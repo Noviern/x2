@@ -1,0 +1,2 @@
+# Rename this to toc.g to enable this addon.
+dump_globals.lua
