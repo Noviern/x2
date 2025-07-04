@@ -49,80 +49,22 @@ local RESERVED_GLOBAL = {
   pairs = true, pcall = true, print = true, rawequal = true, rawget = true,
   rawset = true, require = true, rshift = true, select = true, setfenv = true,
   setmetatable = true, string = true, table = true, tonumber = true,
-  tostring = true, type = true, unpack = true, xpcall = true,
+  tostring = true, type = true, unpack = true, xpcall = true, dump = true,
 }
 
 local ADDON = ADDON
 local UIParent = UIParent
 
-local function dump_globals(tbl, depth, seen, path)
-  depth = depth or 0
-  seen = seen or {}
-  path = path or ""
-
-  local global_vars = {}
-  local global_funcs = {}
-  local indent = string.rep("  ", depth)
-  local tblref = tostring(tbl)
-
-  seen[tblref] = true
+local function filter(tbl)
+  local result = {}
 
   for k, v in pairs(tbl) do
-    if not RESERVED_GLOBAL[k] then
-      local vt = type(v)
-      local line
-
-      if vt == "function" then
-        if path == "" then
-          line = string.format("function %s() end", k)
-        else
-          line = string.format("function %s:%s() end", path, k)
-        end
-
-        table.insert(global_funcs, line)
-      else
-        local val = "{}"
-
-        if vt == "table" then
-          if next(v) ~= nil then
-            local vref = tostring(v)
-            if seen[vref] then
-              val = string.format('"<circular: %s>"', path)
-            else
-              local new_depth = depth + 1
-              local new_path = path == "" and k or path .. "." .. k
-              local sub_global_vars, sub_global_funcs = dump_globals(v, new_depth, seen, new_path)
-
-              if #sub_global_vars > 0 then
-                val = string.format("{\n%s,\n%s}", table.concat(sub_global_vars, ",\n"), indent)
-              end
-
-              for _, func in ipairs(sub_global_funcs) do
-                table.insert(global_funcs, func)
-              end
-            end
-          end
-        elseif vt == "boolean" or vt == "number" then
-          val = tostring(v)
-        elseif vt == "userdata" then
-          val = string.format('"<%s>"', tostring(v))
-        else
-          val = string.format("%q", tostring(v))
-        end
-
-        line = string.format("%s%s = %s", indent, k, val)
-
-        table.insert(global_vars, line)
-      end
+    if RESERVED_GLOBAL[k] == nil then
+      result[k] = v
     end
   end
 
-  seen[tblref] = nil
-
-  table.sort(global_vars)
-  table.sort(global_funcs)
-
-  return global_vars, global_funcs
+  return result
 end
 
 local function clear_globals()
@@ -132,17 +74,17 @@ local function clear_globals()
 end
 
 local function snapshot_globals(name)
-  local global_vars, global_funcs = dump_globals(_G)
+  local var_lines, func_lines = dump(filter(_G))
   local require_comment = " -- " .. name
-  local var_lines = table.concat(global_vars, require_comment .. "\n") .. require_comment
-  local func_lines = table.concat(global_funcs, "\n\n")
+
+  var_lines = string.gsub(var_lines, "\n", require_comment .. "\n") .. require_comment
 
   local filePath = "../Documents/Addon/aad/" .. name .. ".txt"
   local file = assert(io.open(filePath, "w"))
 
   file:write(var_lines)
 
-  if #func_lines > 0 then
+  if func_lines ~= "" then
     file:write("\n\n" .. func_lines)
   end
 
