@@ -60,8 +60,8 @@ local function dump_globals(tbl, depth, seen, path)
   seen = seen or {}
   path = path or ""
 
-  local global_variables = {}
-  local global_functions = {}
+  local global_vars = {}
+  local global_funcs = {}
   local indent = string.rep("  ", depth)
   local tblref = tostring(tbl)
 
@@ -79,7 +79,7 @@ local function dump_globals(tbl, depth, seen, path)
           line = string.format("function %s:%s() end", path, k)
         end
 
-        table.insert(global_functions, line)
+        table.insert(global_funcs, line)
       else
         local val = "{}"
 
@@ -89,15 +89,16 @@ local function dump_globals(tbl, depth, seen, path)
             if seen[vref] then
               val = string.format('"<circular: %s>"', path)
             else
+              local new_depth = depth + 1
               local new_path = path == "" and k or path .. "." .. k
-              local sub_global_variables, sub_global_functions = dump_globals(v, depth + 1, seen, new_path)
-  
-              if #sub_global_variables > 0 then
-                val = string.format("{\n%s,\n%s}", table.concat(sub_global_variables, ",\n"), indent)
+              local sub_global_vars, sub_global_funcs = dump_globals(v, new_depth, seen, new_path)
+
+              if #sub_global_vars > 0 then
+                val = string.format("{\n%s,\n%s}", table.concat(sub_global_vars, ",\n"), indent)
               end
-  
-              for _, func in ipairs(sub_global_functions) do
-                table.insert(global_functions, func)
+
+              for _, func in ipairs(sub_global_funcs) do
+                table.insert(global_funcs, func)
               end
             end
           end
@@ -111,49 +112,53 @@ local function dump_globals(tbl, depth, seen, path)
 
         line = string.format("%s%s = %s", indent, k, val)
 
-        table.insert(global_variables, line)
+        table.insert(global_vars, line)
       end
     end
   end
 
   seen[tblref] = nil
 
-  table.sort(global_variables)
-  table.sort(global_functions)
+  table.sort(global_vars)
+  table.sort(global_funcs)
 
-  return global_variables, global_functions
+  return global_vars, global_funcs
 end
 
-
-local function snapshot_globals(name)
-  local global_variables, global_functions = dump_globals(_G)
-  local variable_lines = table.concat(global_variables, "\n")
-  local function_lines = table.concat(global_functions, "\n\n")
-
-  local filePath = "../Documents/Addon/aad/" .. name
-  local file = assert(io.open(filePath, "w"))
-
-  file:write(variable_lines)
-
-  if #function_lines > 0 then
-    file:write("\n\n" .. function_lines)
-  end
-
-  file:close()
-
+local function clear_globals()
   for key in pairs(_G) do
     if not RESERVED_GLOBAL[key] then _G[key] = nil end
   end
 end
 
-snapshot_globals("api/Addon.txt")
+local function snapshot_globals(name)
+  local global_vars, global_funcs = dump_globals(_G)
+  local require_comment = " -- " .. name
+  local var_lines = table.concat(global_vars, require_comment .. "\n") .. require_comment
+  local func_lines = table.concat(global_funcs, "\n\n")
+
+  local filePath = "../Documents/Addon/aad/" .. name .. ".txt"
+  local file = assert(io.open(filePath, "w"))
+
+  file:write(var_lines)
+
+  if #func_lines > 0 then
+    file:write("\n\n" .. func_lines)
+  end
+
+  file:close()
+
+  clear_globals()
+end
+
+snapshot_globals("api/Addon")
 
 for api_name, api_id in pairs(API) do
   ADDON:ImportAPI(api_id)
-  snapshot_globals("api/".. api_name .. ".txt")
+  snapshot_globals("api/".. api_name)
 end
 
 for object_name, object_id in pairs(OBJECT) do
   ADDON:ImportObject(object_id)
-  snapshot_globals("object/".. object_name .. ".txt")
+  snapshot_globals("object/".. object_name)
 end
