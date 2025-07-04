@@ -1,0 +1,3 @@
+---@meta _
+
+X2Security = {} -- api/X2Security

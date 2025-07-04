@@ -1,0 +1,7 @@
+---@meta _
+
+X2Time = {} -- api/X2Time
+
+function X2Time:GetGameTime() end
+
+function X2Time:GetServerTime() end

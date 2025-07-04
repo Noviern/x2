@@ -1,0 +1,13 @@
+---@meta _
+
+X2Sound = {} -- api/X2Sound
+
+function X2Sound:IsPlaying() end
+
+function X2Sound:PlayMusic() end
+
+function X2Sound:PlayUISound() end
+
+function X2Sound:StopMusic() end
+
+function X2Sound:StopSound() end

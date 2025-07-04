@@ -1,0 +1,19 @@
+---@meta _
+
+ASK_ACCOUNT_BUFF = 3 -- api/X2Auction
+ASK_NORMAL = 0 -- api/X2Auction
+ASK_PCBANG = 1 -- api/X2Auction
+ASK_PREMIUM = 2 -- api/X2Auction
+PT_BID = 0 -- api/X2Auction
+PT_PARTITION = 1 -- api/X2Auction
+X2Auction = {} -- api/X2Auction
+
+function X2Auction:GetSearchedItemCount() end
+
+function X2Auction:GetSearchedItemInfo() end
+
+function X2Auction:GetSearchedItemPage() end
+
+function X2Auction:GetSearchedItemTotalCount() end
+
+function X2Auction:SearchAuctionArticle() end

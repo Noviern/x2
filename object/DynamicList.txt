@@ -1,0 +1,14 @@
+AP_BOTTOM = 8 -- object/DynamicList
+AP_BOTTOMLEFT = 2 -- object/DynamicList
+AP_BOTTOMRIGHT = 3 -- object/DynamicList
+AP_CENTER = 4 -- object/DynamicList
+AP_LEFT = 6 -- object/DynamicList
+AP_RIGHT = 7 -- object/DynamicList
+AP_TOP = 5 -- object/DynamicList
+AP_TOPLEFT = 0 -- object/DynamicList
+AP_TOPRIGHT = 1 -- object/DynamicList
+CT_ABILITY = 2 -- object/DynamicList
+CT_EXPEDITION_NAME = 3 -- object/DynamicList
+CT_NAME = 1 -- object/DynamicList
+DC_ALWAYS = 0 -- object/DynamicList
+DC_SHIFT_KEY_DOWN = 1 -- object/DynamicList

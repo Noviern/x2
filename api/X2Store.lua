@@ -1,0 +1,32 @@
+---@meta _
+
+CURRENCY_AA_POINT = 3 -- api/X2Store
+CURRENCY_CONTRIBUTION_POINT = 5 -- api/X2Store
+CURRENCY_GOLD = 0 -- api/X2Store
+CURRENCY_GOLD_WITH_AA_POINT = 4 -- api/X2Store
+CURRENCY_HONOR_POINT = 1 -- api/X2Store
+CURRENCY_ITEM_POINT = 6 -- api/X2Store
+CURRENCY_LIVING_POINT = 2 -- api/X2Store
+MPT_ALLWAYS = 1 -- api/X2Store
+MPT_DALIY = 2 -- api/X2Store
+MPT_MONTHLY = 4 -- api/X2Store
+MPT_WEEKLY = 3 -- api/X2Store
+RANDOM_SHOP_REFRESH = 3 -- api/X2Store
+SHOP_OPEN_BATTLEFIELD = 4 -- api/X2Store
+SHOP_OPEN_CONTRIBUTION = 3 -- api/X2Store
+SHOP_OPEN_DIRECT_RANDOM_SHOP = 6 -- api/X2Store
+SHOP_OPEN_HONORPOINT = 2 -- api/X2Store
+SHOP_OPEN_LIVINGPOINT = 1 -- api/X2Store
+SHOP_OPEN_NORMAL = 0 -- api/X2Store
+SHOP_OPEN_RANDOM_SHOP = 5 -- api/X2Store
+X2Store = {} -- api/X2Store
+
+function X2Store:GetProductionZoneGroups() end
+
+function X2Store:GetSellableZoneGroups() end
+
+function X2Store:GetSpecialtyRatio() end
+
+function X2Store:GetSpecialtyRatioBetween() end
+
+function X2Store:GetZoneSpecialtyRatio() end

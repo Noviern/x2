@@ -1,0 +1,11 @@
+---@meta _
+
+AP_BOTTOM = 8 -- object/EffectDrawable
+AP_BOTTOMLEFT = 2 -- object/EffectDrawable
+AP_BOTTOMRIGHT = 3 -- object/EffectDrawable
+AP_CENTER = 4 -- object/EffectDrawable
+AP_LEFT = 6 -- object/EffectDrawable
+AP_RIGHT = 7 -- object/EffectDrawable
+AP_TOP = 5 -- object/EffectDrawable
+AP_TOPLEFT = 0 -- object/EffectDrawable
+AP_TOPRIGHT = 1 -- object/EffectDrawable

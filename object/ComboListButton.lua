@@ -1,0 +1,21 @@
+---@meta _
+
+AP_BOTTOM = 8 -- object/ComboListButton
+AP_BOTTOMLEFT = 2 -- object/ComboListButton
+AP_BOTTOMRIGHT = 3 -- object/ComboListButton
+AP_CENTER = 4 -- object/ComboListButton
+AP_LEFT = 6 -- object/ComboListButton
+AP_RIGHT = 7 -- object/ComboListButton
+AP_TOP = 5 -- object/ComboListButton
+AP_TOPLEFT = 0 -- object/ComboListButton
+AP_TOPRIGHT = 1 -- object/ComboListButton
+CT_ABILITY = 2 -- object/ComboListButton
+CT_EXPEDITION_NAME = 3 -- object/ComboListButton
+CT_NAME = 1 -- object/ComboListButton
+DC_ALWAYS = 0 -- object/ComboListButton
+DC_SHIFT_KEY_DOWN = 1 -- object/ComboListButton
+UI_BUTTON_DISABLED = 3 -- object/ComboListButton
+UI_BUTTON_HIGHLIGHTED = 1 -- object/ComboListButton
+UI_BUTTON_MAX = 4 -- object/ComboListButton
+UI_BUTTON_NORMAL = 0 -- object/ComboListButton
+UI_BUTTON_PUSHED = 2 -- object/ComboListButton

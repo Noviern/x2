@@ -1,0 +1,7 @@
+---@meta _
+
+X2SiegeWeapon = {} -- api/X2SiegeWeapon
+
+function X2SiegeWeapon:GetSiegeWeaponSpeed() end
+
+function X2SiegeWeapon:GetSiegeWeaponTurnSpeed() end

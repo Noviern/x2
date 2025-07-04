@@ -1,0 +1,19 @@
+HOUSING_LIST_FILTER_ALL = 1 -- api/X2Resident
+HOUSING_LIST_FILTER_FARM = 5 -- api/X2Resident
+HOUSING_LIST_FILTER_FLOATING = 10 -- api/X2Resident
+HOUSING_LIST_FILTER_HOUSE_NAME = 3 -- api/X2Resident
+HOUSING_LIST_FILTER_LARGE = 9 -- api/X2Resident
+HOUSING_LIST_FILTER_MANSION = 11 -- api/X2Resident
+HOUSING_LIST_FILTER_MEDIUM = 8 -- api/X2Resident
+HOUSING_LIST_FILTER_PUBLIC = 12 -- api/X2Resident
+HOUSING_LIST_FILTER_SELLER_NAME = 2 -- api/X2Resident
+HOUSING_LIST_FILTER_SMALL = 7 -- api/X2Resident
+HOUSING_LIST_FILTER_UNDERWATER_STRUCTURE = 6 -- api/X2Resident
+HOUSING_LIST_FILTER_WORKTABLE = 4 -- api/X2Resident
+X2Resident = {} -- api/X2Resident
+
+function X2Resident:FilterHousingTradeList() end
+
+function X2Resident:GetResidentBoardContent() end
+
+function X2Resident:RequestHousingTradeList() end

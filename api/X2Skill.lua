@@ -1,0 +1,6 @@
+---@meta _
+
+SIK_DESCRIPTION = 1 -- api/X2Skill
+X2Skill = {} -- api/X2Skill
+
+function X2Skill:GetSkillTooltip() end

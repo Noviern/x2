@@ -1,0 +1,69 @@
+---@meta _
+
+EST_1HANDED = 17 -- api/X2Equipment
+EST_2HANDED = 16 -- api/X2Equipment
+EST_AMMUNITION = 19 -- api/X2Equipment
+EST_ARMS = 8 -- api/X2Equipment
+EST_BACK = 9 -- api/X2Equipment
+EST_BACKPACK = 30 -- api/X2Equipment
+EST_BAG = 22 -- api/X2Equipment
+EST_BEARD = 29 -- api/X2Equipment
+EST_BODY = 28 -- api/X2Equipment
+EST_CHEST = 3 -- api/X2Equipment
+EST_COSPLAY = 31 -- api/X2Equipment
+EST_EAR = 10 -- api/X2Equipment
+EST_FACE = 23 -- api/X2Equipment
+EST_FEET = 7 -- api/X2Equipment
+EST_FINGER = 11 -- api/X2Equipment
+EST_GLASSES = 25 -- api/X2Equipment
+EST_HAIR = 24 -- api/X2Equipment
+EST_HANDS = 6 -- api/X2Equipment
+EST_HEAD = 1 -- api/X2Equipment
+EST_HORNS = 26 -- api/X2Equipment
+EST_INSTRUMENT = 21 -- api/X2Equipment
+EST_INVALID = 0 -- api/X2Equipment
+EST_LEGS = 5 -- api/X2Equipment
+EST_MAINHAND = 14 -- api/X2Equipment
+EST_NECK = 2 -- api/X2Equipment
+EST_OFFHAND = 15 -- api/X2Equipment
+EST_RANGED = 18 -- api/X2Equipment
+EST_SHIELD = 20 -- api/X2Equipment
+EST_TAIL = 27 -- api/X2Equipment
+EST_UNDERPANTS = 13 -- api/X2Equipment
+EST_UNDERSHIRT = 12 -- api/X2Equipment
+EST_WAIST = 4 -- api/X2Equipment
+ES_ARMS = 8 -- api/X2Equipment
+ES_BACK = 9 -- api/X2Equipment
+ES_BACKPACK = 27 -- api/X2Equipment
+ES_BEARD = 26 -- api/X2Equipment
+ES_BODY = 25 -- api/X2Equipment
+ES_CHEST = 3 -- api/X2Equipment
+ES_COSPLAY = 28 -- api/X2Equipment
+ES_COSPLAYLOOKS = 32 -- api/X2Equipment
+ES_EAR_1 = 10 -- api/X2Equipment
+ES_EAR_2 = 11 -- api/X2Equipment
+ES_FACE = 20 -- api/X2Equipment
+ES_FEET = 7 -- api/X2Equipment
+ES_FINGER_1 = 12 -- api/X2Equipment
+ES_FINGER_2 = 13 -- api/X2Equipment
+ES_GLASSES = 22 -- api/X2Equipment
+ES_HAIR = 21 -- api/X2Equipment
+ES_HANDS = 6 -- api/X2Equipment
+ES_HEAD = 1 -- api/X2Equipment
+ES_HORNS = 23 -- api/X2Equipment
+ES_INVALID = 0 -- api/X2Equipment
+ES_LEGS = 5 -- api/X2Equipment
+ES_MAINHAND = 16 -- api/X2Equipment
+ES_MUSICAL = 19 -- api/X2Equipment
+ES_NECK = 2 -- api/X2Equipment
+ES_OFFHAND = 17 -- api/X2Equipment
+ES_RANGED = 18 -- api/X2Equipment
+ES_TAIL = 24 -- api/X2Equipment
+ES_UNDERPANTS = 15 -- api/X2Equipment
+ES_UNDERSHIRT = 14 -- api/X2Equipment
+ES_WAIST = 4 -- api/X2Equipment
+X2Equipment = {} -- api/X2Equipment
+
+function X2Equipment:GetEquippedItemTooltipInfo() end
+
+function X2Equipment:GetEquippedItemType() end

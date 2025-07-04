@@ -1,0 +1,19 @@
+---@meta _
+
+X2Locale = {} -- api/X2Locale
+
+function X2Locale:GetKeyboardLayout() end
+
+function X2Locale:GetLocale() end
+
+function X2Locale:GetLocaleIndex() end
+
+function X2Locale:HasLocalizeUiText() end
+
+function X2Locale:LocalizeFormatUiText() end
+
+function X2Locale:LocalizeNonUiText() end
+
+function X2Locale:LocalizeUiText() end
+
+function X2Locale:TextFormating() end
