@@ -1,3 +1,11 @@
+---Dumps a table.
+---@param tbl table
+---@param depth number
+---@param seen table
+---@param path string
+---@return string var_lines
+---@return string func_lines
+---@nodiscard
 function dump(tbl, depth, seen, path)
   depth = depth or 0
   seen = seen or {}
