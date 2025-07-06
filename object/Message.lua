@@ -14,3 +14,38 @@ CT_EXPEDITION_NAME = 3 -- object/Message
 CT_NAME = 1 -- object/Message
 DC_ALWAYS = 0 -- object/Message
 DC_SHIFT_KEY_DOWN = 1 -- object/Message
+
+---object/Message
+---@class Message: Widget
+---@field style TextStyle
+---@field AddMessage fun(self: self, message: string)
+---@field AddMessageEx fun(self: self, message: string, visibleTime)
+---@field AddMessageExRefresh fun(self: self, message, visibleTime)
+---@field AddMessageRefresh fun(self: self, message)
+---@field ChangeDefaultStyle fun(self: self)
+---@field ChangeTextStyle fun(self: self)
+---@field Clear fun(self: self)
+---@field CopyTextToClipboard fun(self: self)
+---@field EnableItemLink fun(self: self, enable: boolean)
+---@field GetCurrentLine fun(self: self)
+---@field GetCurrentScroll fun(self: self)
+---@field GetLineSpace fun(self: self)
+---@field GetLinkInfoOnCursor fun(self: self)
+---@field GetMaxLines fun(self: self)
+---@field GetMessageByTimeStamp fun(self: self, messageTimeStamp: number)
+---@field GetMessageLines fun(self: self)
+---@field GetPagePerMaxLines fun(self: self)
+---@field PageDown fun(self: self)
+---@field PageUp fun(self: self)
+---@field RemoveLastMessage fun(self: self)
+---@field ResetVisibleTime fun(self: self)
+---@field ScrollDown fun(self: self)
+---@field ScrollToBottom fun(self: self)
+---@field ScrollToTop fun(self: self)
+---@field ScrollUp fun(self: self)
+---@field SetFadeDuration fun(self: self, seconds: number)
+---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
+---@field SetLineSpace fun(self: self, space)
+---@field SetMaxLines fun(self: self, count)
+---@field SetScrollPos fun(self: self, value: number)
+---@field SetTimeVisible fun(self: self, seconds: number)

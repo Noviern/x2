@@ -1,0 +1,11 @@
+---@class Editboxbase
+---@field SetMaxTextLength fun(self: self, length: number)
+---@field ClearTextOnEnter fun(self: self, clear: boolean)
+---@field MaxTextLength fun(self: self)
+---@field SetCursorOffset fun(self: self, offset)
+---@field SetCursorHeight fun(self: self, height: number)
+---@field SetCursorColor fun(self: self, r: number, g: number, b: number, a: number)
+---@field SetCursorColorByColorKey fun(self: self, colorKey: string)
+---@field SetReadOnly fun(self: self, readOnly)
+---@field SetGuideText fun(self: self, text: string)
+---@field SetGuideTextInset fun(self: self, insetData)

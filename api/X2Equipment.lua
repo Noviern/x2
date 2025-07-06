@@ -64,6 +64,13 @@ ES_UNDERSHIRT = 14 -- api/X2Equipment
 ES_WAIST = 4 -- api/X2Equipment
 X2Equipment = {} -- api/X2Equipment
 
-function X2Equipment:GetEquippedItemTooltipInfo() end
+---Returns 
+---@param equipSlot EquipSlot [EquipSlot](lua://EquipSlot)
+---@param targetEquippedItem boolean
+---@return ItemInfo? [ItemInfo](lua://ItemInfo)
+function X2Equipment:GetEquippedItemTooltipInfo(equipSlot, targetEquippedItem) end
 
-function X2Equipment:GetEquippedItemType() end
+---Returns the equipped item type.
+---@param equipSlot EquipSlot [EquipSlot](lua://EquipSlot)
+---@return number? EquippedItemType
+function X2Equipment:GetEquippedItemType(equipSlot) end

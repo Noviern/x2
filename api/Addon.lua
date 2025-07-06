@@ -302,7 +302,7 @@ UIC_WEB_PLAY_DIARY_INSTANCE = 95 -- api/Addon
 UIC_WEB_WIKI = 39 -- api/Addon
 UIC_WHISPER = 83 -- api/Addon
 UIC_WORLDMAP = 27 -- api/Addon
-UIParent = {} -- api/Addon
+UIParent = UI -- api/Addon
 UM_ACHIEVEMENT_NAME = 26 -- api/Addon
 UM_AREA_SPHERE = 7 -- api/Addon
 UM_DAY = 20 -- api/Addon
@@ -347,242 +347,323 @@ UR_NEUTRAL = 2 -- api/Addon
 UTIL_TEXT = 31 -- api/Addon
 WEB_TEXT = 112 -- api/Addon
 WINDOW_TITLE_TEXT = 134 -- api/Addon
-X2 = {} -- api/Addon
+X2 = ADDON -- api/Addon
 ZST_CONQUEST_WAR = 1 -- api/Addon
 ZST_INVALID = 0 -- api/Addon
 
-function ADDON:AddEscMenuButton() end
+---Adds a button the escape menu for the related addon.
+---@param categoryId ESC_MENU_CATEGORY_ID [ESC_MENU_CATEGORY_ID](lua://ESC_MENU_CATEGORY_ID)
+---@param uiCategory UIC [UIC](lua://UIC) For a custom UIC use a id above 1000 to not replace the default. Can conflict with other addons.
+---@param iconKey ESC_MENU_ICON_KEY Key from game/ui/common/esc_menu.g
+---@param name string
+---@param data? EscMenuButtonData
+function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data) end
 
-function ADDON:ChatLog() end
+---Outputs a message to the chat under `CMF_SYSTEM`.
+---@param logMessage string
+function ADDON:ChatLog(logMessage) end
 
-function ADDON:ClearData() end
+---Clears the data for `key` in the Addon.
+---@param key string
+function ADDON:ClearData(key) end
 
-function ADDON:FireAddon() end
+---Triggers [UIEVENT_TYPE.UI_ADDON](lua://UIEVENT_TYPE.UI_ADDON) for the addon `name` specified.
+---@param name string
+function ADDON:FireAddon(name) end
 
+---Returns a collection of [AddonInfo](lua://AddonInfo) from addons currently installed.
+---@return AddonInfo[] [AddonInfo](lua://AddonInfo)
 function ADDON:GetAddonInfos() end
 
-function ADDON:GetContent() end
+---TODO:
+---Broken.
+---@param uiCategory UIC [UIC](lua://UIC)
+---@return nil contentFrame
+function ADDON:GetContent(uiCategory) end
 
-function ADDON:GetContentMainScriptPosVis() end
+---Returns the `x`, `y`, `width` (unscaled), `height` (unscaled), and `isVisible` of the [UIC](lua://UIC).
+---@param uiCategory UIC [UIC](lua://UIC)
+---@return number x, number y, number width, number height, boolean isVisible
+function ADDON:GetContentMainScriptPosVis(uiCategory) end
 
+---Returns the `name` of the Addon.
+---@return string name
 function ADDON:GetName() end
 
-function ADDON:ImportAPI() end
+---Imports API for entire addon. Only needs be used once per [API](lua://API).
+---@param apiType API [API](lua://API)
+function ADDON:ImportAPI(apiType) end
 
-function ADDON:ImportObject() end
+---Imports Object for the entire addon. Only needs be used once per [OBJECT_ID](lua://OBJECT_ID).
+---@param objectId OBJECT
+function ADDON:ImportObject(objectId) end
 
-function ADDON:LoadData() end
+---TODO:
+---Broken.
+---Returns `savedData` for the `key` of the Addon.
+---@param key string
+---@return table savedData
+function ADDON:LoadData(key) end
 
-function ADDON:RegisterContentTriggerFunc() end
+---Registers a `triggerFunc` to a [UIC](lua://UIC) and returns `success`.
+---@param uiCategory UIC [UIC](lua://UIC)
+---@param triggerFunc function 
+---@return boolean success
+function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 
-function ADDON:RegisterContentWidget() end
+---Registers a [Widget](lua://Widget) and calls ShowProc method of `widget`.
+---This may also (and or) execute triggerFunc?
+---@param uiCategory UIC [UIC](lua://UIC)
+---@param widget Widget [Widget](lua://Widget)
+---@param triggerFunc? function
+function ADDON:RegisterContentWidget(uiCategory, widget, triggerFunc) end
 
-function ADDON:ReloadAddon() end
+---Reloads an addon `name`. Do not reload the current addon as this will cause the game to crash.
+---@param name string
+function ADDON:ReloadAddon(name) end
 
+---Saves Addon information.
 function ADDON:SaveAddonInfos() end
 
-function ADDON:SaveData() end
+---Saves `data` to a `key` for the Addon.
+---@param key string
+---@param data table
+function ADDON:SaveData(key, data) end
 
-function ADDON:SetAddonEnable() end
+---Enables/Disables an addon. You must call `ADDON:SaveAddonInfos()` after. Requires a reload (character select).
+---@param name string
+---@param enable boolean
+function ADDON:SetAddonEnable(name, enable) end
 
-function ADDON:ShowContent() end
+---Show/Hide UIC [UIC](lua://UIC) and returns a boolean indicating if it was successful.
+---@param uiCategory UIC [UIC](lua://UIC)
+---@param show boolean
+---@param data? table (optional) can't be used currently.
+---@return boolean success
+function ADDON:ShowContent(uiCategory, show, data) end
 
-function ADDON:ToggleContent() end
+---Toggles the visibility of [UIC](lua://UIC) and returns a boolean indicating if it was successful.
+---@param uiCategory UIC [UIC](lua://UIC)
+---@return boolean successful
+function ADDON:ToggleContent(uiCategory) end
 
-function UI:ClearUIBound() end
 
-function UI:CreateWidget() end
+---Clears the [UIBound](lua://UIBound) of the [UIBOUND_KEY](lua://UIBOUND_KEY).
+---@param key UIBOUND_KEY [UIBOUND_KEY](lua://UIBOUND_KEY)
+function UI:ClearUIBound(key) end
 
-function UI:GetAccountUITimeStamp() end
+---Returns a widget.
+---@overload fun(self: self, widgetName: "avi", id: string, parentId: string, category?: string): Avi
+---@overload fun(self: self, widgetName: "button", id: string, parentId: string, category?: string): Button
+---@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: string, category?: string): ChatWindow
+---@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: string, category?: string): Checkbutton
+---@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: string, category?: string): CircleDiagram
+---@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: string, category?: string): ColorPicker
+---@overload fun(self: self, widgetName: "combobox", id: string, parentId: string, category?: string): Combobox
+---@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: string, category?: string): CooldownButton
+---@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: string, category?: string): CooldownConstantButton
+---@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: string, category?: string): CooldownInventoryButton
+---@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: string, category?: string): DamageDisplay
+---@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: string, category?: string): DynamicList
+---@overload fun(self: self, widgetName: "editbox", id: string, parentId: string, category?: string): Editbox
+---@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: string, category?: string): EditboxMultiline
+---@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: string, category?: string): EmptyWidget
+---@overload fun(self: self, widgetName: "folder", id: string, parentId: string, category?: string): Folder
+---@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: string, category?: string): GameTooltip
+---@overload fun(self: self, widgetName: "grid", id: string, parentId: string, category?: string): Grid
+---@overload fun(self: self, widgetName: "label", id: string, parentId: string, category?: string): Label
+---@overload fun(self: self, widgetName: "line", id: string, parentId: string, category?: string): Line
+---@overload fun(self: self, widgetName: "listbox", id: string, parentId: string, category?: string): Listbox
+---@overload fun(self: self, widgetName: "listctrl", id: string, parentId: string, category?: string): ListCtrl
+---@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: string, category?: string): MegaphoneChatEdit
+---@overload fun(self: self, widgetName: "message", id: string, parentId: string, category?: string): Message
+---@overload fun(self: self, widgetName: "modelview", id: string, parentId: string, category?: string): ModelView
+---@overload fun(self: self, widgetName: "pageable", id: string, parentId: string, category?: string): Pageable
+---@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: string, category?: string): PaintColorPicker
+---@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: string, category?: string): RadioGroup
+---@overload fun(self: self, widgetName: "roadmap", id: string, parentId: string, category?: string): RoadMap
+---@overload fun(self: self, widgetName: "slider", id: string, parentId: string, category?: string): Slider
+---@overload fun(self: self, widgetName: "slot", id: string, parentId: string, category?: string): Slot
+---@overload fun(self: self, widgetName: "statusbar", id: string, parentId: string, category?: string): StatusBar
+---@overload fun(self: self, widgetName: "tab", id: string, parentId: string, category?: string): Tab
+---@overload fun(self: self, widgetName: "textbox", id: string, parentId: string, category?: string): Textbox
+---@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: string, category?: string): UnitframeTooltip
+---@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: string, category?: string): Webbrowser
+---@overload fun(self: self, widgetName: "window", id: string, parentId: string, category?: string): Window
+---@overload fun(self: self, widgetName: "worldmap", id: string, parentId: string, category?: string): WorldMap
+---@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: string, category?: string): X2EditBox
+---@param widgetName string
+---@param id string
+---@param parentId string
+---@param category? string
+function UI:CreateWidget(widgetName, id, parentId, category) end
 
+---Returns the `accountUITimeStamp` for the `key`.
+---@param key string
+---@return string accountUITimeStamp
+function UI:GetAccountUITimeStamp(key) end
+
+---Returns the `characterTodayPlayedTimeStamp`.
+---@return string characterTodayPlayedTimeStamp `YYYY-M-D`
 function UI:GetCharacterTodayPlayedTimeStamp() end
 
+---Returns the `currentDP`.
+---@return number currentDP
 function UI:GetCurrentDP() end
 
+---Returns the `currentPolyCount`.
+---@return number currentPolyCount
 function UI:GetCurrentPolyCount() end
 
+---Returns the `currentTimeStamp`.
+---@return string currentTimeStamp `YYYY-M-D`
 function UI:GetCurrentTimeStamp() end
 
-function UI:GetEntityByName() end
+---Returns `sEntityName` if they exist in render range.
+---@param sEntityName string
+---@return string? sEntityName
+function UI:GetEntityByName(sEntityName) end
 
-function UI:GetEtcValue() end
+---Returns the `etcValue` of the `key`.
+---@param key string inventory_guide_line_space
+---@return number etcValue
+function UI:GetEtcValue(key) end
 
-function UI:GetFontColor() end
+---Returns a [RGBAColor](lua://RGBAColor) for the [FONT_COLOR_KEY](lua://FONT_COLOR_KEY) even if the `key` doesnt exist.
+---@param key FONT_COLOR_KEY [FONT_COLOR_KEY](lua://FONT_COLOR_KEY)
+---@return RGBAColor [RGBAColor](lua://RGBAColor)
+function UI:GetFontColor(key) end
 
+---Returns the `frameRate`
+---@return number frameRate
 function UI:GetFrameRate() end
 
+---Returns the `frameTime`.
+---@return number frameTime 1 second/frameRate
 function UI:GetFrameTime() end
 
+---Returns the `id` of the UI element.
+---@return string id
 function UI:GetId() end
 
-function UI:GetPermission() end
+---Returns a boolean indicating if permission for the [UIC](lua://UIC) has been granted.
+---@param uiCategory UIC [UIC](lua://UIC)
+---@return boolean permissionGranted
+function UI:GetPermission(uiCategory) end
 
+---Returns the `screenHeight`.
+---@return number screenHeight
 function UI:GetScreenHeight() end
 
+---Returns the the `screenWidth`.
+---@return number screenWidth
 function UI:GetScreenWidth() end
 
+---Returns the [Time](lua://Time) of the server.
+---@return Time [Time](lua://Time)
 function UI:GetServerTimeTable() end
 
-function UI:GetTextureData() end
+---Returns the [TextureData](lua://TextureData) of the [TEXTURE_PATH](lua://TEXTURE_PATH).
+---@param filename TEXTURE_PATH [TEXTURE_PATH](lua://TEXTURE_PATH)
+---@param infoKey string can be obtained by `UI:GetTextureKeyData(filename).keys`
+---@return TextureData [TextureData](lua://TextureData)
+function UI:GetTextureData(filename, infoKey) end
 
-function UI:GetTextureKeyData() end
+---Returns the [TextureKeyData](lua://TextureKeyData) for the [TEXTURE_PATH](lua://TEXTURE_PATH).
+---@param filename TEXTURE_PATH [TEXTURE_PATH](lua://TEXTURE_PATH)
+---@return TextureKeyData [TextureKeyData](lua://TextureKeyData)
+function UI:GetTextureKeyData(filename) end
 
-function UI:GetUIBound() end
+---Returns the [UIBound](lua://UIBound) of the [UIBOUND_KEY](lua://UIBOUND_KEY).
+---@param key UIBOUND_KEY [UIBOUND_KEY](lua://UIBOUND_KEY)
+---@return UIBound [UIBound](lua://UIBound)
+function UI:GetUIBound(key) end
 
+---Returns the `uiScale`.
+---@return number uiScale
 function UI:GetUIScale() end
 
-function UI:GetUIStamp() end
+---Returns the `uiStamp` of the `key`.
+---@param key string
+---@return string uiStamp
+function UI:GetUIStamp(key) end
 
+---Returns the camera's angles as a [Vec3](lua://Vec3) in degrees.
+---@return Vec3 viewCameraAngles [Vec3](lua://Vec3)
 function UI:GetViewCameraAngles() end
 
+---Returns the camera's direction as a [Vec3](lua://Vec3) in radians.
+---@return Vec3 ViewCameraDir [Vec3](lua://Vec3)
 function UI:GetViewCameraDir() end
 
+---Returns the camera's fov in radians.
+---@return number viewCameraFov
 function UI:GetViewCameraFov() end
 
+---Returns the camera's position as a [Vec3](lua://Vec3).
+---@return Vec3 viewCameraPos [Vec3](lua://Vec3)
 function UI:GetViewCameraPos() end
 
+---Returns the [VirtualMemoryStats](lua://VirtualMemoryStats).
+---@return VirtualMemoryStats [VirtualMemoryStats](lua://VirtualMemoryStats)
 function UI:GetVirtualMemoryStats() end
 
+---Returns the [FontSizeList](lua://FontSizeList).
+---@return FontSizeList [FontSizeList](lua://FontSizeList)
 function UI:InitFontSize() end
 
+---Returns a boolean indicating if DX11 is supported.
+---@return boolean isDX11Supported
 function UI:IsDX11Supported() end
 
-function UI:IsPointVisible() end
+---Returns a boolean indicating if the point is visible.
+---@param point Vec3 [Vec3](lua://Vec3)
+---@return boolean isPointVisible
+function UI:IsPointVisible(point) end
 
+---Returns a boolean indicating if multithread rendering is supported.
+---@return boolean isRenderThreadSupported
 function UI:IsRenderThreadSupported() end
 
-function UI:ReleaseEventHandler() end
-
-function UI:SetEventHandler() end
-
-function UI:SetUIBound() end
-
-function UI:SetUIScale() end
-
-function UI:SetUseInsertComma() end
-
-function UI:SetViewCameraAngles() end
-
-function UI:SetViewCameraDir() end
-
-function UI:SetViewCameraFov() end
-
-function UI:SetViewCameraPos() end
-
-function UIParent:ClearUIBound() end
-
-function UIParent:CreateWidget() end
-
-function UIParent:GetAccountUITimeStamp() end
-
-function UIParent:GetCharacterTodayPlayedTimeStamp() end
-
-function UIParent:GetCurrentDP() end
-
-function UIParent:GetCurrentPolyCount() end
-
-function UIParent:GetCurrentTimeStamp() end
-
-function UIParent:GetEntityByName() end
-
-function UIParent:GetEtcValue() end
-
-function UIParent:GetFontColor() end
-
-function UIParent:GetFrameRate() end
-
-function UIParent:GetFrameTime() end
-
-function UIParent:GetId() end
-
-function UIParent:GetPermission() end
-
-function UIParent:GetScreenHeight() end
-
-function UIParent:GetScreenWidth() end
-
-function UIParent:GetServerTimeTable() end
-
-function UIParent:GetTextureData() end
-
-function UIParent:GetTextureKeyData() end
-
-function UIParent:GetUIBound() end
-
-function UIParent:GetUIScale() end
-
-function UIParent:GetUIStamp() end
-
-function UIParent:GetViewCameraAngles() end
-
-function UIParent:GetViewCameraDir() end
-
-function UIParent:GetViewCameraFov() end
-
-function UIParent:GetViewCameraPos() end
-
-function UIParent:GetVirtualMemoryStats() end
-
-function UIParent:InitFontSize() end
-
-function UIParent:IsDX11Supported() end
-
-function UIParent:IsPointVisible() end
-
-function UIParent:IsRenderThreadSupported() end
-
-function UIParent:ReleaseEventHandler() end
-
-function UIParent:SetEventHandler() end
-
-function UIParent:SetUIBound() end
-
-function UIParent:SetUIScale() end
-
-function UIParent:SetUseInsertComma() end
-
-function UIParent:SetViewCameraAngles() end
-
-function UIParent:SetViewCameraDir() end
-
-function UIParent:SetViewCameraFov() end
-
-function UIParent:SetViewCameraPos() end
-
-function X2:AddEscMenuButton() end
-
-function X2:ChatLog() end
-
-function X2:ClearData() end
-
-function X2:FireAddon() end
-
-function X2:GetAddonInfos() end
-
-function X2:GetContent() end
-
-function X2:GetContentMainScriptPosVis() end
-
-function X2:GetName() end
-
-function X2:ImportAPI() end
-
-function X2:ImportObject() end
-
-function X2:LoadData() end
-
-function X2:RegisterContentTriggerFunc() end
-
-function X2:RegisterContentWidget() end
-
-function X2:ReloadAddon() end
-
-function X2:SaveAddonInfos() end
-
-function X2:SaveData() end
-
-function X2:SetAddonEnable() end
-
-function X2:ShowContent() end
-
-function X2:ToggleContent() end
+---Releases a `handler` for the [UIEVENT_TYPE](lua://UIEVENT_TYPE).
+---@param eventName UIEVENT_TYPE [UIEVENT_TYPE](lua://UIEVENT_TYPE)
+---@param handler function
+function UI:ReleaseEventHandler(eventName, handler) end
+
+---Sets an event `handler` for the [UIEVENT_TYPE](lua://UIEVENT_TYPE). Going over 255 events will crash the game.
+---@param eventName UIEVENT_TYPE [UIEVENT_TYPE](lua://UIEVENT_TYPE)
+---@param handler function Avoid using a inline function so `handler` can be released.
+function UI:SetEventHandler(eventName, handler) end
+
+---Sets the [UIBound](lua://UIBound) for a [UIBOUND_KEY](lua://UIBOUND_KEY).
+---@param key UIBOUND_KEY [UIBOUND_KEY](lua://UIBOUND_KEY)
+---@param uiBound UIBound [UIBound](lua://UIBound)
+function UI:SetUIBound(key, uiBound) end
+
+---Sets the UI scale.
+---@param scale number limited between 0.7 and 2.4
+---@param immediatelyApply boolean
+function UI:SetUIScale(scale, immediatelyApply) end
+
+---TODO:
+---@param use boolean
+function UI:SetUseInsertComma(use) end
+
+---TODO:
+---Broken? Sets the camera view angles to `angles` in radians but does not change the current camera.
+---@param angles Vec3 [Vec3](lua://Vec3)
+function UI:SetViewCameraAngles(angles) end
+
+---TODO: 
+---Broken? Sets the camera view direction to `dir` but does not change the current camera.
+---@param dir Vec3 [Vec3](lua://Vec3)
+function UI:SetViewCameraDir(dir) end
+
+---TODO: 
+---@param fov number
+function UI:SetViewCameraFov(fov) end
+
+---TODO: 
+---Broken? Sets the camera view position to `pos` but does not change the current camera.
+---@param pos Vec3 [Vec3](lua://Vec3)
+function UI:SetViewCameraPos(pos) end

@@ -14,3 +14,7 @@ CT_EXPEDITION_NAME = 3 -- object/EmptyWidget
 CT_NAME = 1 -- object/EmptyWidget
 DC_ALWAYS = 0 -- object/EmptyWidget
 DC_SHIFT_KEY_DOWN = 1 -- object/EmptyWidget
+
+---object/EmptyWidget
+---@class EmptyWidget: Widget
+---@field SetDrawBorder fun(self: self, draw: boolean, r: number, g: number, b: number, a: number)

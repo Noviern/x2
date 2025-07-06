@@ -21,12 +21,27 @@ SHOP_OPEN_NORMAL = 0 -- api/X2Store
 SHOP_OPEN_RANDOM_SHOP = 5 -- api/X2Store
 X2Store = {} -- api/X2Store
 
+---Returns a collection of [ZoneInfo](lua://ZoneInfo) for all zones that packs can be crafted in.
+---@return ZoneInfo[] [ZoneInfo](lua://ZoneInfo)
 function X2Store:GetProductionZoneGroups() end
 
-function X2Store:GetSellableZoneGroups() end
+---Returns a collection of [ZoneInfo](lua://ZoneInfo) for all zones that a pack crafted in `fromZoneGroup` can be
+---turned into.
+---@param fromZoneGroup ZONE_ID [ZONE_ID](lua://ZONE_ID)
+---@return ZoneInfo[] [ZoneInfo](lua://ZoneInfo)
+function X2Store:GetSellableZoneGroups(fromZoneGroup) end
 
+---Returns `specialtyRatio`.
+---@return number specialtyRatio
 function X2Store:GetSpecialtyRatio() end
 
-function X2Store:GetSpecialtyRatioBetween() end
+---Returns `cooldownTime` and triggers
+---[UIEVENT_TYPE.SPECIALTY_RATIO_BETWEEN_INFO](lua://UIEVENT_TYPE.SPECIALTY_RATIO_BETWEEN_INFO).
+---@param fromZoneGroup ZONE_ID [ZONE_ID](lua://ZONE_ID)
+---@param toZoneGroup ZONE_ID [ZONE_ID](lua://ZONE_ID)
+---@return number cooldownTime miliseconds
+function X2Store:GetSpecialtyRatioBetween(fromZoneGroup, toZoneGroup) end
 
+---TODO:
+---This probably triggers an event
 function X2Store:GetZoneSpecialtyRatio() end

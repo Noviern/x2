@@ -14,3 +14,14 @@ CT_EXPEDITION_NAME = 3 -- object/Pageable
 CT_NAME = 1 -- object/Pageable
 DC_ALWAYS = 0 -- object/Pageable
 DC_SHIFT_KEY_DOWN = 1 -- object/Pageable
+
+---object/Pageable
+---@class Pageable: Widget
+---@field AddWidgetToPage fun(self: self, widget: table, pageIndex)
+---@field ChangePage fun(self: self, index: number)
+---@field GetCurrentPageIndex fun(self: self)
+---@field GetTotalPage fun(self: self)
+---@field NextPage fun(self: self)
+---@field PrevPage fun(self: self)
+---@field SetCurrentPageIndex fun(self: self, num: number)
+---@field SetPageCount fun(self: self, num)

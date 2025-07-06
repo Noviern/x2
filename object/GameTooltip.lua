@@ -27,3 +27,20 @@ UFT_PERIOD_LEADERSHIP = "|p13;" -- object/GameTooltip
 UFT_PERMP = "|p7;" -- object/GameTooltip
 UFT_PVPHONOR = "|p10;" -- object/GameTooltip
 UFT_PVPKILL = "|p11;" -- object/GameTooltip
+
+---object/GameTooltip
+---@class GameTooltip: Widget
+---@field style TextStyle
+---@field AddAnotherSideLine fun(self: self, index: number, text, fontPath, fontSize, textAlign, indentation)
+---@field AddLine fun(self: self, text: string, fontPath, fontSize, align, textAlign, indentation)
+---@field AttachLowerSpaceLine fun(self: self, index: number, height)
+---@field AttachUpperSpaceLine fun(self: self, index, height)
+---@field ClearLines fun(self: self)
+---@field GetHeightToLastLine fun(self: self)
+---@field GetLastLine fun(self: self)
+---@field GetLineCount fun(self: self)
+---@field GetLineSpace fun(self: self)
+---@field SetAutoWordwrap fun(self: self, wrap)
+---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
+---@field SetLineSpace fun(self: self, space)
+---@field SetTooltipData fun(self: self)

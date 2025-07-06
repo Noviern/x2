@@ -141,4 +141,7 @@ QMS_READY_NORMAL = 9 -- api/X2Chat
 QMS_READY_SAGA = 8 -- api/X2Chat
 X2Chat = {} -- api/X2Chat
 
-function X2Chat:DispatchChatMessage() end
+---Dispatches a `message` to the chat channel (`filter`).
+---@param filter CMF [CMF](lua://CMF) 
+---@param message string
+function X2Chat:DispatchChatMessage(filter, message) end

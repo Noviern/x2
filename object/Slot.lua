@@ -36,3 +36,27 @@ UI_BUTTON_HIGHLIGHTED = 1 -- object/Slot
 UI_BUTTON_MAX = 4 -- object/Slot
 UI_BUTTON_NORMAL = 0 -- object/Slot
 UI_BUTTON_PUSHED = 2 -- object/Slot
+
+---object/Slot
+---@class Slot: Widget, Button
+---@field cooltime_style TextStyle
+---@field icon Icon
+---@field style TextStyle
+---@field ChangeIconLayer fun(self: self, nameLayer: string)
+---@field DisableDefaultClick fun(self: self)
+---@field EstablishItem fun(self: self, itemType: number, itemGrade)
+---@field EstablishSkill fun(self: self, skillType: number)
+---@field EstablishSkillAlert fun(self: self, statusBuffTag: number, remain, duration)
+---@field EstablishSkillSlot fun(self: self, slotType: number, slotIdx)
+---@field EstablishSlot fun(self: self, slotType, slotIdx)
+---@field EstablishVirtualSlot fun(self: self, slotType: number, slotIdx, virtualSlotIdx)
+---@field GetBindedType fun(self: self)
+---@field GetExtraInfo fun(self: self)
+---@field GetHotKey fun(self: self)
+---@field GetItemLevelRequirment fun(self: self)
+---@field GetPassiveBuffType fun(self: self)
+---@field GetSkillType fun(self: self)
+---@field GetTooltip fun(self: self)
+---@field IsEmpty fun(self: self)
+---@field ReleaseSlot fun(self: self)
+---@field ResetState fun(self: self)

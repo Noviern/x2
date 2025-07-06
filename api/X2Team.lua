@@ -18,6 +18,12 @@ TMROLE_RANGED_DEALER = 4 -- api/X2Team
 TMROLE_TANKER = 1 -- api/X2Team
 X2Team = {} -- api/X2Team
 
-function X2Team:GetRole() end
+---Returns the `role` of the `memberIndex` in `teamIndex`.
+---@param teamIndex number
+---@param memberIndex number
+---@return number role
+function X2Team:GetRole(teamIndex, memberIndex) end
 
-function X2Team:SetRole() end
+---Sets the players role in a raid.
+---@param role TEAM_ROLE
+function X2Team:SetRole(role) end

@@ -157,4 +157,7 @@ MST_TRANSFER_CRUISER = 144 -- api/X2Map
 MST_TRANSFER_LANDSHIP = 77 -- api/X2Map
 X2Map = {} -- api/X2Map
 
-function X2Map:GetZoneStateInfoByZoneId() end
+---Returns [ZoneStateInfo](lua://ZoneStateInfo) for `zoneId` if it exists.
+---@param zoneId number
+---@return ZoneStateInfo? [ZoneStateInfo](lua://ZoneStateInfo)
+function X2Map:GetZoneStateInfoByZoneId(zoneId) end

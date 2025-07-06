@@ -14,3 +14,11 @@ CT_EXPEDITION_NAME = 3 -- object/Line
 CT_NAME = 1 -- object/Line
 DC_ALWAYS = 0 -- object/Line
 DC_SHIFT_KEY_DOWN = 1 -- object/Line
+
+---object/Line
+---@class Line: Widget
+---@field ClearPoints fun(self: self)
+---@field SetLineColor fun(self: self, r, b, g, a)
+---@field SetLineColorByKey fun(self: self, colorKey: string)
+---@field SetLineThickness fun(self: self, thickness: number)
+---@field SetPoints fun(self: self, points: table)

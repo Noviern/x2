@@ -35,7 +35,7 @@ local OBJECT = {
   Combobox = 40, ComboListButton = 41, ChatMessage = 42, ChatEdit = 43,
   MegaphoneChatEdit = 44, ListCtrl = 45, EmptyWidget = 46, Slot = 47, Line = 48,
   Root = 49, TextureDrawable = 50, Webview = 51, Avi = 52, X2Editbox = 53,
-  DynamicList = 54, Radio = 55,
+  DynamicList = 54, RadioGroup = 55,
 }
 
 local RESERVED_GLOBAL = {
@@ -77,7 +77,11 @@ local function snapshot_globals(name)
   local var_lines, func_lines = dump(filter(_G))
   local require_comment = " -- " .. name
 
-  var_lines = string.gsub(var_lines, "\n", require_comment .. "\n") .. require_comment
+  var_lines = string.gsub(var_lines, "\n", require_comment .. "\n")
+
+  if var_lines ~= "" then
+     var_lines = var_lines .. require_comment
+  end
 
   local filePath = "../Documents/Addon/aad/" .. name .. ".txt"
   local file = assert(io.open(filePath, "w"))
@@ -104,3 +108,5 @@ for object_name, object_id in pairs(OBJECT) do
   ADDON:ImportObject(object_id)
   snapshot_globals("object/".. object_name)
 end
+
+ADDON:ChatLog("tyest")

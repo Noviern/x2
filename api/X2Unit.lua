@@ -35,66 +35,177 @@ RACE_RETURNED = 7 -- api/X2Unit
 RACE_WARBORN = 8 -- api/X2Unit
 X2Unit = {} -- api/X2Unit
 
+---Returns the `currentZoneGroup`.
+---@return number currentZoneGroup
 function X2Unit:GetCurrentZoneGroup() end
 
-function X2Unit:GetTargetAbilityTemplates() end
+---Returns a collection of 3 [TargetAbilityTemplate](lua://TargetAbilityTemplate) instances for the `target`  if they are in render range.
+---@param target string
+---@return TargetAbilityTemplate[]? [TargetAbilityTemplate](lua://TargetAbilityTemplate)
+function X2Unit:GetTargetAbilityTemplates(target) end
 
+---Returns current target's `unitId` if they are in render range.
+---@return string? unitId
 function X2Unit:GetTargetUnitId() end
 
-function X2Unit:GetUnitId() end
+---Returns the `unitId` for the `unit` if they are in render range. 
+---@param unit string
+---@return string? unitId
+function X2Unit:GetUnitId(unit) end
 
-function X2Unit:GetUnitInfoById() end
+---Returns a [UnitInfo](lua://UnitInfo) for the `stringId` if they are in render range.
+---@param stringId string `X2Unit:GetTargetUnitId` or `X2Unit:GetUnitId` can provide the `stringId`.
+---@return UnitInfo? [UnitInfo](lua://UnitInfo)
+function X2Unit:GetUnitInfoById(stringId) end
 
-function X2Unit:GetUnitNameById() end
+---Returns the `unitName` of a `stringId` if they are in render range.
+---@param stringId string `X2Unit:GetTargetUnitId` or `X2Unit:GetUnitId` can provide the `stringId`.
+---@return string? unitName
+function X2Unit:GetUnitNameById(stringId) end
 
-function X2Unit:GetUnitScreenPosition() end
+---Returns the `x`, `y`, `z` of a `unit` screen position if they are in render range.
+---@param unit string
+---@return number? x, number? y, number? z
+function X2Unit:GetUnitScreenPosition(unit) end
 
-function X2Unit:GetUnitWorldPositionByTarget() end
+---TODO:
+---Returns the `x`, `y`, and `z` of the `unit` in the world. The behavior is odd as the `x` and `y` coordinates reset
+---when you cross into a new cell. if they are in render range.
+---@param unit string
+---@return number? x, number? y, number? z
+function X2Unit:GetUnitWorldPositionByTarget(unit) end
 
-function X2Unit:UnitBuff() end
+---Returns [BuffInfo](lua://BuffInfo) for the `buffIndex` of `unit` if they are in render range, otherwise returns an empty table.
+---@param unit string
+---@param buffIndex number
+---@return BuffInfo [BuffInfo](lua://BuffInfo)
+function X2Unit:UnitBuff(unit, buffIndex) end
 
-function X2Unit:UnitBuffCount() end
+---Returns `unitBuffCount` if `unit` is within render range, otherwise returns 0. 
+---@param unit string
+---@return number unitBuffCount
+function X2Unit:UnitBuffCount(unit) end
 
-function X2Unit:UnitBuffTooltip() end
+---Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they are in render range.
+---@param unit string
+---@param buffIndex number
+---@return BuffTooltip? [BuffTooltip](lua://BuffTooltip)
+function X2Unit:UnitBuffTooltip(unit, buffIndex) end
 
-function X2Unit:UnitCastingInfo() end
+---Returns [CastingInfo](lua://CastingInfo) for the `unit` if they are in render range.
+---@param unit string
+---@return CastingInfo? [CastingInfo](lua://CastingInfo)
+function X2Unit:UnitCastingInfo(unit) end
 
-function X2Unit:UnitDeBuff() end
+---Returns [BuffInfo](lua://BuffInfo) for the `buffIndex` of `unit` if they are in render range, otherwise returns an empty table.
+---@param unit string
+---@param buffIndex number
+---@return BuffInfo [BuffInfo](lua://BuffInfo)
+function X2Unit:UnitDeBuff(unit, buffIndex) end
 
-function X2Unit:UnitDeBuffCount() end
+---Returns `unitDeBuffCount` if `unit` is within render range, otherwise returns 0. 
+---@param unit string
+---@return number unitDeBuffCount
+function X2Unit:UnitDeBuffCount(unit) end
 
-function X2Unit:UnitDeBuffTooltip() end
+---Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they are in render range.
+---@param unit string
+---@param buffIndex number
+---@return BuffTooltip? [BuffTooltip](lua://BuffTooltip)
+function X2Unit:UnitDeBuffTooltip(unit, buffIndex) end
 
-function X2Unit:UnitDistance() end
+---Returns [UnitDistance](lua://UnitDistance) between the player and the `unit` boundary box if they are in render range.
+---@param unit string
+---@return UnitDistance? [UnitDistance](lua://UnitDistance)
+function X2Unit:UnitDistance(unit) end
 
-function X2Unit:UnitGearScore() end
+---Returns `result` containing the gearscore of the `unit` if they exist otherwise returns a boolean that is false.
+---@param unit string
+---@param comma boolean this doesnt appear to work.
+---@return string|boolean result
+function X2Unit:UnitGearScore(unit, comma) end
 
-function X2Unit:UnitHealth() end
+---Returns `unitHealth` of the `unit` if they exist.
+---@param unit string
+---@return string? unitHealth
+function X2Unit:UnitHealth(unit) end
 
-function X2Unit:UnitHealthInfo() end
+---Returns `unitCurrentHealth`, `unitMaxHealth`, and `unitHealthPercentage` if the `unit` exists, otherwise returns "0"
+---for all three.
+---@param unit string
+---@return string unitCurrentHealth, string unitMaxHealth, string unitHealthPercentage 
+function X2Unit:UnitHealthInfo(unit) end
 
-function X2Unit:UnitHiddenBuff() end
+---Returns [BuffInfo](lua://BuffInfo) for the `buffIndex` of `unit`if it exists, otherwise returns an empty table.
+---@param unit string
+---@param buffIndex number
+---@return BuffInfo
+function X2Unit:UnitHiddenBuff(unit, buffIndex) end
 
-function X2Unit:UnitHiddenBuffCount() end
+---Returns `unitHiddenBuffCount` if `unit` is within render range, otherwise returns 0. 
+---@param unit string
+---@return number unitHiddenBuffCount
+function X2Unit:UnitHiddenBuffCount(unit) end
 
-function X2Unit:UnitHiddenBuffTooltip() end
+---Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they exist.
+---@param unit string
+---@param buffIndex number
+---@return BuffTooltip? [BuffTooltip](lua://BuffTooltip)
+function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex) end
 
-function X2Unit:UnitLevel() end
+---Returns `unitLevel` for `unit` if they exist.
+---@param unit string
+---@return number? unitLevel
+function X2Unit:UnitLevel(unit) end
 
-function X2Unit:UnitMana() end
+---Returns `unitCurrentMana` of `unit` if they exist.
+---@param unit any
+---@return string? unitCurrentMana
+function X2Unit:UnitMana(unit) end
 
-function X2Unit:UnitManaInfo() end
+---Returns `unitCurrentMana`, `unitMaxMana`, and `unitManaPercentage` if the `unit` exists, otherwise returns "0" for
+---all three.
+---@param unit string
+---@return string unitCurrentMana, string unitMaxMana, string unitManaPercentage
+function X2Unit:UnitManaInfo(unit) end
 
-function X2Unit:UnitMaxHealth() end
+---Returns `unitMaxHealth` of `unit` if they exist.
+---@param unit string
+---@return string? unitMaxHealth
+function X2Unit:UnitMaxHealth(unit) end
 
-function X2Unit:UnitMaxMana() end
+---Returns `unitMaxMana` of `unit` if they exist.
+---@param unit string
+---@return string? unitMaxMana
+function X2Unit:UnitMaxMana(unit) end
 
-function X2Unit:UnitName() end
+---Returns `unitName` of `unit` if they exist.
+---@param unit string
+---@return string? unitName
+function X2Unit:UnitName(unit) end
 
-function X2Unit:UnitNameWithWorld() end
+---Returns `unitNameWithWorld` if they exist.
+---@param unit string
+---@return string? unitNameWithWorld
+function X2Unit:UnitNameWithWorld(unit) end
 
-function X2Unit:UnitRemovableDebuff() end
+---TODO:
+---This needs to be tested, I dont know of any debuffs that can be removed.
+---Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they exist.
+---@param unit string
+---@param buffIndex number
+---@return nil
+function X2Unit:UnitRemovableDebuff(unit, buffIndex) end
 
-function X2Unit:UnitRemovableDebuffCount() end
+---Returns `unitRemovableDebuffCount` if `unit` is within render range, otherwise returns 0. 
+---@param unit string
+---@return number? unitRemovableDebuffCount
+function X2Unit:UnitRemovableDebuffCount(unit) end
 
-function X2Unit:UnitRemovableDebuffTooltip() end
+---TODO:
+---This needs to be tested, I dont know of any debuffs that can be removed.
+---Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they exist.
+---@param unit string
+---@param buffIndex number
+---@return nil
+function X2Unit:UnitRemovableDebuffTooltip(unit, buffIndex) end

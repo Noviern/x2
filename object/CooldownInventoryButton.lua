@@ -19,3 +19,10 @@ UI_BUTTON_HIGHLIGHTED = 1 -- object/CooldownInventoryButton
 UI_BUTTON_MAX = 4 -- object/CooldownInventoryButton
 UI_BUTTON_NORMAL = 0 -- object/CooldownInventoryButton
 UI_BUTTON_PUSHED = 2 -- object/CooldownInventoryButton
+
+---object/CooldownInventoryButton
+---@class CooldownInventoryButton: CooldownButton
+---@field SetBagItemSlot fun(self: self, itemSlot)
+---@field SetBankItemSlot fun(self: self, itemSlot)
+---@field SetCofferItemSlot fun(self: self, itemSlot: number)
+---@field SetGuildBankItemSlot fun(self: self, itemSlot)

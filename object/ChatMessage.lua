@@ -14,3 +14,14 @@ CT_EXPEDITION_NAME = 3 -- object/ChatMessage
 CT_NAME = 1 -- object/ChatMessage
 DC_ALWAYS = 0 -- object/ChatMessage
 DC_SHIFT_KEY_DOWN = 1 -- object/ChatMessage
+
+---object/ChatMessage
+---@class ChatMessage
+---@field BackupString fun(self: self, name)
+---@field CleanupBackupString fun(self: self)
+---@field GetDownButton fun(self: self)
+---@field GetDownToBottomButton fun(self: self)
+---@field GetSlider fun(self: self)
+---@field GetUpButton fun(self: self)
+---@field MouseWheelDown fun(self: self, value)
+---@field MouseWheelUp fun(self: self, value)

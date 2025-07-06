@@ -14,3 +14,6 @@ CT_EXPEDITION_NAME = 3 -- object/X2Editbox
 CT_NAME = 1 -- object/X2Editbox
 DC_ALWAYS = 0 -- object/X2Editbox
 DC_SHIFT_KEY_DOWN = 1 -- object/X2Editbox
+
+---object/X2Editbox
+---@class X2EditBox: Editbox

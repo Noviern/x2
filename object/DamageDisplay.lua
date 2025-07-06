@@ -22,3 +22,16 @@ LAT_NONE = 0 -- object/DamageDisplay
 LAT_SHAKE = 8 -- object/DamageDisplay
 PCT_DEFAULT = 0 -- object/DamageDisplay
 PCT_SHIP_COLLISION = 1 -- object/DamageDisplay
+
+---object/DamageDisplay
+---@class DamageDisplay: Widget
+---@field extraStyle TextStyle
+---@field style TextStyle
+---@field Animation fun(self: self, anim: boolean)
+---@field GetActualDrawn fun(self: self)
+---@field GetInset fun(self: self)
+---@field SetAnimFrameInfo fun(self: self, frameInfo: table)
+---@field SetInitPos fun(self: self, x, y)
+---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
+---@field SetPositionCalculationType fun(self: self, positionCalculationType: number)
+---@field SetUnitId fun(self: self, sourceId: string, targetId)

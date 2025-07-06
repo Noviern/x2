@@ -41,6 +41,14 @@ SPECIAL_ACTIVE_SKILL = 170 -- api/X2Ability
 SPECIAL_PASSIVE_SKILL = 190 -- api/X2Ability
 X2Ability = {} -- api/X2Ability
 
+---Returns a collection of the player's [ActabilityInfo](lua://ActabilityInfo).
+---@return ActabilityInfo[] [ActabilityInfo](lua://ActabilityInfo)
 function X2Ability:GetAllMyActabilityInfos() end
 
-function X2Ability:GetBuffTooltip() end
+---TODO:
+---Returns `neededInfo` of [AppellationBuffInfo](lua://AppellationBuffInfo) for `buffType` `itemLevel`.
+---@param buffType number
+---@param itemLevel number
+---@param neededInfo? BIK (optional) [BIK](lua://BIK)
+---@return AppellationBuffInfo [AppellationBuffInfo](lua://AppellationBuffInfo)
+function X2Ability:GetBuffTooltip(buffType, itemLevel, neededInfo) end

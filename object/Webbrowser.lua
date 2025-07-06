@@ -14,3 +14,38 @@ CT_EXPEDITION_NAME = 3 -- object/Webbrowser
 CT_NAME = 1 -- object/Webbrowser
 DC_ALWAYS = 0 -- object/Webbrowser
 DC_SHIFT_KEY_DOWN = 1 -- object/Webbrowser
+
+---object/Webbrowser
+---@class Webbrowser: Widget
+---@field ClearFocus fun(self: self)
+---@field GetURL fun(self: self)
+---@field LoadBlankPage fun(self: self)
+---@field MouseDown fun(self: self, button: string)
+---@field MouseMove fun(self: self)
+---@field MouseUp fun(self: self, button)
+---@field RequestExpeditionBBS fun(self: self)
+---@field RequestExpeditionHome fun(self: self)
+---@field RequestExternalPage fun(self: self, url: string)
+---@field RequestHelp fun(self: self)
+---@field RequestMessenger fun(self: self)
+---@field RequestMessengerByPcName fun(self: self, pcName: string)
+---@field RequestMessengerOnTarget fun(self: self)
+---@field RequestPlayDiary fun(self: self)
+---@field RequestPlayDiaryByPcName fun(self: self, pcName)
+---@field RequestPlayDiaryInstant fun(self: self, fileName: string)
+---@field RequestPlayDiaryOnTarget fun(self: self)
+---@field RequestSensitiveOperationVerify fun(self: self, url: string)
+---@field RequestTest fun(self: self, testUrl) -- Does not exist.
+---@field RequestTGOS fun(self: self, arg)
+---@field RequestWiki fun(self: self)
+---@field SetDefaultDrawable fun(self: self, drawable: table)
+---@field SetEscEvent fun(self: self, has)
+---@field SetExtent fun(self: self, width: number, height)
+---@field SetFocus fun(self: self)
+---@field SetLoadingDrawable fun(self: self, drawable)
+---@field SetMsgToParent fun(self: self, toParent: boolean)
+---@field SetUiLayer fun(self: self, layer: string)
+---@field SetURL fun(self: self, url)
+---@field SetZoomLevel fun(self: self, level)
+---@field WheelDown fun(self: self)
+---@field WheelUp fun(self: self)

@@ -14,3 +14,6 @@ CT_EXPEDITION_NAME = 3 -- object/MegaphoneChatEdit
 CT_NAME = 1 -- object/MegaphoneChatEdit
 DC_ALWAYS = 0 -- object/MegaphoneChatEdit
 DC_SHIFT_KEY_DOWN = 1 -- object/MegaphoneChatEdit
+
+---object/MegaphoneChatEdit
+---@class MegaphoneChatEdit: Editbox, ChatEdit

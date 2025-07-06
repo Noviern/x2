@@ -1,3 +1,1 @@
 ---@meta _
-
- -- object/TextureDrawable

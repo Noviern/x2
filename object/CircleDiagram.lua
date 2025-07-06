@@ -14,3 +14,15 @@ CT_EXPEDITION_NAME = 3 -- object/CircleDiagram
 CT_NAME = 1 -- object/CircleDiagram
 DC_ALWAYS = 0 -- object/CircleDiagram
 DC_SHIFT_KEY_DOWN = 1 -- object/CircleDiagram
+
+---object/CircleDiagram
+---@class CircleDiagram: Widget
+---@field AddPoint fun(self: self, offX: number, offY: number)
+---@field AddPointsByAngle fun(self: self, pointNum: number)
+---@field ClearPoints fun(self: self)
+---@field GetCenterOffset fun(self: self)
+---@field GetPointOffset fun(self: self, index: number)
+---@field SetDiagramColor fun(self: self, r: number, g: number, b: number, a: number)
+---@field SetLineThickness fun(self: self, thickness: number)
+---@field SetMaxValue fun(self: self, maxValue: number)
+---@field SetPointValue fun(self: self, index, value)

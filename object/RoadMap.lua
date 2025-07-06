@@ -15,3 +15,10 @@ CT_NAME = 1 -- object/RoadMap
 DC_ALWAYS = 0 -- object/RoadMap
 DC_SHIFT_KEY_DOWN = 1 -- object/RoadMap
 MAX_SKILL_MAP_EFFECT_COUNT = 6 -- object/RoadMap
+
+---object/RoadMap
+---@class RoadMap: Widget, Map
+---@field IsPingMode fun(self: self)
+---@field SetMapSize fun(self: self, radioValue)
+---@field SetRoadMapNpc fun(self: self, isShow: boolean)
+---@field ShowLeaderPing fun(self: self, isShow: boolean)

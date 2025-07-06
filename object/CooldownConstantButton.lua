@@ -19,3 +19,9 @@ UI_BUTTON_HIGHLIGHTED = 1 -- object/CooldownConstantButton
 UI_BUTTON_MAX = 4 -- object/CooldownConstantButton
 UI_BUTTON_NORMAL = 0 -- object/CooldownConstantButton
 UI_BUTTON_PUSHED = 2 -- object/CooldownConstantButton
+
+---object/CooldownConstantButton
+---@class CooldownConstantButton: CooldownButton
+---@field SetItem fun(self: self, itemType: number)
+---@field SetItemSlot fun(self: self, itemSlot: number, slotType)
+---@field SetSkill fun(self: self, skillType: number)

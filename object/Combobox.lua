@@ -14,3 +14,25 @@ CT_EXPEDITION_NAME = 3 -- object/Combobox
 CT_NAME = 1 -- object/Combobox
 DC_ALWAYS = 0 -- object/Combobox
 DC_SHIFT_KEY_DOWN = 1 -- object/Combobox
+
+---object/Combobox
+---@class Combobox: Widget
+---@field dropdown ComboboxDropDown
+---@field selector X2EditBox
+---@field selectorBtn Button
+---@field toggle Button
+---@field Insert fun(self: self, datas)
+---@field PauseAutocomplete fun(self: self, pause: boolean)
+---@field SetAutocomplete fun(self: self, type: string, filter)
+---@field SetDropdownVisibleLimit fun(self: self, limit: number)
+---@field SetEditable fun(self: self, editable: boolean)
+
+---object/Combobox
+---@class ComboboxDropDown: Listbox
+---@field downBtn Button
+---@field upBtn Button
+---@field vslider Vslider
+
+---object/Combobox
+---@class Vslider: Slider
+---@field thumb Button

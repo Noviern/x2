@@ -14,3 +14,32 @@ CT_EXPEDITION_NAME = 3 -- object/Editbox
 CT_NAME = 1 -- object/Editbox
 DC_ALWAYS = 0 -- object/Editbox
 DC_SHIFT_KEY_DOWN = 1 -- object/Editbox
+
+---object/Editbox
+---@class Editbox: Widget, Editboxbase
+---@field guideTextstyle TextStyle
+---@field prefixStyle TextStyle
+---@field style TextStyle
+---@field AddHistoryLine fun(self: self, text: string)
+---@field CheckNamePolicy fun(self: self, nameType: number)
+---@field ClearFocus fun(self: self)
+---@field ClearString fun(self: self)
+---@field GetText fun(self: self)
+---@field IsDigit fun(self: self)
+---@field IsNowComposition fun(self: self)
+---@field IsPassword fun(self: self)
+---@field SetDigit fun(self: self, digit: boolean)
+---@field SetDigitEmpty fun(self: self, empty)
+---@field SetDigitMax fun(self: self, max)
+---@field SetEnglish fun(self: self, english)
+---@field SetFocus fun(self: self)
+---@field SetHistoryLines fun(self: self, count)
+---@field SetInitVal fun(self: self, val)
+---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
+---@field SetPassword fun(self: self, password)
+---@field SetPossibleFirstZero fun(self: self, possibleFirstZero)
+---@field SetPrefixInset fun(self: self, left: number, top: number, right: number, bottom: number)
+---@field SetPrefixText fun(self: self, prefixText: string)
+---@field SetReClickable fun(self: self, click)
+---@field SetText fun(self: self, text)
+---@field UseSelectAllWhenFocused fun(self: self, use: boolean)

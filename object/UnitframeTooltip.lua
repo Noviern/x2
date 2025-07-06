@@ -27,3 +27,6 @@ UFT_PERIOD_LEADERSHIP = "|p13;" -- object/UnitframeTooltip
 UFT_PERMP = "|p7;" -- object/UnitframeTooltip
 UFT_PVPHONOR = "|p10;" -- object/UnitframeTooltip
 UFT_PVPKILL = "|p11;" -- object/UnitframeTooltip
+
+---object/UnitframeTooltip
+---@class UnitframeTooltip: GameTooltip

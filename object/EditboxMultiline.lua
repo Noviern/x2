@@ -14,3 +14,17 @@ CT_EXPEDITION_NAME = 3 -- object/EditboxMultiline
 CT_NAME = 1 -- object/EditboxMultiline
 DC_ALWAYS = 0 -- object/EditboxMultiline
 DC_SHIFT_KEY_DOWN = 1 -- object/EditboxMultiline
+
+---object/EditboxMultiline
+---@class EditboxMultiline: Widget, Editboxbase
+---@field style TextStyle
+---@field Clear fun(self: self)
+---@field GetCursorPosX fun(self: self)
+---@field GetCursorPosY fun(self: self)
+---@field GetLineCount fun(self: self)
+---@field GetLineHeight fun(self: self)
+---@field GetText fun(self: self)
+---@field GetTextHeight fun(self: self)
+---@field GetTextLength fun(self: self)
+---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
+---@field SetLineSpace fun(self: self, space: number)

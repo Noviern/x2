@@ -1,8 +1,8 @@
 ---Dumps a table.
 ---@param tbl table
----@param depth number
----@param seen table
----@param path string
+---@param depth? number
+---@param seen? table
+---@param path? string
 ---@return string var_lines
 ---@return string func_lines
 ---@nodiscard
@@ -44,7 +44,6 @@ function dump(tbl, depth, seen, path)
             local sub_vars, sub_funcs = dump(v, new_depth, seen, new_path)
 
             if sub_vars ~= "" then
-              sub_vars = string.gsub(sub_vars, "\n", ",\n")
               val = string.format("{\n%s,\n%s}", sub_vars, indent)
             end
 
@@ -70,7 +69,14 @@ function dump(tbl, depth, seen, path)
   table.sort(vars)
   table.sort(funcs)
 
-  local var_lines = table.concat(vars, "\n")
+  local var_lines
+
+  if path ~= "" then
+    var_lines = table.concat(vars, ",\n")
+  else
+    var_lines = table.concat(vars, "\n")
+  end
+
   local func_lines = table.concat(funcs, "\n\n")
 
   return var_lines, func_lines

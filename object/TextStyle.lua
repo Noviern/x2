@@ -11,3 +11,17 @@ ALIGN_TOP_LEFT = 0 -- object/TextStyle
 ALIGN_TOP_RIGHT = 2 -- object/TextStyle
 FTK_GENERAL = 0 -- object/TextStyle
 FTK_IMAGETEXT = 2 -- object/TextStyle
+
+---object/TextStyle
+---@class TextStyle: Uiobject
+---@field GetLineHeight fun(self: self)
+---@field GetTextWidth fun(self: self, text)
+---@field SetAlign fun(self: self, align)
+---@field SetColor fun(self: self, r: number, g: number, b: number, a: number)
+---@field SetColorByKey fun(self: self, key)
+---@field SetEllipsis fun(self: self, ellipsis)
+---@field SetFont fun(self: self, fontPath, fontSize)
+---@field SetFontSize fun(self: self, size)
+---@field SetOutline fun(self: self, outline)
+---@field SetShadow fun(self: self, shadow)
+---@field SetSnap fun(self: self, snap)

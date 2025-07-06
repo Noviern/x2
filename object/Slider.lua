@@ -14,3 +14,23 @@ CT_EXPEDITION_NAME = 3 -- object/Slider
 CT_NAME = 1 -- object/Slider
 DC_ALWAYS = 0 -- object/Slider
 DC_SHIFT_KEY_DOWN = 1 -- object/Slider
+
+---object/Slider
+---@class Slider: Widget
+---@field Down fun(self: self, step)
+---@field GetMinMaxValues fun(self: self)
+---@field GetOrientation fun(self: self)
+---@field GetThumbButtonWidget fun(self: self)
+---@field GetThumbDrawable fun(self: self)
+---@field GetValue fun(self: self)
+---@field GetValueStep fun(self: self)
+---@field SetFixedThumb fun(self: self, bool: boolean)
+---@field SetInset fun(self: self, inset)
+---@field SetMinMaxValues fun(self: self, min: number, max)
+---@field SetMinThumbLength fun(self: self, length: number)
+---@field SetOrientation fun(self: self, scrollType: number)
+---@field SetPageStep fun(self: self, pageStep: number)
+---@field SetThumbButtonWidget fun(self: self, buttonWidget)
+---@field SetValue fun(self: self, value: number, triggerEvent)
+---@field SetValueStep fun(self: self, value: number)
+---@field Up fun(self: self, step)

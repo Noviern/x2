@@ -19,3 +19,10 @@ UI_BUTTON_HIGHLIGHTED = 1 -- object/CooldownButton
 UI_BUTTON_MAX = 4 -- object/CooldownButton
 UI_BUTTON_NORMAL = 0 -- object/CooldownButton
 UI_BUTTON_PUSHED = 2 -- object/CooldownButton
+
+---TODO: Should cooldown be moved to type/ since its used by cooldownconstantbutton and cooldowninventorybutton?
+
+-- object/CooldownButton
+---@class CooldownButton: Button
+---@field SetCoolDown fun(self: self, remainTime: number, totalTime)
+---@field SetCoolDownMask fun(self: self, textureName: string, textureKey, colorKey)

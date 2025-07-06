@@ -24,12 +24,26 @@ QUEST_MARK_ORDER_SAGA = 2 -- api/X2Quest
 QUEST_MARK_ORDER_WEEKLY = 4 -- api/X2Quest
 X2Quest = {} -- api/X2Quest
 
+---Returns `activeQuestListCount` for the count of all active quests, including completed ones.
+---@return number activeQuestListCount
 function X2Quest:GetActiveQuestListCount() end
 
-function X2Quest:GetActiveQuestType() end
+---Returns `activeQuestType` for active quest index `idx`.
+---@param idx number Active quest index, not to be confused with a quest id.
+---@return number activeQuestType quest id
+function X2Quest:GetActiveQuestType(idx) end
 
-function X2Quest:GetQuestContextMainTitle() end
+---Returns `questContextMainTitle` for the quest `type`.
+---@param type number quest id
+---@return string questContextMainTitle
+function X2Quest:GetQuestContextMainTitle(type) end
 
-function X2Quest:IsCompleted() end
+---Returns a boolean indicating if the quest `type` is completed. 
+---@param type number quest id
+---@return boolean isCompleted
+function X2Quest:IsCompleted(type) end
 
-function X2Quest:SetTrackingActiveQuest() end
+---TODO:
+---Broken? Ive tried both the active quest idx and the quest id.
+---@param idx any
+function X2Quest:SetTrackingActiveQuest(idx) end

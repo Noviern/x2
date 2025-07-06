@@ -1,3 +1,6 @@
 # Rename this to toc.g to enable this addon.
 dump.lua
+
+# Only one of these should be active at a time.
 dump_globals.lua
+# dump_objects.lua

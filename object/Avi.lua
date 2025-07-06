@@ -14,3 +14,8 @@ CT_EXPEDITION_NAME = 3 -- object/Avi
 CT_NAME = 1 -- object/Avi
 DC_ALWAYS = 0 -- object/Avi
 DC_SHIFT_KEY_DOWN = 1 -- object/Avi
+
+---object/Avi
+---@class Avi: Widget
+---@field SetAviName fun(self: self, fileName: string)
+---@field SetAviNum fun(self: self, depth: number, avitype)

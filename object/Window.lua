@@ -14,3 +14,13 @@ CT_EXPEDITION_NAME = 3 -- object/Window
 CT_NAME = 1 -- object/Window
 DC_ALWAYS = 0 -- object/Window
 DC_SHIFT_KEY_DOWN = 1 -- object/Window
+
+---object/Window
+---@class Window: Widget
+---@field modalBackgroundWindow EmptyWidget
+---@field titleStyle TextStyle
+---@field SetCloseOnEscape fun(self: self, escape: boolean)
+---@field SetTitleInset fun(self: self, left: number, top: number, right: number, bottom: number)
+---@field SetTitleText fun(self: self, title)
+---@field SetUILayer fun(self: self, layerName)
+---@field SetWindowModal fun(self: self, enable: boolean)

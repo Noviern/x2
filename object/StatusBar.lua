@@ -14,3 +14,23 @@ CT_EXPEDITION_NAME = 3 -- object/StatusBar
 CT_NAME = 1 -- object/StatusBar
 DC_ALWAYS = 0 -- object/StatusBar
 DC_SHIFT_KEY_DOWN = 1 -- object/StatusBar
+
+---object/StatusBar
+---@class StatusBar: Widget
+---@field AddAnchorChildToBar fun(self: self, anchorChild: table, childAnchorPoint)
+---@field GetBarColor fun(self: self)
+---@field GetLeftWidth fun(self: self, value)
+---@field GetMinMaxValues fun(self: self)
+---@field GetOrientation fun(self: self)
+---@field GetValue fun(self: self)
+---@field IsChangeAfterImageColor fun(self: self, value: string)
+---@field SetBarColor fun(self: self, r: number, g: number, b: number, a: number)
+---@field SetBarColorByKey fun(self: self, colorKey: string)
+---@field SetBarTexture fun(self: self, nameTex: string, nameLayer)
+---@field SetBarTextureByKey fun(self: self, key: string)
+---@field SetBarTextureCoords fun(self: self, coordX, coordY, coordW, coordH)
+---@field SetMinMaxValues fun(self: self, min: number, max)
+---@field SetMinMaxValuesForString fun(self: self, min, max)
+---@field SetOrientation fun(self: self, orientation: string)
+---@field SetValue fun(self: self, value)
+---@field SetValueForString fun(self: self, value: string)

@@ -14,3 +14,9 @@ CT_EXPEDITION_NAME = 3 -- object/ColorPicker
 CT_NAME = 1 -- object/ColorPicker
 DC_ALWAYS = 0 -- object/ColorPicker
 DC_SHIFT_KEY_DOWN = 1 -- object/ColorPicker
+
+---object/ColorPicker
+---@class ColorPicker: Widget
+---@field GetColor fun(self: self, xPos, yPos)
+---@field GetPoint fun(self: self, colorR: number, colorG: number, colorB: number)
+---@field SetPaletteImage fun(self: self, imageName: string)

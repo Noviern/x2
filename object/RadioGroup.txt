@@ -1,0 +1,14 @@
+AP_BOTTOM = 8 -- object/RadioGroup
+AP_BOTTOMLEFT = 2 -- object/RadioGroup
+AP_BOTTOMRIGHT = 3 -- object/RadioGroup
+AP_CENTER = 4 -- object/RadioGroup
+AP_LEFT = 6 -- object/RadioGroup
+AP_RIGHT = 7 -- object/RadioGroup
+AP_TOP = 5 -- object/RadioGroup
+AP_TOPLEFT = 0 -- object/RadioGroup
+AP_TOPRIGHT = 1 -- object/RadioGroup
+CT_ABILITY = 2 -- object/RadioGroup
+CT_EXPEDITION_NAME = 3 -- object/RadioGroup
+CT_NAME = 1 -- object/RadioGroup
+DC_ALWAYS = 0 -- object/RadioGroup
+DC_SHIFT_KEY_DOWN = 1 -- object/RadioGroup

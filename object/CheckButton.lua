@@ -19,3 +19,11 @@ UI_BUTTON_HIGHLIGHTED = 1 -- object/CheckButton
 UI_BUTTON_MAX = 4 -- object/CheckButton
 UI_BUTTON_NORMAL = 0 -- object/CheckButton
 UI_BUTTON_PUSHED = 2 -- object/CheckButton
+
+---object/CheckButton
+---@class Checkbutton: Button, Widget
+---@field style TextStyle
+---@field GetChecked fun(self: self)
+---@field SetChecked fun(self: self, state: boolean)
+---@field SetCheckedBackground fun(self: self, checkedTable)
+---@field SetDisabledCheckedBackground fun(self: self, disabledCheckedTable: table)
