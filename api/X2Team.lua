@@ -18,6 +18,14 @@ TMROLE_RANGED_DEALER = 4 -- api/X2Team
 TMROLE_TANKER = 1 -- api/X2Team
 X2Team = {} -- api/X2Team
 
+---api/X2Team
+---@alias TEAM_ROLE
+---| `TMROLE_DEALER`
+---| `TMROLE_HEALER`
+---| `TMROLE_NONE`
+---| `TMROLE_RANGED_DEALER`
+---| `TMROLE_TANKER`
+
 ---Returns the `role` of the `memberIndex` in `teamIndex`.
 ---@param teamIndex number
 ---@param memberIndex number

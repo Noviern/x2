@@ -35,6 +35,70 @@ RACE_RETURNED = 7 -- api/X2Unit
 RACE_WARBORN = 8 -- api/X2Unit
 X2Unit = {} -- api/X2Unit
 
+---api/X2Unit
+---```
+---TargetAbilityTemplate { level = 55, name = "wild", index = 6 }
+---```
+---@class TargetAbilityTemplate
+---@field level number
+---@field name string
+---@field index number
+
+---api/X2Unit
+---@class UnitClass
+---@field [1] number
+---@field [2] number
+---@field [3] number
+
+---api/X2Unit
+---@class UnitInfo
+---@field expeditionName string
+---@field type string
+---@field class UnitClass
+---@field hp string
+---@field name string
+---@field faction string
+---@field family_name string
+---@field level number
+---@field heirLevel number
+---@field maxHp string
+
+---api/X2Unit
+---```
+---BuffInfo { stack = 1, path = "", timeLeft = 0, buff_id = 0 }
+---```
+---@class BuffInfo
+---@field stack number
+---@field path string
+---@field timeLeft? number
+---@field buff_id number
+
+---api/X2Unit
+---@class BuffTooltip: BuffInfo
+---@field description string
+---@field tipType string
+---@field mine boolean
+---@field name string
+---@field category string
+---@field timeUnit? string
+---@field duration number
+
+---api/X2Unit
+---@class CastingInfo
+---@field currCastingTime number
+---@field castingTime number
+---@field castingUseable boolean
+---@field showTargetCastingTime boolean
+---@field spellName string
+
+---api/X2Unit
+---```
+---UnitDistance { over_distance = false, distance = 1 }
+---```
+---@class UnitDistance
+---@field over_distance boolean
+---@field distance number
+
 ---Returns the `currentZoneGroup`.
 ---@return number currentZoneGroup
 function X2Unit:GetCurrentZoneGroup() end
@@ -139,7 +203,7 @@ function X2Unit:UnitHealthInfo(unit) end
 ---Returns [BuffInfo](lua://BuffInfo) for the `buffIndex` of `unit`if it exists, otherwise returns an empty table.
 ---@param unit string
 ---@param buffIndex number
----@return BuffInfo
+---@return BuffInfo [BuffInfo](lua://BuffInfo)
 function X2Unit:UnitHiddenBuff(unit, buffIndex) end
 
 ---Returns `unitHiddenBuffCount` if `unit` is within render range, otherwise returns 0. 

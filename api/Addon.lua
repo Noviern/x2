@@ -351,6 +351,462 @@ X2 = ADDON -- api/Addon
 ZST_CONQUEST_WAR = 1 -- api/Addon
 ZST_INVALID = 0 -- api/Addon
 
+---api/Addon
+---@class GearScoreItemInfo
+---@field total number
+---@field equipSlotReinforce number
+---@field bare number
+
+---api/Addon
+---@class SocketInfo
+---@field maxSocket number
+---@field socketItem number[]
+
+---api/Addon
+---@class EvolvingInfoModifier
+---@field value number
+---@field type number
+---@field gsNum number
+
+---api/Addon
+---@class EvolvingInfo
+---@field minExp number
+---@field evolveChance number
+---@field minSectionExp number
+---@field percent number
+---@field modifier EvolvingInfoModifier[]
+
+---api/Addon
+---@class ModifireTable
+---@field value number
+---@field type number
+---@field name string
+
+---api/Addon
+---@class BonusesInfo
+---@field bufDesc string
+---@field satisfied boolean
+---@field numPieces number
+
+---api/Addon
+---@class EquipSetInfo
+---@field equipSetItemInfoDesc string
+---@field bonuses BonusesInfo[]
+
+---api/Addon
+---@class SetItemsInfo
+---@field item_name string
+---@field equipped boolean
+---@field item_type number
+
+---api/Addon
+---@class RechargeBuffInfo
+---@field chargeLifetime Time
+---@field remainTime Time
+
+---api/Addon
+---@class RequiredConditionInfo
+---@field equipSlotTypes string[]
+
+---api/Addon
+---
+---This may not be complete.
+---@class ItemInfo
+---@field useAsSkin boolean
+---@field description string
+---@field cost number
+---@field soul_bind string
+---@field level number
+---@field isMaterial boolean
+---@field level_limit number
+---@field itemType number
+---@field gender string
+---@field grade string
+---@field sideEffect boolean
+---@field isEnchantDisable boolean
+---@field lookChanged boolean
+---@field name string
+---@field securityState number
+---@field maxStack number
+---@field contributionPointPrice number
+---@field convertibleItem boolean
+---@field dead boolean
+---@field needsUnpack boolean
+---@field isUnderWaterCreature boolean
+---@field indestructible boolean
+---@field craftedWorldName string
+---@field isMyWorld boolean
+---@field crafter string
+---@field itemUsage string
+---@field icon string
+---@field soul_bind_type number
+---@field soul_bound number
+---@field locked boolean
+---@field livingPointPrice number
+---@field stack number
+---@field processedState string
+---@field craftType number
+---@field gradeIcon string
+---@field auction_only boolean
+---@field gradeEnchantable boolean
+---@field level_requirement number
+---@field itemGrade number
+---@field isPetOnly boolean
+---@field lookType number
+---@field useConsumeItem boolean
+---@field honorPrice number
+---@field skillType number
+---@field category string
+---@field refund number
+---@field item_flag_cannot_equip boolean
+---@field item_impl string
+---@field gradeColor string
+---@field isStackable boolean
+---@field sellable boolean
+---@field maxDurability number
+---@field maxDamage number
+---@field slotTypeNum number
+---@field repairable number
+---@field armorType string
+---@field equiped boolean
+---@field scalable boolean
+---@field buffType number
+---@field element string
+---@field durability number
+---@field armor number
+---@field magicResistance number
+---@field extraArmor number
+---@field useAsStat boolean
+---@field slotType string
+---@field overIcon string
+---@field lifeSpan number
+---@field lifeSpanType string
+---@field lifeSpanDayOfWeek boolean
+---@field backpackType number
+---@field moveSpeed number
+---@field location_zone_name string
+---@field location_world_name string
+---@field gearScore GearScoreItemInfo
+---@field checkUnitReq boolean
+---@field uccTooltip string
+---@field socketInfo SocketInfo
+---@field gemInfo number
+---@field magicDps number
+---@field minDamage number
+---@field baseEquipment boolean
+---@field elementName string
+---@field healDps number
+---@field attackDelay number
+---@field DPS number
+---@field extraDPS number
+---@field evolvingInfo EvolvingInfo
+---@field evolvingCategory boolean
+---@field canEvolve boolean
+---@field gemModifireTable ModifireTable[]
+---@field modifier ModifireTable[]
+---@field equipSetInfo EquipSetInfo
+---@field wear boolean
+---@field maxSetItemCount number
+---@field equippedSetItemCount number
+---@field setItems SetItemsInfo[]
+---@field rechargeBuff RechargeBuffInfo
+---@field requiredCondition RequiredConditionInfo
+
+---api/Addon
+---```
+---AppellationBuffInfo { path = "", description = "", category = "", tipType = "", buff_id = 0, name = "" }
+---```
+---@class AppellationBuffInfo
+---@field path string
+---@field description string
+---@field category string
+---@field tipType string
+---@field buff_id number
+---@field name string
+
+---api/Addon
+---UICategory id.
+---@alias UIC
+---| `UIC_ABILITY_CHANGE`
+---| `UIC_ACHIEVEMENT`
+---| `UIC_ACTABILITY`
+---| `UIC_ADDON`
+---| `UIC_APPELLATION`
+---| `UIC_AUCTION`
+---| `UIC_AUTH_MSG_WND`
+---| `UIC_BAG`
+---| `UIC_BANK`
+---| `UIC_BEAUTY_SHOP`
+---| `UIC_BLESS_UTHSTIN`
+---| `UIC_BUTLER_INFO`
+---| `UIC_CHALLENGE`
+---| `UIC_CHANGE_VISUAL_RACE`
+---| `UIC_CHARACTER_INFO`
+---| `UIC_CHARACTER_INFO_VISUAL_RACE`
+---| `UIC_CHECK_BOT_WND`
+---| `UIC_CHECK_SECOND_PASSWORD`
+---| `UIC_CHRONICLE_BOOK_WND`
+---| `UIC_CLEAR_SECOND_PASSWORD`
+---| `UIC_CLIENT_DIRVEN_CONTENTS`
+---| `UIC_CLIENT_DIRVEN_TITLE`
+---| `UIC_CLIENT_DRIVEN_EXIT_BTN`
+---| `UIC_COFFER`
+---| `UIC_COMMERCIAL_MAIL`
+---| `UIC_COMMUNITY`
+---| `UIC_CRAFT_BOOK`
+---| `UIC_CRAFT_ORDER`
+---| `UIC_CREATE_EXPEDITION`
+---| `UIC_DEATH_AND_RESURRECTION_WND`
+---| `UIC_DEV_WINDOW`
+---| `UIC_DROPDOWN_LIST`
+---| `UIC_DYNAMIC_ACTIONBAR`
+---| `UIC_ENCHANT`
+---| `UIC_ENTER_SECOND_PASSWORD`
+---| `UIC_EQUIP_SLOT_REINFORCE`
+---| `UIC_EQUIP_SLOT_REINFORCE_TAB`
+---| `UIC_EVENT_CENTER`
+---| `UIC_EXIT_GAME`
+---| `UIC_EXPAND_INVENTORY`
+---| `UIC_EXPAND_JOB`
+---| `UIC_EXPEDITION`
+---| `UIC_EXPEDITION_GUILD_FUNCTION_CHANGE_BUFF`
+---| `UIC_FAMILY`
+---| `UIC_FOLLOW`
+---| `UIC_FORCE_ATTACK`
+---| `UIC_FRIEND`
+---| `UIC_GAME_EXIT_FRAME`
+---| `UIC_GAME_TOOLTIP_WND`
+---| `UIC_GUILD_BANK`
+---| `UIC_HERO`
+---| `UIC_HERO_ELECTION`
+---| `UIC_HIDDEN_QUEST`
+---| `UIC_INGAME_SHOP`
+---| `UIC_INTERACT_SECOND_PASSWORD`
+---| `UIC_ITEM_GUIDE`
+---| `UIC_ITEM_LOCK`
+---| `UIC_ITEM_REPAIR`
+---| `UIC_LOCAL_DEVELOPMENT_BOARD`
+---| `UIC_LOOK_CONVERT`
+---| `UIC_LOOT_GACHA`
+---| `UIC_MAIL`
+---| `UIC_MAIN_ACTION_BAR`
+---| `UIC_MAKE_CRAFT_ORDER`
+---| `UIC_MARKET_PRICE`
+---| `UIC_MEGAPHONE`
+---| `UIC_MODE_ACTIONBAR`
+---| `UIC_MY_FARM_INFO`
+---| `UIC_NATION`
+---| `UIC_NOTIFY_ACTABILITY`
+---| `UIC_NOTIFY_SKILL`
+---| `UIC_OPTIMIZATION`
+---| `UIC_OPTION_FRAME`
+---| `UIC_PARTY`
+---| `UIC_PLAYER_EQUIPMENT`
+---| `UIC_PLAYER_UNITFRAME`
+---| `UIC_PREMIUM`
+---| `UIC_QUEST_CINEMA_FADE_WND`
+---| `UIC_QUEST_CINEMA_WND`
+---| `UIC_QUEST_LIST`
+---| `UIC_QUEST_NOTIFIER`
+---| `UIC_RAID`
+---| `UIC_RAID_RECRUIT`
+---| `UIC_RAID_TEAM_MANAGER`
+---| `UIC_RANK`
+---| `UIC_RANK_LOCAL_VIEW`
+---| `UIC_RECOVER_EXP`
+---| `UIC_RENAME_EXPEDITION`
+---| `UIC_REPORT_BAD_USER`
+---| `UIC_REQUEST_BATTLEFIELD`
+---| `UIC_RESIDENT_TOWNHALL`
+---| `UIC_RETURN_ACCOUNT_REWARD_WND`
+---| `UIC_ROSTER_MANAGER_WND`
+---| `UIC_SCHEDULE_ITEM`
+---| `UIC_SELECT_CHARACTER`
+---| `UIC_SET_SECOND_PASSWORD`
+---| `UIC_SHORTCUT_ACTIONBAR`
+---| `UIC_SIEGE_RAID_REGISTER_WND`
+---| `UIC_SIEGE_RAID_TEAM_MEMBER_LIST_WND`
+---| `UIC_SKILL`
+---| `UIC_SLAVE_EQUIPMENT`
+---| `UIC_SPECIALTY_BUY`
+---| `UIC_SPECIALTY_INFO`
+---| `UIC_SPECIALTY_SELL`
+---| `UIC_SQUAD`
+---| `UIC_SQUAD_MINIVIEW`
+---| `UIC_STABLER`
+---| `UIC_STORE`
+---| `UIC_SYSTEM_CONFIG_FRAME`
+---| `UIC_TARGET_EQUIPMENT`
+---| `UIC_TARGET_UNITFRAME`
+---| `UIC_TGOS`
+---| `UIC_TRADE`
+---| `UIC_TRADER`
+---| `UIC_TRADE_GOOD_PRICE_INFORMATION`
+---| `UIC_UI_AVI`
+---| `UIC_WEB_HELP`
+---| `UIC_WEB_MESSENGER`
+---| `UIC_WEB_PLAY_DIARY`
+---| `UIC_WEB_PLAY_DIARY_INSTANCE`
+---| `UIC_WEB_WIKI`
+---| `UIC_WHISPER`
+---| `UIC_WORLDMAP`
+
+---api/Addon
+---```
+---EscMenuButtonData { path = "addon/manager/manager_icon.dds", x = 75, y = 0, w = 15, h = 15 }
+---```
+---@class EscMenuButtonData
+---@field path string
+---@field x? number
+---@field y? number
+---@field w number 25
+---@field h number 25
+
+---api/Addon
+---```
+---AddonInfo { name = "testing", enabled = true }
+---```
+---@class AddonInfo
+---@field name string
+---@field enabled boolean
+
+---api/Addon
+---
+---RGBA color with values restricted between 0 to 1.
+---```
+---RGBAColor { r: number, g: number, b: number, a: number }
+---```
+---@class RGBAColor : number[]
+---@field [1] number Red (0 to 1)
+---@field [2] number Green (0 to 1)
+---@field [3] number Blue (0 to 1)
+---@field [4] number Alpha (0 to 1)
+
+---api/Addon
+---```
+---Time { year = 0, month = 0, day = 0, hour = 0, minute = 0, second = 0 }
+---```
+---@class Time
+---@field year number
+---@field month number
+---@field day number
+---@field hour number
+---@field minute number
+---@field second number
+
+---api/Addon
+---```
+---TextureColors { [string]: RGBAColor }
+---```
+---@class TextureColors
+---@field [string] RGBAColor
+
+---api/Addon
+---```
+---TextureColorKey { r, g, b }
+---```
+---@class TextureColorKey
+---@field [1] number Red (0 to 1)
+---@field [2] number Green (0 to 1)
+---@field [3] number Blue (0 to 1)
+
+---api/Addon
+---```
+---TextureCoords { x, y, width, height }
+---```
+---@class TextureCoords
+---@field [1] number x
+---@field [2] number y
+---@field [3] number width
+---@field [4] number height
+
+---api/Addon
+---@class TextureInset
+---@field [1] number leftPadding
+---@field [2] number topPadding
+---@field [3] number rightPadding
+---@field [4] number bottomPadding
+
+---api/Addon
+---@class TextureDimensions
+---@field [1] number resized width
+---@field [2] number resized height
+
+---api/Addon
+---@class TextureData
+---@field offset number[]
+---@field colors TextureColors
+---@field colorKey TextureColorKey
+---@field coords TextureCoords
+---@field inset TextureInset
+---@field extent TextureDimensions
+
+---api/Addon
+---```
+---TextureKeyData { width = 0, height = 0, keys = { key = value }}
+---```
+---@class TextureKeyData
+---@field width number
+---@field height number
+---@field keys table
+
+---api/Addon
+---```
+---ScreenResolution { x = 1920, y = 1080, scale = 1 }
+---```
+---@class ScreenResolution
+---@field x number width of screen
+---@field y number height of screen
+---@field scale number 
+
+---api/Addon
+---```
+---{ x = 0, y = 0, width = 0, height = 0 }
+---```
+---@class Bound
+---@field x number
+---@field y number
+---@field width number unscaled width
+---@field height number unscaled height
+
+---api/Addon
+---```
+---UIBound { screenResolution = { x = 1920, y = 1080, scale = 1 }, bound = { x = 0, y = 0, width = 0, height = 0 } }
+---```
+---@class UIBound
+---@field screenResolution ScreenResolution
+---@field bound Bound
+
+---api/Addon
+---```
+---Vec3 { x = 0, y = 0, z = 0 }
+---```
+---@class Vec3
+---@field x number
+---@field y number
+---@field z number
+
+---api/Addon
+---```
+---VirtualMemoryStats { workingSet = 0, usage = 0 }
+---```
+---@class VirtualMemoryStats 
+---@field workingSet number
+---@field usage number
+
+---api/Addon
+---```
+---FontSizeList { default = 13, small = 11, middle = 13, large = 15, cinema = 26, xlarge = 18, xxlarge = 22 }
+---```
+---@class FontSizeList
+---@field default number
+---@field small number
+---@field middle number
+---@field large number
+---@field cinema number
+---@field xlarge number
+---@field xxlarge number
+
 ---Adds a button the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID [ESC_MENU_CATEGORY_ID](lua://ESC_MENU_CATEGORY_ID)
 ---@param uiCategory UIC [UIC](lua://UIC) For a custom UIC use a id above 1000 to not replace the default. Can conflict with other addons.

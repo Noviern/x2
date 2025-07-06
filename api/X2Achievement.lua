@@ -19,6 +19,124 @@ TADT_MAX = 7 -- api/X2Achievement
 TADT_TODAY = 1 -- api/X2Achievement
 X2Achievement = {} -- api/X2Achievement
 
+---api/X2Achievement
+---@alias ACHIEVEMENT_KIND
+---| `EAK_ACHIEVEMENT`
+---| `EAK_ARCHERAGE`
+---| `EAK_COLLECTION`
+---| `EAK_RACIAL_MISSION`
+
+---api/X2Achievement
+---@class RewardItemInfo
+---@field itemType number
+---@field count number
+
+---api/X2Achievement
+---@class RewardInfo
+---@field item RewardItemInfo
+
+---api/X2Achievement
+---@class AppellationInfo
+---@field name string
+---@field iconPath string
+
+---api/X2Achievement
+---@class AchievementInfo
+---@field current number
+---@field subCategoryType number
+---@field complete boolean
+---@field completeNum number
+---@field tracing boolean
+---@field subCategoryName string
+---@field achievementType number
+---@field achievementKind number
+---@field type number
+---@field grade number
+---@field desc string
+---@field isHidden boolean
+---@field canProgress boolean
+---@field summary string
+---@field highRank boolean
+---@field name string
+---@field iconPath string
+---@field categoryName string
+---@field reward RewardInfo
+---@field appellation AppellationInfo
+
+---api/X2Achievement
+---@alias ACHIEVEMENT_FILTER
+---| `AF_ALL`
+---| `AF_COMPLETE` Doesnt work. Is the same as AF_ALL.
+---| `AF_INVALID` Doesnt work. Is the same as AF_ALL.
+---| `AF_TRACING`
+---| `AF_UNCOMPLETE` Doesnt work. Is the same as AF_ALL.
+
+---api/X2Achievement
+---@class AchievementSubCategory
+---@field name string
+---@field subCategoryType number
+
+---api/X2Achievement
+---@class AchievementLevelSubCategory: AchievementSubCategory
+---@field isHeirLevelCategory boolean
+
+---api/X2Achievement
+---@class AchievementCategory
+---@field subCategories AchievementSubCategory[]
+---@field categoryType number
+---@field name string
+
+---api/X2Achievement
+---```
+---SubcategoryInfo {
+--- isHeirLevelCategory = false, completedCount = 0. rewardAchievementType = 0,
+--- totalCount = 0, name = "", desc = ""
+---}
+---```
+---@class SubcategoryInfo
+---@field isHeirLevelCategory boolean
+---@field completedCount number
+---@field rewardAchievementType number
+---@field totalCount number
+---@field name string
+---@field desc string
+
+---api/X2Achievement
+---@alias TODAY_TYPE
+---| `TADT_ARCHE_PASS`
+---| `TADT_EXPEDITION`
+---| `TADT_EXPEDITION_PUBLIC`
+---| `TADT_FAMILY`
+---| `TADT_HERO`
+---| `TADT_MAX`
+---| `TADT_TODAY`
+
+---api/X2Achievement
+---```
+---TodayAssignmentInfoForChange {
+--- init = false, levelMin = 0, iconPath = "", questType = 0, realStep = 0,
+--- desc = "", sort = 0, levelMax = 0, status = 0, title = "", satisfy = false,
+--- requireLevel = 0
+---}
+---```
+---@class TodayAssignmentInfo
+---@field init boolean
+---@field levelMin number
+---@field iconPath string
+---@field questType number
+---@field realStep number
+---@field desc string
+---@field sort number
+---@field levelMax number
+---@field status number
+---@field title string
+---@field satisfy boolean
+---@field requireLevel number 
+
+---api/X2Achievement
+---@class AchievementSubList
+---@field key number
+
 ---TODO:
 ---Adds an achievement `aType` to the ambitions category under the achievement `kind`.
 ---@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)

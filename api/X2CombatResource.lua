@@ -6,6 +6,25 @@ CRU_GAUGE = 1 -- api/X2CombatResource
 CRU_OVERLAP = 2 -- api/X2CombatResource
 X2CombatResource = {} -- api/X2CombatResource
 
+---api/X2CombatResource
+---@class CombatResource
+---@field uiType number
+---@field resource1Max number
+---@field ability number
+---@field resource1Current number
+---@field recoveryResourceType number
+---@field isDefaultResource boolean
+---@field resource1ColorKey string
+---@field resource2Max? number 
+---@field resource2Current? number 
+---@field resource2ColorKey? string 
+
+---api/X2CombatResource
+---@class CombatResourceInfo: CombatResource
+---@field tooltip string
+---@field iconPath string
+---@field groupType number
+
 ---TODO:
 ---Broken. Always returns false.
 ---@param groupType ABILITY_TYPE [ABILITY_TYPE](lua://ABILITY_TYPE)

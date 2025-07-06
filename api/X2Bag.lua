@@ -2,11 +2,15 @@
 
 X2Bag = {} -- api/X2Bag
 
+---api/X2Bag
+---@alias BAGID 1
+
 ---Attempts to equip the item from the slot.
 ---@param slot number
 ---@param isAuxEquip boolean
 function X2Bag:EquipBagItem(slot, isAuxEquip) end
 
+---TODO: Is IIK the correct type?
 ---Returns item info for the `slot` if the slot exists. [IIK](lua://IIK) requires importing the API X2Item.
 ---@param bagId BAGID
 ---@param slot number

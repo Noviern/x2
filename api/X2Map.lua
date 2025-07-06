@@ -157,6 +157,24 @@ MST_TRANSFER_CRUISER = 144 -- api/X2Map
 MST_TRANSFER_LANDSHIP = 77 -- api/X2Map
 X2Map = {} -- api/X2Map
 
+---api/X2Map
+---@class ZoneStateInfo
+---@field localDevelopmentName string
+---@field isSiegeZone boolean
+---@field localDevelopmentStep number
+---@field isNuiaProtectedZone boolean
+---@field warChaos boolean
+---@field isLocalDevelopment boolean
+---@field isConflictZone boolean
+---@field conflictState number
+---@field nonPeaceState boolean
+---@field isFestivalZone boolean
+---@field isCurrentZone boolean
+---@field isInstanceZone boolean
+---@field isPeaceZone boolean
+---@field isHariharaProtectedZone boolean
+---@field zoneName string
+
 ---Returns [ZoneStateInfo](lua://ZoneStateInfo) for `zoneId` if it exists.
 ---@param zoneId number
 ---@return ZoneStateInfo? [ZoneStateInfo](lua://ZoneStateInfo)

@@ -64,6 +64,40 @@ ES_UNDERSHIRT = 14 -- api/X2Equipment
 ES_WAIST = 4 -- api/X2Equipment
 X2Equipment = {} -- api/X2Equipment
 
+---api/X2Equipment
+---@alias EquipSlot
+---| `ES_ARMS`
+---| `ES_BACK`
+---| `ES_BACKPACK`
+---| `ES_BEARD`
+---| `ES_BODY`
+---| `ES_CHEST`
+---| `ES_COSPLAY`
+---| `ES_COSPLAYLOOKS`
+---| `ES_EAR_1`
+---| `ES_EAR_2`
+---| `ES_FACE`
+---| `ES_FEET`
+---| `ES_FINGER_1`
+---| `ES_FINGER_2`
+---| `ES_GLASSES`
+---| `ES_HAIR`
+---| `ES_HANDS`
+---| `ES_HEAD`
+---| `ES_HORNS`
+---| `ES_INVALID`
+---| `ES_LEGS`
+---| `ES_MAINHAND`
+---| `ES_MUSICAL`
+---| `ES_NECK`
+---| `ES_OFFHAND`
+---| `ES_RANGED`
+---| `ES_TAIL`
+---| `ES_UNDERPANTS`
+---| `ES_UNDERSHIRT`
+---| `ES_WAIST`
+
+---TODO: Finish definition.
 ---Returns 
 ---@param equipSlot EquipSlot [EquipSlot](lua://EquipSlot)
 ---@param targetEquippedItem boolean

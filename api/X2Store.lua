@@ -21,6 +21,15 @@ SHOP_OPEN_NORMAL = 0 -- api/X2Store
 SHOP_OPEN_RANDOM_SHOP = 5 -- api/X2Store
 X2Store = {} -- api/X2Store
 
+---api/X2Store
+---```
+---ZoneInfo { continentName = "Nuia", zoneGroupName = "Gweonid Forest", id = 1 }
+---```
+---@class ZoneInfo
+---@field continentName string
+---@field zoneGroupName string
+---@field id number
+
 ---Returns a collection of [ZoneInfo](lua://ZoneInfo) for all zones that packs can be crafted in.
 ---@return ZoneInfo[] [ZoneInfo](lua://ZoneInfo)
 function X2Store:GetProductionZoneGroups() end

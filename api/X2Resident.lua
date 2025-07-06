@@ -14,6 +14,30 @@ HOUSING_LIST_FILTER_UNDERWATER_STRUCTURE = 6 -- api/X2Resident
 HOUSING_LIST_FILTER_WORKTABLE = 4 -- api/X2Resident
 X2Resident = {} -- api/X2Resident
 
+---api/X2Resident
+---@alias HOUSING_LIST_FILTER
+---| `HOUSING_LIST_FILTER_ALL`
+---| `HOUSING_LIST_FILTER_FARM`
+---| `HOUSING_LIST_FILTER_FLOATING`
+---| `HOUSING_LIST_FILTER_HOUSE_NAME`
+---| `HOUSING_LIST_FILTER_LARGE`
+---| `HOUSING_LIST_FILTER_MANSION`
+---| `HOUSING_LIST_FILTER_MEDIUM`
+---| `HOUSING_LIST_FILTER_PUBLIC`
+---| `HOUSING_LIST_FILTER_SELLER_NAME`
+---| `HOUSING_LIST_FILTER_SMALL`
+---| `HOUSING_LIST_FILTER_UNDERWATER_STRUCTURE`
+---| `HOUSING_LIST_FILTER_WORKTABLE`
+
+---api/X2Resident
+---@class ResidentBoardContent
+---@field [1] string?
+---@field [2] string?
+---@field [3] string?
+---@field [4] string?
+---@field title string
+---@field faction string
+
 ---Searches `searchWord` the resident task board with the filter `filterindex`.
 ---Only works when Sales tab is open on resident task board.
 ---@param filterindex HOUSING_LIST_FILTER [HOUSING_LIST_FILTER](lua://HOUSING_LIST_FILTER)

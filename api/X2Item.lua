@@ -38,6 +38,28 @@ NORMAL_ITEM_GRADE = 0 -- api/X2Item
 POOR_ITEM_GRADE = 1 -- api/X2Item
 X2Item = {} -- api/X2Item
 
+---api/X2Item
+---@enum LinkKind
+local LinkKind = {
+  coffer = "coffer",
+  auction = "auction"
+}
+
+---api/X2Item
+---
+---Values can be added together to get more information.
+---@alias IIK
+---| `IIK_CATEGORY`
+---| `IIK_CONSUME_ITEM`
+---| `IIK_GRADE`
+---| `IIK_GRADE_STR`
+---| `IIK_IMPL`
+---| `IIK_NAME`
+---| `IIK_SELL`
+---| `IIK_SOCKET_MODIFIER`
+---| `IIK_STACK`
+---| `IIK_TYPE`
+
 ---Returns [ItemInfo](lua://ItemInfo) from the `linkText`.
 ---@usage
 ---```

@@ -16,6 +16,34 @@ MFCR_FAIL_WAIT = 2 -- api/X2Craft
 MFCR_SUCCESS = 0 -- api/X2Craft
 X2Craft = {} -- api/X2Craft
 
+---api/X2Craft
+---@class CraftBaseInfo
+---@field orderable boolean
+---@field cost number
+---@field skill_type number
+---@field laborpower_satisfied boolean
+---@field required_actability_name string
+---@field cost_satisfied boolean
+---@field require_doodad number
+---@field doodad_name string
+---@field needed_lp number
+---@field required_actability_point number
+---@field actability_satisfied boolean
+---@field title string
+---@field craft_type number
+---@field consume_lp number
+---@field recommend_level number
+---@field required_actability_type number
+---@field use_only_actability boolean
+
+---@class CraftProductInfo
+---@field productGrade number
+---@field itemType number
+---@field amount number
+---@field item_name string
+---@field success_rate number
+---@field useGrade boolean
+
 ---Returns the [CraftBaseInfo](lua://CraftBaseInfo) for the `craftType`. Does not have material information.
 ---@param craftType number
 ---@param doodadId? number (optional) doesnt do anything atm.

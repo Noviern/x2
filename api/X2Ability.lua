@@ -41,6 +41,28 @@ SPECIAL_ACTIVE_SKILL = 170 -- api/X2Ability
 SPECIAL_PASSIVE_SKILL = 190 -- api/X2Ability
 X2Ability = {} -- api/X2Ability
 
+---api/X2Ability
+---```
+---ActabilityInfo { name = "Alchemy", type = 1, point = 0, modifyPoint = 0, grade = 0 }
+---```
+---@class ActabilityInfo
+---@field name string
+---@field type number
+---@field point number
+---@field modifyPoint number
+---@field grade number
+
+---api/X2Ability
+---
+---As of 6/10/2025 only `BIK_DESCRIPTION` appears to work.
+---@alias BIK number
+---| `BIK_DESCRIPTION`
+---| `BIK_RUNTIME_ALL` Broken
+---| `BIK_RUNTIME_DURATION` Broken
+---| `BIK_RUNTIME_MINE` Broken
+---| `BIK_RUNTIME_STACK` Broken
+---| `BIK_RUNTIME_TIMELEFT` Broken
+
 ---Returns a collection of the player's [ActabilityInfo](lua://ActabilityInfo).
 ---@return ActabilityInfo[] [ActabilityInfo](lua://ActabilityInfo)
 function X2Ability:GetAllMyActabilityInfos() end
