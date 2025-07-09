@@ -19,17 +19,17 @@ DC_SHIFT_KEY_DOWN = 1 -- object/PaintColorPicker
 ---@class PaintColorPicker: Widget
 ---@field luminanceWidget EmptyWidget
 ---@field spectrumWidget EmptyWidget
----@field GetHLSColor fun(self: self)
----@field GetHue fun(self: self)
----@field GetLum fun(self: self)
----@field GetLuminanceWidget fun(self: self)
----@field GetRGBColor fun(self: self)
----@field GetSat fun(self: self)
----@field GetSpectrumWidget fun(self: self)
----@field SetHLSColor fun(self: self, hue: number, lum, sat)
----@field SetHue fun(self: self, hue)
----@field SetLum fun(self: self, lum)
+---@field GetHLSColor fun(self: self): hue: number, saturation: number, luminance: number
+---@field GetHue fun(self: self): hue: number
+---@field GetLum fun(self: self): luminance: number
+---@field GetLuminanceWidget fun(self: self): table
+---@field GetRGBColor fun(self: self): red: number, green: number, blue: number
+---@field GetSat fun(self: self): staturation: number
+---@field GetSpectrumWidget fun(self: self): table
+---@field SetHLSColor fun(self: self, hue: number, lum: number, sat: number)
+---@field SetHue fun(self: self, hue: number)
+---@field SetLum fun(self: self, lum: number)
 ---@field SetLuminanceBg fun(self: self, bg: table)
----@field SetRGBColor fun(self: self, red, green, blue)
----@field SetSat fun(self: self, sat)
+---@field SetRGBColor fun(self: self, red: number, green: number, blue: number)
+---@field SetSat fun(self: self, sat: number)
 ---@field SetSpectrumBg fun(self: self, bg: table)

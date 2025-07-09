@@ -21,19 +21,27 @@ UI_BUTTON_NORMAL = 0 -- object/Button
 UI_BUTTON_PUSHED = 2 -- object/Button
 
 ---object/Button
+---@alias UI_STATE
+---| `UI_BUTTON_DISABLED`
+---| `UI_BUTTON_HIGHLIGHTED`
+---| `UI_BUTTON_MAX`
+---| `UI_BUTTON_NORMAL`
+---| `UI_BUTTON_PUSHED`
+
+---object/Button
 ---@class Button: Widget
 ---@field style TextStyle
----@field CreateStateDrawable fun(self: self, state: number, drawableType: number, path: string)
+---@field CreateStateDrawable fun(self: self, state: UI_STATE, drawableType: UOT, path: string): table
 ---@field DeregisterForClicks fun(self: self)
----@field GetButtonState fun(self: self)
+---@field GetButtonState fun(self: self): string
 ---@field GetDisabledBackground fun(self: self)
----@field GetDisabledColor fun(self: self)
+---@field GetDisabledColor fun(self: self): table
 ---@field GetHighlightBackground fun(self: self)
----@field GetHighlightColor fun(self: self)
+---@field GetHighlightColor fun(self: self): table
 ---@field GetNormalBackground fun(self: self)
----@field GetNormalColor fun(self: self)
----@field GetPushedBackground fun(self: self)
----@field GetPushedColor fun(self: self)
+---@field GetNormalColor fun(self: self): table
+---@field GetPushedBackground fun(self: self): table
+---@field GetPushedColor fun(self: self): table
 ---@field RegisterForClicks fun(self: self)
 ---@field SetAutoClipChar fun(self: self, resize: boolean)
 ---@field SetAutoResize fun(self: self, resize: boolean)

@@ -22,17 +22,17 @@ LCCIT_WINDOW = 2 -- object/ListCtrl
 ---object/ListCtrl
 ---@class ListCtrl: Widget
 ---@field ClearSelection fun(self: self)
----@field CreateOveredImage fun(self: self)
----@field CreateSelectedImage fun(self: self)
+---@field CreateOveredImage fun(self: self): table
+---@field CreateSelectedImage fun(self: self): table
 ---@field DeleteAllDatas fun(self: self)
----@field DeleteData fun(self: self, key)
+---@field DeleteData fun(self: self, key: number)
 ---@field DeleteDataByIndex fun(self: self, index: number)
 ---@field DeleteRows fun(self: self)
----@field GetSelectedIdx fun(self: self)
----@field InsertColumn fun(self: self, width: number, itemType)
----@field InsertData fun(self: self, key: number, colIdx, subItemData)
----@field InsertRows fun(self: self, count: number, withEventWindow)
----@field Select fun(self: self, itemIdx)
+---@field GetSelectedIdx fun(self: self): number
+---@field InsertColumn fun(self: self, width: number, itemType: number): number
+---@field InsertData fun(self: self, key: number, colIdx: number, subItemData: string)
+---@field InsertRows fun(self: self, count: number, withEventWindow: boolean)
+---@field Select fun(self: self, itemIdx: number)
 ---@field SetColumnWidth fun(self: self, idx: number, width: number)
 ---@field SetHeaderColumnHeight fun(self: self, height: number)
 ---@field SetOveredImageOffset fun(self: self, x1: number, y1: number, x2: number, y2: number)

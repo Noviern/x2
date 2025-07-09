@@ -19,25 +19,25 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Message
 ---@class Message: Widget
 ---@field style TextStyle
 ---@field AddMessage fun(self: self, message: string)
----@field AddMessageEx fun(self: self, message: string, visibleTime)
----@field AddMessageExRefresh fun(self: self, message, visibleTime)
----@field AddMessageRefresh fun(self: self, message)
+---@field AddMessageEx fun(self: self, message: string, visibleTim: number)
+---@field AddMessageExRefresh fun(self: self, message: string, visibleTime: number)
+---@field AddMessageRefresh fun(self: self, message: string)
 ---@field ChangeDefaultStyle fun(self: self)
 ---@field ChangeTextStyle fun(self: self)
 ---@field Clear fun(self: self)
----@field CopyTextToClipboard fun(self: self)
+---@field CopyTextToClipboard fun(self: self): boolean
 ---@field EnableItemLink fun(self: self, enable: boolean)
----@field GetCurrentLine fun(self: self)
----@field GetCurrentScroll fun(self: self)
----@field GetLineSpace fun(self: self)
----@field GetLinkInfoOnCursor fun(self: self)
----@field GetMaxLines fun(self: self)
----@field GetMessageByTimeStamp fun(self: self, messageTimeStamp: number)
----@field GetMessageLines fun(self: self)
----@field GetPagePerMaxLines fun(self: self)
+---@field GetCurrentLine fun(self: self): number
+---@field GetCurrentScroll fun(self: self): number
+---@field GetLineSpace fun(self: self): number
+---@field GetLinkInfoOnCursor fun(self: self): table
+---@field GetMaxLines fun(self: self): number
+---@field GetMessageByTimeStamp fun(self: self, messageTimeStamp: number): number
+---@field GetMessageLines fun(self: self): number
+---@field GetPagePerMaxLines fun(self: self): number
 ---@field PageDown fun(self: self)
 ---@field PageUp fun(self: self)
----@field RemoveLastMessage fun(self: self)
+---@field RemoveLastMessage fun(self: self): number
 ---@field ResetVisibleTime fun(self: self)
 ---@field ScrollDown fun(self: self)
 ---@field ScrollToBottom fun(self: self)
@@ -45,7 +45,7 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Message
 ---@field ScrollUp fun(self: self)
 ---@field SetFadeDuration fun(self: self, seconds: number)
 ---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
----@field SetLineSpace fun(self: self, space)
----@field SetMaxLines fun(self: self, count)
+---@field SetLineSpace fun(self: self, space: number)
+---@field SetMaxLines fun(self: self, count: number)
 ---@field SetScrollPos fun(self: self, value: number)
 ---@field SetTimeVisible fun(self: self, seconds: number)

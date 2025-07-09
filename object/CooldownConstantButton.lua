@@ -23,5 +23,5 @@ UI_BUTTON_PUSHED = 2 -- object/CooldownConstantButton
 ---object/CooldownConstantButton
 ---@class CooldownConstantButton: CooldownButton
 ---@field SetItem fun(self: self, itemType: number)
----@field SetItemSlot fun(self: self, itemSlot: number, slotType)
+---@field SetItemSlot fun(self: self, itemSlot: number, slotType: number)
 ---@field SetSkill fun(self: self, skillType: number)

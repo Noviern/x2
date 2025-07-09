@@ -1,3 +1,5 @@
+package.path = "../Documents/Addon/" .. ADDON:GetName() .. "/?.lua;" .. package.path
+
 ---@enum API
 API = {
   X2Console = 2,
@@ -345,7 +347,7 @@ local UIEVENT_TYPE = {
   -- AUCTION_CHARACTER_LEVEL_TOO_LOW = function(msg)
   AUCTION_CHARACTER_LEVEL_TOO_LOW = "AUCTION_CHARACTER_LEVEL_TOO_LOW",
 
-  -- AUCTION_ITEM_ATTACHMENT_STATE_CHANGED = function(msattachedg)
+  -- AUCTION_ITEM_ATTACHMENT_STATE_CHANGED = function(attached)
   AUCTION_ITEM_ATTACHMENT_STATE_CHANGED = "AUCTION_ITEM_ATTACHMENT_STATE_CHANGED",
 
   -- AUCTION_ITEM_PUT_UP = function(itemName)
@@ -6529,110 +6531,6 @@ LOGIN_STAGE_TEXTURE_PATH = {
   SAVE_LOAD = "ui/beautyshop/save_load.dds",
 }
 
----@enum AUCTION_GRADE_FILTER
-AUCTION_GRADE_FILTER = {
-  ALL = 1,
-  BASIC = 2,
-  CRUDE = 3,
-  GRAND = 4,
-  RARE = 5,
-  ARCANE = 6,
-  HEROIC = 7,
-  UNIQUE = 8,
-  CELESTIAL = 9,
-  DIVINE = 10,
-  EPIC = 11,
-  LEGENDARY = 12,
-  MYTHIC = 13,
-  ETERNAL = 14,
-}
-
----Should this be updated to their real name? 
----@enum AUCTION_CATEGORY
-AUCTION_CATEGORY = {
-  ALL = 0,
-  DAGGER = 1,
-  SWORD = 2,
-  BLADE = 3,
-  SPEAR = 4,
-  AXE = 5,
-  MACE = 6,
-  STAFF = 7,
-  TWOHAND_SWORD = 8,
-  TWOHAND_BLADE = 9,
-  TWOHAND_SPEAR = 10,
-  TWOHAND_AXE = 11,
-  TWOHAND_MACE = 12,
-  TWOHAND_STAFF = 13,
-  BOW = 14,
-  LIGHT_ARMOR_HEAD = 15,
-  LIGHT_ARMOR_CHEST = 16,
-  LIGHT_ARMOR_WAIST = 17,
-  LIGHT_ARMOR_ARMS = 18,
-  LIGHT_ARMOR_HANDS = 19,
-  LIGHT_ARMOR_LEGS = 20,
-  LIGHT_ARMOR_FEET = 21,
-  NORMAL_ARMOR_HEAD = 22,
-  NORMAL_ARMOR_CHEST = 23,
-  NORMAL_ARMOR_WAIST = 24,
-  NORMAL_ARMOR_ARMS = 25,
-  NORMAL_ARMOR_HANDS = 26,
-  NORMAL_ARMOR_LEGS = 27,
-  NORMAL_ARMOR_FEET = 28,
-  HEAVY_ARMOR_HEAD = 29,
-  HEAVY_ARMOR_CHEST = 30,
-  HEAVY_ARMOR_WAIST = 31,
-  HEAVY_ARMOR_ARMS = 32,
-  HEAVY_ARMOR_HANDS = 33,
-  HEAVY_ARMOR_LEGS = 34,
-  HEAVY_ARMOR_FEET = 35,
-  ORE = 36,
-  RAW_LUMBER = 37,
-  ROCK = 38,
-  RAWHIDE = 39,
-  FIBER = 40,
-  PARTS = 41,
-  MEAT = 42,
-  MARINE_PRODUCT = 43,
-  GRAIN = 44,
-  VEGETABLES = 45,
-  FRUIT = 46,
-  SPICE = 47,
-  DRUG_MATERIAL = 48,
-  FLOWER = 49,
-  SOIL = 50,
-  JEWEL = 51,
-  PAPER = 52,
-  METAL = 53,
-  WOOD = 54,
-  STONE = 55,
-  LEATHER = 56,
-  CLOTH = 57,
-  MACHINE = 58,
-  GLASS = 59,
-  RUBBER = 60,
-  NOBLE_METAL = 61,
-  ALCHEMY_MATERIAL = 62,
-  CRAFT_MATERIAL = 63,
-  ANIMAL = 64,
-  YOUNG_PLANT = 65,
-  SEED = 66,
-  FURNITURE = 67,
-  ADVENTURE = 68,
-  TOY = 69,
-  DYE = 70,
-  COOKING_OIL = 71,
-  SEASONING = 72,
-  MOON_STONE_SCALE_RED = 73,
-  MOON_STONE_SCALE_YELLOW = 74,
-  MOON_STONE_SCALE_GREEN = 75,
-  MOON_STONE_SCALE_BLUE = 76,
-  MOON_STONE_SCALE_PURPLE = 77,
-  MOON_STONE_SHADOW_CRAFT = 78,
-  MOON_STONE_SHADOW_HONOR = 79,
-  SHOTGUN = 80,
-}
-
 ---Obtained from db sound_pack_items sound_pack_id =203
 ---if sound_id is 0 it cant play, need more testing
 ---@enum SOUND_NAME
@@ -6878,7 +6776,6 @@ SOUND_NAME = {
   TUTORIAL_CONTENTS_2653_1_1 = "tutorial_contents_2653_1_1",
 }
 
---- game\db\data\zones.csv
 ---@enum ZONE_ID
 ZONE_ID = {
   W_GWEONID_FOREST_1 =	1,
@@ -7042,4 +6939,47 @@ ESC_MENU_CATEGORY_ID = {
   SHOP = 3,
   CONVENIENCE = 4,
   SYSTEM = 5,
+}
+
+---scriptsbin\commonui\baselib\variable.lua
+---@enum FONT_PATH
+FONT_PATH = {
+  DEFAULT = "font_main",
+  SUB = "font_sub",
+  COMBAT = "font_combat"
+}
+
+---scriptsbin\commonui\baselib\variable.lua
+---@enum FONT_SIZE
+FONT_SIZE = {
+  DEFAULT = 13,
+  SMALL = 11,
+  MIDDLE = 13,
+  LARGE = 15,
+  CINEMA = 26,
+  XLARGE = 18,
+  XXLARGE = 22,
+}
+local InitFontSize = function()
+  local info = UIParent:InitFontSize()
+  local cnt = 0
+  for k, v in pairs(info) do
+    FONT_SIZE[string.upper(k)] = v
+    cnt = cnt + 1
+  end
+  if cnt == 0 then
+    -- UIParent:Warning(string.format("[Lua Error] InitFontSize() failed, FONT_SIZE is zero size."))
+    ADDON:ChatLog("[Lua Error] InitFontSize() failed, FONT_SIZE is zero size.")
+  end
+end
+InitFontSize()
+
+---scriptsbin\x2ui\baselib\locale\en_us.lua
+---@enum TEXTBOX_LINE_SPACE
+TEXTBOX_LINE_SPACE = {
+  SMALL = 0,
+  MIDDLE = 1,
+  LARGE = 5,
+  TOOLTIP = 0,
+  QUESTGUIDE = 3
 }

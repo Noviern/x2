@@ -42,21 +42,21 @@ UI_BUTTON_PUSHED = 2 -- object/Slot
 ---@field cooltime_style TextStyle
 ---@field icon Icon
 ---@field style TextStyle
----@field ChangeIconLayer fun(self: self, nameLayer: string)
+---@field ChangeIconLayer fun(self: self, nameLayer: string) TODO: Crash if wrong value
 ---@field DisableDefaultClick fun(self: self)
----@field EstablishItem fun(self: self, itemType: number, itemGrade)
+---@field EstablishItem fun(self: self, itemType: number, itemGrade: number)
 ---@field EstablishSkill fun(self: self, skillType: number)
----@field EstablishSkillAlert fun(self: self, statusBuffTag: number, remain, duration)
----@field EstablishSkillSlot fun(self: self, slotType: number, slotIdx)
----@field EstablishSlot fun(self: self, slotType, slotIdx)
----@field EstablishVirtualSlot fun(self: self, slotType: number, slotIdx, virtualSlotIdx)
----@field GetBindedType fun(self: self)
----@field GetExtraInfo fun(self: self)
----@field GetHotKey fun(self: self)
+---@field EstablishSkillAlert fun(self: self, statusBuffTag: number, remain: number, duration: number)
+---@field EstablishSkillSlot fun(self: self, slotType: number, slotIdx: number)
+---@field EstablishSlot fun(self: self, slotType: number, slotIdx: number)
+---@field EstablishVirtualSlot fun(self: self, slotType: number, slotIdx: number, virtualSlotIdx: number)
+---@field GetBindedType fun(self: self): string
+---@field GetExtraInfo fun(self: self): table
+---@field GetHotKey fun(self: self): string
 ---@field GetItemLevelRequirment fun(self: self)
 ---@field GetPassiveBuffType fun(self: self)
 ---@field GetSkillType fun(self: self)
----@field GetTooltip fun(self: self)
----@field IsEmpty fun(self: self)
+---@field GetTooltip fun(self: self): table
+---@field IsEmpty fun(self: self): boolean
 ---@field ReleaseSlot fun(self: self)
 ---@field ResetState fun(self: self)

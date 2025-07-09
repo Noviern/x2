@@ -17,6 +17,6 @@ DC_SHIFT_KEY_DOWN = 1 -- object/ColorPicker
 
 ---object/ColorPicker
 ---@class ColorPicker: Widget
----@field GetColor fun(self: self, xPos, yPos)
----@field GetPoint fun(self: self, colorR: number, colorG: number, colorB: number)
+---@field GetColor fun(self: self, xPos: number, yPos: number): red: number, green: number, blue: number
+---@field GetPoint fun(self: self, colorR: number, colorG: number, colorB: number): xPos: number, yPos: number
 ---@field SetPaletteImage fun(self: self, imageName: string)

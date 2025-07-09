@@ -24,5 +24,5 @@ UI_BUTTON_PUSHED = 2 -- object/CooldownButton
 
 -- object/CooldownButton
 ---@class CooldownButton: Button
----@field SetCoolDown fun(self: self, remainTime: number, totalTime)
----@field SetCoolDownMask fun(self: self, textureName: string, textureKey, colorKey)
+---@field SetCoolDown fun(self: self, remainTime: number, totalTime: number)
+---@field SetCoolDownMask fun(self: self, textureName: string, textureKey: string, colorKey: string)

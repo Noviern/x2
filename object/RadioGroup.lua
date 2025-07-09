@@ -17,16 +17,16 @@ DC_SHIFT_KEY_DOWN = 1 -- object/RadioGroup
 
 ---object/RadioGroup
 ---@class RadioGroup: Widget
----@field Check fun(self: self, index)
+---@field Check fun(self: self, index: number)
 ---@field Clear fun(self: self)
----@field CreateRadioItem fun(self: self, dataValue)
+---@field CreateRadioItem fun(self: self, dataValue: number): table
 ---@field EnableIndex fun(self: self, index: number, enable)
----@field GetChecked fun(self: self)
+---@field GetChecked fun(self: self): number
 ---@field GetCheckedData fun(self: self)
----@field GetDataValue fun(self: self, index)
----@field GetIndexByValue fun(self: self, dataValue: number)
----@field GetSize fun(self: self)
----@field IsInRange fun(self: self, index: number)
+---@field GetDataValue fun(self: self, index: number)
+---@field GetIndexByValue fun(self: self, dataValue: number): number
+---@field GetSize fun(self: self): number
+---@field IsInRange fun(self: self, index: number): boolean
 ---@field ReleaseCheck fun(self: self)
----@field ShowIndex fun(self: self, index: number, show)
----@field UpdateValue fun(self: self, index, data)
+---@field ShowIndex fun(self: self, index: number, show: boolean)
+---@field UpdateValue fun(self: self, index: number, data: number)

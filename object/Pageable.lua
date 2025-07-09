@@ -17,11 +17,11 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Pageable
 
 ---object/Pageable
 ---@class Pageable: Widget
----@field AddWidgetToPage fun(self: self, widget: table, pageIndex)
+---@field AddWidgetToPage fun(self: self, widget: table, pageIndex: number)
 ---@field ChangePage fun(self: self, index: number)
----@field GetCurrentPageIndex fun(self: self)
----@field GetTotalPage fun(self: self)
+---@field GetCurrentPageIndex fun(self: self): number
+---@field GetTotalPage fun(self: self): number
 ---@field NextPage fun(self: self)
 ---@field PrevPage fun(self: self)
 ---@field SetCurrentPageIndex fun(self: self, num: number)
----@field SetPageCount fun(self: self, num)
+---@field SetPageCount fun(self: self, num: number)

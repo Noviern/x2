@@ -23,7 +23,7 @@ UI_BUTTON_PUSHED = 2 -- object/CheckButton
 ---object/CheckButton
 ---@class Checkbutton: Button, Widget
 ---@field style TextStyle
----@field GetChecked fun(self: self)
+---@field GetChecked fun(self: self): boolean
 ---@field SetChecked fun(self: self, state: boolean)
----@field SetCheckedBackground fun(self: self, checkedTable)
----@field SetDisabledCheckedBackground fun(self: self, disabledCheckedTable: table)
+---@field SetCheckedBackground fun(self: self, checkedTable: table) TODO: What is checkedTable?
+---@field SetDisabledCheckedBackground fun(self: self, disabledCheckedTable: table) TODO: What is disabledCheckedTable

@@ -18,19 +18,19 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Textbox
 ---object/Textbox
 ---@class Textbox: Widget
 ---@field style TextStyle
----@field GetInset fun(self: self)
----@field GetLineCount fun(self: self)
----@field GetLineLength fun(self: self, lineNum: number)
----@field GetLongestLineWidth fun(self: self)
----@field GetTextHeight fun(self: self)
----@field GetTextLength fun(self: self)
+---@field GetInset fun(self: self): left: number, top: number, right: number, bottom: number
+---@field GetLineCount fun(self: self): number
+---@field GetLineLength fun(self: self, lineNum: number): number
+---@field GetLongestLineWidth fun(self: self): number
+---@field GetTextHeight fun(self: self): number
+---@field GetTextLength fun(self: self): number
 ---@field SetAutoResize fun(self: self, resize: boolean)
 ---@field SetAutoWordwrap fun(self: self, wrap)
 ---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
 ---@field SetLineColor fun(self: self, r: number, g: number, b: number, a: number)
----@field SetLineHeight fun(self: self, height)
----@field SetLineSpace fun(self: self, space)
+---@field SetLineHeight fun(self: self, height: number)
+---@field SetLineSpace fun(self: self, space: number)
 ---@field SetStrikeThrough fun(self: self, visible: boolean)
----@field SetText fun(self: self, text)
----@field SetTextAutoWidth fun(self: self, initWidth: number, text, offset)
+---@field SetText fun(self: self, text: string)
+---@field SetTextAutoWidth fun(self: self, initWidth: number, text: string, offset: number)
 ---@field SetUnderLine fun(self: self, visible: boolean)

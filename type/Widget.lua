@@ -1,12 +1,12 @@
 ---@class Widget: Widgetbase, Uibounds, Uiobject
 ---@field DisableDrawables fun(self: self, nameLayer: string)
----@field DisableDrawablesWithChildren fun(self: self, nameLayer)
+---@field DisableDrawablesWithChildren fun(self: self, nameLayer: string)
 ---@field EnableDrawables fun(self: self, nameLayer: string)
----@field EnableDrawablesWithChildren fun(self: self, nameLayer)
----@field GetRotation fun(self: self)
+---@field EnableDrawablesWithChildren fun(self: self, nameLayer: string)
+---@field GetRotation fun(self: self) TODO: This returns nil. Broken?
 ---@field RemoveAllDrawables fun(self: self, nameLayer: string)
 ---@field RemoveDrawable fun(self: self, drawableTable: table)
----@field SetLayerColor fun(self: self, r: number, g: number, b: number, a: number, nameLayer)
----@field SetRotation fun(self: self, rs)
+---@field SetLayerColor fun(self: self, r: number, g: number, b: number, a: number, nameLayer: string)
+---@field SetRotation fun(self: self, rs: string) TODO: This takes a string, not sure how this is used.
 ---@field UseDynamicContentState fun(self: self, use: boolean)
 ---@field UseDynamicDrawableState fun(self: self, nameLayer: string, use: boolean)

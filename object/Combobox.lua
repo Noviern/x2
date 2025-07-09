@@ -23,7 +23,7 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Combobox
 ---@field toggle Button
 ---@field Insert fun(self: self, datas)
 ---@field PauseAutocomplete fun(self: self, pause: boolean)
----@field SetAutocomplete fun(self: self, type: string, filter)
+---@field SetAutocomplete fun(self: self, type: string, filter: string)
 ---@field SetDropdownVisibleLimit fun(self: self, limit: number)
 ---@field SetEditable fun(self: self, editable: boolean)
 

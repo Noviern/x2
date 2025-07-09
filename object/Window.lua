@@ -21,6 +21,6 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Window
 ---@field titleStyle TextStyle
 ---@field SetCloseOnEscape fun(self: self, escape: boolean)
 ---@field SetTitleInset fun(self: self, left: number, top: number, right: number, bottom: number)
----@field SetTitleText fun(self: self, title)
----@field SetUILayer fun(self: self, layerName)
+---@field SetTitleText fun(self: self, title: string)
+---@field SetUILayer fun(self: self, layerName: string)
 ---@field SetWindowModal fun(self: self, enable: boolean)

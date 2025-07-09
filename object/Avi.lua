@@ -18,4 +18,4 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Avi
 ---object/Avi
 ---@class Avi: Widget
 ---@field SetAviName fun(self: self, fileName: string)
----@field SetAviNum fun(self: self, depth: number, avitype)
+---@field SetAviNum fun(self: self, depth: number, avitype?) TODO: Not sure what avitype is or if it even exists as any value doesnt cause an error.

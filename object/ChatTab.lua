@@ -17,17 +17,17 @@ DC_SHIFT_KEY_DOWN = 1 -- object/ChatTab
 
 ---object/ChatTab
 ---@class ChatTab: Tabbase
----@field AddTab fun(self: self, tabName: string, widget)
+---@field AddTab fun(self: self, tabName: string, widget?)
 ---@field AllowTabSwitch fun(self: self, allow: boolean)
----@field GetAddButton fun(self: self)
----@field GetCaretDrawable fun(self: self)
----@field GetLeftLineDrawable fun(self: self)
----@field GetLockNotifyDrawable fun(self: self)
----@field GetRightLineDrawable fun(self: self)
+---@field GetAddButton fun(self: self): Button
+---@field GetCaretDrawable fun(self: self): Widget TODO: What is this widget? Drawable?
+---@field GetLeftLineDrawable fun(self: self): Widget TODO: What is this widget? Drawable?
+---@field GetLockNotifyDrawable fun(self: self): Widget TODO: What is this widget? Drawable?
+---@field GetRightLineDrawable fun(self: self): Widget TODO: What is this widget? Drawable?
 ---@field SetCaretOffset fun(self: self, x: number, y: number)
 ---@field SetContentOffset fun(self: self, topLeftXOffset: number, topLeftYOffset: number, bottomRightXOffset: number, bottomRightYOffset: number)
 ---@field SetInjectable fun(self: self, injectable: boolean)
----@field SetLeftLineOffset fun(self: self, offset)
+---@field SetLeftLineOffset fun(self: self, offset: number)
 ---@field SetMaxNotifyTime fun(self: self, time: number)
 ---@field SetMinTabWidth fun(self: self, width: number)
 ---@field SetNotifyBlinkingFreq fun(self: self, freq: number)
@@ -35,7 +35,7 @@ DC_SHIFT_KEY_DOWN = 1 -- object/ChatTab
 ---@field SetSlideTimeInDragging fun(self: self, time: number)
 ---@field SetTabAreaHeight fun(self: self, height: number)
 ---@field SetTabAreaInset fun(self: self, left: number, top: number, right: number, bottom: number)
----@field SetTabButtonAlpha fun(self: self, selectedAlpha: number, unselectedAlpha)
+---@field SetTabButtonAlpha fun(self: self, selectedAlpha: number, unselectedAlpha: number)
 ---@field SetTabWidth fun(self: self, width: number)
 ---@field UseAddTabButton fun(self: self, use: boolean)
 ---@field UseAutoResizingTabButtonMode fun(self: self, offset: boolean)
@@ -43,8 +43,8 @@ DC_SHIFT_KEY_DOWN = 1 -- object/ChatTab
 
 ---object/ChatTab
 ---@class ChatWindow: Widget, ChatTab
----@field GetChatEdit fun(self: self)
----@field GetChatMethodSelector fun(self: self)
----@field GetImeToggleButton fun(self: self)
----@field GetUrlButton fun(self: self)
+---@field GetChatEdit fun(self: self): table TODO: What is this widget? ChatboxEdit?
+---@field GetChatMethodSelector fun(self: self): table TODO: What is this widget?
+---@field GetImeToggleButton fun(self: self): Button
+---@field GetUrlButton fun(self: self): Button
 ---@field SetChatWindowId fun(self: self, id: number)

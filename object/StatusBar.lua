@@ -17,20 +17,20 @@ DC_SHIFT_KEY_DOWN = 1 -- object/StatusBar
 
 ---object/StatusBar
 ---@class StatusBar: Widget
----@field AddAnchorChildToBar fun(self: self, anchorChild: table, childAnchorPoint)
----@field GetBarColor fun(self: self)
----@field GetLeftWidth fun(self: self, value)
----@field GetMinMaxValues fun(self: self)
----@field GetOrientation fun(self: self)
----@field GetValue fun(self: self)
----@field IsChangeAfterImageColor fun(self: self, value: string)
+---@field AddAnchorChildToBar fun(self: self, anchorChild: table, childAnchorPoint: stringlib)
+---@field GetBarColor fun(self: self): r: number, g: number, b: number, a: number
+---@field GetLeftWidth fun(self: self, value): number
+---@field GetMinMaxValues fun(self: self): number, number
+---@field GetOrientation fun(self: self): string
+---@field GetValue fun(self: self): string
+---@field IsChangeAfterImageColor fun(self: self, value: string): boolean
 ---@field SetBarColor fun(self: self, r: number, g: number, b: number, a: number)
 ---@field SetBarColorByKey fun(self: self, colorKey: string)
----@field SetBarTexture fun(self: self, nameTex: string, nameLayer)
+---@field SetBarTexture fun(self: self, nameTex: string, nameLayer) TODO: Can crash if not provided with the correct values.
 ---@field SetBarTextureByKey fun(self: self, key: string)
 ---@field SetBarTextureCoords fun(self: self, coordX, coordY, coordW, coordH)
----@field SetMinMaxValues fun(self: self, min: number, max)
----@field SetMinMaxValuesForString fun(self: self, min, max)
+---@field SetMinMaxValues fun(self: self, min: number, max: number)
+---@field SetMinMaxValuesForString fun(self: self, min: string, max: string)
 ---@field SetOrientation fun(self: self, orientation: string)
----@field SetValue fun(self: self, value)
+---@field SetValue fun(self: self, value: number)
 ---@field SetValueForString fun(self: self, value: string)

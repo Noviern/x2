@@ -652,6 +652,20 @@ ZST_INVALID = 0 -- api/Addon
 ---| `UIC_WORLDMAP`
 
 ---api/Addon
+---@alias UOT
+---| `UOT_EDITBOX`
+---| `UOT_EDITBOX_MULTILINE`
+---| `UOT_EMPTY_WIDGET`
+---| `UOT_IMAGE_DRAWABLE`
+---| `UOT_LABEL`
+---| `UOT_LISTBOX`
+---| `UOT_LIST_CTRL`
+---| `UOT_NINE_PART_DRAWABLE`
+---| `UOT_SLIDER`
+---| `UOT_TEXT_STYLE`
+---| `UOT_X2_EDITBOX`
+
+---api/Addon
 ---```
 ---EscMenuButtonData { path = "addon/manager/manager_icon.dds", x = 75, y = 0, w = 15, h = 15 }
 ---```
@@ -909,45 +923,45 @@ function ADDON:ToggleContent(uiCategory) end
 function UI:ClearUIBound(key) end
 
 ---Returns a widget.
----@overload fun(self: self, widgetName: "avi", id: string, parentId: string, category?: string): Avi
----@overload fun(self: self, widgetName: "button", id: string, parentId: string, category?: string): Button
----@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: string, category?: string): ChatWindow
----@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: string, category?: string): Checkbutton
----@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: string, category?: string): CircleDiagram
----@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: string, category?: string): ColorPicker
----@overload fun(self: self, widgetName: "combobox", id: string, parentId: string, category?: string): Combobox
----@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: string, category?: string): CooldownButton
----@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: string, category?: string): CooldownConstantButton
----@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: string, category?: string): CooldownInventoryButton
----@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: string, category?: string): DamageDisplay
----@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: string, category?: string): DynamicList
----@overload fun(self: self, widgetName: "editbox", id: string, parentId: string, category?: string): Editbox
----@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: string, category?: string): EditboxMultiline
----@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: string, category?: string): EmptyWidget
----@overload fun(self: self, widgetName: "folder", id: string, parentId: string, category?: string): Folder
----@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: string, category?: string): GameTooltip
----@overload fun(self: self, widgetName: "grid", id: string, parentId: string, category?: string): Grid
----@overload fun(self: self, widgetName: "label", id: string, parentId: string, category?: string): Label
----@overload fun(self: self, widgetName: "line", id: string, parentId: string, category?: string): Line
----@overload fun(self: self, widgetName: "listbox", id: string, parentId: string, category?: string): Listbox
----@overload fun(self: self, widgetName: "listctrl", id: string, parentId: string, category?: string): ListCtrl
----@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: string, category?: string): MegaphoneChatEdit
----@overload fun(self: self, widgetName: "message", id: string, parentId: string, category?: string): Message
----@overload fun(self: self, widgetName: "modelview", id: string, parentId: string, category?: string): ModelView
----@overload fun(self: self, widgetName: "pageable", id: string, parentId: string, category?: string): Pageable
----@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: string, category?: string): PaintColorPicker
----@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: string, category?: string): RadioGroup
----@overload fun(self: self, widgetName: "roadmap", id: string, parentId: string, category?: string): RoadMap
----@overload fun(self: self, widgetName: "slider", id: string, parentId: string, category?: string): Slider
----@overload fun(self: self, widgetName: "slot", id: string, parentId: string, category?: string): Slot
----@overload fun(self: self, widgetName: "statusbar", id: string, parentId: string, category?: string): StatusBar
----@overload fun(self: self, widgetName: "tab", id: string, parentId: string, category?: string): Tab
----@overload fun(self: self, widgetName: "textbox", id: string, parentId: string, category?: string): Textbox
----@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: string, category?: string): UnitframeTooltip
----@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: string, category?: string): Webbrowser
----@overload fun(self: self, widgetName: "window", id: string, parentId: string, category?: string): Window
----@overload fun(self: self, widgetName: "worldmap", id: string, parentId: string, category?: string): WorldMap
----@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: string, category?: string): X2EditBox
+---@overload fun(self: self, widgetName: "avi", id: string, parentId: string|Widget, category?: string): Avi
+---@overload fun(self: self, widgetName: "button", id: string, parentId: string|Widget, category?: string): Button
+---@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: string|Widget, category?: string): ChatWindow
+---@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: string|Widget, category?: string): Checkbutton
+---@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: string|Widget, category?: string): CircleDiagram
+---@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: string|Widget, category?: string): ColorPicker
+---@overload fun(self: self, widgetName: "combobox", id: string, parentId: string|Widget, category?: string): Combobox
+---@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: string|Widget, category?: string): CooldownButton
+---@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: string|Widget, category?: string): CooldownConstantButton
+---@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: string|Widget, category?: string): CooldownInventoryButton
+---@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: string|Widget, category?: string): DamageDisplay
+---@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: string|Widget, category?: string): DynamicList
+---@overload fun(self: self, widgetName: "editbox", id: string, parentId: string|Widget, category?: string): Editbox
+---@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: string|Widget, category?: string): EditboxMultiline
+---@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: string|Widget, category?: string): EmptyWidget
+---@overload fun(self: self, widgetName: "folder", id: string, parentId: string|Widget, category?: string): Folder
+---@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: string|Widget, category?: string): GameTooltip
+---@overload fun(self: self, widgetName: "grid", id: string, parentId: string|Widget, category?: string): Grid
+---@overload fun(self: self, widgetName: "label", id: string, parentId: string|Widget, category?: string): Label
+---@overload fun(self: self, widgetName: "line", id: string, parentId: string|Widget, category?: string): Line
+---@overload fun(self: self, widgetName: "listbox", id: string, parentId: string|Widget, category?: string): Listbox
+---@overload fun(self: self, widgetName: "listctrl", id: string, parentId: string|Widget, category?: string): ListCtrl
+---@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: string|Widget, category?: string): MegaphoneChatEdit
+---@overload fun(self: self, widgetName: "message", id: string, parentId: string|Widget, category?: string): Message
+---@overload fun(self: self, widgetName: "modelview", id: string, parentId: string|Widget, category?: string): ModelView
+---@overload fun(self: self, widgetName: "pageable", id: string, parentId: string|Widget, category?: string): Pageable
+---@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: string|Widget, category?: string): PaintColorPicker
+---@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: string|Widget, category?: string): RadioGroup
+---@overload fun(self: self, widgetName: "roadmap", id: string, parentId: string|Widget, category?: string): RoadMap
+---@overload fun(self: self, widgetName: "slider", id: string, parentId: string|Widget, category?: string): Slider
+---@overload fun(self: self, widgetName: "slot", id: string, parentId: string|Widget, category?: string): Slot
+---@overload fun(self: self, widgetName: "statusbar", id: string, parentId: string|Widget, category?: string): StatusBar
+---@overload fun(self: self, widgetName: "tab", id: string, parentId: string|Widget, category?: string): Tab
+---@overload fun(self: self, widgetName: "textbox", id: string, parentId: string|Widget, category?: string): Textbox
+---@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: string|Widget, category?: string): UnitframeTooltip
+---@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: string|Widget, category?: string): Webbrowser
+---@overload fun(self: self, widgetName: "window", id: string, parentId: string|Widget, category?: string): Window
+---@overload fun(self: self, widgetName: "worldmap", id: string, parentId: string|Widget, category?: string): WorldMap
+---@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: string|Widget, category?: string): X2EditBox
 ---@param widgetName string
 ---@param id string
 ---@param parentId string

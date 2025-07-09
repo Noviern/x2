@@ -1,7 +1,7 @@
 ---@class Tabbase
----@field GetSelectedTab fun(self: self)
+---@field GetSelectedTab fun(self: self): number
 ---@field RemoveAllTabs fun(self: self)
----@field RemoveTab fun(self: self, idx)
----@field SelectTab fun(self: self, idx)
----@field SetGap fun(self: self, gap)
+---@field RemoveTab fun(self: self, idx: number)
+---@field SelectTab fun(self: self, idx: number)
+---@field SetGap fun(self: self, gap: number)
 ---@field SetOffset fun(self: self, offset: number)

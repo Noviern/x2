@@ -17,14 +17,14 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Tab
 
 ---object/Tab
 ---@class Tab: Widget, Tabbase 
----@field AddNewTab fun(self: self, tabName: string, selectedButtonWidget, unselectedButtonWidget, windowWidget)
+---@field AddNewTab fun(self: self, tabName: string, selectedButtonWidget: Button, unselectedButtonWidget: Button, windowWidget: Window)
 ---@field AddSimpleTab fun(self: self, tabName: string)
 ---@field AlignTabButtons fun(self: self)
----@field GetActivateTabCount fun(self: self)
----@field GetTabCount fun(self: self)
----@field HideTab fun(self: self, idx)
----@field IsHideTab fun(self: self, index: number)
+---@field GetActivateTabCount fun(self: self): number
+---@field GetTabCount fun(self: self): number
+---@field HideTab fun(self: self, idx: number)
+---@field IsHideTab fun(self: self, index: number): boolean
 ---@field SetActivateTabCount fun(self: self, activateTabCount: number)
----@field SetCorner fun(self: self, corner)
+---@field SetCorner fun(self: self, corner: string)
 ---@field SetVertical fun(self: self, vertical: boolean)
----@field ShowTab fun(self: self, idx)
+---@field ShowTab fun(self: self, idx: number)

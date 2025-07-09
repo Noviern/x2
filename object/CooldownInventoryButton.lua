@@ -22,7 +22,7 @@ UI_BUTTON_PUSHED = 2 -- object/CooldownInventoryButton
 
 ---object/CooldownInventoryButton
 ---@class CooldownInventoryButton: CooldownButton
----@field SetBagItemSlot fun(self: self, itemSlot)
----@field SetBankItemSlot fun(self: self, itemSlot)
+---@field SetBagItemSlot fun(self: self, itemSlot: number)
+---@field SetBankItemSlot fun(self: self, itemSlot: number)
 ---@field SetCofferItemSlot fun(self: self, itemSlot: number)
----@field SetGuildBankItemSlot fun(self: self, itemSlot)
+---@field SetGuildBankItemSlot fun(self: self, itemSlot: number)

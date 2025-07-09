@@ -18,7 +18,7 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Label
 ---object/Label
 ---@class Label: Widget
 ---@field style TextStyle object/TextStyle
----@field GetInset fun(self: self)
----@field SetAutoResize fun(self: self, resize)
+---@field GetInset fun(self: self): left: number, top: number, right: number, bottom: number
+---@field SetAutoResize fun(self: self, resize: true)
 ---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
----@field SetNumberOnly fun(self: self, only)
+---@field SetNumberOnly fun(self: self, only: true)

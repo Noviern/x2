@@ -1,22 +1,24 @@
+---@alias DRAG_CONDITION `DC_ALWAYS` | `DC_SHIFT_KEY_DOWN`
+
 ---@class Widgetbase
 ---@field ApplyUIScale fun(self: self, apply: boolean)
----@field AttachWidget fun(self: self, widget: table)
+---@field AttachWidget fun(self: self, widget: Widget)
 ---@field CancelRequestCharacterCacheData fun(self: self)
----@field ChangeChildAnchorByScrollValue fun(self: self, typeStr: string, value)
+---@field ChangeChildAnchorByScrollValue fun(self: self, typeStr: "horz"|"vert", value: number)
 ---@field Clickable fun(self: self, clickable: boolean)
----@field CreateChildWidget fun(self: self, objectTypeStr: string, name, index, reflectToScriptTable)
----@field CreateChildWidgetByType fun(self: self, objectType, name, index, reflectToScriptTable)
----@field CreateColorDrawable fun(self: self, r: number, g: number, b: number, a: number, nameLayer)
----@field CreateColorDrawableByKey fun(self: self, colorKey: string, nameLayer)
----@field CreateDrawable fun(self: self, path: string, key, nameLayer)
----@field CreateEffectDrawable fun(self: self, nameTex: string, nameLayer)
----@field CreateEffectDrawableByKey fun(self: self, nameTex, key, nameLayer)
----@field CreateIconDrawable fun(self: self, fileName: string, nameLayer)
----@field CreateImageDrawable fun(self: self, nameTex, nameLayer)
----@field CreateNinePartDrawable fun(self: self, nameTex: string, nameLayer)
----@field CreateTextDrawable fun(self: self, path: string, size, nameLayer)
----@field CreateThreeColorDrawable fun(self: self, width: number, height, layer)
----@field CreateThreePartDrawable fun(self: self, nameTex: string, nameLayer)
+---@field CreateChildWidget fun(self: self, objectTypeStr: string, name: string, index: number, reflectToScriptTable: boolean): Widget TODO: Add widget types and their associated returns.
+---@field CreateChildWidgetByType fun(self: self, objectType: OBJECT, name: string, index: number, reflectToScriptTable: boolean): Widget TODO: Add widget types and their associated returns.
+---@field CreateColorDrawable fun(self: self, r: number, g: number, b: number, a: number, nameLayer: string): table
+---@field CreateColorDrawableByKey fun(self: self, colorKey: string, nameLayer: string): table
+---@field CreateDrawable fun(self: self, path: string, key: string, nameLayer: string): table
+---@field CreateEffectDrawable fun(self: self, nameTex: string, nameLayer: string): table
+---@field CreateEffectDrawableByKey fun(self: self, nameTex: string, key: stringlib, nameLayer: string)
+---@field CreateIconDrawable fun(self: self, nameLayer: string): table
+---@field CreateImageDrawable fun(self: self, nameTex: string, nameLayer: string): table
+---@field CreateNinePartDrawable fun(self: self, nameTex: string, nameLayer: string):table
+---@field CreateTextDrawable fun(self: self, path: FONT_PATH, size: FONT_SIZE, nameLayer: string): table
+---@field CreateThreeColorDrawable fun(self: self, width: number, height: number, layer: string): table
+---@field CreateThreePartDrawable fun(self: self, nameTex: string, nameLayer: string)
 ---@field DetachWidget fun(self: self)
 ---@field Enable fun(self: self, enable: boolean)
 ---@field EnableDrag fun(self: self, enable: boolean)
@@ -25,49 +27,49 @@
 ---@field EnableKeyboard fun(self: self, enable: boolean)
 ---@field EnablePick fun(self: self, enable: boolean)
 ---@field EnableScroll fun(self: self, enable: boolean)
----@field GetAlpha fun(self: self)
----@field GetAttachedWidget fun(self: self)
----@field GetParent fun(self: self)
----@field GetText fun(self: self)
----@field GetUILayer fun(self: self)
----@field GetValue fun(self: self, typeStr: string)
----@field HasHandler fun(self: self, actionName: string)
+---@field GetAlpha fun(self: self): number
+---@field GetAttachedWidget fun(self: self): Widget
+---@field GetParent fun(self: self): Widget
+---@field GetText fun(self: self): string
+---@field GetUILayer fun(self: self): string
+---@field GetValue fun(self: self, typeStr: string): number
+---@field HasHandler fun(self: self, actionName: string): boolean
 ---@field InheritAnimationData fun(self: self, targetWidgetTable: table)
----@field IsDescendantWidget fun(self: self, id: string)
----@field IsEnabled fun(self: self)
----@field IsMouseOver fun(self: self)
----@field IsNowAnimation fun(self: self)
----@field IsVisible fun(self: self)
+---@field IsDescendantWidget fun(self: self, id: string): boolean
+---@field IsEnabled fun(self: self): boolean
+---@field IsMouseOver fun(self: self): boolean
+---@field IsNowAnimation fun(self: self): boolean
+---@field IsVisible fun(self: self): boolean
 ---@field Lower fun(self: self)
 ---@field MoveTo fun(self: self, x: number, y: number)
 ---@field Raise fun(self: self)
----@field RegisterEvent fun(self: self, eventName: string)
+---@field RegisterEvent fun(self: self, eventName: UIEVENT_TYPE)
 ---@field ReleaseDeletedHandler fun(self: self)
 ---@field ReleaseHandler fun(self: self, actionName: string)
 ---@field RequestCharacterCacheData fun(self: self, cacheQueryId: string)
 ---@field SetAlpha fun(self: self, alpha: number)
----@field SetAlphaAnimation fun(self: self, initialAlpha: number, finalAlpha, velocityTime, accelerationTime)
----@field SetCategory fun(self: self, category)
+---@field SetAlphaAnimation fun(self: self, initialAlpha: number, finalAlpha: number, velocityTime: number, accelerationTime: number)
+---@field SetCategory fun(self: self, category: string)
 ---@field SetCharacterCacheDataHandler fun(self: self, handler: function)
----@field SetDelegator fun(self: self, action: string, delegator, handler)
+---@field SetDelegator fun(self: self, action: string, delegator: Widget, handler: function)
 ---@field SetDeletedHandler fun(self: self, handler: function)
----@field SetDragCondition fun(self: self, dragCondition)
----@field SetDrawableLayerAlpha fun(self: self, alpha, nameLayer)
+---@field SetDragCondition fun(self: self, dragCondition: DRAG_CONDITION)
+---@field SetDrawableLayerAlpha fun(self: self, alpha: number, nameLayer: string)
 ---@field SetDrawPriority fun(self: self, drawPriority)
----@field SetHandler fun(self: self, actionName: string, handler)
+---@field SetHandler fun(self: self, actionName: string, handler: function)
 ---@field SetLText fun(self: self)
----@field SetMaxResizingExtent fun(self: self, width, height)
----@field SetMinResizingExtent fun(self: self, width, height)
----@field SetMoveAnimation fun(self: self, direction: string, delta, time, repeatAnimation)
+---@field SetMaxResizingExtent fun(self: self, width: number, height: number)
+---@field SetMinResizingExtent fun(self: self, width: number, height: number)
+---@field SetMoveAnimation fun(self: self, direction: string, delta: number, time: number, repeatAnimation: number)
 ---@field SetResizingBorderSize fun(self: self, left: number, top: number, right: number, bottom: number)
----@field SetScale fun(self: self, scale)
----@field SetScaleAnimation fun(self: self, initialScale: number, finalScale, velocityTime, accelerationTime, scaleAnchor)
----@field SetSounds fun(self: self, name)
----@field SetStartAnimation fun(self: self, alpha: boolean, scale)
----@field SetText fun(self: self, text)
+---@field SetScale fun(self: self, scale: number)
+---@field SetScaleAnimation fun(self: self, initialScale: number, finalScale: number, velocityTime: number, accelerationTime: number, scaleAnchor: string) TODO: scaleAnchor
+---@field SetSounds fun(self: self, name: string)
+---@field SetStartAnimation fun(self: self, alpha: boolean, scale: boolean)
+---@field SetText fun(self: self, text: string)
 ---@field Show fun(self: self, show: boolean)
 ---@field StartMoving fun(self: self)
 ---@field StartSizing fun(self: self, anchorPoint: string)
 ---@field StopMovingOrSizing fun(self: self)
----@field TriggerMoveAnimation fun(self: self, on)
+---@field TriggerMoveAnimation fun(self: self, on: boolean)
 ---@field UseResizing fun(self: self, use: boolean)

@@ -20,18 +20,18 @@ DC_SHIFT_KEY_DOWN = 1 -- object/Folder
 ---@field style TextStyle
 ---@field CloseFolder fun(self: self)
 ---@field FixedCloseFolder fun(self: self)
----@field GetExtendLength fun(self: self)
----@field GetState fun(self: self)
----@field GetTitleText fun(self: self)
+---@field GetExtendLength fun(self: self): number
+---@field GetState fun(self: self): string
+---@field GetTitleText fun(self: self): string
 ---@field OpenFolder fun(self: self)
 ---@field SetAnimateStep fun(self: self, height: number)
 ---@field SetChildWidget fun(self: self, childTable: table)
 ---@field SetCloseStateButton fun(self: self, closeTable: table)
----@field SetExtendLength fun(self: self, height)
+---@field SetExtendLength fun(self: self, height: number)
 ---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
 ---@field SetOpenStateButton fun(self: self, openTable: table)
 ---@field SetTitleButtonWidget fun(self: self, titleTable: table)
----@field SetTitleHeight fun(self: self, height)
----@field SetTitleText fun(self: self, text)
+---@field SetTitleHeight fun(self: self, height: number)
+---@field SetTitleText fun(self: self, text: string)
 ---@field ToggleState fun(self: self)
----@field UseAnimation fun(self: self, useAnimation)
+---@field UseAnimation fun(self: self, useAnimation: boolean)

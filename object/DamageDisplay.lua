@@ -24,14 +24,35 @@ PCT_DEFAULT = 0 -- object/DamageDisplay
 PCT_SHIP_COLLISION = 1 -- object/DamageDisplay
 
 ---object/DamageDisplay
+---
+---May not be accurate.
+---@class FrameInfo
+---@field x? number
+---@field y? number
+---@field w? number
+---@field h? number
+---@field time? number
+---@field scale? number
+---@field moveY? number
+---@field moveX? number
+---@field animTime? number
+---@field alpha? number
+---@field animType? number
+
+---object/DamageDisplay
+---@alias PCT
+---| `PCT_DEFAULT`
+---| `PCT_SHIP_COLLISION`
+
+---object/DamageDisplay
 ---@class DamageDisplay: Widget
 ---@field extraStyle TextStyle
 ---@field style TextStyle
 ---@field Animation fun(self: self, anim: boolean)
----@field GetActualDrawn fun(self: self)
----@field GetInset fun(self: self)
----@field SetAnimFrameInfo fun(self: self, frameInfo: table)
----@field SetInitPos fun(self: self, x, y)
+---@field GetActualDrawn fun(self: self): left: number, top: number, right: number, bottom: number
+---@field GetInset fun(self: self): left: number, top: number, right: number, bottom: number
+---@field SetAnimFrameInfo fun(self: self, frameInfo: FrameInfo[])
+---@field SetInitPos fun(self: self, x: number, y: number)
 ---@field SetInset fun(self: self, left: number, top: number, right: number, bottom: number)
----@field SetPositionCalculationType fun(self: self, positionCalculationType: number)
----@field SetUnitId fun(self: self, sourceId: string, targetId)
+---@field SetPositionCalculationType fun(self: self, positionCalculationType: PCT)
+---@field SetUnitId fun(self: self, sourceId: string, targetId: string)

@@ -1,15 +1,15 @@
 ---@class Uibounds
----@field AddAnchor fun(self: self, anchor: string, parentId: string, x: number, y: number)
+---@field AddAnchor fun(self: self, anchor: string, parentId: string|Widget, x: number, y: number) TODO: Sometimes this may have two anchors? one before and after after parentId.
 ---@field BindWidth fun(self: self, width: number)
----@field CheckOutOfScreen fun(self: self)
----@field CorrectOffsetByScreen fun(self: self)
----@field GetEffectiveExtent fun(self: self)
----@field GetEffectiveOffset fun(self: self)
----@field GetExtent fun(self: self)
----@field GetHeight fun(self: self)
----@field GetOffset fun(self: self)
----@field GetWidth fun(self: self)
+---@field CheckOutOfScreen fun(self: self): boolean
+---@field CorrectOffsetByScreen fun(self: self): offX: number, offY: number
+---@field GetEffectiveExtent fun(self: self): effectiveWidth: number, effectiveHeight: number
+---@field GetEffectiveOffset fun(self: self): effectiveOffX: number, effectiveOffY: number
+---@field GetExtent fun(self: self): width: number, height: number
+---@field GetHeight fun(self: self): number
+---@field GetOffset fun(self: self): offX: number, offY: number
+---@field GetWidth fun(self: self): number
 ---@field RemoveAllAnchors fun(self: self)
 ---@field SetExtent fun(self: self, width: number, height: number)
----@field SetHeight fun(self: self, height)
----@field SetWidth fun(self: self, width)
+---@field SetHeight fun(self: self, height: number)
+---@field SetWidth fun(self: self, width: number)
