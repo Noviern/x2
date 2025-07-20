@@ -1,12 +1,45 @@
+---@meta _
+
+---TODO: Should Widgetbase and Widget be merged?
+
 ---@class Widget: Widgetbase, Uibounds, Uiobject
----@field DisableDrawables fun(self: self, nameLayer: string)
----@field DisableDrawablesWithChildren fun(self: self, nameLayer: string)
----@field EnableDrawables fun(self: self, nameLayer: string)
----@field EnableDrawablesWithChildren fun(self: self, nameLayer: string)
----@field GetRotation fun(self: self) TODO: This returns nil. Broken?
----@field RemoveAllDrawables fun(self: self, nameLayer: string)
----@field RemoveDrawable fun(self: self, drawableTable: table)
----@field SetLayerColor fun(self: self, r: number, g: number, b: number, a: number, nameLayer: string)
----@field SetRotation fun(self: self, rs: string) TODO: This takes a string, not sure how this is used.
----@field UseDynamicContentState fun(self: self, use: boolean)
----@field UseDynamicDrawableState fun(self: self, nameLayer: string, use: boolean)
+local Widget = {}
+
+---@param nameLayer string
+function Widget:DisableDrawables(nameLayer) end
+
+---@param nameLayer string
+function Widget:DisableDrawablesWithChildren(nameLayer) end
+
+---@param nameLayer string
+function Widget:EnableDrawables(nameLayer) end
+
+---@param nameLayer string
+function Widget:EnableDrawablesWithChildren(nameLayer) end
+
+---TODO: This returns nil. Broken?
+function Widget:GetRotation() end
+
+---@param nameLayer string
+function Widget:RemoveAllDrawables(nameLayer) end
+
+---@param drawableTable table
+function Widget:RemoveDrawable(drawableTable) end
+
+---@param r number 0 to 1
+---@param g number 0 to 1
+---@param b number 0 to 1
+---@param a number 0 to 1
+---@param nameLayer string
+function Widget:SetLayerColor(r, g, b, a, nameLayer) end
+
+---TODO: This takes a string, not sure how this is used.
+---@param rs string
+function Widget:SetRotation(rs) end
+
+---@param use boolean
+function Widget:UseDynamicContentState(use) end
+
+---@param nameLayer string
+---@param use boolean
+function Widget:UseDynamicDrawableState(nameLayer, use) end

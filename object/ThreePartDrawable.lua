@@ -9,3 +9,7 @@ AP_RIGHT = 7 -- object/ThreePartDrawable
 AP_TOP = 5 -- object/ThreePartDrawable
 AP_TOPLEFT = 0 -- object/ThreePartDrawable
 AP_TOPRIGHT = 1 -- object/ThreePartDrawable
+
+---object/ThreePartDrawable
+---@class ThreePartDrawable: DrawableDDS
+local ThreePartDrawable = {}

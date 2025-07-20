@@ -1,12 +1,12 @@
-__this = "<userdata: 00000001728AB1F0>"
+__this = "<userdata: 00000001591466C0>"
 guideTextStyle = {
-  __this = "<userdata: 00000001B1869A10>",
+  __this = "<userdata: 00000001C6749D20>",
 }
 prefixStyle = {
-  __this = "<userdata: 00000001B1866810>",
+  __this = "<userdata: 00000001C674AC20>",
 }
 style = {
-  __this = "<userdata: 00000001B1867490>",
+  __this = "<userdata: 00000001C674AEA0>",
 }
 Avi SetAviName nil
 Avi SetAviNum nil
@@ -112,6 +112,7 @@ Drawable GetMoveEffectPhaseProperties nil
 Drawable GetTextureSize nil
 Drawable IsGrayTexture nil
 Drawable IsRunning nil
+Drawable IsVisible function
 Drawable IsWhiteTexture nil
 Drawable SetAlign nil
 Drawable SetAnimFrameInfo nil
@@ -129,6 +130,7 @@ Drawable SetEffectScaleAxis nil
 Drawable SetInset function
 Drawable SetInternalDrawType nil
 Drawable SetInterval nil
+Drawable SetLText function
 Drawable SetMoveEffectCircle nil
 Drawable SetMoveEffectEdge nil
 Drawable SetMoveEffectInterval nil
@@ -140,10 +142,12 @@ Drawable SetMoveRotate nil
 Drawable SetOutline nil
 Drawable SetOutlineInvisiblePart nil
 Drawable SetRepeatCount nil
+Drawable SetRotation function
 Drawable SetShadow nil
 Drawable SetSnap nil
 Drawable SetSRGB nil
 Drawable SetStartEffect nil
+Drawable SetText function
 Drawable SetTexture nil
 Drawable SetTextureColor nil
 Drawable SetTextureInfo nil
@@ -153,6 +157,7 @@ Drawable SetUccTextureByUccId nil
 Drawable SetUccTextureInDoodad nil
 Drawable SetVisible nil
 Drawable SetVisibleForString nil
+Drawable Show function
 DynamicList ClearData nil
 DynamicList CreateOveredImage nil
 DynamicList EnableChildTouch nil

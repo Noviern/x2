@@ -1,4 +1,4 @@
-__this = "<userdata: 00000001B12DB460>"
+__this = "<userdata: 00000001C606F2A0>"
 Avi SetAviName nil
 Avi SetAviNum nil
 Button CreateStateDrawable nil
@@ -103,6 +103,7 @@ Drawable GetMoveEffectPhaseProperties nil
 Drawable GetTextureSize nil
 Drawable IsGrayTexture nil
 Drawable IsRunning nil
+Drawable IsVisible function
 Drawable IsWhiteTexture nil
 Drawable SetAlign nil
 Drawable SetAnimFrameInfo nil
@@ -120,6 +121,7 @@ Drawable SetEffectScaleAxis nil
 Drawable SetInset nil
 Drawable SetInternalDrawType nil
 Drawable SetInterval nil
+Drawable SetLText function
 Drawable SetMoveEffectCircle nil
 Drawable SetMoveEffectEdge nil
 Drawable SetMoveEffectInterval nil
@@ -131,10 +133,12 @@ Drawable SetMoveRotate nil
 Drawable SetOutline nil
 Drawable SetOutlineInvisiblePart nil
 Drawable SetRepeatCount nil
+Drawable SetRotation function
 Drawable SetShadow nil
 Drawable SetSnap nil
 Drawable SetSRGB nil
 Drawable SetStartEffect nil
+Drawable SetText function
 Drawable SetTexture nil
 Drawable SetTextureColor nil
 Drawable SetTextureInfo nil
@@ -144,6 +148,7 @@ Drawable SetUccTextureByUccId nil
 Drawable SetUccTextureInDoodad nil
 Drawable SetVisible nil
 Drawable SetVisibleForString nil
+Drawable Show function
 DynamicList ClearData nil
 DynamicList CreateOveredImage nil
 DynamicList EnableChildTouch nil

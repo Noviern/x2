@@ -1,10 +1,10 @@
 ---@meta _
 
-CRU_DOUBLE_GAUGE = 3 -- api/X2CombatResource
+CRU_DOUBLE_GAUGE = 3   -- api/X2CombatResource
 CRU_DOUBLE_GAUGE_2 = 4 -- api/X2CombatResource
-CRU_GAUGE = 1 -- api/X2CombatResource
-CRU_OVERLAP = 2 -- api/X2CombatResource
-X2CombatResource = {} -- api/X2CombatResource
+CRU_GAUGE = 1          -- api/X2CombatResource
+CRU_OVERLAP = 2        -- api/X2CombatResource
+X2CombatResource = {}  -- api/X2CombatResource
 
 ---api/X2CombatResource
 ---@class CombatResource
@@ -15,9 +15,9 @@ X2CombatResource = {} -- api/X2CombatResource
 ---@field recoveryResourceType number
 ---@field isDefaultResource boolean
 ---@field resource1ColorKey string
----@field resource2Max? number 
----@field resource2Current? number 
----@field resource2ColorKey? string 
+---@field resource2Max? number
+---@field resource2Current? number
+---@field resource2ColorKey? string
 
 ---api/X2CombatResource
 ---@class CombatResourceInfo: CombatResource

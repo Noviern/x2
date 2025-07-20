@@ -1,4 +1,9 @@
 package.path = "../Documents/Addon/" .. ADDON:GetName() .. "/?.lua;" .. package.path
+package.cpath = "../Documents/Addon/" .. ADDON:GetName() .. "/?.dll;" .. package.cpath
+
+function open(filename, mode)
+  return io.open("../Documents/Addon/" .. ADDON:GetName() .. "/" .. filename, mode)
+end
 
 ---@enum API
 API = {
@@ -149,47 +154,47 @@ OBJECT = {
   RadioGroup = 55
 }
 
----@enum WIDGET_NAME
-local WIDGET_NAME = {
-  Avi = "avi",
-  Button = "button",
-  ChatWindow = "chatwindow",
-  CheckButton = "checkbutton",
-  CircleDiagram = "circlediagram",
-  ColorPicker = "colorpicker",
-  Combobox = "combobox",
-  CooldownButton = "cooldownbutton",
-  CooldownConstantButton = "cooldownconstantbutton",
-  CooldownInventoryButton = "cooldowninventorybutton",
-  DamageDisplay = "damagedisplay",
-  DynamicList = "dynamiclist",
-  Editbox = "editbox",
-  EditboxMultiline = "editboxmultiline",
-  EmptyWidget = "emptywidget",
-  Folder = "folder",
-  GameTooltip = "gametooltip",
-  Grid = "grid",
-  Label = "label",
-  Line = "line",
-  ListCtrl = "listctrl",
-  Listbox = "listbox",
-  MegaphoneChatEdit = "megaphonechatedit",
-  Message = "message",
-  ModelView = "modelview",
-  Pageable = "pageable",
-  PaintColorPicker = "paintcolorpicker",
-  Radiogroup = "radiogroup",
-  RoadMap = "roadmap",
-  Slider = "slider",
-  Slot = "slot",
-  StatusBar = "statusbar",
-  Tab = "tab",
-  Textbox = "textbox",
-  UnitframeTooltip = "unitframetooltip",
-  Webbrowser = "webbrowser",
-  Window = "window",
-  WorldMap = "worldmap",
-  X2Editbox = "x2editbox",
+---@enum (key) OBJECT_NAME
+local OBJECT_NAME = {
+  avi = "OBJECT.Avi",
+  button = "OBJECT.Button",
+  chatwindow = "OBJECT.ChatTab",
+  checkbutton = "OBJECT.CheckButton",
+  circlediagram = "OBJECT.CircleDiagram",
+  colorpicker = "OBJECT.ColorPicker",
+  combobox = "OBJECT.Combobox",
+  cooldownbutton = "OBJECT.CooldownButton",
+  cooldownconstantbutton = "OBJECT.CooldownConstantButton",
+  cooldowninventorybutton = "OBJECT.CooldownInventoryButton",
+  damagedisplay = "OBJECT.DamageDisplay",
+  dynamiclist = "OBJECT.DynamicList",
+  editbox = "OBJECT.Editbox",
+  editboxmultiline = "OBJECT.EditboxMultiline",
+  emptywidget = "OBJECT.EmptyWidget",
+  folder = "OBJECT.Folder",
+  gametooltip = "OBJECT.GameTooltip",
+  grid = "OBJECT.Grid",
+  label = "OBJECT.Label",
+  line = "OBJECT.Line",
+  listctrl = "OBJECT.ListCtrl",
+  listbox = "OBJECT.Listbox",
+  megaphonechatedit = "OBJECT.MegaphoneChatEdit",
+  message = "OBJECT.Message",
+  modelview = "OBJECT.ModelView",
+  pageable = "OBJECT.Pageable",
+  paintcolorpicker = "OBJECT.PaintColorPicker",
+  radiogroup = "OBJECT.RadioGroup",
+  roadmap = "OBJECT.RoadMap",
+  slider = "OBJECT.Slider",
+  slot = "OBJECT.Slot",
+  statusbar = "OBJECT.StatusBar",
+  tab = "OBJECT.Tab",
+  textbox = "OBJECT.Textbox",
+  unitframetooltip = "OBJECT.UnitframeTooltip",
+  webbrowser = "OBJECT.Webbrowser",
+  window = "OBJECT.Window",
+  worldmap = "OBJECT.WorldMap",
+  x2editbox = "OBJECT.X2Editbox",
 }
 
 ---@enum UIEVENT_TYPE

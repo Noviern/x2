@@ -1,4 +1,28 @@
-__this = "<userdata: 00000001AF579F40>"
+__this = "<userdata: 00000001BEA346A0>"
+column = {
+  1 = {
+    __this = "<userdata: 00000001C67019C0>",
+    style = {
+      __this = "<userdata: 00000001C674C020>",
+    },
+  },
+}
+items = {
+  1 = {
+    __this = "<userdata: 00000001C61D8A70>",
+    subItems = {
+      1 = {
+        __this = "<userdata: 00000001C6843460>",
+        style = {
+          __this = "<userdata: 00000001C6749FA0>",
+        },
+      },
+    },
+    titleStyle = {
+      __this = "<userdata: 00000001C674D920>",
+    },
+  },
+}
 Avi SetAviName nil
 Avi SetAviNum nil
 Button CreateStateDrawable nil
@@ -103,6 +127,7 @@ Drawable GetMoveEffectPhaseProperties nil
 Drawable GetTextureSize nil
 Drawable IsGrayTexture nil
 Drawable IsRunning nil
+Drawable IsVisible function
 Drawable IsWhiteTexture nil
 Drawable SetAlign nil
 Drawable SetAnimFrameInfo nil
@@ -120,6 +145,7 @@ Drawable SetEffectScaleAxis nil
 Drawable SetInset nil
 Drawable SetInternalDrawType nil
 Drawable SetInterval nil
+Drawable SetLText function
 Drawable SetMoveEffectCircle nil
 Drawable SetMoveEffectEdge nil
 Drawable SetMoveEffectInterval nil
@@ -131,10 +157,12 @@ Drawable SetMoveRotate nil
 Drawable SetOutline nil
 Drawable SetOutlineInvisiblePart nil
 Drawable SetRepeatCount nil
+Drawable SetRotation function
 Drawable SetShadow nil
 Drawable SetSnap nil
 Drawable SetSRGB nil
 Drawable SetStartEffect nil
+Drawable SetText function
 Drawable SetTexture nil
 Drawable SetTextureColor nil
 Drawable SetTextureInfo nil
@@ -144,6 +172,7 @@ Drawable SetUccTextureByUccId nil
 Drawable SetUccTextureInDoodad nil
 Drawable SetVisible nil
 Drawable SetVisibleForString nil
+Drawable Show function
 DynamicList ClearData nil
 DynamicList CreateOveredImage function
 DynamicList EnableChildTouch nil

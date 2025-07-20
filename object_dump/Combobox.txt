@@ -1,56 +1,56 @@
-__this = "<userdata: 000000019DA92620>"
+__this = "<userdata: 00000001C1C902D0>"
 dropdown = {
-  __this = "<userdata: 00000001AFEAE230>",
+  __this = "<userdata: 00000001B8B5B760>",
   downBtn = {
-    __this = "<userdata: 00000001B1774BE0>",
+    __this = "<userdata: 00000001C6704710>",
     style = {
-      __this = "<userdata: 00000001B1866D10>",
+      __this = "<userdata: 00000001C674CF20>",
     },
   },
   itemStyle = {
-    __this = "<userdata: 00000001B1862E90>",
+    __this = "<userdata: 00000001C67490A0>",
   },
   itemStyleSub = {
-    __this = "<userdata: 00000001B1863890>",
+    __this = "<userdata: 00000001C6749320>",
   },
   upBtn = {
-    __this = "<userdata: 00000001B1775E00>",
+    __this = "<userdata: 00000001C67010B0>",
     style = {
-      __this = "<userdata: 00000001B1863B10>",
+      __this = "<userdata: 00000001C67454A0>",
     },
   },
   vslider = {
-    __this = "<userdata: 00000001B178EB80>",
+    __this = "<userdata: 00000001C61D84E0>",
     thumb = {
-      __this = "<userdata: 00000001B17742D0>",
+      __this = "<userdata: 00000001C6703E00>",
       style = {
-        __this = "<userdata: 00000001B1868D90>",
+        __this = "<userdata: 00000001C674CA20>",
       },
     },
   },
 }
 selector = {
-  __this = "<userdata: 00000001AFC2DA50>",
+  __this = "<userdata: 00000001B3EA0550>",
   guideTextStyle = {
-    __this = "<userdata: 00000001B1862990>",
+    __this = "<userdata: 00000001C6744AA0>",
   },
   prefixStyle = {
-    __this = "<userdata: 00000001B1862710>",
+    __this = "<userdata: 00000001C6748920>",
   },
   style = {
-    __this = "<userdata: 00000001B1865E10>",
+    __this = "<userdata: 00000001C6746120>",
   },
 }
 selectorBtn = {
-  __this = "<userdata: 00000001B176E830>",
+  __this = "<userdata: 00000001C67007A0>",
   style = {
-    __this = "<userdata: 00000001B1862C10>",
+    __this = "<userdata: 00000001C6748BA0>",
   },
 }
 toggle = {
-  __this = "<userdata: 00000001B17754F0>",
+  __this = "<userdata: 00000001C66FD140>",
   style = {
-    __this = "<userdata: 00000001B1863610>",
+    __this = "<userdata: 00000001C6748E20>",
   },
 }
 Avi SetAviName nil
@@ -157,6 +157,7 @@ Drawable GetMoveEffectPhaseProperties nil
 Drawable GetTextureSize nil
 Drawable IsGrayTexture nil
 Drawable IsRunning nil
+Drawable IsVisible function
 Drawable IsWhiteTexture nil
 Drawable SetAlign nil
 Drawable SetAnimFrameInfo nil
@@ -174,6 +175,7 @@ Drawable SetEffectScaleAxis nil
 Drawable SetInset nil
 Drawable SetInternalDrawType nil
 Drawable SetInterval nil
+Drawable SetLText function
 Drawable SetMoveEffectCircle nil
 Drawable SetMoveEffectEdge nil
 Drawable SetMoveEffectInterval nil
@@ -185,10 +187,12 @@ Drawable SetMoveRotate nil
 Drawable SetOutline nil
 Drawable SetOutlineInvisiblePart nil
 Drawable SetRepeatCount nil
+Drawable SetRotation function
 Drawable SetShadow nil
 Drawable SetSnap nil
 Drawable SetSRGB nil
 Drawable SetStartEffect nil
+Drawable SetText function
 Drawable SetTexture nil
 Drawable SetTextureColor nil
 Drawable SetTextureInfo nil
@@ -198,6 +202,7 @@ Drawable SetUccTextureByUccId nil
 Drawable SetUccTextureInDoodad nil
 Drawable SetVisible nil
 Drawable SetVisibleForString nil
+Drawable Show function
 DynamicList ClearData nil
 DynamicList CreateOveredImage nil
 DynamicList EnableChildTouch nil

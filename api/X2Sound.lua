@@ -12,7 +12,7 @@ function X2Sound:IsPlaying(soundId) end
 ---@param soundPackItemName string
 function X2Sound:PlayMusic(soundPackItemName) end
 
----Plays a [SOUND_NAME](lua://SOUND_NAME) and returns the `soundId` of that sound instance. 
+---Plays a [SOUND_NAME](lua://SOUND_NAME) and returns the `soundId` of that sound instance.
 ---@param PlayUISound SOUND_NAME [SOUND_NAME](lua://SOUND_NAME)
 ---@param duplicable boolean
 ---@return number soundId

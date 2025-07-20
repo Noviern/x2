@@ -1,7 +1,7 @@
 ---@meta _
 
 SIK_DESCRIPTION = 1 -- api/X2Skill
-X2Skill = {} -- api/X2Skill
+X2Skill = {}        -- api/X2Skill
 
 ---api/X2Skill
 ---@class SynergyIconInfo
@@ -10,6 +10,8 @@ X2Skill = {} -- api/X2Skill
 ---@field resulticon string
 ---@field resultbuffkind boolean
 ---@field desc string
+
+---TODO: Should SkillTooltip be moved to Addon because its also used in Slot:GetTooltip()
 
 ---api/X2Skill
 ---@class SkillTooltip

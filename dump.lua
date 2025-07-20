@@ -47,7 +47,9 @@ function dump(tbl, depth, seen, path)
               val = string.format("{\n%s,\n%s}", sub_vars, indent)
             end
 
-            table.insert(funcs, sub_funcs)
+            if sub_funcs ~= "" then
+              table.insert(funcs, sub_funcs)
+            end
           end
         end
       elseif vt == "boolean" or vt == "number" then
@@ -55,7 +57,7 @@ function dump(tbl, depth, seen, path)
       elseif vt == "userdata" then
         val = string.format('"<%s>"', tostring(v))
       else
-        val = string.format("%q", tostring(v))
+        val = string.format('"%s"', (string.gsub(v, "\r\n", "\\r\\n")))
       end
 
       line = string.format("%s%s = %s", indent, k, val)

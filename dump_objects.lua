@@ -5,16 +5,16 @@ local OBJECT = {
   Editbox = 3,
   EditboxMultiline = 4,
   Listbox = 5,
-  Drawable = 6, -- No widget type.
-  ColorDrawable = 7, -- No widget type.
-  NinePartDrawable = 8, -- No widget type.
-  ThreePartDrawable = 9, -- No widget type.
-  ImageDrawable = 10, -- No widget type.
-  IconDrawable = 11, -- No widget type.
-  TextDrawable = 12, -- No widget type.
+  Drawable = 6, -- No widget type. No drawable type. This should import Drawable but instead it does nothing? Drawable is imported under NinePartDrawable?
+  ColorDrawable = 7, -- No widget type. ColorDrawable.
+  NinePartDrawable = 8, -- No widget type. NinePartDrawable.
+  ThreePartDrawable = 9, -- No widget type. ThreePartDrawable.
+  ImageDrawable = 10, -- No widget type. ImageDrawable.
+  IconDrawable = 11, -- No widget type. IconDrawable.
+  TextDrawable = 12, -- No widget type. TextDrawable.
   TextStyle = 13,  -- No widget type but attaches to `widget.style`.
-  ThreeColorDrawable = 14, -- No widget type.
-  EffectDrawable = 15, -- No widget type.
+  ThreeColorDrawable = 14, -- No widget type. ThreeColorDrawable.
+  EffectDrawable = 15, -- No widget type. EffectDrawable.
   Message = 16,
   StatusBar = 17,
   GameTooltip = 18,
@@ -62,6 +62,8 @@ for object_name, object_id in pairs(OBJECT) do
 end
 
 local function dump_object(widget, widgetName)
+  ADDON:ChatLog("Dumping: " .. widgetName)
+  
   local filePath = "../Documents/Addon/aad/object_dump/" .. widgetName .. ".txt"
   local file = assert(io.open(filePath, "w"))
   local method = {}
@@ -379,6 +381,9 @@ local function dump_object(widget, widgetName)
 
   method.IsRunning = type(widget.IsRunning)
   file:write("Drawable IsRunning " .. method.IsRunning .. "\n")
+  
+  method.IsVisible = type(widget.IsVisible)
+  file:write("Drawable IsVisible " .. method.IsVisible .. "\n")
 
   method.IsWhiteTexture = type(widget.IsWhiteTexture)
   file:write("Drawable IsWhiteTexture " .. method.IsWhiteTexture .. "\n")
@@ -431,6 +436,9 @@ local function dump_object(widget, widgetName)
   method.SetInterval = type(widget.SetInterval)
   file:write("Drawable SetInterval " .. method.SetInterval .. "\n")
 
+  method.SetLText = type(widget.SetLText)
+  file:write("Drawable SetLText " .. method.SetLText .. "\n")
+
   method.SetMoveEffectCircle = type(widget.SetMoveEffectCircle)
   file:write("Drawable SetMoveEffectCircle " .. method.SetMoveEffectCircle .. "\n")
 
@@ -464,6 +472,9 @@ local function dump_object(widget, widgetName)
   method.SetRepeatCount = type(widget.SetRepeatCount)
   file:write("Drawable SetRepeatCount " .. method.SetRepeatCount .. "\n")
 
+  method.SetRotation = type(widget.SetRotation)
+  file:write("Drawable SetRotation " .. method.SetRotation .. "\n")
+
   method.SetShadow = type(widget.SetShadow)
   file:write("Drawable SetShadow " .. method.SetShadow .. "\n")
 
@@ -475,6 +486,9 @@ local function dump_object(widget, widgetName)
 
   method.SetStartEffect = type(widget.SetStartEffect)
   file:write("Drawable SetStartEffect " .. method.SetStartEffect .. "\n")
+
+  method.SetText = type(widget.SetText)
+  file:write("Drawable SetText " .. method.SetText .. "\n")
 
   method.SetTexture = type(widget.SetTexture)
   file:write("Drawable SetTexture " .. method.SetTexture .. "\n")
@@ -502,6 +516,9 @@ local function dump_object(widget, widgetName)
 
   method.SetVisibleForString = type(widget.SetVisibleForString)
   file:write("Drawable SetVisibleForString " .. method.SetVisibleForString .. "\n")
+
+  method.Show = type(widget.Show)
+  file:write("Drawable Show " .. method.Show .. "\n")
 
   method.ClearData = type(widget.ClearData)
   file:write("DynamicList ClearData " .. method.ClearData .. "\n")
@@ -2694,7 +2711,6 @@ local function dump_object(widget, widgetName)
   method.UpdateZoneStateDrawable = type(widget.UpdateZoneStateDrawable)
   file:write("Worldmap UpdateZoneStateDrawable " .. method.UpdateZoneStateDrawable .. "\n")
 
-
   file:close()
 end
 
@@ -2758,6 +2774,41 @@ dump_object(EditboxMultiline, "EditboxMultiline")
 EmptyWidget = UIParent:CreateWidget("emptywidget", "exampleEmptyWidget", "UIParent")
 dump_object(EmptyWidget, "EmptyWidget")
 
+local ColorDrawable = EmptyWidget:CreateColorDrawable(1, 1, 1, 1, "background")
+dump_object(ColorDrawable, "EmptyWidgetColorDrawable")
+
+local ColorDrawableByKey = EmptyWidget:CreateColorDrawableByKey("texture_check_window_bg", "background")
+dump_object(ColorDrawableByKey, "EmptyWidgetColorDrawableByKey")
+
+---TODO: CreateDrawable can return multiple types apparently and this is a ninepart
+local Drawable = EmptyWidget:CreateDrawable(TEXTURE_PATH.DEFAULT, "type_05", "background")
+dump_object(Drawable, "EmptyWidgetDrawable")
+
+local EffectDrawable = EmptyWidget:CreateEffectDrawable("ui/font/image_text.dds", "artwork")
+dump_object(EffectDrawable, "EmptyWidgetEffectDrawable")
+
+local EffectDrawableByKey = EmptyWidget:CreateEffectDrawableByKey(TEXTURE_PATH.DEFAULT, "ulc_effect_bg", "background")
+dump_object(EffectDrawableByKey, "EmptyWidgetEffectDrawableByKey")
+
+local IconDrawable = EmptyWidget:CreateIconDrawable("background")
+dump_object(IconDrawable, "EmptyWidgetIconDrawable")
+
+local ImageDrawable = EmptyWidget:CreateImageDrawable(TEXTURE_PATH.RANKING_GRADE, "artwork")
+dump_object(ImageDrawable, "EmptyWidgetImageDrawable")
+
+local NinePartDrawable = EmptyWidget:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
+dump_object(NinePartDrawable, "EmptyWidgetNinePartDrawable")
+
+--- .style TextStyle
+local TextDrawable = EmptyWidget:CreateTextDrawable(FONT_PATH.SUB, FONT_SIZE.XXLARGE, "artwork")
+dump_object(TextDrawable, "EmptyWidgetTextDrawable")
+
+local ThreeColorDrawable = EmptyWidget:CreateThreeColorDrawable(1024, 1024, "background")
+dump_object(ThreeColorDrawable, "EmptyWidgetThreeColorDrawable")
+
+local ThreePartDrawable = EmptyWidget:CreateThreePartDrawable(TEXTURE_PATH.DEFAULT, "background")
+dump_object(ThreePartDrawable, "EmptyWidgetThreePartDrawable")
+
 -- Folder | .style TextStyle
 Folder = UIParent:CreateWidget("folder", "exampleFolder", "UIParent")
 dump_object(Folder, "Folder")
@@ -2780,7 +2831,25 @@ dump_object(Line, "Line")
 
 -- ListCtrl
 ListCtrl = UIParent:CreateWidget("listctrl", "exampleListCtrl", "UIParent")
+local output = ListCtrl:InsertColumn(100, LCCIT_STRING)
+ListCtrl:InsertRows(1, false)
 dump_object(ListCtrl, "ListCtrl")
+
+local OveredImage = ListCtrl:CreateOveredImage()
+dump_object(OveredImage, "ListCtrlOveredImage")
+
+local SelectedImage = ListCtrl:CreateSelectedImage()
+dump_object(SelectedImage, "ListCtrlSelectedImage")
+
+local Column1Header = ListCtrl.column[1]
+dump_object(Column1Header, "ListCtrlColumn1Header")
+
+local Column1Row1 = ListCtrl.items[1]
+dump_object(Column1Row1, "ListCtrlColumn1Row1")
+
+local Column1Row1SubItem = Column1Row1.subItems[1]
+dump_object(Column1Row1SubItem, "ListCtrlColumn1Row1SubItem")
+
 
 -- Listbox | .itemStyle TextStyle ...
 Listbox = UIParent:CreateWidget("listbox", "exampleListbox", "UIParent")
@@ -2809,6 +2878,11 @@ dump_object(PaintColorPicker, "PaintColorPicker")
 -- RadioGroup
 RadioGroup = UIParent:CreateWidget("radiogroup", "exampleRadioGroup", "UIParent")
 dump_object(RadioGroup, "RadioGroup")
+
+local radio = RadioGroup:CreateRadioItem(1)
+
+dump_object(radio, "RadioGroupItem")
+dump_object(radio.check, "RadioGroupItemCheck")
 
 -- RoadMap
 RoadMap = UIParent:CreateWidget("roadmap", "exampleRoadMap", "UIParent")

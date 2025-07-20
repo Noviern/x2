@@ -1,63 +1,232 @@
+---@meta _
+
 ---@class Map
----@field AddGivenQuestInfo fun(self: self, type: number, id: number)
----@field AddNotifyQuestInfo fun(self: self, qType: number)
----@field ClearAllInfo fun(self: self)
----@field ClearBossTelescopeInfo fun(self: self)
----@field ClearCarryingBackpackSlaveInfo fun(self: self)
----@field ClearCompletedQuestInfo fun(self: self)
----@field ClearCorpseInfo fun(self: self)
----@field ClearDoodadInfo fun(self: self)
----@field ClearFishSchoolInfo fun(self: self)
----@field ClearGivenQuestStaticInfo fun(self: self)
----@field ClearHousingInfo fun(self: self)
----@field ClearMySlaveInfo fun(self: self)
----@field ClearNotifyQuestInfo fun(self: self)
----@field ClearNpcInfo fun(self: self)
----@field ClearShipTelescopeInfo fun(self: self)
----@field ClearTransferTelescopeInfo fun(self: self)
----@field GetPlayerSextants fun(self: self): table
----@field GetPlayerViewPos fun(self: self): number, number
----@field GetTooltipController fun(self: self): table
----@field InitMapData fun(self: self)
----@field MapWidgetShown fun(self: self): boolean
----@field OnLeftClick fun(self: self)
----@field ReloadAllInfo fun(self: self)
----@field RemoveBossTelescopeInfo fun(self: self, index: number)
----@field RemoveCarryingBackpackSlaveInfo fun(self: self, index: number)
----@field RemoveFishSchoolInfo fun(self: self, index: number)
----@field RemoveGivenQuestInfo fun(self: self, type: number, id)
----@field RemoveNotifyQuestInfo fun(self: self, qType: number)
----@field RemoveShipTelescopeInfo fun(self: self, index: number)
----@field RemoveTransferTelescopeInfo fun(self: self, index: number)
----@field ResetCursor fun(self: self, isNull: boolean)
----@field SetExpandRatio fun(self: self, ratio: number)
----@field SetPingBtn fun(self: self, clicked: boolean, pingType: number)
----@field SetPingWidget fun(self: self, widget: table, drawable: table, pingType: number)
----@field SetPlayerDrawable fun(self: self, player)
----@field SetSkillEffectWidget fun(self: self, widget: table, drawable: table, index: number)
----@field SetTooltipColor fun(self: self, objColor: string, nickColor: string)
----@field ShowSkillMapEffect fun(self: self, x: number, y: number, z: number, radius: number, index: number)
----@field StartNotifyQuestEffect fun(self: self, index: number, qType: number, isStart: boolean)
----@field UpdateAllDrawableAnchor fun(self: self)
----@field UpdateBossTelescopeArea fun(self: self)
----@field UpdateBossTelescopeInfo fun(self: self)
----@field UpdateCarryingBackpackSlaveInfo fun(self: self)
----@field UpdateCompletedQuestInfo fun(self: self)
----@field UpdateCorpseInfo fun(self: self)
----@field UpdateCurZoneGroupNpcInfo fun(self: self)
----@field UpdateDominionInfo fun(self: self)
----@field UpdateDoodadInfo fun(self: self, bRoadMap: boolean)
----@field UpdateFactionRezDistrictInfo fun(self: self)
----@field UpdateFishSchoolArea fun(self: self)
----@field UpdateFishSchoolInfo fun(self: self)
----@field UpdateGivenQuestStaticInfo fun(self: self)
----@field UpdateHousingInfo fun(self: self)
----@field UpdateMonitorNpcInfo fun(self: self)
----@field UpdateMySlaveInfo fun(self: self)
----@field UpdateNpcInfo fun(self: self)
----@field UpdatePingInfo fun(self: self)
----@field UpdateShipTelescopeInfo fun(self: self)
----@field UpdateTelescopeArea fun(self: self)
----@field UpdateTransferTelescopeArea fun(self: self)
----@field UpdateTransferTelescopeInfo fun(self: self)
----@field UpdateZoneInfo fun(self: self)
+local Map = {}
+
+---TODO:
+---@param type number
+---@param id number
+function Map:AddGivenQuestInfo(type, id) end
+
+---TODO:
+---@param qType number
+function Map:AddNotifyQuestInfo(qType) end
+
+---TODO:
+function Map:ClearAllInfo() end
+
+---TODO:
+function Map:ClearBossTelescopeInfo() end
+
+---TODO:
+function Map:ClearCarryingBackpackSlaveInfo() end
+
+---TODO:
+function Map:ClearCompletedQuestInfo() end
+
+---TODO:
+function Map:ClearCorpseInfo() end
+
+---TODO:
+function Map:ClearDoodadInfo() end
+
+---TODO:
+function Map:ClearFishSchoolInfo() end
+
+---TODO:
+function Map:ClearGivenQuestStaticInfo() end
+
+---TODO:
+function Map:ClearHousingInfo() end
+
+---TODO:
+function Map:ClearMySlaveInfo() end
+
+---TODO:
+function Map:ClearNotifyQuestInfo() end
+
+---TODO:
+function Map:ClearNpcInfo() end
+
+---TODO:
+function Map:ClearShipTelescopeInfo() end
+
+---TODO:
+function Map:ClearTransferTelescopeInfo() end
+
+---TODO:
+---@return table
+---@nodiscard
+function Map:GetPlayerSextants() end
+
+---TODO:
+---@return number
+---@return number
+---@nodiscard
+function Map:GetPlayerViewPos() end
+
+---TODO:
+---@return table
+---@nodiscard
+function Map:GetTooltipController() end
+
+---TODO:
+function Map:InitMapData() end
+
+---TODO:
+---@return boolean
+---@nodiscard
+function Map:MapWidgetShown() end
+
+---TODO:
+function Map:OnLeftClick() end
+
+---TODO:
+function Map:ReloadAllInfo() end
+
+---TODO:
+---@param index number
+function Map:RemoveBossTelescopeInfo(index) end
+
+---TODO:
+---@param index number
+function Map:RemoveCarryingBackpackSlaveInfo(index) end
+
+---TODO:
+---@param index number
+function Map:RemoveFishSchoolInfo(index) end
+
+---TODO:
+---@param type number
+---@param id any
+function Map:RemoveGivenQuestInfo(type, id) end
+
+---TODO:
+---@param qType number
+function Map:RemoveNotifyQuestInfo(qType) end
+
+---TODO:
+---@param index number
+function Map:RemoveShipTelescopeInfo(index) end
+
+---TODO:
+---@param index number
+function Map:RemoveTransferTelescopeInfo(index) end
+
+---TODO:
+---@param isNull boolean
+function Map:ResetCursor(isNull) end
+
+---TODO:
+---@param ratio number
+function Map:SetExpandRatio(ratio) end
+
+---TODO:
+---@param clicked boolean
+---@param pingType number
+function Map:SetPingBtn(clicked, pingType) end
+
+---TODO:
+---@param widget table
+---@param drawable table
+---@param pingType number
+function Map:SetPingWidget(widget, drawable, pingType) end
+
+---TODO:
+---@param player any
+function Map:SetPlayerDrawable(player) end
+
+---TODO:
+---@param widget table
+---@param drawable table
+---@param index number
+function Map:SetSkillEffectWidget(widget, drawable, index) end
+
+---TODO:
+---@param objColor string
+---@param nickColor string
+function Map:SetTooltipColor(objColor, nickColor) end
+
+---TODO:
+---@param x number
+---@param y number
+---@param z number
+---@param radius number
+---@param index number
+function Map:ShowSkillMapEffect(x, y, z, radius, index) end
+
+---TODO:
+---@param index number
+---@param qType number
+---@param isStart boolean
+function Map:StartNotifyQuestEffect(index, qType, isStart) end
+
+---TODO:
+function Map:UpdateAllDrawableAnchor() end
+
+---TODO:
+function Map:UpdateBossTelescopeArea() end
+
+---TODO:
+function Map:UpdateBossTelescopeInfo() end
+
+---TODO:
+function Map:UpdateCarryingBackpackSlaveInfo() end
+
+---TODO:
+function Map:UpdateCompletedQuestInfo() end
+
+---TODO:
+function Map:UpdateCorpseInfo() end
+
+---TODO:
+function Map:UpdateCurZoneGroupNpcInfo() end
+
+---TODO:
+function Map:UpdateDominionInfo() end
+
+---TODO:
+---@param bRoadMap boolean
+function Map:UpdateDoodadInfo(bRoadMap) end
+
+---TODO:
+function Map:UpdateFactionRezDistrictInfo() end
+
+---TODO:
+function Map:UpdateFishSchoolArea() end
+
+---TODO:
+function Map:UpdateFishSchoolInfo() end
+
+---TODO:
+function Map:UpdateGivenQuestStaticInfo() end
+
+---TODO:
+function Map:UpdateHousingInfo() end
+
+---TODO:
+function Map:UpdateMonitorNpcInfo() end
+
+---TODO:
+function Map:UpdateMySlaveInfo() end
+
+---TODO:
+function Map:UpdateNpcInfo() end
+
+---TODO:
+function Map:UpdatePingInfo() end
+
+---TODO:
+function Map:UpdateShipTelescopeInfo() end
+
+---TODO:
+function Map:UpdateTelescopeArea() end
+
+---TODO:
+function Map:UpdateTransferTelescopeArea() end
+
+---TODO:
+function Map:UpdateTransferTelescopeInfo() end
+
+---TODO:
+function Map:UpdateZoneInfo() end

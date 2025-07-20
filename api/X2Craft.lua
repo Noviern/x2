@@ -1,20 +1,20 @@
 ---@meta _
 
-COPT_INSTANT = 2 -- api/X2Craft
-COPT_INVALID = 0 -- api/X2Craft
-COPT_PC = 1 -- api/X2Craft
-COSK_ACTABILITY_GROUP = 1 -- api/X2Craft
-COSK_DEFAULT = 0 -- api/X2Craft
-COSK_FEE = 2 -- api/X2Craft
-COSO_ASC = 0 -- api/X2Craft
-COSO_DESC = 1 -- api/X2Craft
+COPT_INSTANT = 2                    -- api/X2Craft
+COPT_INVALID = 0                    -- api/X2Craft
+COPT_PC = 1                         -- api/X2Craft
+COSK_ACTABILITY_GROUP = 1           -- api/X2Craft
+COSK_DEFAULT = 0                    -- api/X2Craft
+COSK_FEE = 2                        -- api/X2Craft
+COSO_ASC = 0                        -- api/X2Craft
+COSO_DESC = 1                       -- api/X2Craft
 CRAFT_ORDER_ENTRY_PER_CHARACTER = 5 -- api/X2Craft
-CRAFT_ORDER_ENTRY_PER_SEARCH = 8 -- api/X2Craft
-MFCR_FAIL = 3 -- api/X2Craft
-MFCR_FAIL_LIMIT = 1 -- api/X2Craft
-MFCR_FAIL_WAIT = 2 -- api/X2Craft
-MFCR_SUCCESS = 0 -- api/X2Craft
-X2Craft = {} -- api/X2Craft
+CRAFT_ORDER_ENTRY_PER_SEARCH = 8    -- api/X2Craft
+MFCR_FAIL = 3                       -- api/X2Craft
+MFCR_FAIL_LIMIT = 1                 -- api/X2Craft
+MFCR_FAIL_WAIT = 2                  -- api/X2Craft
+MFCR_SUCCESS = 0                    -- api/X2Craft
+X2Craft = {}                        -- api/X2Craft
 
 ---api/X2Craft
 ---@class CraftBaseInfo
@@ -50,7 +50,7 @@ X2Craft = {} -- api/X2Craft
 ---@return CraftBaseInfo? [CraftBaseInfo](lua://CraftBaseInfo)
 function X2Craft:GetCraftBaseInfo(craftType, doodadId) end
 
----Crash EXCEPTION_ACCESS_VIOLATION.
+---TODO: Crash EXCEPTION_ACCESS_VIOLATION. Need to set doodadId type.
 ---@param craftType number
 ---@param doodadId any
 function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end

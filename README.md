@@ -5,7 +5,7 @@ Provides documentation, definitions, and IntelliSense for ArcheAge Addons.
 
 ![Shows method IntelliSense](img/intellisense.png)
 
-## How to use IntelliSense ([VSCode](https://code.visualstudio.com/))
+## How To Use IntelliSense ([VSCode](https://code.visualstudio.com/))
 1. Clone or [download this repo](https://github.com/Noviern/AAAD/archive/refs/heads/master.zip).
 2. Extract and place in `C:\ArcheRage\Documents\Addon`
 3. Install VSCode Extension [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua).
@@ -23,8 +23,13 @@ lua.workspace.library
 
 ![Shows lua.workspace.library settings](img/settings.png)
 
-## How to use globals
+## How To Use Globals
 In your addon's toc.g add at the top
 ```
 ..\AAD\globals.lua
 ```
+
+## Extra
+If you would like some extra dev tools for developing addons visit [DEVTOOLS.md](DEVTOOLS.md).
+
+If you would like to contribute to this project visit [CONTRIBUTING.md](CONTRIBUTING.md).

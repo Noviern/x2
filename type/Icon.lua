@@ -1,1 +1,0 @@
----@class Icon: Uibounds, Uiobject

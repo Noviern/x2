@@ -3,20 +3,6 @@
 X2Locale = {} -- api/X2Locale
 
 ---api/X2Locale
----@alias LocaleIndex
----| `0`
----| `1`
----| `2` en_us
----| `3`
----| `4`
----| `5`
----| `6`
----| `7`
----| `8`
----| `9`
----| `10`
-
----api/X2Locale
 ---@alias UI_TEXT
 ---| `ABILITY_CATEGORY_DESCRIPTION_TEXT`
 ---| `ABILITY_CATEGORY_TEXT`
@@ -135,13 +121,14 @@ X2Locale = {} -- api/X2Locale
 ---@return string keyboardLayout
 function X2Locale:GetKeyboardLayout() end
 
----TODO:
----Returns the current locale
----@return string locale this may not be accurate: en_us, fr, de, ko, ja, ru, zh_cn, zh_tw, tw
+---TODO: Create a locale enum for the return.
+---Returns the current locale.
+---@return string locale this may not be accurate: de, en_sg, en_us, fr, ind, ja, ko, ru, th, zh_cn, zh_tw
 function X2Locale:GetLocale() end
 
----Returns the locale index, there must be a locale enum
----@return LocaleIndex
+---TODO: Create a locale index enum for the return.
+---Returns the locale index. [LOCALE](lua://LOCALE)
+---@return number
 function X2Locale:GetLocaleIndex() end
 
 ---Returns a boolean indicating if the localization `category` and `key` exists.
@@ -173,7 +160,7 @@ function X2Locale:LocalizeNonUiText(text, ...) end
 ---```
 ---@param category UI_TEXT [UI_TEXT](lua://UI_TEXT)
 ---@param key string can be obtained from ui_texts table in the database.
----@param ... string 
+---@param ... string
 ---@return string localizedUiText
 function X2Locale:LocalizeUiText(category, key, ...) end
 

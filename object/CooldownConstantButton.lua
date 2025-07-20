@@ -1,27 +1,38 @@
 ---@meta _
 
-AP_BOTTOM = 8 -- object/CooldownConstantButton
-AP_BOTTOMLEFT = 2 -- object/CooldownConstantButton
-AP_BOTTOMRIGHT = 3 -- object/CooldownConstantButton
-AP_CENTER = 4 -- object/CooldownConstantButton
-AP_LEFT = 6 -- object/CooldownConstantButton
-AP_RIGHT = 7 -- object/CooldownConstantButton
-AP_TOP = 5 -- object/CooldownConstantButton
-AP_TOPLEFT = 0 -- object/CooldownConstantButton
-AP_TOPRIGHT = 1 -- object/CooldownConstantButton
-CT_ABILITY = 2 -- object/CooldownConstantButton
-CT_EXPEDITION_NAME = 3 -- object/CooldownConstantButton
-CT_NAME = 1 -- object/CooldownConstantButton
-DC_ALWAYS = 0 -- object/CooldownConstantButton
-DC_SHIFT_KEY_DOWN = 1 -- object/CooldownConstantButton
-UI_BUTTON_DISABLED = 3 -- object/CooldownConstantButton
+AP_BOTTOM = 8             -- object/CooldownConstantButton
+AP_BOTTOMLEFT = 2         -- object/CooldownConstantButton
+AP_BOTTOMRIGHT = 3        -- object/CooldownConstantButton
+AP_CENTER = 4             -- object/CooldownConstantButton
+AP_LEFT = 6               -- object/CooldownConstantButton
+AP_RIGHT = 7              -- object/CooldownConstantButton
+AP_TOP = 5                -- object/CooldownConstantButton
+AP_TOPLEFT = 0            -- object/CooldownConstantButton
+AP_TOPRIGHT = 1           -- object/CooldownConstantButton
+CT_ABILITY = 2            -- object/CooldownConstantButton
+CT_EXPEDITION_NAME = 3    -- object/CooldownConstantButton
+CT_NAME = 1               -- object/CooldownConstantButton
+DC_ALWAYS = 0             -- object/CooldownConstantButton
+DC_SHIFT_KEY_DOWN = 1     -- object/CooldownConstantButton
+UI_BUTTON_DISABLED = 3    -- object/CooldownConstantButton
 UI_BUTTON_HIGHLIGHTED = 1 -- object/CooldownConstantButton
-UI_BUTTON_MAX = 4 -- object/CooldownConstantButton
-UI_BUTTON_NORMAL = 0 -- object/CooldownConstantButton
-UI_BUTTON_PUSHED = 2 -- object/CooldownConstantButton
+UI_BUTTON_MAX = 4         -- object/CooldownConstantButton
+UI_BUTTON_NORMAL = 0      -- object/CooldownConstantButton
+UI_BUTTON_PUSHED = 2      -- object/CooldownConstantButton
 
 ---object/CooldownConstantButton
 ---@class CooldownConstantButton: CooldownButton
----@field SetItem fun(self: self, itemType: number)
----@field SetItemSlot fun(self: self, itemSlot: number, slotType: number)
----@field SetSkill fun(self: self, skillType: number)
+local CooldownConstantButton = {}
+
+---TODO:
+---@param itemType number
+function CooldownConstantButton:SetItem(itemType) end
+
+---TODO:
+---@param itemSlot number
+---@param slotType number
+function CooldownConstantButton:SetItemSlot(itemSlot, slotType) end
+
+---TODO:
+---@param skillType number
+function CooldownConstantButton:SetSkill(skillType) end

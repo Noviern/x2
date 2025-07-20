@@ -1,7 +1,7 @@
 ---@meta _
 
-ESRA_DEFENCE = 2 -- api/X2EquipSlotReinforce
-ESRA_MAX = 4 -- api/X2EquipSlotReinforce
-ESRA_OFFENCE = 1 -- api/X2EquipSlotReinforce
-ESRA_SUPPORT = 3 -- api/X2EquipSlotReinforce
+ESRA_DEFENCE = 2          -- api/X2EquipSlotReinforce
+ESRA_MAX = 4              -- api/X2EquipSlotReinforce
+ESRA_OFFENCE = 1          -- api/X2EquipSlotReinforce
+ESRA_SUPPORT = 3          -- api/X2EquipSlotReinforce
 X2EquipSlotReinforce = {} -- api/X2EquipSlotReinforce

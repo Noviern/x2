@@ -1,23 +1,23 @@
 ---@meta _
 
-AF_ALL = 1 -- api/X2Achievement
-AF_COMPLETE = 2 -- api/X2Achievement
-AF_INVALID = 0 -- api/X2Achievement
-AF_TRACING = 4 -- api/X2Achievement
-AF_UNCOMPLETE = 3 -- api/X2Achievement
-EAK_ACHIEVEMENT = 2 -- api/X2Achievement
-EAK_ARCHERAGE = 4 -- api/X2Achievement
-EAK_COLLECTION = 3 -- api/X2Achievement
-EAK_RACIAL_MISSION = 1 -- api/X2Achievement
+AF_ALL = 1                  -- api/X2Achievement
+AF_COMPLETE = 2             -- api/X2Achievement
+AF_INVALID = 0              -- api/X2Achievement
+AF_TRACING = 4              -- api/X2Achievement
+AF_UNCOMPLETE = 3           -- api/X2Achievement
+EAK_ACHIEVEMENT = 2         -- api/X2Achievement
+EAK_ARCHERAGE = 4           -- api/X2Achievement
+EAK_COLLECTION = 3          -- api/X2Achievement
+EAK_RACIAL_MISSION = 1      -- api/X2Achievement
 MAX_TRACING_ACHIEVEMENT = 6 -- api/X2Achievement
-TADT_ARCHE_PASS = 5 -- api/X2Achievement
-TADT_EXPEDITION = 2 -- api/X2Achievement
-TADT_EXPEDITION_PUBLIC = 6 -- api/X2Achievement
-TADT_FAMILY = 3 -- api/X2Achievement
-TADT_HERO = 4 -- api/X2Achievement
-TADT_MAX = 7 -- api/X2Achievement
-TADT_TODAY = 1 -- api/X2Achievement
-X2Achievement = {} -- api/X2Achievement
+TADT_ARCHE_PASS = 5         -- api/X2Achievement
+TADT_EXPEDITION = 2         -- api/X2Achievement
+TADT_EXPEDITION_PUBLIC = 6  -- api/X2Achievement
+TADT_FAMILY = 3             -- api/X2Achievement
+TADT_HERO = 4               -- api/X2Achievement
+TADT_MAX = 7                -- api/X2Achievement
+TADT_TODAY = 1              -- api/X2Achievement
+X2Achievement = {}          -- api/X2Achievement
 
 ---api/X2Achievement
 ---@alias ACHIEVEMENT_KIND
@@ -131,7 +131,7 @@ X2Achievement = {} -- api/X2Achievement
 ---@field status number
 ---@field title string
 ---@field satisfy boolean
----@field requireLevel number 
+---@field requireLevel number
 
 ---api/X2Achievement
 ---@class AchievementSubList
@@ -161,8 +161,7 @@ function X2Achievement:GetAchievementMainList(kind, sId, filter) end
 ---@return string achievementName
 function X2Achievement:GetAchievementName(aType) end
 
----TODO: asdfasd
----Broken. AF_COMPLETE returns empty even if the `mainType` is complete. AF_ALL is the only one that works.
+---TODO: Broken. AF_COMPLETE returns empty even if the `mainType` is complete. AF_ALL is the only one that works.
 ---
 ---Returns a collection of `AchievementSubList` for `mainType` with `filter` if it exists, otherwise returns an empty table.
 ---@param mainType number
@@ -180,8 +179,7 @@ function X2Achievement:GetAchievementTracingList(kind) end
 ---@return AchievementCategory[]|AchievementLevelSubCategory[] [AchievementCategory](lua://AchievementCategory) [AchievementLevelSubCategory](lua://AchievementLevelSubCategory)
 function X2Achievement:GetCategories(kind) end
 
----TODO:
----Broken `completedCount` returns 0  regardless of `filter`.
+---TODO: Broken `completedCount` returns 0  regardless of `filter`.
 ---
 ---Returns `completedCount` and `totalCount` for `kind` in the category `cType` under subcategory `scType` with the filter `filter`.
 ---@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
@@ -201,10 +199,9 @@ function X2Achievement:GetSubcategoryInfo(subCategory) end
 ---@return number todayAssignmentCount
 function X2Achievement:GetTodayAssignmentCount(todayType) end
 
----TODO:
----Broken as of 9.5 returns nothing. was working prior to 9.5
+---TODO: Broken as of 9.5 returns nothing. was working prior to 9.5
 ---Returns a table with daily contract completion rewards.
----@return table 
+---@return table
 function X2Achievement:GetTodayAssignmentGoal() end
 
 ---Returns [TodayAssignmentInfo](lua://TodayAssignmentInfo) for the `index` of `todayType` if both exist.
@@ -224,8 +221,7 @@ function X2Achievement:GetTodayAssignmentInfoForChange(todayType, index) end
 ---@return number todayAssignmentResetCount, number todayAssignmentMaxResetCount
 function X2Achievement:GetTodayAssignmentResetCount(todayType) end
 
----TODO:
----Broken  as of 9.5 returns nothing. was working prior to 9.5 now only returns 0 for two variables.
+---TODO: Broken  as of 9.5 returns nothing. was working prior to 9.5 now only returns 0 for two variables.
 ---@return number todayAssignmentCompletionStatus, number todayAssignmentMaxCompletion, number todayAssignmentCompleted
 function X2Achievement:GetTodayAssignmentStatus() end
 
@@ -245,7 +241,7 @@ function X2Achievement:IsTodayAssignmentQuest(todayType, questType) end
 ---@return boolean isTracingAchievement
 function X2Achievement:IsTracingAchievement(kind, aType) end
 
----Removes `aType` in `kind` from tracing. 
+---Removes `aType` in `kind` from tracing.
 ---@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
 ---@param aType number
 function X2Achievement:RemoveTracingAchievement(kind, aType) end

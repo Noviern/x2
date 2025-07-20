@@ -1,34 +1,34 @@
 ---@meta _
 
-ACCOUNT_RESTRICT_CODE_NEXON = 80 -- api/X2Player
-ACCOUNT_RESTRICT_CODE_NONE = 0 -- api/X2Player
-ACCOUNT_RESTRICT_CODE_XL = 81 -- api/X2Player
-APPELATION_ROUTE_TYPE_ACHIEVEMENTS = 2 -- api/X2Player
-APPELATION_ROUTE_TYPE_ETC = 5 -- api/X2Player
-APPELATION_ROUTE_TYPE_HIDDEN = 4 -- api/X2Player
-APPELATION_ROUTE_TYPE_MAX = 6 -- api/X2Player
+ACCOUNT_RESTRICT_CODE_NEXON = 80         -- api/X2Player
+ACCOUNT_RESTRICT_CODE_NONE = 0           -- api/X2Player
+ACCOUNT_RESTRICT_CODE_XL = 81            -- api/X2Player
+APPELATION_ROUTE_TYPE_ACHIEVEMENTS = 2   -- api/X2Player
+APPELATION_ROUTE_TYPE_ETC = 5            -- api/X2Player
+APPELATION_ROUTE_TYPE_HIDDEN = 4         -- api/X2Player
+APPELATION_ROUTE_TYPE_MAX = 6            -- api/X2Player
 APPELATION_ROUTE_TYPE_MERCHANT_PACKS = 3 -- api/X2Player
 APPELATION_ROUTE_TYPE_QUEST_CONTEXTS = 1 -- api/X2Player
-APPELLATION_LIST_PER_PAGE = 50 -- api/X2Player
-BOT_CHECK_ANSWER_COUNT = 3 -- api/X2Player
-BOT_QUESTION_CHAR_SIZE = 5 -- api/X2Player
+APPELLATION_LIST_PER_PAGE = 50           -- api/X2Player
+BOT_CHECK_ANSWER_COUNT = 3               -- api/X2Player
+BOT_QUESTION_CHAR_SIZE = 5               -- api/X2Player
 HIRAMAKAND_SAVE_PEOPLE_BUFF_TYPE = 23281 -- api/X2Player
-INSTANT_TIME_EXPEDITION_REJOIN = 4 -- api/X2Player
-SCREEN_BASE = 8 -- api/X2Player
-SCREEN_CHARACTER_CREATE = 4 -- api/X2Player
-SCREEN_CHARACTER_SELECT = 3 -- api/X2Player
-SCREEN_INIT_WORLD = 5 -- api/X2Player
-SCREEN_INTRO = 7 -- api/X2Player
-SCREEN_LOGIN = 1 -- api/X2Player
-SCREEN_NONE = 0 -- api/X2Player
-SCREEN_WORLD = 6 -- api/X2Player
-SCREEN_WORLD_SELECT = 2 -- api/X2Player
-X2Player = {} -- api/X2Player
-ZPW_ENTER = 0 -- api/X2Player
-ZPW_EXPEL = 3 -- api/X2Player
-ZPW_OUT = 2 -- api/X2Player
-ZPW_WAIT = 1 -- api/X2Player
-ZP_RESERVED = 4 -- api/X2Player
+INSTANT_TIME_EXPEDITION_REJOIN = 4       -- api/X2Player
+SCREEN_BASE = 8                          -- api/X2Player
+SCREEN_CHARACTER_CREATE = 4              -- api/X2Player
+SCREEN_CHARACTER_SELECT = 3              -- api/X2Player
+SCREEN_INIT_WORLD = 5                    -- api/X2Player
+SCREEN_INTRO = 7                         -- api/X2Player
+SCREEN_LOGIN = 1                         -- api/X2Player
+SCREEN_NONE = 0                          -- api/X2Player
+SCREEN_WORLD = 6                         -- api/X2Player
+SCREEN_WORLD_SELECT = 2                  -- api/X2Player
+X2Player = {}                            -- api/X2Player
+ZPW_ENTER = 0                            -- api/X2Player
+ZPW_EXPEL = 3                            -- api/X2Player
+ZPW_OUT = 2                              -- api/X2Player
+ZPW_WAIT = 1                             -- api/X2Player
+ZP_RESERVED = 4                          -- api/X2Player
 
 ---api/X2Player
 ---```
@@ -167,7 +167,7 @@ function X2Player:GetAppellations(routeFilter, pageIndex) end
 ---@return number appellationsCount
 function X2Player:GetAppellationsCount(routeFilter) end
 
----Returns a table of information on the current showing appellation buff.  
+---Returns a table of information on the current showing appellation buff.
 ---@usage
 ---```
 ---local effectInfo = X2Player:GetEffectAppellation()
