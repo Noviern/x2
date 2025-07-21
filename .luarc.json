@@ -9,5 +9,6 @@
       "align_call_args": "true"
     }
   },
-  "typeCheckingMode": "strict"
+  "typeCheckingMode": "strict",
+  "hover.expandAlias": false,
 }
