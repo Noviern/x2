@@ -7,35 +7,68 @@ CRU_OVERLAP = 2        -- api/X2CombatResource
 X2CombatResource = {}  -- api/X2CombatResource
 
 ---api/X2CombatResource
+---Combat Resource Uitype
+---@alias CRU
+---| `CRU_DOUBLE_GAUGE`
+---| `CRU_DOUBLE_GAUGE_2`
+---| `CRU_GAUGE`
+---| `CRU_OVERLAP`
+
+---api/X2CombatResource
 ---@class CombatResource
----@field uiType number
----@field resource1Max number
 ---@field ability number
----@field resource1Current number
----@field recoveryResourceType number
 ---@field isDefaultResource boolean
+---@field recoveryResourceType number
 ---@field resource1ColorKey string
----@field resource2Max? number
----@field resource2Current? number
+---@field resource1Current number
+---@field resource1Max number
 ---@field resource2ColorKey? string
+---@field resource2Current? number
+---@field resource2Max? number
+---@field uiType CRU
 
 ---api/X2CombatResource
 ---@class CombatResourceInfo: CombatResource
----@field tooltip string
----@field iconPath string
 ---@field groupType number
+---@field iconPath string
+---@field tooltip string
 
----TODO:
----Broken. Always returns false.
----@param groupType ABILITY_TYPE [ABILITY_TYPE](lua://ABILITY_TYPE)
----@return boolean maxPointByGroupType
+---@class CombatResources
+---@field [1] CombatResourceInfo
+---@field [2] CombatResourceInfo
+---@field [3] CombatResourceInfo
+
+---@TODO: Broken? Always returns false.
+---Checks if the combat resource for the specified group type is at its maximum.
+---@param groupType ABILITY_TYPE The group type to check.
+---@return boolean maxPointByGroupType True if the combat resource is at maximum, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local maxPointByGroupType = X2CombatResource:CheckCombatResourceMaxPointByGroupType(13)
+---```
+---@see ABILITY_TYPE
 function X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType) end
 
----Returns a collection of [CombatResourceInfo](lua://CombatResourceInfo) for all available [ABILITY_TYPE](lua://ABILITY_TYPE).
----@return CombatResourceInfo[] [CombatResourceInfo](lua://CombatResourceInfo)
+---Retrieves a list of combat resource information for all available ability types.
+---@return CombatResources combatResourceInfo A table of combat resource information.
+---@nodiscard
+---@usage
+---```
+---local combatResourceInfo = X2CombatResource:GetCombatResourceInfo()
+---```
+---@see CombatResourceInfo
+---@see ABILITY_TYPE
 function X2CombatResource:GetCombatResourceInfo() end
 
----Returns [CombatResource](lua://CombatResource) for `groupType` if the player has it.
----@param groupType ABILITY_TYPE [ABILITY_TYPE](lua://ABILITY_TYPE)
----@return CombatResource? [CombatResource](lua://CombatResource)
+---Retrieves combat resource information for the specified group type if the player has it.
+---@param groupType ABILITY_TYPE The group type to query.
+---@return CombatResource|nil combatResourceInfo The combat resource information, or nil if not available.
+---@nodiscard
+---@usage
+---```
+---local combatResourceInfo = X2CombatResource:GetCombatResourceInfoByGroupType(13)
+---```
+---@see ABILITY_TYPE
+---@see CombatResource
 function X2CombatResource:GetCombatResourceInfoByGroupType(groupType) end

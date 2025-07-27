@@ -42,9 +42,6 @@ SPECIAL_PASSIVE_SKILL = 190          -- api/X2Ability
 X2Ability = {}                       -- api/X2Ability
 
 ---api/X2Ability
----```
----ActabilityInfo { name = "Alchemy", type = 1, point = 0, modifyPoint = 0, grade = 0 }
----```
 ---@class ActabilityInfo
 ---@field name string
 ---@field type number
@@ -63,14 +60,28 @@ X2Ability = {}                       -- api/X2Ability
 ---| `BIK_RUNTIME_STACK` Broken
 ---| `BIK_RUNTIME_TIMELEFT` Broken
 
----Returns a collection of the player's [ActabilityInfo](lua://ActabilityInfo).
----@return ActabilityInfo[] [ActabilityInfo](lua://ActabilityInfo)
+---Retrieves a list of all the player's actability information.
+---@return ActabilityInfo[] allMyActabilityInfos A table of actability information.
+---@nodiscard
+---@usage
+---```
+---local allMyActabilityInfos = X2Ability:GetAllMyActabilityInfos()
+---```
+---@see ActabilityInfo
 function X2Ability:GetAllMyActabilityInfos() end
 
----TODO:
----Returns `neededInfo` of [AppellationBuffInfo](lua://AppellationBuffInfo) for `buffType` `itemLevel`.
----@param buffType number
----@param itemLevel number
----@param neededInfo? BIK (optional) [BIK](lua://BIK)
----@return AppellationBuffInfo [AppellationBuffInfo](lua://AppellationBuffInfo)
+---@TODO: Find a buff where itemLevel actually matters.
+---Retrieves information for the buff tooltip based on the buff type and item
+---level.
+---@param buffType number The type of buff.
+---@param itemLevel number The item level for the buff.
+---@param neededInfo? BIK Optional additional information for the buff.
+---@return AppellationBuffInfo buffTooltip The buff tooltip information.
+---@nodiscard
+---@usage
+---```
+---local buffTooltipDesc = X2Ability:GetBuffTooltip(5700, 1, BIK_DESCRIPTION)
+---```
+---@see BIK
+---@see AppellationBuffInfo
 function X2Ability:GetBuffTooltip(buffType, itemLevel, neededInfo) end

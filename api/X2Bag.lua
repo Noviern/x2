@@ -2,18 +2,27 @@
 
 X2Bag = {} -- api/X2Bag
 
----api/X2Bag
----@alias BAGID 1
-
----Attempts to equip the item from the slot.
----@param slot number
----@param isAuxEquip boolean
+---Attempts to equip an item from the specified slot.
+---@param slot number The slot containing the item to equip.
+---@param isAuxEquip boolean Whether to equip as auxiliary equipment.
+---@usage
+---```
+---X2Bag:EquipBagItem(1, false)
+---```
 function X2Bag:EquipBagItem(slot, isAuxEquip) end
 
----TODO: Is IIK the correct type?
----Returns item info for the `slot` if the slot exists. [IIK](lua://IIK) requires importing the API X2Item.
----@param bagId BAGID
----@param slot number
----@param neededInfo? IIK (optional) [IIK](lua://IIK)
----@return ItemInfo? [ItemInfo](lua://ItemInfo)
+---@TODO: It seems the slot id is buggy and starts at 2? and bagId doesnt matter?
+---Retrieves item information for the specified slot if it exists.
+---@param bagId 1 The bag ID.
+---@param slot number The slot to query.
+---@param neededInfo? IIK Optional additional information for the item. Requires importing the X2Item API. IIK types can be added together to increase the filter range.
+---@return ItemInfo|nil bagItemInfo The item information, or nil if the slot is empty.
+---@nodiscard
+---@usage
+---```
+---local bagItemInfo = X2Bag:GetBagItemInfo(1, 2, IIK_CATEGORY + IIK_TYPE)
+---```
+---@see BAGID
+---@see IIK
+---@see ItemInfo
 function X2Bag:GetBagItemInfo(bagId, slot, neededInfo) end

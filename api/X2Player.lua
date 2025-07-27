@@ -31,29 +31,33 @@ ZPW_WAIT = 1                             -- api/X2Player
 ZP_RESERVED = 4                          -- api/X2Player
 
 ---api/X2Player
----```
----AppellationChangeItemInfo { has = 0, enough = false, need = 1, itemType = 0 }
----```
+---@alias SCREEN_STATE
+---| `SCREEN_BASE`
+---| `SCREEN_CHARACTER_CREATE`
+---| `SCREEN_CHARACTER_SELECT`
+---| `SCREEN_INIT_WORLD`
+---| `SCREEN_INTRO`
+---| `SCREEN_LOGIN`
+---| `SCREEN_NONE`
+---| `SCREEN_WORLD`
+---| `SCREEN_WORLD_SELECT`
+
+---api/X2Player
 ---@class AppellationChangeItemInfo
----@field has number
 ---@field enough boolean
----@field need number
+---@field has number
 ---@field itemType number
+---@field need number
 
 ---api/X2Player
----```
----AppellationMyLevelInfo { minExp = 0, maxlevel = 8, maxExp = 0, exp = 0 }
----```
 ---@class AppellationMyLevelInfo
----@field minExp number
----@field maxlevel number
----@field maxExp number
 ---@field exp number
+---@field level number
+---@field maxExp number
+---@field maxlevel number
+---@field minExp number
 
 ---api/X2Player
----```
----AppellationMyStamp { id = 0, path = "" }
----```
 ---@class AppellationMyStamp
 ---@field id number
 ---@field path string
@@ -61,16 +65,16 @@ ZP_RESERVED = 4                          -- api/X2Player
 ---api/X2Player
 ---@class StampInfo: AppellationMyStamp
 ---@field canEquip number
----@field name string
----@field modifier table
 ---@field effectDescription string
+---@field modifier table
+---@field name string
 ---@field reqLevel number
 
 ---api/X2Player
 ---@class AppellationRouteInfo
----@field routePopup number
 ---@field kind number
 ---@field routeDesc string
+---@field routePopup number
 ---@field type number
 
 ---api/X2Player
@@ -83,113 +87,168 @@ ZP_RESERVED = 4                          -- api/X2Player
 ---| `APPELATION_ROUTE_TYPE_QUEST_CONTEXTS`
 
 ---api/X2Player
----```
----Appellation {
----  [1]: number, -- APPELLATION_INFO.TYPE
----  [2]: number, -- APPELLATION_INFO.NAME
----  [3]: number, -- APPELLATION_INFO.GRADE
----  [4]: number, -- APPELLATION_INFO.ISHAVE
----  [5]: number, -- APPELLATION_INFO.ORDER
----  [6]: number, -- APPELLATION_INFO.BUFF_INFO
---- }
----```
 ---@class Appellation
 ---@field [1] number APPELLATION_INFO.TYPE
----@field [2] string APPELLATION_INFO.NAME
+---@field [2]? string APPELLATION_INFO.NAME
 ---@field [3] number APPELLATION_INFO.GRADE
 ---@field [4] number APPELLATION_INFO.ISHAVE
 ---@field [5] number APPELLATION_INFO.ORDER
----@field [6] AppellationBuffInfo? APPELLATION_INFO.BUFF_INFO
+---@field [6]? AppellationBuffInfo APPELLATION_INFO.BUFF_INFO
 
 ---api/X2Player
----```
----StampChangeItemInfo { has = 0, enough = false, need = 1, itemType = 44584 }
----```
 ---@class StampChangeItemInfo
----@field has number
 ---@field enough boolean
----@field need number
+---@field has number
 ---@field itemType number
+---@field need number
 
 ---api/X2Player
----```
----UnitAppellationRoute { key = 1, value = "" }
----```
 ---@class UnitAppellationRoute
 ---@field key number
 ---@field value string
 
 ---Sets the player's appellation name and effect.
----@param nameType number
----@param effectType number
----@return boolean successful this still returns true even if the provided Types are not real
-function X2Player:ChangeAppellation(nameType, effectType) end
+---@param appellationNameType number The appellation name type.
+---@param appellationEffectType number The appellation effect type.
+---@return boolean successful True if the change was successful, even if types are invalid.
+---@usage
+---```
+---X2Player:ChangeAppellation(0, 0)
+---```
+function X2Player:ChangeAppellation(appellationNameType, appellationEffectType) end
 
----Returns a collection of [AppellationBuffInfo](lua://AppellationBuffInfo) which contains information related to each
----appellation level.
----@return AppellationBuffInfo[] [AppellationBuffInfo](lua://AppellationBuffInfo)
+---Retrieves a list of appellation buff information for each appellation level.
+---@return AppellationBuffInfo[] appellationBuffInfo A table of appellation buff information.
+---@nodiscard
+---@usage
+---```
+---local appellationBuffInfo = X2Player:GetAppellationBuffInfoByLevels()
+---```
+---@see AppellationBuffInfo
 function X2Player:GetAppellationBuffInfoByLevels() end
 
----Returns a table of item requirements to change a appellation. Currently there is not a required item for changing a
----appellation so this function shouldn't be used.
----@return AppellationChangeItemInfo [AppellationChangeItemInfo](lua://AppellationChangeItemInfo)
+---Retrieves item requirements for changing an appellation (currently not required).
+---@return AppellationChangeItemInfo appellationChangeItemInfo The item requirements for changing an appellation.
+---@nodiscard
+---@usage
+---```
+---local appellationChangeItemInfo = X2Player:GetAppellationChangeItemInfo()
+---```
+---@see AppellationChangeItemInfo
 function X2Player:GetAppellationChangeItemInfo() end
 
----Returns the player's unlocked appellation count.
----@return number appellationCount
+---Retrieves the count of the player's unlocked appellations.
+---@return number appellationCount The number of unlocked appellations.
+---@nodiscard
+---@usage
+---```
+---local appellationCount = X2Player:GetAppellationCount()
+---```
 function X2Player:GetAppellationCount() end
 
----Returns the player's appellation level information.
----@return AppellationMyLevelInfo [AppellationMyLevelInfo](lua://AppellationMyLevelInfo)
+---Retrieves the player's appellation level information.
+---@return AppellationMyLevelInfo appellationMyLevelInfo The appellation level information.
+---@nodiscard
+---@usage
+---```
+---local appellationMyLevelInfo = X2Player:GetAppellationMyLevelInfo()
+---```
+---@see AppellationMyLevelInfo
 function X2Player:GetAppellationMyLevelInfo() end
 
----Returns current stamp information.
----@return AppellationMyStamp [AppellationMyStamp](lua://AppellationMyStamp)
+---Retrieves current stamp information.
+---@return AppellationMyStamp appellationMyStamp The current stamp information.
+---@nodiscard
+---@usage
+---```
+---local appellationMyStamp = X2Player:GetAppellationMyStamp()
+---```
+---@see AppellationMyStamp
 function X2Player:GetAppellationMyStamp() end
 
----Returns appellation route information based on the appellation id.
----@param type number appellation id
----@return AppellationRouteInfo [AppellationRouteInfo](lua://AppellationRouteInfo)
-function X2Player:GetAppellationRouteInfo(type) end
+---Retrieves appellation route information for the specified appellation ID.
+---@param appellationType number The appellation ID.
+---@return AppellationRouteInfo appellationRouteInfo The appellation route information.
+---@nodiscard
+---@usage
+---```
+---local appellationRouteInfo = X2Player:GetAppellationRouteInfo(9000080)
+---```
+---@see AppellationRouteInfo
+function X2Player:GetAppellationRouteInfo(appellationType) end
 
----Returns a collection of [StampInfo](lua://StampInfo). This may have a hidden param `X2Player:GetAppellationStampInfo(info.id)`
----@return StampInfo[] [StampInfo](lua://StampInfo)
+---Retrieves a list of stamp information.
+---@return StampInfo[] appellationStampInfo A table of stamp information.
+---@nodiscard
+---@usage
+---```
+---local appellationStampInfo = X2Player:GetAppellationStampInfo()
+---```
+---@see StampInfo
 function X2Player:GetAppellationStampInfo() end
 
----Returns a collection of up to 50 [Appellation](lua://AppellationRouteInfo) instances.
----@param routeFilter APPELATION_ROUTE_TYPE [APPELATION_ROUTE_TYPE](lua://APPELATION_ROUTE_TYPE)
----@param pageIndex number
----@return Appellation[] [Appellation](lua://Appellation)
-function X2Player:GetAppellations(routeFilter, pageIndex) end
-
----Returns the total count of appellations in a appellation route type.
----@param routeFilter APPELATION_ROUTE_TYPE [APPELATION_ROUTE_TYPE](lua://APPELATION_ROUTE_TYPE)
----@return number appellationsCount
-function X2Player:GetAppellationsCount(routeFilter) end
-
----Returns a table of information on the current showing appellation buff.
+---Retrieves a list of up to 50 appellation instances.
+---@param appellationRouteFilter APPELATION_ROUTE_TYPE The route type filter.
+---@param appellationPageIndex number The page index for the appellation list.
+---@return Appellation[] appellations A table of appellation instances.
+---@nodiscard
 ---@usage
 ---```
----local effectInfo = X2Player:GetEffectAppellation()
----local effectDescription = effectInfo[APPELLATION_INFO.BUFF_INFO].description
+---local appellations = X2Player:GetAppellations(APPELATION_ROUTE_TYPE_MAX, 1)
 ---```
----@return Appellation [Appellation](lua://Appellation)
+---@see APPELATION_ROUTE_TYPE
+---@see Appellation
+function X2Player:GetAppellations(appellationRouteFilter, appellationPageIndex) end
+
+---Retrieves the total count of appellations for the specified route type.
+---@param appellationRouteFilter APPELATION_ROUTE_TYPE The route type filter.
+---@return number appellationsCount The total number of appellations.
+---@nodiscard
+---@usage
+---```
+---local appellationsCount = X2Player:GetAppellationsCount(APPELATION_ROUTE_TYPE_ACHIEVEMENTS)
+---```
+---@see APPELATION_ROUTE_TYPE
+function X2Player:GetAppellationsCount(appellationRouteFilter) end
+
+---Retrieves information on the currently active appellation buff.
+---@return Appellation showingEffectAppellation The active appellation buff information.
+---@nodiscard
+---@usage
+---```
+---local showingEffectAppellation = X2Player:GetEffectAppellation()
+---local effectDescription = showingEffectAppellation[APPELLATION_INFO.BUFF_INFO].description
+---```
+---@see Appellation
 function X2Player:GetEffectAppellation() end
 
----Returns a table of information on the current showing appellation.
+---Retrieves information on the currently displayed appellation.
+---@return Appellation showingAppellation The displayed appellation information.
+---@nodiscard
 ---@usage
 ---```
----local showingInfo = X2Player:GetShowingAppellation()
----local appellationName = showingInfo[APPELLATION_INFO.NAME]
+---local showingAppellation = X2Player:GetShowingAppellation()
+---local appellationName = showingAppellation[APPELLATION_INFO.NAME]
 ---```
----@return Appellation [Appellation](lua://Appellation)
+---@see Appellation
 function X2Player:GetShowingAppellation() end
 
----Returns a table of item requirements to change a stamp.
----@return StampChangeItemInfo [StampChangeItemInfo](lua://StampChangeItemInfo)
+---Retrieves item requirements for changing a stamp.
+---@return StampChangeItemInfo stampChangeItemInfo The item requirements for changing a stamp.
+---@nodiscard
+---@usage
+---```
+---local stampChangeItemInfo = X2Player:GetStampChangeItemInfo()
+---```
+---@see StampChangeItemInfo
 function X2Player:GetStampChangeItemInfo() end
 
----Returns a collection of `{ key: number, value: string }` pairs where each key and value is representing the
----appellation route type.
----@return UnitAppellationRoute[] [UnitAppellationRoute](lua://UnitAppellationRoute)
+---Retrieves a list of key-value pairs representing appellation route types.
+---@return UnitAppellationRoute[] unitAppellationRoute A table of appellation route types.
+---@nodiscard
+---@usage
+---```
+---local unitAppellationRoute = X2Player:GetUnitAppellationRouteList()
+---```
+---@see UnitAppellationRoute
 function X2Player:GetUnitAppellationRouteList() end

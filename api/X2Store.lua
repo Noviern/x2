@@ -22,35 +22,58 @@ SHOP_OPEN_RANDOM_SHOP = 5        -- api/X2Store
 X2Store = {}                     -- api/X2Store
 
 ---api/X2Store
----```
----ZoneInfo { continentName = "Nuia", zoneGroupName = "Gweonid Forest", id = 1 }
----```
 ---@class ZoneInfo
 ---@field continentName string
----@field zoneGroupName string
 ---@field id number
+---@field zoneGroupName string
 
----Returns a collection of [ZoneInfo](lua://ZoneInfo) for all zones that packs can be crafted in.
----@return ZoneInfo[] [ZoneInfo](lua://ZoneInfo)
+---Retrieves a list of zone information for all zones where packs can be
+---crafted.
+---@return ZoneInfo[] productionZoneGroups A table of zone information for the production zone groups.
+---@nodiscard
+---@usage
+---```
+---local productionZoneGroups = X2Store:GetProductionZoneGroups()
+---```
+---@see ZoneInfo
 function X2Store:GetProductionZoneGroups() end
 
----Returns a collection of [ZoneInfo](lua://ZoneInfo) for all zones that a pack crafted in `fromZoneGroup` can be
----turned into.
----@param fromZoneGroup ZONE_ID [ZONE_ID](lua://ZONE_ID)
----@return ZoneInfo[] [ZoneInfo](lua://ZoneInfo)
+---Retrieves a list of zone information for all zones where a pack crafted in
+---the specified zone can be turned in.
+---@param fromZoneGroup ZONE_ID The source zone ID.
+---@return ZoneInfo[] sellableZoneGroups A table of zone information for the sellable zone groups.
+---@nodiscard
+---@usage
+---```
+---local sellableZoneGroups = X2Store:GetSellableZoneGroups(1)
+---```
+---@see ZONE_ID
+---@see ZoneInfo
 function X2Store:GetSellableZoneGroups(fromZoneGroup) end
 
----Returns `specialtyRatio`.
----@return number specialtyRatio
+---Retrieves the specialty ratio.
+---@return number specialtyRatio The specialty ratio.
+---@nodiscard
+---@usage
+---```
+---local specialtyRatio = X2Store:GetSpecialtyRatio()
+---```
 function X2Store:GetSpecialtyRatio() end
 
----Returns `cooldownTime` and triggers
----[UIEVENT_TYPE.SPECIALTY_RATIO_BETWEEN_INFO](lua://UIEVENT_TYPE.SPECIALTY_RATIO_BETWEEN_INFO).
----@param fromZoneGroup ZONE_ID [ZONE_ID](lua://ZONE_ID)
----@param toZoneGroup ZONE_ID [ZONE_ID](lua://ZONE_ID)
----@return number cooldownTime miliseconds
+---Retrieves the cooldown time and triggers the `SPECIALTY_RATIO_BETWEEN_INFO`
+---event.
+---@param fromZoneGroup ZONE_ID The source zone ID.
+---@param toZoneGroup ZONE_ID The destination zone ID.
+---@return number cooldownTime The cooldown time in milliseconds.
+---@nodiscard
+---@usage
+---```
+---local sellableZoneGroups = X2Store:GetSellableZoneGroups(1)
+---local cooldownTime = X2Store:GetSpecialtyRatioBetween(1, sellableZoneGroups[1].id)
+---```
+---@see ZONE_ID
 function X2Store:GetSpecialtyRatioBetween(fromZoneGroup, toZoneGroup) end
 
----TODO:
----This probably triggers an event
+---@TODO: Probably triggers an event.
+---Retrieves the specialty ratio for zones (details TBD).
 function X2Store:GetZoneSpecialtyRatio() end

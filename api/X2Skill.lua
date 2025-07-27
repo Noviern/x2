@@ -7,41 +7,41 @@ X2Skill = {}        -- api/X2Skill
 ---@class SynergyIconInfo
 ---@field conditionbuffkind boolean
 ---@field conditionicon string
----@field resulticon string
----@field resultbuffkind boolean
 ---@field desc string
+---@field resultbuffkind boolean
+---@field resulticon string
 
----TODO: Should SkillTooltip be moved to Addon because its also used in Slot:GetTooltip()
+---@TODO: Should SkillTooltip be moved to Addon because its also used in Slot:GetTooltip()
 
 ---api/X2Skill
 ---@class SkillTooltip
----@field synergyIconInfo SynergyIconInfo[]
----@field path string
----@field description string
----@field maxCombatResource number
----@field mana number
----@field maxRange number
----@field category string
----@field firstLearnLevel number
----@field abilityLevel number
----@field skillPoints number
----@field tipType string
----@field levelStep number
----@field type number
----@field meleeDpsMultiplier number
----@field isRaceSkill boolean
----@field minCombatResource number
----@field targetAreaRadius number
----@field minRange number
 ---@field ability string
----@field show boolean
----@field channeling number
----@field name string
----@field learnLevel number
----@field heirSkillName number
+---@field abilityLevel number
 ---@field casting number
+---@field category string
+---@field channeling number
 ---@field cooldown number
+---@field description string
+---@field firstLearnLevel number
+---@field heirSkillName number
+---@field isRaceSkill boolean
+---@field learnLevel number
+---@field levelStep number
+---@field mana number
+---@field maxCombatResource number
+---@field maxRange? number
+---@field meleeDpsMultiplier? number
+---@field minCombatResource number
+---@field minRange? number
+---@field name string
+---@field path string
+---@field show boolean
 ---@field skillLevel number
+---@field skillPoints number
+---@field synergyIconInfo? SynergyIconInfo[]
+---@field targetAreaRadius? number
+---@field tipType string
+---@field type number
 
 ---api/X2Skill
 ---
@@ -50,9 +50,13 @@ X2Skill = {}        -- api/X2Skill
 ---| `SIK_DESCRIPTION`
 ---| `4` Not defined but can be used to get almost everything thats not the description.
 
+---@TODO: Not sure how the itemType works with skillId
 ---Returns [SkillTooltip](lua://SkillTooltip) for `skillId` `itemType` and reduces the returned scope if `filter` exists.
 ---@param skillId number
 ---@param itemType number
----@param filter? SIK (optional) [SIK](lua://SIK)
----@return SkillTooltip [SkillTooltip](lua://SkillTooltip)
+---@param filter? SIK
+---@return SkillTooltip
+---@nodiscard
+---@see SIK
+---@see SkillTooltip
 function X2Skill:GetSkillTooltip(skillId, itemType, filter) end

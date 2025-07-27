@@ -2,26 +2,46 @@
 
 X2Sound = {} -- api/X2Sound
 
----Returns a boolean indicating the the `soundId` is currently playing.
----@param soundId number
----@return boolean isPlaying
+---Checks if the specified sound is currently playing.
+---@param soundId number The ID of the sound to check.
+---@return boolean playing True if the sound is playing, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local soundId = X2Sound:PlayUISound("battlefield_1_secound")
+---local playing = X2Sound:IsPlaying(soundId)
+---```
 function X2Sound:IsPlaying(soundId) end
 
----TODO:
----Broken. Doesnt appear to work.
----@param soundPackItemName string
+---@TODO: Broken. Does not appear to work.
+---Plays music from the specified sound pack item.
+---@param soundPackItemName string The name of the sound pack item.
 function X2Sound:PlayMusic(soundPackItemName) end
 
----Plays a [SOUND_NAME](lua://SOUND_NAME) and returns the `soundId` of that sound instance.
----@param PlayUISound SOUND_NAME [SOUND_NAME](lua://SOUND_NAME)
----@param duplicable boolean
----@return number soundId
-function X2Sound:PlayUISound(PlayUISound, duplicable) end
+---Plays a UI sound and returns its sound instance ID.
+---@param soundName SOUND_NAME The name of the sound to play.
+---@param duplicable? boolean If true, allows the sound to play multiple times concurrently; defaults to false.
+---@return number soundId The ID of the sound instance.
+---@nodiscard
+---@usage
+---```
+---local soundId = X2Sound:PlayUISound("battlefield_1_secound")
+---```
+---@see SOUND_NAME
+function X2Sound:PlayUISound(soundName, duplicable) end
 
----TODO:
----Unsure if this works.
+---Stops the currently playing music.
+---@usage
+---```
+---X2Sound:StopMusic()
+---```
 function X2Sound:StopMusic() end
 
----Stops playing the sound instance with the `soundId`.
----@param soundId number
+---Stops the sound instance with the specified ID.
+---@param soundId number The ID of the sound to stop.
+---@usage
+---```
+---local soundId = X2Sound:PlayUISound("battlefield_1_secound")
+---X2Sound:StopSound(soundId)
+---```
 function X2Sound:StopSound(soundId) end

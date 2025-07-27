@@ -20,6 +20,7 @@ TADT_TODAY = 1              -- api/X2Achievement
 X2Achievement = {}          -- api/X2Achievement
 
 ---api/X2Achievement
+---Enum Achievement Kind
 ---@alias ACHIEVEMENT_KIND
 ---| `EAK_ACHIEVEMENT`
 ---| `EAK_ARCHERAGE`
@@ -28,48 +29,54 @@ X2Achievement = {}          -- api/X2Achievement
 
 ---api/X2Achievement
 ---@class RewardItemInfo
----@field itemType number
 ---@field count number
+---@field itemType number
 
 ---api/X2Achievement
 ---@class RewardInfo
+---@field appellation AppellationInfo
 ---@field item RewardItemInfo
 
 ---api/X2Achievement
 ---@class AppellationInfo
----@field name string
 ---@field iconPath string
+---@field name string
 
 ---api/X2Achievement
 ---@class AchievementInfo
----@field current number
----@field subCategoryType number
----@field complete boolean
----@field completeNum number
----@field tracing boolean
----@field subCategoryName string
----@field achievementType number
 ---@field achievementKind number
----@field type number
----@field grade number
----@field desc string
----@field isHidden boolean
 ---@field canProgress boolean
----@field summary string
----@field highRank boolean
----@field name string
----@field iconPath string
 ---@field categoryName string
----@field reward RewardInfo
----@field appellation AppellationInfo
+---@field complete boolean
+---@field completeDate? Time TODO: This is set if complete == true
+---@field completeNum number
+---@field completeSubCount? number TODO: I think this is only set if highRank == true
+---@field current number
+---@field desc string
+---@field grade number
+---@field highRank boolean
+---@field highRankAchievementType? number mainType TODO: I think this is only set if highRank == false
+---@field iconPath string
+---@field isHidden boolean
+---@field isParentComplete? boolean TODO: I think this is only set if highRank == false
+---@field name string
+---@field objective? number[] TODO: I think this is only set if highRank == true
+---@field reward? RewardInfo TODO: I think this is only set if highRank == true
+---@field subCategoryName string
+---@field subCategoryType number
+---@field summary string
+---@field totalSubCount? number TODO: I think this is only set if highRank == true
+---@field tracing boolean
+---@field type number
 
 ---api/X2Achievement
+---Achievement Filter
 ---@alias ACHIEVEMENT_FILTER
 ---| `AF_ALL`
----| `AF_COMPLETE` Doesnt work. Is the same as AF_ALL.
----| `AF_INVALID` Doesnt work. Is the same as AF_ALL.
+---| `AF_COMPLETE` Doesnt work. Produces the same result as AF_ALL.
+---| `AF_INVALID` Doesnt work. Produces the same result as AF_ALL.
 ---| `AF_TRACING`
----| `AF_UNCOMPLETE` Doesnt work. Is the same as AF_ALL.
+---| `AF_UNCOMPLETE` Doesnt work. Produces the same result as AF_ALL.
 
 ---api/X2Achievement
 ---@class AchievementSubCategory
@@ -82,26 +89,21 @@ X2Achievement = {}          -- api/X2Achievement
 
 ---api/X2Achievement
 ---@class AchievementCategory
----@field subCategories AchievementSubCategory[]
 ---@field categoryType number
 ---@field name string
+---@field subCategories AchievementSubCategory[]
 
 ---api/X2Achievement
----```
----SubcategoryInfo {
---- isHeirLevelCategory = false, completedCount = 0. rewardAchievementType = 0,
---- totalCount = 0, name = "", desc = ""
----}
----```
 ---@class SubcategoryInfo
----@field isHeirLevelCategory boolean
 ---@field completedCount number
+---@field desc string
+---@field isHeirLevelCategory boolean
+---@field name string
 ---@field rewardAchievementType number
 ---@field totalCount number
----@field name string
----@field desc string
 
 ---api/X2Achievement
+---Today Assignment Daily Type
 ---@alias TODAY_TYPE
 ---| `TADT_ARCHE_PASS`
 ---| `TADT_EXPEDITION`
@@ -112,136 +114,250 @@ X2Achievement = {}          -- api/X2Achievement
 ---| `TADT_TODAY`
 
 ---api/X2Achievement
----```
----TodayAssignmentInfoForChange {
---- init = false, levelMin = 0, iconPath = "", questType = 0, realStep = 0,
---- desc = "", sort = 0, levelMax = 0, status = 0, title = "", satisfy = false,
---- requireLevel = 0
----}
----```
+---@class TodayAssignmentGoal
+---@field goal number
+---@field itemCount number
+---@field itemType number
+
+---api/X2Achievement
 ---@class TodayAssignmentInfo
----@field init boolean
----@field levelMin number
+---@field desc string
 ---@field iconPath string
+---@field init boolean
+---@field levelMax number
+---@field levelMin number
 ---@field questType number
 ---@field realStep number
----@field desc string
+---@field requireItem? number
+---@field requireItemCount? number
+---@field requireLevel number
+---@field satisfy boolean
 ---@field sort number
----@field levelMax number
 ---@field status number
 ---@field title string
----@field satisfy boolean
----@field requireLevel number
 
 ---api/X2Achievement
 ---@class AchievementSubList
 ---@field key number
 
----TODO:
----Adds an achievement `aType` to the ambitions category under the achievement `kind`.
----@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
----@param aType number
----@return boolean success not sure if this can be false?
-function X2Achievement:AddTracingAchievement(kind, aType) end
-
----Returns [AchievementInfo](lua://AchievementInfo) if `aType` exists.
----@param aType number
----@return AchievementInfo? [AchievementInfo](lua://AchievementInfo)
-function X2Achievement:GetAchievementInfo(aType) end
-
----Returns a collection of `aType` for the `kind` subcategory `sId` with the `filter` if they exist, otherwise returns an empty table.
----@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
----@param sId number subCategoryType from GetCategories
----@param filter ACHIEVEMENT_FILTER [ACHIEVEMENT_FILTER](lua://ACHIEVEMENT_FILTER)
----@return number[]
-function X2Achievement:GetAchievementMainList(kind, sId, filter) end
-
----Returns `achievementName` for `aType` if it exists, otherwise returns an empty string.
----@param aType number
----@return string achievementName
-function X2Achievement:GetAchievementName(aType) end
-
----TODO: Broken. AF_COMPLETE returns empty even if the `mainType` is complete. AF_ALL is the only one that works.
----
----Returns a collection of `AchievementSubList` for `mainType` with `filter` if it exists, otherwise returns an empty table.
----@param mainType number
----@param filter ACHIEVEMENT_FILTER [ACHIEVEMENT_FILTER](lua://ACHIEVEMENT_FILTER)
----@return AchievementSubList[]
-function X2Achievement:GetAchievementSubList(mainType, filter) end
-
----Returns `achievementTracingList` collection of `aType` for the `kind` if it exists, otherwise returns an empty table.
----@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
----@return number[] achievementTracingList
-function X2Achievement:GetAchievementTracingList(kind) end
-
----Returns a collection of [AchievementLevelSubCategory](lua://AchievementLevelSubCategory) for `kind` = `EAK_RACIAL_MISSION`, or [AchievementCategory](lua://AchievementCategory) for other valid `kind`. Returns an empty table if `kind` is invalid.
----@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
----@return AchievementCategory[]|AchievementLevelSubCategory[] [AchievementCategory](lua://AchievementCategory) [AchievementLevelSubCategory](lua://AchievementLevelSubCategory)
-function X2Achievement:GetCategories(kind) end
-
----TODO: Broken `completedCount` returns 0  regardless of `filter`.
----
----Returns `completedCount` and `totalCount` for `kind` in the category `cType` under subcategory `scType` with the filter `filter`.
----@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
----@param cType number categoryType
----@param scType number subcategoryType
----@param filter ACHIEVEMENT_FILTER [ACHIEVEMENT_FILTER](lua://ACHIEVEMENT_FILTER)
----@return number completedCount, number totalCount
-function X2Achievement:GetCategoryCount(kind, cType, scType, filter) end
-
----Returns [SubcategoryInfo](lua://SubcategoryInfo) for `subCategory` if it exists.
----@param subCategory number
----@return SubcategoryInfo? [SubcategoryInfo](lua://SubcategoryInfo)
-function X2Achievement:GetSubcategoryInfo(subCategory) end
-
----Returns `todayAssignmentCount` if `todayType` exists, otherwise returns 7.
----@param todayType TODAY_TYPE [TODAY_TYPE](lua://TODAY_TYPE)
----@return number todayAssignmentCount
-function X2Achievement:GetTodayAssignmentCount(todayType) end
-
----TODO: Broken as of 9.5 returns nothing. was working prior to 9.5
----Returns a table with daily contract completion rewards.
----@return table
-function X2Achievement:GetTodayAssignmentGoal() end
-
----Returns [TodayAssignmentInfo](lua://TodayAssignmentInfo) for the `index` of `todayType` if both exist.
----@param todayType TODAY_TYPE [TODAY_TYPE](lua://TODAY_TYPE)
----@param index number
----@return TodayAssignmentInfo? [TodayAssignmentInfo](lua://TodayAssignmentInfo)
-function X2Achievement:GetTodayAssignmentInfo(todayType, index) end
-
----Returns [TodayAssignmentInfo](lua://TodayAssignmentInfo) for the `index` of `todayType` if both exist.
----@param todayType TODAY_TYPE [TODAY_TYPE](lua://TODAY_TYPE)
----@param index number
----@return TodayAssignmentInfo? [TodayAssignmentInfo](lua://TodayAssignmentInfo)
-function X2Achievement:GetTodayAssignmentInfoForChange(todayType, index) end
-
----Returns `todayAssignmentResetCount` and `todayAssignmentMaxResetCount` for `todayType` if they exist, otherwise returns 0 for both.
----@param todayType TODAY_TYPE [TODAY_TYPE](lua://TODAY_TYPE)
----@return number todayAssignmentResetCount, number todayAssignmentMaxResetCount
-function X2Achievement:GetTodayAssignmentResetCount(todayType) end
-
----TODO: Broken  as of 9.5 returns nothing. was working prior to 9.5 now only returns 0 for two variables.
----@return number todayAssignmentCompletionStatus, number todayAssignmentMaxCompletion, number todayAssignmentCompleted
-function X2Achievement:GetTodayAssignmentStatus() end
-
----Returns true if the quest id is in the list of TodayAssignmentQuests, and its not already complete
+---Adds an achievement to the ambitions category under the specified kind.
+---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
+---@param achievementType number The type (id) of achievement to add.
+---@return boolean success True if the achievement was added successfully, false otherwise.
+---@nodiscard
 ---@usage
 ---```
----X2Achievement:IsTodayAssignmentQuest(TADT_TODAY, 7400)
+---local success = X2Achievement:AddTracingAchievement(EAK_COLLECTION, 4153)
 ---```
----@param todayType TODAY_TYPE [TODAY_TYPE](lua://TODAY_TYPE)
----@param questType number querst id
----@return boolean
+---@see ACHIEVEMENT_KIND
+function X2Achievement:AddTracingAchievement(achievementKind, achievementType) end
+
+---Retrieves achievement information if the specified type exists.
+---@param achievementType number The type (id) of achievement to query.
+---@return AchievementInfo|nil achievementInfo The achievement information, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local achievementInfo = X2Achievement:GetAchievementInfo(4153)
+---```
+---@see AchievementInfo
+function X2Achievement:GetAchievementInfo(achievementType) end
+
+---Retrieves a list of achievement types for the specified kind and subcategory
+---with the given filter.
+---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
+---@param subCategoryType number The subcategory achievement type.
+---@param achievementFilter ACHIEVEMENT_FILTER The filter to apply.
+---@return number[] achievementMainList A table of achievement types, or empty if none exist.
+---@nodiscard
+---@usage
+---```
+---local achievementMainList = X2Achievement:GetAchievementMainList(EAK_COLLECTION, 42, AF_ALL)
+---```
+---@see ACHIEVEMENT_KIND
+---@see ACHIEVEMENT_FILTER
+function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType,
+                                              achievementFilter) end
+
+---Retrieves the name of the specified achievement type.
+---@param achievementType number The type (id) of achievement to query.
+---@return string achievementName The achievement name, or empty string if not found.
+---@nodiscard
+---@usage
+---```
+---local achievementName = X2Achievement:GetAchievementName(4153)
+---```
+function X2Achievement:GetAchievementName(achievementType) end
+
+---Retrieves a list of achievement sublists for the specified main type with the
+---given filter.
+---@param mainType number The main achievement type.
+---@param achievementFilter ACHIEVEMENT_FILTER The filter to apply.
+---@return AchievementSubList[] achievementSubList A table of achievement sublists, or empty if none exist.
+---@nodiscard
+---@usage
+---```
+---local achievementSubList = X2Achievement:GetAchievementSubList(4154, AF_ALL)
+---```
+---@see ACHIEVEMENT_FILTER
+---@see AchievementSubList
+function X2Achievement:GetAchievementSubList(mainType, achievementFilter) end
+
+---Retrieves a list of achievement types being traced for the specified kind.
+---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
+---@return number[] achievementTracingList A table of traced main achievement types, or empty if none exist.
+---@nodiscard
+---@usage
+---```
+---local achievementTracingList = X2Achievement:GetAchievementTracingList(EAK_COLLECTION)
+---```
+---@see ACHIEVEMENT_KIND
+function X2Achievement:GetAchievementTracingList(achievementKind) end
+
+---Retrieves categories for the specified kind, returning level subcategories
+---for EAK_RACIAL_MISSION or regular categories otherwise.
+---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
+---@return AchievementCategory[]|AchievementLevelSubCategory[] categories A table of categories or level subcategories for `EAK_RACIAL_MISSION`, or empty if kind is invalid.
+---@nodiscard
+---@usage
+---```
+---local categories = X2Achievement:GetCategories(EAK_ACHIEVEMENT)
+---```
+---@see ACHIEVEMENT_KIND
+---@see AchievementCategory
+---@see AchievementLevelSubCategory
+function X2Achievement:GetCategories(achievementKind) end
+
+---Retrieves the completed and total count for the specified kind, category, and
+---subcategory with the given filter.
+---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
+---@param categoryType number The category type.
+---@param subCategoryType number The subcategory type.
+---@param achievementFilter ACHIEVEMENT_FILTER The filter to apply.
+---@return number complete The number of completed achievements.
+---@return number total The total number of achievements.
+---@nodiscard
+---@usage
+---```
+---local complete, total = X2Achievement:GetCategoryCount(EAK_COLLECTION, 9, 42, AF_ALL)
+---```
+---@see ACHIEVEMENT_KIND
+---@see ACHIEVEMENT_FILTER
+function X2Achievement:GetCategoryCount(achievementKind, categoryType,
+                                        subCategoryType, achievementFilter) end
+
+---Retrieves subcategory information if the specified subcategory exists.
+---@param subCategory number The subcategory to query.
+---@return SubcategoryInfo|nil subcategoryInfo The subcategory information, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local subcategoryInfo = X2Achievement:GetSubcategoryInfo(42)
+---```
+---@see SubcategoryInfo
+function X2Achievement:GetSubcategoryInfo(subCategory) end
+
+---Retrieves the assignment count for the specified today type, defaulting to 7
+---if not found.
+---@param todayType TODAY_TYPE The type of today’s assignments.
+---@return number todayAssignmentCount The number of assignments for the day.
+---@nodiscard
+---@usage
+---```
+---local todayAssignmentCount = X2Achievement:GetTodayAssignmentCount(TADT_TODAY)
+---```
+---@see TODAY_TYPE
+function X2Achievement:GetTodayAssignmentCount(todayType) end
+
+---Retrieves a table with daily contract completion rewards.
+---@return TodayAssignmentGoal[] todayAssignmentGoal A table of daily contract completion rewards.
+---@nodiscard
+---@usage
+---```
+---local todayAssignmentGoal = X2Achievement:GetTodayAssignmentGoal()
+---```
+function X2Achievement:GetTodayAssignmentGoal() end
+
+---Retrieves assignment information for the specified type and index.
+---@param todayType TODAY_TYPE The type of today’s assignments.
+---@param index number The index of the assignment.
+---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local todayAssignmentInfo = X2Achievement:GetTodayAssignmentInfo(TADT_TODAY, 1)
+---```
+---@see TODAY_TYPE
+---@see TodayAssignmentInfo
+function X2Achievement:GetTodayAssignmentInfo(todayType, index) end
+
+---Retrieves assignment information for changing the specified type and index.
+---@param todayType TODAY_TYPE The type of today’s assignments.
+---@param index number The index of the assignment.
+---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local todayAssignmentInfo = X2Achievement:GetTodayAssignmentInfoForChange(TADT_TODAY, 1)
+---```
+---@see TODAY_TYPE
+---@see TodayAssignmentInfo
+function X2Achievement:GetTodayAssignmentInfoForChange(todayType, index) end
+
+---Retrieves the reset count and maximum reset count for the specified today
+---type.
+---@param todayType TODAY_TYPE The type of today’s assignments.
+---@return number resetCount The current reset count.
+---@return number maxCount The maximum reset count.
+---@nodiscard
+---@usage
+---```
+---local resetCount, maxCount = X2Achievement:GetTodayAssignmentResetCount(TADT_TODAY)
+---```
+---@see TODAY_TYPE
+function X2Achievement:GetTodayAssignmentResetCount(todayType) end
+
+---Retrieves the completion status of today’s assignments.
+---@return number done The number of completed assignments.
+---@return number total The total completion count.
+---@nodiscard
+---@usage
+---```
+---local done, total = X2Achievement:GetTodayAssignmentStatus()
+---```
+function X2Achievement:GetTodayAssignmentStatus() end
+
+---Checks if the quest ID is in the today’s assignment quests and not already
+---complete.
+---@param todayType TODAY_TYPE The type of today’s assignments.
+---@param questType number The quest ID to check.
+---@return boolean todayAssignmentQuest True if the quest is in the list and not complete, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local todayAssignmentQuest = X2Achievement:IsTodayAssignmentQuest(TADT_TODAY, 7046)
+---```
+---@see TODAY_TYPE
 function X2Achievement:IsTodayAssignmentQuest(todayType, questType) end
 
----Returns a boolean `isTracingAchievement` indicating if `aType` in `kind` exists and is being traced.
----@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
----@param aType number
----@return boolean isTracingAchievement
-function X2Achievement:IsTracingAchievement(kind, aType) end
+---Checks if the specified achievement type in the given kind is being traced.
+---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
+---@param achievementType number The type (id) of achievement to check.
+---@return boolean tracingAchievement True if the achievement is being traced, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local tracingAchievement = X2Achievement:IsTracingAchievement(EAK_COLLECTION, 4153)
+---```
+---@see ACHIEVEMENT_KIND
+function X2Achievement:IsTracingAchievement(achievementKind, achievementType) end
 
----Removes `aType` in `kind` from tracing.
----@param kind ACHIEVEMENT_KIND [ACHIEVEMENT_KIND](lua://ACHIEVEMENT_KIND)
----@param aType number
-function X2Achievement:RemoveTracingAchievement(kind, aType) end
+---Removes the specified achievement type in the given kind from tracing.
+---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
+---@param achievementType number The type (id) of achievement to remove.
+---@usage
+---```
+---X2Achievement:RemoveTracingAchievement(EAK_COLLECTION, 4153)
+---```
+---@see ACHIEVEMENT_KIND
+function X2Achievement:RemoveTracingAchievement(achievementKind, achievementType) end

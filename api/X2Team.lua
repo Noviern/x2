@@ -19,6 +19,23 @@ TMROLE_TANKER = 1                     -- api/X2Team
 X2Team = {}                           -- api/X2Team
 
 ---api/X2Team
+---@alias SIEGE_RAID
+---| `SIEGE_RAID_TEAM_ALL_INFO`
+---| `SIEGE_RAID_TEAM_INFO_BY_FACTION`
+
+---api/X2Team
+---@alias TEAM_JOIN
+---| `TEAM_JOINT_MENU_CHAT`
+---| `TEAM_JOINT_MENU_TARGET`
+---| `TEAM_JOINT_REQUEST`
+
+---api/X2Team
+---@alias TEAM_LOOT
+---| `TEAM_LOOT_FREE_FOR_ALL`
+---| `TEAM_LOOT_MASTER_LOOTER`
+---| `TEAM_LOOT_ROUND_ROBIN`
+
+---api/X2Team
 ---@alias TEAM_ROLE
 ---| `TMROLE_DEALER`
 ---| `TMROLE_HEALER`
@@ -26,12 +43,22 @@ X2Team = {}                           -- api/X2Team
 ---| `TMROLE_RANGED_DEALER`
 ---| `TMROLE_TANKER`
 
----Returns the `role` of the `memberIndex` in `teamIndex`.
----@param teamIndex number
----@param memberIndex number
----@return number role
+---Retrieves the role of the specified member in the given team.
+---@param teamIndex number The index of the team.
+---@param memberIndex number The index of the member within the team.
+---@return TEAM_ROLE role The role of the member.
+---@nodiscard
+---@usage
+---```
+---local role = X2Team:GetRole(1, 1)
+---```
 function X2Team:GetRole(teamIndex, memberIndex) end
 
----Sets the players role in a raid.
----@param role TEAM_ROLE
+---Sets the player's role in a raid.
+---@param role TEAM_ROLE The role to set for the player.
+---@usage
+---```
+---X2Team:SetRole(TMROLE_DEALER)
+---```
+---@see TEAM_ROLE
 function X2Team:SetRole(role) end

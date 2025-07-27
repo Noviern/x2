@@ -35,14 +35,174 @@ RACE_RETURNED = 7             -- api/X2Unit
 RACE_WARBORN = 8              -- api/X2Unit
 X2Unit = {}                   -- api/X2Unit
 
+---@TODO: UnitBuffTooltip, UnitDeBuffTooltip, GetBuffTooltip use BIK as a third param?
+
+---@enum UNIT
+local UNIT = {
+  PLAYER       = "player",
+  PLAYERPET1   = "playerpet1", ---mount
+  PLAYERPET2   = "playerpet2", ---pet
+  SLAVE        = "slave",
+  TARGET       = "target",
+  TARGETTARGET = "targettarget",
+  WATCHTARGET  = "watchtarget",
+  TEAM1        = "team1",   -- team = the current raid/can be co raid
+  TEAM2        = "team2",
+  TEAM3        = "team3",
+  TEAM4        = "team4",
+  TEAM5        = "team5",
+  TEAM6        = "team6",
+  TEAM7        = "team7",
+  TEAM8        = "team8",
+  TEAM9        = "team9",
+  TEAM10       = "team10",
+  TEAM11       = "team11",
+  TEAM12       = "team12",
+  TEAM13       = "team13",
+  TEAM14       = "team14",
+  TEAM15       = "team15",
+  TEAM16       = "team16",
+  TEAM17       = "team17",
+  TEAM18       = "team18",
+  TEAM19       = "team19",
+  TEAM20       = "team20",
+  TEAM21       = "team21",
+  TEAM22       = "team22",
+  TEAM23       = "team23",
+  TEAM24       = "team24",
+  TEAM25       = "team25",
+  TEAM26       = "team26",
+  TEAM27       = "team27",
+  TEAM28       = "team28",
+  TEAM29       = "team29",
+  TEAM30       = "team30",
+  TEAM31       = "team31",
+  TEAM32       = "team32",
+  TEAM33       = "team33",
+  TEAM34       = "team34",
+  TEAM35       = "team35",
+  TEAM36       = "team36",
+  TEAM37       = "team37",
+  TEAM38       = "team38",
+  TEAM39       = "team39",
+  TEAM40       = "team40",
+  TEAM41       = "team41",
+  TEAM42       = "team42",
+  TEAM43       = "team43",
+  TEAM44       = "team44",
+  TEAM45       = "team45",
+  TEAM46       = "team46",
+  TEAM47       = "team47",
+  TEAM48       = "team48",
+  TEAM49       = "team49",
+  TEAM50       = "team50",
+  TEAM_1_1     = "team_1_1",
+  TEAM_1_2     = "team_1_2",
+  TEAM_1_3     = "team_1_3",
+  TEAM_1_4     = "team_1_4",
+  TEAM_1_5     = "team_1_5",
+  TEAM_1_6     = "team_1_6",
+  TEAM_1_7     = "team_1_7",
+  TEAM_1_8     = "team_1_8",
+  TEAM_1_9     = "team_1_9",
+  TEAM_1_10    = "team_1_10",
+  TEAM_1_11    = "team_1_11",
+  TEAM_1_12    = "team_1_12",
+  TEAM_1_13    = "team_1_13",
+  TEAM_1_14    = "team_1_14",
+  TEAM_1_15    = "team_1_15",
+  TEAM_1_16    = "team_1_16",
+  TEAM_1_17    = "team_1_17",
+  TEAM_1_18    = "team_1_18",
+  TEAM_1_19    = "team_1_19",
+  TEAM_1_20    = "team_1_20",
+  TEAM_1_21    = "team_1_21",
+  TEAM_1_22    = "team_1_22",
+  TEAM_1_23    = "team_1_23",
+  TEAM_1_24    = "team_1_24",
+  TEAM_1_25    = "team_1_25",
+  TEAM_1_26    = "team_1_26",
+  TEAM_1_27    = "team_1_27",
+  TEAM_1_28    = "team_1_28",
+  TEAM_1_29    = "team_1_29",
+  TEAM_1_30    = "team_1_30",
+  TEAM_1_31    = "team_1_31",
+  TEAM_1_32    = "team_1_32",
+  TEAM_1_33    = "team_1_33",
+  TEAM_1_34    = "team_1_34",
+  TEAM_1_35    = "team_1_35",
+  TEAM_1_36    = "team_1_36",
+  TEAM_1_37    = "team_1_37",
+  TEAM_1_38    = "team_1_38",
+  TEAM_1_39    = "team_1_39",
+  TEAM_1_40    = "team_1_40",
+  TEAM_1_41    = "team_1_41",
+  TEAM_1_42    = "team_1_42",
+  TEAM_1_43    = "team_1_43",
+  TEAM_1_44    = "team_1_44",
+  TEAM_1_45    = "team_1_45",
+  TEAM_1_46    = "team_1_46",
+  TEAM_1_47    = "team_1_47",
+  TEAM_1_48    = "team_1_48",
+  TEAM_1_49    = "team_1_49",
+  TEAM_1_50    = "team_1_50",
+  TEAM_2_1     = "team_2_1",
+  TEAM_2_2     = "team_2_2",
+  TEAM_2_3     = "team_2_3",
+  TEAM_2_4     = "team_2_4",
+  TEAM_2_5     = "team_2_5",
+  TEAM_2_6     = "team_2_6",
+  TEAM_2_7     = "team_2_7",
+  TEAM_2_8     = "team_2_8",
+  TEAM_2_9     = "team_2_9",
+  TEAM_2_10    = "team_2_10",
+  TEAM_2_11    = "team_2_11",
+  TEAM_2_12    = "team_2_12",
+  TEAM_2_13    = "team_2_13",
+  TEAM_2_14    = "team_2_14",
+  TEAM_2_15    = "team_2_15",
+  TEAM_2_16    = "team_2_16",
+  TEAM_2_17    = "team_2_17",
+  TEAM_2_18    = "team_2_18",
+  TEAM_2_19    = "team_2_19",
+  TEAM_2_20    = "team_2_20",
+  TEAM_2_21    = "team_2_21",
+  TEAM_2_22    = "team_2_22",
+  TEAM_2_23    = "team_2_23",
+  TEAM_2_24    = "team_2_24",
+  TEAM_2_25    = "team_2_25",
+  TEAM_2_26    = "team_2_26",
+  TEAM_2_27    = "team_2_27",
+  TEAM_2_28    = "team_2_28",
+  TEAM_2_29    = "team_2_29",
+  TEAM_2_30    = "team_2_30",
+  TEAM_2_31    = "team_2_31",
+  TEAM_2_32    = "team_2_32",
+  TEAM_2_33    = "team_2_33",
+  TEAM_2_34    = "team_2_34",
+  TEAM_2_35    = "team_2_35",
+  TEAM_2_36    = "team_2_36",
+  TEAM_2_37    = "team_2_37",
+  TEAM_2_38    = "team_2_38",
+  TEAM_2_39    = "team_2_39",
+  TEAM_2_40    = "team_2_40",
+  TEAM_2_41    = "team_2_41",
+  TEAM_2_42    = "team_2_42",
+  TEAM_2_43    = "team_2_43",
+  TEAM_2_44    = "team_2_44",
+  TEAM_2_45    = "team_2_45",
+  TEAM_2_46    = "team_2_46",
+  TEAM_2_47    = "team_2_47",
+  TEAM_2_48    = "team_2_48",
+  TEAM_2_49    = "team_2_49",
+  TEAM_2_50    = "team_2_50",
+}
+
 ---api/X2Unit
----```
----TargetAbilityTemplate { level = 55, name = "wild", index = 6 }
----```
 ---@class TargetAbilityTemplate
+---@field index number
 ---@field level number
 ---@field name string
----@field index number
 
 ---api/X2Unit
 ---@class UnitClass
@@ -52,225 +212,426 @@ X2Unit = {}                   -- api/X2Unit
 
 ---api/X2Unit
 ---@class UnitInfo
----@field expeditionName string
----@field type string
 ---@field class UnitClass
----@field hp string
----@field name string
+---@field expeditionName string
 ---@field faction string
 ---@field family_name string
----@field level number
 ---@field heirLevel number
+---@field hp string
+---@field level number
 ---@field maxHp string
+---@field name string
+---@field type string
 
 ---api/X2Unit
----```
----BuffInfo { stack = 1, path = "", timeLeft = 0, buff_id = 0 }
----```
 ---@class BuffInfo
----@field stack number
----@field path string
----@field timeLeft? number
 ---@field buff_id number
+---@field path string
+---@field stack number
+---@field timeLeft? number
 
 ---api/X2Unit
 ---@class BuffTooltip: BuffInfo
+---@field category string
 ---@field description string
----@field tipType string
+---@field duration number
 ---@field mine boolean
 ---@field name string
----@field category string
+---@field path? string
+---@field stack? number
+---@field timeLef? number
 ---@field timeUnit? string
----@field duration number
+---@field tipType string
 
 ---api/X2Unit
 ---@class CastingInfo
----@field currCastingTime number
 ---@field castingTime number
 ---@field castingUseable boolean
+---@field currCastingTime number
 ---@field showTargetCastingTime boolean
 ---@field spellName string
 
 ---api/X2Unit
----```
----UnitDistance { over_distance = false, distance = 1 }
----```
 ---@class UnitDistance
----@field over_distance boolean
 ---@field distance number
+---@field over_distance boolean
 
----Returns the `currentZoneGroup`.
----@return number currentZoneGroup
+---Retrieves the current zone group ID.
+---@return ZONE_ID currentZoneGroup The current zone group ID.
+---@nodiscard
+---@usage
+---```
+---local currentZoneGroup = X2Unit:GetCurrentZoneGroup()
+---```
+---@see ZONE_ID
 function X2Unit:GetCurrentZoneGroup() end
 
----Returns a collection of 3 [TargetAbilityTemplate](lua://TargetAbilityTemplate) instances for the `target`  if they are in render range.
----@param target string
----@return TargetAbilityTemplate[]? [TargetAbilityTemplate](lua://TargetAbilityTemplate)
+---Retrieves a list of up to three target ability templates for the specified target if in render range.
+---@param target UNIT The target unit.
+---@return TargetAbilityTemplate[]|nil targetAbilityTemplates A table of ability templates, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local targetAbilityTemplates = X2Unit:GetTargetAbilityTemplates("player")
+---```
+---@see UNIT
+---@see TargetAbilityTemplate
 function X2Unit:GetTargetAbilityTemplates(target) end
 
----Returns current target's `unitId` if they are in render range.
----@return string? unitId
+---Retrieves the unit ID of the current target if in render range.
+---@return string|nil unitId The target's unit ID, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitId = X2Unit:GetTargetUnitId()
+---```
 function X2Unit:GetTargetUnitId() end
 
----Returns the `unitId` for the `unit` if they are in render range.
----@param unit string
----@return string? unitId
+---Retrieves the unit ID for the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@return string|nil unitId The unit ID, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitId = X2Unit:GetUnitId("player")
+---```
+---@see UNIT
 function X2Unit:GetUnitId(unit) end
 
----Returns a [UnitInfo](lua://UnitInfo) for the `stringId` if they are in render range.
----@param stringId string `X2Unit:GetTargetUnitId` or `X2Unit:GetUnitId` can provide the `stringId`.
----@return UnitInfo? [UnitInfo](lua://UnitInfo)
-function X2Unit:GetUnitInfoById(stringId) end
+---Retrieves unit information for the specified unit ID if in render range.
+---@param unitId string The unit ID .
+---@return UnitInfo|nil unitInfo The unit information, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitId = X2Unit:GetUnitId("player")
+---local unitInfo = X2Unit:GetUnitInfoById(unitId)
+---```
+---@see UnitInfo
+function X2Unit:GetUnitInfoById(unitId) end
 
----Returns the `unitName` of a `stringId` if they are in render range.
----@param stringId string `X2Unit:GetTargetUnitId` or `X2Unit:GetUnitId` can provide the `stringId`.
----@return string? unitName
-function X2Unit:GetUnitNameById(stringId) end
+---Retrieves the name of the unit for the specified unit ID if in render range.
+---@param unitId string The unit ID.
+---@return string|nil unitName The unit name, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitId = X2Unit:GetUnitId("player")
+---local unitName = X2Unit:GetUnitNameById(unitId)
+---```
+function X2Unit:GetUnitNameById(unitId) end
 
----Returns the `x`, `y`, `z` of a `unit` screen position if they are in render range.
----@param unit string
----@return number? x, number? y, number? z
+---Retrieves the screen position (x, y, z) of the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@return number|nil x The x-coordinate, or nil if not in range.
+---@return number|nil y The y-coordinate, or nil if not in range.
+---@return number|nil z The z-coordinate, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local x, y, z = X2Unit:GetUnitScreenPosition("player")
+---```
+---@see UNIT
 function X2Unit:GetUnitScreenPosition(unit) end
 
----TODO:
----Returns the `x`, `y`, and `z` of the `unit` in the world. The behavior is odd as the `x` and `y` coordinates reset
----when you cross into a new cell. if they are in render range.
----@param unit string
----@return number? x, number? y, number? z
-function X2Unit:GetUnitWorldPositionByTarget(unit) end
+---Retrieves the world position (x, y, z) and angle of the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@param isLocal boolean Whether to use local coordinates.
+---@return number|nil x The x-coordinate, or nil if not in range.
+---@return number|nil y The y-coordinate, or nil if not in range.
+---@return number|nil z The z-coordinate, or nil if not in range.
+---@return number|nil angle The unit's angle.
+---@nodiscard
+---@usage
+---```
+---local x, y, z, angle = X2Unit:GetUnitWorldPositionByTarget("player", false)
+---```
+---@see UNIT
+function X2Unit:GetUnitWorldPositionByTarget(unit, isLocal) end
 
----Returns [BuffInfo](lua://BuffInfo) for the `buffIndex` of `unit` if they are in render range, otherwise returns an empty table.
----@param unit string
----@param buffIndex number
----@return BuffInfo [BuffInfo](lua://BuffInfo)
+---Retrieves buff information for the specified buff index of the unit if in render range.
+---@param unit UNIT The unit to query.
+---@param buffIndex number The buff index.
+---@return BuffInfo unitBuffInfo The buff information, or an empty table if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitBuffInfo = X2Unit:UnitBuff("player", 1)
+---```
+---@see UNIT
+---@see BuffInfo
 function X2Unit:UnitBuff(unit, buffIndex) end
 
----Returns `unitBuffCount` if `unit` is within render range, otherwise returns 0.
----@param unit string
----@return number unitBuffCount
+---Retrieves the number of buffs on the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@return number unitBuffCount The number of buffs, or 0 if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitBuffCount = X2Unit:UnitBuffCount("player")
+---```
+---@see UNIT
 function X2Unit:UnitBuffCount(unit) end
 
----Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they are in render range.
----@param unit string
----@param buffIndex number
----@return BuffTooltip? [BuffTooltip](lua://BuffTooltip)
+---Retrieves the buff tooltip for the specified buff index of the unit if in render range.
+---@param unit UNIT The unit to query.
+---@param buffIndex number The buff index.
+---@return BuffTooltip|nil unitBuffTooltip The buff tooltip, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitBuffTooltip = X2Unit:UnitBuffTooltip("player", 1)
+---```
+---@see UNIT
+---@see BuffTooltip
 function X2Unit:UnitBuffTooltip(unit, buffIndex) end
 
----Returns [CastingInfo](lua://CastingInfo) for the `unit` if they are in render range.
----@param unit string
----@return CastingInfo? [CastingInfo](lua://CastingInfo)
+---Retrieves casting information for the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@return CastingInfo|nil unitCastingInfo The casting information, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitCastingInfo = X2Unit:UnitCastingInfo("player")
+---```
+---@see UNIT
+---@see CastingInfo
 function X2Unit:UnitCastingInfo(unit) end
 
----Returns [BuffInfo](lua://BuffInfo) for the `buffIndex` of `unit` if they are in render range, otherwise returns an empty table.
----@param unit string
----@param buffIndex number
----@return BuffInfo [BuffInfo](lua://BuffInfo)
-function X2Unit:UnitDeBuff(unit, buffIndex) end
+---Retrieves debuff information for the specified buff index of the unit if in render range.
+---@param unit UNIT The unit to query.
+---@param deBuffIndex number The debuff index.
+---@return BuffInfo unitDebuffInfo The debuff information, or an empty table if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitDebuffInfo = X2Unit:UnitDeBuff("player", 1)
+---```
+---@see UNIT
+---@see BuffInfo
+function X2Unit:UnitDeBuff(unit, deBuffIndex) end
 
----Returns `unitDeBuffCount` if `unit` is within render range, otherwise returns 0.
----@param unit string
----@return number unitDeBuffCount
+---Retrieves the number of debuffs on the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@return number unitDeBuffCount The number of debuffs, or 0 if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitDeBuffCount = X2Unit:UnitDeBuffCount("player")
+---```
+---@see UNIT
 function X2Unit:UnitDeBuffCount(unit) end
 
----Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they are in render range.
----@param unit string
----@param buffIndex number
----@return BuffTooltip? [BuffTooltip](lua://BuffTooltip)
-function X2Unit:UnitDeBuffTooltip(unit, buffIndex) end
+---Retrieves the debuff tooltip for the specified buff index of the unit if in render range.
+---@param unit UNIT The unit to query.
+---@param deBuffIndex number The debuff index.
+---@return BuffTooltip|nil unitDebuffTooltip The debuff tooltip, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitDebuffTooltip = X2Unit:UnitDeBuffTooltip("player", 1)
+---```
+---@see UNIT
+---@see BuffTooltip
+function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex) end
 
----Returns [UnitDistance](lua://UnitDistance) between the player and the `unit` boundary box if they are in render range.
----@param unit string
----@return UnitDistance? [UnitDistance](lua://UnitDistance)
+---Retrieves the distance between the player and the specified unit's boundary box if in render range.
+---@param unit UNIT The unit to query.
+---@return UnitDistance|nil unitDistance The distance information, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitDistance = X2Unit:UnitDistance("player")
+---```
+---@see UNIT
+---@see UnitDistance
 function X2Unit:UnitDistance(unit) end
 
----Returns `result` containing the gearscore of the `unit` if they exist otherwise returns a boolean that is false.
----@param unit string
----@param comma boolean this doesnt appear to work.
----@return string|boolean result
+---Retrieves the gear score of the specified unit or a boolean indicating if the unit exists.
+---@param unit UNIT The unit to query.
+---@param comma boolean Whether to include a comma (does not appear to work).
+---@return string|boolean result The gear score as a string, or false if the unit does not exist.
+---@nodiscard
+---@usage
+---```
+---local result = X2Unit:UnitGearScore("player", true)
+---```
+---@see UNIT
 function X2Unit:UnitGearScore(unit, comma) end
 
----Returns `unitHealth` of the `unit` if they exist.
----@param unit string
----@return string? unitHealth
+---Retrieves the health of the specified unit if it exists.
+---@param unit UNIT The unit to query.
+---@return string|nil unitHealth The unit's health, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitHealth = X2Unit:UnitHealth("player")
+---```
+---@see UNIT
 function X2Unit:UnitHealth(unit) end
 
----Returns `unitCurrentHealth`, `unitMaxHealth`, and `unitHealthPercentage` if the `unit` exists, otherwise returns "0"
----for all three.
----@param unit string
----@return string unitCurrentHealth, string unitMaxHealth, string unitHealthPercentage
+---Retrieves the current health, maximum health, and health percentage of the specified unit.
+---@param unit UNIT The unit to query.
+---@return string unitCurrentHealth The current health, or "0" if not found.
+---@return string unitMaxHealth The maximum health, or "0" if not found.
+---@return string unitHealthPercentage The health percentage, or "0" if not found.
+---@nodiscard
+---@usage
+---```
+---local unitCurrentHealth, unitMaxHealth, unitHealthPercentage = X2Unit:UnitHealthInfo("player")
+---```
+---@see UNIT
 function X2Unit:UnitHealthInfo(unit) end
 
----Returns [BuffInfo](lua://BuffInfo) for the `buffIndex` of `unit`if it exists, otherwise returns an empty table.
----@param unit string
----@param buffIndex number
----@return BuffInfo [BuffInfo](lua://BuffInfo)
+---Retrieves hidden buff information for the specified buff index of the unit if it exists.
+---@param unit UNIT The unit to query.
+---@param buffIndex number The hidden buff index.
+---@return BuffInfo unitHiddenBuffInfo The hidden buff information, or an empty table if not found.
+---@nodiscard
+---@usage
+---```
+---local unitHiddenBuffInfo = 
+---```
+---@see UNIT
+---@see BuffInfo
 function X2Unit:UnitHiddenBuff(unit, buffIndex) end
 
----Returns `unitHiddenBuffCount` if `unit` is within render range, otherwise returns 0.
----@param unit string
----@return number unitHiddenBuffCount
+---Retrieves the number of hidden buffs on the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@return number unitHiddenBuffCount The number of hidden buffs, or 0 if not in range.
+---@nodiscard
+---@usage
+---```
+---local unitHiddenBuffCount = X2Unit:UnitHiddenBuff("player", 1)
+---```
+---@see UNIT
 function X2Unit:UnitHiddenBuffCount(unit) end
 
----Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they exist.
----@param unit string
----@param buffIndex number
----@return BuffTooltip? [BuffTooltip](lua://BuffTooltip)
+---Retrieves the hidden buff tooltip for the specified buff index of the unit if it exists.
+---@param unit UNIT The unit to query.
+---@param buffIndex number The hidden buff index.
+---@return BuffTooltip|nil unitHiddenBuffTooltip The hidden buff tooltip, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitHiddenBuffTooltip = X2Unit:UnitHiddenBuffTooltip("player", 1)
+---```
+---@see UNIT
+---@see BuffTooltip
 function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex) end
 
----Returns `unitLevel` for `unit` if they exist.
----@param unit string
----@return number? unitLevel
+---Retrieves the level of the specified unit if it exists.
+---@param unit UNIT The unit to query.
+---@return number|nil unitLevel The unit's level 1 to 55, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitLevel = X2Unit:UnitLevel("player")
+---```
+---@see UNIT
 function X2Unit:UnitLevel(unit) end
 
----TODO: Need to set `unit` type.
----Returns `unitCurrentMana` of `unit` if they exist.
----@param unit any
----@return string? unitCurrentMana
+---Retrieves the current mana of the specified unit if it exists.
+---@param unit UNIT The unit to query.
+---@return string|nil unitCurrentMana The unit's current mana, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitCurrentMana = X2Unit:UnitMana("player")
+---```
+---@see UNIT
 function X2Unit:UnitMana(unit) end
 
----Returns `unitCurrentMana`, `unitMaxMana`, and `unitManaPercentage` if the `unit` exists, otherwise returns "0" for
----all three.
----@param unit string
----@return string unitCurrentMana, string unitMaxMana, string unitManaPercentage
+---Retrieves the current mana, maximum mana, and mana percentage of the specified unit.
+---@param unit UNIT The unit to query.
+---@return string unitCurrentMana The current mana, or "0" if not found.
+---@return string unitMaxMana The maximum mana, or "0" if not found.
+---@return string unitManaPercentage The mana percentage, or "0" if not found.
+---@nodiscard
+---@usage
+---```
+---local unitCurrentMana, unitMaxMana, unitManaPercentage = X2Unit:UnitManaInfo("player")
+---```
+---@see UNIT
 function X2Unit:UnitManaInfo(unit) end
 
----Returns `unitMaxHealth` of `unit` if they exist.
----@param unit string
----@return string? unitMaxHealth
+---Retrieves the maximum health of the specified unit if it exists.
+---@param unit UNIT The unit to query.
+---@return string|nil unitMaxHealth The unit's maximum health, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitMaxHealth = X2Unit:UnitMaxHealth("player")
+---```
+---@see UNIT
 function X2Unit:UnitMaxHealth(unit) end
 
----Returns `unitMaxMana` of `unit` if they exist.
----@param unit string
----@return string? unitMaxMana
+---Retrieves the maximum mana of the specified unit if it exists.
+---@param unit UNIT The unit to query.
+---@return string|nil unitMaxMana The unit's maximum mana, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitMaxMana = X2Unit:UnitMaxMana("player")
+---```
+---@see UNIT
 function X2Unit:UnitMaxMana(unit) end
 
----Returns `unitName` of `unit` if they exist.
----@param unit string
----@return string? unitName
+---Retrieves the name of the specified unit if it exists.
+---@param unit UNIT The unit to query.
+---@return string|nil unitName The unit's name, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitName = X2Unit:UnitName("player")
+---```
+---@see UNIT
 function X2Unit:UnitName(unit) end
 
----Returns `unitNameWithWorld` if they exist.
----@param unit string
----@return string? unitNameWithWorld
+---Retrieves the name with world information of the specified unit if it exists.
+---@param unit UNIT The unit to query.
+---@return string|nil unitNameWithWorld The unit's name with world info, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local unitNameWithWorld = X2Unit:UnitNameWithWorld("player")
+---```
+---@see UNIT
 function X2Unit:UnitNameWithWorld(unit) end
 
----TODO:
----This needs to be tested, I dont know of any debuffs that can be removed.
----Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they exist.
----@param unit string
----@param buffIndex number
----@return nil
-function X2Unit:UnitRemovableDebuff(unit, buffIndex) end
+---@TODO: Needs testing, unsure of removable debuffs.
+---Retrieves the removable debuff for the specified buff index of the unit if it exists.
+---@param unit UNIT The unit to query.
+---@param deBuffIndex number The debuff index.
+---@return nil removableDebuff The removable debuff tooltip (currently unimplemented).
+---@nodiscard
+---@usage
+---```
+---local removableDebuff = X2Unit:UnitRemovableDebuff("player", 1)
+---```
+---@see UNIT
+function X2Unit:UnitRemovableDebuff(unit, deBuffIndex) end
 
----Returns `unitRemovableDebuffCount` if `unit` is within render range, otherwise returns 0.
----@param unit string
----@return number? unitRemovableDebuffCount
+---Retrieves the number of removable debuffs on the specified unit if in render range.
+---@param unit UNIT The unit to query.
+---@return number|nil removableDebuffCount The number of removable debuffs, or nil if not in range.
+---@nodiscard
+---@usage
+---```
+---local removableDebuffCount = X2Unit:UnitRemovableDebuffCount("player")
+---```
+---@see UNIT
 function X2Unit:UnitRemovableDebuffCount(unit) end
 
----TODO:
----This needs to be tested, I dont know of any debuffs that can be removed.
----Returns [BuffTooltip](lua://BuffTooltip) for the `buffIndex` of `unit` if they exist.
----@param unit string
----@param buffIndex number
----@return nil
-function X2Unit:UnitRemovableDebuffTooltip(unit, buffIndex) end
+---@TODO: Needs testing, unsure of removable debuffs.
+---Retrieves the removable debuff tooltip for the specified buff index of the unit if it exists.
+---@param unit UNIT The unit to query.
+---@param deBuffIndex number The debuff index.
+---@return nil removableDebuffTooltip The removable debuff tooltip (currently unimplemented).
+---@nodiscard
+---@usage
+---```
+---local removableDebuffTooltip = X2Unit:UnitRemovableDebuffTooltip("player", 1)
+---```
+---@see UNIT
+function X2Unit:UnitRemovableDebuffTooltip(unit, deBuffIndex) end

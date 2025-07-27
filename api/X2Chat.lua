@@ -141,36 +141,80 @@ QMS_READY_NORMAL = 9                     -- api/X2Chat
 QMS_READY_SAGA = 8                       -- api/X2Chat
 X2Chat = {}                              -- api/X2Chat
 
----Chat Message Filter
 ---api/X2Chat
+---@alias CHAT_MESSAGE_CHANNEL
+---| `CHAT_ALL_SERVER`
+---| `CHAT_BIG_MEGAPHONE`
+---| `CHAT_DAILY_MSG`
+---| `CHAT_EXPEDITION`
+---| `CHAT_FACTION`
+---| `CHAT_FAMILY`
+---| `CHAT_FIND_PARTY`
+---| `CHAT_GM_LISTEN`
+---| `CHAT_INVALID`
+---| `CHAT_LOCALE_SERVER`
+---| `CHAT_NOTICE`
+---| `CHAT_PARTY`
+---| `CHAT_PLAY_MUSIC`
+---| `CHAT_RACE`
+---| `CHAT_RAID`
+---| `CHAT_RAID_COMMAND`
+---| `CHAT_REPLYWHISPER`
+---| `CHAT_SAY`
+---| `CHAT_SMALL_MEGAPHONE`
+---| `CHAT_SQUAD`
+---| `CHAT_SYSTEM`
+---| `CHAT_TRADE`
+---| `CHAT_TRIAL`
+---| `CHAT_USER`
+---| `CHAT_WHISPER`
+---| `CHAT_WHISPERED`
+---| `CHAT_ZONE`
+
+---api/X2Chat
+---@enum (key) CHAT_MESSAGE_RELATION
+local CHAT_RELATION = {
+  [0] = "invalid",
+  [1] = "hostile",
+  [2] = "neutral",
+  [3] = "friendly"
+}
+
+---api/X2Chat
+---@class CHAT_MESSAGE_INFO
+---@field charId string
+---@field displayLocale number
+---@field factionName string
+---@field isUserChat boolean
+---@field npcBubbleChat boolean
+---@field speakerInChatBound boolean
+---@field specifyName string
+---@field trialPosition string
+---@field unitId string
+
+---api/X2Chat
+---Channel Message Filter
 ---@alias CMF
 ---| `CMF_ACQ_CONSUME_GROUP`
 ---| `CMF_ADDED_ITEM_GROUP`
 ---| `CMF_ADDED_ITEM_SELF`
 ---| `CMF_ADDED_ITEM_TEAM`
 ---| `CMF_ALL_SERVER`
----| `CMF_BEGIN_USE`
 ---| `CMF_BEHAVIOR_RESULT`
----| `CMF_BIG_MEGAPHONE`
 ---| `CMF_CHANNEL_INFO`
 ---| `CMF_COMBAT_DEAD`
 ---| `CMF_COMBAT_DST_GROUP`
----| `CMF_COMBAT_DST_OTHER`
----| `CMF_COMBAT_DST_SELF`
 ---| `CMF_COMBAT_ENVIRONMENTAL_DMANAGE`
 ---| `CMF_COMBAT_MELEE_DAMAGE`
 ---| `CMF_COMBAT_MELEE_GROUP`
 ---| `CMF_COMBAT_MELEE_MISSED`
 ---| `CMF_COMBAT_SPELL_AURA`
----| `CMF_COMBAT_SPELL_CAST`
 ---| `CMF_COMBAT_SPELL_DAMAGE`
 ---| `CMF_COMBAT_SPELL_ENERGIZE`
 ---| `CMF_COMBAT_SPELL_GROUP`
 ---| `CMF_COMBAT_SPELL_HEALED`
 ---| `CMF_COMBAT_SPELL_MISSED`
 ---| `CMF_COMBAT_SRC_GROUP`
----| `CMF_COMBAT_SRC_OTHER`
----| `CMF_COMBAT_SRC_SELF`
 ---| `CMF_COMMUNITY`
 ---| `CMF_CONNECT_ALERT`
 ---| `CMF_CONNECT_EXPEDITION`
@@ -184,9 +228,7 @@ X2Chat = {}                              -- api/X2Chat
 ---| `CMF_EN_US`
 ---| `CMF_ETC_GROUP`
 ---| `CMF_EXPEDITION`
----| `CMF_FACTION`
 ---| `CMF_FAMILY`
----| `CMF_FIND_PARTY`
 ---| `CMF_FR`
 ---| `CMF_HERO_SEASON_UPDATED`
 ---| `CMF_IND`
@@ -196,37 +238,51 @@ X2Chat = {}                              -- api/X2Chat
 ---| `CMF_LANG_END`
 ---| `CMF_LOCALE_SERVER`
 ---| `CMF_LOOT_METHOD_CHANGED`
----| `CMF_NONE`
 ---| `CMF_NOTICE`
 ---| `CMF_OTHER_CONTINENT`
 ---| `CMF_PARTY`
 ---| `CMF_PARTY_AND_RAID_INFO`
 ---| `CMF_PLAY_MUSIC`
 ---| `CMF_QUEST_INFO`
----| `CMF_RACE`
 ---| `CMF_RAID`
 ---| `CMF_RAID_COMMAND`
 ---| `CMF_RU`
----| `CMF_SAY`
 ---| `CMF_SELF_CONTRIBUTION_POINT_CHANGED`
 ---| `CMF_SELF_HONOR_POINT_CHANGED`
 ---| `CMF_SELF_LEADERSHIP_POINT_CHANGED`
 ---| `CMF_SELF_LIVING_POINT_CHANGED`
 ---| `CMF_SELF_MONEY_CHANGED`
 ---| `CMF_SELF_SKILL_INFO`
----| `CMF_SMALL_MEGAPHONE`
 ---| `CMF_SQUAD`
 ---| `CMF_SYSTEM`
 ---| `CMF_TH`
----| `CMF_TRADE`
 ---| `CMF_TRADE_STORE_MSG`
----| `CMF_TRIAL`
 ---| `CMF_WHISPER`
 ---| `CMF_ZH_CN`
 ---| `CMF_ZH_TW`
+
+---api/X2Chat
+---Channel Message Filter Special
+---@alias CMF_SPECIAL
+---| `CMF_BEGIN_USE`
+---| `CMF_BIG_MEGAPHONE`
+---| `CMF_COMBAT_DST_OTHER`
+---| `CMF_COMBAT_DST_SELF`
+---| `CMF_COMBAT_SPELL_CAST`
+---| `CMF_COMBAT_SRC_OTHER`
+---| `CMF_COMBAT_SRC_SELF`
+---| `CMF_FACTION`
+---| `CMF_FIND_PARTY`
+---| `CMF_NONE`
+---| `CMF_RACE`
+---| `CMF_SAY`
+---| `CMF_SMALL_MEGAPHONE`
+---| `CMF_TRADE`
+---| `CMF_TRIAL`
 ---| `CMF_ZONE`
 
----@alias LOCALE
+---api/X2Chat
+---@alias CHAT_MESSAGE_LOCALE
 ---| `LOCALE_DE` 6
 ---| `LOCALE_EN_SG` 10
 ---| `LOCALE_EN_US` 2
@@ -240,16 +296,26 @@ X2Chat = {}                              -- api/X2Chat
 ---| `LOCALE_ZH_CN` 1
 ---| `LOCALE_ZH_TW` 4
 
+---api/X2Chat
 ---@class CHAT_MESSAGE_OPTION
----@field specifyName string|nil
----@field isOtherWorldMessage boolean
+---@field isOtherWorldMessage? boolean
 ---@field isUserChat boolean
----@field messageLocale LOCALE
----@field npcBubbleChat boolean
+---@field messageLocale? CHAT_MESSAGE_LOCALE
+---@field npcBubbleChat? boolean
+---@field specifyName? string
 
----TODO: Can option be used for all CMF?
----Dispatches a `message` to the chat channel (`filter`).
----@param filter CMF [CMF](lua://CMF)
----@param message string
----@param option? CHAT_MESSAGE_OPTION
+---@TODO: Can option be used for all CMF?
+---Sends a message to the specified chat channel.
+---@param filter CMF|CMF_SPECIAL The chat Channel Message Filter.
+---@param message string The message to send.
+---@param option? CHAT_MESSAGE_OPTION Optional chat message settings. (Required for all `CMF_SPECIAL`)
+---@usage
+---```
+---X2Chat:DispatchChatMessage(CMF_SYSTEM, "Hello, ArcheRage!")
+---X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = true })
+---```
+---@see CMF
+---@see CMF_SPECIAL
+---@see CHAT_MESSAGE_OPTION
+---@overload fun(self: self, filter: CMF_SPECIAL, message: "|o; TEXT HERE - option is required for this.", option: CHAT_MESSAGE_OPTION)
 function X2Chat:DispatchChatMessage(filter, message, option) end

@@ -2,10 +2,20 @@
 
 X2SiegeWeapon = {} -- api/X2SiegeWeapon
 
----Returns `siegeWeaponSpeed` for the current driven vehicles speed.
----@return number siegeWeaponSpeed
+---Retrieves the speed of the currently driven vehicle.
+---@return number siegeWeaponSpeed The vehicle's speed.
+---@nodiscard
+---@usage
+---```
+---local siegeWeaponSpeed = X2SiegeWeapon:GetSiegeWeaponSpeed()
+---```
 function X2SiegeWeapon:GetSiegeWeaponSpeed() end
 
----Returns siegeWeaponTurnSpeed` for the current driven vehicles turning speed.
----@return number siegeWeaponTurnSpeed
+---Retrieves the turning speed of the currently driven vehicle.
+---@return number siegeWeaponTurnSpeed The vehicle's turning speed.
+---@nodiscard
+---@usage
+---```
+---local siegeWeaponTurnSpeed = X2SiegeWeapon:GetSiegeWeaponTurnSpeed()
+---```
 function X2SiegeWeapon:GetSiegeWeaponTurnSpeed() end

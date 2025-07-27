@@ -35,26 +35,44 @@ X2Resident = {}                              -- api/X2Resident
 ---@field [2] string?
 ---@field [3] string?
 ---@field [4] string?
----@field title string
+---@field contents ResidentBoardContent
 ---@field faction string
+---@field title string
 
----Searches `searchWord` the resident task board with the filter `filterindex`.
----Only works when Sales tab is open on resident task board.
----@param filterindex HOUSING_LIST_FILTER [HOUSING_LIST_FILTER](lua://HOUSING_LIST_FILTER)
----@param searchWord string
----@return boolean
+---Searches for housing trade listings in the current zone with the given
+---filter and search word, triggering the `RESIDENT_HOUSING_TRADE_LIST` event.
+---@param filterindex HOUSING_LIST_FILTER The filter to apply.
+---@param searchWord string The search term.
+---@return boolean unknown TODO: Unsure how this used.
+---@usage
+---```
+---X2Resident:FilterHousingTradeList(HOUSING_LIST_FILTER_SMALL, "")
+---```
+---@see HOUSING_LIST_FILTER
 function X2Resident:FilterHousingTradeList(filterindex, searchWord) end
 
----Returns [ResidentBoardContent](lua://ResidentBoardContent) for the
----`boardType` in the current zone if it exists, otherwise returns a empty
----table.
----@param boardType RESIDENT_BOARD_TYPE [RESIDENT_BOARD_TYPE](lua://RESIDENT_BOARD_TYPE)
----@return ResidentBoardContent [ResidentBoardContent](lua://ResidentBoardContent)
+---Retrieves resident board content for the specified board type in the current
+---zone.
+---@param boardType RESIDENT_BOARD_TYPE The type of resident board.
+---@return ResidentBoardContent residentBoardContent The board content, or an empty table if not found.
+---@nodiscard
+---@usage
+---```
+---local residentBoardContent = X2Resident:GetResidentBoardContent(1)
+---```
+---@see RESIDENT_BOARD_TYPE
+---@see ResidentBoardContent
 function X2Resident:GetResidentBoardContent(boardType) end
 
----Searches `searchWord` in `zoneGroupType` and filtered by `filterindex` and triggers [UIEVENT_TYPE.RESIDENT_HOUSING_TRADE_LIST](lua://UIEVENT_TYPE.RESIDENT_HOUSING_TRADE_LIST).
----@param zoneGroupType ZONE_ID
----@param filterindex HOUSING_LIST_FILTER [HOUSING_LIST_FILTER](lua://HOUSING_LIST_FILTER)
----@param searchWord string
-function X2Resident:RequestHousingTradeList(zoneGroupType, filterindex,
-                                            searchWord) end
+---Searches for housing trade listings in the specified zone with the given
+---filter and search word, triggering the `RESIDENT_HOUSING_TRADE_LIST` event.
+---@param zoneGroupType ZONE_ID The zone ID to search.
+---@param filterindex HOUSING_LIST_FILTER The filter to apply.
+---@param searchWord string The search term.
+---@usage
+---```
+---X2Resident:RequestHousingTradeList(1, HOUSING_LIST_FILTER_SMALL, "")
+---```
+---@see ZONE_ID
+---@see HOUSING_LIST_FILTER
+function X2Resident:RequestHousingTradeList(zoneGroupType, filterindex, searchWord) end

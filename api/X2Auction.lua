@@ -13,18 +13,17 @@ X2Auction = {}       -- api/X2Auction
 local AUCTION_GRADE_FILTER = {
   ALL       = 1,
   BASIC     = 2,
-  CRUDE     = 3,
-  GRAND     = 4,
-  RARE      = 5,
-  ARCANE    = 6,
-  HEROIC    = 7,
-  UNIQUE    = 8,
-  CELESTIAL = 9,
-  DIVINE    = 10,
-  EPIC      = 11,
-  LEGENDARY = 12,
-  MYTHIC    = 13,
-  ETERNAL   = 14,
+  GRAND     = 3,
+  RARE      = 4,
+  ARCANE    = 5,
+  HEROIC    = 6,
+  UNIQUE    = 7,
+  CELESTIAL = 8,
+  DIVINE    = 9,
+  EPIC      = 10,
+  LEGENDARY = 11,
+  MYTHIC    = 12,
+  ETERNAL   = 13,
 }
 
 ---api/X2Auction
@@ -113,38 +112,64 @@ local AUCTION_CATEGORY = {
   SHOTGUN                 = 80,
 }
 
----Returns `searchedItemCount` which can be between 0 and 9 searched items displayed.
----Only works when player is currently searching the auction house.
----@return number searchedItemCount
+---Retrieves the number of searched items displayed in the auction house,
+---ranging from 0 to 9 defaulting to 9.
+---@return number searchedItemCount The number of items displayed.
+---@nodiscard
+---@usage
+---```
+---local searchedItemCount = X2Auction:GetSearchedItemCount()
+---```
 function X2Auction:GetSearchedItemCount() end
 
----Returns [ItemInfo](lua://ItemInfo) for the item index `idx` of the current searched auction house page.
----Only works when player is currently searching the auction house.
----@param idx number item index of the current auction house page. Ranges from 1 to 9.
----@return ItemInfo? [ItemInfo](lua://ItemInfo)
+---Retrieves item information for the specified index on the current auction
+---house search page.
+---@param idx number The item index on the current page (1 to 9).
+---@return ItemInfo|nil itemInfo The item information, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local itemInfo = X2Auction:GetSearchedItemInfo(1)
+---```
+---@see ItemInfo
 function X2Auction:GetSearchedItemInfo(idx) end
 
----Returns currentPage` which can be between 1 and `maxSearchablePages` (50).
----Only works when player is currently searching the auction house.
----@return number currentPage
+---Retrieves the current auction house page number, ranging from 1 to 50
+---(max searchable pages) defaulting to 1.
+---@return number currentPage The current page number.
+---@nodiscard
+---@usage
+---```
+---local currentPage = X2Auction:GetSearchedItemPage()
+---```
 function X2Auction:GetSearchedItemPage() end
 
----Returns `maxSearchablePages` (50) for the auction house.
----@return number maxSearchablePages
+---Retrieves the maximum number of searchable pages (50) for the auction house.
+---@return number maxSearchablePages The maximum number of searchable pages.
+---@nodiscard
+---@usage
+---```
+---local maxSearchablePages = X2Auction:GetSearchedItemTotalCount()
+---```
 function X2Auction:GetSearchedItemTotalCount() end
 
----Searches the auction house.
----Only works when player is currently searching the auction house.
----@param page number 1 to 50 - `X2Auction:GetSearchedItemTotalCount()`
----@param minLevel number 0 to 125 Base Level (0 to 55) + Ancestral Level (1 to 70)
----@param maxLevel number 0 to 125 Base Level (0 to 55) + Ancestral Level (1 to 70)
----@param grade AUCTION_GRADE_FILTER [AUCTION_GRADE_FILTER](lua://AUCTION_GRADE_FILTER)
----@param category AUCTION_CATEGORY [AUCTION_CATEGORY](lua://AUCTION_CATEGORY)
----@param exactMatch boolean
----@param keywords string
----@param minDirectPriceStr string
----@param maxDirectPriceStr string
+---Searches the auction house with the specified parameters.
+---Only works when the auction house is open.
+---@param page number The page to search (1 to 50, see `X2Auction:GetSearchedItemTotalCount()`).
+---@param minLevel number The minimum level (0 to 125, base 0-55 + ancestral 1-70).
+---@param maxLevel number The maximum level (0 to 125, base 0-55 + ancestral 1-70).
+---@param grade AUCTION_GRADE_FILTER The item grade filter.
+---@param category AUCTION_CATEGORY The item category.
+---@param exactMatch boolean Whether to use exact keyword matching.
+---@param keywords string The search keywords.
+---@param minDirectPriceStr string The minimum direct price in copper as a string.
+---@param maxDirectPriceStr string The maximum direct price in copper as a string.
+---@see AUCTION_GRADE_FILTER
+---@see AUCTION_CATEGORY
+---@usage
+---```
+---
+---```
 function X2Auction:SearchAuctionArticle(page, minLevel, maxLevel, grade, category,
                                         exactMatch, keywords, minDirectPriceStr,
-                                        maxDirectPriceStr)
-end
+                                        maxDirectPriceStr) end

@@ -65,7 +65,44 @@ ES_WAIST = 4         -- api/X2Equipment
 X2Equipment = {}     -- api/X2Equipment
 
 ---api/X2Equipment
----@alias EquipSlot
+---Equip Slot Type
+---@alias EST
+---| `EST_1HANDED`
+---| `EST_2HANDED`
+---| `EST_AMMUNITION`
+---| `EST_ARMS`
+---| `EST_BACK`
+---| `EST_BACKPACK`
+---| `EST_BAG`
+---| `EST_BEARD`
+---| `EST_BODY`
+---| `EST_CHEST`
+---| `EST_COSPLAY`
+---| `EST_EAR`
+---| `EST_FACE`
+---| `EST_FEET`
+---| `EST_FINGER`
+---| `EST_GLASSES`
+---| `EST_HAIR`
+---| `EST_HANDS`
+---| `EST_HEAD`
+---| `EST_HORNS`
+---| `EST_INSTRUMENT`
+---| `EST_INVALID`
+---| `EST_LEGS`
+---| `EST_MAINHAND`
+---| `EST_NECK`
+---| `EST_OFFHAND`
+---| `EST_RANGED`
+---| `EST_SHIELD`
+---| `EST_TAIL`
+---| `EST_UNDERPANTS`
+---| `EST_UNDERSHIRT`
+---| `EST_WAIST`
+
+---api/X2Equipment
+---Equip Slot
+---@alias ES
 ---| `ES_ARMS`
 ---| `ES_BACK`
 ---| `ES_BACKPACK`
@@ -97,14 +134,26 @@ X2Equipment = {}     -- api/X2Equipment
 ---| `ES_UNDERSHIRT`
 ---| `ES_WAIST`
 
----TODO: Finish definition.
----Returns
----@param equipSlot EquipSlot [EquipSlot](lua://EquipSlot)
----@param targetEquippedItem boolean
----@return ItemInfo? [ItemInfo](lua://ItemInfo)
+---Retrieves tooltip information for the equipped item in the specified slot.
+---@param equipSlot ES The equipment slot to query.
+---@param targetEquippedItem boolean Whether to target the equipped item.
+---@return ItemInfo|nil equippedItemTooltipInfo The tooltip information, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local equippedItemTooltipInfo = X2Equipment:GetEquippedItemTooltipInfo(ES_HEAD, false)
+---```
+---@see ES
+---@see ItemInfo
 function X2Equipment:GetEquippedItemTooltipInfo(equipSlot, targetEquippedItem) end
 
----Returns the equipped item type.
----@param equipSlot EquipSlot [EquipSlot](lua://EquipSlot)
----@return number? EquippedItemType
+---Retrieves the type of item equipped in the specified slot.
+---@param equipSlot ES The equipment slot to query.
+---@return number|nil equippedItemType The equipped item type, or nil if none.
+---@nodiscard
+---@usage
+---```
+---local equippedItemType = X2Equipment:GetEquippedItemType(ES_HEAD)
+---```
+---@see ES
 function X2Equipment:GetEquippedItemType(equipSlot) end

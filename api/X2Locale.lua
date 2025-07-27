@@ -2,8 +2,47 @@
 
 X2Locale = {} -- api/X2Locale
 
+---@enum KEYBOARD_LAYOUT
+local KEYBOARD_LAYOUT = {
+  NONE     = "",
+  KOREAN   = "KOREAN",
+  JAPANESE = "JAPANESE"
+}
+
+---@enum (key) LOCALE_INDEX
+local LOCALE_INDEX = {
+  [-1] = "INVALID",
+  [0]  = "KO",
+  [1]  = "ZH_CN",
+  [2]  = "EN_US",
+  [3]  = "JA",
+  [4]  = "ZH_TW",
+  [5]  = "RU",
+  [6]  = "DE",
+  [7]  = "FR",
+  [8]  = "TH",
+  [9]  = "IND",
+  [10] = "EN_SG",
+}
+
+---@enum LOCALE
+local LOCALE = {
+  INVALID = "", -- TODO: No idea what this would be.
+  KO      = "ko",
+  ZH_CN   = "zh_cn",
+  EN_US   = "en_us",
+  JA      = "ja",
+  ZH_TW   = "zh_tw",
+  RU      = "ru",
+  DE      = "de",
+  FR      = "fr",
+  TH      = "th",
+  IND     = "ind",
+  EN_SG   = "en_sg",
+}
+
 ---api/X2Locale
----@alias UI_TEXT
+---@alias UI_TEXT_CATEGORY_ID
 ---| `ABILITY_CATEGORY_DESCRIPTION_TEXT`
 ---| `ABILITY_CATEGORY_TEXT`
 ---| `ABILITY_CHANGER_TEXT`
@@ -117,54 +156,80 @@ X2Locale = {} -- api/X2Locale
 ---| `WEB_TEXT`
 ---| `WINDOW_TITLE_TEXT`
 
----Returns the current keyboard layout.
----@return string keyboardLayout
-function X2Locale:GetKeyboardLayout() end
-
----TODO: Create a locale enum for the return.
----Returns the current locale.
----@return string locale this may not be accurate: de, en_sg, en_us, fr, ind, ja, ko, ru, th, zh_cn, zh_tw
-function X2Locale:GetLocale() end
-
----TODO: Create a locale index enum for the return.
----Returns the locale index. [LOCALE](lua://LOCALE)
----@return number
-function X2Locale:GetLocaleIndex() end
-
----Returns a boolean indicating if the localization `category` and `key` exists.
----@param category UI_TEXT
----@param key string can be obtained from ui_texts table in the database.
----@return boolean HasLocalizeUiText
-function X2Locale:HasLocalizeUiText(category, key) end
-
----TODO:
----This may trigger an event
-function X2Locale:LocalizeFormatUiText() end
-
----Returns localized non ui text after replacing placeholders of `text` with the provided arguments.
+---Retrieves the current keyboard layout.
+---@return KEYBOARD_LAYOUT keyboardLayout The current keyboard layout.
+---@nodiscard
 ---@usage
 ---```
----X2Locale:LocalizeNonUiText("$2 - the $1 ArcheAge Private Server", "first", "Archerage.to")
+---local keyboardLayout = X2Locale:GetKeyboardLayout()
+---```
+---@see KEYBOARD_LAYOUT
+function X2Locale:GetKeyboardLayout() end
+
+---Retrieves the current locale.
+---@return LOCALE locale The current locale.
+---@nodiscard
+---@usage
+---```
+---local locale = X2Locale:GetLocale()
+---```
+---@see LOCALE
+function X2Locale:GetLocale() end
+
+---Retrieves the locale index.
+---@return LOCALE_INDEX localeIndex The locale index.
+---@nodiscard
+---@usage
+---```
+---local localeIndex = X2Locale:GetLocaleIndex()
+---```
+---@see LOCALE_INDEX
+function X2Locale:GetLocaleIndex() end
+
+---Checks if the specified localization category and key exist.
+---@param categoryId UI_TEXT_CATEGORY_ID The UI text category.
+---@param key string The key from the ui_texts database table.
+---@return boolean localizeUiText True if the localization exists, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local localizeUiText = X2Locale:HasLocalizeUiText(MONEY_TEXT, "silver")
+---```
+---@see UI_TEXT_CATEGORY_ID
+function X2Locale:HasLocalizeUiText(categoryId, key) end
+
+---@TODO: Clarify if this triggers an event or how this works.
+function X2Locale:LocalizeFormatUiText() end
+
+---Localizes non-UI text after replacing placeholders with provided arguments.
+---@param text string The text with placeholders (e.g., $1).
+---@param ... string Arguments to replace placeholders (must match number of $).
+---@return string localizedText The localized text with placeholders replaced.
+---@nodiscard
+---@usage
+---```
+---local localizedText = X2Locale:LocalizeNonUiText("$1 - the $1 ArcheAge Private Server", "Archerage.to", "first")
 ----- Archerage.to - the first ArcheAge Private Server
 ---```
----@param text string
----@param ... string this has to match as many as $
----@return string
 function X2Locale:LocalizeNonUiText(text, ...) end
 
----TODO:
----Returns `localizedUiText` for the `category` `key` after replacing placeholders with the provided arguments `...`.
----@usuage
+---Retrieves localized UI text for the specified category and key, replacing placeholders with provided arguments.
+---@param category UI_TEXT_CATEGORY_ID The UI text category.
+---@param key string The key from the ui_texts database table.
+---@param ... string Arguments to replace placeholders.
+---@return string localizedUiText The localized UI text.
+---@nodiscard
+---@usage
 ---```
----X2Locale:LocalizeUiText(MONEY_TEXT, "silver", tostring(50)) -- 50 Silver
+---local localizedUiText = X2Locale:LocalizeUiText(MONEY_TEXT, "silver", tostring(50))
+----- 50 Silver
 ---```
----@param category UI_TEXT [UI_TEXT](lua://UI_TEXT)
----@param key string can be obtained from ui_texts table in the database.
----@param ... string
----@return string localizedUiText
+---@see UI_TEXT_CATEGORY_ID
 function X2Locale:LocalizeUiText(category, key, ...) end
 
----TODO:
----@param text string
----@return string TextFormatted
+---@TODO: Not sure how this works.
+---Formats the specified text.
+---@param text string The text to format.
+---@return string textFormatted The formatted text.
+---@nodiscard
 function X2Locale:TextFormating(text) end

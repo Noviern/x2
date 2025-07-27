@@ -24,25 +24,46 @@ QUEST_MARK_ORDER_SAGA = 2             -- api/X2Quest
 QUEST_MARK_ORDER_WEEKLY = 4           -- api/X2Quest
 X2Quest = {}                          -- api/X2Quest
 
----Returns `activeQuestListCount` for the count of all active quests, including completed ones.
----@return number activeQuestListCount
+---Retrieves the count of all active quests, including completed ones.
+---@return number activeQuestListCount The number of active quests.
+---@nodiscard
+---@usage
+---```
+---local activeQuestListCount = X2Quest:GetActiveQuestListCount()
+---```
 function X2Quest:GetActiveQuestListCount() end
 
----Returns `activeQuestType` for active quest index `idx`.
----@param idx number Active quest index, not to be confused with a quest id.
----@return number activeQuestType quest id
+---Retrieves the quest ID for the specified active quest index.
+---@param idx number The active quest index (not the quest ID).
+---@return number activeQuestType The quest ID.
+---@nodiscard
+---@usage
+---```
+---local activeQuestType = X2Quest:GetActiveQuestType(1)
+---```
 function X2Quest:GetActiveQuestType(idx) end
 
----Returns `questContextMainTitle` for the quest `type`.
----@param type number quest id
----@return string questContextMainTitle
-function X2Quest:GetQuestContextMainTitle(type) end
+---Retrieves the main title for the specified quest.
+---@param questType number The quest ID.
+---@return string questContextMainTitle The quest's main title.
+---@nodiscard
+---@usage
+---```
+---local questContextMainTitle = X2Quest:GetQuestContextMainTitle(990)
+---```
+function X2Quest:GetQuestContextMainTitle(questType) end
 
----Returns a boolean indicating if the quest `type` is completed.
----@param type number quest id
----@return boolean isCompleted
-function X2Quest:IsCompleted(type) end
+---Checks if the specified quest is completed.
+---@param questType number The quest ID.
+---@return boolean completed True if the quest is completed, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local completed = X2Quest:IsCompleted(990)
+---```
+function X2Quest:IsCompleted(questType) end
 
----TODO: Broken? Ive tried both the active quest idx and the quest id. Need to define the idx type.
----@param idx any
+---@TODO: Broken? Tried both active quest index and quest ID. Need to define idx type.
+---Sets the specified quest as the active tracked quest.
+---@param idx any The quest index or ID to track (type unclear).
 function X2Quest:SetTrackingActiveQuest(idx) end

@@ -159,23 +159,29 @@ X2Map = {}                                -- api/X2Map
 
 ---api/X2Map
 ---@class ZoneStateInfo
----@field localDevelopmentName string
----@field isSiegeZone boolean
----@field localDevelopmentStep number
----@field isNuiaProtectedZone boolean
----@field warChaos boolean
----@field isLocalDevelopment boolean
----@field isConflictZone boolean
 ---@field conflictState number
----@field nonPeaceState boolean
----@field isFestivalZone boolean
+---@field isConflictZone boolean
 ---@field isCurrentZone boolean
----@field isInstanceZone boolean
----@field isPeaceZone boolean
+---@field isFestivalZone boolean
 ---@field isHariharaProtectedZone boolean
+---@field isInstanceZone boolean
+---@field isLocalDevelopment boolean
+---@field isNuiaProtectedZone boolean
+---@field isPeaceZone boolean
+---@field isSiegeZone boolean
+---@field localDevelopmentName string
+---@field localDevelopmentStep number
+---@field nonPeaceState boolean
+---@field warChaos boolean
 ---@field zoneName string
 
----Returns [ZoneStateInfo](lua://ZoneStateInfo) for `zoneId` if it exists.
----@param zoneId number
----@return ZoneStateInfo? [ZoneStateInfo](lua://ZoneStateInfo)
+---Retrieves zone state information for the specified zone ID if it exists.
+---@param zoneId ZONE_ID The ID of the zone to query.
+---@return ZoneStateInfo|nil zoneStateInfo The zone state information, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local zoneStateInfo = X2Map:GetZoneStateInfoByZoneId(1)
+---```
+---@see ZoneStateInfo
 function X2Map:GetZoneStateInfoByZoneId(zoneId) end

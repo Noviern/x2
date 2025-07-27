@@ -158,17 +158,14 @@ X2Option = {}                                    -- api/X2Option
 ---@alias OISLT
 ---| `OISLT_CHARACTER`
 ---| `OISLT_CHARACTER_MODE`
----| `OISLT_SYSTEM` This appears to save it to the system but unable to get again once I restart (C:\ArcheRage\Documents\USER_MUSIC_DISABLE_SELF\udf\.+.sst)
+---| `OISLT_SYSTEM` TODO: This appears to save it to the system but unable to get again once I restart (C:\ArcheRage\Documents\USER[]\udf\.+.sst)
 
 ---api/X2Option
----```
----AAFormat { txaa = 1, samples = 1, quality = 1, desc = "" }
----```
 ---@class AAFormat
----@field txaa number
----@field samples number
----@field quality number
 ---@field desc string
+---@field quality number
+---@field samples number
+---@field txaa number
 
 ---api/X2Option
 ---@alias OIT
@@ -321,162 +318,316 @@ X2Option = {}                                    -- api/X2Option
 ---| `OIT_USE_CELERITY_WITH_DOUBLE_FORWARD`
 ---| `OIT_VISIBLEMYEQUIPINFO`
 
----api/X2Option
----```
----OptionInfo { tooltip = "", title = "", restart = false }
----```
----@class OptionInfo
----@field tooltip string
----@field title string
----@field restart boolean
+---@class BasicCursorShape
+---@field [1] number
+---@field [2] number
+---@field [3] number
+---@field [4] number
+---@field [5] number
+---@field [6] number
+
+---@class CursorSize
+---@field [1] number
+---@field [2] number
+---@field [3] number
 
 ---api/X2Option
----```
----SubOptionItem { optionId = 1, value = "" }
----```
+---@class OptionInfo
+---@field restart boolean
+---@field title string
+---@field tooltip string
+
+---api/X2Option
 ---@class SubOptionItem
 ---@field optionId number
 ---@field value number
 
----Creates a option and saves it based on the `saveLevel` and then returns the `saveLevel`.
----This needs more investigation, saveLevel is odd.
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@param value number
----@param saveLevel OISLT [OISLT](lua://OISLT)
----@return number saveLevel
+---@TODO: Needs more investigation, saveLevel is odd. usage
+---Creates a float option, saves it based on the specified save level, and returns the save level.
+---@param name CONSOLE_VAR The console variable name.
+---@param value number The float value to set.
+---@param saveLevel OISLT The save level for the option.
+---@return number saveLevel The save level used.
+---@see CONSOLE_VAR
+---@see OISLT
 function X2Option:CreateOptionItemFloat(name, value, saveLevel) end
 
----TODO
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@param value number
----@param saveLevel OISLT [OISLT](lua://OISLT)
----@return number saveLevel havent tested this
+---@TODO: Needs testing. usage
+---Creates a string option, saves it based on the specified save level, and returns the save level.
+---@param name CONSOLE_VAR The console variable name.
+---@param value string The string value to set.
+---@param saveLevel OISLT The save level for the option.
+---@return number saveLevel The save level used.
+---@nodiscard
+---@see CONSOLE_VAR
+---@see OISLT
 function X2Option:CreateOptionItemString(name, value, saveLevel) end
 
----Returns a collection of anti-aliasing formats.
----@return AAFormat[]
+---Retrieves a list of available anti-aliasing formats.
+---@return AAFormat[] aaFormats A table of anti-aliasing formats.
+---@nodiscard
+---@usage
+---```
+---local aaFormats = X2Option:EnumAAFormats()
+---```
+---@see AAFormat
 function X2Option:EnumAAFormats() end
 
----Returns a collection of cursor shape (cursor color) ids.
----@return number[] basicCursorShape
+---Retrieves a list of cursor shape (color) IDs.
+---@return BasicCursorShape basicCursorShape A table of cursor shape IDs.
+---@nodiscard
+---@usage
+---```
+---local basicCursorShape = X2Option:GetBasicCursorShape()
+---```
 function X2Option:GetBasicCursorShape() end
 
----Returns the value of a console variable if it exists.
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@return string? consoleVariable
+---Retrieves the value of the specified console variable if it exists.
+---@param name CONSOLE_VAR The console variable name.
+---@return string|nil consoleVariable The console variable value, or nil if not found.
+---@nodiscard
+---@usage
+---```
+---local consoleVariable = X2Option:GetConsoleVariable("custom_camera_max_dist")
+---```
+---@see CONSOLE_VAR
 function X2Option:GetConsoleVariable(name) end
 
----Returns a collection of cursor size ids.
----@return number[] cursorSize
+---Retrieves a list of cursor size IDs.
+---@return CursorSize cursorSize A table of cursor size IDs.
+---@nodiscard
+---@usage
+---```
+---local cursorSize = X2Option:GetCursorSize()
+---```
 function X2Option:GetCursorSize() end
 
----Returns the minimum and maximum mouse sensitivity.
----@return number minMouseSensitivity, number maxMouseSensitivity
+---Retrieves the minimum and maximum mouse sensitivity values.
+---@return number minMouseSensitivity The minimum mouse sensitivity.
+---@return number maxMouseSensitivity The maximum mouse sensitivity.
+---@nodiscard
+---@usage
+---```
+---local minMouseSensitivity, maxMouseSensitivity = X2Option:GetMinxMaxOfMouseSensitivity()
+---```
 function X2Option:GetMinxMaxOfMouseSensitivity() end
 
----Returns a number representing the nextSysSpecFullValue.
----@return number nextSysSpecFullValue
+---Retrieves the next system specification full value.
+---@return number nextSysSpecFullValue The next system specification value.
+---@nodiscard
+---@usage
+---```
+---local nextSysSpecFullValue = X2Option:GetNextSysSpecFullValue()
+---```
 function X2Option:GetNextSysSpecFullValue() end
 
----Returns a table of information for the option.
----@param optionId OIT [OIT](lua://OIT)
----@return OptionInfo
+---Retrieves information for the specified option.
+---@param optionId OIT The option ID.
+---@return OptionInfo|nil optionInfo The option information if it exists.
+---@nodiscard
+---@usage
+---```
+---local optionInfo = X2Option:GetOptionInfo(OIT_BASIC_CURSOR_SHAPE)
+---```
+---@see OIT
 function X2Option:GetOptionInfo(optionId) end
 
----Returns a value for the option.
----@param optionType OIT [OIT](lua://OIT)
----@return number optionItemValue
+---Retrieves the value for the specified option type.
+---@param optionType OIT The option type.
+---@return number optionItemValue The option value.
+---@nodiscard
+---@usage
+---```
+---local optionItemValue = X2Option:GetOptionItemValue(OIT_BASIC_CURSOR_SHAPE)
+---```
+---@see OIT
 function X2Option:GetOptionItemValue(optionType) end
 
----Returns a value for the console variable.
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@return number
+---Retrieves the value for the specified console variable.
+---@param name CONSOLE_VAR The console variable name.
+---@return number optionItemValue The console variable value.
+---@nodiscard
+---@usage
+---```
+---local optionItemValue = X2Option:GetOptionItemValueByName("basic_cursor_shape")
+---```
+---@see CONSOLE_VAR
 function X2Option:GetOptionItemValueByName(name) end
 
----Returns the width, height, and bpp (Bits Per Pixel) for the selected resolution.
----@param index number
----@return number width, number height, number bpp
+---Retrieves the width, height, and bits per pixel for the specified resolution index.
+---@param index number The resolution index.
+---@return number width The resolution width.
+---@return number height The resolution height.
+---@return number bpp The bits per pixel.
+---@usage
+---```
+---local width, height, bpp = X2Option:GetResolution(1)
+---```
+---@nodiscard
 function X2Option:GetResolution(index) end
 
----Returns a number containing the count of total supported resolutions.
----@return number resolutionCount
+---Retrieves the total count of supported resolutions.
+---@return number resolutionCount The number of supported resolutions.
+---@nodiscard
+---@usage
+---```
+---local resolutionCount = X2Option:GetResolutionCount()
+---```
 function X2Option:GetResolutionCount() end
 
----Returns a collection of [SubOptionItem](lua://SubOptionItem) for the `modeOptionId` provided.
----@param modeOptionId number OIT_NAME_TAG_MODE
----@param selected number
----@return SubOptionItem[] [SubOptionItem](lua://SubOptionItem)
+---Retrieves a list of sub-options for the specified mode option ID and selected value.
+---@param modeOptionId `OIT_NAME_TAG_MODE` The mode option ID.
+---@param selected number The selected value.
+---@return SubOptionItem[] subOptionItemList A table of sub-option items.
+---@nodiscard
+---@usage
+---```
+---local subOptionItemList = X2Option:GetSubOptionItemList(OIT_NAME_TAG_MODE, 1)
+---```
+---@see SubOptionItem
 function X2Option:GetSubOptionItemList(modeOptionId, selected) end
 
----Returns a boolean indicating if `hasOceanSimulateOption` is enabled.
----@return boolean hasOceanSimulateOption
+---Checks if the ocean simulation option is enabled.
+---@return boolean oceanSimulateOption True if the ocean simulation option is enabled, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local oceanSimulateOption = X2Option:HasOceanSimulateOption()
+---```
 function X2Option:HasOceanSimulateOption() end
 
----Returns a boolean indicating if pixel sync is supported.
----@return boolean
+---Checks if pixel sync is supported.
+---@return boolean pixelSyncSupported True if pixel sync is supported, false otherwise.
+---@nodiscard
+---@usage
+---```
+---local pixelSyncSupported = X2Option:IsPixelSyncSupported()
+---```
 function X2Option:IsPixelSyncSupported() end
 
----Returns a boolean indicating if the `optionType` requires a restart.
----@param optionType OIT [OIT](lua://OIT)
----@return boolean restartOption
-function X2Option:IsRestartOption(optionType) end
-
----Enables/Disables optimization.
----@param enable boolean
+---Enables or disables optimization.
+---@param enable boolean True to enable optimization, false to disable.
+---@usage
+---```
+---X2Option:OptimizationEnable(true)
+---```
 function X2Option:OptimizationEnable(enable) end
 
----CAUTION: Resets almost all options.
+---Resets almost all options (use with caution).
+---@usage
+---```
+---X2Option:Reset()
+---```
 function X2Option:Reset() end
 
----Saves current options.
+---Saves the current options.
+---@usage
+---```
+---X2Option:Save()
+---```
 function X2Option:Save() end
 
----Sets a `value` for the [CONSOLE_VAR](lua://CONSOLE_VAR).
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@param value string
+---Sets the value for the specified console variable.
+---@param name CONSOLE_VAR The console variable name.
+---@param value string The value to set.
+---@usage
+---```
+---X2Option:SetConsoleVariable("basic_cursor_shape", "1")
+---```
+---@see CONSOLE_VAR
 function X2Option:SetConsoleVariable(name, value) end
 
----Sets a `value` for the OIT [OIT](lua://OIT).
----@param optionType OIT [OIT](lua://OIT)
----@param value number
+---@TODO: What does default do?
+---Sets the default float value for the specified option type.
+---@param optionType OIT The option type.
+---@param value number The default float value.
+---@usage
+---```
+---X2Option:SetItemDefaultFloatValue(OIT_BASIC_CURSOR_SHAPE, 1)
+---```
+---@see OIT
 function X2Option:SetItemDefaultFloatValue(optionType, value) end
 
----Sets a `value` for the [CONSOLE_VAR](lua://CONSOLE_VAR).
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@param value number
+---@TODO: What does default do?
+---Sets the default float value for the specified console variable.
+---@param name CONSOLE_VAR The console variable name.
+---@param value number The default float value.
+---@usage
+---```
+---X2Option:SetItemDefaultFloatValueByName("basic_cursor_shape", 1)
+---```
+---@see CONSOLE_VAR
 function X2Option:SetItemDefaultFloatValueByName(name, value) end
 
----Sets a `value` for the OIT [OIT](lua://OIT).
----@param optionType OIT [OIT](lua://OIT)
----@param value string
+---@TODO: What does default do?
+---Sets the default string value for the specified option type.
+---@param optionType OIT The option type.
+---@param value string The default string value.
+---@usage
+---```
+---X2Option:SetItemDefaultStringValue(OIT_BASIC_CURSOR_SHAPE, "1")
+---```
+---@see OIT
 function X2Option:SetItemDefaultStringValue(optionType, value) end
 
----Sets a `value` for the [CONSOLE_VAR](lua://CONSOLE_VAR).
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@param value string
+---@TODO: What does default do?
+---Sets the default string value for the specified console variable.
+---@param name CONSOLE_VAR The console variable name.
+---@param value string The default string value.
+---@usage
+---```
+---X2Option:SetItemDefaultStringValueByName("basic_cursor_shape", "1")
+---```
+---@see CONSOLE_VAR
 function X2Option:SetItemDefaultStringValueByName(name, value) end
 
----Sets a `value` for the OIT [OIT](lua://OIT).
----@param optionType OIT [OIT](lua://OIT)
----@param value number
+---Sets the float value for the specified option type.
+---@param optionType OIT The option type.
+---@param value number The float value to set.
+---@usage
+---```
+---X2Option:SetItemFloatValue(OIT_BASIC_CURSOR_SHAPE, 1)
+---```
+---@see OIT
 function X2Option:SetItemFloatValue(optionType, value) end
 
----Sets a `value` for the [CONSOLE_VAR](lua://CONSOLE_VAR).
----@param name CONSOLE_VAR [CONSOLE_VAR](lua://CONSOLE_VAR)
----@param value number
+---Sets the float value for the specified console variable.
+---@param name CONSOLE_VAR The console variable name.
+---@param value number The float value to set.
+---@usage
+---```
+---X2Option:SetItemFloatValueByName("basic_cursor_shape", 1)
+---```
+---@see CONSOLE_VAR
 function X2Option:SetItemFloatValueByName(name, value) end
 
----Sets a `value` for the OIT [OIT](lua://OIT).
----@param optionType OIT [OIT](lua://OIT)
----@param value number
+---@TODO: What option would this actually work on?
+---Sets the float value for the specified option type without modifying other settings.
+---@param optionType OIT The option type.
+---@param value number The float value to set.
+---@usage
+---```
+---X2Option:SetItemFloatValueWithoutModify(OIT_BASIC_CURSOR_SHAPE, 1)
+---```
+---@see OIT
 function X2Option:SetItemFloatValueWithoutModify(optionType, value) end
 
----Sets a `value` for the OIT [OIT](lua://OIT).
----@param optionType OIT [OIT](lua://OIT)
----@param value string
+---Sets the string value for the specified option type.
+---@param optionType OIT The option type.
+---@param value string The string value to set.
+---@usage
+---```
+---X2Option:SetItemStringValue(OIT_BASIC_CURSOR_SHAPE, "1")
+---```
+---@see OIT
 function X2Option:SetItemStringValue(optionType, value) end
 
----Sets a `value` for the OIT [OIT](lua://OIT).
----@param name string
----@param value string
+---Sets the string value for the specified console variable.
+---@param name CONSOLE_VAR The console variable name.
+---@param value string The string value to set.
+---@usage
+---```
+---X2Option:SetItemStringValueByName("basic_cursor_shape", "1")
+---```
+---@see CONSOLE_VAR
 function X2Option:SetItemStringValueByName(name, value) end
