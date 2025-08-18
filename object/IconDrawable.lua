@@ -14,14 +14,27 @@ AP_TOPRIGHT = 1    -- object/IconDrawable
 ---@class IconDrawable: Drawablebase
 local IconDrawable = {}
 
----Adds a texture `filename` for the IconDrawable.
----@param filename string
+---Adds a texture to the IconDrawable.
+---@param filename string The path to the texture file.
+---@usage
+---```
+---local info = X2Player:GetAppellationMyStamp()
+---iconDrawable:AddTexture(info.path)
+---```
 function IconDrawable:AddTexture(filename) end
 
----Adds a texture `filename` with the `coord` for the IconDrawable.
----@param filename string
----@param coord string
-function IconDrawable:AddTextureWithInfo(filename, coord) end
+---Adds a texture with a specific key to the IconDrawable.
+---@param filename string The path to the texture file.
+---@param key string The key information for the texture.
+---@usage
+---```
+---iconDrawable:AddTextureWithInfo(TEXTURE_PATH.ITEM_GRADE, "mythic")
+---```
+function IconDrawable:AddTextureWithInfo(filename, key) end
 
----Clears all textures for the IconDrawable.
+---Clears all textures from the IconDrawable.
+---@usage
+---```
+---iconDrawable:ClearAllTextures()
+---```
 function IconDrawable:ClearAllTextures() end

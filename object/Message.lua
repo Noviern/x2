@@ -55,7 +55,7 @@ local LINKTYPE = {
 ---object/Message
 ---@class ItemLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "item"
----@field itemGrade ITEM_GRADE
+---@field itemGrade ITEM_GRADE_TYPE
 ---@field itemLinkText string
 ---@field linkKind number TODO: This is a number but I thought it should be LINKKIND?
 
@@ -93,142 +93,264 @@ local LINKTYPE = {
 ---@field style TextStyle
 local Message = {}
 
----Adds a `message` to the Message.
----@param message string
+---Adds a message to the Message. Must be used after defining the widgets
+---dimensions.
+---@param message string The message text to add.
+---@usage
+---```
+---widget:AddMessage("Archerage.to - the first ArcheAge Private Server")
+---```
 function Message:AddMessage(message) end
 
----TODO:
----@param message string
----@param visibleTim number in ms
-function Message:AddMessageEx(message, visibleTim) end
+---Adds a message with a specified visibility duration to the Message.
+---@param message string The message text to add.
+---@param visibleTime number The visibility duration in milliseconds.
+---@usage
+---```
+---widget:AddMessageEx("This lasts 20 seconds before fade out.", 20000)
+---```
+function Message:AddMessageEx(message, visibleTime) end
 
----TODO:
----@param message string
----@param visibleTime number in ms
+---@TODO: What does this do?
+---Adds a message with a specified visibility duration and refreshes the Message.
+---@param message string The message text to add.
+---@param visibleTime number The visibility duration in milliseconds.
 function Message:AddMessageExRefresh(message, visibleTime) end
 
----TODO:
----@param message string
+---@TODO: What does this do?
+---Adds a message and refreshes the Message.
+---@param message string The message text to add.
 function Message:AddMessageRefresh(message) end
 
 ---Changes the default style for the Message.
-function Message:ChangeDefaultStyle() end
-
----Changes the text style of the Message.
-function Message:ChangeTextStyle() end
-
----Clears Message.
-function Message:Clear() end
-
----Returns a boolean `result` indicating if the text under the cursor was copied
----for the Message.
----@return boolean result
----@nodiscard
-function Message:CopyTextToClipboard() end
-
----Enables/Disables `GetLinkInfoOnCursor` for Message.
----@param enable boolean
-function Message:EnableItemLink(enable) end
-
----Returns the `currentLine` for the Message.
----@return number currentLine
----@nodiscard
-function Message:GetCurrentLine() end
-
----Returns `currentScroll` for the Message.
----@return number currentScroll starts at 0.
----@nodiscard
-function Message:GetCurrentScroll() end
-
----Returns `lineSpace` for the Message.
----@return number lineSpace
----@nodiscard
-function Message:GetLineSpace() end
-
----Returns `linkInfo` for the link in the cursor position for the Message.
 ---@usage
 ---```
----local info = self:GetLinkInfoOnCursor()
----
----if info.linkType == "item" then
----  ---@cast info ItemLinkInfo
----  local itemInfo = X2Item:InfoFromLink(info.itemLinkText, tostring(info.linkKind))
----end
+---widget:ChangeDefaultStyle()
 ---```
----@return BaseLinkInfo linkInfo
+function Message:ChangeDefaultStyle() end
+
+---Changes the text style of the Message from aligning to the bottom of the
+---widget to the top of the widget.
+---@usage
+---```
+---widget:ChangeTextStyle()
+---```
+function Message:ChangeTextStyle() end
+
+---Clears all messages from the Message.
+---@usage
+---```
+---widget:Clear()
+---```
+function Message:Clear() end
+
+---Checks if the text under the cursor was copied to the clipboard.
+---@return boolean result `true` if text was copied, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---widget:SetHandler("OnClick", function(self, mouseButton)
+---  if mouseButton == "RightButton" then
+---    self:CopyTextToClipboard()
+---  end
+---end)
+---```
+function Message:CopyTextToClipboard() end
+
+---Enables or disables item link functionality (`widget:GetLinkInfoOnCursor`) for the Message.
+---@param enable boolean `true` to enable item links, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:EnableItemLink(true)
+---```
+function Message:EnableItemLink(enable) end
+
+---Retrieves the current line index of the Message.
+---@return number currentLine The current line index.
+---@nodiscard
+---@usage
+---```
+---local currentLine = widget:GetCurrentLine()
+---```
+function Message:GetCurrentLine() end
+
+---Retrieves the current scroll position of the Message.
+---@return number currentScroll The current scroll position (min: `0`).
+---@nodiscard
+---@usage
+---```
+---local currentScroll = widget:GetCurrentScroll()
+---```
+function Message:GetCurrentScroll() end
+
+---Retrieves the line spacing for the Message.
+---@return number lineSpace The line spacing value. (default: `0`)
+---@nodiscard
+---@usage
+---```
+---local lineSpace = widget:GetLineSpace()
+---```
+function Message:GetLineSpace() end
+
+---Retrieves link information for the item under the cursor in the Message. Requires `widget:EnableItemLink(true)`.
+---@return BaseLinkInfo linkInfo The link information for the item.
+---@nodiscard
+---@usage
+---```
+---widget:SetHandler("OnClick", function(self)
+---  local linkInfo = self:GetLinkInfoOnCursor()
+---
+---  if linkInfo.linkType == "item" then
+---    ---@cast linkInfo ItemLinkInfo
+---    local itemInfo = X2Item:InfoFromLink(linkInfo.itemLinkText, tostring(linkInfo.linkKind))
+---  end
+---end)
+---```
 function Message:GetLinkInfoOnCursor() end
 
----Returns `maxLines` for the Message.
----@return number maxLines
+---Retrieves the maximum number of lines for the Message.
+---@return number maxLines The maximum number of lines. (default: `80`)
 ---@nodiscard
+---@usage
+---```
+---local maxLines =widget:GetMaxLines()
+---```
 function Message:GetMaxLines() end
 
----Returns `message` with the `messageTimeStamp` for Message.
----@param messageTimeStamp number
----@return string message
+---@TODO:
+---Retrieves the message text for a given timestamp in the Message.
+---@param messageTimeStamp number The timestamp of the message.
+---@return string message The message text.
 ---@nodiscard
 function Message:GetMessageByTimeStamp(messageTimeStamp) end
 
----Returns `messageLines` for the Message.
----@return number messageLines
+---Retrieves the number of message lines in the Message.
+---@return number messageLineCount The number of message lines.
 ---@nodiscard
+---@usage
+---```
+---local messageLineCount = widget:GetMessageLines()
+---```
 function Message:GetMessageLines() end
 
----Returns `maxLinesPerPage` for the Message.
----@return number maxLinesPerPage
+---Retrieves the maximum number of lines per page in the Message.
+---@return number maxLinesPerPage The maximum lines per page (the widgets height).
 ---@nodiscard
+---@usage
+---```
+---local maxLinesPerPage = widget:GetPagePerMaxLines()
+---```
 function Message:GetPagePerMaxLines() end
 
----Scrolls down for the Message.
+---Scrolls down one page in the Message.
+---@usage
+---```
+---widget:PageDown()
+---```
 function Message:PageDown() end
 
----Scrolls up for the Message.
+---Scrolls up one page in the Message.
+---@usage
+---```
+---widget:PageUp()
+---```
 function Message:PageUp() end
 
----Returns `remainingLines` for the Message.
----@return number remainingLines
+---Removes the last message and returns the remaining number of lines.
+---@return number remainingLines The number of remaining lines.
 ---@nodiscard
+---@usage
+---```
+---local remainingLines = widget:RemoveLastMessage()
+---```
 function Message:RemoveLastMessage() end
 
----Resets the visible time for the Message.
+---Resets the visibility duration for the Message.
+---@usage
+---```
+---widget:ResetVisibleTime()
+---```
 function Message:ResetVisibleTime() end
 
----Scrolls down by 1 for the Message.
+---Scrolls down by one line in the Message.
+---@usage
+---```
+---widget:SetHandler("OnWheelDown", function(self)
+---  self:ScrollDown()
+---end)
+---```
 function Message:ScrollDown() end
 
----Scrolls to the Bottom of the Message.
+---Scrolls to the bottom of the Message.
+---@usage
+---```
+---widget:ScrollToBottom()
+---```
 function Message:ScrollToBottom() end
 
 ---Scrolls to the top of the Message.
+---@usage
+---```
+---widget:ScrollToTop()
+---```
 function Message:ScrollToTop() end
 
----Scrolls up by 1 for the Message.
+---Scrolls up by one line in the Message.
+---@usage
+---```
+---widget:SetHandler("OnWheelUp", function(self)
+---  self:ScrollUp()
+---end)
+---```
 function Message:ScrollUp() end
 
----Sets the fade duration `seconds` for the Message.
----@param seconds number
+---Sets the fade duration for the Message. Must be set before adding a message.
+---@param seconds number The fade duration in seconds.
+---@usage
+---```
+---widget:SetFadeDuration(10)
+---```
 function Message:SetFadeDuration(seconds) end
 
 ---Sets the inset for the Message.
----@param left number
----@param top number
----@param right number
----@param bottom number
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---widget:SetInset(10, 10, 10, 10)
+---```
 function Message:SetInset(left, top, right, bottom) end
 
----Sets the line `space` for the Message.
----@param space number
+---Sets the line spacing for the Message.
+---@param space number The line spacing value.
+---@usage
+---```
+---widget:SetLineSpace(15)
+---```
 function Message:SetLineSpace(space) end
 
----TSets the maximum line `count` for the Message.
----@param count number
+---Sets the maximum number of lines for the Message. Uses `widget:Clear()` before setting the maximum line count.
+---@param count number The maximum line count.
+---@usage
+---```
+---widget:SetMaxLines(3)
+---```
 function Message:SetMaxLines(count) end
 
----Sets the scroll position `value` for the Message.
----@param value number
+---Sets the scroll position for the Message.
+---@param value number The scroll position value.
+---@usage
+---```
+---widget:SetScrollPos(widget:GetCurrentScroll() - 1)
+---```
 function Message:SetScrollPos(value) end
 
----Sets the time visible `seconds` for the Message.
----@param seconds number
+---Sets the visibility duration for the Message.
+---@param seconds number The duration in seconds the message remains visible. (default: `15`)
+---@usage
+---```
+---widget:SetTimeVisible(20)
+---```
 function Message:SetTimeVisible(seconds) end

@@ -1,0 +1,150 @@
+---@meta _
+
+---@class GearScoreItemInfo
+---@field total number
+---@field equipSlotReinforce number
+---@field bare number
+
+---@class SocketInfo
+---@field maxSocket number
+---@field socketItem number[]
+
+---@class EvolvingInfoModifier
+---@field value number
+---@field type number
+---@field gsNum number
+
+---@class EvolvingInfo
+---@field minExp number
+---@field evolveChance number
+---@field minSectionExp number
+---@field percent number
+---@field modifier EvolvingInfoModifier[]
+
+---@class ModifireTable
+---@field value number
+---@field type number
+---@field name string
+
+---@class BonusesInfo
+---@field bufDesc string
+---@field satisfied boolean
+---@field numPieces number
+
+---@class EquipSetInfo
+---@field equipSetItemInfoDesc string
+---@field bonuses BonusesInfo[]
+
+---@class SetItemsInfo
+---@field item_name string
+---@field equipped boolean
+---@field item_type number
+
+---@class RechargeBuffInfo
+---@field chargeLifetime Time
+---@field remainTime Time
+
+---@class RequiredConditionInfo
+---@field equipSlotTypes string[]
+
+---@TODO: This may not be complete. Should probably add ? to each field. Maybe convert this into a ItemBase and then make different classes?
+---@class ItemInfo
+---@field armor number
+---@field armorType string
+---@field attackDelay number
+---@field auction_only boolean
+---@field backpackType number
+---@field baseEquipment boolean
+---@field buffType number
+---@field canEvolve boolean
+---@field category string
+---@field checkUnitReq boolean
+---@field contributionPointPrice number
+---@field convertibleItem boolean
+---@field cost number
+---@field craftedWorldName string
+---@field crafter string
+---@field craftType number
+---@field dead boolean
+---@field description string
+---@field DPS number
+---@field durability number
+---@field element string
+---@field elementName string
+---@field equiped boolean
+---@field equippedSetItemCount number
+---@field equipSetInfo EquipSetInfo
+---@field evolvingCategory boolean
+---@field evolvingInfo EvolvingInfo
+---@field extraArmor number
+---@field extraDPS number
+---@field gearScore GearScoreItemInfo
+---@field gemInfo number
+---@field gemModifireTable ModifireTable[]
+---@field gender string
+---@field grade string
+---@field gradeColor string
+---@field gradeEnchantable boolean
+---@field gradeIcon string
+---@field healDps number
+---@field honorPrice number
+---@field icon string
+---@field indestructible boolean
+---@field isEnchantDisable boolean
+---@field isMaterial boolean
+---@field isMyWorld boolean
+---@field isPetOnly boolean
+---@field isStackable boolean
+---@field isUnderWaterCreature boolean
+---@field item_flag_cannot_equip boolean
+---@field item_impl string
+---@field itemGrade number
+---@field itemType number
+---@field itemUsage string
+---@field level number
+---@field level_limit number
+---@field level_requirement number
+---@field lifeSpan number
+---@field lifeSpanDayOfWeek boolean
+---@field lifeSpanType string
+---@field livingPointPrice number
+---@field location_world_name string
+---@field location_zone_name string
+---@field locked boolean
+---@field lookChanged boolean
+---@field lookType number
+---@field magicDps number
+---@field magicResistance number
+---@field maxDamage number
+---@field maxDurability number
+---@field maxSetItemCount number
+---@field maxStack number
+---@field minDamage number
+---@field modifier ModifireTable[]
+---@field moveSpeed number
+---@field name string
+---@field needsUnpack boolean
+---@field overIcon string
+---@field processedState string
+---@field rechargeBuff RechargeBuffInfo
+---@field refund number
+---@field repairable number
+---@field requiredCondition RequiredConditionInfo
+---@field scalable boolean
+---@field securityState number
+---@field sellable boolean
+---@field setItems SetItemsInfo[]
+---@field sideEffect boolean
+---@field skillType number
+---@field slotType string
+---@field slotTypeNum number
+---@field socketInfo SocketInfo
+---@field soul_bind string
+---@field soul_bind_type number
+---@field soul_bound number
+---@field stack number
+---@field uccTooltip string
+---@field useAsSkin boolean
+---@field useAsStat boolean
+---@field useConsumeItem boolean
+---@field wear boolean

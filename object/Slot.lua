@@ -37,12 +37,13 @@ UI_BUTTON_MAX = 4               -- object/Slot
 UI_BUTTON_NORMAL = 0            -- object/Slot
 UI_BUTTON_PUSHED = 2            -- object/Slot
 
----TODO: Should ITEM_GRADE be moved to globals.lua and made a global?
+---@TODO: Should ITEM_GRADE_TYPE be moved to globals.lua and made a global? used also in Message.lua
 
 ---object/Slot
----@enum ITEM_GRADE
-local ITEM_GRADE = {
-  BAISC     = 1,
+---@enum ITEM_GRADE_TYPE
+local ITEM_GRADE_TYPE = {
+  NONE      = 0, ---@TODO: In Message.lua this would be BASIC not NONE.
+  BAISC     = 1, ---@TODO: In Message.lua this would be CRUDE not BASIC.
   GRAND     = 2,
   RARE      = 3,
   ARCANE    = 4,
@@ -76,16 +77,41 @@ local ITEM_GRADE = {
 ---| `ISLOT_SHORTCUT_ACTION`
 ---| `ISLOT_SKILL_ALERT`
 
--- ---@enum BIND_TYPE
--- local BIND_TYPE = {
---   "none",
---   "pet_skill",
---   "skill",
---   "item",
---   "slave_skill",
---   "buff",
---   "function",
--- }
+---@enum SKILL_ALERT_STATUS_BUFF_TAG
+local SKILL_ALERT_STATUS_BUFF_TAG = {
+  STUN        = 1,
+  IMPALE      = 2,
+  STAGGER     = 3,
+  TRIP        = 4,
+  FEAR        = 5,
+  SLEEP       = 6,
+  SNARE       = 7,
+  SLOW        = 8,
+  SILENCE     = 9,
+  SHACKLE     = 10,
+  IMPRISONED  = 11, ---@TODO: Confirm this.
+  LAUNCHED    = 12,
+  FROZEN      = 13,
+  DEEP_FREEZE = 14,
+  POISON      = 15,
+  BLEED       = 16,
+  SHAKEN      = 17,
+  ENERVATED   = 18,
+  CHARMED     = 19,
+  BUBBLE      = 20,
+  PETRIFIED   = 21, ---@TODO: Confirm this.
+}
+
+---@enum BIND_TYPE
+local BIND_TYPE = {
+  NONE        = "none",
+  PET_SKILL   = "pet_skill",
+  SKILL       = "skill",
+  ITEM        = "item",
+  SLAVE_SKILL = "slave_skill",
+  BUFF        = "buff",
+  FUNCTION    = "function",
+}
 
 ---object/Slot
 ---@class Slot: Button
@@ -94,87 +120,173 @@ local ITEM_GRADE = {
 ---@field style TextStyle
 local Slot = {}
 
----TODO: Crash if wrong value
----@param nameLayer string
+---Changes the icon layer for the Slot.
+---@param nameLayer DRAWABLE_NAME_LAYER The name of the layer to set.
+---@see DRAWABLE_NAME_LAYER
+---@usage
+---```
+---widget:ChangeIconLayer("background")
+---```
 function Slot:ChangeIconLayer(nameLayer) end
 
 ---Disables the default clicking behavior of the Slot.
+---@usage
+---```
+---widget:DisableDefaultClick()
+---```
 function Slot:DisableDefaultClick() end
 
----Establishes the `itemType` and `itemGrade` for the Slot.
----@param itemType number
----@param itemGrade ITEM_GRADE
+---Establishes an item for the Slot with the specified type and grade.
+---@param itemType number The type of the item.
+---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
+---@usage
+---```
+---widget:EstablishItem(7992, 12)
+---```
+---@see ITEM_GRADE_TYPE
 function Slot:EstablishItem(itemType, itemGrade) end
 
----Establishes the `skillType` for the Slot.
----@param skillType number
+---Establishes a skill for the Slot.
+---@param skillType number The type of the skill.
+---@usage
+---```
+---widget:EstablishSkill(14495)
+---```
 function Slot:EstablishSkill(skillType) end
 
----TODO:
----@param statusBuffTag number
----@param remain number
----@param duration number
+---@TODO: Clarify statusBuffTag, remain, and duration parameters.
+---Establishes a skill alert for the Slot.
+---@param statusBuffTag SKILL_ALERT_STATUS_BUFF_TAG The status buff tag.
+---@param remain number The remaining time for the alert in milliseconds.
+---@param duration number The total duration of the alert in milliseconds.
+---@usage
+---```
+---widget:EstablishSkillAlert(1, 2000, 2000)
+---```
+---@see SKILL_ALERT_STATUS_BUFF_TAG
 function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 
----TODO:
----@param slotType SLOT_TYPE
----@param slotIdx number TODO: I think this is actually skillType when `ISLOT_ACTION` slotType.
+---@TODO: Confirm if slotIdx is skillType when slotType is ISLOT_ACTION. also ISLOT_ORIGIN_SKILL_VIEW
+---@TODO: Should this only accept skill based SLOT_TYPE?
+---Establishes a skill slot for the Slot.
+---@param slotType SLOT_TYPE The type of the slot.
+---@param slotIdx number The index of the slot (possibly skillType for `ISLOT_ACTION`).
+---@usage
+---```
+---widget:EstablishSkillSlot(ISLOT_ORIGIN_SKILL_VIEW, 36468)
+---```
+---@see SLOT_TYPE
 function Slot:EstablishSkillSlot(slotType, slotIdx) end
 
----Establishes `slotType` and `slotIdx` for the Slot.
----@param slotType SLOT_TYPE
----@param slotIdx number starts at 0.
+---@TODO: Create overloads for each ISLOT? 
+---Establishes a slot with the specified type and index. Triggers the event `OnContentUpdated`.
+---@param slotType SLOT_TYPE The type of the slot.
+---@param slotIdx number The slot index.
+---@usage
+---```
+---widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Dont forget to subtract 1!
+---```
+---@see SLOT_TYPE
 function Slot:EstablishSlot(slotType, slotIdx) end
 
----TODO:
----@param slotType SLOT_TYPE
----@param slotIdx number starts at 0.
----@param virtualSlotIdx number
+---@TODO: Clarify purpose of virtualSlotIdx.
+---Establishes a virtual slot for the Slot. Triggers the event `OnContentUpdated`.
+---@param slotType SLOT_TYPE The type of the slot.
+---@param slotIdx number The slot index.
+---@param virtualSlotIdx number The virtual slot index.
+---@usage
+---```
+---widget:EstablishVirtualSlot(ISLOT_ACTION, 1, 1)
+---```
+---@see SLOT_TYPE
 function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 
----TODO:
----@return string
+---Retrieves the binded type of the Slot.
+---@return BIND_TYPE bindedType The binded type.
 ---@nodiscard
+---@usage
+---```
+---local bindedType = widget:GetBindedType()
+---```
+---@see BIND_TYPE
 function Slot:GetBindedType() end
 
----TODO:
----@return table|nil
+---@TODO: Clarify structure, I believe it returns different tables for different slotTypes.
+---Retrieves extra information for the Slot.
+---@return ItemInfo|table|nil extraInfo The extra information, or `nil` if none exists.
 ---@nodiscard
+---@usage
+---```
+---local extraInfo = widget:GetExtraInfo()
+---```
 function Slot:GetExtraInfo() end
 
----Returns `hotKey` for the Slot. This can be a empty string.
----@return string hotKey
+---Retrieves the hotkey for the Slot (may be an empty string).
+---@return string hotKey The hotkey string.
 ---@nodiscard
+---@usage
+---```
+---local hotkey = widget:GetHotKey()
+---```
 function Slot:GetHotKey() end
 
----TODO:
----@return nil
+---@TODO: Broken?
+---Retrieves the item level requirement for the Slot.
+---@return nil itemLevelRequirment The item level requirement (currently returns `nil`).
 ---@nodiscard
+---@usage
+---```
+---local itemLevelRequirment = widget:GetItemLevelRequirment()
+---```
 function Slot:GetItemLevelRequirment() end
 
----TODO:
----Returns the `passiveBuffType` if it exists for the Slot.
----@return number|nil passiveBuffType
+---Retrieves the passive buff type (not the buff id) for the Slot, if it exists.
+---@return number|nil passiveBuffType The passive buff type, or `nil` if not set.
 ---@nodiscard
+---@usage
+---```
+---local passiveBuffType = widget:GetPassiveBuffType()
+---```
 function Slot:GetPassiveBuffType() end
 
----Returns `skillType` if a skill has been established, otherwise returns `nil`.
----@return number|nil skillType
+---Retrieves the skill type for the Slot, if a skill is established.
+---@return number|nil skillType The skill type, or `nil` if no skill is set.
+---@nodiscard
+---@usage
+---```
+---local skillType = widget:GetSkillType()
+---```
 function Slot:GetSkillType() end
 
----Returns the `SkillTooltip` if a skill has been established. Returns `self` if the Slot
----has anything else established. Returns `nil` if nothing is established.
----@return SkillTooltip|self|nil
+---Retrieves the tooltip for the Slot. Returns `SkillTooltip` if a skill is established, `self` for other established types, or `nil` if nothing is established.
+---@return SkillTooltip|self|nil tooltip The tooltip, `self`, or `nil`.
 ---@nodiscard
+---@usage
+---```
+---local tooltip = widget:GetTooltip()
+---```
+---@see SkillTooltip
 function Slot:GetTooltip() end
 
----Returns a boolean indicating if the Slot is empty.
----@return boolean
+---Checks if the Slot is empty.
+---@return boolean empty `true` if the Slot is empty, `false` otherwise. (default: `true`)
 ---@nodiscard
+---@usage
+---```
+---local empty = widget:IsEmpty()
+---```
 function Slot:IsEmpty() end
 
 ---Releases the established values of the Slot.
+---@usage
+---```
+---widget:ReleaseSlot()
+---```
 function Slot:ReleaseSlot() end
 
 ---Resets the state of the Slot.
+---@usage
+---```
+---widget:ResetState()
+---```
 function Slot:ResetState() end

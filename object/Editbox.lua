@@ -15,98 +15,200 @@ CT_NAME = 1            -- object/Editbox
 DC_ALWAYS = 0          -- object/Editbox
 DC_SHIFT_KEY_DOWN = 1  -- object/Editbox
 
+---@TODO: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
+
 ---object/Editbox
 ---@class Editbox: Widget, Editboxbase
 ---@field prefixStyle TextStyle
 local Editbox = {}
 
----TODO:
----@param text string
+---Adds a text entry to the Editbox history.
+---@param text string The text to add to the history.
+---@usage
+---```
+---widget:AddHistoryLine("Test")
+---```
 function Editbox:AddHistoryLine(text) end
 
----TODO: Check NRT_CHARACTER
----@param nameType number
+---@TODO: Verify nameType and NRT_CHARACTER usage.
+---Checks the name policy for the Editbox.
+---@param nameType number The name type to check against (e.g., NRT_CHARACTER).
+---@usage
+---```
+---widget:CheckNamePolicy(NRT_CHARACTER)
+---```
 function Editbox:CheckNamePolicy(nameType) end
 
----TODO:
+---Clears focus from the Editbox.
+---@usage
+---```
+---widget:ClearFocus()
+---```
 function Editbox:ClearFocus() end
 
----TODO:
+---Clears the string content of the Editbox.
+---@usage
+---```
+---widget:ClearString()
+---```
 function Editbox:ClearString() end
 
----TODO:
+---Retrieves the current text in the Editbox.
+---@return string text The current text, which may be an empty string.
+---@nodiscard
+---@usage
+---```
+---local text = widget:GetText()
+---```
 function Editbox:GetText() end
 
----TODO:
+---Checks if the Editbox content is restricted to digits.
+---@return boolean digit  `true` if restricted to digits, `false` otherwise. (default: `false`)
+---@nodiscard
+---@usage
+---```
+---local digit = widget:IsDigit()
+---```
 function Editbox:IsDigit() end
 
----TODO:
+---Checks if the Editbox is in a composition state (e.g., IME input).
+---@return boolean `true` if in composition state, `false` otherwise. (default: `false`)
+---@nodiscard
+---@usage
+---```
+---widget:IsNowComposition()
+---```
 function Editbox:IsNowComposition() end
 
----TODO:
+---Checks if the Editbox is set as a password field.
+---@return boolean password `true` if set as password, `false` otherwise. (default: `false`)
+---@nodiscard
+---@usage
+---```
+---local password = widget:IsPassword()
+---```
 function Editbox:IsPassword() end
 
----TODO:
----@param digit boolean
+---Enables or disables digit-only input for the Editbox.
+---@param digit boolean `true` to restrict to digits, `false` to allow all characters. (default: `false`)
+---@usage
+---```
+---widget:SetDigit(true)
+---```
 function Editbox:SetDigit(digit) end
 
----TODO:
----@param empty boolean
+---@TODO: Clarify empty parameter purpose.
+---Sets whether the Editbox allows empty digit input.
+---@param empty boolean `true` to allow empty input, `false` to disallow.
 function Editbox:SetDigitEmpty(empty) end
 
----TODO:
----@param max number
+---Sets the maximum value for digit input in the Editbox.
+---@param max number The maximum digit value.
+---@usage
+---```
+---widget:SetDigitMax(100)
+---```
 function Editbox:SetDigitMax(max) end
 
----TODO:
----@param english number
+---Sets the English input mode for the Editbox.
+---@param english boolean `true` to enable English input mode, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:SetEnglish(true)
+---```
 function Editbox:SetEnglish(english) end
 
----TODO:
+---Sets focus to the Editbox.
+---@usage
+---```
+---widget:SetFocus()
+---```
 function Editbox:SetFocus() end
 
----TODO:
----@param count number
+---Sets the maximum number of history lines for the Editbox.
+---@param count number The maximum number of history lines. (default: `0`)
+---@usage
+---```
+---widget:SetHistoryLines(20)
+---```
 function Editbox:SetHistoryLines(count) end
 
----TODO:
----@param val number
+---@TODO: Broken?
+---Sets the initial value for the Editbox.
+---@param val number The initial value.
+---@usage
+---```
+---widget:SetInitVal(100)
+---```
 function Editbox:SetInitVal(val) end
 
----TODO:
----@param left number
----@param top number
----@param right number
----@param bottom number
+---Sets the inset for the Editbox.
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---widget:SetInset(10, 10, 10, 10)
+---```
 function Editbox:SetInset(left, top, right, bottom) end
 
----TODO:
----@param password boolean
+---Enables or disables password mode for the Editbox.
+---@param password boolean `true` to enable password mode, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:SetPassword(true)
+---```
 function Editbox:SetPassword(password) end
 
----TODO:
----@param possibleFirstZero boolean
+---Enables or disables allowing a leading zero in digit input.
+---@param possibleFirstZero boolean `true` to allow leading zero, `false` to disallow. (default: `false`)
+---@usage
+---```
+---widget:SetPossibleFirstZero(true)
+---```
 function Editbox:SetPossibleFirstZero(possibleFirstZero) end
 
----TODO:
----@param left number
----@param top number
----@param right number
----@param bottom number
+---Sets the inset for the prefix text in the Editbox.
+---@param left number The left inset for the prefix.
+---@param top number The top inset for the prefix.
+---@param right number The right inset for the prefix.
+---@param bottom number The bottom inset for the prefix.
+---@usage
+---```
+---widget:SetPrefixInset(10, 10, 10, 10)
+---```
 function Editbox:SetPrefixInset(left, top, right, bottom) end
 
----TODO:
----@param prefixText string
+---Sets the prefix text for the Editbox.
+---@param prefixText string The prefix text to display.
+---@usage
+---```
+---widget:SetPrefixText("Test")
+---```
 function Editbox:SetPrefixText(prefixText) end
 
----TODO:
----@param click boolean
+---@TODO: Clarify re-clickable behavior.
+---Enables or disables re-clickable behavior for the Editbox.
+---@param click boolean `true` to enable re-clicking, `false` to disable.
+---@usage
+---```
+---widget:SetReClickable(false)
+---```
 function Editbox:SetReClickable(click) end
 
----TODO:
----@param text string
+---Sets the text for the Editbox.
+---@param text string The text to set.
+---@usage
+---```
+---widget:SetText("Archerage.to - the first ArcheAge Private Server")
+---```
 function Editbox:SetText(text) end
 
----TODO:
----@param use boolean
+---Enables or disables selecting all text when the Editbox gains focus.
+---@param use boolean `true` to select all text on focus, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:UseSelectAllWhenFocused(true)
+---```
 function Editbox:UseSelectAllWhenFocused(use) end

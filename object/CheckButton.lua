@@ -25,21 +25,42 @@ UI_BUTTON_PUSHED = 2      -- object/CheckButton
 ---@field style TextStyle
 local Checkbutton = {}
 
----Returns a boolean `checked` indicating the state of the Checkbutton.
----@return boolean checked
+---Returns a boolean indicating the state of the Checkbutton.
+---@return boolean checked `true` if the Checkbutton is checked, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local checked = checkbutton:GetChecked()
+---```
 function Checkbutton:GetChecked() end
 
----Sets the `state` of the CheckButton.
----@param state boolean
+---Sets the state of the Checkbutton.
+---@param state boolean `true` to check the Checkbutton, `false` to uncheck.
+---@usage
+---```
+---checkbutton:SetChecked(true)
+---```
 function Checkbutton:SetChecked(state) end
 
----TODO: What is checkedTable?
----Sets a `checkedTable` for the checked state of the Checkbutton.
----@param checkedTable table
+---Sets the background for the checked state of the Checkbutton.
+---@param checkedTable DrawableDDS The table defining the checked state background.
+---@usage
+---```
+---local checkedTable = widget:CreateDrawable(TEXTURE_PATH.BOOKMARK, "bookmark_sel", "overlay")
+---checkedTable:AddAnchor("CENTER", widget, 0, 0)
+---widget:SetCheckedBackground(checkedTable)
+---```
+---@see DrawableDDS
 function Checkbutton:SetCheckedBackground(checkedTable) end
 
----TODO: What is disabledCheckedTable? Not sure how you would disable a checkbutton when SetButtonState has no effect.
----Sets a `disabledCheckedTable` for the checked state of the Checkbutton.
----@param disabledCheckedTable table
+---@TODO: Not sure how to see the disabled state as SetButtonState doesnt work.
+---Sets the background for the disabled checked state of the Checkbutton.
+---@param disabledCheckedTable DrawableDDS The table defining the disabled checked state background.
+---@usage
+---```
+---local disabledCheckedTable = widget:CreateDrawable(TEXTURE_PATH.BOOKMARK, "bookmark_dis", "overlay")
+---disabledCheckedTable:AddAnchor("CENTER", widget, 0, 0)
+---widget:SetDisabledCheckedBackground(disabledCheckedTable)
+---```
+---@see DrawableDDS
 function Checkbutton:SetDisabledCheckedBackground(disabledCheckedTable) end

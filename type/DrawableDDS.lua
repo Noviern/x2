@@ -7,33 +7,58 @@
 ---@class DrawableDDS: Drawablebase
 local DrawableDDS = {}
 
----Returns the `width` and `height` of the texture for the DrawableDDS.
----@return number width
----@return number height
+---Retrieves the width and height of the texture for the DrawableDDS.
+---@return number width The texture width.
+---@return number height The texture height.
+---@nodiscard
+---@usage
+---```
+---local width, height = drawable:GetTextureSize()
+---```
 function DrawableDDS:GetTextureSize() end
 
----Sets the coords and dimensions of the texture of the DrawableDDS.
----@param x number
----@param y number
----@param width number
----@param height number
+---Sets the coordinates and dimensions of the texture for the DrawableDDS.
+---@param x number The x-coordinate of the texture.
+---@param y number The y-coordinate of the texture.
+---@param width number The width of the texture.
+---@param height number The height of the texture.
+---@usage
+---```
+---drawable:SetCoords(0, 0, 100, 100)
+---```
 function DrawableDDS:SetCoords(x, y, width, height) end
 
----Sets the inset of the DrawableDDS.
----@param left number
----@param top number
----@param right number
----@param bottom number
+---Sets the inset for the DrawableDDS.
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---drawable:SetInset(10, 10, 10, 10)
+---```
 function DrawableDDS:SetInset(left, top, right, bottom) end
 
----Sets the texture `filename` for the DrawableDDS.
----@param filename string
+---Sets the texture file for the DrawableDDS.
+---@param filename string The path to the texture file.
 function DrawableDDS:SetTexture(filename) end
 
----Setst the texture `colorKey` for the DrawableDDS.
----@param colorKey string
+---Sets the texture color using a color key for the DrawableDDS.
+---@param colorKey string The color key to apply from the texture path `*.g` file.
+---@usage
+---```
+---local ninePartDrawable = widget:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
+---ninePartDrawable:SetTextureInfo("type_05")
+---ninePartDrawable:SetTextureColor("hud_bg")
+---```
 function DrawableDDS:SetTextureColor(colorKey) end
 
----Sets the texture `infoKey` for the DrawableDDS.
----@param infoKey string
-function DrawableDDS:SetTextureInfo(infoKey) end
+---Sets the texture information using an info key for the DrawableDDS.
+---@param infoKey string The info key taken from the texture path `*.g` file.
+---@param colorKey? string The color key to apply from the texture path `*.g` file.
+---@usage
+---```
+---local ninePartDrawable = widget:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
+---ninePartDrawable:SetTextureInfo("main_bg")
+---```
+function DrawableDDS:SetTextureInfo(infoKey, color) end

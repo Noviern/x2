@@ -16,83 +16,145 @@ local ANCHOR_POINT = {
 ---@class Uibounds
 local Uibounds = {}
 
----Aligns the Uibounds to the `anchor` `x` and `y`.
+---Aligns the UI bounds to the specified anchor point at the given coordinates.
 ---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin.
----@param parentId "UIParent"|Widget
----@param x number
----@param y number
+---@param parentId "UIParent"|Widget The parent widget or UIParent.
+---@param x number The x-coordinate offset.
+---@param y number The y-coordinate offset.
+---@usage
+---```
+---widget:AddAnchor("TOPLEFT", "UIParent", 0, 0)
+---```
+---@see ANCHOR_POINT
 function Uibounds:AddAnchor(anchor, parentId, x, y) end
 
----Aligns the `anchorPoint` (`x` and `y`) of the Uibounds on the `anchorPoint`.
----@param anchorPoint ANCHOR_POINT
----@param parentId "UIParent"|Widget
----@param anchorOrigin ANCHOR_POINT
----@param x number
----@param y number
+---Aligns the UI bounds' anchor point to the specified parent and origin at the
+---given coordinates.
+---@param anchorPoint ANCHOR_POINT The anchor point of the UI bounds.
+---@param parentId "UIParent"|Widget The parent widget or UIParent.
+---@param anchorOrigin ANCHOR_POINT The anchor origin on the parent.
+---@param x number The x-coordinate offset.
+---@param y number The y-coordinate offset.
+---@usage
+---```
+---widget:AddAnchor("TOPLEFT", "UIParent", "TOP", 0, 0)
+---```
+---@see ANCHOR_POINT
 function Uibounds:AddAnchor(anchorPoint, parentId, anchorOrigin, x, y) end
 
----TODO:
----@param width number
+---@TODO: Clarify functionality.
+---Binds the width of the UI bounds.
+---@param width number The width to bind.
 function Uibounds:BindWidth(width) end
 
----Returns a boolean indicating if the Uibounds is outside of the screen.
----@return boolean
+---Checks if the UI bounds is outside the screen.
+---@return boolean outsideOfScreen `true` if the UI bounds is outside the screen, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local outsideOfScreen = widget:CheckOutOfScreen()
+---```
 function Uibounds:CheckOutOfScreen() end
 
----Returns `offX` and `offY` of the Uibounds.
----@return number offX 0 to screen width - Uibounds effective width.
----@return number offY 0 to screen height - Uibounds effective height.
+---Retrieves the offset coordinates of the UI bounds, constrained by screen
+---dimensions.
+---@return number offX The x-offset (0 to screen width - effective width).
+---@return number offY The y-offset (0 to screen height - effective height).
 ---@nodiscard
+---@usage
+---```
+---local offX, offY = widget:CorrectOffsetByScreen()
+---```
 function Uibounds:CorrectOffsetByScreen() end
 
----Returns the width `effectiveWidth` and`effectiveHeight` for the Uibounds.
----Scaled if ApplyUIScale is true.
----@return number effectiveWidth
----@return number effectiveHeight
+---Retrieves the effective width and height of the UI bounds, scaled if
+---ApplyUIScale is true.
+---@return number effectiveWidth The effective width.
+---@return number effectiveHeight The effective height.
 ---@nodiscard
+---@usage
+---```
+---local effectiveWidth, effectiveHeight = widget:GetEffectiveExtent()
+---```
 function Uibounds:GetEffectiveExtent() end
 
----Returns `effectiveOffX` (left) `effectiveOffY` (top) of the Uibounds.
----@return number effectiveOffX
----@return number effectiveOffY
+---Retrieves the effective offset (left, top) of the UI bounds.
+---@return number effectiveOffX The effective x-offset.
+---@return number effectiveOffY The effective y-offset.
 ---@nodiscard
+---@usage
+---```
+---local effectiveOffX, effectiveOffY = widget:GetEffectiveOffset()
+---```
 function Uibounds:GetEffectiveOffset() end
 
----Returns the unscaled `width` and `height` of the Uibounds.
----@return number width
----@return number height
+---Retrieves the unscaled width and height of the UI bounds.
+---@return number width The unscaled width.
+---@return number height The unscaled height.
 ---@nodiscard
+---@usage
+---```
+---local width, height = widget:GetExtent()
+---```
 function Uibounds:GetExtent() end
 
----Returns the unscaled `height` of the Uibounds.
----@return number
+---Retrieves the unscaled height of the UI bounds.
+---@return number height The unscaled height.
 ---@nodiscard
+---@usage
+---```
+---local height = widget:GetHeight()
+---```
 function Uibounds:GetHeight() end
 
----Returns `offX` (right) and `offY` (center) of the Uibounds.
----@return number offX
----@return number offY
+---Retrieves the offset (right, center) of the UI bounds.
+---@return number offX The x-offset.
+---@return number offY The y-offset.
 ---@nodiscard
+---@usage
+---```
+---local offX, offY = widget:GetOffset()
+---```
 function Uibounds:GetOffset() end
 
----Returns the unscaled `width` of the Uibounds.
----@return number
+---Retrieves the unscaled width of the UI bounds.
+---@return number width The unscaled width.
 ---@nodiscard
+---@usage
+---```
+---local width = widget:GetWidth()
+---```
 function Uibounds:GetWidth() end
 
----Removes all anchors for the Uibounds. Does not remove anchor origin.
+---@TODO: Broken?
+---Removes all anchors from the UI bounds, excluding anchor origin.
+---@usage
+---```
+---widget:RemoveAllAnchors()
+---```
 function Uibounds:RemoveAllAnchors() end
 
----Sets the `width` and `height` for the Uibounds.
----@param width number
----@param height number
+---Sets the width and height of the UI bounds.
+---@param width number The width to set.
+---@param height number The height to set.
+---@usage
+---```
+---widget:SetExtent(100, 100)
+---```
 function Uibounds:SetExtent(width, height) end
 
----Sets the `height` for the Uibounds.
----@param height number
+---Sets the height of the UI bounds.
+---@param height number The height to set.
+---@usage
+---```
+---widget:SetHeight(100)
+---```
 function Uibounds:SetHeight(height) end
 
----Sets the `width` for the Uibounds.
----@param width number
+---Sets the width of the UI bounds.
+---@param width number The width to set.
+---@usage
+---```
+---widget:SetWidth(100)
+---```
 function Uibounds:SetWidth(width) end

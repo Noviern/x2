@@ -24,15 +24,18 @@ UI_BUTTON_PUSHED = 2      -- object/CooldownConstantButton
 ---@class CooldownConstantButton: CooldownButton
 local CooldownConstantButton = {}
 
----TODO:
----@param itemType number
+---@TODO: Broken?
+---Sets the item type for the CooldownConstantButton.
+---@param itemType number The item type to set.
 function CooldownConstantButton:SetItem(itemType) end
 
----TODO:
----@param itemSlot number
----@param slotType number
+---@TODO: Broken?
+---Sets the item slot and slot type for the CooldownConstantButton.
+---@param itemSlot number The item slot index.
+---@param slotType number The type of slot.
 function CooldownConstantButton:SetItemSlot(itemSlot, slotType) end
 
----TODO:
----@param skillType number
+---@TODO: Broken?
+---Sets the skill type for the CooldownConstantButton.
+---@param skillType number The skill type to set.
 function CooldownConstantButton:SetSkill(skillType) end

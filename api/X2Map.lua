@@ -177,7 +177,7 @@ X2Map = {}                                -- api/X2Map
 
 ---Retrieves zone state information for the specified zone ID if it exists.
 ---@param zoneId ZONE_ID The ID of the zone to query.
----@return ZoneStateInfo|nil zoneStateInfo The zone state information, or nil if not found.
+---@return ZoneStateInfo|nil zoneStateInfo The zone state information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```

@@ -41,7 +41,7 @@ X2CombatResource = {}  -- api/X2CombatResource
 ---@TODO: Broken? Always returns false.
 ---Checks if the combat resource for the specified group type is at its maximum.
 ---@param groupType ABILITY_TYPE The group type to check.
----@return boolean maxPointByGroupType True if the combat resource is at maximum, false otherwise.
+---@return boolean maxPointByGroupType `true` if the combat resource is at maximum, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -63,7 +63,7 @@ function X2CombatResource:GetCombatResourceInfo() end
 
 ---Retrieves combat resource information for the specified group type if the player has it.
 ---@param groupType ABILITY_TYPE The group type to query.
----@return CombatResource|nil combatResourceInfo The combat resource information, or nil if not available.
+---@return CombatResource|nil combatResourceInfo The combat resource information, or `nil` if not available.
 ---@nodiscard
 ---@usage
 ---```

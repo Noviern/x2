@@ -105,12 +105,12 @@ ZP_RESERVED = 4                          -- api/X2Player
 ---api/X2Player
 ---@class UnitAppellationRoute
 ---@field key number
----@field value string
+---@field value string @TODO: could this be nil? x2ui\assignment\appellation\appellation_view.lua if info.value ~= nil and info.value ~= "hidden" then
 
 ---Sets the player's appellation name and effect.
 ---@param appellationNameType number The appellation name type.
 ---@param appellationEffectType number The appellation effect type.
----@return boolean successful True if the change was successful, even if types are invalid.
+---@return boolean successful `true` if the change was successful, even if types are invalid.
 ---@usage
 ---```
 ---X2Player:ChangeAppellation(0, 0)

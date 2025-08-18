@@ -20,17 +20,27 @@ UI_BUTTON_MAX = 4         -- object/CooldownButton
 UI_BUTTON_NORMAL = 0      -- object/CooldownButton
 UI_BUTTON_PUSHED = 2      -- object/CooldownButton
 
+
 ---object/CooldownButton
 ---@class CooldownButton: Button
 local CooldownButton = {}
 
----TODO:
----@param remainTime number
----@param totalTime number
+---@TODO: I never got this to work. Broken?
+---Sets the cooldown for the CooldownButton.
+---@param remainTime number The remaining cooldown time.
+---@param totalTime number The total cooldown duration.
+---@usage
+---```
+---cooldownButton:SetCoolDown(50, 100)
+---```
 function CooldownButton:SetCoolDown(remainTime, totalTime) end
 
----TODO:
----@param textureName string
----@param textureKey string
----@param colorKey string
+---Sets the cooldown mask for the CooldownButton.
+---@param textureName string The name of the texture.
+---@param textureKey string The key for the texture.
+---@param colorKey string The key for the color.
+---@usage
+---```
+---cooldownButton:SetCoolDownMask("ui/cooldown/cooldown_mask.dds", "mask", "black")
+---```
 function CooldownButton:SetCoolDownMask(textureName, textureKey, colorKey) end

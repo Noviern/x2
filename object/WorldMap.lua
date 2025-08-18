@@ -16,97 +16,232 @@ DC_ALWAYS = 0                  -- object/WorldMap
 DC_SHIFT_KEY_DOWN = 1          -- object/WorldMap
 MAX_SKILL_MAP_EFFECT_COUNT = 6 -- object/WorldMap
 
+---@TODO: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
+
+---object/WorldMap
+---@enum ZONE_CLIMATE
+local ZONE_CLIMATE = {
+  NONE      = 1,
+  TEMPERATE = 2,
+  TROPICAL  = 3,
+  SUBARCTIC = 4
+}
+
+---object/WorldMap
+---@enum WORLD_MAP_ZOOM
+local WORLD_MAP_ZOOM = {
+  WORLD     = 1,
+  CONTINENT = 2,
+  ZONE      = 3,
+  CITY      = 4,
+}
+
 ---object/WorldMap
 ---@class WorldMap: Widget, Map
 local WorldMap = {}
 
----TODO:
----@param zoneId number
----@return table
+---Retrieves climate information for a specific zone.
+---@param zoneId ZONE_ID The ID of the zone.
+---@return ZONE_CLIMATE[] climateInfo The climate information for the zone.
 ---@nodiscard
+---@usage
+---```
+---local climateInfo = widget:GetClimateInfo(34)
+---```
+---@see ZONE_ID
+---@see ZONE_CLIMATE
 function WorldMap:GetClimateInfo(zoneId) end
 
----TODO:
+---Retrieves the sextant location of the cursor on the world map.
+---@return SEXTANT|nil The cursor's sextant data, or `nil` if not available.
+---@nodiscard
+---@usage
+---```
+---widget:GetCursorSextants()
+---```
+---@see SEXTANT
 function WorldMap:GetCursorSextants() end
 
----TODO:
----@param level number
----@param id any
+---Retrieves the icon drawable for a specific zoom level and zone ID.
+---@param level WORLD_MAP_ZOOM The zoom level. (WORLD_MAP_STATE may be more accurate)
+---@param id ZONE_ID The zone ID.
+---@return ImageDrawable|EmptyTable|nil iconDrawable The icon drawable, or `nil` if not found.
+---@nodiscard
+---@usage
+---```
+---local iconDrawable = widget:GetIconDrawable(3, 1)
+---```
+---@see WORLD_MAP_ZOOM
+---@see ZONE_ID
+---@see ImageDrawable
 function WorldMap:GetIconDrawable(level, id) end
 
----TODO: Crash.
----@param level number
----@param id any
+---Retrieves or creates a route drawable for a specific zoom level and ID. Crashes if an invalid level is provided.
+---@param level WORLD_MAP_ZOOM The zoom level. (WORLD_MAP_STATE may be more accurate)
+---@param id number The route ID.
+---@return ImageDrawable|EmptyTable|nil routeDrawable The route drawable, or `nil` if not found.
+---@return boolean created `true` if the drawable was created, `false` if it already existed.
+---@nodiscard
+---@usage
+---```
+---local routeDrawable, created = widget:GetRouteDrawable(3, 17)
+---```
+---@see WORLD_MAP_ZOOM
+---@see ImageDrawable
 function WorldMap:GetRouteDrawable(level, id) end
 
----TODO:
+---Hides all icon drawables on the world map.
+---@usage
+---```
+---widget:HideAllIconDrawable()
+---```
 function WorldMap:HideAllIconDrawable() end
 
----TODO:
----@param pingType number
+---Initializes map data with specified dimensions and texture paths. Must be called before showing the widget to ensure proper rendering.
+---@param width number The width of the map.
+---@param height number The height of the map.
+---@param tgaPath "Game/ui/map/image_map.tga"|string The path to the map texture.
+---@param iconPath BUTTON_TEXTURE_PATH The path to the icon texture. (Possibly TEXTURE_PATH)
+---@usage
+---```
+---widget:InitMapData(928, 556, "Game/ui/map/image_map.tga", BUTTON_TEXTURE_PATH.MAP)
+---```
+---@see BUTTON_TEXTURE_PATH
+function WorldMap:InitMapData(width, height, tgaPath, iconPath) end
+
+---Removes a ping from the world map by its type.
+---@param pingType PING_TYPE The type of ping to remove.
+---@usage
+---```
+---widget:RemovePing(1)
+---```
+---@see PING_TYPE
 function WorldMap:RemovePing(pingType) end
 
----TODO:
+---Removes all pings from the world map.
+---@usage
+---```
+---widget:RemovePingAll()
+---```
 function WorldMap:RemovePingAll() end
 
----TODO:
----@param drawable table
+---Sets the drawable for common farm icons on the world map.
+---@param drawable EffectDrawable The drawable for the farm icon.
+---@usage
+---```
+---local farmDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
+---farmDrawable:SetVisible(false)
+---farmDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
+---farmDrawable:SetMoveRepeatCount(0)
+---farmDrawable:SetMoveRotate(false)
+---farmDrawable:SetMoveEffectType(1, "right", 0, 0, 0.4, 0.4)
+---farmDrawable:SetMoveEffectEdge(1, 0.3, 0.5)
+---farmDrawable:SetMoveEffectType(2, "right", 0, 0, 0.4, 0.4)
+---farmDrawable:SetMoveEffectEdge(2, 0.5, 0.3)
+---widget:SetCommonFarmDrawable(farmDrawable)
+---```
+---@see EffectDrawable
 function WorldMap:SetCommonFarmDrawable(drawable) end
 
----TODO:
----@param r number
----@param g number
----@param b number
----@param a number
+---Sets the color for festival zones on the world map.
+---@param r number The red color component. (min: `0`, max: `1`)
+---@param g number The green color component. (min: `0`, max: `1`)
+---@param b number The blue color component. (min: `0`, max: `1`)
+---@param a number The alpha component. (min: `0`, max: `1`)
+---@usage
+---```
+---widget:SetFestivalZoneColor(1, 1, 0, 1)
+---```
 function WorldMap:SetFestivalZoneColor(r, g, b, a) end
 
----TODO:
----@param drawable table
+---Sets the drawable for portal icons on the world map. May accept any drawable type.
+---@param drawable EffectDrawable The drawable for the portal icon.
+---@usage
+---```
+---local portalDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
+---portalDrawable:SetVisible(false)
+---portalDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
+---portalDrawable:SetMoveRepeatCount(0)
+---portalDrawable:SetMoveRotate(false)
+---portalDrawable:SetMoveEffectType(1, "right", 0, 0, 0.4, 0.4)
+---portalDrawable:SetMoveEffectEdge(1, 0.3, 0.5)
+---portalDrawable:SetMoveEffectType(2, "right", 0, 0, 0.4, 0.4)
+---portalDrawable:SetMoveEffectEdge(2, 0.5, 0.3)
+---widget:SetPortalDrawable(portalDrawable)
+---```
+---@see EffectDrawable
 function WorldMap:SetPortalDrawable(drawable) end
 
----TODO:
----@param color table
+---@TODO: Confirm if RGBAColor is correct and clarify functionality. may allow values up to 255.
+---Sets a temporary notification color for the world map.
+---@param color RGBAColor The color for the temporary notification.
+---@see RGBAColor
 function WorldMap:SetTempNotifyColor(color) end
 
----TODO:
----@param isMain boolean
----@param coord table
+---@TODO: Confirm if RGBAColor is correct and clarify functionality.
+---Sets temporary notification coordinates for the world map.
+---@param isMain boolean Whether the coordinate is for the main notification.
+---@param coord table The coordinate data.
 function WorldMap:SetTempNotifyCoord(isMain, coord) end
 
----TODO:
----@param state number
----@param r number
----@param g number
----@param b number
----@param a number
+---Sets the color for trouble zones on the world map based on their state.
+---@param state ZONE_STATE The state of the trouble zone.
+---@param r number The red color component. (min: `0`, max: `1`)
+---@param g number The green color component. (min: `0`, max: `1`)
+---@param b number The blue color component. (min: `0`, max: `1`)
+---@param a number The alpha component. (min: `0`, max: `1`)
+---@usage
+---```
+---widget:SetTroubleZoneColor(HPWS_TROUBLE_0, 1, 0, 1, .5)
+---```
+---@see ZONE_STATE
 function WorldMap:SetTroubleZoneColor(state, r, g, b, a) end
 
----TODO:
----@param farmGroupType number
----@param farmType number
----@param x number
----@param y number
+---Shows a common farm icon on the world map at the specified coordinates.
+---@param farmGroupType number The farm group type.
+---@param farmType number The farm type.
+---@param x number The x-coordinate.
+---@param y number The y-coordinate.
 function WorldMap:ShowCommonFarm(farmGroupType, farmType, x, y) end
 
----TODO:
----@param zoneId number
----@param x number
----@param y number
----@param z number
+---Shows a portal location on the world map at the specified coordinates. Crashes if `SetPortalDrawable` is not called first.
+---@param zoneId ZONE_KEY The zone ID.
+---@param x number The x-coordinate.
+---@param y number The y-coordinate.
+---@param z number The z-coordinate.
+---@usage
+---```
+---widget:ShowPortal(307, 1277.77, 1394.11, 191.662)
+---```
+---@see ZONE_KEY
 function WorldMap:ShowPortal(zoneId, x, y, z) end
 
----TODO:
----@param qType number
----@param decalIndex number
----@param hasDecal number
+---Shows a quest indicator on the world map.
+---@param qType number The quest type.
+---@param decalIndex number The decal index for the quest.
+---@param hasDecal boolean Whether the quest has a decal.
 function WorldMap:ShowQuest(qType, decalIndex, hasDecal) end
 
----TODO:
+---Updates the event map data on the world map.
+---@usage
+---```
+---widget:UpdateEventMap()
+---```
 function WorldMap:UpdateEventMap() end
 
----TODO:
----@param routeDrawable table
+---Updates the route map with the specified drawable.
+---@param routeDrawable ImageDrawable The drawable for the route.
+---@usage
+---```
+---local routeDrawable, created = widget:GetRouteDrawable(3, 17)
+---widget:UpdateRouteMap(routeDrawable)
+---```
+---@see ImageDrawable
 function WorldMap:UpdateRouteMap(routeDrawable) end
 
----TODO:
+---Updates the zone state drawables on the world map.
+---@usage
+---```
+---widget:UpdateZoneStateDrawable()
+---```
 function WorldMap:UpdateZoneStateDrawable() end

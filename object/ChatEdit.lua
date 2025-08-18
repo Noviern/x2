@@ -15,7 +15,7 @@ CT_NAME = 1            -- object/ChatEdit
 DC_ALWAYS = 0          -- object/ChatEdit
 DC_SHIFT_KEY_DOWN = 1  -- object/ChatEdit
 
----TODO: Not sure what this is for.
+---@TODO: Not sure what this is for.
 
 ---object/ChatEdit
 ---@class ChatEdit

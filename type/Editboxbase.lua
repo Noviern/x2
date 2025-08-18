@@ -7,49 +7,93 @@
 ---@field [4]? number Right
 
 ---@class Editboxbase
----@field guideTextstyle TextStyle
+---@field guideTextStyle TextStyle
 ---@field style TextStyle
 local Editboxbase = {}
 
----Sets the max text`length` of the Editboxbase.
----@param length number default is 128 max of 9215 TODO: tested on multiline not sure about the others.
+---@TODO: Verify max length behavior for non-multiline Editboxbase types (default: `128`, max: `9215`).
+---Sets the maximum text length for the Editboxbase.
+---@param length number The maximum text length. (default: `128`, max: `9215`)
+---@usage
+---```
+---widget:SetMaxTextLength(9215)
+---```
 function Editboxbase:SetMaxTextLength(length) end
 
----Enables/Disables clearing text on enter for the Editboxbase.
----@param clear boolean
+---Enables or disables clearing text when the Enter key is pressed.
+---@param clear boolean `true` to clear text on Enter, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:ClearTextOnEnter(true)
+---```
 function Editboxbase:ClearTextOnEnter(clear) end
 
----Returns `maxTextLength` for the Editboxbase.
----@return number maxTextLength
+---Retrieves the maximum text length for the Editboxbase.
+---@return number maxTextLength The maximum text length.
+---@nodiscard
+---@usage
+---```
+---local maxTextLength = widget:MaxTextLength()
+---```
 function Editboxbase:MaxTextLength() end
 
----Sets the cursor `offset` of the Editboxbase.
----@param offset number
+---Sets the cursor offset for the Editboxbase.
+---@param offset number The cursor offset position.
+---@usage
+---```
+---widget:SetCursorOffset(10)
+---```
 function Editboxbase:SetCursorOffset(offset) end
 
----Sets the cursors `height` for the Editboxbase.
----@param height number
+---Sets the cursor height for the Editboxbase.
+---@param height number The height of the cursor.
+---@usage
+---```
+---widget:SetCursorHeight(20)
+---```
 function Editboxbase:SetCursorHeight(height) end
 
 ---Sets the color of the cursor for the Editboxbase.
----@param r number
----@param g number
----@param b number
----@param a number
+---@param r number The red color component.
+---@param g number The green color component.
+---@param b number The blue color component.
+---@param a number The alpha (opacity) component.
+---@usage
+---```
+---widget:SetCursorColor(1, 0, 0, 1)
+---```
 function Editboxbase:SetCursorColor(r, g, b, a) end
 
----Sets the color `colorKey` of the cursor for the Editboxbase.
----@param colorKey string
+---Sets the cursor color using a color key for the Editboxbase.
+---@param colorKey ETC_COLOR The color key for the cursor.
+---@usage
+---```
+---widget:SetCursorColorByColorKey("editbox_cursor_light")
+---```
+---@see ETC_COLOR
 function Editboxbase:SetCursorColorByColorKey(colorKey) end
 
----Enables/Disables `readOnly` for the Editboxbase.
----@param readOnly boolean
+---Enables or disables read-only mode for the Editboxbase.
+---@param readOnly boolean `true` to make read-only, `false` to allow editing. (default: `false`)
+---@usage
+---```
+---widget:SetReadOnly(true)
+---```
 function Editboxbase:SetReadOnly(readOnly) end
 
----Sets the guide `text` for the Editboxbase.
----@param text string
+---Sets the guide text for the Editboxbase.
+---@param text string The guide text to display.
+---@usage
+---```
+---widget:SetGuideText("Enter item name.")
+---```
 function Editboxbase:SetGuideText(text) end
 
----Sets the guide text `insetData` for the Editboxbase.
----@param insetData InsetData
+---Sets the guide text inset for the Editboxbase.
+---@param insetData InsetData The inset data for the guide text.
+---@usage
+---```
+---widget:SetGuideTextInset({ 10, 10 })
+---```
+---@see InsetData
 function Editboxbase:SetGuideTextInset(insetData) end

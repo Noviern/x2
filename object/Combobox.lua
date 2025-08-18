@@ -43,26 +43,43 @@ local AUTOCOMPLETE_FILTER = {
 ---@field toggle Button
 local Combobox = {}
 
----TODO: Not sure how this works. Im assuming you can create a list of things that can autocomplete?
----@param datas table
+---@TODO: Clarify how this works; possibly creates a list for autocomplete.
+---Inserts data into the Combobox for autocomplete functionality.
+---@param datas table The data to insert for autocomplete.
 function Combobox:Insert(datas) end
 
----Pauses/Unpauses autocomplete for the Combobox.
----@param pause boolean
+---Pauses or unpauses autocomplete functionality for the Combobox.
+---@param pause boolean `true` to pause autocomplete, `false` to unpause.
+---@usage
+---```
+---combobox:PauseAutocomplete(false)
+---```
 function Combobox:PauseAutocomplete(pause) end
 
----TODO: Not every `filter` can be used for the `type`.
----Sets autocomplete for the `type` and `filter` for the Combobox.
----@param type AUTOCOMPLETE_TYPE
----@param filter AUTOCOMPLETE_FILTER
+---@TODO: Verify which filters are valid for each type.
+---Sets the autocomplete type and filter for the Combobox.
+---@param type AUTOCOMPLETE_TYPE The autocomplete type.
+---@param filter AUTOCOMPLETE_FILTER The autocomplete filter.
+---@usage
+---```
+---combobox:SetAutocomplete("item", "")
+---```
 function Combobox:SetAutocomplete(type, filter) end
 
----Limits the visible dropdown items from the Combobox.
----@param limit number 0 to 10.
+---Sets the maximum number of visible items in the Combobox dropdown.
+---@param limit number The maximum number of visible items (`0` to `10`). (default: `10`)
+---@usage
+---```
+---combobox:SetDropdownVisibleLimit(5)
+---```
 function Combobox:SetDropdownVisibleLimit(limit) end
 
----Enables/Disables the editability of the Combobox.
----@param editable boolean
+---Enables or disables editability of the Combobox.
+---@param editable boolean `true` to allow editing, `false` to disable. (dfault: `false`)
+---@usage
+---```
+---combobox:SetEditable(true)
+---```
 function Combobox:SetEditable(editable) end
 
 ---@class ComboboxDropDown: Listbox

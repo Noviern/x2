@@ -3,20 +3,41 @@
 ---@class Uiobject
 local Uiobject = {}
 
----Returns the `id` of the Uiobject.
----@return string id
+---Retrieves the ID of the UI object.
+---@return string id The UI object's ID.
 ---@nodiscard
+---@usage
+---```
+---local id = widget:GetId()
+---```
 function Uiobject:GetId() end
 
----TODO: This may be broken. Currently returns nothing.
+---@TODO: May be broken, currently returns nothing.
+---Retrieves the name of the UI object.
+---@return string name
+---@nodiscard
+---@usage
+---```
+---local name = widget:GetName()
+---```
 function Uiobject:GetName() end
 
----Returns the `objectType` of the Uiobject.
----@return string objectType
+---Retrieves the object type of the UI object.
+---@return OBJECT_NAME objectType The UI object's type.
 ---@nodiscard
+---@usage
+---```
+---local objectType = widget:GetObjectType()
+---```
+---@see OBJECT_NAME
 function Uiobject:GetObjectType() end
 
----Returns a boolean indicating if the Uiobject is a `validUiobject`.
----@return boolean validUiobject
+---@TODO: In what condition would this ever return false?
+---Checks if the UI object is valid.
+---@return boolean validUiobject `true` if the UI object is valid, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local validUiobject = widget:IsValidUIObject()
+---```
 function Uiobject:IsValidUIObject() end

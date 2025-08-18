@@ -10,3 +10,16 @@ HPWS_TROUBLE_3 = 3 -- api/X2Dominion
 HPWS_TROUBLE_4 = 4 -- api/X2Dominion
 HPWS_WAR = 6       -- api/X2Dominion
 X2Dominion = {}    -- api/X2Dominion
+
+---api/X2Dominion
+---
+---HPW State
+---@alias ZONE_STATE
+---| `HPWS_BATTLE`
+---| `HPWS_PEACE`
+---| `HPWS_TROUBLE_0`
+---| `HPWS_TROUBLE_1`
+---| `HPWS_TROUBLE_2`
+---| `HPWS_TROUBLE_3`
+---| `HPWS_TROUBLE_4`
+---| `HPWS_WAR`

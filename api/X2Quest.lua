@@ -55,7 +55,7 @@ function X2Quest:GetQuestContextMainTitle(questType) end
 
 ---Checks if the specified quest is completed.
 ---@param questType number The quest ID.
----@return boolean completed True if the quest is completed, false otherwise.
+---@return boolean completed `true` if the quest is completed, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```

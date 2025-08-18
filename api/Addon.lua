@@ -489,6 +489,7 @@ ZST_INVALID = 0                                   -- api/Addon
 ---| `UIC_WORLDMAP`
 
 ---api/Addon
+---Ui Object Type
 ---@alias UOT
 ---| `UOT_EDITBOX`
 ---| `UOT_EDITBOX_MULTILINE`
@@ -501,6 +502,12 @@ ZST_INVALID = 0                                   -- api/Addon
 ---| `UOT_SLIDER`
 ---| `UOT_TEXT_STYLE`
 ---| `UOT_X2_EDITBOX`
+
+---@alias UOT_DRAWABLE
+---| `UOT_COLOR_DRAWABLE`  We don't have access to this global yet but it does exist in the codebase.
+---| `UOT_IMAGE_DRAWABLE`
+---| `UOT_NINE_PART_DRAWABLE`
+---| `UOT_THREE_PART_DRAWABLE` We don't have access to this global yet but it does exist in the codebase.
 
 ---api/Addon
 ---@class EscMenuButtonData
@@ -519,10 +526,10 @@ ZST_INVALID = 0                                   -- api/Addon
 ---
 ---RGBA color with values restricted between 0 to 1.
 ---@class RGBAColor : number[]
----@field [1] number Red (0 to 1)
----@field [2] number Green (0 to 1)
----@field [3] number Blue (0 to 1)
----@field [4] number Alpha (0 to 1)
+---@field [1] number Red (min: `0`, max: `1`)
+---@field [2] number Green (min: `0`, max: `1`)
+---@field [3] number Blue (min: `0`, max: `1`)
+---@field [4] number Alpha (min: `0`, max: `1`)
 
 ---api/Addon
 ---@class Time
@@ -539,9 +546,9 @@ ZST_INVALID = 0                                   -- api/Addon
 
 ---api/Addon
 ---@class TextureColorKey
----@field [1] number Red (0 to 1)
----@field [2] number Green (0 to 1)
----@field [3] number Blue (0 to 1)
+---@field [1] number Red (min: `0`, max: `1`)
+---@field [2] number Green (min: `0`, max: `1`)
+---@field [3] number Blue (min: `0`, max: `1`)
 
 ---api/Addon
 ---@class TextureCoords
@@ -629,7 +636,7 @@ ZST_INVALID = 0                                   -- api/Addon
 ---@usage
 ---```
 ---ADDON:AddEscMenuButton(5, 1300, "", "example", {
----  path = "Addon/[addonname]/example.dds", h = 25, w = 25
+---  path = "Addon/[addonname]/example.dds",  w = 25, h = 25
 ---})
 ---```
 ---@see ESC_MENU_CATEGORY_ID
@@ -746,12 +753,12 @@ function ADDON:ImportObject(objectId) end
 ---```
 function ADDON:LoadData(key) end
 
----@TODO: Can this override addon UI categories?
+---@TODO: Can this override addon UI categories? triggerFunc alias
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
 ---@param uiCategory UIC The UI component to register the function to.
 ---@param triggerFunc function The function to register as a trigger.
----@return boolean success True if registration was successful, false otherwise.
+---@return boolean success `true` if registration was successful, `false` otherwise.
 ---@usage
 ---```
 ---function ToggleWidget(show, data) end
@@ -767,7 +774,7 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---@param uiCategory UIC The UI component to register the widget to.
 ---@param widget Widget The widget to register.
 ---@param triggerFunc? function The optional trigger function for the widget.
----@return Widget|nil widget The registered widget, or nil if registration failed.
+---@return Widget|nil widget The registered widget, or `nil` if registration failed.
 ---@usage
 ---```
 ---function ToggleWidget(show, data) end
@@ -807,7 +814,7 @@ function ADDON:SaveData(key, data) end
 ---@TODO:
 ---Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos` afterward and a reload (character select).
 ---@param name string The name of the addon to enable or disable.
----@param enable boolean True to enable, false to disable the addon.
+---@param enable boolean `true` to enable, `false` to disable the addon.
 ---@usage
 ---```
 ---ADDON:SetAddonEnable("example", true)
@@ -817,9 +824,9 @@ function ADDON:SetAddonEnable(name, enable) end
 
 ---Shows or hides the UI category and returns whether the operation succeeded.
 ---@param uiCategory UIC The UI component to show or hide.
----@param show boolean True to show, false to hide the component.
+---@param show boolean `true` to show, `false` to hide the component.
 ---@param data? table Optional data (currently unusable, reserved for future use). TODO:
----@return boolean success True if the operation succeeded, false otherwise.
+---@return boolean success `true` if the operation succeeded, `false` otherwise.
 ---@usage
 ---```
 ---local data = { hello = "world" }
@@ -832,7 +839,7 @@ function ADDON:ShowContent(uiCategory, show, data) end
 ---Toggles the visibility of the UI category and returns whether the operation succeeded.
 ---@param uiCategory UIC The UI component to toggle.
 ---@param data? table Optional data for the operation.
----@return boolean success True if the toggle succeeded, false otherwise.
+---@return boolean success `true` if the toggle succeeded, `false` otherwise.
 ---@usage
 ---```
 ---local data = { hello = "world" }
@@ -863,45 +870,45 @@ function UIParent:ClearUIBound(key) end
 ---```
 ---local widget = UIParent:CreateWidget("textbox", "widgetExample", "UIParent")
 ---```
----@overload fun(self: self, widgetName: "avi", id: string, parentId: "UIParent"|Widget, category?: string): Avi|nil
----@overload fun(self: self, widgetName: "button", id: string, parentId: "UIParent"|Widget, category?: string): Button|nil
----@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: "UIParent"|Widget, category?: string): ChatWindow|nil
----@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: "UIParent"|Widget, category?: string): Checkbutton|nil
----@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: "UIParent"|Widget, category?: string): CircleDiagram|nil
----@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: "UIParent"|Widget, category?: string): ColorPicker|nil
----@overload fun(self: self, widgetName: "combobox", id: string, parentId: "UIParent"|Widget, category?: string): Combobox|nil
----@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownButton|nil
----@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownConstantButton|nil
----@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownInventoryButton|nil
----@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: "UIParent"|Widget, category?: string): DamageDisplay|nil
----@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: "UIParent"|Widget, category?: string): DynamicList|nil
----@overload fun(self: self, widgetName: "editbox", id: string, parentId: "UIParent"|Widget, category?: string): Editbox|nil
----@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: "UIParent"|Widget, category?: string): EditboxMultiline|nil
----@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: "UIParent"|Widget, category?: string): EmptyWidget|nil
----@overload fun(self: self, widgetName: "folder", id: string, parentId: "UIParent"|Widget, category?: string): Folder|nil
----@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: "UIParent"|Widget, category?: string): GameTooltip|nil
----@overload fun(self: self, widgetName: "grid", id: string, parentId: "UIParent"|Widget, category?: string): Grid|nil
----@overload fun(self: self, widgetName: "label", id: string, parentId: "UIParent"|Widget, category?: string): Label|nil
----@overload fun(self: self, widgetName: "line", id: string, parentId: "UIParent"|Widget, category?: string): Line|nil
----@overload fun(self: self, widgetName: "listbox", id: string, parentId: "UIParent"|Widget, category?: string): Listbox|nil
----@overload fun(self: self, widgetName: "listctrl", id: string, parentId: "UIParent"|Widget, category?: string): ListCtrl|nil
----@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: "UIParent"|Widget, category?: string): MegaphoneChatEdit|nil
----@overload fun(self: self, widgetName: "message", id: string, parentId: "UIParent"|Widget, category?: string): Message|nil
----@overload fun(self: self, widgetName: "modelview", id: string, parentId: "UIParent"|Widget, category?: string): ModelView|nil
----@overload fun(self: self, widgetName: "pageable", id: string, parentId: "UIParent"|Widget, category?: string): Pageable|nil
----@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: "UIParent"|Widget, category?: string): PaintColorPicker|nil
----@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: "UIParent"|Widget, category?: string): RadioGroup|nil
----@overload fun(self: self, widgetName: "roadmap", id: string, parentId: "UIParent"|Widget, category?: string): RoadMap|nil
----@overload fun(self: self, widgetName: "slider", id: string, parentId: "UIParent"|Widget, category?: string): Slider|nil
----@overload fun(self: self, widgetName: "slot", id: string, parentId: "UIParent"|Widget, category?: string): Slot|nil
----@overload fun(self: self, widgetName: "statusbar", id: string, parentId: "UIParent"|Widget, category?: string): StatusBar|nil
----@overload fun(self: self, widgetName: "tab", id: string, parentId: "UIParent"|Widget, category?: string): Tab|nil
----@overload fun(self: self, widgetName: "textbox", id: string, parentId: "UIParent"|Widget, category?: string): Textbox|nil
----@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: "UIParent"|Widget, category?: string): UnitframeTooltip|nil
----@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: "UIParent"|Widget, category?: string): Webbrowser|nil
----@overload fun(self: self, widgetName: "window", id: string, parentId: "UIParent"|Widget, category?: string): Window|nil
----@overload fun(self: self, widgetName: "worldmap", id: string, parentId: "UIParent"|Widget, category?: string): WorldMap|nil
----@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: "UIParent"|Widget, category?: string): X2EditBox|nil
+---@overload fun(self: self, widgetName: "avi", id: string, parentId: "UIParent"|Widget, category?: string): Avi|EmptyTable|nil
+---@overload fun(self: self, widgetName: "button", id: string, parentId: "UIParent"|Widget, category?: string): Button|EmptyTable|nil
+---@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: "UIParent"|Widget, category?: string): ChatWindow|EmptyTable|nil
+---@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: "UIParent"|Widget, category?: string): Checkbutton|EmptyTable|nil
+---@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: "UIParent"|Widget, category?: string): CircleDiagram|EmptyTable|nil
+---@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: "UIParent"|Widget, category?: string): ColorPicker|EmptyTable|nil
+---@overload fun(self: self, widgetName: "combobox", id: string, parentId: "UIParent"|Widget, category?: string): Combobox|EmptyTable|nil
+---@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownButton|EmptyTable|nil
+---@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownConstantButton|EmptyTable|nil
+---@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownInventoryButton|EmptyTable|nil
+---@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: "UIParent"|Widget, category?: string): DamageDisplay|EmptyTable|nil
+---@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: "UIParent"|Widget, category?: string): DynamicList|EmptyTable|nil
+---@overload fun(self: self, widgetName: "editbox", id: string, parentId: "UIParent"|Widget, category?: string): Editbox|EmptyTable|nil
+---@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: "UIParent"|Widget, category?: string): EditboxMultiline|EmptyTable|nil
+---@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: "UIParent"|Widget, category?: string): EmptyWidget|EmptyTable|nil
+---@overload fun(self: self, widgetName: "folder", id: string, parentId: "UIParent"|Widget, category?: string): Folder|EmptyTable|nil
+---@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: "UIParent"|Widget, category?: string): GameTooltip|EmptyTable|nil
+---@overload fun(self: self, widgetName: "grid", id: string, parentId: "UIParent"|Widget, category?: string): Grid|EmptyTable|nil
+---@overload fun(self: self, widgetName: "label", id: string, parentId: "UIParent"|Widget, category?: string): Label|EmptyTable|nil
+---@overload fun(self: self, widgetName: "line", id: string, parentId: "UIParent"|Widget, category?: string): Line|EmptyTable|nil
+---@overload fun(self: self, widgetName: "listbox", id: string, parentId: "UIParent"|Widget, category?: string): Listbox|EmptyTable|nil
+---@overload fun(self: self, widgetName: "listctrl", id: string, parentId: "UIParent"|Widget, category?: string): ListCtrl|EmptyTable|nil
+---@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: "UIParent"|Widget, category?: string): MegaphoneChatEdit|EmptyTable|nil
+---@overload fun(self: self, widgetName: "message", id: string, parentId: "UIParent"|Widget, category?: string): Message|EmptyTable|nil
+---@overload fun(self: self, widgetName: "modelview", id: string, parentId: "UIParent"|Widget, category?: string): ModelView|EmptyTable|nil
+---@overload fun(self: self, widgetName: "pageable", id: string, parentId: "UIParent"|Widget, category?: string): Pageable|EmptyTable|nil
+---@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: "UIParent"|Widget, category?: string): PaintColorPicker|EmptyTable|nil
+---@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: "UIParent"|Widget, category?: string): RadioGroup|EmptyTable|nil
+---@overload fun(self: self, widgetName: "roadmap", id: string, parentId: "UIParent"|Widget, category?: string): RoadMap|EmptyTable|nil
+---@overload fun(self: self, widgetName: "slider", id: string, parentId: "UIParent"|Widget, category?: string): Slider|EmptyTable|nil
+---@overload fun(self: self, widgetName: "slot", id: string, parentId: "UIParent"|Widget, category?: string): Slot|EmptyTable|nil
+---@overload fun(self: self, widgetName: "statusbar", id: string, parentId: "UIParent"|Widget, category?: string): StatusBar|EmptyTable|nil
+---@overload fun(self: self, widgetName: "tab", id: string, parentId: "UIParent"|Widget, category?: string): Tab|EmptyTable|nil
+---@overload fun(self: self, widgetName: "textbox", id: string, parentId: "UIParent"|Widget, category?: string): Textbox|EmptyTable|nil
+---@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: "UIParent"|Widget, category?: string): UnitframeTooltip|EmptyTable|nil
+---@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: "UIParent"|Widget, category?: string): Webbrowser|EmptyTable|nil
+---@overload fun(self: self, widgetName: "window", id: string, parentId: "UIParent"|Widget, category?: string): Window|EmptyTable|nil
+---@overload fun(self: self, widgetName: "worldmap", id: string, parentId: "UIParent"|Widget, category?: string): WorldMap|EmptyTable|nil
+---@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: "UIParent"|Widget, category?: string): X2EditBox|EmptyTable|nil
 function UIParent:CreateWidget(widgetName, id, parentId, category) end
 
 ---@TODO:
@@ -946,7 +953,7 @@ function UIParent:GetCurrentTimeStamp() end
 
 ---Retrieves the entity name if it exists within render range.
 ---@param sEntityName string The name of the entity to check.
----@return string? sEntityName The entity name if found, or nil if not in range.
+---@return string? sEntityName The entity name if found, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -1007,7 +1014,7 @@ function UIParent:GetId() end
 
 ---Checks if permission for the specified UI category has been granted.
 ---@param uiCategory UIC The UI category to check.
----@return boolean permission True if permission is granted, false otherwise.
+---@return boolean permission `true` if permission is granted, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -1018,11 +1025,11 @@ function UIParent:GetPermission(uiCategory) end
 
 ---Retrieves the screen height.
 ---@return number screenHeight The screen height in pixels.
+---@nodiscard
 ---@usage
 ---```
 ---local screenHeight = UIParent:GetScreenHeight()
 ---```
----@nodiscard
 function UIParent:GetScreenHeight() end
 
 ---Retrieves the screen width.
@@ -1044,8 +1051,9 @@ function UIParent:GetScreenWidth() end
 ---@see Time
 function UIParent:GetServerTimeTable() end
 
+---@TODO: Add other textures like BUTTON_TEXTURE_PATH
 ---Retrieves texture data for the specified file and key.
----@param filename TEXTURE_PATH The texture file path.
+---@param filename TEXTURE_PATH|string The texture file path.
 ---@param infoKey string The key for texture data, obtainable via `UIParent:GetTextureKeyData(filename).keys` or by the associated filename `.g` file.
 ---@return TextureData textureData The texture data for the specified key.
 ---@nodiscard
@@ -1083,22 +1091,22 @@ function UIParent:GetUIBound(key) end
 
 ---Retrieves the UI scale.
 ---@return number uiScale The current UI scale.
+---@nodiscard
 ---@usage
 ---```
 ---local uiScale = UIParent:GetUIScale()
 ---```
----@nodiscard
 function UIParent:GetUIScale() end
 
 ---Retrieves the UI stamp for the specified key. This is currently unusable
 ---without its counterpart method `UIParent:SetUIStamp`.
 ---@param key string The key to retrieve the UI stamp for.
 ---@return string uiStamp The UI stamp associated with the key.
+---@nodiscard
 ---@usage
 ---```
 ---local stamp = UIParent:GetUIStamp("example")
 ---```
----@nodiscard
 function UIParent:GetUIStamp(key) end
 
 ---Retrieves the camera's angles in degrees.
@@ -1161,17 +1169,17 @@ function UIParent:GetVirtualMemoryStats() end
 function UIParent:InitFontSize() end
 
 ---Checks if DirectX 11 is supported.
----@return boolean dx11Supported True if DirectX 11 is supported, false otherwise.
+---@return boolean dx11Supported `true` if DirectX 11 is supported, `false` otherwise.
+---@nodiscard
 ---@usage
 ---```
 ---local dx11Supported = UIParent:IsDX11Supported()
 ---```
----@nodiscard
 function UIParent:IsDX11Supported() end
 
 ---Checks if the specified point is visible.
 ---@param point Vec3 The point to check visibility for.
----@return boolean pointVisible True if the point is visible, false otherwise.
+---@return boolean pointVisible `true` if the point is visible, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -1182,7 +1190,7 @@ function UIParent:IsDX11Supported() end
 function UIParent:IsPointVisible(point) end
 
 ---Checks if multithreaded rendering is supported.
----@return boolean renderThreadSupported True if multithreaded rendering is supported, false otherwise.
+---@return boolean renderThreadSupported `true` if multithreaded rendering is supported, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```

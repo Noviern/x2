@@ -4,7 +4,7 @@ X2Sound = {} -- api/X2Sound
 
 ---Checks if the specified sound is currently playing.
 ---@param soundId number The ID of the sound to check.
----@return boolean playing True if the sound is playing, false otherwise.
+---@return boolean playing `true` if the sound is playing, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```

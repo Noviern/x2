@@ -19,62 +19,116 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Tab
 local TAB_CORNER = {
   TOPLEFT     = "TOPLEFT",
   TOPRIGHT    = "TOPRIGHT",
-  BOTOMLEFT   = "BOTOMLEFT",
+  BOTOMLEFT   = "BOTTOMLEFT",
   BOTTOMRIGHT = "BOTTOMRIGHT",
 }
 
 ---object/Tab
 ---@class Tab: Widget, Tabbase
+---@field selectedButton? Button[]
+---@field unselectedButton? Button[]
+---@field window? Window[]
 local Tab = {}
 
----TODO:
----@param tabName string
----@param selectedButtonWidget Button
----@param unselectedButtonWidget Button
----@param windowWidget Window
+---Adds a new tab to the Tab with specified button and window widgets.
+---@param tabName string The name of the tab.
+---@param selectedButtonWidget Button The button widget for the selected state.
+---@param unselectedButtonWidget Button The button widget for the unselected state.
+---@param windowWidget Window The window widget associated with the tab.
+---@usage
+---```
+---local selectedButton = UIParent:CreateWidget("button", "tab2selectedButton", "UIParent")
+---local unselectedButton = UIParent:CreateWidget("button", "tab2unselectedButton", "UIParent")
+---local window = UIParent:CreateWidget("window", "tab2window", "UIParent")
+---widget:AddNewTab("Tab 2", selectedButton, unselectedButton, window)
+---```
 function Tab:AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget,
-                       windowWidget)
-end
+                       windowWidget) end
 
----Adds a simple tab `tabName` for the Tab.
----@param tabName string
+---Adds a simple tab with the specified name to the Tab, automatically creating
+---`selectedButton`, `unselectedButton`, and `window` widgets stored as
+---`widget.selectedButton[i]`, `widget.unselectedButton[i]`, and
+---`widget.window[i]`. Handles all events necessary for tab switching.
+---@param tabName string The name of the tab.
+---@usage
+---```
+---widget:AddSimpleTab("Tab 1")
+---```
 function Tab:AddSimpleTab(tabName) end
 
----TODO:
+---@TODO: Verify purpose and behavior.
+---Aligns the tab buttons in the Tab. Should be called after all tabs have been created.
+---@usage
+---```
+---widget:AlignTabButtons()
+---```
 function Tab:AlignTabButtons() end
 
----Returns `activateTabCount` of the Tab.
----@return number activateTabCount
+---Retrieves the number of active tabs in the Tab.
+---@return number activateTabCount The number of active tabs.
 ---@nodiscard
+---@usage
+---```
+---local activateTabCount = widget:GetActivateTabCount()
+---```
 function Tab:GetActivateTabCount() end
 
----Returns `tabCount` of the Tab.
----@return number tabCount
+---Retrieves the total number of tabs in the Tab.
+---@return number tabCount The total number of tabs.
 ---@nodiscard
+---@usage
+---```
+---local tabCount = widget:GetTabCount()
+---```
 function Tab:GetTabCount() end
 
----Hides the `idx` tab for the Tab.
----@param idx number
+---Hides the tab at the specified index in the Tab.
+---@param idx number The index of the tab to hide.
+---@usage
+---```
+---widget:HideTab(2)
+---```
 function Tab:HideTab(idx) end
 
----Returns a boolean indicating if the tab in hidden in the Tab.
----@param index number
----@return boolean
+---Checks if the tab at the specified index is hidden.
+---@param index number The index of the tab to check.
+---@return boolean hideTab `true` if the tab is hidden, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local hideTab = widget:IsHideTab(2)
+---```
 function Tab:IsHideTab(index) end
 
----Sets `activateTabCount` for the Tab.
----@param activateTabCount number 0 to `GetTabCount()`.
+---Sets the number of active tabs in the Tab.
+---@param activateTabCount number The number of active tabs (default: `0`, max: `Tab:GetTabCount()`).
+---@usage
+---```
+---widget:SetActivateTabCount(1)
+---```
 function Tab:SetActivateTabCount(activateTabCount) end
 
----Set the `corner` to place tabs in Tab.
----@param corner TAB_CORNER
+---Sets the corner where tabs are placed in the Tab. Should be called before `Tab:AlignTabButtons()`.
+---@param corner TAB_CORNER The corner to place the tabs. (default: `"TOPLEFT"`)
+---@usage
+---```
+---widget:SetCorner("TOPRIGHT")
+---```
+---@see TAB_CORNER
 function Tab:SetCorner(corner) end
 
----TODO:
----@param vertical boolean
+---Sets the orientation of the tabs in the Tab. Should be called before `Tab:AlignTabButtons()`.
+---@param vertical boolean `true` for vertical orientation, `false` for horizontal. (default: `false`)
+---@usage
+---```
+---widget:SetVertical(true)
+---```
 function Tab:SetVertical(vertical) end
 
----Shows the `idx` tab for the Tab.
----@param idx number
+---Shows the tab at the specified index in the Tab.
+---@param idx number The index of the tab to show.
+---@usage
+---```
+---widget:ShowTab(2)
+---```
 function Tab:ShowTab(idx) end

@@ -15,81 +15,184 @@ CT_NAME = 1            -- object/Folder
 DC_ALWAYS = 0          -- object/Folder
 DC_SHIFT_KEY_DOWN = 1  -- object/Folder
 
+---@enum FOLDER_STATE
+local FOLDER_STATE = {
+  CLOSE = "close",
+  OPEN = "open",
+}
+
 ---object/Folder
 ---@class Folder: Widget
 ---@field style TextStyle
 local Folder = {}
 
 ---Closes the Folder.
+---@usage
+---```
+---widget:CloseFolder()
+---```
 function Folder:CloseFolder() end
 
----TODO:
+---@TODO: Clarify purpose and behavior.
+---Performs a fixed close operation on the Folder.
+---@usage
+---```
+---widget:FixedCloseFolder()
+---```
 function Folder:FixedCloseFolder() end
 
----returns the `extendLength` of the Folder.
----@return number extendLength default is 200
+---Retrieves the extend length of the Folder.
+---@return number extendLength The extend length (default: `200`).
 ---@nodiscard
+---@usage
+---```
+---local extendLength = widget:GetExtendLength()
+---```
 function Folder:GetExtendLength() end
 
----Returns the `state` `"open"|"close"` of the Folder.
----@return string state
+---Retrieves the current state of the Folder.
+---@return FOLDER_STATE state The state of the Folder. (default: `"close"`)
 ---@nodiscard
+---@usage
+---```
+---widget:GetState()
+---```
+---@see FOLDER_STATE
 function Folder:GetState() end
 
----Returns the `titleText` of the Folder.
----@return string titleText
+---Retrieves the title text of the Folder.
+---@return string titleText The title text.
 ---@nodiscard
+---@usage
+---```
+---local titleText = widget:GetTitleText()
+---```
 function Folder:GetTitleText() end
 
 ---Opens the Folder.
+---@usage
+---```
+---widget:OpenFolder()
+---```
 function Folder:OpenFolder() end
 
----TODO:
----@param height number
-function Folder:SetAnimateStep(height) end
+---Sets the animation step height for the Folder.
+---@param speed number The speed for the animation step.
+---@usage
+---```
+---widget:SetAnimateStep(3)
+---```
+function Folder:SetAnimateStep(speed) end
 
----TODO:
----@param childTable table
+---Sets the child widget table for the Folder.
+---@param childTable Widget The table containing child widgets.
+---@usage
+---```
+---local details = widget:CreateChildWidget("textbox", "details", 3, true)
+---details.style:SetAlign(ALIGN_TOP_LEFT)
+---details:SetText("The first ArcheAge Private Server")
+---
+---widget:SetChildWidget(details)
+---```
 function Folder:SetChildWidget(childTable) end
 
----Sets the `closeTable` Button that will only show during the closed Folder
----state and will need a OnClick event that is responsible for
----`Folder:OpenFolder()`.
----@param closeTable Button
+---Sets the button to show in the `"close"` state, requiring an OnClick event to call `Folder:OpenFolder()`.
+---@param closeTable Button The button for the `"close"` state.
+---@usage
+---```
+---local openBtn = widget:CreateChildWidget("button", "openBtn", 1, true)
+---openBtn:AddAnchor("TOPLEFT", widget, 0, 5)
+---openBtn:SetStyle("grid_folder_right_arrow")
+---
+---function openBtn:OnClick()
+---  self:GetParent():ToggleState()
+---end
+---
+---openBtn:SetHandler("OnClick", openBtn.OnClick)
+---
+---widget:SetCloseStateButton(openBtn)
+---```
 function Folder:SetCloseStateButton(closeTable) end
 
----Sets the `height` of the extend length for the Folder.
----@param height number
+---Sets the extend length height for the Folder.
+---@param height number The height to set for the extend length.
+---@usage
+---```
+---widget:SetExtendLength(300)
+---```
 function Folder:SetExtendLength(height) end
 
 ---Sets the inset for the Folder.
----@param left number
----@param top number
----@param right number
----@param bottom number
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---widget:SetInset(10, 10, 10, 10)
+---```
 function Folder:SetInset(left, top, right, bottom) end
 
----Sets the `openTable` Button that will only show during the open Folder state
----and will need a OnClick event that is responsible for `Folder:CloseFolder()`.
----@param openTable Button
+---Sets the button to show in the `"open"` state, requiring an OnClick event to call `Folder:CloseFolder()`.
+---@param openTable Button The button for the `"open"` state.
+---@usage
+---```
+---local closeBtn = widget:CreateChildWidget("button", "closeBtn", 0, true)
+---closeBtn:AddAnchor("TOPLEFT", widget, 0, 7)
+---closeBtn:SetStyle("grid_folder_down_arrow")
+---
+---function closeBtn:OnClick()
+---  self:GetParent():ToggleState()
+---end
+---
+---widget:SetOpenStateButton(closeBtn)
+---```
 function Folder:SetOpenStateButton(openTable) end
 
----Sets a `titleTable` Button for the Folder.
----@param titleTable Button
+---Sets the title button widget for the Folder. This will override `Folder:SetTitleText`.
+---@param titleTable Button The button widget for the title.
+---@usage
+---```
+---local titleBtn = widget:CreateChildWidget("button", "titleBtn", 2, true)
+---titleBtn:SetText("ArcheRage.to")
+---
+---function titleBtn:OnClick()
+---  self:GetParent():ToggleState()
+---end
+---
+---titleBtn:SetHandler("OnClick", titleBtn.OnClick)
+---
+---widget:SetTitleButtonWidget(titleBtn)
+---```
 function Folder:SetTitleButtonWidget(titleTable) end
 
----Sets the `height` of the Folder.
----@param height number
+---Sets the title height for the Folder.
+---@param height number The height of the title.
+---@usage
+---```
+---widget:SetTitleHeight(15)
+---```
 function Folder:SetTitleHeight(height) end
 
----Sets the title `text` of the Folder.
----@param text string
+---Sets the title text for the Folder.
+---@param text string The title text to set.
+---@usage
+---```
+---widget:SetTitleText("ArcheRage.to")
+---```
 function Folder:SetTitleText(text) end
 
----Toggles the state of the Folder.
+---Toggles the state of the Folder between `"open"` and `"close"`.
+---@usage
+---```
+---widget:ToggleState()
+---```
 function Folder:ToggleState() end
 
----TODO: Not sure this works.
----Enables/Disables the animation for Folder.
----@param useAnimation boolean
+---Enables or disables animation for the Folder.
+---@param useAnimation boolean `true` to enable animation, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:UseAnimation(true)
+---```
 function Folder:UseAnimation(useAnimation) end

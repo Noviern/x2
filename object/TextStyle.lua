@@ -13,7 +13,7 @@ FTK_GENERAL = 0        -- object/TextStyle
 FTK_IMAGETEXT = 2      -- object/TextStyle
 
 ---object/TextStyle
----@alias ALIGN
+---@alias TEXT_ALIGN
 ---| `ALIGN_BOTTOM`
 ---| `ALIGN_BOTTOM_LEFT`
 ---| `ALIGN_BOTTOM_RIGHT`
@@ -24,58 +24,113 @@ FTK_IMAGETEXT = 2      -- object/TextStyle
 ---| `ALIGN_TOP_LEFT`
 ---| `ALIGN_TOP_RIGHT`
 
+---@alias FONT_KIND
+---| `FTK_GENERAL`
+---| `FTK_IMAGETEXT`
+
 ---object/TextStyle
 ---@class TextStyle: Uiobject
 local TextStyle = {}
 
----Returns the `lineHeight` of the TextStyle.
----@return number lineHeight
+---Retrieves the line height of the TextStyle.
+---@return number lineHeight The height of a text line.
 ---@nodiscard
+---@usage
+---```
+---local lineHeight = style:GetLineHeight()
+---```
 function TextStyle:GetLineHeight() end
 
----Returns the `textWidth` for `text`.
----@param text string
----@return number textWidth
+---Retrieves the width of the specified text using the TextStyle.
+---@param text string The text to measure.
+---@return number textWidth The width of the text.
 ---@nodiscard
+---@usage
+---```
+---local textWidth = style:GetTextWidth("ArcheRage.to")
+---```
 function TextStyle:GetTextWidth(text) end
 
----Sets the text `align` of the TextStyle.
----@param align ALIGN
+---Sets the text alignment for the TextStyle.
+---@param align TEXT_ALIGN The text alignment type.
+---@usage
+---```
+---style:SetAlign(ALIGN_TOP_LEFT)
+---```
 function TextStyle:SetAlign(align) end
 
----Sets the color of the TextStyle.
----@param r number 0 to 1
----@param g number 0 to 1
----@param b number 0 to 1
----@param a number 0 to 1
+---Sets the color for the TextStyle.
+---@param r number The red color component (min: `0`, max: `1`).
+---@param g number The green color component (min: `0`, max: `1`).
+---@param b number The blue color component (min: `0`, max: `1`).
+---@param a number The alpha (opacity) component (min: `0`, max: `1`).
+---@usage
+---```
+---style:SetColor(1, 0, 0, 1)
+---```
 function TextStyle:SetColor(r, g, b, a) end
 
----Sets the color by `key` for the TextStyle.
----@param key FONT_COLOR_KEY
+---Sets the color for the TextStyle using a color key.
+---@param key FONT_COLOR_KEY The color key to apply.
+---@usage
+---```
+---style:SetColorByKey("title")
+---```
 function TextStyle:SetColorByKey(key) end
 
----Enables/Disables `ellipsis` for the TextStyle if the text overflows the
----extent.
----@param ellipsis boolean
+---Enables or disables ellipsis for the TextStyle when text overflows its extent.
+---@param ellipsis boolean `true` to enable ellipsis, `false` to disable. (default: `false`)
+---@usage
+---```
+---style:SetEllipsis(true)
+---```
 function TextStyle:SetEllipsis(ellipsis) end
 
----Sets the `fontPath` and `fontSize` of the TextStyle.
----@param fontPath FONT_PATH
----@param fontSize FONT_SIZE
-function TextStyle:SetFont(fontPath, fontSize) end
+---@TODO: IMG_ have fixed size and kind
+---Sets the font path, size, and optional type for the TextStyle.
+---@param fontPath FONT_PATH The path to the font.
+---@param fontSize FONT_SIZE|number The size of the font.
+---@param fontType? FONT_KIND The font type (optional). (default: `FTK_GENERAL`)
+---@usage
+---```
+---style:SetFont(FONT_PATH.COMBAT, FONT_SIZE.XXLARGE)
+---
+------or
+---
+---widget.style:SetFont(FONT_PATH.IMG_NPC_HPBAR, 19, FTK_IMAGETEXT)
+---widget.style:SetFont(FONT_PATH.IMG_ACTION_BAR, 13, FTK_IMAGETEXT)
+---widget.style:SetFont(FONT_PATH.IMG_COMBAT, 60, FTK_IMAGETEXT)
+---```
+function TextStyle:SetFont(fontPath, fontSize, fontType) end
 
----Sets the font `size` of the TextStyle.
----@param size FONT_SIZE
+---Sets the font size for the TextStyle.
+---@param size FONT_SIZE The font size to set.
+---@usage
+---```
+---style:SetFontSize(FONT_SIZE.DEFAULT)
+---```
 function TextStyle:SetFontSize(size) end
 
----Enables/Disables the `outline` of the TextStyle.
----@param outline boolean
+---Enables or disables the outline for the TextStyle.
+---@param outline boolean `true` to enable outline, `false` to disable. (default: `false`)
+---@usage
+---```
+---style:SetOutline(true)
+---```
 function TextStyle:SetOutline(outline) end
 
----Enables/Disables the `shadow` of the TextStyle.
----@param shadow boolean
+---Enables or disables the shadow for the TextStyle.
+---@param shadow boolean `true` to enable shadow, `false` to disable. (default: `false`)
+---@usage
+---```
+---style:SetShadow(true)
+---```
 function TextStyle:SetShadow(shadow) end
 
----Enables/Disables the `snap` of the TextStyle.
----@param snap boolean
+---Enables or disables snapping for the TextStyle.
+---@param snap boolean `true` to enable snapping, `false` to disable.
+---@usage
+---```
+---style:SetSnap(true)
+---```
 function TextStyle:SetSnap(snap) end

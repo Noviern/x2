@@ -24,18 +24,38 @@ UI_BUTTON_PUSHED = 2      -- object/CooldownInventoryButton
 ---@class CooldownInventoryButton: CooldownButton
 local CooldownInventoryButton = {}
 
----TODO:
----@param itemSlot number
+---@TODO: Broken?
+---Sets the bag item slot for the CooldownInventoryButton.
+---@param itemSlot number The item slot index in the bag.
+---@usage
+---```
+---widget:SetBagItemSlot(0)
+---```
 function CooldownInventoryButton:SetBagItemSlot(itemSlot) end
 
----TODO:
----@param itemSlot number
+---@TODO: Broken?
+---Sets the bank item slot for the CooldownInventoryButton.
+---@param itemSlot number The item slot index in the bank.
+---@usage
+---```
+---widget:SetBankItemSlot(0)
+---```
 function CooldownInventoryButton:SetBankItemSlot(itemSlot) end
 
----TODO:
----@param itemSlot number
+---@TODO: Broken?
+---Sets the coffer item slot for the CooldownInventoryButton.
+---@param itemSlot number The item slot index in the coffer.
+---@usage
+---```
+---widget:SetCofferItemSlot(0)
+---```
 function CooldownInventoryButton:SetCofferItemSlot(itemSlot) end
 
----TODO:
----@param itemSlot number
+---@TODO: Broken?
+---Sets the guild bank item slot for the CooldownInventoryButton.
+---@param itemSlot number The item slot index in the guild bank.
+---@usage
+---```
+---widget:SetGuildBankItemSlot(0)
+---```
 function CooldownInventoryButton:SetGuildBankItemSlot(itemSlot) end

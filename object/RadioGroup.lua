@@ -21,70 +21,121 @@ DC_SHIFT_KEY_DOWN = 1  -- object/RadioGroup
 
 ---object/RadioGroup
 ---@class RadioGroup: Widget
+---@field frame? RadioItem[]
 local RadioGroup = {}
 
----Checks the `index` of the RadioGroup.
----@param index number
+---Checks the radio item at the specified index in the RadioGroup.
+---@param index number The index of the radio item to check.
+---@usage
+---```
+---widget:Check(1)
+---```
 function RadioGroup:Check(index) end
 
----Clears out all radio data for the RadioGroup.
+---Clears all radio data from the RadioGroup.
+---@usage
+---```
+---widget:Clear()
+---```
 function RadioGroup:Clear() end
 
----Returns `radioItem` and creates 
----@param dataValue number
----@return RadioItem radioItem
+---Creates and returns a radio item with the specified data value.
+---@param dataValue number The data value for the radio item.
+---@return RadioItem radioItem The created radio item.
 ---@nodiscard
+---@usage
+---```
+---widget:CreateRadioItem(15)
+---```
 function RadioGroup:CreateRadioItem(dataValue) end
 
----Enables/Disables `enable` checking the radio item `index` of the RadioGroup. 
----@param index number
----@param enable boolean
+---Enables or disables checking for the radio item at the specified index.
+---@param index number The index of the radio item.
+---@param enable boolean `true` to enable checking, `false` to disable.
+---@usage
+---```
+---widget:EnableIndex(1, false)
+---```
 function RadioGroup:EnableIndex(index, enable) end
 
----Returns the `checked` count of the RadioGroup.
----@return number checked
+---Retrieves the number of checked radio items in the RadioGroup.
+---@return number checked The count of checked radio items. (default: `-1`)
 ---@nodiscard
+---@usage
+---```
+---local checked = widget:GetChecked()
+---```
 function RadioGroup:GetChecked() end
 
----Returns `checkedData` of the currently checked radio item of the RadioGroup.
----Returns `nil` if no radio items are checked.
----@return number|nil checkedData
+---Retrieves the data value of the currently checked radio item.
+---@return number|nil checkedData The data value of the checked item, or `nil` if none are checked.
+---@nodiscard
+---@usage
+---```
+---local checkedData = widget:GetCheckedData()
+---```
 function RadioGroup:GetCheckedData() end
 
----Returns the `dataValue` for the `index` of the RadioGroup. Returns `nil` if
----the `index` doesnt exist.
----@param index number
----@return number|nil dataValue
+---Retrieves the data value for the specified index in the RadioGroup.
+---@param index number The index of the radio item.
+---@return number|nil dataValue The data value at the index, or `nil` if the index doesn't exist.
 ---@nodiscard
+---@usage
+---```
+---local dataValue = widget:GetDataValue(1)
+---```
 function RadioGroup:GetDataValue(index) end
 
----Returns the `index` by the `dataValue` for the RadioGroup. Returns `-1` if
----`dataValue` doesnt exists.
----@param dataValue number
----@return number index
+---Retrieves the index of the radio item with the specified data value.
+---@param dataValue number The data value to search for.
+---@return number index The index of the radio item, or `-1` if the data value doesn't exist.
 ---@nodiscard
+---@usage
+---```
+---local index = widget:GetIndexByValue(15)
+---```
 function RadioGroup:GetIndexByValue(dataValue) end
 
----Returns `size` of the RadioGroup.
----@return number size
+---Retrieves the total number of radio items in the RadioGroup.
+---@return number size The number of radio items. (default: `0`)
 ---@nodiscard
+---@usage
+---```
+---local size = widget:GetSize()
+---```
 function RadioGroup:GetSize() end
 
----Returns a boolean indicating if `index` is in range of the RadioGroup.
----@param index number
----@return boolean
+---Checks if the specified index is within the valid range of the RadioGroup.
+---@param index number The index to check.
+---@return boolean inRange `true` if the index is in range, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local inRange = widget:IsInRange(1)
+---```
 function RadioGroup:IsInRange(index) end
 
----Releases check on radio items of RadioGroup.
+---Releases the check state on all radio items in the RadioGroup.
+---@usage
+---```
+---widget:ReleaseCheck()
+---```
 function RadioGroup:ReleaseCheck() end
 
----Shows/Hides `show` the `index` of the RadioGroup.
----@param index number
----@param show boolean
+---Shows or hides the radio item at the specified index in the RadioGroup.
+---@param index number The index of the radio item.
+---@param show boolean `true` to show the item, `false` to hide it. (default: `true`)
+---@usage
+---```
+---widget:ShowIndex(1, false)
+---```
 function RadioGroup:ShowIndex(index, show) end
 
----Updates the `data` at `index` of the RadioGroup.
----@param index number
----@param data number
+---Updates the data value at the specified index in the RadioGroup.
+---@param index number The index of the radio item.
+---@param data number The new data value to set.
+---@usage
+---```
+---widget:UpdateValue(1, 10)
+---```
 function RadioGroup:UpdateValue(index, data) end

@@ -20,26 +20,43 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Label
 ---@field style TextStyle
 local Label = {}
 
-
----Returns the inset of the Label.
----@return number left
----@return number top
----@return number right
----@return number bottom
+---Retrieves the inset of the Label.
+---@return number left The left inset. (default: `0`)
+---@return number top The top inset. (default: `0`)
+---@return number right The right inset. (default: `0`)
+---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
+---@usage
+---```
+---local left, top, right, bottom = widget:GetInset()
+---```
 function Label:GetInset() end
 
----Enables/Disables auto resizing of the Label.
----@param resize boolean
+---Enables or disables automatic resizing of the Label.
+---@param resize boolean `true` to enable auto resizing, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:SetAutoResize(true)
+---```
 function Label:SetAutoResize(resize) end
 
----Sets the inset of the Label.
----@param left number
----@param top number
----@param right number
----@param bottom number
+---Sets the inset for the Label.
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---widget:SetInset(10, 10, 10, 10)
+---```
 function Label:SetInset(left, top, right, bottom) end
 
----Enables/Disables number formatting for `SetText` on a Label if placed before.
----@param only boolean
+---Enables or disables number formatting for the Label's text (must be set before `widget:SetText`).
+---@param only boolean `true` to restrict to numbers only, `false` to allow any text. (default: `false`)
+---@usage
+---```
+---widget:SetNumberOnly(true)
+---widget:SetText("Hello123")
+------He,llo,123
+---```
 function Label:SetNumberOnly(only) end

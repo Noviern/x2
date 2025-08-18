@@ -46,7 +46,7 @@ local UNIT = {
   TARGET       = "target",
   TARGETTARGET = "targettarget",
   WATCHTARGET  = "watchtarget",
-  TEAM1        = "team1",   -- team = the current raid/can be co raid
+  TEAM1        = "team1", -- team = the current raid/can be co raid
   TEAM2        = "team2",
   TEAM3        = "team3",
   TEAM4        = "team4",
@@ -268,7 +268,7 @@ function X2Unit:GetCurrentZoneGroup() end
 
 ---Retrieves a list of up to three target ability templates for the specified target if in render range.
 ---@param target UNIT The target unit.
----@return TargetAbilityTemplate[]|nil targetAbilityTemplates A table of ability templates, or nil if not in range.
+---@return TargetAbilityTemplate[]|nil targetAbilityTemplates A table of ability templates, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -279,7 +279,7 @@ function X2Unit:GetCurrentZoneGroup() end
 function X2Unit:GetTargetAbilityTemplates(target) end
 
 ---Retrieves the unit ID of the current target if in render range.
----@return string|nil unitId The target's unit ID, or nil if not in range.
+---@return string|nil unitId The target's unit ID, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -289,7 +289,7 @@ function X2Unit:GetTargetUnitId() end
 
 ---Retrieves the unit ID for the specified unit if in render range.
 ---@param unit UNIT The unit to query.
----@return string|nil unitId The unit ID, or nil if not in range.
+---@return string|nil unitId The unit ID, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -300,7 +300,7 @@ function X2Unit:GetUnitId(unit) end
 
 ---Retrieves unit information for the specified unit ID if in render range.
 ---@param unitId string The unit ID .
----@return UnitInfo|nil unitInfo The unit information, or nil if not in range.
+---@return UnitInfo|nil unitInfo The unit information, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -312,7 +312,7 @@ function X2Unit:GetUnitInfoById(unitId) end
 
 ---Retrieves the name of the unit for the specified unit ID if in render range.
 ---@param unitId string The unit ID.
----@return string|nil unitName The unit name, or nil if not in range.
+---@return string|nil unitName The unit name, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -323,9 +323,9 @@ function X2Unit:GetUnitNameById(unitId) end
 
 ---Retrieves the screen position (x, y, z) of the specified unit if in render range.
 ---@param unit UNIT The unit to query.
----@return number|nil x The x-coordinate, or nil if not in range.
----@return number|nil y The y-coordinate, or nil if not in range.
----@return number|nil z The z-coordinate, or nil if not in range.
+---@return number|nil x The x-coordinate, or `nil` if not in range.
+---@return number|nil y The y-coordinate, or `nil` if not in range.
+---@return number|nil z The z-coordinate, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -337,9 +337,9 @@ function X2Unit:GetUnitScreenPosition(unit) end
 ---Retrieves the world position (x, y, z) and angle of the specified unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@param isLocal boolean Whether to use local coordinates.
----@return number|nil x The x-coordinate, or nil if not in range.
----@return number|nil y The y-coordinate, or nil if not in range.
----@return number|nil z The z-coordinate, or nil if not in range.
+---@return number|nil x The x-coordinate, or `nil` if not in range.
+---@return number|nil y The y-coordinate, or `nil` if not in range.
+---@return number|nil z The z-coordinate, or `nil` if not in range.
 ---@return number|nil angle The unit's angle.
 ---@nodiscard
 ---@usage
@@ -376,7 +376,7 @@ function X2Unit:UnitBuffCount(unit) end
 ---Retrieves the buff tooltip for the specified buff index of the unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The buff index.
----@return BuffTooltip|nil unitBuffTooltip The buff tooltip, or nil if not in range.
+---@return BuffTooltip|nil unitBuffTooltip The buff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -388,7 +388,7 @@ function X2Unit:UnitBuffTooltip(unit, buffIndex) end
 
 ---Retrieves casting information for the specified unit if in render range.
 ---@param unit UNIT The unit to query.
----@return CastingInfo|nil unitCastingInfo The casting information, or nil if not in range.
+---@return CastingInfo|nil unitCastingInfo The casting information, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -425,7 +425,7 @@ function X2Unit:UnitDeBuffCount(unit) end
 ---Retrieves the debuff tooltip for the specified buff index of the unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index.
----@return BuffTooltip|nil unitDebuffTooltip The debuff tooltip, or nil if not in range.
+---@return BuffTooltip|nil unitDebuffTooltip The debuff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -437,7 +437,7 @@ function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex) end
 
 ---Retrieves the distance between the player and the specified unit's boundary box if in render range.
 ---@param unit UNIT The unit to query.
----@return UnitDistance|nil unitDistance The distance information, or nil if not in range.
+---@return UnitDistance|nil unitDistance The distance information, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```
@@ -450,7 +450,7 @@ function X2Unit:UnitDistance(unit) end
 ---Retrieves the gear score of the specified unit or a boolean indicating if the unit exists.
 ---@param unit UNIT The unit to query.
 ---@param comma boolean Whether to include a comma (does not appear to work).
----@return string|boolean result The gear score as a string, or false if the unit does not exist.
+---@return string|boolean result The gear score as a string, or `false` if the unit does not exist.
 ---@nodiscard
 ---@usage
 ---```
@@ -461,7 +461,7 @@ function X2Unit:UnitGearScore(unit, comma) end
 
 ---Retrieves the health of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return string|nil unitHealth The unit's health, or nil if not found.
+---@return string|nil unitHealth The unit's health, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -490,7 +490,7 @@ function X2Unit:UnitHealthInfo(unit) end
 ---@nodiscard
 ---@usage
 ---```
----local unitHiddenBuffInfo = 
+---local unitHiddenBuffInfo =
 ---```
 ---@see UNIT
 ---@see BuffInfo
@@ -510,7 +510,7 @@ function X2Unit:UnitHiddenBuffCount(unit) end
 ---Retrieves the hidden buff tooltip for the specified buff index of the unit if it exists.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The hidden buff index.
----@return BuffTooltip|nil unitHiddenBuffTooltip The hidden buff tooltip, or nil if not found.
+---@return BuffTooltip|nil unitHiddenBuffTooltip The hidden buff tooltip, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -522,7 +522,7 @@ function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex) end
 
 ---Retrieves the level of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return number|nil unitLevel The unit's level 1 to 55, or nil if not found.
+---@return number|nil unitLevel The unit's level 1 to 55, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -533,7 +533,7 @@ function X2Unit:UnitLevel(unit) end
 
 ---Retrieves the current mana of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return string|nil unitCurrentMana The unit's current mana, or nil if not found.
+---@return string|nil unitCurrentMana The unit's current mana, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -557,7 +557,7 @@ function X2Unit:UnitManaInfo(unit) end
 
 ---Retrieves the maximum health of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return string|nil unitMaxHealth The unit's maximum health, or nil if not found.
+---@return string|nil unitMaxHealth The unit's maximum health, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -568,7 +568,7 @@ function X2Unit:UnitMaxHealth(unit) end
 
 ---Retrieves the maximum mana of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return string|nil unitMaxMana The unit's maximum mana, or nil if not found.
+---@return string|nil unitMaxMana The unit's maximum mana, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -579,7 +579,7 @@ function X2Unit:UnitMaxMana(unit) end
 
 ---Retrieves the name of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return string|nil unitName The unit's name, or nil if not found.
+---@return string|nil unitName The unit's name, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -590,7 +590,7 @@ function X2Unit:UnitName(unit) end
 
 ---Retrieves the name with world information of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return string|nil unitNameWithWorld The unit's name with world info, or nil if not found.
+---@return string|nil unitNameWithWorld The unit's name with world info, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -614,7 +614,7 @@ function X2Unit:UnitRemovableDebuff(unit, deBuffIndex) end
 
 ---Retrieves the number of removable debuffs on the specified unit if in render range.
 ---@param unit UNIT The unit to query.
----@return number|nil removableDebuffCount The number of removable debuffs, or nil if not in range.
+---@return number|nil removableDebuffCount The number of removable debuffs, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```

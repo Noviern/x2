@@ -143,7 +143,7 @@ X2Achievement = {}          -- api/X2Achievement
 ---Adds an achievement to the ambitions category under the specified kind.
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
 ---@param achievementType number The type (id) of achievement to add.
----@return boolean success True if the achievement was added successfully, false otherwise.
+---@return boolean success `true` if the achievement was added successfully, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -154,7 +154,7 @@ function X2Achievement:AddTracingAchievement(achievementKind, achievementType) e
 
 ---Retrieves achievement information if the specified type exists.
 ---@param achievementType number The type (id) of achievement to query.
----@return AchievementInfo|nil achievementInfo The achievement information, or nil if not found.
+---@return AchievementInfo|nil achievementInfo The achievement information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -177,7 +177,8 @@ function X2Achievement:GetAchievementInfo(achievementType) end
 ---@see ACHIEVEMENT_KIND
 ---@see ACHIEVEMENT_FILTER
 function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType,
-                                              achievementFilter) end
+                                              achievementFilter)
+end
 
 ---Retrieves the name of the specified achievement type.
 ---@param achievementType number The type (id) of achievement to query.
@@ -244,11 +245,12 @@ function X2Achievement:GetCategories(achievementKind) end
 ---@see ACHIEVEMENT_KIND
 ---@see ACHIEVEMENT_FILTER
 function X2Achievement:GetCategoryCount(achievementKind, categoryType,
-                                        subCategoryType, achievementFilter) end
+                                        subCategoryType, achievementFilter)
+end
 
 ---Retrieves subcategory information if the specified subcategory exists.
 ---@param subCategory number The subcategory to query.
----@return SubcategoryInfo|nil subcategoryInfo The subcategory information, or nil if not found.
+---@return SubcategoryInfo|nil subcategoryInfo The subcategory information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -281,7 +283,7 @@ function X2Achievement:GetTodayAssignmentGoal() end
 ---Retrieves assignment information for the specified type and index.
 ---@param todayType TODAY_TYPE The type of today’s assignments.
 ---@param index number The index of the assignment.
----@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or nil if not found.
+---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -294,7 +296,7 @@ function X2Achievement:GetTodayAssignmentInfo(todayType, index) end
 ---Retrieves assignment information for changing the specified type and index.
 ---@param todayType TODAY_TYPE The type of today’s assignments.
 ---@param index number The index of the assignment.
----@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or nil if not found.
+---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -331,7 +333,7 @@ function X2Achievement:GetTodayAssignmentStatus() end
 ---complete.
 ---@param todayType TODAY_TYPE The type of today’s assignments.
 ---@param questType number The quest ID to check.
----@return boolean todayAssignmentQuest True if the quest is in the list and not complete, false otherwise.
+---@return boolean todayAssignmentQuest `true` if the quest is in the list and not complete, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -343,7 +345,7 @@ function X2Achievement:IsTodayAssignmentQuest(todayType, questType) end
 ---Checks if the specified achievement type in the given kind is being traced.
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
 ---@param achievementType number The type (id) of achievement to check.
----@return boolean tracingAchievement True if the achievement is being traced, false otherwise.
+---@return boolean tracingAchievement `true` if the achievement is being traced, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```

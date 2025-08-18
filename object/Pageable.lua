@@ -19,34 +19,72 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Pageable
 ---@class Pageable: Widget
 local Pageable = {}
 
----TODO:
----Adds a `widget` to the `pageIndex` of Pageable.
----@param widget Widget
----@param pageIndex number
+---Adds a widget to the specified page of the Pageable.
+---@param widget Widget The widget to add.
+---@param pageIndex number The index of the page to add the widget to.
+---@usage
+---```
+---local page1 = widget:CreateChildWidget("textbox", "page1", 0, true)
+---page1:SetText("page1")
+---page1:AddAnchor("TOPLEFT", widget, 0, 0)
+---page1:AddAnchor("BOTTOMRIGHT", widget, 0, 0)
+---
+---widget:AddWidgetToPage(page1, 1)
+---```
 function Pageable:AddWidgetToPage(widget, pageIndex) end
 
----Changes the page `index` of Pageable.
----@param index number
+---Changes the current page of the Pageable to the specified index.
+---@param index number The page index to switch to.
+---@usage
+---```
+---widget:ChangePage(2)
+---```
 function Pageable:ChangePage(index) end
 
----Returns `currentPageIndex` of the Pageable.
----@return number currentPageIndex
+---Retrieves the current page index of the Pageable.
+---@return number currentPageIndex The current page index. (default: `1`, max: `widget:GetTotalPage()`)
+---@nodiscard
+---@usage
+---```
+---local currentPageIndex = widget:GetCurrentPageIndex()
+---```
 function Pageable:GetCurrentPageIndex() end
 
----Returns `totalPage` of the Pageable.
----@return number totalPage
+---Retrieves the total number of pages in the Pageable.
+---@return number totalPage The total number of pages.
+---@nodiscard
+---@usage
+---```
+---local totalPage = widget:GetTotalPage()
+---```
 function Pageable:GetTotalPage() end
 
----Goes to the next page of the Pageable.
+---Navigates to the next page of the Pageable.
+---@usage
+---```
+---widget:NextPage()
+---```
 function Pageable:NextPage() end
 
----Goes to the previous page of the Pageable.
+---Navigates to the previous page of the Pageable.
+---@usage
+---```
+---widget:PrevPage()
+---```
 function Pageable:PrevPage() end
 
----Sets the current page `num` of the Pageable.
----@param num number
+---Sets the current page index of the Pageable.
+---@param num number The page index to set.
+---@usage
+---```
+---widget:SetCurrentPageIndex(2)
+---```
 function Pageable:SetCurrentPageIndex(num) end
 
----Sets the page count `num` of the Pageable.
----@param num number
+---Sets the total number of pages for the Pageable. This must be set before `Pageable:AddWidgetToPage`.
+---@param num number The number of pages to set.
+---@usage
+---```
+---widget:SetPageCount(2)
+---```
 function Pageable:SetPageCount(num) end

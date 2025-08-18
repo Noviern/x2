@@ -48,7 +48,7 @@ X2Craft = {}                        -- api/X2Craft
 ---Retrieves the base craft information for the specified craft type, excluding material information.
 ---@param craftType number The type of craft to query.
 ---@param doodadId? number Optional doodad ID.
----@return CraftBaseInfo|nil craftBaseInfo The base craft information, or nil if not found.
+---@return CraftBaseInfo|nil craftBaseInfo The base craft information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -65,7 +65,7 @@ function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end
 
 ---Retrieves a list containing craft product information.
 ---@param craftType number The type of craft to query.
----@return CraftProductInfo[]|nil craftProductInfo A table of craft product info, or nil if not found.
+---@return CraftProductInfo[]|nil craftProductInfo A table of craft product info, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```

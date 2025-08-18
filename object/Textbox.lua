@@ -20,84 +20,144 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Textbox
 ---@field style TextStyle
 local Textbox = {}
 
----Returns the inset for the Textbox.
----@return number left
----@return number top
----@return number right
----@return number bottom
+---Retrieves the inset of the Textbox.
+---@return number left The left inset. (default: `0`)
+---@return number top The top inset. (default: `0`)
+---@return number right The right inset. (default: `0`)
+---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
+---@usage
+---```
+---local left, top, right, bottom = widget:GetInset()
+---```
 function Textbox:GetInset() end
 
----Returns the `lineCount` of the Textbox.
----@return number lineCount
+---Retrieves the number of lines in the Textbox.
+---@return number lineCount The number of lines. (default: `0`)
 ---@nodiscard
+---@usage
+---```
+---local lineCount = widget:GetLineCount()
+---```
 function Textbox:GetLineCount() end
 
----Returns the `lineLength` in pixels of the `lineNum` in the Textbox.
----@param lineNum number
----@return number lineLength
+---@TODO: Broken?
+---Retrieves the length in pixels of the specified line in the Textbox.
+---@param lineNum number The line number.
+---@return number lineLength The length of the line in pixels. (default: `0`)
 ---@nodiscard
+---@usage
+---```
+---local lineLegnth = widget:GetLineLength(1)
+---```
 function Textbox:GetLineLength(lineNum) end
 
----TODO: This doesnt match any of the `GetLineLength`
----@return number
+---@TODO: Verify why this doesn't match GetLineLength results. BRoken?
+---Retrieves the width of the longest line in the Textbox.
+---@return number longestLineWidth The width of the longest line. (default: `0`)
 ---@nodiscard
+---@usage
+---```
+---local longestLineWidth = widget:GetLongestLineWidth()
+---```
 function Textbox:GetLongestLineWidth() end
 
----Returns the `textHeight` of the Textbox.
----@return number textHeight
+---@TODO: Broken? Currently its adding the height of each character and returning that.
+---Retrieves the total text height of the Textbox.
+---@return number textHeight The total text height. (default: `-1`)
 ---@nodiscard
+---@usage
+---```
+---local textHeight = widget:GetTextHeight()
+---```
 function Textbox:GetTextHeight() end
 
----TODO: I think this is broken? I only ever get 0 back.
----@return number
+---@TODO: Investigate why this always returns 0.
+---Retrieves the text length of the Textbox.
+---@return number textLength The text length. (default: `0`)
 ---@nodiscard
+---@usage
+---```
+---local textLength = widget:GetTextLength()
+---```
 function Textbox:GetTextLength() end
 
----Enables/Disables automatic resizing of the Textbox.
----@param resize boolean default is false.
+---Enables or disables automatic resizing of the Textbox.
+---@param resize boolean `true` to enable auto resizing, `false` to disable (default: `false`).
+---@usage
+---```
+---widget:SetAutoResize(true)
+---```
 function Textbox:SetAutoResize(resize) end
 
----Enable/Disables automatic word wrap for the Textbox.
----@param wrap boolean default is true
+---Enables or disables automatic word wrapping for the Textbox.
+---@param wrap boolean `true` to enable word wrap, `false` to disable (default: `true`).
+---@usage
+---```
+---widget:SetAutoWordwrap(false)
+---```
 function Textbox:SetAutoWordwrap(wrap) end
 
 ---Sets the inset for the Textbox.
----@param left number
----@param top number
----@param right number
----@param bottom number
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---widget:SetInset(10, 10, 10, 10)
+---```
 function Textbox:SetInset(left, top, right, bottom) end
 
----Sets the color of the `StrikeThrough` and `Underline` for the Textbox.
----@param r number
----@param g number
----@param b number
----@param a number
+---Sets the color for the strikethrough and underline of the Textbox.
+---@param r number The red color component (min: `0`, max: `1`).
+---@param g number The green color component (min: `0`, max: `1`).
+---@param b number The blue color component (min: `0`, max: `1`).
+---@param a number The alpha (opacity) component (min: `0`, max: `1`).
+---@usage
+---```
+---widget:SetLineColor(1, 0, 0, 1)
+---```
 function Textbox:SetLineColor(r, g, b, a) end
 
----Sets the `height` of the `StrikeThrough` and `Underline` for the Textbox.
----@param height number
+---Sets the height of the strikethrough and underline for the Textbox.
+---@param height number The height of the strikethrough and underline.
+---@usage
+---```
+---widget:SetLineHeight(15)
+---```
 function Textbox:SetLineHeight(height) end
 
----Sets the line `space` for the Textbox.
----@param space TEXTBOX_LINE_SPACE|number
+---Sets the line spacing for the Textbox.
+---@param space TEXTBOX_LINE_SPACE|number The line spacing value.
+---@usage
+---```
+---widget:SetLineSpace(15)
+---```
 function Textbox:SetLineSpace(space) end
 
----Enables/Disables strikethrough `visible` of the Textbox.
----@param visible boolean
+---Enables or disables strikethrough visibility for the Textbox.
+---@param visible boolean `true` to show strikethrough, `false` to hide. (default: `false`)
+---@usage
+---```
+---widget:SetStrikeThrough(true)
+---```
 function Textbox:SetStrikeThrough(visible) end
 
----Sets `text` for the Textbox.
----@param text string
-function Textbox:SetText(text) end
-
----Sets the `initWidth` and `offset` for `text` of the Textbox.
----@param initWidth number
----@param text string
----@param offset number
+---Sets the initial width, text, and offset for the Textbox.
+---@param initWidth number The initial width.
+---@param text string The text to set.
+---@param offset number The offset for the text.
+---@usage
+---```
+---widget:SetTextAutoWidth(1000, "Archerage.to - the first ArcheAge Private Server", 10)
+---```
 function Textbox:SetTextAutoWidth(initWidth, text, offset) end
 
----Enables/Disables underline `visible` for the Textbox.
----@param visible boolean
+---Enables or disables underline visibility for the Textbox.
+---@param visible boolean `true` to show underline, `false` to hide. (default: `false`)
+---@usage
+---```
+---widget:SetUnderLine(true)
+---```
 function Textbox:SetUnderLine(visible) end

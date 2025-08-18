@@ -125,7 +125,7 @@ function X2Auction:GetSearchedItemCount() end
 ---Retrieves item information for the specified index on the current auction
 ---house search page.
 ---@param idx number The item index on the current page (1 to 9).
----@return ItemInfo|nil itemInfo The item information, or nil if not found.
+---@return ItemInfo|nil itemInfo The item information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -168,8 +168,9 @@ function X2Auction:GetSearchedItemTotalCount() end
 ---@see AUCTION_CATEGORY
 ---@usage
 ---```
----
+---X2Auction:SearchAuctionArticle(1, 0, 0, 13, 0, false, "Erenor", "0", "0")
 ---```
 function X2Auction:SearchAuctionArticle(page, minLevel, maxLevel, grade, category,
                                         exactMatch, keywords, minDirectPriceStr,
-                                        maxDirectPriceStr) end
+                                        maxDirectPriceStr)
+end

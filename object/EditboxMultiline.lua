@@ -19,51 +19,88 @@ DC_SHIFT_KEY_DOWN = 1  -- object/EditboxMultiline
 ---@class EditboxMultiline: Widget, Editboxbase
 local EditboxMultiline = {}
 
----Clears the EditboxMultiline.
+---Clears all text in the EditboxMultiline.
 function EditboxMultiline:Clear() end
 
----Returns `cursorPosX` for the EditboxMultiline.
----@return number cursorPosX
+---Retrieves the x-coordinate of the cursor in the EditboxMultiline.
+---@return number cursorPosX The x-coordinate of the cursor.
 ---@nodiscard
+---@usage
+---```
+---local cursorPosX = editboxMultiline:GetCursorPosX()
+---```
 function EditboxMultiline:GetCursorPosX() end
 
----Returns `cursorPosY` for the EditboxMultiline.
----@return number cursorPosY
+---Retrieves the y-coordinate of the cursor in the EditboxMultiline.
+---@return number cursorPosY The y-coordinate of the cursor.
 ---@nodiscard
+---@usage
+---```
+---local cursorPosY = editboxMultiline:GetCursorPosY()
+---```
 function EditboxMultiline:GetCursorPosY() end
 
----Returns `lineCount` for the EditboxMultiline.
----@return number lineCount
+---Retrieves the number of lines in the EditboxMultiline.
+---@return number lineCount The number of lines.
 ---@nodiscard
+---@usage
+---```
+---local lineCount = editboxMultiline:GetLineCount()
+---```
 function EditboxMultiline:GetLineCount() end
 
----Returns `lineHeight` for the EditboxMultiline.
----@return number lineHeight
+---Retrieves the height of a single line in the EditboxMultiline.
+---@return number lineHeight The height of a line.
 ---@nodiscard
+---@usage
+---```
+---local lineHeight = editboxMultiline:GetLineHeight()
+---```
 function EditboxMultiline:GetLineHeight() end
 
----Returns `text` for the EditboxMultiline.
----@return string text
+---Retrieves the text content of the EditboxMultiline.
+---@return string text The text content.
 ---@nodiscard
+---@usage
+---```
+---local text = editboxMultiline:GetText()
+---```
 function EditboxMultiline:GetText() end
 
----Returns `textHeight` for the EditboxMultiline.
----@return number textHeight
+---@TODO: Is this broken similar to Textbox:GetTextHeight?
+---Retrieves the total height of the text in the EditboxMultiline.
+---@return number textHeight The total text height.
 ---@nodiscard
+---@usage
+---```
+---local textHeight = editboxMultiline:GetTextHeight()
+---```
 function EditboxMultiline:GetTextHeight() end
 
----Returns `textLength` for the EditboxMultiline.
----@return number textLength
+---Retrieves the length of the text in the EditboxMultiline.
+---@return number textLength The length of the text.
 ---@nodiscard
+---@usage
+---```
+---local textLength = editboxMultiline:GetTextLength()
+---```
 function EditboxMultiline:GetTextLength() end
 
 ---Sets the inset for the EditboxMultiline.
----@param left number
----@param top number
----@param right number
----@param bottom number
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---editboxMultiline:SetInset(10, 10, 10, 10)
+---```
 function EditboxMultiline:SetInset(left, top, right, bottom) end
 
----Sets the line `space` for the EditboxMultiline.
----@param space number
+---Sets the line spacing for the EditboxMultiline.
+---@param space number The line spacing value.
+---@usage
+---```
+---editboxMultiline:SetLineSpace(2)
+---```
 function EditboxMultiline:SetLineSpace(space) end

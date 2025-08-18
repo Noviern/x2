@@ -1,232 +1,494 @@
 ---@meta _
 
+---@class SEXTANT
+---@field deg_lat number
+---@field deg_long number
+---@field latitude "W"|"N"|"E"|"S"
+---@field longitude "W"|"N"|"E"|"S"
+---@field min_lat number
+---@field min_long number
+---@field sec_lat number
+---@field sec_long number
+
+---@enum PING_TYPE
+local PING_TYPE = {
+  PING   = 1,
+  ENEMY  = 2,
+  ATTACK = 3,
+  LINE   = 4,
+  ERASER = 5,
+}
+
 ---@class Map
 local Map = {}
 
----TODO:
----@param type number
----@param id number
+---@TODO: only saw type 0 1
+---Adds quest information to the map with the specified type and ID.
+---@param type number The quest type.
+---@param id number The quest ID.
+---@usage
+---```
+---widget:AddGivenQuestInfo(0, 52373)
+---```
 function Map:AddGivenQuestInfo(type, id) end
 
----TODO:
----@param qType number
+---Adds notification quest information to the map.
+---@param qType number The quest type.
+---@usage
+---```
+---widget:AddNotifyQuestInfo(9148)
+---```
 function Map:AddNotifyQuestInfo(qType) end
 
----TODO:
+---Clears all information displayed on the map.
+---@usage
+---```
+---widget:ClearAllInfo()
+---```
 function Map:ClearAllInfo() end
 
----TODO:
+---Clears boss telescope information from the map.
+---@usage
+---```
+---widget:ClearBossTelescopeInfo()
+---```
 function Map:ClearBossTelescopeInfo() end
 
----TODO:
+---Clears carrying backpack slave information from the map.
+---@usage
+---```
+---widget:ClearCarryingBackpackSlaveInfo()
+---```
 function Map:ClearCarryingBackpackSlaveInfo() end
 
----TODO:
+---Clears completed quest information from the map.
+---@usage
+---```
+---widget:ClearCompletedQuestInfo()
+---```
 function Map:ClearCompletedQuestInfo() end
 
----TODO:
+---Clears corpse information from the map.
+---@usage
+---```
+---widget:ClearCorpseInfo()
+---```
 function Map:ClearCorpseInfo() end
 
----TODO:
+---Clears doodad information from the map.
+---@usage
+---```
+---widget:ClearDoodadInfo()
+---```
 function Map:ClearDoodadInfo() end
 
----TODO:
+---Clears fish school information from the map.
+---@usage
+---```
+---widget:ClearFishSchoolInfo()
+---```
 function Map:ClearFishSchoolInfo() end
 
----TODO:
+---Clears static given quest information from the map.
+---@usage
+---```
+---widget:ClearGivenQuestStaticInfo()
+---```
 function Map:ClearGivenQuestStaticInfo() end
 
----TODO:
+---Clears housing information from the map.
+---@usage
+---```
+---widget:ClearHousingInfo()
+---```
 function Map:ClearHousingInfo() end
 
----TODO:
+---Clears player-owned slave information from the map.
+---@usage
+---```
+---widget:ClearMySlaveInfo()
+---```
 function Map:ClearMySlaveInfo() end
 
----TODO:
+---Clears notification quest information from the map.
+---@usage
+---```
+---widget:ClearNotifyQuestInfo()
+---```
 function Map:ClearNotifyQuestInfo() end
 
----TODO:
+---Clears NPC information from the map.
+---@usage
+---```
+---widget:ClearNpcInfo()
+---```
 function Map:ClearNpcInfo() end
 
----TODO:
+---Clears ship telescope information from the map.
+---@usage
+---```
+---widget:ClearShipTelescopeInfo()
+---```
 function Map:ClearShipTelescopeInfo() end
 
----TODO:
+---Clears transfer telescope information from the map.
+---@usage
+---```
+---widget:ClearTransferTelescopeInfo()
+---```
 function Map:ClearTransferTelescopeInfo() end
 
----TODO:
----@return table
+---Retrieves the player's sextant location on the map.
+---@return SEXTANT playerSextant The player's sextant data.
 ---@nodiscard
+---@usage
+---```
+---local playerSextant = widget:GetPlayerSextants()
+---```
+---@see SEXTANT
 function Map:GetPlayerSextants() end
 
----TODO:
----@return number
----@return number
+---Retrieves the player's view position on the map.
+---@return number playerViewX The player's x location on the map.
+---@return number playerViewY The player's y location on the map.
 ---@nodiscard
+---@usage
+---```
+---local playerViewX, playerViewY = widget:GetPlayerViewPos()
+---```
 function Map:GetPlayerViewPos() end
 
----TODO:
----@return table
+---Retrieves the tooltip controller for the map.
+---@return Window tooltipController The tooltip controller window.
 ---@nodiscard
+---@usage
+---```
+---local tooltipController = widget:GetTooltipController()
+---```
 function Map:GetTooltipController() end
 
----TODO:
-function Map:InitMapData() end
-
----TODO:
----@return boolean
+---Checks if the map widget is shown.
+---@return boolean widgetShown `true` if the map widget is visible, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local widgetShown = widget:MapWidgetShown()
+---```
 function Map:MapWidgetShown() end
 
----TODO:
+---@TODO: Clarify functionality of left click action.
+---Triggers a left-click action on the map.
+---@usage
+---```
+---widget:OnLeftClick()
+---```
 function Map:OnLeftClick() end
 
----TODO:
+---Reloads all information displayed on the map.
+---@usage
+---```
+---widget:ReloadAllInfo()
+---```
 function Map:ReloadAllInfo() end
 
----TODO:
----@param index number
+---Removes boss telescope information at the specified index.
+---@param index number The index of the boss telescope info to remove.
 function Map:RemoveBossTelescopeInfo(index) end
 
----TODO:
----@param index number
+---Removes carrying backpack slave information at the specified index.
+---@param index number The index of the backpack slave info to remove.
 function Map:RemoveCarryingBackpackSlaveInfo(index) end
 
----TODO:
----@param index number
+---Removes fish school information at the specified index.
+---@param index number The index of the fish school info to remove.
 function Map:RemoveFishSchoolInfo(index) end
 
----TODO:
----@param type number
----@param id any
+---Removes given quest information from the map.
+---@param type number The quest type.
+---@param id number The quest ID.
+---@usage
+---```
+---widget:RemoveGivenQuestInfo(0, 52373)
+---```
 function Map:RemoveGivenQuestInfo(type, id) end
 
----TODO:
----@param qType number
+---Removes notification quest information from the map.
+---@param qType number The quest type.
+---@usage
+---```
+---widget:RemoveNotifyQuestInfo(9148)
+---```
 function Map:RemoveNotifyQuestInfo(qType) end
 
----TODO:
----@param index number
+---Removes ship telescope information at the specified index.
+---@param index number The index of the ship telescope info to remove.
 function Map:RemoveShipTelescopeInfo(index) end
 
----TODO:
----@param index number
+---Removes transfer telescope information at the specified index.
+---@param index number The index of the transfer telescope info to remove.
 function Map:RemoveTransferTelescopeInfo(index) end
 
----TODO:
----@param isNull boolean
+---@TODO: Clarify purpose of cursor reset.
+---Resets the map cursor.
+---@param isNull boolean `true` to set cursor to null, `false` otherwise.
+---@usage
+---```
+---widget:ResetCursor(false)
+---```
 function Map:ResetCursor(isNull) end
 
----TODO:
----@param ratio number
+---Sets the expansion ratio for the map.
+---@param ratio number The expansion ratio.
+---@usage
+---```
+---widget:SetExpandRatio(1.5)
+---```
 function Map:SetExpandRatio(ratio) end
 
----TODO:
----@param clicked boolean
----@param pingType number
+---Sets the ping button state and type for the map.
+---@param clicked boolean `true` if the ping button is clicked, `false` otherwise.
+---@param pingType PING_TYPE The type of ping.
+---@usage
+---```
+---widget:SetPingBtn(true, 1)
+---```
+---@see PING_TYPE
 function Map:SetPingBtn(clicked, pingType) end
 
----TODO:
----@param widget table
----@param drawable table
----@param pingType number
+---@TODO: sets the drawable onto the widget for the pingType, widget:CreateDrawable sets the opacity some how, i tried frame:CreateDrawable and the ping was darker
+---Sets the ping widget and drawable for the specified ping type on the map.
+---@param widget Widget The widget for the ping.
+---@param drawable DrawableDDS The drawable for the ping.
+---@param pingType PING_TYPE The type of ping.
+---@usage
+---```
+---local frame = widget:CreateChildWidget("emptywidget", "ping", 0, true)
+---frame:SetExtent(24, 24)
+---frame:Show(false)
+---
+---local bg = widget:CreateDrawable(TEXTURE_PATH.MAP_ICON, "my_ping", "overlay")
+---bg:AddAnchor("CENTER", frame, 0, 0)
+---frame.bg = bg
+---bg:SetVisible(false)
+---
+---widget:SetPingWidget(frame, frame.bg, 1)
+---
+---function frame:OnShow()
+---  frame.bg:SetVisible(true)
+---end
+---
+---frame:SetHandler("OnShow", frame.OnShow)
+---function frame:OnHide()
+---  frame.bg:SetVisible(false)
+---end
+---
+---frame:SetHandler("OnHide", frame.OnHide)
+---```
+---@see Widget
+---@see DrawableDDS
+---@see PING_TYPE
 function Map:SetPingWidget(widget, drawable, pingType) end
 
----TODO:
----@param player any
+---Sets the player's icon drawable on the map.
+---@param player DrawableDDS The drawable for the player icon.
+---@usage
+---```
+---local playerDrawable = widget:CreateDrawable("ui/map/icon/player_cursor.dds", "player_cursor", "overlay")
+---widget:SetPlayerDrawable(playerDrawable)
+---```
+---@see DrawableDDS
 function Map:SetPlayerDrawable(player) end
 
----TODO:
----@param widget table
----@param drawable table
----@param index number
+---Sets the skill effect widget and drawable for the specified index on the map.
+---@param widget Widget The widget for the skill effect.
+---@param drawable ImageDrawable The drawable for the skill effect.
+---@param index number The index of the skill effect.
+---@see Widget
+---@see ImageDrawable
 function Map:SetSkillEffectWidget(widget, drawable, index) end
 
----TODO:
----@param objColor string
----@param nickColor string
+---@TODO: turn "|cFF000000" into a alias?
+---Sets the tooltip colors for objects and nicknames on the map.
+---@param objColor "|cFF000000"|string The hex color for objects (alpha, red, blue, green).
+---@param nickColor "|cFF000000"|string The hex color for nicknames (alpha, red, blue, green).
+---@usage
+---```
+---widget:SetTooltipColor("|cFF000000", "|cFF000000")
+---```
 function Map:SetTooltipColor(objColor, nickColor) end
 
----TODO:
----@param x number
----@param y number
----@param z number
----@param radius number
----@param index number
+---Shows a skill map effect at the specified coordinates and radius.
+---@param x number The x-coordinate.
+---@param y number The y-coordinate.
+---@param z number The z-coordinate.
+---@param radius number The radius of the effect.
+---@param index number The index of the effect.
 function Map:ShowSkillMapEffect(x, y, z, radius, index) end
 
----TODO:
----@param index number
----@param qType number
----@param isStart boolean
+---Starts or stops a notification quest effect on the map.
+---@param index number The index of the quest effect.
+---@param qType number The quest type.
+---@param isStart boolean `true` to start the effect, `false` to stop.
 function Map:StartNotifyQuestEffect(index, qType, isStart) end
 
----TODO:
+---Updates the anchor points for all drawables on the map.
+---@usage
+---```
+---widget:UpdateAllDrawableAnchor()
+---```
 function Map:UpdateAllDrawableAnchor() end
 
----TODO:
+---Updates the boss telescope area on the map.
+---@usage
+---```
+---widget:UpdateBossTelescopeArea()
+---```
 function Map:UpdateBossTelescopeArea() end
 
----TODO:
+---Updates boss telescope information on the map.
+---@usage
+---```
+---widget:UpdateBossTelescopeInfo()
+---```
 function Map:UpdateBossTelescopeInfo() end
 
----TODO:
+---Updates carrying backpack slave information on the map.
+---@usage
+---```
+---widget:UpdateCarryingBackpackSlaveInfo()
+---```
 function Map:UpdateCarryingBackpackSlaveInfo() end
 
----TODO:
+---Updates completed quest information on the map.
+---@usage
+---```
+---widget:UpdateCompletedQuestInfo()
+---```
 function Map:UpdateCompletedQuestInfo() end
 
----TODO:
+---Updates corpse information on the map.
+---@usage
+---```
+---widget:UpdateCorpseInfo()
+---```
 function Map:UpdateCorpseInfo() end
 
----TODO:
+---Updates NPC information for the current zone group on the map.
+---@usage
+---```
+---widget:UpdateCurZoneGroupNpcInfo()
+---```
 function Map:UpdateCurZoneGroupNpcInfo() end
 
----TODO:
+---Updates dominion information on the map.
+---@usage
+---```
+---widget:UpdateDominionInfo()
+---```
 function Map:UpdateDominionInfo() end
 
----TODO:
----@param bRoadMap boolean
+---Updates doodad information on the map.
+---@param bRoadMap boolean `true` to include road map data, `false` otherwise.
+---@usage
+---```
+---widget:UpdateDoodadInfo(false)
+---```
 function Map:UpdateDoodadInfo(bRoadMap) end
 
----TODO:
+---Updates faction resurrection district information on the map.
+---@usage
+---```
+---widget:UpdateFactionRezDistrictInfo()
+---```
 function Map:UpdateFactionRezDistrictInfo() end
 
----TODO:
+---Updates fish school area information on the map.
+---@usage
+---```
+---widget:UpdateFishSchoolArea()
+---```
 function Map:UpdateFishSchoolArea() end
 
----TODO:
+---Updates fish school information on the map.
+---@usage
+---```
+---widget:UpdateFishSchoolInfo()
+---```
 function Map:UpdateFishSchoolInfo() end
 
----TODO:
+---Updates static given quest information on the map.
+---@usage
+---```
+---widget:UpdateGivenQuestStaticInfo()
+---```
 function Map:UpdateGivenQuestStaticInfo() end
 
----TODO:
+---Updates housing information on the map.
+---@usage
+---```
+---widget:UpdateHousingInfo()
+---```
 function Map:UpdateHousingInfo() end
 
----TODO:
+---Updates monitored NPC information on the map.
+---@usage
+---```
+---widget:UpdateMonitorNpcInfo()
+---```
 function Map:UpdateMonitorNpcInfo() end
 
----TODO:
+---Updates player-owned slave information on the map.
+---@usage
+---```
+---widget:UpdateMySlaveInfo()
+---```
 function Map:UpdateMySlaveInfo() end
 
----TODO:
+---Updates NPC information on the map.
+---@usage
+---```
+---widget:UpdateNpcInfo()
+---```
 function Map:UpdateNpcInfo() end
 
----TODO:
+---Updates ping information on the map.
+---@usage
+---```
+---widget:UpdatePingInfo()
+---```
 function Map:UpdatePingInfo() end
 
----TODO:
+---Updates ship telescope information on the map.
+---@usage
+---```
+---widget:UpdateShipTelescopeInfo()
+---```
 function Map:UpdateShipTelescopeInfo() end
 
----TODO:
+---Updates telescope area information on the map.
+---@usage
+---```
+---widget:UpdateTelescopeArea()
+---```
 function Map:UpdateTelescopeArea() end
 
----TODO:
+---Updates transfer telescope area information on the map.
+---@usage
+---```
+---widget:UpdateTransferTelescopeArea()
+---```
 function Map:UpdateTransferTelescopeArea() end
 
----TODO:
+---Updates transfer telescope information on the map.
+---@usage
+---```
+---widget:UpdateTransferTelescopeInfo()
+---```
 function Map:UpdateTransferTelescopeInfo() end
 
----TODO:
+---Updates zone information on the map.
+---@usage
+---```
+---widget:UpdateZoneInfo()
+---```
 function Map:UpdateZoneInfo() end

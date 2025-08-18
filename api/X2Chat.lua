@@ -312,7 +312,7 @@ local CHAT_RELATION = {
 ---@usage
 ---```
 ---X2Chat:DispatchChatMessage(CMF_SYSTEM, "Hello, ArcheRage!")
----X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = true })
+---X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = `true` })
 ---```
 ---@see CMF
 ---@see CMF_SPECIAL

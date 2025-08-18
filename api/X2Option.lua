@@ -384,7 +384,7 @@ function X2Option:GetBasicCursorShape() end
 
 ---Retrieves the value of the specified console variable if it exists.
 ---@param name CONSOLE_VAR The console variable name.
----@return string|nil consoleVariable The console variable value, or nil if not found.
+---@return string|nil consoleVariable The console variable value, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -459,6 +459,7 @@ function X2Option:GetOptionItemValueByName(name) end
 ---@return number width The resolution width.
 ---@return number height The resolution height.
 ---@return number bpp The bits per pixel.
+---@nodiscard
 ---@usage
 ---```
 ---local width, height, bpp = X2Option:GetResolution(1)
@@ -488,7 +489,7 @@ function X2Option:GetResolutionCount() end
 function X2Option:GetSubOptionItemList(modeOptionId, selected) end
 
 ---Checks if the ocean simulation option is enabled.
----@return boolean oceanSimulateOption True if the ocean simulation option is enabled, false otherwise.
+---@return boolean oceanSimulateOption `true` if the ocean simulation option is enabled, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -497,7 +498,7 @@ function X2Option:GetSubOptionItemList(modeOptionId, selected) end
 function X2Option:HasOceanSimulateOption() end
 
 ---Checks if pixel sync is supported.
----@return boolean pixelSyncSupported True if pixel sync is supported, false otherwise.
+---@return boolean pixelSyncSupported `true` if pixel sync is supported, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -506,7 +507,7 @@ function X2Option:HasOceanSimulateOption() end
 function X2Option:IsPixelSyncSupported() end
 
 ---Enables or disables optimization.
----@param enable boolean True to enable optimization, false to disable.
+---@param enable boolean `true` to enable optimization, `false` to disable.
 ---@usage
 ---```
 ---X2Option:OptimizationEnable(true)

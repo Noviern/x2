@@ -3,26 +3,46 @@
 ---@class Tabbase
 local Tabbase = {}
 
----Returns the `selectedTab` of the Tabbase.
----@return number selectedTab
+---Retrieves the index of the currently selected tab in the Tabbase.
+---@return number selectedTab The index of the selected tab. (default: `1`)
 ---@nodiscard
+---@usage
+---```
+---local selectedTab = widget:GetSelectedTab()
+---```
 function Tabbase:GetSelectedTab() end
 
----Removes all the tabs of the Tabbase.
+---Removes all tabs from the Tabbase.
+---@usage
+---```
+---widget:RemoveAllTabs()
+---```
 function Tabbase:RemoveAllTabs() end
 
----Removes the `idx` tab from the Tabbase.
----@param idx number
+---Removes the tab at the specified index from the Tabbase.
+---@param idx number The index of the tab to remove.
 function Tabbase:RemoveTab(idx) end
 
----Selects the `idx` tab from the Tabbbase.
----@param idx number
+---Selects the tab at the specified index in the Tabbase.
+---@param idx number The index of the tab to select.
+---@usage
+---```
+---widget:SelectTab(2)
+---```
 function Tabbase:SelectTab(idx) end
 
----Sets the `gap` for the Tabbase.
----@param gap number
+---Sets the gap between tabs in the Tabbase.
+---@param gap number The gap size between tabs.
+---@usage
+---```
+---widget:SetGap(10)
+---```
 function Tabbase:SetGap(gap) end
 
----Sets the `offset` of the Tabbase.
----@param offset number
+---Sets the offset for the Tabbase.
+---@param offset number The offset value for the tabs.
+---@usage
+---```
+---widget:SetOffset(10)
+---```
 function Tabbase:SetOffset(offset) end

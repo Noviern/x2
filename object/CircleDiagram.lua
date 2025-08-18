@@ -19,49 +19,80 @@ DC_SHIFT_KEY_DOWN = 1  -- object/CircleDiagram
 ---@class CircleDiagram: Widget
 local CircleDiagram = {}
 
----Adds at point at `(offX, offY)` for the CircleDiagram.
----@param offX number
----@param offY number
+---Adds a point at the specified offset coordinates for the CircleDiagram.
+---@param offX number The x-coordinate offset.
+---@param offY number The y-coordinate offset.
+---@usage
+---```
+---circleDiagram:AddPoint(10, 10)
+---```
 function CircleDiagram:AddPoint(offX, offY) end
 
----TODO: Is this by degrees or radians?
----Adds a point by angle `pointNum` for CircleDiagram.
----@param pointNum number
+---@TODO: Clarify if pointNum is in degrees or radians.
+---Adds a point by angle for the CircleDiagram.
+---@param pointNum number The angle value for the point.
 function CircleDiagram:AddPointsByAngle(pointNum) end
 
----Clears all points for the CircleDiagram.
+---Clears all points from the CircleDiagram.
+---@usage
+---```
+---circleDiagram:ClearPoints()
+---```
 function CircleDiagram:ClearPoints() end
 
----Returns the offset `offX` and `offY` for the center of the CircleDiagram.
----@return number offX
----@return number offY
+---Retrieves the offset coordinates of the CircleDiagram's center.
+---@return number offX The x-coordinate offset of the center.
+---@return number offY The y-coordinate offset of the center.
 ---@nodiscard
+---@usage
+---```
+---local offX, offY = circleDiagram:GetCenterOffset()
+---```
 function CircleDiagram:GetCenterOffset() end
 
----Returns the offset `(offX, offY)` for the `index` point of the CircleDiagram.
----@param index number
----@return number offX
----@return number offY
+---Retrieves the offset coordinates for the specified point index of the CircleDiagram.
+---@param index number The index of the point.
+---@return number offX The x-coordinate offset of the point.
+---@return number offY The y-coordinate offset of the point.
 ---@nodiscard
+---@usage
+---```
+---local offX, offY = circleDiagram:GetPointOffset(1)
+---```
 function CircleDiagram:GetPointOffset(index) end
 
----TODO:
 ---Sets the color for the CircleDiagram.
----@param r number
----@param g number
----@param b number
----@param a number
+---@param r number The red color component (min: `0`, max: `1`).
+---@param g number The green color component (min: `0`, max: `1`).
+---@param b number The blue color component (min: `0`, max: `1`).
+---@param a number The alpha (opacity) component (min: `0`, max: `1`).
+---@usage
+---```
+---circleDiagram:SetDiagramColor(1, 0, 0, 1)
+---```
 function CircleDiagram:SetDiagramColor(r, g, b, a) end
 
----Sets line `thickness` for the CircleDiagram.
----@param thickness number
+---Sets the line thickness for the CircleDiagram.
+---@param thickness number The thickness of the diagram's lines.
+---@usage
+---```
+---circleDiagram:SetLineThickness(4)
+---```
 function CircleDiagram:SetLineThickness(thickness) end
 
----Sets the `maxValue` for the CircleDiagram.
----@param maxValue number
+---Sets the maximum value for the CircleDiagram.
+---@param maxValue number The maximum value for the diagram.
+---@usage
+---```
+---circleDiagram:SetMaxValue(15)
+---```
 function CircleDiagram:SetMaxValue(maxValue) end
 
----Sets `value` for `index` of the CircleDiagram.
----@param index number
----@param value number
+---Sets the value for a specific point index of the CircleDiagram.
+---@param index number The index of the point.
+---@param value number The value to set for the point.
+---@usage
+---```
+---circleDiagram:SetPointValue(1, 10)
+---```
 function CircleDiagram:SetPointValue(index, value) end

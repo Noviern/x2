@@ -15,7 +15,7 @@ CT_NAME = 1            -- object/ChatMessage
 DC_ALWAYS = 0          -- object/ChatMessage
 DC_SHIFT_KEY_DOWN = 1  -- object/ChatMessage
 
----TODO: scriptsbin\x2ui\chat\chat_window.lua uses these methods but unsure what widget type it is as its never explicitly stated.
+---@TODO: scriptsbin\x2ui\chat\chat_window.lua uses these methods but unsure what widget type it is as its never explicitly stated.
 
 ---object/ChatMessage
 ---@class ChatMessage

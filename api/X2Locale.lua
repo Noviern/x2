@@ -189,7 +189,7 @@ function X2Locale:GetLocaleIndex() end
 ---Checks if the specified localization category and key exist.
 ---@param categoryId UI_TEXT_CATEGORY_ID The UI text category.
 ---@param key string The key from the ui_texts database table.
----@return boolean localizeUiText True if the localization exists, false otherwise.
+---@return boolean localizeUiText `true` if the localization exists, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```

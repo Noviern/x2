@@ -137,7 +137,7 @@ X2Equipment = {}     -- api/X2Equipment
 ---Retrieves tooltip information for the equipped item in the specified slot.
 ---@param equipSlot ES The equipment slot to query.
 ---@param targetEquippedItem boolean Whether to target the equipped item.
----@return ItemInfo|nil equippedItemTooltipInfo The tooltip information, or nil if not found.
+---@return ItemInfo|nil equippedItemTooltipInfo The tooltip information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```
@@ -149,7 +149,7 @@ function X2Equipment:GetEquippedItemTooltipInfo(equipSlot, targetEquippedItem) e
 
 ---Retrieves the type of item equipped in the specified slot.
 ---@param equipSlot ES The equipment slot to query.
----@return number|nil equippedItemType The equipped item type, or nil if none.
+---@return number|nil equippedItemType The equipped item type, or `nil` if none.
 ---@nodiscard
 ---@usage
 ---```

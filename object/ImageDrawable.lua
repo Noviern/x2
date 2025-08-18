@@ -17,48 +17,77 @@ DAT_MOVE = 1         -- object/ImageDrawable
 ---@class ImageDrawable: DrawableDDS
 local ImageDrawable = {}
 
----Enables/Disables animation `anim` and `loop` for the texture of
----ImageDrawable. This should be used after `ImageDrawable:SetAnimFrameInfo`
----has been populated.
----@param anim boolean
----@param loop boolean
+---Enables or disables animation and looping for the texture of the ImageDrawable. Must be used after `ImageDrawable:SetAnimFrameInfo`.
+---@param anim boolean `true` to enable animation, `false` to disable.
+---@param loop boolean `true` to enable looping, `false` to disable.
+---@usage
+---```
+---imageDrawable:Animation(true, true)
+---```
 function ImageDrawable:Animation(anim, loop) end
 
----Returns a boolean `grayTexture` indicating if the texture is gray for the
----ImageDrawable.
----@return boolean grayTexture
+---Checks if the texture of the ImageDrawable is gray.
+---@return boolean grayTexture `true` if the texture is gray, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local grayTexture = imageDrawable:IsGrayTexture()
+---```
 function ImageDrawable:IsGrayTexture() end
 
----Returns a boolean `whiteTexture` indicating if the texture is white for the
----ImageDrawable.
----@return boolean whiteTexture
+---Checks if the texture of the ImageDrawable is white.
+---@return boolean whiteTexture `true` if the texture is white, `false` otherwise.
 ---@nodiscard
+---@usage
+---```
+---local whiteTexture = imageDrawable:IsWhiteTexture()
+---```
 function ImageDrawable:IsWhiteTexture() end
 
----Sets the animation `frameInfo` for the texture of the ImageDrawable.
----@param frameInfo FrameInfo
+---Sets the animation frame information for the texture of the ImageDrawable.
+---@param frameInfo FrameInfo The frame information for the animation.
+---@usage
+---```
+---local imageDrawable = widget:CreateImageDrawable(TEXTURE_PATH.TIMER, "background")
+---...
+---
+---imageDrawable:SetAnimFrameInfo({
+---  { x = 0,   y = 0,  w = 61, h = 61, time = 100 },
+---  { x = 61,  y = 0,  w = 61, h = 61, time = 100 },
+---  { x = 122, y = 0,  w = 61, h = 61, time = 100 },
+---  { x = 183, y = 0,  w = 61, h = 61, time = 100 },
+---  { x = 0,   y = 61, w = 61, h = 61, time = 100 },
+---  { x = 61,  y = 61, w = 61, h = 61, time = 100 },
+---  { x = 122, y = 61, w = 61, h = 61, time = 100 },
+---  { x = 0,   y = 0,  w = 61, h = 61, time = 500 },
+---})
+---```
+---@see FrameInfo
 function ImageDrawable:SetAnimFrameInfo(frameInfo) end
 
----TODO:
----Enables/Disables `snap` for the ImageDrawable.
----@param snap boolean
+---@TODO: Clarify the purpose and behavior of snap.
+---Enables or disables snapping for the ImageDrawable.
+---@param snap boolean `true` to enable snapping, `false` to disable.
 function ImageDrawable:SetSnap(snap) end
 
----TODO:
----@param filename string
+---@TODO: Verify the usage and format of filename. test Game/ui/map/image_map.tga
+---Sets a TGA texture for the ImageDrawable.
+---@param filename string The path to the TGA texture file.
 function ImageDrawable:SetTgaTexture(filename) end
 
----TODO:
----@param tiling boolean
+---@TODO: Clarify tiling behavior.
+---Enables or disables tiling for the ImageDrawable.
+---@param tiling boolean `true` to enable tiling, `false` to disable.
 function ImageDrawable:SetTiling(tiling) end
 
----TODO:
----@param complexId any
----@param isBack boolean
+---@TODO: Clarify complexId and isBack usage.
+---Sets a UCC texture for the ImageDrawable by UCC ID.
+---@param complexId string The UCC ID for the texture.
+---@param isBack boolean `true` for background, `false` for foreground.
 function ImageDrawable:SetUccTextureByUccId(complexId, isBack) end
 
----TODO:
----@param doodadId any
----@param isBack boolean
+---@TODO: Clarify doodadId and isBack usage.
+---Sets a UCC texture for the ImageDrawable within a doodad.
+---@param doodadId string The doodad ID for the texture.
+---@param isBack boolean `true` for background, `false` for foreground.
 function ImageDrawable:SetUccTextureInDoodad(doodadId, isBack) end

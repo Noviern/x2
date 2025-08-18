@@ -15,31 +15,64 @@ CT_NAME = 1            -- object/Window
 DC_ALWAYS = 0          -- object/Window
 DC_SHIFT_KEY_DOWN = 1  -- object/Window
 
+---@enum UI_LAYER
+local UI_LAYER = {
+  BACKGROUND     = "background",
+  DIALOG         = "dialog",
+  GAME           = "game",
+  HUD            = "hud",
+  NORMAL         = "normal",
+  QUESTDIRECTING = "questdirecting",
+  SYSTEM         = "system",
+  TOOLTIP        = "tooltip",
+}
+
 ---object/Window
 ---@class Window: Widget
 ---@field modalBackgroundWindow EmptyWidget
 ---@field titleStyle TextStyle
 local Window = {}
 
----Enables/Disables close on escape for the Window.
----@param escape boolean
+---Enables or disables closing the Window when the Escape key is pressed.
+---@param escape boolean `true` to enable close on Escape, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:SetCloseOnEscape(true)
+---```
 function Window:SetCloseOnEscape(escape) end
 
----Sets the inset of the title for the Window.
----@param left number
----@param top number
----@param right number
----@param bottom number
+---Sets the inset for the title of the Window.
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+---@usage
+---```
+---widget:SetTitleInset(10, 10, 10, 10)
+---```
 function Window:SetTitleInset(left, top, right, bottom) end
 
----Sets the `title` for the Window.
----@param title string
+---Sets the title text for the Window.
+---@param title string The title text to set.
+---@usage
+---```
+---widget:SetTitleText("Archerage.to - the first ArcheAge Private Server")
+---```
 function Window:SetTitleText(title) end
 
----Sets the ui layer to `layerName` for the Window.
----@param layerName string
+---Sets the UI layer for the Window.
+---@param layerName UI_LAYER The name of the UI layer. (default: `"normal"`)
+---@usage
+---```
+---widget:SetUILayer("system")
+---```
+---@see UI_LAYER
 function Window:SetUILayer(layerName) end
 
----Enables/Disables window modal for the Window.
----@param enable boolean
+---Enables or disables modal behavior for the Window.
+---@param enable boolean `true` to make the Window modal, `false` to disable. (default: `false`)
+---@usage
+---```
+---widget:SetWindowModal(true)
+---```
 function Window:SetWindowModal(enable) end

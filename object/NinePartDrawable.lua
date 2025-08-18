@@ -14,7 +14,7 @@ AP_TOPRIGHT = 1    -- object/NinePartDrawable
 ---@class NinePartDrawable: DrawableDDS
 local NinePartDrawable = {}
 
----TODO:
----@param invisible any
----@param part any
+---Sets the outline invisible part for the NinePartDrawable.
+---@param invisible boolean `true` to make the part invisible, `false` to make it visible.
+---@param part number The part to set as invisible. (`0` to `8`)
 function NinePartDrawable:SetOutlineInvisiblePart(invisible, part) end
