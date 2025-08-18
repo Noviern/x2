@@ -112,6 +112,31 @@ local AUCTION_CATEGORY = {
   SHOTGUN                 = 80,
 }
 
+---@TODO: triggers the `DIAGONAL_ASR` event.
+---Requests the market price for an item, triggering the `DIAGONAL_ASR` event.
+---@param itemType number The type of item.
+---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
+---@param askMarketPriceUi boolean Whether to open the market price UI. Buggy: only opens if UI was opened previously.
+---@usage
+---```
+---X2Auction:AskMarketPrice(8343, 0, true)
+---```
+---@see ITEM_GRADE_TYPE
+function X2Auction:AskMarketPrice(itemType, itemGrade, askMarketPriceUi) end
+
+---@TODO: this is broken and doesnt always return a value, needs more testing
+---Retrieves the lowest market price for an item.
+---@param itemType number The type of item.
+---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
+---@return string|nil lowestPrice The lowest price as a string, or `nil` if not available.
+---@nodiscard
+---@usage
+---```
+---local lowestPrice = X2Auction:GetLowestPrice(8343, 0)
+---```
+---@see ITEM_GRADE_TYPE
+function X2Auction:GetLowestPrice(itemType, itemGrade) end
+
 ---Retrieves the number of searched items displayed in the auction house,
 ---ranging from 0 to 9 defaulting to 9.
 ---@return number searchedItemCount The number of items displayed.

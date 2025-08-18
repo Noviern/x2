@@ -6,6 +6,10 @@ PT_BID = 0 -- api/X2Auction
 PT_PARTITION = 1 -- api/X2Auction
 X2Auction = {} -- api/X2Auction
 
+function X2Auction:AskMarketPrice() end
+
+function X2Auction:GetLowestPrice() end
+
 function X2Auction:GetSearchedItemCount() end
 
 function X2Auction:GetSearchedItemInfo() end
