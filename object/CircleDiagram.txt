@@ -10,5 +10,228 @@ AP_TOPRIGHT = 1 -- object/CircleDiagram
 CT_ABILITY = 2 -- object/CircleDiagram
 CT_EXPEDITION_NAME = 3 -- object/CircleDiagram
 CT_NAME = 1 -- object/CircleDiagram
+CircleDiagram = { -- object/CircleDiagram
+  __this = "<userdata: 00000000AE372EC0>", -- object/CircleDiagram
+} -- object/CircleDiagram
 DC_ALWAYS = 0 -- object/CircleDiagram
 DC_SHIFT_KEY_DOWN = 1 -- object/CircleDiagram
+
+function CircleDiagram:AddAnchor() end
+
+function CircleDiagram:AddPoint() end
+
+function CircleDiagram:AddPointsByAngle() end
+
+function CircleDiagram:ApplyUIScale() end
+
+function CircleDiagram:AttachWidget() end
+
+function CircleDiagram:BindWidth() end
+
+function CircleDiagram:CancelRequestCharacterCacheData() end
+
+function CircleDiagram:ChangeChildAnchorByScrollValue() end
+
+function CircleDiagram:CheckOutOfScreen() end
+
+function CircleDiagram:ClearPoints() end
+
+function CircleDiagram:Clickable() end
+
+function CircleDiagram:CorrectOffsetByScreen() end
+
+function CircleDiagram:CreateChildWidget() end
+
+function CircleDiagram:CreateChildWidgetByType() end
+
+function CircleDiagram:CreateColorDrawable() end
+
+function CircleDiagram:CreateColorDrawableByKey() end
+
+function CircleDiagram:CreateDrawable() end
+
+function CircleDiagram:CreateEffectDrawable() end
+
+function CircleDiagram:CreateEffectDrawableByKey() end
+
+function CircleDiagram:CreateIconDrawable() end
+
+function CircleDiagram:CreateImageDrawable() end
+
+function CircleDiagram:CreateNinePartDrawable() end
+
+function CircleDiagram:CreateTextDrawable() end
+
+function CircleDiagram:CreateThreeColorDrawable() end
+
+function CircleDiagram:CreateThreePartDrawable() end
+
+function CircleDiagram:DetachWidget() end
+
+function CircleDiagram:DisableDrawables() end
+
+function CircleDiagram:DisableDrawablesWithChildren() end
+
+function CircleDiagram:Enable() end
+
+function CircleDiagram:EnableDrag() end
+
+function CircleDiagram:EnableDrawables() end
+
+function CircleDiagram:EnableDrawablesWithChildren() end
+
+function CircleDiagram:EnableFocus() end
+
+function CircleDiagram:EnableHidingIsRemove() end
+
+function CircleDiagram:EnableKeyboard() end
+
+function CircleDiagram:EnablePick() end
+
+function CircleDiagram:EnableScroll() end
+
+function CircleDiagram:GetAlpha() end
+
+function CircleDiagram:GetAttachedWidget() end
+
+function CircleDiagram:GetCenterOffset() end
+
+function CircleDiagram:GetEffectiveExtent() end
+
+function CircleDiagram:GetEffectiveOffset() end
+
+function CircleDiagram:GetExtent() end
+
+function CircleDiagram:GetHeight() end
+
+function CircleDiagram:GetId() end
+
+function CircleDiagram:GetName() end
+
+function CircleDiagram:GetObjectType() end
+
+function CircleDiagram:GetOffset() end
+
+function CircleDiagram:GetParent() end
+
+function CircleDiagram:GetPointOffset() end
+
+function CircleDiagram:GetRotation() end
+
+function CircleDiagram:GetText() end
+
+function CircleDiagram:GetUILayer() end
+
+function CircleDiagram:GetValue() end
+
+function CircleDiagram:GetWidth() end
+
+function CircleDiagram:HasHandler() end
+
+function CircleDiagram:InheritAnimationData() end
+
+function CircleDiagram:IsDescendantWidget() end
+
+function CircleDiagram:IsEnabled() end
+
+function CircleDiagram:IsMouseOver() end
+
+function CircleDiagram:IsNowAnimation() end
+
+function CircleDiagram:IsValidUIObject() end
+
+function CircleDiagram:IsVisible() end
+
+function CircleDiagram:Lower() end
+
+function CircleDiagram:MoveTo() end
+
+function CircleDiagram:Raise() end
+
+function CircleDiagram:RegisterEvent() end
+
+function CircleDiagram:ReleaseDeletedHandler() end
+
+function CircleDiagram:ReleaseHandler() end
+
+function CircleDiagram:RemoveAllAnchors() end
+
+function CircleDiagram:RemoveAllDrawables() end
+
+function CircleDiagram:RemoveDrawable() end
+
+function CircleDiagram:RequestCharacterCacheData() end
+
+function CircleDiagram:SetAlpha() end
+
+function CircleDiagram:SetAlphaAnimation() end
+
+function CircleDiagram:SetCategory() end
+
+function CircleDiagram:SetCharacterCacheDataHandler() end
+
+function CircleDiagram:SetDelegator() end
+
+function CircleDiagram:SetDeletedHandler() end
+
+function CircleDiagram:SetDiagramColor() end
+
+function CircleDiagram:SetDragCondition() end
+
+function CircleDiagram:SetDrawPriority() end
+
+function CircleDiagram:SetDrawableLayerAlpha() end
+
+function CircleDiagram:SetExtent() end
+
+function CircleDiagram:SetHandler() end
+
+function CircleDiagram:SetHeight() end
+
+function CircleDiagram:SetLText() end
+
+function CircleDiagram:SetLayerColor() end
+
+function CircleDiagram:SetLineThickness() end
+
+function CircleDiagram:SetMaxResizingExtent() end
+
+function CircleDiagram:SetMaxValue() end
+
+function CircleDiagram:SetMinResizingExtent() end
+
+function CircleDiagram:SetMoveAnimation() end
+
+function CircleDiagram:SetPointValue() end
+
+function CircleDiagram:SetResizingBorderSize() end
+
+function CircleDiagram:SetRotation() end
+
+function CircleDiagram:SetScale() end
+
+function CircleDiagram:SetScaleAnimation() end
+
+function CircleDiagram:SetSounds() end
+
+function CircleDiagram:SetStartAnimation() end
+
+function CircleDiagram:SetText() end
+
+function CircleDiagram:SetWidth() end
+
+function CircleDiagram:Show() end
+
+function CircleDiagram:StartMoving() end
+
+function CircleDiagram:StartSizing() end
+
+function CircleDiagram:StopMovingOrSizing() end
+
+function CircleDiagram:TriggerMoveAnimation() end
+
+function CircleDiagram:UseDynamicContentState() end
+
+function CircleDiagram:UseDynamicDrawableState() end
+
+function CircleDiagram:UseResizing() end

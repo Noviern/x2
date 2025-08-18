@@ -12,3 +12,390 @@ CT_EXPEDITION_NAME = 3 -- object/Listbox
 CT_NAME = 1 -- object/Listbox
 DC_ALWAYS = 0 -- object/Listbox
 DC_SHIFT_KEY_DOWN = 1 -- object/Listbox
+Listbox = { -- object/Listbox
+  __this = "<userdata: 000000008B15C660>", -- object/Listbox
+  itemStyle = { -- object/Listbox
+    __this = "<userdata: 00000001E3FE2F60>", -- object/Listbox
+  }, -- object/Listbox
+  itemStyleSub = { -- object/Listbox
+    __this = "<userdata: 00000001E3FE40E0>", -- object/Listbox
+  }, -- object/Listbox
+} -- object/Listbox
+
+function Listbox.itemStyle:GetId() end
+
+function Listbox.itemStyle:GetLineHeight() end
+
+function Listbox.itemStyle:GetName() end
+
+function Listbox.itemStyle:GetObjectType() end
+
+function Listbox.itemStyle:GetTextWidth() end
+
+function Listbox.itemStyle:IsValidUIObject() end
+
+function Listbox.itemStyle:SetAlign() end
+
+function Listbox.itemStyle:SetColor() end
+
+function Listbox.itemStyle:SetColorByKey() end
+
+function Listbox.itemStyle:SetEllipsis() end
+
+function Listbox.itemStyle:SetFont() end
+
+function Listbox.itemStyle:SetFontSize() end
+
+function Listbox.itemStyle:SetOutline() end
+
+function Listbox.itemStyle:SetShadow() end
+
+function Listbox.itemStyle:SetSnap() end
+
+function Listbox.itemStyleSub:GetId() end
+
+function Listbox.itemStyleSub:GetLineHeight() end
+
+function Listbox.itemStyleSub:GetName() end
+
+function Listbox.itemStyleSub:GetObjectType() end
+
+function Listbox.itemStyleSub:GetTextWidth() end
+
+function Listbox.itemStyleSub:IsValidUIObject() end
+
+function Listbox.itemStyleSub:SetAlign() end
+
+function Listbox.itemStyleSub:SetColor() end
+
+function Listbox.itemStyleSub:SetColorByKey() end
+
+function Listbox.itemStyleSub:SetEllipsis() end
+
+function Listbox.itemStyleSub:SetFont() end
+
+function Listbox.itemStyleSub:SetFontSize() end
+
+function Listbox.itemStyleSub:SetOutline() end
+
+function Listbox.itemStyleSub:SetShadow() end
+
+function Listbox.itemStyleSub:SetSnap() end
+
+function Listbox:AddAnchor() end
+
+function Listbox:AppendItem() end
+
+function Listbox:AppendItemByTable() end
+
+function Listbox:ApplyUIScale() end
+
+function Listbox:AttachWidget() end
+
+function Listbox:BindWidth() end
+
+function Listbox:CancelRequestCharacterCacheData() end
+
+function Listbox:ChangeChildAnchorByScrollValue() end
+
+function Listbox:CheckOutOfScreen() end
+
+function Listbox:ClearAllSelected() end
+
+function Listbox:ClearItem() end
+
+function Listbox:Clickable() end
+
+function Listbox:CorrectOffsetByScreen() end
+
+function Listbox:CreateChildWidget() end
+
+function Listbox:CreateChildWidgetByType() end
+
+function Listbox:CreateClosedImageDrawable() end
+
+function Listbox:CreateColorDrawable() end
+
+function Listbox:CreateColorDrawableByKey() end
+
+function Listbox:CreateDrawable() end
+
+function Listbox:CreateEffectDrawable() end
+
+function Listbox:CreateEffectDrawableByKey() end
+
+function Listbox:CreateIconDrawable() end
+
+function Listbox:CreateImageDrawable() end
+
+function Listbox:CreateNinePartDrawable() end
+
+function Listbox:CreateOpenedImageDrawable() end
+
+function Listbox:CreateSeparatorImageDrawable() end
+
+function Listbox:CreateTextDrawable() end
+
+function Listbox:CreateThreeColorDrawable() end
+
+function Listbox:CreateThreePartDrawable() end
+
+function Listbox:DetachWidget() end
+
+function Listbox:DisableDrawables() end
+
+function Listbox:DisableDrawablesWithChildren() end
+
+function Listbox:Enable() end
+
+function Listbox:EnableDrag() end
+
+function Listbox:EnableDrawables() end
+
+function Listbox:EnableDrawablesWithChildren() end
+
+function Listbox:EnableFocus() end
+
+function Listbox:EnableHidingIsRemove() end
+
+function Listbox:EnableKeyboard() end
+
+function Listbox:EnablePick() end
+
+function Listbox:EnableScroll() end
+
+function Listbox:EnableSelectNoValue() end
+
+function Listbox:EnableSelectParent() end
+
+function Listbox:EnableSelectionToggle() end
+
+function Listbox:GetAlpha() end
+
+function Listbox:GetAttachedWidget() end
+
+function Listbox:GetEffectiveExtent() end
+
+function Listbox:GetEffectiveOffset() end
+
+function Listbox:GetExtent() end
+
+function Listbox:GetHeight() end
+
+function Listbox:GetId() end
+
+function Listbox:GetInset() end
+
+function Listbox:GetMaxTop() end
+
+function Listbox:GetName() end
+
+function Listbox:GetObjectType() end
+
+function Listbox:GetOffset() end
+
+function Listbox:GetOpenedItemCount() end
+
+function Listbox:GetParent() end
+
+function Listbox:GetRotation() end
+
+function Listbox:GetSelectedIndex() end
+
+function Listbox:GetSelectedIndexWithDepth() end
+
+function Listbox:GetSelectedText() end
+
+function Listbox:GetSelectedValue() end
+
+function Listbox:GetText() end
+
+function Listbox:GetTop() end
+
+function Listbox:GetUILayer() end
+
+function Listbox:GetValue() end
+
+function Listbox:GetViewItemCount() end
+
+function Listbox:GetViewItemsInfo() end
+
+function Listbox:GetWidth() end
+
+function Listbox:HasHandler() end
+
+function Listbox:InheritAnimationData() end
+
+function Listbox:InitializeSelect() end
+
+function Listbox:IsDescendantWidget() end
+
+function Listbox:IsEnabled() end
+
+function Listbox:IsItemOpened() end
+
+function Listbox:IsMouseOver() end
+
+function Listbox:IsNowAnimation() end
+
+function Listbox:IsValidUIObject() end
+
+function Listbox:IsVisible() end
+
+function Listbox:ItemCount() end
+
+function Listbox:Lower() end
+
+function Listbox:MoveTo() end
+
+function Listbox:Raise() end
+
+function Listbox:RegisterEvent() end
+
+function Listbox:ReleaseDeletedHandler() end
+
+function Listbox:ReleaseHandler() end
+
+function Listbox:RemoveAllAnchors() end
+
+function Listbox:RemoveAllDrawables() end
+
+function Listbox:RemoveDrawable() end
+
+function Listbox:RequestCharacterCacheData() end
+
+function Listbox:ScrollDown() end
+
+function Listbox:ScrollUp() end
+
+function Listbox:Select() end
+
+function Listbox:SelectWithText() end
+
+function Listbox:SelectWithValue() end
+
+function Listbox:SetAlpha() end
+
+function Listbox:SetAlphaAnimation() end
+
+function Listbox:SetBorder() end
+
+function Listbox:SetCategory() end
+
+function Listbox:SetCharacterCacheDataHandler() end
+
+function Listbox:SetDefaultItemColor() end
+
+function Listbox:SetDefaultItemCoord() end
+
+function Listbox:SetDefaultItemTextColor() end
+
+function Listbox:SetDelegator() end
+
+function Listbox:SetDeletedHandler() end
+
+function Listbox:SetDisableItemTextColor() end
+
+function Listbox:SetDragCondition() end
+
+function Listbox:SetDrawPriority() end
+
+function Listbox:SetDrawableLayerAlpha() end
+
+function Listbox:SetExtent() end
+
+function Listbox:SetFold() end
+
+function Listbox:SetHandler() end
+
+function Listbox:SetHeight() end
+
+function Listbox:SetInset() end
+
+function Listbox:SetItem() end
+
+function Listbox:SetItemDefaultTextureInfo() end
+
+function Listbox:SetItemOveredTextureInfo() end
+
+function Listbox:SetItemSelectedTextureInfo() end
+
+function Listbox:SetItemTrees() end
+
+function Listbox:SetLText() end
+
+function Listbox:SetLayerColor() end
+
+function Listbox:SetLineColor() end
+
+function Listbox:SetListItemStateTexture() end
+
+function Listbox:SetListItemStateTextureInset() end
+
+function Listbox:SetMaxResizingExtent() end
+
+function Listbox:SetMinResizingExtent() end
+
+function Listbox:SetMoveAnimation() end
+
+function Listbox:SetOveredItemColor() end
+
+function Listbox:SetOveredItemCoord() end
+
+function Listbox:SetOveredItemTextColor() end
+
+function Listbox:SetResizingBorderSize() end
+
+function Listbox:SetRotation() end
+
+function Listbox:SetScale() end
+
+function Listbox:SetScaleAnimation() end
+
+function Listbox:SetSelectedItemColor() end
+
+function Listbox:SetSelectedItemCoord() end
+
+function Listbox:SetSelectedItemTextColor() end
+
+function Listbox:SetSounds() end
+
+function Listbox:SetStartAnimation() end
+
+function Listbox:SetSubTextOffset() end
+
+function Listbox:SetText() end
+
+function Listbox:SetTextLimit() end
+
+function Listbox:SetTop() end
+
+function Listbox:SetTreeTypeIndent() end
+
+function Listbox:SetWidth() end
+
+function Listbox:Show() end
+
+function Listbox:ShowAutoTooltip() end
+
+function Listbox:ShowTooltip() end
+
+function Listbox:StartMoving() end
+
+function Listbox:StartSizing() end
+
+function Listbox:StopMovingOrSizing() end
+
+function Listbox:TriggerMoveAnimation() end
+
+function Listbox:TurnoffOverParent() end
+
+function Listbox:UpdateItem() end
+
+function Listbox:UseChildStyle() end
+
+function Listbox:UseDynamicContentState() end
+
+function Listbox:UseDynamicDrawableState() end
+
+function Listbox:UseResizing() end

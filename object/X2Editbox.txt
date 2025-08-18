@@ -12,3 +12,369 @@ CT_EXPEDITION_NAME = 3 -- object/X2Editbox
 CT_NAME = 1 -- object/X2Editbox
 DC_ALWAYS = 0 -- object/X2Editbox
 DC_SHIFT_KEY_DOWN = 1 -- object/X2Editbox
+X2Editbox = { -- object/X2Editbox
+  __this = "<userdata: 00000000AD609B80>", -- object/X2Editbox
+  guideTextStyle = { -- object/X2Editbox
+    __this = "<userdata: 000000017AD57A70>", -- object/X2Editbox
+  }, -- object/X2Editbox
+  prefixStyle = { -- object/X2Editbox
+    __this = "<userdata: 000000017AD577F0>", -- object/X2Editbox
+  }, -- object/X2Editbox
+  style = { -- object/X2Editbox
+    __this = "<userdata: 000000017AD57570>", -- object/X2Editbox
+  }, -- object/X2Editbox
+} -- object/X2Editbox
+
+function X2Editbox.guideTextStyle:GetId() end
+
+function X2Editbox.guideTextStyle:GetLineHeight() end
+
+function X2Editbox.guideTextStyle:GetName() end
+
+function X2Editbox.guideTextStyle:GetObjectType() end
+
+function X2Editbox.guideTextStyle:GetTextWidth() end
+
+function X2Editbox.guideTextStyle:IsValidUIObject() end
+
+function X2Editbox.guideTextStyle:SetAlign() end
+
+function X2Editbox.guideTextStyle:SetColor() end
+
+function X2Editbox.guideTextStyle:SetColorByKey() end
+
+function X2Editbox.guideTextStyle:SetEllipsis() end
+
+function X2Editbox.guideTextStyle:SetFont() end
+
+function X2Editbox.guideTextStyle:SetFontSize() end
+
+function X2Editbox.guideTextStyle:SetOutline() end
+
+function X2Editbox.guideTextStyle:SetShadow() end
+
+function X2Editbox.guideTextStyle:SetSnap() end
+
+function X2Editbox.prefixStyle:GetId() end
+
+function X2Editbox.prefixStyle:GetLineHeight() end
+
+function X2Editbox.prefixStyle:GetName() end
+
+function X2Editbox.prefixStyle:GetObjectType() end
+
+function X2Editbox.prefixStyle:GetTextWidth() end
+
+function X2Editbox.prefixStyle:IsValidUIObject() end
+
+function X2Editbox.prefixStyle:SetAlign() end
+
+function X2Editbox.prefixStyle:SetColor() end
+
+function X2Editbox.prefixStyle:SetColorByKey() end
+
+function X2Editbox.prefixStyle:SetEllipsis() end
+
+function X2Editbox.prefixStyle:SetFont() end
+
+function X2Editbox.prefixStyle:SetFontSize() end
+
+function X2Editbox.prefixStyle:SetOutline() end
+
+function X2Editbox.prefixStyle:SetShadow() end
+
+function X2Editbox.prefixStyle:SetSnap() end
+
+function X2Editbox.style:GetId() end
+
+function X2Editbox.style:GetLineHeight() end
+
+function X2Editbox.style:GetName() end
+
+function X2Editbox.style:GetObjectType() end
+
+function X2Editbox.style:GetTextWidth() end
+
+function X2Editbox.style:IsValidUIObject() end
+
+function X2Editbox.style:SetAlign() end
+
+function X2Editbox.style:SetColor() end
+
+function X2Editbox.style:SetColorByKey() end
+
+function X2Editbox.style:SetEllipsis() end
+
+function X2Editbox.style:SetFont() end
+
+function X2Editbox.style:SetFontSize() end
+
+function X2Editbox.style:SetOutline() end
+
+function X2Editbox.style:SetShadow() end
+
+function X2Editbox.style:SetSnap() end
+
+function X2Editbox:AddAnchor() end
+
+function X2Editbox:AddHistoryLine() end
+
+function X2Editbox:ApplyUIScale() end
+
+function X2Editbox:AttachWidget() end
+
+function X2Editbox:BindWidth() end
+
+function X2Editbox:CancelRequestCharacterCacheData() end
+
+function X2Editbox:ChangeChildAnchorByScrollValue() end
+
+function X2Editbox:CheckNamePolicy() end
+
+function X2Editbox:CheckOutOfScreen() end
+
+function X2Editbox:ClearFocus() end
+
+function X2Editbox:ClearString() end
+
+function X2Editbox:ClearTextOnEnter() end
+
+function X2Editbox:Clickable() end
+
+function X2Editbox:CorrectOffsetByScreen() end
+
+function X2Editbox:CreateChildWidget() end
+
+function X2Editbox:CreateChildWidgetByType() end
+
+function X2Editbox:CreateColorDrawable() end
+
+function X2Editbox:CreateColorDrawableByKey() end
+
+function X2Editbox:CreateDrawable() end
+
+function X2Editbox:CreateEffectDrawable() end
+
+function X2Editbox:CreateEffectDrawableByKey() end
+
+function X2Editbox:CreateIconDrawable() end
+
+function X2Editbox:CreateImageDrawable() end
+
+function X2Editbox:CreateNinePartDrawable() end
+
+function X2Editbox:CreateTextDrawable() end
+
+function X2Editbox:CreateThreeColorDrawable() end
+
+function X2Editbox:CreateThreePartDrawable() end
+
+function X2Editbox:DetachWidget() end
+
+function X2Editbox:DisableDrawables() end
+
+function X2Editbox:DisableDrawablesWithChildren() end
+
+function X2Editbox:Enable() end
+
+function X2Editbox:EnableDrag() end
+
+function X2Editbox:EnableDrawables() end
+
+function X2Editbox:EnableDrawablesWithChildren() end
+
+function X2Editbox:EnableFocus() end
+
+function X2Editbox:EnableHidingIsRemove() end
+
+function X2Editbox:EnableKeyboard() end
+
+function X2Editbox:EnablePick() end
+
+function X2Editbox:EnableScroll() end
+
+function X2Editbox:GetAlpha() end
+
+function X2Editbox:GetAttachedWidget() end
+
+function X2Editbox:GetEffectiveExtent() end
+
+function X2Editbox:GetEffectiveOffset() end
+
+function X2Editbox:GetExtent() end
+
+function X2Editbox:GetHeight() end
+
+function X2Editbox:GetId() end
+
+function X2Editbox:GetName() end
+
+function X2Editbox:GetObjectType() end
+
+function X2Editbox:GetOffset() end
+
+function X2Editbox:GetParent() end
+
+function X2Editbox:GetRotation() end
+
+function X2Editbox:GetText() end
+
+function X2Editbox:GetUILayer() end
+
+function X2Editbox:GetValue() end
+
+function X2Editbox:GetWidth() end
+
+function X2Editbox:HasHandler() end
+
+function X2Editbox:InheritAnimationData() end
+
+function X2Editbox:IsDescendantWidget() end
+
+function X2Editbox:IsDigit() end
+
+function X2Editbox:IsEnabled() end
+
+function X2Editbox:IsMouseOver() end
+
+function X2Editbox:IsNowAnimation() end
+
+function X2Editbox:IsNowComposition() end
+
+function X2Editbox:IsPassword() end
+
+function X2Editbox:IsValidUIObject() end
+
+function X2Editbox:IsVisible() end
+
+function X2Editbox:Lower() end
+
+function X2Editbox:MaxTextLength() end
+
+function X2Editbox:MoveTo() end
+
+function X2Editbox:Raise() end
+
+function X2Editbox:RegisterEvent() end
+
+function X2Editbox:ReleaseDeletedHandler() end
+
+function X2Editbox:ReleaseHandler() end
+
+function X2Editbox:RemoveAllAnchors() end
+
+function X2Editbox:RemoveAllDrawables() end
+
+function X2Editbox:RemoveDrawable() end
+
+function X2Editbox:RequestCharacterCacheData() end
+
+function X2Editbox:SetAlpha() end
+
+function X2Editbox:SetAlphaAnimation() end
+
+function X2Editbox:SetCategory() end
+
+function X2Editbox:SetCharacterCacheDataHandler() end
+
+function X2Editbox:SetCursorColor() end
+
+function X2Editbox:SetCursorColorByColorKey() end
+
+function X2Editbox:SetCursorHeight() end
+
+function X2Editbox:SetCursorOffset() end
+
+function X2Editbox:SetDelegator() end
+
+function X2Editbox:SetDeletedHandler() end
+
+function X2Editbox:SetDigit() end
+
+function X2Editbox:SetDigitEmpty() end
+
+function X2Editbox:SetDigitMax() end
+
+function X2Editbox:SetDragCondition() end
+
+function X2Editbox:SetDrawPriority() end
+
+function X2Editbox:SetDrawableLayerAlpha() end
+
+function X2Editbox:SetEnglish() end
+
+function X2Editbox:SetExtent() end
+
+function X2Editbox:SetFocus() end
+
+function X2Editbox:SetGuideText() end
+
+function X2Editbox:SetGuideTextInset() end
+
+function X2Editbox:SetHandler() end
+
+function X2Editbox:SetHeight() end
+
+function X2Editbox:SetHistoryLines() end
+
+function X2Editbox:SetInitVal() end
+
+function X2Editbox:SetInset() end
+
+function X2Editbox:SetLText() end
+
+function X2Editbox:SetLayerColor() end
+
+function X2Editbox:SetMaxResizingExtent() end
+
+function X2Editbox:SetMaxTextLength() end
+
+function X2Editbox:SetMinResizingExtent() end
+
+function X2Editbox:SetMoveAnimation() end
+
+function X2Editbox:SetPassword() end
+
+function X2Editbox:SetPossibleFirstZero() end
+
+function X2Editbox:SetPrefixInset() end
+
+function X2Editbox:SetPrefixText() end
+
+function X2Editbox:SetReClickable() end
+
+function X2Editbox:SetReadOnly() end
+
+function X2Editbox:SetResizingBorderSize() end
+
+function X2Editbox:SetRotation() end
+
+function X2Editbox:SetScale() end
+
+function X2Editbox:SetScaleAnimation() end
+
+function X2Editbox:SetSounds() end
+
+function X2Editbox:SetStartAnimation() end
+
+function X2Editbox:SetText() end
+
+function X2Editbox:SetWidth() end
+
+function X2Editbox:Show() end
+
+function X2Editbox:StartMoving() end
+
+function X2Editbox:StartSizing() end
+
+function X2Editbox:StopMovingOrSizing() end
+
+function X2Editbox:TriggerMoveAnimation() end
+
+function X2Editbox:UseDynamicContentState() end
+
+function X2Editbox:UseDynamicDrawableState() end
+
+function X2Editbox:UseResizing() end
+
+function X2Editbox:UseSelectAllWhenFocused() end

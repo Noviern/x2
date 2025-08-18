@@ -12,3 +12,249 @@ CT_EXPEDITION_NAME = 3 -- object/Label
 CT_NAME = 1 -- object/Label
 DC_ALWAYS = 0 -- object/Label
 DC_SHIFT_KEY_DOWN = 1 -- object/Label
+Label = { -- object/Label
+  __this = "<userdata: 00000000AD6E1070>", -- object/Label
+  style = { -- object/Label
+    __this = "<userdata: 00000001E3FE3960>", -- object/Label
+  }, -- object/Label
+} -- object/Label
+
+function Label.style:GetId() end
+
+function Label.style:GetLineHeight() end
+
+function Label.style:GetName() end
+
+function Label.style:GetObjectType() end
+
+function Label.style:GetTextWidth() end
+
+function Label.style:IsValidUIObject() end
+
+function Label.style:SetAlign() end
+
+function Label.style:SetColor() end
+
+function Label.style:SetColorByKey() end
+
+function Label.style:SetEllipsis() end
+
+function Label.style:SetFont() end
+
+function Label.style:SetFontSize() end
+
+function Label.style:SetOutline() end
+
+function Label.style:SetShadow() end
+
+function Label.style:SetSnap() end
+
+function Label:AddAnchor() end
+
+function Label:ApplyUIScale() end
+
+function Label:AttachWidget() end
+
+function Label:BindWidth() end
+
+function Label:CancelRequestCharacterCacheData() end
+
+function Label:ChangeChildAnchorByScrollValue() end
+
+function Label:CheckOutOfScreen() end
+
+function Label:Clickable() end
+
+function Label:CorrectOffsetByScreen() end
+
+function Label:CreateChildWidget() end
+
+function Label:CreateChildWidgetByType() end
+
+function Label:CreateColorDrawable() end
+
+function Label:CreateColorDrawableByKey() end
+
+function Label:CreateDrawable() end
+
+function Label:CreateEffectDrawable() end
+
+function Label:CreateEffectDrawableByKey() end
+
+function Label:CreateIconDrawable() end
+
+function Label:CreateImageDrawable() end
+
+function Label:CreateNinePartDrawable() end
+
+function Label:CreateTextDrawable() end
+
+function Label:CreateThreeColorDrawable() end
+
+function Label:CreateThreePartDrawable() end
+
+function Label:DetachWidget() end
+
+function Label:DisableDrawables() end
+
+function Label:DisableDrawablesWithChildren() end
+
+function Label:Enable() end
+
+function Label:EnableDrag() end
+
+function Label:EnableDrawables() end
+
+function Label:EnableDrawablesWithChildren() end
+
+function Label:EnableFocus() end
+
+function Label:EnableHidingIsRemove() end
+
+function Label:EnableKeyboard() end
+
+function Label:EnablePick() end
+
+function Label:EnableScroll() end
+
+function Label:GetAlpha() end
+
+function Label:GetAttachedWidget() end
+
+function Label:GetEffectiveExtent() end
+
+function Label:GetEffectiveOffset() end
+
+function Label:GetExtent() end
+
+function Label:GetHeight() end
+
+function Label:GetId() end
+
+function Label:GetInset() end
+
+function Label:GetName() end
+
+function Label:GetObjectType() end
+
+function Label:GetOffset() end
+
+function Label:GetParent() end
+
+function Label:GetRotation() end
+
+function Label:GetText() end
+
+function Label:GetUILayer() end
+
+function Label:GetValue() end
+
+function Label:GetWidth() end
+
+function Label:HasHandler() end
+
+function Label:InheritAnimationData() end
+
+function Label:IsDescendantWidget() end
+
+function Label:IsEnabled() end
+
+function Label:IsMouseOver() end
+
+function Label:IsNowAnimation() end
+
+function Label:IsValidUIObject() end
+
+function Label:IsVisible() end
+
+function Label:Lower() end
+
+function Label:MoveTo() end
+
+function Label:Raise() end
+
+function Label:RegisterEvent() end
+
+function Label:ReleaseDeletedHandler() end
+
+function Label:ReleaseHandler() end
+
+function Label:RemoveAllAnchors() end
+
+function Label:RemoveAllDrawables() end
+
+function Label:RemoveDrawable() end
+
+function Label:RequestCharacterCacheData() end
+
+function Label:SetAlpha() end
+
+function Label:SetAlphaAnimation() end
+
+function Label:SetAutoResize() end
+
+function Label:SetCategory() end
+
+function Label:SetCharacterCacheDataHandler() end
+
+function Label:SetDelegator() end
+
+function Label:SetDeletedHandler() end
+
+function Label:SetDragCondition() end
+
+function Label:SetDrawPriority() end
+
+function Label:SetDrawableLayerAlpha() end
+
+function Label:SetExtent() end
+
+function Label:SetHandler() end
+
+function Label:SetHeight() end
+
+function Label:SetInset() end
+
+function Label:SetLText() end
+
+function Label:SetLayerColor() end
+
+function Label:SetMaxResizingExtent() end
+
+function Label:SetMinResizingExtent() end
+
+function Label:SetMoveAnimation() end
+
+function Label:SetNumberOnly() end
+
+function Label:SetResizingBorderSize() end
+
+function Label:SetRotation() end
+
+function Label:SetScale() end
+
+function Label:SetScaleAnimation() end
+
+function Label:SetSounds() end
+
+function Label:SetStartAnimation() end
+
+function Label:SetText() end
+
+function Label:SetWidth() end
+
+function Label:Show() end
+
+function Label:StartMoving() end
+
+function Label:StartSizing() end
+
+function Label:StopMovingOrSizing() end
+
+function Label:TriggerMoveAnimation() end
+
+function Label:UseDynamicContentState() end
+
+function Label:UseDynamicDrawableState() end
+
+function Label:UseResizing() end

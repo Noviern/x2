@@ -53,15 +53,6 @@ function Editbox:ClearFocus() end
 ---```
 function Editbox:ClearString() end
 
----Retrieves the current text in the Editbox.
----@return string text The current text, which may be an empty string.
----@nodiscard
----@usage
----```
----local text = widget:GetText()
----```
-function Editbox:GetText() end
-
 ---Checks if the Editbox content is restricted to digits.
 ---@return boolean digit  `true` if restricted to digits, `false` otherwise. (default: `false`)
 ---@nodiscard
@@ -196,14 +187,6 @@ function Editbox:SetPrefixText(prefixText) end
 ---widget:SetReClickable(false)
 ---```
 function Editbox:SetReClickable(click) end
-
----Sets the text for the Editbox.
----@param text string The text to set.
----@usage
----```
----widget:SetText("Archerage.to - the first ArcheAge Private Server")
----```
-function Editbox:SetText(text) end
 
 ---Enables or disables selecting all text when the Editbox gains focus.
 ---@param use boolean `true` to select all text on focus, `false` to disable. (default: `false`)

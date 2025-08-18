@@ -58,15 +58,6 @@ function EditboxMultiline:GetLineCount() end
 ---```
 function EditboxMultiline:GetLineHeight() end
 
----Retrieves the text content of the EditboxMultiline.
----@return string text The text content.
----@nodiscard
----@usage
----```
----local text = editboxMultiline:GetText()
----```
-function EditboxMultiline:GetText() end
-
 ---@TODO: Is this broken similar to Textbox:GetTextHeight?
 ---Retrieves the total height of the text in the EditboxMultiline.
 ---@return number textHeight The total text height.

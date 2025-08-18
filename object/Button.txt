@@ -7,6 +7,12 @@ AP_RIGHT = 7 -- object/Button
 AP_TOP = 5 -- object/Button
 AP_TOPLEFT = 0 -- object/Button
 AP_TOPRIGHT = 1 -- object/Button
+Button = { -- object/Button
+  __this = "<userdata: 00000000B074C830>", -- object/Button
+  style = { -- object/Button
+    __this = "<userdata: 00000001C84A8800>", -- object/Button
+  }, -- object/Button
+} -- object/Button
 CT_ABILITY = 2 -- object/Button
 CT_EXPEDITION_NAME = 3 -- object/Button
 CT_NAME = 1 -- object/Button
@@ -17,3 +23,295 @@ UI_BUTTON_HIGHLIGHTED = 1 -- object/Button
 UI_BUTTON_MAX = 4 -- object/Button
 UI_BUTTON_NORMAL = 0 -- object/Button
 UI_BUTTON_PUSHED = 2 -- object/Button
+
+function Button.style:GetId() end
+
+function Button.style:GetLineHeight() end
+
+function Button.style:GetName() end
+
+function Button.style:GetObjectType() end
+
+function Button.style:GetTextWidth() end
+
+function Button.style:IsValidUIObject() end
+
+function Button.style:SetAlign() end
+
+function Button.style:SetColor() end
+
+function Button.style:SetColorByKey() end
+
+function Button.style:SetEllipsis() end
+
+function Button.style:SetFont() end
+
+function Button.style:SetFontSize() end
+
+function Button.style:SetOutline() end
+
+function Button.style:SetShadow() end
+
+function Button.style:SetSnap() end
+
+function Button:AddAnchor() end
+
+function Button:ApplyUIScale() end
+
+function Button:AttachWidget() end
+
+function Button:BindWidth() end
+
+function Button:CancelRequestCharacterCacheData() end
+
+function Button:ChangeChildAnchorByScrollValue() end
+
+function Button:CheckOutOfScreen() end
+
+function Button:Clickable() end
+
+function Button:CorrectOffsetByScreen() end
+
+function Button:CreateChildWidget() end
+
+function Button:CreateChildWidgetByType() end
+
+function Button:CreateColorDrawable() end
+
+function Button:CreateColorDrawableByKey() end
+
+function Button:CreateDrawable() end
+
+function Button:CreateEffectDrawable() end
+
+function Button:CreateEffectDrawableByKey() end
+
+function Button:CreateIconDrawable() end
+
+function Button:CreateImageDrawable() end
+
+function Button:CreateNinePartDrawable() end
+
+function Button:CreateStateDrawable() end
+
+function Button:CreateTextDrawable() end
+
+function Button:CreateThreeColorDrawable() end
+
+function Button:CreateThreePartDrawable() end
+
+function Button:DeregisterForClicks() end
+
+function Button:DetachWidget() end
+
+function Button:DisableDrawables() end
+
+function Button:DisableDrawablesWithChildren() end
+
+function Button:Enable() end
+
+function Button:EnableDrag() end
+
+function Button:EnableDrawables() end
+
+function Button:EnableDrawablesWithChildren() end
+
+function Button:EnableFocus() end
+
+function Button:EnableHidingIsRemove() end
+
+function Button:EnableKeyboard() end
+
+function Button:EnablePick() end
+
+function Button:EnableScroll() end
+
+function Button:GetAlpha() end
+
+function Button:GetAttachedWidget() end
+
+function Button:GetButtonState() end
+
+function Button:GetDisabledBackground() end
+
+function Button:GetDisabledColor() end
+
+function Button:GetEffectiveExtent() end
+
+function Button:GetEffectiveOffset() end
+
+function Button:GetExtent() end
+
+function Button:GetHeight() end
+
+function Button:GetHighlightBackground() end
+
+function Button:GetHighlightColor() end
+
+function Button:GetId() end
+
+function Button:GetName() end
+
+function Button:GetNormalBackground() end
+
+function Button:GetNormalColor() end
+
+function Button:GetObjectType() end
+
+function Button:GetOffset() end
+
+function Button:GetParent() end
+
+function Button:GetPushedBackground() end
+
+function Button:GetPushedColor() end
+
+function Button:GetRotation() end
+
+function Button:GetText() end
+
+function Button:GetUILayer() end
+
+function Button:GetValue() end
+
+function Button:GetWidth() end
+
+function Button:HasHandler() end
+
+function Button:InheritAnimationData() end
+
+function Button:IsDescendantWidget() end
+
+function Button:IsEnabled() end
+
+function Button:IsMouseOver() end
+
+function Button:IsNowAnimation() end
+
+function Button:IsValidUIObject() end
+
+function Button:IsVisible() end
+
+function Button:Lower() end
+
+function Button:MoveTo() end
+
+function Button:Raise() end
+
+function Button:RegisterEvent() end
+
+function Button:RegisterForClicks() end
+
+function Button:ReleaseDeletedHandler() end
+
+function Button:ReleaseHandler() end
+
+function Button:RemoveAllAnchors() end
+
+function Button:RemoveAllDrawables() end
+
+function Button:RemoveDrawable() end
+
+function Button:RequestCharacterCacheData() end
+
+function Button:SetAlpha() end
+
+function Button:SetAlphaAnimation() end
+
+function Button:SetAutoClipChar() end
+
+function Button:SetAutoResize() end
+
+function Button:SetButtonState() end
+
+function Button:SetCategory() end
+
+function Button:SetCharacterCacheDataHandler() end
+
+function Button:SetDelegator() end
+
+function Button:SetDeletedHandler() end
+
+function Button:SetDisabledBackground() end
+
+function Button:SetDisabledColor() end
+
+function Button:SetDisabledTextColor() end
+
+function Button:SetDragCondition() end
+
+function Button:SetDrawPriority() end
+
+function Button:SetDrawableLayerAlpha() end
+
+function Button:SetExtent() end
+
+function Button:SetFocus() end
+
+function Button:SetHandler() end
+
+function Button:SetHeight() end
+
+function Button:SetHighlightBackground() end
+
+function Button:SetHighlightColor() end
+
+function Button:SetHighlightTextColor() end
+
+function Button:SetInset() end
+
+function Button:SetLText() end
+
+function Button:SetLayerColor() end
+
+function Button:SetMaxResizingExtent() end
+
+function Button:SetMinResizingExtent() end
+
+function Button:SetMoveAnimation() end
+
+function Button:SetNormalBackground() end
+
+function Button:SetNormalColor() end
+
+function Button:SetPushedBackground() end
+
+function Button:SetPushedColor() end
+
+function Button:SetPushedTextColor() end
+
+function Button:SetResizingBorderSize() end
+
+function Button:SetRotation() end
+
+function Button:SetScale() end
+
+function Button:SetScaleAnimation() end
+
+function Button:SetSounds() end
+
+function Button:SetStartAnimation() end
+
+function Button:SetStyle() end
+
+function Button:SetText() end
+
+function Button:SetTextColor() end
+
+function Button:SetWidth() end
+
+function Button:Show() end
+
+function Button:StartMoving() end
+
+function Button:StartSizing() end
+
+function Button:StopMovingOrSizing() end
+
+function Button:TriggerMoveAnimation() end
+
+function Button:UseDynamicContentState() end
+
+function Button:UseDynamicDrawableState() end
+
+function Button:UseResizing() end

@@ -18,6 +18,20 @@ function dump(tbl, depth, seen, path)
 
   seen[tblref] = true
 
+  ---TODO: Should add a max depth.
+  ---TODO: Options, maybe add a filter so I can filter out object functions from classes like Widgetbase etc
+
+  if tbl.__index ~= nil then
+    local mt = getmetatable(tbl)
+    for k, v in pairs(mt) do
+      if k ~= "__index" then
+        tbl[k] = v
+      end
+    end
+  end
+
+  -- tbl.__this = nil
+
   for k, v in pairs(tbl) do
     local vt = type(v)
     local line
@@ -34,7 +48,11 @@ function dump(tbl, depth, seen, path)
       local val = "{}"
 
       if vt == "table" then
-        if next(v) ~= nil then
+        ---@TODO: This needs to be a option in dump params
+        if depth > 4 then
+        -- if depth > 2 then
+          val = '"<max depth>"'
+        elseif next(v) ~= nil then
           local vref = tostring(v)
           if seen[vref] then
             val = string.format('"<circular: %s>"', path)
@@ -43,7 +61,7 @@ function dump(tbl, depth, seen, path)
             local new_path = path == "" and k or path .. "." .. k
             local sub_vars, sub_funcs = dump(v, new_depth, seen, new_path)
 
-            if sub_vars ~= "" then
+            if sub_vars ~= "" and sub_vars ~= nil then
               val = string.format("{\n%s,\n%s}", sub_vars, indent)
             end
 
@@ -57,7 +75,7 @@ function dump(tbl, depth, seen, path)
       elseif vt == "userdata" then
         val = string.format('"<%s>"', tostring(v))
       else
-        val = string.format('"%s"', (string.gsub(v, "\r\n", "\\r\\n")))
+        val = string.format('"%s"', v:gsub("\r", "\\r"):gsub("\n", "\\n"))
       end
 
       line = string.format("%s%s = %s", indent, k, val)

@@ -12,3 +12,312 @@ CT_EXPEDITION_NAME = 3 -- object/EditboxMultiline
 CT_NAME = 1 -- object/EditboxMultiline
 DC_ALWAYS = 0 -- object/EditboxMultiline
 DC_SHIFT_KEY_DOWN = 1 -- object/EditboxMultiline
+EditboxMultiline = { -- object/EditboxMultiline
+  __this = "<userdata: 000000008B15F240>", -- object/EditboxMultiline
+  guideTextStyle = { -- object/EditboxMultiline
+    __this = "<userdata: 00000001E3FE2CE0>", -- object/EditboxMultiline
+  }, -- object/EditboxMultiline
+  style = { -- object/EditboxMultiline
+    __this = "<userdata: 00000001E3FE3E60>", -- object/EditboxMultiline
+  }, -- object/EditboxMultiline
+} -- object/EditboxMultiline
+
+function EditboxMultiline.guideTextStyle:GetId() end
+
+function EditboxMultiline.guideTextStyle:GetLineHeight() end
+
+function EditboxMultiline.guideTextStyle:GetName() end
+
+function EditboxMultiline.guideTextStyle:GetObjectType() end
+
+function EditboxMultiline.guideTextStyle:GetTextWidth() end
+
+function EditboxMultiline.guideTextStyle:IsValidUIObject() end
+
+function EditboxMultiline.guideTextStyle:SetAlign() end
+
+function EditboxMultiline.guideTextStyle:SetColor() end
+
+function EditboxMultiline.guideTextStyle:SetColorByKey() end
+
+function EditboxMultiline.guideTextStyle:SetEllipsis() end
+
+function EditboxMultiline.guideTextStyle:SetFont() end
+
+function EditboxMultiline.guideTextStyle:SetFontSize() end
+
+function EditboxMultiline.guideTextStyle:SetOutline() end
+
+function EditboxMultiline.guideTextStyle:SetShadow() end
+
+function EditboxMultiline.guideTextStyle:SetSnap() end
+
+function EditboxMultiline.style:GetId() end
+
+function EditboxMultiline.style:GetLineHeight() end
+
+function EditboxMultiline.style:GetName() end
+
+function EditboxMultiline.style:GetObjectType() end
+
+function EditboxMultiline.style:GetTextWidth() end
+
+function EditboxMultiline.style:IsValidUIObject() end
+
+function EditboxMultiline.style:SetAlign() end
+
+function EditboxMultiline.style:SetColor() end
+
+function EditboxMultiline.style:SetColorByKey() end
+
+function EditboxMultiline.style:SetEllipsis() end
+
+function EditboxMultiline.style:SetFont() end
+
+function EditboxMultiline.style:SetFontSize() end
+
+function EditboxMultiline.style:SetOutline() end
+
+function EditboxMultiline.style:SetShadow() end
+
+function EditboxMultiline.style:SetSnap() end
+
+function EditboxMultiline:AddAnchor() end
+
+function EditboxMultiline:ApplyUIScale() end
+
+function EditboxMultiline:AttachWidget() end
+
+function EditboxMultiline:BindWidth() end
+
+function EditboxMultiline:CancelRequestCharacterCacheData() end
+
+function EditboxMultiline:ChangeChildAnchorByScrollValue() end
+
+function EditboxMultiline:CheckOutOfScreen() end
+
+function EditboxMultiline:Clear() end
+
+function EditboxMultiline:ClearTextOnEnter() end
+
+function EditboxMultiline:Clickable() end
+
+function EditboxMultiline:CorrectOffsetByScreen() end
+
+function EditboxMultiline:CreateChildWidget() end
+
+function EditboxMultiline:CreateChildWidgetByType() end
+
+function EditboxMultiline:CreateColorDrawable() end
+
+function EditboxMultiline:CreateColorDrawableByKey() end
+
+function EditboxMultiline:CreateDrawable() end
+
+function EditboxMultiline:CreateEffectDrawable() end
+
+function EditboxMultiline:CreateEffectDrawableByKey() end
+
+function EditboxMultiline:CreateIconDrawable() end
+
+function EditboxMultiline:CreateImageDrawable() end
+
+function EditboxMultiline:CreateNinePartDrawable() end
+
+function EditboxMultiline:CreateTextDrawable() end
+
+function EditboxMultiline:CreateThreeColorDrawable() end
+
+function EditboxMultiline:CreateThreePartDrawable() end
+
+function EditboxMultiline:DetachWidget() end
+
+function EditboxMultiline:DisableDrawables() end
+
+function EditboxMultiline:DisableDrawablesWithChildren() end
+
+function EditboxMultiline:Enable() end
+
+function EditboxMultiline:EnableDrag() end
+
+function EditboxMultiline:EnableDrawables() end
+
+function EditboxMultiline:EnableDrawablesWithChildren() end
+
+function EditboxMultiline:EnableFocus() end
+
+function EditboxMultiline:EnableHidingIsRemove() end
+
+function EditboxMultiline:EnableKeyboard() end
+
+function EditboxMultiline:EnablePick() end
+
+function EditboxMultiline:EnableScroll() end
+
+function EditboxMultiline:GetAlpha() end
+
+function EditboxMultiline:GetAttachedWidget() end
+
+function EditboxMultiline:GetCursorPosX() end
+
+function EditboxMultiline:GetCursorPosY() end
+
+function EditboxMultiline:GetEffectiveExtent() end
+
+function EditboxMultiline:GetEffectiveOffset() end
+
+function EditboxMultiline:GetExtent() end
+
+function EditboxMultiline:GetHeight() end
+
+function EditboxMultiline:GetId() end
+
+function EditboxMultiline:GetLineCount() end
+
+function EditboxMultiline:GetLineHeight() end
+
+function EditboxMultiline:GetName() end
+
+function EditboxMultiline:GetObjectType() end
+
+function EditboxMultiline:GetOffset() end
+
+function EditboxMultiline:GetParent() end
+
+function EditboxMultiline:GetRotation() end
+
+function EditboxMultiline:GetText() end
+
+function EditboxMultiline:GetTextHeight() end
+
+function EditboxMultiline:GetTextLength() end
+
+function EditboxMultiline:GetUILayer() end
+
+function EditboxMultiline:GetValue() end
+
+function EditboxMultiline:GetWidth() end
+
+function EditboxMultiline:HasHandler() end
+
+function EditboxMultiline:InheritAnimationData() end
+
+function EditboxMultiline:IsDescendantWidget() end
+
+function EditboxMultiline:IsEnabled() end
+
+function EditboxMultiline:IsMouseOver() end
+
+function EditboxMultiline:IsNowAnimation() end
+
+function EditboxMultiline:IsValidUIObject() end
+
+function EditboxMultiline:IsVisible() end
+
+function EditboxMultiline:Lower() end
+
+function EditboxMultiline:MaxTextLength() end
+
+function EditboxMultiline:MoveTo() end
+
+function EditboxMultiline:Raise() end
+
+function EditboxMultiline:RegisterEvent() end
+
+function EditboxMultiline:ReleaseDeletedHandler() end
+
+function EditboxMultiline:ReleaseHandler() end
+
+function EditboxMultiline:RemoveAllAnchors() end
+
+function EditboxMultiline:RemoveAllDrawables() end
+
+function EditboxMultiline:RemoveDrawable() end
+
+function EditboxMultiline:RequestCharacterCacheData() end
+
+function EditboxMultiline:SetAlpha() end
+
+function EditboxMultiline:SetAlphaAnimation() end
+
+function EditboxMultiline:SetCategory() end
+
+function EditboxMultiline:SetCharacterCacheDataHandler() end
+
+function EditboxMultiline:SetCursorColor() end
+
+function EditboxMultiline:SetCursorColorByColorKey() end
+
+function EditboxMultiline:SetCursorHeight() end
+
+function EditboxMultiline:SetCursorOffset() end
+
+function EditboxMultiline:SetDelegator() end
+
+function EditboxMultiline:SetDeletedHandler() end
+
+function EditboxMultiline:SetDragCondition() end
+
+function EditboxMultiline:SetDrawPriority() end
+
+function EditboxMultiline:SetDrawableLayerAlpha() end
+
+function EditboxMultiline:SetExtent() end
+
+function EditboxMultiline:SetGuideText() end
+
+function EditboxMultiline:SetGuideTextInset() end
+
+function EditboxMultiline:SetHandler() end
+
+function EditboxMultiline:SetHeight() end
+
+function EditboxMultiline:SetInset() end
+
+function EditboxMultiline:SetLText() end
+
+function EditboxMultiline:SetLayerColor() end
+
+function EditboxMultiline:SetLineSpace() end
+
+function EditboxMultiline:SetMaxResizingExtent() end
+
+function EditboxMultiline:SetMaxTextLength() end
+
+function EditboxMultiline:SetMinResizingExtent() end
+
+function EditboxMultiline:SetMoveAnimation() end
+
+function EditboxMultiline:SetReadOnly() end
+
+function EditboxMultiline:SetResizingBorderSize() end
+
+function EditboxMultiline:SetRotation() end
+
+function EditboxMultiline:SetScale() end
+
+function EditboxMultiline:SetScaleAnimation() end
+
+function EditboxMultiline:SetSounds() end
+
+function EditboxMultiline:SetStartAnimation() end
+
+function EditboxMultiline:SetText() end
+
+function EditboxMultiline:SetWidth() end
+
+function EditboxMultiline:Show() end
+
+function EditboxMultiline:StartMoving() end
+
+function EditboxMultiline:StartSizing() end
+
+function EditboxMultiline:StopMovingOrSizing() end
+
+function EditboxMultiline:TriggerMoveAnimation() end
+
+function EditboxMultiline:UseDynamicContentState() end
+
+function EditboxMultiline:UseDynamicDrawableState() end
+
+function EditboxMultiline:UseResizing() end

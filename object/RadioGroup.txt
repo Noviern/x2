@@ -12,3 +12,234 @@ CT_EXPEDITION_NAME = 3 -- object/RadioGroup
 CT_NAME = 1 -- object/RadioGroup
 DC_ALWAYS = 0 -- object/RadioGroup
 DC_SHIFT_KEY_DOWN = 1 -- object/RadioGroup
+RadioGroup = { -- object/RadioGroup
+  __this = "<userdata: 00000000AE371E10>", -- object/RadioGroup
+} -- object/RadioGroup
+
+function RadioGroup:AddAnchor() end
+
+function RadioGroup:ApplyUIScale() end
+
+function RadioGroup:AttachWidget() end
+
+function RadioGroup:BindWidth() end
+
+function RadioGroup:CancelRequestCharacterCacheData() end
+
+function RadioGroup:ChangeChildAnchorByScrollValue() end
+
+function RadioGroup:Check() end
+
+function RadioGroup:CheckOutOfScreen() end
+
+function RadioGroup:Clear() end
+
+function RadioGroup:Clickable() end
+
+function RadioGroup:CorrectOffsetByScreen() end
+
+function RadioGroup:CreateChildWidget() end
+
+function RadioGroup:CreateChildWidgetByType() end
+
+function RadioGroup:CreateColorDrawable() end
+
+function RadioGroup:CreateColorDrawableByKey() end
+
+function RadioGroup:CreateDrawable() end
+
+function RadioGroup:CreateEffectDrawable() end
+
+function RadioGroup:CreateEffectDrawableByKey() end
+
+function RadioGroup:CreateIconDrawable() end
+
+function RadioGroup:CreateImageDrawable() end
+
+function RadioGroup:CreateNinePartDrawable() end
+
+function RadioGroup:CreateRadioItem() end
+
+function RadioGroup:CreateTextDrawable() end
+
+function RadioGroup:CreateThreeColorDrawable() end
+
+function RadioGroup:CreateThreePartDrawable() end
+
+function RadioGroup:DetachWidget() end
+
+function RadioGroup:DisableDrawables() end
+
+function RadioGroup:DisableDrawablesWithChildren() end
+
+function RadioGroup:Enable() end
+
+function RadioGroup:EnableDrag() end
+
+function RadioGroup:EnableDrawables() end
+
+function RadioGroup:EnableDrawablesWithChildren() end
+
+function RadioGroup:EnableFocus() end
+
+function RadioGroup:EnableHidingIsRemove() end
+
+function RadioGroup:EnableIndex() end
+
+function RadioGroup:EnableKeyboard() end
+
+function RadioGroup:EnablePick() end
+
+function RadioGroup:EnableScroll() end
+
+function RadioGroup:GetAlpha() end
+
+function RadioGroup:GetAttachedWidget() end
+
+function RadioGroup:GetChecked() end
+
+function RadioGroup:GetCheckedData() end
+
+function RadioGroup:GetDataValue() end
+
+function RadioGroup:GetEffectiveExtent() end
+
+function RadioGroup:GetEffectiveOffset() end
+
+function RadioGroup:GetExtent() end
+
+function RadioGroup:GetHeight() end
+
+function RadioGroup:GetId() end
+
+function RadioGroup:GetIndexByValue() end
+
+function RadioGroup:GetName() end
+
+function RadioGroup:GetObjectType() end
+
+function RadioGroup:GetOffset() end
+
+function RadioGroup:GetParent() end
+
+function RadioGroup:GetRotation() end
+
+function RadioGroup:GetSize() end
+
+function RadioGroup:GetText() end
+
+function RadioGroup:GetUILayer() end
+
+function RadioGroup:GetValue() end
+
+function RadioGroup:GetWidth() end
+
+function RadioGroup:HasHandler() end
+
+function RadioGroup:InheritAnimationData() end
+
+function RadioGroup:IsDescendantWidget() end
+
+function RadioGroup:IsEnabled() end
+
+function RadioGroup:IsInRange() end
+
+function RadioGroup:IsMouseOver() end
+
+function RadioGroup:IsNowAnimation() end
+
+function RadioGroup:IsValidUIObject() end
+
+function RadioGroup:IsVisible() end
+
+function RadioGroup:Lower() end
+
+function RadioGroup:MoveTo() end
+
+function RadioGroup:Raise() end
+
+function RadioGroup:RegisterEvent() end
+
+function RadioGroup:ReleaseCheck() end
+
+function RadioGroup:ReleaseDeletedHandler() end
+
+function RadioGroup:ReleaseHandler() end
+
+function RadioGroup:RemoveAllAnchors() end
+
+function RadioGroup:RemoveAllDrawables() end
+
+function RadioGroup:RemoveDrawable() end
+
+function RadioGroup:RequestCharacterCacheData() end
+
+function RadioGroup:SetAlpha() end
+
+function RadioGroup:SetAlphaAnimation() end
+
+function RadioGroup:SetCategory() end
+
+function RadioGroup:SetCharacterCacheDataHandler() end
+
+function RadioGroup:SetDelegator() end
+
+function RadioGroup:SetDeletedHandler() end
+
+function RadioGroup:SetDragCondition() end
+
+function RadioGroup:SetDrawPriority() end
+
+function RadioGroup:SetDrawableLayerAlpha() end
+
+function RadioGroup:SetExtent() end
+
+function RadioGroup:SetHandler() end
+
+function RadioGroup:SetHeight() end
+
+function RadioGroup:SetLText() end
+
+function RadioGroup:SetLayerColor() end
+
+function RadioGroup:SetMaxResizingExtent() end
+
+function RadioGroup:SetMinResizingExtent() end
+
+function RadioGroup:SetMoveAnimation() end
+
+function RadioGroup:SetResizingBorderSize() end
+
+function RadioGroup:SetRotation() end
+
+function RadioGroup:SetScale() end
+
+function RadioGroup:SetScaleAnimation() end
+
+function RadioGroup:SetSounds() end
+
+function RadioGroup:SetStartAnimation() end
+
+function RadioGroup:SetText() end
+
+function RadioGroup:SetWidth() end
+
+function RadioGroup:Show() end
+
+function RadioGroup:ShowIndex() end
+
+function RadioGroup:StartMoving() end
+
+function RadioGroup:StartSizing() end
+
+function RadioGroup:StopMovingOrSizing() end
+
+function RadioGroup:TriggerMoveAnimation() end
+
+function RadioGroup:UpdateValue() end
+
+function RadioGroup:UseDynamicContentState() end
+
+function RadioGroup:UseDynamicDrawableState() end
+
+function RadioGroup:UseResizing() end

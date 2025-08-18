@@ -10,5 +10,278 @@ AP_TOPRIGHT = 1 -- object/ChatTab
 CT_ABILITY = 2 -- object/ChatTab
 CT_EXPEDITION_NAME = 3 -- object/ChatTab
 CT_NAME = 1 -- object/ChatTab
+ChatWindow = { -- object/ChatTab
+  __this = "<userdata: 0000000096FFA450>", -- object/ChatTab
+} -- object/ChatTab
 DC_ALWAYS = 0 -- object/ChatTab
 DC_SHIFT_KEY_DOWN = 1 -- object/ChatTab
+
+function ChatWindow:AddAnchor() end
+
+function ChatWindow:AddTab() end
+
+function ChatWindow:AllowTabSwitch() end
+
+function ChatWindow:ApplyUIScale() end
+
+function ChatWindow:AttachWidget() end
+
+function ChatWindow:BindWidth() end
+
+function ChatWindow:CancelRequestCharacterCacheData() end
+
+function ChatWindow:ChangeChildAnchorByScrollValue() end
+
+function ChatWindow:CheckOutOfScreen() end
+
+function ChatWindow:Clickable() end
+
+function ChatWindow:CorrectOffsetByScreen() end
+
+function ChatWindow:CreateChildWidget() end
+
+function ChatWindow:CreateChildWidgetByType() end
+
+function ChatWindow:CreateColorDrawable() end
+
+function ChatWindow:CreateColorDrawableByKey() end
+
+function ChatWindow:CreateDrawable() end
+
+function ChatWindow:CreateEffectDrawable() end
+
+function ChatWindow:CreateEffectDrawableByKey() end
+
+function ChatWindow:CreateIconDrawable() end
+
+function ChatWindow:CreateImageDrawable() end
+
+function ChatWindow:CreateNinePartDrawable() end
+
+function ChatWindow:CreateTextDrawable() end
+
+function ChatWindow:CreateThreeColorDrawable() end
+
+function ChatWindow:CreateThreePartDrawable() end
+
+function ChatWindow:DetachWidget() end
+
+function ChatWindow:DisableDrawables() end
+
+function ChatWindow:DisableDrawablesWithChildren() end
+
+function ChatWindow:Enable() end
+
+function ChatWindow:EnableDrag() end
+
+function ChatWindow:EnableDrawables() end
+
+function ChatWindow:EnableDrawablesWithChildren() end
+
+function ChatWindow:EnableFocus() end
+
+function ChatWindow:EnableHidingIsRemove() end
+
+function ChatWindow:EnableKeyboard() end
+
+function ChatWindow:EnablePick() end
+
+function ChatWindow:EnableScroll() end
+
+function ChatWindow:GetAddButton() end
+
+function ChatWindow:GetAlpha() end
+
+function ChatWindow:GetAttachedWidget() end
+
+function ChatWindow:GetCaretDrawable() end
+
+function ChatWindow:GetChatEdit() end
+
+function ChatWindow:GetChatMethodSelector() end
+
+function ChatWindow:GetEffectiveExtent() end
+
+function ChatWindow:GetEffectiveOffset() end
+
+function ChatWindow:GetExtent() end
+
+function ChatWindow:GetHeight() end
+
+function ChatWindow:GetId() end
+
+function ChatWindow:GetImeToggleButton() end
+
+function ChatWindow:GetLeftLineDrawable() end
+
+function ChatWindow:GetLockNotifyDrawable() end
+
+function ChatWindow:GetName() end
+
+function ChatWindow:GetObjectType() end
+
+function ChatWindow:GetOffset() end
+
+function ChatWindow:GetParent() end
+
+function ChatWindow:GetRightLineDrawable() end
+
+function ChatWindow:GetRotation() end
+
+function ChatWindow:GetSelectedTab() end
+
+function ChatWindow:GetText() end
+
+function ChatWindow:GetUILayer() end
+
+function ChatWindow:GetUrlButton() end
+
+function ChatWindow:GetValue() end
+
+function ChatWindow:GetWidth() end
+
+function ChatWindow:HasHandler() end
+
+function ChatWindow:InheritAnimationData() end
+
+function ChatWindow:IsDescendantWidget() end
+
+function ChatWindow:IsEnabled() end
+
+function ChatWindow:IsMouseOver() end
+
+function ChatWindow:IsNowAnimation() end
+
+function ChatWindow:IsValidUIObject() end
+
+function ChatWindow:IsVisible() end
+
+function ChatWindow:Lower() end
+
+function ChatWindow:MoveTo() end
+
+function ChatWindow:Raise() end
+
+function ChatWindow:RegisterEvent() end
+
+function ChatWindow:ReleaseDeletedHandler() end
+
+function ChatWindow:ReleaseHandler() end
+
+function ChatWindow:RemoveAllAnchors() end
+
+function ChatWindow:RemoveAllDrawables() end
+
+function ChatWindow:RemoveAllTabs() end
+
+function ChatWindow:RemoveDrawable() end
+
+function ChatWindow:RemoveTab() end
+
+function ChatWindow:RequestCharacterCacheData() end
+
+function ChatWindow:SelectTab() end
+
+function ChatWindow:SetAlpha() end
+
+function ChatWindow:SetAlphaAnimation() end
+
+function ChatWindow:SetCaretOffset() end
+
+function ChatWindow:SetCategory() end
+
+function ChatWindow:SetCharacterCacheDataHandler() end
+
+function ChatWindow:SetChatWindowId() end
+
+function ChatWindow:SetContentOffset() end
+
+function ChatWindow:SetDelegator() end
+
+function ChatWindow:SetDeletedHandler() end
+
+function ChatWindow:SetDragCondition() end
+
+function ChatWindow:SetDrawPriority() end
+
+function ChatWindow:SetDrawableLayerAlpha() end
+
+function ChatWindow:SetExtent() end
+
+function ChatWindow:SetGap() end
+
+function ChatWindow:SetHandler() end
+
+function ChatWindow:SetHeight() end
+
+function ChatWindow:SetInjectable() end
+
+function ChatWindow:SetLText() end
+
+function ChatWindow:SetLayerColor() end
+
+function ChatWindow:SetLeftLineOffset() end
+
+function ChatWindow:SetMaxNotifyTime() end
+
+function ChatWindow:SetMaxResizingExtent() end
+
+function ChatWindow:SetMinResizingExtent() end
+
+function ChatWindow:SetMinTabWidth() end
+
+function ChatWindow:SetMoveAnimation() end
+
+function ChatWindow:SetNotifyBlinkingFreq() end
+
+function ChatWindow:SetOffset() end
+
+function ChatWindow:SetResizingBorderSize() end
+
+function ChatWindow:SetRightLineOffset() end
+
+function ChatWindow:SetRotation() end
+
+function ChatWindow:SetScale() end
+
+function ChatWindow:SetScaleAnimation() end
+
+function ChatWindow:SetSlideTimeInDragging() end
+
+function ChatWindow:SetSounds() end
+
+function ChatWindow:SetStartAnimation() end
+
+function ChatWindow:SetTabAreaHeight() end
+
+function ChatWindow:SetTabAreaInset() end
+
+function ChatWindow:SetTabButtonAlpha() end
+
+function ChatWindow:SetTabWidth() end
+
+function ChatWindow:SetText() end
+
+function ChatWindow:SetWidth() end
+
+function ChatWindow:Show() end
+
+function ChatWindow:StartMoving() end
+
+function ChatWindow:StartSizing() end
+
+function ChatWindow:StopMovingOrSizing() end
+
+function ChatWindow:TriggerMoveAnimation() end
+
+function ChatWindow:UseAddTabButton() end
+
+function ChatWindow:UseAutoResizingTabButtonMode() end
+
+function ChatWindow:UseDynamicContentState() end
+
+function ChatWindow:UseDynamicDrawableState() end
+
+function ChatWindow:UseResizing() end
+
+function ChatWindow:UseSlidingButton() end

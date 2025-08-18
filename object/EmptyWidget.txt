@@ -12,3 +12,210 @@ CT_EXPEDITION_NAME = 3 -- object/EmptyWidget
 CT_NAME = 1 -- object/EmptyWidget
 DC_ALWAYS = 0 -- object/EmptyWidget
 DC_SHIFT_KEY_DOWN = 1 -- object/EmptyWidget
+EmptyWidget = { -- object/EmptyWidget
+  __this = "<userdata: 00000001E45397F0>", -- object/EmptyWidget
+} -- object/EmptyWidget
+
+function EmptyWidget:AddAnchor() end
+
+function EmptyWidget:ApplyUIScale() end
+
+function EmptyWidget:AttachWidget() end
+
+function EmptyWidget:BindWidth() end
+
+function EmptyWidget:CancelRequestCharacterCacheData() end
+
+function EmptyWidget:ChangeChildAnchorByScrollValue() end
+
+function EmptyWidget:CheckOutOfScreen() end
+
+function EmptyWidget:Clickable() end
+
+function EmptyWidget:CorrectOffsetByScreen() end
+
+function EmptyWidget:CreateChildWidget() end
+
+function EmptyWidget:CreateChildWidgetByType() end
+
+function EmptyWidget:CreateColorDrawable() end
+
+function EmptyWidget:CreateColorDrawableByKey() end
+
+function EmptyWidget:CreateDrawable() end
+
+function EmptyWidget:CreateEffectDrawable() end
+
+function EmptyWidget:CreateEffectDrawableByKey() end
+
+function EmptyWidget:CreateIconDrawable() end
+
+function EmptyWidget:CreateImageDrawable() end
+
+function EmptyWidget:CreateNinePartDrawable() end
+
+function EmptyWidget:CreateTextDrawable() end
+
+function EmptyWidget:CreateThreeColorDrawable() end
+
+function EmptyWidget:CreateThreePartDrawable() end
+
+function EmptyWidget:DetachWidget() end
+
+function EmptyWidget:DisableDrawables() end
+
+function EmptyWidget:DisableDrawablesWithChildren() end
+
+function EmptyWidget:Enable() end
+
+function EmptyWidget:EnableDrag() end
+
+function EmptyWidget:EnableDrawables() end
+
+function EmptyWidget:EnableDrawablesWithChildren() end
+
+function EmptyWidget:EnableFocus() end
+
+function EmptyWidget:EnableHidingIsRemove() end
+
+function EmptyWidget:EnableKeyboard() end
+
+function EmptyWidget:EnablePick() end
+
+function EmptyWidget:EnableScroll() end
+
+function EmptyWidget:GetAlpha() end
+
+function EmptyWidget:GetAttachedWidget() end
+
+function EmptyWidget:GetEffectiveExtent() end
+
+function EmptyWidget:GetEffectiveOffset() end
+
+function EmptyWidget:GetExtent() end
+
+function EmptyWidget:GetHeight() end
+
+function EmptyWidget:GetId() end
+
+function EmptyWidget:GetName() end
+
+function EmptyWidget:GetObjectType() end
+
+function EmptyWidget:GetOffset() end
+
+function EmptyWidget:GetParent() end
+
+function EmptyWidget:GetRotation() end
+
+function EmptyWidget:GetText() end
+
+function EmptyWidget:GetUILayer() end
+
+function EmptyWidget:GetValue() end
+
+function EmptyWidget:GetWidth() end
+
+function EmptyWidget:HasHandler() end
+
+function EmptyWidget:InheritAnimationData() end
+
+function EmptyWidget:IsDescendantWidget() end
+
+function EmptyWidget:IsEnabled() end
+
+function EmptyWidget:IsMouseOver() end
+
+function EmptyWidget:IsNowAnimation() end
+
+function EmptyWidget:IsValidUIObject() end
+
+function EmptyWidget:IsVisible() end
+
+function EmptyWidget:Lower() end
+
+function EmptyWidget:MoveTo() end
+
+function EmptyWidget:Raise() end
+
+function EmptyWidget:RegisterEvent() end
+
+function EmptyWidget:ReleaseDeletedHandler() end
+
+function EmptyWidget:ReleaseHandler() end
+
+function EmptyWidget:RemoveAllAnchors() end
+
+function EmptyWidget:RemoveAllDrawables() end
+
+function EmptyWidget:RemoveDrawable() end
+
+function EmptyWidget:RequestCharacterCacheData() end
+
+function EmptyWidget:SetAlpha() end
+
+function EmptyWidget:SetAlphaAnimation() end
+
+function EmptyWidget:SetCategory() end
+
+function EmptyWidget:SetCharacterCacheDataHandler() end
+
+function EmptyWidget:SetDelegator() end
+
+function EmptyWidget:SetDeletedHandler() end
+
+function EmptyWidget:SetDragCondition() end
+
+function EmptyWidget:SetDrawBorder() end
+
+function EmptyWidget:SetDrawPriority() end
+
+function EmptyWidget:SetDrawableLayerAlpha() end
+
+function EmptyWidget:SetExtent() end
+
+function EmptyWidget:SetHandler() end
+
+function EmptyWidget:SetHeight() end
+
+function EmptyWidget:SetLText() end
+
+function EmptyWidget:SetLayerColor() end
+
+function EmptyWidget:SetMaxResizingExtent() end
+
+function EmptyWidget:SetMinResizingExtent() end
+
+function EmptyWidget:SetMoveAnimation() end
+
+function EmptyWidget:SetResizingBorderSize() end
+
+function EmptyWidget:SetRotation() end
+
+function EmptyWidget:SetScale() end
+
+function EmptyWidget:SetScaleAnimation() end
+
+function EmptyWidget:SetSounds() end
+
+function EmptyWidget:SetStartAnimation() end
+
+function EmptyWidget:SetText() end
+
+function EmptyWidget:SetWidth() end
+
+function EmptyWidget:Show() end
+
+function EmptyWidget:StartMoving() end
+
+function EmptyWidget:StartSizing() end
+
+function EmptyWidget:StopMovingOrSizing() end
+
+function EmptyWidget:TriggerMoveAnimation() end
+
+function EmptyWidget:UseDynamicContentState() end
+
+function EmptyWidget:UseDynamicDrawableState() end
+
+function EmptyWidget:UseResizing() end

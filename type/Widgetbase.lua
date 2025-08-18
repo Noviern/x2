@@ -966,7 +966,7 @@ function Widgetbase:SetStartAnimation(alpha, scale) end
 ---@param text string The text to set.
 ---@usage
 ---```
----widget:SetText("Hello, ArcheRage!")
+---widget:SetText("Archerage.to - the first ArcheAge Private Server")
 ---```
 function Widgetbase:SetText(text) end
 

@@ -16,8 +16,12 @@ DC_ALWAYS = 0          -- object/ChatEdit
 DC_SHIFT_KEY_DOWN = 1  -- object/ChatEdit
 
 ---@TODO: Not sure what this is for.
+-- @field SetChatTypeColor fun(self: self, chatType, r: number, g: number, b: number, a: number) -- This does not exist.
 
 ---object/ChatEdit
 ---@class ChatEdit
----@field SetChannel fun(self: self, chatType: number)
----@field SetChatTypeColor fun(self: self, chatType, r: number, g: number, b: number, a: number) -- This does not exist.
+local ChatEdit = {}
+
+---comment
+---@param chatType number
+function ChatEdit:SetChannel(chatType) end

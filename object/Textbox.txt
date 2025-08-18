@@ -1,3 +1,4 @@
+1755548634
 AP_BOTTOM = 8 -- object/Textbox
 AP_BOTTOMLEFT = 2 -- object/Textbox
 AP_BOTTOMRIGHT = 3 -- object/Textbox
@@ -12,3 +13,271 @@ CT_EXPEDITION_NAME = 3 -- object/Textbox
 CT_NAME = 1 -- object/Textbox
 DC_ALWAYS = 0 -- object/Textbox
 DC_SHIFT_KEY_DOWN = 1 -- object/Textbox
+Textbox = { -- object/Textbox
+  __this = "<userdata: 0000000094B20070>", -- object/Textbox
+  style = { -- object/Textbox
+    __this = "<userdata: 000000017AD56DF0>", -- object/Textbox
+  }, -- object/Textbox
+} -- object/Textbox
+
+function Textbox.style:GetId() end
+
+function Textbox.style:GetLineHeight() end
+
+function Textbox.style:GetName() end
+
+function Textbox.style:GetObjectType() end
+
+function Textbox.style:GetTextWidth() end
+
+function Textbox.style:IsValidUIObject() end
+
+function Textbox.style:SetAlign() end
+
+function Textbox.style:SetColor() end
+
+function Textbox.style:SetColorByKey() end
+
+function Textbox.style:SetEllipsis() end
+
+function Textbox.style:SetFont() end
+
+function Textbox.style:SetFontSize() end
+
+function Textbox.style:SetOutline() end
+
+function Textbox.style:SetShadow() end
+
+function Textbox.style:SetSnap() end
+
+function Textbox:AddAnchor() end
+
+function Textbox:ApplyUIScale() end
+
+function Textbox:AttachWidget() end
+
+function Textbox:BindWidth() end
+
+function Textbox:CancelRequestCharacterCacheData() end
+
+function Textbox:ChangeChildAnchorByScrollValue() end
+
+function Textbox:CheckOutOfScreen() end
+
+function Textbox:Clickable() end
+
+function Textbox:CorrectOffsetByScreen() end
+
+function Textbox:CreateChildWidget() end
+
+function Textbox:CreateChildWidgetByType() end
+
+function Textbox:CreateColorDrawable() end
+
+function Textbox:CreateColorDrawableByKey() end
+
+function Textbox:CreateDrawable() end
+
+function Textbox:CreateEffectDrawable() end
+
+function Textbox:CreateEffectDrawableByKey() end
+
+function Textbox:CreateIconDrawable() end
+
+function Textbox:CreateImageDrawable() end
+
+function Textbox:CreateNinePartDrawable() end
+
+function Textbox:CreateTextDrawable() end
+
+function Textbox:CreateThreeColorDrawable() end
+
+function Textbox:CreateThreePartDrawable() end
+
+function Textbox:DetachWidget() end
+
+function Textbox:DisableDrawables() end
+
+function Textbox:DisableDrawablesWithChildren() end
+
+function Textbox:Enable() end
+
+function Textbox:EnableDrag() end
+
+function Textbox:EnableDrawables() end
+
+function Textbox:EnableDrawablesWithChildren() end
+
+function Textbox:EnableFocus() end
+
+function Textbox:EnableHidingIsRemove() end
+
+function Textbox:EnableKeyboard() end
+
+function Textbox:EnablePick() end
+
+function Textbox:EnableScroll() end
+
+function Textbox:GetAlpha() end
+
+function Textbox:GetAttachedWidget() end
+
+function Textbox:GetEffectiveExtent() end
+
+function Textbox:GetEffectiveOffset() end
+
+function Textbox:GetExtent() end
+
+function Textbox:GetHeight() end
+
+function Textbox:GetId() end
+
+function Textbox:GetInset() end
+
+function Textbox:GetLineCount() end
+
+function Textbox:GetLineLength() end
+
+function Textbox:GetLongestLineWidth() end
+
+function Textbox:GetName() end
+
+function Textbox:GetObjectType() end
+
+function Textbox:GetOffset() end
+
+function Textbox:GetParent() end
+
+function Textbox:GetRotation() end
+
+function Textbox:GetText() end
+
+function Textbox:GetTextHeight() end
+
+function Textbox:GetTextLength() end
+
+function Textbox:GetUILayer() end
+
+function Textbox:GetValue() end
+
+function Textbox:GetWidth() end
+
+function Textbox:HasHandler() end
+
+function Textbox:InheritAnimationData() end
+
+function Textbox:IsDescendantWidget() end
+
+function Textbox:IsEnabled() end
+
+function Textbox:IsMouseOver() end
+
+function Textbox:IsNowAnimation() end
+
+function Textbox:IsValidUIObject() end
+
+function Textbox:IsVisible() end
+
+function Textbox:Lower() end
+
+function Textbox:MoveTo() end
+
+function Textbox:Raise() end
+
+function Textbox:RegisterEvent() end
+
+function Textbox:ReleaseDeletedHandler() end
+
+function Textbox:ReleaseHandler() end
+
+function Textbox:RemoveAllAnchors() end
+
+function Textbox:RemoveAllDrawables() end
+
+function Textbox:RemoveDrawable() end
+
+function Textbox:RequestCharacterCacheData() end
+
+function Textbox:SetAlpha() end
+
+function Textbox:SetAlphaAnimation() end
+
+function Textbox:SetAutoResize() end
+
+function Textbox:SetAutoWordwrap() end
+
+function Textbox:SetCategory() end
+
+function Textbox:SetCharacterCacheDataHandler() end
+
+function Textbox:SetDelegator() end
+
+function Textbox:SetDeletedHandler() end
+
+function Textbox:SetDragCondition() end
+
+function Textbox:SetDrawPriority() end
+
+function Textbox:SetDrawableLayerAlpha() end
+
+function Textbox:SetExtent() end
+
+function Textbox:SetHandler() end
+
+function Textbox:SetHeight() end
+
+function Textbox:SetInset() end
+
+function Textbox:SetLText() end
+
+function Textbox:SetLayerColor() end
+
+function Textbox:SetLineColor() end
+
+function Textbox:SetLineHeight() end
+
+function Textbox:SetLineSpace() end
+
+function Textbox:SetMaxResizingExtent() end
+
+function Textbox:SetMinResizingExtent() end
+
+function Textbox:SetMoveAnimation() end
+
+function Textbox:SetResizingBorderSize() end
+
+function Textbox:SetRotation() end
+
+function Textbox:SetScale() end
+
+function Textbox:SetScaleAnimation() end
+
+function Textbox:SetSounds() end
+
+function Textbox:SetStartAnimation() end
+
+function Textbox:SetStrikeThrough() end
+
+function Textbox:SetText() end
+
+function Textbox:SetTextAutoWidth() end
+
+function Textbox:SetUnderLine() end
+
+function Textbox:SetWidth() end
+
+function Textbox:Show() end
+
+function Textbox:StartMoving() end
+
+function Textbox:StartSizing() end
+
+function Textbox:StopMovingOrSizing() end
+
+function Textbox:TriggerMoveAnimation() end
+
+function Textbox:UseDynamicContentState() end
+
+function Textbox:UseDynamicDrawableState() end
+
+function Textbox:UseResizing() end

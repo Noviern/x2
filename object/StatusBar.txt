@@ -12,3 +12,240 @@ CT_EXPEDITION_NAME = 3 -- object/StatusBar
 CT_NAME = 1 -- object/StatusBar
 DC_ALWAYS = 0 -- object/StatusBar
 DC_SHIFT_KEY_DOWN = 1 -- object/StatusBar
+StatusBar = { -- object/StatusBar
+  __this = "<userdata: 00000001DCCEB600>", -- object/StatusBar
+} -- object/StatusBar
+
+function StatusBar:AddAnchor() end
+
+function StatusBar:AddAnchorChildToBar() end
+
+function StatusBar:ApplyUIScale() end
+
+function StatusBar:AttachWidget() end
+
+function StatusBar:BindWidth() end
+
+function StatusBar:CancelRequestCharacterCacheData() end
+
+function StatusBar:ChangeChildAnchorByScrollValue() end
+
+function StatusBar:CheckOutOfScreen() end
+
+function StatusBar:Clickable() end
+
+function StatusBar:CorrectOffsetByScreen() end
+
+function StatusBar:CreateChildWidget() end
+
+function StatusBar:CreateChildWidgetByType() end
+
+function StatusBar:CreateColorDrawable() end
+
+function StatusBar:CreateColorDrawableByKey() end
+
+function StatusBar:CreateDrawable() end
+
+function StatusBar:CreateEffectDrawable() end
+
+function StatusBar:CreateEffectDrawableByKey() end
+
+function StatusBar:CreateIconDrawable() end
+
+function StatusBar:CreateImageDrawable() end
+
+function StatusBar:CreateNinePartDrawable() end
+
+function StatusBar:CreateTextDrawable() end
+
+function StatusBar:CreateThreeColorDrawable() end
+
+function StatusBar:CreateThreePartDrawable() end
+
+function StatusBar:DetachWidget() end
+
+function StatusBar:DisableDrawables() end
+
+function StatusBar:DisableDrawablesWithChildren() end
+
+function StatusBar:Enable() end
+
+function StatusBar:EnableDrag() end
+
+function StatusBar:EnableDrawables() end
+
+function StatusBar:EnableDrawablesWithChildren() end
+
+function StatusBar:EnableFocus() end
+
+function StatusBar:EnableHidingIsRemove() end
+
+function StatusBar:EnableKeyboard() end
+
+function StatusBar:EnablePick() end
+
+function StatusBar:EnableScroll() end
+
+function StatusBar:GetAlpha() end
+
+function StatusBar:GetAttachedWidget() end
+
+function StatusBar:GetBarColor() end
+
+function StatusBar:GetEffectiveExtent() end
+
+function StatusBar:GetEffectiveOffset() end
+
+function StatusBar:GetExtent() end
+
+function StatusBar:GetHeight() end
+
+function StatusBar:GetId() end
+
+function StatusBar:GetLeftWidth() end
+
+function StatusBar:GetMinMaxValues() end
+
+function StatusBar:GetName() end
+
+function StatusBar:GetObjectType() end
+
+function StatusBar:GetOffset() end
+
+function StatusBar:GetOrientation() end
+
+function StatusBar:GetParent() end
+
+function StatusBar:GetRotation() end
+
+function StatusBar:GetText() end
+
+function StatusBar:GetUILayer() end
+
+function StatusBar:GetValue() end
+
+function StatusBar:GetWidth() end
+
+function StatusBar:HasHandler() end
+
+function StatusBar:InheritAnimationData() end
+
+function StatusBar:IsChangeAfterImageColor() end
+
+function StatusBar:IsDescendantWidget() end
+
+function StatusBar:IsEnabled() end
+
+function StatusBar:IsMouseOver() end
+
+function StatusBar:IsNowAnimation() end
+
+function StatusBar:IsValidUIObject() end
+
+function StatusBar:IsVisible() end
+
+function StatusBar:Lower() end
+
+function StatusBar:MoveTo() end
+
+function StatusBar:Raise() end
+
+function StatusBar:RegisterEvent() end
+
+function StatusBar:ReleaseDeletedHandler() end
+
+function StatusBar:ReleaseHandler() end
+
+function StatusBar:RemoveAllAnchors() end
+
+function StatusBar:RemoveAllDrawables() end
+
+function StatusBar:RemoveDrawable() end
+
+function StatusBar:RequestCharacterCacheData() end
+
+function StatusBar:SetAlpha() end
+
+function StatusBar:SetAlphaAnimation() end
+
+function StatusBar:SetBarColor() end
+
+function StatusBar:SetBarColorByKey() end
+
+function StatusBar:SetBarTexture() end
+
+function StatusBar:SetBarTextureByKey() end
+
+function StatusBar:SetBarTextureCoords() end
+
+function StatusBar:SetCategory() end
+
+function StatusBar:SetCharacterCacheDataHandler() end
+
+function StatusBar:SetDelegator() end
+
+function StatusBar:SetDeletedHandler() end
+
+function StatusBar:SetDragCondition() end
+
+function StatusBar:SetDrawPriority() end
+
+function StatusBar:SetDrawableLayerAlpha() end
+
+function StatusBar:SetExtent() end
+
+function StatusBar:SetHandler() end
+
+function StatusBar:SetHeight() end
+
+function StatusBar:SetLText() end
+
+function StatusBar:SetLayerColor() end
+
+function StatusBar:SetMaxResizingExtent() end
+
+function StatusBar:SetMinMaxValues() end
+
+function StatusBar:SetMinMaxValuesForString() end
+
+function StatusBar:SetMinResizingExtent() end
+
+function StatusBar:SetMoveAnimation() end
+
+function StatusBar:SetOrientation() end
+
+function StatusBar:SetResizingBorderSize() end
+
+function StatusBar:SetRotation() end
+
+function StatusBar:SetScale() end
+
+function StatusBar:SetScaleAnimation() end
+
+function StatusBar:SetSounds() end
+
+function StatusBar:SetStartAnimation() end
+
+function StatusBar:SetText() end
+
+function StatusBar:SetValue() end
+
+function StatusBar:SetValueForString() end
+
+function StatusBar:SetWidth() end
+
+function StatusBar:Show() end
+
+function StatusBar:StartMoving() end
+
+function StatusBar:StartSizing() end
+
+function StatusBar:StopMovingOrSizing() end
+
+function StatusBar:TriggerMoveAnimation() end
+
+function StatusBar:UseDynamicContentState() end
+
+function StatusBar:UseDynamicDrawableState() end
+
+function StatusBar:UseResizing() end

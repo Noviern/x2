@@ -12,3 +12,268 @@ CT_EXPEDITION_NAME = 3 -- object/Webbrowser
 CT_NAME = 1 -- object/Webbrowser
 DC_ALWAYS = 0 -- object/Webbrowser
 DC_SHIFT_KEY_DOWN = 1 -- object/Webbrowser
+Webbrowser = { -- object/Webbrowser
+  __this = "<userdata: 000000008B15F990>", -- object/Webbrowser
+} -- object/Webbrowser
+
+function Webbrowser:AddAnchor() end
+
+function Webbrowser:ApplyUIScale() end
+
+function Webbrowser:AttachWidget() end
+
+function Webbrowser:BindWidth() end
+
+function Webbrowser:CancelRequestCharacterCacheData() end
+
+function Webbrowser:ChangeChildAnchorByScrollValue() end
+
+function Webbrowser:CheckOutOfScreen() end
+
+function Webbrowser:ClearFocus() end
+
+function Webbrowser:Clickable() end
+
+function Webbrowser:CorrectOffsetByScreen() end
+
+function Webbrowser:CreateChildWidget() end
+
+function Webbrowser:CreateChildWidgetByType() end
+
+function Webbrowser:CreateColorDrawable() end
+
+function Webbrowser:CreateColorDrawableByKey() end
+
+function Webbrowser:CreateDrawable() end
+
+function Webbrowser:CreateEffectDrawable() end
+
+function Webbrowser:CreateEffectDrawableByKey() end
+
+function Webbrowser:CreateIconDrawable() end
+
+function Webbrowser:CreateImageDrawable() end
+
+function Webbrowser:CreateNinePartDrawable() end
+
+function Webbrowser:CreateTextDrawable() end
+
+function Webbrowser:CreateThreeColorDrawable() end
+
+function Webbrowser:CreateThreePartDrawable() end
+
+function Webbrowser:DetachWidget() end
+
+function Webbrowser:DisableDrawables() end
+
+function Webbrowser:DisableDrawablesWithChildren() end
+
+function Webbrowser:Enable() end
+
+function Webbrowser:EnableDrag() end
+
+function Webbrowser:EnableDrawables() end
+
+function Webbrowser:EnableDrawablesWithChildren() end
+
+function Webbrowser:EnableFocus() end
+
+function Webbrowser:EnableHidingIsRemove() end
+
+function Webbrowser:EnableKeyboard() end
+
+function Webbrowser:EnablePick() end
+
+function Webbrowser:EnableScroll() end
+
+function Webbrowser:GetAlpha() end
+
+function Webbrowser:GetAttachedWidget() end
+
+function Webbrowser:GetEffectiveExtent() end
+
+function Webbrowser:GetEffectiveOffset() end
+
+function Webbrowser:GetExtent() end
+
+function Webbrowser:GetHeight() end
+
+function Webbrowser:GetId() end
+
+function Webbrowser:GetName() end
+
+function Webbrowser:GetObjectType() end
+
+function Webbrowser:GetOffset() end
+
+function Webbrowser:GetParent() end
+
+function Webbrowser:GetRotation() end
+
+function Webbrowser:GetText() end
+
+function Webbrowser:GetUILayer() end
+
+function Webbrowser:GetURL() end
+
+function Webbrowser:GetValue() end
+
+function Webbrowser:GetWidth() end
+
+function Webbrowser:HasHandler() end
+
+function Webbrowser:InheritAnimationData() end
+
+function Webbrowser:IsDescendantWidget() end
+
+function Webbrowser:IsEnabled() end
+
+function Webbrowser:IsMouseOver() end
+
+function Webbrowser:IsNowAnimation() end
+
+function Webbrowser:IsValidUIObject() end
+
+function Webbrowser:IsVisible() end
+
+function Webbrowser:LoadBlankPage() end
+
+function Webbrowser:Lower() end
+
+function Webbrowser:MouseDown() end
+
+function Webbrowser:MouseMove() end
+
+function Webbrowser:MouseUp() end
+
+function Webbrowser:MoveTo() end
+
+function Webbrowser:Raise() end
+
+function Webbrowser:RegisterEvent() end
+
+function Webbrowser:ReleaseDeletedHandler() end
+
+function Webbrowser:ReleaseHandler() end
+
+function Webbrowser:RemoveAllAnchors() end
+
+function Webbrowser:RemoveAllDrawables() end
+
+function Webbrowser:RemoveDrawable() end
+
+function Webbrowser:RequestCharacterCacheData() end
+
+function Webbrowser:RequestExpeditionBBS() end
+
+function Webbrowser:RequestExpeditionHome() end
+
+function Webbrowser:RequestExternalPage() end
+
+function Webbrowser:RequestHelp() end
+
+function Webbrowser:RequestMessenger() end
+
+function Webbrowser:RequestMessengerByPcName() end
+
+function Webbrowser:RequestMessengerOnTarget() end
+
+function Webbrowser:RequestPlayDiary() end
+
+function Webbrowser:RequestPlayDiaryByPcName() end
+
+function Webbrowser:RequestPlayDiaryInstant() end
+
+function Webbrowser:RequestPlayDiaryOnTarget() end
+
+function Webbrowser:RequestSensitiveOperationVerify() end
+
+function Webbrowser:RequestTGOS() end
+
+function Webbrowser:RequestWiki() end
+
+function Webbrowser:SetAlpha() end
+
+function Webbrowser:SetAlphaAnimation() end
+
+function Webbrowser:SetCategory() end
+
+function Webbrowser:SetCharacterCacheDataHandler() end
+
+function Webbrowser:SetDefaultDrawable() end
+
+function Webbrowser:SetDelegator() end
+
+function Webbrowser:SetDeletedHandler() end
+
+function Webbrowser:SetDragCondition() end
+
+function Webbrowser:SetDrawPriority() end
+
+function Webbrowser:SetDrawableLayerAlpha() end
+
+function Webbrowser:SetEscEvent() end
+
+function Webbrowser:SetExtent() end
+
+function Webbrowser:SetFocus() end
+
+function Webbrowser:SetHandler() end
+
+function Webbrowser:SetHeight() end
+
+function Webbrowser:SetLText() end
+
+function Webbrowser:SetLayerColor() end
+
+function Webbrowser:SetLoadingDrawable() end
+
+function Webbrowser:SetMaxResizingExtent() end
+
+function Webbrowser:SetMinResizingExtent() end
+
+function Webbrowser:SetMoveAnimation() end
+
+function Webbrowser:SetMsgToParent() end
+
+function Webbrowser:SetResizingBorderSize() end
+
+function Webbrowser:SetRotation() end
+
+function Webbrowser:SetScale() end
+
+function Webbrowser:SetScaleAnimation() end
+
+function Webbrowser:SetSounds() end
+
+function Webbrowser:SetStartAnimation() end
+
+function Webbrowser:SetText() end
+
+function Webbrowser:SetURL() end
+
+function Webbrowser:SetUiLayer() end
+
+function Webbrowser:SetWidth() end
+
+function Webbrowser:SetZoomLevel() end
+
+function Webbrowser:Show() end
+
+function Webbrowser:StartMoving() end
+
+function Webbrowser:StartSizing() end
+
+function Webbrowser:StopMovingOrSizing() end
+
+function Webbrowser:TriggerMoveAnimation() end
+
+function Webbrowser:UseDynamicContentState() end
+
+function Webbrowser:UseDynamicDrawableState() end
+
+function Webbrowser:UseResizing() end
+
+function Webbrowser:WheelDown() end
+
+function Webbrowser:WheelUp() end

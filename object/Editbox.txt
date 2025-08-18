@@ -12,3 +12,369 @@ CT_EXPEDITION_NAME = 3 -- object/Editbox
 CT_NAME = 1 -- object/Editbox
 DC_ALWAYS = 0 -- object/Editbox
 DC_SHIFT_KEY_DOWN = 1 -- object/Editbox
+Editbox = { -- object/Editbox
+  __this = "<userdata: 00000000AD608BF0>", -- object/Editbox
+  guideTextStyle = { -- object/Editbox
+    __this = "<userdata: 00000001E3FE3460>", -- object/Editbox
+  }, -- object/Editbox
+  prefixStyle = { -- object/Editbox
+    __this = "<userdata: 00000001E3FE3BE0>", -- object/Editbox
+  }, -- object/Editbox
+  style = { -- object/Editbox
+    __this = "<userdata: 00000001DF1C2620>", -- object/Editbox
+  }, -- object/Editbox
+} -- object/Editbox
+
+function Editbox.guideTextStyle:GetId() end
+
+function Editbox.guideTextStyle:GetLineHeight() end
+
+function Editbox.guideTextStyle:GetName() end
+
+function Editbox.guideTextStyle:GetObjectType() end
+
+function Editbox.guideTextStyle:GetTextWidth() end
+
+function Editbox.guideTextStyle:IsValidUIObject() end
+
+function Editbox.guideTextStyle:SetAlign() end
+
+function Editbox.guideTextStyle:SetColor() end
+
+function Editbox.guideTextStyle:SetColorByKey() end
+
+function Editbox.guideTextStyle:SetEllipsis() end
+
+function Editbox.guideTextStyle:SetFont() end
+
+function Editbox.guideTextStyle:SetFontSize() end
+
+function Editbox.guideTextStyle:SetOutline() end
+
+function Editbox.guideTextStyle:SetShadow() end
+
+function Editbox.guideTextStyle:SetSnap() end
+
+function Editbox.prefixStyle:GetId() end
+
+function Editbox.prefixStyle:GetLineHeight() end
+
+function Editbox.prefixStyle:GetName() end
+
+function Editbox.prefixStyle:GetObjectType() end
+
+function Editbox.prefixStyle:GetTextWidth() end
+
+function Editbox.prefixStyle:IsValidUIObject() end
+
+function Editbox.prefixStyle:SetAlign() end
+
+function Editbox.prefixStyle:SetColor() end
+
+function Editbox.prefixStyle:SetColorByKey() end
+
+function Editbox.prefixStyle:SetEllipsis() end
+
+function Editbox.prefixStyle:SetFont() end
+
+function Editbox.prefixStyle:SetFontSize() end
+
+function Editbox.prefixStyle:SetOutline() end
+
+function Editbox.prefixStyle:SetShadow() end
+
+function Editbox.prefixStyle:SetSnap() end
+
+function Editbox.style:GetId() end
+
+function Editbox.style:GetLineHeight() end
+
+function Editbox.style:GetName() end
+
+function Editbox.style:GetObjectType() end
+
+function Editbox.style:GetTextWidth() end
+
+function Editbox.style:IsValidUIObject() end
+
+function Editbox.style:SetAlign() end
+
+function Editbox.style:SetColor() end
+
+function Editbox.style:SetColorByKey() end
+
+function Editbox.style:SetEllipsis() end
+
+function Editbox.style:SetFont() end
+
+function Editbox.style:SetFontSize() end
+
+function Editbox.style:SetOutline() end
+
+function Editbox.style:SetShadow() end
+
+function Editbox.style:SetSnap() end
+
+function Editbox:AddAnchor() end
+
+function Editbox:AddHistoryLine() end
+
+function Editbox:ApplyUIScale() end
+
+function Editbox:AttachWidget() end
+
+function Editbox:BindWidth() end
+
+function Editbox:CancelRequestCharacterCacheData() end
+
+function Editbox:ChangeChildAnchorByScrollValue() end
+
+function Editbox:CheckNamePolicy() end
+
+function Editbox:CheckOutOfScreen() end
+
+function Editbox:ClearFocus() end
+
+function Editbox:ClearString() end
+
+function Editbox:ClearTextOnEnter() end
+
+function Editbox:Clickable() end
+
+function Editbox:CorrectOffsetByScreen() end
+
+function Editbox:CreateChildWidget() end
+
+function Editbox:CreateChildWidgetByType() end
+
+function Editbox:CreateColorDrawable() end
+
+function Editbox:CreateColorDrawableByKey() end
+
+function Editbox:CreateDrawable() end
+
+function Editbox:CreateEffectDrawable() end
+
+function Editbox:CreateEffectDrawableByKey() end
+
+function Editbox:CreateIconDrawable() end
+
+function Editbox:CreateImageDrawable() end
+
+function Editbox:CreateNinePartDrawable() end
+
+function Editbox:CreateTextDrawable() end
+
+function Editbox:CreateThreeColorDrawable() end
+
+function Editbox:CreateThreePartDrawable() end
+
+function Editbox:DetachWidget() end
+
+function Editbox:DisableDrawables() end
+
+function Editbox:DisableDrawablesWithChildren() end
+
+function Editbox:Enable() end
+
+function Editbox:EnableDrag() end
+
+function Editbox:EnableDrawables() end
+
+function Editbox:EnableDrawablesWithChildren() end
+
+function Editbox:EnableFocus() end
+
+function Editbox:EnableHidingIsRemove() end
+
+function Editbox:EnableKeyboard() end
+
+function Editbox:EnablePick() end
+
+function Editbox:EnableScroll() end
+
+function Editbox:GetAlpha() end
+
+function Editbox:GetAttachedWidget() end
+
+function Editbox:GetEffectiveExtent() end
+
+function Editbox:GetEffectiveOffset() end
+
+function Editbox:GetExtent() end
+
+function Editbox:GetHeight() end
+
+function Editbox:GetId() end
+
+function Editbox:GetName() end
+
+function Editbox:GetObjectType() end
+
+function Editbox:GetOffset() end
+
+function Editbox:GetParent() end
+
+function Editbox:GetRotation() end
+
+function Editbox:GetText() end
+
+function Editbox:GetUILayer() end
+
+function Editbox:GetValue() end
+
+function Editbox:GetWidth() end
+
+function Editbox:HasHandler() end
+
+function Editbox:InheritAnimationData() end
+
+function Editbox:IsDescendantWidget() end
+
+function Editbox:IsDigit() end
+
+function Editbox:IsEnabled() end
+
+function Editbox:IsMouseOver() end
+
+function Editbox:IsNowAnimation() end
+
+function Editbox:IsNowComposition() end
+
+function Editbox:IsPassword() end
+
+function Editbox:IsValidUIObject() end
+
+function Editbox:IsVisible() end
+
+function Editbox:Lower() end
+
+function Editbox:MaxTextLength() end
+
+function Editbox:MoveTo() end
+
+function Editbox:Raise() end
+
+function Editbox:RegisterEvent() end
+
+function Editbox:ReleaseDeletedHandler() end
+
+function Editbox:ReleaseHandler() end
+
+function Editbox:RemoveAllAnchors() end
+
+function Editbox:RemoveAllDrawables() end
+
+function Editbox:RemoveDrawable() end
+
+function Editbox:RequestCharacterCacheData() end
+
+function Editbox:SetAlpha() end
+
+function Editbox:SetAlphaAnimation() end
+
+function Editbox:SetCategory() end
+
+function Editbox:SetCharacterCacheDataHandler() end
+
+function Editbox:SetCursorColor() end
+
+function Editbox:SetCursorColorByColorKey() end
+
+function Editbox:SetCursorHeight() end
+
+function Editbox:SetCursorOffset() end
+
+function Editbox:SetDelegator() end
+
+function Editbox:SetDeletedHandler() end
+
+function Editbox:SetDigit() end
+
+function Editbox:SetDigitEmpty() end
+
+function Editbox:SetDigitMax() end
+
+function Editbox:SetDragCondition() end
+
+function Editbox:SetDrawPriority() end
+
+function Editbox:SetDrawableLayerAlpha() end
+
+function Editbox:SetEnglish() end
+
+function Editbox:SetExtent() end
+
+function Editbox:SetFocus() end
+
+function Editbox:SetGuideText() end
+
+function Editbox:SetGuideTextInset() end
+
+function Editbox:SetHandler() end
+
+function Editbox:SetHeight() end
+
+function Editbox:SetHistoryLines() end
+
+function Editbox:SetInitVal() end
+
+function Editbox:SetInset() end
+
+function Editbox:SetLText() end
+
+function Editbox:SetLayerColor() end
+
+function Editbox:SetMaxResizingExtent() end
+
+function Editbox:SetMaxTextLength() end
+
+function Editbox:SetMinResizingExtent() end
+
+function Editbox:SetMoveAnimation() end
+
+function Editbox:SetPassword() end
+
+function Editbox:SetPossibleFirstZero() end
+
+function Editbox:SetPrefixInset() end
+
+function Editbox:SetPrefixText() end
+
+function Editbox:SetReClickable() end
+
+function Editbox:SetReadOnly() end
+
+function Editbox:SetResizingBorderSize() end
+
+function Editbox:SetRotation() end
+
+function Editbox:SetScale() end
+
+function Editbox:SetScaleAnimation() end
+
+function Editbox:SetSounds() end
+
+function Editbox:SetStartAnimation() end
+
+function Editbox:SetText() end
+
+function Editbox:SetWidth() end
+
+function Editbox:Show() end
+
+function Editbox:StartMoving() end
+
+function Editbox:StartSizing() end
+
+function Editbox:StopMovingOrSizing() end
+
+function Editbox:TriggerMoveAnimation() end
+
+function Editbox:UseDynamicContentState() end
+
+function Editbox:UseDynamicDrawableState() end
+
+function Editbox:UseResizing() end
+
+function Editbox:UseSelectAllWhenFocused() end
