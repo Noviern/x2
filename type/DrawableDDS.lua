@@ -61,4 +61,4 @@ function DrawableDDS:SetTextureColor(colorKey) end
 ---local ninePartDrawable = widget:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
 ---ninePartDrawable:SetTextureInfo("main_bg")
 ---```
-function DrawableDDS:SetTextureInfo(infoKey, color) end
+function DrawableDDS:SetTextureInfo(infoKey, colorKey) end
