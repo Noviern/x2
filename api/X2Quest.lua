@@ -63,7 +63,7 @@ function X2Quest:GetQuestContextMainTitle(questType) end
 ---```
 function X2Quest:IsCompleted(questType) end
 
----@TODO: Broken? Tried both active quest index and quest ID. Need to define idx type.
+---@TODO: Broken? Tried both active quest index and quest ID.
 ---Sets the specified quest as the active tracked quest.
----@param idx any The quest index or ID to track (type unclear).
+---@param idx number The quest index or ID to track (type unclear).
 function X2Quest:SetTrackingActiveQuest(idx) end

@@ -14,13 +14,13 @@ function X2Bag:EquipBagItem(slot, isAuxEquip) end
 ---@TODO: It seems the slot id is buggy and starts at 2? and bagId doesnt matter? min max slot, bagId does it matter?
 ---Retrieves item information for the specified slot if it exists.
 ---@param bagId 1 The bag ID.
----@param slot number The slot to query.
+---@param slot number The slot to query. (min:  `1`)
 ---@param neededInfo? IIK Optional additional information for the item. Requires importing the X2Item API. IIK types can be added together to increase the filter range.
----@return ItemInfo|nil bagItemInfo The item information, or `nil` if the slot is empty.
+---@return ItemInfo|nil bagItemInfo The item information, or `nil` if the slot is empty or doesn't exist.
 ---@nodiscard
 ---@usage
 ---```
----local bagItemInfo = X2Bag:GetBagItemInfo(1, 2, IIK_CATEGORY + IIK_TYPE)
+---local bagItemInfo = X2Bag:GetBagItemInfo(1, 1, IIK_CATEGORY + IIK_TYPE)
 ---```
 ---@see IIK
 ---@see ItemInfo

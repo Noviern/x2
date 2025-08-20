@@ -142,7 +142,7 @@ X2Achievement = {}          -- api/X2Achievement
 
 ---Adds an achievement to the ambitions category under the specified kind.
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
----@param achievementType number The type (id) of achievement to add.
+---@param achievementType number The achievement type (id) to add.
 ---@return boolean success `true` if the achievement was added successfully, `false` otherwise.
 ---@nodiscard
 ---@usage
@@ -153,7 +153,7 @@ X2Achievement = {}          -- api/X2Achievement
 function X2Achievement:AddTracingAchievement(achievementKind, achievementType) end
 
 ---Retrieves achievement information if the specified type exists.
----@param achievementType number The type (id) of achievement to query.
+---@param achievementType number The achievement type (id) to query.
 ---@return AchievementInfo|nil achievementInfo The achievement information, or `nil` if not found.
 ---@nodiscard
 ---@usage
@@ -181,7 +181,7 @@ function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType,
 end
 
 ---Retrieves the name of the specified achievement type.
----@param achievementType number The type (id) of achievement to query.
+---@param achievementType number The achievement type (id) to query.
 ---@return string achievementName The achievement name, or empty string if not found.
 ---@nodiscard
 ---@usage
@@ -332,7 +332,7 @@ function X2Achievement:GetTodayAssignmentStatus() end
 ---Checks if the quest ID is in the today’s assignment quests and not already
 ---complete.
 ---@param todayType TODAY_TYPE The type of today’s assignments.
----@param questType number The quest ID to check.
+---@param questType number The quest type (id) to check.
 ---@return boolean todayAssignmentQuest `true` if the quest is in the list and not complete, `false` otherwise.
 ---@nodiscard
 ---@usage
@@ -344,7 +344,7 @@ function X2Achievement:IsTodayAssignmentQuest(todayType, questType) end
 
 ---Checks if the specified achievement type in the given kind is being traced.
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
----@param achievementType number The type (id) of achievement to check.
+---@param achievementType number The achievement type (id) to check.
 ---@return boolean tracingAchievement `true` if the achievement is being traced, `false` otherwise.
 ---@nodiscard
 ---@usage
@@ -356,7 +356,7 @@ function X2Achievement:IsTracingAchievement(achievementKind, achievementType) en
 
 ---Removes the specified achievement type in the given kind from tracing.
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
----@param achievementType number The type (id) of achievement to remove.
+---@param achievementType number The achievement type (id) to remove.
 ---@usage
 ---```
 ---X2Achievement:RemoveTracingAchievement(EAK_COLLECTION, 4153)

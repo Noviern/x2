@@ -13,7 +13,7 @@ X2Dominion = {}    -- api/X2Dominion
 
 ---api/X2Dominion
 ---
----HPW State
+---HP World State
 ---@alias ZONE_STATE
 ---| `HPWS_BATTLE`
 ---| `HPWS_PEACE`

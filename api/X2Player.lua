@@ -105,7 +105,7 @@ ZP_RESERVED = 4                          -- api/X2Player
 ---api/X2Player
 ---@class UnitAppellationRoute
 ---@field key number
----@field value string @TODO: could this be nil? x2ui\assignment\appellation\appellation_view.lua if info.value ~= nil and info.value ~= "hidden" then
+---@field value string
 
 ---Sets the player's appellation name and effect.
 ---@param appellationNameType number The appellation name type.
@@ -127,7 +127,8 @@ function X2Player:ChangeAppellation(appellationNameType, appellationEffectType) 
 ---@see AppellationBuffInfo
 function X2Player:GetAppellationBuffInfoByLevels() end
 
----Retrieves item requirements for changing an appellation (currently not required).
+---Retrieves item requirements for changing an appellation (currently not
+---required).
 ---@return AppellationChangeItemInfo appellationChangeItemInfo The item requirements for changing an appellation.
 ---@nodiscard
 ---@usage

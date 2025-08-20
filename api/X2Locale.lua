@@ -213,7 +213,8 @@ function X2Locale:LocalizeFormatUiText() end
 ---```
 function X2Locale:LocalizeNonUiText(text, ...) end
 
----Retrieves localized UI text for the specified category and key, replacing placeholders with provided arguments.
+---Retrieves localized UI text for the specified category and key, replacing
+---placeholders with provided arguments.
 ---@param category UI_TEXT_CATEGORY_ID The UI text category.
 ---@param key string The key from the ui_texts database table.
 ---@param ... string Arguments to replace placeholders.

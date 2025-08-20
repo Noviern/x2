@@ -75,5 +75,5 @@ function X2Store:GetSpecialtyRatio() end
 function X2Store:GetSpecialtyRatioBetween(fromZoneGroup, toZoneGroup) end
 
 ---@TODO: Probably triggers an event.
----Retrieves the specialty ratio for zones (details TBD).
+---Retrieves the specialty ratio for zones.
 function X2Store:GetZoneSpecialtyRatio() end

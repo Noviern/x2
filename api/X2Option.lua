@@ -342,8 +342,9 @@ X2Option = {}                                    -- api/X2Option
 ---@field optionId number
 ---@field value number
 
----@TODO: Needs more investigation, saveLevel is odd. usage
----Creates a float option, saves it based on the specified save level, and returns the save level.
+---@TODO: Needs more investigation, saveLevel is odd. usage needed
+---Creates a float option, saves it based on the specified save level, and
+---returns the save level.
 ---@param name CONSOLE_VAR The console variable name.
 ---@param value number The float value to set.
 ---@param saveLevel OISLT The save level for the option.
@@ -352,8 +353,9 @@ X2Option = {}                                    -- api/X2Option
 ---@see OISLT
 function X2Option:CreateOptionItemFloat(name, value, saveLevel) end
 
----@TODO: Needs testing. usage
----Creates a string option, saves it based on the specified save level, and returns the save level.
+---@TODO: Needs testing. usage needed
+---Creates a string option, saves it based on the specified save level, and
+---returns the save level.
 ---@param name CONSOLE_VAR The console variable name.
 ---@param value string The string value to set.
 ---@param saveLevel OISLT The save level for the option.
@@ -454,7 +456,8 @@ function X2Option:GetOptionItemValue(optionType) end
 ---@see CONSOLE_VAR
 function X2Option:GetOptionItemValueByName(name) end
 
----Retrieves the width, height, and bits per pixel for the specified resolution index.
+---Retrieves the width, height, and bits per pixel for the specified resolution
+---index.
 ---@param index number The resolution index.
 ---@return number width The resolution width.
 ---@return number height The resolution height.
@@ -476,7 +479,9 @@ function X2Option:GetResolution(index) end
 ---```
 function X2Option:GetResolutionCount() end
 
----Retrieves a list of sub-options for the specified mode option ID and selected value.
+---@TODO: Are there other modeOptionId?
+---Retrieves a list of sub-options for the specified mode option ID and selected
+---value.
 ---@param modeOptionId `OIT_NAME_TAG_MODE` The mode option ID.
 ---@param selected number The selected value.
 ---@return SubOptionItem[] subOptionItemList A table of sub-option items.
@@ -603,7 +608,8 @@ function X2Option:SetItemFloatValue(optionType, value) end
 function X2Option:SetItemFloatValueByName(name, value) end
 
 ---@TODO: What option would this actually work on?
----Sets the float value for the specified option type without modifying other settings.
+---Sets the float value for the specified option type without modifying other
+---settings.
 ---@param optionType OIT The option type.
 ---@param value number The float value to set.
 ---@usage

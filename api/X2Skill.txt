@@ -1,4 +1,8 @@
 SIK_DESCRIPTION = 1 -- api/X2Skill
 X2Skill = {} -- api/X2Skill
 
+function X2Skill:GetCooldown() end
+
 function X2Skill:GetSkillTooltip() end
+
+function X2Skill:Info() end

@@ -41,8 +41,9 @@ X2Item = {}                             -- api/X2Item
 ---api/X2Item
 ---@enum LINKKIND
 local LINKKIND = {
-  COFFER  = "coffer",
-  AUCTION = "auction"
+  AUCTION   = "1",
+  COFFER    = "2",
+  GUILDBANK = "3",
 }
 
 ---api/X2Item
@@ -60,10 +61,9 @@ local LINKKIND = {
 ---| `IIK_STACK`
 ---| `IIK_TYPE`
 
----@TODO: Not sure what kind does.
 ---Retrieves item information from the specified link text.
 ---@param linkText string The link text to query.
----@param kind? LINKKIND Optional kind of link (purpose unclear).
+---@param kind? LINKKIND Optional kind of link.
 ---@return ItemInfo itemInfo The item information.
 ---@nodiscard
 ---@usage

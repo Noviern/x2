@@ -136,7 +136,7 @@ X2Equipment = {}     -- api/X2Equipment
 
 ---Retrieves tooltip information for the equipped item in the specified slot.
 ---@param equipSlot ES The equipment slot to query.
----@param targetEquippedItem boolean Whether to target the equipped item.
+---@param targetEquippedItem boolean `true` to see the targets equipped item, `false` for the players equipped item.
 ---@return ItemInfo|nil equippedItemTooltipInfo The tooltip information, or `nil` if not found.
 ---@nodiscard
 ---@usage

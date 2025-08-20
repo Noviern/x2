@@ -60,7 +60,7 @@ function X2Craft:GetCraftBaseInfo(craftType, doodadId) end
 ---@TODO: Crash EXCEPTION_ACCESS_VIOLATION. Need to set doodadId type. No usage
 ---Retrieves the material information for the specified craft type.
 ---@param craftType number The type of craft to query.
----@param doodadId any The doodad ID (type TBD, causes crash).
+---@param doodadId number The doodad ID (type TBD, causes crash).
 function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end
 
 ---Retrieves a list containing craft product information.

@@ -504,10 +504,10 @@ ZST_INVALID = 0                                   -- api/Addon
 ---| `UOT_X2_EDITBOX`
 
 ---@alias UOT_DRAWABLE
----| `UOT_COLOR_DRAWABLE`  We don't have access to this global yet but it does exist in the codebase.
+---| `UOT_COLOR_DRAWABLE`  # We don't have access to this global yet but it does exist in the codebase.
 ---| `UOT_IMAGE_DRAWABLE`
 ---| `UOT_NINE_PART_DRAWABLE`
----| `UOT_THREE_PART_DRAWABLE` We don't have access to this global yet but it does exist in the codebase.
+---| `UOT_THREE_PART_DRAWABLE` # We don't have access to this global yet but it does exist in the codebase.
 
 ---api/Addon
 ---@class EscMenuButtonData
@@ -523,8 +523,6 @@ ZST_INVALID = 0                                   -- api/Addon
 ---@field enabled boolean
 
 ---api/Addon
----
----RGBA color with values restricted between 0 to 1.
 ---@class RGBAColor : number[]
 ---@field [1] number Red (min: `0`, max: `1`)
 ---@field [2] number Green (min: `0`, max: `1`)
@@ -626,7 +624,6 @@ ZST_INVALID = 0                                   -- api/Addon
 ---@field xlarge number
 ---@field xxlarge number
 
-
 ---Adds a button to the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID The category ID for the menu.
 ---@param uiCategory UIC The UI category ID. Use an ID above 1000 for custom UICs to avoid conflicts with default categories or other addons.
@@ -645,7 +642,7 @@ ZST_INVALID = 0                                   -- api/Addon
 ---@see EscMenuButtonData
 function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data) end
 
----Logs a message to the chat under the `CMF_SYSTEM` category.
+---Logs a message to the chat under `CMF_SYSTEM`.
 ---@param logMessage string The message to log.
 ---@usage
 ---```
@@ -679,19 +676,17 @@ function ADDON:FireAddon(name) end
 ---@see AddonInfo
 function ADDON:GetAddonInfos() end
 
----@TODO: Can this GetContent from other adddons?
 ---Retrieves the registered content frame for the specified UI category.
----Currently limited to just custom UI categories.
+---Restricted to custom UI categories registered in the addon. Can not be used
+---to get content frames from other addons.
 ---@param uiCategory number The UI category ID.
 ---@return Widget|nil contentFrame The content frame.
 ---@nodiscard
 ---@usage
 ---```
------- ... ADDON:RegisterContentWidget ...
----
 ---local widget = ADDON:GetContent(UIC_MY_CUSTOM_WIDGET)
 ---
----if widget ~= nil then
+---if widget == nil then
 ---  return
 ---end
 ---
@@ -701,13 +696,13 @@ function ADDON:GetAddonInfos() end
 function ADDON:GetContent(uiCategory) end
 
 ---Retrieves the position, unscaled size, and visibility of the specified
----`uiCategory`. Does not retrieve locally registered UI category.
+---UI category. Does not retrieve custom registered UI categories.
 ---@param uiCategory UIC The UI component to query.
----@return number|nil x The x-coordinate of the component.
----@return number|nil y The y-coordinate of the component.
----@return number|nil width The unscaled width of the component.
----@return number|nil height The unscaled height of the component.
----@return boolean isVisible Whether the component is visible.
+---@return number|nil x The x-coordinate of the component, or `nil` if the UI category doesn't exist.
+---@return number|nil y The y-coordinate of the component, or `nil` if the UI category doesn't exist.
+---@return number|nil width The unscaled width of the component, or `nil` if the UI category doesn't exist.
+---@return number|nil height The unscaled height of the component, or `nil` if the UI category doesn't exist.
+---@return boolean isVisible `true` if the component is visible, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```
@@ -721,7 +716,7 @@ function ADDON:GetContentMainScriptPosVis(uiCategory) end
 ---@nodiscard
 ---@usage
 ---```
----local addonName = ADDON:GetName()
+---local name = ADDON:GetName()
 ---```
 function ADDON:GetName() end
 
@@ -734,7 +729,7 @@ function ADDON:GetName() end
 ---@see API
 function ADDON:ImportAPI(apiType) end
 
----Imports the object id for the addon. Call once per OBJECT.
+---Imports the object id for the addon. Call only once per OBJECT.
 ---@param objectId OBJECT The object ID to import.
 ---@usage
 ---```
@@ -753,10 +748,9 @@ function ADDON:ImportObject(objectId) end
 ---```
 function ADDON:LoadData(key) end
 
----@TODO: Can this override addon UI categories? triggerFunc alias
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
----@param uiCategory UIC The UI component to register the function to.
+---@param uiCategory UIC The UI category to register the function to.
 ---@param triggerFunc function The function to register as a trigger.
 ---@return boolean success `true` if registration was successful, `false` otherwise.
 ---@usage
@@ -811,8 +805,8 @@ function ADDON:SaveAddonInfos() end
 ---```
 function ADDON:SaveData(key, data) end
 
----@TODO:
----Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos` afterward and a reload (character select).
+---Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos`
+---afterward and a reload (or character select).
 ---@param name string The name of the addon to enable or disable.
 ---@param enable boolean `true` to enable, `false` to disable the addon.
 ---@usage
@@ -822,10 +816,11 @@ function ADDON:SaveData(key, data) end
 ---```
 function ADDON:SetAddonEnable(name, enable) end
 
+---@TODO: Test data more on existing UI categories.
 ---Shows or hides the UI category and returns whether the operation succeeded.
----@param uiCategory UIC The UI component to show or hide.
+---@param uiCategory UIC The UI category to show or hide.
 ---@param show boolean `true` to show, `false` to hide the component.
----@param data? table Optional data (currently unusable, reserved for future use). TODO:
+---@param data? table Optional data (currently only usable for custom UI categories).
 ---@return boolean success `true` if the operation succeeded, `false` otherwise.
 ---@usage
 ---```
@@ -836,9 +831,11 @@ function ADDON:SetAddonEnable(name, enable) end
 ---@see UIC
 function ADDON:ShowContent(uiCategory, show, data) end
 
----Toggles the visibility of the UI category and returns whether the operation succeeded.
----@param uiCategory UIC The UI component to toggle.
----@param data? table Optional data for the operation.
+---@TODO: Test data more on existing UI categories.
+---Toggles the visibility of the UI category and returns whether the operation
+---succeeded.
+---@param uiCategory UIC The UI category to toggle.
+---@param data? table Optional data (currently only usable for custom UI categories).
 ---@return boolean success `true` if the toggle succeeded, `false` otherwise.
 ---@usage
 ---```
@@ -849,9 +846,8 @@ function ADDON:ShowContent(uiCategory, show, data) end
 ---@see UIC
 function ADDON:ToggleContent(uiCategory, data) end
 
----@TODO:
----Clears the UI bound associated with the specified UI key. Reload required to
----update the UI.
+---Clears the UI bound associated with the specified UI key. Reload
+---(or character select) required to update the UI.
 ---@param key UIBOUND_KEY The key whose UIBound data should be cleared.
 ---@usage
 ---```
@@ -862,66 +858,40 @@ function UIParent:ClearUIBound(key) end
 
 ---@TODO: How does category work?
 ---Creates a widget of the specified type with the given ID and parent.
----@param widgetName string The type of widget to create (e.g., "button", "label").
----@param id string The unique identifier for the widget.
----@param parentId string|Widget The parent widget or "UIParent" for the widget.
----@param category? string Optional category for the widget (usage unclear, under review).
+---@generic T
+---@param widgetName `T` The type of widget to create.
+---@param id string The unique identifier for the widget. If the name already exists it will cause a UI Logic Error.
+---@param parentId "UIParent"|string|Widget The parent `Widget` or "UIParent" for the widget.
+---@param category? string Optional category for the widget.
+---@return T|EmptyTable|nil
+---@nodiscard
 ---@usage
 ---```
----local widget = UIParent:CreateWidget("textbox", "widgetExample", "UIParent")
+---local window = UIParent:CreateWidget("window", "exampleWindow", "UIParent")
+---local button = UIParent:CreateWidget("button", "exampleButton", window)
 ---```
----@overload fun(self: self, widgetName: "avi", id: string, parentId: "UIParent"|Widget, category?: string): Avi|EmptyTable|nil
----@overload fun(self: self, widgetName: "button", id: string, parentId: "UIParent"|Widget, category?: string): Button|EmptyTable|nil
----@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: "UIParent"|Widget, category?: string): ChatWindow|EmptyTable|nil
----@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: "UIParent"|Widget, category?: string): Checkbutton|EmptyTable|nil
----@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: "UIParent"|Widget, category?: string): CircleDiagram|EmptyTable|nil
----@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: "UIParent"|Widget, category?: string): ColorPicker|EmptyTable|nil
----@overload fun(self: self, widgetName: "combobox", id: string, parentId: "UIParent"|Widget, category?: string): Combobox|EmptyTable|nil
----@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownButton|EmptyTable|nil
----@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownConstantButton|EmptyTable|nil
----@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: "UIParent"|Widget, category?: string): CooldownInventoryButton|EmptyTable|nil
----@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: "UIParent"|Widget, category?: string): DamageDisplay|EmptyTable|nil
----@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: "UIParent"|Widget, category?: string): DynamicList|EmptyTable|nil
----@overload fun(self: self, widgetName: "editbox", id: string, parentId: "UIParent"|Widget, category?: string): Editbox|EmptyTable|nil
----@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: "UIParent"|Widget, category?: string): EditboxMultiline|EmptyTable|nil
----@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: "UIParent"|Widget, category?: string): EmptyWidget|EmptyTable|nil
----@overload fun(self: self, widgetName: "folder", id: string, parentId: "UIParent"|Widget, category?: string): Folder|EmptyTable|nil
----@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: "UIParent"|Widget, category?: string): GameTooltip|EmptyTable|nil
----@overload fun(self: self, widgetName: "grid", id: string, parentId: "UIParent"|Widget, category?: string): Grid|EmptyTable|nil
----@overload fun(self: self, widgetName: "label", id: string, parentId: "UIParent"|Widget, category?: string): Label|EmptyTable|nil
----@overload fun(self: self, widgetName: "line", id: string, parentId: "UIParent"|Widget, category?: string): Line|EmptyTable|nil
----@overload fun(self: self, widgetName: "listbox", id: string, parentId: "UIParent"|Widget, category?: string): Listbox|EmptyTable|nil
----@overload fun(self: self, widgetName: "listctrl", id: string, parentId: "UIParent"|Widget, category?: string): ListCtrl|EmptyTable|nil
----@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: "UIParent"|Widget, category?: string): MegaphoneChatEdit|EmptyTable|nil
----@overload fun(self: self, widgetName: "message", id: string, parentId: "UIParent"|Widget, category?: string): Message|EmptyTable|nil
----@overload fun(self: self, widgetName: "modelview", id: string, parentId: "UIParent"|Widget, category?: string): ModelView|EmptyTable|nil
----@overload fun(self: self, widgetName: "pageable", id: string, parentId: "UIParent"|Widget, category?: string): Pageable|EmptyTable|nil
----@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: "UIParent"|Widget, category?: string): PaintColorPicker|EmptyTable|nil
----@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: "UIParent"|Widget, category?: string): RadioGroup|EmptyTable|nil
----@overload fun(self: self, widgetName: "roadmap", id: string, parentId: "UIParent"|Widget, category?: string): RoadMap|EmptyTable|nil
----@overload fun(self: self, widgetName: "slider", id: string, parentId: "UIParent"|Widget, category?: string): Slider|EmptyTable|nil
----@overload fun(self: self, widgetName: "slot", id: string, parentId: "UIParent"|Widget, category?: string): Slot|EmptyTable|nil
----@overload fun(self: self, widgetName: "statusbar", id: string, parentId: "UIParent"|Widget, category?: string): StatusBar|EmptyTable|nil
----@overload fun(self: self, widgetName: "tab", id: string, parentId: "UIParent"|Widget, category?: string): Tab|EmptyTable|nil
----@overload fun(self: self, widgetName: "textbox", id: string, parentId: "UIParent"|Widget, category?: string): Textbox|EmptyTable|nil
----@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: "UIParent"|Widget, category?: string): UnitframeTooltip|EmptyTable|nil
----@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: "UIParent"|Widget, category?: string): Webbrowser|EmptyTable|nil
----@overload fun(self: self, widgetName: "window", id: string, parentId: "UIParent"|Widget, category?: string): Window|EmptyTable|nil
----@overload fun(self: self, widgetName: "worldmap", id: string, parentId: "UIParent"|Widget, category?: string): WorldMap|EmptyTable|nil
----@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: "UIParent"|Widget, category?: string): X2EditBox|EmptyTable|nil
+---@see OBJECT_NAME
+---@see Widget
+---@see WIDGET_TYPES
+---@overload fun(self: self, widgetName: OBJECT_NAME, id: string, parentId: "UIParent"|string|Widget, category?: string)
 function UIParent:CreateWidget(widgetName, id, parentId, category) end
 
----@TODO:
+---@TODO: currently unusable without SetAccountUITimeStamp
+---@FIXME:
 ---Retrieves the account UI timestamp for the specified key.
 ---@param key string The key to retrieve the timestamp for.
 ---@return string accountUITimeStamp The timestamp associated with the key.
 ---@nodiscard
 function UIParent:GetAccountUITimeStamp(key) end
 
----@TODO: Broken?
+---@TODO: Seems to be buggy? Shows the wrong day.
 ---Retrieves the character today's played timestamp.
 ---@return string characterTodayPlayedTimeStamp The timestamp in `YYYY-M-D` format.
 ---@nodiscard
+---@usage
+---```
+---local characterTodayPlayedTimeStamp = UIParent:GetCharacterTodayPlayedTimeStamp()
+---```
 function UIParent:GetCharacterTodayPlayedTimeStamp() end
 
 ---Retrieves the current display point value.
@@ -957,7 +927,7 @@ function UIParent:GetCurrentTimeStamp() end
 ---@nodiscard
 ---@usage
 ---```
----UIParent:GetEntityByName("Beginner Training Scarecrow")
+---local sEntityName = UIParent:GetEntityByName("Beginner Training Scarecrow")
 ---```
 function UIParent:GetEntityByName(sEntityName) end
 
@@ -972,7 +942,6 @@ function UIParent:GetEntityByName(sEntityName) end
 ---```
 function UIParent:GetEtcValue(key) end
 
----@TODO: How does the nil return work? Is RGBAColor the same as FONT_COLOR?
 ---Retrieves the font color for the specified key.
 ---@param key FONT_COLOR_KEY The key to retrieve the font color for.
 ---@return RGBAColor fontColor The font color associated with the key.
@@ -1054,7 +1023,7 @@ function UIParent:GetServerTimeTable() end
 ---@TODO: Add other textures like BUTTON_TEXTURE_PATH
 ---Retrieves texture data for the specified file and key.
 ---@param filename TEXTURE_PATH|string The texture file path.
----@param infoKey string The key for texture data, obtainable via `UIParent:GetTextureKeyData(filename).keys` or by the associated filename `.g` file.
+---@param infoKey string The key for texture data, obtainable via `UIParent:GetTextureKeyData(filename).keys` or by the associated `filename` `.g` file.
 ---@return TextureData textureData The texture data for the specified key.
 ---@nodiscard
 ---@usage
@@ -1090,7 +1059,7 @@ function UIParent:GetTextureKeyData(filename) end
 function UIParent:GetUIBound(key) end
 
 ---Retrieves the UI scale.
----@return number uiScale The current UI scale.
+---@return number uiScale The current UI scale. (min: `0.7`, max: `2.4`)
 ---@nodiscard
 ---@usage
 ---```
@@ -1221,15 +1190,14 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@see UIEVENT_TYPE
 function UIParent:SetEventHandler(eventName, handler) end
 
----@TODO: Does the key have to have "ui_bound"? Does uiBound have to be a UIBound?
----Sets the UI bound for the specified key.
+---Sets/Saves the UI bound for the specified key.
 ---@param key UIBOUND_KEY The key to set the UI bound for.
 ---@param uiBound UIBound The UI bound to set.
 ---@usage
 ---```
 ---local bound = {}
----bound.x, bound.y = self:GetEffectiveOffset()
----bound.width, bound.height = self:GetExtent()
+---bound.x, bound.y = widget:GetEffectiveOffset()
+---bound.width, bound.height = widget:GetExtent()
 ---
 ---local screenRes = {}
 ---screenRes.x = UIParent:GetScreenWidth()
@@ -1246,9 +1214,9 @@ function UIParent:SetEventHandler(eventName, handler) end
 ---@see UIBound
 function UIParent:SetUIBound(key, uiBound) end
 
----Sets the UI scale (limited to 0.7–2.4).
----@param scale number The UI scale value.
----@param immediatelyApply boolean Whether to apply the scale immediately.
+---Sets the UI scale.
+---@param scale number The UI scale value. (min: `0.7`, max: `2.4`)
+---@param immediatelyApply boolean `true` to apply the scale immediately, `false` otherwise.
 ---@usage
 ---```
 ---UIParent:SetUIScale(0.9, true)
@@ -1256,26 +1224,31 @@ function UIParent:SetUIBound(key, uiBound) end
 function UIParent:SetUIScale(scale, immediatelyApply) end
 
 ---@TODO: What does this function do?
+---@FIXME:
 ---Sets whether to use a comma in number formatting.
 ---@param use boolean Whether to enable comma usage.
 function UIParent:SetUseInsertComma(use) end
 
 ---@TODO: Broken?
+---@FIXME:
 ---Sets the camera view angles in radians.
 ---@param angles Vec3 The camera angles to set.
 function UIParent:SetViewCameraAngles(angles) end
 
 ---@TODO: Broken?
+---@FIXME:
 ---Sets the camera view direction.
 ---@param dir Vec3 The camera direction to set.
 function UIParent:SetViewCameraDir(dir) end
 
 ---@TODO: Broken?
+---@FIXME:
 ---Sets the camera field of view.
 ---@param fov number The field of view to set.
 function UIParent:SetViewCameraFov(fov) end
 
 ---@TODO: Broken?
+---@FIXME:
 ---Sets the camera view position.
 ---@param pos Vec3 The camera position to set.
 function UIParent:SetViewCameraPos(pos) end

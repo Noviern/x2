@@ -50,7 +50,8 @@ X2CombatResource = {}  -- api/X2CombatResource
 ---@see ABILITY_TYPE
 function X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType) end
 
----Retrieves a list of combat resource information for all available ability types.
+---Retrieves a list of combat resource information for all available ability
+---types.
 ---@return CombatResources combatResourceInfo A table of combat resource information.
 ---@nodiscard
 ---@usage
@@ -61,7 +62,8 @@ function X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType) end
 ---@see ABILITY_TYPE
 function X2CombatResource:GetCombatResourceInfo() end
 
----Retrieves combat resource information for the specified group type if the player has it.
+---Retrieves combat resource information for the specified group type if the
+---player has it.
 ---@param groupType ABILITY_TYPE The group type to query.
 ---@return CombatResource|nil combatResourceInfo The combat resource information, or `nil` if not available.
 ---@nodiscard
