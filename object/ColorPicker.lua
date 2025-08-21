@@ -17,6 +17,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/ColorPicker
 
 ---object/ColorPicker
 ---@class ColorPicker: Widget
+---@class colorpicker: ColorPicker
 local ColorPicker = {}
 
 ---Retrieves the color at the specified point on the ColorPicker.
@@ -28,7 +29,7 @@ local ColorPicker = {}
 ---@nodiscard
 ---@usage
 ---```
----local red, green, blue = colorPicker:GetColor(1, 1)
+---local red, green, blue = widget:GetColor(1, 1)
 ---```
 function ColorPicker:GetColor(xPos, yPos) end
 
@@ -41,14 +42,14 @@ function ColorPicker:GetColor(xPos, yPos) end
 ---@nodiscard
 ---@usage
 ---```
----local xPos, yPos = colorPicker:GetPoint(255, 255, 255)
+---local xPos, yPos = widget:GetPoint(255, 255, 255)
 ---```
 function ColorPicker:GetPoint(colorR, colorG, colorB) end
 
 ---Sets the palette image for the ColorPicker.
----@param imageName string The path to the palette image. This can be `"game/ui/..."` or `"Addon/MyAddon/image.png"`
+---@param imageName string The path to the palette image. This can be `"ui/..."` or `"Addon/MyAddon/image.png"`
 ---@usage
 ---```
----colorPicker:SetPaletteImage("game/ui/common/hud.dds")
+---widget:SetPaletteImage("ui/common/hud.dds")
 ---```
 function ColorPicker:SetPaletteImage(imageName) end

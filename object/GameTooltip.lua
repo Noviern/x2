@@ -37,6 +37,7 @@ local LINE_ALIGN = {
 ---object/GameTooltip
 ---@class GameTooltip: Widget
 ---@field style TextStyle
+---@class gametooltip: GameTooltip
 local GameTooltip = {}
 
 ---Adds text to an existing line in the GameTooltip on the opposite side.
@@ -104,7 +105,8 @@ function GameTooltip:AttachUpperSpaceLine(index, height) end
 function GameTooltip:ClearLines() end
 
 ---@TODO: Verify if heightIncludeSpace is broken (returns same as heightOnlyLine).
----Retrieves the height of the last line in the GameTooltip, with and without spacing.
+---Retrieves the height of the last line in the GameTooltip, with and without
+---spacing.
 ---@return number heightOnlyLine The height of the last line without spacing.
 ---@return number heightIncludeSpace The height of the last line including spacing.
 ---@nodiscard
@@ -141,7 +143,8 @@ function GameTooltip:GetLineCount() end
 ---```
 function GameTooltip:GetLineSpace() end
 
----Enables or disables automatic word wrapping in the GameTooltip (must be set before `GameTooltip:AddLine`).
+---Enables or disables automatic word wrapping in the GameTooltip (must be set
+---before `GameTooltip:AddLine`).
 ---@param wrap boolean `true` to enable word wrap, `false` to disable. (default: `false`)
 ---@usage
 ---```
@@ -160,12 +163,14 @@ function GameTooltip:SetAutoWordwrap(wrap) end
 ---```
 function GameTooltip:SetInset(left, top, right, bottom) end
 
----Sets the line spacing for the GameTooltip (must be set before `GameTooltip:AddLine`).
+---Sets the line spacing for the GameTooltip (must be set before
+---`GameTooltip:AddLine`).
 ---@param space TEXTBOX_LINE_SPACE|number The line spacing value.
 ---@usage
 ---```
 ---widget:GetLineSpace()
 ---```
+---@see TEXTBOX_LINE_SPACE
 function GameTooltip:SetLineSpace(space) end
 
 ---@TODO: Clarify data usage. (possibly "player", "target", etc.)

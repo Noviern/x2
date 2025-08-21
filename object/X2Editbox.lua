@@ -17,4 +17,5 @@ DC_SHIFT_KEY_DOWN = 1  -- object/X2Editbox
 
 ---object/X2Editbox
 ---@class X2EditBox: Editbox
+---@class x2editbox: X2EditBox
 local X2EditBox = {}

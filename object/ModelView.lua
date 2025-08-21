@@ -100,6 +100,7 @@ local BEAUTY_SHOP_ZOOM = {
 
 ---object/ModelView
 ---@class ModelView: Widget
+---@class modelview: ModelView
 local ModelView = {}
 
 ---Adds rotation `angle` to the ModelView. positive is left negative is right
@@ -452,7 +453,7 @@ function ModelView:HasDiffWithClientUnit() end
 ---Initializes the ModelView with a unit and model creation option.
 ---@param unit UNIT
 ---@param createModel boolean
----@return boolean
+---@return boolean unknown
 ---@usage
 ---```
 ---widget:Init("target", true)

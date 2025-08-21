@@ -17,3 +17,4 @@ DC_SHIFT_KEY_DOWN = 1  -- object/MegaphoneChatEdit
 
 ---object/MegaphoneChatEdit
 ---@class MegaphoneChatEdit: Editbox, ChatEdit
+---@class megaphonechatedit: MegaphoneChatEdit

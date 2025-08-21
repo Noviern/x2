@@ -24,6 +24,7 @@ local FOLDER_STATE = {
 ---object/Folder
 ---@class Folder: Widget
 ---@field style TextStyle
+---@class folder: Folder
 local Folder = {}
 
 ---Closes the Folder.
@@ -96,7 +97,8 @@ function Folder:SetAnimateStep(speed) end
 ---```
 function Folder:SetChildWidget(childTable) end
 
----Sets the button to show in the `"close"` state, requiring an OnClick event to call `Folder:OpenFolder()`.
+---Sets the button to show in the `"close"` state, requiring an OnClick event
+---to call `Folder:OpenFolder()`.
 ---@param closeTable Button The button for the `"close"` state.
 ---@usage
 ---```
@@ -133,7 +135,8 @@ function Folder:SetExtendLength(height) end
 ---```
 function Folder:SetInset(left, top, right, bottom) end
 
----Sets the button to show in the `"open"` state, requiring an OnClick event to call `Folder:CloseFolder()`.
+---Sets the button to show in the `"open"` state, requiring an OnClick event to
+---call `Folder:CloseFolder()`.
 ---@param openTable Button The button for the `"open"` state.
 ---@usage
 ---```
@@ -149,7 +152,8 @@ function Folder:SetInset(left, top, right, bottom) end
 ---```
 function Folder:SetOpenStateButton(openTable) end
 
----Sets the title button widget for the Folder. This will override `Folder:SetTitleText`.
+---Sets the title button widget for the Folder. This will override
+---`Folder:SetTitleText`.
 ---@param titleTable Button The button widget for the title.
 ---@usage
 ---```

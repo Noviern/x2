@@ -15,8 +15,7 @@ CT_NAME = 1            -- object/ChatEdit
 DC_ALWAYS = 0          -- object/ChatEdit
 DC_SHIFT_KEY_DOWN = 1  -- object/ChatEdit
 
----@TODO: Not sure what this is for.
--- @field SetChatTypeColor fun(self: self, chatType, r: number, g: number, b: number, a: number) -- This does not exist.
+-- @field SetChatTypeColor fun(self: self, chatType, r: number, g: number, b: number, a: number) ---@TODO: This does not exist.
 
 ---object/ChatEdit
 ---@class ChatEdit

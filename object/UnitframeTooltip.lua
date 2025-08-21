@@ -30,3 +30,4 @@ UFT_PVPKILL = "|p11;"           -- object/UnitframeTooltip
 
 ---object/UnitframeTooltip
 ---@class UnitframeTooltip: GameTooltip
+---@class unitframetooltip: UnitframeTooltip

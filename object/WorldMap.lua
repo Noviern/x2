@@ -38,6 +38,7 @@ local WORLD_MAP_ZOOM = {
 
 ---object/WorldMap
 ---@class WorldMap: Widget, Map
+---@class worldmap: WorldMap
 local WorldMap = {}
 
 ---Retrieves climate information for a specific zone.
@@ -76,7 +77,8 @@ function WorldMap:GetCursorSextants() end
 ---@see ImageDrawable
 function WorldMap:GetIconDrawable(level, id) end
 
----Retrieves or creates a route drawable for a specific zoom level and ID. Crashes if an invalid level is provided.
+---Retrieves or creates a route drawable for a specific zoom level and ID.
+---Crashes if an invalid level is provided.
 ---@param level WORLD_MAP_ZOOM The zoom level. (WORLD_MAP_STATE may be more accurate)
 ---@param id number The route ID.
 ---@return ImageDrawable|EmptyTable|nil routeDrawable The route drawable, or `nil` if not found.
@@ -97,7 +99,8 @@ function WorldMap:GetRouteDrawable(level, id) end
 ---```
 function WorldMap:HideAllIconDrawable() end
 
----Initializes map data with specified dimensions and texture paths. Must be called before showing the widget to ensure proper rendering.
+---Initializes map data with specified dimensions and texture paths. Must be
+---called before showing the widget to ensure proper rendering.
 ---@param width number The width of the map.
 ---@param height number The height of the map.
 ---@param tgaPath "Game/ui/map/image_map.tga"|string The path to the map texture.
@@ -154,7 +157,8 @@ function WorldMap:SetCommonFarmDrawable(drawable) end
 ---```
 function WorldMap:SetFestivalZoneColor(r, g, b, a) end
 
----Sets the drawable for portal icons on the world map. May accept any drawable type.
+---Sets the drawable for portal icons on the world map. May accept any drawable
+---type.
 ---@param drawable EffectDrawable The drawable for the portal icon.
 ---@usage
 ---```
@@ -204,7 +208,8 @@ function WorldMap:SetTroubleZoneColor(state, r, g, b, a) end
 ---@param y number The y-coordinate.
 function WorldMap:ShowCommonFarm(farmGroupType, farmType, x, y) end
 
----Shows a portal location on the world map at the specified coordinates. Crashes if `SetPortalDrawable` is not called first.
+---Shows a portal location on the world map at the specified coordinates.
+---Crashes if `SetPortalDrawable` is not called first.
 ---@param zoneId ZONE_KEY The zone ID.
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.

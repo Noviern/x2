@@ -17,6 +17,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Pageable
 
 ---object/Pageable
 ---@class Pageable: Widget
+---@class pageable: Pageable
 local Pageable = {}
 
 ---Adds a widget to the specified page of the Pageable.
@@ -81,7 +82,8 @@ function Pageable:PrevPage() end
 ---```
 function Pageable:SetCurrentPageIndex(num) end
 
----Sets the total number of pages for the Pageable. This must be set before `Pageable:AddWidgetToPage`.
+---Sets the total number of pages for the Pageable. This must be set before
+---`Pageable:AddWidgetToPage`.
 ---@param num number The number of pages to set.
 ---@usage
 ---```

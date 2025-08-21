@@ -118,6 +118,7 @@ local BIND_TYPE = {
 ---@field cooltime_style TextStyle
 ---@field icon IconDrawable
 ---@field style TextStyle
+---@class slot: Slot
 local Slot = {}
 
 ---Changes the icon layer for the Slot.

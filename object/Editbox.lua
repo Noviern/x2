@@ -20,6 +20,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Editbox
 ---object/Editbox
 ---@class Editbox: Widget, Editboxbase
 ---@field prefixStyle TextStyle
+---@class editbox: Editbox
 local Editbox = {}
 
 ---Adds a text entry to the Editbox history.

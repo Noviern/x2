@@ -23,6 +23,7 @@ UI_BUTTON_PUSHED = 2      -- object/CooldownButton
 
 ---object/CooldownButton
 ---@class CooldownButton: Button
+---@class cooldownbutton: CooldownButton
 local CooldownButton = {}
 
 ---@TODO: I never got this to work. Broken?

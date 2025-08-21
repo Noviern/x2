@@ -18,6 +18,7 @@ MAX_SKILL_MAP_EFFECT_COUNT = 6 -- object/RoadMap
 
 ---object/RoadMap
 ---@class RoadMap: Widget, Map
+---@class roadmap: RoadMap
 local RoadMap = {}
 
 function RoadMap:InitMapData() end

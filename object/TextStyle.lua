@@ -30,6 +30,7 @@ FTK_IMAGETEXT = 2      -- object/TextStyle
 
 ---object/TextStyle
 ---@class TextStyle: Uiobject
+---@class textstyle: TextStyle
 local TextStyle = {}
 
 ---Retrieves the line height of the TextStyle.
@@ -78,7 +79,8 @@ function TextStyle:SetColor(r, g, b, a) end
 ---```
 function TextStyle:SetColorByKey(key) end
 
----Enables or disables ellipsis for the TextStyle when text overflows its extent.
+---Enables or disables ellipsis for the TextStyle when text overflows its
+---extent.
 ---@param ellipsis boolean `true` to enable ellipsis, `false` to disable. (default: `false`)
 ---@usage
 ---```

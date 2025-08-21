@@ -19,6 +19,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/PaintColorPicker
 ---@class PaintColorPicker: Widget
 ---@field luminanceWidget EmptyWidget
 ---@field spectrumWidget EmptyWidget
+---@class paintcolorpicker: PaintColorPicker
 local PaintColorPicker = {}
 
 ---Retrieves the HSL color values of the PaintColorPicker.
@@ -50,7 +51,8 @@ function PaintColorPicker:GetHue() end
 ---```
 function PaintColorPicker:GetLum() end
 
----Retrieves the luminance widget of the PaintColorPicker (same as `PaintColorPicker.luminanceWidget`).
+---Retrieves the luminance widget of the PaintColorPicker (same as
+---`PaintColorPicker.luminanceWidget`).
 ---@return EmptyWidget luminanceWidget The luminance widget.
 ---@nodiscard
 ---@usage
@@ -79,7 +81,8 @@ function PaintColorPicker:GetRGBColor() end
 ---```
 function PaintColorPicker:GetSat() end
 
----Retrieves the spectrum widget of the PaintColorPicker (same as `PaintColorPicker.spectrumWidget`).
+---Retrieves the spectrum widget of the PaintColorPicker (same as
+---`PaintColorPicker.spectrumWidget`).
 ---@return EmptyWidget spectrumWidget The spectrum widget.
 ---@nodiscard
 ---@usage
@@ -88,7 +91,8 @@ function PaintColorPicker:GetSat() end
 ---```
 function PaintColorPicker:GetSpectrumWidget() end
 
----Sets the HSL color values for the PaintColorPicker and updates the `PaintColorPicker.luminanceWidget`.
+---Sets the HSL color values for the PaintColorPicker and updates the
+---`PaintColorPicker.luminanceWidget`.
 ---@param hue number The hue component. (min: `0`, max: `1`)
 ---@param lum number The luminance component. (min: `0`, max: `1`)
 ---@param sat number The saturation component. (min: `0`, max: `1`)
@@ -98,7 +102,8 @@ function PaintColorPicker:GetSpectrumWidget() end
 ---```
 function PaintColorPicker:SetHLSColor(hue, lum, sat) end
 
----Sets the hue value for the PaintColorPicker but does not update the `PaintColorPicker.luminanceWidget`.
+---Sets the hue value for the PaintColorPicker but does not update the
+---`PaintColorPicker.luminanceWidget`.
 ---@param hue number The hue value. (`0` to `240`)
 ---@usage
 ---```
@@ -106,7 +111,8 @@ function PaintColorPicker:SetHLSColor(hue, lum, sat) end
 ---```
 function PaintColorPicker:SetHue(hue) end
 
----Sets the luminance value for the PaintColorPicker but does not update the `PaintColorPicker.luminanceWidget`.
+---Sets the luminance value for the PaintColorPicker but does not update the
+---`PaintColorPicker.luminanceWidget`.
 ---@param lum number The luminance value. (`0` to `240`)
 ---@usage
 ---```
@@ -125,7 +131,8 @@ function PaintColorPicker:SetLum(lum) end
 ---```
 function PaintColorPicker:SetLuminanceBg(bg) end
 
----Sets the RGB color values for the PaintColorPicker and updates the `PaintColorPicker.luminanceWidget`.
+---Sets the RGB color values for the PaintColorPicker and updates the
+---`PaintColorPicker.luminanceWidget`.
 ---@param red number The red color component. (`0` to `255`)
 ---@param green number The green color component. (`0` to `255`)
 ---@param blue number The blue color component. (`0` to `255`)
@@ -135,7 +142,8 @@ function PaintColorPicker:SetLuminanceBg(bg) end
 ---```
 function PaintColorPicker:SetRGBColor(red, green, blue) end
 
----Sets the saturation value for the PaintColorPicker and does not update the `PaintColorPicker.luminanceWidget`.
+---Sets the saturation value for the PaintColorPicker and does not update the
+---`PaintColorPicker.luminanceWidget`.
 ---@param sat number The saturation value. (`0` to `240`)
 ---@usage
 ---```

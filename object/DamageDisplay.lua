@@ -58,13 +58,14 @@ PCT_SHIP_COLLISION = 1  -- object/DamageDisplay
 ---@class DamageDisplay: Widget
 ---@field extraStyle TextStyle
 ---@field style TextStyle
+---@class damagedisplay: DamageDisplay
 local DamageDisplay = {}
 
 ---Enables or disables animation for the DamageDisplay.
 ---@param anim boolean `true` to enable animation, `false` to disable. (default: `false`)
 ---@usage
 ---```
----damageDisplay:Animation(true)
+---widget:Animation(true)
 ---```
 function DamageDisplay:Animation(anim) end
 
@@ -77,7 +78,7 @@ function DamageDisplay:Animation(anim) end
 ---@nodiscard
 ---@usage
 ---```
----local left, top, right, bottom = damageDisplay:GetActualDrawn()
+---local left, top, right, bottom = widget:GetActualDrawn()
 ---```
 function DamageDisplay:GetActualDrawn() end
 
@@ -89,7 +90,7 @@ function DamageDisplay:GetActualDrawn() end
 ---@nodiscard
 ---@usage
 ---```
----local left, top, right, bottom = damageDisplay:GetInset()
+---local left, top, right, bottom = widget:GetInset()
 ---```
 function DamageDisplay:GetInset() end
 
@@ -97,7 +98,7 @@ function DamageDisplay:GetInset() end
 ---@param frameInfo FrameInfo[] An array of frame information for the animation.
 ---@usage
 ---```
----damageDisplay:SetAnimFrameInfo({
+---widget:SetAnimFrameInfo({
 ---  {
 ---    scale = 1.5,
 ---    timeToNextFrame = 70,
@@ -130,7 +131,7 @@ function DamageDisplay:SetAnimFrameInfo(frameInfo) end
 ---@param y number The y-coordinate of the initial position. (default: `0`)
 ---@usage
 ---```
----damageDisplay:SetInitPos(0, 0)
+---widget:SetInitPos(0, 0)
 ---```
 function DamageDisplay:SetInitPos(x, y) end
 
@@ -141,7 +142,7 @@ function DamageDisplay:SetInitPos(x, y) end
 ---@param bottom number The bottom inset. (default: `0`)
 ---@usage
 ---```
----damageDisplay:SetInset(10, 10, 10, 10)
+---widget:SetInset(10, 10, 10, 10)
 ---```
 function DamageDisplay:SetInset(left, top, right, bottom) end
 
@@ -149,7 +150,7 @@ function DamageDisplay:SetInset(left, top, right, bottom) end
 ---@param positionCalculationType PCT The position calculation type. (default: `PCT_DEFAULT`)
 ---@usage
 ---```
----damageDisplay:SetPositionCalculationType(PCT_SHIP_COLLISION)
+---widget:SetPositionCalculationType(PCT_SHIP_COLLISION)
 ---```
 ---@see PCT
 function DamageDisplay:SetPositionCalculationType(positionCalculationType) end
@@ -159,6 +160,6 @@ function DamageDisplay:SetPositionCalculationType(positionCalculationType) end
 ---@param targetId string The target unit ID.
 ---@usage
 ---```
----damageDisplay:SetUnitId(X2Unit:GetUnitId("player"), X2Unit:GetUnitId("target"))
+---widget:SetUnitId(X2Unit:GetUnitId("player"), X2Unit:GetUnitId("target"))
 ---```
 function DamageDisplay:SetUnitId(sourceId, targetId) end

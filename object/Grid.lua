@@ -24,6 +24,7 @@ local HEADER_TYPE = {
 
 ---object/Grid
 ---@class Grid: Widget
+---@class grid: Grid
 local Grid = {}
 
 ---Clears the item from the Grid.
@@ -70,7 +71,8 @@ function Grid:GetMaxTop() end
 ---```
 function Grid:GetRowCount() end
 
----Retrieves the height of the specified row in the Grid. Crashes if `SetRowCount` has not been called.
+---Retrieves the height of the specified row in the Grid. Crashes if
+---`Grid:SetRowCount` has not been called.
 ---@param row number The row index. (min: `1`)
 ---@return number rowHeight The height of the row. (default: `0`)
 ---@nodiscard
@@ -209,7 +211,8 @@ function Grid:SetColTexture(texture) end
 ---```
 function Grid:SetColWidth(width, col) end
 
----Sets the color for the current line in the Grid. Requires `Grid:SetCurrentLine(true)`.
+---Sets the color for the current line in the Grid. Requires
+---`Grid:SetCurrentLine(true)`.
 ---@param r number The red color component. (min: `0`, max: `1`, default: `1`)
 ---@param g number The green color component. (min: `0`, max: `1`, default: `1`)
 ---@param b number The blue color component. (min: `0`, max: `1`, default: `1`)
@@ -228,7 +231,8 @@ function Grid:SetCurrentColor(r, g, b, a) end
 ---```
 function Grid:SetCurrentLine(current) end
 
----Sets the texture coordinates for the current line in the Grid. Requires `Grid:SetCurrentLine(true)`.
+---Sets the texture coordinates for the current line in the Grid. Requires
+---`Grid:SetCurrentLine(true)`.
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@param w number The width.
@@ -239,12 +243,14 @@ function Grid:SetCurrentLine(current) end
 ---```
 function Grid:SetCurrentTexCoord(x, y, w, h) end
 
----Sets the texture for the current line in the Grid. Requires `Grid:SetCurrentLine(true)`.
+---Sets the texture for the current line in the Grid. Requires
+---`Grid:SetCurrentLine(true)`.
 ---@param texture TEXTURE_PATH The texture path.
 ---@see TEXTURE_PATH
 function Grid:SetCurrentTexture(texture) end
 
----Sets the default column width for the Grid. Should be called before `Grid:SetItem`.
+---Sets the default column width for the Grid. Should be called before
+---`Grid:SetItem`.
 ---@param width number The default column width.
 ---@usage
 ---```
@@ -252,7 +258,8 @@ function Grid:SetCurrentTexture(texture) end
 ---```
 function Grid:SetDefaultColWidth(width) end
 
----Sets the default row height for the Grid. Should be called before `Grid:SetItem`.
+---Sets the default row height for the Grid. Should be called before
+---`Grid:SetItem`.
 ---@param height number The default row height.
 ---@usage
 ---```
@@ -344,7 +351,8 @@ function Grid:SetItem(table, row, col, makeIfNotExist, value, withoutExtent) end
 ---```
 function Grid:SetItemInset(row, col, left, top, right, bottom) end
 
----Sets the left scroll position of the Grid. May crash if scrolling is not possible.
+---Sets the left scroll position of the Grid. May crash if scrolling is not
+---possible.
 ---@param left number The left scroll position.
 ---@usage
 ---```
@@ -415,12 +423,14 @@ function Grid:SetRowHeight(height, row) end
 ---```
 function Grid:SetRowTexCoord(x, y, w, h) end
 
----Sets the texture for a row in the Grid. Requires `Grid:SetLineBackGround(true)`.
+---Sets the texture for a row in the Grid. Requires
+---`Grid:SetLineBackGround(true)`.
 ---@param texture TEXTURE_PATH The texture path.
 ---@see TEXTURE_PATH
 function Grid:SetRowTexture(texture) end
 
----Sets the color for the selected item in the Grid. Requires `Grid:SetSelectedLine(true)`.
+---Sets the color for the selected item in the Grid. Requires
+---`Grid:SetSelectedLine(true)`.
 ---@param r number The red color component. (min: `0`, max: `1`, default: `129`)
 ---@param g number The green color component. (min: `0`, max: `1`, default: `129`)
 ---@param b number The blue color component. (min: `0`, max: `1`, default: `129`)
@@ -439,7 +449,8 @@ function Grid:SetSelectedColor(r, g, b, a) end
 ---```
 function Grid:SetSelectedLine(select) end
 
----Sets the texture coordinates for the selected item in the Grid. Requires `Grid:SetSelectedLine(true)`.
+---Sets the texture coordinates for the selected item in the Grid. Requires
+---`Grid:SetSelectedLine(true)`.
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@param w number The width.
@@ -450,7 +461,8 @@ function Grid:SetSelectedLine(select) end
 ---```
 function Grid:SetSelectedTexCoord(x, y, w, h) end
 
----Sets the texture for the selected item in the Grid. Requires `Grid:SetSelectedLine(true)`.
+---Sets the texture for the selected item in the Grid. Requires
+---`Grid:SetSelectedLine(true)`.
 ---@param texture TEXTURE_PATH The texture path.
 ---@see TEXTURE_PATH
 function Grid:SetSelectedTexture(texture) end

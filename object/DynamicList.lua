@@ -18,6 +18,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/DynamicList
 ---object/DynamicList
 ---@class DynamicList: Widget
 ---@field content EmptyWidget TODO: This has a anchor field EmptyWidget
+---@class dynamiclist: DynamicList
 local DynamicList = {}
 
 ---Clears all data from the DynamicList.

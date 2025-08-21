@@ -55,9 +55,11 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Listbox
 ---@class Listbox: Widget
 ---@field itemStyle TextStyle
 ---@field itemStyleSub TextStyle
+---@class listbox: Listbox
 local Listbox = {}
 
----Appends an item to the Listbox with the specified key, value, and optional color.
+---Appends an item to the Listbox with the specified key, value, and optional
+---color.
 ---@param key string The key for the item.
 ---@param value number The value for the item.
 ---@param r? number The red color component. (min: `0`, max: `1`)
@@ -337,7 +339,8 @@ function Listbox:SetBorder(line) end
 ---```
 function Listbox:SetDefaultItemColor(r, g, b, a) end
 
----Sets the texture coordinates for default items in the Listbox. Requires `SetListItemStateTexture`.
+---Sets the texture coordinates for default items in the Listbox. Requires
+---`Listbox:SetListItemStateTexture`.
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@param cx number The width.
@@ -404,7 +407,8 @@ function Listbox:SetInset(left, top, right, bottom) end
 ---```
 function Listbox:SetItem(idx, name, value, r, g, b, a) end
 
----Sets the default texture info for items in the Listbox. Requires `SetListItemStateTexture`.
+---Sets the default texture info for items in the Listbox. Requires
+---`Listbox:SetListItemStateTexture`.
 ---@param infoKey string The texture info key.
 ---@param colorKey? string The color key for the texture.
 ---@usage
@@ -413,7 +417,8 @@ function Listbox:SetItem(idx, name, value, r, g, b, a) end
 ---```
 function Listbox:SetItemDefaultTextureInfo(infoKey, colorKey) end
 
----Sets the texture info for overed items in the Listbox. Requires `SetListItemStateTexture`.
+---Sets the texture info for overed items in the Listbox. Requires
+---`Listbox:SetListItemStateTexture`.
 ---@param infoKey string The texture info key.
 ---@param colorKey? string The color key for the texture.
 ---@usage
@@ -422,7 +427,8 @@ function Listbox:SetItemDefaultTextureInfo(infoKey, colorKey) end
 ---```
 function Listbox:SetItemOveredTextureInfo(infoKey, colorKey) end
 
----Sets the texture info for selected items in the Listbox. Requires `SetListItemStateTexture`.
+---Sets the texture info for selected items in the Listbox. Requires
+---`Listbox:SetListItemStateTexture`.
 ---@param infoKey string The texture info key.
 ---@param colorKey? string The color key for the texture.
 ---@usage
@@ -486,7 +492,8 @@ function Listbox:SetListItemStateTextureInset(left, top, right, bottom) end
 ---```
 function Listbox:SetOveredItemColor(r, g, b, a) end
 
----Sets the texture coordinates for overed items in the Listbox. Requires `SetListItemStateTexture`.
+---Sets the texture coordinates for overed items in the Listbox. Requires
+---`Listbox:SetListItemStateTexture`.
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@param cx number The width.
@@ -519,7 +526,8 @@ function Listbox:SetOveredItemTextColor(r, g, b, a) end
 ---```
 function Listbox:SetSelectedItemColor(r, g, b, a) end
 
----Sets the texture coordinates for selected items in the Listbox. Requires `SetListItemStateTexture`.
+---Sets the texture coordinates for selected items in the Listbox. Requires
+---`Listbox:SetListItemStateTexture`.
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@param cx number The width.

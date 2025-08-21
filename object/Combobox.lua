@@ -41,6 +41,7 @@ local AUTOCOMPLETE_FILTER = {
 ---@field selector X2EditBox
 ---@field selectorBtn Button
 ---@field toggle Button
+---@class combobox: Combobox
 local Combobox = {}
 
 ---@TODO: Clarify how this works; possibly creates a list for autocomplete.
@@ -52,7 +53,7 @@ function Combobox:Insert(datas) end
 ---@param pause boolean `true` to pause autocomplete, `false` to unpause.
 ---@usage
 ---```
----combobox:PauseAutocomplete(false)
+---widget:PauseAutocomplete(false)
 ---```
 function Combobox:PauseAutocomplete(pause) end
 
@@ -62,7 +63,7 @@ function Combobox:PauseAutocomplete(pause) end
 ---@param filter AUTOCOMPLETE_FILTER The autocomplete filter.
 ---@usage
 ---```
----combobox:SetAutocomplete("item", "")
+---widget:SetAutocomplete("item", "")
 ---```
 function Combobox:SetAutocomplete(type, filter) end
 
@@ -70,7 +71,7 @@ function Combobox:SetAutocomplete(type, filter) end
 ---@param limit number The maximum number of visible items (`0` to `10`). (default: `10`)
 ---@usage
 ---```
----combobox:SetDropdownVisibleLimit(5)
+---widget:SetDropdownVisibleLimit(5)
 ---```
 function Combobox:SetDropdownVisibleLimit(limit) end
 
@@ -78,7 +79,7 @@ function Combobox:SetDropdownVisibleLimit(limit) end
 ---@param editable boolean `true` to allow editing, `false` to disable. (dfault: `false`)
 ---@usage
 ---```
----combobox:SetEditable(true)
+---widget:SetEditable(true)
 ---```
 function Combobox:SetEditable(editable) end
 

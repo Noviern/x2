@@ -18,6 +18,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Textbox
 ---object/Textbox
 ---@class Textbox: Widget
 ---@field style TextStyle
+---@class textbox: Textbox
 local Textbox = {}
 
 ---Retrieves the inset of the Textbox.

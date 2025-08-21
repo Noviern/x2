@@ -31,6 +31,7 @@ local UI_LAYER = {
 ---@class Window: Widget
 ---@field modalBackgroundWindow EmptyWidget
 ---@field titleStyle TextStyle
+---@class window: Window
 local Window = {}
 
 ---Enables or disables closing the Window when the Escape key is pressed.

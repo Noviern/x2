@@ -24,9 +24,11 @@ local SLIDER_SCROLL_TYPE = {
 
 ---object/Slider
 ---@class Slider: Widget
+---@class slider: Slider
 local Slider = {}
 
----Moves the slider down for vertical orientation or right for horizontal orientation.
+---Moves the slider down for vertical orientation or right for horizontal
+---orientation.
 ---@param step number The amount to move the slider.
 ---@usage
 ---```
@@ -175,7 +177,8 @@ function Slider:SetValue(value, triggerEvent) end
 ---```
 function Slider:SetValueStep(value) end
 
----Moves the slider up for vertical orientation or left for horizontal orientation.
+---Moves the slider up for vertical orientation or left for horizontal
+---orientation.
 ---@param step number The amount to move the slider.
 ---@usage
 ---```

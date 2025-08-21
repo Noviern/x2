@@ -205,9 +205,15 @@ local AVI_PATH = {
 
 ---object/Avi
 ---@class Avi: Widget
+---@class avi: Avi
 local Avi = {}
 
----@param fileName AVI_PATH
+---Sets the AVI file to be used by the widget.
+---@param fileName AVI_PATH The path to the AVI file.
+---@usage
+---```
+---widget:SetAviName("objects/machinima/avi/ci.avi")
+---```
 function Avi:SetAviName(fileName) end
 
 ---@TODO: Not sure what avitype is as any value doesnt cause an error.

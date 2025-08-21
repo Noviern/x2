@@ -22,6 +22,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/RadioGroup
 ---object/RadioGroup
 ---@class RadioGroup: Widget
 ---@field frame? RadioItem[]
+---@class radiogroup: RadioGroup
 local RadioGroup = {}
 
 ---Checks the radio item at the specified index in the RadioGroup.

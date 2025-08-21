@@ -17,6 +17,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Webbrowser
 
 ---object/Webbrowser
 ---@class Webbrowser: Widget
+---@class webbrowser: Webbrowser
 local Webbrowser = {}
 
 ---Clears focus from the Webbrowser.
@@ -53,7 +54,8 @@ function Webbrowser:LoadBlankPage() end
 ---@see MOUSE_BUTTON
 function Webbrowser:MouseDown(button) end
 
----Simulates a mouse move event on the Webbrowser  and triggers the `"OnMouseMove"` event.
+---Simulates a mouse move event on the Webbrowser  and triggers the
+---`"OnMouseMove"` event.
 ---@usage
 ---```
 ---widget:MouseMove()

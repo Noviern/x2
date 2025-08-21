@@ -17,7 +17,8 @@ DAT_MOVE = 1         -- object/ImageDrawable
 ---@class ImageDrawable: DrawableDDS
 local ImageDrawable = {}
 
----Enables or disables animation and looping for the texture of the ImageDrawable. Must be used after `ImageDrawable:SetAnimFrameInfo`.
+---Enables or disables animation and looping for the texture of the
+---ImageDrawable. Must be used after `ImageDrawable:SetAnimFrameInfo`.
 ---@param anim boolean `true` to enable animation, `false` to disable.
 ---@param loop boolean `true` to enable looping, `false` to disable.
 ---@usage

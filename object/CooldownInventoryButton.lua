@@ -22,6 +22,7 @@ UI_BUTTON_PUSHED = 2      -- object/CooldownInventoryButton
 
 ---object/CooldownInventoryButton
 ---@class CooldownInventoryButton: CooldownButton
+---@class cooldowninventorybutton: CooldownInventoryButton
 local CooldownInventoryButton = {}
 
 ---@TODO: Broken?

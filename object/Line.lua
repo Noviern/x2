@@ -24,6 +24,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Line
 
 ---object/Line
 ---@class Line: Widget
+---@class line: Line
 local Line = {}
 
 ---Clears all points from the Line.

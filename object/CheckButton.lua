@@ -22,6 +22,7 @@ UI_BUTTON_PUSHED = 2      -- object/CheckButton
 
 ---object/CheckButton
 ---@class Checkbutton: Button
+---@class checkbutton: Checkbutton
 ---@field style TextStyle
 local Checkbutton = {}
 

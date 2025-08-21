@@ -35,6 +35,7 @@ LCCIT_WINDOW = 2       -- object/ListCtrl
 ---@class ListCtrl: Widget
 ---@field column? Button[]
 ---@field items? ListCtrlItem[]
+---@class listctrl: ListCtrl
 local ListCtrl = {}
 
 ---Clears the current selection in the ListCtrl.
@@ -103,7 +104,8 @@ function ListCtrl:DeleteRows() end
 ---```
 function ListCtrl:GetSelectedIdx() end
 
----Creates a column with specified width and item type, returning its index. Also creates a `ListCtrl.column: Button[]` property.
+---Creates a column with specified width and item type, returning its index.
+---Also creates a `ListCtrl.column: Button[]` property.
 ---@param width number The width of the column.
 ---@param itemType LCCIT The item type for the column.
 ---@return number index The index of the created column. (min: `0`)

@@ -28,6 +28,7 @@ local TAB_CORNER = {
 ---@field selectedButton? Button[]
 ---@field unselectedButton? Button[]
 ---@field window? Window[]
+---@class tab: Tab
 local Tab = {}
 
 ---Adds a new tab to the Tab with specified button and window widgets.
@@ -57,7 +58,8 @@ function Tab:AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget,
 function Tab:AddSimpleTab(tabName) end
 
 ---@TODO: Verify purpose and behavior.
----Aligns the tab buttons in the Tab. Should be called after all tabs have been created.
+---Aligns the tab buttons in the Tab. Should be called after all tabs have been
+---created.
 ---@usage
 ---```
 ---widget:AlignTabButtons()
@@ -108,7 +110,8 @@ function Tab:IsHideTab(index) end
 ---```
 function Tab:SetActivateTabCount(activateTabCount) end
 
----Sets the corner where tabs are placed in the Tab. Should be called before `Tab:AlignTabButtons()`.
+---Sets the corner where tabs are placed in the Tab. Should be called before
+---`Tab:AlignTabButtons()`.
 ---@param corner TAB_CORNER The corner to place the tabs. (default: `"TOPLEFT"`)
 ---@usage
 ---```
@@ -117,7 +120,8 @@ function Tab:SetActivateTabCount(activateTabCount) end
 ---@see TAB_CORNER
 function Tab:SetCorner(corner) end
 
----Sets the orientation of the tabs in the Tab. Should be called before `Tab:AlignTabButtons()`.
+---Sets the orientation of the tabs in the Tab. Should be called before
+---`Tab:AlignTabButtons()`.
 ---@param vertical boolean `true` for vertical orientation, `false` for horizontal. (default: `false`)
 ---@usage
 ---```

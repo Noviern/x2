@@ -19,7 +19,7 @@ lua.workspace.library
 ```
 
 5. Determine if you want definitions for all addons (User) or just one specific addon (Workspace).
-6. Click **Add Item** and provide the location of this folder (`C:\ArcheRage\Documents\Addon\AAD`)
+6. Click **Add Item** and provide the location of this folder (`C:\ArcheRage\Documents\Addon\AAAD`)
 
 ![Shows lua.workspace.library settings](img/settings.png)
 

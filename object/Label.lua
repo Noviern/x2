@@ -18,6 +18,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/Label
 ---object/Label
 ---@class Label: Widget
 ---@field style TextStyle
+---@class label: Label
 local Label = {}
 
 ---Retrieves the inset of the Label.
@@ -51,7 +52,8 @@ function Label:SetAutoResize(resize) end
 ---```
 function Label:SetInset(left, top, right, bottom) end
 
----Enables or disables number formatting for the Label's text (must be set before `widget:SetText`).
+---Enables or disables number formatting for the Label's text (must be set
+---before `Label:SetText`).
 ---@param only boolean `true` to restrict to numbers only, `false` to allow any text. (default: `false`)
 ---@usage
 ---```

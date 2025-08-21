@@ -17,6 +17,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/EditboxMultiline
 
 ---object/EditboxMultiline
 ---@class EditboxMultiline: Widget, Editboxbase
+---@class editboxmultiline: EditboxMultiline
 local EditboxMultiline = {}
 
 ---Clears all text in the EditboxMultiline.
@@ -27,7 +28,7 @@ function EditboxMultiline:Clear() end
 ---@nodiscard
 ---@usage
 ---```
----local cursorPosX = editboxMultiline:GetCursorPosX()
+---local cursorPosX = widget:GetCursorPosX()
 ---```
 function EditboxMultiline:GetCursorPosX() end
 
@@ -36,7 +37,7 @@ function EditboxMultiline:GetCursorPosX() end
 ---@nodiscard
 ---@usage
 ---```
----local cursorPosY = editboxMultiline:GetCursorPosY()
+---local cursorPosY = widget:GetCursorPosY()
 ---```
 function EditboxMultiline:GetCursorPosY() end
 
@@ -45,7 +46,7 @@ function EditboxMultiline:GetCursorPosY() end
 ---@nodiscard
 ---@usage
 ---```
----local lineCount = editboxMultiline:GetLineCount()
+---local lineCount = widget:GetLineCount()
 ---```
 function EditboxMultiline:GetLineCount() end
 
@@ -54,7 +55,7 @@ function EditboxMultiline:GetLineCount() end
 ---@nodiscard
 ---@usage
 ---```
----local lineHeight = editboxMultiline:GetLineHeight()
+---local lineHeight = widget:GetLineHeight()
 ---```
 function EditboxMultiline:GetLineHeight() end
 
@@ -64,7 +65,7 @@ function EditboxMultiline:GetLineHeight() end
 ---@nodiscard
 ---@usage
 ---```
----local textHeight = editboxMultiline:GetTextHeight()
+---local textHeight = widget:GetTextHeight()
 ---```
 function EditboxMultiline:GetTextHeight() end
 
@@ -73,7 +74,7 @@ function EditboxMultiline:GetTextHeight() end
 ---@nodiscard
 ---@usage
 ---```
----local textLength = editboxMultiline:GetTextLength()
+---local textLength = widget:GetTextLength()
 ---```
 function EditboxMultiline:GetTextLength() end
 
@@ -84,7 +85,7 @@ function EditboxMultiline:GetTextLength() end
 ---@param bottom number The bottom inset.
 ---@usage
 ---```
----editboxMultiline:SetInset(10, 10, 10, 10)
+---widget:SetInset(10, 10, 10, 10)
 ---```
 function EditboxMultiline:SetInset(left, top, right, bottom) end
 
@@ -92,6 +93,6 @@ function EditboxMultiline:SetInset(left, top, right, bottom) end
 ---@param space number The line spacing value.
 ---@usage
 ---```
----editboxMultiline:SetLineSpace(2)
+---widget:SetLineSpace(2)
 ---```
 function EditboxMultiline:SetLineSpace(space) end

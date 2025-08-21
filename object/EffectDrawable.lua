@@ -14,9 +14,9 @@ AP_TOPRIGHT = 1    -- object/EffectDrawable
 ---@enum EFFECT_PRIORITY
 local EFFECT_PRIORITY = {
   ALPHA  = "alpha",
-  SCALEX  = "scalex",
-  ROTATE  = "rotate",
-  COLORR  = "colorr",
+  SCALEX = "scalex",
+  ROTATE = "rotate",
+  COLORR = "colorr",
 }
 
 ---object/EffectDrawable
@@ -88,7 +88,8 @@ function EffectDrawable:SetEffectFinalColor(phase, finalR, finalG, finalB, final
 ---drawable:SetEffectInitialColor(1, 1, 0, 0, 1)
 ---```
 function EffectDrawable:SetEffectInitialColor(phase, initialR, initialG, initialB,
-                                              initialA) end
+                                              initialA)
+end
 
 ---Sets the time interval after the specified effect phase.
 ---@param phase number The effect phase. (min: `1`)
@@ -110,7 +111,8 @@ function EffectDrawable:SetEffectInterval(phase, interval) end
 ---```
 ---@see EFFECT_PRIORITY
 function EffectDrawable:SetEffectPriority(phase, priority, velocityTime,
-                                          accelerationTime) end
+                                          accelerationTime)
+end
 
 ---Sets the rotation effect for the specified phase.
 ---@param phase number The effect phase. (min: `1`)
@@ -196,7 +198,8 @@ function EffectDrawable:SetMoveEffectInterval(phase, interval) end
 ---@see MOVE_TYPE
 function EffectDrawable:SetMoveEffectType(phase, moveType, horizontalRadius,
                                           verticalRadius, velocityTime,
-                                          accelerationTime) end
+                                          accelerationTime)
+end
 
 ---Sets the initial delay for move effects.
 ---@param InitialInterval number The initial delay in seconds.

@@ -14,8 +14,9 @@ AP_TOPRIGHT = 1    -- object/IconDrawable
 ---@class IconDrawable: Drawablebase
 local IconDrawable = {}
 
+---@TODO: Can other file types be used other than dds?
 ---Adds a texture to the IconDrawable.
----@param filename string The path to the texture file.
+---@param filename string The path to the texture file. This can be `"ui/..."` or `"Addon/MyAddon/image.dds"`
 ---@usage
 ---```
 ---local info = X2Player:GetAppellationMyStamp()
@@ -23,8 +24,9 @@ local IconDrawable = {}
 ---```
 function IconDrawable:AddTexture(filename) end
 
+---@TODO: Can other file types be used other than dds?
 ---Adds a texture with a specific key to the IconDrawable.
----@param filename string The path to the texture file.
+---@param filename string The path to the texture file. This can be `"ui/..."` or `"Addon/MyAddon/image.dds"`
 ---@param key string The key information for the texture.
 ---@usage
 ---```

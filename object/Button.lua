@@ -47,7 +47,7 @@ local UI_BUTTON_STATE_TEXT = {
 ---@field b number
 ---@field a number
 
----@TODO: Should this be a alias? Move to Addon?
+---@TODO: Move to Addon?
 ---@enum MOUSE_BUTTON
 local MOUSE_BUTTON = {
   LEFT  = "LeftButton",
@@ -55,6 +55,7 @@ local MOUSE_BUTTON = {
 }
 
 ---@TODO: Not all of these may exist.
+---ui/setting/button_style.g
 ---@enum BUTTON_STYLE
 local BUTTON_STYLE = {
   ACCEPT_V                            = "accept_v",
@@ -292,10 +293,10 @@ local BUTTON_STYLE = {
   ZONE_PERMISSION_WAIT                = "zone_permission_wait",
 }
 
-
 ---object/Button
 ---@class Button: Widget
 ---@field style TextStyle
+---@class button: Button
 local Button = {}
 
 ---@TODO: What is the default layer?
@@ -308,7 +309,7 @@ local Button = {}
 ---@nodiscard
 ---@usage
 ---```
----local normalDrawable = button:CreateStateDrawable(UI_BUTTON_NORMAL, UOT_NINE_PART_DRAWABLE, TEXTURE_PATH.HUD)
+---local normalDrawable = widget:CreateStateDrawable(UI_BUTTON_NORMAL, UOT_NINE_PART_DRAWABLE, TEXTURE_PATH.HUD)
 ---```
 ---@see UI_BUTTON_STATE
 ---@see UOT_DRAWABLE
@@ -319,7 +320,7 @@ function Button:CreateStateDrawable(state, drawableType, path, layer) end
 ---@param mouseButton MOUSE_BUTTON The mouse button to disable.
 ---@usage
 ---```
----button:DeregisterForClicks("LeftButton")
+---widget:DeregisterForClicks("LeftButton")
 ---```
 ---@see MOUSE_BUTTON
 function Button:DeregisterForClicks(mouseButton) end
@@ -329,7 +330,7 @@ function Button:DeregisterForClicks(mouseButton) end
 ---@nodiscard
 ---@usage
 ---```
----local state = button:GetButtonState()
+---local state = widget:GetButtonState()
 ---```
 ---@see UI_BUTTON_STATE_TEXT
 function Button:GetButtonState() end
@@ -340,7 +341,7 @@ function Button:GetButtonState() end
 ---@nodiscard
 ---@usage
 ---```
----local disabledTable = button:GetDisabledBackground()
+---local disabledTable = widget:GetDisabledBackground()
 ---```
 ---@see Drawablebase
 function Button:GetDisabledBackground() end
@@ -350,7 +351,7 @@ function Button:GetDisabledBackground() end
 ---@nodiscard
 ---@usage
 ---```
----local disabledColor = button:GetDisabledColor()
+---local disabledColor = widget:GetDisabledColor()
 ---```
 ---@see RGBA
 function Button:GetDisabledColor() end
@@ -360,7 +361,7 @@ function Button:GetDisabledColor() end
 ---@nodiscard
 ---@usage
 ---```
----local highlightTable = button:GetHighlightBackground()
+---local highlightTable = widget:GetHighlightBackground()
 ---```
 ---@see Drawablebase
 function Button:GetHighlightBackground() end
@@ -370,7 +371,7 @@ function Button:GetHighlightBackground() end
 ---@nodiscard
 ---@usage
 ---```
----local highlightColor = button:GetHighlightColor()
+---local highlightColor = widget:GetHighlightColor()
 ---```
 ---@see RGBA
 function Button:GetHighlightColor() end
@@ -380,7 +381,7 @@ function Button:GetHighlightColor() end
 ---@nodiscard
 ---@usage
 ---```
----local normalTable = button:GetNormalBackground()
+---local normalTable = widget:GetNormalBackground()
 ---```
 ---@see Drawablebase
 function Button:GetNormalBackground() end
@@ -390,7 +391,7 @@ function Button:GetNormalBackground() end
 ---@nodiscard
 ---@usage
 ---```
----local normalColor = button:GetNormalColor()
+---local normalColor = widget:GetNormalColor()
 ---```
 ---@see RGBA
 function Button:GetNormalColor() end
@@ -400,7 +401,7 @@ function Button:GetNormalColor() end
 ---@nodiscard
 ---@usage
 ---```
----local pushedTable = button:GetPushedBackground()
+---local pushedTable = widget:GetPushedBackground()
 ---```
 ---@see Drawablebase
 function Button:GetPushedBackground() end
@@ -410,7 +411,7 @@ function Button:GetPushedBackground() end
 ---@nodiscard
 ---@usage
 ---```
----local pushedColor = button:GetPushedColor
+---local pushedColor = widget:GetPushedColor
 ---```
 ---@see RGBA
 function Button:GetPushedColor() end
@@ -420,7 +421,7 @@ function Button:GetPushedColor() end
 ---@param enable? boolean `true` to enable clicking, `false` to disable. (default: `true`)
 ---@usage
 ---```
----button:RegisterForClicks("RightButton")
+---widget:RegisterForClicks("RightButton")
 ---```
 ---@see MOUSE_BUTTON
 function Button:RegisterForClicks(mouseButton, enable) end
@@ -430,7 +431,7 @@ function Button:RegisterForClicks(mouseButton, enable) end
 ---@param resize boolean `true` to enable auto clipping, `false` to disable. (default: `false`)
 ---@usage
 ---```
----button:SetAutoClipChar(true)
+---widget:SetAutoClipChar(true)
 ---```
 function Button:SetAutoClipChar(resize) end
 
@@ -438,11 +439,11 @@ function Button:SetAutoClipChar(resize) end
 ---@param resize boolean `true` to enable auto resizing, `false` to disable. (default: `false`)
 ---@usage
 ---```
----button:SetAutoResize(true)
+---widget:SetAutoResize(true)
 ---```
 function Button:SetAutoResize(resize) end
 
----@TODO: There is something very wrong this. Almost none of the states match their actual state.
+---@TODO: There is something very wrong with this. Almost none of the states match their actual state.
 ---@TODO: FAKE STATE > REAL STATE
 ---@TODO: NORMAL = HIGHLIGHTED
 ---@TODO: HIGHLIGHTED = DISABLED
@@ -452,7 +453,7 @@ function Button:SetAutoResize(resize) end
 ---@param state UI_BUTTON_STATE_TEXT The state to set. (default: `DISABLED`)
 ---@usage
 ---```
----button:SetButtonState("NORMAL")
+---widget:SetButtonState("NORMAL")
 ---```
 ---@see UI_BUTTON_STATE_TEXT
 function Button:SetButtonState(state) end
@@ -461,7 +462,7 @@ function Button:SetButtonState(state) end
 ---@param disabledTable Drawablebase The drawable for the disabled state.
 ---@usage
 ---```
----button:SetDisabledBackground(drawable)
+---widget:SetDisabledBackground(drawable)
 ---```
 function Button:SetDisabledBackground(disabledTable) end
 
@@ -472,7 +473,7 @@ function Button:SetDisabledBackground(disabledTable) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetDisabledColor(0, 0, 0, 1)
+---widget:SetDisabledColor(0, 0, 0, 1)
 ---```
 function Button:SetDisabledColor(r, g, b, a) end
 
@@ -483,14 +484,14 @@ function Button:SetDisabledColor(r, g, b, a) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetDisabledTextColor(0, 0, 0, 1)
+---widget:SetDisabledTextColor(0, 0, 0, 1)
 ---```
 function Button:SetDisabledTextColor(r, g, b, a) end
 
 ---Sets focus on the button.
 ---@usage
 ---```
----button:SetFocus()
+---widget:SetFocus()
 ---```
 function Button:SetFocus() end
 
@@ -498,7 +499,7 @@ function Button:SetFocus() end
 ---@param highlightTable Drawablebase The drawable for the highlighted state.
 ---@usage
 ---```
----button:SetHighlightBackground(drawable)
+---widget:SetHighlightBackground(drawable)
 ---```
 function Button:SetHighlightBackground(highlightTable) end
 
@@ -509,7 +510,7 @@ function Button:SetHighlightBackground(highlightTable) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetHighlightColor(1, 0, 0, 1)
+---widget:SetHighlightColor(1, 0, 0, 1)
 ---```
 function Button:SetHighlightColor(r, g, b, a) end
 
@@ -520,7 +521,7 @@ function Button:SetHighlightColor(r, g, b, a) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetHighlightTextColor(1, 0, 0, 1)
+---widget:SetHighlightTextColor(1, 0, 0, 1)
 ---```
 function Button:SetHighlightTextColor(r, g, b, a) end
 
@@ -531,7 +532,7 @@ function Button:SetHighlightTextColor(r, g, b, a) end
 ---@param bottom number The bottom inset.
 ---@usage
 ---```
----button::SetInset(10, 10, 10, 10)
+---widget::SetInset(10, 10, 10, 10)
 ---```
 function Button:SetInset(left, top, right, bottom) end
 
@@ -539,7 +540,7 @@ function Button:SetInset(left, top, right, bottom) end
 ---@param normalTable Drawablebase The drawable for the normal state.
 ---@usage
 ---```
----button:SetNormalBackground(drawable)
+---widget:SetNormalBackground(drawable)
 ---```
 function Button:SetNormalBackground(normalTable) end
 
@@ -550,7 +551,7 @@ function Button:SetNormalBackground(normalTable) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetNormalColor(1, 1, 1, 1)
+---widget:SetNormalColor(1, 1, 1, 1)
 ---```
 function Button:SetNormalColor(r, g, b, a) end
 
@@ -558,7 +559,7 @@ function Button:SetNormalColor(r, g, b, a) end
 ---@param pushedTable Drawablebase The drawable for the pushed state.
 ---@usage
 ---```
----button:SetPushedBackground(drawable)
+---widget:SetPushedBackground(drawable)
 ---```
 function Button:SetPushedBackground(pushedTable) end
 
@@ -569,7 +570,7 @@ function Button:SetPushedBackground(pushedTable) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetPushedColor(0, 1, 0, 1)
+---widget:SetPushedColor(0, 1, 0, 1)
 ---```
 function Button:SetPushedColor(r, g, b, a) end
 
@@ -580,7 +581,7 @@ function Button:SetPushedColor(r, g, b, a) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetPushedTextColor(0, 1, 0, 1)
+---widget:SetPushedTextColor(0, 1, 0, 1)
 ---```
 function Button:SetPushedTextColor(r, g, b, a) end
 
@@ -588,7 +589,7 @@ function Button:SetPushedTextColor(r, g, b, a) end
 ---@param style BUTTON_STYLE The style to apply.
 ---@usage
 ---```
----button:SetStyle("text_default")
+---widget:SetStyle("text_default")
 ---```
 ---@see BUTTON_STYLE
 function Button:SetStyle(style) end
@@ -600,6 +601,6 @@ function Button:SetStyle(style) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
 ---```
----button:SetTextColor(0, 0, 0, 1)
+---widget:SetTextColor(0, 0, 0, 1)
 ---```
 function Button:SetTextColor(r, g, b, a) end

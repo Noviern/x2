@@ -24,6 +24,7 @@ local ORIENTATION = {
 
 ---object/StatusBar
 ---@class StatusBar: Widget
+---@class statusbar: StatusBar
 local StatusBar = {}
 
 ---@TODO: Broken?
@@ -97,7 +98,8 @@ function StatusBar:GetValue() end
 ---```
 function StatusBar:IsChangeAfterImageColor(value) end
 
----Sets the color for the StatusBar. Must be called after the texture has been set for the StatusBar.
+---Sets the color for the StatusBar. Must be called after the texture has been
+---set for the StatusBar.
 ---@param r number The red color component (min: `0`, max: `1`).
 ---@param g number The green color component (min: `0`, max: `1`).
 ---@param b number The blue color component (min: `0`, max: `1`).
@@ -108,7 +110,8 @@ function StatusBar:IsChangeAfterImageColor(value) end
 ---```
 function StatusBar:SetBarColor(r, g, b, a) end
 
----Sets the bar color using a color key for the StatusBar. Must be called after the texture has been set for the StatusBar.
+---Sets the bar color using a color key for the StatusBar. Must be called after
+---the texture has been set for the StatusBar.
 ---@param colorKey string The color key to apply from the texture path `*.g` file.
 ---@usage
 ---```
@@ -146,7 +149,8 @@ function StatusBar:SetBarTextureByKey(key) end
 ---```
 function StatusBar:SetBarTextureCoords(coordX, coordY, coordW, coordH) end
 
----Sets the minimum and maximum values for the StatusBar (must be called before `StatusBar:SetValue`).
+---Sets the minimum and maximum values for the StatusBar (must be called before
+---`StatusBar:SetValue`).
 ---@param min number The minimum value.
 ---@param max number The maximum value.
 ---@usage
@@ -173,7 +177,8 @@ function StatusBar:SetMinMaxValuesForString(min, max) end
 ---@see ORIENTATION
 function StatusBar:SetOrientation(orientation) end
 
----Sets the value for the StatusBar with optional animation. Texture for the StatusBar must be set before!
+---Sets the value for the StatusBar with optional animation. Texture for the
+---StatusBar must be set before!
 ---@param value number The value to set. (default: `0`)
 ---@param anim? boolean `true` to enable animation, `false` to disable (optional).
 ---@param animTime? number The animation duration in seconds (optional).
@@ -184,7 +189,8 @@ function StatusBar:SetOrientation(orientation) end
 ---```
 function StatusBar:SetValue(value, anim, animTime) end
 
----Sets the string value for the StatusBar with optional animation. Texture for the StatusBar must be set before!
+---Sets the string value for the StatusBar with optional animation. Texture for
+---the StatusBar must be set before!
 ---@param value string The value to set. (default: `"0"`)
 ---@param anim? boolean `true` to enable animation, `false` to disable (optional).
 ---@param animTime? number The animation duration in seconds (optional).

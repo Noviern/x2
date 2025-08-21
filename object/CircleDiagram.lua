@@ -17,6 +17,7 @@ DC_SHIFT_KEY_DOWN = 1  -- object/CircleDiagram
 
 ---object/CircleDiagram
 ---@class CircleDiagram: Widget
+---@class circlediagram: CircleDiagram
 local CircleDiagram = {}
 
 ---Adds a point at the specified offset coordinates for the CircleDiagram.
@@ -24,7 +25,7 @@ local CircleDiagram = {}
 ---@param offY number The y-coordinate offset.
 ---@usage
 ---```
----circleDiagram:AddPoint(10, 10)
+---widget:AddPoint(10, 10)
 ---```
 function CircleDiagram:AddPoint(offX, offY) end
 
@@ -36,7 +37,7 @@ function CircleDiagram:AddPointsByAngle(pointNum) end
 ---Clears all points from the CircleDiagram.
 ---@usage
 ---```
----circleDiagram:ClearPoints()
+---widget:ClearPoints()
 ---```
 function CircleDiagram:ClearPoints() end
 
@@ -46,7 +47,7 @@ function CircleDiagram:ClearPoints() end
 ---@nodiscard
 ---@usage
 ---```
----local offX, offY = circleDiagram:GetCenterOffset()
+---local offX, offY = widget:GetCenterOffset()
 ---```
 function CircleDiagram:GetCenterOffset() end
 
@@ -57,7 +58,7 @@ function CircleDiagram:GetCenterOffset() end
 ---@nodiscard
 ---@usage
 ---```
----local offX, offY = circleDiagram:GetPointOffset(1)
+---local offX, offY = widget:GetPointOffset(1)
 ---```
 function CircleDiagram:GetPointOffset(index) end
 
@@ -68,7 +69,7 @@ function CircleDiagram:GetPointOffset(index) end
 ---@param a number The alpha (opacity) component (min: `0`, max: `1`).
 ---@usage
 ---```
----circleDiagram:SetDiagramColor(1, 0, 0, 1)
+---widget:SetDiagramColor(1, 0, 0, 1)
 ---```
 function CircleDiagram:SetDiagramColor(r, g, b, a) end
 
@@ -76,7 +77,7 @@ function CircleDiagram:SetDiagramColor(r, g, b, a) end
 ---@param thickness number The thickness of the diagram's lines.
 ---@usage
 ---```
----circleDiagram:SetLineThickness(4)
+---widget:SetLineThickness(4)
 ---```
 function CircleDiagram:SetLineThickness(thickness) end
 
@@ -84,7 +85,7 @@ function CircleDiagram:SetLineThickness(thickness) end
 ---@param maxValue number The maximum value for the diagram.
 ---@usage
 ---```
----circleDiagram:SetMaxValue(15)
+---widget:SetMaxValue(15)
 ---```
 function CircleDiagram:SetMaxValue(maxValue) end
 
@@ -93,6 +94,6 @@ function CircleDiagram:SetMaxValue(maxValue) end
 ---@param value number The value to set for the point.
 ---@usage
 ---```
----circleDiagram:SetPointValue(1, 10)
+---widget:SetPointValue(1, 10)
 ---```
 function CircleDiagram:SetPointValue(index, value) end

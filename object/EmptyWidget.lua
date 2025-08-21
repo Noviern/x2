@@ -16,6 +16,7 @@ DC_ALWAYS = 0          -- object/EmptyWidget
 DC_SHIFT_KEY_DOWN = 1  -- object/EmptyWidget
 
 ---@class EmptyWidget: Widget
+---@class emptywidget: EmptyWidget
 local EmptyWidget = {}
 
 ---@TODO: Not sure if this works.

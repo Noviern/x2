@@ -57,7 +57,7 @@ local LINKTYPE = {
 ---@field linkType "item"
 ---@field itemGrade ITEM_GRADE_TYPE
 ---@field itemLinkText string
----@field linkKind number TODO: This is a number but I thought it should be LINKKIND?
+---@field linkKind number LINKKIND but as a number not a string
 
 ---object/Message
 ---@class NoneLinkInfo : BaseLinkInfo
@@ -91,6 +91,7 @@ local LINKTYPE = {
 ---object/Message
 ---@class Message: Widget
 ---@field style TextStyle
+---@class message: Message
 local Message = {}
 
 ---Adds a message to the Message. Must be used after defining the widgets
@@ -112,7 +113,8 @@ function Message:AddMessage(message) end
 function Message:AddMessageEx(message, visibleTime) end
 
 ---@TODO: What does this do?
----Adds a message with a specified visibility duration and refreshes the Message.
+---Adds a message with a specified visibility duration and refreshes the
+---Message.
 ---@param message string The message text to add.
 ---@param visibleTime number The visibility duration in milliseconds.
 function Message:AddMessageExRefresh(message, visibleTime) end
@@ -157,7 +159,8 @@ function Message:Clear() end
 ---```
 function Message:CopyTextToClipboard() end
 
----Enables or disables item link functionality (`widget:GetLinkInfoOnCursor`) for the Message.
+---Enables or disables item link functionality (`Message:GetLinkInfoOnCursor`)
+---for the Message.
 ---@param enable boolean `true` to enable item links, `false` to disable. (default: `false`)
 ---@usage
 ---```
@@ -192,11 +195,13 @@ function Message:GetCurrentScroll() end
 ---```
 function Message:GetLineSpace() end
 
----Retrieves link information for the item under the cursor in the Message. Requires `widget:EnableItemLink(true)`.
+---Retrieves link information for the item under the cursor in the Message.
+---Requires `Message:EnableItemLink(true)`.
 ---@return BaseLinkInfo linkInfo The link information for the item.
 ---@nodiscard
 ---@usage
 ---```
+---widget:EnableItemLink(true)
 ---widget:SetHandler("OnClick", function(self)
 ---  local linkInfo = self:GetLinkInfoOnCursor()
 ---
@@ -331,7 +336,8 @@ function Message:SetInset(left, top, right, bottom) end
 ---```
 function Message:SetLineSpace(space) end
 
----Sets the maximum number of lines for the Message. Uses `widget:Clear()` before setting the maximum line count.
+---Sets the maximum number of lines for the Message. Uses `widget:Clear()`
+---before setting the maximum line count.
 ---@param count number The maximum line count.
 ---@usage
 ---```

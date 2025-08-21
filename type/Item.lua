@@ -148,3 +148,4 @@
 ---@field useAsStat boolean
 ---@field useConsumeItem boolean
 ---@field wear boolean
+---@field linkKind? string
