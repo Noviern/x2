@@ -66,7 +66,6 @@ end
 ---@param textAlign TEXT_ALIGN The text alignment for the line.
 ---@param indentation number The indentation for the text.
 ---@return number index The index of the added line. (Starts at `0`)
----@nodiscard
 ---@usage
 ---```
 ---local index = widget:AddLine("Archerage.to", FONT_PATH.DEFAULT, FONT_SIZE.DEFAULT, "left", ALIGN_LEFT, 0)

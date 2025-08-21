@@ -18,6 +18,17 @@ local Uibounds = {}
 
 ---Aligns the UI bounds to the specified anchor point at the given coordinates.
 ---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin.
+---@param x number The x-coordinate offset.
+---@param y number The y-coordinate offset.
+---@usage
+---```
+---widget:AddAnchor("TOPLEFT", "UIParent", 0, 0)
+---```
+---@see ANCHOR_POINT
+function Uibounds:AddAnchor(anchor, x, y) end
+
+---Aligns the UI bounds to the specified anchor point at the given coordinates.
+---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin.
 ---@param parentId "UIParent"|Widget The parent widget or UIParent.
 ---@param x number The x-coordinate offset.
 ---@param y number The y-coordinate offset.

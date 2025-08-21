@@ -197,6 +197,7 @@ local KEY_MODIFIER = {
 ---@alias PreUse fun(self: Widget)
 
 ---@class Widgetbase
+---@field [string] any
 local Widgetbase = {}
 
 ---Applies or removes UI scaling for the Widgetbase.
