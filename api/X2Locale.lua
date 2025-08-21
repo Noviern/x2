@@ -1,5 +1,6 @@
 ---@meta _
 
+---@class X2Locale
 X2Locale = {} -- api/X2Locale
 
 ---@enum KEYBOARD_LAYOUT

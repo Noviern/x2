@@ -14,6 +14,7 @@ MFCR_FAIL = 3                       -- api/X2Craft
 MFCR_FAIL_LIMIT = 1                 -- api/X2Craft
 MFCR_FAIL_WAIT = 2                  -- api/X2Craft
 MFCR_SUCCESS = 0                    -- api/X2Craft
+---@class X2Craft
 X2Craft = {}                        -- api/X2Craft
 
 ---api/X2Craft
@@ -60,7 +61,7 @@ function X2Craft:GetCraftBaseInfo(craftType, doodadId) end
 ---@TODO: Crash EXCEPTION_ACCESS_VIOLATION. Need to set doodadId type. No usage
 ---Retrieves the material information for the specified craft type.
 ---@param craftType number The type of craft to query.
----@param doodadId number The doodad ID (type TBD, causes crash).
+---@param doodadId? number The doodad ID (type TBD, causes crash).
 function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end
 
 ---Retrieves a list containing craft product information.

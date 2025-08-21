@@ -12,4 +12,5 @@ RK_HEIR_LEVEL = 14                       -- api/X2Rank
 RK_INSTANCE_RATING = 11                  -- api/X2Rank
 RK_ITEM_SCORE = 10                       -- api/X2Rank
 RK_ZONE_SCORE_SUM_BY_QUEST_COMPLETE = 15 -- api/X2Rank
+---@class X2Rank
 X2Rank = {}                              -- api/X2Rank

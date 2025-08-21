@@ -22,6 +22,7 @@ QUEST_MARK_ORDER_MAIN = 1             -- api/X2Quest
 QUEST_MARK_ORDER_NORMAL = 7           -- api/X2Quest
 QUEST_MARK_ORDER_SAGA = 2             -- api/X2Quest
 QUEST_MARK_ORDER_WEEKLY = 4           -- api/X2Quest
+---@class X2Quest
 X2Quest = {}                          -- api/X2Quest
 
 ---Retrieves the count of all active quests, including completed ones.

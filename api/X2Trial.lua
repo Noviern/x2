@@ -19,4 +19,5 @@ TRIAL_SENTENCE = 5                         -- api/X2Trial
 TRIAL_TESTIMONY = 3                        -- api/X2Trial
 TRIAL_WAITING_CRIME_RECORD = 1             -- api/X2Trial
 TRIAL_WAITING_JURY = 2                     -- api/X2Trial
+---@class X2Trial
 X2Trial = {}                               -- api/X2Trial

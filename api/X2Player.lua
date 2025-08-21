@@ -23,6 +23,7 @@ SCREEN_LOGIN = 1                         -- api/X2Player
 SCREEN_NONE = 0                          -- api/X2Player
 SCREEN_WORLD = 6                         -- api/X2Player
 SCREEN_WORLD_SELECT = 2                  -- api/X2Player
+---@class X2Player
 X2Player = {}                            -- api/X2Player
 ZPW_ENTER = 0                            -- api/X2Player
 ZPW_EXPEL = 3                            -- api/X2Player

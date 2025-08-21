@@ -26,4 +26,5 @@ PSBM_GLADIATOR_FILED_WIN = 8     -- api/X2PremiumService
 PSBM_OFFLINE_LABOR_POWER = 3     -- api/X2PremiumService
 PSBM_ONLINE_LABOR_POWER = 2      -- api/X2PremiumService
 PSBM_ONLY_PREMIUM_QUEST = 1      -- api/X2PremiumService
+---@class X2PremiumService
 X2PremiumService = {}            -- api/X2PremiumService

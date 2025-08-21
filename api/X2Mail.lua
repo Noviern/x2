@@ -37,4 +37,5 @@ MLK_INBOX = 1                           -- api/X2Mail
 MLK_OUTBOX = 2                          -- api/X2Mail
 SIMT_SCHEDULE_ITEM_CUSTOM_MAIL = 2      -- api/X2Mail
 SIMT_SCHEDULE_ITEM_NORMAL_MAIL = 1      -- api/X2Mail
+---@class X2Mail
 X2Mail = {}                             -- api/X2Mail

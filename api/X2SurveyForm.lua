@@ -8,4 +8,5 @@ ESFP_TODO = 3     -- api/X2SurveyForm
 SFQK_CHECK = 2    -- api/X2SurveyForm
 SFQK_INVALID = 0  -- api/X2SurveyForm
 SFQK_RADIO = 1    -- api/X2SurveyForm
+---@class X2SurveyForm
 X2SurveyForm = {} -- api/X2SurveyForm

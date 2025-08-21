@@ -1,5 +1,6 @@
 ---@meta _
 
+---@class X2Sound
 X2Sound = {} -- api/X2Sound
 
 ---Checks if the specified sound is currently playing.
@@ -22,7 +23,6 @@ function X2Sound:PlayMusic(soundPackItemName) end
 ---@param soundName SOUND_NAME The name of the sound to play.
 ---@param duplicable? boolean If true, allows the sound to play multiple times concurrently; defaults to false.
 ---@return number soundId The ID of the sound instance.
----@nodiscard
 ---@usage
 ---```
 ---local soundId = X2Sound:PlayUISound("battlefield_1_secound")

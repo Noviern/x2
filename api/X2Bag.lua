@@ -1,5 +1,6 @@
 ---@meta _
 
+---@class X2Bag
 X2Bag = {} -- api/X2Bag
 
 ---Attempts to equip an item from the specified slot.

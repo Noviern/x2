@@ -10,4 +10,5 @@ MATE_TYPE_BATTLE = 2               -- api/X2Mate
 MATE_TYPE_NONE = 0                 -- api/X2Mate
 MATE_TYPE_RIDE = 1                 -- api/X2Mate
 MAX_MATE_SKILL = 10                -- api/X2Mate
+---@class X2Mate
 X2Mate = {}                        -- api/X2Mate

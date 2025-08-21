@@ -16,6 +16,7 @@ TMROLE_HEALER = 2                     -- api/X2Team
 TMROLE_NONE = 0                       -- api/X2Team
 TMROLE_RANGED_DEALER = 4              -- api/X2Team
 TMROLE_TANKER = 1                     -- api/X2Team
+---@class X2Team
 X2Team = {}                           -- api/X2Team
 
 ---api/X2Team

@@ -39,7 +39,8 @@ SBC_NONE = 1                         -- api/X2Ability
 SPECIAL_ABILITY_MUTATION_SKILL = 150 -- api/X2Ability
 SPECIAL_ACTIVE_SKILL = 170           -- api/X2Ability
 SPECIAL_PASSIVE_SKILL = 190          -- api/X2Ability
-X2Ability = {}                       -- api/X2Ability
+---@class X2Ability
+X2Ability = {} -- api/X2Ability
 
 ---api/X2Ability
 ---@class ActabilityInfo

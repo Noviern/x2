@@ -1,5 +1,6 @@
 ---@meta _
 
+---@class X2Time
 X2Time = {} -- api/X2Time
 
 ---Retrieves the current game time.

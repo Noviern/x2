@@ -33,6 +33,7 @@ RACE_NONE = 0                 -- api/X2Unit
 RACE_NUIAN = 1                -- api/X2Unit
 RACE_RETURNED = 7             -- api/X2Unit
 RACE_WARBORN = 8              -- api/X2Unit
+---@class X2Unit
 X2Unit = {}                   -- api/X2Unit
 
 ---@TODO: UnitBuffTooltip, UnitDeBuffTooltip, GetBuffTooltip use BIK as a third param?

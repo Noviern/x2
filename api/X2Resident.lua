@@ -12,6 +12,7 @@ HOUSING_LIST_FILTER_SELLER_NAME = 2          -- api/X2Resident
 HOUSING_LIST_FILTER_SMALL = 7                -- api/X2Resident
 HOUSING_LIST_FILTER_UNDERWATER_STRUCTURE = 6 -- api/X2Resident
 HOUSING_LIST_FILTER_WORKTABLE = 4            -- api/X2Resident
+---@class X2Resident
 X2Resident = {}                              -- api/X2Resident
 
 ---api/X2Resident
@@ -76,4 +77,5 @@ function X2Resident:GetResidentBoardContent(boardType) end
 ---```
 ---@see ZONE_ID
 ---@see HOUSING_LIST_FILTER
-function X2Resident:RequestHousingTradeList(zoneGroupType, filterindex, searchWord) end
+function X2Resident:RequestHousingTradeList(zoneGroupType, filterindex,
+                                            searchWord) end

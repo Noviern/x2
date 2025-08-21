@@ -113,4 +113,5 @@ IRT_SKILL = 2                                     -- api/X2DialogManager
 RK_IN_PLACE = 1                                   -- api/X2DialogManager
 RK_NORMAL = 0                                     -- api/X2DialogManager
 RK_SPECIAL = 2                                    -- api/X2DialogManager
+---@class X2DialogManager
 X2DialogManager = {}                              -- api/X2DialogManager

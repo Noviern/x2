@@ -20,4 +20,5 @@ IGER_GREAT_SUCCESS = 5            -- api/X2ItemEnchant
 IGER_RESTORE_DISABLE = 7          -- api/X2ItemEnchant
 IGER_SUCCESS = 4                  -- api/X2ItemEnchant
 MAX_ITEM_EVOLVE_MATERIAL_SLOT = 6 -- api/X2ItemEnchant
+---@class X2ItemEnchant
 X2ItemEnchant = {}                -- api/X2ItemEnchant

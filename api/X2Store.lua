@@ -19,6 +19,7 @@ SHOP_OPEN_HONORPOINT = 2         -- api/X2Store
 SHOP_OPEN_LIVINGPOINT = 1        -- api/X2Store
 SHOP_OPEN_NORMAL = 0             -- api/X2Store
 SHOP_OPEN_RANDOM_SHOP = 5        -- api/X2Store
+---@class X2Store
 X2Store = {}                     -- api/X2Store
 
 ---api/X2Store

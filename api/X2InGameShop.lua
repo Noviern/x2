@@ -57,4 +57,5 @@ STOP_SALE_BY_ENDDATE = 3              -- api/X2InGameShop
 STOP_SALE_BY_LIMIT_OVER = 4           -- api/X2InGameShop
 STOP_SALE_BY_STARTDATE = 2            -- api/X2InGameShop
 STOP_SALE_NONE = 0                    -- api/X2InGameShop
+---@class X2InGameShop
 X2InGameShop = {}                     -- api/X2InGameShop

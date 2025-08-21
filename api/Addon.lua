@@ -3,6 +3,7 @@
 ABILITY_CATEGORY_DESCRIPTION_TEXT = 54            -- api/Addon
 ABILITY_CATEGORY_TEXT = 49                        -- api/Addon
 ABILITY_CHANGER_TEXT = 20                         -- api/Addon
+---@class ADDON
 ADDON = {}                                        -- api/Addon
 ATTRIBUTE_TEXT = 44                               -- api/Addon
 ATTRIBUTE_VARIATION_TEXT = 135                    -- api/Addon
@@ -302,6 +303,7 @@ UIC_WEB_PLAY_DIARY_INSTANCE = 95                  -- api/Addon
 UIC_WEB_WIKI = 39                                 -- api/Addon
 UIC_WHISPER = 83                                  -- api/Addon
 UIC_WORLDMAP = 27                                 -- api/Addon
+---@class UIParent
 UIParent = {}                                     -- api/Addon
 UM_ACHIEVEMENT_NAME = 26                          -- api/Addon
 UM_AREA_SPHERE = 7                                -- api/Addon

@@ -25,4 +25,5 @@ WT_PREPARE_FOR_LAUNCH = 8          -- api/X2World
 WT_RECOMMEND = 128                 -- api/X2World
 WT_REMASTER = 64                   -- api/X2World
 WT_RESTRICT_AGE = 256              -- api/X2World
+---@class X2World
 X2World = {}                       -- api/X2World
