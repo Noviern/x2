@@ -27,4 +27,5 @@ MIN_GUILD_FUNCTION_BUFF_TYPE = 1   -- api/X2Faction
 VS_DRAW = 2                        -- api/X2Faction
 VS_LOSE = 1                        -- api/X2Faction
 VS_WIN = 3                         -- api/X2Faction
+---@class X2Faction
 X2Faction = {}                     -- api/X2Faction

@@ -15,4 +15,5 @@ HOUSING_UCC_POS_TOP = 3               -- api/X2House
 HOUSING_UCC_POS_WALL = 1              -- api/X2House
 HOUSING_UCC_POS_WALL_OUTDOOR = 4      -- api/X2House
 MAX_PREPAID_WEEKS = 5                 -- api/X2House
+---@class X2House
 X2House = {}                          -- api/X2House

@@ -8,4 +8,5 @@ NAME_TAG_MODE_BOX = 3           -- api/X2NameTag
 NAME_TAG_MODE_DEFAULT = 0       -- api/X2NameTag
 NAME_TAG_MODE_LIFE = 2          -- api/X2NameTag
 NAME_TAG_MODE_MAX = 4           -- api/X2NameTag
+---@class X2NameTag
 X2NameTag = {}                  -- api/X2NameTag

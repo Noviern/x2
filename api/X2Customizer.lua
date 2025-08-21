@@ -14,4 +14,5 @@ CDR_ERROR_UNSERVICEABILITY_WORD = 10 -- api/X2Customizer
 CDR_INVALID_RESULT = 0               -- api/X2Customizer
 CDR_LOAD_SUCCESS = 1                 -- api/X2Customizer
 CDR_SAVE_SUCCESS = 2                 -- api/X2Customizer
+---@class X2Customizer
 X2Customizer = {}                    -- api/X2Customizer

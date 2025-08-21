@@ -16,6 +16,7 @@ NRT_ROSTER_TITLE = 10 -- api/X2Util
 NRT_SUMMONS = 2       -- api/X2Util
 PLAYWITH = 5          -- api/X2Util
 TENCENT = 1           -- api/X2Util
+---@class X2Util
 X2Util = {}           -- api/X2Util
 XLGAMES = 0           -- api/X2Util
 XLGAMES_TH = 6        -- api/X2Util

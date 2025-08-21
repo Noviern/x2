@@ -36,6 +36,7 @@ MAX_SET_ITEMS = 14                      -- api/X2Item
 MONEY_ITEM_TYPE = 500                   -- api/X2Item
 NORMAL_ITEM_GRADE = 0                   -- api/X2Item
 POOR_ITEM_GRADE = 1                     -- api/X2Item
+---@class X2Item
 X2Item = {}                             -- api/X2Item
 
 ---api/X2Item

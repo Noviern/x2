@@ -1,5 +1,6 @@
 ---@meta _
 
+---@class X2Hotkey
 X2Hotkey = {} -- api/X2Hotkey
 
 ---@TODO: This is not complete!

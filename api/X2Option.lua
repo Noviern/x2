@@ -152,6 +152,7 @@ OIT_USER_MUSIC_DISABLE_SELF = 47                 -- api/X2Option
 OIT_USE_AUTO_REGIST_DISTRICT = 75                -- api/X2Option
 OIT_USE_CELERITY_WITH_DOUBLE_FORWARD = 65        -- api/X2Option
 OIT_VISIBLEMYEQUIPINFO = 128                     -- api/X2Option
+---@class X2Option
 X2Option = {}                                    -- api/X2Option
 
 ---api/X2Option
@@ -360,7 +361,6 @@ function X2Option:CreateOptionItemFloat(name, value, saveLevel) end
 ---@param value string The string value to set.
 ---@param saveLevel OISLT The save level for the option.
 ---@return number saveLevel The save level used.
----@nodiscard
 ---@see CONSOLE_VAR
 ---@see OISLT
 function X2Option:CreateOptionItemString(name, value, saveLevel) end

@@ -9,6 +9,7 @@ HPWS_TROUBLE_2 = 2 -- api/X2Dominion
 HPWS_TROUBLE_3 = 3 -- api/X2Dominion
 HPWS_TROUBLE_4 = 4 -- api/X2Dominion
 HPWS_WAR = 6       -- api/X2Dominion
+---@class X2Dominion
 X2Dominion = {}    -- api/X2Dominion
 
 ---api/X2Dominion

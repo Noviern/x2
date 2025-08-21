@@ -15,4 +15,5 @@ STAGE_SECURITY = 6      -- api/X2LoginCharacter
 STAGE_SELECT = 8        -- api/X2LoginCharacter
 STAGE_SERVER = 7        -- api/X2LoginCharacter
 STAGE_WORLD = 12        -- api/X2LoginCharacter
+---@class X2LoginCharacter
 X2LoginCharacter = {}   -- api/X2LoginCharacter

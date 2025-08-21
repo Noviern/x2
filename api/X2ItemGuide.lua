@@ -10,4 +10,5 @@ IGLMC_OTHER_CRAFT = 2    -- api/X2ItemGuide
 IGLMC_REBUILDING = 9     -- api/X2ItemGuide
 IGLMC_SHOP = 6           -- api/X2ItemGuide
 IGLMC_SOCKET_CHANGE = 10 -- api/X2ItemGuide
+---@class X2ItemGuide
 X2ItemGuide = {}         -- api/X2ItemGuide

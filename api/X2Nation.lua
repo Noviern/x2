@@ -6,4 +6,5 @@ NR_INVALID = 0  -- api/X2Nation
 NR_LIGEANCE = 5 -- api/X2Nation
 NR_NATIVE = 4   -- api/X2Nation
 NR_WAR = 1      -- api/X2Nation
+---@class X2Nation
 X2Nation = {}   -- api/X2Nation

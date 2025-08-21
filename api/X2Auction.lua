@@ -6,6 +6,7 @@ ASK_PCBANG = 1       -- api/X2Auction
 ASK_PREMIUM = 2      -- api/X2Auction
 PT_BID = 0           -- api/X2Auction
 PT_PARTITION = 1     -- api/X2Auction
+---@class X2Auction
 X2Auction = {}       -- api/X2Auction
 
 ---api/X2Auction

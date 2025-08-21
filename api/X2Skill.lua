@@ -1,6 +1,7 @@
 ---@meta _
 
 SIK_DESCRIPTION = 1 -- api/X2Skill
+---@class X2Skill
 X2Skill = {}        -- api/X2Skill
 
 ---api/X2Skill

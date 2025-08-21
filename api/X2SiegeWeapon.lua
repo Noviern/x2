@@ -1,5 +1,6 @@
 ---@meta _
 
+---@class X2SiegeWeapon
 X2SiegeWeapon = {} -- api/X2SiegeWeapon
 
 ---Retrieves the speed of the currently driven vehicle.

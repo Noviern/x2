@@ -17,7 +17,8 @@ TADT_FAMILY = 3             -- api/X2Achievement
 TADT_HERO = 4               -- api/X2Achievement
 TADT_MAX = 7                -- api/X2Achievement
 TADT_TODAY = 1              -- api/X2Achievement
-X2Achievement = {}          -- api/X2Achievement
+---@class X2Achievement
+X2Achievement = {} -- api/X2Achievement
 
 ---api/X2Achievement
 ---Enum Achievement Kind

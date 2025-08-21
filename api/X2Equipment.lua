@@ -62,6 +62,7 @@ ES_TAIL = 24         -- api/X2Equipment
 ES_UNDERPANTS = 15   -- api/X2Equipment
 ES_UNDERSHIRT = 14   -- api/X2Equipment
 ES_WAIST = 4         -- api/X2Equipment
+---@class X2Equipment
 X2Equipment = {}     -- api/X2Equipment
 
 ---api/X2Equipment

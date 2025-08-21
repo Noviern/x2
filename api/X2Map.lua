@@ -155,11 +155,16 @@ MST_TRANSFER_AIRSHIP = 75                 -- api/X2Map
 MST_TRANSFER_CARRIAGE = 76                -- api/X2Map
 MST_TRANSFER_CRUISER = 144                -- api/X2Map
 MST_TRANSFER_LANDSHIP = 77                -- api/X2Map
+---@class X2Map
 X2Map = {}                                -- api/X2Map
 
+---@TODO: This may not be complete, check all zones.
 ---api/X2Map
 ---@class ZoneStateInfo
 ---@field conflictState number
+---@field dropRate? number
+---@field goldRate? number
+---@field festivalName? string
 ---@field isConflictZone boolean
 ---@field isCurrentZone boolean
 ---@field isFestivalZone boolean
@@ -171,7 +176,10 @@ X2Map = {}                                -- api/X2Map
 ---@field isSiegeZone boolean
 ---@field localDevelopmentName string
 ---@field localDevelopmentStep number
+---@field lockTime? number
 ---@field nonPeaceState boolean
+---@field nonRate boolean
+---@field remainTime? number
 ---@field warChaos boolean
 ---@field zoneName string
 
@@ -183,5 +191,6 @@ X2Map = {}                                -- api/X2Map
 ---```
 ---local zoneStateInfo = X2Map:GetZoneStateInfoByZoneId(1)
 ---```
+---@see ZONE_ID
 ---@see ZoneStateInfo
 function X2Map:GetZoneStateInfoByZoneId(zoneId) end
