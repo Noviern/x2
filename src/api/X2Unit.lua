@@ -211,11 +211,12 @@ local UNIT = {
 ---@field [2] TargetAbilityTemplate
 ---@field [3] TargetAbilityTemplate
 
+---@TODO: Dont I have something similar to this already?
 ---api/X2Unit
 ---@class UnitClass
----@field [1] number
----@field [2] number
----@field [3] number
+---@field [1] ABILITY_TYPE
+---@field [2] ABILITY_TYPE
+---@field [3] ABILITY_TYPE
 
 ---api/X2Unit
 ---@class UnitInfo

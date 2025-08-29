@@ -74,6 +74,7 @@ X2Skill = {}        -- api/X2Skill
 ---@field skillPoints number
 ---@field upgradeCost number
 
+---@TODO: gcd is the players gcd not the skill
 ---Retrieves the cooldown information for a specified skill.
 ---@param skillId number The ID of the skill.
 ---@param ignoreGlobalCooldown boolean `true` to return the skill's specific cooldown, `false` to return the global cooldown. If the skill has been used and has a remaining time, this parameter is overridden to `true`, showing the skill's cooldown instead of the global cooldown.

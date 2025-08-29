@@ -174,7 +174,7 @@ X2Chat = {}                              -- api/X2Chat
 
 ---api/X2Chat
 ---@enum (key) CHAT_MESSAGE_RELATION
-local CHAT_RELATION = {
+local CHAT_MESSAGE_RELATION = {
   [0] = "invalid",
   [1] = "hostile",
   [2] = "neutral",

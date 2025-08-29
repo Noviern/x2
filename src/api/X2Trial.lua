@@ -21,3 +21,25 @@ TRIAL_WAITING_CRIME_RECORD = 1             -- api/X2Trial
 TRIAL_WAITING_JURY = 2                     -- api/X2Trial
 ---@class X2Trial
 X2Trial = {}                               -- api/X2Trial
+
+---api/X2Trial
+---@alias SENTENCE_TYPE
+---| `SENTENCE_GUILTY_1`
+---| `SENTENCE_GUILTY_2`
+---| `SENTENCE_GUILTY_3`
+---| `SENTENCE_GUILTY_4`
+---| `SENTENCE_GUILTY_5`
+---| `SENTENCE_NOT_GUILTY`
+
+---api/X2Trial
+---@alias TRIAL_STATE
+---| `TRIAL_FINAL_STATEMENT`
+---| `TRIAL_FREE`
+---| `TRIAL_GUILTY_BY_SYSTEM`
+---| `TRIAL_GUILTY_BY_USER`
+---| `TRIAL_POST_SENTENCE`
+---| `TRIAL_SENTENCE`
+---| `TRIAL_TESTIMONY`
+---| `TRIAL_WAITING_CRIME_RECORD`
+---| `TRIAL_WAITING_JURY`
+
