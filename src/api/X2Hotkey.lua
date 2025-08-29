@@ -110,6 +110,8 @@ local HOTKEY_MANAGER = {
   SECONDARY = 2,
 }
 
+---@TODO: HOTKEY_ACTION|string players can make their own actions but unsure how these could be used.
+
 ---Enables or disables the hotkey system.
 ---@param enable boolean `true` to enable the hotkey system, `false` to disable it. (default: `true`)
 ---@usage
