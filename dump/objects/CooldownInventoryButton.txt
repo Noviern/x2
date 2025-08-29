@@ -1,0 +1,329 @@
+AP_BOTTOM = 8 -- objects/CooldownInventoryButton
+AP_BOTTOMLEFT = 2 -- objects/CooldownInventoryButton
+AP_BOTTOMRIGHT = 3 -- objects/CooldownInventoryButton
+AP_CENTER = 4 -- objects/CooldownInventoryButton
+AP_LEFT = 6 -- objects/CooldownInventoryButton
+AP_RIGHT = 7 -- objects/CooldownInventoryButton
+AP_TOP = 5 -- objects/CooldownInventoryButton
+AP_TOPLEFT = 0 -- objects/CooldownInventoryButton
+AP_TOPRIGHT = 1 -- objects/CooldownInventoryButton
+CT_ABILITY = 2 -- objects/CooldownInventoryButton
+CT_EXPEDITION_NAME = 3 -- objects/CooldownInventoryButton
+CT_NAME = 1 -- objects/CooldownInventoryButton
+CooldownInventoryButton = { -- objects/CooldownInventoryButton
+  __this = <userdata>, -- objects/CooldownInventoryButton
+  style = { -- objects/CooldownInventoryButton
+    __this = <userdata>, -- objects/CooldownInventoryButton
+  }, -- objects/CooldownInventoryButton
+} -- objects/CooldownInventoryButton
+DC_ALWAYS = 0 -- objects/CooldownInventoryButton
+DC_SHIFT_KEY_DOWN = 1 -- objects/CooldownInventoryButton
+UI_BUTTON_DISABLED = 3 -- objects/CooldownInventoryButton
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownInventoryButton
+UI_BUTTON_MAX = 4 -- objects/CooldownInventoryButton
+UI_BUTTON_NORMAL = 0 -- objects/CooldownInventoryButton
+UI_BUTTON_PUSHED = 2 -- objects/CooldownInventoryButton
+
+function CooldownInventoryButton.style:GetId() end
+
+function CooldownInventoryButton.style:GetLineHeight() end
+
+function CooldownInventoryButton.style:GetName() end
+
+function CooldownInventoryButton.style:GetObjectType() end
+
+function CooldownInventoryButton.style:GetTextWidth() end
+
+function CooldownInventoryButton.style:IsValidUIObject() end
+
+function CooldownInventoryButton.style:SetAlign() end
+
+function CooldownInventoryButton.style:SetColor() end
+
+function CooldownInventoryButton.style:SetColorByKey() end
+
+function CooldownInventoryButton.style:SetEllipsis() end
+
+function CooldownInventoryButton.style:SetFont() end
+
+function CooldownInventoryButton.style:SetFontSize() end
+
+function CooldownInventoryButton.style:SetOutline() end
+
+function CooldownInventoryButton.style:SetShadow() end
+
+function CooldownInventoryButton.style:SetSnap() end
+
+function CooldownInventoryButton:AddAnchor() end
+
+function CooldownInventoryButton:ApplyUIScale() end
+
+function CooldownInventoryButton:AttachWidget() end
+
+function CooldownInventoryButton:BindWidth() end
+
+function CooldownInventoryButton:CancelRequestCharacterCacheData() end
+
+function CooldownInventoryButton:ChangeChildAnchorByScrollValue() end
+
+function CooldownInventoryButton:CheckOutOfScreen() end
+
+function CooldownInventoryButton:Clickable() end
+
+function CooldownInventoryButton:CorrectOffsetByScreen() end
+
+function CooldownInventoryButton:CreateChildWidget() end
+
+function CooldownInventoryButton:CreateChildWidgetByType() end
+
+function CooldownInventoryButton:CreateColorDrawable() end
+
+function CooldownInventoryButton:CreateColorDrawableByKey() end
+
+function CooldownInventoryButton:CreateDrawable() end
+
+function CooldownInventoryButton:CreateEffectDrawable() end
+
+function CooldownInventoryButton:CreateEffectDrawableByKey() end
+
+function CooldownInventoryButton:CreateIconDrawable() end
+
+function CooldownInventoryButton:CreateImageDrawable() end
+
+function CooldownInventoryButton:CreateNinePartDrawable() end
+
+function CooldownInventoryButton:CreateStateDrawable() end
+
+function CooldownInventoryButton:CreateTextDrawable() end
+
+function CooldownInventoryButton:CreateThreeColorDrawable() end
+
+function CooldownInventoryButton:CreateThreePartDrawable() end
+
+function CooldownInventoryButton:DeregisterForClicks() end
+
+function CooldownInventoryButton:DetachWidget() end
+
+function CooldownInventoryButton:DisableDrawables() end
+
+function CooldownInventoryButton:DisableDrawablesWithChildren() end
+
+function CooldownInventoryButton:Enable() end
+
+function CooldownInventoryButton:EnableDrag() end
+
+function CooldownInventoryButton:EnableDrawables() end
+
+function CooldownInventoryButton:EnableDrawablesWithChildren() end
+
+function CooldownInventoryButton:EnableFocus() end
+
+function CooldownInventoryButton:EnableHidingIsRemove() end
+
+function CooldownInventoryButton:EnableKeyboard() end
+
+function CooldownInventoryButton:EnablePick() end
+
+function CooldownInventoryButton:EnableScroll() end
+
+function CooldownInventoryButton:GetAlpha() end
+
+function CooldownInventoryButton:GetAttachedWidget() end
+
+function CooldownInventoryButton:GetButtonState() end
+
+function CooldownInventoryButton:GetDisabledBackground() end
+
+function CooldownInventoryButton:GetDisabledColor() end
+
+function CooldownInventoryButton:GetEffectiveExtent() end
+
+function CooldownInventoryButton:GetEffectiveOffset() end
+
+function CooldownInventoryButton:GetExtent() end
+
+function CooldownInventoryButton:GetHeight() end
+
+function CooldownInventoryButton:GetHighlightBackground() end
+
+function CooldownInventoryButton:GetHighlightColor() end
+
+function CooldownInventoryButton:GetId() end
+
+function CooldownInventoryButton:GetName() end
+
+function CooldownInventoryButton:GetNormalBackground() end
+
+function CooldownInventoryButton:GetNormalColor() end
+
+function CooldownInventoryButton:GetObjectType() end
+
+function CooldownInventoryButton:GetOffset() end
+
+function CooldownInventoryButton:GetParent() end
+
+function CooldownInventoryButton:GetPushedBackground() end
+
+function CooldownInventoryButton:GetPushedColor() end
+
+function CooldownInventoryButton:GetRotation() end
+
+function CooldownInventoryButton:GetText() end
+
+function CooldownInventoryButton:GetUILayer() end
+
+function CooldownInventoryButton:GetValue() end
+
+function CooldownInventoryButton:GetWidth() end
+
+function CooldownInventoryButton:HasHandler() end
+
+function CooldownInventoryButton:InheritAnimationData() end
+
+function CooldownInventoryButton:IsDescendantWidget() end
+
+function CooldownInventoryButton:IsEnabled() end
+
+function CooldownInventoryButton:IsMouseOver() end
+
+function CooldownInventoryButton:IsNowAnimation() end
+
+function CooldownInventoryButton:IsValidUIObject() end
+
+function CooldownInventoryButton:IsVisible() end
+
+function CooldownInventoryButton:Lower() end
+
+function CooldownInventoryButton:MoveTo() end
+
+function CooldownInventoryButton:Raise() end
+
+function CooldownInventoryButton:RegisterEvent() end
+
+function CooldownInventoryButton:RegisterForClicks() end
+
+function CooldownInventoryButton:ReleaseDeletedHandler() end
+
+function CooldownInventoryButton:ReleaseHandler() end
+
+function CooldownInventoryButton:RemoveAllAnchors() end
+
+function CooldownInventoryButton:RemoveAllDrawables() end
+
+function CooldownInventoryButton:RemoveDrawable() end
+
+function CooldownInventoryButton:RequestCharacterCacheData() end
+
+function CooldownInventoryButton:SetAlpha() end
+
+function CooldownInventoryButton:SetAlphaAnimation() end
+
+function CooldownInventoryButton:SetAutoClipChar() end
+
+function CooldownInventoryButton:SetAutoResize() end
+
+function CooldownInventoryButton:SetBagItemSlot() end
+
+function CooldownInventoryButton:SetBankItemSlot() end
+
+function CooldownInventoryButton:SetButtonState() end
+
+function CooldownInventoryButton:SetCategory() end
+
+function CooldownInventoryButton:SetCharacterCacheDataHandler() end
+
+function CooldownInventoryButton:SetCofferItemSlot() end
+
+function CooldownInventoryButton:SetCoolDown() end
+
+function CooldownInventoryButton:SetCoolDownMask() end
+
+function CooldownInventoryButton:SetDelegator() end
+
+function CooldownInventoryButton:SetDeletedHandler() end
+
+function CooldownInventoryButton:SetDisabledBackground() end
+
+function CooldownInventoryButton:SetDisabledColor() end
+
+function CooldownInventoryButton:SetDisabledTextColor() end
+
+function CooldownInventoryButton:SetDragCondition() end
+
+function CooldownInventoryButton:SetDrawPriority() end
+
+function CooldownInventoryButton:SetDrawableLayerAlpha() end
+
+function CooldownInventoryButton:SetExtent() end
+
+function CooldownInventoryButton:SetFocus() end
+
+function CooldownInventoryButton:SetGuildBankItemSlot() end
+
+function CooldownInventoryButton:SetHandler() end
+
+function CooldownInventoryButton:SetHeight() end
+
+function CooldownInventoryButton:SetHighlightBackground() end
+
+function CooldownInventoryButton:SetHighlightColor() end
+
+function CooldownInventoryButton:SetHighlightTextColor() end
+
+function CooldownInventoryButton:SetInset() end
+
+function CooldownInventoryButton:SetLText() end
+
+function CooldownInventoryButton:SetLayerColor() end
+
+function CooldownInventoryButton:SetMaxResizingExtent() end
+
+function CooldownInventoryButton:SetMinResizingExtent() end
+
+function CooldownInventoryButton:SetMoveAnimation() end
+
+function CooldownInventoryButton:SetNormalBackground() end
+
+function CooldownInventoryButton:SetNormalColor() end
+
+function CooldownInventoryButton:SetPushedBackground() end
+
+function CooldownInventoryButton:SetPushedColor() end
+
+function CooldownInventoryButton:SetPushedTextColor() end
+
+function CooldownInventoryButton:SetResizingBorderSize() end
+
+function CooldownInventoryButton:SetRotation() end
+
+function CooldownInventoryButton:SetScale() end
+
+function CooldownInventoryButton:SetScaleAnimation() end
+
+function CooldownInventoryButton:SetSounds() end
+
+function CooldownInventoryButton:SetStartAnimation() end
+
+function CooldownInventoryButton:SetStyle() end
+
+function CooldownInventoryButton:SetText() end
+
+function CooldownInventoryButton:SetTextColor() end
+
+function CooldownInventoryButton:SetWidth() end
+
+function CooldownInventoryButton:Show() end
+
+function CooldownInventoryButton:StartMoving() end
+
+function CooldownInventoryButton:StartSizing() end
+
+function CooldownInventoryButton:StopMovingOrSizing() end
+
+function CooldownInventoryButton:TriggerMoveAnimation() end
+
+function CooldownInventoryButton:UseDynamicContentState() end
+
+function CooldownInventoryButton:UseDynamicDrawableState() end
+
+function CooldownInventoryButton:UseResizing() end

@@ -1,0 +1,253 @@
+AP_BOTTOM = 8 -- objects/Tab
+AP_BOTTOMLEFT = 2 -- objects/Tab
+AP_BOTTOMRIGHT = 3 -- objects/Tab
+AP_CENTER = 4 -- objects/Tab
+AP_LEFT = 6 -- objects/Tab
+AP_RIGHT = 7 -- objects/Tab
+AP_TOP = 5 -- objects/Tab
+AP_TOPLEFT = 0 -- objects/Tab
+AP_TOPRIGHT = 1 -- objects/Tab
+CT_ABILITY = 2 -- objects/Tab
+CT_EXPEDITION_NAME = 3 -- objects/Tab
+CT_NAME = 1 -- objects/Tab
+DC_ALWAYS = 0 -- objects/Tab
+DC_SHIFT_KEY_DOWN = 1 -- objects/Tab
+Tab = { -- objects/Tab
+  __this = <userdata>, -- objects/Tab
+} -- objects/Tab
+
+function Tab:AddAnchor() end
+
+function Tab:AddNewTab() end
+
+function Tab:AddSimpleTab() end
+
+function Tab:AlignTabButtons() end
+
+function Tab:ApplyUIScale() end
+
+function Tab:AttachWidget() end
+
+function Tab:BindWidth() end
+
+function Tab:CancelRequestCharacterCacheData() end
+
+function Tab:ChangeChildAnchorByScrollValue() end
+
+function Tab:CheckOutOfScreen() end
+
+function Tab:Clickable() end
+
+function Tab:CorrectOffsetByScreen() end
+
+function Tab:CreateChildWidget() end
+
+function Tab:CreateChildWidgetByType() end
+
+function Tab:CreateColorDrawable() end
+
+function Tab:CreateColorDrawableByKey() end
+
+function Tab:CreateDrawable() end
+
+function Tab:CreateEffectDrawable() end
+
+function Tab:CreateEffectDrawableByKey() end
+
+function Tab:CreateIconDrawable() end
+
+function Tab:CreateImageDrawable() end
+
+function Tab:CreateNinePartDrawable() end
+
+function Tab:CreateTextDrawable() end
+
+function Tab:CreateThreeColorDrawable() end
+
+function Tab:CreateThreePartDrawable() end
+
+function Tab:DetachWidget() end
+
+function Tab:DisableDrawables() end
+
+function Tab:DisableDrawablesWithChildren() end
+
+function Tab:Enable() end
+
+function Tab:EnableDrag() end
+
+function Tab:EnableDrawables() end
+
+function Tab:EnableDrawablesWithChildren() end
+
+function Tab:EnableFocus() end
+
+function Tab:EnableHidingIsRemove() end
+
+function Tab:EnableKeyboard() end
+
+function Tab:EnablePick() end
+
+function Tab:EnableScroll() end
+
+function Tab:GetActivateTabCount() end
+
+function Tab:GetAlpha() end
+
+function Tab:GetAttachedWidget() end
+
+function Tab:GetEffectiveExtent() end
+
+function Tab:GetEffectiveOffset() end
+
+function Tab:GetExtent() end
+
+function Tab:GetHeight() end
+
+function Tab:GetId() end
+
+function Tab:GetName() end
+
+function Tab:GetObjectType() end
+
+function Tab:GetOffset() end
+
+function Tab:GetParent() end
+
+function Tab:GetRotation() end
+
+function Tab:GetSelectedTab() end
+
+function Tab:GetTabCount() end
+
+function Tab:GetText() end
+
+function Tab:GetUILayer() end
+
+function Tab:GetValue() end
+
+function Tab:GetWidth() end
+
+function Tab:HasHandler() end
+
+function Tab:HideTab() end
+
+function Tab:InheritAnimationData() end
+
+function Tab:IsDescendantWidget() end
+
+function Tab:IsEnabled() end
+
+function Tab:IsHideTab() end
+
+function Tab:IsMouseOver() end
+
+function Tab:IsNowAnimation() end
+
+function Tab:IsValidUIObject() end
+
+function Tab:IsVisible() end
+
+function Tab:Lower() end
+
+function Tab:MoveTo() end
+
+function Tab:Raise() end
+
+function Tab:RegisterEvent() end
+
+function Tab:ReleaseDeletedHandler() end
+
+function Tab:ReleaseHandler() end
+
+function Tab:RemoveAllAnchors() end
+
+function Tab:RemoveAllDrawables() end
+
+function Tab:RemoveAllTabs() end
+
+function Tab:RemoveDrawable() end
+
+function Tab:RemoveTab() end
+
+function Tab:RequestCharacterCacheData() end
+
+function Tab:SelectTab() end
+
+function Tab:SetActivateTabCount() end
+
+function Tab:SetAlpha() end
+
+function Tab:SetAlphaAnimation() end
+
+function Tab:SetCategory() end
+
+function Tab:SetCharacterCacheDataHandler() end
+
+function Tab:SetCorner() end
+
+function Tab:SetDelegator() end
+
+function Tab:SetDeletedHandler() end
+
+function Tab:SetDragCondition() end
+
+function Tab:SetDrawPriority() end
+
+function Tab:SetDrawableLayerAlpha() end
+
+function Tab:SetExtent() end
+
+function Tab:SetGap() end
+
+function Tab:SetHandler() end
+
+function Tab:SetHeight() end
+
+function Tab:SetLText() end
+
+function Tab:SetLayerColor() end
+
+function Tab:SetMaxResizingExtent() end
+
+function Tab:SetMinResizingExtent() end
+
+function Tab:SetMoveAnimation() end
+
+function Tab:SetOffset() end
+
+function Tab:SetResizingBorderSize() end
+
+function Tab:SetRotation() end
+
+function Tab:SetScale() end
+
+function Tab:SetScaleAnimation() end
+
+function Tab:SetSounds() end
+
+function Tab:SetStartAnimation() end
+
+function Tab:SetText() end
+
+function Tab:SetVertical() end
+
+function Tab:SetWidth() end
+
+function Tab:Show() end
+
+function Tab:ShowTab() end
+
+function Tab:StartMoving() end
+
+function Tab:StartSizing() end
+
+function Tab:StopMovingOrSizing() end
+
+function Tab:TriggerMoveAnimation() end
+
+function Tab:UseDynamicContentState() end
+
+function Tab:UseDynamicDrawableState() end
+
+function Tab:UseResizing() end

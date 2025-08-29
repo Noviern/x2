@@ -1,0 +1,321 @@
+AP_BOTTOM = 8 -- objects/CooldownButton
+AP_BOTTOMLEFT = 2 -- objects/CooldownButton
+AP_BOTTOMRIGHT = 3 -- objects/CooldownButton
+AP_CENTER = 4 -- objects/CooldownButton
+AP_LEFT = 6 -- objects/CooldownButton
+AP_RIGHT = 7 -- objects/CooldownButton
+AP_TOP = 5 -- objects/CooldownButton
+AP_TOPLEFT = 0 -- objects/CooldownButton
+AP_TOPRIGHT = 1 -- objects/CooldownButton
+CT_ABILITY = 2 -- objects/CooldownButton
+CT_EXPEDITION_NAME = 3 -- objects/CooldownButton
+CT_NAME = 1 -- objects/CooldownButton
+CooldownButton = { -- objects/CooldownButton
+  __this = <userdata>, -- objects/CooldownButton
+  style = { -- objects/CooldownButton
+    __this = <userdata>, -- objects/CooldownButton
+  }, -- objects/CooldownButton
+} -- objects/CooldownButton
+DC_ALWAYS = 0 -- objects/CooldownButton
+DC_SHIFT_KEY_DOWN = 1 -- objects/CooldownButton
+UI_BUTTON_DISABLED = 3 -- objects/CooldownButton
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownButton
+UI_BUTTON_MAX = 4 -- objects/CooldownButton
+UI_BUTTON_NORMAL = 0 -- objects/CooldownButton
+UI_BUTTON_PUSHED = 2 -- objects/CooldownButton
+
+function CooldownButton.style:GetId() end
+
+function CooldownButton.style:GetLineHeight() end
+
+function CooldownButton.style:GetName() end
+
+function CooldownButton.style:GetObjectType() end
+
+function CooldownButton.style:GetTextWidth() end
+
+function CooldownButton.style:IsValidUIObject() end
+
+function CooldownButton.style:SetAlign() end
+
+function CooldownButton.style:SetColor() end
+
+function CooldownButton.style:SetColorByKey() end
+
+function CooldownButton.style:SetEllipsis() end
+
+function CooldownButton.style:SetFont() end
+
+function CooldownButton.style:SetFontSize() end
+
+function CooldownButton.style:SetOutline() end
+
+function CooldownButton.style:SetShadow() end
+
+function CooldownButton.style:SetSnap() end
+
+function CooldownButton:AddAnchor() end
+
+function CooldownButton:ApplyUIScale() end
+
+function CooldownButton:AttachWidget() end
+
+function CooldownButton:BindWidth() end
+
+function CooldownButton:CancelRequestCharacterCacheData() end
+
+function CooldownButton:ChangeChildAnchorByScrollValue() end
+
+function CooldownButton:CheckOutOfScreen() end
+
+function CooldownButton:Clickable() end
+
+function CooldownButton:CorrectOffsetByScreen() end
+
+function CooldownButton:CreateChildWidget() end
+
+function CooldownButton:CreateChildWidgetByType() end
+
+function CooldownButton:CreateColorDrawable() end
+
+function CooldownButton:CreateColorDrawableByKey() end
+
+function CooldownButton:CreateDrawable() end
+
+function CooldownButton:CreateEffectDrawable() end
+
+function CooldownButton:CreateEffectDrawableByKey() end
+
+function CooldownButton:CreateIconDrawable() end
+
+function CooldownButton:CreateImageDrawable() end
+
+function CooldownButton:CreateNinePartDrawable() end
+
+function CooldownButton:CreateStateDrawable() end
+
+function CooldownButton:CreateTextDrawable() end
+
+function CooldownButton:CreateThreeColorDrawable() end
+
+function CooldownButton:CreateThreePartDrawable() end
+
+function CooldownButton:DeregisterForClicks() end
+
+function CooldownButton:DetachWidget() end
+
+function CooldownButton:DisableDrawables() end
+
+function CooldownButton:DisableDrawablesWithChildren() end
+
+function CooldownButton:Enable() end
+
+function CooldownButton:EnableDrag() end
+
+function CooldownButton:EnableDrawables() end
+
+function CooldownButton:EnableDrawablesWithChildren() end
+
+function CooldownButton:EnableFocus() end
+
+function CooldownButton:EnableHidingIsRemove() end
+
+function CooldownButton:EnableKeyboard() end
+
+function CooldownButton:EnablePick() end
+
+function CooldownButton:EnableScroll() end
+
+function CooldownButton:GetAlpha() end
+
+function CooldownButton:GetAttachedWidget() end
+
+function CooldownButton:GetButtonState() end
+
+function CooldownButton:GetDisabledBackground() end
+
+function CooldownButton:GetDisabledColor() end
+
+function CooldownButton:GetEffectiveExtent() end
+
+function CooldownButton:GetEffectiveOffset() end
+
+function CooldownButton:GetExtent() end
+
+function CooldownButton:GetHeight() end
+
+function CooldownButton:GetHighlightBackground() end
+
+function CooldownButton:GetHighlightColor() end
+
+function CooldownButton:GetId() end
+
+function CooldownButton:GetName() end
+
+function CooldownButton:GetNormalBackground() end
+
+function CooldownButton:GetNormalColor() end
+
+function CooldownButton:GetObjectType() end
+
+function CooldownButton:GetOffset() end
+
+function CooldownButton:GetParent() end
+
+function CooldownButton:GetPushedBackground() end
+
+function CooldownButton:GetPushedColor() end
+
+function CooldownButton:GetRotation() end
+
+function CooldownButton:GetText() end
+
+function CooldownButton:GetUILayer() end
+
+function CooldownButton:GetValue() end
+
+function CooldownButton:GetWidth() end
+
+function CooldownButton:HasHandler() end
+
+function CooldownButton:InheritAnimationData() end
+
+function CooldownButton:IsDescendantWidget() end
+
+function CooldownButton:IsEnabled() end
+
+function CooldownButton:IsMouseOver() end
+
+function CooldownButton:IsNowAnimation() end
+
+function CooldownButton:IsValidUIObject() end
+
+function CooldownButton:IsVisible() end
+
+function CooldownButton:Lower() end
+
+function CooldownButton:MoveTo() end
+
+function CooldownButton:Raise() end
+
+function CooldownButton:RegisterEvent() end
+
+function CooldownButton:RegisterForClicks() end
+
+function CooldownButton:ReleaseDeletedHandler() end
+
+function CooldownButton:ReleaseHandler() end
+
+function CooldownButton:RemoveAllAnchors() end
+
+function CooldownButton:RemoveAllDrawables() end
+
+function CooldownButton:RemoveDrawable() end
+
+function CooldownButton:RequestCharacterCacheData() end
+
+function CooldownButton:SetAlpha() end
+
+function CooldownButton:SetAlphaAnimation() end
+
+function CooldownButton:SetAutoClipChar() end
+
+function CooldownButton:SetAutoResize() end
+
+function CooldownButton:SetButtonState() end
+
+function CooldownButton:SetCategory() end
+
+function CooldownButton:SetCharacterCacheDataHandler() end
+
+function CooldownButton:SetCoolDown() end
+
+function CooldownButton:SetCoolDownMask() end
+
+function CooldownButton:SetDelegator() end
+
+function CooldownButton:SetDeletedHandler() end
+
+function CooldownButton:SetDisabledBackground() end
+
+function CooldownButton:SetDisabledColor() end
+
+function CooldownButton:SetDisabledTextColor() end
+
+function CooldownButton:SetDragCondition() end
+
+function CooldownButton:SetDrawPriority() end
+
+function CooldownButton:SetDrawableLayerAlpha() end
+
+function CooldownButton:SetExtent() end
+
+function CooldownButton:SetFocus() end
+
+function CooldownButton:SetHandler() end
+
+function CooldownButton:SetHeight() end
+
+function CooldownButton:SetHighlightBackground() end
+
+function CooldownButton:SetHighlightColor() end
+
+function CooldownButton:SetHighlightTextColor() end
+
+function CooldownButton:SetInset() end
+
+function CooldownButton:SetLText() end
+
+function CooldownButton:SetLayerColor() end
+
+function CooldownButton:SetMaxResizingExtent() end
+
+function CooldownButton:SetMinResizingExtent() end
+
+function CooldownButton:SetMoveAnimation() end
+
+function CooldownButton:SetNormalBackground() end
+
+function CooldownButton:SetNormalColor() end
+
+function CooldownButton:SetPushedBackground() end
+
+function CooldownButton:SetPushedColor() end
+
+function CooldownButton:SetPushedTextColor() end
+
+function CooldownButton:SetResizingBorderSize() end
+
+function CooldownButton:SetRotation() end
+
+function CooldownButton:SetScale() end
+
+function CooldownButton:SetScaleAnimation() end
+
+function CooldownButton:SetSounds() end
+
+function CooldownButton:SetStartAnimation() end
+
+function CooldownButton:SetStyle() end
+
+function CooldownButton:SetText() end
+
+function CooldownButton:SetTextColor() end
+
+function CooldownButton:SetWidth() end
+
+function CooldownButton:Show() end
+
+function CooldownButton:StartMoving() end
+
+function CooldownButton:StartSizing() end
+
+function CooldownButton:StopMovingOrSizing() end
+
+function CooldownButton:TriggerMoveAnimation() end
+
+function CooldownButton:UseDynamicContentState() end
+
+function CooldownButton:UseDynamicDrawableState() end
+
+function CooldownButton:UseResizing() end

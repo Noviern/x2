@@ -1,0 +1,469 @@
+AP_BOTTOM = 8 -- objects/Window
+AP_BOTTOMLEFT = 2 -- objects/Window
+AP_BOTTOMRIGHT = 3 -- objects/Window
+AP_CENTER = 4 -- objects/Window
+AP_LEFT = 6 -- objects/Window
+AP_RIGHT = 7 -- objects/Window
+AP_TOP = 5 -- objects/Window
+AP_TOPLEFT = 0 -- objects/Window
+AP_TOPRIGHT = 1 -- objects/Window
+CT_ABILITY = 2 -- objects/Window
+CT_EXPEDITION_NAME = 3 -- objects/Window
+CT_NAME = 1 -- objects/Window
+DC_ALWAYS = 0 -- objects/Window
+DC_SHIFT_KEY_DOWN = 1 -- objects/Window
+Window = { -- objects/Window
+  __this = <userdata>, -- objects/Window
+  modalBackgroundWindow = { -- objects/Window
+    __this = <userdata>, -- objects/Window
+  }, -- objects/Window
+  titleStyle = { -- objects/Window
+    __this = <userdata>, -- objects/Window
+  }, -- objects/Window
+} -- objects/Window
+
+function Window.modalBackgroundWindow:AddAnchor() end
+
+function Window.modalBackgroundWindow:ApplyUIScale() end
+
+function Window.modalBackgroundWindow:AttachWidget() end
+
+function Window.modalBackgroundWindow:BindWidth() end
+
+function Window.modalBackgroundWindow:CancelRequestCharacterCacheData() end
+
+function Window.modalBackgroundWindow:ChangeChildAnchorByScrollValue() end
+
+function Window.modalBackgroundWindow:CheckOutOfScreen() end
+
+function Window.modalBackgroundWindow:Clickable() end
+
+function Window.modalBackgroundWindow:CorrectOffsetByScreen() end
+
+function Window.modalBackgroundWindow:CreateChildWidget() end
+
+function Window.modalBackgroundWindow:CreateChildWidgetByType() end
+
+function Window.modalBackgroundWindow:CreateColorDrawable() end
+
+function Window.modalBackgroundWindow:CreateColorDrawableByKey() end
+
+function Window.modalBackgroundWindow:CreateDrawable() end
+
+function Window.modalBackgroundWindow:CreateEffectDrawable() end
+
+function Window.modalBackgroundWindow:CreateEffectDrawableByKey() end
+
+function Window.modalBackgroundWindow:CreateIconDrawable() end
+
+function Window.modalBackgroundWindow:CreateImageDrawable() end
+
+function Window.modalBackgroundWindow:CreateNinePartDrawable() end
+
+function Window.modalBackgroundWindow:CreateTextDrawable() end
+
+function Window.modalBackgroundWindow:CreateThreeColorDrawable() end
+
+function Window.modalBackgroundWindow:CreateThreePartDrawable() end
+
+function Window.modalBackgroundWindow:DetachWidget() end
+
+function Window.modalBackgroundWindow:DisableDrawables() end
+
+function Window.modalBackgroundWindow:DisableDrawablesWithChildren() end
+
+function Window.modalBackgroundWindow:Enable() end
+
+function Window.modalBackgroundWindow:EnableDrag() end
+
+function Window.modalBackgroundWindow:EnableDrawables() end
+
+function Window.modalBackgroundWindow:EnableDrawablesWithChildren() end
+
+function Window.modalBackgroundWindow:EnableFocus() end
+
+function Window.modalBackgroundWindow:EnableHidingIsRemove() end
+
+function Window.modalBackgroundWindow:EnableKeyboard() end
+
+function Window.modalBackgroundWindow:EnablePick() end
+
+function Window.modalBackgroundWindow:EnableScroll() end
+
+function Window.modalBackgroundWindow:GetAlpha() end
+
+function Window.modalBackgroundWindow:GetAttachedWidget() end
+
+function Window.modalBackgroundWindow:GetEffectiveExtent() end
+
+function Window.modalBackgroundWindow:GetEffectiveOffset() end
+
+function Window.modalBackgroundWindow:GetExtent() end
+
+function Window.modalBackgroundWindow:GetHeight() end
+
+function Window.modalBackgroundWindow:GetId() end
+
+function Window.modalBackgroundWindow:GetName() end
+
+function Window.modalBackgroundWindow:GetObjectType() end
+
+function Window.modalBackgroundWindow:GetOffset() end
+
+function Window.modalBackgroundWindow:GetParent() end
+
+function Window.modalBackgroundWindow:GetRotation() end
+
+function Window.modalBackgroundWindow:GetText() end
+
+function Window.modalBackgroundWindow:GetUILayer() end
+
+function Window.modalBackgroundWindow:GetValue() end
+
+function Window.modalBackgroundWindow:GetWidth() end
+
+function Window.modalBackgroundWindow:HasHandler() end
+
+function Window.modalBackgroundWindow:InheritAnimationData() end
+
+function Window.modalBackgroundWindow:IsDescendantWidget() end
+
+function Window.modalBackgroundWindow:IsEnabled() end
+
+function Window.modalBackgroundWindow:IsMouseOver() end
+
+function Window.modalBackgroundWindow:IsNowAnimation() end
+
+function Window.modalBackgroundWindow:IsValidUIObject() end
+
+function Window.modalBackgroundWindow:IsVisible() end
+
+function Window.modalBackgroundWindow:Lower() end
+
+function Window.modalBackgroundWindow:MoveTo() end
+
+function Window.modalBackgroundWindow:Raise() end
+
+function Window.modalBackgroundWindow:RegisterEvent() end
+
+function Window.modalBackgroundWindow:ReleaseDeletedHandler() end
+
+function Window.modalBackgroundWindow:ReleaseHandler() end
+
+function Window.modalBackgroundWindow:RemoveAllAnchors() end
+
+function Window.modalBackgroundWindow:RemoveAllDrawables() end
+
+function Window.modalBackgroundWindow:RemoveDrawable() end
+
+function Window.modalBackgroundWindow:RequestCharacterCacheData() end
+
+function Window.modalBackgroundWindow:SetAlpha() end
+
+function Window.modalBackgroundWindow:SetAlphaAnimation() end
+
+function Window.modalBackgroundWindow:SetCategory() end
+
+function Window.modalBackgroundWindow:SetCharacterCacheDataHandler() end
+
+function Window.modalBackgroundWindow:SetDelegator() end
+
+function Window.modalBackgroundWindow:SetDeletedHandler() end
+
+function Window.modalBackgroundWindow:SetDragCondition() end
+
+function Window.modalBackgroundWindow:SetDrawBorder() end
+
+function Window.modalBackgroundWindow:SetDrawPriority() end
+
+function Window.modalBackgroundWindow:SetDrawableLayerAlpha() end
+
+function Window.modalBackgroundWindow:SetExtent() end
+
+function Window.modalBackgroundWindow:SetHandler() end
+
+function Window.modalBackgroundWindow:SetHeight() end
+
+function Window.modalBackgroundWindow:SetLText() end
+
+function Window.modalBackgroundWindow:SetLayerColor() end
+
+function Window.modalBackgroundWindow:SetMaxResizingExtent() end
+
+function Window.modalBackgroundWindow:SetMinResizingExtent() end
+
+function Window.modalBackgroundWindow:SetMoveAnimation() end
+
+function Window.modalBackgroundWindow:SetResizingBorderSize() end
+
+function Window.modalBackgroundWindow:SetRotation() end
+
+function Window.modalBackgroundWindow:SetScale() end
+
+function Window.modalBackgroundWindow:SetScaleAnimation() end
+
+function Window.modalBackgroundWindow:SetSounds() end
+
+function Window.modalBackgroundWindow:SetStartAnimation() end
+
+function Window.modalBackgroundWindow:SetText() end
+
+function Window.modalBackgroundWindow:SetWidth() end
+
+function Window.modalBackgroundWindow:Show() end
+
+function Window.modalBackgroundWindow:StartMoving() end
+
+function Window.modalBackgroundWindow:StartSizing() end
+
+function Window.modalBackgroundWindow:StopMovingOrSizing() end
+
+function Window.modalBackgroundWindow:TriggerMoveAnimation() end
+
+function Window.modalBackgroundWindow:UseDynamicContentState() end
+
+function Window.modalBackgroundWindow:UseDynamicDrawableState() end
+
+function Window.modalBackgroundWindow:UseResizing() end
+
+function Window.titleStyle:GetId() end
+
+function Window.titleStyle:GetLineHeight() end
+
+function Window.titleStyle:GetName() end
+
+function Window.titleStyle:GetObjectType() end
+
+function Window.titleStyle:GetTextWidth() end
+
+function Window.titleStyle:IsValidUIObject() end
+
+function Window.titleStyle:SetAlign() end
+
+function Window.titleStyle:SetColor() end
+
+function Window.titleStyle:SetColorByKey() end
+
+function Window.titleStyle:SetEllipsis() end
+
+function Window.titleStyle:SetFont() end
+
+function Window.titleStyle:SetFontSize() end
+
+function Window.titleStyle:SetOutline() end
+
+function Window.titleStyle:SetShadow() end
+
+function Window.titleStyle:SetSnap() end
+
+function Window:AddAnchor() end
+
+function Window:ApplyUIScale() end
+
+function Window:AttachWidget() end
+
+function Window:BindWidth() end
+
+function Window:CancelRequestCharacterCacheData() end
+
+function Window:ChangeChildAnchorByScrollValue() end
+
+function Window:CheckOutOfScreen() end
+
+function Window:Clickable() end
+
+function Window:CorrectOffsetByScreen() end
+
+function Window:CreateChildWidget() end
+
+function Window:CreateChildWidgetByType() end
+
+function Window:CreateColorDrawable() end
+
+function Window:CreateColorDrawableByKey() end
+
+function Window:CreateDrawable() end
+
+function Window:CreateEffectDrawable() end
+
+function Window:CreateEffectDrawableByKey() end
+
+function Window:CreateIconDrawable() end
+
+function Window:CreateImageDrawable() end
+
+function Window:CreateNinePartDrawable() end
+
+function Window:CreateTextDrawable() end
+
+function Window:CreateThreeColorDrawable() end
+
+function Window:CreateThreePartDrawable() end
+
+function Window:DetachWidget() end
+
+function Window:DisableDrawables() end
+
+function Window:DisableDrawablesWithChildren() end
+
+function Window:Enable() end
+
+function Window:EnableDrag() end
+
+function Window:EnableDrawables() end
+
+function Window:EnableDrawablesWithChildren() end
+
+function Window:EnableFocus() end
+
+function Window:EnableHidingIsRemove() end
+
+function Window:EnableKeyboard() end
+
+function Window:EnablePick() end
+
+function Window:EnableScroll() end
+
+function Window:GetAlpha() end
+
+function Window:GetAttachedWidget() end
+
+function Window:GetEffectiveExtent() end
+
+function Window:GetEffectiveOffset() end
+
+function Window:GetExtent() end
+
+function Window:GetHeight() end
+
+function Window:GetId() end
+
+function Window:GetName() end
+
+function Window:GetObjectType() end
+
+function Window:GetOffset() end
+
+function Window:GetParent() end
+
+function Window:GetRotation() end
+
+function Window:GetText() end
+
+function Window:GetUILayer() end
+
+function Window:GetValue() end
+
+function Window:GetWidth() end
+
+function Window:HasHandler() end
+
+function Window:InheritAnimationData() end
+
+function Window:IsDescendantWidget() end
+
+function Window:IsEnabled() end
+
+function Window:IsMouseOver() end
+
+function Window:IsNowAnimation() end
+
+function Window:IsValidUIObject() end
+
+function Window:IsVisible() end
+
+function Window:Lower() end
+
+function Window:MoveTo() end
+
+function Window:Raise() end
+
+function Window:RegisterEvent() end
+
+function Window:ReleaseDeletedHandler() end
+
+function Window:ReleaseHandler() end
+
+function Window:RemoveAllAnchors() end
+
+function Window:RemoveAllDrawables() end
+
+function Window:RemoveDrawable() end
+
+function Window:RequestCharacterCacheData() end
+
+function Window:SetAlpha() end
+
+function Window:SetAlphaAnimation() end
+
+function Window:SetCategory() end
+
+function Window:SetCharacterCacheDataHandler() end
+
+function Window:SetCloseOnEscape() end
+
+function Window:SetDelegator() end
+
+function Window:SetDeletedHandler() end
+
+function Window:SetDragCondition() end
+
+function Window:SetDrawPriority() end
+
+function Window:SetDrawableLayerAlpha() end
+
+function Window:SetExtent() end
+
+function Window:SetHandler() end
+
+function Window:SetHeight() end
+
+function Window:SetLText() end
+
+function Window:SetLayerColor() end
+
+function Window:SetMaxResizingExtent() end
+
+function Window:SetMinResizingExtent() end
+
+function Window:SetMoveAnimation() end
+
+function Window:SetResizingBorderSize() end
+
+function Window:SetRotation() end
+
+function Window:SetScale() end
+
+function Window:SetScaleAnimation() end
+
+function Window:SetSounds() end
+
+function Window:SetStartAnimation() end
+
+function Window:SetText() end
+
+function Window:SetTitleInset() end
+
+function Window:SetTitleText() end
+
+function Window:SetUILayer() end
+
+function Window:SetWidth() end
+
+function Window:SetWindowModal() end
+
+function Window:Show() end
+
+function Window:StartMoving() end
+
+function Window:StartSizing() end
+
+function Window:StopMovingOrSizing() end
+
+function Window:TriggerMoveAnimation() end
+
+function Window:UseDynamicContentState() end
+
+function Window:UseDynamicDrawableState() end
+
+function Window:UseResizing() end

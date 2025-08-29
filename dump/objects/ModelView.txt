@@ -1,0 +1,399 @@
+AP_BOTTOM = 8 -- objects/ModelView
+AP_BOTTOMLEFT = 2 -- objects/ModelView
+AP_BOTTOMRIGHT = 3 -- objects/ModelView
+AP_CENTER = 4 -- objects/ModelView
+AP_LEFT = 6 -- objects/ModelView
+AP_RIGHT = 7 -- objects/ModelView
+AP_TOP = 5 -- objects/ModelView
+AP_TOPLEFT = 0 -- objects/ModelView
+AP_TOPRIGHT = 1 -- objects/ModelView
+CT_ABILITY = 2 -- objects/ModelView
+CT_EXPEDITION_NAME = 3 -- objects/ModelView
+CT_NAME = 1 -- objects/ModelView
+DC_ALWAYS = 0 -- objects/ModelView
+DC_SHIFT_KEY_DOWN = 1 -- objects/ModelView
+ModelView = { -- objects/ModelView
+  __this = <userdata>, -- objects/ModelView
+} -- objects/ModelView
+
+function ModelView:AddAnchor() end
+
+function ModelView:AddRotation() end
+
+function ModelView:AdjustCameraPos() end
+
+function ModelView:AdjustCameraPosToModel() end
+
+function ModelView:ApplyCustomizerParamToUnit() end
+
+function ModelView:ApplyModel() end
+
+function ModelView:ApplyPresetParam() end
+
+function ModelView:ApplyUIScale() end
+
+function ModelView:AttachWidget() end
+
+function ModelView:BindWidth() end
+
+function ModelView:CancelRequestCharacterCacheData() end
+
+function ModelView:ChangeChildAnchorByScrollValue() end
+
+function ModelView:CheckOutOfScreen() end
+
+function ModelView:ClearModel() end
+
+function ModelView:Clickable() end
+
+function ModelView:CorrectOffsetByScreen() end
+
+function ModelView:CreateChildWidget() end
+
+function ModelView:CreateChildWidgetByType() end
+
+function ModelView:CreateColorDrawable() end
+
+function ModelView:CreateColorDrawableByKey() end
+
+function ModelView:CreateDrawable() end
+
+function ModelView:CreateEffectDrawable() end
+
+function ModelView:CreateEffectDrawableByKey() end
+
+function ModelView:CreateIconDrawable() end
+
+function ModelView:CreateImageDrawable() end
+
+function ModelView:CreateNinePartDrawable() end
+
+function ModelView:CreateTextDrawable() end
+
+function ModelView:CreateThreeColorDrawable() end
+
+function ModelView:CreateThreePartDrawable() end
+
+function ModelView:DetachWidget() end
+
+function ModelView:DisableDrawables() end
+
+function ModelView:DisableDrawablesWithChildren() end
+
+function ModelView:Enable() end
+
+function ModelView:EnableDrag() end
+
+function ModelView:EnableDrawables() end
+
+function ModelView:EnableDrawablesWithChildren() end
+
+function ModelView:EnableFocus() end
+
+function ModelView:EnableHidingIsRemove() end
+
+function ModelView:EnableKeyboard() end
+
+function ModelView:EnablePick() end
+
+function ModelView:EnableScroll() end
+
+function ModelView:EquipCostume() end
+
+function ModelView:EquipItem() end
+
+function ModelView:GetAlpha() end
+
+function ModelView:GetAttachedWidget() end
+
+function ModelView:GetCustomBodyNormal() end
+
+function ModelView:GetCustomDeco() end
+
+function ModelView:GetCustomEyebrow() end
+
+function ModelView:GetCustomEyebrowColor() end
+
+function ModelView:GetCustomFaceDiffuse() end
+
+function ModelView:GetCustomFaceNormal() end
+
+function ModelView:GetCustomHair() end
+
+function ModelView:GetCustomHairColor() end
+
+function ModelView:GetCustomHorn() end
+
+function ModelView:GetCustomHornColor() end
+
+function ModelView:GetCustomLipColor() end
+
+function ModelView:GetCustomMakeUp() end
+
+function ModelView:GetCustomPreviewCloth() end
+
+function ModelView:GetCustomPupil() end
+
+function ModelView:GetCustomPupilColor() end
+
+function ModelView:GetCustomScar() end
+
+function ModelView:GetCustomSkinColor() end
+
+function ModelView:GetCustomTail() end
+
+function ModelView:GetCustomTattoo() end
+
+function ModelView:GetCustomizingDecoColor() end
+
+function ModelView:GetCustomizingOddEyeUsable() end
+
+function ModelView:GetEffectiveExtent() end
+
+function ModelView:GetEffectiveOffset() end
+
+function ModelView:GetExtent() end
+
+function ModelView:GetFaceTargetCurValue() end
+
+function ModelView:GetGender() end
+
+function ModelView:GetHeight() end
+
+function ModelView:GetId() end
+
+function ModelView:GetName() end
+
+function ModelView:GetObjectType() end
+
+function ModelView:GetOffset() end
+
+function ModelView:GetParent() end
+
+function ModelView:GetRace() end
+
+function ModelView:GetRotation() end
+
+function ModelView:GetScarStatus() end
+
+function ModelView:GetSelectedPresetIndex() end
+
+function ModelView:GetText() end
+
+function ModelView:GetTwoToneHairStatus() end
+
+function ModelView:GetUILayer() end
+
+function ModelView:GetValue() end
+
+function ModelView:GetWidth() end
+
+function ModelView:HasDiffWithClientUnit() end
+
+function ModelView:HasHandler() end
+
+function ModelView:InheritAnimationData() end
+
+function ModelView:Init() end
+
+function ModelView:InitBeautyShop() end
+
+function ModelView:InitByModelRef() end
+
+function ModelView:InitCustomizerControl() end
+
+function ModelView:IsDescendantWidget() end
+
+function ModelView:IsEnabled() end
+
+function ModelView:IsFrozen() end
+
+function ModelView:IsMouseOver() end
+
+function ModelView:IsNowAnimation() end
+
+function ModelView:IsValidUIObject() end
+
+function ModelView:IsVisible() end
+
+function ModelView:Lower() end
+
+function ModelView:ModifyFaceParamValue() end
+
+function ModelView:MoveTo() end
+
+function ModelView:PayBeautyShop() end
+
+function ModelView:PlayAnimation() end
+
+function ModelView:Raise() end
+
+function ModelView:RegisterEvent() end
+
+function ModelView:ReleaseDeletedHandler() end
+
+function ModelView:ReleaseHandler() end
+
+function ModelView:RemoveAllAnchors() end
+
+function ModelView:RemoveAllDrawables() end
+
+function ModelView:RemoveDrawable() end
+
+function ModelView:RemoveEquipSlot() end
+
+function ModelView:RequestCharacterCacheData() end
+
+function ModelView:ResetBeautyShop() end
+
+function ModelView:ResetEquips() end
+
+function ModelView:SetAlpha() end
+
+function ModelView:SetAlphaAnimation() end
+
+function ModelView:SetBackColor() end
+
+function ModelView:SetBeautyShopMode() end
+
+function ModelView:SetCameraPos() end
+
+function ModelView:SetCategory() end
+
+function ModelView:SetCharacterCacheDataHandler() end
+
+function ModelView:SetCustomizingBodyNormal() end
+
+function ModelView:SetCustomizingDeco() end
+
+function ModelView:SetCustomizingDecoColor() end
+
+function ModelView:SetCustomizingEyebrow() end
+
+function ModelView:SetCustomizingEyebrowColor() end
+
+function ModelView:SetCustomizingFaceDiffuse() end
+
+function ModelView:SetCustomizingFaceNormal() end
+
+function ModelView:SetCustomizingHair() end
+
+function ModelView:SetCustomizingHairColor() end
+
+function ModelView:SetCustomizingHairDefaultColor() end
+
+function ModelView:SetCustomizingHairTwoToneColor() end
+
+function ModelView:SetCustomizingHorn() end
+
+function ModelView:SetCustomizingHornColor() end
+
+function ModelView:SetCustomizingLipColor() end
+
+function ModelView:SetCustomizingMakeUp() end
+
+function ModelView:SetCustomizingPreviewCloth() end
+
+function ModelView:SetCustomizingPupil() end
+
+function ModelView:SetCustomizingPupilColor() end
+
+function ModelView:SetCustomizingScar() end
+
+function ModelView:SetCustomizingSkinColor() end
+
+function ModelView:SetCustomizingTail() end
+
+function ModelView:SetCustomizingTattoo() end
+
+function ModelView:SetDelegator() end
+
+function ModelView:SetDeletedHandler() end
+
+function ModelView:SetDisableColorGrading() end
+
+function ModelView:SetDragCondition() end
+
+function ModelView:SetDrawPriority() end
+
+function ModelView:SetDrawableLayerAlpha() end
+
+function ModelView:SetEquipSlotFromCharacter() end
+
+function ModelView:SetExtent() end
+
+function ModelView:SetFov() end
+
+function ModelView:SetFreeze() end
+
+function ModelView:SetHandler() end
+
+function ModelView:SetHeight() end
+
+function ModelView:SetIngameShopMode() end
+
+function ModelView:SetLText() end
+
+function ModelView:SetLayerColor() end
+
+function ModelView:SetMaxResizingExtent() end
+
+function ModelView:SetMinResizingExtent() end
+
+function ModelView:SetModelViewBackground() end
+
+function ModelView:SetModelViewCoords() end
+
+function ModelView:SetModelViewExtent() end
+
+function ModelView:SetMoveAnimation() end
+
+function ModelView:SetResizingBorderSize() end
+
+function ModelView:SetRotation() end
+
+function ModelView:SetScale() end
+
+function ModelView:SetScaleAnimation() end
+
+function ModelView:SetSmile() end
+
+function ModelView:SetSounds() end
+
+function ModelView:SetStartAnimation() end
+
+function ModelView:SetText() end
+
+function ModelView:SetTextureSize() end
+
+function ModelView:SetWidth() end
+
+function ModelView:Show() end
+
+function ModelView:ShowItem() end
+
+function ModelView:StartMoving() end
+
+function ModelView:StartSizing() end
+
+function ModelView:StopAnimation() end
+
+function ModelView:StopMovingOrSizing() end
+
+function ModelView:ToggleCosplayEquipped() end
+
+function ModelView:TriggerMoveAnimation() end
+
+function ModelView:UnequipItemSlot() end
+
+function ModelView:UpdateDyeColor() end
+
+function ModelView:UseDynamicContentState() end
+
+function ModelView:UseDynamicDrawableState() end
+
+function ModelView:UseResizing() end
+
+function ModelView:ZoomInOut() end
+
+function ModelView:ZoomInOutBeautyShop() end

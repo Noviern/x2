@@ -1,0 +1,314 @@
+AP_BOTTOM = 8 -- objects/Message
+AP_BOTTOMLEFT = 2 -- objects/Message
+AP_BOTTOMRIGHT = 3 -- objects/Message
+AP_CENTER = 4 -- objects/Message
+AP_LEFT = 6 -- objects/Message
+AP_RIGHT = 7 -- objects/Message
+AP_TOP = 5 -- objects/Message
+AP_TOPLEFT = 0 -- objects/Message
+AP_TOPRIGHT = 1 -- objects/Message
+CT_ABILITY = 2 -- objects/Message
+CT_EXPEDITION_NAME = 3 -- objects/Message
+CT_NAME = 1 -- objects/Message
+DC_ALWAYS = 0 -- objects/Message
+DC_SHIFT_KEY_DOWN = 1 -- objects/Message
+Message = { -- objects/Message
+  __this = <userdata>, -- objects/Message
+  style = { -- objects/Message
+    __this = <userdata>, -- objects/Message
+  }, -- objects/Message
+} -- objects/Message
+
+function Message.style:GetId() end
+
+function Message.style:GetLineHeight() end
+
+function Message.style:GetName() end
+
+function Message.style:GetObjectType() end
+
+function Message.style:GetTextWidth() end
+
+function Message.style:IsValidUIObject() end
+
+function Message.style:SetAlign() end
+
+function Message.style:SetColor() end
+
+function Message.style:SetColorByKey() end
+
+function Message.style:SetEllipsis() end
+
+function Message.style:SetFont() end
+
+function Message.style:SetFontSize() end
+
+function Message.style:SetOutline() end
+
+function Message.style:SetShadow() end
+
+function Message.style:SetSnap() end
+
+function Message:AddAnchor() end
+
+function Message:AddMessage() end
+
+function Message:AddMessageEx() end
+
+function Message:AddMessageExRefresh() end
+
+function Message:AddMessageRefresh() end
+
+function Message:ApplyUIScale() end
+
+function Message:AttachWidget() end
+
+function Message:BindWidth() end
+
+function Message:CancelRequestCharacterCacheData() end
+
+function Message:ChangeChildAnchorByScrollValue() end
+
+function Message:ChangeDefaultStyle() end
+
+function Message:ChangeTextStyle() end
+
+function Message:CheckOutOfScreen() end
+
+function Message:Clear() end
+
+function Message:Clickable() end
+
+function Message:CopyTextToClipboard() end
+
+function Message:CorrectOffsetByScreen() end
+
+function Message:CreateChildWidget() end
+
+function Message:CreateChildWidgetByType() end
+
+function Message:CreateColorDrawable() end
+
+function Message:CreateColorDrawableByKey() end
+
+function Message:CreateDrawable() end
+
+function Message:CreateEffectDrawable() end
+
+function Message:CreateEffectDrawableByKey() end
+
+function Message:CreateIconDrawable() end
+
+function Message:CreateImageDrawable() end
+
+function Message:CreateNinePartDrawable() end
+
+function Message:CreateTextDrawable() end
+
+function Message:CreateThreeColorDrawable() end
+
+function Message:CreateThreePartDrawable() end
+
+function Message:DetachWidget() end
+
+function Message:DisableDrawables() end
+
+function Message:DisableDrawablesWithChildren() end
+
+function Message:Enable() end
+
+function Message:EnableDrag() end
+
+function Message:EnableDrawables() end
+
+function Message:EnableDrawablesWithChildren() end
+
+function Message:EnableFocus() end
+
+function Message:EnableHidingIsRemove() end
+
+function Message:EnableItemLink() end
+
+function Message:EnableKeyboard() end
+
+function Message:EnablePick() end
+
+function Message:EnableScroll() end
+
+function Message:GetAlpha() end
+
+function Message:GetAttachedWidget() end
+
+function Message:GetCurrentLine() end
+
+function Message:GetCurrentScroll() end
+
+function Message:GetEffectiveExtent() end
+
+function Message:GetEffectiveOffset() end
+
+function Message:GetExtent() end
+
+function Message:GetHeight() end
+
+function Message:GetId() end
+
+function Message:GetLineSpace() end
+
+function Message:GetLinkInfoOnCursor() end
+
+function Message:GetMaxLines() end
+
+function Message:GetMessageByTimeStamp() end
+
+function Message:GetMessageLines() end
+
+function Message:GetName() end
+
+function Message:GetObjectType() end
+
+function Message:GetOffset() end
+
+function Message:GetPagePerMaxLines() end
+
+function Message:GetParent() end
+
+function Message:GetRotation() end
+
+function Message:GetText() end
+
+function Message:GetUILayer() end
+
+function Message:GetValue() end
+
+function Message:GetWidth() end
+
+function Message:HasHandler() end
+
+function Message:InheritAnimationData() end
+
+function Message:IsDescendantWidget() end
+
+function Message:IsEnabled() end
+
+function Message:IsMouseOver() end
+
+function Message:IsNowAnimation() end
+
+function Message:IsValidUIObject() end
+
+function Message:IsVisible() end
+
+function Message:Lower() end
+
+function Message:MoveTo() end
+
+function Message:PageDown() end
+
+function Message:PageUp() end
+
+function Message:Raise() end
+
+function Message:RegisterEvent() end
+
+function Message:ReleaseDeletedHandler() end
+
+function Message:ReleaseHandler() end
+
+function Message:RemoveAllAnchors() end
+
+function Message:RemoveAllDrawables() end
+
+function Message:RemoveDrawable() end
+
+function Message:RemoveLastMessage() end
+
+function Message:RequestCharacterCacheData() end
+
+function Message:ResetVisibleTime() end
+
+function Message:ScrollDown() end
+
+function Message:ScrollToBottom() end
+
+function Message:ScrollToTop() end
+
+function Message:ScrollUp() end
+
+function Message:SetAlpha() end
+
+function Message:SetAlphaAnimation() end
+
+function Message:SetCategory() end
+
+function Message:SetCharacterCacheDataHandler() end
+
+function Message:SetDelegator() end
+
+function Message:SetDeletedHandler() end
+
+function Message:SetDragCondition() end
+
+function Message:SetDrawPriority() end
+
+function Message:SetDrawableLayerAlpha() end
+
+function Message:SetExtent() end
+
+function Message:SetFadeDuration() end
+
+function Message:SetHandler() end
+
+function Message:SetHeight() end
+
+function Message:SetInset() end
+
+function Message:SetLText() end
+
+function Message:SetLayerColor() end
+
+function Message:SetLineSpace() end
+
+function Message:SetMaxLines() end
+
+function Message:SetMaxResizingExtent() end
+
+function Message:SetMinResizingExtent() end
+
+function Message:SetMoveAnimation() end
+
+function Message:SetResizingBorderSize() end
+
+function Message:SetRotation() end
+
+function Message:SetScale() end
+
+function Message:SetScaleAnimation() end
+
+function Message:SetScrollPos() end
+
+function Message:SetSounds() end
+
+function Message:SetStartAnimation() end
+
+function Message:SetText() end
+
+function Message:SetTimeVisible() end
+
+function Message:SetWidth() end
+
+function Message:Show() end
+
+function Message:StartMoving() end
+
+function Message:StartSizing() end
+
+function Message:StopMovingOrSizing() end
+
+function Message:TriggerMoveAnimation() end
+
+function Message:UseDynamicContentState() end
+
+function Message:UseDynamicDrawableState() end
+
+function Message:UseResizing() end

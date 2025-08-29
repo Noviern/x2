@@ -1,0 +1,291 @@
+AP_BOTTOM = 8 -- objects/UnitframeTooltip
+AP_BOTTOMLEFT = 2 -- objects/UnitframeTooltip
+AP_BOTTOMRIGHT = 3 -- objects/UnitframeTooltip
+AP_CENTER = 4 -- objects/UnitframeTooltip
+AP_LEFT = 6 -- objects/UnitframeTooltip
+AP_RIGHT = 7 -- objects/UnitframeTooltip
+AP_TOP = 5 -- objects/UnitframeTooltip
+AP_TOPLEFT = 0 -- objects/UnitframeTooltip
+AP_TOPRIGHT = 1 -- objects/UnitframeTooltip
+CT_ABILITY = 2 -- objects/UnitframeTooltip
+CT_EXPEDITION_NAME = 3 -- objects/UnitframeTooltip
+CT_NAME = 1 -- objects/UnitframeTooltip
+DC_ALWAYS = 0 -- objects/UnitframeTooltip
+DC_SHIFT_KEY_DOWN = 1 -- objects/UnitframeTooltip
+UFT_CUPLABOR = "|p8;" -- objects/UnitframeTooltip
+UFT_CURHP = "|p2;" -- objects/UnitframeTooltip
+UFT_CURMP = "|p5;" -- objects/UnitframeTooltip
+UFT_GEARSCORE = "|p12;" -- objects/UnitframeTooltip
+UFT_MAXHP = "|p3;" -- objects/UnitframeTooltip
+UFT_MAXLABOR = "|p9;" -- objects/UnitframeTooltip
+UFT_MAXMP = "|p6;" -- objects/UnitframeTooltip
+UFT_NAME = "|p1;" -- objects/UnitframeTooltip
+UFT_PERHP = "|p4;" -- objects/UnitframeTooltip
+UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/UnitframeTooltip
+UFT_PERMP = "|p7;" -- objects/UnitframeTooltip
+UFT_PVPHONOR = "|p10;" -- objects/UnitframeTooltip
+UFT_PVPKILL = "|p11;" -- objects/UnitframeTooltip
+UnitframeTooltip = { -- objects/UnitframeTooltip
+  __this = <userdata>, -- objects/UnitframeTooltip
+  style = { -- objects/UnitframeTooltip
+    __this = <userdata>, -- objects/UnitframeTooltip
+  }, -- objects/UnitframeTooltip
+} -- objects/UnitframeTooltip
+
+function UnitframeTooltip.style:GetId() end
+
+function UnitframeTooltip.style:GetLineHeight() end
+
+function UnitframeTooltip.style:GetName() end
+
+function UnitframeTooltip.style:GetObjectType() end
+
+function UnitframeTooltip.style:GetTextWidth() end
+
+function UnitframeTooltip.style:IsValidUIObject() end
+
+function UnitframeTooltip.style:SetAlign() end
+
+function UnitframeTooltip.style:SetColor() end
+
+function UnitframeTooltip.style:SetColorByKey() end
+
+function UnitframeTooltip.style:SetEllipsis() end
+
+function UnitframeTooltip.style:SetFont() end
+
+function UnitframeTooltip.style:SetFontSize() end
+
+function UnitframeTooltip.style:SetOutline() end
+
+function UnitframeTooltip.style:SetShadow() end
+
+function UnitframeTooltip.style:SetSnap() end
+
+function UnitframeTooltip:AddAnchor() end
+
+function UnitframeTooltip:AddAnotherSideLine() end
+
+function UnitframeTooltip:AddLine() end
+
+function UnitframeTooltip:ApplyUIScale() end
+
+function UnitframeTooltip:AttachLowerSpaceLine() end
+
+function UnitframeTooltip:AttachUpperSpaceLine() end
+
+function UnitframeTooltip:AttachWidget() end
+
+function UnitframeTooltip:BindWidth() end
+
+function UnitframeTooltip:CancelRequestCharacterCacheData() end
+
+function UnitframeTooltip:ChangeChildAnchorByScrollValue() end
+
+function UnitframeTooltip:CheckOutOfScreen() end
+
+function UnitframeTooltip:ClearLines() end
+
+function UnitframeTooltip:Clickable() end
+
+function UnitframeTooltip:CorrectOffsetByScreen() end
+
+function UnitframeTooltip:CreateChildWidget() end
+
+function UnitframeTooltip:CreateChildWidgetByType() end
+
+function UnitframeTooltip:CreateColorDrawable() end
+
+function UnitframeTooltip:CreateColorDrawableByKey() end
+
+function UnitframeTooltip:CreateDrawable() end
+
+function UnitframeTooltip:CreateEffectDrawable() end
+
+function UnitframeTooltip:CreateEffectDrawableByKey() end
+
+function UnitframeTooltip:CreateIconDrawable() end
+
+function UnitframeTooltip:CreateImageDrawable() end
+
+function UnitframeTooltip:CreateNinePartDrawable() end
+
+function UnitframeTooltip:CreateTextDrawable() end
+
+function UnitframeTooltip:CreateThreeColorDrawable() end
+
+function UnitframeTooltip:CreateThreePartDrawable() end
+
+function UnitframeTooltip:DetachWidget() end
+
+function UnitframeTooltip:DisableDrawables() end
+
+function UnitframeTooltip:DisableDrawablesWithChildren() end
+
+function UnitframeTooltip:Enable() end
+
+function UnitframeTooltip:EnableDrag() end
+
+function UnitframeTooltip:EnableDrawables() end
+
+function UnitframeTooltip:EnableDrawablesWithChildren() end
+
+function UnitframeTooltip:EnableFocus() end
+
+function UnitframeTooltip:EnableHidingIsRemove() end
+
+function UnitframeTooltip:EnableKeyboard() end
+
+function UnitframeTooltip:EnablePick() end
+
+function UnitframeTooltip:EnableScroll() end
+
+function UnitframeTooltip:GetAlpha() end
+
+function UnitframeTooltip:GetAttachedWidget() end
+
+function UnitframeTooltip:GetEffectiveExtent() end
+
+function UnitframeTooltip:GetEffectiveOffset() end
+
+function UnitframeTooltip:GetExtent() end
+
+function UnitframeTooltip:GetHeight() end
+
+function UnitframeTooltip:GetHeightToLastLine() end
+
+function UnitframeTooltip:GetId() end
+
+function UnitframeTooltip:GetLastLine() end
+
+function UnitframeTooltip:GetLineCount() end
+
+function UnitframeTooltip:GetLineSpace() end
+
+function UnitframeTooltip:GetName() end
+
+function UnitframeTooltip:GetObjectType() end
+
+function UnitframeTooltip:GetOffset() end
+
+function UnitframeTooltip:GetParent() end
+
+function UnitframeTooltip:GetRotation() end
+
+function UnitframeTooltip:GetText() end
+
+function UnitframeTooltip:GetUILayer() end
+
+function UnitframeTooltip:GetValue() end
+
+function UnitframeTooltip:GetWidth() end
+
+function UnitframeTooltip:HasHandler() end
+
+function UnitframeTooltip:InheritAnimationData() end
+
+function UnitframeTooltip:IsDescendantWidget() end
+
+function UnitframeTooltip:IsEnabled() end
+
+function UnitframeTooltip:IsMouseOver() end
+
+function UnitframeTooltip:IsNowAnimation() end
+
+function UnitframeTooltip:IsValidUIObject() end
+
+function UnitframeTooltip:IsVisible() end
+
+function UnitframeTooltip:Lower() end
+
+function UnitframeTooltip:MoveTo() end
+
+function UnitframeTooltip:Raise() end
+
+function UnitframeTooltip:RegisterEvent() end
+
+function UnitframeTooltip:ReleaseDeletedHandler() end
+
+function UnitframeTooltip:ReleaseHandler() end
+
+function UnitframeTooltip:RemoveAllAnchors() end
+
+function UnitframeTooltip:RemoveAllDrawables() end
+
+function UnitframeTooltip:RemoveDrawable() end
+
+function UnitframeTooltip:RequestCharacterCacheData() end
+
+function UnitframeTooltip:SetAlpha() end
+
+function UnitframeTooltip:SetAlphaAnimation() end
+
+function UnitframeTooltip:SetAutoWordwrap() end
+
+function UnitframeTooltip:SetCategory() end
+
+function UnitframeTooltip:SetCharacterCacheDataHandler() end
+
+function UnitframeTooltip:SetDelegator() end
+
+function UnitframeTooltip:SetDeletedHandler() end
+
+function UnitframeTooltip:SetDragCondition() end
+
+function UnitframeTooltip:SetDrawPriority() end
+
+function UnitframeTooltip:SetDrawableLayerAlpha() end
+
+function UnitframeTooltip:SetExtent() end
+
+function UnitframeTooltip:SetHandler() end
+
+function UnitframeTooltip:SetHeight() end
+
+function UnitframeTooltip:SetInset() end
+
+function UnitframeTooltip:SetLText() end
+
+function UnitframeTooltip:SetLayerColor() end
+
+function UnitframeTooltip:SetLineSpace() end
+
+function UnitframeTooltip:SetMaxResizingExtent() end
+
+function UnitframeTooltip:SetMinResizingExtent() end
+
+function UnitframeTooltip:SetMoveAnimation() end
+
+function UnitframeTooltip:SetResizingBorderSize() end
+
+function UnitframeTooltip:SetRotation() end
+
+function UnitframeTooltip:SetScale() end
+
+function UnitframeTooltip:SetScaleAnimation() end
+
+function UnitframeTooltip:SetSounds() end
+
+function UnitframeTooltip:SetStartAnimation() end
+
+function UnitframeTooltip:SetText() end
+
+function UnitframeTooltip:SetTooltipData() end
+
+function UnitframeTooltip:SetWidth() end
+
+function UnitframeTooltip:Show() end
+
+function UnitframeTooltip:StartMoving() end
+
+function UnitframeTooltip:StartSizing() end
+
+function UnitframeTooltip:StopMovingOrSizing() end
+
+function UnitframeTooltip:TriggerMoveAnimation() end
+
+function UnitframeTooltip:UseDynamicContentState() end
+
+function UnitframeTooltip:UseDynamicDrawableState() end
+
+function UnitframeTooltip:UseResizing() end

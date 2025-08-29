@@ -1,0 +1,382 @@
+AP_BOTTOM = 8 -- objects/MegaphoneChatEdit
+AP_BOTTOMLEFT = 2 -- objects/MegaphoneChatEdit
+AP_BOTTOMRIGHT = 3 -- objects/MegaphoneChatEdit
+AP_CENTER = 4 -- objects/MegaphoneChatEdit
+AP_LEFT = 6 -- objects/MegaphoneChatEdit
+AP_RIGHT = 7 -- objects/MegaphoneChatEdit
+AP_TOP = 5 -- objects/MegaphoneChatEdit
+AP_TOPLEFT = 0 -- objects/MegaphoneChatEdit
+AP_TOPRIGHT = 1 -- objects/MegaphoneChatEdit
+CT_ABILITY = 2 -- objects/MegaphoneChatEdit
+CT_EXPEDITION_NAME = 3 -- objects/MegaphoneChatEdit
+CT_NAME = 1 -- objects/MegaphoneChatEdit
+DC_ALWAYS = 0 -- objects/MegaphoneChatEdit
+DC_SHIFT_KEY_DOWN = 1 -- objects/MegaphoneChatEdit
+MegaphoneChatEdit = { -- objects/MegaphoneChatEdit
+  __this = <userdata>, -- objects/MegaphoneChatEdit
+  guideTextStyle = { -- objects/MegaphoneChatEdit
+    __this = <userdata>, -- objects/MegaphoneChatEdit
+  }, -- objects/MegaphoneChatEdit
+  prefixStyle = { -- objects/MegaphoneChatEdit
+    __this = <userdata>, -- objects/MegaphoneChatEdit
+  }, -- objects/MegaphoneChatEdit
+  style = { -- objects/MegaphoneChatEdit
+    __this = <userdata>, -- objects/MegaphoneChatEdit
+  }, -- objects/MegaphoneChatEdit
+} -- objects/MegaphoneChatEdit
+
+function MegaphoneChatEdit.guideTextStyle:GetId() end
+
+function MegaphoneChatEdit.guideTextStyle:GetLineHeight() end
+
+function MegaphoneChatEdit.guideTextStyle:GetName() end
+
+function MegaphoneChatEdit.guideTextStyle:GetObjectType() end
+
+function MegaphoneChatEdit.guideTextStyle:GetTextWidth() end
+
+function MegaphoneChatEdit.guideTextStyle:IsValidUIObject() end
+
+function MegaphoneChatEdit.guideTextStyle:SetAlign() end
+
+function MegaphoneChatEdit.guideTextStyle:SetColor() end
+
+function MegaphoneChatEdit.guideTextStyle:SetColorByKey() end
+
+function MegaphoneChatEdit.guideTextStyle:SetEllipsis() end
+
+function MegaphoneChatEdit.guideTextStyle:SetFont() end
+
+function MegaphoneChatEdit.guideTextStyle:SetFontSize() end
+
+function MegaphoneChatEdit.guideTextStyle:SetOutline() end
+
+function MegaphoneChatEdit.guideTextStyle:SetShadow() end
+
+function MegaphoneChatEdit.guideTextStyle:SetSnap() end
+
+function MegaphoneChatEdit.prefixStyle:GetId() end
+
+function MegaphoneChatEdit.prefixStyle:GetLineHeight() end
+
+function MegaphoneChatEdit.prefixStyle:GetName() end
+
+function MegaphoneChatEdit.prefixStyle:GetObjectType() end
+
+function MegaphoneChatEdit.prefixStyle:GetTextWidth() end
+
+function MegaphoneChatEdit.prefixStyle:IsValidUIObject() end
+
+function MegaphoneChatEdit.prefixStyle:SetAlign() end
+
+function MegaphoneChatEdit.prefixStyle:SetColor() end
+
+function MegaphoneChatEdit.prefixStyle:SetColorByKey() end
+
+function MegaphoneChatEdit.prefixStyle:SetEllipsis() end
+
+function MegaphoneChatEdit.prefixStyle:SetFont() end
+
+function MegaphoneChatEdit.prefixStyle:SetFontSize() end
+
+function MegaphoneChatEdit.prefixStyle:SetOutline() end
+
+function MegaphoneChatEdit.prefixStyle:SetShadow() end
+
+function MegaphoneChatEdit.prefixStyle:SetSnap() end
+
+function MegaphoneChatEdit.style:GetId() end
+
+function MegaphoneChatEdit.style:GetLineHeight() end
+
+function MegaphoneChatEdit.style:GetName() end
+
+function MegaphoneChatEdit.style:GetObjectType() end
+
+function MegaphoneChatEdit.style:GetTextWidth() end
+
+function MegaphoneChatEdit.style:IsValidUIObject() end
+
+function MegaphoneChatEdit.style:SetAlign() end
+
+function MegaphoneChatEdit.style:SetColor() end
+
+function MegaphoneChatEdit.style:SetColorByKey() end
+
+function MegaphoneChatEdit.style:SetEllipsis() end
+
+function MegaphoneChatEdit.style:SetFont() end
+
+function MegaphoneChatEdit.style:SetFontSize() end
+
+function MegaphoneChatEdit.style:SetOutline() end
+
+function MegaphoneChatEdit.style:SetShadow() end
+
+function MegaphoneChatEdit.style:SetSnap() end
+
+function MegaphoneChatEdit:AddAnchor() end
+
+function MegaphoneChatEdit:AddHistoryLine() end
+
+function MegaphoneChatEdit:ApplyUIScale() end
+
+function MegaphoneChatEdit:AttachWidget() end
+
+function MegaphoneChatEdit:BindWidth() end
+
+function MegaphoneChatEdit:CancelRequestCharacterCacheData() end
+
+function MegaphoneChatEdit:ChangeChildAnchorByScrollValue() end
+
+function MegaphoneChatEdit:CheckNamePolicy() end
+
+function MegaphoneChatEdit:CheckOutOfScreen() end
+
+function MegaphoneChatEdit:ClearFocus() end
+
+function MegaphoneChatEdit:ClearString() end
+
+function MegaphoneChatEdit:ClearTextOnEnter() end
+
+function MegaphoneChatEdit:Clickable() end
+
+function MegaphoneChatEdit:CorrectOffsetByScreen() end
+
+function MegaphoneChatEdit:CreateChildWidget() end
+
+function MegaphoneChatEdit:CreateChildWidgetByType() end
+
+function MegaphoneChatEdit:CreateColorDrawable() end
+
+function MegaphoneChatEdit:CreateColorDrawableByKey() end
+
+function MegaphoneChatEdit:CreateDrawable() end
+
+function MegaphoneChatEdit:CreateEffectDrawable() end
+
+function MegaphoneChatEdit:CreateEffectDrawableByKey() end
+
+function MegaphoneChatEdit:CreateIconDrawable() end
+
+function MegaphoneChatEdit:CreateImageDrawable() end
+
+function MegaphoneChatEdit:CreateNinePartDrawable() end
+
+function MegaphoneChatEdit:CreateTextDrawable() end
+
+function MegaphoneChatEdit:CreateThreeColorDrawable() end
+
+function MegaphoneChatEdit:CreateThreePartDrawable() end
+
+function MegaphoneChatEdit:DetachWidget() end
+
+function MegaphoneChatEdit:DisableDrawables() end
+
+function MegaphoneChatEdit:DisableDrawablesWithChildren() end
+
+function MegaphoneChatEdit:Enable() end
+
+function MegaphoneChatEdit:EnableDrag() end
+
+function MegaphoneChatEdit:EnableDrawables() end
+
+function MegaphoneChatEdit:EnableDrawablesWithChildren() end
+
+function MegaphoneChatEdit:EnableFocus() end
+
+function MegaphoneChatEdit:EnableHidingIsRemove() end
+
+function MegaphoneChatEdit:EnableKeyboard() end
+
+function MegaphoneChatEdit:EnablePick() end
+
+function MegaphoneChatEdit:EnableScroll() end
+
+function MegaphoneChatEdit:GetAlpha() end
+
+function MegaphoneChatEdit:GetAttachedWidget() end
+
+function MegaphoneChatEdit:GetEffectiveExtent() end
+
+function MegaphoneChatEdit:GetEffectiveOffset() end
+
+function MegaphoneChatEdit:GetExtent() end
+
+function MegaphoneChatEdit:GetHeight() end
+
+function MegaphoneChatEdit:GetId() end
+
+function MegaphoneChatEdit:GetName() end
+
+function MegaphoneChatEdit:GetObjectType() end
+
+function MegaphoneChatEdit:GetOffset() end
+
+function MegaphoneChatEdit:GetParent() end
+
+function MegaphoneChatEdit:GetRotation() end
+
+function MegaphoneChatEdit:GetText() end
+
+function MegaphoneChatEdit:GetUILayer() end
+
+function MegaphoneChatEdit:GetValue() end
+
+function MegaphoneChatEdit:GetWidth() end
+
+function MegaphoneChatEdit:HasHandler() end
+
+function MegaphoneChatEdit:InheritAnimationData() end
+
+function MegaphoneChatEdit:IsDescendantWidget() end
+
+function MegaphoneChatEdit:IsDigit() end
+
+function MegaphoneChatEdit:IsEnabled() end
+
+function MegaphoneChatEdit:IsMouseOver() end
+
+function MegaphoneChatEdit:IsNowAnimation() end
+
+function MegaphoneChatEdit:IsNowComposition() end
+
+function MegaphoneChatEdit:IsPassword() end
+
+function MegaphoneChatEdit:IsValidUIObject() end
+
+function MegaphoneChatEdit:IsVisible() end
+
+function MegaphoneChatEdit:Lower() end
+
+function MegaphoneChatEdit:MaxTextLength() end
+
+function MegaphoneChatEdit:MoveTo() end
+
+function MegaphoneChatEdit:Raise() end
+
+function MegaphoneChatEdit:RegisterEvent() end
+
+function MegaphoneChatEdit:ReleaseDeletedHandler() end
+
+function MegaphoneChatEdit:ReleaseHandler() end
+
+function MegaphoneChatEdit:RemoveAllAnchors() end
+
+function MegaphoneChatEdit:RemoveAllDrawables() end
+
+function MegaphoneChatEdit:RemoveDrawable() end
+
+function MegaphoneChatEdit:RequestCharacterCacheData() end
+
+function MegaphoneChatEdit:SetAlpha() end
+
+function MegaphoneChatEdit:SetAlphaAnimation() end
+
+function MegaphoneChatEdit:SetCategory() end
+
+function MegaphoneChatEdit:SetChannel() end
+
+function MegaphoneChatEdit:SetCharacterCacheDataHandler() end
+
+function MegaphoneChatEdit:SetCursorColor() end
+
+function MegaphoneChatEdit:SetCursorColorByColorKey() end
+
+function MegaphoneChatEdit:SetCursorHeight() end
+
+function MegaphoneChatEdit:SetCursorOffset() end
+
+function MegaphoneChatEdit:SetDelegator() end
+
+function MegaphoneChatEdit:SetDeletedHandler() end
+
+function MegaphoneChatEdit:SetDigit() end
+
+function MegaphoneChatEdit:SetDigitEmpty() end
+
+function MegaphoneChatEdit:SetDigitMax() end
+
+function MegaphoneChatEdit:SetDragCondition() end
+
+function MegaphoneChatEdit:SetDrawPriority() end
+
+function MegaphoneChatEdit:SetDrawableLayerAlpha() end
+
+function MegaphoneChatEdit:SetEnglish() end
+
+function MegaphoneChatEdit:SetExtent() end
+
+function MegaphoneChatEdit:SetFocus() end
+
+function MegaphoneChatEdit:SetGuideText() end
+
+function MegaphoneChatEdit:SetGuideTextInset() end
+
+function MegaphoneChatEdit:SetHandler() end
+
+function MegaphoneChatEdit:SetHeight() end
+
+function MegaphoneChatEdit:SetHistoryLines() end
+
+function MegaphoneChatEdit:SetInitVal() end
+
+function MegaphoneChatEdit:SetInset() end
+
+function MegaphoneChatEdit:SetLText() end
+
+function MegaphoneChatEdit:SetLayerColor() end
+
+function MegaphoneChatEdit:SetMaxResizingExtent() end
+
+function MegaphoneChatEdit:SetMaxTextLength() end
+
+function MegaphoneChatEdit:SetMinResizingExtent() end
+
+function MegaphoneChatEdit:SetMoveAnimation() end
+
+function MegaphoneChatEdit:SetPassword() end
+
+function MegaphoneChatEdit:SetPossibleFirstZero() end
+
+function MegaphoneChatEdit:SetPrefixInset() end
+
+function MegaphoneChatEdit:SetPrefixText() end
+
+function MegaphoneChatEdit:SetReClickable() end
+
+function MegaphoneChatEdit:SetReadOnly() end
+
+function MegaphoneChatEdit:SetResizingBorderSize() end
+
+function MegaphoneChatEdit:SetRotation() end
+
+function MegaphoneChatEdit:SetScale() end
+
+function MegaphoneChatEdit:SetScaleAnimation() end
+
+function MegaphoneChatEdit:SetSounds() end
+
+function MegaphoneChatEdit:SetStartAnimation() end
+
+function MegaphoneChatEdit:SetText() end
+
+function MegaphoneChatEdit:SetWidth() end
+
+function MegaphoneChatEdit:Show() end
+
+function MegaphoneChatEdit:StartMoving() end
+
+function MegaphoneChatEdit:StartSizing() end
+
+function MegaphoneChatEdit:StopMovingOrSizing() end
+
+function MegaphoneChatEdit:TriggerMoveAnimation() end
+
+function MegaphoneChatEdit:UseDynamicContentState() end
+
+function MegaphoneChatEdit:UseDynamicDrawableState() end
+
+function MegaphoneChatEdit:UseResizing() end
+
+function MegaphoneChatEdit:UseSelectAllWhenFocused() end

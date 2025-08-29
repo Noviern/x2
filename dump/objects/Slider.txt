@@ -1,0 +1,251 @@
+AP_BOTTOM = 8 -- objects/Slider
+AP_BOTTOMLEFT = 2 -- objects/Slider
+AP_BOTTOMRIGHT = 3 -- objects/Slider
+AP_CENTER = 4 -- objects/Slider
+AP_LEFT = 6 -- objects/Slider
+AP_RIGHT = 7 -- objects/Slider
+AP_TOP = 5 -- objects/Slider
+AP_TOPLEFT = 0 -- objects/Slider
+AP_TOPRIGHT = 1 -- objects/Slider
+CT_ABILITY = 2 -- objects/Slider
+CT_EXPEDITION_NAME = 3 -- objects/Slider
+CT_NAME = 1 -- objects/Slider
+DC_ALWAYS = 0 -- objects/Slider
+DC_SHIFT_KEY_DOWN = 1 -- objects/Slider
+Slider = { -- objects/Slider
+  __this = <userdata>, -- objects/Slider
+} -- objects/Slider
+
+function Slider:AddAnchor() end
+
+function Slider:ApplyUIScale() end
+
+function Slider:AttachWidget() end
+
+function Slider:BindWidth() end
+
+function Slider:CancelRequestCharacterCacheData() end
+
+function Slider:ChangeChildAnchorByScrollValue() end
+
+function Slider:CheckOutOfScreen() end
+
+function Slider:Clickable() end
+
+function Slider:CorrectOffsetByScreen() end
+
+function Slider:CreateChildWidget() end
+
+function Slider:CreateChildWidgetByType() end
+
+function Slider:CreateColorDrawable() end
+
+function Slider:CreateColorDrawableByKey() end
+
+function Slider:CreateDrawable() end
+
+function Slider:CreateEffectDrawable() end
+
+function Slider:CreateEffectDrawableByKey() end
+
+function Slider:CreateIconDrawable() end
+
+function Slider:CreateImageDrawable() end
+
+function Slider:CreateNinePartDrawable() end
+
+function Slider:CreateTextDrawable() end
+
+function Slider:CreateThreeColorDrawable() end
+
+function Slider:CreateThreePartDrawable() end
+
+function Slider:DetachWidget() end
+
+function Slider:DisableDrawables() end
+
+function Slider:DisableDrawablesWithChildren() end
+
+function Slider:Down() end
+
+function Slider:Enable() end
+
+function Slider:EnableDrag() end
+
+function Slider:EnableDrawables() end
+
+function Slider:EnableDrawablesWithChildren() end
+
+function Slider:EnableFocus() end
+
+function Slider:EnableHidingIsRemove() end
+
+function Slider:EnableKeyboard() end
+
+function Slider:EnablePick() end
+
+function Slider:EnableScroll() end
+
+function Slider:GetAlpha() end
+
+function Slider:GetAttachedWidget() end
+
+function Slider:GetEffectiveExtent() end
+
+function Slider:GetEffectiveOffset() end
+
+function Slider:GetExtent() end
+
+function Slider:GetHeight() end
+
+function Slider:GetId() end
+
+function Slider:GetMinMaxValues() end
+
+function Slider:GetName() end
+
+function Slider:GetObjectType() end
+
+function Slider:GetOffset() end
+
+function Slider:GetOrientation() end
+
+function Slider:GetParent() end
+
+function Slider:GetRotation() end
+
+function Slider:GetText() end
+
+function Slider:GetThumbButtonWidget() end
+
+function Slider:GetThumbDrawable() end
+
+function Slider:GetUILayer() end
+
+function Slider:GetValue() end
+
+function Slider:GetValueStep() end
+
+function Slider:GetWidth() end
+
+function Slider:HasHandler() end
+
+function Slider:InheritAnimationData() end
+
+function Slider:IsDescendantWidget() end
+
+function Slider:IsEnabled() end
+
+function Slider:IsMouseOver() end
+
+function Slider:IsNowAnimation() end
+
+function Slider:IsValidUIObject() end
+
+function Slider:IsVisible() end
+
+function Slider:Lower() end
+
+function Slider:MoveTo() end
+
+function Slider:Raise() end
+
+function Slider:RegisterEvent() end
+
+function Slider:ReleaseDeletedHandler() end
+
+function Slider:ReleaseHandler() end
+
+function Slider:RemoveAllAnchors() end
+
+function Slider:RemoveAllDrawables() end
+
+function Slider:RemoveDrawable() end
+
+function Slider:RequestCharacterCacheData() end
+
+function Slider:SetAlpha() end
+
+function Slider:SetAlphaAnimation() end
+
+function Slider:SetCategory() end
+
+function Slider:SetCharacterCacheDataHandler() end
+
+function Slider:SetDelegator() end
+
+function Slider:SetDeletedHandler() end
+
+function Slider:SetDragCondition() end
+
+function Slider:SetDrawPriority() end
+
+function Slider:SetDrawableLayerAlpha() end
+
+function Slider:SetExtent() end
+
+function Slider:SetFixedThumb() end
+
+function Slider:SetHandler() end
+
+function Slider:SetHeight() end
+
+function Slider:SetInset() end
+
+function Slider:SetLText() end
+
+function Slider:SetLayerColor() end
+
+function Slider:SetMaxResizingExtent() end
+
+function Slider:SetMinMaxValues() end
+
+function Slider:SetMinResizingExtent() end
+
+function Slider:SetMinThumbLength() end
+
+function Slider:SetMoveAnimation() end
+
+function Slider:SetOrientation() end
+
+function Slider:SetPageStep() end
+
+function Slider:SetResizingBorderSize() end
+
+function Slider:SetRotation() end
+
+function Slider:SetScale() end
+
+function Slider:SetScaleAnimation() end
+
+function Slider:SetSounds() end
+
+function Slider:SetStartAnimation() end
+
+function Slider:SetText() end
+
+function Slider:SetThumbButtonWidget() end
+
+function Slider:SetValue() end
+
+function Slider:SetValueStep() end
+
+function Slider:SetWidth() end
+
+function Slider:Show() end
+
+function Slider:StartMoving() end
+
+function Slider:StartSizing() end
+
+function Slider:StopMovingOrSizing() end
+
+function Slider:TriggerMoveAnimation() end
+
+function Slider:Up() end
+
+function Slider:UseDynamicContentState() end
+
+function Slider:UseDynamicDrawableState() end
+
+function Slider:UseResizing() end

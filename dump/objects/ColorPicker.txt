@@ -1,0 +1,225 @@
+AP_BOTTOM = 8 -- objects/ColorPicker
+AP_BOTTOMLEFT = 2 -- objects/ColorPicker
+AP_BOTTOMRIGHT = 3 -- objects/ColorPicker
+AP_CENTER = 4 -- objects/ColorPicker
+AP_LEFT = 6 -- objects/ColorPicker
+AP_RIGHT = 7 -- objects/ColorPicker
+AP_TOP = 5 -- objects/ColorPicker
+AP_TOPLEFT = 0 -- objects/ColorPicker
+AP_TOPRIGHT = 1 -- objects/ColorPicker
+CT_ABILITY = 2 -- objects/ColorPicker
+CT_EXPEDITION_NAME = 3 -- objects/ColorPicker
+CT_NAME = 1 -- objects/ColorPicker
+ColorPicker = { -- objects/ColorPicker
+  __this = <userdata>, -- objects/ColorPicker
+} -- objects/ColorPicker
+DC_ALWAYS = 0 -- objects/ColorPicker
+DC_SHIFT_KEY_DOWN = 1 -- objects/ColorPicker
+
+function ColorPicker:AddAnchor() end
+
+function ColorPicker:ApplyUIScale() end
+
+function ColorPicker:AttachWidget() end
+
+function ColorPicker:BindWidth() end
+
+function ColorPicker:CancelRequestCharacterCacheData() end
+
+function ColorPicker:ChangeChildAnchorByScrollValue() end
+
+function ColorPicker:CheckOutOfScreen() end
+
+function ColorPicker:Clickable() end
+
+function ColorPicker:CorrectOffsetByScreen() end
+
+function ColorPicker:CreateChildWidget() end
+
+function ColorPicker:CreateChildWidgetByType() end
+
+function ColorPicker:CreateColorDrawable() end
+
+function ColorPicker:CreateColorDrawableByKey() end
+
+function ColorPicker:CreateDrawable() end
+
+function ColorPicker:CreateEffectDrawable() end
+
+function ColorPicker:CreateEffectDrawableByKey() end
+
+function ColorPicker:CreateIconDrawable() end
+
+function ColorPicker:CreateImageDrawable() end
+
+function ColorPicker:CreateNinePartDrawable() end
+
+function ColorPicker:CreateTextDrawable() end
+
+function ColorPicker:CreateThreeColorDrawable() end
+
+function ColorPicker:CreateThreePartDrawable() end
+
+function ColorPicker:DetachWidget() end
+
+function ColorPicker:DisableDrawables() end
+
+function ColorPicker:DisableDrawablesWithChildren() end
+
+function ColorPicker:Enable() end
+
+function ColorPicker:EnableDrag() end
+
+function ColorPicker:EnableDrawables() end
+
+function ColorPicker:EnableDrawablesWithChildren() end
+
+function ColorPicker:EnableFocus() end
+
+function ColorPicker:EnableHidingIsRemove() end
+
+function ColorPicker:EnableKeyboard() end
+
+function ColorPicker:EnablePick() end
+
+function ColorPicker:EnableScroll() end
+
+function ColorPicker:GetAlpha() end
+
+function ColorPicker:GetAttachedWidget() end
+
+function ColorPicker:GetColor() end
+
+function ColorPicker:GetEffectiveExtent() end
+
+function ColorPicker:GetEffectiveOffset() end
+
+function ColorPicker:GetExtent() end
+
+function ColorPicker:GetHeight() end
+
+function ColorPicker:GetId() end
+
+function ColorPicker:GetName() end
+
+function ColorPicker:GetObjectType() end
+
+function ColorPicker:GetOffset() end
+
+function ColorPicker:GetParent() end
+
+function ColorPicker:GetPoint() end
+
+function ColorPicker:GetRotation() end
+
+function ColorPicker:GetText() end
+
+function ColorPicker:GetUILayer() end
+
+function ColorPicker:GetValue() end
+
+function ColorPicker:GetWidth() end
+
+function ColorPicker:HasHandler() end
+
+function ColorPicker:InheritAnimationData() end
+
+function ColorPicker:IsDescendantWidget() end
+
+function ColorPicker:IsEnabled() end
+
+function ColorPicker:IsMouseOver() end
+
+function ColorPicker:IsNowAnimation() end
+
+function ColorPicker:IsValidUIObject() end
+
+function ColorPicker:IsVisible() end
+
+function ColorPicker:Lower() end
+
+function ColorPicker:MoveTo() end
+
+function ColorPicker:Raise() end
+
+function ColorPicker:RegisterEvent() end
+
+function ColorPicker:ReleaseDeletedHandler() end
+
+function ColorPicker:ReleaseHandler() end
+
+function ColorPicker:RemoveAllAnchors() end
+
+function ColorPicker:RemoveAllDrawables() end
+
+function ColorPicker:RemoveDrawable() end
+
+function ColorPicker:RequestCharacterCacheData() end
+
+function ColorPicker:SetAlpha() end
+
+function ColorPicker:SetAlphaAnimation() end
+
+function ColorPicker:SetCategory() end
+
+function ColorPicker:SetCharacterCacheDataHandler() end
+
+function ColorPicker:SetDelegator() end
+
+function ColorPicker:SetDeletedHandler() end
+
+function ColorPicker:SetDragCondition() end
+
+function ColorPicker:SetDrawPriority() end
+
+function ColorPicker:SetDrawableLayerAlpha() end
+
+function ColorPicker:SetExtent() end
+
+function ColorPicker:SetHandler() end
+
+function ColorPicker:SetHeight() end
+
+function ColorPicker:SetLText() end
+
+function ColorPicker:SetLayerColor() end
+
+function ColorPicker:SetMaxResizingExtent() end
+
+function ColorPicker:SetMinResizingExtent() end
+
+function ColorPicker:SetMoveAnimation() end
+
+function ColorPicker:SetPaletteImage() end
+
+function ColorPicker:SetResizingBorderSize() end
+
+function ColorPicker:SetRotation() end
+
+function ColorPicker:SetScale() end
+
+function ColorPicker:SetScaleAnimation() end
+
+function ColorPicker:SetSounds() end
+
+function ColorPicker:SetStartAnimation() end
+
+function ColorPicker:SetText() end
+
+function ColorPicker:SetWidth() end
+
+function ColorPicker:Show() end
+
+function ColorPicker:StartMoving() end
+
+function ColorPicker:StartSizing() end
+
+function ColorPicker:StopMovingOrSizing() end
+
+function ColorPicker:TriggerMoveAnimation() end
+
+function ColorPicker:UseDynamicContentState() end
+
+function ColorPicker:UseDynamicDrawableState() end
+
+function ColorPicker:UseResizing() end

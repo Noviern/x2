@@ -1,0 +1,257 @@
+AP_BOTTOM = 8 -- objects/ListCtrl
+AP_BOTTOMLEFT = 2 -- objects/ListCtrl
+AP_BOTTOMRIGHT = 3 -- objects/ListCtrl
+AP_CENTER = 4 -- objects/ListCtrl
+AP_LEFT = 6 -- objects/ListCtrl
+AP_RIGHT = 7 -- objects/ListCtrl
+AP_TOP = 5 -- objects/ListCtrl
+AP_TOPLEFT = 0 -- objects/ListCtrl
+AP_TOPRIGHT = 1 -- objects/ListCtrl
+CT_ABILITY = 2 -- objects/ListCtrl
+CT_EXPEDITION_NAME = 3 -- objects/ListCtrl
+CT_NAME = 1 -- objects/ListCtrl
+DC_ALWAYS = 0 -- objects/ListCtrl
+DC_SHIFT_KEY_DOWN = 1 -- objects/ListCtrl
+LCCIT_BUTTON = 1 -- objects/ListCtrl
+LCCIT_STRING = 0 -- objects/ListCtrl
+LCCIT_TEXTBOX = 3 -- objects/ListCtrl
+LCCIT_WINDOW = 2 -- objects/ListCtrl
+ListCtrl = { -- objects/ListCtrl
+  __this = <userdata>, -- objects/ListCtrl
+} -- objects/ListCtrl
+
+function ListCtrl:AddAnchor() end
+
+function ListCtrl:ApplyUIScale() end
+
+function ListCtrl:AttachWidget() end
+
+function ListCtrl:BindWidth() end
+
+function ListCtrl:CancelRequestCharacterCacheData() end
+
+function ListCtrl:ChangeChildAnchorByScrollValue() end
+
+function ListCtrl:CheckOutOfScreen() end
+
+function ListCtrl:ClearSelection() end
+
+function ListCtrl:Clickable() end
+
+function ListCtrl:CorrectOffsetByScreen() end
+
+function ListCtrl:CreateChildWidget() end
+
+function ListCtrl:CreateChildWidgetByType() end
+
+function ListCtrl:CreateColorDrawable() end
+
+function ListCtrl:CreateColorDrawableByKey() end
+
+function ListCtrl:CreateDrawable() end
+
+function ListCtrl:CreateEffectDrawable() end
+
+function ListCtrl:CreateEffectDrawableByKey() end
+
+function ListCtrl:CreateIconDrawable() end
+
+function ListCtrl:CreateImageDrawable() end
+
+function ListCtrl:CreateNinePartDrawable() end
+
+function ListCtrl:CreateOveredImage() end
+
+function ListCtrl:CreateSelectedImage() end
+
+function ListCtrl:CreateTextDrawable() end
+
+function ListCtrl:CreateThreeColorDrawable() end
+
+function ListCtrl:CreateThreePartDrawable() end
+
+function ListCtrl:DeleteAllDatas() end
+
+function ListCtrl:DeleteData() end
+
+function ListCtrl:DeleteDataByIndex() end
+
+function ListCtrl:DeleteRows() end
+
+function ListCtrl:DetachWidget() end
+
+function ListCtrl:DisableDrawables() end
+
+function ListCtrl:DisableDrawablesWithChildren() end
+
+function ListCtrl:Enable() end
+
+function ListCtrl:EnableDrag() end
+
+function ListCtrl:EnableDrawables() end
+
+function ListCtrl:EnableDrawablesWithChildren() end
+
+function ListCtrl:EnableFocus() end
+
+function ListCtrl:EnableHidingIsRemove() end
+
+function ListCtrl:EnableKeyboard() end
+
+function ListCtrl:EnablePick() end
+
+function ListCtrl:EnableScroll() end
+
+function ListCtrl:GetAlpha() end
+
+function ListCtrl:GetAttachedWidget() end
+
+function ListCtrl:GetEffectiveExtent() end
+
+function ListCtrl:GetEffectiveOffset() end
+
+function ListCtrl:GetExtent() end
+
+function ListCtrl:GetHeight() end
+
+function ListCtrl:GetId() end
+
+function ListCtrl:GetName() end
+
+function ListCtrl:GetObjectType() end
+
+function ListCtrl:GetOffset() end
+
+function ListCtrl:GetParent() end
+
+function ListCtrl:GetRotation() end
+
+function ListCtrl:GetSelectedIdx() end
+
+function ListCtrl:GetText() end
+
+function ListCtrl:GetUILayer() end
+
+function ListCtrl:GetValue() end
+
+function ListCtrl:GetWidth() end
+
+function ListCtrl:HasHandler() end
+
+function ListCtrl:InheritAnimationData() end
+
+function ListCtrl:InsertColumn() end
+
+function ListCtrl:InsertData() end
+
+function ListCtrl:InsertRows() end
+
+function ListCtrl:IsDescendantWidget() end
+
+function ListCtrl:IsEnabled() end
+
+function ListCtrl:IsMouseOver() end
+
+function ListCtrl:IsNowAnimation() end
+
+function ListCtrl:IsValidUIObject() end
+
+function ListCtrl:IsVisible() end
+
+function ListCtrl:Lower() end
+
+function ListCtrl:MoveTo() end
+
+function ListCtrl:Raise() end
+
+function ListCtrl:RegisterEvent() end
+
+function ListCtrl:ReleaseDeletedHandler() end
+
+function ListCtrl:ReleaseHandler() end
+
+function ListCtrl:RemoveAllAnchors() end
+
+function ListCtrl:RemoveAllDrawables() end
+
+function ListCtrl:RemoveDrawable() end
+
+function ListCtrl:RequestCharacterCacheData() end
+
+function ListCtrl:Select() end
+
+function ListCtrl:SetAlpha() end
+
+function ListCtrl:SetAlphaAnimation() end
+
+function ListCtrl:SetCategory() end
+
+function ListCtrl:SetCharacterCacheDataHandler() end
+
+function ListCtrl:SetColumnWidth() end
+
+function ListCtrl:SetDelegator() end
+
+function ListCtrl:SetDeletedHandler() end
+
+function ListCtrl:SetDragCondition() end
+
+function ListCtrl:SetDrawPriority() end
+
+function ListCtrl:SetDrawableLayerAlpha() end
+
+function ListCtrl:SetExtent() end
+
+function ListCtrl:SetHandler() end
+
+function ListCtrl:SetHeaderColumnHeight() end
+
+function ListCtrl:SetHeight() end
+
+function ListCtrl:SetLText() end
+
+function ListCtrl:SetLayerColor() end
+
+function ListCtrl:SetMaxResizingExtent() end
+
+function ListCtrl:SetMinResizingExtent() end
+
+function ListCtrl:SetMoveAnimation() end
+
+function ListCtrl:SetOveredImageOffset() end
+
+function ListCtrl:SetResizingBorderSize() end
+
+function ListCtrl:SetRotation() end
+
+function ListCtrl:SetScale() end
+
+function ListCtrl:SetScaleAnimation() end
+
+function ListCtrl:SetSelectedImageOffset() end
+
+function ListCtrl:SetSounds() end
+
+function ListCtrl:SetStartAnimation() end
+
+function ListCtrl:SetText() end
+
+function ListCtrl:SetUseDoubleClick() end
+
+function ListCtrl:SetWidth() end
+
+function ListCtrl:Show() end
+
+function ListCtrl:StartMoving() end
+
+function ListCtrl:StartSizing() end
+
+function ListCtrl:StopMovingOrSizing() end
+
+function ListCtrl:TriggerMoveAnimation() end
+
+function ListCtrl:UseDynamicContentState() end
+
+function ListCtrl:UseDynamicDrawableState() end
+
+function ListCtrl:UseResizing() end
