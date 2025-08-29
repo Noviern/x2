@@ -1,16 +1,16 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- object/EffectDrawable
-AP_BOTTOMLEFT = 2  -- object/EffectDrawable
-AP_BOTTOMRIGHT = 3 -- object/EffectDrawable
-AP_CENTER = 4      -- object/EffectDrawable
-AP_LEFT = 6        -- object/EffectDrawable
-AP_RIGHT = 7       -- object/EffectDrawable
-AP_TOP = 5         -- object/EffectDrawable
-AP_TOPLEFT = 0     -- object/EffectDrawable
-AP_TOPRIGHT = 1    -- object/EffectDrawable
+AP_BOTTOM = 8      -- objects/EffectDrawable
+AP_BOTTOMLEFT = 2  -- objects/EffectDrawable
+AP_BOTTOMRIGHT = 3 -- objects/EffectDrawable
+AP_CENTER = 4      -- objects/EffectDrawable
+AP_LEFT = 6        -- objects/EffectDrawable
+AP_RIGHT = 7       -- objects/EffectDrawable
+AP_TOP = 5         -- objects/EffectDrawable
+AP_TOPLEFT = 0     -- objects/EffectDrawable
+AP_TOPRIGHT = 1    -- objects/EffectDrawable
 
----object/EffectDrawable
+---objects/EffectDrawable
 ---@enum EFFECT_PRIORITY
 local EFFECT_PRIORITY = {
   ALPHA  = "alpha",
@@ -19,7 +19,7 @@ local EFFECT_PRIORITY = {
   COLORR = "colorr",
 }
 
----object/EffectDrawable
+---objects/EffectDrawable
 ---@enum MOVE_TYPE
 local MOVE_TYPE = {
   LEFT   = "left",
@@ -29,7 +29,7 @@ local MOVE_TYPE = {
   CIRCLE = "circle",
 }
 
----object/EffectDrawable
+---objects/EffectDrawable
 ---@class EffectDrawable: DrawableDDS
 local EffectDrawable = {}
 

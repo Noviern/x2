@@ -1,30 +1,30 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/ModelView
-AP_BOTTOMLEFT = 2      -- object/ModelView
-AP_BOTTOMRIGHT = 3     -- object/ModelView
-AP_CENTER = 4          -- object/ModelView
-AP_LEFT = 6            -- object/ModelView
-AP_RIGHT = 7           -- object/ModelView
-AP_TOP = 5             -- object/ModelView
-AP_TOPLEFT = 0         -- object/ModelView
-AP_TOPRIGHT = 1        -- object/ModelView
-CT_ABILITY = 2         -- object/ModelView
-CT_EXPEDITION_NAME = 3 -- object/ModelView
-CT_NAME = 1            -- object/ModelView
-DC_ALWAYS = 0          -- object/ModelView
-DC_SHIFT_KEY_DOWN = 1  -- object/ModelView
+AP_BOTTOM = 8          -- objects/ModelView
+AP_BOTTOMLEFT = 2      -- objects/ModelView
+AP_BOTTOMRIGHT = 3     -- objects/ModelView
+AP_CENTER = 4          -- objects/ModelView
+AP_LEFT = 6            -- objects/ModelView
+AP_RIGHT = 7           -- objects/ModelView
+AP_TOP = 5             -- objects/ModelView
+AP_TOPLEFT = 0         -- objects/ModelView
+AP_TOPRIGHT = 1        -- objects/ModelView
+CT_ABILITY = 2         -- objects/ModelView
+CT_EXPEDITION_NAME = 3 -- objects/ModelView
+CT_NAME = 1            -- objects/ModelView
+DC_ALWAYS = 0          -- objects/ModelView
+DC_SHIFT_KEY_DOWN = 1  -- objects/ModelView
 
 ---@TODO: RACE GENDER GLOBALS defined in X2Unit
 
----object/ModelView
+---objects/ModelView
 ---@class CustomizingHairDefaultColor
 ---@field defaultR number Basic Hair Color Red. (min: `0`, max: `255`)
 ---@field defaultG number Basic Hair Color Green. (min: `0`, max: `255`)
 ---@field defaultB number Basic Hair Color Blue. (min: `0`, max: `255`)
 ---@field index? number Old Hair @TODO: If this is set by default on the model then rgb cant be used and vice versa, needs more testing.
 
----object/ModelView
+---objects/ModelView
 ---@class CustomizingHairTwoToneColor
 ---@field twoToneR number Highlight Color Red. (min: `0`, max: `255`)
 ---@field twoToneG number Highlight Color Green. (min: `0`, max: `255`)
@@ -32,10 +32,10 @@ DC_SHIFT_KEY_DOWN = 1  -- object/ModelView
 ---@field firstWidth number Dye Length. (min: `0`, max: `1`)
 ---@field secondWidth number Highlights. (min: `0`, max: `1`)
 
----object/ModelView
+---objects/ModelView
 ---@class CustomHairColor: CustomizingHairDefaultColor, CustomizingHairTwoToneColor
 
----object/ModelView
+---objects/ModelView
 ---@enum EYE
 local EYE = {
   LEFT  = 1,
@@ -43,7 +43,7 @@ local EYE = {
   BOTH  = 3, -- LEFT, @TODO: Third eye maybe?
 }
 
----object/ModelView
+---objects/ModelView
 ---@enum (key) GENDER_ID
 local GENDER_ID = {
   [0] = "none",
@@ -51,7 +51,7 @@ local GENDER_ID = {
   [2] = "female",
 }
 
----object/ModelView
+---objects/ModelView
 ---@enum GENDER
 local GENDER = {
   [0] = "none",
@@ -59,7 +59,7 @@ local GENDER = {
   [2] = "female",
 }
 
----object/ModelView
+---objects/ModelView
 ---@enum (key) RACE_ID
 local RACE_ID = {
   [0] = "none",
@@ -74,7 +74,7 @@ local RACE_ID = {
   [9] = "daru",
 }
 
----object/ModelView
+---objects/ModelView
 ---@enum RACE
 local RACE = {
   [0] = "none",
@@ -89,7 +89,7 @@ local RACE = {
   [9] = "daru",
 }
 
----object/ModelView
+---objects/ModelView
 ---@enum BEAUTY_SHOP_ZOOM
 local BEAUTY_SHOP_ZOOM = {
   FIRST  = -1,
@@ -98,7 +98,7 @@ local BEAUTY_SHOP_ZOOM = {
   FOURTH = 2,
 }
 
----object/ModelView
+---objects/ModelView
 ---@class ModelView: Widget
 ---@class modelview: ModelView
 local ModelView = {}

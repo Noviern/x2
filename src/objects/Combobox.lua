@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Combobox
-AP_BOTTOMLEFT = 2      -- object/Combobox
-AP_BOTTOMRIGHT = 3     -- object/Combobox
-AP_CENTER = 4          -- object/Combobox
-AP_LEFT = 6            -- object/Combobox
-AP_RIGHT = 7           -- object/Combobox
-AP_TOP = 5             -- object/Combobox
-AP_TOPLEFT = 0         -- object/Combobox
-AP_TOPRIGHT = 1        -- object/Combobox
-CT_ABILITY = 2         -- object/Combobox
-CT_EXPEDITION_NAME = 3 -- object/Combobox
-CT_NAME = 1            -- object/Combobox
-DC_ALWAYS = 0          -- object/Combobox
-DC_SHIFT_KEY_DOWN = 1  -- object/Combobox
+AP_BOTTOM = 8          -- objects/Combobox
+AP_BOTTOMLEFT = 2      -- objects/Combobox
+AP_BOTTOMRIGHT = 3     -- objects/Combobox
+AP_CENTER = 4          -- objects/Combobox
+AP_LEFT = 6            -- objects/Combobox
+AP_RIGHT = 7           -- objects/Combobox
+AP_TOP = 5             -- objects/Combobox
+AP_TOPLEFT = 0         -- objects/Combobox
+AP_TOPRIGHT = 1        -- objects/Combobox
+CT_ABILITY = 2         -- objects/Combobox
+CT_EXPEDITION_NAME = 3 -- objects/Combobox
+CT_NAME = 1            -- objects/Combobox
+DC_ALWAYS = 0          -- objects/Combobox
+DC_SHIFT_KEY_DOWN = 1  -- objects/Combobox
 
----object/Combobox
+---objects/Combobox
 ---@enum AUTOCOMPLETE_TYPE
 local AUTOCOMPLETE_TYPE = {
   APPELLATION      = "appellation",
@@ -26,7 +26,7 @@ local AUTOCOMPLETE_TYPE = {
   STORE            = "store",
 }
 
----object/Combobox
+---objects/Combobox
 ---@enum AUTOCOMPLETE_FILTER
 local AUTOCOMPLETE_FILTER = {
   AUCTIONABLE   = "auctionable",
@@ -35,7 +35,7 @@ local AUTOCOMPLETE_FILTER = {
   EMPTY         = "",
 }
 
----object/Combobox
+---objects/Combobox
 ---@class Combobox: Widget
 ---@field dropdown ComboboxDropDown
 ---@field selector X2EditBox

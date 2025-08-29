@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/PaintColorPicker
-AP_BOTTOMLEFT = 2      -- object/PaintColorPicker
-AP_BOTTOMRIGHT = 3     -- object/PaintColorPicker
-AP_CENTER = 4          -- object/PaintColorPicker
-AP_LEFT = 6            -- object/PaintColorPicker
-AP_RIGHT = 7           -- object/PaintColorPicker
-AP_TOP = 5             -- object/PaintColorPicker
-AP_TOPLEFT = 0         -- object/PaintColorPicker
-AP_TOPRIGHT = 1        -- object/PaintColorPicker
-CT_ABILITY = 2         -- object/PaintColorPicker
-CT_EXPEDITION_NAME = 3 -- object/PaintColorPicker
-CT_NAME = 1            -- object/PaintColorPicker
-DC_ALWAYS = 0          -- object/PaintColorPicker
-DC_SHIFT_KEY_DOWN = 1  -- object/PaintColorPicker
+AP_BOTTOM = 8          -- objects/PaintColorPicker
+AP_BOTTOMLEFT = 2      -- objects/PaintColorPicker
+AP_BOTTOMRIGHT = 3     -- objects/PaintColorPicker
+AP_CENTER = 4          -- objects/PaintColorPicker
+AP_LEFT = 6            -- objects/PaintColorPicker
+AP_RIGHT = 7           -- objects/PaintColorPicker
+AP_TOP = 5             -- objects/PaintColorPicker
+AP_TOPLEFT = 0         -- objects/PaintColorPicker
+AP_TOPRIGHT = 1        -- objects/PaintColorPicker
+CT_ABILITY = 2         -- objects/PaintColorPicker
+CT_EXPEDITION_NAME = 3 -- objects/PaintColorPicker
+CT_NAME = 1            -- objects/PaintColorPicker
+DC_ALWAYS = 0          -- objects/PaintColorPicker
+DC_SHIFT_KEY_DOWN = 1  -- objects/PaintColorPicker
 
----object/PaintColorPicker
+---objects/PaintColorPicker
 ---@class PaintColorPicker: Widget
 ---@field luminanceWidget EmptyWidget
 ---@field spectrumWidget EmptyWidget

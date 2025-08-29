@@ -1,16 +1,16 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- object/ThreeColorDrawable
-AP_BOTTOMLEFT = 2  -- object/ThreeColorDrawable
-AP_BOTTOMRIGHT = 3 -- object/ThreeColorDrawable
-AP_CENTER = 4      -- object/ThreeColorDrawable
-AP_LEFT = 6        -- object/ThreeColorDrawable
-AP_RIGHT = 7       -- object/ThreeColorDrawable
-AP_TOP = 5         -- object/ThreeColorDrawable
-AP_TOPLEFT = 0     -- object/ThreeColorDrawable
-AP_TOPRIGHT = 1    -- object/ThreeColorDrawable
+AP_BOTTOM = 8      -- objects/ThreeColorDrawable
+AP_BOTTOMLEFT = 2  -- objects/ThreeColorDrawable
+AP_BOTTOMRIGHT = 3 -- objects/ThreeColorDrawable
+AP_CENTER = 4      -- objects/ThreeColorDrawable
+AP_LEFT = 6        -- objects/ThreeColorDrawable
+AP_RIGHT = 7       -- objects/ThreeColorDrawable
+AP_TOP = 5         -- objects/ThreeColorDrawable
+AP_TOPLEFT = 0     -- objects/ThreeColorDrawable
+AP_TOPRIGHT = 1    -- objects/ThreeColorDrawable
 
----object/ThreeColorDrawable
+---objects/ThreeColorDrawable
 ---@class ThreeColorDrawable: Drawablebase
 local ThreeColorDrawable = {}
 

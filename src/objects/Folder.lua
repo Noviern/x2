@@ -1,19 +1,19 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Folder
-AP_BOTTOMLEFT = 2      -- object/Folder
-AP_BOTTOMRIGHT = 3     -- object/Folder
-AP_CENTER = 4          -- object/Folder
-AP_LEFT = 6            -- object/Folder
-AP_RIGHT = 7           -- object/Folder
-AP_TOP = 5             -- object/Folder
-AP_TOPLEFT = 0         -- object/Folder
-AP_TOPRIGHT = 1        -- object/Folder
-CT_ABILITY = 2         -- object/Folder
-CT_EXPEDITION_NAME = 3 -- object/Folder
-CT_NAME = 1            -- object/Folder
-DC_ALWAYS = 0          -- object/Folder
-DC_SHIFT_KEY_DOWN = 1  -- object/Folder
+AP_BOTTOM = 8          -- objects/Folder
+AP_BOTTOMLEFT = 2      -- objects/Folder
+AP_BOTTOMRIGHT = 3     -- objects/Folder
+AP_CENTER = 4          -- objects/Folder
+AP_LEFT = 6            -- objects/Folder
+AP_RIGHT = 7           -- objects/Folder
+AP_TOP = 5             -- objects/Folder
+AP_TOPLEFT = 0         -- objects/Folder
+AP_TOPRIGHT = 1        -- objects/Folder
+CT_ABILITY = 2         -- objects/Folder
+CT_EXPEDITION_NAME = 3 -- objects/Folder
+CT_NAME = 1            -- objects/Folder
+DC_ALWAYS = 0          -- objects/Folder
+DC_SHIFT_KEY_DOWN = 1  -- objects/Folder
 
 ---@enum FOLDER_STATE
 local FOLDER_STATE = {
@@ -21,7 +21,7 @@ local FOLDER_STATE = {
   OPEN = "open",
 }
 
----object/Folder
+---objects/Folder
 ---@class Folder: Widget
 ---@field style TextStyle
 ---@class folder: Folder

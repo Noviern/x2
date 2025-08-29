@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Pageable
-AP_BOTTOMLEFT = 2      -- object/Pageable
-AP_BOTTOMRIGHT = 3     -- object/Pageable
-AP_CENTER = 4          -- object/Pageable
-AP_LEFT = 6            -- object/Pageable
-AP_RIGHT = 7           -- object/Pageable
-AP_TOP = 5             -- object/Pageable
-AP_TOPLEFT = 0         -- object/Pageable
-AP_TOPRIGHT = 1        -- object/Pageable
-CT_ABILITY = 2         -- object/Pageable
-CT_EXPEDITION_NAME = 3 -- object/Pageable
-CT_NAME = 1            -- object/Pageable
-DC_ALWAYS = 0          -- object/Pageable
-DC_SHIFT_KEY_DOWN = 1  -- object/Pageable
+AP_BOTTOM = 8          -- objects/Pageable
+AP_BOTTOMLEFT = 2      -- objects/Pageable
+AP_BOTTOMRIGHT = 3     -- objects/Pageable
+AP_CENTER = 4          -- objects/Pageable
+AP_LEFT = 6            -- objects/Pageable
+AP_RIGHT = 7           -- objects/Pageable
+AP_TOP = 5             -- objects/Pageable
+AP_TOPLEFT = 0         -- objects/Pageable
+AP_TOPRIGHT = 1        -- objects/Pageable
+CT_ABILITY = 2         -- objects/Pageable
+CT_EXPEDITION_NAME = 3 -- objects/Pageable
+CT_NAME = 1            -- objects/Pageable
+DC_ALWAYS = 0          -- objects/Pageable
+DC_SHIFT_KEY_DOWN = 1  -- objects/Pageable
 
----object/Pageable
+---objects/Pageable
 ---@class Pageable: Widget
 ---@class pageable: Pageable
 local Pageable = {}

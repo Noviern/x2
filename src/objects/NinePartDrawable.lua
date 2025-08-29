@@ -1,16 +1,16 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- object/NinePartDrawable
-AP_BOTTOMLEFT = 2  -- object/NinePartDrawable
-AP_BOTTOMRIGHT = 3 -- object/NinePartDrawable
-AP_CENTER = 4      -- object/NinePartDrawable
-AP_LEFT = 6        -- object/NinePartDrawable
-AP_RIGHT = 7       -- object/NinePartDrawable
-AP_TOP = 5         -- object/NinePartDrawable
-AP_TOPLEFT = 0     -- object/NinePartDrawable
-AP_TOPRIGHT = 1    -- object/NinePartDrawable
+AP_BOTTOM = 8      -- objects/NinePartDrawable
+AP_BOTTOMLEFT = 2  -- objects/NinePartDrawable
+AP_BOTTOMRIGHT = 3 -- objects/NinePartDrawable
+AP_CENTER = 4      -- objects/NinePartDrawable
+AP_LEFT = 6        -- objects/NinePartDrawable
+AP_RIGHT = 7       -- objects/NinePartDrawable
+AP_TOP = 5         -- objects/NinePartDrawable
+AP_TOPLEFT = 0     -- objects/NinePartDrawable
+AP_TOPRIGHT = 1    -- objects/NinePartDrawable
 
----object/NinePartDrawable
+---objects/NinePartDrawable
 ---@class NinePartDrawable: DrawableDDS
 local NinePartDrawable = {}
 

@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/DynamicList
-AP_BOTTOMLEFT = 2      -- object/DynamicList
-AP_BOTTOMRIGHT = 3     -- object/DynamicList
-AP_CENTER = 4          -- object/DynamicList
-AP_LEFT = 6            -- object/DynamicList
-AP_RIGHT = 7           -- object/DynamicList
-AP_TOP = 5             -- object/DynamicList
-AP_TOPLEFT = 0         -- object/DynamicList
-AP_TOPRIGHT = 1        -- object/DynamicList
-CT_ABILITY = 2         -- object/DynamicList
-CT_EXPEDITION_NAME = 3 -- object/DynamicList
-CT_NAME = 1            -- object/DynamicList
-DC_ALWAYS = 0          -- object/DynamicList
-DC_SHIFT_KEY_DOWN = 1  -- object/DynamicList
+AP_BOTTOM = 8          -- objects/DynamicList
+AP_BOTTOMLEFT = 2      -- objects/DynamicList
+AP_BOTTOMRIGHT = 3     -- objects/DynamicList
+AP_CENTER = 4          -- objects/DynamicList
+AP_LEFT = 6            -- objects/DynamicList
+AP_RIGHT = 7           -- objects/DynamicList
+AP_TOP = 5             -- objects/DynamicList
+AP_TOPLEFT = 0         -- objects/DynamicList
+AP_TOPRIGHT = 1        -- objects/DynamicList
+CT_ABILITY = 2         -- objects/DynamicList
+CT_EXPEDITION_NAME = 3 -- objects/DynamicList
+CT_NAME = 1            -- objects/DynamicList
+DC_ALWAYS = 0          -- objects/DynamicList
+DC_SHIFT_KEY_DOWN = 1  -- objects/DynamicList
 
----object/DynamicList
+---objects/DynamicList
 ---@class DynamicList: Widget
 ---@field content EmptyWidget TODO: This has a anchor field EmptyWidget
 ---@class dynamiclist: DynamicList

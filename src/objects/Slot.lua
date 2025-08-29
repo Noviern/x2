@@ -1,45 +1,45 @@
 ---@meta _
 
-AP_BOTTOM = 8                   -- object/Slot
-AP_BOTTOMLEFT = 2               -- object/Slot
-AP_BOTTOMRIGHT = 3              -- object/Slot
-AP_CENTER = 4                   -- object/Slot
-AP_LEFT = 6                     -- object/Slot
-AP_RIGHT = 7                    -- object/Slot
-AP_TOP = 5                      -- object/Slot
-AP_TOPLEFT = 0                  -- object/Slot
-AP_TOPRIGHT = 1                 -- object/Slot
-CT_ABILITY = 2                  -- object/Slot
-CT_EXPEDITION_NAME = 3          -- object/Slot
-CT_NAME = 1                     -- object/Slot
-DC_ALWAYS = 0                   -- object/Slot
-DC_SHIFT_KEY_DOWN = 1           -- object/Slot
-ISLOT_ABILITY_VIEW = 243        -- object/Slot
-ISLOT_ACTION = 254              -- object/Slot
-ISLOT_BAG = 2                   -- object/Slot
-ISLOT_BANK = 3                  -- object/Slot
-ISLOT_COFFER = 4                -- object/Slot
-ISLOT_CONSTANT = 249            -- object/Slot
-ISLOT_EQUIPMENT = 1             -- object/Slot
-ISLOT_GUILD_BANK = 33           -- object/Slot
-ISLOT_HEIR_SKILL_VIEW = 234     -- object/Slot
-ISLOT_INSTANT_KILL_STREAK = 244 -- object/Slot
-ISLOT_MODE_ACTION = 246         -- object/Slot
-ISLOT_ORIGIN_SKILL_VIEW = 233   -- object/Slot
-ISLOT_PET_BATTLE_ACTION = 239   -- object/Slot
-ISLOT_PET_RIDE_ACTION = 248     -- object/Slot
-ISLOT_PRELIMINARY_EQUIPMENT = 7 -- object/Slot
-ISLOT_SHORTCUT_ACTION = 235     -- object/Slot
-ISLOT_SKILL_ALERT = 232         -- object/Slot
-UI_BUTTON_DISABLED = 3          -- object/Slot
-UI_BUTTON_HIGHLIGHTED = 1       -- object/Slot
-UI_BUTTON_MAX = 4               -- object/Slot
-UI_BUTTON_NORMAL = 0            -- object/Slot
-UI_BUTTON_PUSHED = 2            -- object/Slot
+AP_BOTTOM = 8                   -- objects/Slot
+AP_BOTTOMLEFT = 2               -- objects/Slot
+AP_BOTTOMRIGHT = 3              -- objects/Slot
+AP_CENTER = 4                   -- objects/Slot
+AP_LEFT = 6                     -- objects/Slot
+AP_RIGHT = 7                    -- objects/Slot
+AP_TOP = 5                      -- objects/Slot
+AP_TOPLEFT = 0                  -- objects/Slot
+AP_TOPRIGHT = 1                 -- objects/Slot
+CT_ABILITY = 2                  -- objects/Slot
+CT_EXPEDITION_NAME = 3          -- objects/Slot
+CT_NAME = 1                     -- objects/Slot
+DC_ALWAYS = 0                   -- objects/Slot
+DC_SHIFT_KEY_DOWN = 1           -- objects/Slot
+ISLOT_ABILITY_VIEW = 243        -- objects/Slot
+ISLOT_ACTION = 254              -- objects/Slot
+ISLOT_BAG = 2                   -- objects/Slot
+ISLOT_BANK = 3                  -- objects/Slot
+ISLOT_COFFER = 4                -- objects/Slot
+ISLOT_CONSTANT = 249            -- objects/Slot
+ISLOT_EQUIPMENT = 1             -- objects/Slot
+ISLOT_GUILD_BANK = 33           -- objects/Slot
+ISLOT_HEIR_SKILL_VIEW = 234     -- objects/Slot
+ISLOT_INSTANT_KILL_STREAK = 244 -- objects/Slot
+ISLOT_MODE_ACTION = 246         -- objects/Slot
+ISLOT_ORIGIN_SKILL_VIEW = 233   -- objects/Slot
+ISLOT_PET_BATTLE_ACTION = 239   -- objects/Slot
+ISLOT_PET_RIDE_ACTION = 248     -- objects/Slot
+ISLOT_PRELIMINARY_EQUIPMENT = 7 -- objects/Slot
+ISLOT_SHORTCUT_ACTION = 235     -- objects/Slot
+ISLOT_SKILL_ALERT = 232         -- objects/Slot
+UI_BUTTON_DISABLED = 3          -- objects/Slot
+UI_BUTTON_HIGHLIGHTED = 1       -- objects/Slot
+UI_BUTTON_MAX = 4               -- objects/Slot
+UI_BUTTON_NORMAL = 0            -- objects/Slot
+UI_BUTTON_PUSHED = 2            -- objects/Slot
 
 ---@TODO: Should ITEM_GRADE_TYPE be moved to globals.lua and made a global? used also in Message.lua
 
----object/Slot
+---objects/Slot
 ---@enum ITEM_GRADE_TYPE
 local ITEM_GRADE_TYPE = {
   NONE      = 0, ---@TODO: In Message.lua this would be BASIC not NONE.
@@ -57,7 +57,7 @@ local ITEM_GRADE_TYPE = {
   ETERNAL   = 12,
 }
 
----object/Slot
+---objects/Slot
 ---@alias SLOT_TYPE
 ---| `ISLOT_ABILITY_VIEW`
 ---| `ISLOT_ACTION`
@@ -113,7 +113,7 @@ local BIND_TYPE = {
   FUNCTION    = "function",
 }
 
----object/Slot
+---objects/Slot
 ---@class Slot: Button
 ---@field cooltime_style TextStyle
 ---@field icon IconDrawable
@@ -179,7 +179,7 @@ function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 ---@see SLOT_TYPE
 function Slot:EstablishSkillSlot(slotType, slotIdx) end
 
----@TODO: Create overloads for each ISLOT? 
+---@TODO: Create overloads for each ISLOT?
 ---Establishes a slot with the specified type and index. Triggers the event `OnContentUpdated`.
 ---@param slotType SLOT_TYPE The type of the slot.
 ---@param slotIdx number The slot index.

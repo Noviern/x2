@@ -1,27 +1,27 @@
 ---@meta _
 
-AP_BOTTOM = 8           -- object/DamageDisplay
-AP_BOTTOMLEFT = 2       -- object/DamageDisplay
-AP_BOTTOMRIGHT = 3      -- object/DamageDisplay
-AP_CENTER = 4           -- object/DamageDisplay
-AP_LEFT = 6             -- object/DamageDisplay
-AP_RIGHT = 7            -- object/DamageDisplay
-AP_TOP = 5              -- object/DamageDisplay
-AP_TOPLEFT = 0          -- object/DamageDisplay
-AP_TOPRIGHT = 1         -- object/DamageDisplay
-CT_ABILITY = 2          -- object/DamageDisplay
-CT_EXPEDITION_NAME = 3  -- object/DamageDisplay
-CT_NAME = 1             -- object/DamageDisplay
-DC_ALWAYS = 0           -- object/DamageDisplay
-DC_SHIFT_KEY_DOWN = 1   -- object/DamageDisplay
-LAT_AFTERIMAGE = 4      -- object/DamageDisplay
-LAT_COUNT = 2           -- object/DamageDisplay
-LAT_LINEAR_DISPLAY = 16 -- object/DamageDisplay
-LAT_MOVE = 1            -- object/DamageDisplay
-LAT_NONE = 0            -- object/DamageDisplay
-LAT_SHAKE = 8           -- object/DamageDisplay
-PCT_DEFAULT = 0         -- object/DamageDisplay
-PCT_SHIP_COLLISION = 1  -- object/DamageDisplay
+AP_BOTTOM = 8           -- objects/DamageDisplay
+AP_BOTTOMLEFT = 2       -- objects/DamageDisplay
+AP_BOTTOMRIGHT = 3      -- objects/DamageDisplay
+AP_CENTER = 4           -- objects/DamageDisplay
+AP_LEFT = 6             -- objects/DamageDisplay
+AP_RIGHT = 7            -- objects/DamageDisplay
+AP_TOP = 5              -- objects/DamageDisplay
+AP_TOPLEFT = 0          -- objects/DamageDisplay
+AP_TOPRIGHT = 1         -- objects/DamageDisplay
+CT_ABILITY = 2          -- objects/DamageDisplay
+CT_EXPEDITION_NAME = 3  -- objects/DamageDisplay
+CT_NAME = 1             -- objects/DamageDisplay
+DC_ALWAYS = 0           -- objects/DamageDisplay
+DC_SHIFT_KEY_DOWN = 1   -- objects/DamageDisplay
+LAT_AFTERIMAGE = 4      -- objects/DamageDisplay
+LAT_COUNT = 2           -- objects/DamageDisplay
+LAT_LINEAR_DISPLAY = 16 -- objects/DamageDisplay
+LAT_MOVE = 1            -- objects/DamageDisplay
+LAT_NONE = 0            -- objects/DamageDisplay
+LAT_SHAKE = 8           -- objects/DamageDisplay
+PCT_DEFAULT = 0         -- objects/DamageDisplay
+PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay
 
 ---@alias LAT
 ---| `LAT_AFTERIMAGE`
@@ -32,7 +32,7 @@ PCT_SHIP_COLLISION = 1  -- object/DamageDisplay
 ---| `LAT_SHAKE`
 
 ---@TODO: each animType has it own fields
----object/DamageDisplay
+---objects/DamageDisplay
 ---
 ---May not be accurate.
 ---@class FrameInfo
@@ -49,12 +49,12 @@ PCT_SHIP_COLLISION = 1  -- object/DamageDisplay
 ---@field x? number
 ---@field y? number
 
----object/DamageDisplay
+---objects/DamageDisplay
 ---@alias PCT
 ---| `PCT_DEFAULT`
 ---| `PCT_SHIP_COLLISION`
 
----object/DamageDisplay
+---objects/DamageDisplay
 ---@class DamageDisplay: Widget
 ---@field extraStyle TextStyle
 ---@field style TextStyle

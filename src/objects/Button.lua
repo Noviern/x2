@@ -2,34 +2,34 @@
 
 ---@TODO: Drawablebase may not be correct, it may be DrawableDDS.
 
-AP_BOTTOM = 8             -- object/Button
-AP_BOTTOMLEFT = 2         -- object/Button
-AP_BOTTOMRIGHT = 3        -- object/Button
-AP_CENTER = 4             -- object/Button
-AP_LEFT = 6               -- object/Button
-AP_RIGHT = 7              -- object/Button
-AP_TOP = 5                -- object/Button
-AP_TOPLEFT = 0            -- object/Button
-AP_TOPRIGHT = 1           -- object/Button
-CT_ABILITY = 2            -- object/Button
-CT_EXPEDITION_NAME = 3    -- object/Button
-CT_NAME = 1               -- object/Button
-DC_ALWAYS = 0             -- object/Button
-DC_SHIFT_KEY_DOWN = 1     -- object/Button
-UI_BUTTON_DISABLED = 3    -- object/Button
-UI_BUTTON_HIGHLIGHTED = 1 -- object/Button
-UI_BUTTON_MAX = 4         -- object/Button The count of UI_BUTTON states.
-UI_BUTTON_NORMAL = 0      -- object/Button
-UI_BUTTON_PUSHED = 2      -- object/Button
+AP_BOTTOM = 8             -- objects/Button
+AP_BOTTOMLEFT = 2         -- objects/Button
+AP_BOTTOMRIGHT = 3        -- objects/Button
+AP_CENTER = 4             -- objects/Button
+AP_LEFT = 6               -- objects/Button
+AP_RIGHT = 7              -- objects/Button
+AP_TOP = 5                -- objects/Button
+AP_TOPLEFT = 0            -- objects/Button
+AP_TOPRIGHT = 1           -- objects/Button
+CT_ABILITY = 2            -- objects/Button
+CT_EXPEDITION_NAME = 3    -- objects/Button
+CT_NAME = 1               -- objects/Button
+DC_ALWAYS = 0             -- objects/Button
+DC_SHIFT_KEY_DOWN = 1     -- objects/Button
+UI_BUTTON_DISABLED = 3    -- objects/Button
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/Button
+UI_BUTTON_MAX = 4         -- objects/Button The count of UI_BUTTON states.
+UI_BUTTON_NORMAL = 0      -- objects/Button
+UI_BUTTON_PUSHED = 2      -- objects/Button
 
----object/Button
+---objects/Button
 ---@alias UI_BUTTON_STATE
 ---| `UI_BUTTON_NORMAL`
 ---| `UI_BUTTON_HIGHLIGHTED`
 ---| `UI_BUTTON_PUSHED`
 ---| `UI_BUTTON_DISABLED`
 
----object/Button
+---objects/Button
 ---@enum UI_BUTTON_STATE_TEXT
 local UI_BUTTON_STATE_TEXT = {
   NORMAL      = "NORMAL",
@@ -40,7 +40,7 @@ local UI_BUTTON_STATE_TEXT = {
 
 ---@TODO: Should RGBA be in Addon.lua?
 
----object/Button
+---objects/Button
 ---@class RGBA
 ---@field r number
 ---@field g number
@@ -293,7 +293,7 @@ local BUTTON_STYLE = {
   ZONE_PERMISSION_WAIT                = "zone_permission_wait",
 }
 
----object/Button
+---objects/Button
 ---@class Button: Widget
 ---@field style TextStyle
 ---@class button: Button

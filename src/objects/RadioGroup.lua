@@ -1,25 +1,25 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/RadioGroup
-AP_BOTTOMLEFT = 2      -- object/RadioGroup
-AP_BOTTOMRIGHT = 3     -- object/RadioGroup
-AP_CENTER = 4          -- object/RadioGroup
-AP_LEFT = 6            -- object/RadioGroup
-AP_RIGHT = 7           -- object/RadioGroup
-AP_TOP = 5             -- object/RadioGroup
-AP_TOPLEFT = 0         -- object/RadioGroup
-AP_TOPRIGHT = 1        -- object/RadioGroup
-CT_ABILITY = 2         -- object/RadioGroup
-CT_EXPEDITION_NAME = 3 -- object/RadioGroup
-CT_NAME = 1            -- object/RadioGroup
-DC_ALWAYS = 0          -- object/RadioGroup
-DC_SHIFT_KEY_DOWN = 1  -- object/RadioGroup
+AP_BOTTOM = 8          -- objects/RadioGroup
+AP_BOTTOMLEFT = 2      -- objects/RadioGroup
+AP_BOTTOMRIGHT = 3     -- objects/RadioGroup
+AP_CENTER = 4          -- objects/RadioGroup
+AP_LEFT = 6            -- objects/RadioGroup
+AP_RIGHT = 7           -- objects/RadioGroup
+AP_TOP = 5             -- objects/RadioGroup
+AP_TOPLEFT = 0         -- objects/RadioGroup
+AP_TOPRIGHT = 1        -- objects/RadioGroup
+CT_ABILITY = 2         -- objects/RadioGroup
+CT_EXPEDITION_NAME = 3 -- objects/RadioGroup
+CT_NAME = 1            -- objects/RadioGroup
+DC_ALWAYS = 0          -- objects/RadioGroup
+DC_SHIFT_KEY_DOWN = 1  -- objects/RadioGroup
 
----object/RadioGroup
+---objects/RadioGroup
 ---@class RadioItem: EmptyWidget
 ---@field check Checkbutton
 
----object/RadioGroup
+---objects/RadioGroup
 ---@class RadioGroup: Widget
 ---@field frame? RadioItem[]
 ---@class radiogroup: RadioGroup

@@ -1,19 +1,19 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/StatusBar
-AP_BOTTOMLEFT = 2      -- object/StatusBar
-AP_BOTTOMRIGHT = 3     -- object/StatusBar
-AP_CENTER = 4          -- object/StatusBar
-AP_LEFT = 6            -- object/StatusBar
-AP_RIGHT = 7           -- object/StatusBar
-AP_TOP = 5             -- object/StatusBar
-AP_TOPLEFT = 0         -- object/StatusBar
-AP_TOPRIGHT = 1        -- object/StatusBar
-CT_ABILITY = 2         -- object/StatusBar
-CT_EXPEDITION_NAME = 3 -- object/StatusBar
-CT_NAME = 1            -- object/StatusBar
-DC_ALWAYS = 0          -- object/StatusBar
-DC_SHIFT_KEY_DOWN = 1  -- object/StatusBar
+AP_BOTTOM = 8          -- objects/StatusBar
+AP_BOTTOMLEFT = 2      -- objects/StatusBar
+AP_BOTTOMRIGHT = 3     -- objects/StatusBar
+AP_CENTER = 4          -- objects/StatusBar
+AP_LEFT = 6            -- objects/StatusBar
+AP_RIGHT = 7           -- objects/StatusBar
+AP_TOP = 5             -- objects/StatusBar
+AP_TOPLEFT = 0         -- objects/StatusBar
+AP_TOPRIGHT = 1        -- objects/StatusBar
+CT_ABILITY = 2         -- objects/StatusBar
+CT_EXPEDITION_NAME = 3 -- objects/StatusBar
+CT_NAME = 1            -- objects/StatusBar
+DC_ALWAYS = 0          -- objects/StatusBar
+DC_SHIFT_KEY_DOWN = 1  -- objects/StatusBar
 
 ---@enum ORIENTATION
 local ORIENTATION = {
@@ -22,7 +22,7 @@ local ORIENTATION = {
   VERTICAL   = "VERTICAL",
 }
 
----object/StatusBar
+---objects/StatusBar
 ---@class StatusBar: Widget
 ---@class statusbar: StatusBar
 local StatusBar = {}

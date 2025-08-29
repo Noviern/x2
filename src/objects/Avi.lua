@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Avi
-AP_BOTTOMLEFT = 2      -- object/Avi
-AP_BOTTOMRIGHT = 3     -- object/Avi
-AP_CENTER = 4          -- object/Avi
-AP_LEFT = 6            -- object/Avi
-AP_RIGHT = 7           -- object/Avi
-AP_TOP = 5             -- object/Avi
-AP_TOPLEFT = 0         -- object/Avi
-AP_TOPRIGHT = 1        -- object/Avi
-CT_ABILITY = 2         -- object/Avi
-CT_EXPEDITION_NAME = 3 -- object/Avi
-CT_NAME = 1            -- object/Avi
-DC_ALWAYS = 0          -- object/Avi
-DC_SHIFT_KEY_DOWN = 1  -- object/Avi
+AP_BOTTOM = 8          -- objects/Avi
+AP_BOTTOMLEFT = 2      -- objects/Avi
+AP_BOTTOMRIGHT = 3     -- objects/Avi
+AP_CENTER = 4          -- objects/Avi
+AP_LEFT = 6            -- objects/Avi
+AP_RIGHT = 7           -- objects/Avi
+AP_TOP = 5             -- objects/Avi
+AP_TOPLEFT = 0         -- objects/Avi
+AP_TOPRIGHT = 1        -- objects/Avi
+CT_ABILITY = 2         -- objects/Avi
+CT_EXPEDITION_NAME = 3 -- objects/Avi
+CT_NAME = 1            -- objects/Avi
+DC_ALWAYS = 0          -- objects/Avi
+DC_SHIFT_KEY_DOWN = 1  -- objects/Avi
 
----object/Avi
+---objects/Avi
 ---@enum AVI_PATH
 local AVI_PATH = {
   ALL_01_RECRUIT        = "objects/machinima/avi/all_01_recruit.avi",
@@ -203,7 +203,7 @@ local AVI_PATH = {
   WB_08_PRAY            = "objects/machinima/avi/wb_08_pray.avi",
 }
 
----object/Avi
+---objects/Avi
 ---@class Avi: Widget
 ---@class avi: Avi
 local Avi = {}

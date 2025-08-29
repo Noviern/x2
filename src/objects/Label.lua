@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Label
-AP_BOTTOMLEFT = 2      -- object/Label
-AP_BOTTOMRIGHT = 3     -- object/Label
-AP_CENTER = 4          -- object/Label
-AP_LEFT = 6            -- object/Label
-AP_RIGHT = 7           -- object/Label
-AP_TOP = 5             -- object/Label
-AP_TOPLEFT = 0         -- object/Label
-AP_TOPRIGHT = 1        -- object/Label
-CT_ABILITY = 2         -- object/Label
-CT_EXPEDITION_NAME = 3 -- object/Label
-CT_NAME = 1            -- object/Label
-DC_ALWAYS = 0          -- object/Label
-DC_SHIFT_KEY_DOWN = 1  -- object/Label
+AP_BOTTOM = 8          -- objects/Label
+AP_BOTTOMLEFT = 2      -- objects/Label
+AP_BOTTOMRIGHT = 3     -- objects/Label
+AP_CENTER = 4          -- objects/Label
+AP_LEFT = 6            -- objects/Label
+AP_RIGHT = 7           -- objects/Label
+AP_TOP = 5             -- objects/Label
+AP_TOPLEFT = 0         -- objects/Label
+AP_TOPRIGHT = 1        -- objects/Label
+CT_ABILITY = 2         -- objects/Label
+CT_EXPEDITION_NAME = 3 -- objects/Label
+CT_NAME = 1            -- objects/Label
+DC_ALWAYS = 0          -- objects/Label
+DC_SHIFT_KEY_DOWN = 1  -- objects/Label
 
----object/Label
+---objects/Label
 ---@class Label: Widget
 ---@field style TextStyle
 ---@class label: Label

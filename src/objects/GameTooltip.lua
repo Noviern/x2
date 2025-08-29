@@ -1,32 +1,32 @@
 ---@meta _
 
-AP_BOTTOM = 8                   -- object/GameTooltip
-AP_BOTTOMLEFT = 2               -- object/GameTooltip
-AP_BOTTOMRIGHT = 3              -- object/GameTooltip
-AP_CENTER = 4                   -- object/GameTooltip
-AP_LEFT = 6                     -- object/GameTooltip
-AP_RIGHT = 7                    -- object/GameTooltip
-AP_TOP = 5                      -- object/GameTooltip
-AP_TOPLEFT = 0                  -- object/GameTooltip
-AP_TOPRIGHT = 1                 -- object/GameTooltip
-CT_ABILITY = 2                  -- object/GameTooltip
-CT_EXPEDITION_NAME = 3          -- object/GameTooltip
-CT_NAME = 1                     -- object/GameTooltip
-DC_ALWAYS = 0                   -- object/GameTooltip
-DC_SHIFT_KEY_DOWN = 1           -- object/GameTooltip
-UFT_CUPLABOR = "|p8;"           -- object/GameTooltip
-UFT_CURHP = "|p2;"              -- object/GameTooltip
-UFT_CURMP = "|p5;"              -- object/GameTooltip
-UFT_GEARSCORE = "|p12;"         -- object/GameTooltip
-UFT_MAXHP = "|p3;"              -- object/GameTooltip
-UFT_MAXLABOR = "|p9;"           -- object/GameTooltip
-UFT_MAXMP = "|p6;"              -- object/GameTooltip
-UFT_NAME = "|p1;"               -- object/GameTooltip
-UFT_PERHP = "|p4;"              -- object/GameTooltip
-UFT_PERIOD_LEADERSHIP = "|p13;" -- object/GameTooltip
-UFT_PERMP = "|p7;"              -- object/GameTooltip
-UFT_PVPHONOR = "|p10;"          -- object/GameTooltip
-UFT_PVPKILL = "|p11;"           -- object/GameTooltip
+AP_BOTTOM = 8                   -- objects/GameTooltip
+AP_BOTTOMLEFT = 2               -- objects/GameTooltip
+AP_BOTTOMRIGHT = 3              -- objects/GameTooltip
+AP_CENTER = 4                   -- objects/GameTooltip
+AP_LEFT = 6                     -- objects/GameTooltip
+AP_RIGHT = 7                    -- objects/GameTooltip
+AP_TOP = 5                      -- objects/GameTooltip
+AP_TOPLEFT = 0                  -- objects/GameTooltip
+AP_TOPRIGHT = 1                 -- objects/GameTooltip
+CT_ABILITY = 2                  -- objects/GameTooltip
+CT_EXPEDITION_NAME = 3          -- objects/GameTooltip
+CT_NAME = 1                     -- objects/GameTooltip
+DC_ALWAYS = 0                   -- objects/GameTooltip
+DC_SHIFT_KEY_DOWN = 1           -- objects/GameTooltip
+UFT_CUPLABOR = "|p8;"           -- objects/GameTooltip
+UFT_CURHP = "|p2;"              -- objects/GameTooltip
+UFT_CURMP = "|p5;"              -- objects/GameTooltip
+UFT_GEARSCORE = "|p12;"         -- objects/GameTooltip
+UFT_MAXHP = "|p3;"              -- objects/GameTooltip
+UFT_MAXLABOR = "|p9;"           -- objects/GameTooltip
+UFT_MAXMP = "|p6;"              -- objects/GameTooltip
+UFT_NAME = "|p1;"               -- objects/GameTooltip
+UFT_PERHP = "|p4;"              -- objects/GameTooltip
+UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/GameTooltip
+UFT_PERMP = "|p7;"              -- objects/GameTooltip
+UFT_PVPHONOR = "|p10;"          -- objects/GameTooltip
+UFT_PVPKILL = "|p11;"           -- objects/GameTooltip
 
 ---@enum LINE_ALIGN
 local LINE_ALIGN = {
@@ -34,7 +34,7 @@ local LINE_ALIGN = {
   right = "right"
 }
 
----object/GameTooltip
+---objects/GameTooltip
 ---@class GameTooltip: Widget
 ---@field style TextStyle
 ---@class gametooltip: GameTooltip

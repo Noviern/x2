@@ -1,37 +1,37 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/ListCtrl
-AP_BOTTOMLEFT = 2      -- object/ListCtrl
-AP_BOTTOMRIGHT = 3     -- object/ListCtrl
-AP_CENTER = 4          -- object/ListCtrl
-AP_LEFT = 6            -- object/ListCtrl
-AP_RIGHT = 7           -- object/ListCtrl
-AP_TOP = 5             -- object/ListCtrl
-AP_TOPLEFT = 0         -- object/ListCtrl
-AP_TOPRIGHT = 1        -- object/ListCtrl
-CT_ABILITY = 2         -- object/ListCtrl
-CT_EXPEDITION_NAME = 3 -- object/ListCtrl
-CT_NAME = 1            -- object/ListCtrl
-DC_ALWAYS = 0          -- object/ListCtrl
-DC_SHIFT_KEY_DOWN = 1  -- object/ListCtrl
-LCCIT_BUTTON = 1       -- object/ListCtrl
-LCCIT_STRING = 0       -- object/ListCtrl
-LCCIT_TEXTBOX = 3      -- object/ListCtrl
-LCCIT_WINDOW = 2       -- object/ListCtrl
+AP_BOTTOM = 8          -- objects/ListCtrl
+AP_BOTTOMLEFT = 2      -- objects/ListCtrl
+AP_BOTTOMRIGHT = 3     -- objects/ListCtrl
+AP_CENTER = 4          -- objects/ListCtrl
+AP_LEFT = 6            -- objects/ListCtrl
+AP_RIGHT = 7           -- objects/ListCtrl
+AP_TOP = 5             -- objects/ListCtrl
+AP_TOPLEFT = 0         -- objects/ListCtrl
+AP_TOPRIGHT = 1        -- objects/ListCtrl
+CT_ABILITY = 2         -- objects/ListCtrl
+CT_EXPEDITION_NAME = 3 -- objects/ListCtrl
+CT_NAME = 1            -- objects/ListCtrl
+DC_ALWAYS = 0          -- objects/ListCtrl
+DC_SHIFT_KEY_DOWN = 1  -- objects/ListCtrl
+LCCIT_BUTTON = 1       -- objects/ListCtrl
+LCCIT_STRING = 0       -- objects/ListCtrl
+LCCIT_TEXTBOX = 3      -- objects/ListCtrl
+LCCIT_WINDOW = 2       -- objects/ListCtrl
 
 ---ListCtrl Column Item Type
----object/ListCtrl
+---objects/ListCtrl
 ---@alias LCCIT
 ---| `LCCIT_BUTTON`
 ---| `LCCIT_STRING`
 ---| `LCCIT_TEXTBOX`
 ---| `LCCIT_WINDOW`
 
----object/ListCtrl
+---objects/ListCtrl
 ---@class ListCtrlItem: Window
 ---@field subItems Label[]
 
----object/ListCtrl
+---objects/ListCtrl
 ---@class ListCtrl: Widget
 ---@field column? Button[]
 ---@field items? ListCtrlItem[]

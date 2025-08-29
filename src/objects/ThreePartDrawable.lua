@@ -1,15 +1,15 @@
 ---@meta _
 
-AP_BOTTOM = 8 -- object/ThreePartDrawable
-AP_BOTTOMLEFT = 2 -- object/ThreePartDrawable
-AP_BOTTOMRIGHT = 3 -- object/ThreePartDrawable
-AP_CENTER = 4 -- object/ThreePartDrawable
-AP_LEFT = 6 -- object/ThreePartDrawable
-AP_RIGHT = 7 -- object/ThreePartDrawable
-AP_TOP = 5 -- object/ThreePartDrawable
-AP_TOPLEFT = 0 -- object/ThreePartDrawable
-AP_TOPRIGHT = 1 -- object/ThreePartDrawable
+AP_BOTTOM = 8      -- objects/ThreePartDrawable
+AP_BOTTOMLEFT = 2  -- objects/ThreePartDrawable
+AP_BOTTOMRIGHT = 3 -- objects/ThreePartDrawable
+AP_CENTER = 4      -- objects/ThreePartDrawable
+AP_LEFT = 6        -- objects/ThreePartDrawable
+AP_RIGHT = 7       -- objects/ThreePartDrawable
+AP_TOP = 5         -- objects/ThreePartDrawable
+AP_TOPLEFT = 0     -- objects/ThreePartDrawable
+AP_TOPRIGHT = 1    -- objects/ThreePartDrawable
 
----object/ThreePartDrawable
+---objects/ThreePartDrawable
 ---@class ThreePartDrawable: DrawableDDS
 local ThreePartDrawable = {}

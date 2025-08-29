@@ -1,24 +1,24 @@
 ---@meta _
 
-AP_BOTTOM = 8                  -- object/WorldMap
-AP_BOTTOMLEFT = 2              -- object/WorldMap
-AP_BOTTOMRIGHT = 3             -- object/WorldMap
-AP_CENTER = 4                  -- object/WorldMap
-AP_LEFT = 6                    -- object/WorldMap
-AP_RIGHT = 7                   -- object/WorldMap
-AP_TOP = 5                     -- object/WorldMap
-AP_TOPLEFT = 0                 -- object/WorldMap
-AP_TOPRIGHT = 1                -- object/WorldMap
-CT_ABILITY = 2                 -- object/WorldMap
-CT_EXPEDITION_NAME = 3         -- object/WorldMap
-CT_NAME = 1                    -- object/WorldMap
-DC_ALWAYS = 0                  -- object/WorldMap
-DC_SHIFT_KEY_DOWN = 1          -- object/WorldMap
-MAX_SKILL_MAP_EFFECT_COUNT = 6 -- object/WorldMap
+AP_BOTTOM = 8                  -- objects/WorldMap
+AP_BOTTOMLEFT = 2              -- objects/WorldMap
+AP_BOTTOMRIGHT = 3             -- objects/WorldMap
+AP_CENTER = 4                  -- objects/WorldMap
+AP_LEFT = 6                    -- objects/WorldMap
+AP_RIGHT = 7                   -- objects/WorldMap
+AP_TOP = 5                     -- objects/WorldMap
+AP_TOPLEFT = 0                 -- objects/WorldMap
+AP_TOPRIGHT = 1                -- objects/WorldMap
+CT_ABILITY = 2                 -- objects/WorldMap
+CT_EXPEDITION_NAME = 3         -- objects/WorldMap
+CT_NAME = 1                    -- objects/WorldMap
+DC_ALWAYS = 0                  -- objects/WorldMap
+DC_SHIFT_KEY_DOWN = 1          -- objects/WorldMap
+MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/WorldMap
 
 ---@TODO: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
 
----object/WorldMap
+---objects/WorldMap
 ---@enum ZONE_CLIMATE
 local ZONE_CLIMATE = {
   NONE      = 1,
@@ -27,7 +27,7 @@ local ZONE_CLIMATE = {
   SUBARCTIC = 4
 }
 
----object/WorldMap
+---objects/WorldMap
 ---@enum WORLD_MAP_ZOOM
 local WORLD_MAP_ZOOM = {
   WORLD     = 1,
@@ -36,7 +36,7 @@ local WORLD_MAP_ZOOM = {
   CITY      = 4,
 }
 
----object/WorldMap
+---objects/WorldMap
 ---@class WorldMap: Widget, Map
 ---@class worldmap: WorldMap
 local WorldMap = {}

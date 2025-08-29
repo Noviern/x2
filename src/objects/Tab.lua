@@ -1,19 +1,19 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Tab
-AP_BOTTOMLEFT = 2      -- object/Tab
-AP_BOTTOMRIGHT = 3     -- object/Tab
-AP_CENTER = 4          -- object/Tab
-AP_LEFT = 6            -- object/Tab
-AP_RIGHT = 7           -- object/Tab
-AP_TOP = 5             -- object/Tab
-AP_TOPLEFT = 0         -- object/Tab
-AP_TOPRIGHT = 1        -- object/Tab
-CT_ABILITY = 2         -- object/Tab
-CT_EXPEDITION_NAME = 3 -- object/Tab
-CT_NAME = 1            -- object/Tab
-DC_ALWAYS = 0          -- object/Tab
-DC_SHIFT_KEY_DOWN = 1  -- object/Tab
+AP_BOTTOM = 8          -- objects/Tab
+AP_BOTTOMLEFT = 2      -- objects/Tab
+AP_BOTTOMRIGHT = 3     -- objects/Tab
+AP_CENTER = 4          -- objects/Tab
+AP_LEFT = 6            -- objects/Tab
+AP_RIGHT = 7           -- objects/Tab
+AP_TOP = 5             -- objects/Tab
+AP_TOPLEFT = 0         -- objects/Tab
+AP_TOPRIGHT = 1        -- objects/Tab
+CT_ABILITY = 2         -- objects/Tab
+CT_EXPEDITION_NAME = 3 -- objects/Tab
+CT_NAME = 1            -- objects/Tab
+DC_ALWAYS = 0          -- objects/Tab
+DC_SHIFT_KEY_DOWN = 1  -- objects/Tab
 
 ---@enum TAB_CORNER
 local TAB_CORNER = {
@@ -23,7 +23,7 @@ local TAB_CORNER = {
   BOTTOMRIGHT = "BOTTOMRIGHT",
 }
 
----object/Tab
+---objects/Tab
 ---@class Tab: Widget, Tabbase
 ---@field selectedButton? Button[]
 ---@field unselectedButton? Button[]
@@ -44,7 +44,8 @@ local Tab = {}
 ---widget:AddNewTab("Tab 2", selectedButton, unselectedButton, window)
 ---```
 function Tab:AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget,
-                       windowWidget) end
+                       windowWidget)
+end
 
 ---Adds a simple tab with the specified name to the Tab, automatically creating
 ---`selectedButton`, `unselectedButton`, and `window` widgets stored as

@@ -1,33 +1,33 @@
 ---@meta _
 
-AP_BOTTOM = 8                   -- object/UnitframeTooltip
-AP_BOTTOMLEFT = 2               -- object/UnitframeTooltip
-AP_BOTTOMRIGHT = 3              -- object/UnitframeTooltip
-AP_CENTER = 4                   -- object/UnitframeTooltip
-AP_LEFT = 6                     -- object/UnitframeTooltip
-AP_RIGHT = 7                    -- object/UnitframeTooltip
-AP_TOP = 5                      -- object/UnitframeTooltip
-AP_TOPLEFT = 0                  -- object/UnitframeTooltip
-AP_TOPRIGHT = 1                 -- object/UnitframeTooltip
-CT_ABILITY = 2                  -- object/UnitframeTooltip
-CT_EXPEDITION_NAME = 3          -- object/UnitframeTooltip
-CT_NAME = 1                     -- object/UnitframeTooltip
-DC_ALWAYS = 0                   -- object/UnitframeTooltip
-DC_SHIFT_KEY_DOWN = 1           -- object/UnitframeTooltip
-UFT_CUPLABOR = "|p8;"           -- object/UnitframeTooltip
-UFT_CURHP = "|p2;"              -- object/UnitframeTooltip
-UFT_CURMP = "|p5;"              -- object/UnitframeTooltip
-UFT_GEARSCORE = "|p12;"         -- object/UnitframeTooltip
-UFT_MAXHP = "|p3;"              -- object/UnitframeTooltip
-UFT_MAXLABOR = "|p9;"           -- object/UnitframeTooltip
-UFT_MAXMP = "|p6;"              -- object/UnitframeTooltip
-UFT_NAME = "|p1;"               -- object/UnitframeTooltip
-UFT_PERHP = "|p4;"              -- object/UnitframeTooltip
-UFT_PERIOD_LEADERSHIP = "|p13;" -- object/UnitframeTooltip
-UFT_PERMP = "|p7;"              -- object/UnitframeTooltip
-UFT_PVPHONOR = "|p10;"          -- object/UnitframeTooltip
-UFT_PVPKILL = "|p11;"           -- object/UnitframeTooltip
+AP_BOTTOM = 8                   -- objects/UnitframeTooltip
+AP_BOTTOMLEFT = 2               -- objects/UnitframeTooltip
+AP_BOTTOMRIGHT = 3              -- objects/UnitframeTooltip
+AP_CENTER = 4                   -- objects/UnitframeTooltip
+AP_LEFT = 6                     -- objects/UnitframeTooltip
+AP_RIGHT = 7                    -- objects/UnitframeTooltip
+AP_TOP = 5                      -- objects/UnitframeTooltip
+AP_TOPLEFT = 0                  -- objects/UnitframeTooltip
+AP_TOPRIGHT = 1                 -- objects/UnitframeTooltip
+CT_ABILITY = 2                  -- objects/UnitframeTooltip
+CT_EXPEDITION_NAME = 3          -- objects/UnitframeTooltip
+CT_NAME = 1                     -- objects/UnitframeTooltip
+DC_ALWAYS = 0                   -- objects/UnitframeTooltip
+DC_SHIFT_KEY_DOWN = 1           -- objects/UnitframeTooltip
+UFT_CUPLABOR = "|p8;"           -- objects/UnitframeTooltip
+UFT_CURHP = "|p2;"              -- objects/UnitframeTooltip
+UFT_CURMP = "|p5;"              -- objects/UnitframeTooltip
+UFT_GEARSCORE = "|p12;"         -- objects/UnitframeTooltip
+UFT_MAXHP = "|p3;"              -- objects/UnitframeTooltip
+UFT_MAXLABOR = "|p9;"           -- objects/UnitframeTooltip
+UFT_MAXMP = "|p6;"              -- objects/UnitframeTooltip
+UFT_NAME = "|p1;"               -- objects/UnitframeTooltip
+UFT_PERHP = "|p4;"              -- objects/UnitframeTooltip
+UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/UnitframeTooltip
+UFT_PERMP = "|p7;"              -- objects/UnitframeTooltip
+UFT_PVPHONOR = "|p10;"          -- objects/UnitframeTooltip
+UFT_PVPKILL = "|p11;"           -- objects/UnitframeTooltip
 
----object/UnitframeTooltip
+---objects/UnitframeTooltip
 ---@class UnitframeTooltip: GameTooltip
 ---@class unitframetooltip: UnitframeTooltip

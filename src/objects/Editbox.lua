@@ -1,23 +1,23 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Editbox
-AP_BOTTOMLEFT = 2      -- object/Editbox
-AP_BOTTOMRIGHT = 3     -- object/Editbox
-AP_CENTER = 4          -- object/Editbox
-AP_LEFT = 6            -- object/Editbox
-AP_RIGHT = 7           -- object/Editbox
-AP_TOP = 5             -- object/Editbox
-AP_TOPLEFT = 0         -- object/Editbox
-AP_TOPRIGHT = 1        -- object/Editbox
-CT_ABILITY = 2         -- object/Editbox
-CT_EXPEDITION_NAME = 3 -- object/Editbox
-CT_NAME = 1            -- object/Editbox
-DC_ALWAYS = 0          -- object/Editbox
-DC_SHIFT_KEY_DOWN = 1  -- object/Editbox
+AP_BOTTOM = 8          -- objects/Editbox
+AP_BOTTOMLEFT = 2      -- objects/Editbox
+AP_BOTTOMRIGHT = 3     -- objects/Editbox
+AP_CENTER = 4          -- objects/Editbox
+AP_LEFT = 6            -- objects/Editbox
+AP_RIGHT = 7           -- objects/Editbox
+AP_TOP = 5             -- objects/Editbox
+AP_TOPLEFT = 0         -- objects/Editbox
+AP_TOPRIGHT = 1        -- objects/Editbox
+CT_ABILITY = 2         -- objects/Editbox
+CT_EXPEDITION_NAME = 3 -- objects/Editbox
+CT_NAME = 1            -- objects/Editbox
+DC_ALWAYS = 0          -- objects/Editbox
+DC_SHIFT_KEY_DOWN = 1  -- objects/Editbox
 
 ---@TODO: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
 
----object/Editbox
+---objects/Editbox
 ---@class Editbox: Widget, Editboxbase
 ---@field prefixStyle TextStyle
 ---@class editbox: Editbox

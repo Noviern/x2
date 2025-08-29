@@ -1,28 +1,28 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Slider
-AP_BOTTOMLEFT = 2      -- object/Slider
-AP_BOTTOMRIGHT = 3     -- object/Slider
-AP_CENTER = 4          -- object/Slider
-AP_LEFT = 6            -- object/Slider
-AP_RIGHT = 7           -- object/Slider
-AP_TOP = 5             -- object/Slider
-AP_TOPLEFT = 0         -- object/Slider
-AP_TOPRIGHT = 1        -- object/Slider
-CT_ABILITY = 2         -- object/Slider
-CT_EXPEDITION_NAME = 3 -- object/Slider
-CT_NAME = 1            -- object/Slider
-DC_ALWAYS = 0          -- object/Slider
-DC_SHIFT_KEY_DOWN = 1  -- object/Slider
+AP_BOTTOM = 8          -- objects/Slider
+AP_BOTTOMLEFT = 2      -- objects/Slider
+AP_BOTTOMRIGHT = 3     -- objects/Slider
+AP_CENTER = 4          -- objects/Slider
+AP_LEFT = 6            -- objects/Slider
+AP_RIGHT = 7           -- objects/Slider
+AP_TOP = 5             -- objects/Slider
+AP_TOPLEFT = 0         -- objects/Slider
+AP_TOPRIGHT = 1        -- objects/Slider
+CT_ABILITY = 2         -- objects/Slider
+CT_EXPEDITION_NAME = 3 -- objects/Slider
+CT_NAME = 1            -- objects/Slider
+DC_ALWAYS = 0          -- objects/Slider
+DC_SHIFT_KEY_DOWN = 1  -- objects/Slider
 
----object/Slider
+---objects/Slider
 ---@enum SLIDER_SCROLL_TYPE
 local SLIDER_SCROLL_TYPE = {
   VERTICAL   = 0,
   HORIZONTAL = 1,
 }
 
----object/Slider
+---objects/Slider
 ---@class Slider: Widget
 ---@class slider: Slider
 local Slider = {}

@@ -1,19 +1,19 @@
 ---@meta _
 
-AP_BOTTOM = 8        -- object/ImageDrawable
-AP_BOTTOMLEFT = 2    -- object/ImageDrawable
-AP_BOTTOMRIGHT = 3   -- object/ImageDrawable
-AP_CENTER = 4        -- object/ImageDrawable
-AP_LEFT = 6          -- object/ImageDrawable
-AP_RIGHT = 7         -- object/ImageDrawable
-AP_TOP = 5           -- object/ImageDrawable
-AP_TOPLEFT = 0       -- object/ImageDrawable
-AP_TOPRIGHT = 1      -- object/ImageDrawable
-DAT_LINEAR_ALPHA = 4 -- object/ImageDrawable
-DAT_LINEAR_SCALE = 2 -- object/ImageDrawable
-DAT_MOVE = 1         -- object/ImageDrawable
+AP_BOTTOM = 8        -- objects/ImageDrawable
+AP_BOTTOMLEFT = 2    -- objects/ImageDrawable
+AP_BOTTOMRIGHT = 3   -- objects/ImageDrawable
+AP_CENTER = 4        -- objects/ImageDrawable
+AP_LEFT = 6          -- objects/ImageDrawable
+AP_RIGHT = 7         -- objects/ImageDrawable
+AP_TOP = 5           -- objects/ImageDrawable
+AP_TOPLEFT = 0       -- objects/ImageDrawable
+AP_TOPRIGHT = 1      -- objects/ImageDrawable
+DAT_LINEAR_ALPHA = 4 -- objects/ImageDrawable
+DAT_LINEAR_SCALE = 2 -- objects/ImageDrawable
+DAT_MOVE = 1         -- objects/ImageDrawable
 
----object/ImageDrawable
+---objects/ImageDrawable
 ---@class ImageDrawable: DrawableDDS
 local ImageDrawable = {}
 

@@ -1,17 +1,17 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- object/ColorDrawable
-AP_BOTTOMLEFT = 2  -- object/ColorDrawable
-AP_BOTTOMRIGHT = 3 -- object/ColorDrawable
-AP_CENTER = 4      -- object/ColorDrawable
-AP_LEFT = 6        -- object/ColorDrawable
-AP_RIGHT = 7       -- object/ColorDrawable
-AP_TOP = 5         -- object/ColorDrawable
-AP_TOPLEFT = 0     -- object/ColorDrawable
-AP_TOPRIGHT = 1    -- object/ColorDrawable
+AP_BOTTOM = 8      -- objects/ColorDrawable
+AP_BOTTOMLEFT = 2  -- objects/ColorDrawable
+AP_BOTTOMRIGHT = 3 -- objects/ColorDrawable
+AP_CENTER = 4      -- objects/ColorDrawable
+AP_LEFT = 6        -- objects/ColorDrawable
+AP_RIGHT = 7       -- objects/ColorDrawable
+AP_TOP = 5         -- objects/ColorDrawable
+AP_TOPLEFT = 0     -- objects/ColorDrawable
+AP_TOPRIGHT = 1    -- objects/ColorDrawable
 
 ---@TODO: This is also used by Editboxbase:SetCursorColorByColorKey and Line:SetLineColorByKey so this needs to be renamed and moved.
----object/ColorDrawable
+---objects/ColorDrawable
 ---
 ---ui/setting/etc_color.g
 ---@enum ETC_COLOR
@@ -51,7 +51,7 @@ local ETC_COLOR = {
   WEB_BROWSER_BACKGROUND                  = "web_browser_background",
 }
 
----object/ColorDrawable
+---objects/ColorDrawable
 ---@class ColorDrawable: Drawablebase
 local ColorDrawable = {}
 

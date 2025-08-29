@@ -1,22 +1,22 @@
 ---@meta _
 
-AP_BOTTOM = 8                  -- object/RoadMap
-AP_BOTTOMLEFT = 2              -- object/RoadMap
-AP_BOTTOMRIGHT = 3             -- object/RoadMap
-AP_CENTER = 4                  -- object/RoadMap
-AP_LEFT = 6                    -- object/RoadMap
-AP_RIGHT = 7                   -- object/RoadMap
-AP_TOP = 5                     -- object/RoadMap
-AP_TOPLEFT = 0                 -- object/RoadMap
-AP_TOPRIGHT = 1                -- object/RoadMap
-CT_ABILITY = 2                 -- object/RoadMap
-CT_EXPEDITION_NAME = 3         -- object/RoadMap
-CT_NAME = 1                    -- object/RoadMap
-DC_ALWAYS = 0                  -- object/RoadMap
-DC_SHIFT_KEY_DOWN = 1          -- object/RoadMap
-MAX_SKILL_MAP_EFFECT_COUNT = 6 -- object/RoadMap
+AP_BOTTOM = 8                  -- objects/RoadMap
+AP_BOTTOMLEFT = 2              -- objects/RoadMap
+AP_BOTTOMRIGHT = 3             -- objects/RoadMap
+AP_CENTER = 4                  -- objects/RoadMap
+AP_LEFT = 6                    -- objects/RoadMap
+AP_RIGHT = 7                   -- objects/RoadMap
+AP_TOP = 5                     -- objects/RoadMap
+AP_TOPLEFT = 0                 -- objects/RoadMap
+AP_TOPRIGHT = 1                -- objects/RoadMap
+CT_ABILITY = 2                 -- objects/RoadMap
+CT_EXPEDITION_NAME = 3         -- objects/RoadMap
+CT_NAME = 1                    -- objects/RoadMap
+DC_ALWAYS = 0                  -- objects/RoadMap
+DC_SHIFT_KEY_DOWN = 1          -- objects/RoadMap
+MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/RoadMap
 
----object/RoadMap
+---objects/RoadMap
 ---@class RoadMap: Widget, Map
 ---@class roadmap: RoadMap
 local RoadMap = {}

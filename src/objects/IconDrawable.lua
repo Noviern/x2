@@ -1,16 +1,16 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- object/IconDrawable
-AP_BOTTOMLEFT = 2  -- object/IconDrawable
-AP_BOTTOMRIGHT = 3 -- object/IconDrawable
-AP_CENTER = 4      -- object/IconDrawable
-AP_LEFT = 6        -- object/IconDrawable
-AP_RIGHT = 7       -- object/IconDrawable
-AP_TOP = 5         -- object/IconDrawable
-AP_TOPLEFT = 0     -- object/IconDrawable
-AP_TOPRIGHT = 1    -- object/IconDrawable
+AP_BOTTOM = 8      -- objects/IconDrawable
+AP_BOTTOMLEFT = 2  -- objects/IconDrawable
+AP_BOTTOMRIGHT = 3 -- objects/IconDrawable
+AP_CENTER = 4      -- objects/IconDrawable
+AP_LEFT = 6        -- objects/IconDrawable
+AP_RIGHT = 7       -- objects/IconDrawable
+AP_TOP = 5         -- objects/IconDrawable
+AP_TOPLEFT = 0     -- objects/IconDrawable
+AP_TOPRIGHT = 1    -- objects/IconDrawable
 
----object/IconDrawable
+---objects/IconDrawable
 ---@class IconDrawable: Drawablebase
 local IconDrawable = {}
 

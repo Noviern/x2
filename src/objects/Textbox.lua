@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Textbox
-AP_BOTTOMLEFT = 2      -- object/Textbox
-AP_BOTTOMRIGHT = 3     -- object/Textbox
-AP_CENTER = 4          -- object/Textbox
-AP_LEFT = 6            -- object/Textbox
-AP_RIGHT = 7           -- object/Textbox
-AP_TOP = 5             -- object/Textbox
-AP_TOPLEFT = 0         -- object/Textbox
-AP_TOPRIGHT = 1        -- object/Textbox
-CT_ABILITY = 2         -- object/Textbox
-CT_EXPEDITION_NAME = 3 -- object/Textbox
-CT_NAME = 1            -- object/Textbox
-DC_ALWAYS = 0          -- object/Textbox
-DC_SHIFT_KEY_DOWN = 1  -- object/Textbox
+AP_BOTTOM = 8          -- objects/Textbox
+AP_BOTTOMLEFT = 2      -- objects/Textbox
+AP_BOTTOMRIGHT = 3     -- objects/Textbox
+AP_CENTER = 4          -- objects/Textbox
+AP_LEFT = 6            -- objects/Textbox
+AP_RIGHT = 7           -- objects/Textbox
+AP_TOP = 5             -- objects/Textbox
+AP_TOPLEFT = 0         -- objects/Textbox
+AP_TOPRIGHT = 1        -- objects/Textbox
+CT_ABILITY = 2         -- objects/Textbox
+CT_EXPEDITION_NAME = 3 -- objects/Textbox
+CT_NAME = 1            -- objects/Textbox
+DC_ALWAYS = 0          -- objects/Textbox
+DC_SHIFT_KEY_DOWN = 1  -- objects/Textbox
 
----object/Textbox
+---objects/Textbox
 ---@class Textbox: Widget
 ---@field style TextStyle
 ---@class textbox: Textbox

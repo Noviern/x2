@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Message
-AP_BOTTOMLEFT = 2      -- object/Message
-AP_BOTTOMRIGHT = 3     -- object/Message
-AP_CENTER = 4          -- object/Message
-AP_LEFT = 6            -- object/Message
-AP_RIGHT = 7           -- object/Message
-AP_TOP = 5             -- object/Message
-AP_TOPLEFT = 0         -- object/Message
-AP_TOPRIGHT = 1        -- object/Message
-CT_ABILITY = 2         -- object/Message
-CT_EXPEDITION_NAME = 3 -- object/Message
-CT_NAME = 1            -- object/Message
-DC_ALWAYS = 0          -- object/Message
-DC_SHIFT_KEY_DOWN = 1  -- object/Message
+AP_BOTTOM = 8          -- objects/Message
+AP_BOTTOMLEFT = 2      -- objects/Message
+AP_BOTTOMRIGHT = 3     -- objects/Message
+AP_CENTER = 4          -- objects/Message
+AP_LEFT = 6            -- objects/Message
+AP_RIGHT = 7           -- objects/Message
+AP_TOP = 5             -- objects/Message
+AP_TOPLEFT = 0         -- objects/Message
+AP_TOPRIGHT = 1        -- objects/Message
+CT_ABILITY = 2         -- objects/Message
+CT_EXPEDITION_NAME = 3 -- objects/Message
+CT_NAME = 1            -- objects/Message
+DC_ALWAYS = 0          -- objects/Message
+DC_SHIFT_KEY_DOWN = 1  -- objects/Message
 
----object/Message
+---objects/Message
 ---@enum LINKTYPE
 local LINKTYPE = {
   CHARACTER = "character",
@@ -29,52 +29,52 @@ local LINKTYPE = {
   URL       = "url",
 }
 
----object/Message
+---objects/Message
 ---@class BaseLinkInfo
 ---@field linkType LINKTYPE
 
----object/Message
+---objects/Message
 ---@class CommonLinkFields
 ---@field filter number
 ---@field isOtherWorld boolean
 ---@field messageTimeStamp number
 
----object/Message
+---objects/Message
 ---@class CharacterLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "character"
 
----object/Message
+---objects/Message
 ---@class CraftLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "craft"
 ---@field craftType number
 
----object/Message
+---objects/Message
 ---@class InvalidLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "invalid"
 
----object/Message
+---objects/Message
 ---@class ItemLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "item"
 ---@field itemGrade ITEM_GRADE_TYPE
 ---@field itemLinkText string
 ---@field linkKind number LINKKIND but as a number not a string
 
----object/Message
+---objects/Message
 ---@class NoneLinkInfo : BaseLinkInfo
 ---@field linkType "none"
 
----object/Message
+---objects/Message
 ---@class QuestLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "quest"
 ---@field questType number
 
----object/Message
+---objects/Message
 ---@class RaidLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "raid"
 ---@field createTime string
 ---@field ownerId string
 
----object/Message
+---objects/Message
 ---@class SquadLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "squad"
 ---@field battleFieldType number
@@ -82,13 +82,13 @@ local LINKTYPE = {
 ---@field squadId number
 ---@field zoneGroupType number
 
----object/Message
+---objects/Message
 ---@class UrlLinkInfo : BaseLinkInfo, CommonLinkFields
 ---@field linkType "url"
 ---@field addr string
 ---@field text string
 
----object/Message
+---objects/Message
 ---@class Message: Widget
 ---@field style TextStyle
 ---@class message: Message

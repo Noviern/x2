@@ -1,16 +1,16 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- object/TextDrawable
-AP_BOTTOMLEFT = 2  -- object/TextDrawable
-AP_BOTTOMRIGHT = 3 -- object/TextDrawable
-AP_CENTER = 4      -- object/TextDrawable
-AP_LEFT = 6        -- object/TextDrawable
-AP_RIGHT = 7       -- object/TextDrawable
-AP_TOP = 5         -- object/TextDrawable
-AP_TOPLEFT = 0     -- object/TextDrawable
-AP_TOPRIGHT = 1    -- object/TextDrawable
+AP_BOTTOM = 8      -- objects/TextDrawable
+AP_BOTTOMLEFT = 2  -- objects/TextDrawable
+AP_BOTTOMRIGHT = 3 -- objects/TextDrawable
+AP_CENTER = 4      -- objects/TextDrawable
+AP_LEFT = 6        -- objects/TextDrawable
+AP_RIGHT = 7       -- objects/TextDrawable
+AP_TOP = 5         -- objects/TextDrawable
+AP_TOPLEFT = 0     -- objects/TextDrawable
+AP_TOPRIGHT = 1    -- objects/TextDrawable
 
----object/TextDrawable
+---objects/TextDrawable
 ---@class TextDrawable: Drawablebase
 ---@field style TextStyle
 local TextDrawable = {}

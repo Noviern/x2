@@ -1,19 +1,19 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/Window
-AP_BOTTOMLEFT = 2      -- object/Window
-AP_BOTTOMRIGHT = 3     -- object/Window
-AP_CENTER = 4          -- object/Window
-AP_LEFT = 6            -- object/Window
-AP_RIGHT = 7           -- object/Window
-AP_TOP = 5             -- object/Window
-AP_TOPLEFT = 0         -- object/Window
-AP_TOPRIGHT = 1        -- object/Window
-CT_ABILITY = 2         -- object/Window
-CT_EXPEDITION_NAME = 3 -- object/Window
-CT_NAME = 1            -- object/Window
-DC_ALWAYS = 0          -- object/Window
-DC_SHIFT_KEY_DOWN = 1  -- object/Window
+AP_BOTTOM = 8          -- objects/Window
+AP_BOTTOMLEFT = 2      -- objects/Window
+AP_BOTTOMRIGHT = 3     -- objects/Window
+AP_CENTER = 4          -- objects/Window
+AP_LEFT = 6            -- objects/Window
+AP_RIGHT = 7           -- objects/Window
+AP_TOP = 5             -- objects/Window
+AP_TOPLEFT = 0         -- objects/Window
+AP_TOPRIGHT = 1        -- objects/Window
+CT_ABILITY = 2         -- objects/Window
+CT_EXPEDITION_NAME = 3 -- objects/Window
+CT_NAME = 1            -- objects/Window
+DC_ALWAYS = 0          -- objects/Window
+DC_SHIFT_KEY_DOWN = 1  -- objects/Window
 
 ---@enum UI_LAYER
 local UI_LAYER = {
@@ -27,7 +27,7 @@ local UI_LAYER = {
   TOOLTIP        = "tooltip",
 }
 
----object/Window
+---objects/Window
 ---@class Window: Widget
 ---@field modalBackgroundWindow EmptyWidget
 ---@field titleStyle TextStyle

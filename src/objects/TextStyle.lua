@@ -1,18 +1,18 @@
 ---@meta _
 
-ALIGN_BOTTOM = 7       -- object/TextStyle
-ALIGN_BOTTOM_LEFT = 6  -- object/TextStyle
-ALIGN_BOTTOM_RIGHT = 8 -- object/TextStyle
-ALIGN_CENTER = 4       -- object/TextStyle
-ALIGN_LEFT = 3         -- object/TextStyle
-ALIGN_RIGHT = 5        -- object/TextStyle
-ALIGN_TOP = 1          -- object/TextStyle
-ALIGN_TOP_LEFT = 0     -- object/TextStyle
-ALIGN_TOP_RIGHT = 2    -- object/TextStyle
-FTK_GENERAL = 0        -- object/TextStyle
-FTK_IMAGETEXT = 2      -- object/TextStyle
+ALIGN_BOTTOM = 7       -- objects/TextStyle
+ALIGN_BOTTOM_LEFT = 6  -- objects/TextStyle
+ALIGN_BOTTOM_RIGHT = 8 -- objects/TextStyle
+ALIGN_CENTER = 4       -- objects/TextStyle
+ALIGN_LEFT = 3         -- objects/TextStyle
+ALIGN_RIGHT = 5        -- objects/TextStyle
+ALIGN_TOP = 1          -- objects/TextStyle
+ALIGN_TOP_LEFT = 0     -- objects/TextStyle
+ALIGN_TOP_RIGHT = 2    -- objects/TextStyle
+FTK_GENERAL = 0        -- objects/TextStyle
+FTK_IMAGETEXT = 2      -- objects/TextStyle
 
----object/TextStyle
+---objects/TextStyle
 ---@alias TEXT_ALIGN
 ---| `ALIGN_BOTTOM`
 ---| `ALIGN_BOTTOM_LEFT`
@@ -28,7 +28,7 @@ FTK_IMAGETEXT = 2      -- object/TextStyle
 ---| `FTK_GENERAL`
 ---| `FTK_IMAGETEXT`
 
----object/TextStyle
+---objects/TextStyle
 ---@class TextStyle: Uiobject
 ---@class textstyle: TextStyle
 local TextStyle = {}

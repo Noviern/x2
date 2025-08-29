@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/EditboxMultiline
-AP_BOTTOMLEFT = 2      -- object/EditboxMultiline
-AP_BOTTOMRIGHT = 3     -- object/EditboxMultiline
-AP_CENTER = 4          -- object/EditboxMultiline
-AP_LEFT = 6            -- object/EditboxMultiline
-AP_RIGHT = 7           -- object/EditboxMultiline
-AP_TOP = 5             -- object/EditboxMultiline
-AP_TOPLEFT = 0         -- object/EditboxMultiline
-AP_TOPRIGHT = 1        -- object/EditboxMultiline
-CT_ABILITY = 2         -- object/EditboxMultiline
-CT_EXPEDITION_NAME = 3 -- object/EditboxMultiline
-CT_NAME = 1            -- object/EditboxMultiline
-DC_ALWAYS = 0          -- object/EditboxMultiline
-DC_SHIFT_KEY_DOWN = 1  -- object/EditboxMultiline
+AP_BOTTOM = 8          -- objects/EditboxMultiline
+AP_BOTTOMLEFT = 2      -- objects/EditboxMultiline
+AP_BOTTOMRIGHT = 3     -- objects/EditboxMultiline
+AP_CENTER = 4          -- objects/EditboxMultiline
+AP_LEFT = 6            -- objects/EditboxMultiline
+AP_RIGHT = 7           -- objects/EditboxMultiline
+AP_TOP = 5             -- objects/EditboxMultiline
+AP_TOPLEFT = 0         -- objects/EditboxMultiline
+AP_TOPRIGHT = 1        -- objects/EditboxMultiline
+CT_ABILITY = 2         -- objects/EditboxMultiline
+CT_EXPEDITION_NAME = 3 -- objects/EditboxMultiline
+CT_NAME = 1            -- objects/EditboxMultiline
+DC_ALWAYS = 0          -- objects/EditboxMultiline
+DC_SHIFT_KEY_DOWN = 1  -- objects/EditboxMultiline
 
----object/EditboxMultiline
+---objects/EditboxMultiline
 ---@class EditboxMultiline: Widget, Editboxbase
 ---@class editboxmultiline: EditboxMultiline
 local EditboxMultiline = {}

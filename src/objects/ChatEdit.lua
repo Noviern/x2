@@ -1,23 +1,23 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/ChatEdit
-AP_BOTTOMLEFT = 2      -- object/ChatEdit
-AP_BOTTOMRIGHT = 3     -- object/ChatEdit
-AP_CENTER = 4          -- object/ChatEdit
-AP_LEFT = 6            -- object/ChatEdit
-AP_RIGHT = 7           -- object/ChatEdit
-AP_TOP = 5             -- object/ChatEdit
-AP_TOPLEFT = 0         -- object/ChatEdit
-AP_TOPRIGHT = 1        -- object/ChatEdit
-CT_ABILITY = 2         -- object/ChatEdit
-CT_EXPEDITION_NAME = 3 -- object/ChatEdit
-CT_NAME = 1            -- object/ChatEdit
-DC_ALWAYS = 0          -- object/ChatEdit
-DC_SHIFT_KEY_DOWN = 1  -- object/ChatEdit
+AP_BOTTOM = 8          -- objects/ChatEdit
+AP_BOTTOMLEFT = 2      -- objects/ChatEdit
+AP_BOTTOMRIGHT = 3     -- objects/ChatEdit
+AP_CENTER = 4          -- objects/ChatEdit
+AP_LEFT = 6            -- objects/ChatEdit
+AP_RIGHT = 7           -- objects/ChatEdit
+AP_TOP = 5             -- objects/ChatEdit
+AP_TOPLEFT = 0         -- objects/ChatEdit
+AP_TOPRIGHT = 1        -- objects/ChatEdit
+CT_ABILITY = 2         -- objects/ChatEdit
+CT_EXPEDITION_NAME = 3 -- objects/ChatEdit
+CT_NAME = 1            -- objects/ChatEdit
+DC_ALWAYS = 0          -- objects/ChatEdit
+DC_SHIFT_KEY_DOWN = 1  -- objects/ChatEdit
 
 -- @field SetChatTypeColor fun(self: self, chatType, r: number, g: number, b: number, a: number) ---@TODO: This does not exist.
 
----object/ChatEdit
+---objects/ChatEdit
 ---@class ChatEdit
 local ChatEdit = {}
 

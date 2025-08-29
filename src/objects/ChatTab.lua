@@ -1,21 +1,21 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- object/ChatTab
-AP_BOTTOMLEFT = 2      -- object/ChatTab
-AP_BOTTOMRIGHT = 3     -- object/ChatTab
-AP_CENTER = 4          -- object/ChatTab
-AP_LEFT = 6            -- object/ChatTab
-AP_RIGHT = 7           -- object/ChatTab
-AP_TOP = 5             -- object/ChatTab
-AP_TOPLEFT = 0         -- object/ChatTab
-AP_TOPRIGHT = 1        -- object/ChatTab
-CT_ABILITY = 2         -- object/ChatTab
-CT_EXPEDITION_NAME = 3 -- object/ChatTab
-CT_NAME = 1            -- object/ChatTab
-DC_ALWAYS = 0          -- object/ChatTab
-DC_SHIFT_KEY_DOWN = 1  -- object/ChatTab
+AP_BOTTOM = 8          -- objects/ChatTab
+AP_BOTTOMLEFT = 2      -- objects/ChatTab
+AP_BOTTOMRIGHT = 3     -- objects/ChatTab
+AP_CENTER = 4          -- objects/ChatTab
+AP_LEFT = 6            -- objects/ChatTab
+AP_RIGHT = 7           -- objects/ChatTab
+AP_TOP = 5             -- objects/ChatTab
+AP_TOPLEFT = 0         -- objects/ChatTab
+AP_TOPRIGHT = 1        -- objects/ChatTab
+CT_ABILITY = 2         -- objects/ChatTab
+CT_EXPEDITION_NAME = 3 -- objects/ChatTab
+CT_NAME = 1            -- objects/ChatTab
+DC_ALWAYS = 0          -- objects/ChatTab
+DC_SHIFT_KEY_DOWN = 1  -- objects/ChatTab
 
----object/ChatTab
+---objects/ChatTab
 ---@class ChatWindow: Widget, Tabbase
 ---@class chatwindow: ChatWindow
 local ChatWindow = {}
