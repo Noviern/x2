@@ -161,7 +161,7 @@ local LOCALE = {
 ---@return KEYBOARD_LAYOUT keyboardLayout The current keyboard layout.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local keyboardLayout = X2Locale:GetKeyboardLayout()
 ---```
 ---@see KEYBOARD_LAYOUT
@@ -171,7 +171,7 @@ function X2Locale:GetKeyboardLayout() end
 ---@return LOCALE locale The current locale.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local locale = X2Locale:GetLocale()
 ---```
 ---@see LOCALE
@@ -181,7 +181,7 @@ function X2Locale:GetLocale() end
 ---@return LOCALE_INDEX localeIndex The locale index.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local localeIndex = X2Locale:GetLocaleIndex()
 ---```
 ---@see LOCALE_INDEX
@@ -193,7 +193,7 @@ function X2Locale:GetLocaleIndex() end
 ---@return boolean localizeUiText `true` if the localization exists, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local localizeUiText = X2Locale:HasLocalizeUiText(MONEY_TEXT, "silver")
 ---```
 ---@see UI_TEXT_CATEGORY_ID
@@ -208,7 +208,7 @@ function X2Locale:LocalizeFormatUiText() end
 ---@return string localizedText The localized text with placeholders replaced.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local localizedText = X2Locale:LocalizeNonUiText("$1 - the $1 ArcheAge Private Server", "Archerage.to", "first")
 ----- Archerage.to - the first ArcheAge Private Server
 ---```
@@ -222,7 +222,7 @@ function X2Locale:LocalizeNonUiText(text, ...) end
 ---@return string localizedUiText The localized UI text.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local localizedUiText = X2Locale:LocalizeUiText(MONEY_TEXT, "silver", tostring(50))
 ----- 50 Silver
 ---```

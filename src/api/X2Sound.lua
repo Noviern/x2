@@ -8,7 +8,7 @@ X2Sound = {} -- api/X2Sound
 ---@return boolean playing `true` if the sound is playing, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local soundId = X2Sound:PlayUISound("battlefield_1_secound")
 ---local playing = X2Sound:IsPlaying(soundId)
 ---```
@@ -24,7 +24,7 @@ function X2Sound:PlayMusic(soundPackItemName) end
 ---@param duplicable? boolean If true, allows the sound to play multiple times concurrently; defaults to false.
 ---@return number soundId The ID of the sound instance.
 ---@usage
----```
+---```lua
 ---local soundId = X2Sound:PlayUISound("battlefield_1_secound")
 ---```
 ---@see SOUND_NAME
@@ -32,7 +32,7 @@ function X2Sound:PlayUISound(soundName, duplicable) end
 
 ---Stops the currently playing music.
 ---@usage
----```
+---```lua
 ---X2Sound:StopMusic()
 ---```
 function X2Sound:StopMusic() end
@@ -40,7 +40,7 @@ function X2Sound:StopMusic() end
 ---Stops the sound instance with the specified ID.
 ---@param soundId number The ID of the sound to stop.
 ---@usage
----```
+---```lua
 ---local soundId = X2Sound:PlayUISound("battlefield_1_secound")
 ---X2Sound:StopSound(soundId)
 ---```

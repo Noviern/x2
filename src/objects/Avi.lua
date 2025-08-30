@@ -211,7 +211,7 @@ local Avi = {}
 ---Sets the AVI file to be used by the widget.
 ---@param fileName AVI_PATH The path to the AVI file.
 ---@usage
----```
+---```lua
 ---widget:SetAviName("objects/machinima/avi/ci.avi")
 ---```
 function Avi:SetAviName(fileName) end

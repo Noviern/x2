@@ -48,15 +48,13 @@ local GameTooltip = {}
 ---@param textAlign TEXT_ALIGN The text alignment.
 ---@param indentation number The indentation for the text.
 ---@usage
----```
+---```lua
 ---widget:AddAnotherSideLine(index, " - the first ArcheAge Private Server", FONT_PATH.DEFAULT, FONT_SIZE.DEFAULT, ALIGN_RIGHT, 0)
 ---```
 ---@see FONT_PATH
 ---@see FONT_SIZE
 ---@see TEXT_ALIGN
-function GameTooltip:AddAnotherSideLine(index, text, fontPath, fontSize,
-                                        textAlign, indentation)
-end
+function GameTooltip:AddAnotherSideLine(index, text, fontPath, fontSize, textAlign, indentation) end
 
 ---Adds a new line to the GameTooltip and returns its index.
 ---@param text string The text to add.
@@ -67,22 +65,20 @@ end
 ---@param indentation number The indentation for the text.
 ---@return number index The index of the added line. (Starts at `0`)
 ---@usage
----```
+---```lua
 ---local index = widget:AddLine("Archerage.to", FONT_PATH.DEFAULT, FONT_SIZE.DEFAULT, "left", ALIGN_LEFT, 0)
 ---```
 ---@see FONT_PATH
 ---@see FONT_SIZE
 ---@see LINE_ALIGN
 ---@see TEXT_ALIGN
-function GameTooltip:AddLine(text, fontPath, fontSize, align, textAlign,
-                             indentation)
-end
+function GameTooltip:AddLine(text, fontPath, fontSize, align, textAlign, indentation) end
 
 ---Attaches a lower space to the specified line in the GameTooltip.
 ---@param index number The line index to attach the space to.
 ---@param height number The height of the lower space.
 ---@usage
----```
+---```lua
 ---widget:AttachLowerSpaceLine(0, 100)
 ---```
 function GameTooltip:AttachLowerSpaceLine(index, height) end
@@ -91,14 +87,14 @@ function GameTooltip:AttachLowerSpaceLine(index, height) end
 ---@param index number The line index to attach the space to.
 ---@param height number The height of the upper space.
 ---@usage
----```
+---```lua
 ---widget:AttachUpperSpaceLine(0, 100)
 ---```
 function GameTooltip:AttachUpperSpaceLine(index, height) end
 
 ---Clears all lines from the GameTooltip.
 ---@usage
----```
+---```lua
 ---widget:ClearLines()
 ---```
 function GameTooltip:ClearLines() end
@@ -110,7 +106,7 @@ function GameTooltip:ClearLines() end
 ---@return number heightIncludeSpace The height of the last line including spacing.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local heightOnlyLine, heightIncludeSpace = widget:GetHeightToLastLine()
 ---```
 function GameTooltip:GetHeightToLastLine() end
@@ -119,7 +115,7 @@ function GameTooltip:GetHeightToLastLine() end
 ---@return number lastLine The index of the last line. (min: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:GetLastLine()
 ---```
 function GameTooltip:GetLastLine() end
@@ -128,7 +124,7 @@ function GameTooltip:GetLastLine() end
 ---@return number lineCount The number of lines.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lineCount = widget:GetLineCount()
 ---```
 function GameTooltip:GetLineCount() end
@@ -137,7 +133,7 @@ function GameTooltip:GetLineCount() end
 ---@return number lineSpace The line spacing value.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lineSpace = widget:GetLineSpace()
 ---```
 function GameTooltip:GetLineSpace() end
@@ -146,7 +142,7 @@ function GameTooltip:GetLineSpace() end
 ---before `GameTooltip:AddLine`).
 ---@param wrap boolean `true` to enable word wrap, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetAutoWordwrap(true)
 ---```
 function GameTooltip:SetAutoWordwrap(wrap) end
@@ -157,7 +153,7 @@ function GameTooltip:SetAutoWordwrap(wrap) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetInset(10, 10, 10, 10)
 ---```
 function GameTooltip:SetInset(left, top, right, bottom) end
@@ -166,7 +162,7 @@ function GameTooltip:SetInset(left, top, right, bottom) end
 ---`GameTooltip:AddLine`).
 ---@param space TEXTBOX_LINE_SPACE|number The line spacing value.
 ---@usage
----```
+---```lua
 ---widget:GetLineSpace()
 ---```
 ---@see TEXTBOX_LINE_SPACE

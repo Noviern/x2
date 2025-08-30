@@ -188,7 +188,7 @@ X2Map = {}                                -- api/X2Map
 ---@return ZoneStateInfo|nil zoneStateInfo The zone state information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local zoneStateInfo = X2Map:GetZoneStateInfoByZoneId(1)
 ---```
 ---@see ZONE_ID

@@ -35,14 +35,14 @@ local EffectDrawable = {}
 
 ---Clears all effects from the EffectDrawable.
 ---@usage
----```
+---```lua
 ---drawable:ClearEffect()
 ---```
 function EffectDrawable:ClearEffect() end
 
 ---Clears all move effects from the EffectDrawable.
 ---@usage
----```
+---```lua
 ---drawable:ClearMoveEffect()
 ---```
 function EffectDrawable:ClearMoveEffect() end
@@ -51,7 +51,7 @@ function EffectDrawable:ClearMoveEffect() end
 ---@return boolean running `true` if the effect is running, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local running = drawable:IsRunning()
 ---```
 function EffectDrawable:IsRunning() end
@@ -60,7 +60,7 @@ function EffectDrawable:IsRunning() end
 ---@param phase number The effect phase. (min: `1`)
 ---@param needClip boolean `true` to enable clipping, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---drawable:SetEffectClip(1, true)
 ---```
 function EffectDrawable:SetEffectClip(phase, needClip) end
@@ -72,7 +72,7 @@ function EffectDrawable:SetEffectClip(phase, needClip) end
 ---@param finalB number The blue color component. (min: `0`, max: `1`)
 ---@param finalA number The alpha (opacity) component. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---drawable:SetEffectFinalColor(1, 0, 0, 1, 1)
 ---```
 function EffectDrawable:SetEffectFinalColor(phase, finalR, finalG, finalB, finalA) end
@@ -84,18 +84,16 @@ function EffectDrawable:SetEffectFinalColor(phase, finalR, finalG, finalB, final
 ---@param initialB number The blue color component. (min: `0`, max: `1`)
 ---@param initialA number The alpha (opacity) component. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---drawable:SetEffectInitialColor(1, 1, 0, 0, 1)
 ---```
-function EffectDrawable:SetEffectInitialColor(phase, initialR, initialG, initialB,
-                                              initialA)
-end
+function EffectDrawable:SetEffectInitialColor(phase, initialR, initialG, initialB, initialA) end
 
 ---Sets the time interval after the specified effect phase.
 ---@param phase number The effect phase. (min: `1`)
 ---@param interval number The interval in seconds.
 ---@usage
----```
+---```lua
 ---drawable:SetEffectInterval(1, 1)
 ---```
 function EffectDrawable:SetEffectInterval(phase, interval) end
@@ -106,20 +104,18 @@ function EffectDrawable:SetEffectInterval(phase, interval) end
 ---@param velocityTime number The velocity duration in seconds.
 ---@param accelerationTime number The acceleration duration in seconds.
 ---@usage
----```
+---```lua
 ---drawable:SetEffectPriority(1, "alpha", 1, 1)
 ---```
 ---@see EFFECT_PRIORITY
-function EffectDrawable:SetEffectPriority(phase, priority, velocityTime,
-                                          accelerationTime)
-end
+function EffectDrawable:SetEffectPriority(phase, priority, velocityTime, accelerationTime) end
 
 ---Sets the rotation effect for the specified phase.
 ---@param phase number The effect phase. (min: `1`)
 ---@param initial number The initial rotation in degrees. (default: `0`)
 ---@param final number The final rotation in degrees. (default: `0`)
 ---@usage
----```
+---```lua
 ---drawable:SetEffectRotate(1, 0, 360)
 ---```
 function EffectDrawable:SetEffectRotate(phase, initial, final) end
@@ -131,7 +127,7 @@ function EffectDrawable:SetEffectRotate(phase, initial, final) end
 ---@param initialY number The initial Y scale (default: `1`).
 ---@param finalY number The final Y scale (default: `1`).
 ---@usage
----```
+---```lua
 ---drawable:SetEffectScale(1, 1, 1, 1, 1)
 ---```
 function EffectDrawable:SetEffectScale(phase, initialX, finalX, initialY, finalY) end
@@ -150,7 +146,7 @@ function EffectDrawable:SetInternalDrawType(drawType) end
 ---Sets the initial delay before effect phases start.
 ---@param initialInterval number The initial delay in seconds.
 ---@usage
----```
+---```lua
 ---drawable:SetInterval(1)
 ---```
 function EffectDrawable:SetInterval(initialInterval) end
@@ -160,7 +156,7 @@ function EffectDrawable:SetInterval(initialInterval) end
 ---@param initial number The initial angle in degrees.
 ---@param final number The final angle in degrees.
 ---@usage
----```
+---```lua
 ---drawable:SetMoveEffectCircle(1, 0, 360)
 ---```
 function EffectDrawable:SetMoveEffectCircle(phase, initial, final) end
@@ -170,7 +166,7 @@ function EffectDrawable:SetMoveEffectCircle(phase, initial, final) end
 ---@param initial number The initial scale. (min: `0`, max: `1`)
 ---@param final number The final scale. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---drawable:SetMoveEffectEdge(1, 0, 1)
 ---```
 function EffectDrawable:SetMoveEffectEdge(phase, initial, final) end
@@ -179,7 +175,7 @@ function EffectDrawable:SetMoveEffectEdge(phase, initial, final) end
 ---@param phase number The effect phase. (min: `1`)
 ---@param interval number The interval in seconds.
 ---@usage
----```
+---```lua
 ---drawable:SetMoveEffectInterval(1, 3)
 ---```
 function EffectDrawable:SetMoveEffectInterval(phase, interval) end
@@ -192,19 +188,18 @@ function EffectDrawable:SetMoveEffectInterval(phase, interval) end
 ---@param velocityTime number The velocity duration in seconds.
 ---@param accelerationTime number The acceleration duration in seconds.
 ---@usage
----```
+---```lua
 ---drawable:SetMoveEffectType(1, "right", 0, 0, 0.4, 0.4)
 ---```
 ---@see MOVE_TYPE
-function EffectDrawable:SetMoveEffectType(phase, moveType, horizontalRadius,
-                                          verticalRadius, velocityTime,
-                                          accelerationTime)
+function EffectDrawable:SetMoveEffectType(phase, moveType, horizontalRadius, verticalRadius, velocityTime,
+    accelerationTime)
 end
 
 ---Sets the initial delay for move effects.
 ---@param InitialInterval number The initial delay in seconds.
 ---@usage
----```
+---```lua
 ---drawable:SetMoveInterval(5)
 ---```
 function EffectDrawable:SetMoveInterval(InitialInterval) end
@@ -212,7 +207,7 @@ function EffectDrawable:SetMoveInterval(InitialInterval) end
 ---Sets the repeat count for move effects.
 ---@param repeatCount number The number of repeats. (`0` for infinite, default: `0`)
 ---@usage
----```
+---```lua
 ---drawable:SetMoveRepeatCount(1)
 ---```
 function EffectDrawable:SetMoveRepeatCount(repeatCount) end
@@ -220,7 +215,7 @@ function EffectDrawable:SetMoveRepeatCount(repeatCount) end
 ---Enables or disables rotation for move effects.
 ---@param needRotate boolean `true` to enable rotation, `false` to disable. (default: `true`)
 ---@usage
----```
+---```lua
 ---drawable:SetMoveRotate(false)
 ---```
 function EffectDrawable:SetMoveRotate(needRotate) end
@@ -228,7 +223,7 @@ function EffectDrawable:SetMoveRotate(needRotate) end
 ---Sets the repeat count for effects.
 ---@param repeatCount number The number of repeats. (`0` for infinite, default: `0`)
 ---@usage
----```
+---```lua
 ---drawable:SetRepeatCount(1)
 ---```
 function EffectDrawable:SetRepeatCount(repeatCount) end
@@ -236,7 +231,7 @@ function EffectDrawable:SetRepeatCount(repeatCount) end
 ---Starts or stops the effect.
 ---@param start boolean `true` to start the effect, `false` to stop. (default: `false`)
 ---@usage
----```
+---```lua
 ---drawable:SetStartEffect(true)
 ---```
 function EffectDrawable:SetStartEffect(start) end

@@ -33,7 +33,7 @@ X2Store = {}                     -- api/X2Store
 ---@return ZoneInfo[] productionZoneGroups A table of zone information for the production zone groups.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local productionZoneGroups = X2Store:GetProductionZoneGroups()
 ---```
 ---@see ZoneInfo
@@ -45,7 +45,7 @@ function X2Store:GetProductionZoneGroups() end
 ---@return ZoneInfo[] sellableZoneGroups A table of zone information for the sellable zone groups.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local sellableZoneGroups = X2Store:GetSellableZoneGroups(1)
 ---```
 ---@see ZONE_ID
@@ -56,7 +56,7 @@ function X2Store:GetSellableZoneGroups(fromZoneGroup) end
 ---@return number specialtyRatio The specialty ratio.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local specialtyRatio = X2Store:GetSpecialtyRatio()
 ---```
 function X2Store:GetSpecialtyRatio() end
@@ -68,7 +68,7 @@ function X2Store:GetSpecialtyRatio() end
 ---@return number cooldownTime The cooldown time in milliseconds.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local sellableZoneGroups = X2Store:GetSellableZoneGroups(1)
 ---local cooldownTime = X2Store:GetSpecialtyRatioBetween(1, sellableZoneGroups[1].id)
 ---```

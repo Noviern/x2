@@ -203,7 +203,7 @@ local Widgetbase = {}
 ---Applies or removes UI scaling for the Widgetbase.
 ---@param apply boolean `true` to apply UI scale, `false` to remove. (default: `true`)
 ---@usage
----```
+---```lua
 ---widget:ApplyUIScale(false)
 ---```
 function Widgetbase:ApplyUIScale(apply) end
@@ -225,7 +225,7 @@ function Widgetbase:ChangeChildAnchorByScrollValue(typeStr, value) end
 ---Enables or disables clickability for the Widgetbase. (default: `true`)
 ---@param clickable boolean `true` to enable clicking, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:Clickable(false)
 ---```
 function Widgetbase:Clickable(clickable) end
@@ -239,7 +239,7 @@ function Widgetbase:Clickable(clickable) end
 ---@return Widget|nil widget The created child widget, or `nil` if creation fails.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local button = widget:CreateChildWidget("button", "exampleButton", 0, true)
 ------widget.exampleButton This is automatically set by this method.
 ---```
@@ -285,9 +285,7 @@ function Widgetbase:Clickable(clickable) end
 ---@overload fun(self: self, objectTypeStr: "window", name: string, index: number, reflectToScriptTable: boolean): Window|EmptyTable|nil
 ---@overload fun(self: self, objectTypeStr: "worldmap", name: string, index: number, reflectToScriptTable: boolean): WorldMap|EmptyTable|nil
 ---@overload fun(self: self, objectTypeStr: "x2editbox", name: string, index: number, reflectToScriptTable: boolean): X2EditBox|EmptyTable|nil
-function Widgetbase:CreateChildWidget(objectTypeStr, name, index,
-                                      reflectToScriptTable)
-end
+function Widgetbase:CreateChildWidget(objectTypeStr, name, index, reflectToScriptTable) end
 
 ---@TODO: Can return an empty table not nil.
 ---@TODO: Needs UOT enum clarification.
@@ -299,7 +297,7 @@ end
 ---@return Widget|nil widget The created child widget, or `nil` if creation fails.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local button = widget:CreateChildWidgetByType(OBJECT.Button, "exampleButton", 0, true)
 ------widget.exampleButton This is automatically set by this method.
 ---```
@@ -345,9 +343,7 @@ end
 ---@overload fun(self: self, objectType: 0, name: string, index: number, reflectToScriptTable: boolean): Window|EmptyTable|nil
 ---@overload fun(self: self, objectType: 26, name: string, index: number, reflectToScriptTable: boolean): WorldMap|EmptyTable|nil
 ---@overload fun(self: self, objectType: 53, name: string, index: number, reflectToScriptTable: boolean): X2EditBox|EmptyTable|nil
-function Widgetbase:CreateChildWidgetByType(objectType, name, index,
-                                            reflectToScriptTable)
-end
+function Widgetbase:CreateChildWidgetByType(objectType, name, index, reflectToScriptTable) end
 
 ---@TODO: Verify if drawable returns nil if type not imported.
 ---Creates a color drawable for the specified layer.
@@ -359,7 +355,7 @@ end
 ---@return ColorDrawable|EmptyTable|nil drawable The created color drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateColorDrawable(0, 1, 0, 1, "background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -372,7 +368,7 @@ function Widgetbase:CreateColorDrawable(r, g, b, a, nameLayer) end
 ---@return ColorDrawable|EmptyTable|nil drawable The created color drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateColorDrawableByKey("common_white_bg", "background")
 ---```
 ---@see DRAWABLE_COLOR_KEY
@@ -387,7 +383,7 @@ function Widgetbase:CreateColorDrawableByKey(colorKey, nameLayer) end
 ---@return DrawableDDS|EmptyTable|nil drawable The created drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateDrawable(TEXTURE_PATH.DEFAULT, "btn_normal", "background")
 ------@cast drawable NinePartDrawable
 ---drawable:SetOutlineInvisiblePart()
@@ -401,7 +397,7 @@ function Widgetbase:CreateDrawable(texturePath, textureKey, nameLayer) end
 ---@return EffectDrawable|EmptyTable|nil drawable The created effect drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateEffectDrawable(TEXTURE_PATH.ACHIEVEMENT, "background")
 ---```
 ---@see TEXTURE_PATH
@@ -417,7 +413,7 @@ function Widgetbase:CreateEffectDrawable(texturePath, nameLayer) end
 ---@return EffectDrawable|EmptyTable|nil drawable The created effect drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.ACHIEVEMENT, "icon_plus", "background")
 ---```
 ---@see TEXTURE_PATH
@@ -431,7 +427,7 @@ function Widgetbase:CreateEffectDrawableByKey(texturePath, textureKey, nameLayer
 ---@return IconDrawable|EmptyTable|nil drawable The created icon drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateIconDrawable("background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -444,7 +440,7 @@ function Widgetbase:CreateIconDrawable(nameLayer) end
 ---@return ImageDrawable|EmptyTable|nil drawable The created image drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateImageDrawable(TEXTURE_PATH.RANKING_GRADE, "artwork")
 ---```
 ---@see TEXTURE_PATH
@@ -458,7 +454,7 @@ function Widgetbase:CreateImageDrawable(texturePath, nameLayer) end
 ---@return NinePartDrawable|EmptyTable|nil drawable The created nine-part drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
 ---```
 ---@see TEXTURE_PATH
@@ -473,7 +469,7 @@ function Widgetbase:CreateNinePartDrawable(texturePath, nameLayer) end
 ---@return TextDrawable|EmptyTable|nil drawable The created text drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateTextDrawable(FONT_PATH.DEFAULT, FONT_SIZE.DEFAULT, "overlay")
 ---```
 ---@see FONT_PATH
@@ -489,7 +485,7 @@ function Widgetbase:CreateTextDrawable(fontPath, fontSize, nameLayer) end
 ---@return ThreeColorDrawable|EmptyTable|nil drawable The created three-color drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateThreeColorDrawable(1024, 1024, "background")
 ---```
 ---@see ThreeColorDrawable
@@ -501,7 +497,7 @@ function Widgetbase:CreateThreeColorDrawable(width, height, nameLayer) end
 ---@return ThreePartDrawable|EmptyTable|nil drawable The created three-part drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local drawable = widget:CreateThreePartDrawable(TEXTURE_PATH.HUD, "background")
 ---```
 ---@see TEXTURE_PATH
@@ -517,7 +513,7 @@ function Widgetbase:DetachWidget() end
 ---Enables or disables interactivity for the Widgetbase.
 ---@param enable boolean `true` to enable, `false` to disable. (default: `true`)
 ---@usage
----```
+---```lua
 ---widget:Enable(false)
 ---```
 function Widgetbase:Enable(enable) end
@@ -526,7 +522,7 @@ function Widgetbase:Enable(enable) end
 ---Enables or disables dragging for the Widgetbase.
 ---@param enable boolean `true` to enable dragging, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:EnableDrag(true)
 ---```
 function Widgetbase:EnableDrag(enable) end
@@ -535,7 +531,7 @@ function Widgetbase:EnableDrag(enable) end
 ---Enables or disables focus for the Widgetbase.
 ---@param enable boolean `true` to enable focus, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:EnableFocus(true)
 ---```
 function Widgetbase:EnableFocus(enable) end
@@ -544,7 +540,7 @@ function Widgetbase:EnableFocus(enable) end
 ---Enables or disables removing the Widgetbase when hidden.
 ---@param enable boolean `true` to enable removal on hide, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:EnableHidingIsRemove(true)
 ---```
 function Widgetbase:EnableHidingIsRemove(enable) end
@@ -553,7 +549,7 @@ function Widgetbase:EnableHidingIsRemove(enable) end
 ---Enables or disables keyboard input capture for the Widgetbase.
 ---@param enable boolean `true` to enable keyboard input, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:EnableKeyboard(true)
 ---```
 function Widgetbase:EnableKeyboard(enable) end
@@ -562,7 +558,7 @@ function Widgetbase:EnableKeyboard(enable) end
 ---Enables or disables picking for the Widgetbase.
 ---@param enable boolean `true` to enable picking, `false` to disable. (default: `true`)
 ---@usage
----```
+---```lua
 ---widget:EnablePick(false)
 ---```
 function Widgetbase:EnablePick(enable) end
@@ -571,7 +567,7 @@ function Widgetbase:EnablePick(enable) end
 ---Enables or disables scrolling for the Widgetbase.
 ---@param enable boolean `true` to enable scrolling, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:EnableScroll(true)
 ---```
 function Widgetbase:EnableScroll(enable) end
@@ -580,7 +576,7 @@ function Widgetbase:EnableScroll(enable) end
 ---@return number alpha The alpha value (min: `0`, max: `1`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local alpha = widget:GetAlpha()
 ---```
 function Widgetbase:GetAlpha() end
@@ -590,7 +586,7 @@ function Widgetbase:GetAlpha() end
 ---@return Widget|nil attachedWidget The attached widget, or `nil` if none.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:GetAttachedWidget()
 ---```
 ---@see Widget
@@ -601,7 +597,7 @@ function Widgetbase:GetAttachedWidget() end
 ---@return Widget parentWidget The parent widget.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local parentWidget = widget:GetParent()
 ---```
 function Widgetbase:GetParent() end
@@ -610,7 +606,7 @@ function Widgetbase:GetParent() end
 ---@return string text The text content.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local text = widget:GetText()
 ---```
 function Widgetbase:GetText() end
@@ -620,7 +616,7 @@ function Widgetbase:GetText() end
 ---@return string uiLayer The UI layer.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local uiLayer = widget:GetUILayer()
 ---```
 function Widgetbase:GetUILayer() end
@@ -640,7 +636,7 @@ function Widgetbase:GetValue(typeStr) end
 ---@return boolean handlerExists `true` if a handler exists, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local handlerExists = widget:HasHandler("OnClick")
 ---```
 ---@see WIDGET_EVENT_TYPE
@@ -656,7 +652,7 @@ function Widgetbase:InheritAnimationData(widget) end
 ---@return boolean descendantWidget `true` if the ID is a descendant, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local button = widget:CreateChildWidget("button", "exampleButton", 0, true)
 ---local descendantWidget = widget:IsDescendantWidget(button:GetId())
 ---```
@@ -666,7 +662,7 @@ function Widgetbase:IsDescendantWidget(id) end
 ---@return boolean enabled `true` if enabled, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local enabled = widget:IsEnabled()
 ---```
 function Widgetbase:IsEnabled() end
@@ -675,7 +671,7 @@ function Widgetbase:IsEnabled() end
 ---@return boolean mouseOver `true` if the mouse is over, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local mouseOver = widget:IsMouseOver()
 ---```
 function Widgetbase:IsMouseOver() end
@@ -684,7 +680,7 @@ function Widgetbase:IsMouseOver() end
 ---@return boolean nowAnimation `true` if animating, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local nowAnimation = widget:IsNowAnimation()
 ---```
 function Widgetbase:IsNowAnimation() end
@@ -693,14 +689,14 @@ function Widgetbase:IsNowAnimation() end
 ---@return boolean visible `true` if visible, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local visible = widget:IsVisible()
 ---```
 function Widgetbase:IsVisible() end
 
 ---Lowers the Widgetbase in the UI hierarchy.
 ---@usage
----```
+---```lua
 ---widget:Lower()
 ---```
 function Widgetbase:Lower() end
@@ -709,14 +705,14 @@ function Widgetbase:Lower() end
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@usage
----```
+---```lua
 ---widget:MoveTo(0, 0)
 ---```
 function Widgetbase:MoveTo(x, y) end
 
 ---Raises the Widgetbase in the UI hierarchy.
 ---@usage
----```
+---```lua
 ---widget:Raise()
 ---```
 function Widgetbase:Raise() end
@@ -726,7 +722,7 @@ function Widgetbase:Raise() end
 ---@param eventName UIEVENT_TYPE The event to register.
 ---@see UIEVENT_TYPE
 ---@usage
----```
+---```lua
 ---widget:RegisterEvent("CHAT_MESSAGE")
 ---```
 function Widgetbase:RegisterEvent(eventName) end
@@ -737,7 +733,7 @@ function Widgetbase:ReleaseDeletedHandler() end
 ---Releases a handler for the specified action.
 ---@param actionName WIDGET_EVENT_TYPE The action name to release.
 ---@usage
----```
+---```lua
 ---widget:ReleaseHandler("OnClick")
 ---```
 ---@see WIDGET_EVENT_TYPE
@@ -751,7 +747,7 @@ function Widgetbase:RequestCharacterCacheData(cacheQueryId) end
 ---Sets the alpha value of the Widgetbase.
 ---@param alpha number The alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetAlpha(.5)
 ---```
 function Widgetbase:SetAlpha(alpha) end
@@ -762,12 +758,10 @@ function Widgetbase:SetAlpha(alpha) end
 ---@param velocityTime number Duration in seconds for velocity.
 ---@param accelerationTime number Duration in seconds for acceleration.
 ---@usage
----```
+---```lua
 ---widget:SetAlphaAnimation(0, 1, 0.3, 0.3)
 ---```
-function Widgetbase:SetAlphaAnimation(initialAlpha, finalAlpha, velocityTime,
-                                      accelerationTime)
-end
+function Widgetbase:SetAlphaAnimation(initialAlpha, finalAlpha, velocityTime, accelerationTime) end
 
 ---@TODO: Clarify category purpose.
 ---Sets the category for the Widgetbase.
@@ -789,7 +783,7 @@ function Widgetbase:SetDelegator(action, delegator, handler) end
 ---Sets a handler for the Widgetbase deletion event.
 ---@param handler function The handler function.
 ---@usage
----```
+---```lua
 ---widget:SetDeletedHandler(function() end)
 ---```
 function Widgetbase:SetDeletedHandler(handler) end
@@ -798,7 +792,7 @@ function Widgetbase:SetDeletedHandler(handler) end
 ---`OnDragReceive`, `OnDragStart`, and `OnDragStop` are fired.
 ---@param dragCondition DRAG_CONDITION The drag condition. (default: `DC_ALWAYS`)
 ---@usage
----```
+---```lua
 ---widget:SetDragCondition(DC_SHIFT_KEY_DOWN)
 ---```
 ---@see DRAG_CONDITION
@@ -809,7 +803,7 @@ function Widgetbase:SetDragCondition(dragCondition) end
 ---@param alpha number Alpha value (min: `0`, max: `1`).
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the alpha to.
 ---@usage
----```
+---```lua
 ---widget:SetDrawableLayerAlpha(.5, "background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -819,7 +813,7 @@ function Widgetbase:SetDrawableLayerAlpha(alpha, nameLayer) end
 ---Sets the draw priority for the Widgetbase.
 ---@param drawPriority number The draw priority value.
 ---@usage
----```
+---```lua
 ---widget:SetDrawPriority(1)
 ---```
 function Widgetbase:SetDrawPriority(drawPriority) end
@@ -828,7 +822,7 @@ function Widgetbase:SetDrawPriority(drawPriority) end
 ---@param actionName string The action name.
 ---@param handler function The handler function.
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnClick", function() ADDON:ChatLog("OnClick") end)
 ---```
 ---@overload fun(self: self, actionName: "OnAcceptFocus", handler: OnAcceptFocus)
@@ -890,7 +884,7 @@ function Widgetbase:SetLText() end
 ---@param width number The maximum width.
 ---@param height number The maximum height.
 ---@usage
----```
+---```lua
 ---widget:SetMaxResizingExtent(1000, 1000)
 ---```
 function Widgetbase:SetMaxResizingExtent(width, height) end
@@ -899,7 +893,7 @@ function Widgetbase:SetMaxResizingExtent(width, height) end
 ---@param width number The minimum width.
 ---@param height number The minimum height.
 ---@usage
----```
+---```lua
 ---widget:SetMaxResizingExtent(100, 100)
 ---```
 function Widgetbase:SetMinResizingExtent(width, height) end
@@ -919,7 +913,7 @@ function Widgetbase:SetMoveAnimation(direction, delta, time, repeatAnimation) en
 ---@param right number The right border size.
 ---@param bottom number The bottom border size.
 ---@usage
----```
+---```lua
 ---widget:SetResizingBorderSize(10, 10, 10, 10)
 ---widget:SetMinResizingExtent(345, 160)
 ---widget:SetMaxResizingExtent(1050, 1020)
@@ -929,7 +923,7 @@ function Widgetbase:SetResizingBorderSize(left, top, right, bottom) end
 ---Sets the scale of the Widgetbase.
 ---@param scale number The scale value.
 ---@usage
----```
+---```lua
 ---widget:SetScale(.5)
 ---```
 function Widgetbase:SetScale(scale) end
@@ -941,13 +935,11 @@ function Widgetbase:SetScale(scale) end
 ---@param accelerationTime number Duration in seconds for acceleration.
 ---@param scaleAnchor ANCHOR_POINT The anchor point for scaling.
 ---@usage
----```
+---```lua
 ---widget:SetScaleAnimation(5, 1, 2, 2, "CENTER")
 ---```
 ---@see ANCHOR_POINT
-function Widgetbase:SetScaleAnimation(initialScale, finalScale, velocityTime,
-                                      accelerationTime, scaleAnchor)
-end
+function Widgetbase:SetScaleAnimation(initialScale, finalScale, velocityTime, accelerationTime, scaleAnchor) end
 
 ---@TODO: Broken?
 ---Sets the sound to play when the Widgetbase is shown.
@@ -958,7 +950,7 @@ function Widgetbase:SetSounds(name) end
 ---@param alpha boolean `true` to enable **alpha** animation, `false` to disable. (default: `false`)
 ---@param scale boolean `true` to enable **scale** animation, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---
 ---```
 function Widgetbase:SetStartAnimation(alpha, scale) end
@@ -966,7 +958,7 @@ function Widgetbase:SetStartAnimation(alpha, scale) end
 ---Sets the text for the Widgetbase.
 ---@param text string The text to set.
 ---@usage
----```
+---```lua
 ---widget:SetText("Archerage.to - the first ArcheAge Private Server")
 ---```
 function Widgetbase:SetText(text) end
@@ -974,14 +966,14 @@ function Widgetbase:SetText(text) end
 ---Shows or hides the Widgetbase.
 ---@param show boolean `true` to show, `false` to hide. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:Show(true)
 ---```
 function Widgetbase:Show(show) end
 
 ---Starts moving the Widgetbase.
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnDragStart", function(self)
 ---  self:StartMoving()
 ---end)
@@ -991,7 +983,7 @@ function Widgetbase:StartMoving() end
 ---Starts resizing the Widgetbase from the specified anchor point.
 ---@param anchorPoint ANCHOR_POINT The anchor point for resizing.
 ---@usage
----```
+---```lua
 ---widget:StartSizing("CENTER")
 ---```
 ---@see ANCHOR_POINT
@@ -999,7 +991,7 @@ function Widgetbase:StartSizing(anchorPoint) end
 
 ---Stops moving or resizing the Widgetbase.
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnDragStop", function(self)
 ---  self:StopMovingOrSizing()
 ---end)
@@ -1010,7 +1002,7 @@ function Widgetbase:StopMovingOrSizing() end
 ---Triggers or stops the move animation of the Widgetbase.
 ---@param on boolean `true` to start the animation, `false` to stop.
 ---@usage
----```
+---```lua
 ---widget:TriggerMoveAnimation(true)
 ---```
 function Widgetbase:TriggerMoveAnimation(on) end
@@ -1019,7 +1011,7 @@ function Widgetbase:TriggerMoveAnimation(on) end
 ---Enables or disables resizing for the Widgetbase.
 ---@param use boolean `true` to enable resizing, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:UseResizing(true)
 ---```
 function Widgetbase:UseResizing(use) end

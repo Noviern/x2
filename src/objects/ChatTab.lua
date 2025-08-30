@@ -24,7 +24,7 @@ local ChatWindow = {}
 ---@param tabName string The name of the tab.
 ---@param widget? Widget The widget to associate with the tab.
 ---@usage
----```
+---```lua
 ---local textbox = UIParent:CreateWidget("textbox", "exampleTextbox", "UIParent")
 ---textbox:SetText("Test")
 ---widget:AddTab("Test", textbox)
@@ -36,7 +36,7 @@ function ChatWindow:AddTab(tabName, widget) end
 ---Enables or disables tab switching in the ChatWindow.
 ---@param allow boolean `true` to allow tab switching, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:AllowTabSwitch(false)
 ---```
 function ChatWindow:AllowTabSwitch(allow) end
@@ -46,7 +46,7 @@ function ChatWindow:AllowTabSwitch(allow) end
 ---@return table addButton The add button.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local addButton = widget:GetAddButton()
 ---```
 function ChatWindow:GetAddButton() end
@@ -55,7 +55,7 @@ function ChatWindow:GetAddButton() end
 ---@return ImageDrawable|EmptyTable|nil caretDrawable The caret drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local caretDrawable = widget:GetCaretDrawable()
 ---```
 function ChatWindow:GetCaretDrawable() end
@@ -65,7 +65,7 @@ function ChatWindow:GetCaretDrawable() end
 ---@return table chatEdit The chat edit widget.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local chatEdit = widget:GetChatEdit()
 ---```
 function ChatWindow:GetChatEdit() end
@@ -75,7 +75,7 @@ function ChatWindow:GetChatEdit() end
 ---@return table chatMethodSelector The chat method selector.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local chatMethodSelector = widget:GetChatMethodSelector()
 ---```
 function ChatWindow:GetChatMethodSelector() end
@@ -85,7 +85,7 @@ function ChatWindow:GetChatMethodSelector() end
 ---@return Button imeToggleButton The IME toggle button.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local imeToggleButton = widget:GetImeToggleButton()
 ---```
 function ChatWindow:GetImeToggleButton() end
@@ -94,7 +94,7 @@ function ChatWindow:GetImeToggleButton() end
 ---@return ThreePartDrawable leftLineDrawable The left line drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local leftLineDrawable = widget:GetLeftLineDrawable()
 ---```
 ---@see ThreePartDrawable
@@ -104,7 +104,7 @@ function ChatWindow:GetLeftLineDrawable() end
 ---@return ImageDrawable|EmptyTable|nil lockNotifyDrawable The lock notification drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lockNotifyDrawable = widget:GetLockNotifyDrawable()
 ---```
 ---@see ImageDrawable
@@ -114,7 +114,7 @@ function ChatWindow:GetLockNotifyDrawable() end
 ---@return ThreePartDrawable rightLineDrawable The right line drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local rightLineDrawable = widget:GetRightLineDrawable()
 ---```
 ---@see ThreePartDrawable
@@ -125,7 +125,7 @@ function ChatWindow:GetRightLineDrawable() end
 ---@return table urlButton The URL button.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local urlButton = widget:GetUrlButton()
 ---```
 function ChatWindow:GetUrlButton() end
@@ -135,7 +135,7 @@ function ChatWindow:GetUrlButton() end
 ---@param x number The x-offset.
 ---@param y number The y-offset.
 ---@usage
----```
+---```lua
 ---widget:SetCaretOffset(0, 0)
 ---```
 function ChatWindow:SetCaretOffset(x, y) end
@@ -143,7 +143,7 @@ function ChatWindow:SetCaretOffset(x, y) end
 ---Sets the ID for the ChatWindow.
 ---@param id number The chat window ID.
 ---@usage
----```
+---```lua
 ---widget:SetChatWindowId(0)
 ---```
 function ChatWindow:SetChatWindowId(id) end
@@ -155,18 +155,16 @@ function ChatWindow:SetChatWindowId(id) end
 ---@param bottomRightXOffset number The x-offset for the bottom-right corner.
 ---@param bottomRightYOffset number The y-offset for the bottom-right corner.
 ---@usage
----```
+---```lua
 ---widget:SetContentOffset(100, 100, 100, 100)
 ---```
-function ChatWindow:SetContentOffset(topLeftXOffset, topLeftYOffset,
-                                     bottomRightXOffset, bottomRightYOffset)
-end
+function ChatWindow:SetContentOffset(topLeftXOffset, topLeftYOffset, bottomRightXOffset, bottomRightYOffset) end
 
 ---@TODO: Clarify what injectable means in this context.
 ---Sets whether the ChatWindow is injectable.
 ---@param injectable boolean `true` to enable injectable mode, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:SetInjectable(true)
 ---```
 function ChatWindow:SetInjectable(injectable) end
@@ -175,7 +173,7 @@ function ChatWindow:SetInjectable(injectable) end
 ---Sets the offset for the left line in the ChatWindow.
 ---@param offset number The offset value.
 ---@usage
----```
+---```lua
 ---widget:SetLeftLineOffset(100)
 ---```
 function ChatWindow:SetLeftLineOffset(offset) end
@@ -184,7 +182,7 @@ function ChatWindow:SetLeftLineOffset(offset) end
 ---Sets the maximum notification time for the ChatWindow.
 ---@param time number The maximum notification time in milliseconds.
 ---@usage
----```
+---```lua
 ---widget:SetMaxNotifyTime(3000)
 ---```
 function ChatWindow:SetMaxNotifyTime(time) end
@@ -193,7 +191,7 @@ function ChatWindow:SetMaxNotifyTime(time) end
 ---Sets the minimum tab width for the ChatWindow.
 ---@param width number The minimum tab width.
 ---@usage
----```
+---```lua
 ---widget:SetMinTabWidth(200)
 ---```
 function ChatWindow:SetMinTabWidth(width) end
@@ -202,7 +200,7 @@ function ChatWindow:SetMinTabWidth(width) end
 ---Sets the notification blinking frequency for the ChatWindow.
 ---@param freq number The blinking frequency in milliseconds.
 ---@usage
----```
+---```lua
 ---widget:SetNotifyBlinkingFreq(400)
 ---```
 function ChatWindow:SetNotifyBlinkingFreq(freq) end
@@ -211,7 +209,7 @@ function ChatWindow:SetNotifyBlinkingFreq(freq) end
 ---Sets the offset for the right line in the ChatWindow.
 ---@param offset number The offset value.
 ---@usage
----```
+---```lua
 ---widget:SetRightLineOffset(100)
 ---```
 function ChatWindow:SetRightLineOffset(offset) end
@@ -220,7 +218,7 @@ function ChatWindow:SetRightLineOffset(offset) end
 ---Sets the slide time for tab dragging in the ChatWindow.
 ---@param time number The slide time in milliseconds.
 ---@usage
----```
+---```lua
 ---widget:SetSlideTimeInDragging(150)
 ---```
 function ChatWindow:SetSlideTimeInDragging(time) end
@@ -229,7 +227,7 @@ function ChatWindow:SetSlideTimeInDragging(time) end
 ---Sets the height of the tab area in the ChatWindow.
 ---@param height number The height of the tab area.
 ---@usage
----```
+---```lua
 ---widget:SetTabAreaHeight(25)
 ---```
 function ChatWindow:SetTabAreaHeight(height) end
@@ -241,7 +239,7 @@ function ChatWindow:SetTabAreaHeight(height) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetTabAreaInset(10, 10, 10, 10)
 ---```
 function ChatWindow:SetTabAreaInset(left, top, right, bottom) end
@@ -251,7 +249,7 @@ function ChatWindow:SetTabAreaInset(left, top, right, bottom) end
 ---@param selectedAlpha number The alpha for selected tabs. (min: `0`, max: `1`)
 ---@param unselectedAlpha number The alpha for unselected tabs. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetTabButtonAlpha(.5, .2)
 ---```
 function ChatWindow:SetTabButtonAlpha(selectedAlpha, unselectedAlpha) end
@@ -259,7 +257,7 @@ function ChatWindow:SetTabButtonAlpha(selectedAlpha, unselectedAlpha) end
 ---Sets the tab width for the ChatWindow.
 ---@param width number The tab width.
 ---@usage
----```
+---```lua
 ---widget:SetTabWidth(250)
 ---```
 function ChatWindow:SetTabWidth(width) end
@@ -268,7 +266,7 @@ function ChatWindow:SetTabWidth(width) end
 ---Enables or disables the add tab button in the ChatWindow.
 ---@param use boolean `true` to enable the add tab button, `false` to disable. (default: `true`)
 ---@usage
----```
+---```lua
 ---widget:UseAddTabButton(false)
 ---```
 function ChatWindow:UseAddTabButton(use) end
@@ -277,7 +275,7 @@ function ChatWindow:UseAddTabButton(use) end
 ---Enables or disables auto-resizing tab button mode in the ChatWindow.
 ---@param offset boolean `true` to enable auto-resizing, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:UseAutoResizingTabButtonMode(true)
 ---```
 function ChatWindow:UseAutoResizingTabButtonMode(offset) end
@@ -286,7 +284,7 @@ function ChatWindow:UseAutoResizingTabButtonMode(offset) end
 ---Enables or disables sliding button functionality in the ChatWindow.
 ---@param use boolean `true` to enable sliding buttons, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:UseSlidingButton(true)
 ---```
 function ChatWindow:UseSlidingButton(use) end

@@ -106,7 +106,7 @@ local ModelView = {}
 ---Adds rotation `angle` to the ModelView. positive is left negative is right
 ---@param angle number in degrees
 ---@usage
----```
+---```lua
 ---widget:AddRotation(45)
 ---```
 function ModelView:AddRotation(angle) end
@@ -117,7 +117,7 @@ function ModelView:AddRotation(angle) end
 ---@param offsetY number
 ---@param offsetZ number
 ---@usage
----```
+---```lua
 ---widget:AdjustCameraPos(0, 0, 0)
 ---```
 function ModelView:AdjustCameraPos(offsetX, offsetY, offsetZ) end
@@ -127,21 +127,21 @@ function ModelView:AdjustCameraPos(offsetX, offsetY, offsetZ) end
 ---@param offsetY number
 ---@param offsetZ number
 ---@usage
----```
+---```lua
 ---widget:AdjustCameraPosToModel(0, 0)
 ---```
 function ModelView:AdjustCameraPosToModel(offsetY, offsetZ) end
 
 ---Applies customizer parameters to the unit in the ModelView.
 ---@usage
----```
+---```lua
 ---widget:ApplyCustomizerParamToUnit()
 ---```
 function ModelView:ApplyCustomizerParamToUnit() end
 
 ---Applies the model to the ModelView.
 ---@usage
----```
+---```lua
 ---widget:ApplyModel()
 ---```
 function ModelView:ApplyModel() end
@@ -154,7 +154,7 @@ function ModelView:ApplyPresetParam(part, index) end
 
 ---Clears the model for the ModelView.
 ---@usage
----```
+---```lua
 ---widget:ClearModel()
 ---```
 function ModelView:ClearModel() end
@@ -166,7 +166,7 @@ function ModelView:ClearModel() end
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
 ---@usage
----```
+---```lua
 ---widget:EquipCostume(51479, 12, 0, 255, 0)
 ---```
 ---@see ITEM_GRADE_TYPE
@@ -175,7 +175,7 @@ function ModelView:EquipCostume(itemType, itemGrade, r, g, b) end
 ---Equips the `itemType` on to the model for the ModelView. stops any playing animation.
 ---@param itemType number
 ---@usage
----```
+---```lua
 ---widget:EquipItem(49376)
 ---```
 function ModelView:EquipItem(itemType) end
@@ -186,7 +186,7 @@ function ModelView:EquipItem(itemType) end
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index, weight = widget:GetCustomBodyNormal()
 ---```
 function ModelView:GetCustomBodyNormal() end
@@ -197,7 +197,7 @@ function ModelView:GetCustomBodyNormal() end
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index, weight = widget:GetCustomDeco()
 ---```
 function ModelView:GetCustomDeco() end
@@ -214,7 +214,7 @@ function ModelView:GetCustomEyebrow() end
 ---@return number blue (min: `0`, max: `255`, default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local red, green, blue = widget:GetCustomEyebrowColor()
 ---```
 function ModelView:GetCustomEyebrowColor() end
@@ -231,7 +231,7 @@ function ModelView:GetCustomFaceDiffuse() end
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index, weight = widget:GetCustomFaceNormal()
 ---```
 function ModelView:GetCustomFaceNormal() end
@@ -247,7 +247,7 @@ function ModelView:GetCustomHair() end
 ---@return CustomHairColor|number|nil customHairColor
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local customHairColor = widget:GetCustomHairColor()
 ---```
 ---@see CustomHairColor
@@ -271,7 +271,7 @@ function ModelView:GetCustomHornColor() end
 ---@return number blue (min: `0`, max: `255`, default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local red, green, blue = widget:GetCustomizingDecoColor()
 ---```
 function ModelView:GetCustomizingDecoColor() end
@@ -280,7 +280,7 @@ function ModelView:GetCustomizingDecoColor() end
 ---@return boolean customizingOddEyeUsable
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local customizingOddEyeUsable = widget:GetCustomizingOddEyeUsable()
 ---```
 function ModelView:GetCustomizingOddEyeUsable() end
@@ -291,7 +291,7 @@ function ModelView:GetCustomizingOddEyeUsable() end
 ---@return number blue (min: `0`, max: `255`, default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local red, green, blue = widget:GetCustomLipColor()
 ---```
 function ModelView:GetCustomLipColor() end
@@ -302,7 +302,7 @@ function ModelView:GetCustomLipColor() end
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index, weight = widget:GetCustomMakeUp()
 ---```
 function ModelView:GetCustomMakeUp() end
@@ -319,7 +319,7 @@ function ModelView:GetCustomPreviewCloth() end
 ---@return number|nil index
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index = widget:GetCustomPupil(0)
 ---```
 function ModelView:GetCustomPupil(range) end
@@ -331,7 +331,7 @@ function ModelView:GetCustomPupil(range) end
 ---@return number blue (min: `0`, max: `255`, default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local red, green, blue = widget:GetCustomPupilColor()
 ---```
 ---@see EYE
@@ -341,7 +341,7 @@ function ModelView:GetCustomPupilColor(range) end
 ---@return number|nil index
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index = widget:GetCustomScar()
 ---```
 function ModelView:GetCustomScar() end
@@ -364,7 +364,7 @@ function ModelView:GetCustomTail() end
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index, weight = widget:GetCustomTattoo()
 ---```
 function ModelView:GetCustomTattoo() end
@@ -375,7 +375,7 @@ function ModelView:GetCustomTattoo() end
 ---@return number faceTargetCurValue (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local faceTargetCurValue = widget:GetFaceTargetCurValue(1)
 ---```
 function ModelView:GetFaceTargetCurValue(index) end
@@ -384,7 +384,7 @@ function ModelView:GetFaceTargetCurValue(index) end
 ---@return GENDER_ID genderId (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local genderId = widget:GetGender()
 ---```
 function ModelView:GetGender() end
@@ -393,7 +393,7 @@ function ModelView:GetGender() end
 ---@return RACE_ID raceId (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local raceId = widget:GetRace()
 ---```
 function ModelView:GetRace() end
@@ -402,7 +402,7 @@ function ModelView:GetRace() end
 ---@return number rotation in degrees. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:GetRotation()
 ---```
 function ModelView:GetRotation() end
@@ -412,7 +412,7 @@ function ModelView:GetRotation() end
 ---@return table|nil info
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local info = widget:GetScarStatus()
 ---```
 function ModelView:GetScarStatus() end
@@ -423,7 +423,7 @@ function ModelView:GetScarStatus() end
 ---@return nil
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:GetSelectedPresetIndex(1)
 ---```
 function ModelView:GetSelectedPresetIndex(part) end
@@ -434,7 +434,7 @@ function ModelView:GetSelectedPresetIndex(part) end
 ---@return number|nil secondWidth Highlights. (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local firstWidth, secondWidth = widget:GetTwoToneHairStatus()
 ---```
 function ModelView:GetTwoToneHairStatus() end
@@ -444,7 +444,7 @@ function ModelView:GetTwoToneHairStatus() end
 ---@return boolean diffWithClientUnit
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local diffWithClientUnit = widget:HasDiffWithClientUnit()
 ---```
 function ModelView:HasDiffWithClientUnit() end
@@ -455,7 +455,7 @@ function ModelView:HasDiffWithClientUnit() end
 ---@param createModel boolean
 ---@return boolean unknown
 ---@usage
----```
+---```lua
 ---widget:Init("target", true)
 ---```
 ---@see UNIT
@@ -464,7 +464,7 @@ function ModelView:Init(unit, createModel) end
 ---@TODO: this has to be called before Init as it sets its own init as the player, this is set on your characters height? if im a dwarf models are slightly outside the window
 ---Initializes the ModelView for beauty shop mode.
 ---@usage
----```
+---```lua
 ---widget:InitBeautyShop()
 ---```
 function ModelView:InitBeautyShop() end
@@ -482,7 +482,7 @@ function ModelView:InitByModelRef(modelRef, race, gender, butlerMode) end
 ---@TODO: no idea what this does
 ---Initializes customizer controls for the ModelView.
 ---@usage
----```
+---```lua
 ---widget:InitCustomizerControl()
 ---```
 function ModelView:InitCustomizerControl() end
@@ -492,7 +492,7 @@ function ModelView:InitCustomizerControl() end
 ---@return boolean frozen
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local frozen = widget:IsFrozen()
 ---```
 function ModelView:IsFrozen() end
@@ -501,14 +501,14 @@ function ModelView:IsFrozen() end
 ---@param index number
 ---@param weight number (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---widget:ModifyFaceParamValue(1, 1)
 ---```
 function ModelView:ModifyFaceParamValue(index, weight) end
 
 ---Processes payment for the beauty shop.
 ---@usage
----```
+---```lua
 ---widget:PayBeautyShop()
 ---```
 function ModelView:PayBeautyShop() end
@@ -518,7 +518,7 @@ function ModelView:PayBeautyShop() end
 ---@param name string
 ---@param loop boolean
 ---@usage
----```
+---```lua
 ---widget:PlayAnimation("fist_ba_relaxed_idle", true)
 ---```
 function ModelView:PlayAnimation(name, loop) end
@@ -526,7 +526,7 @@ function ModelView:PlayAnimation(name, loop) end
 ---Removes an item from the specified equipment slot.
 ---@param index ES
 ---@usage
----```
+---```lua
 ---widget:RemoveEquipSlot(ES_CHEST)
 ---```
 ---@see ES
@@ -534,7 +534,7 @@ function ModelView:RemoveEquipSlot(index) end
 
 ---Resets the beauty shop settings.
 ---@usage
----```
+---```lua
 ---widget:ResetBeautyShop()
 ---```
 function ModelView:ResetBeautyShop() end
@@ -542,7 +542,7 @@ function ModelView:ResetBeautyShop() end
 ---@TODO: resets the characters equipment to what they are were wearing
 ---Resets the model's equipment to match the character's current equipment.
 ---@usage
----```
+---```lua
 ---widget:ResetEquips()
 ---```
 function ModelView:ResetEquips() end
@@ -557,7 +557,7 @@ function ModelView:SetBackColor(r, g, b) end
 ---Sets the beauty shop mode for the ModelView.
 ---@param beautyShop boolean
 ---@usage
----```
+---```lua
 ---widget:SetBeautyShopMode(true)
 ---```
 function ModelView:SetBeautyShopMode(beautyShop) end
@@ -586,7 +586,7 @@ function ModelView:SetCustomizingDeco(index, weight) end
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
 ---@usage
----```
+---```lua
 ---widget:SetCustomizingDecoColor(0, 255, 0)
 ---```
 function ModelView:SetCustomizingDecoColor(r, g, b) end
@@ -601,7 +601,7 @@ function ModelView:SetCustomizingEyebrow(index) end
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
 ---@usage
----```
+---```lua
 ---widget:SetCustomizingEyebrowColor(0, 255, 0)
 ---```
 function ModelView:SetCustomizingEyebrowColor(r, g, b) end
@@ -625,7 +625,7 @@ function ModelView:SetCustomizingHair(index) end
 ---Sets the custom hair color.
 ---@param infos CustomHairColor
 ---@usage
----```
+---```lua
 ---widget:SetCustomizingHairColor({
 ---  defaultR = 255,
 ---  defaultB = 0,
@@ -643,7 +643,7 @@ function ModelView:SetCustomizingHairColor(infos) end
 ---Sets the default custom hair color.
 ---@param infos CustomizingHairDefaultColor
 ---@usage
----```
+---```lua
 ---widget:SetCustomizingHairDefaultColor({
 ---  defaultR = 255,
 ---  defaultG = 0,
@@ -656,7 +656,7 @@ function ModelView:SetCustomizingHairDefaultColor(infos) end
 ---Sets the two-tone custom hair color.
 ---@param infos CustomizingHairTwoToneColor
 ---@usage
----```
+---```lua
 ---widget:SetCustomizingHairTwoToneColor({
 ---  twoToneR = 0,
 ---  twoToneG = 0,
@@ -677,7 +677,7 @@ function ModelView:SetCustomizingHorn(index) end
 ---Sets the custom horn color index.
 ---@param index number (min: `?`, max: `?`)
 ---@usage
----```
+---```lua
 ---widget:SetCustomizingHornColor(7)
 ---```
 function ModelView:SetCustomizingHornColor(index) end
@@ -687,7 +687,7 @@ function ModelView:SetCustomizingHornColor(index) end
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
 ---@usage
----```
+---```lua
 ---widget:SetCustomizingLipColor(0, 255, 0)
 ---```
 function ModelView:SetCustomizingLipColor(r, g, b) end
@@ -747,7 +747,7 @@ function ModelView:SetCustomizingTattoo(index, weight) end
 ---Disables color grading to prevent flickering when using `SetModelViewBackground`.
 ---@param disable boolean (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetDisableColorGrading(true)
 ---```
 function ModelView:SetDisableColorGrading(disable) end
@@ -756,7 +756,7 @@ function ModelView:SetDisableColorGrading(disable) end
 ---Sets the equipment from a character slot to the current model.
 ---@param index ES
 ---@usage
----```
+---```lua
 ---widget:SetEquipSlotFromCharacter(ES_COSPLAYLOOKS)
 ---```
 ---@see ES
@@ -765,7 +765,7 @@ function ModelView:SetEquipSlotFromCharacter(index) end
 ---Sets the fov `angle` for the ModelView.
 ---@param angle number in degrees (default: `20`)
 ---@usage
----```
+---```lua
 ---widget:SetFov(30)
 ---```
 function ModelView:SetFov(angle) end
@@ -773,7 +773,7 @@ function ModelView:SetFov(angle) end
 ---Sets `isStop` for the ModelView.
 ---@param isStop boolean
 ---@usage
----```
+---```lua
 ---widget:SetFreeze(true)
 ---```
 function ModelView:SetFreeze(isStop) end
@@ -782,7 +782,7 @@ function ModelView:SetFreeze(isStop) end
 ---Sets the in-game shop mode for the ModelView.
 ---@param ingameShop boolean
 ---@usage
----```
+---```lua
 ---widget:SetIngameShopMode(true)
 ---```
 function ModelView:SetIngameShopMode(ingameShop) end
@@ -792,7 +792,7 @@ function ModelView:SetIngameShopMode(ingameShop) end
 ---@param path string
 ---@param key? string
 ---@usage
----```
+---```lua
 ---widget:SetModelViewBackground(TEXTURE_PATH.INGAME_SHOP, "character_bg")
 ---widget:SetDisableColorGrading(true)
 ---```
@@ -815,7 +815,7 @@ function ModelView:SetModelViewExtent(width, height) end
 ---Sets the rotation `angle` for the ModelView.
 ---@param angle number in degrees. (default: `0`)
 ---@usage
----```
+---```lua
 ---widget:SetRotation(90)
 ---```
 function ModelView:SetRotation(angle) end
@@ -823,7 +823,7 @@ function ModelView:SetRotation(angle) end
 ---Enables/Disables smiling for the ModelView.
 ---@param smile boolean (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetSmile(true)
 ---```
 function ModelView:SetSmile(smile) end
@@ -833,7 +833,7 @@ function ModelView:SetSmile(smile) end
 ---@param width number
 ---@param height number
 ---@usage
----```
+---```lua
 ---widget:SetTextureSize(512, 512)
 ---```
 function ModelView:SetTextureSize(width, height) end
@@ -844,14 +844,14 @@ function ModelView:SetTextureSize(width, height) end
 ---@return boolean initModel do i need to init the model true or false
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local success, initModel = widget:ShowItem(50835)
 ---```
 function ModelView:ShowItem(itemType) end
 
 ---Stops the animation for the ModelView.
 ---@usage
----```
+---```lua
 ---widget:StopAnimation()
 ---```
 function ModelView:StopAnimation() end
@@ -859,7 +859,7 @@ function ModelView:StopAnimation() end
 ---Enables/Disables cosplay `equipped` for the ModelView.
 ---@param equipped boolean (default: `true`)
 ---@usage
----```
+---```lua
 ---widget:ToggleCosplayEquipped(false)
 ---```
 function ModelView:ToggleCosplayEquipped(equipped) end
@@ -867,7 +867,7 @@ function ModelView:ToggleCosplayEquipped(equipped) end
 ---Unequips an item from the specified slot.
 ---@param itemSlot ES
 ---@usage
----```
+---```lua
 ---widget:UnequipItemSlot(ES_MAINHAND)
 ---widget:ApplyModel()
 ---```
@@ -880,7 +880,7 @@ function ModelView:UnequipItemSlot(itemSlot) end
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
 ---@usage
----```
+---```lua
 ---widget:UpdateDyeColor(255, 255, 255)
 ---```
 function ModelView:UpdateDyeColor(r, g, b) end
@@ -888,7 +888,7 @@ function ModelView:UpdateDyeColor(r, g, b) end
 ---Zooms in/out `yAmt` the model for the ModelView.
 ---@param yAmt number
 ---@usage
----```
+---```lua
 ---widget:ZoomInOut(1)
 ---```
 function ModelView:ZoomInOut(yAmt) end
@@ -897,7 +897,7 @@ function ModelView:ZoomInOut(yAmt) end
 ---Zooms in or out in beauty shop mode.
 ---@param amount BEAUTY_SHOP_ZOOM (default: `2`)
 ---@usage
----```
+---```lua
 ---widget:ZoomInOutBeautyShop(1) -- Set the default zoom.
 ---
 ---widget:SetHandler("OnWheelUp", function(self)

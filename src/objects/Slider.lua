@@ -31,7 +31,7 @@ local Slider = {}
 ---orientation.
 ---@param step number The amount to move the slider.
 ---@usage
----```
+---```lua
 ---widget:Down(15)
 ---```
 function Slider:Down(step) end
@@ -41,7 +41,7 @@ function Slider:Down(step) end
 ---@return number maxValue The maximum value (default: `10`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local minValue, maxValue = widget:GetMinMaxValues()
 ---```
 function Slider:GetMinMaxValues() end
@@ -50,7 +50,7 @@ function Slider:GetMinMaxValues() end
 ---@return SLIDER_SCROLL_TYPE orientation The orientation of the Slider (default: `0`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local orientation = widget:GetOrientation()
 ---```
 ---@see SLIDER_SCROLL_TYPE
@@ -61,7 +61,7 @@ function Slider:GetOrientation() end
 ---@return Button|nil thumbButtonWidget The thumb button widget, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local thumbButtonWidget = widget:GetThumbButtonWidget()
 ---```
 ---@see Button
@@ -72,7 +72,7 @@ function Slider:GetThumbButtonWidget() end
 ---@return Button|nil thumbDrawable The thumb drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local thumbDrawable = widget:GetThumbDrawable()
 ---```
 ---@see Button
@@ -82,7 +82,7 @@ function Slider:GetThumbDrawable() end
 ---@return number value The current value (default: `0`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local value = widget:GetValue()
 ---```
 function Slider:GetValue() end
@@ -91,7 +91,7 @@ function Slider:GetValue() end
 ---@return number valueStep The value step (default: `1`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local valueStep = widget:GetValueStep()
 ---```
 function Slider:GetValueStep() end
@@ -99,7 +99,7 @@ function Slider:GetValueStep() end
 ---Sets whether the thumb size is fixed for the Slider.
 ---@param bool boolean `true` to fix the thumb size, `false` to allow resizing.
 ---@usage
----```
+---```lua
 ---widget:SetFixedThumb(true)
 ---```
 function Slider:SetFixedThumb(bool) end
@@ -107,7 +107,7 @@ function Slider:SetFixedThumb(bool) end
 ---Sets the inset for the Slider.
 ---@param inset number The inset value (default: `0`).
 ---@usage
----```
+---```lua
 ---widget:SetInset(10)
 ---```
 function Slider:SetInset(inset) end
@@ -116,7 +116,7 @@ function Slider:SetInset(inset) end
 ---@param min number The minimum value.
 ---@param max number The maximum value.
 ---@usage
----```
+---```lua
 ---widget:SetMinMaxValues(0, 100)
 ---```
 function Slider:SetMinMaxValues(min, max) end
@@ -124,7 +124,7 @@ function Slider:SetMinMaxValues(min, max) end
 ---Sets the minimum length of the thumb for the Slider.
 ---@param length number The minimum thumb length.
 ---@usage
----```
+---```lua
 ---widget:SetMinThumbLength(17)
 ---```
 function Slider:SetMinThumbLength(length) end
@@ -133,7 +133,7 @@ function Slider:SetMinThumbLength(length) end
 ---@param scrollType SLIDER_SCROLL_TYPE The orientation type (default: `0`).
 ---@see SLIDER_SCROLL_TYPE
 ---@usage
----```
+---```lua
 ---widget:SetOrientation(1)
 ---```
 function Slider:SetOrientation(scrollType) end
@@ -141,7 +141,7 @@ function Slider:SetOrientation(scrollType) end
 ---Sets the step value for clicking within the Slider.
 ---@param pageStep number The step value for page navigation.
 ---@usage
----```
+---```lua
 ---widget:SetPageStep(5)
 ---```
 function Slider:SetPageStep(pageStep) end
@@ -149,7 +149,7 @@ function Slider:SetPageStep(pageStep) end
 ---Sets the thumb button widget for the Slider.
 ---@param buttonWidget Button The button widget to use as the thumb.
 ---@usage
----```
+---```lua
 ---local thumb = widget:CreateChildWidget("button", "thumb", 0, true)
 ---thumb.bg = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
 ---thumb.bg:SetTextureInfo("thumb_df")
@@ -164,7 +164,7 @@ function Slider:SetThumbButtonWidget(buttonWidget) end
 ---@param value number The value to set.
 ---@param triggerEvent boolean `true` to trigger them `"OnSliderChanged"` event, `false` otherwise.
 ---@usage
----```
+---```lua
 ---widget:SetValue(15, true)
 ---```
 function Slider:SetValue(value, triggerEvent) end
@@ -172,7 +172,7 @@ function Slider:SetValue(value, triggerEvent) end
 ---Sets the step value for dragging the Slider.
 ---@param value number The step value for dragging.
 ---@usage
----```
+---```lua
 ---widget:SetValueStep(5)
 ---```
 function Slider:SetValueStep(value) end
@@ -181,7 +181,7 @@ function Slider:SetValueStep(value) end
 ---orientation.
 ---@param step number The amount to move the slider.
 ---@usage
----```
+---```lua
 ---widget:Up(15)
 ---```
 function Slider:Up(step) end

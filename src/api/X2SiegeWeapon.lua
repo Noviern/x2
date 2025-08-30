@@ -7,7 +7,7 @@ X2SiegeWeapon = {} -- api/X2SiegeWeapon
 ---@return number siegeWeaponSpeed The vehicle's speed.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local siegeWeaponSpeed = X2SiegeWeapon:GetSiegeWeaponSpeed()
 ---```
 function X2SiegeWeapon:GetSiegeWeaponSpeed() end
@@ -16,7 +16,7 @@ function X2SiegeWeapon:GetSiegeWeaponSpeed() end
 ---@return number siegeWeaponTurnSpeed The vehicle's turning speed.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local siegeWeaponTurnSpeed = X2SiegeWeapon:GetSiegeWeaponTurnSpeed()
 ---```
 function X2SiegeWeapon:GetSiegeWeaponTurnSpeed() end

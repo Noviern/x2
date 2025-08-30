@@ -18,7 +18,7 @@ TADT_HERO = 4               -- api/X2Achievement
 TADT_MAX = 7                -- api/X2Achievement
 TADT_TODAY = 1              -- api/X2Achievement
 ---@class X2Achievement
-X2Achievement = {} -- api/X2Achievement
+X2Achievement = {}          -- api/X2Achievement
 
 ---api/X2Achievement
 ---Enum Achievement Kind
@@ -147,7 +147,7 @@ X2Achievement = {} -- api/X2Achievement
 ---@return boolean success `true` if the achievement was added successfully, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local success = X2Achievement:AddTracingAchievement(EAK_COLLECTION, 4153)
 ---```
 ---@see ACHIEVEMENT_KIND
@@ -158,7 +158,7 @@ function X2Achievement:AddTracingAchievement(achievementKind, achievementType) e
 ---@return AchievementInfo|nil achievementInfo The achievement information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local achievementInfo = X2Achievement:GetAchievementInfo(4153)
 ---```
 ---@see AchievementInfo
@@ -172,21 +172,19 @@ function X2Achievement:GetAchievementInfo(achievementType) end
 ---@return number[] achievementMainList A table of achievement types, or empty if none exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local achievementMainList = X2Achievement:GetAchievementMainList(EAK_COLLECTION, 42, AF_ALL)
 ---```
 ---@see ACHIEVEMENT_KIND
 ---@see ACHIEVEMENT_FILTER
-function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType,
-                                              achievementFilter)
-end
+function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType, achievementFilter) end
 
 ---Retrieves the name of the specified achievement type.
 ---@param achievementType number The achievement type (id) to query.
 ---@return string achievementName The achievement name, or empty string if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local achievementName = X2Achievement:GetAchievementName(4153)
 ---```
 function X2Achievement:GetAchievementName(achievementType) end
@@ -198,7 +196,7 @@ function X2Achievement:GetAchievementName(achievementType) end
 ---@return AchievementSubList[] achievementSubList A table of achievement sublists, or empty if none exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local achievementSubList = X2Achievement:GetAchievementSubList(4154, AF_ALL)
 ---```
 ---@see ACHIEVEMENT_FILTER
@@ -210,7 +208,7 @@ function X2Achievement:GetAchievementSubList(mainType, achievementFilter) end
 ---@return number[] achievementTracingList A table of traced main achievement types, or empty if none exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local achievementTracingList = X2Achievement:GetAchievementTracingList(EAK_COLLECTION)
 ---```
 ---@see ACHIEVEMENT_KIND
@@ -222,7 +220,7 @@ function X2Achievement:GetAchievementTracingList(achievementKind) end
 ---@return AchievementCategory[]|AchievementLevelSubCategory[] categories A table of categories or level subcategories for `EAK_RACIAL_MISSION`, or empty if kind is invalid.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local categories = X2Achievement:GetCategories(EAK_ACHIEVEMENT)
 ---```
 ---@see ACHIEVEMENT_KIND
@@ -240,21 +238,19 @@ function X2Achievement:GetCategories(achievementKind) end
 ---@return number total The total number of achievements.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local complete, total = X2Achievement:GetCategoryCount(EAK_COLLECTION, 9, 42, AF_ALL)
 ---```
 ---@see ACHIEVEMENT_KIND
 ---@see ACHIEVEMENT_FILTER
-function X2Achievement:GetCategoryCount(achievementKind, categoryType,
-                                        subCategoryType, achievementFilter)
-end
+function X2Achievement:GetCategoryCount(achievementKind, categoryType, subCategoryType, achievementFilter) end
 
 ---Retrieves subcategory information if the specified subcategory exists.
 ---@param subCategory number The subcategory to query.
 ---@return SubcategoryInfo|nil subcategoryInfo The subcategory information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local subcategoryInfo = X2Achievement:GetSubcategoryInfo(42)
 ---```
 ---@see SubcategoryInfo
@@ -266,7 +262,7 @@ function X2Achievement:GetSubcategoryInfo(subCategory) end
 ---@return number todayAssignmentCount The number of assignments for the day.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local todayAssignmentCount = X2Achievement:GetTodayAssignmentCount(TADT_TODAY)
 ---```
 ---@see TODAY_TYPE
@@ -276,7 +272,7 @@ function X2Achievement:GetTodayAssignmentCount(todayType) end
 ---@return TodayAssignmentGoal[] todayAssignmentGoal A table of daily contract completion rewards.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local todayAssignmentGoal = X2Achievement:GetTodayAssignmentGoal()
 ---```
 function X2Achievement:GetTodayAssignmentGoal() end
@@ -287,7 +283,7 @@ function X2Achievement:GetTodayAssignmentGoal() end
 ---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local todayAssignmentInfo = X2Achievement:GetTodayAssignmentInfo(TADT_TODAY, 1)
 ---```
 ---@see TODAY_TYPE
@@ -300,7 +296,7 @@ function X2Achievement:GetTodayAssignmentInfo(todayType, index) end
 ---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local todayAssignmentInfo = X2Achievement:GetTodayAssignmentInfoForChange(TADT_TODAY, 1)
 ---```
 ---@see TODAY_TYPE
@@ -314,7 +310,7 @@ function X2Achievement:GetTodayAssignmentInfoForChange(todayType, index) end
 ---@return number maxCount The maximum reset count.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local resetCount, maxCount = X2Achievement:GetTodayAssignmentResetCount(TADT_TODAY)
 ---```
 ---@see TODAY_TYPE
@@ -325,7 +321,7 @@ function X2Achievement:GetTodayAssignmentResetCount(todayType) end
 ---@return number total The total completion count.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local done, total = X2Achievement:GetTodayAssignmentStatus()
 ---```
 function X2Achievement:GetTodayAssignmentStatus() end
@@ -337,7 +333,7 @@ function X2Achievement:GetTodayAssignmentStatus() end
 ---@return boolean todayAssignmentQuest `true` if the quest is in the list and not complete, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local todayAssignmentQuest = X2Achievement:IsTodayAssignmentQuest(TADT_TODAY, 7046)
 ---```
 ---@see TODAY_TYPE
@@ -349,7 +345,7 @@ function X2Achievement:IsTodayAssignmentQuest(todayType, questType) end
 ---@return boolean tracingAchievement `true` if the achievement is being traced, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local tracingAchievement = X2Achievement:IsTracingAchievement(EAK_COLLECTION, 4153)
 ---```
 ---@see ACHIEVEMENT_KIND
@@ -359,7 +355,7 @@ function X2Achievement:IsTracingAchievement(achievementKind, achievementType) en
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
 ---@param achievementType number The achievement type (id) to remove.
 ---@usage
----```
+---```lua
 ---X2Achievement:RemoveTracingAchievement(EAK_COLLECTION, 4153)
 ---```
 ---@see ACHIEVEMENT_KIND

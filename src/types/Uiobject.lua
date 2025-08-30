@@ -7,7 +7,7 @@ local Uiobject = {}
 ---@return string id The UI object's ID.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local id = widget:GetId()
 ---```
 function Uiobject:GetId() end
@@ -17,7 +17,7 @@ function Uiobject:GetId() end
 ---@return string name
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local name = widget:GetName()
 ---```
 function Uiobject:GetName() end
@@ -26,7 +26,7 @@ function Uiobject:GetName() end
 ---@return OBJECT_NAME objectType The UI object's type.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local objectType = widget:GetObjectType()
 ---```
 ---@see OBJECT_NAME
@@ -37,7 +37,7 @@ function Uiobject:GetObjectType() end
 ---@return boolean validUiobject `true` if the UI object is valid, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local validUiobject = widget:IsValidUIObject()
 ---```
 function Uiobject:IsValidUIObject() end

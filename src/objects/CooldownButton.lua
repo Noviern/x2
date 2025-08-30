@@ -31,7 +31,7 @@ local CooldownButton = {}
 ---@param remainTime number The remaining cooldown time.
 ---@param totalTime number The total cooldown duration.
 ---@usage
----```
+---```lua
 ---cooldownButton:SetCoolDown(50, 100)
 ---```
 function CooldownButton:SetCoolDown(remainTime, totalTime) end
@@ -41,7 +41,7 @@ function CooldownButton:SetCoolDown(remainTime, totalTime) end
 ---@param textureKey string The key for the texture.
 ---@param colorKey string The key for the color.
 ---@usage
----```
+---```lua
 ---cooldownButton:SetCoolDownMask("ui/cooldown/cooldown_mask.dds", "mask", "black")
 ---```
 function CooldownButton:SetCoolDownMask(textureName, textureKey, colorKey) end

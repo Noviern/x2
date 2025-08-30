@@ -40,7 +40,7 @@ local ListCtrl = {}
 
 ---Clears the current selection in the ListCtrl.
 ---@usage
----```
+---```lua
 ---widget:ClearSelection()
 ---```
 function ListCtrl:ClearSelection() end
@@ -49,7 +49,7 @@ function ListCtrl:ClearSelection() end
 ---@return NinePartDrawable overedImage The overed image drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local overedImage = widget:CreateOveredImage()
 ---```
 ---@see NinePartDrawable
@@ -59,7 +59,7 @@ function ListCtrl:CreateOveredImage() end
 ---@return NinePartDrawable selectedImage The selected image drawable.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local selectedImage = widget:CreateSelectedImage()
 ---```
 ---@see NinePartDrawable
@@ -67,7 +67,7 @@ function ListCtrl:CreateSelectedImage() end
 
 ---Deletes all data from the ListCtrl.
 ---@usage
----```
+---```lua
 ---widget:DeleteAllDatas()
 ---```
 function ListCtrl:DeleteAllDatas() end
@@ -75,7 +75,7 @@ function ListCtrl:DeleteAllDatas() end
 ---Deletes data associated with the specified key from the ListCtrl.
 ---@param key number The key of the data to delete. (the row index, starting at `1`)
 ---@usage
----```
+---```lua
 ---widget:DeleteData(1)
 ---```
 function ListCtrl:DeleteData(key) end
@@ -83,14 +83,14 @@ function ListCtrl:DeleteData(key) end
 ---Deletes data at the specified index from the ListCtrl.
 ---@param index number The index of the data to delete. (the row index, starting at `0`)
 ---@usage
----```
+---```lua
 ---widget:DeleteDataByIndex(0)
 ---```
 function ListCtrl:DeleteDataByIndex(index) end
 
 ---Deletes all rows from the ListCtrl, excluding the column header.
 ---@usage
----```
+---```lua
 ---widget:DeleteRows()
 ---```
 function ListCtrl:DeleteRows() end
@@ -99,7 +99,7 @@ function ListCtrl:DeleteRows() end
 ---@return number selectedIdx The index of the selected item. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local selectedIdx = widget:GetSelectedIdx()
 ---```
 function ListCtrl:GetSelectedIdx() end
@@ -111,7 +111,7 @@ function ListCtrl:GetSelectedIdx() end
 ---@return number index The index of the created column. (min: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index = widget:InsertColumn(100, LCCIT_TEXTBOX)
 ---```
 ---@see LCCIT
@@ -122,7 +122,7 @@ function ListCtrl:InsertColumn(width, itemType) end
 ---@param colIdx number The column index. (starting at `1`)
 ---@param subItemData string The data to insert.
 ---@usage
----```
+---```lua
 ---widget:InsertData(2, 1, "This item is in row 2 column 1")
 ---```
 function ListCtrl:InsertData(key, colIdx, subItemData) end
@@ -134,7 +134,7 @@ function ListCtrl:InsertData(key, colIdx, subItemData) end
 ---@param count number The number of rows to create.
 ---@param withEventWindow boolean `true` to include an event window, `false` otherwise.
 ---@usage
----```
+---```lua
 ---widget:InsertRows(2 , false)
 ---```
 function ListCtrl:InsertRows(count, withEventWindow) end
@@ -142,7 +142,7 @@ function ListCtrl:InsertRows(count, withEventWindow) end
 ---Selects the item at the specified index in the ListCtrl.
 ---@param itemIdx number The index of the item to select. (the row index, starting at `0`)
 ---@usage
----```
+---```lua
 ---widget:Select(0)
 ---```
 function ListCtrl:Select(itemIdx) end
@@ -151,7 +151,7 @@ function ListCtrl:Select(itemIdx) end
 ---@param idx number The column index. (starting at `1`)
 ---@param width number The width to set for the column.
 ---@usage
----```
+---```lua
 ---widget:SetColumnWidth(1, 200)
 ---```
 function ListCtrl:SetColumnWidth(idx, width) end
@@ -159,7 +159,7 @@ function ListCtrl:SetColumnWidth(idx, width) end
 ---Sets the height of the header column for the ListCtrl.
 ---@param height number The height of the header column.
 ---@usage
----```
+---```lua
 ---widget:SetHeaderColumnHeight(200)
 ---```
 function ListCtrl:SetHeaderColumnHeight(height) end
@@ -170,7 +170,7 @@ function ListCtrl:SetHeaderColumnHeight(height) end
 ---@param x2 number The x-coordinate of the second point.
 ---@param y2 number The y-coordinate of the second point.
 ---@usage
----```
+---```lua
 ---widget:SetOveredImageOffset(0, 0, 0, 0)
 ---```
 function ListCtrl:SetOveredImageOffset(x1, y1, x2, y2) end
@@ -181,7 +181,7 @@ function ListCtrl:SetOveredImageOffset(x1, y1, x2, y2) end
 ---@param x2 number The x-coordinate of the second point.
 ---@param y2 number The y-coordinate of the second point.
 ---@usage
----```
+---```lua
 ---widget:SetSelectedImageOffset(0, 0, 0, 0)
 ---```
 function ListCtrl:SetSelectedImageOffset(x1, y1, x2, y2) end
@@ -190,7 +190,7 @@ function ListCtrl:SetSelectedImageOffset(x1, y1, x2, y2) end
 ---the `"OnSelChanged"` event.
 ---@param use boolean `true` to enable double-click, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetUseDoubleClick(true)
 ---```
 function ListCtrl:SetUseDoubleClick(use) end

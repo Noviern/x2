@@ -29,7 +29,7 @@ local Grid = {}
 
 ---Clears the item from the Grid.
 ---@usage
----```
+---```lua
 ---widget:ClearItem()
 ---```
 function Grid:ClearItem() end
@@ -38,7 +38,7 @@ function Grid:ClearItem() end
 ---@return number adjustRowHeight The adjustment height. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:GetAdjustRowHeight()
 ---```
 function Grid:GetAdjustRowHeight() end
@@ -47,7 +47,7 @@ function Grid:GetAdjustRowHeight() end
 ---@return number left The number of left scrolls. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local left = widget:GetLeft()
 ---```
 function Grid:GetLeft() end
@@ -57,7 +57,7 @@ function Grid:GetLeft() end
 ---@return number max The maximum scroll position.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local min, max = widget:GetMaxTop()
 ---```
 function Grid:GetMaxTop() end
@@ -66,7 +66,7 @@ function Grid:GetMaxTop() end
 ---@return number rowCount The number of rows. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local rowCount = widget:GetRowCount()
 ---```
 function Grid:GetRowCount() end
@@ -77,7 +77,7 @@ function Grid:GetRowCount() end
 ---@return number rowHeight The height of the row. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local rowHeight = widget:GetRowHeight(1)
 ---```
 function Grid:GetRowHeight(row) end
@@ -86,7 +86,7 @@ function Grid:GetRowHeight(row) end
 ---@return number selectedColIndex The selected column index. (min: `0`, default: `-1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local selectedColIndex = widget:GetSelectedColIndex()
 ---```
 function Grid:GetSelectedColIndex() end
@@ -95,7 +95,7 @@ function Grid:GetSelectedColIndex() end
 ---@return number selectedRowIndex The selected row index. (min: `1`, default: `-1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local selectedRowIndex = widget:GetSelectedRowIndex()
 ---```
 function Grid:GetSelectedRowIndex() end
@@ -104,7 +104,7 @@ function Grid:GetSelectedRowIndex() end
 ---@return number selectedValue The selected value. (default: `-1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local selectedValue = widget:GetSelectedValue()
 ---```
 function Grid:GetSelectedValue() end
@@ -113,7 +113,7 @@ function Grid:GetSelectedValue() end
 ---@return number top The top scroll position. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local top = widget:GetTop()
 ---```
 function Grid:GetTop() end
@@ -121,21 +121,21 @@ function Grid:GetTop() end
 ---Selects the specified row in the Grid.
 ---@param index number The row index to select. (min: `1`)
 ---@usage
----```
+---```lua
 ---widget:LineSelect(1)
 ---```
 function Grid:LineSelect(index) end
 
 ---Releases the current selection in the Grid.
 ---@usage
----```
+---```lua
 ---widget:ReleaseSelect()
 ---```
 function Grid:ReleaseSelect() end
 
 ---Removes all items from the Grid.
 ---@usage
----```
+---```lua
 ---widget:RemoveAllItems()
 ---```
 function Grid:RemoveAllItems() end
@@ -144,35 +144,35 @@ function Grid:RemoveAllItems() end
 ---@param row number The row index. (min: `1`)
 ---@param col number The column index. (min: `1`)
 ---@usage
----```
+---```lua
 ---widget:RemoveItem(1, 2)
 ---```
 function Grid:RemoveItem(row, col) end
 
 ---Scrolls the Grid down by one step.
 ---@usage
----```
+---```lua
 ---widget:ScrollDown()
 ---```
 function Grid:ScrollDown() end
 
 ---Scrolls the Grid left by one step.
 ---@usage
----```
+---```lua
 ---widget:ScrollLeft()
 ---```
 function Grid:ScrollLeft() end
 
 ---Scrolls the Grid right by one step.
 ---@usage
----```
+---```lua
 ---widget:ScrollRight()
 ---```
 function Grid:ScrollRight() end
 
 ---Scrolls the Grid up by one step.
 ---@usage
----```
+---```lua
 ---widget:ScrollUp()
 ---```
 function Grid:ScrollUp() end
@@ -180,7 +180,7 @@ function Grid:ScrollUp() end
 ---Sets the number of columns in the Grid.
 ---@param count number The number of columns.
 ---@usage
----```
+---```lua
 ---widget:SetColCount(2)
 ---```
 function Grid:SetColCount(count) end
@@ -191,7 +191,7 @@ function Grid:SetColCount(count) end
 ---@param w number The width.
 ---@param h number The height.
 ---@usage
----```
+---```lua
 ---widget:SetColTexCoord(0, 0, 0, 0)
 ---```
 function Grid:SetColTexCoord(x, y, w, h) end
@@ -206,7 +206,7 @@ function Grid:SetColTexture(texture) end
 ---@param width number The width to set.
 ---@param col number The column index. (min: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetColWidth(100, 1)
 ---```
 function Grid:SetColWidth(width, col) end
@@ -218,7 +218,7 @@ function Grid:SetColWidth(width, col) end
 ---@param b number The blue color component. (min: `0`, max: `1`, default: `1`)
 ---@param a number The alpha component. (min: `0`, max: `1`, default: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetCurrentColor(1, 0, 0, .1)
 ---```
 function Grid:SetCurrentColor(r, g, b, a) end
@@ -226,7 +226,7 @@ function Grid:SetCurrentColor(r, g, b, a) end
 ---Enables or disables the current line in the Grid.
 ---@param current boolean `true` to enable the current line, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetCurrentLine(true)
 ---```
 function Grid:SetCurrentLine(current) end
@@ -238,7 +238,7 @@ function Grid:SetCurrentLine(current) end
 ---@param w number The width.
 ---@param h number The height.
 ---@usage
----```
+---```lua
 ---widget:SetCurrentTexCoord(0, 0, 0, 0)
 ---```
 function Grid:SetCurrentTexCoord(x, y, w, h) end
@@ -253,7 +253,7 @@ function Grid:SetCurrentTexture(texture) end
 ---`Grid:SetItem`.
 ---@param width number The default column width.
 ---@usage
----```
+---```lua
 ---widget:SetDefaultColWidth(100)
 ---```
 function Grid:SetDefaultColWidth(width) end
@@ -262,7 +262,7 @@ function Grid:SetDefaultColWidth(width) end
 ---`Grid:SetItem`.
 ---@param height number The default row height.
 ---@usage
----```
+---```lua
 ---widget:SetDefaultRowHeight(100)
 ---```
 function Grid:SetDefaultRowHeight(height) end
@@ -280,7 +280,7 @@ function Grid:SetDrawStartNumber(number) end
 ---Sets the header type for the Grid.
 ---@param type HEADER_TYPE The header type.
 ---@usage
----```
+---```lua
 ---widget:SetHeaderType("top")
 ---```
 ---@see HEADER_TYPE
@@ -292,7 +292,7 @@ function Grid:SetHeaderType(type) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetInsetForCol(10, 10, 10, 10)
 ---```
 function Grid:SetInsetForCol(left, top, right, bottom) end
@@ -303,7 +303,7 @@ function Grid:SetInsetForCol(left, top, right, bottom) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetInsetForOutLine(10, 10, 10, 10)
 ---```
 function Grid:SetInsetForOutLine(left, top, right, bottom) end
@@ -314,7 +314,7 @@ function Grid:SetInsetForOutLine(left, top, right, bottom) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetInsetForRow(10, 10, 10, 10)
 ---```
 function Grid:SetInsetForRow(left, top, right, bottom) end
@@ -328,7 +328,7 @@ function Grid:SetInsetForRow(left, top, right, bottom) end
 ---@param value number The value associated with the item.
 ---@param withoutExtent boolean `true` to ignore extent, `false` to use it.
 ---@usage
----```
+---```lua
 ---local label = widget:CreateChildWidget("label", "testbtn", 0, true)
 ---label:SetText("Archerage.to")
 ---label:SetExtent(50, 50)
@@ -346,7 +346,7 @@ function Grid:SetItem(table, row, col, makeIfNotExist, value, withoutExtent) end
 ---@param bottom number The bottom inset.
 ---@return number rowCount The number of rows affected.
 ---@usage
----```
+---```lua
 ---widget:SetItemInset(1, 1, 10, 10, 10, 10)
 ---```
 function Grid:SetItemInset(row, col, left, top, right, bottom) end
@@ -355,7 +355,7 @@ function Grid:SetItemInset(row, col, left, top, right, bottom) end
 ---possible.
 ---@param left number The left scroll position.
 ---@usage
----```
+---```lua
 ---widget:SetLeft(1)
 ---```
 function Grid:SetLeft(left) end
@@ -363,7 +363,7 @@ function Grid:SetLeft(left) end
 ---Sets the width of the left header in the Grid.
 ---@param width number The width of the left header.
 ---@usage
----```
+---```lua
 ---widget:SetLeftHeaderWidth(100)
 ---```
 function Grid:SetLeftHeaderWidth(width) end
@@ -371,7 +371,7 @@ function Grid:SetLeftHeaderWidth(width) end
 ---Enables or disables the line background for the Grid to show row textures.
 ---@param line boolean `true` to enable line background, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetLineBackGround(true)
 ---```
 function Grid:SetLineBackGround(line) end
@@ -382,7 +382,7 @@ function Grid:SetLineBackGround(line) end
 ---@param b number The blue color component. (min: `0`, max: `1`)
 ---@param a number The alpha component. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetLineColor(1, 0, 0, 1)
 ---```
 function Grid:SetLineColor(r, g, b, a) end
@@ -390,7 +390,7 @@ function Grid:SetLineColor(r, g, b, a) end
 ---Enables or disables row clipping in the Grid.
 ---@param use boolean `true` to enable row clipping, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:SetRowCliping(true)
 ---```
 function Grid:SetRowCliping(use) end
@@ -398,7 +398,7 @@ function Grid:SetRowCliping(use) end
 ---Sets the number of rows in the Grid.
 ---@param count number The number of rows.
 ---@usage
----```
+---```lua
 ---widget:SetRowCount(3)
 ---```
 function Grid:SetRowCount(count) end
@@ -407,7 +407,7 @@ function Grid:SetRowCount(count) end
 ---@param height number The height to set. (default: `0`)
 ---@param row number The row index. (min: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetRowHeight(100, 1)
 ---```
 function Grid:SetRowHeight(height, row) end
@@ -418,7 +418,7 @@ function Grid:SetRowHeight(height, row) end
 ---@param w number The width.
 ---@param h number The height.
 ---@usage
----```
+---```lua
 ---widget:SetRowTexCoord(0, 0, 0, 0)
 ---```
 function Grid:SetRowTexCoord(x, y, w, h) end
@@ -436,7 +436,7 @@ function Grid:SetRowTexture(texture) end
 ---@param b number The blue color component. (min: `0`, max: `1`, default: `129`)
 ---@param a number The alpha component. (min: `0`, max: `1`, default: `129`)
 ---@usage
----```
+---```lua
 ---widget:SetSelectedColor(1, 0, 0, 1)
 ---```
 function Grid:SetSelectedColor(r, g, b, a) end
@@ -444,7 +444,7 @@ function Grid:SetSelectedColor(r, g, b, a) end
 ---Enables or disables line selection in the Grid.
 ---@param select boolean `true` to enable line selection, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetSelectedLine(true)
 ---```
 function Grid:SetSelectedLine(select) end
@@ -456,7 +456,7 @@ function Grid:SetSelectedLine(select) end
 ---@param w number The width.
 ---@param h number The height.
 ---@usage
----```
+---```lua
 ---widget:SetSelectedTexCoord(0, 0, 0, 0)
 ---```
 function Grid:SetSelectedTexCoord(x, y, w, h) end
@@ -473,7 +473,7 @@ function Grid:SetSelectedTexture(texture) end
 ---@param right number The right inset. (default: `0`)
 ---@param bottom number The bottom inset. (default: `0`)
 ---@usage
----```
+---```lua
 ---widget:SetTexInset(0, 0, 0, 0)
 ---```
 function Grid:SetTexInset(left, top, right, bottom) end
@@ -481,7 +481,7 @@ function Grid:SetTexInset(left, top, right, bottom) end
 ---Sets the top scroll position of the Grid.
 ---@param top number The top scroll position.
 ---@usage
----```
+---```lua
 ---widget:SetTop(15)
 ---```
 function Grid:SetTop(top) end
@@ -489,7 +489,7 @@ function Grid:SetTop(top) end
 ---Sets the height of the top header in the Grid.
 ---@param height number The height of the top header.
 ---@usage
----```
+---```lua
 ---widget:SetTopHeaderHeight(50)
 ---```
 function Grid:SetTopHeaderHeight(height) end

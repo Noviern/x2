@@ -34,15 +34,13 @@ local StatusBar = {}
 ---@param anchorOigin? ANCHOR_POINT The origin anchor point (optional).
 ---@param x? number The x-offset (optional).
 ---@param y? number The y-offset (optional).
-function StatusBar:AddAnchorChildToBar(anchorChild, childAnchorPoint,
-                                       anchorOigin, x, y)
-end
+function StatusBar:AddAnchorChildToBar(anchorChild, childAnchorPoint, anchorOigin, x, y) end
 
 ---Retrieves the color of the StatusBar.
 ---@return RGBA barColor The color of the StatusBar.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local barColor = widget:GetBarColor()
 ---```
 ---@see RGBA
@@ -53,7 +51,7 @@ function StatusBar:GetBarColor() end
 ---@return number leftWidth The calculated left width.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local leftWidth = widget:GetLeftWidth(15)
 ---```
 function StatusBar:GetLeftWidth(value) end
@@ -63,7 +61,7 @@ function StatusBar:GetLeftWidth(value) end
 ---@return string min The minimum value.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local max, min = widget:GetMinMaxValues()
 ---```
 function StatusBar:GetMinMaxValues() end
@@ -72,7 +70,7 @@ function StatusBar:GetMinMaxValues() end
 ---@return ORIENTATION orientation The orientation of the StatusBar. (default: `"HORIZONTAL"`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local orientation = widget:GetOrientation()
 ---```
 ---@see ORIENTATION
@@ -82,7 +80,7 @@ function StatusBar:GetOrientation() end
 ---@return string value The current value. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local value = widget:GetValue()
 ---```
 function StatusBar:GetValue() end
@@ -93,7 +91,7 @@ function StatusBar:GetValue() end
 ---@return boolean `true` if the color changes, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:IsChangeAfterImageColor("50")
 ---```
 function StatusBar:IsChangeAfterImageColor(value) end
@@ -105,7 +103,7 @@ function StatusBar:IsChangeAfterImageColor(value) end
 ---@param b number The blue color component (min: `0`, max: `1`).
 ---@param a number The alpha (opacity) component (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetBarColor(1, 0, 0, 1)
 ---```
 function StatusBar:SetBarColor(r, g, b, a) end
@@ -114,7 +112,7 @@ function StatusBar:SetBarColor(r, g, b, a) end
 ---the texture has been set for the StatusBar.
 ---@param colorKey string The color key to apply from the texture path `*.g` file.
 ---@usage
----```
+---```lua
 ---widget:SetBarColorByKey("death_01")
 ---```
 function StatusBar:SetBarColorByKey(colorKey) end
@@ -123,7 +121,7 @@ function StatusBar:SetBarColorByKey(colorKey) end
 ---@param nameTex TEXTURE_PATH The texture path.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the texture to.
 ---@usage
----```
+---```lua
 ---widget:SetBarTexture(TEXTURE_PATH.COMMON_GAUGE, "artwork")
 ---```
 ---@see TEXTURE_PATH
@@ -133,7 +131,7 @@ function StatusBar:SetBarTexture(nameTex, nameLayer) end
 ---Sets the texture using a key for the StatusBar.
 ---@param key string The texture key to apply.
 ---@usage
----```
+---```lua
 ---widget:SetBarTextureByKey("gage")
 ---```
 function StatusBar:SetBarTextureByKey(key) end
@@ -144,7 +142,7 @@ function StatusBar:SetBarTextureByKey(key) end
 ---@param coordW any The width of the texture.
 ---@param coordH any The height of the texture.
 ---@usage
----```
+---```lua
 ---widget:SetBarTextureCoords(0, 13, 460, 12)
 ---```
 function StatusBar:SetBarTextureCoords(coordX, coordY, coordW, coordH) end
@@ -154,7 +152,7 @@ function StatusBar:SetBarTextureCoords(coordX, coordY, coordW, coordH) end
 ---@param min number The minimum value.
 ---@param max number The maximum value.
 ---@usage
----```
+---```lua
 ---widget:SetMinMaxValues(0, 100)
 ---```
 function StatusBar:SetMinMaxValues(min, max) end
@@ -163,7 +161,7 @@ function StatusBar:SetMinMaxValues(min, max) end
 ---@param min string The minimum value.
 ---@param max string The maximum value.
 ---@usage
----```
+---```lua
 ---widget:SetMinMaxValuesForString("0", "100")
 ---```
 function StatusBar:SetMinMaxValuesForString(min, max) end
@@ -171,7 +169,7 @@ function StatusBar:SetMinMaxValuesForString(min, max) end
 ---Sets the orientation of the StatusBar.
 ---@param orientation ORIENTATION The orientation to set.
 ---@usage
----```
+---```lua
 ---widget:SetOrientation("VERTICAL")
 ---```
 ---@see ORIENTATION
@@ -183,7 +181,7 @@ function StatusBar:SetOrientation(orientation) end
 ---@param anim? boolean `true` to enable animation, `false` to disable (optional).
 ---@param animTime? number The animation duration in seconds (optional).
 ---@usage
----```
+---```lua
 ---widget:SetValue(100)
 ---widget:SetValue(80, true, 2) -- This will animate from 100 to 80.
 ---```
@@ -195,7 +193,7 @@ function StatusBar:SetValue(value, anim, animTime) end
 ---@param anim? boolean `true` to enable animation, `false` to disable (optional).
 ---@param animTime? number The animation duration in seconds (optional).
 ---@usage
----```
+---```lua
 ---widget:SetValueForString("100")
 ---widget:SetValueForString("80", true, 2)
 ---```

@@ -118,7 +118,7 @@ local AUCTION_CATEGORY = {
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
 ---@param askMarketPriceUi boolean `true` to open the market price UI, `false` otherwise. Buggy: only opens if UI was opened previously.
 ---@usage
----```
+---```lua
 ---X2Auction:AskMarketPrice(8343, 0, true)
 ---```
 ---@see ITEM_GRADE_TYPE
@@ -131,7 +131,7 @@ function X2Auction:AskMarketPrice(itemType, itemGrade, askMarketPriceUi) end
 ---@return string|nil lowestPrice The lowest price as a string, or `nil` if not available.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lowestPrice = X2Auction:GetLowestPrice(8343, 0)
 ---```
 ---@see ITEM_GRADE_TYPE
@@ -141,7 +141,7 @@ function X2Auction:GetLowestPrice(itemType, itemGrade) end
 ---@return number searchedItemCount The number of items displayed. (min: `0`, max: `9`, default: `9`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local searchedItemCount = X2Auction:GetSearchedItemCount()
 ---```
 function X2Auction:GetSearchedItemCount() end
@@ -152,7 +152,7 @@ function X2Auction:GetSearchedItemCount() end
 ---@return ItemInfo|nil itemInfo The item information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local itemInfo = X2Auction:GetSearchedItemInfo(1)
 ---```
 ---@see ItemInfo
@@ -162,7 +162,7 @@ function X2Auction:GetSearchedItemInfo(idx) end
 ---@return number currentPage The current page number. (min: `1`, max: `50`, default: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentPage = X2Auction:GetSearchedItemPage()
 ---```
 function X2Auction:GetSearchedItemPage() end
@@ -171,7 +171,7 @@ function X2Auction:GetSearchedItemPage() end
 ---@return number maxSearchablePages The maximum number of searchable pages. (max: `50`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local maxSearchablePages = X2Auction:GetSearchedItemTotalCount()
 ---```
 function X2Auction:GetSearchedItemTotalCount() end
@@ -188,12 +188,11 @@ function X2Auction:GetSearchedItemTotalCount() end
 ---@param minDirectPriceStr string The minimum direct price in copper as a string.
 ---@param maxDirectPriceStr string The maximum direct price in copper as a string.
 ---@usage
----```
+---```lua
 ---X2Auction:SearchAuctionArticle(1, 0, 0, 13, 0, false, "Erenor", "0", "0")
 ---```
 ---@see AUCTION_GRADE_FILTER
 ---@see AUCTION_CATEGORY
-function X2Auction:SearchAuctionArticle(page, minLevel, maxLevel, grade, category,
-                                        exactMatch, keywords, minDirectPriceStr,
-                                        maxDirectPriceStr)
+function X2Auction:SearchAuctionArticle(page, minLevel, maxLevel, grade, category, exactMatch, keywords,
+    minDirectPriceStr, maxDirectPriceStr)
 end

@@ -125,14 +125,14 @@ local Slot = {}
 ---@param nameLayer DRAWABLE_NAME_LAYER The name of the layer to set.
 ---@see DRAWABLE_NAME_LAYER
 ---@usage
----```
+---```lua
 ---widget:ChangeIconLayer("background")
 ---```
 function Slot:ChangeIconLayer(nameLayer) end
 
 ---Disables the default clicking behavior of the Slot.
 ---@usage
----```
+---```lua
 ---widget:DisableDefaultClick()
 ---```
 function Slot:DisableDefaultClick() end
@@ -141,7 +141,7 @@ function Slot:DisableDefaultClick() end
 ---@param itemType number The type of the item.
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
 ---@usage
----```
+---```lua
 ---widget:EstablishItem(7992, 12)
 ---```
 ---@see ITEM_GRADE_TYPE
@@ -150,7 +150,7 @@ function Slot:EstablishItem(itemType, itemGrade) end
 ---Establishes a skill for the Slot.
 ---@param skillType number The type of the skill.
 ---@usage
----```
+---```lua
 ---widget:EstablishSkill(14495)
 ---```
 function Slot:EstablishSkill(skillType) end
@@ -161,7 +161,7 @@ function Slot:EstablishSkill(skillType) end
 ---@param remain number The remaining time for the alert in milliseconds.
 ---@param duration number The total duration of the alert in milliseconds.
 ---@usage
----```
+---```lua
 ---widget:EstablishSkillAlert(1, 2000, 2000)
 ---```
 ---@see SKILL_ALERT_STATUS_BUFF_TAG
@@ -173,7 +173,7 @@ function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 ---@param slotType SLOT_TYPE The type of the slot.
 ---@param slotIdx number The index of the slot (possibly skillType for `ISLOT_ACTION`).
 ---@usage
----```
+---```lua
 ---widget:EstablishSkillSlot(ISLOT_ORIGIN_SKILL_VIEW, 36468)
 ---```
 ---@see SLOT_TYPE
@@ -184,7 +184,7 @@ function Slot:EstablishSkillSlot(slotType, slotIdx) end
 ---@param slotType SLOT_TYPE The type of the slot.
 ---@param slotIdx number The slot index.
 ---@usage
----```
+---```lua
 ---widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Dont forget to subtract 1!
 ---```
 ---@see SLOT_TYPE
@@ -196,7 +196,7 @@ function Slot:EstablishSlot(slotType, slotIdx) end
 ---@param slotIdx number The slot index.
 ---@param virtualSlotIdx number The virtual slot index.
 ---@usage
----```
+---```lua
 ---widget:EstablishVirtualSlot(ISLOT_ACTION, 1, 1)
 ---```
 ---@see SLOT_TYPE
@@ -206,7 +206,7 @@ function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 ---@return BIND_TYPE bindedType The binded type.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local bindedType = widget:GetBindedType()
 ---```
 ---@see BIND_TYPE
@@ -217,7 +217,7 @@ function Slot:GetBindedType() end
 ---@return ItemInfo|table|nil extraInfo The extra information, or `nil` if none exists.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local extraInfo = widget:GetExtraInfo()
 ---```
 function Slot:GetExtraInfo() end
@@ -226,7 +226,7 @@ function Slot:GetExtraInfo() end
 ---@return string hotKey The hotkey string.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local hotkey = widget:GetHotKey()
 ---```
 function Slot:GetHotKey() end
@@ -236,7 +236,7 @@ function Slot:GetHotKey() end
 ---@return nil itemLevelRequirment The item level requirement (currently returns `nil`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local itemLevelRequirment = widget:GetItemLevelRequirment()
 ---```
 function Slot:GetItemLevelRequirment() end
@@ -245,7 +245,7 @@ function Slot:GetItemLevelRequirment() end
 ---@return number|nil passiveBuffType The passive buff type, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local passiveBuffType = widget:GetPassiveBuffType()
 ---```
 function Slot:GetPassiveBuffType() end
@@ -254,7 +254,7 @@ function Slot:GetPassiveBuffType() end
 ---@return number|nil skillType The skill type, or `nil` if no skill is set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local skillType = widget:GetSkillType()
 ---```
 function Slot:GetSkillType() end
@@ -263,7 +263,7 @@ function Slot:GetSkillType() end
 ---@return SkillTooltip|self|nil tooltip The tooltip, `self`, or `nil`.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local tooltip = widget:GetTooltip()
 ---```
 ---@see SkillTooltip
@@ -273,21 +273,21 @@ function Slot:GetTooltip() end
 ---@return boolean empty `true` if the Slot is empty, `false` otherwise. (default: `true`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local empty = widget:IsEmpty()
 ---```
 function Slot:IsEmpty() end
 
 ---Releases the established values of the Slot.
 ---@usage
----```
+---```lua
 ---widget:ReleaseSlot()
 ---```
 function Slot:ReleaseSlot() end
 
 ---Resets the state of the Slot.
 ---@usage
----```
+---```lua
 ---widget:ResetState()
 ---```
 function Slot:ResetState() end

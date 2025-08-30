@@ -28,14 +28,14 @@ local RadioGroup = {}
 ---Checks the radio item at the specified index in the RadioGroup.
 ---@param index number The index of the radio item to check.
 ---@usage
----```
+---```lua
 ---widget:Check(1)
 ---```
 function RadioGroup:Check(index) end
 
 ---Clears all radio data from the RadioGroup.
 ---@usage
----```
+---```lua
 ---widget:Clear()
 ---```
 function RadioGroup:Clear() end
@@ -45,7 +45,7 @@ function RadioGroup:Clear() end
 ---@return RadioItem radioItem The created radio item.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:CreateRadioItem(15)
 ---```
 function RadioGroup:CreateRadioItem(dataValue) end
@@ -54,7 +54,7 @@ function RadioGroup:CreateRadioItem(dataValue) end
 ---@param index number The index of the radio item.
 ---@param enable boolean `true` to enable checking, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:EnableIndex(1, false)
 ---```
 function RadioGroup:EnableIndex(index, enable) end
@@ -63,7 +63,7 @@ function RadioGroup:EnableIndex(index, enable) end
 ---@return number checked The count of checked radio items. (default: `-1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local checked = widget:GetChecked()
 ---```
 function RadioGroup:GetChecked() end
@@ -72,7 +72,7 @@ function RadioGroup:GetChecked() end
 ---@return number|nil checkedData The data value of the checked item, or `nil` if none are checked.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local checkedData = widget:GetCheckedData()
 ---```
 function RadioGroup:GetCheckedData() end
@@ -82,7 +82,7 @@ function RadioGroup:GetCheckedData() end
 ---@return number|nil dataValue The data value at the index, or `nil` if the index doesn't exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local dataValue = widget:GetDataValue(1)
 ---```
 function RadioGroup:GetDataValue(index) end
@@ -92,7 +92,7 @@ function RadioGroup:GetDataValue(index) end
 ---@return number index The index of the radio item, or `-1` if the data value doesn't exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local index = widget:GetIndexByValue(15)
 ---```
 function RadioGroup:GetIndexByValue(dataValue) end
@@ -101,7 +101,7 @@ function RadioGroup:GetIndexByValue(dataValue) end
 ---@return number size The number of radio items. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local size = widget:GetSize()
 ---```
 function RadioGroup:GetSize() end
@@ -111,14 +111,14 @@ function RadioGroup:GetSize() end
 ---@return boolean inRange `true` if the index is in range, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local inRange = widget:IsInRange(1)
 ---```
 function RadioGroup:IsInRange(index) end
 
 ---Releases the check state on all radio items in the RadioGroup.
 ---@usage
----```
+---```lua
 ---widget:ReleaseCheck()
 ---```
 function RadioGroup:ReleaseCheck() end
@@ -127,7 +127,7 @@ function RadioGroup:ReleaseCheck() end
 ---@param index number The index of the radio item.
 ---@param show boolean `true` to show the item, `false` to hide it. (default: `true`)
 ---@usage
----```
+---```lua
 ---widget:ShowIndex(1, false)
 ---```
 function RadioGroup:ShowIndex(index, show) end
@@ -136,7 +136,7 @@ function RadioGroup:ShowIndex(index, show) end
 ---@param index number The index of the radio item.
 ---@param data number The new data value to set.
 ---@usage
----```
+---```lua
 ---widget:UpdateValue(1, 10)
 ---```
 function RadioGroup:UpdateValue(index, data) end

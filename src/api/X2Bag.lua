@@ -7,7 +7,7 @@ X2Bag = {} -- api/X2Bag
 ---@param slot number The slot containing the item to equip.
 ---@param isAuxEquip boolean Whether to equip as auxiliary equipment.
 ---@usage
----```
+---```lua
 ---X2Bag:EquipBagItem(1, false)
 ---```
 function X2Bag:EquipBagItem(slot, isAuxEquip) end
@@ -20,7 +20,7 @@ function X2Bag:EquipBagItem(slot, isAuxEquip) end
 ---@return ItemInfo|nil bagItemInfo The item information, or `nil` if the slot is empty or doesn't exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local bagItemInfo = X2Bag:GetBagItemInfo(1, 1, IIK_CATEGORY + IIK_TYPE)
 ---```
 ---@see IIK

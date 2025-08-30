@@ -311,7 +311,7 @@ local CHAT_MESSAGE_RELATION = {
 ---@param message string The message to send.
 ---@param option? CHAT_MESSAGE_OPTION Optional chat message settings. (Required for all `CMF_SPECIAL`)
 ---@usage
----```
+---```lua
 ---X2Chat:DispatchChatMessage(CMF_SYSTEM, "Hello, ArcheRage!")
 ---X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = `true` })
 ---```

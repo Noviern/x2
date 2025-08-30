@@ -46,7 +46,7 @@ local WorldMap = {}
 ---@return ZONE_CLIMATE[] climateInfo The climate information for the zone.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local climateInfo = widget:GetClimateInfo(34)
 ---```
 ---@see ZONE_ID
@@ -57,7 +57,7 @@ function WorldMap:GetClimateInfo(zoneId) end
 ---@return SEXTANT|nil The cursor's sextant data, or `nil` if not available.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:GetCursorSextants()
 ---```
 ---@see SEXTANT
@@ -69,7 +69,7 @@ function WorldMap:GetCursorSextants() end
 ---@return ImageDrawable|EmptyTable|nil iconDrawable The icon drawable, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local iconDrawable = widget:GetIconDrawable(3, 1)
 ---```
 ---@see WORLD_MAP_ZOOM
@@ -85,7 +85,7 @@ function WorldMap:GetIconDrawable(level, id) end
 ---@return boolean created `true` if the drawable was created, `false` if it already existed.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local routeDrawable, created = widget:GetRouteDrawable(3, 17)
 ---```
 ---@see WORLD_MAP_ZOOM
@@ -94,7 +94,7 @@ function WorldMap:GetRouteDrawable(level, id) end
 
 ---Hides all icon drawables on the world map.
 ---@usage
----```
+---```lua
 ---widget:HideAllIconDrawable()
 ---```
 function WorldMap:HideAllIconDrawable() end
@@ -106,7 +106,7 @@ function WorldMap:HideAllIconDrawable() end
 ---@param tgaPath "Game/ui/map/image_map.tga"|string The path to the map texture.
 ---@param iconPath BUTTON_TEXTURE_PATH The path to the icon texture. (Possibly TEXTURE_PATH)
 ---@usage
----```
+---```lua
 ---widget:InitMapData(928, 556, "Game/ui/map/image_map.tga", BUTTON_TEXTURE_PATH.MAP)
 ---```
 ---@see BUTTON_TEXTURE_PATH
@@ -115,7 +115,7 @@ function WorldMap:InitMapData(width, height, tgaPath, iconPath) end
 ---Removes a ping from the world map by its type.
 ---@param pingType PING_TYPE The type of ping to remove.
 ---@usage
----```
+---```lua
 ---widget:RemovePing(1)
 ---```
 ---@see PING_TYPE
@@ -123,7 +123,7 @@ function WorldMap:RemovePing(pingType) end
 
 ---Removes all pings from the world map.
 ---@usage
----```
+---```lua
 ---widget:RemovePingAll()
 ---```
 function WorldMap:RemovePingAll() end
@@ -131,7 +131,7 @@ function WorldMap:RemovePingAll() end
 ---Sets the drawable for common farm icons on the world map.
 ---@param drawable EffectDrawable The drawable for the farm icon.
 ---@usage
----```
+---```lua
 ---local farmDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
 ---farmDrawable:SetVisible(false)
 ---farmDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
@@ -152,7 +152,7 @@ function WorldMap:SetCommonFarmDrawable(drawable) end
 ---@param b number The blue color component. (min: `0`, max: `1`)
 ---@param a number The alpha component. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetFestivalZoneColor(1, 1, 0, 1)
 ---```
 function WorldMap:SetFestivalZoneColor(r, g, b, a) end
@@ -161,7 +161,7 @@ function WorldMap:SetFestivalZoneColor(r, g, b, a) end
 ---type.
 ---@param drawable EffectDrawable The drawable for the portal icon.
 ---@usage
----```
+---```lua
 ---local portalDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
 ---portalDrawable:SetVisible(false)
 ---portalDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
@@ -195,7 +195,7 @@ function WorldMap:SetTempNotifyCoord(isMain, coord) end
 ---@param b number The blue color component. (min: `0`, max: `1`)
 ---@param a number The alpha component. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetTroubleZoneColor(HPWS_TROUBLE_0, 1, 0, 1, .5)
 ---```
 ---@see ZONE_STATE
@@ -215,7 +215,7 @@ function WorldMap:ShowCommonFarm(farmGroupType, farmType, x, y) end
 ---@param y number The y-coordinate.
 ---@param z number The z-coordinate.
 ---@usage
----```
+---```lua
 ---widget:ShowPortal(307, 1277.77, 1394.11, 191.662)
 ---```
 ---@see ZONE_KEY
@@ -229,7 +229,7 @@ function WorldMap:ShowQuest(qType, decalIndex, hasDecal) end
 
 ---Updates the event map data on the world map.
 ---@usage
----```
+---```lua
 ---widget:UpdateEventMap()
 ---```
 function WorldMap:UpdateEventMap() end
@@ -237,7 +237,7 @@ function WorldMap:UpdateEventMap() end
 ---Updates the route map with the specified drawable.
 ---@param routeDrawable ImageDrawable The drawable for the route.
 ---@usage
----```
+---```lua
 ---local routeDrawable, created = widget:GetRouteDrawable(3, 17)
 ---widget:UpdateRouteMap(routeDrawable)
 ---```
@@ -246,7 +246,7 @@ function WorldMap:UpdateRouteMap(routeDrawable) end
 
 ---Updates the zone state drawables on the world map.
 ---@usage
----```
+---```lua
 ---widget:UpdateZoneStateDrawable()
 ---```
 function WorldMap:UpdateZoneStateDrawable() end

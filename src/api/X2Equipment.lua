@@ -141,7 +141,7 @@ X2Equipment = {}     -- api/X2Equipment
 ---@return ItemInfo|nil equippedItemTooltipInfo The tooltip information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local equippedItemTooltipInfo = X2Equipment:GetEquippedItemTooltipInfo(ES_HEAD, false)
 ---```
 ---@see ES
@@ -153,7 +153,7 @@ function X2Equipment:GetEquippedItemTooltipInfo(equipSlot, targetEquippedItem) e
 ---@return number|nil equippedItemType The equipped item type, or `nil` if none.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local equippedItemType = X2Equipment:GetEquippedItemType(ES_HEAD)
 ---```
 ---@see ES

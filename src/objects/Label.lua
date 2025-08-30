@@ -28,7 +28,7 @@ local Label = {}
 ---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local left, top, right, bottom = widget:GetInset()
 ---```
 function Label:GetInset() end
@@ -36,7 +36,7 @@ function Label:GetInset() end
 ---Enables or disables automatic resizing of the Label.
 ---@param resize boolean `true` to enable auto resizing, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetAutoResize(true)
 ---```
 function Label:SetAutoResize(resize) end
@@ -47,7 +47,7 @@ function Label:SetAutoResize(resize) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetInset(10, 10, 10, 10)
 ---```
 function Label:SetInset(left, top, right, bottom) end
@@ -56,7 +56,7 @@ function Label:SetInset(left, top, right, bottom) end
 ---before `Label:SetText`).
 ---@param only boolean `true` to restrict to numbers only, `false` to allow any text. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetNumberOnly(true)
 ---widget:SetText("Hello123")
 ------He,llo,123

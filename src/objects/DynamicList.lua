@@ -23,7 +23,7 @@ local DynamicList = {}
 
 ---Clears all data from the DynamicList.
 ---@usage
----```
+---```lua
 ---widget:ClearData()
 ---```
 function DynamicList:ClearData() end
@@ -33,7 +33,7 @@ function DynamicList:ClearData() end
 ---@return NinePartDrawable overedImage The created overed image.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local overedImage = widget:CreateOveredImage("overlay")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -62,7 +62,7 @@ function DynamicList:EraseSubItemInfo(mainKey, depth, depthKey, key) end
 ---@return number currentHeight The current height. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentHeight = widget:GetCurrentHeight()
 ---```
 function DynamicList:GetCurrentHeight() end
@@ -82,7 +82,7 @@ function DynamicList:GetMainList() end
 ---@return number scrollMaxValue The maximum scroll value.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local scrollMaxValue = widget:GetScrollMaxValue()
 ---```
 function DynamicList:GetScrollMaxValue() end
@@ -102,7 +102,7 @@ function DynamicList:InitBgType(bgDrawType) end
 ---@TODO: Confirm purpose and behavior.
 ---Initializes the widget pool for the DynamicList.
 ---@usage
----```
+---```lua
 ---widget:InitCreateWidgetPool()
 ---```
 function DynamicList:InitCreateWidgetPool() end
@@ -114,7 +114,7 @@ function DynamicList:InitCreateWidgetPool() end
 ---@param subLayout function The sub-layout function.
 ---@param subData function The sub-data function.
 ---@usage
----```
+---```lua
 ---function mainLayoutFunc(subItem, index) end
 ---function mainDataFunc(subItem, mainKey, isOpen, frameBg, subListSize, isClicked) end
 ---function subLayoutFunc(subItem, index) end

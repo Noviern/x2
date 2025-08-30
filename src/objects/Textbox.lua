@@ -28,7 +28,7 @@ local Textbox = {}
 ---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local left, top, right, bottom = widget:GetInset()
 ---```
 function Textbox:GetInset() end
@@ -37,7 +37,7 @@ function Textbox:GetInset() end
 ---@return number lineCount The number of lines. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lineCount = widget:GetLineCount()
 ---```
 function Textbox:GetLineCount() end
@@ -48,7 +48,7 @@ function Textbox:GetLineCount() end
 ---@return number lineLength The length of the line in pixels. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lineLegnth = widget:GetLineLength(1)
 ---```
 function Textbox:GetLineLength(lineNum) end
@@ -58,7 +58,7 @@ function Textbox:GetLineLength(lineNum) end
 ---@return number longestLineWidth The width of the longest line. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local longestLineWidth = widget:GetLongestLineWidth()
 ---```
 function Textbox:GetLongestLineWidth() end
@@ -68,7 +68,7 @@ function Textbox:GetLongestLineWidth() end
 ---@return number textHeight The total text height. (default: `-1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local textHeight = widget:GetTextHeight()
 ---```
 function Textbox:GetTextHeight() end
@@ -78,7 +78,7 @@ function Textbox:GetTextHeight() end
 ---@return number textLength The text length. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local textLength = widget:GetTextLength()
 ---```
 function Textbox:GetTextLength() end
@@ -86,7 +86,7 @@ function Textbox:GetTextLength() end
 ---Enables or disables automatic resizing of the Textbox.
 ---@param resize boolean `true` to enable auto resizing, `false` to disable (default: `false`).
 ---@usage
----```
+---```lua
 ---widget:SetAutoResize(true)
 ---```
 function Textbox:SetAutoResize(resize) end
@@ -94,7 +94,7 @@ function Textbox:SetAutoResize(resize) end
 ---Enables or disables automatic word wrapping for the Textbox.
 ---@param wrap boolean `true` to enable word wrap, `false` to disable (default: `true`).
 ---@usage
----```
+---```lua
 ---widget:SetAutoWordwrap(false)
 ---```
 function Textbox:SetAutoWordwrap(wrap) end
@@ -105,7 +105,7 @@ function Textbox:SetAutoWordwrap(wrap) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetInset(10, 10, 10, 10)
 ---```
 function Textbox:SetInset(left, top, right, bottom) end
@@ -116,7 +116,7 @@ function Textbox:SetInset(left, top, right, bottom) end
 ---@param b number The blue color component (min: `0`, max: `1`).
 ---@param a number The alpha (opacity) component (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetLineColor(1, 0, 0, 1)
 ---```
 function Textbox:SetLineColor(r, g, b, a) end
@@ -124,7 +124,7 @@ function Textbox:SetLineColor(r, g, b, a) end
 ---Sets the height of the strikethrough and underline for the Textbox.
 ---@param height number The height of the strikethrough and underline.
 ---@usage
----```
+---```lua
 ---widget:SetLineHeight(15)
 ---```
 function Textbox:SetLineHeight(height) end
@@ -132,7 +132,7 @@ function Textbox:SetLineHeight(height) end
 ---Sets the line spacing for the Textbox.
 ---@param space TEXTBOX_LINE_SPACE|number The line spacing value.
 ---@usage
----```
+---```lua
 ---widget:SetLineSpace(15)
 ---```
 function Textbox:SetLineSpace(space) end
@@ -140,7 +140,7 @@ function Textbox:SetLineSpace(space) end
 ---Enables or disables strikethrough visibility for the Textbox.
 ---@param visible boolean `true` to show strikethrough, `false` to hide. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetStrikeThrough(true)
 ---```
 function Textbox:SetStrikeThrough(visible) end
@@ -150,7 +150,7 @@ function Textbox:SetStrikeThrough(visible) end
 ---@param text string The text to set.
 ---@param offset number The offset for the text.
 ---@usage
----```
+---```lua
 ---widget:SetTextAutoWidth(1000, "Archerage.to - the first ArcheAge Private Server", 10)
 ---```
 function Textbox:SetTextAutoWidth(initWidth, text, offset) end
@@ -158,7 +158,7 @@ function Textbox:SetTextAutoWidth(initWidth, text, offset) end
 ---Enables or disables underline visibility for the Textbox.
 ---@param visible boolean `true` to show underline, `false` to hide. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetUnderLine(true)
 ---```
 function Textbox:SetUnderLine(visible) end

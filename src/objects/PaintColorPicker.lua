@@ -28,7 +28,7 @@ local PaintColorPicker = {}
 ---@return number luminance The luminance component. (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local hue, saturation, luminance = widget:GetHLSColor()
 ---```
 function PaintColorPicker:GetHLSColor() end
@@ -37,7 +37,7 @@ function PaintColorPicker:GetHLSColor() end
 ---@return number hue The hue value. (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local hue = widget:GetHue()
 ---```
 function PaintColorPicker:GetHue() end
@@ -46,7 +46,7 @@ function PaintColorPicker:GetHue() end
 ---@return number luminance The luminance value. (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:GetLum()
 ---```
 function PaintColorPicker:GetLum() end
@@ -56,7 +56,7 @@ function PaintColorPicker:GetLum() end
 ---@return EmptyWidget luminanceWidget The luminance widget.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local luminanceWidget = widget:GetLuminanceWidget()
 ---```
 function PaintColorPicker:GetLuminanceWidget() end
@@ -67,7 +67,7 @@ function PaintColorPicker:GetLuminanceWidget() end
 ---@return number blue The blue color component. (`0` to `255`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local red, green, blue = widget:GetRGBColor()
 ---```
 function PaintColorPicker:GetRGBColor() end
@@ -76,7 +76,7 @@ function PaintColorPicker:GetRGBColor() end
 ---@return number saturation The saturation value. (min: `0`, max: `1`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local saturation = widget:GetSat()
 ---```
 function PaintColorPicker:GetSat() end
@@ -86,7 +86,7 @@ function PaintColorPicker:GetSat() end
 ---@return EmptyWidget spectrumWidget The spectrum widget.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local spectrumWidget = widget:GetSpectrumWidget()
 ---```
 function PaintColorPicker:GetSpectrumWidget() end
@@ -97,7 +97,7 @@ function PaintColorPicker:GetSpectrumWidget() end
 ---@param lum number The luminance component. (min: `0`, max: `1`)
 ---@param sat number The saturation component. (min: `0`, max: `1`)
 ---@usage
----```
+---```lua
 ---widget:SetHLSColor(120 / 360, 175 / 360, 360 / 360)
 ---```
 function PaintColorPicker:SetHLSColor(hue, lum, sat) end
@@ -106,7 +106,7 @@ function PaintColorPicker:SetHLSColor(hue, lum, sat) end
 ---`PaintColorPicker.luminanceWidget`.
 ---@param hue number The hue value. (`0` to `240`)
 ---@usage
----```
+---```lua
 ---widget:SetHue(80)
 ---```
 function PaintColorPicker:SetHue(hue) end
@@ -115,7 +115,7 @@ function PaintColorPicker:SetHue(hue) end
 ---`PaintColorPicker.luminanceWidget`.
 ---@param lum number The luminance value. (`0` to `240`)
 ---@usage
----```
+---```lua
 ---widget:SetLum(120)
 ---```
 function PaintColorPicker:SetLum(lum) end
@@ -123,7 +123,7 @@ function PaintColorPicker:SetLum(lum) end
 ---Sets the background for the luminance widget of the PaintColorPicker.
 ---@param bg Drawablebase The background drawable for the luminance widget.
 ---@usage
----```
+---```lua
 ---local luminanceBg = widget:CreateDrawable("ui/login_stage/color_palette.dds", "color_bg", "background")
 ---luminanceBg:AddAnchor("TOPLEFT", widget.luminanceWidget, 0, 0)
 ---luminanceBg:AddAnchor("BOTTOMRIGHT", widget.luminanceWidget, 0, 0)
@@ -137,7 +137,7 @@ function PaintColorPicker:SetLuminanceBg(bg) end
 ---@param green number The green color component. (`0` to `255`)
 ---@param blue number The blue color component. (`0` to `255`)
 ---@usage
----```
+---```lua
 ---widget:SetRGBColor(255, 0, 0)
 ---```
 function PaintColorPicker:SetRGBColor(red, green, blue) end
@@ -146,7 +146,7 @@ function PaintColorPicker:SetRGBColor(red, green, blue) end
 ---`PaintColorPicker.luminanceWidget`.
 ---@param sat number The saturation value. (`0` to `240`)
 ---@usage
----```
+---```lua
 ---widget:SetSat(240)
 ---```
 function PaintColorPicker:SetSat(sat) end
@@ -154,7 +154,7 @@ function PaintColorPicker:SetSat(sat) end
 ---Sets the background for the spectrum widget of the PaintColorPicker.
 ---@param bg Drawablebase The background drawable for the spectrum widget.
 ---@usage
----```
+---```lua
 ---local spectrumBg = widget:CreateDrawable("ui/login_stage/color_palette.dds", "color_bg", "background")
 ---spectrumBg:AddAnchor("TOPLEFT", widget.spectrumWidget, 0, 0)
 ---spectrumBg:AddAnchor("BOTTOMRIGHT", widget.spectrumWidget, 0, 0)

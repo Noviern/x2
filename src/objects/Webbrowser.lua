@@ -22,7 +22,7 @@ local Webbrowser = {}
 
 ---Clears focus from the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:ClearFocus()
 ---```
 function Webbrowser:ClearFocus() end
@@ -31,7 +31,7 @@ function Webbrowser:ClearFocus() end
 ---@return string url The current URL. (default: `""`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local url = widget:GetURL()
 ---```
 function Webbrowser:GetURL() end
@@ -39,7 +39,7 @@ function Webbrowser:GetURL() end
 ---@TODO: Broken?
 ---Loads a blank page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:LoadBlankPage()
 ---```
 function Webbrowser:LoadBlankPage() end
@@ -48,7 +48,7 @@ function Webbrowser:LoadBlankPage() end
 ---Simulates a mouse down event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
 ---@usage
----```
+---```lua
 ---widget:MouseDown("LeftButton")
 ---```
 ---@see MOUSE_BUTTON
@@ -57,7 +57,7 @@ function Webbrowser:MouseDown(button) end
 ---Simulates a mouse move event on the Webbrowser  and triggers the
 ---`"OnMouseMove"` event.
 ---@usage
----```
+---```lua
 ---widget:MouseMove()
 ---```
 function Webbrowser:MouseMove() end
@@ -66,7 +66,7 @@ function Webbrowser:MouseMove() end
 ---Simulates a mouse up event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
 ---@usage
----```
+---```lua
 ---widget:MouseUp("LeftButton")
 ---```
 ---@see MOUSE_BUTTON
@@ -75,7 +75,7 @@ function Webbrowser:MouseUp(button) end
 ---@TODO: Broken?
 ---Requests the expedition BBS page in the Webbrowser.'
 ---@usage
----```
+---```lua
 ---widget:RequestExpeditionBBS()
 ---```
 function Webbrowser:RequestExpeditionBBS() end
@@ -83,7 +83,7 @@ function Webbrowser:RequestExpeditionBBS() end
 ---@TODO: Broken?
 ---Requests the expedition home page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:RequestExpeditionHome()
 ---```
 function Webbrowser:RequestExpeditionHome() end
@@ -92,7 +92,7 @@ function Webbrowser:RequestExpeditionHome() end
 ---Requests an external page in the Webbrowser.
 ---@param url string The URL of the external page.
 ---@usage
----```
+---```lua
 ---widget:RequestExternalPage("https://wiki.archerage.to/")
 ---```
 function Webbrowser:RequestExternalPage(url) end
@@ -100,7 +100,7 @@ function Webbrowser:RequestExternalPage(url) end
 ---@TODO: Broken?
 ---Requests the help page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:RequestHelp()
 ---```
 function Webbrowser:RequestHelp() end
@@ -108,7 +108,7 @@ function Webbrowser:RequestHelp() end
 ---@TODO: Broken?
 ---Requests the messenger page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:RequestMessenger()
 ---```
 function Webbrowser:RequestMessenger() end
@@ -117,7 +117,7 @@ function Webbrowser:RequestMessenger() end
 ---Requests the messenger page for a specific PC name in the Webbrowser.
 ---@param pcName string The PC name for the messenger request.
 ---@usage
----```
+---```lua
 ---widget:RequestMessengerByPcName("")
 ---```
 function Webbrowser:RequestMessengerByPcName(pcName) end
@@ -125,7 +125,7 @@ function Webbrowser:RequestMessengerByPcName(pcName) end
 ---@TODO: Broken?
 ---Requests the messenger page based on the current target in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:RequestMessengerOnTarget()
 ---```
 function Webbrowser:RequestMessengerOnTarget() end
@@ -133,7 +133,7 @@ function Webbrowser:RequestMessengerOnTarget() end
 ---@TODO: Broken?
 ---Requests the play diary page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:RequestPlayDiary()
 ---```
 function Webbrowser:RequestPlayDiary() end
@@ -142,7 +142,7 @@ function Webbrowser:RequestPlayDiary() end
 ---Requests the play diary page for a specific PC name in the Webbrowser.
 ---@param pcName string The PC name for the play diary request.
 ---@usage
----```
+---```lua
 ---widget:RequestPlayDiaryByPcName("")
 ---```
 function Webbrowser:RequestPlayDiaryByPcName(pcName) end
@@ -151,7 +151,7 @@ function Webbrowser:RequestPlayDiaryByPcName(pcName) end
 ---Requests an instant play diary page by file name in the Webbrowser.
 ---@param fileName string The file name for the play diary.
 ---@usage
----```
+---```lua
 ---widget:RequestPlayDiaryInstant("")
 ---```
 function Webbrowser:RequestPlayDiaryInstant(fileName) end
@@ -159,7 +159,7 @@ function Webbrowser:RequestPlayDiaryInstant(fileName) end
 ---@TODO: Broken?
 ---Requests the play diary page based on the current target in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:RequestPlayDiaryOnTarget()
 ---```
 function Webbrowser:RequestPlayDiaryOnTarget() end
@@ -168,7 +168,7 @@ function Webbrowser:RequestPlayDiaryOnTarget() end
 ---Requests verification for a sensitive operation with the specified URL.
 ---@param url string The URL for the sensitive operation.
 ---@usage
----```
+---```lua
 ---widget:RequestSensitiveOperationVerify("https://wiki.archerage.to/")
 ---```
 function Webbrowser:RequestSensitiveOperationVerify(url) end
@@ -177,7 +177,7 @@ function Webbrowser:RequestSensitiveOperationVerify(url) end
 ---Requests a TGOS operation in the Webbrowser.
 ---@param arg number The argument for the TGOS request.
 ---@usage
----```
+---```lua
 ---widget:RequestTGOS(1)
 ---```
 function Webbrowser:RequestTGOS(arg) end
@@ -185,7 +185,7 @@ function Webbrowser:RequestTGOS(arg) end
 ---@TODO: Broken?
 ---Requests the wiki page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:RequestWiki()
 ---```
 function Webbrowser:RequestWiki() end
@@ -193,7 +193,7 @@ function Webbrowser:RequestWiki() end
 ---Sets the default drawable for the Webbrowser.
 ---@param drawable Drawablebase The default drawable to set.
 ---@usage
----```
+---```lua
 ---local defaultDrawable = widget:CreateColorDrawable(0, 0, 1, 1, "background")
 ---defaultDrawable:AddAnchor("TOPLEFT", widget, 0, 0)
 ---defaultDrawable:AddAnchor("BOTTOMRIGHT", widget, 0, 0)
@@ -205,14 +205,14 @@ function Webbrowser:SetDefaultDrawable(drawable) end
 ---Enables or disables the `WEB_BROWSER_ESC_EVENT` event registration for the Webbrowser.
 ---@param has boolean `true` to enable the escape event, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetEscEvent(true)
 ---```
 function Webbrowser:SetEscEvent(has) end
 
 ---Sets focus to the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:SetFocus()
 ---```
 function Webbrowser:SetFocus() end
@@ -220,7 +220,7 @@ function Webbrowser:SetFocus() end
 ---Sets the loading drawable for the Webbrowser.
 ---@param drawable Drawablebase The drawable to display during loading.
 ---@usage
----```
+---```lua
 ---local loadingDrawable = widget:CreateColorDrawable(1, 0, 0, 1, "background")
 ---loadingDrawable:AddAnchor("TOPLEFT", widget, 0, 0)
 ---loadingDrawable:AddAnchor("BOTTOMRIGHT", widget, 0, 0)
@@ -233,7 +233,7 @@ function Webbrowser:SetLoadingDrawable(drawable) end
 ---Sets whether messages are sent to the parent of the Webbrowser.
 ---@param toParent boolean `true` to send messages to parent, `false` otherwise.
 ---@usage
----```
+---```lua
 ---widget:SetMsgToParent(true)
 ---```
 function Webbrowser:SetMsgToParent(toParent) end
@@ -242,7 +242,7 @@ function Webbrowser:SetMsgToParent(toParent) end
 ---Sets the UI layer for the Webbrowser.
 ---@param layer "background" The UI layer to set (only "background" confirmed working).
 ---@usage
----```
+---```lua
 ---widget:SetUiLayer("background")
 ---```
 function Webbrowser:SetUiLayer(layer) end
@@ -250,7 +250,7 @@ function Webbrowser:SetUiLayer(layer) end
 ---Sets the URL for the Webbrowser.
 ---@param url string The URL to load.
 ---@usage
----```
+---```lua
 ---widget:SetURL("https://wiki.archerage.to/")
 ---```
 function Webbrowser:SetURL(url) end
@@ -259,14 +259,14 @@ function Webbrowser:SetURL(url) end
 ---Sets the zoom level for the Webbrowser.
 ---@param level number The zoom level to set.
 ---@usage
----```
+---```lua
 ---widget:SetZoomLevel(1)
 ---```
 function Webbrowser:SetZoomLevel(level) end
 
 ---Scrolls down the page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnWheelDown", function(self)
 ---  self:WheelDown()
 ---end)
@@ -275,7 +275,7 @@ function Webbrowser:WheelDown() end
 
 ---Scrolls up the page in the Webbrowser.
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnWheelUp", function(self)
 ---  self:WheelUp()
 ---end)

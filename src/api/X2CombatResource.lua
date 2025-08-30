@@ -45,7 +45,7 @@ X2CombatResource = {}  -- api/X2CombatResource
 ---@return boolean maxPointByGroupType `true` if the combat resource is at maximum, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local maxPointByGroupType = X2CombatResource:CheckCombatResourceMaxPointByGroupType(13)
 ---```
 ---@see ABILITY_TYPE
@@ -56,7 +56,7 @@ function X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType) end
 ---@return CombatResources combatResourceInfo A table of combat resource information.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local combatResourceInfo = X2CombatResource:GetCombatResourceInfo()
 ---```
 ---@see CombatResourceInfo
@@ -69,7 +69,7 @@ function X2CombatResource:GetCombatResourceInfo() end
 ---@return CombatResource|nil combatResourceInfo The combat resource information, or `nil` if not available.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local combatResourceInfo = X2CombatResource:GetCombatResourceInfoByGroupType(13)
 ---```
 ---@see ABILITY_TYPE

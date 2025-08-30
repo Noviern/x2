@@ -308,7 +308,7 @@ local Button = {}
 ---@return DrawableDDS|EmptyTable|nil stateDrawable The created drawable, an empty table, or `nil` if creation fails.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local normalDrawable = widget:CreateStateDrawable(UI_BUTTON_NORMAL, UOT_NINE_PART_DRAWABLE, TEXTURE_PATH.HUD)
 ---```
 ---@see UI_BUTTON_STATE
@@ -319,7 +319,7 @@ function Button:CreateStateDrawable(state, drawableType, path, layer) end
 ---Disables clicking for the specified mouse button.
 ---@param mouseButton MOUSE_BUTTON The mouse button to disable.
 ---@usage
----```
+---```lua
 ---widget:DeregisterForClicks("LeftButton")
 ---```
 ---@see MOUSE_BUTTON
@@ -329,7 +329,7 @@ function Button:DeregisterForClicks(mouseButton) end
 ---@return UI_BUTTON_STATE_TEXT state The current button state. (default: `DISABLED`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local state = widget:GetButtonState()
 ---```
 ---@see UI_BUTTON_STATE_TEXT
@@ -340,7 +340,7 @@ function Button:GetButtonState() end
 ---@return Drawablebase|nil disabledTable The disabled state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local disabledTable = widget:GetDisabledBackground()
 ---```
 ---@see Drawablebase
@@ -350,7 +350,7 @@ function Button:GetDisabledBackground() end
 ---@return RGBA disabledColor The disabled state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local disabledColor = widget:GetDisabledColor()
 ---```
 ---@see RGBA
@@ -360,7 +360,7 @@ function Button:GetDisabledColor() end
 ---@return Drawablebase|nil highlightTable The highlighted state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local highlightTable = widget:GetHighlightBackground()
 ---```
 ---@see Drawablebase
@@ -370,7 +370,7 @@ function Button:GetHighlightBackground() end
 ---@return RGBA highlightColor The highlighted state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local highlightColor = widget:GetHighlightColor()
 ---```
 ---@see RGBA
@@ -380,7 +380,7 @@ function Button:GetHighlightColor() end
 ---@return Drawablebase|nil normalTable The normal state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local normalTable = widget:GetNormalBackground()
 ---```
 ---@see Drawablebase
@@ -390,7 +390,7 @@ function Button:GetNormalBackground() end
 ---@return RGBA normalColor The normal state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local normalColor = widget:GetNormalColor()
 ---```
 ---@see RGBA
@@ -400,7 +400,7 @@ function Button:GetNormalColor() end
 ---@return Drawablebase|nil pushedTable The pushed state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local pushedTable = widget:GetPushedBackground()
 ---```
 ---@see Drawablebase
@@ -410,7 +410,7 @@ function Button:GetPushedBackground() end
 ---@return RGBA pushedColor The pushed state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local pushedColor = widget:GetPushedColor
 ---```
 ---@see RGBA
@@ -420,7 +420,7 @@ function Button:GetPushedColor() end
 ---@param mouseButton MOUSE_BUTTON The mouse button to enable/disable. (default: `"LeftButton"`)
 ---@param enable? boolean `true` to enable clicking, `false` to disable. (default: `true`)
 ---@usage
----```
+---```lua
 ---widget:RegisterForClicks("RightButton")
 ---```
 ---@see MOUSE_BUTTON
@@ -430,7 +430,7 @@ function Button:RegisterForClicks(mouseButton, enable) end
 ---`Button:SetText`.
 ---@param resize boolean `true` to enable auto clipping, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetAutoClipChar(true)
 ---```
 function Button:SetAutoClipChar(resize) end
@@ -438,7 +438,7 @@ function Button:SetAutoClipChar(resize) end
 ---Enables or disables automatic resizing for the button.
 ---@param resize boolean `true` to enable auto resizing, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetAutoResize(true)
 ---```
 function Button:SetAutoResize(resize) end
@@ -452,7 +452,7 @@ function Button:SetAutoResize(resize) end
 ---Sets the state of the button.
 ---@param state UI_BUTTON_STATE_TEXT The state to set. (default: `DISABLED`)
 ---@usage
----```
+---```lua
 ---widget:SetButtonState("NORMAL")
 ---```
 ---@see UI_BUTTON_STATE_TEXT
@@ -461,7 +461,7 @@ function Button:SetButtonState(state) end
 ---Sets the drawable for the disabled state of the button.
 ---@param disabledTable Drawablebase The drawable for the disabled state.
 ---@usage
----```
+---```lua
 ---widget:SetDisabledBackground(drawable)
 ---```
 function Button:SetDisabledBackground(disabledTable) end
@@ -472,7 +472,7 @@ function Button:SetDisabledBackground(disabledTable) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetDisabledColor(0, 0, 0, 1)
 ---```
 function Button:SetDisabledColor(r, g, b, a) end
@@ -483,14 +483,14 @@ function Button:SetDisabledColor(r, g, b, a) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetDisabledTextColor(0, 0, 0, 1)
 ---```
 function Button:SetDisabledTextColor(r, g, b, a) end
 
 ---Sets focus on the button.
 ---@usage
----```
+---```lua
 ---widget:SetFocus()
 ---```
 function Button:SetFocus() end
@@ -498,7 +498,7 @@ function Button:SetFocus() end
 ---Sets the drawable for the highlighted state of the button.
 ---@param highlightTable Drawablebase The drawable for the highlighted state.
 ---@usage
----```
+---```lua
 ---widget:SetHighlightBackground(drawable)
 ---```
 function Button:SetHighlightBackground(highlightTable) end
@@ -509,7 +509,7 @@ function Button:SetHighlightBackground(highlightTable) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetHighlightColor(1, 0, 0, 1)
 ---```
 function Button:SetHighlightColor(r, g, b, a) end
@@ -520,7 +520,7 @@ function Button:SetHighlightColor(r, g, b, a) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetHighlightTextColor(1, 0, 0, 1)
 ---```
 function Button:SetHighlightTextColor(r, g, b, a) end
@@ -531,7 +531,7 @@ function Button:SetHighlightTextColor(r, g, b, a) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget::SetInset(10, 10, 10, 10)
 ---```
 function Button:SetInset(left, top, right, bottom) end
@@ -539,7 +539,7 @@ function Button:SetInset(left, top, right, bottom) end
 ---Sets the drawable for the normal state of the button.
 ---@param normalTable Drawablebase The drawable for the normal state.
 ---@usage
----```
+---```lua
 ---widget:SetNormalBackground(drawable)
 ---```
 function Button:SetNormalBackground(normalTable) end
@@ -550,7 +550,7 @@ function Button:SetNormalBackground(normalTable) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetNormalColor(1, 1, 1, 1)
 ---```
 function Button:SetNormalColor(r, g, b, a) end
@@ -558,7 +558,7 @@ function Button:SetNormalColor(r, g, b, a) end
 ---Sets the drawable for the pushed state of the button.
 ---@param pushedTable Drawablebase The drawable for the pushed state.
 ---@usage
----```
+---```lua
 ---widget:SetPushedBackground(drawable)
 ---```
 function Button:SetPushedBackground(pushedTable) end
@@ -569,7 +569,7 @@ function Button:SetPushedBackground(pushedTable) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetPushedColor(0, 1, 0, 1)
 ---```
 function Button:SetPushedColor(r, g, b, a) end
@@ -580,7 +580,7 @@ function Button:SetPushedColor(r, g, b, a) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetPushedTextColor(0, 1, 0, 1)
 ---```
 function Button:SetPushedTextColor(r, g, b, a) end
@@ -588,7 +588,7 @@ function Button:SetPushedTextColor(r, g, b, a) end
 ---Sets the style for the button. Should be applied before setting the extent.
 ---@param style BUTTON_STYLE The style to apply.
 ---@usage
----```
+---```lua
 ---widget:SetStyle("text_default")
 ---```
 ---@see BUTTON_STYLE
@@ -600,7 +600,7 @@ function Button:SetStyle(style) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---widget:SetTextColor(0, 0, 0, 1)
 ---```
 function Button:SetTextColor(r, g, b, a) end

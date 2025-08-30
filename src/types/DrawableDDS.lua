@@ -12,7 +12,7 @@ local DrawableDDS = {}
 ---@return number height The texture height.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local width, height = drawable:GetTextureSize()
 ---```
 function DrawableDDS:GetTextureSize() end
@@ -23,7 +23,7 @@ function DrawableDDS:GetTextureSize() end
 ---@param width number The width of the texture.
 ---@param height number The height of the texture.
 ---@usage
----```
+---```lua
 ---drawable:SetCoords(0, 0, 100, 100)
 ---```
 function DrawableDDS:SetCoords(x, y, width, height) end
@@ -34,7 +34,7 @@ function DrawableDDS:SetCoords(x, y, width, height) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---drawable:SetInset(10, 10, 10, 10)
 ---```
 function DrawableDDS:SetInset(left, top, right, bottom) end
@@ -46,7 +46,7 @@ function DrawableDDS:SetTexture(filename) end
 ---Sets the texture color using a color key for the DrawableDDS.
 ---@param colorKey string The color key to apply from the texture path `*.g` file.
 ---@usage
----```
+---```lua
 ---local ninePartDrawable = widget:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
 ---ninePartDrawable:SetTextureInfo("type_05")
 ---ninePartDrawable:SetTextureColor("hud_bg")
@@ -57,7 +57,7 @@ function DrawableDDS:SetTextureColor(colorKey) end
 ---@param infoKey string The info key taken from the texture path `*.g` file.
 ---@param colorKey? string The color key to apply from the texture path `*.g` file.
 ---@usage
----```
+---```lua
 ---local ninePartDrawable = widget:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
 ---ninePartDrawable:SetTextureInfo("main_bg")
 ---```

@@ -15,7 +15,7 @@ local Drawablebase = {}
 ---@return boolean visible `true` if the Drawablebase is visible, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local visible = drawable:IsVisible()
 ---```
 function Drawablebase:IsVisible() end
@@ -26,7 +26,7 @@ function Drawablebase:IsVisible() end
 ---@param b number The blue color component (min: `0`, max: `1`).
 ---@param a number The alpha (opacity) component (min: `0`, max: `1`).
 ---@usage
----```
+---```lua
 ---drawable:SetColor(1, 0, 0, 1)
 ---```
 function Drawablebase:SetColor(r, g, b, a) end
@@ -40,7 +40,7 @@ function Drawablebase:SetRotation(angle) end
 ---Enables or disables sRGB for the Drawablebase.
 ---@param srgb boolean `true` to enable sRGB, `false` to disable.
 ---@usage
----```
+---```lua
 ---drawable:SetSRGB(true)
 ---```
 function Drawablebase:SetSRGB(srgb) end
@@ -49,7 +49,7 @@ function Drawablebase:SetSRGB(srgb) end
 ---Shows or hides the Drawablebase.
 ---@param visible boolean `true` to show, `false` to hide. (default: `true`)
 ---@usage
----```
+---```lua
 ---drawable:SetVisible(false)
 ---```
 function Drawablebase:SetVisible(visible) end
@@ -60,7 +60,7 @@ function Drawablebase:SetVisible(visible) end
 ---@param maxValue string The maximum value for visibility.
 ---@param value string The value to check (`value > minValue and value < maxValue`).
 ---@usage
----```
+---```lua
 ---drawable:SetVisibleForString("1", "100", "50")
 ---```
 function Drawablebase:SetVisibleForString(minValue, maxValue, value) end
@@ -68,7 +68,7 @@ function Drawablebase:SetVisibleForString(minValue, maxValue, value) end
 ---Shows or hides the Drawablebase.
 ---@param show boolean `true` to show, `false` to hide. (default: `true`)
 ---@usage
----```
+---```lua
 ---drawable:Show(false)
 ---```
 function Drawablebase:Show(show) end

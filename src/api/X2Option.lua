@@ -369,7 +369,7 @@ function X2Option:CreateOptionItemString(name, value, saveLevel) end
 ---@return AAFormat[] aaFormats A table of anti-aliasing formats.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local aaFormats = X2Option:EnumAAFormats()
 ---```
 ---@see AAFormat
@@ -379,7 +379,7 @@ function X2Option:EnumAAFormats() end
 ---@return BasicCursorShape basicCursorShape A table of cursor shape IDs.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local basicCursorShape = X2Option:GetBasicCursorShape()
 ---```
 function X2Option:GetBasicCursorShape() end
@@ -389,7 +389,7 @@ function X2Option:GetBasicCursorShape() end
 ---@return string|nil consoleVariable The console variable value, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local consoleVariable = X2Option:GetConsoleVariable("custom_camera_max_dist")
 ---```
 ---@see CONSOLE_VAR
@@ -399,7 +399,7 @@ function X2Option:GetConsoleVariable(name) end
 ---@return CursorSize cursorSize A table of cursor size IDs.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local cursorSize = X2Option:GetCursorSize()
 ---```
 function X2Option:GetCursorSize() end
@@ -409,7 +409,7 @@ function X2Option:GetCursorSize() end
 ---@return number maxMouseSensitivity The maximum mouse sensitivity.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local minMouseSensitivity, maxMouseSensitivity = X2Option:GetMinxMaxOfMouseSensitivity()
 ---```
 function X2Option:GetMinxMaxOfMouseSensitivity() end
@@ -418,7 +418,7 @@ function X2Option:GetMinxMaxOfMouseSensitivity() end
 ---@return number nextSysSpecFullValue The next system specification value.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local nextSysSpecFullValue = X2Option:GetNextSysSpecFullValue()
 ---```
 function X2Option:GetNextSysSpecFullValue() end
@@ -428,7 +428,7 @@ function X2Option:GetNextSysSpecFullValue() end
 ---@return OptionInfo|nil optionInfo The option information if it exists.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local optionInfo = X2Option:GetOptionInfo(OIT_BASIC_CURSOR_SHAPE)
 ---```
 ---@see OIT
@@ -439,7 +439,7 @@ function X2Option:GetOptionInfo(optionId) end
 ---@return number optionItemValue The option value.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local optionItemValue = X2Option:GetOptionItemValue(OIT_BASIC_CURSOR_SHAPE)
 ---```
 ---@see OIT
@@ -450,7 +450,7 @@ function X2Option:GetOptionItemValue(optionType) end
 ---@return number optionItemValue The console variable value.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local optionItemValue = X2Option:GetOptionItemValueByName("basic_cursor_shape")
 ---```
 ---@see CONSOLE_VAR
@@ -464,7 +464,7 @@ function X2Option:GetOptionItemValueByName(name) end
 ---@return number bpp The bits per pixel.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local width, height, bpp = X2Option:GetResolution(1)
 ---```
 ---@nodiscard
@@ -474,7 +474,7 @@ function X2Option:GetResolution(index) end
 ---@return number resolutionCount The number of supported resolutions.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local resolutionCount = X2Option:GetResolutionCount()
 ---```
 function X2Option:GetResolutionCount() end
@@ -487,7 +487,7 @@ function X2Option:GetResolutionCount() end
 ---@return SubOptionItem[] subOptionItemList A table of sub-option items.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local subOptionItemList = X2Option:GetSubOptionItemList(OIT_NAME_TAG_MODE, 1)
 ---```
 ---@see SubOptionItem
@@ -497,7 +497,7 @@ function X2Option:GetSubOptionItemList(modeOptionId, selected) end
 ---@return boolean oceanSimulateOption `true` if the ocean simulation option is enabled, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local oceanSimulateOption = X2Option:HasOceanSimulateOption()
 ---```
 function X2Option:HasOceanSimulateOption() end
@@ -506,7 +506,7 @@ function X2Option:HasOceanSimulateOption() end
 ---@return boolean pixelSyncSupported `true` if pixel sync is supported, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local pixelSyncSupported = X2Option:IsPixelSyncSupported()
 ---```
 function X2Option:IsPixelSyncSupported() end
@@ -514,21 +514,21 @@ function X2Option:IsPixelSyncSupported() end
 ---Enables or disables optimization.
 ---@param enable boolean `true` to enable optimization, `false` to disable.
 ---@usage
----```
+---```lua
 ---X2Option:OptimizationEnable(true)
 ---```
 function X2Option:OptimizationEnable(enable) end
 
 ---Resets almost all options (use with caution).
 ---@usage
----```
+---```lua
 ---X2Option:Reset()
 ---```
 function X2Option:Reset() end
 
 ---Saves the current options.
 ---@usage
----```
+---```lua
 ---X2Option:Save()
 ---```
 function X2Option:Save() end
@@ -537,7 +537,7 @@ function X2Option:Save() end
 ---@param name CONSOLE_VAR The console variable name.
 ---@param value string The value to set.
 ---@usage
----```
+---```lua
 ---X2Option:SetConsoleVariable("basic_cursor_shape", "1")
 ---```
 ---@see CONSOLE_VAR
@@ -548,7 +548,7 @@ function X2Option:SetConsoleVariable(name, value) end
 ---@param optionType OIT The option type.
 ---@param value number The default float value.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemDefaultFloatValue(OIT_BASIC_CURSOR_SHAPE, 1)
 ---```
 ---@see OIT
@@ -559,7 +559,7 @@ function X2Option:SetItemDefaultFloatValue(optionType, value) end
 ---@param name CONSOLE_VAR The console variable name.
 ---@param value number The default float value.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemDefaultFloatValueByName("basic_cursor_shape", 1)
 ---```
 ---@see CONSOLE_VAR
@@ -570,7 +570,7 @@ function X2Option:SetItemDefaultFloatValueByName(name, value) end
 ---@param optionType OIT The option type.
 ---@param value string The default string value.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemDefaultStringValue(OIT_BASIC_CURSOR_SHAPE, "1")
 ---```
 ---@see OIT
@@ -581,7 +581,7 @@ function X2Option:SetItemDefaultStringValue(optionType, value) end
 ---@param name CONSOLE_VAR The console variable name.
 ---@param value string The default string value.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemDefaultStringValueByName("basic_cursor_shape", "1")
 ---```
 ---@see CONSOLE_VAR
@@ -591,7 +591,7 @@ function X2Option:SetItemDefaultStringValueByName(name, value) end
 ---@param optionType OIT The option type.
 ---@param value number The float value to set.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemFloatValue(OIT_BASIC_CURSOR_SHAPE, 1)
 ---```
 ---@see OIT
@@ -601,7 +601,7 @@ function X2Option:SetItemFloatValue(optionType, value) end
 ---@param name CONSOLE_VAR The console variable name.
 ---@param value number The float value to set.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemFloatValueByName("basic_cursor_shape", 1)
 ---```
 ---@see CONSOLE_VAR
@@ -613,7 +613,7 @@ function X2Option:SetItemFloatValueByName(name, value) end
 ---@param optionType OIT The option type.
 ---@param value number The float value to set.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemFloatValueWithoutModify(OIT_BASIC_CURSOR_SHAPE, 1)
 ---```
 ---@see OIT
@@ -623,7 +623,7 @@ function X2Option:SetItemFloatValueWithoutModify(optionType, value) end
 ---@param optionType OIT The option type.
 ---@param value string The string value to set.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemStringValue(OIT_BASIC_CURSOR_SHAPE, "1")
 ---```
 ---@see OIT
@@ -633,7 +633,7 @@ function X2Option:SetItemStringValue(optionType, value) end
 ---@param name CONSOLE_VAR The console variable name.
 ---@param value string The string value to set.
 ---@usage
----```
+---```lua
 ---X2Option:SetItemStringValueByName("basic_cursor_shape", "1")
 ---```
 ---@see CONSOLE_VAR

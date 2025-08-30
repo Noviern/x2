@@ -82,7 +82,7 @@ X2Skill = {}        -- api/X2Skill
 ---@return number|nil totalTime The total cooldown time in milliseconds, or `nil` if the skillId doesn't exist. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local remainTime, totalTime = X2Skill:GetCooldown(44202, false)
 ---```
 function X2Skill:GetCooldown(skillId, ignoreGlobalCooldown) end
@@ -95,7 +95,7 @@ function X2Skill:GetCooldown(skillId, ignoreGlobalCooldown) end
 ---@return SkillTooltip|EmptyTable skillTooltip The skill tooltip information, or an empty table if no data is available.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local skillTooltip = X2Skill:GetSkillTooltip(44202, 0, SIK_DESCRIPTION)
 ---```
 ---@see SIK
@@ -107,7 +107,7 @@ function X2Skill:GetSkillTooltip(skillId, itemType, filter) end
 ---@return SkillInfo|nil skillInfo The skill information, or `nil` if the skillId doesn't exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local skillInfo = X2Skill:Info(44202)
 ---```
 ---@see SkillInfo

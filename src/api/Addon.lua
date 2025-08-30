@@ -633,7 +633,7 @@ ZST_INVALID = 0                                   -- api/Addon
 ---@param name string The name of the button.
 ---@param data? EscMenuButtonData Optional data for the button. If this is set it will override the `iconKey`.
 ---@usage
----```
+---```lua
 ---ADDON:AddEscMenuButton(5, 1300, "", "example", {
 ---  path = "Addon/[addonname]/example.dds",  w = 25, h = 25
 ---})
@@ -647,7 +647,7 @@ function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data) end
 ---Logs a message to the chat under `CMF_SYSTEM`.
 ---@param logMessage string The message to log.
 ---@usage
----```
+---```lua
 ---ADDON:ChatLog("Archerage.to - the first ArcheAge Private Server")
 ---```
 function ADDON:ChatLog(logMessage) end
@@ -655,7 +655,7 @@ function ADDON:ChatLog(logMessage) end
 ---Clears data associated with the specified key.
 ---@param key string The key for the data to clear.
 ---@usage
----```
+---```lua
 ---ADDON:ClearData("data")
 ---```
 function ADDON:ClearData(key) end
@@ -663,7 +663,7 @@ function ADDON:ClearData(key) end
 ---Triggers the `UI_ADDON` event for the specified addon.
 ---@param name string The name of the addon to trigger.
 ---@usage
----```
+---```lua
 ---ADDON:FireAddon(ADDON:GetName())
 ---```
 function ADDON:FireAddon(name) end
@@ -672,7 +672,7 @@ function ADDON:FireAddon(name) end
 ---@return AddonInfo[] addonInfo Array of addon information.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local addonInfo = ADDON:GetAddonInfos()
 ---```
 ---@see AddonInfo
@@ -685,7 +685,7 @@ function ADDON:GetAddonInfos() end
 ---@return Widget|nil contentFrame The content frame.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local widget = ADDON:GetContent(UIC_MY_CUSTOM_WIDGET)
 ---
 ---if widget == nil then
@@ -707,7 +707,7 @@ function ADDON:GetContent(uiCategory) end
 ---@return boolean isVisible `true` if the component is visible, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local x, y, width, height, isVisible = ADDON:GetContentMainScriptPosVis(UIC_PLAYER_UNITFRAME)
 ---```
 ---@see UIC
@@ -717,7 +717,7 @@ function ADDON:GetContentMainScriptPosVis(uiCategory) end
 ---@return string name The name of the addon.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local name = ADDON:GetName()
 ---```
 function ADDON:GetName() end
@@ -725,7 +725,7 @@ function ADDON:GetName() end
 ---Imports the API type for the addon. Call once per API.
 ---@param apiType API The API to import.
 ---@usage
----```
+---```lua
 ---ADDON:ImportAPI(API.X2Console)
 ---```
 ---@see API
@@ -734,7 +734,7 @@ function ADDON:ImportAPI(apiType) end
 ---Imports the object id for the addon. Call only once per OBJECT.
 ---@param objectId OBJECT The object ID to import.
 ---@usage
----```
+---```lua
 ---ADDON:ImportObject(OBJECT.Window)
 ---```
 ---@see OBJECT
@@ -745,18 +745,20 @@ function ADDON:ImportObject(objectId) end
 ---@return table savedData The data associated with the key.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local addonData = ADDON:LoadData("data")
 ---```
 function ADDON:LoadData(key) end
 
+---@alias RegisterContentTriggerFunc fun(show: boolean, data?: table)
+
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
 ---@param uiCategory UIC The UI category to register the function to.
----@param triggerFunc function The function to register as a trigger.
+---@param triggerFunc RegisterContentTriggerFunc The function to register as a trigger.
 ---@return boolean success `true` if registration was successful, `false` otherwise.
 ---@usage
----```
+---```lua
 ---function ToggleWidget(show, data) end
 ---
 ---ADDON:RegisterContentTriggerFunc(UIC_MY_CUSTOM_WIDGET, ToggleWidget)
@@ -772,7 +774,7 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---@param triggerFunc? function The optional trigger function for the widget.
 ---@return Widget|nil widget The registered widget, or `nil` if registration failed.
 ---@usage
----```
+---```lua
 ---function ToggleWidget(show, data) end
 ---
 ---ADDON:RegisterContentWidget(UIC_MY_CUSTOM_WIDGET, widget, ToggleWidget)
@@ -785,14 +787,14 @@ function ADDON:RegisterContentWidget(uiCategory, widget, triggerFunc) end
 ---to prevent game crashes.
 ---@param name string The name of the addon to reload.
 ---@usage
----```
+---```lua
 ---ADDON:ReloadAddon("example")
 ---```
 function ADDON:ReloadAddon(name) end
 
 ---Saves the addon's information. Should be called after `ADDON:SetAddonEnable`.
 ---@usage
----```
+---```lua
 ---ADDON:SetAddonEnable("example", true)
 ---ADDON:SaveAddonInfos()
 ---```
@@ -802,7 +804,7 @@ function ADDON:SaveAddonInfos() end
 ---@param key string The key to associate with the data.
 ---@param data table The data to save.
 ---@usage
----```
+---```lua
 ---ADDON:SaveData("data", { hello = "world" })
 ---```
 function ADDON:SaveData(key, data) end
@@ -812,7 +814,7 @@ function ADDON:SaveData(key, data) end
 ---@param name string The name of the addon to enable or disable.
 ---@param enable boolean `true` to enable, `false` to disable the addon.
 ---@usage
----```
+---```lua
 ---ADDON:SetAddonEnable("example", true)
 ---ADDON:SaveAddonInfos()
 ---```
@@ -825,7 +827,7 @@ function ADDON:SetAddonEnable(name, enable) end
 ---@param data? table Optional data (currently only usable for custom UI categories).
 ---@return boolean success `true` if the operation succeeded, `false` otherwise.
 ---@usage
----```
+---```lua
 ---local data = { hello = "world" }
 ---
 ---ADDON:ShowContent(UIC_MY_CUSTOM_WIDGET, true, data)
@@ -840,7 +842,7 @@ function ADDON:ShowContent(uiCategory, show, data) end
 ---@param data? table Optional data (currently only usable for custom UI categories).
 ---@return boolean success `true` if the toggle succeeded, `false` otherwise.
 ---@usage
----```
+---```lua
 ---local data = { hello = "world" }
 ---
 ---ADDON:ToggleContent(UIC_MY_CUSTOM_WIDGET, data)
@@ -852,7 +854,7 @@ function ADDON:ToggleContent(uiCategory, data) end
 ---(or character select) required to update the UI.
 ---@param key UIBOUND_KEY The key whose UIBound data should be cleared.
 ---@usage
----```
+---```lua
 ---UIParent:ClearUIBound("ui_bound_playerFrame")
 ---```
 ---@see UIBOUND_KEY
@@ -868,7 +870,7 @@ function UIParent:ClearUIBound(key) end
 ---@return T|EmptyTable|nil
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local window = UIParent:CreateWidget("window", "exampleWindow", "UIParent")
 ---local button = UIParent:CreateWidget("button", "exampleButton", window)
 ---```
@@ -891,7 +893,7 @@ function UIParent:GetAccountUITimeStamp(key) end
 ---@return string characterTodayPlayedTimeStamp The timestamp in `YYYY-M-D` format.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local characterTodayPlayedTimeStamp = UIParent:GetCharacterTodayPlayedTimeStamp()
 ---```
 function UIParent:GetCharacterTodayPlayedTimeStamp() end
@@ -900,7 +902,7 @@ function UIParent:GetCharacterTodayPlayedTimeStamp() end
 ---@return number currentDP The current display point value.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentDP = UIParent:GetCurrentDP()
 ---```
 function UIParent:GetCurrentDP() end
@@ -909,7 +911,7 @@ function UIParent:GetCurrentDP() end
 ---@return number currentPolyCount The current polygon count.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentPolyCount = UIParent:GetCurrentPolyCount()
 ---```
 function UIParent:GetCurrentPolyCount() end
@@ -918,7 +920,7 @@ function UIParent:GetCurrentPolyCount() end
 ---@return string currentTimeStamp The current timestamp in `YYYY-M-D` format.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentTimeStamp = UIParent:GetCurrentTimeStamp()
 ---```
 function UIParent:GetCurrentTimeStamp() end
@@ -928,7 +930,7 @@ function UIParent:GetCurrentTimeStamp() end
 ---@return string? sEntityName The entity name if found, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local sEntityName = UIParent:GetEntityByName("Beginner Training Scarecrow")
 ---```
 function UIParent:GetEntityByName(sEntityName) end
@@ -939,7 +941,7 @@ function UIParent:GetEntityByName(sEntityName) end
 ---@return number etcValue The value associated with the key.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lineSpace = UIParent:GetEtcValue("inventory_guide_line_space")
 ---```
 function UIParent:GetEtcValue(key) end
@@ -949,7 +951,7 @@ function UIParent:GetEtcValue(key) end
 ---@return RGBAColor fontColor The font color associated with the key.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local fontColor = UIParent:GetFontColor("default")
 ---```
 ---@see FONT_COLOR_KEY
@@ -960,7 +962,7 @@ function UIParent:GetFontColor(key) end
 ---@return number frameRate The current frame rate.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local frameRate = UIParent:GetFrameRate()
 ---```
 function UIParent:GetFrameRate() end
@@ -969,7 +971,7 @@ function UIParent:GetFrameRate() end
 ---@return number frameTime The frame time in seconds.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local frameTime = UIParent:GetFrameTime()
 ---```
 function UIParent:GetFrameTime() end
@@ -978,7 +980,7 @@ function UIParent:GetFrameTime() end
 ---@return string id The UI element's ID.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local id = UIParent:GetId()
 ---```
 function UIParent:GetId() end
@@ -988,7 +990,7 @@ function UIParent:GetId() end
 ---@return boolean permission `true` if permission is granted, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local permission = UIParent:GetPermission(UIC_MAIL)
 ---```
 ---@see UIC
@@ -998,7 +1000,7 @@ function UIParent:GetPermission(uiCategory) end
 ---@return number screenHeight The screen height in pixels.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local screenHeight = UIParent:GetScreenHeight()
 ---```
 function UIParent:GetScreenHeight() end
@@ -1007,7 +1009,7 @@ function UIParent:GetScreenHeight() end
 ---@return number screenWidth The screen width in pixels.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local screenWidth = UIParent:GetScreenWidth()
 ---```
 function UIParent:GetScreenWidth() end
@@ -1016,7 +1018,7 @@ function UIParent:GetScreenWidth() end
 ---@return Time serverTime The server time table.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local serverTime = UIParent:GetServerTimeTable()
 ---```
 ---@see Time
@@ -1029,7 +1031,7 @@ function UIParent:GetServerTimeTable() end
 ---@return TextureData textureData The texture data for the specified key.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local textureData = UIParent:GetTextureData(TEXTURE_PATH.ACHIEVEMENT, "achievement_bg_blue")
 ---```
 ---@see TEXTURE_PATH
@@ -1041,7 +1043,7 @@ function UIParent:GetTextureData(filename, infoKey) end
 ---@return TextureKeyData textureKeyData The texture key data.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local textureKeyData = UIParent:GetTextureKeyData(TEXTURE_PATH.ACHIEVEMENT)
 ---```
 ---@see TEXTURE_PATH
@@ -1053,7 +1055,7 @@ function UIParent:GetTextureKeyData(filename) end
 ---@return UIBound|nil uiBound The UI bound if the key has been moved, nil otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local uiBound = UIParent:GetUIBound("ui_bound_playerFrame")
 ---```
 ---@see UIBOUND_KEY
@@ -1064,7 +1066,7 @@ function UIParent:GetUIBound(key) end
 ---@return number uiScale The current UI scale. (min: `0.7`, max: `2.4`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local uiScale = UIParent:GetUIScale()
 ---```
 function UIParent:GetUIScale() end
@@ -1075,7 +1077,7 @@ function UIParent:GetUIScale() end
 ---@return string uiStamp The UI stamp associated with the key.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local stamp = UIParent:GetUIStamp("example")
 ---```
 function UIParent:GetUIStamp(key) end
@@ -1084,7 +1086,7 @@ function UIParent:GetUIStamp(key) end
 ---@return Vec3 viewCameraAngles The camera angles as a Vec3.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local viewCameraAngles = UIParent:GetViewCameraAngles()
 ---```
 ---@see Vec3
@@ -1094,7 +1096,7 @@ function UIParent:GetViewCameraAngles() end
 ---@return Vec3 viewCameraDir The camera direction as a Vec3.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local viewCameraDir = UIParent:GetViewCameraDir()
 ---```
 ---@see Vec3
@@ -1104,7 +1106,7 @@ function UIParent:GetViewCameraDir() end
 ---@return number viewCameraFov The camera's field of view.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local viewCameraFov = UIParent:GetViewCameraFov()
 ---```
 function UIParent:GetViewCameraFov() end
@@ -1113,7 +1115,7 @@ function UIParent:GetViewCameraFov() end
 ---@return Vec3 viewCameraPos The camera position as a Vec3.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local viewCameraPos = UIParent:GetViewCameraPos()
 ---```
 ---@see Vec3
@@ -1123,7 +1125,7 @@ function UIParent:GetViewCameraPos() end
 ---@return VirtualMemoryStats virtualMemoryStats The virtual memory statistics.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local virtualMemoryStats = UIParent:GetVirtualMemoryStats()
 ---```
 ---@see VirtualMemoryStats
@@ -1133,7 +1135,7 @@ function UIParent:GetVirtualMemoryStats() end
 ---@return FontSizeList fontSizeList The font size list.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local fontSizeList = UIParent:InitFontSize()
 ---```
 ---@see FontSizeList
@@ -1143,7 +1145,7 @@ function UIParent:InitFontSize() end
 ---@return boolean dx11Supported `true` if DirectX 11 is supported, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local dx11Supported = UIParent:IsDX11Supported()
 ---```
 function UIParent:IsDX11Supported() end
@@ -1153,7 +1155,7 @@ function UIParent:IsDX11Supported() end
 ---@return boolean pointVisible `true` if the point is visible, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local point = { X2Unit:GetUnitWorldPositionByTarget("player", true) }
 ---local pointVisible = UIParent:IsPointVisible(point)
 ---```
@@ -1164,7 +1166,7 @@ function UIParent:IsPointVisible(point) end
 ---@return boolean renderThreadSupported `true` if multithreaded rendering is supported, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local renderThreadSupported = UIParent:IsRenderThreadSupported()
 ---```
 function UIParent:IsRenderThreadSupported() end
@@ -1173,7 +1175,7 @@ function UIParent:IsRenderThreadSupported() end
 ---@param eventName UIEVENT_TYPE The UI event to release the handler for.
 ---@param handler function The handler function to release.
 ---@usage
----```
+---```lua
 ---UIParent:ReleaseEventHandler("UI_ADDON", ToggleAddonSettings)
 ---```
 ---@see UIEVENT_TYPE
@@ -1184,7 +1186,7 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@param eventName UIEVENT_TYPE The UI event to set the handler for.
 ---@param handler function The handler function to set.
 ---@usage
----```
+---```lua
 ---function ToggleAddonSettings() end
 ---
 ---UIParent:SetEventHandler("UI_ADDON", ToggleAddonSettings)
@@ -2075,7 +2077,7 @@ function UIParent:SetEventHandler(eventName, handler) end
 ---@param key UIBOUND_KEY The key to set the UI bound for.
 ---@param uiBound UIBound The UI bound to set.
 ---@usage
----```
+---```lua
 ---local bound = {}
 ---bound.x, bound.y = widget:GetEffectiveOffset()
 ---bound.width, bound.height = widget:GetExtent()
@@ -2099,7 +2101,7 @@ function UIParent:SetUIBound(key, uiBound) end
 ---@param scale number The UI scale value. (min: `0.7`, max: `2.4`)
 ---@param immediatelyApply boolean `true` to apply the scale immediately, `false` otherwise.
 ---@usage
----```
+---```lua
 ---UIParent:SetUIScale(0.9, true)
 ---```
 function UIParent:SetUIScale(scale, immediatelyApply) end

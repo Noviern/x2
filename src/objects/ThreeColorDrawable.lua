@@ -20,7 +20,7 @@ local ThreeColorDrawable = {}
 ---@param g number The green color component.
 ---@param b number The blue color component.
 ---@usage
----```
+---```lua
 ---drawable:ChangeColor1(1, 0, 0)
 ---```
 function ThreeColorDrawable:ChangeColor1(r, g, b) end
@@ -31,7 +31,7 @@ function ThreeColorDrawable:ChangeColor1(r, g, b) end
 ---@param g number The green color component.
 ---@param b number The blue color component.
 ---@usage
----```
+---```lua
 ---drawable:ChangeColor2(0, 1, 0)
 ---```
 function ThreeColorDrawable:ChangeColor2(r, g, b) end
@@ -42,7 +42,7 @@ function ThreeColorDrawable:ChangeColor2(r, g, b) end
 ---@param g number The green color component.
 ---@param b number The blue color component.
 ---@usage
----```
+---```lua
 ---drawable:ChangeColor3(0, 0, 1)
 ---```
 function ThreeColorDrawable:ChangeColor3(r, g, b) end
@@ -63,7 +63,7 @@ function ThreeColorDrawable:ChangeUserImageFile(idx) end
 ---@param width number The width of the drawable.
 ---@param height number The height of the drawable.
 ---@usage
----```
+---```lua
 ---drawable:SetCoords(0, 0, 100, 100)
 ---```
 function ThreeColorDrawable:SetCoords(x, y, width, height) end

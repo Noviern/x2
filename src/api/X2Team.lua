@@ -50,7 +50,7 @@ X2Team = {}                           -- api/X2Team
 ---@return TEAM_ROLE role The role of the member.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local role = X2Team:GetRole(1, 1)
 ---```
 function X2Team:GetRole(teamIndex, memberIndex) end
@@ -58,7 +58,7 @@ function X2Team:GetRole(teamIndex, memberIndex) end
 ---Sets the player's role in a raid.
 ---@param role TEAM_ROLE The role to set for the player.
 ---@usage
----```
+---```lua
 ---X2Team:SetRole(TMROLE_DEALER)
 ---```
 ---@see TEAM_ROLE

@@ -37,15 +37,13 @@ local Tab = {}
 ---@param unselectedButtonWidget Button The button widget for the unselected state.
 ---@param windowWidget Window The window widget associated with the tab.
 ---@usage
----```
+---```lua
 ---local selectedButton = UIParent:CreateWidget("button", "tab2selectedButton", "UIParent")
 ---local unselectedButton = UIParent:CreateWidget("button", "tab2unselectedButton", "UIParent")
 ---local window = UIParent:CreateWidget("window", "tab2window", "UIParent")
 ---widget:AddNewTab("Tab 2", selectedButton, unselectedButton, window)
 ---```
-function Tab:AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget,
-                       windowWidget)
-end
+function Tab:AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget, windowWidget) end
 
 ---Adds a simple tab with the specified name to the Tab, automatically creating
 ---`selectedButton`, `unselectedButton`, and `window` widgets stored as
@@ -53,7 +51,7 @@ end
 ---`widget.window[i]`. Handles all events necessary for tab switching.
 ---@param tabName string The name of the tab.
 ---@usage
----```
+---```lua
 ---widget:AddSimpleTab("Tab 1")
 ---```
 function Tab:AddSimpleTab(tabName) end
@@ -62,7 +60,7 @@ function Tab:AddSimpleTab(tabName) end
 ---Aligns the tab buttons in the Tab. Should be called after all tabs have been
 ---created.
 ---@usage
----```
+---```lua
 ---widget:AlignTabButtons()
 ---```
 function Tab:AlignTabButtons() end
@@ -71,7 +69,7 @@ function Tab:AlignTabButtons() end
 ---@return number activateTabCount The number of active tabs.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local activateTabCount = widget:GetActivateTabCount()
 ---```
 function Tab:GetActivateTabCount() end
@@ -80,7 +78,7 @@ function Tab:GetActivateTabCount() end
 ---@return number tabCount The total number of tabs.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local tabCount = widget:GetTabCount()
 ---```
 function Tab:GetTabCount() end
@@ -88,7 +86,7 @@ function Tab:GetTabCount() end
 ---Hides the tab at the specified index in the Tab.
 ---@param idx number The index of the tab to hide.
 ---@usage
----```
+---```lua
 ---widget:HideTab(2)
 ---```
 function Tab:HideTab(idx) end
@@ -98,7 +96,7 @@ function Tab:HideTab(idx) end
 ---@return boolean hideTab `true` if the tab is hidden, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local hideTab = widget:IsHideTab(2)
 ---```
 function Tab:IsHideTab(index) end
@@ -106,7 +104,7 @@ function Tab:IsHideTab(index) end
 ---Sets the number of active tabs in the Tab.
 ---@param activateTabCount number The number of active tabs (default: `0`, max: `Tab:GetTabCount()`).
 ---@usage
----```
+---```lua
 ---widget:SetActivateTabCount(1)
 ---```
 function Tab:SetActivateTabCount(activateTabCount) end
@@ -115,7 +113,7 @@ function Tab:SetActivateTabCount(activateTabCount) end
 ---`Tab:AlignTabButtons()`.
 ---@param corner TAB_CORNER The corner to place the tabs. (default: `"TOPLEFT"`)
 ---@usage
----```
+---```lua
 ---widget:SetCorner("TOPRIGHT")
 ---```
 ---@see TAB_CORNER
@@ -125,7 +123,7 @@ function Tab:SetCorner(corner) end
 ---`Tab:AlignTabButtons()`.
 ---@param vertical boolean `true` for vertical orientation, `false` for horizontal. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetVertical(true)
 ---```
 function Tab:SetVertical(vertical) end
@@ -133,7 +131,7 @@ function Tab:SetVertical(vertical) end
 ---Shows the tab at the specified index in the Tab.
 ---@param idx number The index of the tab to show.
 ---@usage
----```
+---```lua
 ---widget:ShowTab(2)
 ---```
 function Tab:ShowTab(idx) end

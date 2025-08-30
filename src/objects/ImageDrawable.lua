@@ -22,7 +22,7 @@ local ImageDrawable = {}
 ---@param anim boolean `true` to enable animation, `false` to disable.
 ---@param loop boolean `true` to enable looping, `false` to disable.
 ---@usage
----```
+---```lua
 ---imageDrawable:Animation(true, true)
 ---```
 function ImageDrawable:Animation(anim, loop) end
@@ -31,7 +31,7 @@ function ImageDrawable:Animation(anim, loop) end
 ---@return boolean grayTexture `true` if the texture is gray, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local grayTexture = imageDrawable:IsGrayTexture()
 ---```
 function ImageDrawable:IsGrayTexture() end
@@ -40,7 +40,7 @@ function ImageDrawable:IsGrayTexture() end
 ---@return boolean whiteTexture `true` if the texture is white, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local whiteTexture = imageDrawable:IsWhiteTexture()
 ---```
 function ImageDrawable:IsWhiteTexture() end
@@ -48,7 +48,7 @@ function ImageDrawable:IsWhiteTexture() end
 ---Sets the animation frame information for the texture of the ImageDrawable.
 ---@param frameInfo FrameInfo The frame information for the animation.
 ---@usage
----```
+---```lua
 ---local imageDrawable = widget:CreateImageDrawable(TEXTURE_PATH.TIMER, "background")
 ---...
 ---

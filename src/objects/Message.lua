@@ -98,7 +98,7 @@ local Message = {}
 ---dimensions.
 ---@param message string The message text to add.
 ---@usage
----```
+---```lua
 ---widget:AddMessage("Archerage.to - the first ArcheAge Private Server")
 ---```
 function Message:AddMessage(message) end
@@ -107,7 +107,7 @@ function Message:AddMessage(message) end
 ---@param message string The message text to add.
 ---@param visibleTime number The visibility duration in milliseconds.
 ---@usage
----```
+---```lua
 ---widget:AddMessageEx("This lasts 20 seconds before fade out.", 20000)
 ---```
 function Message:AddMessageEx(message, visibleTime) end
@@ -126,7 +126,7 @@ function Message:AddMessageRefresh(message) end
 
 ---Changes the default style for the Message.
 ---@usage
----```
+---```lua
 ---widget:ChangeDefaultStyle()
 ---```
 function Message:ChangeDefaultStyle() end
@@ -134,14 +134,14 @@ function Message:ChangeDefaultStyle() end
 ---Changes the text style of the Message from aligning to the bottom of the
 ---widget to the top of the widget.
 ---@usage
----```
+---```lua
 ---widget:ChangeTextStyle()
 ---```
 function Message:ChangeTextStyle() end
 
 ---Clears all messages from the Message.
 ---@usage
----```
+---```lua
 ---widget:Clear()
 ---```
 function Message:Clear() end
@@ -150,7 +150,7 @@ function Message:Clear() end
 ---@return boolean result `true` if text was copied, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnClick", function(self, mouseButton)
 ---  if mouseButton == "RightButton" then
 ---    self:CopyTextToClipboard()
@@ -163,7 +163,7 @@ function Message:CopyTextToClipboard() end
 ---for the Message.
 ---@param enable boolean `true` to enable item links, `false` to disable. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:EnableItemLink(true)
 ---```
 function Message:EnableItemLink(enable) end
@@ -172,7 +172,7 @@ function Message:EnableItemLink(enable) end
 ---@return number currentLine The current line index.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentLine = widget:GetCurrentLine()
 ---```
 function Message:GetCurrentLine() end
@@ -181,7 +181,7 @@ function Message:GetCurrentLine() end
 ---@return number currentScroll The current scroll position (min: `0`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentScroll = widget:GetCurrentScroll()
 ---```
 function Message:GetCurrentScroll() end
@@ -190,7 +190,7 @@ function Message:GetCurrentScroll() end
 ---@return number lineSpace The line spacing value. (default: `0`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local lineSpace = widget:GetLineSpace()
 ---```
 function Message:GetLineSpace() end
@@ -200,7 +200,7 @@ function Message:GetLineSpace() end
 ---@return BaseLinkInfo linkInfo The link information for the item.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---widget:EnableItemLink(true)
 ---widget:SetHandler("OnClick", function(self)
 ---  local linkInfo = self:GetLinkInfoOnCursor()
@@ -217,7 +217,7 @@ function Message:GetLinkInfoOnCursor() end
 ---@return number maxLines The maximum number of lines. (default: `80`)
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local maxLines =widget:GetMaxLines()
 ---```
 function Message:GetMaxLines() end
@@ -233,7 +233,7 @@ function Message:GetMessageByTimeStamp(messageTimeStamp) end
 ---@return number messageLineCount The number of message lines.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local messageLineCount = widget:GetMessageLines()
 ---```
 function Message:GetMessageLines() end
@@ -242,21 +242,21 @@ function Message:GetMessageLines() end
 ---@return number maxLinesPerPage The maximum lines per page (the widgets height).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local maxLinesPerPage = widget:GetPagePerMaxLines()
 ---```
 function Message:GetPagePerMaxLines() end
 
 ---Scrolls down one page in the Message.
 ---@usage
----```
+---```lua
 ---widget:PageDown()
 ---```
 function Message:PageDown() end
 
 ---Scrolls up one page in the Message.
 ---@usage
----```
+---```lua
 ---widget:PageUp()
 ---```
 function Message:PageUp() end
@@ -265,21 +265,21 @@ function Message:PageUp() end
 ---@return number remainingLines The number of remaining lines.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local remainingLines = widget:RemoveLastMessage()
 ---```
 function Message:RemoveLastMessage() end
 
 ---Resets the visibility duration for the Message.
 ---@usage
----```
+---```lua
 ---widget:ResetVisibleTime()
 ---```
 function Message:ResetVisibleTime() end
 
 ---Scrolls down by one line in the Message.
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnWheelDown", function(self)
 ---  self:ScrollDown()
 ---end)
@@ -288,21 +288,21 @@ function Message:ScrollDown() end
 
 ---Scrolls to the bottom of the Message.
 ---@usage
----```
+---```lua
 ---widget:ScrollToBottom()
 ---```
 function Message:ScrollToBottom() end
 
 ---Scrolls to the top of the Message.
 ---@usage
----```
+---```lua
 ---widget:ScrollToTop()
 ---```
 function Message:ScrollToTop() end
 
 ---Scrolls up by one line in the Message.
 ---@usage
----```
+---```lua
 ---widget:SetHandler("OnWheelUp", function(self)
 ---  self:ScrollUp()
 ---end)
@@ -312,7 +312,7 @@ function Message:ScrollUp() end
 ---Sets the fade duration for the Message. Must be set before adding a message.
 ---@param seconds number The fade duration in seconds.
 ---@usage
----```
+---```lua
 ---widget:SetFadeDuration(10)
 ---```
 function Message:SetFadeDuration(seconds) end
@@ -323,7 +323,7 @@ function Message:SetFadeDuration(seconds) end
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
 ---@usage
----```
+---```lua
 ---widget:SetInset(10, 10, 10, 10)
 ---```
 function Message:SetInset(left, top, right, bottom) end
@@ -331,7 +331,7 @@ function Message:SetInset(left, top, right, bottom) end
 ---Sets the line spacing for the Message.
 ---@param space number The line spacing value.
 ---@usage
----```
+---```lua
 ---widget:SetLineSpace(15)
 ---```
 function Message:SetLineSpace(space) end
@@ -340,7 +340,7 @@ function Message:SetLineSpace(space) end
 ---before setting the maximum line count.
 ---@param count number The maximum line count.
 ---@usage
----```
+---```lua
 ---widget:SetMaxLines(3)
 ---```
 function Message:SetMaxLines(count) end
@@ -348,7 +348,7 @@ function Message:SetMaxLines(count) end
 ---Sets the scroll position for the Message.
 ---@param value number The scroll position value.
 ---@usage
----```
+---```lua
 ---widget:SetScrollPos(widget:GetCurrentScroll() - 1)
 ---```
 function Message:SetScrollPos(value) end
@@ -356,7 +356,7 @@ function Message:SetScrollPos(value) end
 ---Sets the visibility duration for the Message.
 ---@param seconds number The duration in seconds the message remains visible. (default: `15`)
 ---@usage
----```
+---```lua
 ---widget:SetTimeVisible(20)
 ---```
 function Message:SetTimeVisible(seconds) end

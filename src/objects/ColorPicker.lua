@@ -28,7 +28,7 @@ local ColorPicker = {}
 ---@return number blue The blue color component (min: `0`, max: `1`).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local red, green, blue = widget:GetColor(1, 1)
 ---```
 function ColorPicker:GetColor(xPos, yPos) end
@@ -41,7 +41,7 @@ function ColorPicker:GetColor(xPos, yPos) end
 ---@return number yPos The y-coordinate of the point.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local xPos, yPos = widget:GetPoint(255, 255, 255)
 ---```
 function ColorPicker:GetPoint(colorR, colorG, colorB) end
@@ -49,7 +49,7 @@ function ColorPicker:GetPoint(colorR, colorG, colorB) end
 ---Sets the palette image for the ColorPicker.
 ---@param imageName string The path to the palette image. This can be `"ui/..."` or `"Addon/MyAddon/image.png"`
 ---@usage
----```
+---```lua
 ---widget:SetPaletteImage("ui/common/hud.dds")
 ---```
 function ColorPicker:SetPaletteImage(imageName) end

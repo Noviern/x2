@@ -52,7 +52,7 @@ X2Craft = {}                        -- api/X2Craft
 ---@return CraftBaseInfo|nil craftBaseInfo The base craft information, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local craftBaseInfo = X2Craft:GetCraftBaseInfo(85)
 ---```
 ---@see CraftBaseInfo
@@ -69,7 +69,7 @@ function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end
 ---@return CraftProductInfo[]|nil craftProductInfo A table of craft product info, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local craftProductInfo = X2Craft:GetCraftProductInfo(85)
 ---```
 ---@see CraftProductInfo

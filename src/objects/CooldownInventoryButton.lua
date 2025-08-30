@@ -29,7 +29,7 @@ local CooldownInventoryButton = {}
 ---Sets the bag item slot for the CooldownInventoryButton.
 ---@param itemSlot number The item slot index in the bag.
 ---@usage
----```
+---```lua
 ---widget:SetBagItemSlot(0)
 ---```
 function CooldownInventoryButton:SetBagItemSlot(itemSlot) end
@@ -38,7 +38,7 @@ function CooldownInventoryButton:SetBagItemSlot(itemSlot) end
 ---Sets the bank item slot for the CooldownInventoryButton.
 ---@param itemSlot number The item slot index in the bank.
 ---@usage
----```
+---```lua
 ---widget:SetBankItemSlot(0)
 ---```
 function CooldownInventoryButton:SetBankItemSlot(itemSlot) end
@@ -47,7 +47,7 @@ function CooldownInventoryButton:SetBankItemSlot(itemSlot) end
 ---Sets the coffer item slot for the CooldownInventoryButton.
 ---@param itemSlot number The item slot index in the coffer.
 ---@usage
----```
+---```lua
 ---widget:SetCofferItemSlot(0)
 ---```
 function CooldownInventoryButton:SetCofferItemSlot(itemSlot) end
@@ -56,7 +56,7 @@ function CooldownInventoryButton:SetCofferItemSlot(itemSlot) end
 ---Sets the guild bank item slot for the CooldownInventoryButton.
 ---@param itemSlot number The item slot index in the guild bank.
 ---@usage
----```
+---```lua
 ---widget:SetGuildBankItemSlot(0)
 ---```
 function CooldownInventoryButton:SetGuildBankItemSlot(itemSlot) end

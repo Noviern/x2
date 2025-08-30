@@ -21,7 +21,7 @@ local Uibounds = {}
 ---@param x number The x-coordinate offset.
 ---@param y number The y-coordinate offset.
 ---@usage
----```
+---```lua
 ---widget:AddAnchor("TOPLEFT", "UIParent", 0, 0)
 ---```
 ---@see ANCHOR_POINT
@@ -33,7 +33,7 @@ function Uibounds:AddAnchor(anchor, x, y) end
 ---@param x number The x-coordinate offset.
 ---@param y number The y-coordinate offset.
 ---@usage
----```
+---```lua
 ---widget:AddAnchor("TOPLEFT", "UIParent", 0, 0)
 ---```
 ---@see ANCHOR_POINT
@@ -47,7 +47,7 @@ function Uibounds:AddAnchor(anchor, parentId, x, y) end
 ---@param x number The x-coordinate offset.
 ---@param y number The y-coordinate offset.
 ---@usage
----```
+---```lua
 ---widget:AddAnchor("TOPLEFT", "UIParent", "TOP", 0, 0)
 ---```
 ---@see ANCHOR_POINT
@@ -62,7 +62,7 @@ function Uibounds:BindWidth(width) end
 ---@return boolean outsideOfScreen `true` if the UI bounds is outside the screen, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local outsideOfScreen = widget:CheckOutOfScreen()
 ---```
 function Uibounds:CheckOutOfScreen() end
@@ -73,7 +73,7 @@ function Uibounds:CheckOutOfScreen() end
 ---@return number offY The y-offset (0 to screen height - effective height).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local offX, offY = widget:CorrectOffsetByScreen()
 ---```
 function Uibounds:CorrectOffsetByScreen() end
@@ -84,7 +84,7 @@ function Uibounds:CorrectOffsetByScreen() end
 ---@return number effectiveHeight The effective height.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local effectiveWidth, effectiveHeight = widget:GetEffectiveExtent()
 ---```
 function Uibounds:GetEffectiveExtent() end
@@ -94,7 +94,7 @@ function Uibounds:GetEffectiveExtent() end
 ---@return number effectiveOffY The effective y-offset.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local effectiveOffX, effectiveOffY = widget:GetEffectiveOffset()
 ---```
 function Uibounds:GetEffectiveOffset() end
@@ -104,7 +104,7 @@ function Uibounds:GetEffectiveOffset() end
 ---@return number height The unscaled height.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local width, height = widget:GetExtent()
 ---```
 function Uibounds:GetExtent() end
@@ -113,7 +113,7 @@ function Uibounds:GetExtent() end
 ---@return number height The unscaled height.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local height = widget:GetHeight()
 ---```
 function Uibounds:GetHeight() end
@@ -123,7 +123,7 @@ function Uibounds:GetHeight() end
 ---@return number offY The y-offset.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local offX, offY = widget:GetOffset()
 ---```
 function Uibounds:GetOffset() end
@@ -132,7 +132,7 @@ function Uibounds:GetOffset() end
 ---@return number width The unscaled width.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local width = widget:GetWidth()
 ---```
 function Uibounds:GetWidth() end
@@ -140,7 +140,7 @@ function Uibounds:GetWidth() end
 ---@TODO: Broken?
 ---Removes all anchors from the UI bounds, excluding anchor origin.
 ---@usage
----```
+---```lua
 ---widget:RemoveAllAnchors()
 ---```
 function Uibounds:RemoveAllAnchors() end
@@ -149,7 +149,7 @@ function Uibounds:RemoveAllAnchors() end
 ---@param width number The width to set.
 ---@param height number The height to set.
 ---@usage
----```
+---```lua
 ---widget:SetExtent(100, 100)
 ---```
 function Uibounds:SetExtent(width, height) end
@@ -157,7 +157,7 @@ function Uibounds:SetExtent(width, height) end
 ---Sets the height of the UI bounds.
 ---@param height number The height to set.
 ---@usage
----```
+---```lua
 ---widget:SetHeight(100)
 ---```
 function Uibounds:SetHeight(height) end
@@ -165,7 +165,7 @@ function Uibounds:SetHeight(height) end
 ---Sets the width of the UI bounds.
 ---@param width number The width to set.
 ---@usage
----```
+---```lua
 ---widget:SetWidth(100)
 ---```
 function Uibounds:SetWidth(width) end

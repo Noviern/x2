@@ -115,7 +115,7 @@ local HOTKEY_MANAGER = {
 ---Enables or disables the hotkey system.
 ---@param enable boolean `true` to enable the hotkey system, `false` to disable it. (default: `true`)
 ---@usage
----```
+---```lua
 ---X2Hotkey:EnableHotkey(false)
 ---```
 function X2Hotkey:EnableHotkey(enable) end
@@ -128,7 +128,7 @@ function X2Hotkey:EnableHotkey(enable) end
 ---@return string optionBinding The option binding string.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---X2Hotkey:GetOptionBinding("quest_directing_interaction", 1, false, 2)
 ---```
 ---@see HOTKEY_ACTION
@@ -140,7 +140,7 @@ function X2Hotkey:GetOptionBinding(action, index, option, arg) end
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
 ---@return string optionBindingButton The button binding string.
 ---@usage
----```
+---```lua
 ---X2Hotkey:GetOptionBindingButton("toggle_worldmap", 1)
 ---```
 ---@see HOTKEY_ACTION
@@ -152,7 +152,7 @@ function X2Hotkey:GetOptionBindingButton(action, index) end
 ---@return boolean overridableAction `true` if the action is overridable, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local overridableAction = X2Hotkey:IsOverridableAction("quest_directing_interaction")
 ---```
 ---@see HOTKEY_ACTION
@@ -163,7 +163,7 @@ function X2Hotkey:IsOverridableAction(action) end
 ---@return boolean validActionName `true` if the action name is valid, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local validActionName = X2Hotkey:IsValidActionName("quest_directing_interaction")
 ---```
 ---@see HOTKEY_ACTION
@@ -175,7 +175,7 @@ function X2Hotkey:IsValidActionName(action) end
 ---@param key string The key to bind.
 ---@param keyType HOTKEY_MANAGER The key type for the binding.
 ---@usage
----```
+---```lua
 ---X2Hotkey:SetOptionBindingButtonWithIndex("front_camera", "`", 1)
 ---```
 ---@see HOTKEY_ACTION
@@ -189,7 +189,7 @@ function X2Hotkey:SetOptionBindingButtonWithIndex(action, key, keyType) end
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
 ---@param arg number The additional argument for the binding. (min: `0`)
 ---@usage
----```
+---```lua
 ---X2Hotkey:SetOptionBindingWithIndex("front_camera", "`", 1, 0)
 ---```
 ---@see HOTKEY_ACTION

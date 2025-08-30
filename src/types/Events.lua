@@ -1748,7 +1748,7 @@ local HOUSE_STRUCTURE_TYPE = {
 ---Event triggers when the player takes money from the mail.
 ---@alias MAIL_INBOX_MONEY_TAKEN_HANDLER fun()
 
----
+---Event triggers when the player pays their taxes through the mail.
 ---@alias MAIL_INBOX_TAX_PAID_HANDLER fun()
 
 ---Event triggers when the players mailbox has an update.
@@ -1873,7 +1873,7 @@ local NAME_TAG_MODE = {
 ---
 ---@alias NAVI_MARK_REMOVE_HANDLER fun()
 
----
+---Event triggers when a new day (daily reset) starts.
 ---@alias NEW_DAY_STARTED_HANDLER fun()
 
 ---
@@ -2068,8 +2068,8 @@ local NAME_TAG_MODE = {
 ---
 ---@alias PLAYER_VISUAL_RACE_HANDLER fun()
 
----
----@alias POST_CRAFT_ORDER_HANDLER fun(result)
+---Event triggers when the player attempts to list a craftring request. 
+---@alias POST_CRAFT_ORDER_HANDLER fun(result: boolean)
 
 ---Event triggers when the player changes equipment.
 ---@alias PRELIMINARY_EQUIP_UPDATE_HANDLER fun()
@@ -2450,8 +2450,8 @@ local QUEST_STATUS = {
 ---
 ---@alias SENSITIVE_OPERATION_VERIFY_SUCCESS_HANDLER fun()
 
----
----@alias SET_DEFAULT_EXPAND_RATIO_HANDLER fun(isSameZone)
+---Event triggers when the player is changing zones in the map.
+---@alias SET_DEFAULT_EXPAND_RATIO_HANDLER fun(isSameZone: boolean)
 
 ---
 ---@alias SET_EFFECT_ICON_VISIBLE_HANDLER fun(isShow, arg)
@@ -3136,14 +3136,25 @@ local UNIT_TYPE = {
 ---Event triggers when the player dies and when the player respawns.
 ---@alias UPDATE_CORPSE_INFO_HANDLER fun()
 
----
----@alias UPDATE_CRAFT_ORDER_ITEM_FEE_HANDLER fun(info)
+---@class CraftOrderItemFee
+---@field defaultFee string
+---@field maxFee string
+---@field minFee string
 
----
----@alias UPDATE_CRAFT_ORDER_ITEM_SLOT_HANDLER fun(info)
+---Event triggers when the player is attempting to list a requested item.
+---@alias UPDATE_CRAFT_ORDER_ITEM_FEE_HANDLER fun(info: CraftOrderItemFee)
 
----
----@alias UPDATE_CRAFT_ORDER_SKILL_HANDLER fun(key, fired)
+---@class CraftOrderItemSlot
+---@field craftCount number
+---@field craftGrade number
+---@field craftType number
+
+---Event triggers when the request slot updates.
+---@alias UPDATE_CRAFT_ORDER_ITEM_SLOT_HANDLER fun(info?: CraftOrderItemSlot)
+
+---Event triggers when the player starts to make, or cancels, a request for a
+---craft order.
+---@alias UPDATE_CRAFT_ORDER_SKILL_HANDLER fun(key: string, fired: boolean)
 
 ---
 ---@alias UPDATE_DEFENCE_INFO_HANDLER fun(info)

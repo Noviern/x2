@@ -18,7 +18,7 @@ local IconDrawable = {}
 ---Adds a texture to the IconDrawable.
 ---@param filename string The path to the texture file. This can be `"ui/..."` or `"Addon/MyAddon/image.dds"`
 ---@usage
----```
+---```lua
 ---local info = X2Player:GetAppellationMyStamp()
 ---iconDrawable:AddTexture(info.path)
 ---```
@@ -29,14 +29,14 @@ function IconDrawable:AddTexture(filename) end
 ---@param filename string The path to the texture file. This can be `"ui/..."` or `"Addon/MyAddon/image.dds"`
 ---@param key string The key information for the texture.
 ---@usage
----```
+---```lua
 ---iconDrawable:AddTextureWithInfo(TEXTURE_PATH.ITEM_GRADE, "mythic")
 ---```
 function IconDrawable:AddTextureWithInfo(filename, key) end
 
 ---Clears all textures from the IconDrawable.
 ---@usage
----```
+---```lua
 ---iconDrawable:ClearAllTextures()
 ---```
 function IconDrawable:ClearAllTextures() end

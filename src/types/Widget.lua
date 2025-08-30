@@ -16,7 +16,7 @@ local Widget = {}
 ---Disables drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 ---@usage
----```
+---```lua
 ---widget:DisableDrawables("background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -25,7 +25,7 @@ function Widget:DisableDrawables(nameLayer) end
 ---Disables drawables for the specified layer and its children.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 ---@usage
----```
+---```lua
 ---widget:DisableDrawablesWithChildren("background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -34,7 +34,7 @@ function Widget:DisableDrawablesWithChildren(nameLayer) end
 ---Enables drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to enable.
 ---@usage
----```
+---```lua
 ---widget:EnableDrawables("background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -43,7 +43,7 @@ function Widget:EnableDrawables(nameLayer) end
 ---Enables drawables for the specified layer and its children.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to enable.
 ---@usage
----```
+---```lua
 ---widget:EnableDrawablesWithChildren("background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -58,7 +58,7 @@ function Widget:GetRotation() end
 ---Removes all drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to clear.
 ---@usage
----```
+---```lua
 ---widget:RemoveAllDrawables("background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -67,7 +67,7 @@ function Widget:RemoveAllDrawables(nameLayer) end
 ---Removes a specific drawable table from the widget.
 ---@param drawableTable Drawablebase The drawable table to remove.
 ---@usage
----```
+---```lua
 ---widget:RemoveDrawable(bg)
 ---```
 ---@see Drawablebase
@@ -80,7 +80,7 @@ function Widget:RemoveDrawable(drawableTable) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the color to.
 ---@usage
----```
+---```lua
 ---widget:SetLayerColor(1, 0, 0, .5, "background")
 ---```
 ---@see DRAWABLE_NAME_LAYER
@@ -94,7 +94,7 @@ function Widget:SetRotation(rs) end
 ---Enables or disables dynamic content state for the widget.
 ---@param use boolean `true` to enable, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:UseDynamicContentState(true)
 ---```
 function Widget:UseDynamicContentState(use) end
@@ -103,7 +103,7 @@ function Widget:UseDynamicContentState(use) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to modify.
 ---@param use boolean `true` to enable, `false` to disable.
 ---@usage
----```
+---```lua
 ---widget:UseDynamicDrawableState("background", true)
 ---```
 ---@see DRAWABLE_NAME_LAYER

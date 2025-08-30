@@ -27,7 +27,7 @@ function RoadMap:InitMapData() end
 ---@return boolean pingMode `true` if ping mode is active, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local pingMod = widget:IsPingMode()
 ---```
 function RoadMap:IsPingMode() end
@@ -35,7 +35,7 @@ function RoadMap:IsPingMode() end
 ---Sets the size of the RoadMap.
 ---@param radioValue number The size value for the map.
 ---@usage
----```
+---```lua
 ---widget:SetMapSize(300)
 ---```
 function RoadMap:SetMapSize(radioValue) end
@@ -43,7 +43,7 @@ function RoadMap:SetMapSize(radioValue) end
 ---Shows or hides NPCs on the RoadMap.
 ---@param isShow boolean `true` to show NPCs, `false` to hide. (default: `false`)
 ---@usage
----```
+---```lua
 ---widget:SetRoadMapNpc(true)
 ---```
 function RoadMap:SetRoadMapNpc(isShow) end
@@ -52,7 +52,7 @@ function RoadMap:SetRoadMapNpc(isShow) end
 ---Shows or hides the leader ping on the RoadMap.
 ---@param isShow boolean `true` to show the leader ping, `false` to hide.
 ---@usage
----```
+---```lua
 ---widget:ShowLeaderPing(true)
 ---```
 function RoadMap:ShowLeaderPing(isShow) end

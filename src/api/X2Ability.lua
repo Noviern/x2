@@ -40,7 +40,7 @@ SPECIAL_ABILITY_MUTATION_SKILL = 150 -- api/X2Ability
 SPECIAL_ACTIVE_SKILL = 170           -- api/X2Ability
 SPECIAL_PASSIVE_SKILL = 190          -- api/X2Ability
 ---@class X2Ability
-X2Ability = {} -- api/X2Ability
+X2Ability = {}                       -- api/X2Ability
 
 ---api/X2Ability
 ---@class ActabilityInfo
@@ -65,7 +65,7 @@ X2Ability = {} -- api/X2Ability
 ---@return ActabilityInfo[] allMyActabilityInfos A table of actability information.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local allMyActabilityInfos = X2Ability:GetAllMyActabilityInfos()
 ---```
 ---@see ActabilityInfo
@@ -80,7 +80,7 @@ function X2Ability:GetAllMyActabilityInfos() end
 ---@return AppellationBuffInfo buffTooltip The buff tooltip information.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local buffTooltipDesc = X2Ability:GetBuffTooltip(5700, 1, BIK_DESCRIPTION)
 ---```
 ---@see BIK

@@ -268,7 +268,7 @@ local UNIT = {
 ---@return ZONE_ID currentZoneGroup The current zone group ID.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local currentZoneGroup = X2Unit:GetCurrentZoneGroup()
 ---```
 ---@see ZONE_ID
@@ -280,7 +280,7 @@ function X2Unit:GetCurrentZoneGroup() end
 ---@return TargetAbility[]|nil targetAbilityTemplates A table of ability templates, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local targetAbilityTemplates = X2Unit:GetTargetAbilityTemplates("player")
 ---```
 ---@see UNIT
@@ -291,7 +291,7 @@ function X2Unit:GetTargetAbilityTemplates(target) end
 ---@return string|nil unitId The target's unit ID, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitId = X2Unit:GetTargetUnitId()
 ---```
 function X2Unit:GetTargetUnitId() end
@@ -301,7 +301,7 @@ function X2Unit:GetTargetUnitId() end
 ---@return string|nil unitId The unit ID, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitId = X2Unit:GetUnitId("player")
 ---```
 ---@see UNIT
@@ -312,7 +312,7 @@ function X2Unit:GetUnitId(unit) end
 ---@return UnitInfo|nil unitInfo The unit information, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitId = X2Unit:GetUnitId("player")
 ---local unitInfo = X2Unit:GetUnitInfoById(unitId)
 ---```
@@ -324,7 +324,7 @@ function X2Unit:GetUnitInfoById(unitId) end
 ---@return string|nil unitName The unit name, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitId = X2Unit:GetUnitId("player")
 ---local unitName = X2Unit:GetUnitNameById(unitId)
 ---```
@@ -338,7 +338,7 @@ function X2Unit:GetUnitNameById(unitId) end
 ---@return number|nil z The z-coordinate, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local x, y, z = X2Unit:GetUnitScreenPosition("player")
 ---```
 ---@see UNIT
@@ -354,7 +354,7 @@ function X2Unit:GetUnitScreenPosition(unit) end
 ---@return number|nil angle The unit's angle.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local x, y, z, angle = X2Unit:GetUnitWorldPositionByTarget("player", false)
 ---```
 ---@see UNIT
@@ -367,7 +367,7 @@ function X2Unit:GetUnitWorldPositionByTarget(unit, isLocal) end
 ---@return BuffInfo unitBuffInfo The buff information, or an empty table if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitBuffInfo = X2Unit:UnitBuff("player", 1)
 ---```
 ---@see UNIT
@@ -379,7 +379,7 @@ function X2Unit:UnitBuff(unit, buffIndex) end
 ---@return number unitBuffCount The number of buffs, or 0 if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitBuffCount = X2Unit:UnitBuffCount("player")
 ---```
 ---@see UNIT
@@ -392,7 +392,7 @@ function X2Unit:UnitBuffCount(unit) end
 ---@return BuffTooltip|nil unitBuffTooltip The buff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitBuffTooltip = X2Unit:UnitBuffTooltip("player", 1)
 ---```
 ---@see UNIT
@@ -404,7 +404,7 @@ function X2Unit:UnitBuffTooltip(unit, buffIndex) end
 ---@return CastingInfo|nil unitCastingInfo The casting information, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitCastingInfo = X2Unit:UnitCastingInfo("player")
 ---```
 ---@see UNIT
@@ -418,7 +418,7 @@ function X2Unit:UnitCastingInfo(unit) end
 ---@return BuffInfo unitDebuffInfo The debuff information, or an empty table if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitDebuffInfo = X2Unit:UnitDeBuff("player", 1)
 ---```
 ---@see UNIT
@@ -430,7 +430,7 @@ function X2Unit:UnitDeBuff(unit, deBuffIndex) end
 ---@return number unitDeBuffCount The number of debuffs, or 0 if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitDeBuffCount = X2Unit:UnitDeBuffCount("player")
 ---```
 ---@see UNIT
@@ -443,7 +443,7 @@ function X2Unit:UnitDeBuffCount(unit) end
 ---@return BuffTooltip|nil unitDebuffTooltip The debuff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitDebuffTooltip = X2Unit:UnitDeBuffTooltip("player", 1)
 ---```
 ---@see UNIT
@@ -456,7 +456,7 @@ function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex) end
 ---@return UnitDistance|nil unitDistance The distance information, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitDistance = X2Unit:UnitDistance("player")
 ---```
 ---@see UNIT
@@ -470,7 +470,7 @@ function X2Unit:UnitDistance(unit) end
 ---@return string|boolean result The gear score as a string, or `false` if the unit does not exist.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local result = X2Unit:UnitGearScore("player", true)
 ---```
 ---@see UNIT
@@ -481,7 +481,7 @@ function X2Unit:UnitGearScore(unit, comma) end
 ---@return string|nil unitHealth The unit's health, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitHealth = X2Unit:UnitHealth("player")
 ---```
 ---@see UNIT
@@ -495,7 +495,7 @@ function X2Unit:UnitHealth(unit) end
 ---@return string unitHealthPercentage The health percentage, or "0" if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitCurrentHealth, unitMaxHealth, unitHealthPercentage = X2Unit:UnitHealthInfo("player")
 ---```
 ---@see UNIT
@@ -508,7 +508,7 @@ function X2Unit:UnitHealthInfo(unit) end
 ---@return BuffInfo unitHiddenBuffInfo The hidden buff information, or an empty table if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitHiddenBuffInfo =
 ---```
 ---@see UNIT
@@ -520,7 +520,7 @@ function X2Unit:UnitHiddenBuff(unit, buffIndex) end
 ---@return number unitHiddenBuffCount The number of hidden buffs, or 0 if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitHiddenBuffCount = X2Unit:UnitHiddenBuff("player", 1)
 ---```
 ---@see UNIT
@@ -533,7 +533,7 @@ function X2Unit:UnitHiddenBuffCount(unit) end
 ---@return BuffTooltip|nil unitHiddenBuffTooltip The hidden buff tooltip, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitHiddenBuffTooltip = X2Unit:UnitHiddenBuffTooltip("player", 1)
 ---```
 ---@see UNIT
@@ -545,7 +545,7 @@ function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex) end
 ---@return number|nil unitLevel The unit's level 1 to 55, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitLevel = X2Unit:UnitLevel("player")
 ---```
 ---@see UNIT
@@ -556,7 +556,7 @@ function X2Unit:UnitLevel(unit) end
 ---@return string|nil unitCurrentMana The unit's current mana, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitCurrentMana = X2Unit:UnitMana("player")
 ---```
 ---@see UNIT
@@ -570,7 +570,7 @@ function X2Unit:UnitMana(unit) end
 ---@return string unitManaPercentage The mana percentage, or "0" if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitCurrentMana, unitMaxMana, unitManaPercentage = X2Unit:UnitManaInfo("player")
 ---```
 ---@see UNIT
@@ -581,7 +581,7 @@ function X2Unit:UnitManaInfo(unit) end
 ---@return string|nil unitMaxHealth The unit's maximum health, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitMaxHealth = X2Unit:UnitMaxHealth("player")
 ---```
 ---@see UNIT
@@ -592,7 +592,7 @@ function X2Unit:UnitMaxHealth(unit) end
 ---@return string|nil unitMaxMana The unit's maximum mana, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitMaxMana = X2Unit:UnitMaxMana("player")
 ---```
 ---@see UNIT
@@ -603,7 +603,7 @@ function X2Unit:UnitMaxMana(unit) end
 ---@return string|nil unitName The unit's name, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitName = X2Unit:UnitName("player")
 ---```
 ---@see UNIT
@@ -614,7 +614,7 @@ function X2Unit:UnitName(unit) end
 ---@return string|nil unitNameWithWorld The unit's name with world info, or `nil` if not found.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local unitNameWithWorld = X2Unit:UnitNameWithWorld("player")
 ---```
 ---@see UNIT
@@ -628,7 +628,7 @@ function X2Unit:UnitNameWithWorld(unit) end
 ---@return nil removableDebuff The removable debuff tooltip (currently unimplemented).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local removableDebuff = X2Unit:UnitRemovableDebuff("player", 1)
 ---```
 ---@see UNIT
@@ -640,7 +640,7 @@ function X2Unit:UnitRemovableDebuff(unit, deBuffIndex) end
 ---@return number|nil removableDebuffCount The number of removable debuffs, or `nil` if not in range.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local removableDebuffCount = X2Unit:UnitRemovableDebuffCount("player")
 ---```
 ---@see UNIT
@@ -654,7 +654,7 @@ function X2Unit:UnitRemovableDebuffCount(unit) end
 ---@return nil removableDebuffTooltip The removable debuff tooltip (currently unimplemented).
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local removableDebuffTooltip = X2Unit:UnitRemovableDebuffTooltip("player", 1)
 ---```
 ---@see UNIT

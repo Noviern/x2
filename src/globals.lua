@@ -1,8 +1,10 @@
-package.path = "../Documents/Addon/" .. ADDON:GetName() .. "/?.lua;" .. package.path
-package.cpath = "../Documents/Addon/" .. ADDON:GetName() .. "/?.dll;" .. package.cpath
+local addon_path = "../Documents/Addon/" .. ADDON:GetName() .. "/"
+package.path     = package.path .. ";" .. addon_path .. "?.lua;"
+package.cpath    = package.cpath .. ";" .. addon_path .. "?.dll;"
+-- these may not be neccessary, check
 
 function open(filename, mode)
-  return io.open("../Documents/Addon/" .. ADDON:GetName() .. "/" .. filename, mode)
+  return io.open(addon_path .. filename, mode)
 end
 
 ---@enum API
@@ -176,8 +178,8 @@ local OBJECT_NAME = {
   grid = "OBJECT.Grid",
   label = "OBJECT.Label",
   line = "OBJECT.Line",
-  listctrl = "OBJECT.ListCtrl",
   listbox = "OBJECT.Listbox",
+  listctrl = "OBJECT.ListCtrl",
   megaphonechatedit = "OBJECT.MegaphoneChatEdit",
   message = "OBJECT.Message",
   modelview = "OBJECT.ModelView",
@@ -197,2662 +199,2688 @@ local OBJECT_NAME = {
   x2editbox = "OBJECT.X2Editbox",
 }
 
+
+
 ---@enum UIEVENT_TYPE
 local UIEVENT_TYPE = {
   -- ABILITY_CHANGED = function(newAbility: string, oldAbility: string)
-  ABILITY_CHANGED = "ABILITY_CHANGED",
+  ABILITY_CHANGED                                = "ABILITY_CHANGED",
 
   -- ABILITY_EXP_CHANGED = function(expStr: string)
-  ABILITY_EXP_CHANGED = "ABILITY_EXP_CHANGED",
+  ABILITY_EXP_CHANGED                            = "ABILITY_EXP_CHANGED",
 
   -- ABILITY_SET_CHANGED = function(responseType: number)
-  ABILITY_SET_CHANGED = "ABILITY_SET_CHANGED",
+  ABILITY_SET_CHANGED                            = "ABILITY_SET_CHANGED",
 
   -- ABILITY_SET_USABLE_SLOT_COUNT_CHANGED = function(responseType)
-  ABILITY_SET_USABLE_SLOT_COUNT_CHANGED = "ABILITY_SET_USABLE_SLOT_COUNT_CHANGED",
+  ABILITY_SET_USABLE_SLOT_COUNT_CHANGED          = "ABILITY_SET_USABLE_SLOT_COUNT_CHANGED",
 
   -- ACCOUNT_ATTENDANCE_ADDED = function()
-  ACCOUNT_ATTENDANCE_ADDED = "ACCOUNT_ATTENDANCE_ADDED",
+  ACCOUNT_ATTENDANCE_ADDED                       = "ACCOUNT_ATTENDANCE_ADDED",
 
   -- ACCOUNT_ATTENDANCE_LOADED = function()
-  ACCOUNT_ATTENDANCE_LOADED = "ACCOUNT_ATTENDANCE_LOADED",
+  ACCOUNT_ATTENDANCE_LOADED                      = "ACCOUNT_ATTENDANCE_LOADED",
 
   -- ACCOUNT_ATTRIBUTE_UPDATED = function(kind, extraKind, state: boolean)
-  ACCOUNT_ATTRIBUTE_UPDATED = "ACCOUNT_ATTRIBUTE_UPDATED",
+  ACCOUNT_ATTRIBUTE_UPDATED                      = "ACCOUNT_ATTRIBUTE_UPDATED",
 
   -- ACCOUNT_RESTRICT_NOTICE = function()
-  ACCOUNT_RESTRICT_NOTICE = "ACCOUNT_RESTRICT_NOTICE",
+  ACCOUNT_RESTRICT_NOTICE                        = "ACCOUNT_RESTRICT_NOTICE",
 
   -- ACHIEVEMENT_UPDATE = function(status: string, newAchievementType: number)
-  ACHIEVEMENT_UPDATE = "ACHIEVEMENT_UPDATE",
+  ACHIEVEMENT_UPDATE                             = "ACHIEVEMENT_UPDATE",
 
   -- ACQUAINTANCE_LOGIN = function(cmf: CMF, charName: string)
-  ACQUAINTANCE_LOGIN = "ACQUAINTANCE_LOGIN",
+  ACQUAINTANCE_LOGIN                             = "ACQUAINTANCE_LOGIN",
 
   -- ACTABILITY_EXPERT_CHANGED = function(actabilityId, name: string, diff: number|string, final: number|string)
-  ACTABILITY_EXPERT_CHANGED = "ACTABILITY_EXPERT_CHANGED",
+  ACTABILITY_EXPERT_CHANGED                      = "ACTABILITY_EXPERT_CHANGED",
 
   -- ACTABILITY_EXPERT_EXPANDED = function()
-  ACTABILITY_EXPERT_EXPANDED = "ACTABILITY_EXPERT_EXPANDED",
+  ACTABILITY_EXPERT_EXPANDED                     = "ACTABILITY_EXPERT_EXPANDED",
 
   -- ACTABILITY_EXPERT_GRADE_CHANGED = function(actabilityId, isUpgrade: boolean, name: string, gradeName: string)
-  ACTABILITY_EXPERT_GRADE_CHANGED = "ACTABILITY_EXPERT_GRADE_CHANGED",
+  ACTABILITY_EXPERT_GRADE_CHANGED                = "ACTABILITY_EXPERT_GRADE_CHANGED",
 
   -- ACTABILITY_MODIFIER_UPDATE = function()
-  ACTABILITY_MODIFIER_UPDATE = "ACTABILITY_MODIFIER_UPDATE",
+  ACTABILITY_MODIFIER_UPDATE                     = "ACTABILITY_MODIFIER_UPDATE",
 
   -- ACTABILITY_REFRESH_ALL = function()
-  ACTABILITY_REFRESH_ALL = "ACTABILITY_REFRESH_ALL",
+  ACTABILITY_REFRESH_ALL                         = "ACTABILITY_REFRESH_ALL",
 
   -- ACTION_BAR_AUTO_REGISTERED = function(slotIndex: number)
-  ACTION_BAR_AUTO_REGISTERED = "ACTION_BAR_AUTO_REGISTERED",
+  ACTION_BAR_AUTO_REGISTERED                     = "ACTION_BAR_AUTO_REGISTERED",
 
   -- ACTION_BAR_PAGE_CHANGED = function(page: number)
-  ACTION_BAR_PAGE_CHANGED = "ACTION_BAR_PAGE_CHANGED",
+  ACTION_BAR_PAGE_CHANGED                        = "ACTION_BAR_PAGE_CHANGED",
 
   -- ACTIONS_UPDATE = function()
-  ACTIONS_UPDATE = "ACTIONS_UPDATE",
+  ACTIONS_UPDATE                                 = "ACTIONS_UPDATE",
 
   -- ADD_GIVEN_QUEST_INFO = function(arg1, arg2)
-  ADD_GIVEN_QUEST_INFO = "ADD_GIVEN_QUEST_INFO",
+  ADD_GIVEN_QUEST_INFO                           = "ADD_GIVEN_QUEST_INFO",
 
   -- ADD_NOTIFY_QUEST_INFO = function(arg)
-  ADD_NOTIFY_QUEST_INFO = "ADD_NOTIFY_QUEST_INFO",
+  ADD_NOTIFY_QUEST_INFO                          = "ADD_NOTIFY_QUEST_INFO",
 
   -- ADDED_ITEM = function(itemLinkText: string, itemCount: number, itemTaskType: string, tradeOtherName: string)
-  ADDED_ITEM = "ADDED_ITEM",
+  ADDED_ITEM                                     = "ADDED_ITEM",
 
   -- ADDON_LOADED = function()
-  ADDON_LOADED = "ADDON_LOADED",
+  ADDON_LOADED                                   = "ADDON_LOADED",
 
   -- AGGRO_METER_CLEARED = function()
-  AGGRO_METER_CLEARED = "AGGRO_METER_CLEARED",
+  AGGRO_METER_CLEARED                            = "AGGRO_METER_CLEARED",
 
   -- AGGRO_METER_UPDATED = function()
-  AGGRO_METER_UPDATED = "AGGRO_METER_UPDATED",
+  AGGRO_METER_UPDATED                            = "AGGRO_METER_UPDATED",
 
   -- ALL_SIEGE_RAID_TEAM_INFOS = function(teamInfos)
-  ALL_SIEGE_RAID_TEAM_INFOS = "ALL_SIEGE_RAID_TEAM_INFOS",
+  ALL_SIEGE_RAID_TEAM_INFOS                      = "ALL_SIEGE_RAID_TEAM_INFOS",
 
   -- ANTIBOT_PUNISH = function(message)
-  ANTIBOT_PUNISH = "ANTIBOT_PUNISH",
+  ANTIBOT_PUNISH                                 = "ANTIBOT_PUNISH",
 
   -- APPELLATION_CHANGED = function(stringId: string, isChanged: boolean)
-  APPELLATION_CHANGED = "APPELLATION_CHANGED",
+  APPELLATION_CHANGED                            = "APPELLATION_CHANGED",
 
   -- APPELLATION_GAINED = function(str: string)
-  APPELLATION_GAINED = "APPELLATION_GAINED",
+  APPELLATION_GAINED                             = "APPELLATION_GAINED",
 
   -- APPELLATION_STAMP_SET = function()
-  APPELLATION_STAMP_SET = "APPELLATION_STAMP_SET",
+  APPELLATION_STAMP_SET                          = "APPELLATION_STAMP_SET",
 
   -- ARCHE_PASS_BUY = function(passType)
-  ARCHE_PASS_BUY = "ARCHE_PASS_BUY",
+  ARCHE_PASS_BUY                                 = "ARCHE_PASS_BUY",
 
   -- ARCHE_PASS_COMPLETED = function(passType, allDone: boolean)
-  ARCHE_PASS_COMPLETED = "ARCHE_PASS_COMPLETED",
+  ARCHE_PASS_COMPLETED                           = "ARCHE_PASS_COMPLETED",
 
   -- ARCHE_PASS_DROPPED = function(passType)
-  ARCHE_PASS_DROPPED = "ARCHE_PASS_DROPPED",
+  ARCHE_PASS_DROPPED                             = "ARCHE_PASS_DROPPED",
 
   -- ARCHE_PASS_EXPIRED = function(passType)
-  ARCHE_PASS_EXPIRED = "ARCHE_PASS_EXPIRED",
+  ARCHE_PASS_EXPIRED                             = "ARCHE_PASS_EXPIRED",
 
   -- ARCHE_PASS_LOADED = function()
-  ARCHE_PASS_LOADED = "ARCHE_PASS_LOADED",
+  ARCHE_PASS_LOADED                              = "ARCHE_PASS_LOADED",
 
   -- ARCHE_PASS_MISSION_CHANGED = function()
-  ARCHE_PASS_MISSION_CHANGED = "ARCHE_PASS_MISSION_CHANGED",
+  ARCHE_PASS_MISSION_CHANGED                     = "ARCHE_PASS_MISSION_CHANGED",
 
   -- ARCHE_PASS_MISSION_COMPLETED = function()
-  ARCHE_PASS_MISSION_COMPLETED = "ARCHE_PASS_MISSION_COMPLETED",
+  ARCHE_PASS_MISSION_COMPLETED                   = "ARCHE_PASS_MISSION_COMPLETED",
 
   -- ARCHE_PASS_OWNED = function(passType)
-  ARCHE_PASS_OWNED = "ARCHE_PASS_OWNED",
+  ARCHE_PASS_OWNED                               = "ARCHE_PASS_OWNED",
 
   -- ARCHE_PASS_RESETED = function(passType)
-  ARCHE_PASS_RESETED = "ARCHE_PASS_RESETED",
+  ARCHE_PASS_RESETED                             = "ARCHE_PASS_RESETED",
 
   -- ARCHE_PASS_STARTED = function(passType)
-  ARCHE_PASS_STARTED = "ARCHE_PASS_STARTED",
+  ARCHE_PASS_STARTED                             = "ARCHE_PASS_STARTED",
 
   -- ARCHE_PASS_UPDATE_POINT = function(point)
-  ARCHE_PASS_UPDATE_POINT = "ARCHE_PASS_UPDATE_POINT",
+  ARCHE_PASS_UPDATE_POINT                        = "ARCHE_PASS_UPDATE_POINT",
 
   -- ARCHE_PASS_UPDATE_REWARD_ITEM = function(complete)
-  ARCHE_PASS_UPDATE_REWARD_ITEM = "ARCHE_PASS_UPDATE_REWARD_ITEM",
+  ARCHE_PASS_UPDATE_REWARD_ITEM                  = "ARCHE_PASS_UPDATE_REWARD_ITEM",
 
   -- ARCHE_PASS_UPDATE_TIER = function(tier)
-  ARCHE_PASS_UPDATE_TIER = "ARCHE_PASS_UPDATE_TIER",
+  ARCHE_PASS_UPDATE_TIER                         = "ARCHE_PASS_UPDATE_TIER",
 
   -- ARCHE_PASS_UPGRADE_PREMIUM = function()
-  ARCHE_PASS_UPGRADE_PREMIUM = "ARCHE_PASS_UPGRADE_PREMIUM",
+  ARCHE_PASS_UPGRADE_PREMIUM                     = "ARCHE_PASS_UPGRADE_PREMIUM",
 
   -- ASK_BUY_LABOR_POWER_POTION = function()
-  ASK_BUY_LABOR_POWER_POTION = "ASK_BUY_LABOR_POWER_POTION",
+  ASK_BUY_LABOR_POWER_POTION                     = "ASK_BUY_LABOR_POWER_POTION",
 
   -- ASK_FORCE_ATTACK = function(forceAttackLevel)
-  ASK_FORCE_ATTACK = "ASK_FORCE_ATTACK",
+  ASK_FORCE_ATTACK                               = "ASK_FORCE_ATTACK",
 
   -- AUCTION_BIDDED = function(itemName, moneyStr)
-  AUCTION_BIDDED = "AUCTION_BIDDED",
+  AUCTION_BIDDED                                 = "AUCTION_BIDDED",
 
   -- AUCTION_BIDDEN = function(itemName: string, moneyStr: string)
-  AUCTION_BIDDEN = "AUCTION_BIDDEN",
+  AUCTION_BIDDEN                                 = "AUCTION_BIDDEN",
 
   -- AUCTION_BOUGHT = function()
-  AUCTION_BOUGHT = "AUCTION_BOUGHT",
+  AUCTION_BOUGHT                                 = "AUCTION_BOUGHT",
 
   -- AUCTION_BOUGHT_BY_SOMEONE = function(itemName, moneyStr)
-  AUCTION_BOUGHT_BY_SOMEONE = "AUCTION_BOUGHT_BY_SOMEONE",
+  AUCTION_BOUGHT_BY_SOMEONE                      = "AUCTION_BOUGHT_BY_SOMEONE",
 
   -- AUCTION_CANCELED = function(itemName)
-  AUCTION_CANCELED = "AUCTION_CANCELED",
+  AUCTION_CANCELED                               = "AUCTION_CANCELED",
 
   -- AUCTION_CHARACTER_LEVEL_TOO_LOW = function(msg)
-  AUCTION_CHARACTER_LEVEL_TOO_LOW = "AUCTION_CHARACTER_LEVEL_TOO_LOW",
+  AUCTION_CHARACTER_LEVEL_TOO_LOW                = "AUCTION_CHARACTER_LEVEL_TOO_LOW",
 
   -- AUCTION_ITEM_ATTACHMENT_STATE_CHANGED = function(attached)
-  AUCTION_ITEM_ATTACHMENT_STATE_CHANGED = "AUCTION_ITEM_ATTACHMENT_STATE_CHANGED",
+  AUCTION_ITEM_ATTACHMENT_STATE_CHANGED          = "AUCTION_ITEM_ATTACHMENT_STATE_CHANGED",
 
   -- AUCTION_ITEM_PUT_UP = function(itemName)
-  AUCTION_ITEM_PUT_UP = "AUCTION_ITEM_PUT_UP",
+  AUCTION_ITEM_PUT_UP                            = "AUCTION_ITEM_PUT_UP",
 
   -- AUCTION_ITEM_SEARCH = function()
-  AUCTION_ITEM_SEARCH = "AUCTION_ITEM_SEARCH",
+  AUCTION_ITEM_SEARCH                            = "AUCTION_ITEM_SEARCH",
 
   -- AUCTION_ITEM_SEARCHED = function(clearLastSearchArticle)
-  AUCTION_ITEM_SEARCHED = "AUCTION_ITEM_SEARCHED",
+  AUCTION_ITEM_SEARCHED                          = "AUCTION_ITEM_SEARCHED",
 
   -- AUCTION_LOWEST_PRICE = function(itemType, grade, price)
-  AUCTION_LOWEST_PRICE = "AUCTION_LOWEST_PRICE",
+  AUCTION_LOWEST_PRICE                           = "AUCTION_LOWEST_PRICE",
 
   -- AUCTION_PERMISSION_BY_CRAFT = function(icraftType)
-  AUCTION_PERMISSION_BY_CRAFT = "AUCTION_PERMISSION_BY_CRAFT",
+  AUCTION_PERMISSION_BY_CRAFT                    = "AUCTION_PERMISSION_BY_CRAFT",
 
   -- AUCTION_TOGGLE = function()
-  AUCTION_TOGGLE = "AUCTION_TOGGLE",
+  AUCTION_TOGGLE                                 = "AUCTION_TOGGLE",
 
   -- AUDIENCE_JOINED = function(audienceName: string)
-  AUDIENCE_JOINED = "AUDIENCE_JOINED",
+  AUDIENCE_JOINED                                = "AUDIENCE_JOINED",
 
   -- AUDIENCE_LEFT = function(audienceName: string)
-  AUDIENCE_LEFT = "AUDIENCE_LEFT",
+  AUDIENCE_LEFT                                  = "AUDIENCE_LEFT",
 
   -- BAD_USER_LIST_UPDATE = function()
-  BAD_USER_LIST_UPDATE = "BAD_USER_LIST_UPDATE",
+  BAD_USER_LIST_UPDATE                           = "BAD_USER_LIST_UPDATE",
 
   -- BADWORD_USER_REPORED_RESPONE_MSG = function(success: boolean)
-  BADWORD_USER_REPORED_RESPONE_MSG = "BADWORD_USER_REPORED_RESPONE_MSG",
+  BADWORD_USER_REPORED_RESPONE_MSG               = "BADWORD_USER_REPORED_RESPONE_MSG",
 
   -- BAG_EXPANDED = function()
-  BAG_EXPANDED = "BAG_EXPANDED",
+  BAG_EXPANDED                                   = "BAG_EXPANDED",
 
   -- BAG_ITEM_CONFIRMED = function()
-  BAG_ITEM_CONFIRMED = "BAG_ITEM_CONFIRMED",
+  BAG_ITEM_CONFIRMED                             = "BAG_ITEM_CONFIRMED",
 
   -- BAG_REAL_INDEX_SHOW = function(isRealSlotShow: boolean)
-  BAG_REAL_INDEX_SHOW = "BAG_REAL_INDEX_SHOW",
+  BAG_REAL_INDEX_SHOW                            = "BAG_REAL_INDEX_SHOW",
 
   -- BAG_TAB_CREATED = function()
-  BAG_TAB_CREATED = "BAG_TAB_CREATED",
+  BAG_TAB_CREATED                                = "BAG_TAB_CREATED",
 
   -- BAG_TAB_REMOVED = function()
-  BAG_TAB_REMOVED = "BAG_TAB_REMOVED",
+  BAG_TAB_REMOVED                                = "BAG_TAB_REMOVED",
 
   -- BAG_TAB_SORTED = function()
-  BAG_TAB_SORTED = "BAG_TAB_SORTED",
+  BAG_TAB_SORTED                                 = "BAG_TAB_SORTED",
 
   -- BAG_TAB_SWITCHED = function()
-  BAG_TAB_SWITCHED = "BAG_TAB_SWITCHED",
+  BAG_TAB_SWITCHED                               = "BAG_TAB_SWITCHED",
 
   -- BAG_UPDATE = function(bagId: number, slotId: number)
-  BAG_UPDATE = "BAG_UPDATE",
+  BAG_UPDATE                                     = "BAG_UPDATE",
 
   -- BAN_PLAYER_RESULT = function(param)
-  BAN_PLAYER_RESULT = "BAN_PLAYER_RESULT",
+  BAN_PLAYER_RESULT                              = "BAN_PLAYER_RESULT",
 
   -- BANK_EXPANDED = function()
-  BANK_EXPANDED = "BANK_EXPANDED",
+  BANK_EXPANDED                                  = "BANK_EXPANDED",
 
   -- BANK_REAL_INDEX_SHOW = function(isRealSlotShow: boolean)
-  BANK_REAL_INDEX_SHOW = "BANK_REAL_INDEX_SHOW",
+  BANK_REAL_INDEX_SHOW                           = "BANK_REAL_INDEX_SHOW",
 
   -- BANK_TAB_CREATED = function()
-  BANK_TAB_CREATED = "BANK_TAB_CREATED",
+  BANK_TAB_CREATED                               = "BANK_TAB_CREATED",
 
   -- BANK_TAB_REMOVED = function()
-  BANK_TAB_REMOVED = "BANK_TAB_REMOVED",
+  BANK_TAB_REMOVED                               = "BANK_TAB_REMOVED",
 
   -- BANK_TAB_SORTED = function()
-  BANK_TAB_SORTED = "BANK_TAB_SORTED",
+  BANK_TAB_SORTED                                = "BANK_TAB_SORTED",
 
   -- BANK_TAB_SWITCHED = function()
-  BANK_TAB_SWITCHED = "BANK_TAB_SWITCHED",
+  BANK_TAB_SWITCHED                              = "BANK_TAB_SWITCHED",
 
   -- BANK_UPDATE = function(bagId: number, slotId: number)
-  BANK_UPDATE = "BANK_UPDATE",
+  BANK_UPDATE                                    = "BANK_UPDATE",
 
   -- BEAUTYSHOP_CLOSE_BY_SYSTEM = function()
-  BEAUTYSHOP_CLOSE_BY_SYSTEM = "BEAUTYSHOP_CLOSE_BY_SYSTEM",
+  BEAUTYSHOP_CLOSE_BY_SYSTEM                     = "BEAUTYSHOP_CLOSE_BY_SYSTEM",
 
   -- BLESS_UTHSTIN_EXTEND_MAX_STATS = function()
-  BLESS_UTHSTIN_EXTEND_MAX_STATS = "BLESS_UTHSTIN_EXTEND_MAX_STATS",
+  BLESS_UTHSTIN_EXTEND_MAX_STATS                 = "BLESS_UTHSTIN_EXTEND_MAX_STATS",
 
   -- BLESS_UTHSTIN_ITEM_SLOT_CLEAR = function()
-  BLESS_UTHSTIN_ITEM_SLOT_CLEAR = "BLESS_UTHSTIN_ITEM_SLOT_CLEAR",
+  BLESS_UTHSTIN_ITEM_SLOT_CLEAR                  = "BLESS_UTHSTIN_ITEM_SLOT_CLEAR",
 
   -- BLESS_UTHSTIN_ITEM_SLOT_SET = function(msgapplycountlimit)
-  BLESS_UTHSTIN_ITEM_SLOT_SET = "BLESS_UTHSTIN_ITEM_SLOT_SET",
+  BLESS_UTHSTIN_ITEM_SLOT_SET                    = "BLESS_UTHSTIN_ITEM_SLOT_SET",
 
   -- BLESS_UTHSTIN_MESSAGE = function(messageType: number)
-  BLESS_UTHSTIN_MESSAGE = "BLESS_UTHSTIN_MESSAGE",
+  BLESS_UTHSTIN_MESSAGE                          = "BLESS_UTHSTIN_MESSAGE",
 
   -- BLESS_UTHSTIN_UPDATE_STATS = function()
-  BLESS_UTHSTIN_UPDATE_STATS = "BLESS_UTHSTIN_UPDATE_STATS",
+  BLESS_UTHSTIN_UPDATE_STATS                     = "BLESS_UTHSTIN_UPDATE_STATS",
 
   -- BLESS_UTHSTIN_WILL_APPLY_STATS = function(itemType, incStatsKind, decStatsKind, incStatsPoint, decStatsPoint)
-  BLESS_UTHSTIN_WILL_APPLY_STATS = "BLESS_UTHSTIN_WILL_APPLY_STATS",
+  BLESS_UTHSTIN_WILL_APPLY_STATS                 = "BLESS_UTHSTIN_WILL_APPLY_STATS",
 
   -- BLOCKED_USER_LIST = function(msg: string)
-  BLOCKED_USER_LIST = "BLOCKED_USER_LIST",
+  BLOCKED_USER_LIST                              = "BLOCKED_USER_LIST",
 
   -- BLOCKED_USER_UPDATE = function()
-  BLOCKED_USER_UPDATE = "BLOCKED_USER_UPDATE",
+  BLOCKED_USER_UPDATE                            = "BLOCKED_USER_UPDATE",
 
   -- BLOCKED_USERS_INFO = function()
-  BLOCKED_USERS_INFO = "BLOCKED_USERS_INFO",
+  BLOCKED_USERS_INFO                             = "BLOCKED_USERS_INFO",
 
   -- BOT_SUSPECT_REPORTED = function(sourceName: string, targetName: string)
-  BOT_SUSPECT_REPORTED = "BOT_SUSPECT_REPORTED",
+  BOT_SUSPECT_REPORTED                           = "BOT_SUSPECT_REPORTED",
 
   -- BUFF_SKILL_CHANGED = function(onePetBar: table)
-  BUFF_SKILL_CHANGED = "BUFF_SKILL_CHANGED",
+  BUFF_SKILL_CHANGED                             = "BUFF_SKILL_CHANGED",
 
   -- BUFF_UPDATE = function(action, target: string)
-  BUFF_UPDATE = "BUFF_UPDATE",
+  BUFF_UPDATE                                    = "BUFF_UPDATE",
 
   -- BUILD_CONDITION = function(param)
-  BUILD_CONDITION = "BUILD_CONDITION",
+  BUILD_CONDITION                                = "BUILD_CONDITION",
 
   -- BUILDER_END = function()
-  BUILDER_END = "BUILDER_END",
+  BUILDER_END                                    = "BUILDER_END",
 
   -- BUILDER_STEP = function(step)
-  BUILDER_STEP = "BUILDER_STEP",
+  BUILDER_STEP                                   = "BUILDER_STEP",
 
   -- BUTLER_INFO_UPDATED = function(event: string, noError: boolean)
-  BUTLER_INFO_UPDATED = "BUTLER_INFO_UPDATED",
+  BUTLER_INFO_UPDATED                            = "BUTLER_INFO_UPDATED",
 
   -- BUTLER_UI_COMMAND = function(mode: number)
-  BUTLER_UI_COMMAND = "BUTLER_UI_COMMAND",
+  BUTLER_UI_COMMAND                              = "BUTLER_UI_COMMAND",
 
   -- BUY_RESULT_AA_POINT = function(result, moneyString)
-  BUY_RESULT_AA_POINT = "BUY_RESULT_AA_POINT",
+  BUY_RESULT_AA_POINT                            = "BUY_RESULT_AA_POINT",
 
   -- BUY_SPECIALTY_CONTENT_INFO = function(list: table)
-  BUY_SPECIALTY_CONTENT_INFO = "BUY_SPECIALTY_CONTENT_INFO",
+  BUY_SPECIALTY_CONTENT_INFO                     = "BUY_SPECIALTY_CONTENT_INFO",
 
   -- CANCEL_CRAFT_ORDER = function(result)
-  CANCEL_CRAFT_ORDER = "CANCEL_CRAFT_ORDER",
+  CANCEL_CRAFT_ORDER                             = "CANCEL_CRAFT_ORDER",
 
   -- CANCEL_REBUILD_HOUSE_CAMERA_MODE = function()
-  CANCEL_REBUILD_HOUSE_CAMERA_MODE = "CANCEL_REBUILD_HOUSE_CAMERA_MODE",
+  CANCEL_REBUILD_HOUSE_CAMERA_MODE               = "CANCEL_REBUILD_HOUSE_CAMERA_MODE",
 
   -- CANDIDATE_LIST_CHANGED = function()
-  CANDIDATE_LIST_CHANGED = "CANDIDATE_LIST_CHANGED",
+  CANDIDATE_LIST_CHANGED                         = "CANDIDATE_LIST_CHANGED",
 
   -- CANDIDATE_LIST_HIDE = function()
-  CANDIDATE_LIST_HIDE = "CANDIDATE_LIST_HIDE",
+  CANDIDATE_LIST_HIDE                            = "CANDIDATE_LIST_HIDE",
 
   -- CANDIDATE_LIST_SELECTION_CHANGED = function()
-  CANDIDATE_LIST_SELECTION_CHANGED = "CANDIDATE_LIST_SELECTION_CHANGED",
+  CANDIDATE_LIST_SELECTION_CHANGED               = "CANDIDATE_LIST_SELECTION_CHANGED",
 
   -- CANDIDATE_LIST_SHOW = function()
-  CANDIDATE_LIST_SHOW = "CANDIDATE_LIST_SHOW",
+  CANDIDATE_LIST_SHOW                            = "CANDIDATE_LIST_SHOW",
 
   -- CHANGE_ACTABILITY_DECO_NUM = function()
-  CHANGE_ACTABILITY_DECO_NUM = "CHANGE_ACTABILITY_DECO_NUM",
+  CHANGE_ACTABILITY_DECO_NUM                     = "CHANGE_ACTABILITY_DECO_NUM",
 
   -- CHANGE_CONTRIBUTION_POINT_TO_PLAYER = function(isGain: boolean, diff, total)
-  CHANGE_CONTRIBUTION_POINT_TO_PLAYER = "CHANGE_CONTRIBUTION_POINT_TO_PLAYER",
+  CHANGE_CONTRIBUTION_POINT_TO_PLAYER            = "CHANGE_CONTRIBUTION_POINT_TO_PLAYER",
 
   -- CHANGE_CONTRIBUTION_POINT_TO_STORE = function()
-  CHANGE_CONTRIBUTION_POINT_TO_STORE = "CHANGE_CONTRIBUTION_POINT_TO_STORE",
+  CHANGE_CONTRIBUTION_POINT_TO_STORE             = "CHANGE_CONTRIBUTION_POINT_TO_STORE",
 
   -- CHANGE_MY_LANGUAGE = function()
-  CHANGE_MY_LANGUAGE = "CHANGE_MY_LANGUAGE",
+  CHANGE_MY_LANGUAGE                             = "CHANGE_MY_LANGUAGE",
 
   -- CHANGE_OPTION = function(optionType: number, infoTable: table)
-  CHANGE_OPTION = "CHANGE_OPTION",
+  CHANGE_OPTION                                  = "CHANGE_OPTION",
 
   -- CHANGE_PAY_INFO = function(oldPayMethod, newPayMethod, oldPayLocation, newPayLocation)
-  CHANGE_PAY_INFO = "CHANGE_PAY_INFO",
+  CHANGE_PAY_INFO                                = "CHANGE_PAY_INFO",
 
   -- CHANGE_VISUAL_RACE_ENDED = function()
-  CHANGE_VISUAL_RACE_ENDED = "CHANGE_VISUAL_RACE_ENDED",
+  CHANGE_VISUAL_RACE_ENDED                       = "CHANGE_VISUAL_RACE_ENDED",
 
   -- CHANGED_AUTO_USE_AAPOINT = function()
-  CHANGED_AUTO_USE_AAPOINT = "CHANGED_AUTO_USE_AAPOINT",
+  CHANGED_AUTO_USE_AAPOINT                       = "CHANGED_AUTO_USE_AAPOINT",
 
   -- CHANGED_MSG = function()
-  CHANGED_MSG = "CHANGED_MSG",
+  CHANGED_MSG                                    = "CHANGED_MSG",
 
   -- CHAT_DICE_VALUE = function(msg: string)
-  CHAT_DICE_VALUE = "CHAT_DICE_VALUE",
+  CHAT_DICE_VALUE                                = "CHAT_DICE_VALUE",
 
   -- CHAT_EMOTION = function(message: string)
-  CHAT_EMOTION = "CHAT_EMOTION",
+  CHAT_EMOTION                                   = "CHAT_EMOTION",
 
   -- CHAT_FAILED = function(message: string, channelName)
-  CHAT_FAILED = "CHAT_FAILED",
+  CHAT_FAILED                                    = "CHAT_FAILED",
 
   -- CHAT_JOINED_CHANNEL = function(channel, name)
-  CHAT_JOINED_CHANNEL = "CHAT_JOINED_CHANNEL",
+  CHAT_JOINED_CHANNEL                            = "CHAT_JOINED_CHANNEL",
 
   -- CHAT_LEAVED_CHANNEL = function(channel, name)
-  CHAT_LEAVED_CHANNEL = "CHAT_LEAVED_CHANNEL",
+  CHAT_LEAVED_CHANNEL                            = "CHAT_LEAVED_CHANNEL",
 
   -- CHAT_MESSAGE = function(channel, relation, name, message, info)
-  CHAT_MESSAGE = "CHAT_MESSAGE",
+  CHAT_MESSAGE                                   = "CHAT_MESSAGE",
 
   -- CHAT_MSG_ALARM = function(text)
-  CHAT_MSG_ALARM = "CHAT_MSG_ALARM",
+  CHAT_MSG_ALARM                                 = "CHAT_MSG_ALARM",
 
   -- CHAT_MSG_DOODAD = function(message, author, speakerId, tailType, showTime, fadeTime, hasNext, qtype, forceFinished)
-  CHAT_MSG_DOODAD = "CHAT_MSG_DOODAD",
+  CHAT_MSG_DOODAD                                = "CHAT_MSG_DOODAD",
 
   -- CHAT_MSG_QUEST = function(message, author, authorId, tailType, showTime, fadeTime, currentBubbleType, qtype, forceFinished)
-  CHAT_MSG_QUEST = "CHAT_MSG_QUEST",
+  CHAT_MSG_QUEST                                 = "CHAT_MSG_QUEST",
 
   -- CHECK_TEXTURE = function(texturePath)
-  CHECK_TEXTURE = "CHECK_TEXTURE",
+  CHECK_TEXTURE                                  = "CHECK_TEXTURE",
 
   -- CLEAR_BOSS_TELESCOPE_INFO = function()
-  CLEAR_BOSS_TELESCOPE_INFO = "CLEAR_BOSS_TELESCOPE_INFO",
+  CLEAR_BOSS_TELESCOPE_INFO                      = "CLEAR_BOSS_TELESCOPE_INFO",
 
   -- CLEAR_CARRYING_BACKPACK_SLAVE_INFO = function()
-  CLEAR_CARRYING_BACKPACK_SLAVE_INFO = "CLEAR_CARRYING_BACKPACK_SLAVE_INFO",
+  CLEAR_CARRYING_BACKPACK_SLAVE_INFO             = "CLEAR_CARRYING_BACKPACK_SLAVE_INFO",
 
   -- CLEAR_COMPLETED_QUEST_INFO = function()
-  CLEAR_COMPLETED_QUEST_INFO = "CLEAR_COMPLETED_QUEST_INFO",
+  CLEAR_COMPLETED_QUEST_INFO                     = "CLEAR_COMPLETED_QUEST_INFO",
 
   -- CLEAR_CORPSE_INFO = function()
-  CLEAR_CORPSE_INFO = "CLEAR_CORPSE_INFO",
+  CLEAR_CORPSE_INFO                              = "CLEAR_CORPSE_INFO",
 
   -- CLEAR_DOODAD_INFO = function()
-  CLEAR_DOODAD_INFO = "CLEAR_DOODAD_INFO",
+  CLEAR_DOODAD_INFO                              = "CLEAR_DOODAD_INFO",
 
   -- CLEAR_FISH_SCHOOL_INFO = function()
-  CLEAR_FISH_SCHOOL_INFO = "CLEAR_FISH_SCHOOL_INFO",
+  CLEAR_FISH_SCHOOL_INFO                         = "CLEAR_FISH_SCHOOL_INFO",
 
   -- CLEAR_GIVEN_QUEST_STATIC_INFO = function()
-  CLEAR_GIVEN_QUEST_STATIC_INFO = "CLEAR_GIVEN_QUEST_STATIC_INFO",
+  CLEAR_GIVEN_QUEST_STATIC_INFO                  = "CLEAR_GIVEN_QUEST_STATIC_INFO",
 
   -- CLEAR_HOUSING_INFO = function()
-  CLEAR_HOUSING_INFO = "CLEAR_HOUSING_INFO",
+  CLEAR_HOUSING_INFO                             = "CLEAR_HOUSING_INFO",
 
   -- CLEAR_MY_SLAVE_POS_INFO = function()
-  CLEAR_MY_SLAVE_POS_INFO = "CLEAR_MY_SLAVE_POS_INFO",
+  CLEAR_MY_SLAVE_POS_INFO                        = "CLEAR_MY_SLAVE_POS_INFO",
 
   -- CLEAR_NOTIFY_QUEST_INFO = function()
-  CLEAR_NOTIFY_QUEST_INFO = "CLEAR_NOTIFY_QUEST_INFO",
+  CLEAR_NOTIFY_QUEST_INFO                        = "CLEAR_NOTIFY_QUEST_INFO",
 
   -- CLEAR_NPC_INFO = function()
-  CLEAR_NPC_INFO = "CLEAR_NPC_INFO",
+  CLEAR_NPC_INFO                                 = "CLEAR_NPC_INFO",
 
   -- CLEAR_SHIP_TELESCOPE_INFO = function()
-  CLEAR_SHIP_TELESCOPE_INFO = "CLEAR_SHIP_TELESCOPE_INFO",
+  CLEAR_SHIP_TELESCOPE_INFO                      = "CLEAR_SHIP_TELESCOPE_INFO",
 
   -- CLEAR_TRANSFER_TELESCOPE_INFO = function()
-  CLEAR_TRANSFER_TELESCOPE_INFO = "CLEAR_TRANSFER_TELESCOPE_INFO",
+  CLEAR_TRANSFER_TELESCOPE_INFO                  = "CLEAR_TRANSFER_TELESCOPE_INFO",
 
   -- CLOSE_CRAFT_ORDER = function()
-  CLOSE_CRAFT_ORDER = "CLOSE_CRAFT_ORDER",
+  CLOSE_CRAFT_ORDER                              = "CLOSE_CRAFT_ORDER",
 
   -- CLOSE_MUSIC_SHEET = function()
-  CLOSE_MUSIC_SHEET = "CLOSE_MUSIC_SHEET",
+  CLOSE_MUSIC_SHEET                              = "CLOSE_MUSIC_SHEET",
 
   -- COFFER_INTERACTION_END = function()
-  COFFER_INTERACTION_END = "COFFER_INTERACTION_END",
+  COFFER_INTERACTION_END                         = "COFFER_INTERACTION_END",
 
   -- COFFER_INTERACTION_START = function()
-  COFFER_INTERACTION_START = "COFFER_INTERACTION_START",
+  COFFER_INTERACTION_START                       = "COFFER_INTERACTION_START",
 
   -- COFFER_REAL_INDEX_SHOW = function(isRealSlotShow)
-  COFFER_REAL_INDEX_SHOW = "COFFER_REAL_INDEX_SHOW",
+  COFFER_REAL_INDEX_SHOW                         = "COFFER_REAL_INDEX_SHOW",
 
   -- COFFER_TAB_CREATED = function()
-  COFFER_TAB_CREATED = "COFFER_TAB_CREATED",
+  COFFER_TAB_CREATED                             = "COFFER_TAB_CREATED",
 
   -- COFFER_TAB_REMOVED = function()
-  COFFER_TAB_REMOVED = "COFFER_TAB_REMOVED",
+  COFFER_TAB_REMOVED                             = "COFFER_TAB_REMOVED",
 
   -- COFFER_TAB_SORTED = function()
-  COFFER_TAB_SORTED = "COFFER_TAB_SORTED",
+  COFFER_TAB_SORTED                              = "COFFER_TAB_SORTED",
 
   -- COFFER_TAB_SWITCHED = function()
-  COFFER_TAB_SWITCHED = "COFFER_TAB_SWITCHED",
+  COFFER_TAB_SWITCHED                            = "COFFER_TAB_SWITCHED",
 
   -- COFFER_UPDATE = function(bagId, slotId)
-  COFFER_UPDATE = "COFFER_UPDATE",
+  COFFER_UPDATE                                  = "COFFER_UPDATE",
 
   -- COMBAT_MSG = function(targetUnitId, combatEvent, source, target, ...)
-  COMBAT_MSG = "COMBAT_MSG",
+  COMBAT_MSG                                     = "COMBAT_MSG",
 
   -- COMBAT_TEXT = function(targetUnitId, combatEvent, source, target, ...)
-  COMBAT_TEXT = "COMBAT_TEXT",
+  COMBAT_TEXT                                    = "COMBAT_TEXT",
 
   -- COMBAT_TEXT_COLLISION = function(targetUnitId, combatEvent, source, target, ...)
-  COMBAT_TEXT_COLLISION = "COMBAT_TEXT_COLLISION",
+  COMBAT_TEXT_COLLISION                          = "COMBAT_TEXT_COLLISION",
 
   -- COMBAT_TEXT_SYNERGY = function(...)
-  COMBAT_TEXT_SYNERGY = "COMBAT_TEXT_SYNERGY",
+  COMBAT_TEXT_SYNERGY                            = "COMBAT_TEXT_SYNERGY",
 
   -- COMMON_FARM_UPDATED = function()
-  COMMON_FARM_UPDATED = "COMMON_FARM_UPDATED",
+  COMMON_FARM_UPDATED                            = "COMMON_FARM_UPDATED",
 
   -- COMMUNITY_ERROR = function(msg)
-  COMMUNITY_ERROR = "COMMUNITY_ERROR",
+  COMMUNITY_ERROR                                = "COMMUNITY_ERROR",
 
   -- COMPLETE_ACHIEVEMENT = function(newAchievementType)
-  COMPLETE_ACHIEVEMENT = "COMPLETE_ACHIEVEMENT",
+  COMPLETE_ACHIEVEMENT                           = "COMPLETE_ACHIEVEMENT",
 
   -- COMPLETE_CRAFT_ORDER = function(info)
-  COMPLETE_CRAFT_ORDER = "COMPLETE_CRAFT_ORDER",
+  COMPLETE_CRAFT_ORDER                           = "COMPLETE_CRAFT_ORDER",
 
   -- COMPLETE_QUEST_CONTEXT_DOODAD = function(qtype, useDirectingMode, doodadId)
-  COMPLETE_QUEST_CONTEXT_DOODAD = "COMPLETE_QUEST_CONTEXT_DOODAD",
+  COMPLETE_QUEST_CONTEXT_DOODAD                  = "COMPLETE_QUEST_CONTEXT_DOODAD",
 
   -- COMPLETE_QUEST_CONTEXT_NPC = function(qtype, useDirectingMode, npcId)
-  COMPLETE_QUEST_CONTEXT_NPC = "COMPLETE_QUEST_CONTEXT_NPC",
+  COMPLETE_QUEST_CONTEXT_NPC                     = "COMPLETE_QUEST_CONTEXT_NPC",
 
   -- CONSOLE_WRITE = function()
-  CONSOLE_WRITE = "CONSOLE_WRITE",
+  CONSOLE_WRITE                                  = "CONSOLE_WRITE",
 
   -- CONVERT_TO_RAID_TEAM = function()
-  CONVERT_TO_RAID_TEAM = "CONVERT_TO_RAID_TEAM",
+  CONVERT_TO_RAID_TEAM                           = "CONVERT_TO_RAID_TEAM",
 
   -- COPY_RAID_MEMBERS_TO_CLIPBOARD = function()
-  COPY_RAID_MEMBERS_TO_CLIPBOARD = "COPY_RAID_MEMBERS_TO_CLIPBOARD",
+  COPY_RAID_MEMBERS_TO_CLIPBOARD                 = "COPY_RAID_MEMBERS_TO_CLIPBOARD",
 
   -- CRAFT_DOODAD_INFO = function()
-  CRAFT_DOODAD_INFO = "CRAFT_DOODAD_INFO",
+  CRAFT_DOODAD_INFO                              = "CRAFT_DOODAD_INFO",
 
   -- CRAFT_ENDED = function(leftCount)
-  CRAFT_ENDED = "CRAFT_ENDED",
+  CRAFT_ENDED                                    = "CRAFT_ENDED",
 
   -- CRAFT_FAILED = function(itemLinkText)
-  CRAFT_FAILED = "CRAFT_FAILED",
+  CRAFT_FAILED                                   = "CRAFT_FAILED",
 
   -- CRAFT_ORDER_ENTRY_SEARCHED = function(infos, totalCount, page)
-  CRAFT_ORDER_ENTRY_SEARCHED = "CRAFT_ORDER_ENTRY_SEARCHED",
+  CRAFT_ORDER_ENTRY_SEARCHED                     = "CRAFT_ORDER_ENTRY_SEARCHED",
 
   -- CRAFT_RECIPE_ADDED = function()
-  CRAFT_RECIPE_ADDED = "CRAFT_RECIPE_ADDED",
+  CRAFT_RECIPE_ADDED                             = "CRAFT_RECIPE_ADDED",
 
   -- CRAFT_STARTED = function(leftCount)
-  CRAFT_STARTED = "CRAFT_STARTED",
+  CRAFT_STARTED                                  = "CRAFT_STARTED",
 
   -- CRAFT_TRAINED = function()
-  CRAFT_TRAINED = "CRAFT_TRAINED",
+  CRAFT_TRAINED                                  = "CRAFT_TRAINED",
 
   -- CRAFTING_END = function()
-  CRAFTING_END = "CRAFTING_END",
+  CRAFTING_END                                   = "CRAFTING_END",
 
   -- CRAFTING_START = function(doodadId, count)
-  CRAFTING_START = "CRAFTING_START",
+  CRAFTING_START                                 = "CRAFTING_START",
 
   -- CREATE_CHARACTER_FAILED = function(key)
-  CREATE_CHARACTER_FAILED = "CREATE_CHARACTER_FAILED",
+  CREATE_CHARACTER_FAILED                        = "CREATE_CHARACTER_FAILED",
 
   -- CREATE_ORIGIN_UCC_ITEM = function()
-  CREATE_ORIGIN_UCC_ITEM = "CREATE_ORIGIN_UCC_ITEM",
+  CREATE_ORIGIN_UCC_ITEM                         = "CREATE_ORIGIN_UCC_ITEM",
 
   -- CRIME_REPORTED = function(diffPoint, diffRecord, diffScore)
-  CRIME_REPORTED = "CRIME_REPORTED",
+  CRIME_REPORTED                                 = "CRIME_REPORTED",
 
   -- DEBUFF_UPDATE = function(action, target)
-  DEBUFF_UPDATE = "DEBUFF_UPDATE",
+  DEBUFF_UPDATE                                  = "DEBUFF_UPDATE",
 
   -- DELETE_CRAFT_ORDER = function()
-  DELETE_CRAFT_ORDER = "DELETE_CRAFT_ORDER",
+  DELETE_CRAFT_ORDER                             = "DELETE_CRAFT_ORDER",
 
   -- DELETE_PORTAL = function()
-  DELETE_PORTAL = "DELETE_PORTAL",
+  DELETE_PORTAL                                  = "DELETE_PORTAL",
 
   -- DESTROY_PAPER = function()
-  DESTROY_PAPER = "DESTROY_PAPER",
+  DESTROY_PAPER                                  = "DESTROY_PAPER",
 
-  -- DIAGONAL_ASR = function(itemName, itemGrade, askMarketPriceUi, values)
-  DIAGONAL_ASR = "DIAGONAL_ASR",
+  ---values 1 to 14
+  -- 14 = {
+  --   dailyAvg = "0",
+  --   maxPrice = "0",
+  --   minPrice = "0",
+  --   volume = 0,
+  --   weeklyAvg = "0",
+  -- }
+  -- DIAGONAL_ASR = function(itemName: strings, itemGrade: ITEM_GRADE_TYPE, askMarketPriceUi: boolean, values: table)
+  DIAGONAL_ASR                                   = "DIAGONAL_ASR",
 
   -- DIAGONAL_LINE = function()
-  DIAGONAL_LINE = "DIAGONAL_LINE",
+  DIAGONAL_LINE                                  = "DIAGONAL_LINE",
 
   -- DICE_BID_RULE_CHANGED = function(diceBidRule)
-  DICE_BID_RULE_CHANGED = "DICE_BID_RULE_CHANGED",
+  DICE_BID_RULE_CHANGED                          = "DICE_BID_RULE_CHANGED",
 
   -- DISCONNECT_FROM_AUTH = function()
-  DISCONNECT_FROM_AUTH = "DISCONNECT_FROM_AUTH",
+  DISCONNECT_FROM_AUTH                           = "DISCONNECT_FROM_AUTH",
 
   -- DISCONNECTED_BY_WORLD = function(title, body)
-  DISCONNECTED_BY_WORLD = "DISCONNECTED_BY_WORLD",
+  DISCONNECTED_BY_WORLD                          = "DISCONNECTED_BY_WORLD",
 
   -- DISMISS_PET = function(onePetFrame, mateType)
-  DISMISS_PET = "DISMISS_PET",
+  DISMISS_PET                                    = "DISMISS_PET",
 
   -- DIVE_END = function()
-  DIVE_END = "DIVE_END",
+  DIVE_END                                       = "DIVE_END",
 
   -- DIVE_START = function()
-  DIVE_START = "DIVE_START",
+  DIVE_START                                     = "DIVE_START",
 
   -- DOMINION = function(action, zoneGroupName, expeditionName)
-  DOMINION = "DOMINION",
+  DOMINION                                       = "DOMINION",
 
   -- DOMINION_GUARD_TOWER_STATE_NOTICE = function(key, name, factionName)
-  DOMINION_GUARD_TOWER_STATE_NOTICE = "DOMINION_GUARD_TOWER_STATE_NOTICE",
+  DOMINION_GUARD_TOWER_STATE_NOTICE              = "DOMINION_GUARD_TOWER_STATE_NOTICE",
 
   -- DOMINION_GUARD_TOWER_UPDATE_TOOLTIP = function(unitId)
-  DOMINION_GUARD_TOWER_UPDATE_TOOLTIP = "DOMINION_GUARD_TOWER_UPDATE_TOOLTIP",
+  DOMINION_GUARD_TOWER_UPDATE_TOOLTIP            = "DOMINION_GUARD_TOWER_UPDATE_TOOLTIP",
 
   -- DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED = function()
-  DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED = "DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED",
+  DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED       =
+  "DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED",
 
   -- DOMINION_SIEGE_PERIOD_CHANGED = function(action, zoneGroupType, zoneGroupName, defenseName, offenseName, periodName, isMyInfo, team)
-  DOMINION_SIEGE_PERIOD_CHANGED = "DOMINION_SIEGE_PERIOD_CHANGED",
+  DOMINION_SIEGE_PERIOD_CHANGED                  = "DOMINION_SIEGE_PERIOD_CHANGED",
 
   -- DOMINION_SIEGE_SYSTEM_NOTICE = function()
-  DOMINION_SIEGE_SYSTEM_NOTICE = "DOMINION_SIEGE_SYSTEM_NOTICE",
+  DOMINION_SIEGE_SYSTEM_NOTICE                   = "DOMINION_SIEGE_SYSTEM_NOTICE",
 
   -- DOMINION_SIEGE_UPDATE_TIMER = function(secondHalf)
-  DOMINION_SIEGE_UPDATE_TIMER = "DOMINION_SIEGE_UPDATE_TIMER",
+  DOMINION_SIEGE_UPDATE_TIMER                    = "DOMINION_SIEGE_UPDATE_TIMER",
 
   -- DOODAD_LOGIC = function()
-  DOODAD_LOGIC = "DOODAD_LOGIC",
+  DOODAD_LOGIC                                   = "DOODAD_LOGIC",
 
   -- DOODAD_PHASE_MSG = function(text)
-  DOODAD_PHASE_MSG = "DOODAD_PHASE_MSG",
+  DOODAD_PHASE_MSG                               = "DOODAD_PHASE_MSG",
 
   -- DOODAD_PHASE_UI_MSG = function(phaseMsgInfo)
-  DOODAD_PHASE_UI_MSG = "DOODAD_PHASE_UI_MSG",
+  DOODAD_PHASE_UI_MSG                            = "DOODAD_PHASE_UI_MSG",
 
   -- DRAW_DOODAD_SIGN_TAG = function(tooltip)
-  DRAW_DOODAD_SIGN_TAG = "DRAW_DOODAD_SIGN_TAG",
+  DRAW_DOODAD_SIGN_TAG                           = "DRAW_DOODAD_SIGN_TAG",
 
   -- DRAW_DOODAD_TOOLTIP = function(info)
-  DRAW_DOODAD_TOOLTIP = "DRAW_DOODAD_TOOLTIP",
+  DRAW_DOODAD_TOOLTIP                            = "DRAW_DOODAD_TOOLTIP",
 
   -- DYEING_END = function()
-  DYEING_END = "DYEING_END",
+  DYEING_END                                     = "DYEING_END",
 
   -- DYEING_START = function()
-  DYEING_START = "DYEING_START",
+  DYEING_START                                   = "DYEING_START",
 
   -- DYNAMIC_ACTION_BAR_HIDE = function()
-  DYNAMIC_ACTION_BAR_HIDE = "DYNAMIC_ACTION_BAR_HIDE",
+  DYNAMIC_ACTION_BAR_HIDE                        = "DYNAMIC_ACTION_BAR_HIDE",
 
   -- DYNAMIC_ACTION_BAR_SHOW = function(dynamicActionType)
-  DYNAMIC_ACTION_BAR_SHOW = "DYNAMIC_ACTION_BAR_SHOW",
+  DYNAMIC_ACTION_BAR_SHOW                        = "DYNAMIC_ACTION_BAR_SHOW",
 
   -- ENABLE_TEAM_AREA_INVITATION = function(enable)
-  ENABLE_TEAM_AREA_INVITATION = "ENABLE_TEAM_AREA_INVITATION",
+  ENABLE_TEAM_AREA_INVITATION                    = "ENABLE_TEAM_AREA_INVITATION",
 
   -- ENCHANT_EXAMINE = function()
-  ENCHANT_EXAMINE = "ENCHANT_EXAMINE",
+  ENCHANT_EXAMINE                                = "ENCHANT_EXAMINE",
 
   -- ENCHANT_RESULT = function(resultCode, itemLink, oldGrade, newGrade, breakRewardItemType, breakRewardItemCount, breakRewardByMail)
-  ENCHANT_RESULT = "ENCHANT_RESULT",
+  ENCHANT_RESULT                                 = "ENCHANT_RESULT",
 
   -- ENCHANT_SAY_ABILITY = function()
-  ENCHANT_SAY_ABILITY = "ENCHANT_SAY_ABILITY",
+  ENCHANT_SAY_ABILITY                            = "ENCHANT_SAY_ABILITY",
 
   -- END_HERO_ELECTION_PERIOD = function()
-  END_HERO_ELECTION_PERIOD = "END_HERO_ELECTION_PERIOD",
+  END_HERO_ELECTION_PERIOD                       = "END_HERO_ELECTION_PERIOD",
 
   -- END_QUEST_CHAT_BUBBLE = function(playedBubble)
-  END_QUEST_CHAT_BUBBLE = "END_QUEST_CHAT_BUBBLE",
+  END_QUEST_CHAT_BUBBLE                          = "END_QUEST_CHAT_BUBBLE",
 
   -- ENDED_DUEL = function()
-  ENDED_DUEL = "ENDED_DUEL",
+  ENDED_DUEL                                     = "ENDED_DUEL",
 
   -- ENTER_ANOTHER_ZONEGROUP = function(zoneId)
-  ENTER_ANOTHER_ZONEGROUP = "ENTER_ANOTHER_ZONEGROUP",
+  ENTER_ANOTHER_ZONEGROUP                        = "ENTER_ANOTHER_ZONEGROUP",
 
   -- ENTER_ENCHANT_ITEM_MODE = function(mode)
-  ENTER_ENCHANT_ITEM_MODE = "ENTER_ENCHANT_ITEM_MODE",
+  ENTER_ENCHANT_ITEM_MODE                        = "ENTER_ENCHANT_ITEM_MODE",
 
   -- ENTER_GACHA_LOOT_MODE = function()
-  ENTER_GACHA_LOOT_MODE = "ENTER_GACHA_LOOT_MODE",
+  ENTER_GACHA_LOOT_MODE                          = "ENTER_GACHA_LOOT_MODE",
 
   -- ENTER_ITEM_LOOK_CONVERT_MODE = function()
-  ENTER_ITEM_LOOK_CONVERT_MODE = "ENTER_ITEM_LOOK_CONVERT_MODE",
+  ENTER_ITEM_LOOK_CONVERT_MODE                   = "ENTER_ITEM_LOOK_CONVERT_MODE",
 
   -- ENTER_WORLD_CANCELLED = function()
-  ENTER_WORLD_CANCELLED = "ENTER_WORLD_CANCELLED",
+  ENTER_WORLD_CANCELLED                          = "ENTER_WORLD_CANCELLED",
 
   -- ENTERED_INSTANT_GAME_ZONE = function()
-  ENTERED_INSTANT_GAME_ZONE = "ENTERED_INSTANT_GAME_ZONE",
+  ENTERED_INSTANT_GAME_ZONE                      = "ENTERED_INSTANT_GAME_ZONE",
 
   -- ENTERED_LOADING = function(worldImagePath)
-  ENTERED_LOADING = "ENTERED_LOADING",
+  ENTERED_LOADING                                = "ENTERED_LOADING",
 
   -- ENTERED_LOGIN = function()
-  ENTERED_LOGIN = "ENTERED_LOGIN",
+  ENTERED_LOGIN                                  = "ENTERED_LOGIN",
 
   -- ENTERED_SCREEN_SHOT_CAMERA_MODE = function()
-  ENTERED_SCREEN_SHOT_CAMERA_MODE = "ENTERED_SCREEN_SHOT_CAMERA_MODE",
+  ENTERED_SCREEN_SHOT_CAMERA_MODE                = "ENTERED_SCREEN_SHOT_CAMERA_MODE",
 
   -- ENTERED_SUBZONE = function(zoneName)
-  ENTERED_SUBZONE = "ENTERED_SUBZONE",
+  ENTERED_SUBZONE                                = "ENTERED_SUBZONE",
 
   -- ENTERED_WORLD = function()
-  ENTERED_WORLD = "ENTERED_WORLD",
+  ENTERED_WORLD                                  = "ENTERED_WORLD",
 
   -- ENTERED_WORLD_SELECT = function()
-  ENTERED_WORLD_SELECT = "ENTERED_WORLD_SELECT",
+  ENTERED_WORLD_SELECT                           = "ENTERED_WORLD_SELECT",
 
   -- EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT = function()
-  EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT = "EQUIP_SLOT_REINFORCE_MSG_CHAGNE_LEVEL_EFFECT",
+  EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT   =
+  "EQUIP_SLOT_REINFORCE_MSG_CHAGNE_LEVEL_EFFECT",
 
   -- EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT = function(equipSlot, level)
-  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT = "EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT",
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT          = "EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT",
 
   -- EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP = function(equipSlot, level)
-  EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP = "EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP",
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP              = "EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP",
 
   -- EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT = function(equipSlotAttribute, level)
-  EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT = "EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT",
+  EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT            = "EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT",
 
   -- EQUIP_SLOT_REINFORCE_UPDATE = function(equipSlot)
-  EQUIP_SLOT_REINFORCE_UPDATE = "EQUIP_SLOT_REINFORCE_UPDATE",
+  EQUIP_SLOT_REINFORCE_UPDATE                    = "EQUIP_SLOT_REINFORCE_UPDATE",
 
   -- ESC_MENU_ADD_BUTTON = function()
-  ESC_MENU_ADD_BUTTON = "ESC_MENU_ADD_BUTTON",
+  ESC_MENU_ADD_BUTTON                            = "ESC_MENU_ADD_BUTTON",
 
   -- ESCAPE_END = function()
-  ESCAPE_END = "ESCAPE_END",
+  ESCAPE_END                                     = "ESCAPE_END",
 
   -- ESCAPE_START = function(waitTime)
-  ESCAPE_START = "ESCAPE_START",
+  ESCAPE_START                                   = "ESCAPE_START",
 
   -- EVENT_SCHEDULE_START = function(msg)
-  EVENT_SCHEDULE_START = "EVENT_SCHEDULE_START",
+  EVENT_SCHEDULE_START                           = "EVENT_SCHEDULE_START",
 
   -- EVENT_SCHEDULE_STOP = function(msg)
-  EVENT_SCHEDULE_STOP = "EVENT_SCHEDULE_STOP",
+  EVENT_SCHEDULE_STOP                            = "EVENT_SCHEDULE_STOP",
 
   -- EXP_CHANGED = function(stringId, expNum, expStr)
-  EXP_CHANGED = "EXP_CHANGED",
+  EXP_CHANGED                                    = "EXP_CHANGED",
 
   -- EXPEDITION_APPLICANT_ACCEPT = function(expeditionName)
-  EXPEDITION_APPLICANT_ACCEPT = "EXPEDITION_APPLICANT_ACCEPT",
+  EXPEDITION_APPLICANT_ACCEPT                    = "EXPEDITION_APPLICANT_ACCEPT",
 
   -- EXPEDITION_APPLICANT_REJECT = function(expeditionName)
-  EXPEDITION_APPLICANT_REJECT = "EXPEDITION_APPLICANT_REJECT",
+  EXPEDITION_APPLICANT_REJECT                    = "EXPEDITION_APPLICANT_REJECT",
 
   -- EXPEDITION_BUFF_CHANGE = function(expedition, buff, before, after)
-  EXPEDITION_BUFF_CHANGE = "EXPEDITION_BUFF_CHANGE",
+  EXPEDITION_BUFF_CHANGE                         = "EXPEDITION_BUFF_CHANGE",
 
   -- EXPEDITION_EXP = function(amount, amountStr)
-  EXPEDITION_EXP = "EXPEDITION_EXP",
+  EXPEDITION_EXP                                 = "EXPEDITION_EXP",
 
   -- EXPEDITION_HISTORY = function(type)
-  EXPEDITION_HISTORY = "EXPEDITION_HISTORY",
+  EXPEDITION_HISTORY                             = "EXPEDITION_HISTORY",
 
   -- EXPEDITION_LEVEL_UP = function(title, desc)
-  EXPEDITION_LEVEL_UP = "EXPEDITION_LEVEL_UP",
+  EXPEDITION_LEVEL_UP                            = "EXPEDITION_LEVEL_UP",
 
   -- EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT = function(charId)
-  EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT = "EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT",
+  EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT         =
+  "EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT",
 
   -- EXPEDITION_MANAGEMENT_APPLICANT_ADD = function(expeditionId)
-  EXPEDITION_MANAGEMENT_APPLICANT_ADD = "EXPEDITION_MANAGEMENT_APPLICANT_ADD",
+  EXPEDITION_MANAGEMENT_APPLICANT_ADD            = "EXPEDITION_MANAGEMENT_APPLICANT_ADD",
 
   -- EXPEDITION_MANAGEMENT_APPLICANT_DEL = function(expeditionId)
-  EXPEDITION_MANAGEMENT_APPLICANT_DEL = "EXPEDITION_MANAGEMENT_APPLICANT_DEL",
+  EXPEDITION_MANAGEMENT_APPLICANT_DEL            = "EXPEDITION_MANAGEMENT_APPLICANT_DEL",
 
   -- EXPEDITION_MANAGEMENT_APPLICANT_REJECT = function(charId)
-  EXPEDITION_MANAGEMENT_APPLICANT_REJECT = "EXPEDITION_MANAGEMENT_APPLICANT_REJECT",
+  EXPEDITION_MANAGEMENT_APPLICANT_REJECT         =
+  "EXPEDITION_MANAGEMENT_APPLICANT_REJECT",
 
   -- EXPEDITION_MANAGEMENT_APPLICANTS = function(infos)
-  EXPEDITION_MANAGEMENT_APPLICANTS = "EXPEDITION_MANAGEMENT_APPLICANTS",
+  EXPEDITION_MANAGEMENT_APPLICANTS               = "EXPEDITION_MANAGEMENT_APPLICANTS",
 
   -- EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED = function()
-  EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED = "EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED",
+  EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED   =
+  "EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED",
 
   -- EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED = function()
-  EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED = "EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED",
+  EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED      =
+  "EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED",
 
   -- EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED = function()
-  EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED = "EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED",
+  EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED    =
+  "EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED",
 
   -- EXPEDITION_MANAGEMENT_MEMBERS_INFO = function(totalCount, startIndex, memberInfos)
-  EXPEDITION_MANAGEMENT_MEMBERS_INFO = "EXPEDITION_MANAGEMENT_MEMBERS_INFO",
+  EXPEDITION_MANAGEMENT_MEMBERS_INFO             = "EXPEDITION_MANAGEMENT_MEMBERS_INFO",
 
   -- EXPEDITION_MANAGEMENT_POLICY_CHANGED = function()
-  EXPEDITION_MANAGEMENT_POLICY_CHANGED = "EXPEDITION_MANAGEMENT_POLICY_CHANGED",
+  EXPEDITION_MANAGEMENT_POLICY_CHANGED           = "EXPEDITION_MANAGEMENT_POLICY_CHANGED",
 
   -- EXPEDITION_MANAGEMENT_RECRUITMENT_ADD = function(info)
-  EXPEDITION_MANAGEMENT_RECRUITMENT_ADD = "EXPEDITION_MANAGEMENT_RECRUITMENT_ADD",
+  EXPEDITION_MANAGEMENT_RECRUITMENT_ADD          = "EXPEDITION_MANAGEMENT_RECRUITMENT_ADD",
 
   -- EXPEDITION_MANAGEMENT_RECRUITMENT_DEL = function(expeditionId)
-  EXPEDITION_MANAGEMENT_RECRUITMENT_DEL = "EXPEDITION_MANAGEMENT_RECRUITMENT_DEL",
+  EXPEDITION_MANAGEMENT_RECRUITMENT_DEL          = "EXPEDITION_MANAGEMENT_RECRUITMENT_DEL",
 
   -- EXPEDITION_MANAGEMENT_RECRUITMENTS = function(total, perPageItemCount, infos)
-  EXPEDITION_MANAGEMENT_RECRUITMENTS = "EXPEDITION_MANAGEMENT_RECRUITMENTS",
+  EXPEDITION_MANAGEMENT_RECRUITMENTS             = "EXPEDITION_MANAGEMENT_RECRUITMENTS",
 
   -- EXPEDITION_MANAGEMENT_ROLE_CHANGED = function()
-  EXPEDITION_MANAGEMENT_ROLE_CHANGED = "EXPEDITION_MANAGEMENT_ROLE_CHANGED",
+  EXPEDITION_MANAGEMENT_ROLE_CHANGED             = "EXPEDITION_MANAGEMENT_ROLE_CHANGED",
 
   -- EXPEDITION_MANAGEMENT_UPDATED = function()
-  EXPEDITION_MANAGEMENT_UPDATED = "EXPEDITION_MANAGEMENT_UPDATED",
+  EXPEDITION_MANAGEMENT_UPDATED                  = "EXPEDITION_MANAGEMENT_UPDATED",
 
   -- EXPEDITION_RANKING = function()
-  EXPEDITION_RANKING = "EXPEDITION_RANKING",
+  EXPEDITION_RANKING                             = "EXPEDITION_RANKING",
 
   -- EXPEDITION_SUMMON_SUGGEST = function()
-  EXPEDITION_SUMMON_SUGGEST = "EXPEDITION_SUMMON_SUGGEST",
+  EXPEDITION_SUMMON_SUGGEST                      = "EXPEDITION_SUMMON_SUGGEST",
 
   -- EXPEDITION_WAR_DECLARATION_FAILED = function(errorMsg, param)
-  EXPEDITION_WAR_DECLARATION_FAILED = "EXPEDITION_WAR_DECLARATION_FAILED",
+  EXPEDITION_WAR_DECLARATION_FAILED              = "EXPEDITION_WAR_DECLARATION_FAILED",
 
   -- EXPEDITION_WAR_DECLARATION_MONEY = function(unitId, name, money)
-  EXPEDITION_WAR_DECLARATION_MONEY = "EXPEDITION_WAR_DECLARATION_MONEY",
+  EXPEDITION_WAR_DECLARATION_MONEY               = "EXPEDITION_WAR_DECLARATION_MONEY",
 
   -- EXPEDITION_WAR_KILL_SCORE = function(toggle)
-  EXPEDITION_WAR_KILL_SCORE = "EXPEDITION_WAR_KILL_SCORE",
+  EXPEDITION_WAR_KILL_SCORE                      = "EXPEDITION_WAR_KILL_SCORE",
 
   -- EXPEDITION_WAR_SET_PROTECT_DATE = function()
-  EXPEDITION_WAR_SET_PROTECT_DATE = "EXPEDITION_WAR_SET_PROTECT_DATE",
+  EXPEDITION_WAR_SET_PROTECT_DATE                = "EXPEDITION_WAR_SET_PROTECT_DATE",
 
   -- EXPEDITION_WAR_STATE = function(related, state, declarer, defendant, winner)
-  EXPEDITION_WAR_STATE = "EXPEDITION_WAR_STATE",
+  EXPEDITION_WAR_STATE                           = "EXPEDITION_WAR_STATE",
 
   -- EXPIRED_ITEM = function(itemLinkText)
-  EXPIRED_ITEM = "EXPIRED_ITEM",
+  EXPIRED_ITEM                                   = "EXPIRED_ITEM",
 
   -- FACTION_CHANGED = function()
-  FACTION_CHANGED = "FACTION_CHANGED",
+  FACTION_CHANGED                                = "FACTION_CHANGED",
 
   -- FACTION_COMPETITION_INFO = function(info)
-  FACTION_COMPETITION_INFO = "FACTION_COMPETITION_INFO",
+  FACTION_COMPETITION_INFO                       = "FACTION_COMPETITION_INFO",
 
   -- FACTION_COMPETITION_RESULT = function()
-  FACTION_COMPETITION_RESULT = "FACTION_COMPETITION_RESULT",
+  FACTION_COMPETITION_RESULT                     = "FACTION_COMPETITION_RESULT",
 
   -- FACTION_COMPETITION_UPDATE_POINT = function(infos)
-  FACTION_COMPETITION_UPDATE_POINT = "FACTION_COMPETITION_UPDATE_POINT",
+  FACTION_COMPETITION_UPDATE_POINT               = "FACTION_COMPETITION_UPDATE_POINT",
 
   -- FACTION_RELATION_ACCEPTED = function(name, factionName)
-  FACTION_RELATION_ACCEPTED = "FACTION_RELATION_ACCEPTED",
+  FACTION_RELATION_ACCEPTED                      = "FACTION_RELATION_ACCEPTED",
 
   -- FACTION_RELATION_CHANGED = function(isHostile, f1Name, f2Name)
-  FACTION_RELATION_CHANGED = "FACTION_RELATION_CHANGED",
+  FACTION_RELATION_CHANGED                       = "FACTION_RELATION_CHANGED",
 
   -- FACTION_RELATION_COUNT = function()
-  FACTION_RELATION_COUNT = "FACTION_RELATION_COUNT",
+  FACTION_RELATION_COUNT                         = "FACTION_RELATION_COUNT",
 
   -- FACTION_RELATION_DENIED = function(name)
-  FACTION_RELATION_DENIED = "FACTION_RELATION_DENIED",
+  FACTION_RELATION_DENIED                        = "FACTION_RELATION_DENIED",
 
   -- FACTION_RELATION_HISTORY = function()
-  FACTION_RELATION_HISTORY = "FACTION_RELATION_HISTORY",
+  FACTION_RELATION_HISTORY                       = "FACTION_RELATION_HISTORY",
 
   -- FACTION_RELATION_REQUESTED = function(name, factionName)
-  FACTION_RELATION_REQUESTED = "FACTION_RELATION_REQUESTED",
+  FACTION_RELATION_REQUESTED                     = "FACTION_RELATION_REQUESTED",
 
   -- FACTION_RELATION_WILL_CHANGE = function(f1Name, f2Name)
-  FACTION_RELATION_WILL_CHANGE = "FACTION_RELATION_WILL_CHANGE",
+  FACTION_RELATION_WILL_CHANGE                   = "FACTION_RELATION_WILL_CHANGE",
 
   -- FACTION_RENAMED = function(isExpedition, oldName, newName)
-  FACTION_RENAMED = "FACTION_RENAMED",
+  FACTION_RENAMED                                = "FACTION_RENAMED",
 
   -- FADE_INOUT_DONE = function(param)
-  FADE_INOUT_DONE = "FADE_INOUT_DONE",
+  FADE_INOUT_DONE                                = "FADE_INOUT_DONE",
 
   -- FAIL_WEB_PLAY_DIARY_INSTANT = function()
-  FAIL_WEB_PLAY_DIARY_INSTANT = "FAIL_WEB_PLAY_DIARY_INSTANT",
+  FAIL_WEB_PLAY_DIARY_INSTANT                    = "FAIL_WEB_PLAY_DIARY_INSTANT",
 
   -- FAILED_TO_SET_PET_AUTO_SKILL = function(onePetBar, mateType)
-  FAILED_TO_SET_PET_AUTO_SKILL = "FAILED_TO_SET_PET_AUTO_SKILL",
+  FAILED_TO_SET_PET_AUTO_SKILL                   = "FAILED_TO_SET_PET_AUTO_SKILL",
 
   -- FAMILY_ERROR = function(msg)
-  FAMILY_ERROR = "FAMILY_ERROR",
+  FAMILY_ERROR                                   = "FAMILY_ERROR",
 
   -- FAMILY_EXP_ADD = function(amount)
-  FAMILY_EXP_ADD = "FAMILY_EXP_ADD",
+  FAMILY_EXP_ADD                                 = "FAMILY_EXP_ADD",
 
   -- FAMILY_INFO_REFRESH = function()
-  FAMILY_INFO_REFRESH = "FAMILY_INFO_REFRESH",
+  FAMILY_INFO_REFRESH                            = "FAMILY_INFO_REFRESH",
 
   -- FAMILY_LEVEL_UP = function(levelName)
-  FAMILY_LEVEL_UP = "FAMILY_LEVEL_UP",
+  FAMILY_LEVEL_UP                                = "FAMILY_LEVEL_UP",
 
   -- FAMILY_MEMBER = function(owner, member, role, title)
-  FAMILY_MEMBER = "FAMILY_MEMBER",
+  FAMILY_MEMBER                                  = "FAMILY_MEMBER",
 
   -- FAMILY_MEMBER_ADDED = function(owner, member, title)
-  FAMILY_MEMBER_ADDED = "FAMILY_MEMBER_ADDED",
+  FAMILY_MEMBER_ADDED                            = "FAMILY_MEMBER_ADDED",
 
   -- FAMILY_MEMBER_KICKED = function(member)
-  FAMILY_MEMBER_KICKED = "FAMILY_MEMBER_KICKED",
+  FAMILY_MEMBER_KICKED                           = "FAMILY_MEMBER_KICKED",
 
   -- FAMILY_MEMBER_LEFT = function(member)
-  FAMILY_MEMBER_LEFT = "FAMILY_MEMBER_LEFT",
+  FAMILY_MEMBER_LEFT                             = "FAMILY_MEMBER_LEFT",
 
   -- FAMILY_MEMBER_ONLINE = function()
-  FAMILY_MEMBER_ONLINE = "FAMILY_MEMBER_ONLINE",
+  FAMILY_MEMBER_ONLINE                           = "FAMILY_MEMBER_ONLINE",
 
   -- FAMILY_MGR = function()
-  FAMILY_MGR = "FAMILY_MGR",
+  FAMILY_MGR                                     = "FAMILY_MGR",
 
   -- FAMILY_NAME_CHANGED = function(FAMILY_NAME_CHANGED)
-  FAMILY_NAME_CHANGED = "FAMILY_NAME_CHANGED",
+  FAMILY_NAME_CHANGED                            = "FAMILY_NAME_CHANGED",
 
   -- FAMILY_OWNER_CHANGED = function(owner)
-  FAMILY_OWNER_CHANGED = "FAMILY_OWNER_CHANGED",
+  FAMILY_OWNER_CHANGED                           = "FAMILY_OWNER_CHANGED",
 
   -- FAMILY_REFRESH = function()
-  FAMILY_REFRESH = "FAMILY_REFRESH",
+  FAMILY_REFRESH                                 = "FAMILY_REFRESH",
 
   -- FAMILY_REMOVED = function()
-  FAMILY_REMOVED = "FAMILY_REMOVED",
+  FAMILY_REMOVED                                 = "FAMILY_REMOVED",
 
   -- FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL = function(cooltime)
-  FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL = "FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL",
+  FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL        =
+  "FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL",
 
   -- FIND_FACTION_REZ_DISTRICT_DURATION_FAIL = function(remain)
-  FIND_FACTION_REZ_DISTRICT_DURATION_FAIL = "FIND_FACTION_REZ_DISTRICT_DURATION_FAIL",
+  FIND_FACTION_REZ_DISTRICT_DURATION_FAIL        =
+  "FIND_FACTION_REZ_DISTRICT_DURATION_FAIL",
 
   -- FOLDER_STATE_CHANGED = function(arg)
-  FOLDER_STATE_CHANGED = "FOLDER_STATE_CHANGED",
+  FOLDER_STATE_CHANGED                           = "FOLDER_STATE_CHANGED",
 
   -- FORCE_ATTACK_CHANGED = function(id, isNewState)
-  FORCE_ATTACK_CHANGED = "FORCE_ATTACK_CHANGED",
+  FORCE_ATTACK_CHANGED                           = "FORCE_ATTACK_CHANGED",
 
   -- FRIENDLIST = function(msg)
-  FRIENDLIST = "FRIENDLIST",
+  FRIENDLIST                                     = "FRIENDLIST",
 
   -- FRIENDLIST_INFO = function(totalCount, memberInfos)
-  FRIENDLIST_INFO = "FRIENDLIST_INFO",
+  FRIENDLIST_INFO                                = "FRIENDLIST_INFO",
 
   -- FRIENDLIST_UPDATE = function(updateType, dataField)
-  FRIENDLIST_UPDATE = "FRIENDLIST_UPDATE",
+  FRIENDLIST_UPDATE                              = "FRIENDLIST_UPDATE",
 
   -- GACHA_LOOT_PACK_LOG = function(logs)
-  GACHA_LOOT_PACK_LOG = "GACHA_LOOT_PACK_LOG",
+  GACHA_LOOT_PACK_LOG                            = "GACHA_LOOT_PACK_LOG",
 
   -- GACHA_LOOT_PACK_RESULT = function(results)
-  GACHA_LOOT_PACK_RESULT = "GACHA_LOOT_PACK_RESULT",
+  GACHA_LOOT_PACK_RESULT                         = "GACHA_LOOT_PACK_RESULT",
 
   -- GAME_EVENT_EMPTY = function()
-  GAME_EVENT_EMPTY = "GAME_EVENT_EMPTY",
+  GAME_EVENT_EMPTY                               = "GAME_EVENT_EMPTY",
 
   -- GAME_EVENT_INFO_LIST_UPDATED = function()
-  GAME_EVENT_INFO_LIST_UPDATED = "GAME_EVENT_INFO_LIST_UPDATED",
+  GAME_EVENT_INFO_LIST_UPDATED                   = "GAME_EVENT_INFO_LIST_UPDATED",
 
   -- GAME_EVENT_INFO_REQUESTED = function()
-  GAME_EVENT_INFO_REQUESTED = "GAME_EVENT_INFO_REQUESTED",
+  GAME_EVENT_INFO_REQUESTED                      = "GAME_EVENT_INFO_REQUESTED",
 
   -- GAME_SCHEDULE = function()
-  GAME_SCHEDULE = "GAME_SCHEDULE",
+  GAME_SCHEDULE                                  = "GAME_SCHEDULE",
 
   -- GENDER_TRANSFERED = function()
-  GENDER_TRANSFERED = "GENDER_TRANSFERED",
+  GENDER_TRANSFERED                              = "GENDER_TRANSFERED",
 
   -- GLIDER_MOVED_INTO_BAG = function()
-  GLIDER_MOVED_INTO_BAG = "GLIDER_MOVED_INTO_BAG",
+  GLIDER_MOVED_INTO_BAG                          = "GLIDER_MOVED_INTO_BAG",
 
   -- GOODS_MAIL_INBOX_ITEM_TAKEN = function(index)
-  GOODS_MAIL_INBOX_ITEM_TAKEN = "GOODS_MAIL_INBOX_ITEM_TAKEN",
+  GOODS_MAIL_INBOX_ITEM_TAKEN                    = "GOODS_MAIL_INBOX_ITEM_TAKEN",
 
   -- GOODS_MAIL_INBOX_MONEY_TAKEN = function()
-  GOODS_MAIL_INBOX_MONEY_TAKEN = "GOODS_MAIL_INBOX_MONEY_TAKEN",
+  GOODS_MAIL_INBOX_MONEY_TAKEN                   = "GOODS_MAIL_INBOX_MONEY_TAKEN",
 
   -- GOODS_MAIL_INBOX_TAX_PAID = function()
-  GOODS_MAIL_INBOX_TAX_PAID = "GOODS_MAIL_INBOX_TAX_PAID",
+  GOODS_MAIL_INBOX_TAX_PAID                      = "GOODS_MAIL_INBOX_TAX_PAID",
 
   -- GOODS_MAIL_INBOX_UPDATE = function(read)
-  GOODS_MAIL_INBOX_UPDATE = "GOODS_MAIL_INBOX_UPDATE",
+  GOODS_MAIL_INBOX_UPDATE                        = "GOODS_MAIL_INBOX_UPDATE",
 
   -- GOODS_MAIL_RETURNED = function()
-  GOODS_MAIL_RETURNED = "GOODS_MAIL_RETURNED",
+  GOODS_MAIL_RETURNED                            = "GOODS_MAIL_RETURNED",
 
   -- GOODS_MAIL_SENT_SUCCESS = function()
-  GOODS_MAIL_SENT_SUCCESS = "GOODS_MAIL_SENT_SUCCESS",
+  GOODS_MAIL_SENT_SUCCESS                        = "GOODS_MAIL_SENT_SUCCESS",
 
   -- GOODS_MAIL_SENTBOX_UPDATE = function()
-  GOODS_MAIL_SENTBOX_UPDATE = "GOODS_MAIL_SENTBOX_UPDATE",
+  GOODS_MAIL_SENTBOX_UPDATE                      = "GOODS_MAIL_SENTBOX_UPDATE",
 
   -- GOODS_MAIL_WRITE_ITEM_UPDATE = function()
-  GOODS_MAIL_WRITE_ITEM_UPDATE = "GOODS_MAIL_WRITE_ITEM_UPDATE",
+  GOODS_MAIL_WRITE_ITEM_UPDATE                   = "GOODS_MAIL_WRITE_ITEM_UPDATE",
 
   -- GRADE_ENCHANT_BROADCAST = function(characterName, resultCode, itemLink, oldGrade, newGrade)
-  GRADE_ENCHANT_BROADCAST = "GRADE_ENCHANT_BROADCAST",
+  GRADE_ENCHANT_BROADCAST                        = "GRADE_ENCHANT_BROADCAST",
 
   -- GRADE_ENCHANT_RESULT = function(resultCode, itemLink, oldGrade, newGrade, breakRewardItemType, breakRewardItemCount, breakRewardByMail)
-  GRADE_ENCHANT_RESULT = "GRADE_ENCHANT_RESULT",
+  GRADE_ENCHANT_RESULT                           = "GRADE_ENCHANT_RESULT",
 
   -- GUARDTOWER_HEALTH_CHANGED = function()
-  GUARDTOWER_HEALTH_CHANGED = "GUARDTOWER_HEALTH_CHANGED",
+  GUARDTOWER_HEALTH_CHANGED                      = "GUARDTOWER_HEALTH_CHANGED",
 
   -- GUILD_BANK_INDEX_SHOW = function() -- Crash
   -- GUILD_BANK_INDEX_SHOW = "GUILD_BANK_INDEX_SHOW", -- Crash
 
   -- GUILD_BANK_INTERACTION_END = function()
-  GUILD_BANK_INTERACTION_END = "GUILD_BANK_INTERACTION_END",
+  GUILD_BANK_INTERACTION_END                     = "GUILD_BANK_INTERACTION_END",
 
   -- GUILD_BANK_INTERACTION_START = function()
-  GUILD_BANK_INTERACTION_START = "GUILD_BANK_INTERACTION_START",
+  GUILD_BANK_INTERACTION_START                   = "GUILD_BANK_INTERACTION_START",
 
   -- GUILD_BANK_INVEN_SHOW = function()
-  GUILD_BANK_INVEN_SHOW = "GUILD_BANK_INVEN_SHOW",
+  GUILD_BANK_INVEN_SHOW                          = "GUILD_BANK_INVEN_SHOW",
 
   -- GUILD_BANK_MONEY_UPDATE = function()
-  GUILD_BANK_MONEY_UPDATE = "GUILD_BANK_MONEY_UPDATE",
+  GUILD_BANK_MONEY_UPDATE                        = "GUILD_BANK_MONEY_UPDATE",
 
   -- GUILD_BANK_REAL_INDEX_SHOW = function()
-  GUILD_BANK_REAL_INDEX_SHOW = "GUILD_BANK_REAL_INDEX_SHOW",
+  GUILD_BANK_REAL_INDEX_SHOW                     = "GUILD_BANK_REAL_INDEX_SHOW",
 
   -- GUILD_BANK_TAB_CREATED = function()
-  GUILD_BANK_TAB_CREATED = "GUILD_BANK_TAB_CREATED",
+  GUILD_BANK_TAB_CREATED                         = "GUILD_BANK_TAB_CREATED",
 
   -- GUILD_BANK_TAB_REMOVED = function()
-  GUILD_BANK_TAB_REMOVED = "GUILD_BANK_TAB_REMOVED",
+  GUILD_BANK_TAB_REMOVED                         = "GUILD_BANK_TAB_REMOVED",
 
   -- GUILD_BANK_TAB_SORTED = function()
-  GUILD_BANK_TAB_SORTED = "GUILD_BANK_TAB_SORTED",
+  GUILD_BANK_TAB_SORTED                          = "GUILD_BANK_TAB_SORTED",
 
   -- GUILD_BANK_TAB_SWITCHED = function()
-  GUILD_BANK_TAB_SWITCHED = "GUILD_BANK_TAB_SWITCHED",
+  GUILD_BANK_TAB_SWITCHED                        = "GUILD_BANK_TAB_SWITCHED",
 
   -- GUILD_BANK_UPDATE = function()
-  GUILD_BANK_UPDATE = "GUILD_BANK_UPDATE",
+  GUILD_BANK_UPDATE                              = "GUILD_BANK_UPDATE",
 
   -- HEIR_LEVEL_UP = function(myUnit, unitId)
-  HEIR_LEVEL_UP = "HEIR_LEVEL_UP",
+  HEIR_LEVEL_UP                                  = "HEIR_LEVEL_UP",
 
   -- HEIR_SKILL_ACTIVE_TYPE_MSG = function(activeType, ability, text, pos)
-  HEIR_SKILL_ACTIVE_TYPE_MSG = "HEIR_SKILL_ACTIVE_TYPE_MSG",
+  HEIR_SKILL_ACTIVE_TYPE_MSG                     = "HEIR_SKILL_ACTIVE_TYPE_MSG",
 
   -- HEIR_SKILL_LEARN = function(text, pos)
-  HEIR_SKILL_LEARN = "HEIR_SKILL_LEARN",
+  HEIR_SKILL_LEARN                               = "HEIR_SKILL_LEARN",
 
   -- HEIR_SKILL_RESET = function(isAll, text, info)
-  HEIR_SKILL_RESET = "HEIR_SKILL_RESET",
+  HEIR_SKILL_RESET                               = "HEIR_SKILL_RESET",
 
   -- HEIR_SKILL_UPDATE = function()
-  HEIR_SKILL_UPDATE = "HEIR_SKILL_UPDATE",
+  HEIR_SKILL_UPDATE                              = "HEIR_SKILL_UPDATE",
 
   -- HERO_ALL_SCORE_UPDATED = function(factionID)
-  HERO_ALL_SCORE_UPDATED  = "HERO_ALL_SCORE_UPDATED",
+  HERO_ALL_SCORE_UPDATED                         = "HERO_ALL_SCORE_UPDATED",
 
   -- HERO_ANNOUNCE_REMAIN_TIME = function(remainTime, isStartTime)
-  HERO_ANNOUNCE_REMAIN_TIME = "HERO_ANNOUNCE_REMAIN_TIME",
+  HERO_ANNOUNCE_REMAIN_TIME                      = "HERO_ANNOUNCE_REMAIN_TIME",
 
   -- HERO_CANDIDATE_NOTI = function()
-  HERO_CANDIDATE_NOTI = "HERO_CANDIDATE_NOTI",
+  HERO_CANDIDATE_NOTI                            = "HERO_CANDIDATE_NOTI",
 
   -- HERO_CANDIDATES_ANNOUNCED = function(title, desc)
-  HERO_CANDIDATES_ANNOUNCED = "HERO_CANDIDATES_ANNOUNCED",
+  HERO_CANDIDATES_ANNOUNCED                      = "HERO_CANDIDATES_ANNOUNCED",
 
   -- HERO_ELECTION = function()
-  HERO_ELECTION = "HERO_ELECTION",
+  HERO_ELECTION                                  = "HERO_ELECTION",
 
   -- HERO_ELECTION_DAY_ALERT = function(title, desc)
-  HERO_ELECTION_DAY_ALERT = "HERO_ELECTION_DAY_ALERT",
+  HERO_ELECTION_DAY_ALERT                        = "HERO_ELECTION_DAY_ALERT",
 
   -- HERO_ELECTION_RESULT = function(title, desc)
-  HERO_ELECTION_RESULT = "HERO_ELECTION_RESULT",
+  HERO_ELECTION_RESULT                           = "HERO_ELECTION_RESULT",
 
   -- HERO_ELECTION_VOTED = function()
-  HERO_ELECTION_VOTED = "HERO_ELECTION_VOTED",
+  HERO_ELECTION_VOTED                            = "HERO_ELECTION_VOTED",
 
   -- HERO_NOTI = function()
-  HERO_NOTI = "HERO_NOTI",
+  HERO_NOTI                                      = "HERO_NOTI",
 
   -- HERO_RANK_DATA_RETRIEVED = function(factionID)
-  HERO_RANK_DATA_RETRIEVED = "HERO_RANK_DATA_RETRIEVED",
+  HERO_RANK_DATA_RETRIEVED                       = "HERO_RANK_DATA_RETRIEVED",
 
   -- HERO_RANK_DATA_TIMEOUT = function()
-  HERO_RANK_DATA_TIMEOUT = "HERO_RANK_DATA_TIMEOUT",
+  HERO_RANK_DATA_TIMEOUT                         = "HERO_RANK_DATA_TIMEOUT",
 
   -- HERO_SCORE_UPDATED = function()
-  HERO_SCORE_UPDATED = "HERO_SCORE_UPDATED",
+  HERO_SCORE_UPDATED                             = "HERO_SCORE_UPDATED",
 
   -- HERO_SEASON_OFF = function()
-  HERO_SEASON_OFF = "HERO_SEASON_OFF",
+  HERO_SEASON_OFF                                = "HERO_SEASON_OFF",
 
   -- HERO_SEASON_UPDATED = function()
-  HERO_SEASON_UPDATED = "HERO_SEASON_UPDATED",
+  HERO_SEASON_UPDATED                            = "HERO_SEASON_UPDATED",
 
   -- HIDE_ROADMAP_TOOLTIP = function(text)
-  HIDE_ROADMAP_TOOLTIP = "HIDE_ROADMAP_TOOLTIP",
+  HIDE_ROADMAP_TOOLTIP                           = "HIDE_ROADMAP_TOOLTIP",
 
   -- HIDE_SKILL_MAP_EFFECT = function(index)
-  HIDE_SKILL_MAP_EFFECT = "HIDE_SKILL_MAP_EFFECT",
+  HIDE_SKILL_MAP_EFFECT                          = "HIDE_SKILL_MAP_EFFECT",
 
   -- HIDE_WORLDMAP_TOOLTIP = function()
-  HIDE_WORLDMAP_TOOLTIP = "HIDE_WORLDMAP_TOOLTIP",
+  HIDE_WORLDMAP_TOOLTIP                          = "HIDE_WORLDMAP_TOOLTIP",
 
   -- HOUSE_BUILD_INFO = function(hType, bTax, hTax, heavyTaxHouseCount, normalTaxHouseCount, isHeavyTaxHouse, hostileTaxRate, depositString, taxType, completion)
-  HOUSE_BUILD_INFO = "HOUSE_BUILD_INFO",
+  HOUSE_BUILD_INFO                               = "HOUSE_BUILD_INFO",
 
   -- HOUSE_BUY_FAIL = function()
-  HOUSE_BUY_FAIL = "HOUSE_BUY_FAIL",
+  HOUSE_BUY_FAIL                                 = "HOUSE_BUY_FAIL",
 
   -- HOUSE_BUY_SUCCESS = function(houseName)
-  HOUSE_BUY_SUCCESS = "HOUSE_BUY_SUCCESS",
+  HOUSE_BUY_SUCCESS                              = "HOUSE_BUY_SUCCESS",
 
   -- HOUSE_CANCEL_SELL_FAIL = function()
-  HOUSE_CANCEL_SELL_FAIL = "HOUSE_CANCEL_SELL_FAIL",
+  HOUSE_CANCEL_SELL_FAIL                         = "HOUSE_CANCEL_SELL_FAIL",
 
   -- HOUSE_CANCEL_SELL_SUCCESS = function(houseName)
-  HOUSE_CANCEL_SELL_SUCCESS = "HOUSE_CANCEL_SELL_SUCCESS",
+  HOUSE_CANCEL_SELL_SUCCESS                      = "HOUSE_CANCEL_SELL_SUCCESS",
 
   -- HOUSE_DECO_UPDATED = function()
-  HOUSE_DECO_UPDATED = "HOUSE_DECO_UPDATED",
+  HOUSE_DECO_UPDATED                             = "HOUSE_DECO_UPDATED",
 
   -- HOUSE_FARM_MSG = function(name, total, harvestable)
-  HOUSE_FARM_MSG = "HOUSE_FARM_MSG",
+  HOUSE_FARM_MSG                                 = "HOUSE_FARM_MSG",
 
   -- HOUSE_INFO_UPDATED = function()
-  HOUSE_INFO_UPDATED = "HOUSE_INFO_UPDATED",
+  HOUSE_INFO_UPDATED                             = "HOUSE_INFO_UPDATED",
 
   -- HOUSE_INTERACTION_END = function()
-  HOUSE_INTERACTION_END = "HOUSE_INTERACTION_END",
+  HOUSE_INTERACTION_END                          = "HOUSE_INTERACTION_END",
 
   -- HOUSE_INTERACTION_START = function(structureType, viewType)
-  HOUSE_INTERACTION_START = "HOUSE_INTERACTION_START",
+  HOUSE_INTERACTION_START                        = "HOUSE_INTERACTION_START",
 
   -- HOUSE_PERMISSION_UPDATED = function()
-  HOUSE_PERMISSION_UPDATED = "HOUSE_PERMISSION_UPDATED",
+  HOUSE_PERMISSION_UPDATED                       = "HOUSE_PERMISSION_UPDATED",
 
   -- HOUSE_REBUILD_TAX_INFO = function()
-  HOUSE_REBUILD_TAX_INFO = "HOUSE_REBUILD_TAX_INFO",
+  HOUSE_REBUILD_TAX_INFO                         = "HOUSE_REBUILD_TAX_INFO",
 
   -- HOUSE_ROTATE_CONFIRM = function()
-  HOUSE_ROTATE_CONFIRM = "HOUSE_ROTATE_CONFIRM",
+  HOUSE_ROTATE_CONFIRM                           = "HOUSE_ROTATE_CONFIRM",
 
   -- HOUSE_SALE_SUCCESS = function(houseName)
-  HOUSE_SALE_SUCCESS = "HOUSE_SALE_SUCCESS",
+  HOUSE_SALE_SUCCESS                             = "HOUSE_SALE_SUCCESS",
 
   -- HOUSE_SET_SELL_FAIL = function()
-  HOUSE_SET_SELL_FAIL = "HOUSE_SET_SELL_FAIL",
+  HOUSE_SET_SELL_FAIL                            = "HOUSE_SET_SELL_FAIL",
 
   -- HOUSE_SET_SELL_SUCCESS = function(houseName)
-  HOUSE_SET_SELL_SUCCESS = "HOUSE_SET_SELL_SUCCESS",
+  HOUSE_SET_SELL_SUCCESS                         = "HOUSE_SET_SELL_SUCCESS",
 
   -- HOUSE_STEP_INFO_UPDATED = function(structureType)
-  HOUSE_STEP_INFO_UPDATED = "HOUSE_STEP_INFO_UPDATED",
+  HOUSE_STEP_INFO_UPDATED                        = "HOUSE_STEP_INFO_UPDATED",
 
   -- HOUSE_TAX_INFO = function(dominionTaxRate, hostileTaxRate, taxString, dueTime, prepayTime, weeksWithoutPay, weeksPrepay, isAlreadyPaid, isHeavyTaxHouse, depositString, taxType, id)
-  HOUSE_TAX_INFO = "HOUSE_TAX_INFO",
+  HOUSE_TAX_INFO                                 = "HOUSE_TAX_INFO",
 
   -- HOUSING_UCC_CLOSE = function()
-  HOUSING_UCC_CLOSE = "HOUSING_UCC_CLOSE",
+  HOUSING_UCC_CLOSE                              = "HOUSING_UCC_CLOSE",
 
   -- HOUSING_UCC_ITEM_SLOT_CLEAR = function()
-  HOUSING_UCC_ITEM_SLOT_CLEAR = "HOUSING_UCC_ITEM_SLOT_CLEAR",
+  HOUSING_UCC_ITEM_SLOT_CLEAR                    = "HOUSING_UCC_ITEM_SLOT_CLEAR",
 
   -- HOUSING_UCC_ITEM_SLOT_SET = function()
-  HOUSING_UCC_ITEM_SLOT_SET = "HOUSING_UCC_ITEM_SLOT_SET",
+  HOUSING_UCC_ITEM_SLOT_SET                      = "HOUSING_UCC_ITEM_SLOT_SET",
 
   -- HOUSING_UCC_LEAVE = function()
-  HOUSING_UCC_LEAVE = "HOUSING_UCC_LEAVE",
+  HOUSING_UCC_LEAVE                              = "HOUSING_UCC_LEAVE",
 
   -- HOUSING_UCC_UPDATED = function()
-  HOUSING_UCC_UPDATED = "HOUSING_UCC_UPDATED",
+  HOUSING_UCC_UPDATED                            = "HOUSING_UCC_UPDATED",
 
   -- HPW_ZONE_STATE_CHANGE = function(zoneId: ZONE_ID)
-  HPW_ZONE_STATE_CHANGE = "HPW_ZONE_STATE_CHANGE",
+  HPW_ZONE_STATE_CHANGE                          = "HPW_ZONE_STATE_CHANGE",
 
   -- HPW_ZONE_STATE_WAR_END = function(zoneId, points)
-  HPW_ZONE_STATE_WAR_END = "HPW_ZONE_STATE_WAR_END",
+  HPW_ZONE_STATE_WAR_END                         = "HPW_ZONE_STATE_WAR_END",
 
   -- IME_STATUS_CHANGED = function()
-  IME_STATUS_CHANGED = "IME_STATUS_CHANGED",
+  IME_STATUS_CHANGED                             = "IME_STATUS_CHANGED",
 
   -- INDUN_INITAL_ROUND_INFO = function()
-  INDUN_INITAL_ROUND_INFO = "INDUN_INITAL_ROUND_INFO",
+  INDUN_INITAL_ROUND_INFO                        = "INDUN_INITAL_ROUND_INFO",
 
   -- INDUN_ROUND_END = function(success, round, isBossRound, lastRound)
-  INDUN_ROUND_END = "INDUN_ROUND_END",
+  INDUN_ROUND_END                                = "INDUN_ROUND_END",
 
   -- INDUN_ROUND_START = function(round, isBossRound)
-  INDUN_ROUND_START = "INDUN_ROUND_START",
+  INDUN_ROUND_START                              = "INDUN_ROUND_START",
 
   -- INDUN_UPDATE_ROUND_INFO = function()
-  INDUN_UPDATE_ROUND_INFO = "INDUN_UPDATE_ROUND_INFO",
+  INDUN_UPDATE_ROUND_INFO                        = "INDUN_UPDATE_ROUND_INFO",
 
   -- INGAME_SHOP_BUY_RESULT = function()
-  INGAME_SHOP_BUY_RESULT = "INGAME_SHOP_BUY_RESULT",
+  INGAME_SHOP_BUY_RESULT                         = "INGAME_SHOP_BUY_RESULT",
 
   -- INIT_CHRONICLE_INFO = function()
-  INIT_CHRONICLE_INFO = "INIT_CHRONICLE_INFO",
+  INIT_CHRONICLE_INFO                            = "INIT_CHRONICLE_INFO",
 
   -- INSERT_CRAFT_ORDER = function()
-  INSERT_CRAFT_ORDER = "INSERT_CRAFT_ORDER",
+  INSERT_CRAFT_ORDER                             = "INSERT_CRAFT_ORDER",
 
   -- INSTANCE_ENTERABLE_MSG = function(info)
-  INSTANCE_ENTERABLE_MSG = "INSTANCE_ENTERABLE_MSG",
+  INSTANCE_ENTERABLE_MSG                         = "INSTANCE_ENTERABLE_MSG",
 
   -- INSTANT_GAME_BEST_RATING_REWARD = function()
-  INSTANT_GAME_BEST_RATING_REWARD = "INSTANT_GAME_BEST_RATING_REWARD",
+  INSTANT_GAME_BEST_RATING_REWARD                = "INSTANT_GAME_BEST_RATING_REWARD",
 
   -- INSTANT_GAME_END = function()
-  INSTANT_GAME_END = "INSTANT_GAME_END",
+  INSTANT_GAME_END                               = "INSTANT_GAME_END",
 
   -- INSTANT_GAME_JOIN_APPLY = function()
-  INSTANT_GAME_JOIN_APPLY = "INSTANT_GAME_JOIN_APPLY",
+  INSTANT_GAME_JOIN_APPLY                        = "INSTANT_GAME_JOIN_APPLY",
 
   -- INSTANT_GAME_JOIN_CANCEL = function()
-  INSTANT_GAME_JOIN_CANCEL = "INSTANT_GAME_JOIN_CANCEL",
+  INSTANT_GAME_JOIN_CANCEL                       = "INSTANT_GAME_JOIN_CANCEL",
 
   -- INSTANT_GAME_KILL = function(msgInfo)
-  INSTANT_GAME_KILL = "INSTANT_GAME_KILL",
+  INSTANT_GAME_KILL                              = "INSTANT_GAME_KILL",
 
   -- INSTANT_GAME_PICK_BUFFS = function()
-  INSTANT_GAME_PICK_BUFFS = "INSTANT_GAME_PICK_BUFFS",
+  INSTANT_GAME_PICK_BUFFS                        = "INSTANT_GAME_PICK_BUFFS",
 
   -- INSTANT_GAME_READY = function()
-  INSTANT_GAME_READY = "INSTANT_GAME_READY",
+  INSTANT_GAME_READY                             = "INSTANT_GAME_READY",
 
   -- INSTANT_GAME_RETIRE = function()
-  INSTANT_GAME_RETIRE = "INSTANT_GAME_RETIRE",
+  INSTANT_GAME_RETIRE                            = "INSTANT_GAME_RETIRE",
 
   -- INSTANT_GAME_ROUND_RESULT = function(resultState, resultRound)
-  INSTANT_GAME_ROUND_RESULT = "INSTANT_GAME_ROUND_RESULT",
+  INSTANT_GAME_ROUND_RESULT                      = "INSTANT_GAME_ROUND_RESULT",
 
   -- INSTANT_GAME_START = function()
-  INSTANT_GAME_START = "INSTANT_GAME_START",
+  INSTANT_GAME_START                             = "INSTANT_GAME_START",
 
   -- INSTANT_GAME_START_POINT_RETURN_MSG = function(remainSec)
-  INSTANT_GAME_START_POINT_RETURN_MSG = "INSTANT_GAME_START_POINT_RETURN_MSG",
+  INSTANT_GAME_START_POINT_RETURN_MSG            = "INSTANT_GAME_START_POINT_RETURN_MSG",
 
   -- INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME = function(remainTime)
-  INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME = "INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME",
+  INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME          = "INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME",
 
   -- INSTANT_GAME_VISIT_COUNT_RESET = function()
-  INSTANT_GAME_VISIT_COUNT_RESET = "INSTANT_GAME_VISIT_COUNT_RESET",
+  INSTANT_GAME_VISIT_COUNT_RESET                 = "INSTANT_GAME_VISIT_COUNT_RESET",
 
   -- INSTANT_GAME_WAIT = function()
-  INSTANT_GAME_WAIT = "INSTANT_GAME_WAIT",
+  INSTANT_GAME_WAIT                              = "INSTANT_GAME_WAIT",
 
   -- INTERACTION_END = function()
-  INTERACTION_END = "INTERACTION_END",
+  INTERACTION_END                                = "INTERACTION_END",
 
   -- INTERACTION_START = function()
-  INTERACTION_START = "INTERACTION_START",
+  INTERACTION_START                              = "INTERACTION_START",
 
   -- INVALID_NAME_POLICY = function(namePolicyType)
-  INVALID_NAME_POLICY = "INVALID_NAME_POLICY",
+  INVALID_NAME_POLICY                            = "INVALID_NAME_POLICY",
 
   -- INVEN_SLOT_SPLIT = function(invenType, slot)
-  INVEN_SLOT_SPLIT = "INVEN_SLOT_SPLIT",
+  INVEN_SLOT_SPLIT                               = "INVEN_SLOT_SPLIT",
 
   -- ITEM_ACQUISITION_BY_LOOT = function(charName, itemLinkText, itemCount)
-  ITEM_ACQUISITION_BY_LOOT = "ITEM_ACQUISITION_BY_LOOT",
+  ITEM_ACQUISITION_BY_LOOT                       = "ITEM_ACQUISITION_BY_LOOT",
 
   -- ITEM_CHANGE_MAPPING_RESULT = function(result, oldGrade, oldGearScore, itemLink, bonusRate)
-  ITEM_CHANGE_MAPPING_RESULT = "ITEM_CHANGE_MAPPING_RESULT",
+  ITEM_CHANGE_MAPPING_RESULT                     = "ITEM_CHANGE_MAPPING_RESULT",
 
   -- ITEM_ENCHANT_MAGICAL_RESULT = function(resultCode, itemLink, gemItemType)
-  ITEM_ENCHANT_MAGICAL_RESULT = "ITEM_ENCHANT_MAGICAL_RESULT",
+  ITEM_ENCHANT_MAGICAL_RESULT                    = "ITEM_ENCHANT_MAGICAL_RESULT",
 
   -- ITEM_EQUIP_RESULT = function(ItemEquipResult)
-  ITEM_EQUIP_RESULT = "ITEM_EQUIP_RESULT",
+  ITEM_EQUIP_RESULT                              = "ITEM_EQUIP_RESULT",
 
   -- ITEM_LOOK_CONVERTED = function(itemLinkText)
-  ITEM_LOOK_CONVERTED = "ITEM_LOOK_CONVERTED",
+  ITEM_LOOK_CONVERTED                            = "ITEM_LOOK_CONVERTED",
 
   -- ITEM_LOOK_CONVERTED_EFFECT = function()
-  ITEM_LOOK_CONVERTED_EFFECT = "ITEM_LOOK_CONVERTED_EFFECT",
+  ITEM_LOOK_CONVERTED_EFFECT                     = "ITEM_LOOK_CONVERTED_EFFECT",
 
   -- ITEM_REFURBISHMENT_RESULT = function(result, itemLink, beforeScale, afterScale)
-  ITEM_REFURBISHMENT_RESULT = "ITEM_REFURBISHMENT_RESULT",
+  ITEM_REFURBISHMENT_RESULT                      = "ITEM_REFURBISHMENT_RESULT",
 
   -- ITEM_SMELTING_RESULT = function(resultCode, itemLink, smeltingItemType)
-  ITEM_SMELTING_RESULT = "ITEM_SMELTING_RESULT",
+  ITEM_SMELTING_RESULT                           = "ITEM_SMELTING_RESULT",
 
   -- ITEM_SOCKET_UPGRADE = function(socketItemType)
-  ITEM_SOCKET_UPGRADE = "ITEM_SOCKET_UPGRADE",
+  ITEM_SOCKET_UPGRADE                            = "ITEM_SOCKET_UPGRADE",
 
   -- ITEM_SOCKETING_RESULT = function(resultCode, itemLink, socketItemType, install)
-  ITEM_SOCKETING_RESULT = "ITEM_SOCKETING_RESULT",
+  ITEM_SOCKETING_RESULT                          = "ITEM_SOCKETING_RESULT",
 
   -- JURY_OK_COUNT = function(count, total)
-  JURY_OK_COUNT = "JURY_OK_COUNT",
+  JURY_OK_COUNT                                  = "JURY_OK_COUNT",
 
   -- JURY_WAITING_NUMBER = function(num)
-  JURY_WAITING_NUMBER = "JURY_WAITING_NUMBER",
+  JURY_WAITING_NUMBER                            = "JURY_WAITING_NUMBER",
 
   -- LABORPOWER_CHANGED = function(diff, laborPower)
-  LABORPOWER_CHANGED = "LABORPOWER_CHANGED",
+  LABORPOWER_CHANGED                             = "LABORPOWER_CHANGED",
 
   -- LEAVE_ENCHANT_ITEM_MODE = function()
-  LEAVE_ENCHANT_ITEM_MODE = "LEAVE_ENCHANT_ITEM_MODE",
+  LEAVE_ENCHANT_ITEM_MODE                        = "LEAVE_ENCHANT_ITEM_MODE",
 
   -- LEAVE_GACHA_LOOT_MODE = function()
-  LEAVE_GACHA_LOOT_MODE = "LEAVE_GACHA_LOOT_MODE",
+  LEAVE_GACHA_LOOT_MODE                          = "LEAVE_GACHA_LOOT_MODE",
 
   -- LEAVE_ITEM_LOOK_CONVERT_MODE = function()
-  LEAVE_ITEM_LOOK_CONVERT_MODE = "LEAVE_ITEM_LOOK_CONVERT_MODE",
+  LEAVE_ITEM_LOOK_CONVERT_MODE                   = "LEAVE_ITEM_LOOK_CONVERT_MODE",
 
   -- LEAVED_INSTANT_GAME_ZONE = function()
-  LEAVED_INSTANT_GAME_ZONE = "LEAVED_INSTANT_GAME_ZONE",
+  LEAVED_INSTANT_GAME_ZONE                       = "LEAVED_INSTANT_GAME_ZONE",
 
   -- LEAVING_WORLD_CANCELED = function()
-  LEAVING_WORLD_CANCELED = "LEAVING_WORLD_CANCELED",
+  LEAVING_WORLD_CANCELED                         = "LEAVING_WORLD_CANCELED",
 
   -- LEAVING_WORLD_STARTED = function(waitTime, exitTarget, idleKick)
-  LEAVING_WORLD_STARTED = "LEAVING_WORLD_STARTED",
+  LEAVING_WORLD_STARTED                          = "LEAVING_WORLD_STARTED",
 
   -- LEFT_LOADING = function()
-  LEFT_LOADING = "LEFT_LOADING",
+  LEFT_LOADING                                   = "LEFT_LOADING",
 
   -- LEFT_LOGIN = function()
-  LEFT_LOGIN = "LEFT_LOGIN",
+  LEFT_LOGIN                                     = "LEFT_LOGIN",
 
   -- LEFT_SCREEN_SHOT_CAMERA_MODE = function()
-  LEFT_SCREEN_SHOT_CAMERA_MODE = "LEFT_SCREEN_SHOT_CAMERA_MODE",
+  LEFT_SCREEN_SHOT_CAMERA_MODE                   = "LEFT_SCREEN_SHOT_CAMERA_MODE",
 
   -- LEFT_SUBZONE = function()
-  LEFT_SUBZONE = "LEFT_SUBZONE",
+  LEFT_SUBZONE                                   = "LEFT_SUBZONE",
 
   -- LEFT_WORLD = function()
-  LEFT_WORLD = "LEFT_WORLD",
+  LEFT_WORLD                                     = "LEFT_WORLD",
 
   -- LEVEL_CHANGED = function(_, stringId)
-  LEVEL_CHANGED = "LEVEL_CHANGED",
+  LEVEL_CHANGED                                  = "LEVEL_CHANGED",
 
   -- LOGIN_CHARACTER_UPDATED = function(status, characterIndex)
-  LOGIN_CHARACTER_UPDATED = "LOGIN_CHARACTER_UPDATED",
+  LOGIN_CHARACTER_UPDATED                        = "LOGIN_CHARACTER_UPDATED",
 
   -- LOGIN_DENIED = function()
-  LOGIN_DENIED = "LOGIN_DENIED",
+  LOGIN_DENIED                                   = "LOGIN_DENIED",
 
   -- LOOT_BAG_CHANGED = function(setTime)
-  LOOT_BAG_CHANGED = "LOOT_BAG_CHANGED",
+  LOOT_BAG_CHANGED                               = "LOOT_BAG_CHANGED",
 
   -- LOOT_BAG_CLOSE = function()
-  LOOT_BAG_CLOSE = "LOOT_BAG_CLOSE",
+  LOOT_BAG_CLOSE                                 = "LOOT_BAG_CLOSE",
 
   -- LOOT_DICE = function(charName, itemLinkText, diceValue)
-  LOOT_DICE = "LOOT_DICE",
+  LOOT_DICE                                      = "LOOT_DICE",
 
   -- LOOT_PACK_ITEM_BROADCAST = function(characterName, sourceName, useItemLink, resultItemLink)
-  LOOT_PACK_ITEM_BROADCAST = "LOOT_PACK_ITEM_BROADCAST",
+  LOOT_PACK_ITEM_BROADCAST                       = "LOOT_PACK_ITEM_BROADCAST",
 
   -- LOOTING_RULE_BOP_CHANGED = function(rollForBop)
-  LOOTING_RULE_BOP_CHANGED = "LOOTING_RULE_BOP_CHANGED",
+  LOOTING_RULE_BOP_CHANGED                       = "LOOTING_RULE_BOP_CHANGED",
 
   -- LOOTING_RULE_GRADE_CHANGED = function(grade)
-  LOOTING_RULE_GRADE_CHANGED = "LOOTING_RULE_GRADE_CHANGED",
+  LOOTING_RULE_GRADE_CHANGED                     = "LOOTING_RULE_GRADE_CHANGED",
 
   -- LOOTING_RULE_MASTER_CHANGED = function(charName)
-  LOOTING_RULE_MASTER_CHANGED = "LOOTING_RULE_MASTER_CHANGED",
+  LOOTING_RULE_MASTER_CHANGED                    = "LOOTING_RULE_MASTER_CHANGED",
 
   -- LOOTING_RULE_METHOD_CHANGED = function(lootMethod)
-  LOOTING_RULE_METHOD_CHANGED = "LOOTING_RULE_METHOD_CHANGED",
+  LOOTING_RULE_METHOD_CHANGED                    = "LOOTING_RULE_METHOD_CHANGED",
 
   -- LP_MANAGE_CHARACTER_CHANGED = function()
-  LP_MANAGE_CHARACTER_CHANGED = "LP_MANAGE_CHARACTER_CHANGED",
+  LP_MANAGE_CHARACTER_CHANGED                    = "LP_MANAGE_CHARACTER_CHANGED",
 
   -- MAIL_INBOX_ATTACHMENT_TAKEN_ALL = function(mailId)
-  MAIL_INBOX_ATTACHMENT_TAKEN_ALL = "MAIL_INBOX_ATTACHMENT_TAKEN_ALL",
+  MAIL_INBOX_ATTACHMENT_TAKEN_ALL                = "MAIL_INBOX_ATTACHMENT_TAKEN_ALL",
 
   -- MAIL_INBOX_ITEM_TAKEN = function(index)
-  MAIL_INBOX_ITEM_TAKEN = "MAIL_INBOX_ITEM_TAKEN",
+  MAIL_INBOX_ITEM_TAKEN                          = "MAIL_INBOX_ITEM_TAKEN",
 
   -- MAIL_INBOX_MONEY_TAKEN = function()
-  MAIL_INBOX_MONEY_TAKEN = "MAIL_INBOX_MONEY_TAKEN",
+  MAIL_INBOX_MONEY_TAKEN                         = "MAIL_INBOX_MONEY_TAKEN",
 
   -- MAIL_INBOX_TAX_PAID = function()
-  MAIL_INBOX_TAX_PAID = "MAIL_INBOX_TAX_PAID",
+  MAIL_INBOX_TAX_PAID                            = "MAIL_INBOX_TAX_PAID",
 
   -- MAIL_INBOX_UPDATE = function(read, mailListKind)
-  MAIL_INBOX_UPDATE = "MAIL_INBOX_UPDATE",
+  MAIL_INBOX_UPDATE                              = "MAIL_INBOX_UPDATE",
 
   -- MAIL_RETURNED = function()
-  MAIL_RETURNED = "MAIL_RETURNED",
+  MAIL_RETURNED                                  = "MAIL_RETURNED",
 
   -- MAIL_SENT_SUCCESS = function()
-  MAIL_SENT_SUCCESS = "MAIL_SENT_SUCCESS",
+  MAIL_SENT_SUCCESS                              = "MAIL_SENT_SUCCESS",
 
   -- MAIL_SENTBOX_UPDATE = function(read, mailListKind)
-  MAIL_SENTBOX_UPDATE = "MAIL_SENTBOX_UPDATE",
+  MAIL_SENTBOX_UPDATE                            = "MAIL_SENTBOX_UPDATE",
 
   -- MAIL_WRITE_ITEM_UPDATE = function(index)
-  MAIL_WRITE_ITEM_UPDATE = "MAIL_WRITE_ITEM_UPDATE",
+  MAIL_WRITE_ITEM_UPDATE                         = "MAIL_WRITE_ITEM_UPDATE",
 
   -- MAP_EVENT_CHANGED = function()
-  MAP_EVENT_CHANGED = "MAP_EVENT_CHANGED",
+  MAP_EVENT_CHANGED                              = "MAP_EVENT_CHANGED",
 
   -- MATE_SKILL_LEARNED = function(mateType, text)
-  MATE_SKILL_LEARNED = "MATE_SKILL_LEARNED",
+  MATE_SKILL_LEARNED                             = "MATE_SKILL_LEARNED",
 
   -- MATE_STATE_UPDATE = function(mateType, stateIndex)
-  MATE_STATE_UPDATE = "MATE_STATE_UPDATE",
+  MATE_STATE_UPDATE                              = "MATE_STATE_UPDATE",
 
   -- MEGAPHONE_MESSAGE = function(show, channel, name, message, isMyMessage)
-  MEGAPHONE_MESSAGE = "MEGAPHONE_MESSAGE",
+  MEGAPHONE_MESSAGE                              = "MEGAPHONE_MESSAGE",
 
   -- MIA_MAIL_INBOX_ITEM_TAKEN = function()
-  MIA_MAIL_INBOX_ITEM_TAKEN = "MIA_MAIL_INBOX_ITEM_TAKEN",
+  MIA_MAIL_INBOX_ITEM_TAKEN                      = "MIA_MAIL_INBOX_ITEM_TAKEN",
 
   -- MIA_MAIL_INBOX_MONEY_TAKEN = function()
-  MIA_MAIL_INBOX_MONEY_TAKEN = "MIA_MAIL_INBOX_MONEY_TAKEN",
+  MIA_MAIL_INBOX_MONEY_TAKEN                     = "MIA_MAIL_INBOX_MONEY_TAKEN",
 
   -- MIA_MAIL_INBOX_TAX_PAID = function()
-  MIA_MAIL_INBOX_TAX_PAID = "MIA_MAIL_INBOX_TAX_PAID",
+  MIA_MAIL_INBOX_TAX_PAID                        = "MIA_MAIL_INBOX_TAX_PAID",
 
   -- MIA_MAIL_INBOX_UPDATE = function()
-  MIA_MAIL_INBOX_UPDATE = "MIA_MAIL_INBOX_UPDATE",
+  MIA_MAIL_INBOX_UPDATE                          = "MIA_MAIL_INBOX_UPDATE",
 
   -- MIA_MAIL_RETURNED = function()
-  MIA_MAIL_RETURNED = "MIA_MAIL_RETURNED",
+  MIA_MAIL_RETURNED                              = "MIA_MAIL_RETURNED",
 
   -- MIA_MAIL_SENT_SUCCESS = function()
-  MIA_MAIL_SENT_SUCCESS = "MIA_MAIL_SENT_SUCCESS",
+  MIA_MAIL_SENT_SUCCESS                          = "MIA_MAIL_SENT_SUCCESS",
 
   -- MIA_MAIL_SENTBOX_UPDATE = function()
-  MIA_MAIL_SENTBOX_UPDATE = "MIA_MAIL_SENTBOX_UPDATE",
+  MIA_MAIL_SENTBOX_UPDATE                        = "MIA_MAIL_SENTBOX_UPDATE",
 
   -- MIA_MAIL_WRITE_ITEM_UPDATE = function()
-  MIA_MAIL_WRITE_ITEM_UPDATE = "MIA_MAIL_WRITE_ITEM_UPDATE",
+  MIA_MAIL_WRITE_ITEM_UPDATE                     = "MIA_MAIL_WRITE_ITEM_UPDATE",
 
   -- MINE_AMOUNT = function()
-  MINE_AMOUNT = "MINE_AMOUNT",
+  MINE_AMOUNT                                    = "MINE_AMOUNT",
 
   -- MINI_SCOREBOARD_CHANGED = function(status, info)
-  MINI_SCOREBOARD_CHANGED = "MINI_SCOREBOARD_CHANGED",
+  MINI_SCOREBOARD_CHANGED                        = "MINI_SCOREBOARD_CHANGED",
 
   -- MODE_ACTIONS_UPDATE = function()
-  MODE_ACTIONS_UPDATE = "MODE_ACTIONS_UPDATE",
+  MODE_ACTIONS_UPDATE                            = "MODE_ACTIONS_UPDATE",
 
   -- MONEY_ACQUISITION_BY_LOOT = function(charName, moneyStr)
-  MONEY_ACQUISITION_BY_LOOT = "MONEY_ACQUISITION_BY_LOOT",
+  MONEY_ACQUISITION_BY_LOOT                      = "MONEY_ACQUISITION_BY_LOOT",
 
   -- MOUNT_BAG_UPDATE = function()
-  MOUNT_BAG_UPDATE = "MOUNT_BAG_UPDATE",
+  MOUNT_BAG_UPDATE                               = "MOUNT_BAG_UPDATE",
 
   -- MOUNT_PET = function(onePetBar, mateType, isMyPet)
-  MOUNT_PET = "MOUNT_PET",
+  MOUNT_PET                                      = "MOUNT_PET",
 
   -- MOUNT_SLOT_CHANGED = function()
-  MOUNT_SLOT_CHANGED = "MOUNT_SLOT_CHANGED",
+  MOUNT_SLOT_CHANGED                             = "MOUNT_SLOT_CHANGED",
 
   -- MOUSE_CLICK = function()
-  MOUSE_CLICK = "MOUSE_CLICK",
+  MOUSE_CLICK                                    = "MOUSE_CLICK",
 
   -- MOUSE_DOWN = function(widgetId)
-  MOUSE_DOWN = "MOUSE_DOWN",
+  MOUSE_DOWN                                     = "MOUSE_DOWN",
 
   -- MOUSE_UP = function()
-  MOUSE_UP = "MOUSE_UP",
+  MOUSE_UP                                       = "MOUSE_UP",
 
   -- MOVE_SPEED_CHANGE = function()
-  MOVE_SPEED_CHANGE = "MOVE_SPEED_CHANGE",
+  MOVE_SPEED_CHANGE                              = "MOVE_SPEED_CHANGE",
 
   -- MOVIE_ABORT = function()
-  MOVIE_ABORT = "MOVIE_ABORT",
+  MOVIE_ABORT                                    = "MOVIE_ABORT",
 
   -- MOVIE_LOAD = function()
-  MOVIE_LOAD = "MOVIE_LOAD",
+  MOVIE_LOAD                                     = "MOVIE_LOAD",
 
   -- MOVIE_START = function()
-  MOVIE_START = "MOVIE_START",
+  MOVIE_START                                    = "MOVIE_START",
 
   -- MOVIE_STOP = function()
-  MOVIE_STOP = "MOVIE_STOP",
+  MOVIE_STOP                                     = "MOVIE_STOP",
 
   -- MULTI_QUEST_CONTEXT_SELECT = function(targetNpc, qtype, useDirectingMode, targetId, interactionValue)
-  MULTI_QUEST_CONTEXT_SELECT = "MULTI_QUEST_CONTEXT_SELECT",
+  MULTI_QUEST_CONTEXT_SELECT                     = "MULTI_QUEST_CONTEXT_SELECT",
 
   -- MULTI_QUEST_CONTEXT_SELECT_LIST = function(questList)
-  MULTI_QUEST_CONTEXT_SELECT_LIST = "MULTI_QUEST_CONTEXT_SELECT_LIST",
+  MULTI_QUEST_CONTEXT_SELECT_LIST                = "MULTI_QUEST_CONTEXT_SELECT_LIST",
 
   -- NAME_TAG_MODE_CHANGED_MSG = function(changedNameTagMode)
-  NAME_TAG_MODE_CHANGED_MSG = "NAME_TAG_MODE_CHANGED_MSG",
+  NAME_TAG_MODE_CHANGED_MSG                      = "NAME_TAG_MODE_CHANGED_MSG",
 
   -- NATION_DOMINION = function(zoneGroupType, force)
-  NATION_DOMINION = "NATION_DOMINION",
+  NATION_DOMINION                                = "NATION_DOMINION",
 
   -- NAVI_MARK_POS_TO_MAP = function()
-  NAVI_MARK_POS_TO_MAP = "NAVI_MARK_POS_TO_MAP",
+  NAVI_MARK_POS_TO_MAP                           = "NAVI_MARK_POS_TO_MAP",
 
   -- NAVI_MARK_REMOVE = function()
-  NAVI_MARK_REMOVE = "NAVI_MARK_REMOVE",
+  NAVI_MARK_REMOVE                               = "NAVI_MARK_REMOVE",
 
   -- NEW_DAY_STARTED = function()
-  NEW_DAY_STARTED = "NEW_DAY_STARTED",
+  NEW_DAY_STARTED                                = "NEW_DAY_STARTED",
 
   -- NEW_SKILL_POINT = function(point)
-  NEW_SKILL_POINT = "NEW_SKILL_POINT",
+  NEW_SKILL_POINT                                = "NEW_SKILL_POINT",
 
   -- NEXT_SIEGE_INFO = function(siegeInfo)
-  NEXT_SIEGE_INFO = "NEXT_SIEGE_INFO",
+  NEXT_SIEGE_INFO                                = "NEXT_SIEGE_INFO",
 
   -- NOTICE_MESSAGE = function(noticeType, color, visibleTime, message, name)
-  NOTICE_MESSAGE = "NOTICE_MESSAGE",
+  NOTICE_MESSAGE                                 = "NOTICE_MESSAGE",
 
   -- NOTIFY_AUTH_ADVERTISING_MESSAGE = function(msg, remainTime)
-  NOTIFY_AUTH_ADVERTISING_MESSAGE = "NOTIFY_AUTH_ADVERTISING_MESSAGE",
+  NOTIFY_AUTH_ADVERTISING_MESSAGE                = "NOTIFY_AUTH_ADVERTISING_MESSAGE",
 
   -- NOTIFY_AUTH_BILLING_MESSAGE = function(msg, remainTime)
-  NOTIFY_AUTH_BILLING_MESSAGE = "NOTIFY_AUTH_BILLING_MESSAGE",
+  NOTIFY_AUTH_BILLING_MESSAGE                    = "NOTIFY_AUTH_BILLING_MESSAGE",
 
   -- NOTIFY_AUTH_DISCONNECTION_MESSAGE = function(msg, remainTime)
-  NOTIFY_AUTH_DISCONNECTION_MESSAGE = "NOTIFY_AUTH_DISCONNECTION_MESSAGE",
+  NOTIFY_AUTH_DISCONNECTION_MESSAGE              = "NOTIFY_AUTH_DISCONNECTION_MESSAGE",
 
   -- NOTIFY_AUTH_FATIGUE_MESSAGE = function(msg, remainTime)
-  NOTIFY_AUTH_FATIGUE_MESSAGE = "NOTIFY_AUTH_FATIGUE_MESSAGE",
+  NOTIFY_AUTH_FATIGUE_MESSAGE                    = "NOTIFY_AUTH_FATIGUE_MESSAGE",
 
   -- NOTIFY_AUTH_NOTICE_MESSAGE = function(message, visibleTime, needCountdown)
-  NOTIFY_AUTH_NOTICE_MESSAGE = "NOTIFY_AUTH_NOTICE_MESSAGE",
+  NOTIFY_AUTH_NOTICE_MESSAGE                     = "NOTIFY_AUTH_NOTICE_MESSAGE",
 
   -- NOTIFY_AUTH_TC_FATIGUE_MESSAGE = function(msg, remainTime)
-  NOTIFY_AUTH_TC_FATIGUE_MESSAGE = "NOTIFY_AUTH_TC_FATIGUE_MESSAGE",
+  NOTIFY_AUTH_TC_FATIGUE_MESSAGE                 = "NOTIFY_AUTH_TC_FATIGUE_MESSAGE",
 
   -- NOTIFY_WEB_TRANSFER_STATE = function(arg)
-  NOTIFY_WEB_TRANSFER_STATE = "NOTIFY_WEB_TRANSFER_STATE",
+  NOTIFY_WEB_TRANSFER_STATE                      = "NOTIFY_WEB_TRANSFER_STATE",
 
   -- NPC_CRAFT_ERROR = function()
-  NPC_CRAFT_ERROR = "NPC_CRAFT_ERROR",
+  NPC_CRAFT_ERROR                                = "NPC_CRAFT_ERROR",
 
   -- NPC_CRAFT_UPDATE = function()
-  NPC_CRAFT_UPDATE = "NPC_CRAFT_UPDATE",
+  NPC_CRAFT_UPDATE                               = "NPC_CRAFT_UPDATE",
 
   -- NPC_INTERACTION_END = function()
-  NPC_INTERACTION_END = "NPC_INTERACTION_END",
+  NPC_INTERACTION_END                            = "NPC_INTERACTION_END",
 
   -- NPC_INTERACTION_START = function(value, addedValue, npcId)
-  NPC_INTERACTION_START = "NPC_INTERACTION_START",
+  NPC_INTERACTION_START                          = "NPC_INTERACTION_START",
 
   -- NPC_UNIT_EQUIPMENT_CHANGED = function()
-  NPC_UNIT_EQUIPMENT_CHANGED = "UNIT_NPC_EQUIPMENT_CHANGED",
+  NPC_UNIT_EQUIPMENT_CHANGED                     = "UNIT_NPC_EQUIPMENT_CHANGED",
 
   -- NUONS_ARROW_SHOW = function(visible)
-  NUONS_ARROW_SHOW = "NUONS_ARROW_SHOW",
+  NUONS_ARROW_SHOW                               = "NUONS_ARROW_SHOW",
 
   -- NUONS_ARROW_UI_MSG = function(nuonsMsgInfo)
-  NUONS_ARROW_UI_MSG = "NUONS_ARROW_UI_MSG",
+  NUONS_ARROW_UI_MSG                             = "NUONS_ARROW_UI_MSG",
 
   -- NUONS_ARROW_UPDATE = function(data)
-  NUONS_ARROW_UPDATE = "NUONS_ARROW_UPDATE",
+  NUONS_ARROW_UPDATE                             = "NUONS_ARROW_UPDATE",
 
   -- ONE_AND_ONE_CHAT_ADD_MESSAGE = function(channelId, speakerName, message, isSpeakerGm)
-  ONE_AND_ONE_CHAT_ADD_MESSAGE = "ONE_AND_ONE_CHAT_ADD_MESSAGE",
+  ONE_AND_ONE_CHAT_ADD_MESSAGE                   = "ONE_AND_ONE_CHAT_ADD_MESSAGE",
 
   -- ONE_AND_ONE_CHAT_END = function(channelId)
-  ONE_AND_ONE_CHAT_END = "ONE_AND_ONE_CHAT_END",
+  ONE_AND_ONE_CHAT_END                           = "ONE_AND_ONE_CHAT_END",
 
   -- ONE_AND_ONE_CHAT_START = function(channelId, targetName)
-  ONE_AND_ONE_CHAT_START = "ONE_AND_ONE_CHAT_START",
+  ONE_AND_ONE_CHAT_START                         = "ONE_AND_ONE_CHAT_START",
 
   -- OPEN_ARS = function(number, timeout)
-  OPEN_ARS = "OPEN_ARS",
+  OPEN_ARS                                       = "OPEN_ARS",
 
   -- OPEN_CHAT = function()
-  OPEN_CHAT = "OPEN_CHAT",
+  OPEN_CHAT                                      = "OPEN_CHAT",
 
   -- OPEN_COMMON_FARM_INFO = function(commonFarmType)
-  OPEN_COMMON_FARM_INFO = "OPEN_COMMON_FARM_INFO",
+  OPEN_COMMON_FARM_INFO                          = "OPEN_COMMON_FARM_INFO",
 
   -- OPEN_CONFIG = function()
-  OPEN_CONFIG = "OPEN_CONFIG",
+  OPEN_CONFIG                                    = "OPEN_CONFIG",
 
   -- OPEN_CRAFT_ORDER_BOARD = function(tabName)
-  OPEN_CRAFT_ORDER_BOARD = "OPEN_CRAFT_ORDER_BOARD",
+  OPEN_CRAFT_ORDER_BOARD                         = "OPEN_CRAFT_ORDER_BOARD",
 
   -- OPEN_EMBLEM_IMPRINT_UI = function()
-  OPEN_EMBLEM_IMPRINT_UI = "OPEN_EMBLEM_IMPRINT_UI",
+  OPEN_EMBLEM_IMPRINT_UI                         = "OPEN_EMBLEM_IMPRINT_UI",
 
   -- OPEN_EMBLEM_UPLOAD_UI = function(doodad)
-  OPEN_EMBLEM_UPLOAD_UI = "OPEN_EMBLEM_UPLOAD_UI",
+  OPEN_EMBLEM_UPLOAD_UI                          = "OPEN_EMBLEM_UPLOAD_UI",
 
   -- OPEN_EXPEDITION_PORTAL_LIST = function(addPortal, interactionDoodad, expeditionOwner)
-  OPEN_EXPEDITION_PORTAL_LIST = "OPEN_EXPEDITION_PORTAL_LIST",
+  OPEN_EXPEDITION_PORTAL_LIST                    = "OPEN_EXPEDITION_PORTAL_LIST",
 
   -- OPEN_MUSIC_SHEET = function(isShow, itemIdString, isWide)
-  OPEN_MUSIC_SHEET = "OPEN_MUSIC_SHEET",
+  OPEN_MUSIC_SHEET                               = "OPEN_MUSIC_SHEET",
 
   -- OPEN_NAVI_DOODAD_NAMING_DIALOG = function()
-  OPEN_NAVI_DOODAD_NAMING_DIALOG = "OPEN_NAVI_DOODAD_NAMING_DIALOG",
+  OPEN_NAVI_DOODAD_NAMING_DIALOG                 = "OPEN_NAVI_DOODAD_NAMING_DIALOG",
 
   -- OPEN_OTP = function(currentTry, maxTry, onTime)
-  OPEN_OTP = "OPEN_OTP",
+  OPEN_OTP                                       = "OPEN_OTP",
 
   -- OPEN_PAPER = function(type, idx)
-  OPEN_PAPER = "OPEN_PAPER",
+  OPEN_PAPER                                     = "OPEN_PAPER",
 
   -- OPEN_PCCERT = function(currentTry, maxTry, onTime)
-  OPEN_PCCERT = "OPEN_PCCERT",
+  OPEN_PCCERT                                    = "OPEN_PCCERT",
 
   -- OPEN_PROMOTION_EVENT_URL = function(url)
-  OPEN_PROMOTION_EVENT_URL = "OPEN_PROMOTION_EVENT_URL",
+  OPEN_PROMOTION_EVENT_URL                       = "OPEN_PROMOTION_EVENT_URL",
 
   -- OPEN_SECURE_CARD = function(secureCardIndex, currentTry, onTime)
-  OPEN_SECURE_CARD = "OPEN_SECURE_CARD",
+  OPEN_SECURE_CARD                               = "OPEN_SECURE_CARD",
 
   -- OPEN_WORLD_QUEUE = function()
-  OPEN_WORLD_QUEUE = "OPEN_WORLD_QUEUE",
+  OPEN_WORLD_QUEUE                               = "OPEN_WORLD_QUEUE",
 
   -- OPTIMIZATION_BUTTON_MESSAGE = function() -- Crash
   -- OPTIMIZATION_BUTTON_MESSAGE = "OPTIMIZATION_BUTTON_MESSAGE", -- Crash
 
   -- OPTIMIZATION_RESULT_MESSAGE = function(activated)
-  OPTIMIZATION_RESULT_MESSAGE = "OPTIMIZATION_RESULT_MESSAGE",
+  OPTIMIZATION_RESULT_MESSAGE                    = "OPTIMIZATION_RESULT_MESSAGE",
 
   -- OPTION_RESET = function()
-  OPTION_RESET = "OPTION_RESET",
+  OPTION_RESET                                   = "OPTION_RESET",
 
   -- PASSENGER_MOUNT_PET = function(onePetBar, mateType)
-  PASSENGER_MOUNT_PET = "PASSENGER_MOUNT_PET",
+  PASSENGER_MOUNT_PET                            = "PASSENGER_MOUNT_PET",
 
   -- PASSENGER_UNMOUNT_PET = function(onePetBar, mateType)
-  PASSENGER_UNMOUNT_PET = "PASSENGER_UNMOUNT_PET",
+  PASSENGER_UNMOUNT_PET                          = "PASSENGER_UNMOUNT_PET",
 
   -- PET_AUTO_SKILL_CHANGED = function(onePetBar, mateType)
-  PET_AUTO_SKILL_CHANGED = "PET_AUTO_SKILL_CHANGED",
+  PET_AUTO_SKILL_CHANGED                         = "PET_AUTO_SKILL_CHANGED",
 
   -- PET_FOLLOWING_MASTER = function(onePetBar, mateType)
-  PET_FOLLOWING_MASTER = "PET_FOLLOWING_MASTER",
+  PET_FOLLOWING_MASTER                           = "PET_FOLLOWING_MASTER",
 
   -- PET_STOP_BY_MASTER = function(onePetBar, mateType)
-  PET_STOP_BY_MASTER = "PET_STOP_BY_MASTER",
+  PET_STOP_BY_MASTER                             = "PET_STOP_BY_MASTER",
 
   -- PETMATE_BOUND = function()
-  PETMATE_BOUND = "PETMATE_BOUND",
+  PETMATE_BOUND                                  = "PETMATE_BOUND",
 
   -- PETMATE_UNBOUND = function()
-  PETMATE_UNBOUND = "PETMATE_UNBOUND",
+  PETMATE_UNBOUND                                = "PETMATE_UNBOUND",
 
   -- PLAYER_AA_POINT = function(change, changeStr, itemTaskType, info)
-  PLAYER_AA_POINT = "PLAYER_AA_POINT",
+  PLAYER_AA_POINT                                = "PLAYER_AA_POINT",
 
   -- PLAYER_ABILITY_LEVEL_CHANGED = function()
-  PLAYER_ABILITY_LEVEL_CHANGED = "PLAYER_ABILITY_LEVEL_CHANGED",
+  PLAYER_ABILITY_LEVEL_CHANGED                   = "PLAYER_ABILITY_LEVEL_CHANGED",
 
   -- PLAYER_BANK_AA_POINT = function()
-  PLAYER_BANK_AA_POINT = "PLAYER_BANK_AA_POINT",
+  PLAYER_BANK_AA_POINT                           = "PLAYER_BANK_AA_POINT",
 
   -- PLAYER_BANK_MONEY = function()
-  PLAYER_BANK_MONEY = "PLAYER_BANK_MONEY",
+  PLAYER_BANK_MONEY                              = "PLAYER_BANK_MONEY",
 
   -- PLAYER_BM_POINT = function(oldBmPoint)
-  PLAYER_BM_POINT = "PLAYER_BM_POINT",
+  PLAYER_BM_POINT                                = "PLAYER_BM_POINT",
 
   -- PLAYER_GEAR_POINT = function()
-  PLAYER_GEAR_POINT = "PLAYER_GEAR_POINT",
+  PLAYER_GEAR_POINT                              = "PLAYER_GEAR_POINT",
 
   -- PLAYER_HONOR_POINT = function(amount, amountStr, isCombatInHonorPointWar)
-  PLAYER_HONOR_POINT = "PLAYER_HONOR_POINT",
+  PLAYER_HONOR_POINT                             = "PLAYER_HONOR_POINT",
 
   -- PLAYER_HONOR_POINT_CHANGED_IN_HPW = function(amount)
-  PLAYER_HONOR_POINT_CHANGED_IN_HPW = "PLAYER_HONOR_POINT_CHANGED_IN_HPW",
+  PLAYER_HONOR_POINT_CHANGED_IN_HPW              = "PLAYER_HONOR_POINT_CHANGED_IN_HPW",
 
   -- PLAYER_JURY_POINT = function()
-  PLAYER_JURY_POINT = "PLAYER_JURY_POINT",
+  PLAYER_JURY_POINT                              = "PLAYER_JURY_POINT",
 
   -- PLAYER_LEADERSHIP_POINT = function(amount, amountStr)
-  PLAYER_LEADERSHIP_POINT = "PLAYER_LEADERSHIP_POINT",
+  PLAYER_LEADERSHIP_POINT                        = "PLAYER_LEADERSHIP_POINT",
 
   -- PLAYER_LIVING_POINT = function(amount, amountStr)
-  PLAYER_LIVING_POINT = "PLAYER_LIVING_POINT",
+  PLAYER_LIVING_POINT                            = "PLAYER_LIVING_POINT",
 
   -- PLAYER_MONEY = function(change, changeStr, itemTaskType, info)
-  PLAYER_MONEY = "PLAYER_MONEY",
+  PLAYER_MONEY                                   = "PLAYER_MONEY",
 
   -- PLAYER_RESURRECTED = function()
-  PLAYER_RESURRECTED = "PLAYER_RESURRECTED",
+  PLAYER_RESURRECTED                             = "PLAYER_RESURRECTED",
 
   -- PLAYER_RESURRECTION = function(name)
-  PLAYER_RESURRECTION = "PLAYER_RESURRECTION",
+  PLAYER_RESURRECTION                            = "PLAYER_RESURRECTION",
 
   -- PLAYER_VISUAL_RACE = function()
-  PLAYER_VISUAL_RACE = "PLAYER_VISUAL_RACE",
+  PLAYER_VISUAL_RACE                             = "PLAYER_VISUAL_RACE",
 
   -- POST_CRAFT_ORDER = function(result)
-  POST_CRAFT_ORDER = "POST_CRAFT_ORDER",
+  POST_CRAFT_ORDER                               = "POST_CRAFT_ORDER",
 
   -- PRELIMINARY_EQUIP_UPDATE = function()
-  PRELIMINARY_EQUIP_UPDATE = "PRELIMINARY_EQUIP_UPDATE",
+  PRELIMINARY_EQUIP_UPDATE                       = "PRELIMINARY_EQUIP_UPDATE",
 
   -- PREMIUM_FIRST_BUY_BONUS = function()
-  PREMIUM_FIRST_BUY_BONUS = "PREMIUM_FIRST_BUY_BONUS",
+  PREMIUM_FIRST_BUY_BONUS                        = "PREMIUM_FIRST_BUY_BONUS",
 
   -- PREMIUM_GRADE_CHANGE = function(prevPremiumGrade, presentPremiumGrade)
-  PREMIUM_GRADE_CHANGE = "PREMIUM_GRADE_CHANGE",
+  PREMIUM_GRADE_CHANGE                           = "PREMIUM_GRADE_CHANGE",
 
   -- PREMIUM_LABORPOWER_CHANGED = function(onlineDiff, offlineDiff)
-  PREMIUM_LABORPOWER_CHANGED = "PREMIUM_LABORPOWER_CHANGED",
+  PREMIUM_LABORPOWER_CHANGED                     = "PREMIUM_LABORPOWER_CHANGED",
 
   -- PREMIUM_POINT_CHANGE = function()
-  PREMIUM_POINT_CHANGE = "PREMIUM_POINT_CHANGE",
+  PREMIUM_POINT_CHANGE                           = "PREMIUM_POINT_CHANGE",
 
   -- PREMIUM_SERVICE_BUY_RESULT = function(err)
-  PREMIUM_SERVICE_BUY_RESULT = "PREMIUM_SERVICE_BUY_RESULT",
+  PREMIUM_SERVICE_BUY_RESULT                     = "PREMIUM_SERVICE_BUY_RESULT",
 
   -- PREMIUM_SERVICE_LIST_UPDATED = function()
-  PREMIUM_SERVICE_LIST_UPDATED = "PREMIUM_SERVICE_LIST_UPDATED",
+  PREMIUM_SERVICE_LIST_UPDATED                   = "PREMIUM_SERVICE_LIST_UPDATED",
 
   -- PROCESS_CRAFT_ORDER = function(result, processType)
-  PROCESS_CRAFT_ORDER = "PROCESS_CRAFT_ORDER",
+  PROCESS_CRAFT_ORDER                            = "PROCESS_CRAFT_ORDER",
 
   -- PROGRESS_TALK_QUEST_CONTEXT = function(qtype, useDirectingMode, npcId, doodadId)
-  PROGRESS_TALK_QUEST_CONTEXT = "PROGRESS_TALK_QUEST_CONTEXT",
+  PROGRESS_TALK_QUEST_CONTEXT                    = "PROGRESS_TALK_QUEST_CONTEXT",
 
   -- QUEST_CHAT_LET_IT_DONE = function()
-  QUEST_CHAT_LET_IT_DONE = "QUEST_CHAT_LET_IT_DONE",
+  QUEST_CHAT_LET_IT_DONE                         = "QUEST_CHAT_LET_IT_DONE",
 
   -- QUEST_CHAT_RESTART = function()
-  QUEST_CHAT_RESTART = "QUEST_CHAT_RESTART",
+  QUEST_CHAT_RESTART                             = "QUEST_CHAT_RESTART",
 
   -- QUEST_CONTEXT_CONDITION_EVENT = function(objText, condition)
-  QUEST_CONTEXT_CONDITION_EVENT = "QUEST_CONTEXT_CONDITION_EVENT",
+  QUEST_CONTEXT_CONDITION_EVENT                  = "QUEST_CONTEXT_CONDITION_EVENT",
 
   -- QUEST_CONTEXT_OBJECTIVE_EVENT = function(objText)
-  QUEST_CONTEXT_OBJECTIVE_EVENT = "QUEST_CONTEXT_OBJECTIVE_EVENT",
+  QUEST_CONTEXT_OBJECTIVE_EVENT                  = "QUEST_CONTEXT_OBJECTIVE_EVENT",
 
   -- QUEST_CONTEXT_UPDATED = function(qType, status)
-  QUEST_CONTEXT_UPDATED = "QUEST_CONTEXT_UPDATED",
+  QUEST_CONTEXT_UPDATED                          = "QUEST_CONTEXT_UPDATED",
 
   -- QUEST_DIRECTING_MODE_END = function()
-  QUEST_DIRECTING_MODE_END = "QUEST_DIRECTING_MODE_END",
+  QUEST_DIRECTING_MODE_END                       = "QUEST_DIRECTING_MODE_END",
 
   -- QUEST_DIRECTING_MODE_HOT_KEY = function(arg)
-  QUEST_DIRECTING_MODE_HOT_KEY = "QUEST_DIRECTING_MODE_HOT_KEY",
+  QUEST_DIRECTING_MODE_HOT_KEY                   = "QUEST_DIRECTING_MODE_HOT_KEY",
 
   -- QUEST_ERROR_INFO = function(errNum, qtype)
-  QUEST_ERROR_INFO = "QUEST_ERROR_INFO",
+  QUEST_ERROR_INFO                               = "QUEST_ERROR_INFO",
 
   -- QUEST_HIDDEN_COMPLETE = function(qtype)
-  QUEST_HIDDEN_COMPLETE = "QUEST_HIDDEN_COMPLETE",
+  QUEST_HIDDEN_COMPLETE                          = "QUEST_HIDDEN_COMPLETE",
 
   -- QUEST_HIDDEN_READY = function(qtype)
-  QUEST_HIDDEN_READY = "QUEST_HIDDEN_READY",
+  QUEST_HIDDEN_READY                             = "QUEST_HIDDEN_READY",
 
   -- QUEST_LEFT_TIME_UPDATED = function(qtype, leftTime)
-  QUEST_LEFT_TIME_UPDATED = "QUEST_LEFT_TIME_UPDATED",
+  QUEST_LEFT_TIME_UPDATED                        = "QUEST_LEFT_TIME_UPDATED",
 
   -- QUEST_MSG = function(arg1, arg2)
-  QUEST_MSG = "QUEST_MSG",
+  QUEST_MSG                                      = "QUEST_MSG",
 
   -- QUEST_NOTIFIER_START = function()
-  QUEST_NOTIFIER_START = "QUEST_NOTIFIER_START",
+  QUEST_NOTIFIER_START                           = "QUEST_NOTIFIER_START",
 
   -- QUEST_QUICK_CLOSE_EVENT = function(qtype)
-  QUEST_QUICK_CLOSE_EVENT = "QUEST_QUICK_CLOSE_EVENT",
+  QUEST_QUICK_CLOSE_EVENT                        = "QUEST_QUICK_CLOSE_EVENT",
 
   -- RAID_APPLICANT_LIST = function(data)
-  RAID_APPLICANT_LIST= "RAID_APPLICANT_LIST",
+  RAID_APPLICANT_LIST                            = "RAID_APPLICANT_LIST",
 
   -- RAID_FRAME_SIMPLE_VIEW = function(simple)
-  RAID_FRAME_SIMPLE_VIEW = "RAID_FRAME_SIMPLE_VIEW",
+  RAID_FRAME_SIMPLE_VIEW                         = "RAID_FRAME_SIMPLE_VIEW",
 
   -- RAID_RECRUIT_DETAIL = function(data)
-  RAID_RECRUIT_DETAIL = "RAID_RECRUIT_DETAIL",
+  RAID_RECRUIT_DETAIL                            = "RAID_RECRUIT_DETAIL",
 
   -- RAID_RECRUIT_HUD = function(infos)
-  RAID_RECRUIT_HUD = "RAID_RECRUIT_HUD",
+  RAID_RECRUIT_HUD                               = "RAID_RECRUIT_HUD",
 
   -- RAID_RECRUIT_LIST = function(data)
-  RAID_RECRUIT_LIST  = "RAID_RECRUIT_LIST",
+  RAID_RECRUIT_LIST                              = "RAID_RECRUIT_LIST",
 
   -- RANDOM_SHOP_INFO = function(isHide, isdailyReset)
-  RANDOM_SHOP_INFO = "RANDOM_SHOP_INFO",
+  RANDOM_SHOP_INFO                               = "RANDOM_SHOP_INFO",
 
   -- RANDOM_SHOP_OPEN_HOT_KEY = function() -- Crash
   -- RANDOM_SHOP_OPEN_HOT_KEY = "RANDOM_SHOP_OPEN_HOT_KEY", -- Crash
 
   -- RANDOM_SHOP_UPDATE = function()
-  RANDOM_SHOP_UPDATE = "RANDOM_SHOP_UPDATE",
+  RANDOM_SHOP_UPDATE                             = "RANDOM_SHOP_UPDATE",
 
   -- RANK_ALARM_MSG = function(rankType, msg)
-  RANK_ALARM_MSG = "RANK_ALARM_MSG",
+  RANK_ALARM_MSG                                 = "RANK_ALARM_MSG",
 
   -- RANK_DATA_RECEIVED = function()
-  RANK_DATA_RECEIVED = "RANK_DATA_RECEIVED",
+  RANK_DATA_RECEIVED                             = "RANK_DATA_RECEIVED",
 
   -- RANK_LOCK = function()
-  RANK_LOCK = "RANK_LOCK",
+  RANK_LOCK                                      = "RANK_LOCK",
 
   -- RANK_PERSONAL_DATA = function()
-  RANK_PERSONAL_DATA = "RANK_PERSONAL_DATA",
+  RANK_PERSONAL_DATA                             = "RANK_PERSONAL_DATA",
 
   -- RANK_RANKER_APPEARANCE = function(charID)
-  RANK_RANKER_APPEARANCE = "RANK_RANKER_APPEARANCE",
+  RANK_RANKER_APPEARANCE                         = "RANK_RANKER_APPEARANCE",
 
   -- RANK_REWARD_SNAPSHOTS = function(rankType, divisionId)
-  RANK_REWARD_SNAPSHOTS = "RANK_REWARD_SNAPSHOTS",
+  RANK_REWARD_SNAPSHOTS                          = "RANK_REWARD_SNAPSHOTS",
 
   -- RANK_SEASON_RESULT_RECEIVED = function()
-  RANK_SEASON_RESULT_RECEIVED = "RANK_SEASON_RESULT_RECEIVED",
+  RANK_SEASON_RESULT_RECEIVED                    = "RANK_SEASON_RESULT_RECEIVED",
 
   -- RANK_SNAPSHOTS = function(rankType, divisionId)
-  RANK_SNAPSHOTS = "RANK_SNAPSHOTS",
+  RANK_SNAPSHOTS                                 = "RANK_SNAPSHOTS",
 
   -- RANK_UNLOCK = function()
-  RANK_UNLOCK = "RANK_UNLOCK",
+  RANK_UNLOCK                                    = "RANK_UNLOCK",
 
   -- READY_TO_CONNECT_WORLD = function()
-  READY_TO_CONNECT_WORLD = "READY_TO_CONNECT_WORLD",
+  READY_TO_CONNECT_WORLD                         = "READY_TO_CONNECT_WORLD",
 
   -- RECOVERABLE_EXP = function(stringId, expNum)
-  RECOVERABLE_EXP = "RECOVERABLE_EXP",
+  RECOVERABLE_EXP                                = "RECOVERABLE_EXP",
 
   -- RECOVERED_EXP = function(stringId, expNum)
-  RECOVERED_EXP = "RECOVERED_EXP",
+  RECOVERED_EXP                                  = "RECOVERED_EXP",
 
   -- REENTRY_NOTIFY_DISABLE = function()
-  REENTRY_NOTIFY_DISABLE = "REENTRY_NOTIFY_DISABLE",
+  REENTRY_NOTIFY_DISABLE                         = "REENTRY_NOTIFY_DISABLE",
 
   -- REENTRY_NOTIFY_ENABLE = function(param)
-  REENTRY_NOTIFY_ENABLE = "REENTRY_NOTIFY_ENABLE",
+  REENTRY_NOTIFY_ENABLE                          = "REENTRY_NOTIFY_ENABLE",
 
   -- REFRESH_COMBAT_RESOURCE = function(resetBar, groupType, resourceType, point)
-  REFRESH_COMBAT_RESOURCE = "REFRESH_COMBAT_RESOURCE",
+  REFRESH_COMBAT_RESOURCE                        = "REFRESH_COMBAT_RESOURCE",
 
   -- REFRESH_COMBAT_RESOURCE_UPDATE_TIME = function(updateReesourceType, nowTime, show)
-  REFRESH_COMBAT_RESOURCE_UPDATE_TIME = "REFRESH_COMBAT_RESOURCE_UPDATE_TIME",
+  REFRESH_COMBAT_RESOURCE_UPDATE_TIME            = "REFRESH_COMBAT_RESOURCE_UPDATE_TIME",
 
   -- REFRESH_SQUAD_LIST = function()
-  REFRESH_SQUAD_LIST = "REFRESH_SQUAD_LIST",
+  REFRESH_SQUAD_LIST                             = "REFRESH_SQUAD_LIST",
 
   -- REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE = function()
-  REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE = "REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE",
+  REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE     =
+  "REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE",
 
   -- REFRESH_WORLD_QUEUE = function()
-  REFRESH_WORLD_QUEUE = "REFRESH_WORLD_QUEUE",
+  REFRESH_WORLD_QUEUE                            = "REFRESH_WORLD_QUEUE",
 
   -- RELOAD_CASH = function(money)
-  RELOAD_CASH = "RELOAD_CASH",
+  RELOAD_CASH                                    = "RELOAD_CASH",
 
   -- REMOVE_BOSS_TELESCOPE_INFO = function(arg)
-  REMOVE_BOSS_TELESCOPE_INFO = "REMOVE_BOSS_TELESCOPE_INFO",
+  REMOVE_BOSS_TELESCOPE_INFO                     = "REMOVE_BOSS_TELESCOPE_INFO",
 
   -- REMOVE_CARRYING_BACKPACK_SLAVE_INFO = function(arg)
-  REMOVE_CARRYING_BACKPACK_SLAVE_INFO = "REMOVE_CARRYING_BACKPACK_SLAVE_INFO",
+  REMOVE_CARRYING_BACKPACK_SLAVE_INFO            = "REMOVE_CARRYING_BACKPACK_SLAVE_INFO",
 
   -- REMOVE_FISH_SCHOOL_INFO = function(arg)
-  REMOVE_FISH_SCHOOL_INFO = "REMOVE_FISH_SCHOOL_INFO",
+  REMOVE_FISH_SCHOOL_INFO                        = "REMOVE_FISH_SCHOOL_INFO",
 
   -- REMOVE_GIVEN_QUEST_INFO = function(arg1, arg2)
-  REMOVE_GIVEN_QUEST_INFO = "REMOVE_GIVEN_QUEST_INFO",
+  REMOVE_GIVEN_QUEST_INFO                        = "REMOVE_GIVEN_QUEST_INFO",
 
   -- REMOVE_NOTIFY_QUEST_INFO = function(arg)
-  REMOVE_NOTIFY_QUEST_INFO = "REMOVE_NOTIFY_QUEST_INFO",
+  REMOVE_NOTIFY_QUEST_INFO                       = "REMOVE_NOTIFY_QUEST_INFO",
 
   -- REMOVE_PING = function()
-  REMOVE_PING = "REMOVE_PING",
+  REMOVE_PING                                    = "REMOVE_PING",
 
   -- REMOVE_SHIP_TELESCOPE_INFO = function(arg)
-  REMOVE_SHIP_TELESCOPE_INFO = "REMOVE_SHIP_TELESCOPE_INFO",
+  REMOVE_SHIP_TELESCOPE_INFO                     = "REMOVE_SHIP_TELESCOPE_INFO",
 
   -- REMOVE_TRANSFER_TELESCOPE_INFO = function(arg)
-  REMOVE_TRANSFER_TELESCOPE_INFO = "REMOVE_TRANSFER_TELESCOPE_INFO",
+  REMOVE_TRANSFER_TELESCOPE_INFO                 = "REMOVE_TRANSFER_TELESCOPE_INFO",
 
   -- REMOVED_ITEM = function(itemLinkText, itemCount, removeState, itemTaskType, tradeOtherName)
-  REMOVED_ITEM = "REMOVED_ITEM",
+  REMOVED_ITEM                                   = "REMOVED_ITEM",
 
   -- RENAME_CHARACTER_FAILED = function(key)
-  RENAME_CHARACTER_FAILED = "RENAME_CHARACTER_FAILED",
+  RENAME_CHARACTER_FAILED                        = "RENAME_CHARACTER_FAILED",
 
   -- RENAME_PORTAL = function()
-  RENAME_PORTAL = "RENAME_PORTAL",
+  RENAME_PORTAL                                  = "RENAME_PORTAL",
 
   -- RENEW_ITEM_SUCCEEDED = function()
-  RENEW_ITEM_SUCCEEDED = "RENEW_ITEM_SUCCEEDED",
+  RENEW_ITEM_SUCCEEDED                           = "RENEW_ITEM_SUCCEEDED",
 
   -- REPORT_BAD_USER_UPDATE = function()
-  REPORT_BAD_USER_UPDATE = "BAD_USER_LIST_UPDATE",
+  REPORT_BAD_USER_UPDATE                         = "BAD_USER_LIST_UPDATE",
 
   -- REPORT_CRIME = function(doodadName, locationName)
-  REPORT_CRIME = "REPORT_CRIME",
+  REPORT_CRIME                                   = "REPORT_CRIME",
 
   -- REPRESENT_CHARACTER_RESULT = function(isLoginLoad, success, isClearRequest)
-  REPRESENT_CHARACTER_RESULT = "REPRESENT_CHARACTER_RESULT",
+  REPRESENT_CHARACTER_RESULT                     = "REPRESENT_CHARACTER_RESULT",
 
   -- REPUTATION_GIVEN = function()
-  REPUTATION_GIVEN = "REPUTATION_GIVEN",
+  REPUTATION_GIVEN                               = "REPUTATION_GIVEN",
 
   -- REQUIRE_DELAY_TO_CHAT = function(channel, delay, remain)
-  REQUIRE_DELAY_TO_CHAT = "REQUIRE_DELAY_TO_CHAT",
+  REQUIRE_DELAY_TO_CHAT                          = "REQUIRE_DELAY_TO_CHAT",
 
   -- REQUIRE_ITEM_TO_CHAT = function(channel)
-  REQUIRE_ITEM_TO_CHAT = "REQUIRE_ITEM_TO_CHAT",
+  REQUIRE_ITEM_TO_CHAT                           = "REQUIRE_ITEM_TO_CHAT",
 
   -- RESET_INGAME_SHOP_MODELVIEW = function()
-  RESET_INGAME_SHOP_MODELVIEW = "RESET_INGAME_SHOP_MODELVIEW",
+  RESET_INGAME_SHOP_MODELVIEW                    = "RESET_INGAME_SHOP_MODELVIEW",
 
   -- RESIDENT_BOARD_TYPE = function(boardType)
-  RESIDENT_BOARD_TYPE = "RESIDENT_BOARD_TYPE",
+  RESIDENT_BOARD_TYPE                            = "RESIDENT_BOARD_TYPE",
 
   -- RESIDENT_HOUSING_TRADE_LIST = function(infos, rownum, filter, searchword, refresh)
-  RESIDENT_HOUSING_TRADE_LIST = "RESIDENT_HOUSING_TRADE_LIST",
+  RESIDENT_HOUSING_TRADE_LIST                    = "RESIDENT_HOUSING_TRADE_LIST",
 
   -- RESIDENT_MEMBER_LIST = function(total, start, refresh, members)
-  RESIDENT_MEMBER_LIST = "RESIDENT_MEMBER_LIST",
+  RESIDENT_MEMBER_LIST                           = "RESIDENT_MEMBER_LIST",
 
   -- RESIDENT_SERVICE_POINT_CHANGED = function(zoneGroupName, amount, total)
-  RESIDENT_SERVICE_POINT_CHANGED = "RESIDENT_SERVICE_POINT_CHANGED",
+  RESIDENT_SERVICE_POINT_CHANGED                 = "RESIDENT_SERVICE_POINT_CHANGED",
 
   -- RESIDENT_TOWNHALL = function(info)
-  RESIDENT_TOWNHALL = "RESIDENT_TOWNHALL",
+  RESIDENT_TOWNHALL                              = "RESIDENT_TOWNHALL",
 
   -- RESIDENT_ZONE_STATE_CHANGE = function()
-  RESIDENT_ZONE_STATE_CHANGE = "RESIDENT_ZONE_STATE_CHANGE",
+  RESIDENT_ZONE_STATE_CHANGE                     = "RESIDENT_ZONE_STATE_CHANGE",
 
   -- ROLLBACK_FAVORITE_CRAFTS = function(datas)
-  ROLLBACK_FAVORITE_CRAFTS = "ROLLBACK_FAVORITE_CRAFTS",
+  ROLLBACK_FAVORITE_CRAFTS                       = "ROLLBACK_FAVORITE_CRAFTS",
 
   -- RULING_CLOSED = function()
-  RULING_CLOSED = "RULING_CLOSED",
+  RULING_CLOSED                                  = "RULING_CLOSED",
 
   -- RULING_STATUS = function(count, total, sentenceType, sentenceTime)
-  RULING_STATUS = "RULING_STATUS",
+  RULING_STATUS                                  = "RULING_STATUS",
 
   -- SAVE_PORTAL = function()
-  SAVE_PORTAL = "SAVE_PORTAL",
+  SAVE_PORTAL                                    = "SAVE_PORTAL",
 
   -- SAVE_SCREEN_SHOT = function(path)
-  SAVE_SCREEN_SHOT = "SAVE_SCREEN_SHOT",
+  SAVE_SCREEN_SHOT                               = "SAVE_SCREEN_SHOT",
 
   -- SCALE_ENCHANT_BROADCAST = function(characterName, resultCode, itemLink, oldScale, newScale)
-  SCALE_ENCHANT_BROADCAST = "SCALE_ENCHANT_BROADCAST",
+  SCALE_ENCHANT_BROADCAST                        = "SCALE_ENCHANT_BROADCAST",
 
   -- SCHEDULE_ITEM_SENT = function()
-  SCHEDULE_ITEM_SENT = "SCHEDULE_ITEM_SENT",
+  SCHEDULE_ITEM_SENT                             = "SCHEDULE_ITEM_SENT",
 
   -- SCHEDULE_ITEM_UPDATED = function()
-  SCHEDULE_ITEM_UPDATED = "SCHEDULE_ITEM_UPDATED",
+  SCHEDULE_ITEM_UPDATED                          = "SCHEDULE_ITEM_UPDATED",
 
   -- SECOND_PASSWORD_ACCOUNT_LOCKED = function()
-  SECOND_PASSWORD_ACCOUNT_LOCKED = "SECOND_PASSWORD_ACCOUNT_LOCKED",
+  SECOND_PASSWORD_ACCOUNT_LOCKED                 = "SECOND_PASSWORD_ACCOUNT_LOCKED",
 
   -- SECOND_PASSWORD_CHANGE_COMPLETED = function(result)
-  SECOND_PASSWORD_CHANGE_COMPLETED = "SECOND_PASSWORD_CHANGE_COMPLETED",
+  SECOND_PASSWORD_CHANGE_COMPLETED               = "SECOND_PASSWORD_CHANGE_COMPLETED",
 
   -- SECOND_PASSWORD_CHECK_COMPLETED = function(success)
-  SECOND_PASSWORD_CHECK_COMPLETED = "SECOND_PASSWORD_CHECK_COMPLETED",
+  SECOND_PASSWORD_CHECK_COMPLETED                = "SECOND_PASSWORD_CHECK_COMPLETED",
 
   -- SECOND_PASSWORD_CHECK_OVER_FAILED = function()
-  SECOND_PASSWORD_CHECK_OVER_FAILED = "SECOND_PASSWORD_CHECK_OVER_FAILED",
+  SECOND_PASSWORD_CHECK_OVER_FAILED              = "SECOND_PASSWORD_CHECK_OVER_FAILED",
 
   -- SECOND_PASSWORD_CLEAR_COMPLETED = function(success)
-  SECOND_PASSWORD_CLEAR_COMPLETED = "SECOND_PASSWORD_CLEAR_COMPLETED",
+  SECOND_PASSWORD_CLEAR_COMPLETED                = "SECOND_PASSWORD_CLEAR_COMPLETED",
 
   -- SECOND_PASSWORD_CREATION_COMPLETED = function(success)
-  SECOND_PASSWORD_CREATION_COMPLETED = "SECOND_PASSWORD_CREATION_COMPLETED",
+  SECOND_PASSWORD_CREATION_COMPLETED             = "SECOND_PASSWORD_CREATION_COMPLETED",
 
   -- SELECT_SQUAD_LIST = function(data)
-  SELECT_SQUAD_LIST = "SELECT_SQUAD_LIST",
+  SELECT_SQUAD_LIST                              = "SELECT_SQUAD_LIST",
 
   -- SELECTED_INSTANCE_DIFFICULT = function(difficult)
-  SELECTED_INSTANCE_DIFFICULT = "SELECTED_INSTANCE_DIFFICULT",
+  SELECTED_INSTANCE_DIFFICULT                    = "SELECTED_INSTANCE_DIFFICULT",
 
   -- SELL_SPECIALTY = function(text)
-  SELL_SPECIALTY = "SELL_SPECIALTY",
+  SELL_SPECIALTY                                 = "SELL_SPECIALTY",
 
   -- SELL_SPECIALTY_CONTENT_INFO = function(list)
-  SELL_SPECIALTY_CONTENT_INFO = "SELL_SPECIALTY_CONTENT_INFO",
+  SELL_SPECIALTY_CONTENT_INFO                    = "SELL_SPECIALTY_CONTENT_INFO",
 
   -- SENSITIVE_OPERATION_VERIFY = function(seqNum, url)
-  SENSITIVE_OPERATION_VERIFY = "SENSITIVE_OPERATION_VERIFY",
+  SENSITIVE_OPERATION_VERIFY                     = "SENSITIVE_OPERATION_VERIFY",
 
   -- SENSITIVE_OPERATION_VERIFY_SUCCESS = function()
-  SENSITIVE_OPERATION_VERIFY_SUCCESS = "SENSITIVE_OPERATION_VERIFY_SUCCESS",
+  SENSITIVE_OPERATION_VERIFY_SUCCESS             = "SENSITIVE_OPERATION_VERIFY_SUCCESS",
 
   -- SET_DEFAULT_EXPAND_RATIO = function(isSameZone)
-  SET_DEFAULT_EXPAND_RATIO = "SET_DEFAULT_EXPAND_RATIO",
+  SET_DEFAULT_EXPAND_RATIO                       = "SET_DEFAULT_EXPAND_RATIO",
 
   -- SET_EFFECT_ICON_VISIBLE = function(isShow, arg)
-  SET_EFFECT_ICON_VISIBLE = "SET_EFFECT_ICON_VISIBLE",
+  SET_EFFECT_ICON_VISIBLE                        = "SET_EFFECT_ICON_VISIBLE",
 
   -- SET_LOGIN_BROWSER_URL = function()
-  SET_LOGIN_BROWSER_URL = "SET_LOGIN_BROWSER_URL",
+  SET_LOGIN_BROWSER_URL                          = "SET_LOGIN_BROWSER_URL",
 
   -- SET_OVERHEAD_MARK = function(unitId, index, visible)
-  SET_OVERHEAD_MARK = "SET_OVERHEAD_MARK",
+  SET_OVERHEAD_MARK                              = "SET_OVERHEAD_MARK",
 
   -- SET_PING_MODE = function(arg)
-  SET_PING_MODE = "SET_PING_MODE",
+  SET_PING_MODE                                  = "SET_PING_MODE",
 
   -- SET_REBUILD_HOUSE_CAMERA_MODE = function()
-  SET_REBUILD_HOUSE_CAMERA_MODE = "SET_REBUILD_HOUSE_CAMERA_MODE",
+  SET_REBUILD_HOUSE_CAMERA_MODE                  = "SET_REBUILD_HOUSE_CAMERA_MODE",
 
   -- SET_ROADMAP_PICKABLE = function(pick)
-  SET_ROADMAP_PICKABLE = "SET_ROADMAP_PICKABLE",
+  SET_ROADMAP_PICKABLE                           = "SET_ROADMAP_PICKABLE",
 
   -- SET_UI_MESSAGE = function()
-  SET_UI_MESSAGE = "SET_UI_MESSAGE",
+  SET_UI_MESSAGE                                 = "SET_UI_MESSAGE",
 
   -- SET_WEB_MESSENGE_COUNT = function()
-  SET_WEB_MESSENGE_COUNT = "SET_WEB_MESSENGE_COUNT",
+  SET_WEB_MESSENGE_COUNT                         = "SET_WEB_MESSENGE_COUNT",
 
   -- SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW = function(zoneName, accumulatePoint, state)
-  SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW = "SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW",
+  SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW         =
+  "SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW",
 
   -- SHOW_ADD_TAB_WINDOW = function()
-  SHOW_ADD_TAB_WINDOW = "SHOW_ADD_TAB_WINDOW",
+  SHOW_ADD_TAB_WINDOW                            = "SHOW_ADD_TAB_WINDOW",
 
   -- SHOW_ADDED_ITEM = function(item, count, taskType)
-  SHOW_ADDED_ITEM = "SHOW_ADDED_ITEM",
+  SHOW_ADDED_ITEM                                = "SHOW_ADDED_ITEM",
 
   -- SHOW_BANNER = function(show, instanceType, remainPreNoticeTime)
-  SHOW_BANNER = "SHOW_BANNER",
+  SHOW_BANNER                                    = "SHOW_BANNER",
 
   -- SHOW_CHARACTER_ABILITY_WINDOW = function(show, byCutscene)
-  SHOW_CHARACTER_ABILITY_WINDOW = "SHOW_CHARACTER_ABILITY_WINDOW",
+  SHOW_CHARACTER_ABILITY_WINDOW                  = "SHOW_CHARACTER_ABILITY_WINDOW",
 
   -- SHOW_CHARACTER_CREATE_WINDOW = function(show)
-  SHOW_CHARACTER_CREATE_WINDOW = "SHOW_CHARACTER_CREATE_WINDOW",
+  SHOW_CHARACTER_CREATE_WINDOW                   = "SHOW_CHARACTER_CREATE_WINDOW",
 
   -- SHOW_CHARACTER_CUSTOMIZE_WINDOW = function(show)
-  SHOW_CHARACTER_CUSTOMIZE_WINDOW = "SHOW_CHARACTER_CUSTOMIZE_WINDOW",
+  SHOW_CHARACTER_CUSTOMIZE_WINDOW                = "SHOW_CHARACTER_CUSTOMIZE_WINDOW",
 
   -- SHOW_CHARACTER_SELECT_WINDOW = function(visible)
-  SHOW_CHARACTER_SELECT_WINDOW = "SHOW_CHARACTER_SELECT_WINDOW",
+  SHOW_CHARACTER_SELECT_WINDOW                   = "SHOW_CHARACTER_SELECT_WINDOW",
 
   -- SHOW_CHAT_TAB_CONTEXT = function()
-  SHOW_CHAT_TAB_CONTEXT = "SHOW_CHAT_TAB_CONTEXT",
+  SHOW_CHAT_TAB_CONTEXT                          = "SHOW_CHAT_TAB_CONTEXT",
 
   -- SHOW_CRIME_RECORDS = function(trialState)
-  SHOW_CRIME_RECORDS = "SHOW_CRIME_RECORDS",
+  SHOW_CRIME_RECORDS                             = "SHOW_CRIME_RECORDS",
 
   -- SHOW_DEFENDANT_WAIT_JURY = function()
-  SHOW_DEFENDANT_WAIT_JURY  = "SHOW_DEPENDANT_WAIT_JURY",
+  SHOW_DEFENDANT_WAIT_JURY                       = "SHOW_DEPENDANT_WAIT_JURY",
 
   -- SHOW_DEFENDANT_WAIT_TRIAL = function()
-  SHOW_DEFENDANT_WAIT_TRIAL = "SHOW_DEPENDANT_WAIT_TRIAL",
+  SHOW_DEFENDANT_WAIT_TRIAL                      = "SHOW_DEPENDANT_WAIT_TRIAL",
 
   -- SHOW_GAME_RATING = function()
-  SHOW_GAME_RATING = "SHOW_GAME_RATING",
+  SHOW_GAME_RATING                               = "SHOW_GAME_RATING",
 
   -- SHOW_HEALTH_NOTICE = function()
-  SHOW_HEALTH_NOTICE = "SHOW_HEALTH_NOTICE",
+  SHOW_HEALTH_NOTICE                             = "SHOW_HEALTH_NOTICE",
 
   -- SHOW_HIDDEN_BUFF = function()
-  SHOW_HIDDEN_BUFF = "SHOW_HIDDEN_BUFF",
+  SHOW_HIDDEN_BUFF                               = "SHOW_HIDDEN_BUFF",
 
   -- SHOW_LOGIN_WINDOW = function(show)
-  SHOW_LOGIN_WINDOW = "SHOW_LOGIN_WINDOW",
+  SHOW_LOGIN_WINDOW                              = "SHOW_LOGIN_WINDOW",
 
   -- SHOW_PRIVACY_POLICY_WINDOW = function(show)
-  SHOW_PRIVACY_POLICY_WINDOW = "SHOW_PRIVACY_POLICY_WINDOW",
+  SHOW_PRIVACY_POLICY_WINDOW                     = "SHOW_PRIVACY_POLICY_WINDOW",
 
   -- SHOW_RAID_FRAME_SETTINGS = function()
-  SHOW_RAID_FRAME_SETTINGS = "SHOW_RAID_FRAME_SETTINGS",
+  SHOW_RAID_FRAME_SETTINGS                       = "SHOW_RAID_FRAME_SETTINGS",
 
   -- SHOW_RECOMMEND_USING_SECOND_PASSWORD = function()
-  SHOW_RECOMMEND_USING_SECOND_PASSWORD = "SHOW_RECOMMEND_USING_SECOND_PASSWORD",
+  SHOW_RECOMMEND_USING_SECOND_PASSWORD           = "SHOW_RECOMMEND_USING_SECOND_PASSWORD",
 
   -- SHOW_RENAME_EXPEIDITON = function(byItem, triedName, ownerWnd)
-  SHOW_RENAME_EXPEIDITON = "SHOW_RENAME_EXPEIDITON",
+  SHOW_RENAME_EXPEIDITON                         = "SHOW_RENAME_EXPEIDITON",
 
   -- SHOW_ROADMAP_TOOLTIP = function(tooltipInfo, tooltipCount)
-  SHOW_ROADMAP_TOOLTIP = "SHOW_ROADMAP_TOOLTIP",
+  SHOW_ROADMAP_TOOLTIP                           = "SHOW_ROADMAP_TOOLTIP",
 
   -- SHOW_SERVER_SELECT_WINDOW = function(visible)
-  SHOW_SERVER_SELECT_WINDOW = "SHOW_SERVER_SELECT_WINDOW",
+  SHOW_SERVER_SELECT_WINDOW                      = "SHOW_SERVER_SELECT_WINDOW",
 
   -- SHOW_SEXTANT_POS = function(argTable)
-  SHOW_SEXTANT_POS = "SHOW_SEXTANT_POS",
+  SHOW_SEXTANT_POS                               = "SHOW_SEXTANT_POS",
 
   -- SHOW_SLAVE_INFO = function()
-  SHOW_SLAVE_INFO = "SHOW_SLAVE_INFO",
+  SHOW_SLAVE_INFO                                = "SHOW_SLAVE_INFO",
 
   -- SHOW_VERDICTS = function(p1, p2, p3, p4, p5)
-  SHOW_VERDICTS = "SHOW_VERDICTS",
+  SHOW_VERDICTS                                  = "SHOW_VERDICTS",
 
   -- SHOW_WORLDMAP_LOCATION = function(zoneId, x, y, z)
-  SHOW_WORLDMAP_LOCATION = "SHOW_WORLDMAP_LOCATION",
+  SHOW_WORLDMAP_LOCATION                         = "SHOW_WORLDMAP_LOCATION",
 
   -- SHOW_WORLDMAP_TOOLTIP = function(tooltipInfo, tooltipCount)
-  SHOW_WORLDMAP_TOOLTIP = "SHOW_WORLDMAP_TOOLTIP",
+  SHOW_WORLDMAP_TOOLTIP                          = "SHOW_WORLDMAP_TOOLTIP",
 
   -- SIEGE_APPOINT_RESULT = function(isDefender, faction)
-  SIEGE_APPOINT_RESULT = "SIEGE_APPOINT_RESULT",
+  SIEGE_APPOINT_RESULT                           = "SIEGE_APPOINT_RESULT",
 
   -- SIEGE_RAID_REGISTER_LIST = function(zoneGroupType, bRegistState, bListUpdate)
-  SIEGE_RAID_REGISTER_LIST = "SIEGE_RAID_REGISTER_LIST",
+  SIEGE_RAID_REGISTER_LIST                       = "SIEGE_RAID_REGISTER_LIST",
 
   -- SIEGE_RAID_TEAM_INFO = function(info)
-  SIEGE_RAID_TEAM_INFO = "SIEGE_RAID_TEAM_INFO",
+  SIEGE_RAID_TEAM_INFO                           = "SIEGE_RAID_TEAM_INFO",
 
   -- SIEGE_WAR_ENDED = function()
-  SIEGE_WAR_ENDED = "SIEGE_WAR_ENDED",
+  SIEGE_WAR_ENDED                                = "SIEGE_WAR_ENDED",
 
   -- SIEGEWEAPON_BOUND = function()
-  SIEGEWEAPON_BOUND = "SIEGEWEAPON_BOUND",
+  SIEGEWEAPON_BOUND                              = "SIEGEWEAPON_BOUND",
 
   -- SIEGEWEAPON_UNBOUND = function()
-  SIEGEWEAPON_UNBOUND = "SIEGEWEAPON_UNBOUND",
+  SIEGEWEAPON_UNBOUND                            = "SIEGEWEAPON_UNBOUND",
 
   -- SIM_DOODAD_MSG = function(code)
-  SIM_DOODAD_MSG = "SIM_DOODAD_MSG",
+  SIM_DOODAD_MSG                                 = "SIM_DOODAD_MSG",
 
   -- SKILL_ALERT_ADD = function(statusBuffType, buffId, remainTime, name)
-  SKILL_ALERT_ADD = "SKILL_ALERT_ADD",
+  SKILL_ALERT_ADD                                = "SKILL_ALERT_ADD",
 
   -- SKILL_ALERT_REMOVE = function(statusBuffType)
-  SKILL_ALERT_REMOVE = "SKILL_ALERT_REMOVE",
+  SKILL_ALERT_REMOVE                             = "SKILL_ALERT_REMOVE",
 
   -- SKILL_CHANGED = function(text, level, ability)
-  SKILL_CHANGED = "SKILL_CHANGED",
+  SKILL_CHANGED                                  = "SKILL_CHANGED",
 
   -- SKILL_DEBUG_MSG = function(resultCode, param, skillType)
-  SKILL_DEBUG_MSG = "SKILL_DEBUG_MSG",
+  SKILL_DEBUG_MSG                                = "SKILL_DEBUG_MSG",
 
   -- SKILL_LEARNED = function(text)
-  SKILL_LEARNED = "SKILL_LEARNED",
+  SKILL_LEARNED                                  = "SKILL_LEARNED",
 
   -- SKILL_MAP_EFFECT = function(info)
-  SKILL_MAP_EFFECT = "SKILL_MAP_EFFECT",
+  SKILL_MAP_EFFECT                               = "SKILL_MAP_EFFECT",
 
   -- SKILL_MSG = function(resultCode, param, skillType)
-  SKILL_MSG = "SKILL_MSG",
+  SKILL_MSG                                      = "SKILL_MSG",
 
   -- SKILL_SELECTIVE_ITEM = function(list, usingSlotIndex)
-  SKILL_SELECTIVE_ITEM = "SKILL_SELECTIVE_ITEM",
+  SKILL_SELECTIVE_ITEM                           = "SKILL_SELECTIVE_ITEM",
 
   -- SKILL_SELECTIVE_ITEM_NOT_AVAILABLE = function()
-  SKILL_SELECTIVE_ITEM_NOT_AVAILABLE = "SKILL_SELECTIVE_ITEM_NOT_AVAILABLE",
+  SKILL_SELECTIVE_ITEM_NOT_AVAILABLE             = "SKILL_SELECTIVE_ITEM_NOT_AVAILABLE",
 
   -- SKILL_SELECTIVE_ITEM_READY_STATUS = function(status)
-  SKILL_SELECTIVE_ITEM_READY_STATUS = "SKILL_SELECTIVE_ITEM_READY_STATUS",
+  SKILL_SELECTIVE_ITEM_READY_STATUS              = "SKILL_SELECTIVE_ITEM_READY_STATUS",
 
   -- SKILL_UPGRADED = function(skillType)
-  SKILL_UPGRADED = "SKILL_UPGRADED",
+  SKILL_UPGRADED                                 = "SKILL_UPGRADED",
 
   -- SKILLS_RESET = function(ability)
-  SKILLS_RESET = "SKILLS_RESET",
+  SKILLS_RESET                                   = "SKILLS_RESET",
 
   -- SLAVE_SHIP_BOARDING = function()
-  SLAVE_SHIP_BOARDING = "SLAVE_SHIP_BOARDING",
+  SLAVE_SHIP_BOARDING                            = "SLAVE_SHIP_BOARDING",
 
   -- SLAVE_SHIP_UNBOARDING = function()
-  SLAVE_SHIP_UNBOARDING = "SLAVE_SHIP_UNBOARDING",
+  SLAVE_SHIP_UNBOARDING                          = "SLAVE_SHIP_UNBOARDING",
 
   -- SLAVE_SPAWN = function()
-  SLAVE_SPAWN = "SLAVE_SPAWN",
+  SLAVE_SPAWN                                    = "SLAVE_SPAWN",
 
   -- SPAWN_PET = function(mateType)
-  SPAWN_PET = "SPAWN_PET",
+  SPAWN_PET                                      = "SPAWN_PET",
 
   -- SPECIAL_ABILITY_LEARNED = function(recvAbility)
-  SPECIAL_ABILITY_LEARNED = "SPECIAL_ABILITY_LEARNED",
+  SPECIAL_ABILITY_LEARNED                        = "SPECIAL_ABILITY_LEARNED",
 
   -- SPECIALTY_CONTENT_RECIPE_INFO = function(list)
-  SPECIALTY_CONTENT_RECIPE_INFO = "SPECIALTY_CONTENT_RECIPE_INFO",
+  SPECIALTY_CONTENT_RECIPE_INFO                  = "SPECIALTY_CONTENT_RECIPE_INFO",
 
   -- SPECIALTY_RATIO_BETWEEN_INFO = function(specialtyRatioTable)
-  SPECIALTY_RATIO_BETWEEN_INFO = "SPECIALTY_RATIO_BETWEEN_INFO",
+  SPECIALTY_RATIO_BETWEEN_INFO                   = "SPECIALTY_RATIO_BETWEEN_INFO",
 
   -- SPELLCAST_START = function(spellName, castingTime, caster, castingUseable)
-  SPELLCAST_START = "SPELLCAST_START",
+  SPELLCAST_START                                = "SPELLCAST_START",
 
   -- SPELLCAST_STOP = function(caster)
-  SPELLCAST_STOP = "SPELLCAST_STOP",
+  SPELLCAST_STOP                                 = "SPELLCAST_STOP",
 
   -- SPELLCAST_SUCCEEDED = function(caster)
-  SPELLCAST_SUCCEEDED = "SPELLCAST_SUCCEEDED",
+  SPELLCAST_SUCCEEDED                            = "SPELLCAST_SUCCEEDED",
 
   -- START_CHAT_BUBBLE = function()
-  START_CHAT_BUBBLE = "START_CHAT_BUBBLE",
+  START_CHAT_BUBBLE                              = "START_CHAT_BUBBLE",
 
   -- START_HERO_ELECTION_PERIOD = function()
-  START_HERO_ELECTION_PERIOD = "START_HERO_ELECTION_PERIOD",
+  START_HERO_ELECTION_PERIOD                     = "START_HERO_ELECTION_PERIOD",
 
   -- START_QUEST_CONTEXT = function(qtype, useDirectingMode, npcId)
-  START_QUEST_CONTEXT = "START_QUEST_CONTEXT",
+  START_QUEST_CONTEXT                            = "START_QUEST_CONTEXT",
 
   -- START_QUEST_CONTEXT_DOODAD = function(qtype, useDirectingMode, doodadId)
-  START_QUEST_CONTEXT_DOODAD = "START_QUEST_CONTEXT_DOODAD",
+  START_QUEST_CONTEXT_DOODAD                     = "START_QUEST_CONTEXT_DOODAD",
 
   -- START_QUEST_CONTEXT_NPC = function(qtype, useDirectingMode, npcId)
-  START_QUEST_CONTEXT_NPC = "START_QUEST_CONTEXT_NPC",
+  START_QUEST_CONTEXT_NPC                        = "START_QUEST_CONTEXT_NPC",
 
   -- START_QUEST_CONTEXT_SPHERE = function(qtype, stype)
-  START_QUEST_CONTEXT_SPHERE = "START_QUEST_CONTEXT_SPHERE",
+  START_QUEST_CONTEXT_SPHERE                     = "START_QUEST_CONTEXT_SPHERE",
 
   -- START_SENSITIVE_OPERATION = function(remainTime)
-  START_SENSITIVE_OPERATION = "START_SENSITIVE_OPERATION",
+  START_SENSITIVE_OPERATION                      = "START_SENSITIVE_OPERATION",
 
   -- START_TALK_QUEST_CONTEXT = function(doodadId)
-  START_TALK_QUEST_CONTEXT = "START_TALK_QUEST_CONTEXT",
+  START_TALK_QUEST_CONTEXT                       = "START_TALK_QUEST_CONTEXT",
 
   -- START_TODAY_ASSIGNMENT = function(stepName)
-  START_TODAY_ASSIGNMENT = "START_TODAY_ASSIGNMENT",
+  START_TODAY_ASSIGNMENT                         = "START_TODAY_ASSIGNMENT",
 
   -- STARTED_DUEL = function()
-  STARTED_DUEL = "STARTED_DUEL",
+  STARTED_DUEL                                   = "STARTED_DUEL",
 
   -- STARTING_QUEST_COMPLETED = function()
-  STARTING_QUEST_COMPLETED = "STARTING_QUEST_COMPLETED",
+  STARTING_QUEST_COMPLETED                       = "STARTING_QUEST_COMPLETED",
 
   -- STICKED_MSG = function()
-  STICKED_MSG = "STICKED_MSG",
+  STICKED_MSG                                    = "STICKED_MSG",
 
   -- STILL_LOADING = function(loadingProgress)
-  STILL_LOADING = "STILL_LOADING",
+  STILL_LOADING                                  = "STILL_LOADING",
 
   -- STORE_ADD_BUY_ITEM = function()
-  STORE_ADD_BUY_ITEM = "STORE_ADD_BUY_ITEM",
+  STORE_ADD_BUY_ITEM                             = "STORE_ADD_BUY_ITEM",
 
   -- STORE_ADD_SELL_ITEM = function(slotNumber)
-  STORE_ADD_SELL_ITEM = "STORE_ADD_SELL_ITEM",
+  STORE_ADD_SELL_ITEM                            = "STORE_ADD_SELL_ITEM",
 
   -- STORE_BUY = function(itemLinkText, stackCount)
-  STORE_BUY = "STORE_BUY",
+  STORE_BUY                                      = "STORE_BUY",
 
   -- STORE_FULL = function()
-  STORE_FULL = "STORE_FULL",
+  STORE_FULL                                     = "STORE_FULL",
 
   -- STORE_SELL = function(itemLinkText, stackCount)
-  STORE_SELL = "STORE_SELL",
+  STORE_SELL                                     = "STORE_SELL",
 
   -- STORE_SOLD_LIST = function(soldItems)
-  STORE_SOLD_LIST = "STORE_SOLD_LIST",
+  STORE_SOLD_LIST                                = "STORE_SOLD_LIST",
 
   -- STORE_TRADE_FAILED = function()
-  STORE_TRADE_FAILED = "STORE_TRADE_FAILED",
+  STORE_TRADE_FAILED                             = "STORE_TRADE_FAILED",
 
   -- SURVEY_FORM_UPDATE = function()
-  SURVEY_FORM_UPDATE = "SURVEY_FORM_UPDATE",
+  SURVEY_FORM_UPDATE                             = "SURVEY_FORM_UPDATE",
 
   -- SWITCH_ENCHANT_ITEM_MODE = function(mode)
-  SWITCH_ENCHANT_ITEM_MODE = "SWITCH_ENCHANT_ITEM_MODE",
+  SWITCH_ENCHANT_ITEM_MODE                       = "SWITCH_ENCHANT_ITEM_MODE",
 
   -- SYNC_PORTAL = function()
-  SYNC_PORTAL = "SYNC_PORTAL",
+  SYNC_PORTAL                                    = "SYNC_PORTAL",
 
   -- SYS_INDUN_STAT_UPDATED = function()
-  SYS_INDUN_STAT_UPDATED = "SYS_INDUN_STAT_UPDATED",
+  SYS_INDUN_STAT_UPDATED                         = "SYS_INDUN_STAT_UPDATED",
 
   -- SYSMSG = function(msg)
-  SYSMSG = "SYSMSG",
+  SYSMSG                                         = "SYSMSG",
 
   -- TARGET_CHANGED = function(stringId, targetType)
-  TARGET_CHANGED = "TARGET_CHANGED",
+  TARGET_CHANGED                                 = "TARGET_CHANGED",
 
   -- TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO = function(curHp, maxHp)
-  TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO = "TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO",
+  TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO     =
+  "TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO",
 
   -- TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION = function(target, curHp, maxHp)
-  TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION = "TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION", 
+  TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION   =
+  "TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION",
 
   -- TARGET_OVER = function(arg, arg2)
-  TARGET_OVER = "TARGET_OVER",
+  TARGET_OVER                                    = "TARGET_OVER",
 
   -- TARGET_TO_TARGET_CHANGED = function(stringId, targetType)
-  TARGET_TO_TARGET_CHANGED = "TARGET_TO_TARGET_CHANGED",
+  TARGET_TO_TARGET_CHANGED                       = "TARGET_TO_TARGET_CHANGED",
 
   -- TEAM_JOINT_BREAK = function(requester, enable)
-  TEAM_JOINT_BREAK = "TEAM_JOINT_BREAK",
+  TEAM_JOINT_BREAK                               = "TEAM_JOINT_BREAK",
 
   -- TEAM_JOINT_BROKEN = function()
-  TEAM_JOINT_BROKEN = "TEAM_JOINT_BROKEN",
+  TEAM_JOINT_BROKEN                              = "TEAM_JOINT_BROKEN",
 
   -- TEAM_JOINT_CHAT = function()
-  TEAM_JOINT_CHAT = "TEAM_JOINT_CHAT",
+  TEAM_JOINT_CHAT                                = "TEAM_JOINT_CHAT",
 
   -- TEAM_JOINT_RESPONSE = function()
-  TEAM_JOINT_RESPONSE = "TEAM_JOINT_RESPONSE",
+  TEAM_JOINT_RESPONSE                            = "TEAM_JOINT_RESPONSE",
 
   -- TEAM_JOINT_TARGET = function(isJointable)
-  TEAM_JOINT_TARGET = "TEAM_JOINT_TARGET",
+  TEAM_JOINT_TARGET                              = "TEAM_JOINT_TARGET",
 
   -- TEAM_JOINTED = function()
-  TEAM_JOINTED = "TEAM_JOINTED",
+  TEAM_JOINTED                                   = "TEAM_JOINTED",
 
   -- TEAM_MEMBER_DISCONNECTED = function(isParty, jointOrder, stringId, memberIndex)
-  TEAM_MEMBER_DISCONNECTED = "TEAM_MEMBER_DISCONNECTED",
+  TEAM_MEMBER_DISCONNECTED                       = "TEAM_MEMBER_DISCONNECTED",
 
   -- TEAM_MEMBER_UNIT_ID_CHANGED = function(oldStringId, stringId)
-  TEAM_MEMBER_UNIT_ID_CHANGED = "TEAM_MEMBER_UNIT_ID_CHANGED",
+  TEAM_MEMBER_UNIT_ID_CHANGED                    = "TEAM_MEMBER_UNIT_ID_CHANGED",
 
   -- TEAM_MEMBERS_CHANGED = function(reason, value)
-  TEAM_MEMBERS_CHANGED = "TEAM_MEMBERS_CHANGED",
+  TEAM_MEMBERS_CHANGED                           = "TEAM_MEMBERS_CHANGED",
 
   -- TEAM_ROLE_CHANGED = function(jointOrder, memberIndex, role)
-  TEAM_ROLE_CHANGED = "TEAM_ROLE_CHANGED",
+  TEAM_ROLE_CHANGED                              = "TEAM_ROLE_CHANGED",
 
   -- TEAM_SUMMON_SUGGEST = function()
-  TEAM_SUMMON_SUGGEST = "TEAM_SUMMON_SUGGEST",
+  TEAM_SUMMON_SUGGEST                            = "TEAM_SUMMON_SUGGEST",
 
   -- TENCENT_HEALTH_CARE_URL = function(url, width, height)
-  TENCENT_HEALTH_CARE_URL = "TENCENT_HEALTH_CARE_URL",
+  TENCENT_HEALTH_CARE_URL                        = "TENCENT_HEALTH_CARE_URL",
 
   -- TIME_MESSAGE = function(key, timeTable)
-  TIME_MESSAGE = "TIME_MESSAGE",
+  TIME_MESSAGE                                   = "TIME_MESSAGE",
 
   -- TOGGLE_CHANGE_VISUAL_RACE = function(data)
-  TOGGLE_CHANGE_VISUAL_RACE = "TOGGLE_CHANGE_VISUAL_RACE",
+  TOGGLE_CHANGE_VISUAL_RACE                      = "TOGGLE_CHANGE_VISUAL_RACE",
 
   -- TOGGLE_COMMUNITY = function()
-  TOGGLE_COMMUNITY = "TOGGLE_COMMUNITY",
+  TOGGLE_COMMUNITY                               = "TOGGLE_COMMUNITY",
 
   -- TOGGLE_CRAFT = function()
-  TOGGLE_CRAFT = "TOGGLE_CRAFT",
+  TOGGLE_CRAFT                                   = "TOGGLE_CRAFT",
 
   -- TOGGLE_FACTION = function()
-  TOGGLE_FACTION = "TOGGLE_FACTION",
+  TOGGLE_FACTION                                 = "TOGGLE_FACTION",
 
   -- TOGGLE_FOLLOW = function(on)
-  TOGGLE_FOLLOW = "TOGGLE_FOLLOW",
+  TOGGLE_FOLLOW                                  = "TOGGLE_FOLLOW",
 
   -- TOGGLE_IN_GAME_NOTICE = function(url)
-  TOGGLE_IN_GAME_NOTICE = "TOGGLE_IN_GAME_NOTICE",
+  TOGGLE_IN_GAME_NOTICE                          = "TOGGLE_IN_GAME_NOTICE",
 
   -- TOGGLE_MEGAPHONE_CHAT = function()
-  TOGGLE_MEGAPHONE_CHAT = "TOGGLE_MEGAPHONE_CHAT",
+  TOGGLE_MEGAPHONE_CHAT                          = "TOGGLE_MEGAPHONE_CHAT",
 
   -- TOGGLE_PARTY_FRAME = function(show)
-  TOGGLE_PARTY_FRAME = "TOGGLE_PARTY_FRAME",
+  TOGGLE_PARTY_FRAME                             = "TOGGLE_PARTY_FRAME",
 
   -- TOGGLE_PET_MANAGE = function()
-  TOGGLE_PET_MANAGE = "TOGGLE_PET_MANAGE",
+  TOGGLE_PET_MANAGE                              = "TOGGLE_PET_MANAGE",
 
   -- TOGGLE_PORTAL_DIALOG = function(addPortal, skillTypeNumber, itemTypeNumber)
-  TOGGLE_PORTAL_DIALOG = "TOGGLE_PORTAL_DIALOG",
+  TOGGLE_PORTAL_DIALOG                           = "TOGGLE_PORTAL_DIALOG",
 
   -- TOGGLE_RAID_FRAME = function(show)
-  TOGGLE_RAID_FRAME = "TOGGLE_RAID_FRAME",
+  TOGGLE_RAID_FRAME                              = "TOGGLE_RAID_FRAME",
 
   -- TOGGLE_RAID_FRAME_PARTY = function(party, visible)
-  TOGGLE_RAID_FRAME_PARTY = "TOGGLE_RAID_FRAME_PARTY",
+  TOGGLE_RAID_FRAME_PARTY                        = "TOGGLE_RAID_FRAME_PARTY",
 
   -- TOGGLE_RAID_FRAME2 = function()
-  TOGGLE_RAID_FRAME2 = "TOGGLE_RAID_FRAME2",
+  TOGGLE_RAID_FRAME2                             = "TOGGLE_RAID_FRAME2",
 
   -- TOGGLE_ROADMAP = function()
-  TOGGLE_ROADMAP = "TOGGLE_ROADMAP",
+  TOGGLE_ROADMAP                                 = "TOGGLE_ROADMAP",
 
   -- TOGGLE_WALK = function(speed)
-  TOGGLE_WALK = "TOGGLE_WALK",
+  TOGGLE_WALK                                    = "TOGGLE_WALK",
 
   -- TOWER_DEF_INFO_UPDATE = function()
-  TOWER_DEF_INFO_UPDATE = "TOWER_DEF_INFO_UPDATE",
+  TOWER_DEF_INFO_UPDATE                          = "TOWER_DEF_INFO_UPDATE",
 
   -- TOWER_DEF_MSG = function(towerDefInfo)
-  TOWER_DEF_MSG = "TOWER_DEF_MSG",
+  TOWER_DEF_MSG                                  = "TOWER_DEF_MSG",
 
   -- TRADE_CAN_START = function(unitIdStr)
-  TRADE_CAN_START = "TRADE_CAN_START",
+  TRADE_CAN_START                                = "TRADE_CAN_START",
 
   -- TRADE_CANCELED = function()
-  TRADE_CANCELED = "TRADE_CANCELED",
+  TRADE_CANCELED                                 = "TRADE_CANCELED",
 
   -- TRADE_ITEM_PUTUP = function(inventoryIdx, amount)
-  TRADE_ITEM_PUTUP = "TRADE_ITEM_PUTUP",
+  TRADE_ITEM_PUTUP                               = "TRADE_ITEM_PUTUP",
 
   -- TRADE_ITEM_TOOKDOWN = function(inventoryIdx)
-  TRADE_ITEM_TOOKDOWN = "TRADE_ITEM_TOOKDOWN",
+  TRADE_ITEM_TOOKDOWN                            = "TRADE_ITEM_TOOKDOWN",
 
   -- TRADE_ITEM_UPDATED = function()
-  TRADE_ITEM_UPDATED = "TRADE_ITEM_UPDATED",
+  TRADE_ITEM_UPDATED                             = "TRADE_ITEM_UPDATED",
 
   -- TRADE_LOCKED = function()
-  TRADE_LOCKED = "TRADE_LOCKED",
+  TRADE_LOCKED                                   = "TRADE_LOCKED",
 
   -- TRADE_MADE = function()
-  TRADE_MADE = "TRADE_MADE",
+  TRADE_MADE                                     = "TRADE_MADE",
 
   -- TRADE_MONEY_PUTUP = function(money)
-  TRADE_MONEY_PUTUP = "TRADE_MONEY_PUTUP",
+  TRADE_MONEY_PUTUP                              = "TRADE_MONEY_PUTUP",
 
   -- TRADE_OK = function()
-  TRADE_OK = "TRADE_OK",
+  TRADE_OK                                       = "TRADE_OK",
 
   -- TRADE_OTHER_ITEM_PUTUP = function(otherIdx, type, stackCount, tooltip)
-  TRADE_OTHER_ITEM_PUTUP = "TRADE_OTHER_ITEM_PUTUP",
+  TRADE_OTHER_ITEM_PUTUP                         = "TRADE_OTHER_ITEM_PUTUP",
 
   -- TRADE_OTHER_ITEM_TOOKDOWN = function(otherIdx)
-  TRADE_OTHER_ITEM_TOOKDOWN = "TRADE_OTHER_ITEM_TOOKDOWN",
+  TRADE_OTHER_ITEM_TOOKDOWN                      = "TRADE_OTHER_ITEM_TOOKDOWN",
 
   -- TRADE_OTHER_LOCKED = function()
-  TRADE_OTHER_LOCKED = "TRADE_OTHER_LOCKED",
+  TRADE_OTHER_LOCKED                             = "TRADE_OTHER_LOCKED",
 
   -- TRADE_OTHER_MONEY_PUTUP = function(money)
-  TRADE_OTHER_MONEY_PUTUP = "TRADE_OTHER_MONEY_PUTUP",
+  TRADE_OTHER_MONEY_PUTUP                        = "TRADE_OTHER_MONEY_PUTUP",
 
   -- TRADE_OTHER_OK = function()
-  TRADE_OTHER_OK = "TRADE_OTHER_OK",
+  TRADE_OTHER_OK                                 = "TRADE_OTHER_OK",
 
   -- TRADE_STARTED = function(targetName)
-  TRADE_STARTED = "TRADE_STARTED",
+  TRADE_STARTED                                  = "TRADE_STARTED",
 
   -- TRADE_UI_TOGGLE = function()
-  TRADE_UI_TOGGLE = "TRADE_UI_TOGGLE",
+  TRADE_UI_TOGGLE                                = "TRADE_UI_TOGGLE",
 
   -- TRADE_UNLOCKED = function()
-  TRADE_UNLOCKED = "TRADE_UNLOCKED",
+  TRADE_UNLOCKED                                 = "TRADE_UNLOCKED",
 
   -- TRANSFORM_COMBAT_RESOURCE = function(groupType)
-  TRANSFORM_COMBAT_RESOURCE = "TRANSFORM_COMBAT_RESOURCE",
+  TRANSFORM_COMBAT_RESOURCE                      = "TRANSFORM_COMBAT_RESOURCE",
 
   -- TRIAL_CANCELED = function()
-  TRIAL_CANCELED = "TRIAL_CANCELED",
+  TRIAL_CANCELED                                 = "TRIAL_CANCELED",
 
   -- TRIAL_CLOSED = function()
-  TRIAL_CLOSED = "TRIAL_CLOSED",
+  TRIAL_CLOSED                                   = "TRIAL_CLOSED",
 
   -- TRIAL_MESSAGE = function(text)
-  TRIAL_MESSAGE = "TRIAL_MESSAGE",
+  TRIAL_MESSAGE                                  = "TRIAL_MESSAGE",
 
   -- TRIAL_STATUS = function(state, juryCount, remainTime)
-  TRIAL_STATUS = "TRIAL_STATUS",
+  TRIAL_STATUS                                   = "TRIAL_STATUS",
 
   -- TRIAL_TIMER = function(state, remainTable)
-  TRIAL_TIMER = "TRIAL_TIMER",
+  TRIAL_TIMER                                    = "TRIAL_TIMER",
 
   -- TRY_LOOT_DICE = function(key, timeStamp, itemLink)
-  TRY_LOOT_DICE = "TRY_LOOT_DICE",
+  TRY_LOOT_DICE                                  = "TRY_LOOT_DICE",
 
   -- TUTORIAL_EVENT = function(id, info)
-  TUTORIAL_EVENT = "TUTORIAL_EVENT",
+  TUTORIAL_EVENT                                 = "TUTORIAL_EVENT",
 
   -- TUTORIAL_HIDE_FROM_OPTION = function()
-  TUTORIAL_HIDE_FROM_OPTION = "TUTORIAL_HIDE_FROM_OPTION",
+  TUTORIAL_HIDE_FROM_OPTION                      = "TUTORIAL_HIDE_FROM_OPTION",
 
   -- UCC_IMPRINT_SUCCEEDED = function()
-  UCC_IMPRINT_SUCCEEDED = "UCC_IMPRINT_SUCCEEDED",
+  UCC_IMPRINT_SUCCEEDED                          = "UCC_IMPRINT_SUCCEEDED",
 
   -- UI_ADDON = function()
-  UI_ADDON = "UI_ADDON",
+  UI_ADDON                                       = "UI_ADDON",
 
   -- UI_PERMISSION_UPDATE = function()
-  UI_PERMISSION_UPDATE = "UI_PERMISSION_UPDATE",
+  UI_PERMISSION_UPDATE                           = "UI_PERMISSION_UPDATE",
 
   -- UI_RELOADED = function()
-  UI_RELOADED = "UI_RELOADED",
+  UI_RELOADED                                    = "UI_RELOADED",
 
   -- ULC_ACTIVATE = function(ulcType)
-  ULC_ACTIVATE = "ULC_ACTIVATE",
+  ULC_ACTIVATE                                   = "ULC_ACTIVATE",
 
   -- ULC_SKILL_MSG = function(resultCode, param)
-  ULC_SKILL_MSG = "ULC_SKILL_MSG",
+  ULC_SKILL_MSG                                  = "ULC_SKILL_MSG",
 
   -- UNFINISHED_BUILD_HOUSE = function(message)
-  UNFINISHED_BUILD_HOUSE = "UNFINISHED_BUILD_HOUSE",
+  UNFINISHED_BUILD_HOUSE                         = "UNFINISHED_BUILD_HOUSE",
 
   -- UNIT_COMBAT_STATE_CHANGED = function(bool, unitId)
-  UNIT_COMBAT_STATE_CHANGED = "UNIT_COMBAT_STATE_CHANGED",
+  UNIT_COMBAT_STATE_CHANGED                      = "UNIT_COMBAT_STATE_CHANGED",
 
   -- UNIT_DEAD = function(stringId, lossExp, lossDurabilityRatio)
-  UNIT_DEAD = "UNIT_DEAD",
+  UNIT_DEAD                                      = "UNIT_DEAD",
 
   -- UNIT_DEAD_NOTICE = function(name)
-  UNIT_DEAD_NOTICE = "UNIT_DEAD_NOTICE",
+  UNIT_DEAD_NOTICE                               = "UNIT_DEAD_NOTICE",
 
   -- UNIT_ENTERED_SIGHT = function(unitId, unitType, curHp, maxHp)
-  UNIT_ENTERED_SIGHT = "UNIT_ENTERED_SIGHT",
+  UNIT_ENTERED_SIGHT                             = "UNIT_ENTERED_SIGHT",
 
   -- UNIT_EQUIPMENT_CHANGED = function(equipSlot)
-  UNIT_EQUIPMENT_CHANGED = "UNIT_EQUIPMENT_CHANGED",
+  UNIT_EQUIPMENT_CHANGED                         = "UNIT_EQUIPMENT_CHANGED",
 
   -- UNIT_KILL_STREAK = function(killStreakInfo)
-  UNIT_KILL_STREAK = "UNIT_KILL_STREAK",
+  UNIT_KILL_STREAK                               = "UNIT_KILL_STREAK",
 
   -- UNIT_LEAVED_SIGHT = function(unitId, unitType)
-  UNIT_LEAVED_SIGHT = "UNIT_LEAVED_SIGHT",
+  UNIT_LEAVED_SIGHT                              = "UNIT_LEAVED_SIGHT",
 
   -- UNIT_NAME_CHANGED = function(unitId)
-  UNIT_NAME_CHANGED = "UNIT_NAME_CHANGED",
+  UNIT_NAME_CHANGED                              = "UNIT_NAME_CHANGED",
 
   -- UNIT_NPC_EQUIPMENT_CHANGED = function()
-  UNIT_NPC_EQUIPMENT_CHANGED = "UNIT_NPC_EQUIPMENT_CHANGED",
+  UNIT_NPC_EQUIPMENT_CHANGED                     = "UNIT_NPC_EQUIPMENT_CHANGED",
 
   -- UNITFRAME_ABILITY_UPDATE = function(unitId)
-  UNITFRAME_ABILITY_UPDATE = "UNITFRAME_ABILITY_UPDATE",
+  UNITFRAME_ABILITY_UPDATE                       = "UNITFRAME_ABILITY_UPDATE",
 
   -- UNMOUNT_PET = function(onePetBar, mateType, isMyPet) -- Crash?
   -- UNMOUNT_PET = "UNMOUNT_PET", -- Crash?
 
   -- UPDATE_BINDINGS = function()
-  UPDATE_BINDINGS = "UPDATE_BINDINGS",
+  UPDATE_BINDINGS                                = "UPDATE_BINDINGS",
 
   -- UPDATE_BOSS_TELESCOPE_AREA = function()
-  UPDATE_BOSS_TELESCOPE_AREA = "UPDATE_BOSS_TELESCOPE_AREA",
+  UPDATE_BOSS_TELESCOPE_AREA                     = "UPDATE_BOSS_TELESCOPE_AREA",
 
   -- UPDATE_BOSS_TELESCOPE_INFO = function()
-  UPDATE_BOSS_TELESCOPE_INFO = "UPDATE_BOSS_TELESCOPE_INFO",
+  UPDATE_BOSS_TELESCOPE_INFO                     = "UPDATE_BOSS_TELESCOPE_INFO",
 
   -- UPDATE_BOT_CHECK_INFO = function(totalTime, remainTime, count, question)
-  UPDATE_BOT_CHECK_INFO = "UPDATE_BOT_CHECK_INFO",
+  UPDATE_BOT_CHECK_INFO                          = "UPDATE_BOT_CHECK_INFO",
 
   -- UPDATE_BUBBLE = function()
-  UPDATE_BUBBLE = "BUBBLE_UPDATE",
+  UPDATE_BUBBLE                                  = "BUBBLE_UPDATE",
 
   -- UPDATE_CARRYING_BACKPACK_SLAVE_INFO = function()
-  UPDATE_CARRYING_BACKPACK_SLAVE_INFO = "UPDATE_CARRYING_BACKPACK_SLAVE_INFO",
+  UPDATE_CARRYING_BACKPACK_SLAVE_INFO            = "UPDATE_CARRYING_BACKPACK_SLAVE_INFO",
 
   -- UPDATE_CHANGE_VISUAL_RACE_WND = function(fired)
-  UPDATE_CHANGE_VISUAL_RACE_WND = "UPDATE_CHANGE_VISUAL_RACE_WND",
+  UPDATE_CHANGE_VISUAL_RACE_WND                  = "UPDATE_CHANGE_VISUAL_RACE_WND",
 
   -- UPDATE_CHRONICLE_INFO = function(info)
-  UPDATE_CHRONICLE_INFO = "UPDATE_CHRONICLE_INFO",
+  UPDATE_CHRONICLE_INFO                          = "UPDATE_CHRONICLE_INFO",
 
   -- UPDATE_CHRONICLE_NOTIFIER = function(init, mainKey)
-  UPDATE_CHRONICLE_NOTIFIER = "UPDATE_CHRONICLE_NOTIFIER",
+  UPDATE_CHRONICLE_NOTIFIER                      = "UPDATE_CHRONICLE_NOTIFIER",
 
   -- UPDATE_CLIENT_DRIVEN_INFO = function(sceneInfo)
-  UPDATE_CLIENT_DRIVEN_INFO = "UPDATE_CLIENT_DRIVEN_INFO",
+  UPDATE_CLIENT_DRIVEN_INFO                      = "UPDATE_CLIENT_DRIVEN_INFO",
 
   -- UPDATE_COMPLETED_QUEST_INFO = function()
-  UPDATE_COMPLETED_QUEST_INFO = "UPDATE_COMPLETED_QUEST_INFO",
+  UPDATE_COMPLETED_QUEST_INFO                    = "UPDATE_COMPLETED_QUEST_INFO",
 
   -- UPDATE_CONTENT_ROSTER_WINDOW = function(updateInfo)
-  UPDATE_CONTENT_ROSTER_WINDOW = "UPDATE_CONTENT_ROSTER_WINDOW",
+  UPDATE_CONTENT_ROSTER_WINDOW                   = "UPDATE_CONTENT_ROSTER_WINDOW",
 
   -- UPDATE_CORPSE_INFO = function()
-  UPDATE_CORPSE_INFO = "UPDATE_CORPSE_INFO",
+  UPDATE_CORPSE_INFO                             = "UPDATE_CORPSE_INFO",
 
   -- UPDATE_CRAFT_ORDER_ITEM_FEE = function(info)
-  UPDATE_CRAFT_ORDER_ITEM_FEE = "UPDATE_CRAFT_ORDER_ITEM_FEE",
+  UPDATE_CRAFT_ORDER_ITEM_FEE                    = "UPDATE_CRAFT_ORDER_ITEM_FEE",
 
   -- UPDATE_CRAFT_ORDER_ITEM_SLOT = function(info)
-  UPDATE_CRAFT_ORDER_ITEM_SLOT = "UPDATE_CRAFT_ORDER_ITEM_SLOT",
+  UPDATE_CRAFT_ORDER_ITEM_SLOT                   = "UPDATE_CRAFT_ORDER_ITEM_SLOT",
 
   -- UPDATE_CRAFT_ORDER_SKILL = function(key, fired)
-  UPDATE_CRAFT_ORDER_SKILL = "UPDATE_CRAFT_ORDER_SKILL",
+  UPDATE_CRAFT_ORDER_SKILL                       = "UPDATE_CRAFT_ORDER_SKILL",
 
   -- UPDATE_DEFENCE_INFO = function(info)
-  UPDATE_DEFENCE_INFO = "UPDATE_DEFENCE_INFO",
+  UPDATE_DEFENCE_INFO                            = "UPDATE_DEFENCE_INFO",
 
   -- UPDATE_DOMINION_INFO = function()
-  UPDATE_DOMINION_INFO = "UPDATE_DOMINION_INFO",
+  UPDATE_DOMINION_INFO                           = "UPDATE_DOMINION_INFO",
 
   -- UPDATE_DOODAD_INFO = function()
-  UPDATE_DOODAD_INFO = "UPDATE_DOODAD_INFO",
+  UPDATE_DOODAD_INFO                             = "UPDATE_DOODAD_INFO",
 
   -- UPDATE_DURABILITY_STATUS = function(frame, added, removed)
-  UPDATE_DURABILITY_STATUS = "UPDATE_DURABILITY_STATUS",
+  UPDATE_DURABILITY_STATUS                       = "UPDATE_DURABILITY_STATUS",
 
   -- UPDATE_DYEING_EXCUTABLE = function(executeable)
-  UPDATE_DYEING_EXCUTABLE = "UPDATE_DYEING_EXCUTABLE",
+  UPDATE_DYEING_EXCUTABLE                        = "UPDATE_DYEING_EXCUTABLE",
 
   -- UPDATE_ENCHANT_ITEM_MODE = function(isExcutable, isLock)
-  UPDATE_ENCHANT_ITEM_MODE = "UPDATE_ENCHANT_ITEM_MODE",
+  UPDATE_ENCHANT_ITEM_MODE                       = "UPDATE_ENCHANT_ITEM_MODE",
 
   -- UPDATE_EXPEDITION_PORTAL = function()
-  UPDATE_EXPEDITION_PORTAL = "UPDATE_EXPEDITION_PORTAL",
+  UPDATE_EXPEDITION_PORTAL                       = "UPDATE_EXPEDITION_PORTAL",
 
   -- UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT = function(count)
-  UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT = "UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT",
+  UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT =
+  "UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT",
 
   -- UPDATE_FACTION_REZ_DISTRICT = function()
-  UPDATE_FACTION_REZ_DISTRICT = "UPDATE_FACTION_REZ_DISTRICT",
+  UPDATE_FACTION_REZ_DISTRICT                    = "UPDATE_FACTION_REZ_DISTRICT",
 
   -- UPDATE_FISH_SCHOOL_AREA = function()
-  UPDATE_FISH_SCHOOL_AREA = "UPDATE_FISH_SCHOOL_AREA",
+  UPDATE_FISH_SCHOOL_AREA                        = "UPDATE_FISH_SCHOOL_AREA",
 
   -- UPDATE_FISH_SCHOOL_INFO = function()
-  UPDATE_FISH_SCHOOL_INFO = "UPDATE_FISH_SCHOOL_INFO",
+  UPDATE_FISH_SCHOOL_INFO                        = "UPDATE_FISH_SCHOOL_INFO",
 
   -- UPDATE_GACHA_LOOT_MODE = function(isExcutable, isLock)
-  UPDATE_GACHA_LOOT_MODE = "UPDATE_GACHA_LOOT_MODE",
+  UPDATE_GACHA_LOOT_MODE                         = "UPDATE_GACHA_LOOT_MODE",
 
   -- UPDATE_GIVEN_QUEST_STATIC_INFO = function()
-  UPDATE_GIVEN_QUEST_STATIC_INFO = "UPDATE_GIVEN_QUEST_STATIC_INFO",
+  UPDATE_GIVEN_QUEST_STATIC_INFO                 = "UPDATE_GIVEN_QUEST_STATIC_INFO",
 
   -- UPDATE_HERO_ELECTION_CONDITION = function()
-  UPDATE_HERO_ELECTION_CONDITION = "UPDATE_HERO_ELECTION_CONDITION",
+  UPDATE_HERO_ELECTION_CONDITION                 = "UPDATE_HERO_ELECTION_CONDITION",
 
   -- UPDATE_HIDE_OPTIMIZATION_BUTTON = function()
   -- UPDATE_HIDE_OPTIMIZATION_BUTTON = "UPDATE_HIDE_OPTIMIZATION_BUTTON", -- Crash-
 
   -- UPDATE_HOUSING_INFO = function()
-  UPDATE_HOUSING_INFO = "UPDATE_HOUSING_INFO",
+  UPDATE_HOUSING_INFO                            = "UPDATE_HOUSING_INFO",
 
   -- UPDATE_HOUSING_TOOLTIP = function(unitId)
-  UPDATE_HOUSING_TOOLTIP = "UPDATE_HOUSING_TOOLTIP",
+  UPDATE_HOUSING_TOOLTIP                         = "UPDATE_HOUSING_TOOLTIP",
 
   -- UPDATE_INGAME_BEAUTYSHOP_STATUS = function()
-  UPDATE_INGAME_BEAUTYSHOP_STATUS = "UPDATE_INGAME_BEAUTYSHOP_STATUS",
+  UPDATE_INGAME_BEAUTYSHOP_STATUS                = "UPDATE_INGAME_BEAUTYSHOP_STATUS",
 
   -- UPDATE_INGAME_SHOP = function(arg1, arg2, arg3, arg4)
-  UPDATE_INGAME_SHOP = "UPDATE_INGAME_SHOP",
+  UPDATE_INGAME_SHOP                             = "UPDATE_INGAME_SHOP",
 
   -- UPDATE_INGAME_SHOP_VIEW = function(arg1, arg2)
-  UPDATE_INGAME_SHOP_VIEW = "UPDATE_INGAME_SHOP_VIEW",
+  UPDATE_INGAME_SHOP_VIEW                        = "UPDATE_INGAME_SHOP_VIEW",
 
   -- UPDATE_INSTANT_GAME_INVITATION_COUNT = function(accept, totalSize)
-  UPDATE_INSTANT_GAME_INVITATION_COUNT = "UPDATE_INSTANT_GAME_INVITATION_COUNT",
+  UPDATE_INSTANT_GAME_INVITATION_COUNT           = "UPDATE_INSTANT_GAME_INVITATION_COUNT",
 
   -- UPDATE_INSTANT_GAME_KILLSTREAK = function(count)
-  UPDATE_INSTANT_GAME_KILLSTREAK = "UPDATE_INSTANT_GAME_KILLSTREAK",
+  UPDATE_INSTANT_GAME_KILLSTREAK                 = "UPDATE_INSTANT_GAME_KILLSTREAK",
 
   -- UPDATE_INSTANT_GAME_KILLSTREAK_COUNT = function(count)
-  UPDATE_INSTANT_GAME_KILLSTREAK_COUNT = "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT",
+  UPDATE_INSTANT_GAME_KILLSTREAK_COUNT           = "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT",
 
   -- UPDATE_INSTANT_GAME_SCORES = function()
-  UPDATE_INSTANT_GAME_SCORES = "UPDATE_INSTANT_GAME_SCORES",
+  UPDATE_INSTANT_GAME_SCORES                     = "UPDATE_INSTANT_GAME_SCORES",
 
   -- UPDATE_INSTANT_GAME_STATE = function()
-  UPDATE_INSTANT_GAME_STATE = "UPDATE_INSTANT_GAME_STATE",
+  UPDATE_INSTANT_GAME_STATE                      = "UPDATE_INSTANT_GAME_STATE",
 
   -- UPDATE_INSTANT_GAME_TIME = function()
-  UPDATE_INSTANT_GAME_TIME = "UPDATE_INSTANT_GAME_TIME",
+  UPDATE_INSTANT_GAME_TIME                       = "UPDATE_INSTANT_GAME_TIME",
 
   -- UPDATE_ITEM_LOOK_CONVERT_MODE = function()
-  UPDATE_ITEM_LOOK_CONVERT_MODE = "UPDATE_ITEM_LOOK_CONVERT_MODE",
+  UPDATE_ITEM_LOOK_CONVERT_MODE                  = "UPDATE_ITEM_LOOK_CONVERT_MODE",
 
   -- UPDATE_MAIN_MENU_EXPEDITION = function() -- Crash
   -- UPDATE_MAIN_MENU_EXPEDITION = "UPDATE_MAIN_MENU_EXPEDITION", -- Crash-
 
   -- UPDATE_MONITOR_NPC = function()
-  UPDATE_MONITOR_NPC = "UPDATE_MONITOR_NPC",
+  UPDATE_MONITOR_NPC                             = "UPDATE_MONITOR_NPC",
 
   -- UPDATE_MY_SLAVE_POS_INFO = function()
-  UPDATE_MY_SLAVE_POS_INFO = "UPDATE_MY_SLAVE_POS_INFO",
+  UPDATE_MY_SLAVE_POS_INFO                       = "UPDATE_MY_SLAVE_POS_INFO",
 
   -- UPDATE_NPC_INFO = function()
-  UPDATE_NPC_INFO = "UPDATE_NPC_INFO",
+  UPDATE_NPC_INFO                                = "UPDATE_NPC_INFO",
 
   -- UPDATE_NPC_INFO_BROADCASTING = function(info)
-  UPDATE_NPC_INFO_BROADCASTING = "UPDATE_NPC_INFO_BROADCASTING",
+  UPDATE_NPC_INFO_BROADCASTING                   = "UPDATE_NPC_INFO_BROADCASTING",
 
-  -- UPDATE_OPTION_BINDINGS = function(overrided, oldAction, newAction)
-  UPDATE_OPTION_BINDINGS = "UPDATE_OPTION_BINDINGS",
+  -- UPDATE_OPTION_BINDINGS = function(overrided: boolean, oldAction: string|EmptyString, newAction: string|nil)
+  -- trigggers when you try to change a keybind
+  UPDATE_OPTION_BINDINGS                         = "UPDATE_OPTION_BINDINGS",
 
   -- UPDATE_PING_INFO = function()
-  UPDATE_PING_INFO = "UPDATE_PING_INFO",
+  UPDATE_PING_INFO                               = "UPDATE_PING_INFO",
 
   -- UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL = function(infos)
-  UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL = "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL",
+  UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL       =
+  "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL",
 
   -- UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT = function(info)
-  UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT = "UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT",
+  UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT           = "UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT",
 
   -- UPDATE_RETURN_ACCOUNT_STATUS = function(status)
-  UPDATE_RETURN_ACCOUNT_STATUS = "UPDATE_RETURN_ACCOUNT_STATUS",
+  UPDATE_RETURN_ACCOUNT_STATUS                   = "UPDATE_RETURN_ACCOUNT_STATUS",
 
   -- UPDATE_ROADMAP_ANCHOR = function(file)
-  UPDATE_ROADMAP_ANCHOR = "UPDATE_ROADMAP_ANCHOR",
+  UPDATE_ROADMAP_ANCHOR                          = "UPDATE_ROADMAP_ANCHOR",
 
   -- UPDATE_ROSTER_MEMBER_INFO = function(rosterId)
-  UPDATE_ROSTER_MEMBER_INFO = "UPDATE_ROSTER_MEMBER_INFO",
+  UPDATE_ROSTER_MEMBER_INFO                      = "UPDATE_ROSTER_MEMBER_INFO",
 
   -- UPDATE_ROUTE_MAP = function()
-  UPDATE_ROUTE_MAP = "UPDATE_ROUTE_MAP",
+  UPDATE_ROUTE_MAP                               = "UPDATE_ROUTE_MAP",
 
   -- UPDATE_SHIP_TELESCOPE_INFO = function()
-  UPDATE_SHIP_TELESCOPE_INFO = "UPDATE_SHIP_TELESCOPE_INFO",
+  UPDATE_SHIP_TELESCOPE_INFO                     = "UPDATE_SHIP_TELESCOPE_INFO",
 
   -- UPDATE_SHORTCUT_SKILLS = function()
-  UPDATE_SHORTCUT_SKILLS = "UPDATE_SHORTCUT_SKILLS",
+  UPDATE_SHORTCUT_SKILLS                         = "UPDATE_SHORTCUT_SKILLS",
 
   -- UPDATE_SIEGE_SCORE = function(offensePoint, outlawPoint)
-  UPDATE_SIEGE_SCORE = "UPDATE_SIEGE_SCORE",
+  UPDATE_SIEGE_SCORE                             = "UPDATE_SIEGE_SCORE",
 
   -- UPDATE_SKILL_ACTIVE_TYPE = function()
-  UPDATE_SKILL_ACTIVE_TYPE = "UPDATE_SKILL_ACTIVE_TYPE",
+  UPDATE_SKILL_ACTIVE_TYPE                       = "UPDATE_SKILL_ACTIVE_TYPE",
 
   -- UPDATE_SLAVE_EQUIPMENT_SLOT = function(reload)
-  UPDATE_SLAVE_EQUIPMENT_SLOT = "UPDATE_SLAVE_EQUIPMENT_SLOT",
+  UPDATE_SLAVE_EQUIPMENT_SLOT                    = "UPDATE_SLAVE_EQUIPMENT_SLOT",
 
   -- UPDATE_SPECIALTY_RATIO = function(sellItem)
-  UPDATE_SPECIALTY_RATIO = "UPDATE_SPECIALTY_RATIO",
+  UPDATE_SPECIALTY_RATIO                         = "UPDATE_SPECIALTY_RATIO",
 
   -- UPDATE_SQUAD = function()
-  UPDATE_SQUAD = "UPDATE_SQUAD",
+  UPDATE_SQUAD                                   = "UPDATE_SQUAD",
 
   -- UPDATE_TELESCOPE_AREA = function()
-  UPDATE_TELESCOPE_AREA = "UPDATE_TELESCOPE_AREA",
+  UPDATE_TELESCOPE_AREA                          = "UPDATE_TELESCOPE_AREA",
 
   -- UPDATE_TODAY_ASSIGNMENT = function(todayInfo)
-  UPDATE_TODAY_ASSIGNMENT = "UPDATE_TODAY_ASSIGNMENT",
+  UPDATE_TODAY_ASSIGNMENT                        = "UPDATE_TODAY_ASSIGNMENT",
 
   -- UPDATE_TODAY_ASSIGNMENT_RESET_COUNT = function(count)
-  UPDATE_TODAY_ASSIGNMENT_RESET_COUNT = "UPDATE_TODAY_ASSIGNMENT_RESET_COUNT",
+  UPDATE_TODAY_ASSIGNMENT_RESET_COUNT            = "UPDATE_TODAY_ASSIGNMENT_RESET_COUNT",
 
   -- UPDATE_TRANSFER_TELESCOPE_AREA = function()
-  UPDATE_TRANSFER_TELESCOPE_AREA = "UPDATE_TRANSFER_TELESCOPE_AREA",
+  UPDATE_TRANSFER_TELESCOPE_AREA                 = "UPDATE_TRANSFER_TELESCOPE_AREA",
 
   -- UPDATE_TRANSFER_TELESCOPE_INFO = function()
-  UPDATE_TRANSFER_TELESCOPE_INFO = "UPDATE_TRANSFER_TELESCOPE_INFO",
+  UPDATE_TRANSFER_TELESCOPE_INFO                 = "UPDATE_TRANSFER_TELESCOPE_INFO",
 
   -- UPDATE_ZONE_INFO = function()
-  UPDATE_ZONE_INFO = "UPDATE_ZONE_INFO",
+  UPDATE_ZONE_INFO                               = "UPDATE_ZONE_INFO",
 
   -- UPDATE_ZONE_LEVEL_INFO = function(level, id)
-  UPDATE_ZONE_LEVEL_INFO = "UPDATE_ZONE_LEVEL_INFO",
+  UPDATE_ZONE_LEVEL_INFO                         = "UPDATE_ZONE_LEVEL_INFO",
 
   -- UPDATE_ZONE_PERMISSION = function()
-  UPDATE_ZONE_PERMISSION = "UPDATE_ZONE_PERMISSION",
+  UPDATE_ZONE_PERMISSION                         = "UPDATE_ZONE_PERMISSION",
 
   -- VIEW_CASH_BUY_WINDOW = function(sellType)
-  VIEW_CASH_BUY_WINDOW = "VIEW_CASH_BUY_WINDOW",
+  VIEW_CASH_BUY_WINDOW                           = "VIEW_CASH_BUY_WINDOW",
 
   -- WAIT_FRIEND_ADD_ALARM = function()
-  WAIT_FRIEND_ADD_ALARM = "WAIT_FRIEND_ADD_ALARM",
+  WAIT_FRIEND_ADD_ALARM                          = "WAIT_FRIEND_ADD_ALARM",
 
   -- WAIT_FRIENDLIST_UPDATE = function(updateType)
-  WAIT_FRIENDLIST_UPDATE = "WAIT_FRIENDLIST_UPDATE",
+  WAIT_FRIENDLIST_UPDATE                         = "WAIT_FRIENDLIST_UPDATE",
 
   -- WAIT_REPLY_FROM_SERVER = function(arg)
-  WAIT_REPLY_FROM_SERVER = "WAIT_REPLY_FROM_SERVER",
+  WAIT_REPLY_FROM_SERVER                         = "WAIT_REPLY_FROM_SERVER",
 
   -- WATCH_TARGET_CHANGED = function(stringId)
-  WATCH_TARGET_CHANGED = "WATCH_TARGET_CHANGED",
+  WATCH_TARGET_CHANGED                           = "WATCH_TARGET_CHANGED",
 
   -- WEB_BROWSER_ESC_EVENT = function(browser)
-  WEB_BROWSER_ESC_EVENT = "WEB_BROWSER_ESC_EVENT",
+  WEB_BROWSER_ESC_EVENT                          = "WEB_BROWSER_ESC_EVENT",
 
   -- WORLD_MESSAGE = function(msg, iconKey, info)
-  WORLD_MESSAGE = "WORLD_MESSAGE",
+  WORLD_MESSAGE                                  = "WORLD_MESSAGE",
 
   -- ZONE_SCORE_CONTENT_STATE = function(states)
-  ZONE_SCORE_CONTENT_STATE = "ZONE_SCORE_CONTENT_STATE",
+  ZONE_SCORE_CONTENT_STATE                       = "ZONE_SCORE_CONTENT_STATE",
 
   -- ZONE_SCORE_UPDATED = function(kind, info)
-  ZONE_SCORE_UPDATED = "ZONE_SCORE_UPDATED",
+  ZONE_SCORE_UPDATED                             = "ZONE_SCORE_UPDATED",
 }
 
 ---Found in ui/common/esc_menu.g
@@ -2931,7 +2959,8 @@ local CONSOLE_VAR = {
   CB_CLOSEUP_SPEED = "cb_closeup_speed",
   R_TEXTURESSTREAMINGMIPFADING = "r_texturesstreamingmipfading",
   CA_DEBUGCOMMANDBUFFER = "ca_DebugCommandBuffer",
-  E_MODELVIEW_PREFAB_LIGHT_OFFSET_FROM_CENTER = "e_modelview_Prefab_light_offset_from_center",
+  E_MODELVIEW_PREFAB_LIGHT_OFFSET_FROM_CENTER =
+  "e_modelview_Prefab_light_offset_from_center",
   P_WIREFRAME_DISTANCE = "p_wireframe_distance",
   MOVEMENT_VERIFY_MIN_Z_POS = "movement_verify_min_z_pos",
   INPUT_DEBUG = "input_debug",
@@ -2949,7 +2978,8 @@ local CONSOLE_VAR = {
   R_OPTIMISEDLIGHTSETUP = "r_OptimisedLightSetup",
   E_LOD_SKIN_RATIO = "e_lod_skin_ratio",
   R_CUBEMAPGENERATING = "r_cubemapgenerating",
-  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_TOO_FAST = "movement_verify_detailed_warp_speed_too_fast",
+  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_TOO_FAST =
+  "movement_verify_detailed_warp_speed_too_fast",
   CA_BLENDOUTTIME = "ca_BlendOutTime",
   R_SHADOWJITTERING = "r_ShadowJittering",
   R_FORCEZCLEARWITHCOLOR = "r_ForceZClearWithColor",
@@ -3013,7 +3043,8 @@ local CONSOLE_VAR = {
   CL_DEBUGFREEZESHAKE = "cl_debugFreezeShake",
   SV_VOICE_ENABLE_GROUPS = "sv_voice_enable_groups",
   AI_LOGCONSOLEVERBOSITY = "ai_LogConsoleVerbosity",
-  G_UNIT_COLLIDE_BOTTOM_BOX_MAX_SIZE_GAP = "g_unit_collide_bottom_box_max_size_gap",
+  G_UNIT_COLLIDE_BOTTOM_BOX_MAX_SIZE_GAP =
+  "g_unit_collide_bottom_box_max_size_gap",
   SWIM_JUMP_PERMISSION_RANGE = "swim_jump_permission_range",
   CL_CHECK_RESURRECTABLE_POS_DEBUG = "cl_check_resurrectable_pos_debug",
   X_FLOAT1 = "x_float1",
@@ -3025,7 +3056,8 @@ local CONSOLE_VAR = {
   TIP_OF_DAY_NUMBER = "tip_of_day_number",
   HTTP_PASSWORD = "http_password",
   D3D9_IBPOOLS = "d3d9_IBPools",
-  MOVEMENT_VERIFY_GRAVITY_HEIGHT_TOLERANCE = "movement_verify_gravity_height_tolerance",
+  MOVEMENT_VERIFY_GRAVITY_HEIGHT_TOLERANCE =
+  "movement_verify_gravity_height_tolerance",
   E_FOLIAGE_BROKEN_BRANCHES_DAMPING = "e_foliage_broken_branches_damping",
   AIM_ASSISTAIMENABLED = "aim_assistAimEnabled",
   SYS_BUDGET_DP_ROAD = "sys_budget_dp_road",
@@ -3077,24 +3109,28 @@ local CONSOLE_VAR = {
   NAME_TAG_ICON_GAP = "name_tag_icon_gap",
   E_GICACHE = "e_GICache",
   S_MUSICSPEAKERCENTERVOLUME = "s_MusicSpeakerCenterVolume",
-  MOVEMENT_VERIFY_MOVE_SPEED_SAMPLING_TIME = "movement_verify_move_speed_sampling_time",
+  MOVEMENT_VERIFY_MOVE_SPEED_SAMPLING_TIME =
+  "movement_verify_move_speed_sampling_time",
   R_RELOADSHADERS = "r_ReloadShaders",
   E_VIEW_DIST_RATIO = "e_view_dist_ratio",
   AIM_ASSISTCROSSHAIRDEBUG = "aim_assistCrosshairDebug",
   AI_IGNOREVISIBILITYCHECKS = "ai_IgnoreVisibilityChecks",
   R_TERRAINSPECULAR_STRENGTH = "r_TerrainSpecular_Strength",
-  R_TEXTURE_DB_STREAMING_CHECK_INTEGRITY = "r_texture_db_streaming_check_integrity",
+  R_TEXTURE_DB_STREAMING_CHECK_INTEGRITY =
+  "r_texture_db_streaming_check_integrity",
   E_PARTICLES_LOW_UPDATE_DIST = "e_particles_low_update_dist",
   R_TEXNOANISO = "r_TexNoAniso",
   CAMERA_INTERACTION_NPC_FADEIN_TIME = "camera_interaction_npc_fadein_time",
   E_SCISSOR_DEBUG = "e_scissor_debug",
-  NAME_TAG_LARGE_APP_STAMP_OFFSET_NORMAL = "name_tag_large_app_stamp_offset_normal",
+  NAME_TAG_LARGE_APP_STAMP_OFFSET_NORMAL =
+  "name_tag_large_app_stamp_offset_normal",
   S_PRECACHEDURATION = "s_PrecacheDuration",
   P_PROFILE_FUNCTIONS = "p_profile_functions",
   CL_SPRINTBLUR = "cl_sprintBlur",
   AI_PATHFINDERUPDATECOUNT = "ai_PathfinderUpdateCount",
   AI_THREADEDVOLUMENAVPREPROCESS = "ai_ThreadedVolumeNavPreprocess",
-  E_VOXTERHEIGHTMAPEDITINGCUSTOMLAYERINFO = "e_VoxTerHeightmapEditingCustomLayerInfo",
+  E_VOXTERHEIGHTMAPEDITINGCUSTOMLAYERINFO =
+  "e_VoxTerHeightmapEditingCustomLayerInfo",
   R_FOGDENSITYSCALE = "r_FogDensityScale",
   R_GEOMINSTANCINGTHRESHOLD = "r_GeomInstancingThreshold",
   G_SHOW_LOOT_WINDOW = "g_show_loot_window",
@@ -3162,7 +3198,8 @@ local CONSOLE_VAR = {
   NET_ACTOR_SYNC_PERIOD = "net_actor_sync_period",
   P_NOTIFY_EPSILON_RIGID = "p_notify_epsilon_rigid",
   E_BRUSHES = "e_brushes",
-  NAME_TAG_HP_COLOR_MULTIPLIER_ON_BGMODE = "name_tag_hp_color_multiplier_on_bgmode",
+  NAME_TAG_HP_COLOR_MULTIPLIER_ON_BGMODE =
+  "name_tag_hp_color_multiplier_on_bgmode",
   E_DEFERREDPHYSICSEVENTS = "e_DeferredPhysicsEvents",
   R_RAINIGNORENEAREST = "r_RainIgnoreNearest",
   CA_ITEM_OFFSET_DEBUG = "ca_item_offset_debug",
@@ -3178,7 +3215,8 @@ local CONSOLE_VAR = {
   R_ALLOWHARDWARESRGBWRITE = "r_AllowHardwareSRGBWrite",
   R_HDROFFSET = "r_HDROffset",
   PICKING_DISTANCE = "picking_distance",
-  E_LEVEL_AUTO_PRECACHE_TERRAIN_AND_PROC_VEGET = "e_level_auto_precache_terrain_and_proc_veget",
+  E_LEVEL_AUTO_PRECACHE_TERRAIN_AND_PROC_VEGET =
+  "e_level_auto_precache_terrain_and_proc_veget",
   R_NVSSAO_COARSEAO = "r_NVSSAO_CoarseAO",
   E_TERRAIN_TEXTURE_BUFFERS = "e_terrain_texture_buffers",
   CL_FROZENANGLEMAX = "cl_frozenAngleMax",
@@ -3192,7 +3230,8 @@ local CONSOLE_VAR = {
   PEPSIMAN = "pepsiman",
   E_GSM_CACHE_LOD_OFFSET = "e_gsm_cache_lod_offset",
   CAMERA_DIVE_START_DEPTH = "camera_dive_start_depth",
-  E_LEVEL_AUTO_PRECACHE_TEXTURES_AND_SHADERS = "e_level_auto_precache_textures_and_shaders",
+  E_LEVEL_AUTO_PRECACHE_TEXTURES_AND_SHADERS =
+  "e_level_auto_precache_textures_and_shaders",
   E_VOXTERPLANARPROJECTION = "e_VoxTerPlanarProjection",
   R_SSAO_RADIUS_MULTIPLER = "r_SSAO_radius_multipler",
   AI_INTERESTENABLESCAN = "ai_InterestEnableScan",
@@ -3256,7 +3295,8 @@ local CONSOLE_VAR = {
   S_VISAREASPROPAGATION = "s_VisAreasPropagation",
   CA_STOREANIMNAMESONLOAD = "ca_StoreAnimNamesOnLoad",
   E_WATER_WAVES = "e_water_waves",
-  E_CUSTOM_BUILD_EXTRAMAPS_FROMSHADERQUALITY = "e_custom_build_extramaps_fromshaderquality",
+  E_CUSTOM_BUILD_EXTRAMAPS_FROMSHADERQUALITY =
+  "e_custom_build_extramaps_fromshaderquality",
   E_MODELVIEW_PREFAB_LIGHT_COLOR_RGB = "e_modelview_Prefab_light_color_rgb",
   ES_FARPHYSTIMEOUT = "es_FarPhysTimeout",
   UI_MODELVIEW_UPDATE_TIMES = "ui_modelview_update_times",
@@ -3267,7 +3307,8 @@ local CONSOLE_VAR = {
   R_USESOFTPARTICLES = "r_UseSoftParticles",
   R_TEXTURESSTREAMPOOLSIZE = "r_TexturesStreamPoolSize",
   S_SOUNDINFO = "s_SoundInfo",
-  R_THERMALVISIONVIEWCLOAKFREQUENCYPRIMARY = "r_ThermalVisionViewCloakFrequencyPrimary",
+  R_THERMALVISIONVIEWCLOAKFREQUENCYPRIMARY =
+  "r_ThermalVisionViewCloakFrequencyPrimary",
   S_XMADECODERS = "s_XMADecoders",
   E_MESH_SIMPLIFY = "e_mesh_simplify",
   R_DEFERREDSHADINGCUBEMAPS = "r_DeferredShadingCubeMaps",
@@ -3318,7 +3359,8 @@ local CONSOLE_VAR = {
   E_CHARACTER_LIGHT_COLOR_G = "e_character_light_color_g",
   E_CHARACTER_LIGHT_COLOR_R = "e_character_light_color_r",
   E_STREAM_FOR_PHYSICS = "e_stream_for_physics",
-  R_NVSSAO_AMBIENTLIGHTOCCLUSION_HIGHQUALITY = "r_NVSSAO_AmbientLightOcclusion_HighQuality",
+  R_NVSSAO_AMBIENTLIGHTOCCLUSION_HIGHQUALITY =
+  "r_NVSSAO_AmbientLightOcclusion_HighQuality",
   PL_ZEROGGYROFADEANGLEINNER = "pl_zeroGGyroFadeAngleInner",
   MFX_PFX_MINSCALE = "mfx_pfx_minScale",
   R_MERGERENDERCHUNKS = "r_MergeRenderChunks",
@@ -3347,7 +3389,8 @@ local CONSOLE_VAR = {
   E_PARTICLES_LIGHTS_VIEW_DIST_RATIO = "e_particles_lights_view_dist_ratio",
   AI_PROTORODLOGSCALE = "ai_ProtoRODLogScale",
   R_RAINOCCLADDITIONALSIZE = "r_rainOcclAdditionalSize",
-  E_SHADOWS_CAST_VIEW_DIST_RATIO_CHARACTER = "e_shadows_cast_view_dist_ratio_character",
+  E_SHADOWS_CAST_VIEW_DIST_RATIO_CHARACTER =
+  "e_shadows_cast_view_dist_ratio_character",
   AI_AMBIENTFIREQUOTA = "ai_AmbientFireQuota",
   G_SHOWUPDATESTATE = "g_showUpdateState",
   E_CBUFFER_TERRAIN_SHIFT_NEAR = "e_cbuffer_terrain_shift_near",
@@ -3381,7 +3424,8 @@ local CONSOLE_VAR = {
   CG_DEBUG_DRAW = "cg_debug_draw",
   E_CBUFFER_OCCLUDERS_VIEW_DIST_RATIO = "e_cbuffer_occluders_view_dist_ratio",
   AG_DEBUGERRORS = "ag_debugErrors",
-  E_VEGETATION_SPRITES_DISTANCE_CUSTOM_RATIO_MIN = "e_vegetation_sprites_distance_custom_ratio_min",
+  E_VEGETATION_SPRITES_DISTANCE_CUSTOM_RATIO_MIN =
+  "e_vegetation_sprites_distance_custom_ratio_min",
   E_SCREENSHOT_SAVE_PATH = "e_screenshot_save_path",
   SYS_BUDGET_DP_VEGETATION = "sys_budget_dp_vegetation",
   SS_AUTO_CELL_LOADING = "ss_auto_cell_loading",
@@ -3418,7 +3462,8 @@ local CONSOLE_VAR = {
   MOVEMENT_VERIFY_MOVE_SPEED_ENABLE = "movement_verify_move_speed_enable",
   SYS_STREAMCALLBACKTIMEBUDGET = "sys_StreamCallbackTimeBudget",
   PL_DEBUG_JUMPING = "pl_debug_jumping",
-  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_ERROR_RATE = "movement_verify_move_speed_report_error_rate",
+  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_ERROR_RATE =
+  "movement_verify_move_speed_report_error_rate",
   AI_SOMSPEEDCOMBAT = "ai_SOMSpeedCombat",
   AI_DRAWREADIBILITIES = "ai_DrawReadibilities",
   PL_FALLDAMAGE_SPEEDFATAL = "pl_fallDamage_SpeedFatal",
@@ -3615,7 +3660,8 @@ local CONSOLE_VAR = {
   SYS_BUDGET_PARTICLE_ETC = "sys_budget_particle_etc",
   SYS_BUDGET_PARTICLE_MFX = "sys_budget_particle_mfx",
   CA_CHAREDITMODEL = "ca_CharEditModel",
-  E_TERRAIN_DEFORMATIONS_OBSTRUCT_OBJECT_SIZE_RATIO = "e_terrain_deformations_obstruct_object_size_ratio",
+  E_TERRAIN_DEFORMATIONS_OBSTRUCT_OBJECT_SIZE_RATIO =
+  "e_terrain_deformations_obstruct_object_size_ratio",
   R_TEXTURESSTREAMINGRESIDENCYENABLED = "r_texturesstreamingResidencyEnabled",
   E_VEGETATION_DISABLE_BENDING_DISTANCE = "e_vegetation_disable_bending_distance",
   CL_UNIT_COLLIDE_EFFECT_INTERVAL = "cl_unit_collide_effect_interval",
@@ -3633,7 +3679,8 @@ local CONSOLE_VAR = {
   E_PARTICLES_DYNAMIC_PARTICLE_COUNT = "e_particles_dynamic_particle_count",
   R_TEXTURESSTREAMINGDEBUGDUMPINTOLOG = "r_TexturesStreamingDebugDumpIntoLog",
   CA_DRAWBASEMESH = "ca_DrawBaseMesh",
-  NET_DEFAULTCHANNELPACKETRATETOLERANCELOW = "net_defaultChannelPacketRateToleranceLow",
+  NET_DEFAULTCHANNELPACKETRATETOLERANCELOW =
+  "net_defaultChannelPacketRateToleranceLow",
   E_MATERIAL_LOADING_PROFILE = "e_material_loading_profile",
   E_PARTICLES_TRAIL_MIN_SEG_SIZE = "e_particles_trail_min_seg_size",
   AUTO_ENEMY_TARGETING = "auto_enemy_targeting",
@@ -3641,7 +3688,8 @@ local CONSOLE_VAR = {
   CAMERA_DAMPING_USE_PHYSICS_SPEED = "camera_damping_use_physics_speed",
   CA_DEBUGANIMMEMTRACKING = "ca_DebugAnimMemTracking",
   R_TEXTURESSTREAMINGRESIDENCYTIME = "r_texturesstreamingResidencyTime",
-  R_WATERREFLECTIONSMINVISUPDATEFACTORMUL = "r_WaterReflectionsMinVisUpdateFactorMul",
+  R_WATERREFLECTIONSMINVISUPDATEFACTORMUL =
+  "r_WaterReflectionsMinVisUpdateFactorMul",
   E_TESSELLATION = "e_Tessellation",
   R_DESIREHEIGHT = "r_desireHeight",
   E_GSM_EXTRA_RANGE_SHADOW = "e_gsm_extra_range_shadow",
@@ -3650,7 +3698,8 @@ local CONSOLE_VAR = {
   R_DYNTEXATLASVOXTERRAINSIZE = "r_dyntexatlasvoxterrainsize",
   S_REVERBDELAY = "s_ReverbDelay",
   SYS_BUDGET_TRIS_ENTITY = "sys_budget_tris_entity",
-  CP_DEBUG_RAY_WORLD_INTERSECTION_RWI_FLAGS = "cp_debug_ray_world_intersection_rwi_flags",
+  CP_DEBUG_RAY_WORLD_INTERSECTION_RWI_FLAGS =
+  "cp_debug_ray_world_intersection_rwi_flags",
   AUTO_DISCONNECT_TIMER = "auto_disconnect_timer",
   G_WALKMULTIPLIER = "g_walkMultiplier",
   AI_ADJUSTPATHSAROUNDDYNAMICOBSTACLES = "ai_AdjustPathsAroundDynamicObstacles",
@@ -3658,14 +3707,16 @@ local CONSOLE_VAR = {
   P_MAX_CONTACT_GAP_PLAYER = "p_max_contact_gap_player",
   UM_SHIP_FULL_SAIL_SPEED_RATE = "um_ship_full_sail_speed_rate",
   E_CGF_VERIFY = "e_cgf_verify",
-  R_WATERREFLECTIONSMINVISUPDATEDISTANCEMUL = "r_WaterReflectionsMinVisUpdateDistanceMul",
+  R_WATERREFLECTIONSMINVISUPDATEDISTANCEMUL =
+  "r_WaterReflectionsMinVisUpdateDistanceMul",
   E_CBUFFER_TERRAIN_DISTANCE_NEAR = "e_cbuffer_terrain_distance_near",
   R_TEXGRID = "r_TexGrid",
   NAME_TAG_FONT_SIZE_ON_BGMODE = "name_tag_font_size_on_bgmode",
   PROFILE_DISK_TIMEFRAME = "profile_disk_timeframe",
   BOT_SCAN_AREA_FILTER = "bot_scan_area_filter",
   R_NVDOF_BOKEHLUMINANCE = "r_NVDOF_BokehLuminance",
-  NET_DEFAULTCHANNELPACKETRATETOLERANCEHIGH = "net_defaultChannelPacketRateToleranceHigh",
+  NET_DEFAULTCHANNELPACKETRATETOLERANCEHIGH =
+  "net_defaultChannelPacketRateToleranceHigh",
   R_BEAMSDISTFACTOR = "r_BeamsDistFactor",
   PELVIS_SHAKE_KNOCKBACK = "pelvis_shake_knockback",
   D3D9_UI_BUFFER_SIZE = "d3d9_ui_buffer_size",
@@ -3689,7 +3740,8 @@ local CONSOLE_VAR = {
   P_PROHIBIT_UNPROJECTION = "p_prohibit_unprojection",
   FLY_STANCE_ENABLE = "fly_stance_enable",
   E_WATER_TESSELATION_SWATH_WIDTH = "e_water_tesselation_swath_width",
-  NET_DEFAULTCHANNELBITRATETOLERANCEHIGH = "net_defaultChannelBitRateToleranceHigh",
+  NET_DEFAULTCHANNELBITRATETOLERANCEHIGH =
+  "net_defaultChannelBitRateToleranceHigh",
   SHOW_DOF_VALUE = "show_dof_value",
   E_PARTICLES_STREAM = "e_particles_stream",
   PL_ZEROGSPEEDMODEENERGYCONSUMPTION = "pl_zeroGSpeedModeEnergyConsumption",
@@ -3709,20 +3761,24 @@ local CONSOLE_VAR = {
   HS_IGNORE_DOMINION_AREA = "hs_ignore_dominion_area",
   E_GIGLOSSYREFLECTIONS = "e_GIGlossyReflections",
   NET_VOICE_TRAIL_PACKETS = "net_voice_trail_packets",
-  OPTION_SHADOW_VIEW_DIST_RATIO_CHARACTER = "option_shadow_view_dist_ratio_character",
+  OPTION_SHADOW_VIEW_DIST_RATIO_CHARACTER =
+  "option_shadow_view_dist_ratio_character",
   PROFILE_EVENT_TOLERANCE = "profile_event_tolerance",
   P_MAX_CONTACT_GAP_SIMPLE = "p_max_contact_gap_simple",
   R_DUALMATERIALCULLINGDIST = "r_DualMaterialCullingDist",
   CP_WORLD_PICKING = "cp_world_picking",
-  CP_DEBUG_RAY_WORLD_INTERSECTION_ENTITY_QUERY_FLAGS = "cp_debug_ray_world_intersection_entity_query_flags",
+  CP_DEBUG_RAY_WORLD_INTERSECTION_ENTITY_QUERY_FLAGS =
+  "cp_debug_ray_world_intersection_entity_query_flags",
   E_VOXTERSHADOWS = "e_VoxTerShadows",
   AI_SYSTEMUPDATE = "ai_SystemUpdate",
-  E_DETAIL_MATERIALS_ZPASS_NORMAL_DRAW_DIST = "e_detail_materials_zpass_normal_draw_dist",
+  E_DETAIL_MATERIALS_ZPASS_NORMAL_DRAW_DIST =
+  "e_detail_materials_zpass_normal_draw_dist",
   SYS_NO_CRASH_DIALOG = "sys_no_crash_dialog",
   TIME_SCALE = "time_scale",
   AI_INTERESTDETECTMOVEMENT = "ai_InterestDetectMovement",
   E_DECALS_MERGE = "e_decals_merge",
-  SOUND_OTHERS_MATERIAL_EFFECT_SOUND_VOLUME = "sound_others_material_effect_sound_volume",
+  SOUND_OTHERS_MATERIAL_EFFECT_SOUND_VOLUME =
+  "sound_others_material_effect_sound_volume",
   CA_LODSKIPTASKINFLECTIONOFRATIO = "ca_LodSkipTaskInflectionOfRatio",
   R_SHOWNORMALS = "r_ShowNormals",
   I_OFFSET_UP = "i_offset_up",
@@ -3734,7 +3790,8 @@ local CONSOLE_VAR = {
   G_GRABLOG = "g_grabLog",
   AI_GENCRYORGWATERGRAPH = "ai_genCryOrgWaterGraph",
   SOUND_OTHERS_COMBAT_SOUND_VOLUME = "sound_others_combat_sound_volume",
-  CL_WEB_UPLOAD_RESERVED_SCREENSHOT_FILE_NAME = "cl_web_upload_reserved_screenshot_file_name",
+  CL_WEB_UPLOAD_RESERVED_SCREENSHOT_FILE_NAME =
+  "cl_web_upload_reserved_screenshot_file_name",
   E_WATER_OCEAN_SOFT_PARTICLES = "e_water_ocean_soft_particles",
   BLINK_DEBUG = "blink_debug",
   OPTION_VIEW_DIST_RATIO = "option_view_dist_ratio",
@@ -3748,7 +3805,8 @@ local CONSOLE_VAR = {
   AUX_PHYS_ACTIVE_ALL = "aux_phys_active_all",
   AC_FRAMETIME = "ac_frametime",
   SYS_BUDGET_SYSTEM_MEMORY_MESH = "sys_budget_system_memory_mesh",
-  DECORATION_SMART_POSITIONING_LOOP_COUNT = "decoration_smart_positioning_loop_count",
+  DECORATION_SMART_POSITIONING_LOOP_COUNT =
+  "decoration_smart_positioning_loop_count",
   S_GAMEMASTERVOLUME = "s_GameMasterVolume",
   CA_LOADDBH = "ca_LoadDBH",
   PL_ZEROGTHRUSTERRESPONSIVENESS = "pl_zeroGThrusterResponsiveness",
@@ -3774,7 +3832,8 @@ local CONSOLE_VAR = {
   PREFAB_CACHE_XML = "prefab_cache_xml",
   R_NVSSAO_ONLYOCCLUDEAMBIENT = "r_NVSSAO_OnlyOccludeAmbient",
   OPTION_VIEW_DISTANCE = "option_view_distance",
-  E_MODELVIEW_PREFAB_LIGHT_SPECUALR_MULTY = "e_modelview_Prefab_light_specualr_multy",
+  E_MODELVIEW_PREFAB_LIGHT_SPECUALR_MULTY =
+  "e_modelview_Prefab_light_specualr_multy",
   AI_DEBUGDRAWDAMAGEPARTS = "ai_DebugDrawDamageParts",
   E_VOXTERHIDEINTEGRATED = "e_VoxTerHideIntegrated",
   CD_UNMOUNT_AUTO = "cd_unmount_auto",
@@ -3893,7 +3952,8 @@ local CONSOLE_VAR = {
   UI_DRAW_ACHIEVEMENT_TYPE = "ui_draw_achievement_type",
   E_VIEW_DIST_RATIO_VEGETATION = "e_view_dist_ratio_vegetation",
   AI_DRAWTARGETS = "ai_DrawTargets",
-  MOVEMENT_LEVITATION_HACK_BUFF_START_TIME = "movement_levitation_hack_buff_start_time",
+  MOVEMENT_LEVITATION_HACK_BUFF_START_TIME =
+  "movement_levitation_hack_buff_start_time",
   FG_ABORTONLOADERROR = "fg_abortOnLoadError",
   NET_ENABLE_TFRC = "net_enable_tfrc",
   P_ACCURACY_LCPCG_NO_IMPROVEMENT = "p_accuracy_LCPCG_no_improvement",
@@ -3979,7 +4039,8 @@ local CONSOLE_VAR = {
   R_RAINOCCLVIEWERDIST = "r_rainOcclViewerDist",
   ES_REMOVEENTITY = "es_removeEntity",
   ITEM_MAKER_INFO_SHOW_TOOLTIP = "item_maker_info_show_tooltip",
-  ROPE_SKILL_CONTROLLER_RELATIVE_WATERLEVEL_FOR_CHANGE_TO_FLYMODE = "rope_skill_controller_relative_waterlevel_for_change_to_flymode",
+  ROPE_SKILL_CONTROLLER_RELATIVE_WATERLEVEL_FOR_CHANGE_TO_FLYMODE =
+  "rope_skill_controller_relative_waterlevel_for_change_to_flymode",
   CAMERA_FREE_IGNORE_ALL = "camera_free_ignore_all",
   CL_CHECK_TELEPORT_TO_UNIT = "cl_check_teleport_to_unit",
   G_UNIT_COLLIDE_PROCESS_FREQUENCY = "g_unit_collide_process_frequency",
@@ -3992,7 +4053,8 @@ local CONSOLE_VAR = {
   R_WATERRIPPLE = "r_WaterRipple",
   G_ACTOR_STANCE_DEBUG = "g_actor_stance_debug",
   MIN_TIME_STEP = "min_time_step",
-  E_SHADOWS_ARRANGE_DEFERRED_TEXTURE_SIZE = "e_shadows_arrange_deferred_texture_size",
+  E_SHADOWS_ARRANGE_DEFERRED_TEXTURE_SIZE =
+  "e_shadows_arrange_deferred_texture_size",
   G_DETACHCAMERA = "g_detachCamera",
   I_MOUSE_ACCEL_MAX = "i_mouse_accel_max",
   E_SHADOWS_TERRAIN_TEXTURE_SIZE = "e_shadows_terrain_texture_size",
@@ -4032,7 +4094,8 @@ local CONSOLE_VAR = {
   R_ZFIGHTINGEXTRUDE = "r_ZFightingExtrude",
   LOG_SPAMDELAY = "log_SpamDelay",
   S_GAMEREVERBMANAGERPAUSE = "s_GameReverbManagerPause",
-  E_DEBUG_DRAW_LOD_WARNING_DEFAULT_LOD_RATIO = "e_debug_draw_lod_warning_default_lod_ratio",
+  E_DEBUG_DRAW_LOD_WARNING_DEFAULT_LOD_RATIO =
+  "e_debug_draw_lod_warning_default_lod_ratio",
   SYS_SAVECVARS = "sys_SaveCVars",
   R_HDRRANGEADAPTLBUFFERMAXRANGE = "r_HDRRangeAdaptLBufferMaxRange",
   P_NET_VELSNAPMUL = "p_net_velsnapmul",
@@ -4107,12 +4170,14 @@ local CONSOLE_VAR = {
   R_HDRRANGEADAPTMAXRANGE = "r_HDRRangeAdaptMaxRange",
   CAMERA_USE_FADE_OUT = "camera_use_fade_out",
   SHOW_GUIDEDECAL = "show_guidedecal",
-  R_TEXTURESSTREAMINGRESIDENCYTIMETESTLIMIT = "r_texturesstreamingResidencyTimeTestLimit",
+  R_TEXTURESSTREAMINGRESIDENCYTIMETESTLIMIT =
+  "r_texturesstreamingResidencyTimeTestLimit",
   E_CBUFFER_OCCLUDERS_LOD_RATIO = "e_cbuffer_occluders_lod_ratio",
   ANGLE_DEBUG = "angle_debug",
   R_CORONAFADE = "r_CoronaFade",
   E_GSM_FOCUS_ON_UNIT = "e_gsm_focus_on_unit",
-  ROPE_SKILL_CONTROLLER_FINISH_ACCEL_VELOCITY = "rope_skill_controller_finish_accel_velocity",
+  ROPE_SKILL_CONTROLLER_FINISH_ACCEL_VELOCITY =
+  "rope_skill_controller_finish_accel_velocity",
   MAX_ARROW_SCALE_RATE = "max_arrow_scale_rate",
   MAX_ARROW_SCALE_TIME = "max_arrow_scale_time",
   ALN_DEBUG_MOVEMENT = "aln_debug_movement",
@@ -4218,7 +4283,8 @@ local CONSOLE_VAR = {
   NET_LOG = "net_log",
   QUEUED_SKILL_DEBUG = "queued_skill_debug",
   S_UNUSEDSOUNDCOUNT = "s_UnusedSoundCount",
-  R_THERMALVISIONVIEWCLOAKFREQUENCYSECONDARY = "r_ThermalVisionViewCloakFrequencySecondary",
+  R_THERMALVISIONVIEWCLOAKFREQUENCYSECONDARY =
+  "r_ThermalVisionViewCloakFrequencySecondary",
   BUILDER_ROTATE_ANGLE = "builder_rotate_angle",
   R_GENERALPASSGEOMETRYSORTING = "r_GeneralPassGeometrySorting",
   AI_DRAWRADARDIST = "ai_DrawRadarDist",
@@ -4271,7 +4337,8 @@ local CONSOLE_VAR = {
   R_SHADOWSOMNILIGHTLIMIT = "r_ShadowsOmniLightLimit",
   E_WATER_TESSELATION_AMOUNTX = "e_water_tesselation_amountX",
   E_WATER_TESSELATION_AMOUNTY = "e_water_tesselation_amountY",
-  E_COVERAGEBUFFERCULLINDIVIDUALBRUSHESMAXNODESIZE = "e_CoverageBufferCullIndividualBrushesMaxNodeSize",
+  E_COVERAGEBUFFERCULLINDIVIDUALBRUSHESMAXNODESIZE =
+  "e_CoverageBufferCullIndividualBrushesMaxNodeSize",
   AI_RECORDER = "ai_Recorder",
   AC_DEBUGFUTUREANIMPATH = "ac_debugFutureAnimPath",
   AI_LIMITPHYSICSREQUESTPERFRAME = "ai_LimitPhysicsRequestPerFrame",
@@ -4326,7 +4393,8 @@ local CONSOLE_VAR = {
   E_DYNAMIC_LIGHT = "e_dynamic_light",
   FG_PROFILE = "fg_profile",
   R_USEPARTICLESHALFRESFORCE = "r_UseParticlesHalfResForce",
-  MOVEMENT_VERIFY_ONGROUND_HEIGHT_TOLERANCE = "movement_verify_onground_height_tolerance",
+  MOVEMENT_VERIFY_ONGROUND_HEIGHT_TOLERANCE =
+  "movement_verify_onground_height_tolerance",
   E_SHADOWSDEBUG = "e_ShadowsDebug",
   R_WATERUPDATEDISTANCE = "r_WaterUpdateDistance",
   CL_SCREENEFFECTS = "cl_screeneffects",
@@ -4398,7 +4466,8 @@ local CONSOLE_VAR = {
   E_CBUFFER_DEBUG_DRAW_SCALE = "e_cbuffer_debug_draw_scale",
   R_SHADOWSMASKRESOLUTION = "r_ShadowsMaskResolution",
   P_NOTIFY_EPSILON_LIVING = "p_notify_epsilon_living",
-  NET_DEFAULTCHANNELIDLEPACKETRATEDESIRED = "net_defaultChannelIdlePacketRateDesired",
+  NET_DEFAULTCHANNELIDLEPACKETRATEDESIRED =
+  "net_defaultChannelIdlePacketRateDesired",
   G_ENABLEITEMS = "g_enableitems",
   PL_ZEROGSPEEDMULTNORMAL = "pl_zeroGSpeedMultNormal",
   FR_FTURN_SCALE = "fr_fturn_scale",
@@ -4463,7 +4532,8 @@ local CONSOLE_VAR = {
   CA_GC_DURATION = "ca_gc_duration",
   R_SHADOWSSUNMASKBLURRINESS = "r_ShadowsSunMaskBlurriness",
   SOUND_CHARACTER_LISTENER = "sound_character_listener",
-  G_UNIT_COLLIDE_BOTTOM_BOX_MIN_HEIGHT_SIZE_GAP = "g_unit_collide_bottom_box_min_height_size_gap",
+  G_UNIT_COLLIDE_BOTTOM_BOX_MIN_HEIGHT_SIZE_GAP =
+  "g_unit_collide_bottom_box_min_height_size_gap",
   INSTANCE_ID = "instance_id",
   R_WATERCAUSTICS = "r_WaterCaustics",
   P_DEBUG_JOINTS = "p_debug_joints",
@@ -4478,7 +4548,8 @@ local CONSOLE_VAR = {
   CA_DRAWCGAASSKIN = "ca_DrawCGAAsSkin",
   AI_DEBUGDRAWAMBIENTFIRE = "ai_DebugDrawAmbientFire",
   R_USEPARTICLESREFRACTION = "r_UseParticlesRefraction",
-  MOVEMENT_VERIFY_AIRSTANDING_HEIGHT_TOLERANCE = "movement_verify_airstanding_height_tolerance",
+  MOVEMENT_VERIFY_AIRSTANDING_HEIGHT_TOLERANCE =
+  "movement_verify_airstanding_height_tolerance",
   R_BEAMSSOFTCLIP = "r_BeamsSoftClip",
   AC_CLAMPTIMEENTITY = "ac_clampTimeEntity",
   SKIP_AG_UPDATE = "skip_ag_update",
@@ -4546,7 +4617,8 @@ local CONSOLE_VAR = {
   NAME_TAG_FONT_SIZE = "name_tag_font_size",
   E_DEFAULT_MATERIAL = "e_default_material",
   OPTION_SHOW_COMBAT_RESOURCE_WINDOW = "option_show_combat_resource_window",
-  MOVEMENT_VERIFY_MOVE_SPEED_BIG_ENOUGH_VEL = "movement_verify_move_speed_big_enough_vel",
+  MOVEMENT_VERIFY_MOVE_SPEED_BIG_ENOUGH_VEL =
+  "movement_verify_move_speed_big_enough_vel",
   AG_EP_CORRECTMOVEMENT = "ag_ep_correctMovement",
   R_SHADOWSADAPTIONMIN = "r_ShadowsAdaptionMin",
   R_POSTPROCESSEFFECTSPARAMSBLENDING = "r_PostProcessEffectsParamsBlending",
@@ -4589,7 +4661,8 @@ local CONSOLE_VAR = {
   CR_SENSITIVITY = "cr_sensitivity",
   SWIM_SIDE_SPEED_MUL = "swim_side_speed_mul",
   OPTION_CAMERA_DIST_LIMIT = "option_camera_dist_limit",
-  R_TEXTURESSTREAMINGPOSTPONETHRESHOLDKB = "r_texturesstreamingPostponeThresholdKB",
+  R_TEXTURESSTREAMINGPOSTPONETHRESHOLDKB =
+  "r_texturesstreamingPostponeThresholdKB",
   R_NVSSAO_POWEREXPONENT = "r_NVSSAO_PowerExponent",
   E_SKY_BOX = "e_sky_box",
   P_TIME_GRANULARITY = "p_time_granularity",
@@ -4610,7 +4683,8 @@ local CONSOLE_VAR = {
   SWIM_UP_SPEED_MUL = "swim_up_speed_mul",
   AI_DRAWBEAUTIFYPATH = "ai_drawBeautifyPath",
   OPTION_SKELETON_EFFECT = "option_skeleton_effect",
-  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_CRITICAL_POINT = "movement_verify_move_speed_report_critical_point",
+  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_CRITICAL_POINT =
+  "movement_verify_move_speed_report_critical_point",
   R_TEXTURESSTREAMINGPOSTPONEMIPS = "r_texturesstreamingPostponeMips",
   P_RWI_QUEUE_DEBUG = "p_rwi_queue_debug",
   CA_LIPSYNC_PHONEME_CROSSFADE = "ca_lipsync_phoneme_crossfade",
@@ -4636,12 +4710,14 @@ local CONSOLE_VAR = {
   CAMERA_LIMIT_FADEOUT_DISTANCE = "camera_limit_fadeout_distance",
   E_WATER_TESSELATION_AMOUNT = "e_water_tesselation_amount",
   G_CUSTOMIZER_STREAM_CUTSCENE = "g_customizer_stream_cutscene",
-  G_UNIT_COLLIDE_BOTTOM_BOX_HEIGHT_SIZE_RATE = "g_unit_collide_bottom_box_height_size_rate",
+  G_UNIT_COLLIDE_BOTTOM_BOX_HEIGHT_SIZE_RATE =
+  "g_unit_collide_bottom_box_height_size_rate",
   E_GIAMOUNT = "e_GIAmount",
   R_DEFERREDSHADINGTILED = "r_DeferredShadingTiled",
   AI_DYNAMICTRIANGULARUPDATETIME = "ai_DynamicTriangularUpdateTime",
   ES_SPLASHTIMEOUT = "es_SplashTimeout",
-  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_PRETTY_FAST = "movement_verify_detailed_warp_speed_pretty_fast",
+  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_PRETTY_FAST =
+  "movement_verify_detailed_warp_speed_pretty_fast",
   R_DYNTEXATLASSPRITESMAXSIZE = "r_DynTexAtlasSpritesMaxSize",
   E_FORCE_DETAIL_LEVEL_FOR_RESOLUTION = "e_force_detail_level_for_resolution",
   OPTION_ANTI_ALIASING = "option_anti_aliasing",
@@ -4669,7 +4745,8 @@ local CONSOLE_VAR = {
   BOT_TEMPORY_DUMP_SIZE = "bot_tempory_dump_size",
   G_GOFORCEFASTUPDATE = "g_goForceFastUpdate",
   WORLD_WIDGET_MOUSE_UP_THRESHOLD_TIME = "world_widget_mouse_up_threshold_time",
-  MOVEMENT_VERIFY_MOVE_SPEED_MAX_CLIMBING_VEL = "movement_verify_move_speed_max_climbing_vel",
+  MOVEMENT_VERIFY_MOVE_SPEED_MAX_CLIMBING_VEL =
+  "movement_verify_move_speed_max_climbing_vel",
   R_REFRACTION = "r_refraction",
   E_GSM_RANGE_STEP_OBJECT = "e_gsm_range_step_object",
   CD_STREAM_VIEW_DIST_RATIO = "cd_stream_view_dist_ratio",
@@ -4683,12 +4760,14 @@ local CONSOLE_VAR = {
   R_OCEANHEIGHTSCALE = "r_OceanHeightScale",
   ES_DEBUGFINDENTITY = "es_DebugFindEntity",
   G_BREAKTIMEOUTFRAMES = "g_breaktimeoutframes",
-  MOVEMENT_VERIFY_GRAVITY_ERROR_TOLERANCE = "movement_verify_gravity_error_tolerance",
+  MOVEMENT_VERIFY_GRAVITY_ERROR_TOLERANCE =
+  "movement_verify_gravity_error_tolerance",
   G_ENABLEIDLECHECK = "g_enableIdleCheck",
   OCEANWAVESSPEED = "OceanWavesSpeed",
   MODIFIER_SHOW = "modifier_show",
   R_DRIVER = "r_Driver",
-  MOVEMENT_VERIFY_IGNORE_MSEC_AFTER_SKILL_CONTROLLER = "movement_verify_ignore_msec_after_skill_controller",
+  MOVEMENT_VERIFY_IGNORE_MSEC_AFTER_SKILL_CONTROLLER =
+  "movement_verify_ignore_msec_after_skill_controller",
   CA_LIPSYNC_DEBUG = "ca_lipsync_debug",
   S_DOPPLER = "s_Doppler",
   R_DRAWNEARZRANGE = "r_DrawNearZRange",
@@ -4743,7 +4822,8 @@ local CONSOLE_VAR = {
   P_MAX_PLANE_CONTACTS = "p_max_plane_contacts",
   E_PARTICLES_VERYHIGH = "e_particles_veryhigh",
   UM_PLANE_SHADOW = "um_plane_shadow",
-  MOVEMENT_VERIFY_DETAILED_WARP_DIST_PRETTY_FAR = "movement_verify_detailed_warp_dist_pretty_far",
+  MOVEMENT_VERIFY_DETAILED_WARP_DIST_PRETTY_FAR =
+  "movement_verify_detailed_warp_dist_pretty_far",
   PL_ZEROGPARTICLETRAIL = "pl_zeroGParticleTrail",
   HR_DOTANGLE = "hr_dotAngle",
   E_XML_CACHE_GC = "e_xml_cache_gc",
@@ -4766,7 +4846,8 @@ local CONSOLE_VAR = {
   P_UNPROJ_VEL_SCALE = "p_unproj_vel_scale",
   R_HDRBRIGHTOFFSET = "r_HDRBrightOffset",
   HS_IGNORE_BUILD_AVAILABLE_TIME = "hs_ignore_build_available_time",
-  E_TERRAIN_OCCLUSION_CULLING_PRECISION_DIST_RATIO = "e_terrain_occlusion_culling_precision_dist_ratio",
+  E_TERRAIN_OCCLUSION_CULLING_PRECISION_DIST_RATIO =
+  "e_terrain_occlusion_culling_precision_dist_ratio",
   E_FACE_RESET_DEBUG = "e_face_reset_debug",
   PLAYER_DEBUG_NAME = "player_debug_name",
   ES_DRAWAREAS = "es_DrawAreas",
@@ -4820,7 +4901,8 @@ local CONSOLE_VAR = {
   P_TICK_BREAKABLE = "p_tick_breakable",
   R_SHADOWSADAPTIONSIZE = "r_ShadowsAdaptionSize",
   E_STATOBJ_STATS = "e_statobj_stats",
-  E_TERRAIN_OCCLUSION_CULLING_STEP_SIZE_DELTA = "e_terrain_occlusion_culling_step_size_delta",
+  E_TERRAIN_OCCLUSION_CULLING_STEP_SIZE_DELTA =
+  "e_terrain_occlusion_culling_step_size_delta",
   BOT_ZONE_ID = "bot_zone_id",
   AI_ENABLEWARNINGSERRORS = "ai_EnableWarningsErrors",
   AI_DEBUGDRAWCOLLISIONEVENTS = "ai_DebugDrawCollisionEvents",
@@ -4882,7 +4964,8 @@ local CONSOLE_VAR = {
   CA_DRAWATTACHMENTRADIUS = "ca_DrawAttachmentRadius",
   P_MAX_LCPCG_CONTACTS = "p_max_LCPCG_contacts",
   NAME_TAG_FIXED_SIZE_MODE = "name_tag_fixed_size_mode",
-  E_STAT_OBJ_MERGE_MAX_TRIS_PER_DRAWCALL = "e_stat_obj_merge_max_tris_per_drawcall",
+  E_STAT_OBJ_MERGE_MAX_TRIS_PER_DRAWCALL =
+  "e_stat_obj_merge_max_tris_per_drawcall",
   R_SHADERSUSEINSTANCELOOKUPTABLE = "r_ShadersUseInstanceLookUpTable",
   R_NIGHTVISIONBRIGHTLEVEL = "r_NightVisionBrightLevel",
   R_NVSSAO = "r_NVSSAO",
@@ -4954,7 +5037,8 @@ local CONSOLE_VAR = {
   AI_DRAWAREAS = "ai_DrawAreas",
   P_MAX_APPROX_CAPS = "p_max_approx_caps",
   R_CONTRAST = "r_Contrast",
-  NET_ACTOR_CONTROLLER_INTERPOLATE_METHOD = "net_actor_controller_interpolate_method",
+  NET_ACTOR_CONTROLLER_INTERPOLATE_METHOD =
+  "net_actor_controller_interpolate_method",
   R_EYEADAPTATIONLOCAL = "r_EyeAdaptationLocal",
   Q_SHADERGLASS = "q_ShaderGlass",
   AI_DRAWGOALS = "ai_DrawGoals",
@@ -5074,13 +5158,15 @@ local CONSOLE_VAR = {
   CA_USEATTEFFECTRELATIVEOFFSET = "ca_useAttEffectRelativeOffset",
   E_PROFILE_LEVEL_LOADING = "e_profile_level_loading",
   SOUND_SOURCE_COMBAT_SOUND_VOLUME = "sound_source_combat_sound_volume",
-  MOVEMENT_VERIFY_DETAILED_WARP_DIST_FAR = "movement_verify_detailed_warp_dist_far",
+  MOVEMENT_VERIFY_DETAILED_WARP_DIST_FAR =
+  "movement_verify_detailed_warp_dist_far",
   DDCMS_TIME_OFFSET = "ddcms_time_offset",
   ATT_SCALE_TEST_WORN = "att_scale_test_worn",
   OVER_HEAD_MARKER_OFFSET = "over_head_marker_offset",
   E_GSM_FOCUS_OFFSET_VAL = "e_gsm_focus_offset_val",
   R_SHADERSDELAYFLUSH = "r_ShadersDelayFlush",
-  CL_WEB_UPLOAD_RESERVED_SCREENSHOT_PATH = "cl_web_upload_reserved_screenshot_path",
+  CL_WEB_UPLOAD_RESERVED_SCREENSHOT_PATH =
+  "cl_web_upload_reserved_screenshot_path",
   AI_ALLTIME = "ai_AllTime",
   CA_USELINKVERTICES = "ca_UseLinkVertices",
   AI_INTERESTSWITCHBOOST = "ai_InterestSwitchBoost",
@@ -5153,7 +5239,8 @@ local CONSOLE_VAR = {
   E_DEBUG_DRAW_LOD_ERROR_NO_LOD_TRIS = "e_debug_draw_lod_error_no_lod_tris",
   R_SHADOWPOOLMAXFRAMES = "r_ShadowPoolMaxFrames",
   R_WIREFRAME = "r_wireframe",
-  MOVEMENT_VERIFY_MOVE_SPEED_CRITICAL_TOLERANCE = "movement_verify_move_speed_critical_tolerance",
+  MOVEMENT_VERIFY_MOVE_SPEED_CRITICAL_TOLERANCE =
+  "movement_verify_move_speed_critical_tolerance",
   P_MAX_MC_MASS_RATIO = "p_max_MC_mass_ratio",
   R_CULLGEOMETRYFORLIGHTS = "r_CullGeometryForLights",
   E_VEGETATION_USE_LIST = "e_vegetation_use_list",
@@ -5168,7 +5255,8 @@ local CONSOLE_VAR = {
   G_USE_CHAT_TIME_STAMP = "g_use_chat_time_stamp",
   R_NODRAWNEAR = "r_NoDrawNear",
   E_TERRAIN_NORMAL_MAP = "e_terrain_normal_map",
-  AI_EXTRAFORBIDDENRADIUSDURINGBEAUTIFICATION = "ai_ExtraForbiddenRadiusDuringBeautification",
+  AI_EXTRAFORBIDDENRADIUSDURINGBEAUTIFICATION =
+  "ai_ExtraForbiddenRadiusDuringBeautification",
   P_MAX_SUBSTEPS_LARGE_GROUP = "p_max_substeps_large_group",
   R_NIGHTVISIONVIEWDIST = "r_NightVisionViewDist",
   E_STREAMPREDICTIONDISTANCEFAR = "e_StreamPredictionDistanceFar",
@@ -5290,7 +5378,8 @@ local CONSOLE_VAR = {
   S_REVERBECHODSP = "s_ReverbEchoDSP",
   CL_HITBLUR = "cl_hitBlur",
   R_ENVLCMUPDATEINTERVAL = "r_EnvLCMupdateInterval",
-  R_WATERREFLECTIONSMINVISIBLEPIXELSUPDATE = "r_WaterReflectionsMinVisiblePixelsUpdate",
+  R_WATERREFLECTIONSMINVISIBLEPIXELSUPDATE =
+  "r_WaterReflectionsMinVisiblePixelsUpdate",
   E_DECALS_OVERLAPPING = "e_decals_overlapping",
   E_CGF_LOADING_PROFILE = "e_cgf_loading_profile",
   DOODAD_SMART_POSITIONING_LOOP_COUNT = "doodad_smart_positioning_loop_count",
@@ -5334,7 +5423,8 @@ local CONSOLE_VAR = {
   AI_DEBUGDRAWOBSTRSPHERES = "ai_DebugDrawObstrSpheres",
   CAMERA_FOV_ON_5BY4_SCREEN = "camera_fov_on_5by4_screen",
   AG_PHYSERRORMAXOUTERRADIUS = "ag_physErrorMaxOuterRadius",
-  R_NVSSAO_AMBIENTLIGHTOCCLUSION_LOWQUALITY = "r_NVSSAO_AmbientLightOcclusion_LowQuality",
+  R_NVSSAO_AMBIENTLIGHTOCCLUSION_LOWQUALITY =
+  "r_NVSSAO_AmbientLightOcclusion_LowQuality",
   NET_LANBROWSER = "net_lanbrowser",
   E_WATER_WAVES_TESSELATION_AMOUNT = "e_water_waves_tesselation_amount",
   OPTION_USE_NO_ZPASS = "option_use_no_zpass",
@@ -5344,7 +5434,8 @@ local CONSOLE_VAR = {
   FR_ZSPEED = "fr_zspeed",
   NET_ENABLE_FAST_PING = "net_enable_fast_ping",
   CLOTH_MASS_DECAY = "cloth_mass_decay",
-  R_MSAA_AMD_RESOLVESSUBRESOURCE_WORKAROUND = "r_MSAA_amd_resolvessubresource_workaround",
+  R_MSAA_AMD_RESOLVESSUBRESOURCE_WORKAROUND =
+  "r_MSAA_amd_resolvessubresource_workaround",
   S_X2CULLINGDISTANCE = "s_X2CullingDistance",
   G_RAGDOLL_BLENDANIM = "g_ragdoll_BlendAnim",
   R_CONDITIONALRENDERING = "r_ConditionalRendering",
@@ -5363,7 +5454,8 @@ local CONSOLE_VAR = {
   POSTURE_DEBUG = "posture_debug",
   E_SHADOWS_ON_WATER = "e_shadows_on_water",
   AC_DEBUGMOVEMENTCONTROLMETHODS = "ac_debugMovementControlMethods",
-  MOVEMENT_VERIFY_DETAILED_WARP_DIST_TOO_FAR = "movement_verify_detailed_warp_dist_too_far",
+  MOVEMENT_VERIFY_DETAILED_WARP_DIST_TOO_FAR =
+  "movement_verify_detailed_warp_dist_too_far",
   E_VOXTERTEXBUILDONCPU = "e_VoxTerTexBuildOnCPU",
   CL_DEBUG_SKILL_MSG = "cl_debug_skill_msg",
   AI_ALLOWACCURACYINCREASE = "ai_AllowAccuracyIncrease",
@@ -5432,7 +5524,8 @@ local CONSOLE_VAR = {
   DRAW_TORNADO_AREA = "draw_tornado_area",
   E_TERRAIN_BBOXES = "e_terrain_bboxes",
   R_PROFILESHADERSSMOOTH = "r_ProfileShadersSmooth",
-  E_DEBUG_DRAW_LOD_ERROR_MIN_REDUCE_RATIO = "e_debug_draw_lod_error_min_reduce_ratio",
+  E_DEBUG_DRAW_LOD_ERROR_MIN_REDUCE_RATIO =
+  "e_debug_draw_lod_error_min_reduce_ratio",
   AI_SOUNDPERCEPTION = "ai_SoundPerception",
   G_QUICKGAME_PING1_LEVEL = "g_quickGame_ping1_level",
   DS_WARNONMISSINGLOC = "ds_WarnOnMissingLoc",
@@ -5463,7 +5556,8 @@ local CONSOLE_VAR = {
   AI_USECALCULATIONSTOPPERCOUNTER = "ai_UseCalculationStopperCounter",
   MOVEMENT_VERIFY_SPEED_SAMPLE_MIN = "movement_verify_speed_sample_min",
   R_SHADERSDEBUG = "r_ShadersDebug",
-  ROPE_SKILL_CONTROLLER_TARGET_MOVED_AWAY_DIST = "rope_skill_controller_target_moved_away_dist",
+  ROPE_SKILL_CONTROLLER_TARGET_MOVED_AWAY_DIST =
+  "rope_skill_controller_target_moved_away_dist",
   CA_LIPSYNC_PHONEME_STRENGTH = "ca_lipsync_phoneme_strength",
   R_FOGDEPTHTEST = "r_FogDepthTest",
   CA_LIPSYNC_PHONEME_OFFSET = "ca_lipsync_phoneme_offset",
@@ -5558,7 +5652,8 @@ local CONSOLE_VAR = {
   PL_FALLDAMAGE_SPEEDBIAS = "pl_fallDamage_SpeedBias",
   PL_FALLDAMAGE_SPEEDSAFE = "pl_fallDamage_SpeedSafe",
   AI_USEALTERNATIVEREADABILITY = "ai_UseAlternativeReadability",
-  MOVEMENT_VERIFY_AIRSTANDING_ERROR_RATE = "movement_verify_airstanding_error_rate",
+  MOVEMENT_VERIFY_AIRSTANDING_ERROR_RATE =
+  "movement_verify_airstanding_error_rate",
   ES_CHARZOFFSETSPEED = "es_CharZOffsetSpeed",
   E_TERRAIN_DRAW_THIS_SECTOR_ONLY = "e_terrain_draw_this_sector_only",
   CAMERA_MOVE_HOLD_Z = "camera_move_hold_z",
@@ -5595,7 +5690,8 @@ local CONSOLE_VAR = {
   P_DRAW_HELPERS_NUM = "p_draw_helpers_num",
   E_TERRAIN_OPTIMISED_IB = "e_terrain_optimised_ib",
   LOCALIZED_TEXTS_DB_LOCATION = "localized_texts_db_location",
-  ROPE_SKILL_CONTROLLER_AIR_TIME_FOR_CHANGE_TO_FLYMODE = "rope_skill_controller_air_time_for_change_to_flymode",
+  ROPE_SKILL_CONTROLLER_AIR_TIME_FOR_CHANGE_TO_FLYMODE =
+  "rope_skill_controller_air_time_for_change_to_flymode",
   DS_LOADSOUNDSSYNC = "ds_LoadSoundsSync",
   E_COVERAGEBUFFERTOLERANCE = "e_CoverageBufferTolerance",
   CL_COUNTRY_CODE = "cl_country_code",
@@ -5636,7 +5732,8 @@ local CONSOLE_VAR = {
   P_NET_MINSNAPDOT = "p_net_minsnapdot",
   E_SCREENSHOT_WIDTH = "e_screenshot_width",
   AI_OVERLAYMESSAGEDURATION = "ai_OverlayMessageDuration",
-  NET_ACTOR_CONTROLLER_RAGDOLL_SMOOTH_TIME = "net_actor_controller_ragdoll_smooth_time",
+  NET_ACTOR_CONTROLLER_RAGDOLL_SMOOTH_TIME =
+  "net_actor_controller_ragdoll_smooth_time",
   SYS_SSINFO = "sys_SSInfo",
   SV_DEDICATEDMAXRATE = "sv_DedicatedMaxRate",
   R_DRAWNEARFOV = "r_DrawNearFoV",
@@ -5648,7 +5745,8 @@ local CONSOLE_VAR = {
   ROPE_MAX_ALLOWED_STEP = "rope_max_allowed_step",
   CR_ROTATEDAMPINGSPEED = "cr_rotateDampingSpeed",
   R_SHADERSDIRECTORY = "r_ShadersDirectory",
-  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_FAST = "movement_verify_detailed_warp_speed_fast",
+  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_FAST =
+  "movement_verify_detailed_warp_speed_fast",
   E_SKY_BOX_DEBUG = "e_sky_box_debug",
   P_MAX_LCPCG_SUBITERS_FINAL = "p_max_LCPCG_subiters_final",
   R_CUSTOMRESPREVIEW = "r_CustomResPreview",
@@ -5702,7 +5800,8 @@ local CONSOLE_VAR = {
   R_PIXELSYNC = "r_PixelSync",
   AG_FORCEINSIDEERRORDISC = "ag_forceInsideErrorDisc",
   UM_VEHICLE_WATER_SPEED_RATIO = "um_vehicle_water_speed_ratio",
-  VEHICLE_CONTROLLER_GROUNDALIGN_SMOOTH_TIME = "vehicle_controller_GroundAlign_smooth_time",
+  VEHICLE_CONTROLLER_GROUNDALIGN_SMOOTH_TIME =
+  "vehicle_controller_GroundAlign_smooth_time",
   SYS_BUDGET_DP = "sys_budget_dp",
   E_SCREENSHOT_MAP_CAMHEIGHT = "e_screenshot_map_camheight",
   R_SHADERSPREACTIVATE = "r_ShadersPreactivate",
@@ -5715,11 +5814,13 @@ local CONSOLE_VAR = {
   R_ENVTEXUPDATEINTERVAL = "r_EnvTexUpdateInterval",
   E_VOXEL_FILL_MODE = "e_voxel_fill_mode",
   UI_SKILL_ACCESSOR_UPDATE_INTERVAL = "ui_skill_accessor_update_interval",
-  R_SHADOWPOOLMAXTIMESLICEDUPDATESPERFRAME = "r_ShadowPoolMaxTimeslicedUpdatesPerFrame",
+  R_SHADOWPOOLMAXTIMESLICEDUPDATESPERFRAME =
+  "r_ShadowPoolMaxTimeslicedUpdatesPerFrame",
   AI_PROTORODREGENTIME = "ai_ProtoRODRegenTime",
   CAMERA_CLOSE_UP_FADE_OUT_DURATION = "camera_close_up_fade_out_duration",
   NET_STATS_PASS = "net_stats_pass",
-  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_SKIP_RATE = "movement_verify_move_speed_report_skip_rate",
+  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_SKIP_RATE =
+  "movement_verify_move_speed_report_skip_rate",
   P_LOG_LATTICE_TENSION = "p_log_lattice_tension",
   CAMERA_PITCH_ALIGN_SPEED = "camera_pitch_align_speed",
   HIT_ASSISTSINGLEPLAYERENABLED = "hit_assistSingleplayerEnabled",
@@ -5808,7 +5909,8 @@ local CONSOLE_VAR = {
   OPTION_HIDE_BLOODLUST_MODE = "option_hide_bloodlust_mode",
   UI_EVENTPROFILE = "ui_eventProfile",
   CA_DRAWBBOX = "ca_DrawBBox",
-  E_GSM_FORCE_EXTRA_RANGE_INCLUDE_OBJECTS = "e_gsm_force_extra_range_include_objects",
+  E_GSM_FORCE_EXTRA_RANGE_INCLUDE_OBJECTS =
+  "e_gsm_force_extra_range_include_objects",
   CL_CROUCHTOGGLE = "cl_crouchToggle",
   NET_BACKOFFTIMEOUT = "net_backofftimeout",
   MFX_DEBUG = "mfx_Debug",
@@ -5820,7 +5922,8 @@ local CONSOLE_VAR = {
   R_SHADERSINTCOMPILER = "r_ShadersIntCompiler",
   R_DISTANT_RAIN = "r_distant_rain",
   S_MUSICSPEAKERBACKVOLUME = "s_MusicSpeakerBackVolume",
-  R_TEXTURESSTREAMINGPOSTPONETHRESHOLDMIP = "r_texturesstreamingPostponeThresholdMip",
+  R_TEXTURESSTREAMINGPOSTPONETHRESHOLDMIP =
+  "r_texturesstreamingPostponeThresholdMip",
   R_NIGHTVISIONCAMMOVNOISEBLENDSPEED = "r_NightVisionCamMovNoiseBlendSpeed",
   G_DEBUGAIMLOOK = "g_debugaimlook",
   PICKING_TARGET = "picking_target",
@@ -5857,7 +5960,8 @@ local CONSOLE_VAR = {
   CL_BANDWIDTH = "cl_bandwidth",
   CA_LODCOUNT0 = "ca_LodCount0",
   D3D9_TEXTUREFILTER = "d3d9_TextureFilter",
-  MOVEMENT_VERIFY_MOVE_SPEED_OVER_TOLERANCE = "movement_verify_move_speed_over_tolerance",
+  MOVEMENT_VERIFY_MOVE_SPEED_OVER_TOLERANCE =
+  "movement_verify_move_speed_over_tolerance",
   ES_HITCHARACTERS = "es_HitCharacters",
   NAME_TAG_EXPEDITION_SHOW = "name_tag_expedition_show",
   AUX_USE_COLLIDE = "aux_use_collide",
@@ -5901,12 +6005,12 @@ local CONSOLE_VAR = {
 
 ---@enum RESIDENT_BOARD_TYPE
 local RESIDENT_BOARD_TYPE = {
-  FABRIC = 1, -- Nuia/Haranya
+  FABRIC = 1,  -- Nuia/Haranya
   LEATHER = 2, -- Nuia/Haranya
-  LUMBER = 3, -- Nuia/Haranya
-  IRON = 4, -- Nuia/Haranya
-  PRINCE = 5, -- Auroria
-  QUEEN = 6, -- Auroria
+  LUMBER = 3,  -- Nuia/Haranya
+  IRON = 4,    -- Nuia/Haranya
+  PRINCE = 5,  -- Auroria
+  QUEEN = 6,   -- Auroria
   ANCESTOR = 7 -- Auroria
 }
 
@@ -6070,8 +6174,8 @@ local FONT_COLOR_KEY = {
   LOADING_CONTENT = "loading_content",
   LOADING_PERCENT = "loading_percent",
   LOADING_TIP = "loading_tip",
-  LOGIN_STAGE_BLUE = "login_stage_blue", 
-  LOGIN_STAGE_BROWN = "login_stage_brown", 
+  LOGIN_STAGE_BLUE = "login_stage_blue",
+  LOGIN_STAGE_BROWN = "login_stage_brown",
   LOGIN_STAGE_BUTTON_ON = "login_stage_button_on",
   LOGIN_STAGE_BUTTON_OV = "login_stage_button_ov",
   LOGIN_STAGE_CHARACTER_SLOT_IMPOSSIBLE = "login_stage_character_slot_impossible",
@@ -6281,7 +6385,8 @@ TEXTURE_PATH = {
   BATTLEFIELD_ALARM_READY = "ui/battlefield/ready_end.dds",
   BATTLEFIELD_BEST_RATING = "ui/hud/best_score.dds",
   BATTLEFIELD_BUTTON_DUNGEON = "ui/battlefield/list_button/button_dungeon.dds",
-  BATTLEFIELD_BUTTON_INFLUENCE = "ui/battlefield/list_button/button_influence.dds",
+  BATTLEFIELD_BUTTON_INFLUENCE =
+  "ui/battlefield/list_button/button_influence.dds",
   BATTLEFIELD_BUTTON_RAID = "ui/battlefield/list_button/button_raid.dds",
   BATTLEFIELD_COMMON_LIST_BUTTON = "ui/battlefield/list_button/common.dds",
   BATTLEFIELD_LIST_BUTTON = "ui/battlefield/list_button/button_battle_field.dds",
@@ -6329,12 +6434,17 @@ TEXTURE_PATH = {
   ENCHANT_TAB = "ui/inventory/tab_enchant.dds",
   ENCHANT_TARGET = "ui/inventory/socket_item.dds",
   EQUIP_SLOT_REINFORCE = "ui/character/slot_enchant.dds",
-  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_ICON = "ui/character/slot_enchant_special.dds",
-  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_TEXT = "ui/character/slot_enchant_special_text.dds",
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_ICON =
+  "ui/character/slot_enchant_special.dds",
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_TEXT =
+  "ui/character/slot_enchant_special_text.dds",
   EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_ICON = "ui/character/slot_enchant_set.dds",
-  EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_TEXT = "ui/character/slot_enchant_set_text.dds",
-  EQUIP_SLOT_REINFORCE_MSG_SLOT_LEVEL_UP_ICON = "ui/character/slot_enchant_levelup.dds",
-  EQUIP_SLOT_REINFORCE_MSG_SLOT_LEVEL_UP_TEXT = "ui/character/slot_enchant_levelup_text.dds",
+  EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_TEXT =
+  "ui/character/slot_enchant_set_text.dds",
+  EQUIP_SLOT_REINFORCE_MSG_SLOT_LEVEL_UP_ICON =
+  "ui/character/slot_enchant_levelup.dds",
+  EQUIP_SLOT_REINFORCE_MSG_SLOT_LEVEL_UP_TEXT =
+  "ui/character/slot_enchant_levelup_text.dds",
   EVENT_CENTER_ATTENDANCE = "ui/eventcenter/attendance_event.dds",
   EVENT_CENTER_ATTENDANCE_REWARD = "ui/eventcenter/reward.dds",
   EVENT_CENTER_COMMON = "ui/eventcenter/star_common.dds",
@@ -6409,7 +6519,8 @@ TEXTURE_PATH = {
   KILL_EFFECT_FIFTH_BELOW_DECO = "ui/hud/kill_effect/fifth_below_deco.dds",
   KILL_EFFECT_FIFTH_KILL = "ui/hud/kill_effect/fifth_kill.dds",
   KILL_EFFECT_FIRST_KILL = "ui/hud/kill_effect/first_kill.dds",
-  KILL_EFFECT_FROM_SECOND_TO_FOURTH_KILL = "ui/hud/kill_effect/from_second_to_fourth_kill.dds",
+  KILL_EFFECT_FROM_SECOND_TO_FOURTH_KILL =
+  "ui/hud/kill_effect/from_second_to_fourth_kill.dds",
   KILL_EFFECT_WAR_OF_GOD = "ui/hud/kill_effect/war_of_god.dds",
   LEARN_ABILITY = "ui/hud/skill.dds",
   LEVLE_UP = "ui/effect/level_up.dds",
@@ -6539,7 +6650,7 @@ LOGIN_STAGE_TEXTURE_PATH = {
   SAVE_LOAD = "ui/beautyshop/save_load.dds",
 }
 
----Obtained from db sound_pack_items sound_pack_id =203
+---Obtained from db sound_pack_items sound_pack_id = 203
 ---@enum SOUND_NAME
 local SOUND_NAME = {
   BATTLEFIELD_1_SECOUND = "battlefield_1_secound",
@@ -6563,7 +6674,8 @@ local SOUND_NAME = {
   BATTLEFIELD_START = "battlefield_start",
   BATTLEFIELD_WIN = "battlefield_win",
   CDI_SCENE_ARTILLERY_CONTENTS2 = "cdi_scene_artillery_contents2",
-  CDI_SCENE_ARTILLERY_QUEST_ACCEPT_TITLE = "cdi_scene_artillery_quest_accept_title",
+  CDI_SCENE_ARTILLERY_QUEST_ACCEPT_TITLE =
+  "cdi_scene_artillery_quest_accept_title",
   CDI_SCENE_ARTILLERY_TITLE = "cdi_scene_artillery_title",
   CDI_SCENE_COMBAT_CONTENTS2 = "cdi_scene_combat_contents2",
   CDI_SCENE_COMBAT_CONTENTS3 = "cdi_scene_combat_contents3",
@@ -6768,7 +6880,7 @@ local SOUND_NAME = {
   TUTORIAL_CONTENTS_2653_1_1 = "tutorial_contents_2653_1_1",
 }
 
----@TODO: This should be [number] = "string" unless i make this a global, need to update this
+---@TODO: This should be [number] = "string" unless i make this a global, need to update this, this also doesnt include sub_zones
 ---@enum ZONE_ID
 local ZONE_ID = {
   W_GWEONID_FOREST_1 = 1,
@@ -6836,7 +6948,7 @@ local ZONE_ID = {
   O_LIBRARY_1 = 67,
   INSTANCE_PROLOGUE = 68,
   O_LIBRARY_3 = 69,
-  INSTANCE_LIBRARY_1 =  70,
+  INSTANCE_LIBRARY_1 = 70,
   INSTANCE_LIBRARY_2 = 71,
   INSTANCE_LIBRARY_3 = 72,
   INSTANCE_LIBRARY_BOSS_1 = 73,
@@ -6927,6 +7039,10 @@ local ZONE_ID = {
 ---@TODO: taken from db zones
 ---@enum ZONE_KEY
 local ZONE_KEY = {}
+
+---@TODO: Populate this.
+---@enum ZONE_NAME
+local ZONE_NAME = {}
 
 ---Taken from db ui_esc_menu_categories
 ---@enum ESC_MENU_CATEGORY_ID
