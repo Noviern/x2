@@ -1,14 +1,7 @@
 {
   "diagnostics.neededFileStatus": {
-    "codestyle-check": "Opened"
+    "codestyle-check": "Any"
   },
-  "format": {
-    "defaultConfig": {
-      "max_line_length": "80",
-      "indent_size": "2",
-      "align_call_args": "true"
-    }
-  },
-  "typeCheckingMode": "strict",
-  "hover.expandAlias": false,
+  // "typeCheckingMode": "strict", // what does this do?
+  "hover.expandAlias": false
 }
