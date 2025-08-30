@@ -1,28 +1,54 @@
+---@class ctx
+---@field max_depth? number|nil
+---@field depth? number
+---@field seen? table
+---@field path? string
+---@field indent_size? number
+---@field indent_type? string
+
+---@type ctx
+local ctx_default = {
+  max_depth   = nil,
+  depth       = 0,
+  seen        = {},
+  path        = "",
+  indent_size = 2,
+  indent_type = " "
+}
+
 ---Dumps a table.
 ---@param tbl table
----@param depth? number
----@param seen? table
----@param path? string
----@return string var_lines
----@return string func_lines
+---@param ctx? ctx
+---@return string output
 ---@nodiscard
-function dump(tbl, depth, seen, path)
-  depth = depth or 0
-  seen = seen or {}
-  path = path or ""
+function dump(tbl, ctx)
+  if type(tbl) ~= "table" then
+    return "tbl value passed in was not a table."
+  end
 
-  local vars = {}
-  local funcs = {}
-  local indent = string.rep("  ", depth)
-  local tblref = tostring(tbl)
+  if ctx ~= nil and type(ctx) ~= "table" then
+    return "ctx value passed in was not a table."
+  end
 
-  seen[tblref] = true
+  if ctx == nil then
+    ctx = ctx_default
+  else
+    ctx.max_depth   = ctx.max_depth or ctx_default.max_depth
+    ctx.depth       = ctx.depth or ctx_default.depth
+    ctx.seen        = ctx.seen or ctx_default.seen
+    ctx.path        = ctx.path or ctx_default.path
+    ctx.indent_size = ctx.indent_size or ctx_default.indent_size
+    ctx.indent_type = ctx.indent_type or ctx_default.indent_type
+  end
 
-  ---TODO: Should add a max depth.
-  ---TODO: Options, maybe add a filter so I can filter out object functions from classes like Widgetbase etc
+  local tbl_ref = tostring(tbl)
+  local lines   = {}
+  local indent  = string.rep(ctx.indent_type, ctx.indent_size * ctx.depth)
 
+  -- populate tbl with its metatable functions
   if tbl.__index ~= nil then
     local mt = getmetatable(tbl)
+
     for k, v in pairs(mt) do
       if k ~= "__index" then
         tbl[k] = v
@@ -30,76 +56,65 @@ function dump(tbl, depth, seen, path)
     end
   end
 
-  -- tbl.__this = nil
+  -- save the current table and its path
+  ctx.seen[tbl_ref] = ctx.path
 
   for k, v in pairs(tbl) do
     local vt = type(v)
-    local line
+    local line = ""
+    local value = ""
 
-    if vt == "function" then
-      if path == "" then
-        line = string.format("function %s() end", k)
-      else
-        line = string.format("function %s:%s() end", path, k)
-      end
+    if vt == "table" then
+      if ctx.depth == ctx.max_depth then
+        value = '"<maximum depth>"'
+      elseif next(v) ~= nil then
+        local v_ref = tostring(v)
+        if ctx.seen[v_ref] then
+          value = string.format('"<circular %s %s>"', v_ref, ctx.seen[v_ref])
+        else
+          -- save current depth and path
+          local depth = ctx.depth
+          local path  = ctx.path
 
-      table.insert(funcs, line)
-    else
-      local val = "{}"
+          -- update current depth and path
+          ctx.depth   = depth + 1
+          ctx.path    = path == "" and k or path .. "." .. k
 
-      if vt == "table" then
-        ---@TODO: This needs to be a option in dump params
-        if depth > 4 then
-        -- if depth > 2 then
-          val = '"<max depth>"'
-        elseif next(v) ~= nil then
-          local vref = tostring(v)
-          if seen[vref] then
-            val = string.format('"<circular: %s>"', path)
-          else
-            local new_depth = depth + 1
-            local new_path = path == "" and k or path .. "." .. k
-            local sub_vars, sub_funcs = dump(v, new_depth, seen, new_path)
+          value       = string.format("{\n%s\n%s}", dump(v, ctx), indent)
 
-            if sub_vars ~= "" and sub_vars ~= nil then
-              val = string.format("{\n%s,\n%s}", sub_vars, indent)
-            end
-
-            if sub_funcs ~= "" then
-              table.insert(funcs, sub_funcs)
-            end
-          end
+          -- restore current depth and path
+          ctx.depth   = depth
+          ctx.path    = path
         end
-      elseif vt == "boolean" or vt == "number" then
-        val = tostring(v)
-      elseif vt == "userdata" then
-        val = string.format('"<%s>"', tostring(v))
       else
-        val = string.format('"%s"', v:gsub("\r", "\\r"):gsub("\n", "\\n"))
+        value = "{}"
       end
-
-      line = string.format("%s%s = %s", indent, k, val)
-
-      table.insert(vars, line)
+    elseif vt == "boolean" or vt == "number" then
+      value = tostring(v)
+    elseif vt == "string" then
+      value = string.format('"%s"', v:gsub("\r", "\\r"):gsub("\n", "\\n"))
+    else
+      value = string.format('"<%s>"', tostring(v))
     end
+
+    line = string.format("%s%s = %s", indent, k, value)
+
+    table.insert(lines, line)
   end
 
-  seen[tblref] = nil
+  -- remove the current table and its path
+  if ctx.depth == 1 then
+    ctx.seen[tbl_ref] = nil
+  end
 
-  table.sort(vars)
-  table.sort(funcs)
+  table.sort(lines)
+  local output
 
-  local var_lines
-
-  if path ~= "" then
-    var_lines = table.concat(vars, ",\n")
+  if ctx.depth > 0 then
+    output = table.concat(lines, ",\n") .. ","
   else
-    var_lines = table.concat(vars, "\n")
+    output = table.concat(lines, "\n")
   end
 
-  local func_lines = table.concat(funcs, "\n\n")
-
-  return var_lines, func_lines
+  return output
 end
-
-return dump

@@ -1,314 +1,167 @@
-AP_BOTTOM = 8 -- objects/Message
-AP_BOTTOMLEFT = 2 -- objects/Message
-AP_BOTTOMRIGHT = 3 -- objects/Message
-AP_CENTER = 4 -- objects/Message
-AP_LEFT = 6 -- objects/Message
-AP_RIGHT = 7 -- objects/Message
-AP_TOP = 5 -- objects/Message
-AP_TOPLEFT = 0 -- objects/Message
-AP_TOPRIGHT = 1 -- objects/Message
-CT_ABILITY = 2 -- objects/Message
-CT_EXPEDITION_NAME = 3 -- objects/Message
-CT_NAME = 1 -- objects/Message
-DC_ALWAYS = 0 -- objects/Message
-DC_SHIFT_KEY_DOWN = 1 -- objects/Message
-Message = { -- objects/Message
-  __this = <userdata>, -- objects/Message
-  style = { -- objects/Message
-    __this = <userdata>, -- objects/Message
-  }, -- objects/Message
-} -- objects/Message
-
-function Message.style:GetId() end
-
-function Message.style:GetLineHeight() end
-
-function Message.style:GetName() end
-
-function Message.style:GetObjectType() end
-
-function Message.style:GetTextWidth() end
-
-function Message.style:IsValidUIObject() end
-
-function Message.style:SetAlign() end
-
-function Message.style:SetColor() end
-
-function Message.style:SetColorByKey() end
-
-function Message.style:SetEllipsis() end
-
-function Message.style:SetFont() end
-
-function Message.style:SetFontSize() end
-
-function Message.style:SetOutline() end
-
-function Message.style:SetShadow() end
-
-function Message.style:SetSnap() end
-
-function Message:AddAnchor() end
-
-function Message:AddMessage() end
-
-function Message:AddMessageEx() end
-
-function Message:AddMessageExRefresh() end
-
-function Message:AddMessageRefresh() end
-
-function Message:ApplyUIScale() end
-
-function Message:AttachWidget() end
-
-function Message:BindWidth() end
-
-function Message:CancelRequestCharacterCacheData() end
-
-function Message:ChangeChildAnchorByScrollValue() end
-
-function Message:ChangeDefaultStyle() end
-
-function Message:ChangeTextStyle() end
-
-function Message:CheckOutOfScreen() end
-
-function Message:Clear() end
-
-function Message:Clickable() end
-
-function Message:CopyTextToClipboard() end
-
-function Message:CorrectOffsetByScreen() end
-
-function Message:CreateChildWidget() end
-
-function Message:CreateChildWidgetByType() end
-
-function Message:CreateColorDrawable() end
-
-function Message:CreateColorDrawableByKey() end
-
-function Message:CreateDrawable() end
-
-function Message:CreateEffectDrawable() end
-
-function Message:CreateEffectDrawableByKey() end
-
-function Message:CreateIconDrawable() end
-
-function Message:CreateImageDrawable() end
-
-function Message:CreateNinePartDrawable() end
-
-function Message:CreateTextDrawable() end
-
-function Message:CreateThreeColorDrawable() end
-
-function Message:CreateThreePartDrawable() end
-
-function Message:DetachWidget() end
-
-function Message:DisableDrawables() end
-
-function Message:DisableDrawablesWithChildren() end
-
-function Message:Enable() end
-
-function Message:EnableDrag() end
-
-function Message:EnableDrawables() end
-
-function Message:EnableDrawablesWithChildren() end
-
-function Message:EnableFocus() end
-
-function Message:EnableHidingIsRemove() end
-
-function Message:EnableItemLink() end
-
-function Message:EnableKeyboard() end
-
-function Message:EnablePick() end
-
-function Message:EnableScroll() end
-
-function Message:GetAlpha() end
-
-function Message:GetAttachedWidget() end
-
-function Message:GetCurrentLine() end
-
-function Message:GetCurrentScroll() end
-
-function Message:GetEffectiveExtent() end
-
-function Message:GetEffectiveOffset() end
-
-function Message:GetExtent() end
-
-function Message:GetHeight() end
-
-function Message:GetId() end
-
-function Message:GetLineSpace() end
-
-function Message:GetLinkInfoOnCursor() end
-
-function Message:GetMaxLines() end
-
-function Message:GetMessageByTimeStamp() end
-
-function Message:GetMessageLines() end
-
-function Message:GetName() end
-
-function Message:GetObjectType() end
-
-function Message:GetOffset() end
-
-function Message:GetPagePerMaxLines() end
-
-function Message:GetParent() end
-
-function Message:GetRotation() end
-
-function Message:GetText() end
-
-function Message:GetUILayer() end
-
-function Message:GetValue() end
-
-function Message:GetWidth() end
-
-function Message:HasHandler() end
-
-function Message:InheritAnimationData() end
-
-function Message:IsDescendantWidget() end
-
-function Message:IsEnabled() end
-
-function Message:IsMouseOver() end
-
-function Message:IsNowAnimation() end
-
-function Message:IsValidUIObject() end
-
-function Message:IsVisible() end
-
-function Message:Lower() end
-
-function Message:MoveTo() end
-
-function Message:PageDown() end
-
-function Message:PageUp() end
-
-function Message:Raise() end
-
-function Message:RegisterEvent() end
-
-function Message:ReleaseDeletedHandler() end
-
-function Message:ReleaseHandler() end
-
-function Message:RemoveAllAnchors() end
-
-function Message:RemoveAllDrawables() end
-
-function Message:RemoveDrawable() end
-
-function Message:RemoveLastMessage() end
-
-function Message:RequestCharacterCacheData() end
-
-function Message:ResetVisibleTime() end
-
-function Message:ScrollDown() end
-
-function Message:ScrollToBottom() end
-
-function Message:ScrollToTop() end
-
-function Message:ScrollUp() end
-
-function Message:SetAlpha() end
-
-function Message:SetAlphaAnimation() end
-
-function Message:SetCategory() end
-
-function Message:SetCharacterCacheDataHandler() end
-
-function Message:SetDelegator() end
-
-function Message:SetDeletedHandler() end
-
-function Message:SetDragCondition() end
-
-function Message:SetDrawPriority() end
-
-function Message:SetDrawableLayerAlpha() end
-
-function Message:SetExtent() end
-
-function Message:SetFadeDuration() end
-
-function Message:SetHandler() end
-
-function Message:SetHeight() end
-
-function Message:SetInset() end
-
-function Message:SetLText() end
-
-function Message:SetLayerColor() end
-
-function Message:SetLineSpace() end
-
-function Message:SetMaxLines() end
-
-function Message:SetMaxResizingExtent() end
-
-function Message:SetMinResizingExtent() end
-
-function Message:SetMoveAnimation() end
-
-function Message:SetResizingBorderSize() end
-
-function Message:SetRotation() end
-
-function Message:SetScale() end
-
-function Message:SetScaleAnimation() end
-
-function Message:SetScrollPos() end
-
-function Message:SetSounds() end
-
-function Message:SetStartAnimation() end
-
-function Message:SetText() end
-
-function Message:SetTimeVisible() end
-
-function Message:SetWidth() end
-
-function Message:Show() end
-
-function Message:StartMoving() end
-
-function Message:StartSizing() end
-
-function Message:StopMovingOrSizing() end
-
-function Message:TriggerMoveAnimation() end
-
-function Message:UseDynamicContentState() end
-
-function Message:UseDynamicDrawableState() end
-
-function Message:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+Message = {
+  AddAnchor = "<function: 00000000CD7AFA44>",
+  AddMessage = "<function: 00000001F88C4684>",
+  AddMessageEx = "<function: 00000001AFA97794>",
+  AddMessageExRefresh = "<function: 00000001D3D8B4C4>",
+  AddMessageRefresh = "<function: 00000001D3B986D4>",
+  ApplyUIScale = "<function: 00000001D48F1794>",
+  AttachWidget = "<function: 00000001D4434FD4>",
+  BindWidth = "<function: 00000001E9689C64>",
+  CancelRequestCharacterCacheData = "<function: 00000001D4053224>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001D3E069D4>",
+  ChangeDefaultStyle = "<function: 00000001E4E682A4>",
+  ChangeTextStyle = "<function: 00000001E4E63A24>",
+  CheckOutOfScreen = "<function: 00000001EE8D8604>",
+  Clear = "<function: 00000001D3D84DC4>",
+  Clickable = "<function: 00000002276CC7F4>",
+  CopyTextToClipboard = "<function: 00000001D4098984>",
+  CorrectOffsetByScreen = "<function: 00000001EE8686C4>",
+  CreateChildWidget = "<function: 00000001EEB3D944>",
+  CreateChildWidgetByType = "<function: 00000001D4678524>",
+  CreateColorDrawable = "<function: 00000001F889E944>",
+  CreateColorDrawableByKey = "<function: 00000001F88E4004>",
+  CreateDrawable = "<function: 00000001D462A714>",
+  CreateEffectDrawable = "<function: 00000001EED21B44>",
+  CreateEffectDrawableByKey = "<function: 00000001C89F0284>",
+  CreateIconDrawable = "<function: 00000001FBEDAAD4>",
+  CreateImageDrawable = "<function: 00000001FBE77514>",
+  CreateNinePartDrawable = "<function: 000000007CAB8CF4>",
+  CreateTextDrawable = "<function: 00000001FBEDAF94>",
+  CreateThreeColorDrawable = "<function: 00000001EED21AC4>",
+  CreateThreePartDrawable = "<function: 00000001C8A2A8C4>",
+  DetachWidget = "<function: 00000001E1B0EC74>",
+  DisableDrawables = "<function: 00000001FD703644>",
+  DisableDrawablesWithChildren = "<function: 00000001E1914F04>",
+  Enable = "<function: 00000001EE8DA184>",
+  EnableDrag = "<function: 00000002276DD9B4>",
+  EnableDrawables = "<function: 00000001FD6FE5C4>",
+  EnableDrawablesWithChildren = "<function: 00000001EE890B84>",
+  EnableFocus = "<function: 00000001EE8DCA84>",
+  EnableHidingIsRemove = "<function: 00000001EE8B5D04>",
+  EnableItemLink = "<function: 00000001E19C23D4>",
+  EnableKeyboard = "<function: 00000001EE75EC84>",
+  EnablePick = "<function: 00000002276CC7B4>",
+  EnableScroll = "<function: 0000000068460784>",
+  GetAlpha = "<function: 00000001FBE88AD4>",
+  GetAttachedWidget = "<function: 00000001E272B664>",
+  GetCurrentLine = "<function: 00000000CD72A0D4>",
+  GetCurrentScroll = "<function: 00000001F65FEA84>",
+  GetEffectiveExtent = "<function: 00000001E96BC2E4>",
+  GetEffectiveOffset = "<function: 00000001E96DE3A4>",
+  GetExtent = "<function: 00000001EE7E5454>",
+  GetHeight = "<function: 00000001E968F264>",
+  GetId = "<function: 00000001E969DBA4>",
+  GetLineSpace = "<function: 00000001E9626B54>",
+  GetLinkInfoOnCursor = "<function: 00000001B5D64944>",
+  GetMaxLines = "<function: 00000001EE72C604>",
+  GetMessageByTimeStamp = "<function: 00000001E9693CE4>",
+  GetMessageLines = "<function: 00000001EE725C44>",
+  GetName = "<function: 00000001EEB92FC4>",
+  GetObjectType = "<function: 00000001E966C0A4>",
+  GetOffset = "<function: 00000001EE8CFB44>",
+  GetPagePerMaxLines = "<function: 00000001EE726204>",
+  GetParent = "<function: 00000001EE868704>",
+  GetRotation = "<function: 00000001E966E4A4>",
+  GetText = "<function: 00000001B5DB6DC4>",
+  GetUILayer = "<function: 00000001E498B754>",
+  GetValue = "<function: 00000001E4AE2084>",
+  GetWidth = "<function: 00000001E968F224>",
+  HasHandler = "<function: 00000001E9695864>",
+  InheritAnimationData = "<function: 00000001D3D8C9C4>",
+  IsDescendantWidget = "<function: 00000001EE8E34C4>",
+  IsEnabled = "<function: 00000001EE8DC904>",
+  IsMouseOver = "<function: 00000001FDD16D34>",
+  IsNowAnimation = "<function: 00000001D47B5D84>",
+  IsValidUIObject = "<function: 00000001EE87E604>",
+  IsVisible = "<function: 00000001FDD5B054>",
+  Lower = "<function: 00000000CD7FE104>",
+  MoveTo = "<function: 00000001D3CF3B74>",
+  PageDown = "<function: 00000001F88C8E04>",
+  PageUp = "<function: 00000001D43E1004>",
+  Raise = "<function: 00000001FBE72754>",
+  RegisterEvent = "<function: 00000001D456A704>",
+  ReleaseDeletedHandler = "<function: 00000000CD633474>",
+  ReleaseHandler = "<function: 00000001E9695824>",
+  RemoveAllAnchors = "<function: 00000001E1985CC4>",
+  RemoveAllDrawables = "<function: 000000007C8F6104>",
+  RemoveDrawable = "<function: 00000001E4CA7004>",
+  RemoveLastMessage = "<function: 00000001D3D849C4>",
+  RequestCharacterCacheData = "<function: 00000001E95BCB04>",
+  ResetVisibleTime = "<function: 00000001E95D7A44>",
+  ScrollDown = "<function: 00000001E4B42814>",
+  ScrollToBottom = "<function: 00000001B5D93144>",
+  ScrollToTop = "<function: 000000006848A384>",
+  ScrollUp = "<function: 00000001D3FA6054>",
+  SetAlpha = "<function: 00000001FBE7CF54>",
+  SetAlphaAnimation = "<function: 00000001E9626ED4>",
+  SetCategory = "<function: 00000001EE868744>",
+  SetCharacterCacheDataHandler = "<function: 00000001D3D4AFF4>",
+  SetDelegator = "<function: 00000001D3E16A54>",
+  SetDeletedHandler = "<function: 00000001D3C9FE54>",
+  SetDragCondition = "<function: 00000002276DDC74>",
+  SetDrawPriority = "<function: 000000007C860C74>",
+  SetDrawableLayerAlpha = "<function: 00000001D45185F4>",
+  SetExtent = "<function: 00000001EE7E6DD4>",
+  SetFadeDuration = "<function: 00000001D467A4E4>",
+  SetHandler = "<function: 00000001E96CECE4>",
+  SetHeight = "<function: 00000001EE8D5404>",
+  SetInset = "<function: 00000000FC6067E4>",
+  SetLText = "<function: 00000001EE803454>",
+  SetLayerColor = "<function: 00000001E275EBE4>",
+  SetLineSpace = "<function: 00000001E966E564>",
+  SetMaxLines = "<function: 00000001E966E524>",
+  SetMaxResizingExtent = "<function: 00000001D4580E84>",
+  SetMinResizingExtent = "<function: 00000001E199E354>",
+  SetMoveAnimation = "<function: 00000001B5D64504>",
+  SetResizingBorderSize = "<function: 00000001D4581484>",
+  SetRotation = "<function: 00000001E966E4E4>",
+  SetScale = "<function: 00000001E4EBD7E4>",
+  SetScaleAnimation = "<function: 000000007CAB4AB4>",
+  SetScrollPos = "<function: 00000001E95D5E44>",
+  SetSounds = "<function: 00000001E96956E4>",
+  SetStartAnimation = "<function: 00000001E4D551C4>",
+  SetText = "<function: 00000001EE8033D4>",
+  SetTimeVisible = "<function: 00000001E8E91894>",
+  SetWidth = "<function: 00000001EE8D89C4>",
+  Show = "<function: 00000001E485F5B4>",
+  StartMoving = "<function: 00000001EE739584>",
+  StartSizing = "<function: 00000001D3CF3874>",
+  StopMovingOrSizing = "<function: 00000001E9643694>",
+  TriggerMoveAnimation = "<function: 00000001B5D9E004>",
+  UseDynamicContentState = "<function: 00000001E9687924>",
+  UseDynamicDrawableState = "<function: 00000001E9667664>",
+  UseResizing = "<function: 00000001E199E814>",
+  __this = "<userdata: 00000001E6F35060>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD4FF0>",
+  },
+}

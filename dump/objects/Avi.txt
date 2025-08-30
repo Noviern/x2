@@ -1,234 +1,131 @@
-ALIGN_BOTTOM = 7 -- objects/Avi
-ALIGN_BOTTOM_LEFT = 6 -- objects/Avi
-ALIGN_BOTTOM_RIGHT = 8 -- objects/Avi
-ALIGN_CENTER = 4 -- objects/Avi
-ALIGN_LEFT = 3 -- objects/Avi
-ALIGN_RIGHT = 5 -- objects/Avi
-ALIGN_TOP = 1 -- objects/Avi
-ALIGN_TOP_LEFT = 0 -- objects/Avi
-ALIGN_TOP_RIGHT = 2 -- objects/Avi
-AP_BOTTOM = 8 -- objects/Avi
-AP_BOTTOMLEFT = 2 -- objects/Avi
-AP_BOTTOMRIGHT = 3 -- objects/Avi
-AP_CENTER = 4 -- objects/Avi
-AP_LEFT = 6 -- objects/Avi
-AP_RIGHT = 7 -- objects/Avi
-AP_TOP = 5 -- objects/Avi
-AP_TOPLEFT = 0 -- objects/Avi
-AP_TOPRIGHT = 1 -- objects/Avi
-Avi = { -- objects/Avi
-  __this = <userdata>, -- objects/Avi
-} -- objects/Avi
-CT_ABILITY = 2 -- objects/Avi
-CT_EXPEDITION_NAME = 3 -- objects/Avi
-CT_NAME = 1 -- objects/Avi
-DC_ALWAYS = 0 -- objects/Avi
-DC_SHIFT_KEY_DOWN = 1 -- objects/Avi
-FTK_GENERAL = 0 -- objects/Avi
-FTK_IMAGETEXT = 2 -- objects/Avi
-
-function Avi:AddAnchor() end
-
-function Avi:ApplyUIScale() end
-
-function Avi:AttachWidget() end
-
-function Avi:BindWidth() end
-
-function Avi:CancelRequestCharacterCacheData() end
-
-function Avi:ChangeChildAnchorByScrollValue() end
-
-function Avi:CheckOutOfScreen() end
-
-function Avi:Clickable() end
-
-function Avi:CorrectOffsetByScreen() end
-
-function Avi:CreateChildWidget() end
-
-function Avi:CreateChildWidgetByType() end
-
-function Avi:CreateColorDrawable() end
-
-function Avi:CreateColorDrawableByKey() end
-
-function Avi:CreateDrawable() end
-
-function Avi:CreateEffectDrawable() end
-
-function Avi:CreateEffectDrawableByKey() end
-
-function Avi:CreateIconDrawable() end
-
-function Avi:CreateImageDrawable() end
-
-function Avi:CreateNinePartDrawable() end
-
-function Avi:CreateTextDrawable() end
-
-function Avi:CreateThreeColorDrawable() end
-
-function Avi:CreateThreePartDrawable() end
-
-function Avi:DetachWidget() end
-
-function Avi:DisableDrawables() end
-
-function Avi:DisableDrawablesWithChildren() end
-
-function Avi:Enable() end
-
-function Avi:EnableDrag() end
-
-function Avi:EnableDrawables() end
-
-function Avi:EnableDrawablesWithChildren() end
-
-function Avi:EnableFocus() end
-
-function Avi:EnableHidingIsRemove() end
-
-function Avi:EnableKeyboard() end
-
-function Avi:EnablePick() end
-
-function Avi:EnableScroll() end
-
-function Avi:GetAlpha() end
-
-function Avi:GetAttachedWidget() end
-
-function Avi:GetEffectiveExtent() end
-
-function Avi:GetEffectiveOffset() end
-
-function Avi:GetExtent() end
-
-function Avi:GetHeight() end
-
-function Avi:GetId() end
-
-function Avi:GetName() end
-
-function Avi:GetObjectType() end
-
-function Avi:GetOffset() end
-
-function Avi:GetParent() end
-
-function Avi:GetRotation() end
-
-function Avi:GetText() end
-
-function Avi:GetUILayer() end
-
-function Avi:GetValue() end
-
-function Avi:GetWidth() end
-
-function Avi:HasHandler() end
-
-function Avi:InheritAnimationData() end
-
-function Avi:IsDescendantWidget() end
-
-function Avi:IsEnabled() end
-
-function Avi:IsMouseOver() end
-
-function Avi:IsNowAnimation() end
-
-function Avi:IsValidUIObject() end
-
-function Avi:IsVisible() end
-
-function Avi:Lower() end
-
-function Avi:MoveTo() end
-
-function Avi:Raise() end
-
-function Avi:RegisterEvent() end
-
-function Avi:ReleaseDeletedHandler() end
-
-function Avi:ReleaseHandler() end
-
-function Avi:RemoveAllAnchors() end
-
-function Avi:RemoveAllDrawables() end
-
-function Avi:RemoveDrawable() end
-
-function Avi:RequestCharacterCacheData() end
-
-function Avi:SetAlpha() end
-
-function Avi:SetAlphaAnimation() end
-
-function Avi:SetAviName() end
-
-function Avi:SetAviNum() end
-
-function Avi:SetCategory() end
-
-function Avi:SetCharacterCacheDataHandler() end
-
-function Avi:SetDelegator() end
-
-function Avi:SetDeletedHandler() end
-
-function Avi:SetDragCondition() end
-
-function Avi:SetDrawPriority() end
-
-function Avi:SetDrawableLayerAlpha() end
-
-function Avi:SetExtent() end
-
-function Avi:SetHandler() end
-
-function Avi:SetHeight() end
-
-function Avi:SetLText() end
-
-function Avi:SetLayerColor() end
-
-function Avi:SetMaxResizingExtent() end
-
-function Avi:SetMinResizingExtent() end
-
-function Avi:SetMoveAnimation() end
-
-function Avi:SetResizingBorderSize() end
-
-function Avi:SetRotation() end
-
-function Avi:SetScale() end
-
-function Avi:SetScaleAnimation() end
-
-function Avi:SetSounds() end
-
-function Avi:SetStartAnimation() end
-
-function Avi:SetText() end
-
-function Avi:SetWidth() end
-
-function Avi:Show() end
-
-function Avi:StartMoving() end
-
-function Avi:StartSizing() end
-
-function Avi:StopMovingOrSizing() end
-
-function Avi:TriggerMoveAnimation() end
-
-function Avi:UseDynamicContentState() end
-
-function Avi:UseDynamicDrawableState() end
-
-function Avi:UseResizing() end
+ALIGN_BOTTOM = 7
+ALIGN_BOTTOM_LEFT = 6
+ALIGN_BOTTOM_RIGHT = 8
+ALIGN_CENTER = 4
+ALIGN_LEFT = 3
+ALIGN_RIGHT = 5
+ALIGN_TOP = 1
+ALIGN_TOP_LEFT = 0
+ALIGN_TOP_RIGHT = 2
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+Avi = {
+  AddAnchor = "<function: 00000001CEAA7264>",
+  ApplyUIScale = "<function: 00000001E8EC3E64>",
+  AttachWidget = "<function: 00000001AFA638D4>",
+  BindWidth = "<function: 00000001D3B98354>",
+  CancelRequestCharacterCacheData = "<function: 00000001E8F35634>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001EEB7C844>",
+  CheckOutOfScreen = "<function: 00000001E961A154>",
+  Clickable = "<function: 00000001D4A58544>",
+  CorrectOffsetByScreen = "<function: 00000001E8E73594>",
+  CreateChildWidget = "<function: 00000001E4CA7984>",
+  CreateChildWidgetByType = "<function: 00000002537221A4>",
+  CreateColorDrawable = "<function: 00000001E4AE7844>",
+  CreateColorDrawableByKey = "<function: 00000001D479DF44>",
+  CreateDrawable = "<function: 00000001E2768A44>",
+  CreateEffectDrawable = "<function: 00000001D44684D4>",
+  CreateEffectDrawableByKey = "<function: 000000007CAE7C74>",
+  CreateIconDrawable = "<function: 00000000FC8AA824>",
+  CreateImageDrawable = "<function: 00000001D3FE4714>",
+  CreateNinePartDrawable = "<function: 00000001D4558284>",
+  CreateTextDrawable = "<function: 00000001E958BC84>",
+  CreateThreeColorDrawable = "<function: 00000001E4F64EC4>",
+  CreateThreePartDrawable = "<function: 00000001E96C4C64>",
+  DetachWidget = "<function: 00000001E9562F84>",
+  DisableDrawables = "<function: 00000001E965E314>",
+  DisableDrawablesWithChildren = "<function: 00000001E4D9BE04>",
+  Enable = "<function: 00000001D3CE5874>",
+  EnableDrag = "<function: 00000001EED4BF44>",
+  EnableDrawables = "<function: 00000001E4993214>",
+  EnableDrawablesWithChildren = "<function: 00000001EE72BF44>",
+  EnableFocus = "<function: 00000001D3CE5734>",
+  EnableHidingIsRemove = "<function: 00000000684A6B84>",
+  EnableKeyboard = "<function: 00000000CD659E34>",
+  EnablePick = "<function: 00000001D3FF5A24>",
+  EnableScroll = "<function: 00000001E8F850F4>",
+  GetAlpha = "<function: 00000001E4F78A04>",
+  GetAttachedWidget = "<function: 00000001D4A85804>",
+  GetEffectiveExtent = "<function: 00000001E95A8B44>",
+  GetEffectiveOffset = "<function: 00000000FA0227E4>",
+  GetExtent = "<function: 00000001E95C1CC4>",
+  GetHeight = "<function: 000000025368BB54>",
+  GetId = "<function: 00000001E4A27A24>",
+  GetName = "<function: 00000001D3FCF0D4>",
+  GetObjectType = "<function: 00000001AFA8A614>",
+  GetOffset = "<function: 00000001E95C4A84>",
+  GetParent = "<function: 00000001D4A6B984>",
+  GetRotation = "<function: 00000001EE7275C4>",
+  GetText = "<function: 00000001E4F56BC4>",
+  GetUILayer = "<function: 00000001E9585504>",
+  GetValue = "<function: 00000001D44E5834>",
+  GetWidth = "<function: 00000001E4F341B4>",
+  HasHandler = "<function: 00000001D49E5634>",
+  InheritAnimationData = "<function: 00000001F65FBAC4>",
+  IsDescendantWidget = "<function: 00000001E4EA4C24>",
+  IsEnabled = "<function: 00000001A254E444>",
+  IsMouseOver = "<function: 00000001F6263E34>",
+  IsNowAnimation = "<function: 00000001D4637014>",
+  IsValidUIObject = "<function: 00000001E8E42FD4>",
+  IsVisible = "<function: 00000001E9665864>",
+  Lower = "<function: 00000001E49A1614>",
+  MoveTo = "<function: 00000001E499FDD4>",
+  Raise = "<function: 00000001D40AC844>",
+  RegisterEvent = "<function: 00000001E1A47BA4>",
+  ReleaseDeletedHandler = "<function: 00000001D3F56B34>",
+  ReleaseHandler = "<function: 00000001D48B0E94>",
+  RemoveAllAnchors = "<function: 00000001D3DA1E04>",
+  RemoveAllDrawables = "<function: 00000001E4A2DAA4>",
+  RemoveDrawable = "<function: 00000001E4FB4E04>",
+  RequestCharacterCacheData = "<function: 00000001D3FA3D94>",
+  SetAlpha = "<function: 00000001E4B34754>",
+  SetAlphaAnimation = "<function: 00000001E4A21B64>",
+  SetAviName = "<function: 00000001E957DB04>",
+  SetAviNum = "<function: 00000001E4FA5C84>",
+  SetCategory = "<function: 00000001EEB532C4>",
+  SetCharacterCacheDataHandler = "<function: 00000001D44F6634>",
+  SetDelegator = "<function: 00000001E8EA4264>",
+  SetDeletedHandler = "<function: 00000001E4A8F2C4>",
+  SetDragCondition = "<function: 00000001E487CCB4>",
+  SetDrawPriority = "<function: 00000001E19561C4>",
+  SetDrawableLayerAlpha = "<function: 00000001E95A3904>",
+  SetExtent = "<function: 00000001E4CA7844>",
+  SetHandler = "<function: 00000001E8E99C14>",
+  SetHeight = "<function: 00000001E4F22C34>",
+  SetLText = "<function: 00000001D48A4454>",
+  SetLayerColor = "<function: 00000001EE756004>",
+  SetMaxResizingExtent = "<function: 00000001D3C61114>",
+  SetMinResizingExtent = "<function: 000000025363DE14>",
+  SetMoveAnimation = "<function: 00000001D4518EB4>",
+  SetResizingBorderSize = "<function: 00000001E4B01404>",
+  SetRotation = "<function: 00000001E8EFA324>",
+  SetScale = "<function: 00000001E95C5C04>",
+  SetScaleAnimation = "<function: 00000001EE773784>",
+  SetSounds = "<function: 00000001EE741B44>",
+  SetStartAnimation = "<function: 0000000253589874>",
+  SetText = "<function: 0000000228A02384>",
+  SetWidth = "<function: 00000001E96C4BE4>",
+  Show = "<function: 00000001E4806334>",
+  StartMoving = "<function: 00000001D4354CD4>",
+  StartSizing = "<function: 00000001D49B2EB4>",
+  StopMovingOrSizing = "<function: 00000001E4E37954>",
+  TriggerMoveAnimation = "<function: 00000001E19F4D14>",
+  UseDynamicContentState = "<function: 00000001D401C864>",
+  UseDynamicDrawableState = "<function: 00000001E8ECBD24>",
+  UseResizing = "<function: 00000001E4EAD2E4>",
+  __this = "<userdata: 000000024BB20A80>",
+}
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+FTK_GENERAL = 0
+FTK_IMAGETEXT = 2

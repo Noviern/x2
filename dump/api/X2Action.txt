@@ -1,1 +1,1 @@
-X2Action = {} -- api/X2Action
+X2Action = {}

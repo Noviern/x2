@@ -1,401 +1,212 @@
-AP_BOTTOM = 8 -- objects/Listbox
-AP_BOTTOMLEFT = 2 -- objects/Listbox
-AP_BOTTOMRIGHT = 3 -- objects/Listbox
-AP_CENTER = 4 -- objects/Listbox
-AP_LEFT = 6 -- objects/Listbox
-AP_RIGHT = 7 -- objects/Listbox
-AP_TOP = 5 -- objects/Listbox
-AP_TOPLEFT = 0 -- objects/Listbox
-AP_TOPRIGHT = 1 -- objects/Listbox
-CT_ABILITY = 2 -- objects/Listbox
-CT_EXPEDITION_NAME = 3 -- objects/Listbox
-CT_NAME = 1 -- objects/Listbox
-DC_ALWAYS = 0 -- objects/Listbox
-DC_SHIFT_KEY_DOWN = 1 -- objects/Listbox
-Listbox = { -- objects/Listbox
-  __this = <userdata>, -- objects/Listbox
-  itemStyle = { -- objects/Listbox
-    __this = <userdata>, -- objects/Listbox
-  }, -- objects/Listbox
-  itemStyleSub = { -- objects/Listbox
-    __this = <userdata>, -- objects/Listbox
-  }, -- objects/Listbox
-} -- objects/Listbox
-
-function Listbox.itemStyle:GetId() end
-
-function Listbox.itemStyle:GetLineHeight() end
-
-function Listbox.itemStyle:GetName() end
-
-function Listbox.itemStyle:GetObjectType() end
-
-function Listbox.itemStyle:GetTextWidth() end
-
-function Listbox.itemStyle:IsValidUIObject() end
-
-function Listbox.itemStyle:SetAlign() end
-
-function Listbox.itemStyle:SetColor() end
-
-function Listbox.itemStyle:SetColorByKey() end
-
-function Listbox.itemStyle:SetEllipsis() end
-
-function Listbox.itemStyle:SetFont() end
-
-function Listbox.itemStyle:SetFontSize() end
-
-function Listbox.itemStyle:SetOutline() end
-
-function Listbox.itemStyle:SetShadow() end
-
-function Listbox.itemStyle:SetSnap() end
-
-function Listbox.itemStyleSub:GetId() end
-
-function Listbox.itemStyleSub:GetLineHeight() end
-
-function Listbox.itemStyleSub:GetName() end
-
-function Listbox.itemStyleSub:GetObjectType() end
-
-function Listbox.itemStyleSub:GetTextWidth() end
-
-function Listbox.itemStyleSub:IsValidUIObject() end
-
-function Listbox.itemStyleSub:SetAlign() end
-
-function Listbox.itemStyleSub:SetColor() end
-
-function Listbox.itemStyleSub:SetColorByKey() end
-
-function Listbox.itemStyleSub:SetEllipsis() end
-
-function Listbox.itemStyleSub:SetFont() end
-
-function Listbox.itemStyleSub:SetFontSize() end
-
-function Listbox.itemStyleSub:SetOutline() end
-
-function Listbox.itemStyleSub:SetShadow() end
-
-function Listbox.itemStyleSub:SetSnap() end
-
-function Listbox:AddAnchor() end
-
-function Listbox:AppendItem() end
-
-function Listbox:AppendItemByTable() end
-
-function Listbox:ApplyUIScale() end
-
-function Listbox:AttachWidget() end
-
-function Listbox:BindWidth() end
-
-function Listbox:CancelRequestCharacterCacheData() end
-
-function Listbox:ChangeChildAnchorByScrollValue() end
-
-function Listbox:CheckOutOfScreen() end
-
-function Listbox:ClearAllSelected() end
-
-function Listbox:ClearItem() end
-
-function Listbox:Clickable() end
-
-function Listbox:CorrectOffsetByScreen() end
-
-function Listbox:CreateChildWidget() end
-
-function Listbox:CreateChildWidgetByType() end
-
-function Listbox:CreateClosedImageDrawable() end
-
-function Listbox:CreateColorDrawable() end
-
-function Listbox:CreateColorDrawableByKey() end
-
-function Listbox:CreateDrawable() end
-
-function Listbox:CreateEffectDrawable() end
-
-function Listbox:CreateEffectDrawableByKey() end
-
-function Listbox:CreateIconDrawable() end
-
-function Listbox:CreateImageDrawable() end
-
-function Listbox:CreateNinePartDrawable() end
-
-function Listbox:CreateOpenedImageDrawable() end
-
-function Listbox:CreateSeparatorImageDrawable() end
-
-function Listbox:CreateTextDrawable() end
-
-function Listbox:CreateThreeColorDrawable() end
-
-function Listbox:CreateThreePartDrawable() end
-
-function Listbox:DetachWidget() end
-
-function Listbox:DisableDrawables() end
-
-function Listbox:DisableDrawablesWithChildren() end
-
-function Listbox:Enable() end
-
-function Listbox:EnableDrag() end
-
-function Listbox:EnableDrawables() end
-
-function Listbox:EnableDrawablesWithChildren() end
-
-function Listbox:EnableFocus() end
-
-function Listbox:EnableHidingIsRemove() end
-
-function Listbox:EnableKeyboard() end
-
-function Listbox:EnablePick() end
-
-function Listbox:EnableScroll() end
-
-function Listbox:EnableSelectNoValue() end
-
-function Listbox:EnableSelectParent() end
-
-function Listbox:EnableSelectionToggle() end
-
-function Listbox:GetAlpha() end
-
-function Listbox:GetAttachedWidget() end
-
-function Listbox:GetEffectiveExtent() end
-
-function Listbox:GetEffectiveOffset() end
-
-function Listbox:GetExtent() end
-
-function Listbox:GetHeight() end
-
-function Listbox:GetId() end
-
-function Listbox:GetInset() end
-
-function Listbox:GetMaxTop() end
-
-function Listbox:GetName() end
-
-function Listbox:GetObjectType() end
-
-function Listbox:GetOffset() end
-
-function Listbox:GetOpenedItemCount() end
-
-function Listbox:GetParent() end
-
-function Listbox:GetRotation() end
-
-function Listbox:GetSelectedIndex() end
-
-function Listbox:GetSelectedIndexWithDepth() end
-
-function Listbox:GetSelectedText() end
-
-function Listbox:GetSelectedValue() end
-
-function Listbox:GetText() end
-
-function Listbox:GetTop() end
-
-function Listbox:GetUILayer() end
-
-function Listbox:GetValue() end
-
-function Listbox:GetViewItemCount() end
-
-function Listbox:GetViewItemsInfo() end
-
-function Listbox:GetWidth() end
-
-function Listbox:HasHandler() end
-
-function Listbox:InheritAnimationData() end
-
-function Listbox:InitializeSelect() end
-
-function Listbox:IsDescendantWidget() end
-
-function Listbox:IsEnabled() end
-
-function Listbox:IsItemOpened() end
-
-function Listbox:IsMouseOver() end
-
-function Listbox:IsNowAnimation() end
-
-function Listbox:IsValidUIObject() end
-
-function Listbox:IsVisible() end
-
-function Listbox:ItemCount() end
-
-function Listbox:Lower() end
-
-function Listbox:MoveTo() end
-
-function Listbox:Raise() end
-
-function Listbox:RegisterEvent() end
-
-function Listbox:ReleaseDeletedHandler() end
-
-function Listbox:ReleaseHandler() end
-
-function Listbox:RemoveAllAnchors() end
-
-function Listbox:RemoveAllDrawables() end
-
-function Listbox:RemoveDrawable() end
-
-function Listbox:RequestCharacterCacheData() end
-
-function Listbox:ScrollDown() end
-
-function Listbox:ScrollUp() end
-
-function Listbox:Select() end
-
-function Listbox:SelectWithText() end
-
-function Listbox:SelectWithValue() end
-
-function Listbox:SetAlpha() end
-
-function Listbox:SetAlphaAnimation() end
-
-function Listbox:SetBorder() end
-
-function Listbox:SetCategory() end
-
-function Listbox:SetCharacterCacheDataHandler() end
-
-function Listbox:SetDefaultItemColor() end
-
-function Listbox:SetDefaultItemCoord() end
-
-function Listbox:SetDefaultItemTextColor() end
-
-function Listbox:SetDelegator() end
-
-function Listbox:SetDeletedHandler() end
-
-function Listbox:SetDisableItemTextColor() end
-
-function Listbox:SetDragCondition() end
-
-function Listbox:SetDrawPriority() end
-
-function Listbox:SetDrawableLayerAlpha() end
-
-function Listbox:SetExtent() end
-
-function Listbox:SetFold() end
-
-function Listbox:SetHandler() end
-
-function Listbox:SetHeight() end
-
-function Listbox:SetInset() end
-
-function Listbox:SetItem() end
-
-function Listbox:SetItemDefaultTextureInfo() end
-
-function Listbox:SetItemOveredTextureInfo() end
-
-function Listbox:SetItemSelectedTextureInfo() end
-
-function Listbox:SetItemTrees() end
-
-function Listbox:SetLText() end
-
-function Listbox:SetLayerColor() end
-
-function Listbox:SetLineColor() end
-
-function Listbox:SetListItemStateTexture() end
-
-function Listbox:SetListItemStateTextureInset() end
-
-function Listbox:SetMaxResizingExtent() end
-
-function Listbox:SetMinResizingExtent() end
-
-function Listbox:SetMoveAnimation() end
-
-function Listbox:SetOveredItemColor() end
-
-function Listbox:SetOveredItemCoord() end
-
-function Listbox:SetOveredItemTextColor() end
-
-function Listbox:SetResizingBorderSize() end
-
-function Listbox:SetRotation() end
-
-function Listbox:SetScale() end
-
-function Listbox:SetScaleAnimation() end
-
-function Listbox:SetSelectedItemColor() end
-
-function Listbox:SetSelectedItemCoord() end
-
-function Listbox:SetSelectedItemTextColor() end
-
-function Listbox:SetSounds() end
-
-function Listbox:SetStartAnimation() end
-
-function Listbox:SetSubTextOffset() end
-
-function Listbox:SetText() end
-
-function Listbox:SetTextLimit() end
-
-function Listbox:SetTop() end
-
-function Listbox:SetTreeTypeIndent() end
-
-function Listbox:SetWidth() end
-
-function Listbox:Show() end
-
-function Listbox:ShowAutoTooltip() end
-
-function Listbox:ShowTooltip() end
-
-function Listbox:StartMoving() end
-
-function Listbox:StartSizing() end
-
-function Listbox:StopMovingOrSizing() end
-
-function Listbox:TriggerMoveAnimation() end
-
-function Listbox:TurnoffOverParent() end
-
-function Listbox:UpdateItem() end
-
-function Listbox:UseChildStyle() end
-
-function Listbox:UseDynamicContentState() end
-
-function Listbox:UseDynamicDrawableState() end
-
-function Listbox:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+Listbox = {
+  AddAnchor = "<function: 00000000FC52F444>",
+  AppendItem = "<function: 00000001E95ED694>",
+  AppendItemByTable = "<function: 00000001E95F6C14>",
+  ApplyUIScale = "<function: 00000001E4FB0FC4>",
+  AttachWidget = "<function: 00000001D461B854>",
+  BindWidth = "<function: 00000001D4490794>",
+  CancelRequestCharacterCacheData = "<function: 00000000CD64DB34>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001A254AC04>",
+  CheckOutOfScreen = "<function: 00000000FA02FBE4>",
+  ClearAllSelected = "<function: 00000001E480A774>",
+  ClearItem = "<function: 00000001E95BCC84>",
+  Clickable = "<function: 00000001E4F360F4>",
+  CorrectOffsetByScreen = "<function: 00000001E95FF594>",
+  CreateChildWidget = "<function: 00000001E8F3DA74>",
+  CreateChildWidgetByType = "<function: 00000001E9603D54>",
+  CreateClosedImageDrawable = "<function: 00000000FC9A8584>",
+  CreateColorDrawable = "<function: 00000001D474F884>",
+  CreateColorDrawableByKey = "<function: 00000001E960E254>",
+  CreateDrawable = "<function: 00000001E964BA94>",
+  CreateEffectDrawable = "<function: 00000001E95F7454>",
+  CreateEffectDrawableByKey = "<function: 00000001E4B41694>",
+  CreateIconDrawable = "<function: 00000000CD7019D4>",
+  CreateImageDrawable = "<function: 00000001AF080834>",
+  CreateNinePartDrawable = "<function: 00000001E95DD504>",
+  CreateOpenedImageDrawable = "<function: 00000001E95C7B44>",
+  CreateSeparatorImageDrawable = "<function: 00000001E4923DC4>",
+  CreateTextDrawable = "<function: 00000001E4EBD924>",
+  CreateThreeColorDrawable = "<function: 00000001E96223D4>",
+  CreateThreePartDrawable = "<function: 00000002271D0A44>",
+  DetachWidget = "<function: 00000001D3BDFE54>",
+  DisableDrawables = "<function: 00000001EE7C9B94>",
+  DisableDrawablesWithChildren = "<function: 00000001E960DF14>",
+  Enable = "<function: 00000001D4537034>",
+  EnableDrag = "<function: 00000001AFA434D4>",
+  EnableDrawables = "<function: 00000000FA01E0E4>",
+  EnableDrawablesWithChildren = "<function: 00000001EE761204>",
+  EnableFocus = "<function: 00000001E4F36434>",
+  EnableHidingIsRemove = "<function: 00000001F621FE34>",
+  EnableKeyboard = "<function: 00000000FC5F8124>",
+  EnablePick = "<function: 00000001E95A2684>",
+  EnableScroll = "<function: 00000001CEA9D564>",
+  EnableSelectNoValue = "<function: 00000001E4F26DF4>",
+  EnableSelectParent = "<function: 00000000CD659A74>",
+  EnableSelectionToggle = "<function: 00000001F6630E84>",
+  GetAlpha = "<function: 00000001E501F5D4>",
+  GetAttachedWidget = "<function: 00000001E968B0A4>",
+  GetEffectiveExtent = "<function: 00000001E95C3CC4>",
+  GetEffectiveOffset = "<function: 00000001E9640B14>",
+  GetExtent = "<function: 00000001C8A12184>",
+  GetHeight = "<function: 00000001D45CE014>",
+  GetId = "<function: 00000001E95D2304>",
+  GetInset = "<function: 00000001D45CD814>",
+  GetMaxTop = "<function: 00000001E8EECA64>",
+  GetName = "<function: 00000001D4099544>",
+  GetObjectType = "<function: 00000001E9565904>",
+  GetOffset = "<function: 000000007CAD6A34>",
+  GetOpenedItemCount = "<function: 00000001AFA83394>",
+  GetParent = "<function: 00000001B5D98A84>",
+  GetRotation = "<function: 00000001E4B403D4>",
+  GetSelectedIndex = "<function: 00000001D3D5ADC4>",
+  GetSelectedIndexWithDepth = "<function: 00000001E969A664>",
+  GetSelectedText = "<function: 00000001E9684C24>",
+  GetSelectedValue = "<function: 00000001E9672CE4>",
+  GetText = "<function: 000000007CAE2EB4>",
+  GetTop = "<function: 00000001E95D1B84>",
+  GetUILayer = "<function: 00000001E4EA5764>",
+  GetValue = "<function: 00000001EE876084>",
+  GetViewItemCount = "<function: 00000001F6223DF4>",
+  GetViewItemsInfo = "<function: 00000001EED88684>",
+  GetWidth = "<function: 00000001E963DFD4>",
+  HasHandler = "<function: 00000001E8E4CF94>",
+  InheritAnimationData = "<function: 00000001E968A5E4>",
+  InitializeSelect = "<function: 00000001EE7D2394>",
+  IsDescendantWidget = "<function: 0000000228D71C94>",
+  IsEnabled = "<function: 00000001D4542074>",
+  IsItemOpened = "<function: 00000001E4F348B4>",
+  IsMouseOver = "<function: 00000000CD7959C4>",
+  IsNowAnimation = "<function: 00000001E4A41E64>",
+  IsValidUIObject = "<function: 00000001D3BA9FD4>",
+  IsVisible = "<function: 00000001E8EE84A4>",
+  ItemCount = "<function: 00000001F62444B4>",
+  Lower = "<function: 00000001A2576984>",
+  MoveTo = "<function: 00000001D4731E74>",
+  Raise = "<function: 00000001E4EA5824>",
+  RegisterEvent = "<function: 00000001E199A1D4>",
+  ReleaseDeletedHandler = "<function: 00000001D434B094>",
+  ReleaseHandler = "<function: 00000001E95D9304>",
+  RemoveAllAnchors = "<function: 00000001E18F1C74>",
+  RemoveAllDrawables = "<function: 00000001E4F2A6F4>",
+  RemoveDrawable = "<function: 00000001F83A5264>",
+  RequestCharacterCacheData = "<function: 00000001E4FA2284>",
+  ScrollDown = "<function: 00000001E9641254>",
+  ScrollUp = "<function: 00000001E962ED94>",
+  Select = "<function: 00000001E95C01C4>",
+  SelectWithText = "<function: 00000001E4F08574>",
+  SelectWithValue = "<function: 00000001E48DF104>",
+  SetAlpha = "<function: 00000001E9641A94>",
+  SetAlphaAnimation = "<function: 00000001A2576A04>",
+  SetBorder = "<function: 00000001E9610594>",
+  SetCategory = "<function: 00000001E95C7D44>",
+  SetCharacterCacheDataHandler = "<function: 00000001E500A454>",
+  SetDefaultItemColor = "<function: 00000001D409BE44>",
+  SetDefaultItemCoord = "<function: 00000001AFA7BFD4>",
+  SetDefaultItemTextColor = "<function: 00000001E27209A4>",
+  SetDelegator = "<function: 00000001E4E160D4>",
+  SetDeletedHandler = "<function: 00000001D3DACF84>",
+  SetDisableItemTextColor = "<function: 00000001E9641214>",
+  SetDragCondition = "<function: 00000001E968A464>",
+  SetDrawPriority = "<function: 00000001E4CB3944>",
+  SetDrawableLayerAlpha = "<function: 00000001D45EC5D4>",
+  SetExtent = "<function: 000000007C8FB484>",
+  SetFold = "<function: 00000001B5D7DF44>",
+  SetHandler = "<function: 00000001D3BF6BD4>",
+  SetHeight = "<function: 00000001E96AF964>",
+  SetInset = "<function: 00000001D49C2F74>",
+  SetItem = "<function: 00000000FA02B4E4>",
+  SetItemDefaultTextureInfo = "<function: 00000001E4ED90B4>",
+  SetItemOveredTextureInfo = "<function: 00000001FDD22CD4>",
+  SetItemSelectedTextureInfo = "<function: 00000001E9668464>",
+  SetItemTrees = "<function: 00000001D4558B84>",
+  SetLText = "<function: 00000001E963F8D4>",
+  SetLayerColor = "<function: 00000001E95BBAC4>",
+  SetLineColor = "<function: 00000001D45FC154>",
+  SetListItemStateTexture = "<function: 00000001E95BD1C4>",
+  SetListItemStateTextureInset = "<function: 00000002271C5EC4>",
+  SetMaxResizingExtent = "<function: 00000001D3FF42A4>",
+  SetMinResizingExtent = "<function: 000000007CA9E574>",
+  SetMoveAnimation = "<function: 00000001D3FC05D4>",
+  SetOveredItemColor = "<function: 00000001E96B3564>",
+  SetOveredItemCoord = "<function: 00000000CD625FF4>",
+  SetOveredItemTextColor = "<function: 00000000CD6422B4>",
+  SetResizingBorderSize = "<function: 00000001EE7356C4>",
+  SetRotation = "<function: 000000007C8C68C4>",
+  SetScale = "<function: 00000001B5D87C84>",
+  SetScaleAnimation = "<function: 00000001D3D6B044>",
+  SetSelectedItemColor = "<function: 00000001E4B42F94>",
+  SetSelectedItemCoord = "<function: 00000001E96024D4>",
+  SetSelectedItemTextColor = "<function: 00000001E96643A4>",
+  SetSounds = "<function: 00000001E96411D4>",
+  SetStartAnimation = "<function: 00000001E966A2E4>",
+  SetSubTextOffset = "<function: 00000001F6623704>",
+  SetText = "<function: 00000001E4C98D44>",
+  SetTextLimit = "<function: 00000001F623BE34>",
+  SetTop = "<function: 00000001E4F1BC74>",
+  SetTreeTypeIndent = "<function: 00000001F83DF164>",
+  SetWidth = "<function: 00000001E963C854>",
+  Show = "<function: 00000001E95EF0D4>",
+  ShowAutoTooltip = "<function: 00000001EEB94044>",
+  ShowTooltip = "<function: 00000001E961D114>",
+  StartMoving = "<function: 00000001F6248974>",
+  StartSizing = "<function: 00000001D3E7E224>",
+  StopMovingOrSizing = "<function: 00000001D4984D64>",
+  TriggerMoveAnimation = "<function: 00000001CEA9BCA4>",
+  TurnoffOverParent = "<function: 00000001E8F1F6B4>",
+  UpdateItem = "<function: 00000001E9636314>",
+  UseChildStyle = "<function: 00000001E1B148C4>",
+  UseDynamicContentState = "<function: 00000001D3FBB754>",
+  UseDynamicDrawableState = "<function: 00000001E963C814>",
+  UseResizing = "<function: 00000001D3DAEF84>",
+  __this = "<userdata: 000000020B755C70>",
+  itemStyle = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD6170>",
+  },
+  itemStyleSub = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD63F0>",
+  },
+}

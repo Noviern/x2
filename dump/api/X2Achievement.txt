@@ -1,54 +1,37 @@
-AF_ALL = 1 -- api/X2Achievement
-AF_COMPLETE = 2 -- api/X2Achievement
-AF_INVALID = 0 -- api/X2Achievement
-AF_TRACING = 4 -- api/X2Achievement
-AF_UNCOMPLETE = 3 -- api/X2Achievement
-EAK_ACHIEVEMENT = 2 -- api/X2Achievement
-EAK_ARCHERAGE = 4 -- api/X2Achievement
-EAK_COLLECTION = 3 -- api/X2Achievement
-EAK_RACIAL_MISSION = 1 -- api/X2Achievement
-MAX_TRACING_ACHIEVEMENT = 6 -- api/X2Achievement
-TADT_ARCHE_PASS = 5 -- api/X2Achievement
-TADT_EXPEDITION = 2 -- api/X2Achievement
-TADT_EXPEDITION_PUBLIC = 6 -- api/X2Achievement
-TADT_FAMILY = 3 -- api/X2Achievement
-TADT_HERO = 4 -- api/X2Achievement
-TADT_MAX = 7 -- api/X2Achievement
-TADT_TODAY = 1 -- api/X2Achievement
-X2Achievement = {} -- api/X2Achievement
-
-function X2Achievement:AddTracingAchievement() end
-
-function X2Achievement:GetAchievementInfo() end
-
-function X2Achievement:GetAchievementMainList() end
-
-function X2Achievement:GetAchievementName() end
-
-function X2Achievement:GetAchievementSubList() end
-
-function X2Achievement:GetAchievementTracingList() end
-
-function X2Achievement:GetCategories() end
-
-function X2Achievement:GetCategoryCount() end
-
-function X2Achievement:GetSubcategoryInfo() end
-
-function X2Achievement:GetTodayAssignmentCount() end
-
-function X2Achievement:GetTodayAssignmentGoal() end
-
-function X2Achievement:GetTodayAssignmentInfo() end
-
-function X2Achievement:GetTodayAssignmentInfoForChange() end
-
-function X2Achievement:GetTodayAssignmentResetCount() end
-
-function X2Achievement:GetTodayAssignmentStatus() end
-
-function X2Achievement:IsTodayAssignmentQuest() end
-
-function X2Achievement:IsTracingAchievement() end
-
-function X2Achievement:RemoveTracingAchievement() end
+AF_ALL = 1
+AF_COMPLETE = 2
+AF_INVALID = 0
+AF_TRACING = 4
+AF_UNCOMPLETE = 3
+EAK_ACHIEVEMENT = 2
+EAK_ARCHERAGE = 4
+EAK_COLLECTION = 3
+EAK_RACIAL_MISSION = 1
+MAX_TRACING_ACHIEVEMENT = 6
+TADT_ARCHE_PASS = 5
+TADT_EXPEDITION = 2
+TADT_EXPEDITION_PUBLIC = 6
+TADT_FAMILY = 3
+TADT_HERO = 4
+TADT_MAX = 7
+TADT_TODAY = 1
+X2Achievement = {
+  AddTracingAchievement = "<function: 00000001D4A30F04>",
+  GetAchievementInfo = "<function: 00000001D3C64A14>",
+  GetAchievementMainList = "<function: 00000001EEB93704>",
+  GetAchievementName = "<function: 00000002537D1B04>",
+  GetAchievementSubList = "<function: 00000001E507B924>",
+  GetAchievementTracingList = "<function: 00000001E8E42D14>",
+  GetCategories = "<function: 00000001E96B9B24>",
+  GetCategoryCount = "<function: 00000002533B5C84>",
+  GetSubcategoryInfo = "<function: 00000001D40AEE04>",
+  GetTodayAssignmentCount = "<function: 00000001E95B95C4>",
+  GetTodayAssignmentGoal = "<function: 00000001D49C9AB4>",
+  GetTodayAssignmentInfo = "<function: 00000001D3E112D4>",
+  GetTodayAssignmentInfoForChange = "<function: 00000001A7139CC4>",
+  GetTodayAssignmentResetCount = "<function: 00000001E95635C4>",
+  GetTodayAssignmentStatus = "<function: 00000001E4FB4FC4>",
+  IsTodayAssignmentQuest = "<function: 00000001E4F358B4>",
+  IsTracingAchievement = "<function: 00000001E4F34EB4>",
+  RemoveTracingAchievement = "<function: 00000001D40D1F04>",
+}

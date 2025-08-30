@@ -1,21 +1,15 @@
-ASK_ACCOUNT_BUFF = 3 -- api/X2Auction
-ASK_NORMAL = 0 -- api/X2Auction
-ASK_PCBANG = 1 -- api/X2Auction
-ASK_PREMIUM = 2 -- api/X2Auction
-PT_BID = 0 -- api/X2Auction
-PT_PARTITION = 1 -- api/X2Auction
-X2Auction = {} -- api/X2Auction
-
-function X2Auction:AskMarketPrice() end
-
-function X2Auction:GetLowestPrice() end
-
-function X2Auction:GetSearchedItemCount() end
-
-function X2Auction:GetSearchedItemInfo() end
-
-function X2Auction:GetSearchedItemPage() end
-
-function X2Auction:GetSearchedItemTotalCount() end
-
-function X2Auction:SearchAuctionArticle() end
+ASK_ACCOUNT_BUFF = 3
+ASK_NORMAL = 0
+ASK_PCBANG = 1
+ASK_PREMIUM = 2
+PT_BID = 0
+PT_PARTITION = 1
+X2Auction = {
+  AskMarketPrice = "<function: 00000002536F86A4>",
+  GetLowestPrice = "<function: 00000001E1A68664>",
+  GetSearchedItemCount = "<function: 00000002536F8E64>",
+  GetSearchedItemInfo = "<function: 00000001D46AD564>",
+  GetSearchedItemPage = "<function: 00000001E4FD7754>",
+  GetSearchedItemTotalCount = "<function: 00000001D44D9C34>",
+  SearchAuctionArticle = "<function: 00000001E9650794>",
+}

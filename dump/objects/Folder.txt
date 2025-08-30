@@ -1,286 +1,153 @@
-AP_BOTTOM = 8 -- objects/Folder
-AP_BOTTOMLEFT = 2 -- objects/Folder
-AP_BOTTOMRIGHT = 3 -- objects/Folder
-AP_CENTER = 4 -- objects/Folder
-AP_LEFT = 6 -- objects/Folder
-AP_RIGHT = 7 -- objects/Folder
-AP_TOP = 5 -- objects/Folder
-AP_TOPLEFT = 0 -- objects/Folder
-AP_TOPRIGHT = 1 -- objects/Folder
-CT_ABILITY = 2 -- objects/Folder
-CT_EXPEDITION_NAME = 3 -- objects/Folder
-CT_NAME = 1 -- objects/Folder
-DC_ALWAYS = 0 -- objects/Folder
-DC_SHIFT_KEY_DOWN = 1 -- objects/Folder
-Folder = { -- objects/Folder
-  __this = <userdata>, -- objects/Folder
-  style = { -- objects/Folder
-    __this = <userdata>, -- objects/Folder
-  }, -- objects/Folder
-} -- objects/Folder
-
-function Folder.style:GetId() end
-
-function Folder.style:GetLineHeight() end
-
-function Folder.style:GetName() end
-
-function Folder.style:GetObjectType() end
-
-function Folder.style:GetTextWidth() end
-
-function Folder.style:IsValidUIObject() end
-
-function Folder.style:SetAlign() end
-
-function Folder.style:SetColor() end
-
-function Folder.style:SetColorByKey() end
-
-function Folder.style:SetEllipsis() end
-
-function Folder.style:SetFont() end
-
-function Folder.style:SetFontSize() end
-
-function Folder.style:SetOutline() end
-
-function Folder.style:SetShadow() end
-
-function Folder.style:SetSnap() end
-
-function Folder:AddAnchor() end
-
-function Folder:ApplyUIScale() end
-
-function Folder:AttachWidget() end
-
-function Folder:BindWidth() end
-
-function Folder:CancelRequestCharacterCacheData() end
-
-function Folder:ChangeChildAnchorByScrollValue() end
-
-function Folder:CheckOutOfScreen() end
-
-function Folder:Clickable() end
-
-function Folder:CloseFolder() end
-
-function Folder:CorrectOffsetByScreen() end
-
-function Folder:CreateChildWidget() end
-
-function Folder:CreateChildWidgetByType() end
-
-function Folder:CreateColorDrawable() end
-
-function Folder:CreateColorDrawableByKey() end
-
-function Folder:CreateDrawable() end
-
-function Folder:CreateEffectDrawable() end
-
-function Folder:CreateEffectDrawableByKey() end
-
-function Folder:CreateIconDrawable() end
-
-function Folder:CreateImageDrawable() end
-
-function Folder:CreateNinePartDrawable() end
-
-function Folder:CreateTextDrawable() end
-
-function Folder:CreateThreeColorDrawable() end
-
-function Folder:CreateThreePartDrawable() end
-
-function Folder:DetachWidget() end
-
-function Folder:DisableDrawables() end
-
-function Folder:DisableDrawablesWithChildren() end
-
-function Folder:Enable() end
-
-function Folder:EnableDrag() end
-
-function Folder:EnableDrawables() end
-
-function Folder:EnableDrawablesWithChildren() end
-
-function Folder:EnableFocus() end
-
-function Folder:EnableHidingIsRemove() end
-
-function Folder:EnableKeyboard() end
-
-function Folder:EnablePick() end
-
-function Folder:EnableScroll() end
-
-function Folder:FixedCloseFolder() end
-
-function Folder:GetAlpha() end
-
-function Folder:GetAttachedWidget() end
-
-function Folder:GetEffectiveExtent() end
-
-function Folder:GetEffectiveOffset() end
-
-function Folder:GetExtendLength() end
-
-function Folder:GetExtent() end
-
-function Folder:GetHeight() end
-
-function Folder:GetId() end
-
-function Folder:GetName() end
-
-function Folder:GetObjectType() end
-
-function Folder:GetOffset() end
-
-function Folder:GetParent() end
-
-function Folder:GetRotation() end
-
-function Folder:GetState() end
-
-function Folder:GetText() end
-
-function Folder:GetTitleText() end
-
-function Folder:GetUILayer() end
-
-function Folder:GetValue() end
-
-function Folder:GetWidth() end
-
-function Folder:HasHandler() end
-
-function Folder:InheritAnimationData() end
-
-function Folder:IsDescendantWidget() end
-
-function Folder:IsEnabled() end
-
-function Folder:IsMouseOver() end
-
-function Folder:IsNowAnimation() end
-
-function Folder:IsValidUIObject() end
-
-function Folder:IsVisible() end
-
-function Folder:Lower() end
-
-function Folder:MoveTo() end
-
-function Folder:OpenFolder() end
-
-function Folder:Raise() end
-
-function Folder:RegisterEvent() end
-
-function Folder:ReleaseDeletedHandler() end
-
-function Folder:ReleaseHandler() end
-
-function Folder:RemoveAllAnchors() end
-
-function Folder:RemoveAllDrawables() end
-
-function Folder:RemoveDrawable() end
-
-function Folder:RequestCharacterCacheData() end
-
-function Folder:SetAlpha() end
-
-function Folder:SetAlphaAnimation() end
-
-function Folder:SetAnimateStep() end
-
-function Folder:SetCategory() end
-
-function Folder:SetCharacterCacheDataHandler() end
-
-function Folder:SetChildWidget() end
-
-function Folder:SetCloseStateButton() end
-
-function Folder:SetDelegator() end
-
-function Folder:SetDeletedHandler() end
-
-function Folder:SetDragCondition() end
-
-function Folder:SetDrawPriority() end
-
-function Folder:SetDrawableLayerAlpha() end
-
-function Folder:SetExtendLength() end
-
-function Folder:SetExtent() end
-
-function Folder:SetHandler() end
-
-function Folder:SetHeight() end
-
-function Folder:SetInset() end
-
-function Folder:SetLText() end
-
-function Folder:SetLayerColor() end
-
-function Folder:SetMaxResizingExtent() end
-
-function Folder:SetMinResizingExtent() end
-
-function Folder:SetMoveAnimation() end
-
-function Folder:SetOpenStateButton() end
-
-function Folder:SetResizingBorderSize() end
-
-function Folder:SetRotation() end
-
-function Folder:SetScale() end
-
-function Folder:SetScaleAnimation() end
-
-function Folder:SetSounds() end
-
-function Folder:SetStartAnimation() end
-
-function Folder:SetText() end
-
-function Folder:SetTitleButtonWidget() end
-
-function Folder:SetTitleHeight() end
-
-function Folder:SetTitleText() end
-
-function Folder:SetWidth() end
-
-function Folder:Show() end
-
-function Folder:StartMoving() end
-
-function Folder:StartSizing() end
-
-function Folder:StopMovingOrSizing() end
-
-function Folder:ToggleState() end
-
-function Folder:TriggerMoveAnimation() end
-
-function Folder:UseAnimation() end
-
-function Folder:UseDynamicContentState() end
-
-function Folder:UseDynamicDrawableState() end
-
-function Folder:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+Folder = {
+  AddAnchor = "<function: 00000001E4BE32A4>",
+  ApplyUIScale = "<function: 00000001E8F4D8B4>",
+  AttachWidget = "<function: 00000001EE7C3D14>",
+  BindWidth = "<function: 00000001E4C572B4>",
+  CancelRequestCharacterCacheData = "<function: 00000001E95A5F84>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E9693364>",
+  CheckOutOfScreen = "<function: 00000001E968D5E4>",
+  Clickable = "<function: 00000001E9624ED4>",
+  CloseFolder = "<function: 00000001F6248EB4>",
+  CorrectOffsetByScreen = "<function: 00000001E961C354>",
+  CreateChildWidget = "<function: 00000001D4903314>",
+  CreateChildWidgetByType = "<function: 00000001E95DBC04>",
+  CreateColorDrawable = "<function: 00000001E4F1BA34>",
+  CreateColorDrawableByKey = "<function: 00000001E4F1B9B4>",
+  CreateDrawable = "<function: 00000001E95D1004>",
+  CreateEffectDrawable = "<function: 00000001E963FA54>",
+  CreateEffectDrawableByKey = "<function: 00000001E96A7164>",
+  CreateIconDrawable = "<function: 00000001E96B3F24>",
+  CreateImageDrawable = "<function: 00000001E96B3DA4>",
+  CreateNinePartDrawable = "<function: 00000001E4F36334>",
+  CreateTextDrawable = "<function: 00000001E963DA14>",
+  CreateThreeColorDrawable = "<function: 00000001E963FA14>",
+  CreateThreePartDrawable = "<function: 00000001E4F36374>",
+  DetachWidget = "<function: 00000001E963CCD4>",
+  DisableDrawables = "<function: 00000001AF9BD9D4>",
+  DisableDrawablesWithChildren = "<function: 00000001E4FA6784>",
+  Enable = "<function: 00000001E4A934C4>",
+  EnableDrag = "<function: 00000001E9624F94>",
+  EnableDrawables = "<function: 00000001B5D4D044>",
+  EnableDrawablesWithChildren = "<function: 00000001E4FDC1D4>",
+  EnableFocus = "<function: 00000001A71404C4>",
+  EnableHidingIsRemove = "<function: 00000001E5024A54>",
+  EnableKeyboard = "<function: 00000001E1A05514>",
+  EnablePick = "<function: 00000001E9624F14>",
+  EnableScroll = "<function: 00000001E9693324>",
+  FixedCloseFolder = "<function: 00000001D43D9544>",
+  GetAlpha = "<function: 00000001E4AE94C4>",
+  GetAttachedWidget = "<function: 00000001E963C754>",
+  GetEffectiveExtent = "<function: 00000001E968BC24>",
+  GetEffectiveOffset = "<function: 00000001E968BC64>",
+  GetExtendLength = "<function: 00000001AFA70A94>",
+  GetExtent = "<function: 00000001E4AEB804>",
+  GetHeight = "<function: 00000001D48D7394>",
+  GetId = "<function: 00000001E4EC5BE4>",
+  GetName = "<function: 00000001E9583284>",
+  GetObjectType = "<function: 00000001E4ED93F4>",
+  GetOffset = "<function: 00000001E4BD0FE4>",
+  GetParent = "<function: 00000001E961C494>",
+  GetRotation = "<function: 00000001D4045FA4>",
+  GetState = "<function: 00000001D4018324>",
+  GetText = "<function: 00000001D40996C4>",
+  GetTitleText = "<function: 00000001B5DA61C4>",
+  GetUILayer = "<function: 00000001E4F35BB4>",
+  GetValue = "<function: 00000001E96933A4>",
+  GetWidth = "<function: 00000001E956CE44>",
+  HasHandler = "<function: 00000001E95C9C84>",
+  InheritAnimationData = "<function: 00000001E4F62A44>",
+  IsDescendantWidget = "<function: 00000001E963CD14>",
+  IsEnabled = "<function: 00000001D3CB4214>",
+  IsMouseOver = "<function: 00000001D4909254>",
+  IsNowAnimation = "<function: 00000001E2784D44>",
+  IsValidUIObject = "<function: 00000001E9629ED4>",
+  IsVisible = "<function: 00000000CD6CE2D4>",
+  Lower = "<function: 00000001EE727D04>",
+  MoveTo = "<function: 00000001D4699DA4>",
+  OpenFolder = "<function: 00000001C8A54644>",
+  Raise = "<function: 00000001E4F07D74>",
+  RegisterEvent = "<function: 00000001E95DBC84>",
+  ReleaseDeletedHandler = "<function: 00000001E96C0FE4>",
+  ReleaseHandler = "<function: 00000001E95D7544>",
+  RemoveAllAnchors = "<function: 00000001E4B60614>",
+  RemoveAllDrawables = "<function: 00000001C560A424>",
+  RemoveDrawable = "<function: 00000001D3EA8F24>",
+  RequestCharacterCacheData = "<function: 00000001E96408D4>",
+  SetAlpha = "<function: 00000001E4EBDAA4>",
+  SetAlphaAnimation = "<function: 00000001E4F9A644>",
+  SetAnimateStep = "<function: 00000001D472B634>",
+  SetCategory = "<function: 00000001FFFB9404>",
+  SetCharacterCacheDataHandler = "<function: 00000001E95A60C4>",
+  SetChildWidget = "<function: 00000001AFA71BD4>",
+  SetCloseStateButton = "<function: 00000001E95AAB04>",
+  SetDelegator = "<function: 00000001E9640814>",
+  SetDeletedHandler = "<function: 00000001EE760A04>",
+  SetDragCondition = "<function: 00000001D475E684>",
+  SetDrawPriority = "<function: 00000001E96932E4>",
+  SetDrawableLayerAlpha = "<function: 00000001E96A71A4>",
+  SetExtendLength = "<function: 0000000068472084>",
+  SetExtent = "<function: 00000001D48A6114>",
+  SetHandler = "<function: 00000001E27C3A04>",
+  SetHeight = "<function: 00000001E4EAEF64>",
+  SetInset = "<function: 00000001E9641C14>",
+  SetLText = "<function: 00000001D405D264>",
+  SetLayerColor = "<function: 00000001F6655144>",
+  SetMaxResizingExtent = "<function: 00000001F621F474>",
+  SetMinResizingExtent = "<function: 00000001E5027714>",
+  SetMoveAnimation = "<function: 00000001E4FA1784>",
+  SetOpenStateButton = "<function: 00000001E95AAA04>",
+  SetResizingBorderSize = "<function: 00000001D4A034F4>",
+  SetRotation = "<function: 00000001D404F9E4>",
+  SetScale = "<function: 00000001E8F2FD74>",
+  SetScaleAnimation = "<function: 00000001E4F8AF04>",
+  SetSounds = "<function: 00000001E4F49F84>",
+  SetStartAnimation = "<function: 00000001E4F90E04>",
+  SetText = "<function: 00000001E95D5D04>",
+  SetTitleButtonWidget = "<function: 00000001E95D7CC4>",
+  SetTitleHeight = "<function: 00000001C8A57E84>",
+  SetTitleText = "<function: 00000001D3CF7074>",
+  SetWidth = "<function: 00000001E95ABE84>",
+  Show = "<function: 00000001A257EB04>",
+  StartMoving = "<function: 00000001E4F4A044>",
+  StartSizing = "<function: 00000001D4699D64>",
+  StopMovingOrSizing = "<function: 00000001E960E294>",
+  ToggleState = "<function: 000000007CAE7D34>",
+  TriggerMoveAnimation = "<function: 00000001E95F5694>",
+  UseAnimation = "<function: 00000000CD6C1514>",
+  UseDynamicContentState = "<function: 00000001B5DA9544>",
+  UseDynamicDrawableState = "<function: 00000001D3CA9BD4>",
+  UseResizing = "<function: 00000001E961CBD4>",
+  __this = "<userdata: 00000001E1790070>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DCEBF0>",
+  },
+}

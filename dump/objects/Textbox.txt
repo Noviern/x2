@@ -1,283 +1,152 @@
-1756500805
-AP_BOTTOM = 8 -- objects/Textbox
-AP_BOTTOMLEFT = 2 -- objects/Textbox
-AP_BOTTOMRIGHT = 3 -- objects/Textbox
-AP_CENTER = 4 -- objects/Textbox
-AP_LEFT = 6 -- objects/Textbox
-AP_RIGHT = 7 -- objects/Textbox
-AP_TOP = 5 -- objects/Textbox
-AP_TOPLEFT = 0 -- objects/Textbox
-AP_TOPRIGHT = 1 -- objects/Textbox
-CT_ABILITY = 2 -- objects/Textbox
-CT_EXPEDITION_NAME = 3 -- objects/Textbox
-CT_NAME = 1 -- objects/Textbox
-DC_ALWAYS = 0 -- objects/Textbox
-DC_SHIFT_KEY_DOWN = 1 -- objects/Textbox
-Textbox = { -- objects/Textbox
-  __this = <userdata>, -- objects/Textbox
-  style = { -- objects/Textbox
-    __this = <userdata>, -- objects/Textbox
-  }, -- objects/Textbox
-} -- objects/Textbox
-
-function Textbox.style:GetId() end
-
-function Textbox.style:GetLineHeight() end
-
-function Textbox.style:GetName() end
-
-function Textbox.style:GetObjectType() end
-
-function Textbox.style:GetTextWidth() end
-
-function Textbox.style:IsValidUIObject() end
-
-function Textbox.style:SetAlign() end
-
-function Textbox.style:SetColor() end
-
-function Textbox.style:SetColorByKey() end
-
-function Textbox.style:SetEllipsis() end
-
-function Textbox.style:SetFont() end
-
-function Textbox.style:SetFontSize() end
-
-function Textbox.style:SetOutline() end
-
-function Textbox.style:SetShadow() end
-
-function Textbox.style:SetSnap() end
-
-function Textbox:AddAnchor() end
-
-function Textbox:ApplyUIScale() end
-
-function Textbox:AttachWidget() end
-
-function Textbox:BindWidth() end
-
-function Textbox:CancelRequestCharacterCacheData() end
-
-function Textbox:ChangeChildAnchorByScrollValue() end
-
-function Textbox:CheckOutOfScreen() end
-
-function Textbox:Clickable() end
-
-function Textbox:CorrectOffsetByScreen() end
-
-function Textbox:CreateChildWidget() end
-
-function Textbox:CreateChildWidgetByType() end
-
-function Textbox:CreateColorDrawable() end
-
-function Textbox:CreateColorDrawableByKey() end
-
-function Textbox:CreateDrawable() end
-
-function Textbox:CreateEffectDrawable() end
-
-function Textbox:CreateEffectDrawableByKey() end
-
-function Textbox:CreateIconDrawable() end
-
-function Textbox:CreateImageDrawable() end
-
-function Textbox:CreateNinePartDrawable() end
-
-function Textbox:CreateTextDrawable() end
-
-function Textbox:CreateThreeColorDrawable() end
-
-function Textbox:CreateThreePartDrawable() end
-
-function Textbox:DetachWidget() end
-
-function Textbox:DisableDrawables() end
-
-function Textbox:DisableDrawablesWithChildren() end
-
-function Textbox:Enable() end
-
-function Textbox:EnableDrag() end
-
-function Textbox:EnableDrawables() end
-
-function Textbox:EnableDrawablesWithChildren() end
-
-function Textbox:EnableFocus() end
-
-function Textbox:EnableHidingIsRemove() end
-
-function Textbox:EnableKeyboard() end
-
-function Textbox:EnablePick() end
-
-function Textbox:EnableScroll() end
-
-function Textbox:GetAlpha() end
-
-function Textbox:GetAttachedWidget() end
-
-function Textbox:GetEffectiveExtent() end
-
-function Textbox:GetEffectiveOffset() end
-
-function Textbox:GetExtent() end
-
-function Textbox:GetHeight() end
-
-function Textbox:GetId() end
-
-function Textbox:GetInset() end
-
-function Textbox:GetLineCount() end
-
-function Textbox:GetLineLength() end
-
-function Textbox:GetLongestLineWidth() end
-
-function Textbox:GetName() end
-
-function Textbox:GetObjectType() end
-
-function Textbox:GetOffset() end
-
-function Textbox:GetParent() end
-
-function Textbox:GetRotation() end
-
-function Textbox:GetText() end
-
-function Textbox:GetTextHeight() end
-
-function Textbox:GetTextLength() end
-
-function Textbox:GetUILayer() end
-
-function Textbox:GetValue() end
-
-function Textbox:GetWidth() end
-
-function Textbox:HasHandler() end
-
-function Textbox:InheritAnimationData() end
-
-function Textbox:IsDescendantWidget() end
-
-function Textbox:IsEnabled() end
-
-function Textbox:IsMouseOver() end
-
-function Textbox:IsNowAnimation() end
-
-function Textbox:IsValidUIObject() end
-
-function Textbox:IsVisible() end
-
-function Textbox:Lower() end
-
-function Textbox:MoveTo() end
-
-function Textbox:Raise() end
-
-function Textbox:RegisterEvent() end
-
-function Textbox:ReleaseDeletedHandler() end
-
-function Textbox:ReleaseHandler() end
-
-function Textbox:RemoveAllAnchors() end
-
-function Textbox:RemoveAllDrawables() end
-
-function Textbox:RemoveDrawable() end
-
-function Textbox:RequestCharacterCacheData() end
-
-function Textbox:SetAlpha() end
-
-function Textbox:SetAlphaAnimation() end
-
-function Textbox:SetAutoResize() end
-
-function Textbox:SetAutoWordwrap() end
-
-function Textbox:SetCategory() end
-
-function Textbox:SetCharacterCacheDataHandler() end
-
-function Textbox:SetDelegator() end
-
-function Textbox:SetDeletedHandler() end
-
-function Textbox:SetDragCondition() end
-
-function Textbox:SetDrawPriority() end
-
-function Textbox:SetDrawableLayerAlpha() end
-
-function Textbox:SetExtent() end
-
-function Textbox:SetHandler() end
-
-function Textbox:SetHeight() end
-
-function Textbox:SetInset() end
-
-function Textbox:SetLText() end
-
-function Textbox:SetLayerColor() end
-
-function Textbox:SetLineColor() end
-
-function Textbox:SetLineHeight() end
-
-function Textbox:SetLineSpace() end
-
-function Textbox:SetMaxResizingExtent() end
-
-function Textbox:SetMinResizingExtent() end
-
-function Textbox:SetMoveAnimation() end
-
-function Textbox:SetResizingBorderSize() end
-
-function Textbox:SetRotation() end
-
-function Textbox:SetScale() end
-
-function Textbox:SetScaleAnimation() end
-
-function Textbox:SetSounds() end
-
-function Textbox:SetStartAnimation() end
-
-function Textbox:SetStrikeThrough() end
-
-function Textbox:SetText() end
-
-function Textbox:SetTextAutoWidth() end
-
-function Textbox:SetUnderLine() end
-
-function Textbox:SetWidth() end
-
-function Textbox:Show() end
-
-function Textbox:StartMoving() end
-
-function Textbox:StartSizing() end
-
-function Textbox:StopMovingOrSizing() end
-
-function Textbox:TriggerMoveAnimation() end
-
-function Textbox:UseDynamicContentState() end
-
-function Textbox:UseDynamicDrawableState() end
-
-function Textbox:UseResizing() end
+1756573041
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+Textbox = {
+  AddAnchor = "<function: 00000001EE8727C4>",
+  ApplyUIScale = "<function: 000000007C8B6C84>",
+  AttachWidget = "<function: 00000001E95E1214>",
+  BindWidth = "<function: 00000001D3E13E94>",
+  CancelRequestCharacterCacheData = "<function: 00000001E4E7C1E4>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E960D194>",
+  CheckOutOfScreen = "<function: 00000001EE86BD04>",
+  Clickable = "<function: 00000001EE868284>",
+  CorrectOffsetByScreen = "<function: 00000001EE7C4BD4>",
+  CreateChildWidget = "<function: 0000000227211EC4>",
+  CreateChildWidgetByType = "<function: 00000000FC527A44>",
+  CreateColorDrawable = "<function: 00000001E95B6CC4>",
+  CreateColorDrawableByKey = "<function: 00000001E9610D14>",
+  CreateDrawable = "<function: 00000001E95B2004>",
+  CreateEffectDrawable = "<function: 00000001E95BC2C4>",
+  CreateEffectDrawableByKey = "<function: 00000001E95C9784>",
+  CreateIconDrawable = "<function: 00000001E9627794>",
+  CreateImageDrawable = "<function: 00000001E9610D54>",
+  CreateNinePartDrawable = "<function: 00000001E95B13C4>",
+  CreateTextDrawable = "<function: 00000001E95D5344>",
+  CreateThreeColorDrawable = "<function: 00000001F62201B4>",
+  CreateThreePartDrawable = "<function: 00000001E9641CD4>",
+  DetachWidget = "<function: 00000001D464DD24>",
+  DisableDrawables = "<function: 00000001E95B9744>",
+  DisableDrawablesWithChildren = "<function: 00000001E95BF3C4>",
+  Enable = "<function: 00000001EE867F84>",
+  EnableDrag = "<function: 00000001EE7F3D54>",
+  EnableDrawables = "<function: 00000001EE7C3C94>",
+  EnableDrawablesWithChildren = "<function: 00000001E95BF304>",
+  EnableFocus = "<function: 00000001EE868044>",
+  EnableHidingIsRemove = "<function: 00000001EE868204>",
+  EnableKeyboard = "<function: 00000001EE8680C4>",
+  EnablePick = "<function: 00000001EE7FB8D4>",
+  EnableScroll = "<function: 00000001E960D154>",
+  GetAlpha = "<function: 00000001EEB87D04>",
+  GetAttachedWidget = "<function: 00000001E9622CD4>",
+  GetEffectiveExtent = "<function: 00000001D47452F4>",
+  GetEffectiveOffset = "<function: 00000001A25BAC04>",
+  GetExtent = "<function: 00000001D4358A14>",
+  GetHeight = "<function: 00000001E4F62944>",
+  GetId = "<function: 00000001EE81F114>",
+  GetInset = "<function: 00000001E95DBD04>",
+  GetLineCount = "<function: 00000001E95A70C4>",
+  GetLineLength = "<function: 00000001D49B6A74>",
+  GetLongestLineWidth = "<function: 00000001A713AB04>",
+  GetName = "<function: 00000001EE8C3BC4>",
+  GetObjectType = "<function: 00000001EE81ACD4>",
+  GetOffset = "<function: 00000001D4357994>",
+  GetParent = "<function: 00000001EE7C4C54>",
+  GetRotation = "<function: 00000001E4F56404>",
+  GetText = "<function: 00000001EE7C9B54>",
+  GetTextHeight = "<function: 00000001F6219AB4>",
+  GetTextLength = "<function: 00000001D3E275D4>",
+  GetUILayer = "<function: 00000001EEB81584>",
+  GetValue = "<function: 00000001D4554B44>",
+  GetWidth = "<function: 00000001D3D74684>",
+  HasHandler = "<function: 00000001E4E7C764>",
+  InheritAnimationData = "<function: 00000001EE75D504>",
+  IsDescendantWidget = "<function: 00000001D3F4F5F4>",
+  IsEnabled = "<function: 00000001EE868004>",
+  IsMouseOver = "<function: 00000001EE8818C4>",
+  IsNowAnimation = "<function: 00000001E962E5D4>",
+  IsValidUIObject = "<function: 00000001EEB57304>",
+  IsVisible = "<function: 00000001EE882744>",
+  Lower = "<function: 00000001EEB87DC4>",
+  MoveTo = "<function: 00000001E963CC14>",
+  Raise = "<function: 00000001D4A53584>",
+  RegisterEvent = "<function: 00000001E8E864D4>",
+  ReleaseDeletedHandler = "<function: 00000000FC527784>",
+  ReleaseHandler = "<function: 000000007CAD4634>",
+  RemoveAllAnchors = "<function: 00000001EEB66204>",
+  RemoveAllDrawables = "<function: 00000001E95B9344>",
+  RemoveDrawable = "<function: 00000001E271FE64>",
+  RequestCharacterCacheData = "<function: 00000001E962E854>",
+  SetAlpha = "<function: 00000001D4A535C4>",
+  SetAlphaAnimation = "<function: 00000001D4050664>",
+  SetAutoResize = "<function: 00000001E95AE604>",
+  SetAutoWordwrap = "<function: 00000001C8A15BC4>",
+  SetCategory = "<function: 00000001EE7C4C94>",
+  SetCharacterCacheDataHandler = "<function: 00000001E271EA64>",
+  SetDelegator = "<function: 00000001E962E694>",
+  SetDeletedHandler = "<function: 000000007CAC1574>",
+  SetDragCondition = "<function: 00000001EE7F00D4>",
+  SetDrawPriority = "<function: 00000001E96368D4>",
+  SetDrawableLayerAlpha = "<function: 00000001E95C9804>",
+  SetExtent = "<function: 00000001EE7F3A54>",
+  SetHandler = "<function: 00000001D3F44374>",
+  SetHeight = "<function: 00000001EE7F3A14>",
+  SetInset = "<function: 00000001C8A18884>",
+  SetLText = "<function: 00000001EE7E1AD4>",
+  SetLayerColor = "<function: 00000001E95B6844>",
+  SetLineColor = "<function: 00000000FC624124>",
+  SetLineHeight = "<function: 00000001E4F1A834>",
+  SetLineSpace = "<function: 00000001E95EAF94>",
+  SetMaxResizingExtent = "<function: 00000001D3F8E7D4>",
+  SetMinResizingExtent = "<function: 00000001E95EDE14>",
+  SetMoveAnimation = "<function: 00000001EE7E1D14>",
+  SetResizingBorderSize = "<function: 00000001E964D354>",
+  SetRotation = "<function: 00000001C8A207C4>",
+  SetScale = "<function: 00000001D3DAFCC4>",
+  SetScaleAnimation = "<function: 00000001E4F360B4>",
+  SetSounds = "<function: 00000001E4F400F4>",
+  SetStartAnimation = "<function: 00000001E9610894>",
+  SetStrikeThrough = "<function: 00000001E4F45EB4>",
+  SetText = "<function: 00000001E95F7F94>",
+  SetTextAutoWidth = "<function: 00000001E95F80D4>",
+  SetUnderLine = "<function: 00000001D43C33C4>",
+  SetWidth = "<function: 00000001EE8C6104>",
+  Show = "<function: 00000001EEB90584>",
+  StartMoving = "<function: 00000001E8E91494>",
+  StartSizing = "<function: 00000001E189F5F4>",
+  StopMovingOrSizing = "<function: 00000001E9622B14>",
+  TriggerMoveAnimation = "<function: 00000001D452F974>",
+  UseDynamicContentState = "<function: 00000001E966B0E4>",
+  UseDynamicDrawableState = "<function: 00000001E95BF444>",
+  UseResizing = "<function: 00000001E95B9204>",
+  __this = "<userdata: 00000001A35AE970>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD5C70>",
+  },
+}

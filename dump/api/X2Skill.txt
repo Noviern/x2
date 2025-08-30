@@ -1,8 +1,2 @@
-SIK_DESCRIPTION = 1 -- api/X2Skill
-X2Skill = {} -- api/X2Skill
-
-function X2Skill:GetCooldown() end
-
-function X2Skill:GetSkillTooltip() end
-
-function X2Skill:Info() end
+SIK_DESCRIPTION = 1
+X2Skill = "<circular table: 00000001E1AB9B74 >"

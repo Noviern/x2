@@ -1,15 +1,9 @@
-X2Hotkey = {} -- api/X2Hotkey
-
-function X2Hotkey:EnableHotkey() end
-
-function X2Hotkey:GetOptionBinding() end
-
-function X2Hotkey:GetOptionBindingButton() end
-
-function X2Hotkey:IsOverridableAction() end
-
-function X2Hotkey:IsValidActionName() end
-
-function X2Hotkey:SetOptionBindingButtonWithIndex() end
-
-function X2Hotkey:SetOptionBindingWithIndex() end
+X2Hotkey = {
+  EnableHotkey = "<function: 00000001FBEA1114>",
+  GetOptionBinding = "<function: 00000001A7140AC4>",
+  GetOptionBindingButton = "<function: 00000001E8F71474>",
+  IsOverridableAction = "<function: 00000000FA01BDA4>",
+  IsValidActionName = "<function: 00000001AF04A034>",
+  SetOptionBindingButtonWithIndex = "<function: 00000001E8E547D4>",
+  SetOptionBindingWithIndex = "<function: 00000001FBE8FAD4>",
+}

@@ -1,291 +1,162 @@
-AP_BOTTOM = 8 -- objects/UnitframeTooltip
-AP_BOTTOMLEFT = 2 -- objects/UnitframeTooltip
-AP_BOTTOMRIGHT = 3 -- objects/UnitframeTooltip
-AP_CENTER = 4 -- objects/UnitframeTooltip
-AP_LEFT = 6 -- objects/UnitframeTooltip
-AP_RIGHT = 7 -- objects/UnitframeTooltip
-AP_TOP = 5 -- objects/UnitframeTooltip
-AP_TOPLEFT = 0 -- objects/UnitframeTooltip
-AP_TOPRIGHT = 1 -- objects/UnitframeTooltip
-CT_ABILITY = 2 -- objects/UnitframeTooltip
-CT_EXPEDITION_NAME = 3 -- objects/UnitframeTooltip
-CT_NAME = 1 -- objects/UnitframeTooltip
-DC_ALWAYS = 0 -- objects/UnitframeTooltip
-DC_SHIFT_KEY_DOWN = 1 -- objects/UnitframeTooltip
-UFT_CUPLABOR = "|p8;" -- objects/UnitframeTooltip
-UFT_CURHP = "|p2;" -- objects/UnitframeTooltip
-UFT_CURMP = "|p5;" -- objects/UnitframeTooltip
-UFT_GEARSCORE = "|p12;" -- objects/UnitframeTooltip
-UFT_MAXHP = "|p3;" -- objects/UnitframeTooltip
-UFT_MAXLABOR = "|p9;" -- objects/UnitframeTooltip
-UFT_MAXMP = "|p6;" -- objects/UnitframeTooltip
-UFT_NAME = "|p1;" -- objects/UnitframeTooltip
-UFT_PERHP = "|p4;" -- objects/UnitframeTooltip
-UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/UnitframeTooltip
-UFT_PERMP = "|p7;" -- objects/UnitframeTooltip
-UFT_PVPHONOR = "|p10;" -- objects/UnitframeTooltip
-UFT_PVPKILL = "|p11;" -- objects/UnitframeTooltip
-UnitframeTooltip = { -- objects/UnitframeTooltip
-  __this = <userdata>, -- objects/UnitframeTooltip
-  style = { -- objects/UnitframeTooltip
-    __this = <userdata>, -- objects/UnitframeTooltip
-  }, -- objects/UnitframeTooltip
-} -- objects/UnitframeTooltip
-
-function UnitframeTooltip.style:GetId() end
-
-function UnitframeTooltip.style:GetLineHeight() end
-
-function UnitframeTooltip.style:GetName() end
-
-function UnitframeTooltip.style:GetObjectType() end
-
-function UnitframeTooltip.style:GetTextWidth() end
-
-function UnitframeTooltip.style:IsValidUIObject() end
-
-function UnitframeTooltip.style:SetAlign() end
-
-function UnitframeTooltip.style:SetColor() end
-
-function UnitframeTooltip.style:SetColorByKey() end
-
-function UnitframeTooltip.style:SetEllipsis() end
-
-function UnitframeTooltip.style:SetFont() end
-
-function UnitframeTooltip.style:SetFontSize() end
-
-function UnitframeTooltip.style:SetOutline() end
-
-function UnitframeTooltip.style:SetShadow() end
-
-function UnitframeTooltip.style:SetSnap() end
-
-function UnitframeTooltip:AddAnchor() end
-
-function UnitframeTooltip:AddAnotherSideLine() end
-
-function UnitframeTooltip:AddLine() end
-
-function UnitframeTooltip:ApplyUIScale() end
-
-function UnitframeTooltip:AttachLowerSpaceLine() end
-
-function UnitframeTooltip:AttachUpperSpaceLine() end
-
-function UnitframeTooltip:AttachWidget() end
-
-function UnitframeTooltip:BindWidth() end
-
-function UnitframeTooltip:CancelRequestCharacterCacheData() end
-
-function UnitframeTooltip:ChangeChildAnchorByScrollValue() end
-
-function UnitframeTooltip:CheckOutOfScreen() end
-
-function UnitframeTooltip:ClearLines() end
-
-function UnitframeTooltip:Clickable() end
-
-function UnitframeTooltip:CorrectOffsetByScreen() end
-
-function UnitframeTooltip:CreateChildWidget() end
-
-function UnitframeTooltip:CreateChildWidgetByType() end
-
-function UnitframeTooltip:CreateColorDrawable() end
-
-function UnitframeTooltip:CreateColorDrawableByKey() end
-
-function UnitframeTooltip:CreateDrawable() end
-
-function UnitframeTooltip:CreateEffectDrawable() end
-
-function UnitframeTooltip:CreateEffectDrawableByKey() end
-
-function UnitframeTooltip:CreateIconDrawable() end
-
-function UnitframeTooltip:CreateImageDrawable() end
-
-function UnitframeTooltip:CreateNinePartDrawable() end
-
-function UnitframeTooltip:CreateTextDrawable() end
-
-function UnitframeTooltip:CreateThreeColorDrawable() end
-
-function UnitframeTooltip:CreateThreePartDrawable() end
-
-function UnitframeTooltip:DetachWidget() end
-
-function UnitframeTooltip:DisableDrawables() end
-
-function UnitframeTooltip:DisableDrawablesWithChildren() end
-
-function UnitframeTooltip:Enable() end
-
-function UnitframeTooltip:EnableDrag() end
-
-function UnitframeTooltip:EnableDrawables() end
-
-function UnitframeTooltip:EnableDrawablesWithChildren() end
-
-function UnitframeTooltip:EnableFocus() end
-
-function UnitframeTooltip:EnableHidingIsRemove() end
-
-function UnitframeTooltip:EnableKeyboard() end
-
-function UnitframeTooltip:EnablePick() end
-
-function UnitframeTooltip:EnableScroll() end
-
-function UnitframeTooltip:GetAlpha() end
-
-function UnitframeTooltip:GetAttachedWidget() end
-
-function UnitframeTooltip:GetEffectiveExtent() end
-
-function UnitframeTooltip:GetEffectiveOffset() end
-
-function UnitframeTooltip:GetExtent() end
-
-function UnitframeTooltip:GetHeight() end
-
-function UnitframeTooltip:GetHeightToLastLine() end
-
-function UnitframeTooltip:GetId() end
-
-function UnitframeTooltip:GetLastLine() end
-
-function UnitframeTooltip:GetLineCount() end
-
-function UnitframeTooltip:GetLineSpace() end
-
-function UnitframeTooltip:GetName() end
-
-function UnitframeTooltip:GetObjectType() end
-
-function UnitframeTooltip:GetOffset() end
-
-function UnitframeTooltip:GetParent() end
-
-function UnitframeTooltip:GetRotation() end
-
-function UnitframeTooltip:GetText() end
-
-function UnitframeTooltip:GetUILayer() end
-
-function UnitframeTooltip:GetValue() end
-
-function UnitframeTooltip:GetWidth() end
-
-function UnitframeTooltip:HasHandler() end
-
-function UnitframeTooltip:InheritAnimationData() end
-
-function UnitframeTooltip:IsDescendantWidget() end
-
-function UnitframeTooltip:IsEnabled() end
-
-function UnitframeTooltip:IsMouseOver() end
-
-function UnitframeTooltip:IsNowAnimation() end
-
-function UnitframeTooltip:IsValidUIObject() end
-
-function UnitframeTooltip:IsVisible() end
-
-function UnitframeTooltip:Lower() end
-
-function UnitframeTooltip:MoveTo() end
-
-function UnitframeTooltip:Raise() end
-
-function UnitframeTooltip:RegisterEvent() end
-
-function UnitframeTooltip:ReleaseDeletedHandler() end
-
-function UnitframeTooltip:ReleaseHandler() end
-
-function UnitframeTooltip:RemoveAllAnchors() end
-
-function UnitframeTooltip:RemoveAllDrawables() end
-
-function UnitframeTooltip:RemoveDrawable() end
-
-function UnitframeTooltip:RequestCharacterCacheData() end
-
-function UnitframeTooltip:SetAlpha() end
-
-function UnitframeTooltip:SetAlphaAnimation() end
-
-function UnitframeTooltip:SetAutoWordwrap() end
-
-function UnitframeTooltip:SetCategory() end
-
-function UnitframeTooltip:SetCharacterCacheDataHandler() end
-
-function UnitframeTooltip:SetDelegator() end
-
-function UnitframeTooltip:SetDeletedHandler() end
-
-function UnitframeTooltip:SetDragCondition() end
-
-function UnitframeTooltip:SetDrawPriority() end
-
-function UnitframeTooltip:SetDrawableLayerAlpha() end
-
-function UnitframeTooltip:SetExtent() end
-
-function UnitframeTooltip:SetHandler() end
-
-function UnitframeTooltip:SetHeight() end
-
-function UnitframeTooltip:SetInset() end
-
-function UnitframeTooltip:SetLText() end
-
-function UnitframeTooltip:SetLayerColor() end
-
-function UnitframeTooltip:SetLineSpace() end
-
-function UnitframeTooltip:SetMaxResizingExtent() end
-
-function UnitframeTooltip:SetMinResizingExtent() end
-
-function UnitframeTooltip:SetMoveAnimation() end
-
-function UnitframeTooltip:SetResizingBorderSize() end
-
-function UnitframeTooltip:SetRotation() end
-
-function UnitframeTooltip:SetScale() end
-
-function UnitframeTooltip:SetScaleAnimation() end
-
-function UnitframeTooltip:SetSounds() end
-
-function UnitframeTooltip:SetStartAnimation() end
-
-function UnitframeTooltip:SetText() end
-
-function UnitframeTooltip:SetTooltipData() end
-
-function UnitframeTooltip:SetWidth() end
-
-function UnitframeTooltip:Show() end
-
-function UnitframeTooltip:StartMoving() end
-
-function UnitframeTooltip:StartSizing() end
-
-function UnitframeTooltip:StopMovingOrSizing() end
-
-function UnitframeTooltip:TriggerMoveAnimation() end
-
-function UnitframeTooltip:UseDynamicContentState() end
-
-function UnitframeTooltip:UseDynamicDrawableState() end
-
-function UnitframeTooltip:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+UFT_CUPLABOR = "|p8;"
+UFT_CURHP = "|p2;"
+UFT_CURMP = "|p5;"
+UFT_GEARSCORE = "|p12;"
+UFT_MAXHP = "|p3;"
+UFT_MAXLABOR = "|p9;"
+UFT_MAXMP = "|p6;"
+UFT_NAME = "|p1;"
+UFT_PERHP = "|p4;"
+UFT_PERIOD_LEADERSHIP = "|p13;"
+UFT_PERMP = "|p7;"
+UFT_PVPHONOR = "|p10;"
+UFT_PVPKILL = "|p11;"
+UnitframeTooltip = {
+  AddAnchor = "<function: 00000001E966DE24>",
+  AddAnotherSideLine = "<function: 00000001EE898844>",
+  AddLine = "<function: 00000001E963FC14>",
+  ApplyUIScale = "<function: 00000001EE7C85D4>",
+  AttachLowerSpaceLine = "<function: 00000001EE7BDF14>",
+  AttachUpperSpaceLine = "<function: 00000001EE7BC614>",
+  AttachWidget = "<function: 00000001EE8D7BC4>",
+  BindWidth = "<function: 00000001EE8D0D84>",
+  CancelRequestCharacterCacheData = "<function: 00000001EEB4AE84>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001EE809994>",
+  CheckOutOfScreen = "<function: 00000001E193A604>",
+  ClearLines = "<function: 00000001EEB70244>",
+  Clickable = "<function: 00000001E279B504>",
+  CorrectOffsetByScreen = "<function: 00000001E4F44474>",
+  CreateChildWidget = "<function: 00000001EE764304>",
+  CreateChildWidgetByType = "<function: 00000001EE7E6854>",
+  CreateColorDrawable = "<function: 00000001D48B5254>",
+  CreateColorDrawableByKey = "<function: 00000001D48B5294>",
+  CreateDrawable = "<function: 00000001EE89B9C4>",
+  CreateEffectDrawable = "<function: 00000000CD701C14>",
+  CreateEffectDrawableByKey = "<function: 00000001EE747CC4>",
+  CreateIconDrawable = "<function: 00000001D3BD13D4>",
+  CreateImageDrawable = "<function: 00000001A254FFC4>",
+  CreateNinePartDrawable = "<function: 00000001EE81F014>",
+  CreateTextDrawable = "<function: 00000001D3DCF344>",
+  CreateThreeColorDrawable = "<function: 00000000FC56AC44>",
+  CreateThreePartDrawable = "<function: 00000001EEB8D804>",
+  DetachWidget = "<function: 00000001AF0913B4>",
+  DisableDrawables = "<function: 00000001D46A70A4>",
+  DisableDrawablesWithChildren = "<function: 00000001E964BF94>",
+  Enable = "<function: 00000001EE7E5114>",
+  EnableDrag = "<function: 00000001F627BFF4>",
+  EnableDrawables = "<function: 00000001E9651C54>",
+  EnableDrawablesWithChildren = "<function: 00000001D46CA224>",
+  EnableFocus = "<function: 00000001EE86D504>",
+  EnableHidingIsRemove = "<function: 00000001D49CF1F4>",
+  EnableKeyboard = "<function: 00000001D49CDD34>",
+  EnablePick = "<function: 00000001E18DE074>",
+  EnableScroll = "<function: 00000001EE809894>",
+  GetAlpha = "<function: 00000001EE801D54>",
+  GetAttachedWidget = "<function: 00000001EE884104>",
+  GetEffectiveExtent = "<function: 00000001E1AB2D74>",
+  GetEffectiveOffset = "<function: 00000001E193A5C4>",
+  GetExtent = "<function: 00000001E9669A64>",
+  GetHeight = "<function: 00000001EE8D0D44>",
+  GetHeightToLastLine = "<function: 00000001EEB5E904>",
+  GetId = "<function: 00000001EE8A4884>",
+  GetLastLine = "<function: 00000001EEB5C5C4>",
+  GetLineCount = "<function: 00000001EEB5C604>",
+  GetLineSpace = "<function: 00000001EE8175D4>",
+  GetName = "<function: 00000001EE87C004>",
+  GetObjectType = "<function: 00000001EE7E59D4>",
+  GetOffset = "<function: 00000001E96699E4>",
+  GetParent = "<function: 00000001E4F49B84>",
+  GetRotation = "<function: 00000001E4D56104>",
+  GetText = "<function: 00000001EE8D7244>",
+  GetUILayer = "<function: 00000001EE8992C4>",
+  GetValue = "<function: 00000001EE7E7CD4>",
+  GetWidth = "<function: 00000001E4DA3F04>",
+  HasHandler = "<function: 00000001EE8C6304>",
+  InheritAnimationData = "<function: 00000001D3DA3D04>",
+  IsDescendantWidget = "<function: 00000001EEB74FC4>",
+  IsEnabled = "<function: 00000001D49EEC34>",
+  IsMouseOver = "<function: 00000001EE7FA054>",
+  IsNowAnimation = "<function: 00000001EE8963C4>",
+  IsValidUIObject = "<function: 00000001EE870904>",
+  IsVisible = "<function: 00000001E4F49B04>",
+  Lower = "<function: 00000001EE87A284>",
+  MoveTo = "<function: 00000001EE8088D4>",
+  Raise = "<function: 00000001EE867B84>",
+  RegisterEvent = "<function: 00000001E9696924>",
+  ReleaseDeletedHandler = "<function: 00000001EE757504>",
+  ReleaseHandler = "<function: 00000001EE7F8454>",
+  RemoveAllAnchors = "<function: 00000001E1AB4A34>",
+  RemoveAllDrawables = "<function: 00000001EEB4E5C4>",
+  RemoveDrawable = "<function: 00000001E9695464>",
+  RequestCharacterCacheData = "<function: 00000001EE89C544>",
+  SetAlpha = "<function: 00000001EE867C04>",
+  SetAlphaAnimation = "<function: 00000001EE87E7C4>",
+  SetAutoWordwrap = "<function: 00000001EEB6F584>",
+  SetCategory = "<function: 00000001EE7F7094>",
+  SetCharacterCacheDataHandler = "<function: 00000001EEB4AEC4>",
+  SetDelegator = "<function: 00000001EE7688C4>",
+  SetDeletedHandler = "<function: 00000001EE7E6694>",
+  SetDragCondition = "<function: 00000001E9696624>",
+  SetDrawPriority = "<function: 00000001E9642C94>",
+  SetDrawableLayerAlpha = "<function: 00000000CD6D9394>",
+  SetExtent = "<function: 00000001E96699A4>",
+  SetHandler = "<function: 00000001EE7F5014>",
+  SetHeight = "<function: 00000001E9669964>",
+  SetInset = "<function: 00000001A255D904>",
+  SetLText = "<function: 00000001D48DAF94>",
+  SetLayerColor = "<function: 00000001D405A4A4>",
+  SetLineSpace = "<function: 00000001E18DDEB4>",
+  SetMaxResizingExtent = "<function: 00000001D3D4D5B4>",
+  SetMinResizingExtent = "<function: 00000001D46A5624>",
+  SetMoveAnimation = "<function: 00000001E96A57A4>",
+  SetResizingBorderSize = "<function: 00000001D46ED934>",
+  SetRotation = "<function: 00000001E9629E14>",
+  SetScale = "<function: 00000001AFAB2114>",
+  SetScaleAnimation = "<function: 00000001EE7C4294>",
+  SetSounds = "<function: 00000001F6245074>",
+  SetStartAnimation = "<function: 00000001E96CB8A4>",
+  SetText = "<function: 00000001D48DAD94>",
+  SetTooltipData = "<function: 00000001EE817694>",
+  SetWidth = "<function: 00000001EE763884>",
+  Show = "<function: 00000001EE899284>",
+  StartMoving = "<function: 00000001E96849E4>",
+  StartSizing = "<function: 00000001EE7E7C54>",
+  StopMovingOrSizing = "<function: 00000001EE809BD4>",
+  TriggerMoveAnimation = "<function: 00000001E968EC24>",
+  UseDynamicContentState = "<function: 00000001E96413D4>",
+  UseDynamicDrawableState = "<function: 00000000CD724454>",
+  UseResizing = "<function: 00000001EE809C14>",
+  __this = "<userdata: 00000001A35B10D0>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD36F0>",
+  },
+}

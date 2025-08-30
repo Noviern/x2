@@ -1,225 +1,121 @@
-AP_BOTTOM = 8 -- objects/ColorPicker
-AP_BOTTOMLEFT = 2 -- objects/ColorPicker
-AP_BOTTOMRIGHT = 3 -- objects/ColorPicker
-AP_CENTER = 4 -- objects/ColorPicker
-AP_LEFT = 6 -- objects/ColorPicker
-AP_RIGHT = 7 -- objects/ColorPicker
-AP_TOP = 5 -- objects/ColorPicker
-AP_TOPLEFT = 0 -- objects/ColorPicker
-AP_TOPRIGHT = 1 -- objects/ColorPicker
-CT_ABILITY = 2 -- objects/ColorPicker
-CT_EXPEDITION_NAME = 3 -- objects/ColorPicker
-CT_NAME = 1 -- objects/ColorPicker
-ColorPicker = { -- objects/ColorPicker
-  __this = <userdata>, -- objects/ColorPicker
-} -- objects/ColorPicker
-DC_ALWAYS = 0 -- objects/ColorPicker
-DC_SHIFT_KEY_DOWN = 1 -- objects/ColorPicker
-
-function ColorPicker:AddAnchor() end
-
-function ColorPicker:ApplyUIScale() end
-
-function ColorPicker:AttachWidget() end
-
-function ColorPicker:BindWidth() end
-
-function ColorPicker:CancelRequestCharacterCacheData() end
-
-function ColorPicker:ChangeChildAnchorByScrollValue() end
-
-function ColorPicker:CheckOutOfScreen() end
-
-function ColorPicker:Clickable() end
-
-function ColorPicker:CorrectOffsetByScreen() end
-
-function ColorPicker:CreateChildWidget() end
-
-function ColorPicker:CreateChildWidgetByType() end
-
-function ColorPicker:CreateColorDrawable() end
-
-function ColorPicker:CreateColorDrawableByKey() end
-
-function ColorPicker:CreateDrawable() end
-
-function ColorPicker:CreateEffectDrawable() end
-
-function ColorPicker:CreateEffectDrawableByKey() end
-
-function ColorPicker:CreateIconDrawable() end
-
-function ColorPicker:CreateImageDrawable() end
-
-function ColorPicker:CreateNinePartDrawable() end
-
-function ColorPicker:CreateTextDrawable() end
-
-function ColorPicker:CreateThreeColorDrawable() end
-
-function ColorPicker:CreateThreePartDrawable() end
-
-function ColorPicker:DetachWidget() end
-
-function ColorPicker:DisableDrawables() end
-
-function ColorPicker:DisableDrawablesWithChildren() end
-
-function ColorPicker:Enable() end
-
-function ColorPicker:EnableDrag() end
-
-function ColorPicker:EnableDrawables() end
-
-function ColorPicker:EnableDrawablesWithChildren() end
-
-function ColorPicker:EnableFocus() end
-
-function ColorPicker:EnableHidingIsRemove() end
-
-function ColorPicker:EnableKeyboard() end
-
-function ColorPicker:EnablePick() end
-
-function ColorPicker:EnableScroll() end
-
-function ColorPicker:GetAlpha() end
-
-function ColorPicker:GetAttachedWidget() end
-
-function ColorPicker:GetColor() end
-
-function ColorPicker:GetEffectiveExtent() end
-
-function ColorPicker:GetEffectiveOffset() end
-
-function ColorPicker:GetExtent() end
-
-function ColorPicker:GetHeight() end
-
-function ColorPicker:GetId() end
-
-function ColorPicker:GetName() end
-
-function ColorPicker:GetObjectType() end
-
-function ColorPicker:GetOffset() end
-
-function ColorPicker:GetParent() end
-
-function ColorPicker:GetPoint() end
-
-function ColorPicker:GetRotation() end
-
-function ColorPicker:GetText() end
-
-function ColorPicker:GetUILayer() end
-
-function ColorPicker:GetValue() end
-
-function ColorPicker:GetWidth() end
-
-function ColorPicker:HasHandler() end
-
-function ColorPicker:InheritAnimationData() end
-
-function ColorPicker:IsDescendantWidget() end
-
-function ColorPicker:IsEnabled() end
-
-function ColorPicker:IsMouseOver() end
-
-function ColorPicker:IsNowAnimation() end
-
-function ColorPicker:IsValidUIObject() end
-
-function ColorPicker:IsVisible() end
-
-function ColorPicker:Lower() end
-
-function ColorPicker:MoveTo() end
-
-function ColorPicker:Raise() end
-
-function ColorPicker:RegisterEvent() end
-
-function ColorPicker:ReleaseDeletedHandler() end
-
-function ColorPicker:ReleaseHandler() end
-
-function ColorPicker:RemoveAllAnchors() end
-
-function ColorPicker:RemoveAllDrawables() end
-
-function ColorPicker:RemoveDrawable() end
-
-function ColorPicker:RequestCharacterCacheData() end
-
-function ColorPicker:SetAlpha() end
-
-function ColorPicker:SetAlphaAnimation() end
-
-function ColorPicker:SetCategory() end
-
-function ColorPicker:SetCharacterCacheDataHandler() end
-
-function ColorPicker:SetDelegator() end
-
-function ColorPicker:SetDeletedHandler() end
-
-function ColorPicker:SetDragCondition() end
-
-function ColorPicker:SetDrawPriority() end
-
-function ColorPicker:SetDrawableLayerAlpha() end
-
-function ColorPicker:SetExtent() end
-
-function ColorPicker:SetHandler() end
-
-function ColorPicker:SetHeight() end
-
-function ColorPicker:SetLText() end
-
-function ColorPicker:SetLayerColor() end
-
-function ColorPicker:SetMaxResizingExtent() end
-
-function ColorPicker:SetMinResizingExtent() end
-
-function ColorPicker:SetMoveAnimation() end
-
-function ColorPicker:SetPaletteImage() end
-
-function ColorPicker:SetResizingBorderSize() end
-
-function ColorPicker:SetRotation() end
-
-function ColorPicker:SetScale() end
-
-function ColorPicker:SetScaleAnimation() end
-
-function ColorPicker:SetSounds() end
-
-function ColorPicker:SetStartAnimation() end
-
-function ColorPicker:SetText() end
-
-function ColorPicker:SetWidth() end
-
-function ColorPicker:Show() end
-
-function ColorPicker:StartMoving() end
-
-function ColorPicker:StartSizing() end
-
-function ColorPicker:StopMovingOrSizing() end
-
-function ColorPicker:TriggerMoveAnimation() end
-
-function ColorPicker:UseDynamicContentState() end
-
-function ColorPicker:UseDynamicDrawableState() end
-
-function ColorPicker:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+ColorPicker = {
+  AddAnchor = "<function: 00000001EEB8DA84>",
+  ApplyUIScale = "<function: 00000001E508B8A4>",
+  AttachWidget = "<function: 00000001E4F259F4>",
+  BindWidth = "<function: 00000001F6639C84>",
+  CancelRequestCharacterCacheData = "<function: 00000001D3CFFF34>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001A25467C4>",
+  CheckOutOfScreen = "<function: 00000001D44E5634>",
+  Clickable = "<function: 00000001EE73F284>",
+  CorrectOffsetByScreen = "<function: 00000001D3CD5394>",
+  CreateChildWidget = "<function: 00000001EE7C2854>",
+  CreateChildWidgetByType = "<function: 00000001EE760D04>",
+  CreateColorDrawable = "<function: 00000001E4A232E4>",
+  CreateColorDrawableByKey = "<function: 00000001E192CDC4>",
+  CreateDrawable = "<function: 00000001D4486AD4>",
+  CreateEffectDrawable = "<function: 00000001E96B4564>",
+  CreateEffectDrawableByKey = "<function: 00000001E4F2F6B4>",
+  CreateIconDrawable = "<function: 00000001D4465754>",
+  CreateImageDrawable = "<function: 00000001E192CE04>",
+  CreateNinePartDrawable = "<function: 00000001D4487D14>",
+  CreateTextDrawable = "<function: 00000001D3D8ED44>",
+  CreateThreeColorDrawable = "<function: 00000001E4EBD2A4>",
+  CreateThreePartDrawable = "<function: 00000001E4A23224>",
+  DetachWidget = "<function: 00000001EE769184>",
+  DisableDrawables = "<function: 00000001E95DDA44>",
+  DisableDrawablesWithChildren = "<function: 00000001D475F4C4>",
+  Enable = "<function: 00000001E95F6954>",
+  EnableDrag = "<function: 00000001EE73F4C4>",
+  EnableDrawables = "<function: 00000001E4F2FDB4>",
+  EnableDrawablesWithChildren = "<function: 00000001D475B544>",
+  EnableFocus = "<function: 00000001EE765084>",
+  EnableHidingIsRemove = "<function: 00000001EE73F244>",
+  EnableKeyboard = "<function: 00000001EE7650C4>",
+  EnablePick = "<function: 00000001EE73F444>",
+  EnableScroll = "<function: 00000001A2545C84>",
+  GetAlpha = "<function: 00000001D4486794>",
+  GetAttachedWidget = "<function: 00000001D44F84F4>",
+  GetColor = "<function: 00000001E4FB9584>",
+  GetEffectiveExtent = "<function: 00000001D4726334>",
+  GetEffectiveOffset = "<function: 00000001D4891614>",
+  GetExtent = "<function: 00000001E271A9A4>",
+  GetHeight = "<function: 00000001D48FCE14>",
+  GetId = "<function: 00000001A7138204>",
+  GetName = "<function: 00000001E8EE3AA4>",
+  GetObjectType = "<function: 00000001D46B5724>",
+  GetOffset = "<function: 00000001D3E5E224>",
+  GetParent = "<function: 00000001EE7BA994>",
+  GetPoint = "<function: 00000001E48EC704>",
+  GetRotation = "<function: 00000001E4D48484>",
+  GetText = "<function: 00000001E95C68C4>",
+  GetUILayer = "<function: 00000001E50366D4>",
+  GetValue = "<function: 00000001A2546884>",
+  GetWidth = "<function: 00000001E1A01BD4>",
+  HasHandler = "<function: 00000001A7113884>",
+  InheritAnimationData = "<function: 00000001D40FD384>",
+  IsDescendantWidget = "<function: 00000001EE760EC4>",
+  IsEnabled = "<function: 00000001EE765044>",
+  IsMouseOver = "<function: 00000001EE73F5C4>",
+  IsNowAnimation = "<function: 00000001D3FFE3E4>",
+  IsValidUIObject = "<function: 00000001E8EE9A24>",
+  IsVisible = "<function: 00000001E4F28F34>",
+  Lower = "<function: 00000001D4466054>",
+  MoveTo = "<function: 00000001D3FA5294>",
+  Raise = "<function: 00000001D3E05914>",
+  RegisterEvent = "<function: 00000001EE736AC4>",
+  ReleaseDeletedHandler = "<function: 00000001D48B3D94>",
+  ReleaseHandler = "<function: 00000001A713B2C4>",
+  RemoveAllAnchors = "<function: 00000001EEB8DAC4>",
+  RemoveAllDrawables = "<function: 00000001E4F2FD34>",
+  RemoveDrawable = "<function: 00000001D3D5AD84>",
+  RequestCharacterCacheData = "<function: 00000001D3C64C94>",
+  SetAlpha = "<function: 00000001E4EB6864>",
+  SetAlphaAnimation = "<function: 00000001E4E21A14>",
+  SetCategory = "<function: 00000001EE764F44>",
+  SetCharacterCacheDataHandler = "<function: 00000001E4B31D94>",
+  SetDelegator = "<function: 00000001D3BEC294>",
+  SetDeletedHandler = "<function: 00000001E967E4E4>",
+  SetDragCondition = "<function: 00000001EE73F504>",
+  SetDrawPriority = "<function: 00000001E4ED8834>",
+  SetDrawableLayerAlpha = "<function: 00000001E4ED81B4>",
+  SetExtent = "<function: 00000001A713FBC4>",
+  SetHandler = "<function: 00000001A7133B84>",
+  SetHeight = "<function: 00000001D48CDF14>",
+  SetLText = "<function: 00000001E4F5F744>",
+  SetLayerColor = "<function: 00000001D47C2044>",
+  SetMaxResizingExtent = "<function: 00000001E18F11B4>",
+  SetMinResizingExtent = "<function: 00000001E1A723A4>",
+  SetMoveAnimation = "<function: 00000001D4A6D544>",
+  SetPaletteImage = "<function: 00000001EE75C804>",
+  SetResizingBorderSize = "<function: 00000001E508DC24>",
+  SetRotation = "<function: 00000001D4551904>",
+  SetScale = "<function: 00000001E9584E04>",
+  SetScaleAnimation = "<function: 00000001C5630864>",
+  SetSounds = "<function: 00000001E4DDF894>",
+  SetStartAnimation = "<function: 00000001D3D922C4>",
+  SetText = "<function: 00000001E4F60084>",
+  SetWidth = "<function: 00000001E193CD04>",
+  Show = "<function: 00000001E5036594>",
+  StartMoving = "<function: 00000001E4DDFC54>",
+  StartSizing = "<function: 00000001E4F70084>",
+  StopMovingOrSizing = "<function: 00000001D4A74B04>",
+  TriggerMoveAnimation = "<function: 00000001D3D923C4>",
+  UseDynamicContentState = "<function: 00000001D44DE574>",
+  UseDynamicDrawableState = "<function: 00000000FA024864>",
+  UseResizing = "<function: 00000001D4A74B84>",
+  __this = "<userdata: 000000024BB204F0>",
+}
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1

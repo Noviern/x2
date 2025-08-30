@@ -1,323 +1,170 @@
-AP_BOTTOM = 8 -- objects/Grid
-AP_BOTTOMLEFT = 2 -- objects/Grid
-AP_BOTTOMRIGHT = 3 -- objects/Grid
-AP_CENTER = 4 -- objects/Grid
-AP_LEFT = 6 -- objects/Grid
-AP_RIGHT = 7 -- objects/Grid
-AP_TOP = 5 -- objects/Grid
-AP_TOPLEFT = 0 -- objects/Grid
-AP_TOPRIGHT = 1 -- objects/Grid
-CT_ABILITY = 2 -- objects/Grid
-CT_EXPEDITION_NAME = 3 -- objects/Grid
-CT_NAME = 1 -- objects/Grid
-DC_ALWAYS = 0 -- objects/Grid
-DC_SHIFT_KEY_DOWN = 1 -- objects/Grid
-Grid = { -- objects/Grid
-  __this = <userdata>, -- objects/Grid
-} -- objects/Grid
-
-function Grid:AddAnchor() end
-
-function Grid:ApplyUIScale() end
-
-function Grid:AttachWidget() end
-
-function Grid:BindWidth() end
-
-function Grid:CancelRequestCharacterCacheData() end
-
-function Grid:ChangeChildAnchorByScrollValue() end
-
-function Grid:CheckOutOfScreen() end
-
-function Grid:ClearItem() end
-
-function Grid:Clickable() end
-
-function Grid:CorrectOffsetByScreen() end
-
-function Grid:CreateChildWidget() end
-
-function Grid:CreateChildWidgetByType() end
-
-function Grid:CreateColorDrawable() end
-
-function Grid:CreateColorDrawableByKey() end
-
-function Grid:CreateDrawable() end
-
-function Grid:CreateEffectDrawable() end
-
-function Grid:CreateEffectDrawableByKey() end
-
-function Grid:CreateIconDrawable() end
-
-function Grid:CreateImageDrawable() end
-
-function Grid:CreateNinePartDrawable() end
-
-function Grid:CreateTextDrawable() end
-
-function Grid:CreateThreeColorDrawable() end
-
-function Grid:CreateThreePartDrawable() end
-
-function Grid:DetachWidget() end
-
-function Grid:DisableDrawables() end
-
-function Grid:DisableDrawablesWithChildren() end
-
-function Grid:Enable() end
-
-function Grid:EnableDrag() end
-
-function Grid:EnableDrawables() end
-
-function Grid:EnableDrawablesWithChildren() end
-
-function Grid:EnableFocus() end
-
-function Grid:EnableHidingIsRemove() end
-
-function Grid:EnableKeyboard() end
-
-function Grid:EnablePick() end
-
-function Grid:EnableScroll() end
-
-function Grid:GetAdjustRowHeight() end
-
-function Grid:GetAlpha() end
-
-function Grid:GetAttachedWidget() end
-
-function Grid:GetEffectiveExtent() end
-
-function Grid:GetEffectiveOffset() end
-
-function Grid:GetExtent() end
-
-function Grid:GetHeight() end
-
-function Grid:GetId() end
-
-function Grid:GetLeft() end
-
-function Grid:GetMaxTop() end
-
-function Grid:GetName() end
-
-function Grid:GetObjectType() end
-
-function Grid:GetOffset() end
-
-function Grid:GetParent() end
-
-function Grid:GetRotation() end
-
-function Grid:GetRowCount() end
-
-function Grid:GetRowHeight() end
-
-function Grid:GetSelectedColIndex() end
-
-function Grid:GetSelectedRowIndex() end
-
-function Grid:GetSelectedValue() end
-
-function Grid:GetText() end
-
-function Grid:GetTop() end
-
-function Grid:GetUILayer() end
-
-function Grid:GetValue() end
-
-function Grid:GetWidth() end
-
-function Grid:HasHandler() end
-
-function Grid:InheritAnimationData() end
-
-function Grid:IsDescendantWidget() end
-
-function Grid:IsEnabled() end
-
-function Grid:IsMouseOver() end
-
-function Grid:IsNowAnimation() end
-
-function Grid:IsValidUIObject() end
-
-function Grid:IsVisible() end
-
-function Grid:LineSelect() end
-
-function Grid:Lower() end
-
-function Grid:MoveTo() end
-
-function Grid:Raise() end
-
-function Grid:RegisterEvent() end
-
-function Grid:ReleaseDeletedHandler() end
-
-function Grid:ReleaseHandler() end
-
-function Grid:ReleaseSelect() end
-
-function Grid:RemoveAllAnchors() end
-
-function Grid:RemoveAllDrawables() end
-
-function Grid:RemoveAllItems() end
-
-function Grid:RemoveDrawable() end
-
-function Grid:RemoveItem() end
-
-function Grid:RequestCharacterCacheData() end
-
-function Grid:ScrollDown() end
-
-function Grid:ScrollLeft() end
-
-function Grid:ScrollRight() end
-
-function Grid:ScrollUp() end
-
-function Grid:SetAlpha() end
-
-function Grid:SetAlphaAnimation() end
-
-function Grid:SetCategory() end
-
-function Grid:SetCharacterCacheDataHandler() end
-
-function Grid:SetColCount() end
-
-function Grid:SetColTexCoord() end
-
-function Grid:SetColTexture() end
-
-function Grid:SetColWidth() end
-
-function Grid:SetCurrentColor() end
-
-function Grid:SetCurrentLine() end
-
-function Grid:SetCurrentTexCoord() end
-
-function Grid:SetCurrentTexture() end
-
-function Grid:SetDefaultColWidth() end
-
-function Grid:SetDefaultRowHeight() end
-
-function Grid:SetDelegator() end
-
-function Grid:SetDeletedHandler() end
-
-function Grid:SetDragCondition() end
-
-function Grid:SetDrawLineType() end
-
-function Grid:SetDrawPriority() end
-
-function Grid:SetDrawStartNumber() end
-
-function Grid:SetDrawableLayerAlpha() end
-
-function Grid:SetExtent() end
-
-function Grid:SetHandler() end
-
-function Grid:SetHeaderType() end
-
-function Grid:SetHeight() end
-
-function Grid:SetInsetForCol() end
-
-function Grid:SetInsetForOutLine() end
-
-function Grid:SetInsetForRow() end
-
-function Grid:SetItem() end
-
-function Grid:SetItemInset() end
-
-function Grid:SetLText() end
-
-function Grid:SetLayerColor() end
-
-function Grid:SetLeft() end
-
-function Grid:SetLeftHeaderWidth() end
-
-function Grid:SetLineBackGround() end
-
-function Grid:SetLineColor() end
-
-function Grid:SetMaxResizingExtent() end
-
-function Grid:SetMinResizingExtent() end
-
-function Grid:SetMoveAnimation() end
-
-function Grid:SetResizingBorderSize() end
-
-function Grid:SetRotation() end
-
-function Grid:SetRowCliping() end
-
-function Grid:SetRowCount() end
-
-function Grid:SetRowHeight() end
-
-function Grid:SetRowTexCoord() end
-
-function Grid:SetRowTexture() end
-
-function Grid:SetScale() end
-
-function Grid:SetScaleAnimation() end
-
-function Grid:SetSelectedColor() end
-
-function Grid:SetSelectedLine() end
-
-function Grid:SetSelectedTexCoord() end
-
-function Grid:SetSelectedTexture() end
-
-function Grid:SetSounds() end
-
-function Grid:SetStartAnimation() end
-
-function Grid:SetTexInset() end
-
-function Grid:SetText() end
-
-function Grid:SetTop() end
-
-function Grid:SetTopHeaderHeight() end
-
-function Grid:SetWidth() end
-
-function Grid:Show() end
-
-function Grid:StartMoving() end
-
-function Grid:StartSizing() end
-
-function Grid:StopMovingOrSizing() end
-
-function Grid:TriggerMoveAnimation() end
-
-function Grid:UseDynamicContentState() end
-
-function Grid:UseDynamicDrawableState() end
-
-function Grid:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+Grid = {
+  AddAnchor = "<function: 00000000CD7D7584>",
+  ApplyUIScale = "<function: 00000001EEB9DA04>",
+  AttachWidget = "<function: 00000001FBE787D4>",
+  BindWidth = "<function: 00000001F88BD704>",
+  CancelRequestCharacterCacheData = "<function: 00000001E4BF1F64>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001D3E2F014>",
+  CheckOutOfScreen = "<function: 00000000CD67E674>",
+  ClearItem = "<function: 00000001E9658514>",
+  Clickable = "<function: 00000000FC8978A4>",
+  CorrectOffsetByScreen = "<function: 00000001B5D539C4>",
+  CreateChildWidget = "<function: 00000001F88BE7C4>",
+  CreateChildWidgetByType = "<function: 00000001F88BE944>",
+  CreateColorDrawable = "<function: 00000001B5DAA4C4>",
+  CreateColorDrawableByKey = "<function: 00000001C8A5FE84>",
+  CreateDrawable = "<function: 00000001D3E80264>",
+  CreateEffectDrawable = "<function: 00000001D4743D34>",
+  CreateEffectDrawableByKey = "<function: 00000001E95FBD94>",
+  CreateIconDrawable = "<function: 00000001AF0601F4>",
+  CreateImageDrawable = "<function: 00000001C8A1F0C4>",
+  CreateNinePartDrawable = "<function: 00000001D3E80324>",
+  CreateTextDrawable = "<function: 00000001D47341B4>",
+  CreateThreeColorDrawable = "<function: 00000001D47341F4>",
+  CreateThreePartDrawable = "<function: 00000001C561F0E4>",
+  DetachWidget = "<function: 00000001FBE78794>",
+  DisableDrawables = "<function: 00000001D475E404>",
+  DisableDrawablesWithChildren = "<function: 00000001E96677E4>",
+  Enable = "<function: 00000001D45ED214>",
+  EnableDrag = "<function: 00000001D474F584>",
+  EnableDrawables = "<function: 00000001D475E384>",
+  EnableDrawablesWithChildren = "<function: 00000001E96677A4>",
+  EnableFocus = "<function: 00000001D468DD24>",
+  EnableHidingIsRemove = "<function: 000000007C841AF4>",
+  EnableKeyboard = "<function: 000000007C841AB4>",
+  EnablePick = "<function: 00000001EED81B84>",
+  EnableScroll = "<function: 00000001AF9BCE94>",
+  GetAdjustRowHeight = "<function: 00000001C8A2F404>",
+  GetAlpha = "<function: 00000001EE7C9854>",
+  GetAttachedWidget = "<function: 00000001F8383A24>",
+  GetEffectiveExtent = "<function: 000000007CAB93F4>",
+  GetEffectiveOffset = "<function: 000000007CACD334>",
+  GetExtent = "<function: 00000001D3E2C954>",
+  GetHeight = "<function: 00000001F88B7D44>",
+  GetId = "<function: 00000001E96C8AA4>",
+  GetLeft = "<function: 00000000CD7A3684>",
+  GetMaxTop = "<function: 00000001AFA7AA94>",
+  GetName = "<function: 00000000CD6EEE54>",
+  GetObjectType = "<function: 00000001E487CA74>",
+  GetOffset = "<function: 00000000FC5FF824>",
+  GetParent = "<function: 00000001D45ECA54>",
+  GetRotation = "<function: 00000001E966ECA4>",
+  GetRowCount = "<function: 000000007CAE9774>",
+  GetRowHeight = "<function: 00000001F88B83C4>",
+  GetSelectedColIndex = "<function: 00000001E9676B64>",
+  GetSelectedRowIndex = "<function: 00000001E9676B24>",
+  GetSelectedValue = "<function: 00000001E9676BA4>",
+  GetText = "<function: 00000001E9617594>",
+  GetTop = "<function: 00000001D46CD2B4>",
+  GetUILayer = "<function: 00000001E1A63CA4>",
+  GetValue = "<function: 00000001D40C0C04>",
+  GetWidth = "<function: 00000001D3E75464>",
+  HasHandler = "<function: 00000001B5D4F844>",
+  InheritAnimationData = "<function: 000000007C8794F4>",
+  IsDescendantWidget = "<function: 00000001F88BE304>",
+  IsEnabled = "<function: 00000001D464D124>",
+  IsMouseOver = "<function: 00000001D3EF2034>",
+  IsNowAnimation = "<function: 000000007CAB6234>",
+  IsValidUIObject = "<function: 00000001E4F36734>",
+  IsVisible = "<function: 00000001E8E91B54>",
+  LineSelect = "<function: 00000001F6287574>",
+  Lower = "<function: 00000001E1A68E64>",
+  MoveTo = "<function: 00000001E1926004>",
+  Raise = "<function: 00000001E1A68F24>",
+  RegisterEvent = "<function: 00000001C8A638C4>",
+  ReleaseDeletedHandler = "<function: 00000001C8A65644>",
+  ReleaseHandler = "<function: 00000001AF09CEB4>",
+  ReleaseSelect = "<function: 00000001F665CA04>",
+  RemoveAllAnchors = "<function: 00000001E95C4844>",
+  RemoveAllDrawables = "<function: 00000001E4ACED84>",
+  RemoveAllItems = "<function: 00000001D3CDDD74>",
+  RemoveDrawable = "<function: 00000001E4B50194>",
+  RemoveItem = "<function: 00000000CD70F4D4>",
+  RequestCharacterCacheData = "<function: 00000001E4D4BE04>",
+  ScrollDown = "<function: 00000001E9671224>",
+  ScrollLeft = "<function: 00000001E96712A4>",
+  ScrollRight = "<function: 00000001E9676AE4>",
+  ScrollUp = "<function: 00000001E966F4E4>",
+  SetAlpha = "<function: 00000001E1A692A4>",
+  SetAlphaAnimation = "<function: 00000001EEB6F8C4>",
+  SetCategory = "<function: 00000001D45ECC54>",
+  SetCharacterCacheDataHandler = "<function: 00000001E4B08E54>",
+  SetColCount = "<function: 00000001E8F08CE4>",
+  SetColTexCoord = "<function: 00000001F88AE804>",
+  SetColTexture = "<function: 00000001E8F1D834>",
+  SetColWidth = "<function: 00000001E8F08FE4>",
+  SetCurrentColor = "<function: 00000001B5D5A3C4>",
+  SetCurrentLine = "<function: 00000001C5609624>",
+  SetCurrentTexCoord = "<function: 00000001AF0495F4>",
+  SetCurrentTexture = "<function: 00000001E9658494>",
+  SetDefaultColWidth = "<function: 00000001C5600C24>",
+  SetDefaultRowHeight = "<function: 00000001B5DC0504>",
+  SetDelegator = "<function: 000000007CAB6274>",
+  SetDeletedHandler = "<function: 00000001C8A63904>",
+  SetDragCondition = "<function: 00000001C8A666C4>",
+  SetDrawLineType = "<function: 00000001E9687824>",
+  SetDrawPriority = "<function: 00000001E96446D4>",
+  SetDrawStartNumber = "<function: 00000001E963D314>",
+  SetDrawableLayerAlpha = "<function: 00000001E9604A94>",
+  SetExtent = "<function: 000000007CAE8D74>",
+  SetHandler = "<function: 00000001F62621F4>",
+  SetHeaderType = "<function: 00000001E96876A4>",
+  SetHeight = "<function: 00000000FC5FFAE4>",
+  SetInsetForCol = "<function: 00000001D444CC94>",
+  SetInsetForOutLine = "<function: 00000001E4F94EC4>",
+  SetInsetForRow = "<function: 00000000CD71DF94>",
+  SetItem = "<function: 00000001E966F464>",
+  SetItemInset = "<function: 00000001C5612E24>",
+  SetLText = "<function: 00000001E19A2154>",
+  SetLayerColor = "<function: 00000001E966EAE4>",
+  SetLeft = "<function: 00000001AF9D9F14>",
+  SetLeftHeaderWidth = "<function: 00000001C8A16604>",
+  SetLineBackGround = "<function: 00000001D3DF0D54>",
+  SetLineColor = "<function: 00000001C5611664>",
+  SetMaxResizingExtent = "<function: 00000001D4763144>",
+  SetMinResizingExtent = "<function: 00000001F88A7B84>",
+  SetMoveAnimation = "<function: 00000001EE7CBF94>",
+  SetResizingBorderSize = "<function: 00000001D472FE34>",
+  SetRotation = "<function: 00000001E966ED64>",
+  SetRowCliping = "<function: 00000001E8E25854>",
+  SetRowCount = "<function: 00000001E1B1FD84>",
+  SetRowHeight = "<function: 00000001AFA98C94>",
+  SetRowTexCoord = "<function: 00000001F6281BF4>",
+  SetRowTexture = "<function: 00000001D472D674>",
+  SetScale = "<function: 00000001E4824134>",
+  SetScaleAnimation = "<function: 00000001EE7CBE94>",
+  SetSelectedColor = "<function: 00000001AF06EB34>",
+  SetSelectedLine = "<function: 00000001C55FC4E4>",
+  SetSelectedTexCoord = "<function: 00000000FC628C64>",
+  SetSelectedTexture = "<function: 00000001D47B4604>",
+  SetSounds = "<function: 00000001B5D4F884>",
+  SetStartAnimation = "<function: 00000001E95E2154>",
+  SetTexInset = "<function: 00000001F6285EB4>",
+  SetText = "<function: 00000001E9667B24>",
+  SetTop = "<function: 00000001AFAB3494>",
+  SetTopHeaderHeight = "<function: 00000001D46A6764>",
+  SetWidth = "<function: 00000001C56171A4>",
+  Show = "<function: 00000000CD6D8FD4>",
+  StartMoving = "<function: 00000001B5D65D44>",
+  StartSizing = "<function: 00000001E4B46ED4>",
+  StopMovingOrSizing = "<function: 00000001F88A7A84>",
+  TriggerMoveAnimation = "<function: 00000001E4F3DE74>",
+  UseDynamicContentState = "<function: 00000001E9667BA4>",
+  UseDynamicDrawableState = "<function: 00000001E9667864>",
+  UseResizing = "<function: 00000001F88A7A44>",
+  __this = "<userdata: 000000015CBBFCF0>",
+}

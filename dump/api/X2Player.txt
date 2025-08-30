@@ -1,58 +1,45 @@
-ACCOUNT_RESTRICT_CODE_NEXON = 80 -- api/X2Player
-ACCOUNT_RESTRICT_CODE_NONE = 0 -- api/X2Player
-ACCOUNT_RESTRICT_CODE_XL = 81 -- api/X2Player
-APPELATION_ROUTE_TYPE_ACHIEVEMENTS = 2 -- api/X2Player
-APPELATION_ROUTE_TYPE_ETC = 5 -- api/X2Player
-APPELATION_ROUTE_TYPE_HIDDEN = 4 -- api/X2Player
-APPELATION_ROUTE_TYPE_MAX = 6 -- api/X2Player
-APPELATION_ROUTE_TYPE_MERCHANT_PACKS = 3 -- api/X2Player
-APPELATION_ROUTE_TYPE_QUEST_CONTEXTS = 1 -- api/X2Player
-APPELLATION_LIST_PER_PAGE = 50 -- api/X2Player
-BOT_CHECK_ANSWER_COUNT = 3 -- api/X2Player
-BOT_QUESTION_CHAR_SIZE = 5 -- api/X2Player
-HIRAMAKAND_SAVE_PEOPLE_BUFF_TYPE = 23281 -- api/X2Player
-INSTANT_TIME_EXPEDITION_REJOIN = 4 -- api/X2Player
-INSTANT_TIME_FACTION_CHANGE = 9 -- api/X2Player
-SCREEN_BASE = 8 -- api/X2Player
-SCREEN_CHARACTER_CREATE = 4 -- api/X2Player
-SCREEN_CHARACTER_SELECT = 3 -- api/X2Player
-SCREEN_INIT_WORLD = 5 -- api/X2Player
-SCREEN_INTRO = 7 -- api/X2Player
-SCREEN_LOGIN = 1 -- api/X2Player
-SCREEN_NONE = 0 -- api/X2Player
-SCREEN_WORLD = 6 -- api/X2Player
-SCREEN_WORLD_SELECT = 2 -- api/X2Player
-X2Player = {} -- api/X2Player
-ZPW_ENTER = 0 -- api/X2Player
-ZPW_EXPEL = 3 -- api/X2Player
-ZPW_OUT = 2 -- api/X2Player
-ZPW_WAIT = 1 -- api/X2Player
-ZP_RESERVED = 4 -- api/X2Player
-
-function X2Player:ChangeAppellation() end
-
-function X2Player:GetAppellationBuffInfoByLevels() end
-
-function X2Player:GetAppellationChangeItemInfo() end
-
-function X2Player:GetAppellationCount() end
-
-function X2Player:GetAppellationMyLevelInfo() end
-
-function X2Player:GetAppellationMyStamp() end
-
-function X2Player:GetAppellationRouteInfo() end
-
-function X2Player:GetAppellationStampInfo() end
-
-function X2Player:GetAppellations() end
-
-function X2Player:GetAppellationsCount() end
-
-function X2Player:GetEffectAppellation() end
-
-function X2Player:GetShowingAppellation() end
-
-function X2Player:GetStampChangeItemInfo() end
-
-function X2Player:GetUnitAppellationRouteList() end
+ACCOUNT_RESTRICT_CODE_NEXON = 80
+ACCOUNT_RESTRICT_CODE_NONE = 0
+ACCOUNT_RESTRICT_CODE_XL = 81
+APPELATION_ROUTE_TYPE_ACHIEVEMENTS = 2
+APPELATION_ROUTE_TYPE_ETC = 5
+APPELATION_ROUTE_TYPE_HIDDEN = 4
+APPELATION_ROUTE_TYPE_MAX = 6
+APPELATION_ROUTE_TYPE_MERCHANT_PACKS = 3
+APPELATION_ROUTE_TYPE_QUEST_CONTEXTS = 1
+APPELLATION_LIST_PER_PAGE = 50
+BOT_CHECK_ANSWER_COUNT = 3
+BOT_QUESTION_CHAR_SIZE = 5
+HIRAMAKAND_SAVE_PEOPLE_BUFF_TYPE = 23281
+INSTANT_TIME_EXPEDITION_REJOIN = 4
+INSTANT_TIME_FACTION_CHANGE = 9
+SCREEN_BASE = 8
+SCREEN_CHARACTER_CREATE = 4
+SCREEN_CHARACTER_SELECT = 3
+SCREEN_INIT_WORLD = 5
+SCREEN_INTRO = 7
+SCREEN_LOGIN = 1
+SCREEN_NONE = 0
+SCREEN_WORLD = 6
+SCREEN_WORLD_SELECT = 2
+X2Player = {
+  ChangeAppellation = "<function: 000000007CAE2734>",
+  GetAppellationBuffInfoByLevels = "<function: 00000001E1971D44>",
+  GetAppellationChangeItemInfo = "<function: 00000000CD79AF04>",
+  GetAppellationCount = "<function: 00000001E4BA7BA4>",
+  GetAppellationMyLevelInfo = "<function: 00000001E197C404>",
+  GetAppellationMyStamp = "<function: 00000001E4CB0BC4>",
+  GetAppellationRouteInfo = "<function: 00000001D449D794>",
+  GetAppellationStampInfo = "<function: 00000001E4C79EF4>",
+  GetAppellations = "<function: 00000001D43B8304>",
+  GetAppellationsCount = "<function: 00000001D43B9BC4>",
+  GetEffectAppellation = "<function: 00000001E4CCA244>",
+  GetShowingAppellation = "<function: 00000001E1AFE974>",
+  GetStampChangeItemInfo = "<function: 00000000CD79AF84>",
+  GetUnitAppellationRouteList = "<function: 00000000CD66ED74>",
+}
+ZPW_ENTER = 0
+ZPW_EXPEL = 3
+ZPW_OUT = 2
+ZPW_WAIT = 1
+ZP_RESERVED = 4

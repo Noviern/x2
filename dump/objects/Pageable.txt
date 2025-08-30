@@ -1,235 +1,126 @@
-AP_BOTTOM = 8 -- objects/Pageable
-AP_BOTTOMLEFT = 2 -- objects/Pageable
-AP_BOTTOMRIGHT = 3 -- objects/Pageable
-AP_CENTER = 4 -- objects/Pageable
-AP_LEFT = 6 -- objects/Pageable
-AP_RIGHT = 7 -- objects/Pageable
-AP_TOP = 5 -- objects/Pageable
-AP_TOPLEFT = 0 -- objects/Pageable
-AP_TOPRIGHT = 1 -- objects/Pageable
-CT_ABILITY = 2 -- objects/Pageable
-CT_EXPEDITION_NAME = 3 -- objects/Pageable
-CT_NAME = 1 -- objects/Pageable
-DC_ALWAYS = 0 -- objects/Pageable
-DC_SHIFT_KEY_DOWN = 1 -- objects/Pageable
-Pageable = { -- objects/Pageable
-  __this = <userdata>, -- objects/Pageable
-} -- objects/Pageable
-
-function Pageable:AddAnchor() end
-
-function Pageable:AddWidgetToPage() end
-
-function Pageable:ApplyUIScale() end
-
-function Pageable:AttachWidget() end
-
-function Pageable:BindWidth() end
-
-function Pageable:CancelRequestCharacterCacheData() end
-
-function Pageable:ChangeChildAnchorByScrollValue() end
-
-function Pageable:ChangePage() end
-
-function Pageable:CheckOutOfScreen() end
-
-function Pageable:Clickable() end
-
-function Pageable:CorrectOffsetByScreen() end
-
-function Pageable:CreateChildWidget() end
-
-function Pageable:CreateChildWidgetByType() end
-
-function Pageable:CreateColorDrawable() end
-
-function Pageable:CreateColorDrawableByKey() end
-
-function Pageable:CreateDrawable() end
-
-function Pageable:CreateEffectDrawable() end
-
-function Pageable:CreateEffectDrawableByKey() end
-
-function Pageable:CreateIconDrawable() end
-
-function Pageable:CreateImageDrawable() end
-
-function Pageable:CreateNinePartDrawable() end
-
-function Pageable:CreateTextDrawable() end
-
-function Pageable:CreateThreeColorDrawable() end
-
-function Pageable:CreateThreePartDrawable() end
-
-function Pageable:DetachWidget() end
-
-function Pageable:DisableDrawables() end
-
-function Pageable:DisableDrawablesWithChildren() end
-
-function Pageable:Enable() end
-
-function Pageable:EnableDrag() end
-
-function Pageable:EnableDrawables() end
-
-function Pageable:EnableDrawablesWithChildren() end
-
-function Pageable:EnableFocus() end
-
-function Pageable:EnableHidingIsRemove() end
-
-function Pageable:EnableKeyboard() end
-
-function Pageable:EnablePick() end
-
-function Pageable:EnableScroll() end
-
-function Pageable:GetAlpha() end
-
-function Pageable:GetAttachedWidget() end
-
-function Pageable:GetCurrentPageIndex() end
-
-function Pageable:GetEffectiveExtent() end
-
-function Pageable:GetEffectiveOffset() end
-
-function Pageable:GetExtent() end
-
-function Pageable:GetHeight() end
-
-function Pageable:GetId() end
-
-function Pageable:GetName() end
-
-function Pageable:GetObjectType() end
-
-function Pageable:GetOffset() end
-
-function Pageable:GetParent() end
-
-function Pageable:GetRotation() end
-
-function Pageable:GetText() end
-
-function Pageable:GetTotalPage() end
-
-function Pageable:GetUILayer() end
-
-function Pageable:GetValue() end
-
-function Pageable:GetWidth() end
-
-function Pageable:HasHandler() end
-
-function Pageable:InheritAnimationData() end
-
-function Pageable:IsDescendantWidget() end
-
-function Pageable:IsEnabled() end
-
-function Pageable:IsMouseOver() end
-
-function Pageable:IsNowAnimation() end
-
-function Pageable:IsValidUIObject() end
-
-function Pageable:IsVisible() end
-
-function Pageable:Lower() end
-
-function Pageable:MoveTo() end
-
-function Pageable:NextPage() end
-
-function Pageable:PrevPage() end
-
-function Pageable:Raise() end
-
-function Pageable:RegisterEvent() end
-
-function Pageable:ReleaseDeletedHandler() end
-
-function Pageable:ReleaseHandler() end
-
-function Pageable:RemoveAllAnchors() end
-
-function Pageable:RemoveAllDrawables() end
-
-function Pageable:RemoveDrawable() end
-
-function Pageable:RequestCharacterCacheData() end
-
-function Pageable:SetAlpha() end
-
-function Pageable:SetAlphaAnimation() end
-
-function Pageable:SetCategory() end
-
-function Pageable:SetCharacterCacheDataHandler() end
-
-function Pageable:SetCurrentPageIndex() end
-
-function Pageable:SetDelegator() end
-
-function Pageable:SetDeletedHandler() end
-
-function Pageable:SetDragCondition() end
-
-function Pageable:SetDrawPriority() end
-
-function Pageable:SetDrawableLayerAlpha() end
-
-function Pageable:SetExtent() end
-
-function Pageable:SetHandler() end
-
-function Pageable:SetHeight() end
-
-function Pageable:SetLText() end
-
-function Pageable:SetLayerColor() end
-
-function Pageable:SetMaxResizingExtent() end
-
-function Pageable:SetMinResizingExtent() end
-
-function Pageable:SetMoveAnimation() end
-
-function Pageable:SetPageCount() end
-
-function Pageable:SetResizingBorderSize() end
-
-function Pageable:SetRotation() end
-
-function Pageable:SetScale() end
-
-function Pageable:SetScaleAnimation() end
-
-function Pageable:SetSounds() end
-
-function Pageable:SetStartAnimation() end
-
-function Pageable:SetText() end
-
-function Pageable:SetWidth() end
-
-function Pageable:Show() end
-
-function Pageable:StartMoving() end
-
-function Pageable:StartSizing() end
-
-function Pageable:StopMovingOrSizing() end
-
-function Pageable:TriggerMoveAnimation() end
-
-function Pageable:UseDynamicContentState() end
-
-function Pageable:UseDynamicDrawableState() end
-
-function Pageable:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+Pageable = {
+  AddAnchor = "<function: 00000001E95D3C04>",
+  AddWidgetToPage = "<function: 00000001D43E8F04>",
+  ApplyUIScale = "<function: 00000001EE8A4184>",
+  AttachWidget = "<function: 00000001B5D74844>",
+  BindWidth = "<function: 00000001E4F1BB74>",
+  CancelRequestCharacterCacheData = "<function: 00000001C8A4C144>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001EE74AD44>",
+  ChangePage = "<function: 00000001D4890E54>",
+  CheckOutOfScreen = "<function: 00000001E9619754>",
+  Clickable = "<function: 00000000FC545384>",
+  CorrectOffsetByScreen = "<function: 00000001E95B0E84>",
+  CreateChildWidget = "<function: 00000001D47BF884>",
+  CreateChildWidgetByType = "<function: 00000001AF042FF4>",
+  CreateColorDrawable = "<function: 00000001E95BCCC4>",
+  CreateColorDrawableByKey = "<function: 00000001E95BCD44>",
+  CreateDrawable = "<function: 00000001C8A56404>",
+  CreateEffectDrawable = "<function: 00000001E4B7F394>",
+  CreateEffectDrawableByKey = "<function: 00000001E4B68D94>",
+  CreateIconDrawable = "<function: 00000001E96184D4>",
+  CreateImageDrawable = "<function: 00000001E95A5F04>",
+  CreateNinePartDrawable = "<function: 00000001D3E7C5E4>",
+  CreateTextDrawable = "<function: 00000001E9618514>",
+  CreateThreeColorDrawable = "<function: 00000001D44922D4>",
+  CreateThreePartDrawable = "<function: 00000001E4F377F4>",
+  DetachWidget = "<function: 00000001AF03B7F4>",
+  DisableDrawables = "<function: 000000007C86A7B4>",
+  DisableDrawablesWithChildren = "<function: 00000001E4F1A974>",
+  Enable = "<function: 00000001B5DA6B44>",
+  EnableDrag = "<function: 00000001E1A01794>",
+  EnableDrawables = "<function: 00000001E9641194>",
+  EnableDrawablesWithChildren = "<function: 00000001D44D97B4>",
+  EnableFocus = "<function: 00000001D3E7CDA4>",
+  EnableHidingIsRemove = "<function: 00000000CD646074>",
+  EnableKeyboard = "<function: 00000001E4B47A94>",
+  EnablePick = "<function: 00000000FC545444>",
+  EnableScroll = "<function: 00000001E95C2FC4>",
+  GetAlpha = "<function: 00000001D4486C14>",
+  GetAttachedWidget = "<function: 00000001B5D92104>",
+  GetCurrentPageIndex = "<function: 00000001D40D71C4>",
+  GetEffectiveExtent = "<function: 00000001E9618254>",
+  GetEffectiveOffset = "<function: 00000001E9618394>",
+  GetExtent = "<function: 00000001E95FAD14>",
+  GetHeight = "<function: 00000001E9617E14>",
+  GetId = "<function: 00000001E96277D4>",
+  GetName = "<function: 00000001E96489D4>",
+  GetObjectType = "<function: 00000001E9614694>",
+  GetOffset = "<function: 00000001E95CE984>",
+  GetParent = "<function: 00000001F623AB34>",
+  GetRotation = "<function: 00000000CD708794>",
+  GetText = "<function: 00000001AF9CA554>",
+  GetTotalPage = "<function: 00000001FBE607D4>",
+  GetUILayer = "<function: 00000001AFA8A394>",
+  GetValue = "<function: 00000001E95E8154>",
+  GetWidth = "<function: 00000001E95FAF54>",
+  HasHandler = "<function: 00000001E96C92E4>",
+  InheritAnimationData = "<function: 00000001F623FAF4>",
+  IsDescendantWidget = "<function: 00000001D3E80B24>",
+  IsEnabled = "<function: 000000007CAD48F4>",
+  IsMouseOver = "<function: 00000001D3B99F14>",
+  IsNowAnimation = "<function: 00000001D46B38E4>",
+  IsValidUIObject = "<function: 00000001E9622214>",
+  IsVisible = "<function: 00000001D401F364>",
+  Lower = "<function: 00000001AFA57AD4>",
+  MoveTo = "<function: 00000001E964C854>",
+  NextPage = "<function: 000000007C88D574>",
+  PrevPage = "<function: 00000001EE74B084>",
+  Raise = "<function: 00000001D4487254>",
+  RegisterEvent = "<function: 00000001AF04B774>",
+  ReleaseDeletedHandler = "<function: 00000001F83D62E4>",
+  ReleaseHandler = "<function: 00000001E4EDB2B4>",
+  RemoveAllAnchors = "<function: 00000001E95D2BC4>",
+  RemoveAllDrawables = "<function: 00000001E4F3CE34>",
+  RemoveDrawable = "<function: 00000001E9627954>",
+  RequestCharacterCacheData = "<function: 00000001E9693BA4>",
+  SetAlpha = "<function: 00000001D4501FB4>",
+  SetAlphaAnimation = "<function: 00000001D44DD2B4>",
+  SetCategory = "<function: 00000001E8EEB924>",
+  SetCharacterCacheDataHandler = "<function: 00000001D40023E4>",
+  SetCurrentPageIndex = "<function: 00000001D47C36C4>",
+  SetDelegator = "<function: 000000025348AB14>",
+  SetDeletedHandler = "<function: 00000001CEA86364>",
+  SetDragCondition = "<function: 00000001E4FB2984>",
+  SetDrawPriority = "<function: 00000001E95A8D84>",
+  SetDrawableLayerAlpha = "<function: 00000001E1AFC2F4>",
+  SetExtent = "<function: 00000001E964F194>",
+  SetHandler = "<function: 00000001E963D714>",
+  SetHeight = "<function: 00000001E964F0D4>",
+  SetLText = "<function: 00000001E4EC5A64>",
+  SetLayerColor = "<function: 00000001E96962A4>",
+  SetMaxResizingExtent = "<function: 00000001E8F46EB4>",
+  SetMinResizingExtent = "<function: 00000001D496D824>",
+  SetMoveAnimation = "<function: 00000001E8F0B1E4>",
+  SetPageCount = "<function: 00000001EEBB6144>",
+  SetResizingBorderSize = "<function: 00000001EE8D5804>",
+  SetRotation = "<function: 00000000FC532AC4>",
+  SetScale = "<function: 00000001A7134E84>",
+  SetScaleAnimation = "<function: 00000001E9632ED4>",
+  SetSounds = "<function: 00000001E969FC64>",
+  SetStartAnimation = "<function: 00000001E4E547E4>",
+  SetText = "<function: 00000001E95E8354>",
+  SetWidth = "<function: 00000001E964F054>",
+  Show = "<function: 00000001D4022264>",
+  StartMoving = "<function: 00000001D43FBF04>",
+  StartSizing = "<function: 00000001EE7BC794>",
+  StopMovingOrSizing = "<function: 00000001B5D7DCC4>",
+  TriggerMoveAnimation = "<function: 00000001E4F36174>",
+  UseDynamicContentState = "<function: 00000001F88B7804>",
+  UseDynamicDrawableState = "<function: 00000001FDD36B54>",
+  UseResizing = "<function: 000000007CABC674>",
+  __this = "<userdata: 000000016BB98890>",
+}

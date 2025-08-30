@@ -1,5 +1,4 @@
-X2SiegeWeapon = {} -- api/X2SiegeWeapon
-
-function X2SiegeWeapon:GetSiegeWeaponSpeed() end
-
-function X2SiegeWeapon:GetSiegeWeaponTurnSpeed() end
+X2SiegeWeapon = {
+  GetSiegeWeaponSpeed = "<function: 00000001D40638E4>",
+  GetSiegeWeaponTurnSpeed = "<function: 00000001E8E2AD54>",
+}

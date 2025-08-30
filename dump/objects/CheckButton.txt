@@ -1,325 +1,175 @@
-AP_BOTTOM = 8 -- objects/CheckButton
-AP_BOTTOMLEFT = 2 -- objects/CheckButton
-AP_BOTTOMRIGHT = 3 -- objects/CheckButton
-AP_CENTER = 4 -- objects/CheckButton
-AP_LEFT = 6 -- objects/CheckButton
-AP_RIGHT = 7 -- objects/CheckButton
-AP_TOP = 5 -- objects/CheckButton
-AP_TOPLEFT = 0 -- objects/CheckButton
-AP_TOPRIGHT = 1 -- objects/CheckButton
-CT_ABILITY = 2 -- objects/CheckButton
-CT_EXPEDITION_NAME = 3 -- objects/CheckButton
-CT_NAME = 1 -- objects/CheckButton
-CheckButton = { -- objects/CheckButton
-  __this = <userdata>, -- objects/CheckButton
-  style = { -- objects/CheckButton
-    __this = <userdata>, -- objects/CheckButton
-  }, -- objects/CheckButton
-} -- objects/CheckButton
-DC_ALWAYS = 0 -- objects/CheckButton
-DC_SHIFT_KEY_DOWN = 1 -- objects/CheckButton
-UI_BUTTON_DISABLED = 3 -- objects/CheckButton
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/CheckButton
-UI_BUTTON_MAX = 4 -- objects/CheckButton
-UI_BUTTON_NORMAL = 0 -- objects/CheckButton
-UI_BUTTON_PUSHED = 2 -- objects/CheckButton
-
-function CheckButton.style:GetId() end
-
-function CheckButton.style:GetLineHeight() end
-
-function CheckButton.style:GetName() end
-
-function CheckButton.style:GetObjectType() end
-
-function CheckButton.style:GetTextWidth() end
-
-function CheckButton.style:IsValidUIObject() end
-
-function CheckButton.style:SetAlign() end
-
-function CheckButton.style:SetColor() end
-
-function CheckButton.style:SetColorByKey() end
-
-function CheckButton.style:SetEllipsis() end
-
-function CheckButton.style:SetFont() end
-
-function CheckButton.style:SetFontSize() end
-
-function CheckButton.style:SetOutline() end
-
-function CheckButton.style:SetShadow() end
-
-function CheckButton.style:SetSnap() end
-
-function CheckButton:AddAnchor() end
-
-function CheckButton:ApplyUIScale() end
-
-function CheckButton:AttachWidget() end
-
-function CheckButton:BindWidth() end
-
-function CheckButton:CancelRequestCharacterCacheData() end
-
-function CheckButton:ChangeChildAnchorByScrollValue() end
-
-function CheckButton:CheckOutOfScreen() end
-
-function CheckButton:Clickable() end
-
-function CheckButton:CorrectOffsetByScreen() end
-
-function CheckButton:CreateChildWidget() end
-
-function CheckButton:CreateChildWidgetByType() end
-
-function CheckButton:CreateColorDrawable() end
-
-function CheckButton:CreateColorDrawableByKey() end
-
-function CheckButton:CreateDrawable() end
-
-function CheckButton:CreateEffectDrawable() end
-
-function CheckButton:CreateEffectDrawableByKey() end
-
-function CheckButton:CreateIconDrawable() end
-
-function CheckButton:CreateImageDrawable() end
-
-function CheckButton:CreateNinePartDrawable() end
-
-function CheckButton:CreateStateDrawable() end
-
-function CheckButton:CreateTextDrawable() end
-
-function CheckButton:CreateThreeColorDrawable() end
-
-function CheckButton:CreateThreePartDrawable() end
-
-function CheckButton:DeregisterForClicks() end
-
-function CheckButton:DetachWidget() end
-
-function CheckButton:DisableDrawables() end
-
-function CheckButton:DisableDrawablesWithChildren() end
-
-function CheckButton:Enable() end
-
-function CheckButton:EnableDrag() end
-
-function CheckButton:EnableDrawables() end
-
-function CheckButton:EnableDrawablesWithChildren() end
-
-function CheckButton:EnableFocus() end
-
-function CheckButton:EnableHidingIsRemove() end
-
-function CheckButton:EnableKeyboard() end
-
-function CheckButton:EnablePick() end
-
-function CheckButton:EnableScroll() end
-
-function CheckButton:GetAlpha() end
-
-function CheckButton:GetAttachedWidget() end
-
-function CheckButton:GetButtonState() end
-
-function CheckButton:GetChecked() end
-
-function CheckButton:GetDisabledBackground() end
-
-function CheckButton:GetDisabledColor() end
-
-function CheckButton:GetEffectiveExtent() end
-
-function CheckButton:GetEffectiveOffset() end
-
-function CheckButton:GetExtent() end
-
-function CheckButton:GetHeight() end
-
-function CheckButton:GetHighlightBackground() end
-
-function CheckButton:GetHighlightColor() end
-
-function CheckButton:GetId() end
-
-function CheckButton:GetName() end
-
-function CheckButton:GetNormalBackground() end
-
-function CheckButton:GetNormalColor() end
-
-function CheckButton:GetObjectType() end
-
-function CheckButton:GetOffset() end
-
-function CheckButton:GetParent() end
-
-function CheckButton:GetPushedBackground() end
-
-function CheckButton:GetPushedColor() end
-
-function CheckButton:GetRotation() end
-
-function CheckButton:GetText() end
-
-function CheckButton:GetUILayer() end
-
-function CheckButton:GetValue() end
-
-function CheckButton:GetWidth() end
-
-function CheckButton:HasHandler() end
-
-function CheckButton:InheritAnimationData() end
-
-function CheckButton:IsDescendantWidget() end
-
-function CheckButton:IsEnabled() end
-
-function CheckButton:IsMouseOver() end
-
-function CheckButton:IsNowAnimation() end
-
-function CheckButton:IsValidUIObject() end
-
-function CheckButton:IsVisible() end
-
-function CheckButton:Lower() end
-
-function CheckButton:MoveTo() end
-
-function CheckButton:Raise() end
-
-function CheckButton:RegisterEvent() end
-
-function CheckButton:RegisterForClicks() end
-
-function CheckButton:ReleaseDeletedHandler() end
-
-function CheckButton:ReleaseHandler() end
-
-function CheckButton:RemoveAllAnchors() end
-
-function CheckButton:RemoveAllDrawables() end
-
-function CheckButton:RemoveDrawable() end
-
-function CheckButton:RequestCharacterCacheData() end
-
-function CheckButton:SetAlpha() end
-
-function CheckButton:SetAlphaAnimation() end
-
-function CheckButton:SetAutoClipChar() end
-
-function CheckButton:SetAutoResize() end
-
-function CheckButton:SetButtonState() end
-
-function CheckButton:SetCategory() end
-
-function CheckButton:SetCharacterCacheDataHandler() end
-
-function CheckButton:SetChecked() end
-
-function CheckButton:SetCheckedBackground() end
-
-function CheckButton:SetDelegator() end
-
-function CheckButton:SetDeletedHandler() end
-
-function CheckButton:SetDisabledBackground() end
-
-function CheckButton:SetDisabledCheckedBackground() end
-
-function CheckButton:SetDisabledColor() end
-
-function CheckButton:SetDisabledTextColor() end
-
-function CheckButton:SetDragCondition() end
-
-function CheckButton:SetDrawPriority() end
-
-function CheckButton:SetDrawableLayerAlpha() end
-
-function CheckButton:SetExtent() end
-
-function CheckButton:SetFocus() end
-
-function CheckButton:SetHandler() end
-
-function CheckButton:SetHeight() end
-
-function CheckButton:SetHighlightBackground() end
-
-function CheckButton:SetHighlightColor() end
-
-function CheckButton:SetHighlightTextColor() end
-
-function CheckButton:SetInset() end
-
-function CheckButton:SetLText() end
-
-function CheckButton:SetLayerColor() end
-
-function CheckButton:SetMaxResizingExtent() end
-
-function CheckButton:SetMinResizingExtent() end
-
-function CheckButton:SetMoveAnimation() end
-
-function CheckButton:SetNormalBackground() end
-
-function CheckButton:SetNormalColor() end
-
-function CheckButton:SetPushedBackground() end
-
-function CheckButton:SetPushedColor() end
-
-function CheckButton:SetPushedTextColor() end
-
-function CheckButton:SetResizingBorderSize() end
-
-function CheckButton:SetRotation() end
-
-function CheckButton:SetScale() end
-
-function CheckButton:SetScaleAnimation() end
-
-function CheckButton:SetSounds() end
-
-function CheckButton:SetStartAnimation() end
-
-function CheckButton:SetStyle() end
-
-function CheckButton:SetText() end
-
-function CheckButton:SetTextColor() end
-
-function CheckButton:SetWidth() end
-
-function CheckButton:Show() end
-
-function CheckButton:StartMoving() end
-
-function CheckButton:StartSizing() end
-
-function CheckButton:StopMovingOrSizing() end
-
-function CheckButton:TriggerMoveAnimation() end
-
-function CheckButton:UseDynamicContentState() end
-
-function CheckButton:UseDynamicDrawableState() end
-
-function CheckButton:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+CheckButton = {
+  AddAnchor = "<function: 00000001E969E164>",
+  ApplyUIScale = "<function: 00000001E9617694>",
+  AttachWidget = "<function: 00000001EE727784>",
+  BindWidth = "<function: 00000001E963FE54>",
+  CancelRequestCharacterCacheData = "<function: 000000007CAB9574>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001D3D61704>",
+  CheckOutOfScreen = "<function: 00000001E4E43E54>",
+  Clickable = "<function: 00000001EEBA62C4>",
+  CorrectOffsetByScreen = "<function: 00000001E27337A4>",
+  CreateChildWidget = "<function: 00000001E9665924>",
+  CreateChildWidgetByType = "<function: 00000001E49E9964>",
+  CreateColorDrawable = "<function: 00000001EE73F604>",
+  CreateColorDrawableByKey = "<function: 00000001E4F23934>",
+  CreateDrawable = "<function: 00000001E4FD14D4>",
+  CreateEffectDrawable = "<function: 00000001D48D0454>",
+  CreateEffectDrawableByKey = "<function: 00000001D45A1684>",
+  CreateIconDrawable = "<function: 00000001E967C364>",
+  CreateImageDrawable = "<function: 00000001AFAAAC14>",
+  CreateNinePartDrawable = "<function: 00000001D3FF5FA4>",
+  CreateStateDrawable = "<function: 00000001E95CE384>",
+  CreateTextDrawable = "<function: 00000001E4DBC284>",
+  CreateThreeColorDrawable = "<function: 00000000FC8B6EE4>",
+  CreateThreePartDrawable = "<function: 00000002534AD4D4>",
+  DeregisterForClicks = "<function: 00000001E4F413F4>",
+  DetachWidget = "<function: 00000001D49252E4>",
+  DisableDrawables = "<function: 00000001E487FDF4>",
+  DisableDrawablesWithChildren = "<function: 00000001D3FB3C14>",
+  Enable = "<function: 00000001E95C1EC4>",
+  EnableDrag = "<function: 00000001E4EAE664>",
+  EnableDrawables = "<function: 00000001C8A31E44>",
+  EnableDrawablesWithChildren = "<function: 00000001EE89F184>",
+  EnableFocus = "<function: 00000001D4633394>",
+  EnableHidingIsRemove = "<function: 00000001C8A37FC4>",
+  EnableKeyboard = "<function: 00000001D4100304>",
+  EnablePick = "<function: 00000002536DAC24>",
+  EnableScroll = "<function: 00000001D46F1B74>",
+  GetAlpha = "<function: 00000001EED40C84>",
+  GetAttachedWidget = "<function: 00000001D3F4DFF4>",
+  GetButtonState = "<function: 00000001A71475C4>",
+  GetChecked = "<function: 00000001D45DFAD4>",
+  GetDisabledBackground = "<function: 00000001E4F361F4>",
+  GetDisabledColor = "<function: 00000001E8E42F54>",
+  GetEffectiveExtent = "<function: 000000007C83AEB4>",
+  GetEffectiveOffset = "<function: 00000000FC897DE4>",
+  GetExtent = "<function: 00000001E4A3E2E4>",
+  GetHeight = "<function: 00000000FA01BBE4>",
+  GetHighlightBackground = "<function: 00000001E8F8D5B4>",
+  GetHighlightColor = "<function: 00000001E4EBDDE4>",
+  GetId = "<function: 00000001E1A89524>",
+  GetName = "<function: 00000001EE74FC84>",
+  GetNormalBackground = "<function: 00000001C8A156C4>",
+  GetNormalColor = "<function: 00000001E4F258B4>",
+  GetObjectType = "<function: 00000001D3DDD054>",
+  GetOffset = "<function: 00000002537B3084>",
+  GetParent = "<function: 00000001D458DE04>",
+  GetPushedBackground = "<function: 00000001EE73A604>",
+  GetPushedColor = "<function: 00000001F83810A4>",
+  GetRotation = "<function: 00000001C8A12F44>",
+  GetText = "<function: 00000000FA02B524>",
+  GetUILayer = "<function: 00000001E49E99A4>",
+  GetValue = "<function: 00000001A7138044>",
+  GetWidth = "<function: 00000001EE74FC44>",
+  HasHandler = "<function: 00000001C8A59804>",
+  InheritAnimationData = "<function: 00000001D4930364>",
+  IsDescendantWidget = "<function: 00000001D3D91044>",
+  IsEnabled = "<function: 00000001E9598DC4>",
+  IsMouseOver = "<function: 00000001A712A884>",
+  IsNowAnimation = "<function: 00000001E1A76B24>",
+  IsValidUIObject = "<function: 00000001D46129D4>",
+  IsVisible = "<function: 00000001E4D9F4C4>",
+  Lower = "<function: 00000001A7147304>",
+  MoveTo = "<function: 00000001EE731784>",
+  Raise = "<function: 00000001D46CA8A4>",
+  RegisterEvent = "<function: 00000001E95DB244>",
+  RegisterForClicks = "<function: 00000001AFAAAC54>",
+  ReleaseDeletedHandler = "<function: 00000001D4554504>",
+  ReleaseHandler = "<function: 00000001E4EC80F4>",
+  RemoveAllAnchors = "<function: 00000001E4C69C34>",
+  RemoveAllDrawables = "<function: 00000001E4B6C414>",
+  RemoveDrawable = "<function: 00000001D4642694>",
+  RequestCharacterCacheData = "<function: 00000001E4F249B4>",
+  SetAlpha = "<function: 00000001E4EA4BA4>",
+  SetAlphaAnimation = "<function: 00000001D45F8594>",
+  SetAutoClipChar = "<function: 00000001D40525E4>",
+  SetAutoResize = "<function: 00000001E8F8C4B4>",
+  SetButtonState = "<function: 00000001D4554404>",
+  SetCategory = "<function: 00000001E967C724>",
+  SetCharacterCacheDataHandler = "<function: 00000001F6263A34>",
+  SetChecked = "<function: 00000001D4789D84>",
+  SetCheckedBackground = "<function: 00000000FC8CFE64>",
+  SetDelegator = "<function: 00000001E9625D54>",
+  SetDeletedHandler = "<function: 00000001D43CDB84>",
+  SetDisabledBackground = "<function: 00000001F6611E04>",
+  SetDisabledCheckedBackground = "<function: 00000001A70ED284>",
+  SetDisabledColor = "<function: 00000001D462A294>",
+  SetDisabledTextColor = "<function: 00000001A70F4484>",
+  SetDragCondition = "<function: 000000025366CB54>",
+  SetDrawPriority = "<function: 00000001E4B00C84>",
+  SetDrawableLayerAlpha = "<function: 00000001E4A09064>",
+  SetExtent = "<function: 00000001E4F35474>",
+  SetFocus = "<function: 00000001C8A1F884>",
+  SetHandler = "<function: 00000001E95D14C4>",
+  SetHeight = "<function: 00000001E95A6D04>",
+  SetHighlightBackground = "<function: 00000001EE74FBC4>",
+  SetHighlightColor = "<function: 0000000068441A44>",
+  SetHighlightTextColor = "<function: 00000001D3E46994>",
+  SetInset = "<function: 00000001D40F42C4>",
+  SetLText = "<function: 00000001E4B6E1D4>",
+  SetLayerColor = "<function: 00000001E1ACC1F4>",
+  SetMaxResizingExtent = "<function: 00000001D46DEBF4>",
+  SetMinResizingExtent = "<function: 0000000253A51C54>",
+  SetMoveAnimation = "<function: 00000001D45D1914>",
+  SetNormalBackground = "<function: 00000001E4E42994>",
+  SetNormalColor = "<function: 00000001D3DB4A44>",
+  SetPushedBackground = "<function: 00000001E967C6E4>",
+  SetPushedColor = "<function: 00000001E967BFA4>",
+  SetPushedTextColor = "<function: 00000001E95A6904>",
+  SetResizingBorderSize = "<function: 00000001AF9CE214>",
+  SetRotation = "<function: 00000001D4488ED4>",
+  SetScale = "<function: 00000001D40FEB44>",
+  SetScaleAnimation = "<function: 00000001E95C4644>",
+  SetSounds = "<function: 00000001E4EBDCE4>",
+  SetStartAnimation = "<function: 00000001E95A0904>",
+  SetStyle = "<function: 00000001E4F1B2B4>",
+  SetText = "<function: 000000007CAA3334>",
+  SetTextColor = "<function: 00000001E4E43014>",
+  SetWidth = "<function: 00000001A70F6044>",
+  Show = "<function: 00000001D3C61094>",
+  StartMoving = "<function: 00000000CD790A04>",
+  StartSizing = "<function: 00000001D3FFE0A4>",
+  StopMovingOrSizing = "<function: 00000001D3F536F4>",
+  TriggerMoveAnimation = "<function: 00000001A714A884>",
+  UseDynamicContentState = "<function: 00000001E1AD1734>",
+  UseDynamicDrawableState = "<function: 00000002536E47A4>",
+  UseResizing = "<function: 00000001E1A21C24>",
+  __this = "<userdata: 000000025216D180>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DCF370>",
+  },
+}
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+UI_BUTTON_DISABLED = 3
+UI_BUTTON_HIGHLIGHTED = 1
+UI_BUTTON_MAX = 4
+UI_BUTTON_NORMAL = 0
+UI_BUTTON_PUSHED = 2

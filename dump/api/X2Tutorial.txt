@@ -1,1 +1,1 @@
-X2Tutorial = {} -- api/X2Tutorial
+X2Tutorial = {}

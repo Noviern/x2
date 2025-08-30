@@ -1,329 +1,177 @@
-AP_BOTTOM = 8 -- objects/CooldownInventoryButton
-AP_BOTTOMLEFT = 2 -- objects/CooldownInventoryButton
-AP_BOTTOMRIGHT = 3 -- objects/CooldownInventoryButton
-AP_CENTER = 4 -- objects/CooldownInventoryButton
-AP_LEFT = 6 -- objects/CooldownInventoryButton
-AP_RIGHT = 7 -- objects/CooldownInventoryButton
-AP_TOP = 5 -- objects/CooldownInventoryButton
-AP_TOPLEFT = 0 -- objects/CooldownInventoryButton
-AP_TOPRIGHT = 1 -- objects/CooldownInventoryButton
-CT_ABILITY = 2 -- objects/CooldownInventoryButton
-CT_EXPEDITION_NAME = 3 -- objects/CooldownInventoryButton
-CT_NAME = 1 -- objects/CooldownInventoryButton
-CooldownInventoryButton = { -- objects/CooldownInventoryButton
-  __this = <userdata>, -- objects/CooldownInventoryButton
-  style = { -- objects/CooldownInventoryButton
-    __this = <userdata>, -- objects/CooldownInventoryButton
-  }, -- objects/CooldownInventoryButton
-} -- objects/CooldownInventoryButton
-DC_ALWAYS = 0 -- objects/CooldownInventoryButton
-DC_SHIFT_KEY_DOWN = 1 -- objects/CooldownInventoryButton
-UI_BUTTON_DISABLED = 3 -- objects/CooldownInventoryButton
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownInventoryButton
-UI_BUTTON_MAX = 4 -- objects/CooldownInventoryButton
-UI_BUTTON_NORMAL = 0 -- objects/CooldownInventoryButton
-UI_BUTTON_PUSHED = 2 -- objects/CooldownInventoryButton
-
-function CooldownInventoryButton.style:GetId() end
-
-function CooldownInventoryButton.style:GetLineHeight() end
-
-function CooldownInventoryButton.style:GetName() end
-
-function CooldownInventoryButton.style:GetObjectType() end
-
-function CooldownInventoryButton.style:GetTextWidth() end
-
-function CooldownInventoryButton.style:IsValidUIObject() end
-
-function CooldownInventoryButton.style:SetAlign() end
-
-function CooldownInventoryButton.style:SetColor() end
-
-function CooldownInventoryButton.style:SetColorByKey() end
-
-function CooldownInventoryButton.style:SetEllipsis() end
-
-function CooldownInventoryButton.style:SetFont() end
-
-function CooldownInventoryButton.style:SetFontSize() end
-
-function CooldownInventoryButton.style:SetOutline() end
-
-function CooldownInventoryButton.style:SetShadow() end
-
-function CooldownInventoryButton.style:SetSnap() end
-
-function CooldownInventoryButton:AddAnchor() end
-
-function CooldownInventoryButton:ApplyUIScale() end
-
-function CooldownInventoryButton:AttachWidget() end
-
-function CooldownInventoryButton:BindWidth() end
-
-function CooldownInventoryButton:CancelRequestCharacterCacheData() end
-
-function CooldownInventoryButton:ChangeChildAnchorByScrollValue() end
-
-function CooldownInventoryButton:CheckOutOfScreen() end
-
-function CooldownInventoryButton:Clickable() end
-
-function CooldownInventoryButton:CorrectOffsetByScreen() end
-
-function CooldownInventoryButton:CreateChildWidget() end
-
-function CooldownInventoryButton:CreateChildWidgetByType() end
-
-function CooldownInventoryButton:CreateColorDrawable() end
-
-function CooldownInventoryButton:CreateColorDrawableByKey() end
-
-function CooldownInventoryButton:CreateDrawable() end
-
-function CooldownInventoryButton:CreateEffectDrawable() end
-
-function CooldownInventoryButton:CreateEffectDrawableByKey() end
-
-function CooldownInventoryButton:CreateIconDrawable() end
-
-function CooldownInventoryButton:CreateImageDrawable() end
-
-function CooldownInventoryButton:CreateNinePartDrawable() end
-
-function CooldownInventoryButton:CreateStateDrawable() end
-
-function CooldownInventoryButton:CreateTextDrawable() end
-
-function CooldownInventoryButton:CreateThreeColorDrawable() end
-
-function CooldownInventoryButton:CreateThreePartDrawable() end
-
-function CooldownInventoryButton:DeregisterForClicks() end
-
-function CooldownInventoryButton:DetachWidget() end
-
-function CooldownInventoryButton:DisableDrawables() end
-
-function CooldownInventoryButton:DisableDrawablesWithChildren() end
-
-function CooldownInventoryButton:Enable() end
-
-function CooldownInventoryButton:EnableDrag() end
-
-function CooldownInventoryButton:EnableDrawables() end
-
-function CooldownInventoryButton:EnableDrawablesWithChildren() end
-
-function CooldownInventoryButton:EnableFocus() end
-
-function CooldownInventoryButton:EnableHidingIsRemove() end
-
-function CooldownInventoryButton:EnableKeyboard() end
-
-function CooldownInventoryButton:EnablePick() end
-
-function CooldownInventoryButton:EnableScroll() end
-
-function CooldownInventoryButton:GetAlpha() end
-
-function CooldownInventoryButton:GetAttachedWidget() end
-
-function CooldownInventoryButton:GetButtonState() end
-
-function CooldownInventoryButton:GetDisabledBackground() end
-
-function CooldownInventoryButton:GetDisabledColor() end
-
-function CooldownInventoryButton:GetEffectiveExtent() end
-
-function CooldownInventoryButton:GetEffectiveOffset() end
-
-function CooldownInventoryButton:GetExtent() end
-
-function CooldownInventoryButton:GetHeight() end
-
-function CooldownInventoryButton:GetHighlightBackground() end
-
-function CooldownInventoryButton:GetHighlightColor() end
-
-function CooldownInventoryButton:GetId() end
-
-function CooldownInventoryButton:GetName() end
-
-function CooldownInventoryButton:GetNormalBackground() end
-
-function CooldownInventoryButton:GetNormalColor() end
-
-function CooldownInventoryButton:GetObjectType() end
-
-function CooldownInventoryButton:GetOffset() end
-
-function CooldownInventoryButton:GetParent() end
-
-function CooldownInventoryButton:GetPushedBackground() end
-
-function CooldownInventoryButton:GetPushedColor() end
-
-function CooldownInventoryButton:GetRotation() end
-
-function CooldownInventoryButton:GetText() end
-
-function CooldownInventoryButton:GetUILayer() end
-
-function CooldownInventoryButton:GetValue() end
-
-function CooldownInventoryButton:GetWidth() end
-
-function CooldownInventoryButton:HasHandler() end
-
-function CooldownInventoryButton:InheritAnimationData() end
-
-function CooldownInventoryButton:IsDescendantWidget() end
-
-function CooldownInventoryButton:IsEnabled() end
-
-function CooldownInventoryButton:IsMouseOver() end
-
-function CooldownInventoryButton:IsNowAnimation() end
-
-function CooldownInventoryButton:IsValidUIObject() end
-
-function CooldownInventoryButton:IsVisible() end
-
-function CooldownInventoryButton:Lower() end
-
-function CooldownInventoryButton:MoveTo() end
-
-function CooldownInventoryButton:Raise() end
-
-function CooldownInventoryButton:RegisterEvent() end
-
-function CooldownInventoryButton:RegisterForClicks() end
-
-function CooldownInventoryButton:ReleaseDeletedHandler() end
-
-function CooldownInventoryButton:ReleaseHandler() end
-
-function CooldownInventoryButton:RemoveAllAnchors() end
-
-function CooldownInventoryButton:RemoveAllDrawables() end
-
-function CooldownInventoryButton:RemoveDrawable() end
-
-function CooldownInventoryButton:RequestCharacterCacheData() end
-
-function CooldownInventoryButton:SetAlpha() end
-
-function CooldownInventoryButton:SetAlphaAnimation() end
-
-function CooldownInventoryButton:SetAutoClipChar() end
-
-function CooldownInventoryButton:SetAutoResize() end
-
-function CooldownInventoryButton:SetBagItemSlot() end
-
-function CooldownInventoryButton:SetBankItemSlot() end
-
-function CooldownInventoryButton:SetButtonState() end
-
-function CooldownInventoryButton:SetCategory() end
-
-function CooldownInventoryButton:SetCharacterCacheDataHandler() end
-
-function CooldownInventoryButton:SetCofferItemSlot() end
-
-function CooldownInventoryButton:SetCoolDown() end
-
-function CooldownInventoryButton:SetCoolDownMask() end
-
-function CooldownInventoryButton:SetDelegator() end
-
-function CooldownInventoryButton:SetDeletedHandler() end
-
-function CooldownInventoryButton:SetDisabledBackground() end
-
-function CooldownInventoryButton:SetDisabledColor() end
-
-function CooldownInventoryButton:SetDisabledTextColor() end
-
-function CooldownInventoryButton:SetDragCondition() end
-
-function CooldownInventoryButton:SetDrawPriority() end
-
-function CooldownInventoryButton:SetDrawableLayerAlpha() end
-
-function CooldownInventoryButton:SetExtent() end
-
-function CooldownInventoryButton:SetFocus() end
-
-function CooldownInventoryButton:SetGuildBankItemSlot() end
-
-function CooldownInventoryButton:SetHandler() end
-
-function CooldownInventoryButton:SetHeight() end
-
-function CooldownInventoryButton:SetHighlightBackground() end
-
-function CooldownInventoryButton:SetHighlightColor() end
-
-function CooldownInventoryButton:SetHighlightTextColor() end
-
-function CooldownInventoryButton:SetInset() end
-
-function CooldownInventoryButton:SetLText() end
-
-function CooldownInventoryButton:SetLayerColor() end
-
-function CooldownInventoryButton:SetMaxResizingExtent() end
-
-function CooldownInventoryButton:SetMinResizingExtent() end
-
-function CooldownInventoryButton:SetMoveAnimation() end
-
-function CooldownInventoryButton:SetNormalBackground() end
-
-function CooldownInventoryButton:SetNormalColor() end
-
-function CooldownInventoryButton:SetPushedBackground() end
-
-function CooldownInventoryButton:SetPushedColor() end
-
-function CooldownInventoryButton:SetPushedTextColor() end
-
-function CooldownInventoryButton:SetResizingBorderSize() end
-
-function CooldownInventoryButton:SetRotation() end
-
-function CooldownInventoryButton:SetScale() end
-
-function CooldownInventoryButton:SetScaleAnimation() end
-
-function CooldownInventoryButton:SetSounds() end
-
-function CooldownInventoryButton:SetStartAnimation() end
-
-function CooldownInventoryButton:SetStyle() end
-
-function CooldownInventoryButton:SetText() end
-
-function CooldownInventoryButton:SetTextColor() end
-
-function CooldownInventoryButton:SetWidth() end
-
-function CooldownInventoryButton:Show() end
-
-function CooldownInventoryButton:StartMoving() end
-
-function CooldownInventoryButton:StartSizing() end
-
-function CooldownInventoryButton:StopMovingOrSizing() end
-
-function CooldownInventoryButton:TriggerMoveAnimation() end
-
-function CooldownInventoryButton:UseDynamicContentState() end
-
-function CooldownInventoryButton:UseDynamicDrawableState() end
-
-function CooldownInventoryButton:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+CooldownInventoryButton = {
+  AddAnchor = "<function: 00000001E95BEEC4>",
+  ApplyUIScale = "<function: 00000000CD702E54>",
+  AttachWidget = "<function: 00000001E48284B4>",
+  BindWidth = "<function: 00000000CD666CF4>",
+  CancelRequestCharacterCacheData = "<function: 00000001E95A9444>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001EE7517C4>",
+  CheckOutOfScreen = "<function: 00000001E95BF144>",
+  Clickable = "<function: 00000001E4AC7884>",
+  CorrectOffsetByScreen = "<function: 00000001E95BF184>",
+  CreateChildWidget = "<function: 00000001C8A19E44>",
+  CreateChildWidgetByType = "<function: 00000001D4494B14>",
+  CreateColorDrawable = "<function: 00000001D45DA4D4>",
+  CreateColorDrawableByKey = "<function: 00000001E95E1B94>",
+  CreateDrawable = "<function: 00000001D4551984>",
+  CreateEffectDrawable = "<function: 00000001E95DC844>",
+  CreateEffectDrawableByKey = "<function: 00000001E95E2414>",
+  CreateIconDrawable = "<function: 00000001E95E1C94>",
+  CreateImageDrawable = "<function: 00000001E95E1C14>",
+  CreateNinePartDrawable = "<function: 00000001E4F2D6F4>",
+  CreateStateDrawable = "<function: 00000001E95B2104>",
+  CreateTextDrawable = "<function: 00000001E95DC784>",
+  CreateThreeColorDrawable = "<function: 00000001E95DC7C4>",
+  CreateThreePartDrawable = "<function: 00000001E4EB67A4>",
+  DeregisterForClicks = "<function: 00000001E4EA5564>",
+  DetachWidget = "<function: 00000001FFFFD904>",
+  DisableDrawables = "<function: 00000001E95D4304>",
+  DisableDrawablesWithChildren = "<function: 00000001E95D4484>",
+  Enable = "<function: 00000001E4F2ADB4>",
+  EnableDrag = "<function: 00000001E9585644>",
+  EnableDrawables = "<function: 00000001E4F1A734>",
+  EnableDrawablesWithChildren = "<function: 00000001E95D4404>",
+  EnableFocus = "<function: 00000001D40406A4>",
+  EnableHidingIsRemove = "<function: 00000001E4AC7904>",
+  EnableKeyboard = "<function: 00000001E4AC5744>",
+  EnablePick = "<function: 00000001D3E5EC64>",
+  EnableScroll = "<function: 00000001E4F62F44>",
+  GetAlpha = "<function: 00000001D4551884>",
+  GetAttachedWidget = "<function: 00000001E4841C34>",
+  GetButtonState = "<function: 00000000FA01C024>",
+  GetDisabledBackground = "<function: 00000001E4EA5A24>",
+  GetDisabledColor = "<function: 00000001A713C784>",
+  GetEffectiveExtent = "<function: 00000001E9626FD4>",
+  GetEffectiveOffset = "<function: 00000001E9627014>",
+  GetExtent = "<function: 00000001D46321D4>",
+  GetHeight = "<function: 00000001E1AB8AB4>",
+  GetHighlightBackground = "<function: 00000001E4E9AF64>",
+  GetHighlightColor = "<function: 00000001D4465F94>",
+  GetId = "<function: 00000001E95BFA04>",
+  GetName = "<function: 00000001E4F29E74>",
+  GetNormalBackground = "<function: 00000001E95B9CC4>",
+  GetNormalColor = "<function: 00000001D4465D94>",
+  GetObjectType = "<function: 00000001E4F2DE34>",
+  GetOffset = "<function: 00000001E4EE6234>",
+  GetParent = "<function: 00000001E4F2AE34>",
+  GetPushedBackground = "<function: 00000001E4EC8934>",
+  GetPushedColor = "<function: 00000001D4465F54>",
+  GetRotation = "<function: 00000001E95BE804>",
+  GetText = "<function: 00000001FDA41924>",
+  GetUILayer = "<function: 00000001EE7BA794>",
+  GetValue = "<function: 00000001E95C0284>",
+  GetWidth = "<function: 00000001D49A4FF4>",
+  HasHandler = "<function: 00000001E968C2A4>",
+  InheritAnimationData = "<function: 00000001E95EF9D4>",
+  IsDescendantWidget = "<function: 00000001C8A64044>",
+  IsEnabled = "<function: 00000001D4040524>",
+  IsMouseOver = "<function: 00000001D4572D84>",
+  IsNowAnimation = "<function: 00000001A7140644>",
+  IsValidUIObject = "<function: 00000001E95BFE04>",
+  IsVisible = "<function: 00000001E1A02814>",
+  Lower = "<function: 00000001E4A35DA4>",
+  MoveTo = "<function: 00000001E4FCA4D4>",
+  Raise = "<function: 00000001D46DDA74>",
+  RegisterEvent = "<function: 00000001E95A2744>",
+  RegisterForClicks = "<function: 00000001E95B12C4>",
+  ReleaseDeletedHandler = "<function: 00000001E8F50674>",
+  ReleaseHandler = "<function: 00000001D4489114>",
+  RemoveAllAnchors = "<function: 00000001E95C4344>",
+  RemoveAllDrawables = "<function: 00000001E4F1A334>",
+  RemoveDrawable = "<function: 00000001E4F1A2F4>",
+  RequestCharacterCacheData = "<function: 00000001E1AF7134>",
+  SetAlpha = "<function: 00000001D44DCD34>",
+  SetAlphaAnimation = "<function: 00000001E963A1D4>",
+  SetAutoClipChar = "<function: 00000001E4EA56A4>",
+  SetAutoResize = "<function: 00000001E4EA55E4>",
+  SetBagItemSlot = "<function: 00000001E4E3FA94>",
+  SetBankItemSlot = "<function: 00000001E4E3FB94>",
+  SetButtonState = "<function: 00000001A713C7C4>",
+  SetCategory = "<function: 00000001E4F2B0F4>",
+  SetCharacterCacheDataHandler = "<function: 00000001E95A9484>",
+  SetCofferItemSlot = "<function: 00000001E95E3E14>",
+  SetCoolDown = "<function: 00000001E95C7E04>",
+  SetCoolDownMask = "<function: 00000001E96A6F64>",
+  SetDelegator = "<function: 00000001E1AF05B4>",
+  SetDeletedHandler = "<function: 00000001E95A2804>",
+  SetDisabledBackground = "<function: 00000001E95991C4>",
+  SetDisabledColor = "<function: 00000001D3D8E904>",
+  SetDisabledTextColor = "<function: 00000001D4040224>",
+  SetDragCondition = "<function: 00000001E18F4C34>",
+  SetDrawPriority = "<function: 00000001E95E2494>",
+  SetDrawableLayerAlpha = "<function: 00000001E95E2454>",
+  SetExtent = "<function: 00000001D3BE36D4>",
+  SetFocus = "<function: 00000001E963D9D4>",
+  SetGuildBankItemSlot = "<function: 00000001A714AC44>",
+  SetHandler = "<function: 00000001D45DEB94>",
+  SetHeight = "<function: 00000001D4A640C4>",
+  SetHighlightBackground = "<function: 00000001E959A284>",
+  SetHighlightColor = "<function: 00000001E4F27AB4>",
+  SetHighlightTextColor = "<function: 00000001E4F27A74>",
+  SetInset = "<function: 00000001D4465CD4>",
+  SetLText = "<function: 00000001FDA418E4>",
+  SetLayerColor = "<function: 00000001B5D76204>",
+  SetMaxResizingExtent = "<function: 00000001E9643194>",
+  SetMinResizingExtent = "<function: 00000001E9642C54>",
+  SetMoveAnimation = "<function: 00000001E963A254>",
+  SetNormalBackground = "<function: 00000001E9640894>",
+  SetNormalColor = "<function: 00000001E4EC8BF4>",
+  SetPushedBackground = "<function: 00000001E95B6F44>",
+  SetPushedColor = "<function: 00000001E4EC8CB4>",
+  SetPushedTextColor = "<function: 00000001E4EC8C34>",
+  SetResizingBorderSize = "<function: 00000001E1A157E4>",
+  SetRotation = "<function: 00000001E4EA5464>",
+  SetScale = "<function: 00000001D3BA4454>",
+  SetScaleAnimation = "<function: 00000001E963A214>",
+  SetSounds = "<function: 00000001D45F8714>",
+  SetStartAnimation = "<function: 00000001D409BA84>",
+  SetStyle = "<function: 00000001E9622C94>",
+  SetText = "<function: 00000001E95C0304>",
+  SetTextColor = "<function: 00000001E4EC8BB4>",
+  SetWidth = "<function: 00000001E4F29EB4>",
+  Show = "<function: 00000001E19A2394>",
+  StartMoving = "<function: 00000001E4F227B4>",
+  StartSizing = "<function: 00000001E9631794>",
+  StopMovingOrSizing = "<function: 00000001E4EA5724>",
+  TriggerMoveAnimation = "<function: 00000001D409BBC4>",
+  UseDynamicContentState = "<function: 00000001B5D75EC4>",
+  UseDynamicDrawableState = "<function: 00000001D3D7C984>",
+  UseResizing = "<function: 00000001E4A86CC4>",
+  __this = "<userdata: 0000000252171A00>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD1B70>",
+  },
+}
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+UI_BUTTON_DISABLED = 3
+UI_BUTTON_HIGHLIGHTED = 1
+UI_BUTTON_MAX = 4
+UI_BUTTON_NORMAL = 0
+UI_BUTTON_PUSHED = 2

@@ -1,1 +1,1 @@
-X2Hero = {} -- api/X2Hero
+X2Hero = {}

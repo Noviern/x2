@@ -1,17 +1,10 @@
-X2Locale = {} -- api/X2Locale
-
-function X2Locale:GetKeyboardLayout() end
-
-function X2Locale:GetLocale() end
-
-function X2Locale:GetLocaleIndex() end
-
-function X2Locale:HasLocalizeUiText() end
-
-function X2Locale:LocalizeFormatUiText() end
-
-function X2Locale:LocalizeNonUiText() end
-
-function X2Locale:LocalizeUiText() end
-
-function X2Locale:TextFormating() end
+X2Locale = {
+  GetKeyboardLayout = "<function: 00000001D4492454>",
+  GetLocale = "<function: 00000001A70EEEC4>",
+  GetLocaleIndex = "<function: 0000000253845654>",
+  HasLocalizeUiText = "<function: 00000001B5DAD844>",
+  LocalizeFormatUiText = "<function: 00000001D48A1294>",
+  LocalizeNonUiText = "<function: 00000001E19D2C14>",
+  LocalizeUiText = "<function: 00000001A7133904>",
+  TextFormating = "<function: 00000001D3DCED84>",
+}

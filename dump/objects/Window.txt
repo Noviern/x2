@@ -1,469 +1,246 @@
-AP_BOTTOM = 8 -- objects/Window
-AP_BOTTOMLEFT = 2 -- objects/Window
-AP_BOTTOMRIGHT = 3 -- objects/Window
-AP_CENTER = 4 -- objects/Window
-AP_LEFT = 6 -- objects/Window
-AP_RIGHT = 7 -- objects/Window
-AP_TOP = 5 -- objects/Window
-AP_TOPLEFT = 0 -- objects/Window
-AP_TOPRIGHT = 1 -- objects/Window
-CT_ABILITY = 2 -- objects/Window
-CT_EXPEDITION_NAME = 3 -- objects/Window
-CT_NAME = 1 -- objects/Window
-DC_ALWAYS = 0 -- objects/Window
-DC_SHIFT_KEY_DOWN = 1 -- objects/Window
-Window = { -- objects/Window
-  __this = <userdata>, -- objects/Window
-  modalBackgroundWindow = { -- objects/Window
-    __this = <userdata>, -- objects/Window
-  }, -- objects/Window
-  titleStyle = { -- objects/Window
-    __this = <userdata>, -- objects/Window
-  }, -- objects/Window
-} -- objects/Window
-
-function Window.modalBackgroundWindow:AddAnchor() end
-
-function Window.modalBackgroundWindow:ApplyUIScale() end
-
-function Window.modalBackgroundWindow:AttachWidget() end
-
-function Window.modalBackgroundWindow:BindWidth() end
-
-function Window.modalBackgroundWindow:CancelRequestCharacterCacheData() end
-
-function Window.modalBackgroundWindow:ChangeChildAnchorByScrollValue() end
-
-function Window.modalBackgroundWindow:CheckOutOfScreen() end
-
-function Window.modalBackgroundWindow:Clickable() end
-
-function Window.modalBackgroundWindow:CorrectOffsetByScreen() end
-
-function Window.modalBackgroundWindow:CreateChildWidget() end
-
-function Window.modalBackgroundWindow:CreateChildWidgetByType() end
-
-function Window.modalBackgroundWindow:CreateColorDrawable() end
-
-function Window.modalBackgroundWindow:CreateColorDrawableByKey() end
-
-function Window.modalBackgroundWindow:CreateDrawable() end
-
-function Window.modalBackgroundWindow:CreateEffectDrawable() end
-
-function Window.modalBackgroundWindow:CreateEffectDrawableByKey() end
-
-function Window.modalBackgroundWindow:CreateIconDrawable() end
-
-function Window.modalBackgroundWindow:CreateImageDrawable() end
-
-function Window.modalBackgroundWindow:CreateNinePartDrawable() end
-
-function Window.modalBackgroundWindow:CreateTextDrawable() end
-
-function Window.modalBackgroundWindow:CreateThreeColorDrawable() end
-
-function Window.modalBackgroundWindow:CreateThreePartDrawable() end
-
-function Window.modalBackgroundWindow:DetachWidget() end
-
-function Window.modalBackgroundWindow:DisableDrawables() end
-
-function Window.modalBackgroundWindow:DisableDrawablesWithChildren() end
-
-function Window.modalBackgroundWindow:Enable() end
-
-function Window.modalBackgroundWindow:EnableDrag() end
-
-function Window.modalBackgroundWindow:EnableDrawables() end
-
-function Window.modalBackgroundWindow:EnableDrawablesWithChildren() end
-
-function Window.modalBackgroundWindow:EnableFocus() end
-
-function Window.modalBackgroundWindow:EnableHidingIsRemove() end
-
-function Window.modalBackgroundWindow:EnableKeyboard() end
-
-function Window.modalBackgroundWindow:EnablePick() end
-
-function Window.modalBackgroundWindow:EnableScroll() end
-
-function Window.modalBackgroundWindow:GetAlpha() end
-
-function Window.modalBackgroundWindow:GetAttachedWidget() end
-
-function Window.modalBackgroundWindow:GetEffectiveExtent() end
-
-function Window.modalBackgroundWindow:GetEffectiveOffset() end
-
-function Window.modalBackgroundWindow:GetExtent() end
-
-function Window.modalBackgroundWindow:GetHeight() end
-
-function Window.modalBackgroundWindow:GetId() end
-
-function Window.modalBackgroundWindow:GetName() end
-
-function Window.modalBackgroundWindow:GetObjectType() end
-
-function Window.modalBackgroundWindow:GetOffset() end
-
-function Window.modalBackgroundWindow:GetParent() end
-
-function Window.modalBackgroundWindow:GetRotation() end
-
-function Window.modalBackgroundWindow:GetText() end
-
-function Window.modalBackgroundWindow:GetUILayer() end
-
-function Window.modalBackgroundWindow:GetValue() end
-
-function Window.modalBackgroundWindow:GetWidth() end
-
-function Window.modalBackgroundWindow:HasHandler() end
-
-function Window.modalBackgroundWindow:InheritAnimationData() end
-
-function Window.modalBackgroundWindow:IsDescendantWidget() end
-
-function Window.modalBackgroundWindow:IsEnabled() end
-
-function Window.modalBackgroundWindow:IsMouseOver() end
-
-function Window.modalBackgroundWindow:IsNowAnimation() end
-
-function Window.modalBackgroundWindow:IsValidUIObject() end
-
-function Window.modalBackgroundWindow:IsVisible() end
-
-function Window.modalBackgroundWindow:Lower() end
-
-function Window.modalBackgroundWindow:MoveTo() end
-
-function Window.modalBackgroundWindow:Raise() end
-
-function Window.modalBackgroundWindow:RegisterEvent() end
-
-function Window.modalBackgroundWindow:ReleaseDeletedHandler() end
-
-function Window.modalBackgroundWindow:ReleaseHandler() end
-
-function Window.modalBackgroundWindow:RemoveAllAnchors() end
-
-function Window.modalBackgroundWindow:RemoveAllDrawables() end
-
-function Window.modalBackgroundWindow:RemoveDrawable() end
-
-function Window.modalBackgroundWindow:RequestCharacterCacheData() end
-
-function Window.modalBackgroundWindow:SetAlpha() end
-
-function Window.modalBackgroundWindow:SetAlphaAnimation() end
-
-function Window.modalBackgroundWindow:SetCategory() end
-
-function Window.modalBackgroundWindow:SetCharacterCacheDataHandler() end
-
-function Window.modalBackgroundWindow:SetDelegator() end
-
-function Window.modalBackgroundWindow:SetDeletedHandler() end
-
-function Window.modalBackgroundWindow:SetDragCondition() end
-
-function Window.modalBackgroundWindow:SetDrawBorder() end
-
-function Window.modalBackgroundWindow:SetDrawPriority() end
-
-function Window.modalBackgroundWindow:SetDrawableLayerAlpha() end
-
-function Window.modalBackgroundWindow:SetExtent() end
-
-function Window.modalBackgroundWindow:SetHandler() end
-
-function Window.modalBackgroundWindow:SetHeight() end
-
-function Window.modalBackgroundWindow:SetLText() end
-
-function Window.modalBackgroundWindow:SetLayerColor() end
-
-function Window.modalBackgroundWindow:SetMaxResizingExtent() end
-
-function Window.modalBackgroundWindow:SetMinResizingExtent() end
-
-function Window.modalBackgroundWindow:SetMoveAnimation() end
-
-function Window.modalBackgroundWindow:SetResizingBorderSize() end
-
-function Window.modalBackgroundWindow:SetRotation() end
-
-function Window.modalBackgroundWindow:SetScale() end
-
-function Window.modalBackgroundWindow:SetScaleAnimation() end
-
-function Window.modalBackgroundWindow:SetSounds() end
-
-function Window.modalBackgroundWindow:SetStartAnimation() end
-
-function Window.modalBackgroundWindow:SetText() end
-
-function Window.modalBackgroundWindow:SetWidth() end
-
-function Window.modalBackgroundWindow:Show() end
-
-function Window.modalBackgroundWindow:StartMoving() end
-
-function Window.modalBackgroundWindow:StartSizing() end
-
-function Window.modalBackgroundWindow:StopMovingOrSizing() end
-
-function Window.modalBackgroundWindow:TriggerMoveAnimation() end
-
-function Window.modalBackgroundWindow:UseDynamicContentState() end
-
-function Window.modalBackgroundWindow:UseDynamicDrawableState() end
-
-function Window.modalBackgroundWindow:UseResizing() end
-
-function Window.titleStyle:GetId() end
-
-function Window.titleStyle:GetLineHeight() end
-
-function Window.titleStyle:GetName() end
-
-function Window.titleStyle:GetObjectType() end
-
-function Window.titleStyle:GetTextWidth() end
-
-function Window.titleStyle:IsValidUIObject() end
-
-function Window.titleStyle:SetAlign() end
-
-function Window.titleStyle:SetColor() end
-
-function Window.titleStyle:SetColorByKey() end
-
-function Window.titleStyle:SetEllipsis() end
-
-function Window.titleStyle:SetFont() end
-
-function Window.titleStyle:SetFontSize() end
-
-function Window.titleStyle:SetOutline() end
-
-function Window.titleStyle:SetShadow() end
-
-function Window.titleStyle:SetSnap() end
-
-function Window:AddAnchor() end
-
-function Window:ApplyUIScale() end
-
-function Window:AttachWidget() end
-
-function Window:BindWidth() end
-
-function Window:CancelRequestCharacterCacheData() end
-
-function Window:ChangeChildAnchorByScrollValue() end
-
-function Window:CheckOutOfScreen() end
-
-function Window:Clickable() end
-
-function Window:CorrectOffsetByScreen() end
-
-function Window:CreateChildWidget() end
-
-function Window:CreateChildWidgetByType() end
-
-function Window:CreateColorDrawable() end
-
-function Window:CreateColorDrawableByKey() end
-
-function Window:CreateDrawable() end
-
-function Window:CreateEffectDrawable() end
-
-function Window:CreateEffectDrawableByKey() end
-
-function Window:CreateIconDrawable() end
-
-function Window:CreateImageDrawable() end
-
-function Window:CreateNinePartDrawable() end
-
-function Window:CreateTextDrawable() end
-
-function Window:CreateThreeColorDrawable() end
-
-function Window:CreateThreePartDrawable() end
-
-function Window:DetachWidget() end
-
-function Window:DisableDrawables() end
-
-function Window:DisableDrawablesWithChildren() end
-
-function Window:Enable() end
-
-function Window:EnableDrag() end
-
-function Window:EnableDrawables() end
-
-function Window:EnableDrawablesWithChildren() end
-
-function Window:EnableFocus() end
-
-function Window:EnableHidingIsRemove() end
-
-function Window:EnableKeyboard() end
-
-function Window:EnablePick() end
-
-function Window:EnableScroll() end
-
-function Window:GetAlpha() end
-
-function Window:GetAttachedWidget() end
-
-function Window:GetEffectiveExtent() end
-
-function Window:GetEffectiveOffset() end
-
-function Window:GetExtent() end
-
-function Window:GetHeight() end
-
-function Window:GetId() end
-
-function Window:GetName() end
-
-function Window:GetObjectType() end
-
-function Window:GetOffset() end
-
-function Window:GetParent() end
-
-function Window:GetRotation() end
-
-function Window:GetText() end
-
-function Window:GetUILayer() end
-
-function Window:GetValue() end
-
-function Window:GetWidth() end
-
-function Window:HasHandler() end
-
-function Window:InheritAnimationData() end
-
-function Window:IsDescendantWidget() end
-
-function Window:IsEnabled() end
-
-function Window:IsMouseOver() end
-
-function Window:IsNowAnimation() end
-
-function Window:IsValidUIObject() end
-
-function Window:IsVisible() end
-
-function Window:Lower() end
-
-function Window:MoveTo() end
-
-function Window:Raise() end
-
-function Window:RegisterEvent() end
-
-function Window:ReleaseDeletedHandler() end
-
-function Window:ReleaseHandler() end
-
-function Window:RemoveAllAnchors() end
-
-function Window:RemoveAllDrawables() end
-
-function Window:RemoveDrawable() end
-
-function Window:RequestCharacterCacheData() end
-
-function Window:SetAlpha() end
-
-function Window:SetAlphaAnimation() end
-
-function Window:SetCategory() end
-
-function Window:SetCharacterCacheDataHandler() end
-
-function Window:SetCloseOnEscape() end
-
-function Window:SetDelegator() end
-
-function Window:SetDeletedHandler() end
-
-function Window:SetDragCondition() end
-
-function Window:SetDrawPriority() end
-
-function Window:SetDrawableLayerAlpha() end
-
-function Window:SetExtent() end
-
-function Window:SetHandler() end
-
-function Window:SetHeight() end
-
-function Window:SetLText() end
-
-function Window:SetLayerColor() end
-
-function Window:SetMaxResizingExtent() end
-
-function Window:SetMinResizingExtent() end
-
-function Window:SetMoveAnimation() end
-
-function Window:SetResizingBorderSize() end
-
-function Window:SetRotation() end
-
-function Window:SetScale() end
-
-function Window:SetScaleAnimation() end
-
-function Window:SetSounds() end
-
-function Window:SetStartAnimation() end
-
-function Window:SetText() end
-
-function Window:SetTitleInset() end
-
-function Window:SetTitleText() end
-
-function Window:SetUILayer() end
-
-function Window:SetWidth() end
-
-function Window:SetWindowModal() end
-
-function Window:Show() end
-
-function Window:StartMoving() end
-
-function Window:StartSizing() end
-
-function Window:StopMovingOrSizing() end
-
-function Window:TriggerMoveAnimation() end
-
-function Window:UseDynamicContentState() end
-
-function Window:UseDynamicDrawableState() end
-
-function Window:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+Window = {
+  AddAnchor = "<function: 00000000FA02B4A4>",
+  ApplyUIScale = "<function: 00000001EE888884>",
+  AttachWidget = "<function: 00000001EE805D14>",
+  BindWidth = "<function: 00000000FC896424>",
+  CancelRequestCharacterCacheData = "<function: 000000007CAC0074>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001AF06ADF4>",
+  CheckOutOfScreen = "<function: 00000001D4779E84>",
+  Clickable = "<function: 00000001E96A5B24>",
+  CorrectOffsetByScreen = "<function: 00000001E1A694A4>",
+  CreateChildWidget = "<function: 00000001F621F334>",
+  CreateChildWidgetByType = "<function: 00000001D470A034>",
+  CreateColorDrawable = "<function: 00000001D4450ED4>",
+  CreateColorDrawableByKey = "<function: 00000001E95ABEC4>",
+  CreateDrawable = "<function: 00000001EEB4FA84>",
+  CreateEffectDrawable = "<function: 00000001EE763E44>",
+  CreateEffectDrawableByKey = "<function: 00000001E4E44D94>",
+  CreateIconDrawable = "<function: 00000001EE87EA44>",
+  CreateImageDrawable = "<function: 00000001EE8D5644>",
+  CreateNinePartDrawable = "<function: 00000001E4EBCDA4>",
+  CreateTextDrawable = "<function: 00000001D3CEBA34>",
+  CreateThreeColorDrawable = "<function: 00000001EE896784>",
+  CreateThreePartDrawable = "<function: 00000001E95FC994>",
+  DetachWidget = "<function: 00000001E96C9764>",
+  DisableDrawables = "<function: 00000001D48F0C54>",
+  DisableDrawablesWithChildren = "<function: 00000001D44DDFB4>",
+  Enable = "<function: 00000000FA02EEE4>",
+  EnableDrag = "<function: 00000001A2566A44>",
+  EnableDrawables = "<function: 00000001E969E364>",
+  EnableDrawablesWithChildren = "<function: 00000001F6654B44>",
+  EnableFocus = "<function: 00000001E9671364>",
+  EnableHidingIsRemove = "<function: 00000000FC5F22A4>",
+  EnableKeyboard = "<function: 00000001E95C43C4>",
+  EnablePick = "<function: 00000001E9665FE4>",
+  EnableScroll = "<function: 00000001D472D174>",
+  GetAlpha = "<function: 00000001AFAA27D4>",
+  GetAttachedWidget = "<function: 00000001FBEA1A14>",
+  GetEffectiveExtent = "<function: 00000001EE740344>",
+  GetEffectiveOffset = "<function: 00000001EEB6D684>",
+  GetExtent = "<function: 00000001F88B86C4>",
+  GetHeight = "<function: 00000001E9641154>",
+  GetId = "<function: 00000001F8373264>",
+  GetName = "<function: 00000001EE819354>",
+  GetObjectType = "<function: 00000001D3C6D4D4>",
+  GetOffset = "<function: 000000007CAEDBF4>",
+  GetParent = "<function: 00000001EE73BD44>",
+  GetRotation = "<function: 00000001EE72B6C4>",
+  GetText = "<function: 00000001D3CE97B4>",
+  GetUILayer = "<function: 00000001E4DB6EC4>",
+  GetValue = "<function: 00000001E96796E4>",
+  GetWidth = "<function: 00000001AF04A8F4>",
+  HasHandler = "<function: 00000001D47303B4>",
+  InheritAnimationData = "<function: 00000001CEAA2564>",
+  IsDescendantWidget = "<function: 00000001E96575D4>",
+  IsEnabled = "<function: 00000001AFA5E814>",
+  IsMouseOver = "<function: 00000001D3CC6014>",
+  IsNowAnimation = "<function: 00000001E4E17014>",
+  IsValidUIObject = "<function: 00000001EEB868C4>",
+  IsVisible = "<function: 00000001EE73D3C4>",
+  Lower = "<function: 00000001FBE91414>",
+  MoveTo = "<function: 00000001EE769DC4>",
+  Raise = "<function: 00000001FBE78814>",
+  RegisterEvent = "<function: 00000001E4F21774>",
+  ReleaseDeletedHandler = "<function: 00000001EE7DA314>",
+  ReleaseHandler = "<function: 00000001E4F27634>",
+  RemoveAllAnchors = "<function: 00000001EE8886C4>",
+  RemoveAllDrawables = "<function: 00000001D3E13DD4>",
+  RemoveDrawable = "<function: 00000001EED786C4>",
+  RequestCharacterCacheData = "<function: 00000001E4F3DDB4>",
+  SetAlpha = "<function: 00000001CEA50FE4>",
+  SetAlphaAnimation = "<function: 00000001E95D5A04>",
+  SetCategory = "<function: 00000001A2576884>",
+  SetCharacterCacheDataHandler = "<function: 00000001E1AB02F4>",
+  SetCloseOnEscape = "<function: 00000001A25BE304>",
+  SetDelegator = "<function: 00000001D46660A4>",
+  SetDeletedHandler = "<function: 00000001EE72D4C4>",
+  SetDragCondition = "<function: 00000001EE7F8514>",
+  SetDrawPriority = "<function: 00000001E8F08824>",
+  SetDrawableLayerAlpha = "<function: 00000000CD63F8F4>",
+  SetExtent = "<function: 00000001E968F3A4>",
+  SetHandler = "<function: 00000001EE73DD04>",
+  SetHeight = "<function: 00000001D4434E54>",
+  SetLText = "<function: 00000001EE874CC4>",
+  SetLayerColor = "<function: 00000001E1AB6F74>",
+  SetMaxResizingExtent = "<function: 00000001EEB92D04>",
+  SetMinResizingExtent = "<function: 00000001EE87AEC4>",
+  SetMoveAnimation = "<function: 00000001D4778B04>",
+  SetResizingBorderSize = "<function: 00000001E196E384>",
+  SetRotation = "<function: 00000001AFA79D94>",
+  SetScale = "<function: 00000001D4503574>",
+  SetScaleAnimation = "<function: 00000001E48D1244>",
+  SetSounds = "<function: 00000001EE7614C4>",
+  SetStartAnimation = "<function: 00000000FC6222E4>",
+  SetText = "<function: 00000001D442F254>",
+  SetTitleInset = "<function: 00000001E96BB364>",
+  SetTitleText = "<function: 00000001F6620044>",
+  SetUILayer = "<function: 00000001E963FD14>",
+  SetWidth = "<function: 00000001E95CDB84>",
+  SetWindowModal = "<function: 00000001E1916C84>",
+  Show = "<function: 00000001E4D49284>",
+  StartMoving = "<function: 00000001D4930664>",
+  StartSizing = "<function: 00000001EEB69184>",
+  StopMovingOrSizing = "<function: 00000001D45C8FC4>",
+  TriggerMoveAnimation = "<function: 00000001E96AA7E4>",
+  UseDynamicContentState = "<function: 00000001E4E27914>",
+  UseDynamicDrawableState = "<function: 00000001A71407C4>",
+  UseResizing = "<function: 00000001EEB67B84>",
+  __this = "<userdata: 000000024BB1E920>",
+  modalBackgroundWindow = {
+    AddAnchor = "<function: 00000001F8395B64>",
+    ApplyUIScale = "<function: 00000001D45D19D4>",
+    AttachWidget = "<function: 00000001E95B8004>",
+    BindWidth = "<function: 00000001E4EBCFA4>",
+    CancelRequestCharacterCacheData = "<function: 00000001E963DE94>",
+    ChangeChildAnchorByScrollValue = "<function: 00000001EE7E1D94>",
+    CheckOutOfScreen = "<function: 00000001D44A7F14>",
+    Clickable = "<function: 00000001D44E61B4>",
+    CorrectOffsetByScreen = "<function: 00000001E4F37774>",
+    CreateChildWidget = "<function: 00000001D4050424>",
+    CreateChildWidgetByType = "<function: 00000001D3F73F54>",
+    CreateColorDrawable = "<function: 00000001E963D054>",
+    CreateColorDrawableByKey = "<function: 00000001D3D750C4>",
+    CreateDrawable = "<function: 00000001E95F4914>",
+    CreateEffectDrawable = "<function: 00000001E8F7D874>",
+    CreateEffectDrawableByKey = "<function: 000000007CB0AF34>",
+    CreateIconDrawable = "<function: 00000001E4F37374>",
+    CreateImageDrawable = "<function: 00000001C8A30344>",
+    CreateNinePartDrawable = "<function: 00000001E95B09C4>",
+    CreateTextDrawable = "<function: 00000001D47ABBC4>",
+    CreateThreeColorDrawable = "<function: 00000001E4F2D434>",
+    CreateThreePartDrawable = "<function: 00000001E27206E4>",
+    DetachWidget = "<function: 00000001D405D5E4>",
+    DisableDrawables = "<function: 00000001E4ECB474>",
+    DisableDrawablesWithChildren = "<function: 00000000FC8D5624>",
+    Enable = "<function: 00000001E4E425D4>",
+    EnableDrag = "<function: 00000001D3BA0954>",
+    EnableDrawables = "<function: 00000001E509A724>",
+    EnableDrawablesWithChildren = "<function: 000000007CAD2EF4>",
+    EnableFocus = "<function: 00000001EE75C684>",
+    EnableHidingIsRemove = "<function: 00000001E9616E54>",
+    EnableKeyboard = "<function: 00000001D48D5614>",
+    EnablePick = "<function: 00000001D48FFD54>",
+    EnableScroll = "<function: 00000001E8F04624>",
+    GetAlpha = "<function: 00000001E509AF24>",
+    GetAttachedWidget = "<function: 00000001E966D2A4>",
+    GetEffectiveExtent = "<function: 00000001D4467994>",
+    GetEffectiveOffset = "<function: 00000001E4E89BE4>",
+    GetExtent = "<function: 00000001E4C59AB4>",
+    GetHeight = "<function: 00000001D3FB2D54>",
+    GetId = "<function: 00000001F6606104>",
+    GetName = "<function: 00000001E4C4F9F4>",
+    GetObjectType = "<function: 0000000228770474>",
+    GetOffset = "<function: 00000001F6611544>",
+    GetParent = "<function: 00000001E1A1E124>",
+    GetRotation = "<function: 00000001EE7C9C14>",
+    GetText = "<function: 00000001E95B9AC4>",
+    GetUILayer = "<function: 00000001A7119444>",
+    GetValue = "<function: 00000001D44446D4>",
+    GetWidth = "<function: 00000001E4F34574>",
+    HasHandler = "<function: 00000001D44EEDB4>",
+    InheritAnimationData = "<function: 00000001EE75C844>",
+    IsDescendantWidget = "<function: 00000001E4EBA9E4>",
+    IsEnabled = "<function: 00000001E480AC74>",
+    IsMouseOver = "<function: 00000001EE7C2CD4>",
+    IsNowAnimation = "<function: 00000001E960DE14>",
+    IsValidUIObject = "<function: 00000001AFA9C2D4>",
+    IsVisible = "<function: 00000001E4A2D4A4>",
+    Lower = "<function: 0000000068454184>",
+    MoveTo = "<function: 00000001CEA6EEA4>",
+    Raise = "<function: 00000001E4988054>",
+    RegisterEvent = "<function: 00000001EE7277C4>",
+    ReleaseDeletedHandler = "<function: 00000001E2746924>",
+    ReleaseHandler = "<function: 00000001E4BAED64>",
+    RemoveAllAnchors = "<function: 00000001D44E58F4>",
+    RemoveAllDrawables = "<function: 00000001A254DFC4>",
+    RemoveDrawable = "<function: 00000001EE731A44>",
+    RequestCharacterCacheData = "<function: 00000001EEBB16C4>",
+    SetAlpha = "<function: 00000001E95DB2C4>",
+    SetAlphaAnimation = "<function: 00000001E18D81B4>",
+    SetCategory = "<function: 00000001E4EB0524>",
+    SetCharacterCacheDataHandler = "<function: 00000001D3E82424>",
+    SetDelegator = "<function: 00000001EE7BA8D4>",
+    SetDeletedHandler = "<function: 00000001E4E6F424>",
+    SetDragCondition = "<function: 00000001E4E7D2A4>",
+    SetDrawBorder = "<function: 00000001E95D6584>",
+    SetDrawPriority = "<function: 00000001D452AB74>",
+    SetDrawableLayerAlpha = "<function: 00000001E4F349B4>",
+    SetExtent = "<function: 00000001E95B2604>",
+    SetHandler = "<function: 00000001D3D6B444>",
+    SetHeight = "<function: 00000001D3D85C04>",
+    SetLText = "<function: 00000001F8394B64>",
+    SetLayerColor = "<function: 00000001D4041964>",
+    SetMaxResizingExtent = "<function: 00000001AF9BD4D4>",
+    SetMinResizingExtent = "<function: 00000001E95C6704>",
+    SetMoveAnimation = "<function: 00000001E961C294>",
+    SetResizingBorderSize = "<function: 00000001E27A9CC4>",
+    SetRotation = "<function: 00000001AF04A8B4>",
+    SetScale = "<function: 00000001E95FC594>",
+    SetScaleAnimation = "<function: 00000001A713A6C4>",
+    SetSounds = "<function: 00000000FC8BDEA4>",
+    SetStartAnimation = "<function: 00000001A713DB04>",
+    SetText = "<function: 00000001E48762B4>",
+    SetWidth = "<function: 00000001E9623354>",
+    Show = "<function: 00000001E95C00C4>",
+    StartMoving = "<function: 00000001D48C4C94>",
+    StartSizing = "<function: 00000001D44FA7F4>",
+    StopMovingOrSizing = "<function: 00000001E4F36234>",
+    TriggerMoveAnimation = "<function: 00000001D4480FD4>",
+    UseDynamicContentState = "<function: 00000001D3FCBBD4>",
+    UseDynamicDrawableState = "<function: 00000001A713DD44>",
+    UseResizing = "<function: 000000007CB016F4>",
+    __this = "<userdata: 00000001E69B7AE0>",
+  },
+  titleStyle = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD5EF0>",
+  },
+}

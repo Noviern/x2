@@ -1,21 +1,19 @@
-COPT_INSTANT = 2 -- api/X2Craft
-COPT_INVALID = 0 -- api/X2Craft
-COPT_PC = 1 -- api/X2Craft
-COSK_ACTABILITY_GROUP = 1 -- api/X2Craft
-COSK_DEFAULT = 0 -- api/X2Craft
-COSK_FEE = 2 -- api/X2Craft
-COSO_ASC = 0 -- api/X2Craft
-COSO_DESC = 1 -- api/X2Craft
-CRAFT_ORDER_ENTRY_PER_CHARACTER = 5 -- api/X2Craft
-CRAFT_ORDER_ENTRY_PER_SEARCH = 8 -- api/X2Craft
-MFCR_FAIL = 3 -- api/X2Craft
-MFCR_FAIL_LIMIT = 1 -- api/X2Craft
-MFCR_FAIL_WAIT = 2 -- api/X2Craft
-MFCR_SUCCESS = 0 -- api/X2Craft
-X2Craft = {} -- api/X2Craft
-
-function X2Craft:GetCraftBaseInfo() end
-
-function X2Craft:GetCraftMaterialInfo() end
-
-function X2Craft:GetCraftProductInfo() end
+COPT_INSTANT = 2
+COPT_INVALID = 0
+COPT_PC = 1
+COSK_ACTABILITY_GROUP = 1
+COSK_DEFAULT = 0
+COSK_FEE = 2
+COSO_ASC = 0
+COSO_DESC = 1
+CRAFT_ORDER_ENTRY_PER_CHARACTER = 5
+CRAFT_ORDER_ENTRY_PER_SEARCH = 8
+MFCR_FAIL = 3
+MFCR_FAIL_LIMIT = 1
+MFCR_FAIL_WAIT = 2
+MFCR_SUCCESS = 0
+X2Craft = {
+  GetCraftBaseInfo = "<function: 00000001D459E744>",
+  GetCraftMaterialInfo = "<function: 00000001D459EE44>",
+  GetCraftProductInfo = "<function: 00000001D45BFFC4>",
+}

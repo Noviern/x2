@@ -1,327 +1,176 @@
-AP_BOTTOM = 8 -- objects/CooldownConstantButton
-AP_BOTTOMLEFT = 2 -- objects/CooldownConstantButton
-AP_BOTTOMRIGHT = 3 -- objects/CooldownConstantButton
-AP_CENTER = 4 -- objects/CooldownConstantButton
-AP_LEFT = 6 -- objects/CooldownConstantButton
-AP_RIGHT = 7 -- objects/CooldownConstantButton
-AP_TOP = 5 -- objects/CooldownConstantButton
-AP_TOPLEFT = 0 -- objects/CooldownConstantButton
-AP_TOPRIGHT = 1 -- objects/CooldownConstantButton
-CT_ABILITY = 2 -- objects/CooldownConstantButton
-CT_EXPEDITION_NAME = 3 -- objects/CooldownConstantButton
-CT_NAME = 1 -- objects/CooldownConstantButton
-CooldownConstantButton = { -- objects/CooldownConstantButton
-  __this = <userdata>, -- objects/CooldownConstantButton
-  style = { -- objects/CooldownConstantButton
-    __this = <userdata>, -- objects/CooldownConstantButton
-  }, -- objects/CooldownConstantButton
-} -- objects/CooldownConstantButton
-DC_ALWAYS = 0 -- objects/CooldownConstantButton
-DC_SHIFT_KEY_DOWN = 1 -- objects/CooldownConstantButton
-UI_BUTTON_DISABLED = 3 -- objects/CooldownConstantButton
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownConstantButton
-UI_BUTTON_MAX = 4 -- objects/CooldownConstantButton
-UI_BUTTON_NORMAL = 0 -- objects/CooldownConstantButton
-UI_BUTTON_PUSHED = 2 -- objects/CooldownConstantButton
-
-function CooldownConstantButton.style:GetId() end
-
-function CooldownConstantButton.style:GetLineHeight() end
-
-function CooldownConstantButton.style:GetName() end
-
-function CooldownConstantButton.style:GetObjectType() end
-
-function CooldownConstantButton.style:GetTextWidth() end
-
-function CooldownConstantButton.style:IsValidUIObject() end
-
-function CooldownConstantButton.style:SetAlign() end
-
-function CooldownConstantButton.style:SetColor() end
-
-function CooldownConstantButton.style:SetColorByKey() end
-
-function CooldownConstantButton.style:SetEllipsis() end
-
-function CooldownConstantButton.style:SetFont() end
-
-function CooldownConstantButton.style:SetFontSize() end
-
-function CooldownConstantButton.style:SetOutline() end
-
-function CooldownConstantButton.style:SetShadow() end
-
-function CooldownConstantButton.style:SetSnap() end
-
-function CooldownConstantButton:AddAnchor() end
-
-function CooldownConstantButton:ApplyUIScale() end
-
-function CooldownConstantButton:AttachWidget() end
-
-function CooldownConstantButton:BindWidth() end
-
-function CooldownConstantButton:CancelRequestCharacterCacheData() end
-
-function CooldownConstantButton:ChangeChildAnchorByScrollValue() end
-
-function CooldownConstantButton:CheckOutOfScreen() end
-
-function CooldownConstantButton:Clickable() end
-
-function CooldownConstantButton:CorrectOffsetByScreen() end
-
-function CooldownConstantButton:CreateChildWidget() end
-
-function CooldownConstantButton:CreateChildWidgetByType() end
-
-function CooldownConstantButton:CreateColorDrawable() end
-
-function CooldownConstantButton:CreateColorDrawableByKey() end
-
-function CooldownConstantButton:CreateDrawable() end
-
-function CooldownConstantButton:CreateEffectDrawable() end
-
-function CooldownConstantButton:CreateEffectDrawableByKey() end
-
-function CooldownConstantButton:CreateIconDrawable() end
-
-function CooldownConstantButton:CreateImageDrawable() end
-
-function CooldownConstantButton:CreateNinePartDrawable() end
-
-function CooldownConstantButton:CreateStateDrawable() end
-
-function CooldownConstantButton:CreateTextDrawable() end
-
-function CooldownConstantButton:CreateThreeColorDrawable() end
-
-function CooldownConstantButton:CreateThreePartDrawable() end
-
-function CooldownConstantButton:DeregisterForClicks() end
-
-function CooldownConstantButton:DetachWidget() end
-
-function CooldownConstantButton:DisableDrawables() end
-
-function CooldownConstantButton:DisableDrawablesWithChildren() end
-
-function CooldownConstantButton:Enable() end
-
-function CooldownConstantButton:EnableDrag() end
-
-function CooldownConstantButton:EnableDrawables() end
-
-function CooldownConstantButton:EnableDrawablesWithChildren() end
-
-function CooldownConstantButton:EnableFocus() end
-
-function CooldownConstantButton:EnableHidingIsRemove() end
-
-function CooldownConstantButton:EnableKeyboard() end
-
-function CooldownConstantButton:EnablePick() end
-
-function CooldownConstantButton:EnableScroll() end
-
-function CooldownConstantButton:GetAlpha() end
-
-function CooldownConstantButton:GetAttachedWidget() end
-
-function CooldownConstantButton:GetButtonState() end
-
-function CooldownConstantButton:GetDisabledBackground() end
-
-function CooldownConstantButton:GetDisabledColor() end
-
-function CooldownConstantButton:GetEffectiveExtent() end
-
-function CooldownConstantButton:GetEffectiveOffset() end
-
-function CooldownConstantButton:GetExtent() end
-
-function CooldownConstantButton:GetHeight() end
-
-function CooldownConstantButton:GetHighlightBackground() end
-
-function CooldownConstantButton:GetHighlightColor() end
-
-function CooldownConstantButton:GetId() end
-
-function CooldownConstantButton:GetName() end
-
-function CooldownConstantButton:GetNormalBackground() end
-
-function CooldownConstantButton:GetNormalColor() end
-
-function CooldownConstantButton:GetObjectType() end
-
-function CooldownConstantButton:GetOffset() end
-
-function CooldownConstantButton:GetParent() end
-
-function CooldownConstantButton:GetPushedBackground() end
-
-function CooldownConstantButton:GetPushedColor() end
-
-function CooldownConstantButton:GetRotation() end
-
-function CooldownConstantButton:GetText() end
-
-function CooldownConstantButton:GetUILayer() end
-
-function CooldownConstantButton:GetValue() end
-
-function CooldownConstantButton:GetWidth() end
-
-function CooldownConstantButton:HasHandler() end
-
-function CooldownConstantButton:InheritAnimationData() end
-
-function CooldownConstantButton:IsDescendantWidget() end
-
-function CooldownConstantButton:IsEnabled() end
-
-function CooldownConstantButton:IsMouseOver() end
-
-function CooldownConstantButton:IsNowAnimation() end
-
-function CooldownConstantButton:IsValidUIObject() end
-
-function CooldownConstantButton:IsVisible() end
-
-function CooldownConstantButton:Lower() end
-
-function CooldownConstantButton:MoveTo() end
-
-function CooldownConstantButton:Raise() end
-
-function CooldownConstantButton:RegisterEvent() end
-
-function CooldownConstantButton:RegisterForClicks() end
-
-function CooldownConstantButton:ReleaseDeletedHandler() end
-
-function CooldownConstantButton:ReleaseHandler() end
-
-function CooldownConstantButton:RemoveAllAnchors() end
-
-function CooldownConstantButton:RemoveAllDrawables() end
-
-function CooldownConstantButton:RemoveDrawable() end
-
-function CooldownConstantButton:RequestCharacterCacheData() end
-
-function CooldownConstantButton:SetAlpha() end
-
-function CooldownConstantButton:SetAlphaAnimation() end
-
-function CooldownConstantButton:SetAutoClipChar() end
-
-function CooldownConstantButton:SetAutoResize() end
-
-function CooldownConstantButton:SetButtonState() end
-
-function CooldownConstantButton:SetCategory() end
-
-function CooldownConstantButton:SetCharacterCacheDataHandler() end
-
-function CooldownConstantButton:SetCoolDown() end
-
-function CooldownConstantButton:SetCoolDownMask() end
-
-function CooldownConstantButton:SetDelegator() end
-
-function CooldownConstantButton:SetDeletedHandler() end
-
-function CooldownConstantButton:SetDisabledBackground() end
-
-function CooldownConstantButton:SetDisabledColor() end
-
-function CooldownConstantButton:SetDisabledTextColor() end
-
-function CooldownConstantButton:SetDragCondition() end
-
-function CooldownConstantButton:SetDrawPriority() end
-
-function CooldownConstantButton:SetDrawableLayerAlpha() end
-
-function CooldownConstantButton:SetExtent() end
-
-function CooldownConstantButton:SetFocus() end
-
-function CooldownConstantButton:SetHandler() end
-
-function CooldownConstantButton:SetHeight() end
-
-function CooldownConstantButton:SetHighlightBackground() end
-
-function CooldownConstantButton:SetHighlightColor() end
-
-function CooldownConstantButton:SetHighlightTextColor() end
-
-function CooldownConstantButton:SetInset() end
-
-function CooldownConstantButton:SetItem() end
-
-function CooldownConstantButton:SetItemSlot() end
-
-function CooldownConstantButton:SetLText() end
-
-function CooldownConstantButton:SetLayerColor() end
-
-function CooldownConstantButton:SetMaxResizingExtent() end
-
-function CooldownConstantButton:SetMinResizingExtent() end
-
-function CooldownConstantButton:SetMoveAnimation() end
-
-function CooldownConstantButton:SetNormalBackground() end
-
-function CooldownConstantButton:SetNormalColor() end
-
-function CooldownConstantButton:SetPushedBackground() end
-
-function CooldownConstantButton:SetPushedColor() end
-
-function CooldownConstantButton:SetPushedTextColor() end
-
-function CooldownConstantButton:SetResizingBorderSize() end
-
-function CooldownConstantButton:SetRotation() end
-
-function CooldownConstantButton:SetScale() end
-
-function CooldownConstantButton:SetScaleAnimation() end
-
-function CooldownConstantButton:SetSkill() end
-
-function CooldownConstantButton:SetSounds() end
-
-function CooldownConstantButton:SetStartAnimation() end
-
-function CooldownConstantButton:SetStyle() end
-
-function CooldownConstantButton:SetText() end
-
-function CooldownConstantButton:SetTextColor() end
-
-function CooldownConstantButton:SetWidth() end
-
-function CooldownConstantButton:Show() end
-
-function CooldownConstantButton:StartMoving() end
-
-function CooldownConstantButton:StartSizing() end
-
-function CooldownConstantButton:StopMovingOrSizing() end
-
-function CooldownConstantButton:TriggerMoveAnimation() end
-
-function CooldownConstantButton:UseDynamicContentState() end
-
-function CooldownConstantButton:UseDynamicDrawableState() end
-
-function CooldownConstantButton:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+CooldownConstantButton = {
+  AddAnchor = "<function: 00000000683EDB74>",
+  ApplyUIScale = "<function: 00000001D40522E4>",
+  AttachWidget = "<function: 00000001AF073CB4>",
+  BindWidth = "<function: 00000001E1945E04>",
+  CancelRequestCharacterCacheData = "<function: 00000001E4ADFD04>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E9624694>",
+  CheckOutOfScreen = "<function: 00000001E9635F14>",
+  Clickable = "<function: 00000001EE7C2714>",
+  CorrectOffsetByScreen = "<function: 00000001D45C1C44>",
+  CreateChildWidget = "<function: 00000001D43CDD04>",
+  CreateChildWidgetByType = "<function: 00000001B5DBEDC4>",
+  CreateColorDrawable = "<function: 00000001D4640354>",
+  CreateColorDrawableByKey = "<function: 00000001F664BEC4>",
+  CreateDrawable = "<function: 00000001E19EE454>",
+  CreateEffectDrawable = "<function: 00000001E4B7CED4>",
+  CreateEffectDrawableByKey = "<function: 00000001E95EDB54>",
+  CreateIconDrawable = "<function: 00000001E4F63204>",
+  CreateImageDrawable = "<function: 00000001C8A5EA04>",
+  CreateNinePartDrawable = "<function: 00000001D43B1384>",
+  CreateStateDrawable = "<function: 000000007CACE534>",
+  CreateTextDrawable = "<function: 00000001E18A7234>",
+  CreateThreeColorDrawable = "<function: 00000001E4AC7344>",
+  CreateThreePartDrawable = "<function: 0000000228DE94E4>",
+  DeregisterForClicks = "<function: 00000001E4A8DB04>",
+  DetachWidget = "<function: 00000001E1A95D74>",
+  DisableDrawables = "<function: 00000001E966A164>",
+  DisableDrawablesWithChildren = "<function: 00000001E18AE274>",
+  Enable = "<function: 00000001E4EDB0F4>",
+  EnableDrag = "<function: 00000001D44915D4>",
+  EnableDrawables = "<function: 00000001E8E37814>",
+  EnableDrawablesWithChildren = "<function: 00000001D48F9154>",
+  EnableFocus = "<function: 00000001D444A154>",
+  EnableHidingIsRemove = "<function: 00000001A71141C4>",
+  EnableKeyboard = "<function: 00000001E9671F24>",
+  EnablePick = "<function: 00000001E9657054>",
+  EnableScroll = "<function: 00000001E49788D4>",
+  GetAlpha = "<function: 00000001D4731D34>",
+  GetAttachedWidget = "<function: 00000001E4DC3AC4>",
+  GetButtonState = "<function: 00000001E4E45454>",
+  GetDisabledBackground = "<function: 00000001E9616854>",
+  GetDisabledColor = "<function: 00000001D44CEE74>",
+  GetEffectiveExtent = "<function: 00000001E1908DF4>",
+  GetEffectiveOffset = "<function: 00000001D3F8F014>",
+  GetExtent = "<function: 00000001E9677C64>",
+  GetHeight = "<function: 00000001E4B3F994>",
+  GetHighlightBackground = "<function: 00000001E4F23334>",
+  GetHighlightColor = "<function: 00000001E9643F14>",
+  GetId = "<function: 00000001E1971944>",
+  GetName = "<function: 00000001E96C94E4>",
+  GetNormalBackground = "<function: 00000001D3D1F9B4>",
+  GetNormalColor = "<function: 00000001E95C0804>",
+  GetObjectType = "<function: 00000001F83AA864>",
+  GetOffset = "<function: 00000001D40FE284>",
+  GetParent = "<function: 00000001E4C50734>",
+  GetPushedBackground = "<function: 00000001E4E05C94>",
+  GetPushedColor = "<function: 00000001E9616914>",
+  GetRotation = "<function: 00000001E19153C4>",
+  GetText = "<function: 00000001E1905C74>",
+  GetUILayer = "<function: 00000001E95A6944>",
+  GetValue = "<function: 0000000228DFA264>",
+  GetWidth = "<function: 00000000CD7272D4>",
+  HasHandler = "<function: 00000001E8EB5B64>",
+  InheritAnimationData = "<function: 0000000227135A74>",
+  IsDescendantWidget = "<function: 00000001E4EBDD24>",
+  IsEnabled = "<function: 00000000FC8ED2E4>",
+  IsMouseOver = "<function: 00000001D474F984>",
+  IsNowAnimation = "<function: 00000001D3D9D004>",
+  IsValidUIObject = "<function: 00000001E95BC684>",
+  IsVisible = "<function: 00000001E4F1A4B4>",
+  Lower = "<function: 00000001E95CE344>",
+  MoveTo = "<function: 00000001D3F8F214>",
+  Raise = "<function: 00000001D4467E14>",
+  RegisterEvent = "<function: 00000001C5611A64>",
+  RegisterForClicks = "<function: 00000000FC9A7844>",
+  ReleaseDeletedHandler = "<function: 00000001EED16044>",
+  ReleaseHandler = "<function: 00000000FC541284>",
+  RemoveAllAnchors = "<function: 00000001D40671A4>",
+  RemoveAllDrawables = "<function: 00000001E1916E44>",
+  RemoveDrawable = "<function: 00000001E480BF34>",
+  RequestCharacterCacheData = "<function: 00000001D3D00D34>",
+  SetAlpha = "<function: 000000007CAA8A74>",
+  SetAlphaAnimation = "<function: 00000001E95EDA14>",
+  SetAutoClipChar = "<function: 00000001E8EE9864>",
+  SetAutoResize = "<function: 00000000CD724114>",
+  SetButtonState = "<function: 00000001CEA5BC24>",
+  SetCategory = "<function: 00000001D46137D4>",
+  SetCharacterCacheDataHandler = "<function: 00000001E8F8EFB4>",
+  SetCoolDown = "<function: 00000001C8A14004>",
+  SetCoolDownMask = "<function: 00000001E95BC0C4>",
+  SetDelegator = "<function: 00000001D4103944>",
+  SetDeletedHandler = "<function: 00000001E4FEAA94>",
+  SetDisabledBackground = "<function: 00000001E4FB5784>",
+  SetDisabledColor = "<function: 00000001E4D7C844>",
+  SetDisabledTextColor = "<function: 00000001E95C7284>",
+  SetDragCondition = "<function: 00000001D3D5B4C4>",
+  SetDrawPriority = "<function: 00000001D48D15D4>",
+  SetDrawableLayerAlpha = "<function: 00000001D44E6034>",
+  SetExtent = "<function: 00000001D48CF4D4>",
+  SetFocus = "<function: 00000001E95A30C4>",
+  SetHandler = "<function: 00000001D40BED04>",
+  SetHeight = "<function: 00000001E95C3584>",
+  SetHighlightBackground = "<function: 00000001E96B3364>",
+  SetHighlightColor = "<function: 00000001E8E44394>",
+  SetHighlightTextColor = "<function: 00000001D3FB31D4>",
+  SetInset = "<function: 00000001D3D156F4>",
+  SetItem = "<function: 00000001E4BA9724>",
+  SetItemSlot = "<function: 00000001AF098EB4>",
+  SetLText = "<function: 00000001D44DCC34>",
+  SetLayerColor = "<function: 00000001E4F2A0B4>",
+  SetMaxResizingExtent = "<function: 00000001D40402A4>",
+  SetMinResizingExtent = "<function: 000000007CAEBF74>",
+  SetMoveAnimation = "<function: 00000001E4B3AF54>",
+  SetNormalBackground = "<function: 00000001E4E05C54>",
+  SetNormalColor = "<function: 00000001D3D90D04>",
+  SetPushedBackground = "<function: 00000001E4E3F514>",
+  SetPushedColor = "<function: 00000001D3EBD024>",
+  SetPushedTextColor = "<function: 00000001CEA5C164>",
+  SetResizingBorderSize = "<function: 00000001E4DFD014>",
+  SetRotation = "<function: 00000001CEA6DB64>",
+  SetScale = "<function: 00000001E95C65C4>",
+  SetScaleAnimation = "<function: 00000001E18B0174>",
+  SetSkill = "<function: 00000001E95A6C84>",
+  SetSounds = "<function: 00000000FC5CE564>",
+  SetStartAnimation = "<function: 00000002532B4BC4>",
+  SetStyle = "<function: 00000001E18A5334>",
+  SetText = "<function: 00000001FDD31D54>",
+  SetTextColor = "<function: 00000001E4ADFD44>",
+  SetWidth = "<function: 00000001D44EEE74>",
+  Show = "<function: 0000000228D43B84>",
+  StartMoving = "<function: 00000001E96934A4>",
+  StartSizing = "<function: 00000001E9635E94>",
+  StopMovingOrSizing = "<function: 000000007CAE8FF4>",
+  TriggerMoveAnimation = "<function: 00000000FC8D5964>",
+  UseDynamicContentState = "<function: 00000001E8F52FF4>",
+  UseDynamicDrawableState = "<function: 00000000FC8DEFE4>",
+  UseResizing = "<function: 00000001E4F298B4>",
+  __this = "<userdata: 0000000252172310>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD18F0>",
+  },
+}
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+UI_BUTTON_DISABLED = 3
+UI_BUTTON_HIGHLIGHTED = 1
+UI_BUTTON_MAX = 4
+UI_BUTTON_NORMAL = 0
+UI_BUTTON_PUSHED = 2

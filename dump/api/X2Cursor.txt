@@ -1,1 +1,1 @@
-X2Cursor = {} -- api/X2Cursor
+X2Cursor = {}

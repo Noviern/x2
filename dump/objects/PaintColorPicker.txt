@@ -1,661 +1,342 @@
-AP_BOTTOM = 8 -- objects/PaintColorPicker
-AP_BOTTOMLEFT = 2 -- objects/PaintColorPicker
-AP_BOTTOMRIGHT = 3 -- objects/PaintColorPicker
-AP_CENTER = 4 -- objects/PaintColorPicker
-AP_LEFT = 6 -- objects/PaintColorPicker
-AP_RIGHT = 7 -- objects/PaintColorPicker
-AP_TOP = 5 -- objects/PaintColorPicker
-AP_TOPLEFT = 0 -- objects/PaintColorPicker
-AP_TOPRIGHT = 1 -- objects/PaintColorPicker
-CT_ABILITY = 2 -- objects/PaintColorPicker
-CT_EXPEDITION_NAME = 3 -- objects/PaintColorPicker
-CT_NAME = 1 -- objects/PaintColorPicker
-DC_ALWAYS = 0 -- objects/PaintColorPicker
-DC_SHIFT_KEY_DOWN = 1 -- objects/PaintColorPicker
-PaintColorPicker = { -- objects/PaintColorPicker
-  __this = <userdata>, -- objects/PaintColorPicker
-  luminanceWidget = { -- objects/PaintColorPicker
-    __this = <userdata>, -- objects/PaintColorPicker
-  }, -- objects/PaintColorPicker
-  spectrumWidget = { -- objects/PaintColorPicker
-    __this = <userdata>, -- objects/PaintColorPicker
-  }, -- objects/PaintColorPicker
-} -- objects/PaintColorPicker
-
-function PaintColorPicker.luminanceWidget:AddAnchor() end
-
-function PaintColorPicker.luminanceWidget:ApplyUIScale() end
-
-function PaintColorPicker.luminanceWidget:AttachWidget() end
-
-function PaintColorPicker.luminanceWidget:BindWidth() end
-
-function PaintColorPicker.luminanceWidget:CancelRequestCharacterCacheData() end
-
-function PaintColorPicker.luminanceWidget:ChangeChildAnchorByScrollValue() end
-
-function PaintColorPicker.luminanceWidget:CheckOutOfScreen() end
-
-function PaintColorPicker.luminanceWidget:Clickable() end
-
-function PaintColorPicker.luminanceWidget:CorrectOffsetByScreen() end
-
-function PaintColorPicker.luminanceWidget:CreateChildWidget() end
-
-function PaintColorPicker.luminanceWidget:CreateChildWidgetByType() end
-
-function PaintColorPicker.luminanceWidget:CreateColorDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateColorDrawableByKey() end
-
-function PaintColorPicker.luminanceWidget:CreateDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateEffectDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateEffectDrawableByKey() end
-
-function PaintColorPicker.luminanceWidget:CreateIconDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateImageDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateNinePartDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateTextDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateThreeColorDrawable() end
-
-function PaintColorPicker.luminanceWidget:CreateThreePartDrawable() end
-
-function PaintColorPicker.luminanceWidget:DetachWidget() end
-
-function PaintColorPicker.luminanceWidget:DisableDrawables() end
-
-function PaintColorPicker.luminanceWidget:DisableDrawablesWithChildren() end
-
-function PaintColorPicker.luminanceWidget:Enable() end
-
-function PaintColorPicker.luminanceWidget:EnableDrag() end
-
-function PaintColorPicker.luminanceWidget:EnableDrawables() end
-
-function PaintColorPicker.luminanceWidget:EnableDrawablesWithChildren() end
-
-function PaintColorPicker.luminanceWidget:EnableFocus() end
-
-function PaintColorPicker.luminanceWidget:EnableHidingIsRemove() end
-
-function PaintColorPicker.luminanceWidget:EnableKeyboard() end
-
-function PaintColorPicker.luminanceWidget:EnablePick() end
-
-function PaintColorPicker.luminanceWidget:EnableScroll() end
-
-function PaintColorPicker.luminanceWidget:GetAlpha() end
-
-function PaintColorPicker.luminanceWidget:GetAttachedWidget() end
-
-function PaintColorPicker.luminanceWidget:GetEffectiveExtent() end
-
-function PaintColorPicker.luminanceWidget:GetEffectiveOffset() end
-
-function PaintColorPicker.luminanceWidget:GetExtent() end
-
-function PaintColorPicker.luminanceWidget:GetHeight() end
-
-function PaintColorPicker.luminanceWidget:GetId() end
-
-function PaintColorPicker.luminanceWidget:GetName() end
-
-function PaintColorPicker.luminanceWidget:GetObjectType() end
-
-function PaintColorPicker.luminanceWidget:GetOffset() end
-
-function PaintColorPicker.luminanceWidget:GetParent() end
-
-function PaintColorPicker.luminanceWidget:GetRotation() end
-
-function PaintColorPicker.luminanceWidget:GetText() end
-
-function PaintColorPicker.luminanceWidget:GetUILayer() end
-
-function PaintColorPicker.luminanceWidget:GetValue() end
-
-function PaintColorPicker.luminanceWidget:GetWidth() end
-
-function PaintColorPicker.luminanceWidget:HasHandler() end
-
-function PaintColorPicker.luminanceWidget:InheritAnimationData() end
-
-function PaintColorPicker.luminanceWidget:IsDescendantWidget() end
-
-function PaintColorPicker.luminanceWidget:IsEnabled() end
-
-function PaintColorPicker.luminanceWidget:IsMouseOver() end
-
-function PaintColorPicker.luminanceWidget:IsNowAnimation() end
-
-function PaintColorPicker.luminanceWidget:IsValidUIObject() end
-
-function PaintColorPicker.luminanceWidget:IsVisible() end
-
-function PaintColorPicker.luminanceWidget:Lower() end
-
-function PaintColorPicker.luminanceWidget:MoveTo() end
-
-function PaintColorPicker.luminanceWidget:Raise() end
-
-function PaintColorPicker.luminanceWidget:RegisterEvent() end
-
-function PaintColorPicker.luminanceWidget:ReleaseDeletedHandler() end
-
-function PaintColorPicker.luminanceWidget:ReleaseHandler() end
-
-function PaintColorPicker.luminanceWidget:RemoveAllAnchors() end
-
-function PaintColorPicker.luminanceWidget:RemoveAllDrawables() end
-
-function PaintColorPicker.luminanceWidget:RemoveDrawable() end
-
-function PaintColorPicker.luminanceWidget:RequestCharacterCacheData() end
-
-function PaintColorPicker.luminanceWidget:SetAlpha() end
-
-function PaintColorPicker.luminanceWidget:SetAlphaAnimation() end
-
-function PaintColorPicker.luminanceWidget:SetCategory() end
-
-function PaintColorPicker.luminanceWidget:SetCharacterCacheDataHandler() end
-
-function PaintColorPicker.luminanceWidget:SetDelegator() end
-
-function PaintColorPicker.luminanceWidget:SetDeletedHandler() end
-
-function PaintColorPicker.luminanceWidget:SetDragCondition() end
-
-function PaintColorPicker.luminanceWidget:SetDrawBorder() end
-
-function PaintColorPicker.luminanceWidget:SetDrawPriority() end
-
-function PaintColorPicker.luminanceWidget:SetDrawableLayerAlpha() end
-
-function PaintColorPicker.luminanceWidget:SetExtent() end
-
-function PaintColorPicker.luminanceWidget:SetHandler() end
-
-function PaintColorPicker.luminanceWidget:SetHeight() end
-
-function PaintColorPicker.luminanceWidget:SetLText() end
-
-function PaintColorPicker.luminanceWidget:SetLayerColor() end
-
-function PaintColorPicker.luminanceWidget:SetMaxResizingExtent() end
-
-function PaintColorPicker.luminanceWidget:SetMinResizingExtent() end
-
-function PaintColorPicker.luminanceWidget:SetMoveAnimation() end
-
-function PaintColorPicker.luminanceWidget:SetResizingBorderSize() end
-
-function PaintColorPicker.luminanceWidget:SetRotation() end
-
-function PaintColorPicker.luminanceWidget:SetScale() end
-
-function PaintColorPicker.luminanceWidget:SetScaleAnimation() end
-
-function PaintColorPicker.luminanceWidget:SetSounds() end
-
-function PaintColorPicker.luminanceWidget:SetStartAnimation() end
-
-function PaintColorPicker.luminanceWidget:SetText() end
-
-function PaintColorPicker.luminanceWidget:SetWidth() end
-
-function PaintColorPicker.luminanceWidget:Show() end
-
-function PaintColorPicker.luminanceWidget:StartMoving() end
-
-function PaintColorPicker.luminanceWidget:StartSizing() end
-
-function PaintColorPicker.luminanceWidget:StopMovingOrSizing() end
-
-function PaintColorPicker.luminanceWidget:TriggerMoveAnimation() end
-
-function PaintColorPicker.luminanceWidget:UseDynamicContentState() end
-
-function PaintColorPicker.luminanceWidget:UseDynamicDrawableState() end
-
-function PaintColorPicker.luminanceWidget:UseResizing() end
-
-function PaintColorPicker.spectrumWidget:AddAnchor() end
-
-function PaintColorPicker.spectrumWidget:ApplyUIScale() end
-
-function PaintColorPicker.spectrumWidget:AttachWidget() end
-
-function PaintColorPicker.spectrumWidget:BindWidth() end
-
-function PaintColorPicker.spectrumWidget:CancelRequestCharacterCacheData() end
-
-function PaintColorPicker.spectrumWidget:ChangeChildAnchorByScrollValue() end
-
-function PaintColorPicker.spectrumWidget:CheckOutOfScreen() end
-
-function PaintColorPicker.spectrumWidget:Clickable() end
-
-function PaintColorPicker.spectrumWidget:CorrectOffsetByScreen() end
-
-function PaintColorPicker.spectrumWidget:CreateChildWidget() end
-
-function PaintColorPicker.spectrumWidget:CreateChildWidgetByType() end
-
-function PaintColorPicker.spectrumWidget:CreateColorDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateColorDrawableByKey() end
-
-function PaintColorPicker.spectrumWidget:CreateDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateEffectDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateEffectDrawableByKey() end
-
-function PaintColorPicker.spectrumWidget:CreateIconDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateImageDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateNinePartDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateTextDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateThreeColorDrawable() end
-
-function PaintColorPicker.spectrumWidget:CreateThreePartDrawable() end
-
-function PaintColorPicker.spectrumWidget:DetachWidget() end
-
-function PaintColorPicker.spectrumWidget:DisableDrawables() end
-
-function PaintColorPicker.spectrumWidget:DisableDrawablesWithChildren() end
-
-function PaintColorPicker.spectrumWidget:Enable() end
-
-function PaintColorPicker.spectrumWidget:EnableDrag() end
-
-function PaintColorPicker.spectrumWidget:EnableDrawables() end
-
-function PaintColorPicker.spectrumWidget:EnableDrawablesWithChildren() end
-
-function PaintColorPicker.spectrumWidget:EnableFocus() end
-
-function PaintColorPicker.spectrumWidget:EnableHidingIsRemove() end
-
-function PaintColorPicker.spectrumWidget:EnableKeyboard() end
-
-function PaintColorPicker.spectrumWidget:EnablePick() end
-
-function PaintColorPicker.spectrumWidget:EnableScroll() end
-
-function PaintColorPicker.spectrumWidget:GetAlpha() end
-
-function PaintColorPicker.spectrumWidget:GetAttachedWidget() end
-
-function PaintColorPicker.spectrumWidget:GetEffectiveExtent() end
-
-function PaintColorPicker.spectrumWidget:GetEffectiveOffset() end
-
-function PaintColorPicker.spectrumWidget:GetExtent() end
-
-function PaintColorPicker.spectrumWidget:GetHeight() end
-
-function PaintColorPicker.spectrumWidget:GetId() end
-
-function PaintColorPicker.spectrumWidget:GetName() end
-
-function PaintColorPicker.spectrumWidget:GetObjectType() end
-
-function PaintColorPicker.spectrumWidget:GetOffset() end
-
-function PaintColorPicker.spectrumWidget:GetParent() end
-
-function PaintColorPicker.spectrumWidget:GetRotation() end
-
-function PaintColorPicker.spectrumWidget:GetText() end
-
-function PaintColorPicker.spectrumWidget:GetUILayer() end
-
-function PaintColorPicker.spectrumWidget:GetValue() end
-
-function PaintColorPicker.spectrumWidget:GetWidth() end
-
-function PaintColorPicker.spectrumWidget:HasHandler() end
-
-function PaintColorPicker.spectrumWidget:InheritAnimationData() end
-
-function PaintColorPicker.spectrumWidget:IsDescendantWidget() end
-
-function PaintColorPicker.spectrumWidget:IsEnabled() end
-
-function PaintColorPicker.spectrumWidget:IsMouseOver() end
-
-function PaintColorPicker.spectrumWidget:IsNowAnimation() end
-
-function PaintColorPicker.spectrumWidget:IsValidUIObject() end
-
-function PaintColorPicker.spectrumWidget:IsVisible() end
-
-function PaintColorPicker.spectrumWidget:Lower() end
-
-function PaintColorPicker.spectrumWidget:MoveTo() end
-
-function PaintColorPicker.spectrumWidget:Raise() end
-
-function PaintColorPicker.spectrumWidget:RegisterEvent() end
-
-function PaintColorPicker.spectrumWidget:ReleaseDeletedHandler() end
-
-function PaintColorPicker.spectrumWidget:ReleaseHandler() end
-
-function PaintColorPicker.spectrumWidget:RemoveAllAnchors() end
-
-function PaintColorPicker.spectrumWidget:RemoveAllDrawables() end
-
-function PaintColorPicker.spectrumWidget:RemoveDrawable() end
-
-function PaintColorPicker.spectrumWidget:RequestCharacterCacheData() end
-
-function PaintColorPicker.spectrumWidget:SetAlpha() end
-
-function PaintColorPicker.spectrumWidget:SetAlphaAnimation() end
-
-function PaintColorPicker.spectrumWidget:SetCategory() end
-
-function PaintColorPicker.spectrumWidget:SetCharacterCacheDataHandler() end
-
-function PaintColorPicker.spectrumWidget:SetDelegator() end
-
-function PaintColorPicker.spectrumWidget:SetDeletedHandler() end
-
-function PaintColorPicker.spectrumWidget:SetDragCondition() end
-
-function PaintColorPicker.spectrumWidget:SetDrawBorder() end
-
-function PaintColorPicker.spectrumWidget:SetDrawPriority() end
-
-function PaintColorPicker.spectrumWidget:SetDrawableLayerAlpha() end
-
-function PaintColorPicker.spectrumWidget:SetExtent() end
-
-function PaintColorPicker.spectrumWidget:SetHandler() end
-
-function PaintColorPicker.spectrumWidget:SetHeight() end
-
-function PaintColorPicker.spectrumWidget:SetLText() end
-
-function PaintColorPicker.spectrumWidget:SetLayerColor() end
-
-function PaintColorPicker.spectrumWidget:SetMaxResizingExtent() end
-
-function PaintColorPicker.spectrumWidget:SetMinResizingExtent() end
-
-function PaintColorPicker.spectrumWidget:SetMoveAnimation() end
-
-function PaintColorPicker.spectrumWidget:SetResizingBorderSize() end
-
-function PaintColorPicker.spectrumWidget:SetRotation() end
-
-function PaintColorPicker.spectrumWidget:SetScale() end
-
-function PaintColorPicker.spectrumWidget:SetScaleAnimation() end
-
-function PaintColorPicker.spectrumWidget:SetSounds() end
-
-function PaintColorPicker.spectrumWidget:SetStartAnimation() end
-
-function PaintColorPicker.spectrumWidget:SetText() end
-
-function PaintColorPicker.spectrumWidget:SetWidth() end
-
-function PaintColorPicker.spectrumWidget:Show() end
-
-function PaintColorPicker.spectrumWidget:StartMoving() end
-
-function PaintColorPicker.spectrumWidget:StartSizing() end
-
-function PaintColorPicker.spectrumWidget:StopMovingOrSizing() end
-
-function PaintColorPicker.spectrumWidget:TriggerMoveAnimation() end
-
-function PaintColorPicker.spectrumWidget:UseDynamicContentState() end
-
-function PaintColorPicker.spectrumWidget:UseDynamicDrawableState() end
-
-function PaintColorPicker.spectrumWidget:UseResizing() end
-
-function PaintColorPicker:AddAnchor() end
-
-function PaintColorPicker:ApplyUIScale() end
-
-function PaintColorPicker:AttachWidget() end
-
-function PaintColorPicker:BindWidth() end
-
-function PaintColorPicker:CancelRequestCharacterCacheData() end
-
-function PaintColorPicker:ChangeChildAnchorByScrollValue() end
-
-function PaintColorPicker:CheckOutOfScreen() end
-
-function PaintColorPicker:Clickable() end
-
-function PaintColorPicker:CorrectOffsetByScreen() end
-
-function PaintColorPicker:CreateChildWidget() end
-
-function PaintColorPicker:CreateChildWidgetByType() end
-
-function PaintColorPicker:CreateColorDrawable() end
-
-function PaintColorPicker:CreateColorDrawableByKey() end
-
-function PaintColorPicker:CreateDrawable() end
-
-function PaintColorPicker:CreateEffectDrawable() end
-
-function PaintColorPicker:CreateEffectDrawableByKey() end
-
-function PaintColorPicker:CreateIconDrawable() end
-
-function PaintColorPicker:CreateImageDrawable() end
-
-function PaintColorPicker:CreateNinePartDrawable() end
-
-function PaintColorPicker:CreateTextDrawable() end
-
-function PaintColorPicker:CreateThreeColorDrawable() end
-
-function PaintColorPicker:CreateThreePartDrawable() end
-
-function PaintColorPicker:DetachWidget() end
-
-function PaintColorPicker:DisableDrawables() end
-
-function PaintColorPicker:DisableDrawablesWithChildren() end
-
-function PaintColorPicker:Enable() end
-
-function PaintColorPicker:EnableDrag() end
-
-function PaintColorPicker:EnableDrawables() end
-
-function PaintColorPicker:EnableDrawablesWithChildren() end
-
-function PaintColorPicker:EnableFocus() end
-
-function PaintColorPicker:EnableHidingIsRemove() end
-
-function PaintColorPicker:EnableKeyboard() end
-
-function PaintColorPicker:EnablePick() end
-
-function PaintColorPicker:EnableScroll() end
-
-function PaintColorPicker:GetAlpha() end
-
-function PaintColorPicker:GetAttachedWidget() end
-
-function PaintColorPicker:GetEffectiveExtent() end
-
-function PaintColorPicker:GetEffectiveOffset() end
-
-function PaintColorPicker:GetExtent() end
-
-function PaintColorPicker:GetHLSColor() end
-
-function PaintColorPicker:GetHeight() end
-
-function PaintColorPicker:GetHue() end
-
-function PaintColorPicker:GetId() end
-
-function PaintColorPicker:GetLum() end
-
-function PaintColorPicker:GetLuminanceWidget() end
-
-function PaintColorPicker:GetName() end
-
-function PaintColorPicker:GetObjectType() end
-
-function PaintColorPicker:GetOffset() end
-
-function PaintColorPicker:GetParent() end
-
-function PaintColorPicker:GetRGBColor() end
-
-function PaintColorPicker:GetRotation() end
-
-function PaintColorPicker:GetSat() end
-
-function PaintColorPicker:GetSpectrumWidget() end
-
-function PaintColorPicker:GetText() end
-
-function PaintColorPicker:GetUILayer() end
-
-function PaintColorPicker:GetValue() end
-
-function PaintColorPicker:GetWidth() end
-
-function PaintColorPicker:HasHandler() end
-
-function PaintColorPicker:InheritAnimationData() end
-
-function PaintColorPicker:IsDescendantWidget() end
-
-function PaintColorPicker:IsEnabled() end
-
-function PaintColorPicker:IsMouseOver() end
-
-function PaintColorPicker:IsNowAnimation() end
-
-function PaintColorPicker:IsValidUIObject() end
-
-function PaintColorPicker:IsVisible() end
-
-function PaintColorPicker:Lower() end
-
-function PaintColorPicker:MoveTo() end
-
-function PaintColorPicker:Raise() end
-
-function PaintColorPicker:RegisterEvent() end
-
-function PaintColorPicker:ReleaseDeletedHandler() end
-
-function PaintColorPicker:ReleaseHandler() end
-
-function PaintColorPicker:RemoveAllAnchors() end
-
-function PaintColorPicker:RemoveAllDrawables() end
-
-function PaintColorPicker:RemoveDrawable() end
-
-function PaintColorPicker:RequestCharacterCacheData() end
-
-function PaintColorPicker:SetAlpha() end
-
-function PaintColorPicker:SetAlphaAnimation() end
-
-function PaintColorPicker:SetCategory() end
-
-function PaintColorPicker:SetCharacterCacheDataHandler() end
-
-function PaintColorPicker:SetDelegator() end
-
-function PaintColorPicker:SetDeletedHandler() end
-
-function PaintColorPicker:SetDragCondition() end
-
-function PaintColorPicker:SetDrawPriority() end
-
-function PaintColorPicker:SetDrawableLayerAlpha() end
-
-function PaintColorPicker:SetExtent() end
-
-function PaintColorPicker:SetHLSColor() end
-
-function PaintColorPicker:SetHandler() end
-
-function PaintColorPicker:SetHeight() end
-
-function PaintColorPicker:SetHue() end
-
-function PaintColorPicker:SetLText() end
-
-function PaintColorPicker:SetLayerColor() end
-
-function PaintColorPicker:SetLum() end
-
-function PaintColorPicker:SetLuminanceBg() end
-
-function PaintColorPicker:SetMaxResizingExtent() end
-
-function PaintColorPicker:SetMinResizingExtent() end
-
-function PaintColorPicker:SetMoveAnimation() end
-
-function PaintColorPicker:SetRGBColor() end
-
-function PaintColorPicker:SetResizingBorderSize() end
-
-function PaintColorPicker:SetRotation() end
-
-function PaintColorPicker:SetSat() end
-
-function PaintColorPicker:SetScale() end
-
-function PaintColorPicker:SetScaleAnimation() end
-
-function PaintColorPicker:SetSounds() end
-
-function PaintColorPicker:SetSpectrumBg() end
-
-function PaintColorPicker:SetStartAnimation() end
-
-function PaintColorPicker:SetText() end
-
-function PaintColorPicker:SetWidth() end
-
-function PaintColorPicker:Show() end
-
-function PaintColorPicker:StartMoving() end
-
-function PaintColorPicker:StartSizing() end
-
-function PaintColorPicker:StopMovingOrSizing() end
-
-function PaintColorPicker:TriggerMoveAnimation() end
-
-function PaintColorPicker:UseDynamicContentState() end
-
-function PaintColorPicker:UseDynamicDrawableState() end
-
-function PaintColorPicker:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+PaintColorPicker = {
+  AddAnchor = "<function: 00000001E4CED944>",
+  ApplyUIScale = "<function: 00000001E95E11D4>",
+  AttachWidget = "<function: 00000001B5D6F444>",
+  BindWidth = "<function: 00000000CD7BB704>",
+  CancelRequestCharacterCacheData = "<function: 00000001E96104D4>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E4F362B4>",
+  CheckOutOfScreen = "<function: 00000001EE815AD4>",
+  Clickable = "<function: 00000001E96B6364>",
+  CorrectOffsetByScreen = "<function: 00000001E1A57864>",
+  CreateChildWidget = "<function: 00000001E95B6344>",
+  CreateChildWidgetByType = "<function: 00000001B5DAF104>",
+  CreateColorDrawable = "<function: 00000001E960DB94>",
+  CreateColorDrawableByKey = "<function: 00000001E9664124>",
+  CreateDrawable = "<function: 00000001AFA8A554>",
+  CreateEffectDrawable = "<function: 00000001D49AC674>",
+  CreateEffectDrawableByKey = "<function: 00000001F6643C84>",
+  CreateIconDrawable = "<function: 00000001A259BD04>",
+  CreateImageDrawable = "<function: 00000001D45C77C4>",
+  CreateNinePartDrawable = "<function: 00000001E49C95E4>",
+  CreateTextDrawable = "<function: 00000001E4F1AB74>",
+  CreateThreeColorDrawable = "<function: 00000001E4F275F4>",
+  CreateThreePartDrawable = "<function: 00000001D47AA204>",
+  DetachWidget = "<function: 00000001D46B7E64>",
+  DisableDrawables = "<function: 00000001E9618314>",
+  DisableDrawablesWithChildren = "<function: 00000001E4EB6624>",
+  Enable = "<function: 00000001EEB9D544>",
+  EnableDrag = "<function: 00000001E9691D64>",
+  EnableDrawables = "<function: 00000001E968A324>",
+  EnableDrawablesWithChildren = "<function: 00000000FC61DA24>",
+  EnableFocus = "<function: 00000001E95FF194>",
+  EnableHidingIsRemove = "<function: 00000000CD790B84>",
+  EnableKeyboard = "<function: 00000001E1A26EE4>",
+  EnablePick = "<function: 00000001E95C8584>",
+  EnableScroll = "<function: 00000001E4E2B754>",
+  GetAlpha = "<function: 00000001EE75B084>",
+  GetAttachedWidget = "<function: 00000001EE758E04>",
+  GetEffectiveExtent = "<function: 00000001E96272D4>",
+  GetEffectiveOffset = "<function: 00000001D4054224>",
+  GetExtent = "<function: 00000001E4F339B4>",
+  GetHLSColor = "<function: 00000001E9596584>",
+  GetHeight = "<function: 00000001AFA9B154>",
+  GetHue = "<function: 00000001E965E554>",
+  GetId = "<function: 00000001CEA70964>",
+  GetLum = "<function: 00000000FC622C24>",
+  GetLuminanceWidget = "<function: 00000001D4947264>",
+  GetName = "<function: 00000000FC5FF0A4>",
+  GetObjectType = "<function: 00000001FBE72AD4>",
+  GetOffset = "<function: 00000000FA015D24>",
+  GetParent = "<function: 00000001E95C9DC4>",
+  GetRGBColor = "<function: 00000001E95F5394>",
+  GetRotation = "<function: 00000001EEB534C4>",
+  GetSat = "<function: 00000001EE801F14>",
+  GetSpectrumWidget = "<function: 00000001E4FFBA54>",
+  GetText = "<function: 00000001E2785C04>",
+  GetUILayer = "<function: 00000001E9629B54>",
+  GetValue = "<function: 00000001E4AE9504>",
+  GetWidth = "<function: 00000001E96C0BA4>",
+  HasHandler = "<function: 00000000CD7242D4>",
+  InheritAnimationData = "<function: 00000000FC62AA64>",
+  IsDescendantWidget = "<function: 00000001E4F250B4>",
+  IsEnabled = "<function: 00000001E4F35A34>",
+  IsMouseOver = "<function: 00000001E4F62A84>",
+  IsNowAnimation = "<function: 00000001D405A724>",
+  IsValidUIObject = "<function: 00000001D3F7AA14>",
+  IsVisible = "<function: 00000001EE869784>",
+  Lower = "<function: 00000001E1AF8BF4>",
+  MoveTo = "<function: 00000001E49F0264>",
+  Raise = "<function: 00000001D44E0BB4>",
+  RegisterEvent = "<function: 00000001E96181D4>",
+  ReleaseDeletedHandler = "<function: 00000001D4494C54>",
+  ReleaseHandler = "<function: 000000007CB04834>",
+  RemoveAllAnchors = "<function: 00000001B5DB9BC4>",
+  RemoveAllDrawables = "<function: 00000001B5D7F0C4>",
+  RemoveDrawable = "<function: 00000001E95FE514>",
+  RequestCharacterCacheData = "<function: 00000001E9694E24>",
+  SetAlpha = "<function: 00000002275B2C94>",
+  SetAlphaAnimation = "<function: 00000001EE72ABC4>",
+  SetCategory = "<function: 00000001E961EED4>",
+  SetCharacterCacheDataHandler = "<function: 00000001F624D274>",
+  SetDelegator = "<function: 00000001E9665EE4>",
+  SetDeletedHandler = "<function: 00000001D46B8F24>",
+  SetDragCondition = "<function: 00000001EE81F4D4>",
+  SetDrawPriority = "<function: 00000001EE7349C4>",
+  SetDrawableLayerAlpha = "<function: 00000001E275A2A4>",
+  SetExtent = "<function: 00000001D4585144>",
+  SetHLSColor = "<function: 00000000CD6D9194>",
+  SetHandler = "<function: 00000001E969DE64>",
+  SetHeight = "<function: 00000001E96B2EA4>",
+  SetHue = "<function: 00000001E4F32934>",
+  SetLText = "<function: 00000001E96B2324>",
+  SetLayerColor = "<function: 00000001E4EBCE24>",
+  SetLum = "<function: 00000001D44DC0F4>",
+  SetLuminanceBg = "<function: 00000001CEA709A4>",
+  SetMaxResizingExtent = "<function: 00000001D460F8D4>",
+  SetMinResizingExtent = "<function: 000000007CAF06B4>",
+  SetMoveAnimation = "<function: 00000001E9627354>",
+  SetRGBColor = "<function: 00000001D3E81424>",
+  SetResizingBorderSize = "<function: 00000001E1B20404>",
+  SetRotation = "<function: 00000001E967E6E4>",
+  SetSat = "<function: 00000001E1919F44>",
+  SetScale = "<function: 00000001E4BAEDA4>",
+  SetScaleAnimation = "<function: 00000001D49D38F4>",
+  SetSounds = "<function: 00000001E199D514>",
+  SetSpectrumBg = "<function: 00000001E96419D4>",
+  SetStartAnimation = "<function: 00000001E4FD9B94>",
+  SetText = "<function: 00000001E964E454>",
+  SetWidth = "<function: 00000001E9668424>",
+  Show = "<function: 00000001E18F2AB4>",
+  StartMoving = "<function: 00000001E9627254>",
+  StartSizing = "<function: 00000001E4E75024>",
+  StopMovingOrSizing = "<function: 00000001D4364414>",
+  TriggerMoveAnimation = "<function: 00000001EE739C84>",
+  UseDynamicContentState = "<function: 00000001D447A754>",
+  UseDynamicDrawableState = "<function: 00000001EE7CF7D4>",
+  UseResizing = "<function: 00000001E272A1E4>",
+  __this = "<userdata: 000000016BB97150>",
+  luminanceWidget = {
+    AddAnchor = "<function: 00000001F8395B64>",
+    ApplyUIScale = "<function: 00000001D45D19D4>",
+    AttachWidget = "<function: 00000001E95B8004>",
+    BindWidth = "<function: 00000001E4EBCFA4>",
+    CancelRequestCharacterCacheData = "<function: 00000001E963DE94>",
+    ChangeChildAnchorByScrollValue = "<function: 00000001EE7E1D94>",
+    CheckOutOfScreen = "<function: 00000001D44A7F14>",
+    Clickable = "<function: 00000001D44E61B4>",
+    CorrectOffsetByScreen = "<function: 00000001E4F37774>",
+    CreateChildWidget = "<function: 00000001D4050424>",
+    CreateChildWidgetByType = "<function: 00000001D3F73F54>",
+    CreateColorDrawable = "<function: 00000001E963D054>",
+    CreateColorDrawableByKey = "<function: 00000001D3D750C4>",
+    CreateDrawable = "<function: 00000001E95F4914>",
+    CreateEffectDrawable = "<function: 00000001E8F7D874>",
+    CreateEffectDrawableByKey = "<function: 000000007CB0AF34>",
+    CreateIconDrawable = "<function: 00000001E4F37374>",
+    CreateImageDrawable = "<function: 00000001C8A30344>",
+    CreateNinePartDrawable = "<function: 00000001E95B09C4>",
+    CreateTextDrawable = "<function: 00000001D47ABBC4>",
+    CreateThreeColorDrawable = "<function: 00000001E4F2D434>",
+    CreateThreePartDrawable = "<function: 00000001E27206E4>",
+    DetachWidget = "<function: 00000001D405D5E4>",
+    DisableDrawables = "<function: 00000001E4ECB474>",
+    DisableDrawablesWithChildren = "<function: 00000000FC8D5624>",
+    Enable = "<function: 00000001E4E425D4>",
+    EnableDrag = "<function: 00000001D3BA0954>",
+    EnableDrawables = "<function: 00000001E509A724>",
+    EnableDrawablesWithChildren = "<function: 000000007CAD2EF4>",
+    EnableFocus = "<function: 00000001EE75C684>",
+    EnableHidingIsRemove = "<function: 00000001E9616E54>",
+    EnableKeyboard = "<function: 00000001D48D5614>",
+    EnablePick = "<function: 00000001D48FFD54>",
+    EnableScroll = "<function: 00000001E8F04624>",
+    GetAlpha = "<function: 00000001E509AF24>",
+    GetAttachedWidget = "<function: 00000001E966D2A4>",
+    GetEffectiveExtent = "<function: 00000001D4467994>",
+    GetEffectiveOffset = "<function: 00000001E4E89BE4>",
+    GetExtent = "<function: 00000001E4C59AB4>",
+    GetHeight = "<function: 00000001D3FB2D54>",
+    GetId = "<function: 00000001F6606104>",
+    GetName = "<function: 00000001E4C4F9F4>",
+    GetObjectType = "<function: 0000000228770474>",
+    GetOffset = "<function: 00000001F6611544>",
+    GetParent = "<function: 00000001E1A1E124>",
+    GetRotation = "<function: 00000001EE7C9C14>",
+    GetText = "<function: 00000001E95B9AC4>",
+    GetUILayer = "<function: 00000001A7119444>",
+    GetValue = "<function: 00000001D44446D4>",
+    GetWidth = "<function: 00000001E4F34574>",
+    HasHandler = "<function: 00000001D44EEDB4>",
+    InheritAnimationData = "<function: 00000001EE75C844>",
+    IsDescendantWidget = "<function: 00000001E4EBA9E4>",
+    IsEnabled = "<function: 00000001E480AC74>",
+    IsMouseOver = "<function: 00000001EE7C2CD4>",
+    IsNowAnimation = "<function: 00000001E960DE14>",
+    IsValidUIObject = "<function: 00000001AFA9C2D4>",
+    IsVisible = "<function: 00000001E4A2D4A4>",
+    Lower = "<function: 0000000068454184>",
+    MoveTo = "<function: 00000001CEA6EEA4>",
+    Raise = "<function: 00000001E4988054>",
+    RegisterEvent = "<function: 00000001EE7277C4>",
+    ReleaseDeletedHandler = "<function: 00000001E2746924>",
+    ReleaseHandler = "<function: 00000001E4BAED64>",
+    RemoveAllAnchors = "<function: 00000001D44E58F4>",
+    RemoveAllDrawables = "<function: 00000001A254DFC4>",
+    RemoveDrawable = "<function: 00000001EE731A44>",
+    RequestCharacterCacheData = "<function: 00000001EEBB16C4>",
+    SetAlpha = "<function: 00000001E95DB2C4>",
+    SetAlphaAnimation = "<function: 00000001E18D81B4>",
+    SetCategory = "<function: 00000001E4EB0524>",
+    SetCharacterCacheDataHandler = "<function: 00000001D3E82424>",
+    SetDelegator = "<function: 00000001EE7BA8D4>",
+    SetDeletedHandler = "<function: 00000001E4E6F424>",
+    SetDragCondition = "<function: 00000001E4E7D2A4>",
+    SetDrawBorder = "<function: 00000001E95D6584>",
+    SetDrawPriority = "<function: 00000001D452AB74>",
+    SetDrawableLayerAlpha = "<function: 00000001E4F349B4>",
+    SetExtent = "<function: 00000001E95B2604>",
+    SetHandler = "<function: 00000001D3D6B444>",
+    SetHeight = "<function: 00000001D3D85C04>",
+    SetLText = "<function: 00000001F8394B64>",
+    SetLayerColor = "<function: 00000001D4041964>",
+    SetMaxResizingExtent = "<function: 00000001AF9BD4D4>",
+    SetMinResizingExtent = "<function: 00000001E95C6704>",
+    SetMoveAnimation = "<function: 00000001E961C294>",
+    SetResizingBorderSize = "<function: 00000001E27A9CC4>",
+    SetRotation = "<function: 00000001AF04A8B4>",
+    SetScale = "<function: 00000001E95FC594>",
+    SetScaleAnimation = "<function: 00000001A713A6C4>",
+    SetSounds = "<function: 00000000FC8BDEA4>",
+    SetStartAnimation = "<function: 00000001A713DB04>",
+    SetText = "<function: 00000001E48762B4>",
+    SetWidth = "<function: 00000001E9623354>",
+    Show = "<function: 00000001E95C00C4>",
+    StartMoving = "<function: 00000001D48C4C94>",
+    StartSizing = "<function: 00000001D44FA7F4>",
+    StopMovingOrSizing = "<function: 00000001E4F36234>",
+    TriggerMoveAnimation = "<function: 00000001D4480FD4>",
+    UseDynamicContentState = "<function: 00000001D3FCBBD4>",
+    UseDynamicDrawableState = "<function: 00000001A713DD44>",
+    UseResizing = "<function: 000000007CB016F4>",
+    __this = "<userdata: 00000001E69B6AF0>",
+  },
+  spectrumWidget = {
+    AddAnchor = "<function: 00000001F8395B64>",
+    ApplyUIScale = "<function: 00000001D45D19D4>",
+    AttachWidget = "<function: 00000001E95B8004>",
+    BindWidth = "<function: 00000001E4EBCFA4>",
+    CancelRequestCharacterCacheData = "<function: 00000001E963DE94>",
+    ChangeChildAnchorByScrollValue = "<function: 00000001EE7E1D94>",
+    CheckOutOfScreen = "<function: 00000001D44A7F14>",
+    Clickable = "<function: 00000001D44E61B4>",
+    CorrectOffsetByScreen = "<function: 00000001E4F37774>",
+    CreateChildWidget = "<function: 00000001D4050424>",
+    CreateChildWidgetByType = "<function: 00000001D3F73F54>",
+    CreateColorDrawable = "<function: 00000001E963D054>",
+    CreateColorDrawableByKey = "<function: 00000001D3D750C4>",
+    CreateDrawable = "<function: 00000001E95F4914>",
+    CreateEffectDrawable = "<function: 00000001E8F7D874>",
+    CreateEffectDrawableByKey = "<function: 000000007CB0AF34>",
+    CreateIconDrawable = "<function: 00000001E4F37374>",
+    CreateImageDrawable = "<function: 00000001C8A30344>",
+    CreateNinePartDrawable = "<function: 00000001E95B09C4>",
+    CreateTextDrawable = "<function: 00000001D47ABBC4>",
+    CreateThreeColorDrawable = "<function: 00000001E4F2D434>",
+    CreateThreePartDrawable = "<function: 00000001E27206E4>",
+    DetachWidget = "<function: 00000001D405D5E4>",
+    DisableDrawables = "<function: 00000001E4ECB474>",
+    DisableDrawablesWithChildren = "<function: 00000000FC8D5624>",
+    Enable = "<function: 00000001E4E425D4>",
+    EnableDrag = "<function: 00000001D3BA0954>",
+    EnableDrawables = "<function: 00000001E509A724>",
+    EnableDrawablesWithChildren = "<function: 000000007CAD2EF4>",
+    EnableFocus = "<function: 00000001EE75C684>",
+    EnableHidingIsRemove = "<function: 00000001E9616E54>",
+    EnableKeyboard = "<function: 00000001D48D5614>",
+    EnablePick = "<function: 00000001D48FFD54>",
+    EnableScroll = "<function: 00000001E8F04624>",
+    GetAlpha = "<function: 00000001E509AF24>",
+    GetAttachedWidget = "<function: 00000001E966D2A4>",
+    GetEffectiveExtent = "<function: 00000001D4467994>",
+    GetEffectiveOffset = "<function: 00000001E4E89BE4>",
+    GetExtent = "<function: 00000001E4C59AB4>",
+    GetHeight = "<function: 00000001D3FB2D54>",
+    GetId = "<function: 00000001F6606104>",
+    GetName = "<function: 00000001E4C4F9F4>",
+    GetObjectType = "<function: 0000000228770474>",
+    GetOffset = "<function: 00000001F6611544>",
+    GetParent = "<function: 00000001E1A1E124>",
+    GetRotation = "<function: 00000001EE7C9C14>",
+    GetText = "<function: 00000001E95B9AC4>",
+    GetUILayer = "<function: 00000001A7119444>",
+    GetValue = "<function: 00000001D44446D4>",
+    GetWidth = "<function: 00000001E4F34574>",
+    HasHandler = "<function: 00000001D44EEDB4>",
+    InheritAnimationData = "<function: 00000001EE75C844>",
+    IsDescendantWidget = "<function: 00000001E4EBA9E4>",
+    IsEnabled = "<function: 00000001E480AC74>",
+    IsMouseOver = "<function: 00000001EE7C2CD4>",
+    IsNowAnimation = "<function: 00000001E960DE14>",
+    IsValidUIObject = "<function: 00000001AFA9C2D4>",
+    IsVisible = "<function: 00000001E4A2D4A4>",
+    Lower = "<function: 0000000068454184>",
+    MoveTo = "<function: 00000001CEA6EEA4>",
+    Raise = "<function: 00000001E4988054>",
+    RegisterEvent = "<function: 00000001EE7277C4>",
+    ReleaseDeletedHandler = "<function: 00000001E2746924>",
+    ReleaseHandler = "<function: 00000001E4BAED64>",
+    RemoveAllAnchors = "<function: 00000001D44E58F4>",
+    RemoveAllDrawables = "<function: 00000001A254DFC4>",
+    RemoveDrawable = "<function: 00000001EE731A44>",
+    RequestCharacterCacheData = "<function: 00000001EEBB16C4>",
+    SetAlpha = "<function: 00000001E95DB2C4>",
+    SetAlphaAnimation = "<function: 00000001E18D81B4>",
+    SetCategory = "<function: 00000001E4EB0524>",
+    SetCharacterCacheDataHandler = "<function: 00000001D3E82424>",
+    SetDelegator = "<function: 00000001EE7BA8D4>",
+    SetDeletedHandler = "<function: 00000001E4E6F424>",
+    SetDragCondition = "<function: 00000001E4E7D2A4>",
+    SetDrawBorder = "<function: 00000001E95D6584>",
+    SetDrawPriority = "<function: 00000001D452AB74>",
+    SetDrawableLayerAlpha = "<function: 00000001E4F349B4>",
+    SetExtent = "<function: 00000001E95B2604>",
+    SetHandler = "<function: 00000001D3D6B444>",
+    SetHeight = "<function: 00000001D3D85C04>",
+    SetLText = "<function: 00000001F8394B64>",
+    SetLayerColor = "<function: 00000001D4041964>",
+    SetMaxResizingExtent = "<function: 00000001AF9BD4D4>",
+    SetMinResizingExtent = "<function: 00000001E95C6704>",
+    SetMoveAnimation = "<function: 00000001E961C294>",
+    SetResizingBorderSize = "<function: 00000001E27A9CC4>",
+    SetRotation = "<function: 00000001AF04A8B4>",
+    SetScale = "<function: 00000001E95FC594>",
+    SetScaleAnimation = "<function: 00000001A713A6C4>",
+    SetSounds = "<function: 00000000FC8BDEA4>",
+    SetStartAnimation = "<function: 00000001A713DB04>",
+    SetText = "<function: 00000001E48762B4>",
+    SetWidth = "<function: 00000001E9623354>",
+    Show = "<function: 00000001E95C00C4>",
+    StartMoving = "<function: 00000001D48C4C94>",
+    StartSizing = "<function: 00000001D44FA7F4>",
+    StopMovingOrSizing = "<function: 00000001E4F36234>",
+    TriggerMoveAnimation = "<function: 00000001D4480FD4>",
+    UseDynamicContentState = "<function: 00000001D3FCBBD4>",
+    UseDynamicDrawableState = "<function: 00000001A713DD44>",
+    UseResizing = "<function: 000000007CB016F4>",
+    __this = "<userdata: 00000001E69B65A0>",
+  },
+}

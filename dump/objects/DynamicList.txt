@@ -1,282 +1,151 @@
-AP_BOTTOM = 8 -- objects/DynamicList
-AP_BOTTOMLEFT = 2 -- objects/DynamicList
-AP_BOTTOMRIGHT = 3 -- objects/DynamicList
-AP_CENTER = 4 -- objects/DynamicList
-AP_LEFT = 6 -- objects/DynamicList
-AP_RIGHT = 7 -- objects/DynamicList
-AP_TOP = 5 -- objects/DynamicList
-AP_TOPLEFT = 0 -- objects/DynamicList
-AP_TOPRIGHT = 1 -- objects/DynamicList
-CT_ABILITY = 2 -- objects/DynamicList
-CT_EXPEDITION_NAME = 3 -- objects/DynamicList
-CT_NAME = 1 -- objects/DynamicList
-DC_ALWAYS = 0 -- objects/DynamicList
-DC_SHIFT_KEY_DOWN = 1 -- objects/DynamicList
-DynamicList = { -- objects/DynamicList
-  __this = <userdata>, -- objects/DynamicList
-  content = { -- objects/DynamicList
-    anchor = {}, -- objects/DynamicList
-  }, -- objects/DynamicList
-} -- objects/DynamicList
-
-function DynamicList:AddAnchor() end
-
-function DynamicList:ApplyUIScale() end
-
-function DynamicList:AttachWidget() end
-
-function DynamicList:BindWidth() end
-
-function DynamicList:CancelRequestCharacterCacheData() end
-
-function DynamicList:ChangeChildAnchorByScrollValue() end
-
-function DynamicList:CheckOutOfScreen() end
-
-function DynamicList:ClearData() end
-
-function DynamicList:Clickable() end
-
-function DynamicList:CorrectOffsetByScreen() end
-
-function DynamicList:CreateChildWidget() end
-
-function DynamicList:CreateChildWidgetByType() end
-
-function DynamicList:CreateColorDrawable() end
-
-function DynamicList:CreateColorDrawableByKey() end
-
-function DynamicList:CreateDrawable() end
-
-function DynamicList:CreateEffectDrawable() end
-
-function DynamicList:CreateEffectDrawableByKey() end
-
-function DynamicList:CreateIconDrawable() end
-
-function DynamicList:CreateImageDrawable() end
-
-function DynamicList:CreateNinePartDrawable() end
-
-function DynamicList:CreateOveredImage() end
-
-function DynamicList:CreateTextDrawable() end
-
-function DynamicList:CreateThreeColorDrawable() end
-
-function DynamicList:CreateThreePartDrawable() end
-
-function DynamicList:DetachWidget() end
-
-function DynamicList:DisableDrawables() end
-
-function DynamicList:DisableDrawablesWithChildren() end
-
-function DynamicList:Enable() end
-
-function DynamicList:EnableChildTouch() end
-
-function DynamicList:EnableDrag() end
-
-function DynamicList:EnableDrawables() end
-
-function DynamicList:EnableDrawablesWithChildren() end
-
-function DynamicList:EnableFocus() end
-
-function DynamicList:EnableHidingIsRemove() end
-
-function DynamicList:EnableKeyboard() end
-
-function DynamicList:EnablePick() end
-
-function DynamicList:EnableScroll() end
-
-function DynamicList:EraseData() end
-
-function DynamicList:EraseSubItemInfo() end
-
-function DynamicList:GetAlpha() end
-
-function DynamicList:GetAttachedWidget() end
-
-function DynamicList:GetCurrentHeight() end
-
-function DynamicList:GetEffectiveExtent() end
-
-function DynamicList:GetEffectiveOffset() end
-
-function DynamicList:GetExtent() end
-
-function DynamicList:GetHeight() end
-
-function DynamicList:GetId() end
-
-function DynamicList:GetMainIndex() end
-
-function DynamicList:GetMainList() end
-
-function DynamicList:GetName() end
-
-function DynamicList:GetObjectType() end
-
-function DynamicList:GetOffset() end
-
-function DynamicList:GetParent() end
-
-function DynamicList:GetRotation() end
-
-function DynamicList:GetScrollMaxValue() end
-
-function DynamicList:GetSelectedItemInfo() end
-
-function DynamicList:GetText() end
-
-function DynamicList:GetUILayer() end
-
-function DynamicList:GetValue() end
-
-function DynamicList:GetWidth() end
-
-function DynamicList:HasHandler() end
-
-function DynamicList:InheritAnimationData() end
-
-function DynamicList:InitBgType() end
-
-function DynamicList:InitCreateWidgetPool() end
-
-function DynamicList:InitFunc() end
-
-function DynamicList:InitHeight() end
-
-function DynamicList:InsertData() end
-
-function DynamicList:InsertSubItemInfo() end
-
-function DynamicList:IsDescendantWidget() end
-
-function DynamicList:IsEnabled() end
-
-function DynamicList:IsMouseOver() end
-
-function DynamicList:IsNowAnimation() end
-
-function DynamicList:IsSelectedItem() end
-
-function DynamicList:IsValidUIObject() end
-
-function DynamicList:IsVisible() end
-
-function DynamicList:LoadItemList() end
-
-function DynamicList:Lower() end
-
-function DynamicList:MoveHeight() end
-
-function DynamicList:MoveIndex() end
-
-function DynamicList:MoveTo() end
-
-function DynamicList:OpenBySubItemInfo() end
-
-function DynamicList:PushData() end
-
-function DynamicList:Raise() end
-
-function DynamicList:RegisterEvent() end
-
-function DynamicList:ReleaseDeletedHandler() end
-
-function DynamicList:ReleaseHandler() end
-
-function DynamicList:RemoveAllAnchors() end
-
-function DynamicList:RemoveAllDrawables() end
-
-function DynamicList:RemoveDrawable() end
-
-function DynamicList:RequestCharacterCacheData() end
-
-function DynamicList:SaveItemList() end
-
-function DynamicList:SetAlpha() end
-
-function DynamicList:SetAlphaAnimation() end
-
-function DynamicList:SetCategory() end
-
-function DynamicList:SetCharacterCacheDataHandler() end
-
-function DynamicList:SetDelegator() end
-
-function DynamicList:SetDeletedHandler() end
-
-function DynamicList:SetDragCondition() end
-
-function DynamicList:SetDrawPriority() end
-
-function DynamicList:SetDrawableLayerAlpha() end
-
-function DynamicList:SetExtent() end
-
-function DynamicList:SetGaps() end
-
-function DynamicList:SetHandler() end
-
-function DynamicList:SetHeight() end
-
-function DynamicList:SetLText() end
-
-function DynamicList:SetLayerColor() end
-
-function DynamicList:SetMaxResizingExtent() end
-
-function DynamicList:SetMinResizingExtent() end
-
-function DynamicList:SetMoveAnimation() end
-
-function DynamicList:SetResizingBorderSize() end
-
-function DynamicList:SetRotation() end
-
-function DynamicList:SetScale() end
-
-function DynamicList:SetScaleAnimation() end
-
-function DynamicList:SetSelectedItemInfo() end
-
-function DynamicList:SetSounds() end
-
-function DynamicList:SetStartAnimation() end
-
-function DynamicList:SetText() end
-
-function DynamicList:SetWidth() end
-
-function DynamicList:Show() end
-
-function DynamicList:StartMoving() end
-
-function DynamicList:StartSizing() end
-
-function DynamicList:StopMovingOrSizing() end
-
-function DynamicList:Toggle() end
-
-function DynamicList:ToggleByMainKey() end
-
-function DynamicList:ToggleSubItem() end
-
-function DynamicList:TriggerMoveAnimation() end
-
-function DynamicList:UpdateData() end
-
-function DynamicList:UpdateView() end
-
-function DynamicList:UseDynamicContentState() end
-
-function DynamicList:UseDynamicDrawableState() end
-
-function DynamicList:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+DynamicList = {
+  AddAnchor = "<function: 00000001E966B724>",
+  ApplyUIScale = "<function: 00000001E8F79AF4>",
+  AttachWidget = "<function: 00000001E4A2B524>",
+  BindWidth = "<function: 00000001E4A9AA04>",
+  CancelRequestCharacterCacheData = "<function: 00000001E95DD944>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E4C8BE44>",
+  CheckOutOfScreen = "<function: 00000001B5D76F04>",
+  ClearData = "<function: 00000001E95ECF14>",
+  Clickable = "<function: 00000001E95A4704>",
+  CorrectOffsetByScreen = "<function: 00000001B5D7DB84>",
+  CreateChildWidget = "<function: 00000001E8E981D4>",
+  CreateChildWidgetByType = "<function: 00000001D446C494>",
+  CreateColorDrawable = "<function: 00000001E4E1CD94>",
+  CreateColorDrawableByKey = "<function: 00000001D4551A04>",
+  CreateDrawable = "<function: 00000001EE7CA154>",
+  CreateEffectDrawable = "<function: 00000001D4747FB4>",
+  CreateEffectDrawableByKey = "<function: 00000001E4C9B944>",
+  CreateIconDrawable = "<function: 00000001D4554EC4>",
+  CreateImageDrawable = "<function: 00000001D4551A44>",
+  CreateNinePartDrawable = "<function: 00000001D477A1C4>",
+  CreateOveredImage = "<function: 00000001E4F32C34>",
+  CreateTextDrawable = "<function: 00000001E27320A4>",
+  CreateThreeColorDrawable = "<function: 00000001F83E4924>",
+  CreateThreePartDrawable = "<function: 00000001D477A244>",
+  DetachWidget = "<function: 00000001F6640344>",
+  DisableDrawables = "<function: 00000001E95FCA54>",
+  DisableDrawablesWithChildren = "<function: 00000001E95B06C4>",
+  Enable = "<function: 00000001E95C3184>",
+  EnableChildTouch = "<function: 00000001D400EAE4>",
+  EnableDrag = "<function: 00000001D3E251D4>",
+  EnableDrawables = "<function: 00000001E95B7204>",
+  EnableDrawablesWithChildren = "<function: 00000001E95FE094>",
+  EnableFocus = "<function: 00000001E8E42CD4>",
+  EnableHidingIsRemove = "<function: 00000001EE765304>",
+  EnableKeyboard = "<function: 00000001E4AED8C4>",
+  EnablePick = "<function: 00000001B5DAA044>",
+  EnableScroll = "<function: 00000001E4EECF34>",
+  EraseData = "<function: 00000001E95E2914>",
+  EraseSubItemInfo = "<function: 00000001D45C7984>",
+  GetAlpha = "<function: 00000000CD70F3D4>",
+  GetAttachedWidget = "<function: 00000001E4AA7A84>",
+  GetCurrentHeight = "<function: 00000001E95AC744>",
+  GetEffectiveExtent = "<function: 00000001E4E5A624>",
+  GetEffectiveOffset = "<function: 00000000FA0283A4>",
+  GetExtent = "<function: 00000001E49456D4>",
+  GetHeight = "<function: 00000001E4EBB8E4>",
+  GetId = "<function: 00000001E4EBCFE4>",
+  GetMainIndex = "<function: 00000001E1B07EB4>",
+  GetMainList = "<function: 000000007CAE89F4>",
+  GetName = "<function: 00000001A7134F04>",
+  GetObjectType = "<function: 00000001F625AEB4>",
+  GetOffset = "<function: 00000001C8A31044>",
+  GetParent = "<function: 00000001AFA98F54>",
+  GetRotation = "<function: 00000001E95C9844>",
+  GetScrollMaxValue = "<function: 00000001D46EA4F4>",
+  GetSelectedItemInfo = "<function: 00000001E8E42DD4>",
+  GetText = "<function: 00000001A7139E84>",
+  GetUILayer = "<function: 00000001E5032694>",
+  GetValue = "<function: 00000001E4C8C004>",
+  GetWidth = "<function: 00000001E4F37074>",
+  HasHandler = "<function: 00000001D435C754>",
+  InheritAnimationData = "<function: 00000001E4A110A4>",
+  InitBgType = "<function: 00000001E95CA544>",
+  InitCreateWidgetPool = "<function: 00000001E95D0D84>",
+  InitFunc = "<function: 00000001E95CA484>",
+  InitHeight = "<function: 00000001E95C9904>",
+  InsertData = "<function: 00000001E95ECD94>",
+  InsertSubItemInfo = "<function: 00000001D465D3A4>",
+  IsDescendantWidget = "<function: 00000001C8A142C4>",
+  IsEnabled = "<function: 00000001E95C0F84>",
+  IsMouseOver = "<function: 00000001E95A5584>",
+  IsNowAnimation = "<function: 00000001E4A2DB24>",
+  IsSelectedItem = "<function: 0000000228D71C14>",
+  IsValidUIObject = "<function: 00000001E4EBD024>",
+  IsVisible = "<function: 00000001E4E54964>",
+  LoadItemList = "<function: 00000001E9636054>",
+  Lower = "<function: 00000001E963C354>",
+  MoveHeight = "<function: 00000001E95EDBD4>",
+  MoveIndex = "<function: 00000001E95ED014>",
+  MoveTo = "<function: 00000001E8E47D14>",
+  OpenBySubItemInfo = "<function: 00000001E4F338F4>",
+  PushData = "<function: 00000001E95ECDD4>",
+  Raise = "<function: 00000001E963C214>",
+  RegisterEvent = "<function: 00000001A7133DC4>",
+  ReleaseDeletedHandler = "<function: 00000001A7137FC4>",
+  ReleaseHandler = "<function: 00000001C8A38DC4>",
+  RemoveAllAnchors = "<function: 00000001E9629F94>",
+  RemoveAllDrawables = "<function: 00000001D3E15094>",
+  RemoveDrawable = "<function: 00000001D44DD774>",
+  RequestCharacterCacheData = "<function: 00000001E95DD844>",
+  SaveItemList = "<function: 00000001E95EDC94>",
+  SetAlpha = "<function: 00000000CD726A54>",
+  SetAlphaAnimation = "<function: 00000001CEA7BE24>",
+  SetCategory = "<function: 00000001E95C3084>",
+  SetCharacterCacheDataHandler = "<function: 00000001E95DDA04>",
+  SetDelegator = "<function: 00000001E1AB9EF4>",
+  SetDeletedHandler = "<function: 00000001A7134004>",
+  SetDragCondition = "<function: 00000001D3E214D4>",
+  SetDrawPriority = "<function: 0000000228DEEC24>",
+  SetDrawableLayerAlpha = "<function: 00000001E4AED904>",
+  SetExtent = "<function: 00000001F621B934>",
+  SetGaps = "<function: 00000001E95E2B54>",
+  SetHandler = "<function: 00000001E8F713B4>",
+  SetHeight = "<function: 00000001E4F2CFF4>",
+  SetLText = "<function: 00000001D3CFFA34>",
+  SetLayerColor = "<function: 00000001E95D8A84>",
+  SetMaxResizingExtent = "<function: 00000001E4DB47C4>",
+  SetMinResizingExtent = "<function: 00000001CEA457E4>",
+  SetMoveAnimation = "<function: 00000001AF0A21B4>",
+  SetResizingBorderSize = "<function: 00000001CEA520A4>",
+  SetRotation = "<function: 00000001E95C9884>",
+  SetScale = "<function: 00000001E18A6134>",
+  SetScaleAnimation = "<function: 00000001E8E2C5D4>",
+  SetSelectedItemInfo = "<function: 00000001E9617394>",
+  SetSounds = "<function: 00000001D40D8CC4>",
+  SetStartAnimation = "<function: 00000001D3E7BBE4>",
+  SetText = "<function: 00000001D3CF9834>",
+  SetWidth = "<function: 00000001E4F23274>",
+  Show = "<function: 00000001C560A864>",
+  StartMoving = "<function: 0000000228B42AE4>",
+  StartSizing = "<function: 00000001E8E49114>",
+  StopMovingOrSizing = "<function: 00000001A255F244>",
+  Toggle = "<function: 00000001E95AC784>",
+  ToggleByMainKey = "<function: 00000001E95AC844>",
+  ToggleSubItem = "<function: 00000001E9617354>",
+  TriggerMoveAnimation = "<function: 000000007CAC5D34>",
+  UpdateData = "<function: 00000001E95ECED4>",
+  UpdateView = "<function: 00000001E9636854>",
+  UseDynamicContentState = "<function: 00000001E95D8904>",
+  UseDynamicDrawableState = "<function: 00000001E95D63C4>",
+  UseResizing = "<function: 00000001AF062874>",
+  __this = "<userdata: 00000001F9C681B0>",
+  content = {
+    anchor = {},
+  },
+}

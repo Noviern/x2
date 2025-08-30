@@ -1,251 +1,134 @@
-AP_BOTTOM = 8 -- objects/StatusBar
-AP_BOTTOMLEFT = 2 -- objects/StatusBar
-AP_BOTTOMRIGHT = 3 -- objects/StatusBar
-AP_CENTER = 4 -- objects/StatusBar
-AP_LEFT = 6 -- objects/StatusBar
-AP_RIGHT = 7 -- objects/StatusBar
-AP_TOP = 5 -- objects/StatusBar
-AP_TOPLEFT = 0 -- objects/StatusBar
-AP_TOPRIGHT = 1 -- objects/StatusBar
-CT_ABILITY = 2 -- objects/StatusBar
-CT_EXPEDITION_NAME = 3 -- objects/StatusBar
-CT_NAME = 1 -- objects/StatusBar
-DC_ALWAYS = 0 -- objects/StatusBar
-DC_SHIFT_KEY_DOWN = 1 -- objects/StatusBar
-StatusBar = { -- objects/StatusBar
-  __this = <userdata>, -- objects/StatusBar
-} -- objects/StatusBar
-
-function StatusBar:AddAnchor() end
-
-function StatusBar:AddAnchorChildToBar() end
-
-function StatusBar:ApplyUIScale() end
-
-function StatusBar:AttachWidget() end
-
-function StatusBar:BindWidth() end
-
-function StatusBar:CancelRequestCharacterCacheData() end
-
-function StatusBar:ChangeChildAnchorByScrollValue() end
-
-function StatusBar:CheckOutOfScreen() end
-
-function StatusBar:Clickable() end
-
-function StatusBar:CorrectOffsetByScreen() end
-
-function StatusBar:CreateChildWidget() end
-
-function StatusBar:CreateChildWidgetByType() end
-
-function StatusBar:CreateColorDrawable() end
-
-function StatusBar:CreateColorDrawableByKey() end
-
-function StatusBar:CreateDrawable() end
-
-function StatusBar:CreateEffectDrawable() end
-
-function StatusBar:CreateEffectDrawableByKey() end
-
-function StatusBar:CreateIconDrawable() end
-
-function StatusBar:CreateImageDrawable() end
-
-function StatusBar:CreateNinePartDrawable() end
-
-function StatusBar:CreateTextDrawable() end
-
-function StatusBar:CreateThreeColorDrawable() end
-
-function StatusBar:CreateThreePartDrawable() end
-
-function StatusBar:DetachWidget() end
-
-function StatusBar:DisableDrawables() end
-
-function StatusBar:DisableDrawablesWithChildren() end
-
-function StatusBar:Enable() end
-
-function StatusBar:EnableDrag() end
-
-function StatusBar:EnableDrawables() end
-
-function StatusBar:EnableDrawablesWithChildren() end
-
-function StatusBar:EnableFocus() end
-
-function StatusBar:EnableHidingIsRemove() end
-
-function StatusBar:EnableKeyboard() end
-
-function StatusBar:EnablePick() end
-
-function StatusBar:EnableScroll() end
-
-function StatusBar:GetAlpha() end
-
-function StatusBar:GetAttachedWidget() end
-
-function StatusBar:GetBarColor() end
-
-function StatusBar:GetEffectiveExtent() end
-
-function StatusBar:GetEffectiveOffset() end
-
-function StatusBar:GetExtent() end
-
-function StatusBar:GetHeight() end
-
-function StatusBar:GetId() end
-
-function StatusBar:GetLeftWidth() end
-
-function StatusBar:GetMinMaxValues() end
-
-function StatusBar:GetName() end
-
-function StatusBar:GetObjectType() end
-
-function StatusBar:GetOffset() end
-
-function StatusBar:GetOrientation() end
-
-function StatusBar:GetParent() end
-
-function StatusBar:GetRotation() end
-
-function StatusBar:GetText() end
-
-function StatusBar:GetUILayer() end
-
-function StatusBar:GetValue() end
-
-function StatusBar:GetWidth() end
-
-function StatusBar:HasHandler() end
-
-function StatusBar:InheritAnimationData() end
-
-function StatusBar:IsChangeAfterImageColor() end
-
-function StatusBar:IsDescendantWidget() end
-
-function StatusBar:IsEnabled() end
-
-function StatusBar:IsMouseOver() end
-
-function StatusBar:IsNowAnimation() end
-
-function StatusBar:IsValidUIObject() end
-
-function StatusBar:IsVisible() end
-
-function StatusBar:Lower() end
-
-function StatusBar:MoveTo() end
-
-function StatusBar:Raise() end
-
-function StatusBar:RegisterEvent() end
-
-function StatusBar:ReleaseDeletedHandler() end
-
-function StatusBar:ReleaseHandler() end
-
-function StatusBar:RemoveAllAnchors() end
-
-function StatusBar:RemoveAllDrawables() end
-
-function StatusBar:RemoveDrawable() end
-
-function StatusBar:RequestCharacterCacheData() end
-
-function StatusBar:SetAlpha() end
-
-function StatusBar:SetAlphaAnimation() end
-
-function StatusBar:SetBarColor() end
-
-function StatusBar:SetBarColorByKey() end
-
-function StatusBar:SetBarTexture() end
-
-function StatusBar:SetBarTextureByKey() end
-
-function StatusBar:SetBarTextureCoords() end
-
-function StatusBar:SetCategory() end
-
-function StatusBar:SetCharacterCacheDataHandler() end
-
-function StatusBar:SetDelegator() end
-
-function StatusBar:SetDeletedHandler() end
-
-function StatusBar:SetDragCondition() end
-
-function StatusBar:SetDrawPriority() end
-
-function StatusBar:SetDrawableLayerAlpha() end
-
-function StatusBar:SetExtent() end
-
-function StatusBar:SetHandler() end
-
-function StatusBar:SetHeight() end
-
-function StatusBar:SetLText() end
-
-function StatusBar:SetLayerColor() end
-
-function StatusBar:SetMaxResizingExtent() end
-
-function StatusBar:SetMinMaxValues() end
-
-function StatusBar:SetMinMaxValuesForString() end
-
-function StatusBar:SetMinResizingExtent() end
-
-function StatusBar:SetMoveAnimation() end
-
-function StatusBar:SetOrientation() end
-
-function StatusBar:SetResizingBorderSize() end
-
-function StatusBar:SetRotation() end
-
-function StatusBar:SetScale() end
-
-function StatusBar:SetScaleAnimation() end
-
-function StatusBar:SetSounds() end
-
-function StatusBar:SetStartAnimation() end
-
-function StatusBar:SetText() end
-
-function StatusBar:SetValue() end
-
-function StatusBar:SetValueForString() end
-
-function StatusBar:SetWidth() end
-
-function StatusBar:Show() end
-
-function StatusBar:StartMoving() end
-
-function StatusBar:StartSizing() end
-
-function StatusBar:StopMovingOrSizing() end
-
-function StatusBar:TriggerMoveAnimation() end
-
-function StatusBar:UseDynamicContentState() end
-
-function StatusBar:UseDynamicDrawableState() end
-
-function StatusBar:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+StatusBar = {
+  AddAnchor = "<function: 00000001E964D1D4>",
+  AddAnchorChildToBar = "<function: 00000001AF0A0BF4>",
+  ApplyUIScale = "<function: 00000001EE7AB714>",
+  AttachWidget = "<function: 00000001E1B08BF4>",
+  BindWidth = "<function: 00000001E95B0984>",
+  CancelRequestCharacterCacheData = "<function: 00000001EEB4E704>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001EE808894>",
+  CheckOutOfScreen = "<function: 00000001D4A63E44>",
+  Clickable = "<function: 00000001B5DB6784>",
+  CorrectOffsetByScreen = "<function: 00000001D4464954>",
+  CreateChildWidget = "<function: 00000001EE8D0E84>",
+  CreateChildWidgetByType = "<function: 00000001EEB56284>",
+  CreateColorDrawable = "<function: 00000001E8F790B4>",
+  CreateColorDrawableByKey = "<function: 00000001EEB67B44>",
+  CreateDrawable = "<function: 00000001E4F24FB4>",
+  CreateEffectDrawable = "<function: 00000001E95E2994>",
+  CreateEffectDrawableByKey = "<function: 00000001E95E29D4>",
+  CreateIconDrawable = "<function: 00000001EEB548C4>",
+  CreateImageDrawable = "<function: 00000001EE8959C4>",
+  CreateNinePartDrawable = "<function: 000000007CAA25B4>",
+  CreateTextDrawable = "<function: 00000001EEB7C604>",
+  CreateThreeColorDrawable = "<function: 00000001E95E2854>",
+  CreateThreePartDrawable = "<function: 00000000FC629364>",
+  DetachWidget = "<function: 00000001EE7D0414>",
+  DisableDrawables = "<function: 00000001B5D98B44>",
+  DisableDrawablesWithChildren = "<function: 00000000CD7018D4>",
+  Enable = "<function: 00000000FC8CD9A4>",
+  EnableDrag = "<function: 00000001E4F237B4>",
+  EnableDrawables = "<function: 00000001E95B1104>",
+  EnableDrawablesWithChildren = "<function: 00000001D40BE6C4>",
+  EnableFocus = "<function: 00000001D3B9A114>",
+  EnableHidingIsRemove = "<function: 00000001EEB7C744>",
+  EnableKeyboard = "<function: 00000001E8F492B4>",
+  EnablePick = "<function: 00000001EE7C7854>",
+  EnableScroll = "<function: 00000001B5D4EDC4>",
+  GetAlpha = "<function: 00000001E27B2C84>",
+  GetAttachedWidget = "<function: 00000001EE8C3444>",
+  GetBarColor = "<function: 00000001E8F1A7A4>",
+  GetEffectiveExtent = "<function: 00000001E498ED54>",
+  GetEffectiveOffset = "<function: 00000001D4A593C4>",
+  GetExtent = "<function: 00000000FC620664>",
+  GetHeight = "<function: 00000001E4F45974>",
+  GetId = "<function: 00000001E49B5994>",
+  GetLeftWidth = "<function: 00000001EEBBA384>",
+  GetMinMaxValues = "<function: 00000001E96C9EA4>",
+  GetName = "<function: 00000001E5089DA4>",
+  GetObjectType = "<function: 00000001D477C204>",
+  GetOffset = "<function: 00000001E4EB9FA4>",
+  GetOrientation = "<function: 00000001D49195E4>",
+  GetParent = "<function: 000000007C86A434>",
+  GetRotation = "<function: 000000020019A2F4>",
+  GetText = "<function: 000000007CAFF334>",
+  GetUILayer = "<function: 00000001E961CDD4>",
+  GetValue = "<function: 00000001AFA72694>",
+  GetWidth = "<function: 00000001E963A794>",
+  HasHandler = "<function: 00000001E96991A4>",
+  InheritAnimationData = "<function: 000000006851D384>",
+  IsChangeAfterImageColor = "<function: 00000001FDD3B454>",
+  IsDescendantWidget = "<function: 00000001EE7FB714>",
+  IsEnabled = "<function: 00000001D3E00A14>",
+  IsMouseOver = "<function: 00000001E4B32314>",
+  IsNowAnimation = "<function: 00000001A258DFC4>",
+  IsValidUIObject = "<function: 00000001D405D2A4>",
+  IsVisible = "<function: 00000001B5D46444>",
+  Lower = "<function: 00000001E95B0EC4>",
+  MoveTo = "<function: 00000001EE767C84>",
+  Raise = "<function: 00000001E4F30034>",
+  RegisterEvent = "<function: 00000001EE7E5254>",
+  ReleaseDeletedHandler = "<function: 00000001E9622514>",
+  ReleaseHandler = "<function: 00000001E96992A4>",
+  RemoveAllAnchors = "<function: 00000001E4F35B34>",
+  RemoveAllDrawables = "<function: 00000001E96392D4>",
+  RemoveDrawable = "<function: 00000001FDED8894>",
+  RequestCharacterCacheData = "<function: 00000001F6630744>",
+  SetAlpha = "<function: 00000001D46DF1B4>",
+  SetAlphaAnimation = "<function: 00000001C8A0E7C4>",
+  SetBarColor = "<function: 00000001E4BAFC24>",
+  SetBarColorByKey = "<function: 00000001FD74F744>",
+  SetBarTexture = "<function: 00000001FD74F7C4>",
+  SetBarTextureByKey = "<function: 00000001E4CA2644>",
+  SetBarTextureCoords = "<function: 00000001E4C9E5C4>",
+  SetCategory = "<function: 000000007C87CC74>",
+  SetCharacterCacheDataHandler = "<function: 00000001EE7E7D94>",
+  SetDelegator = "<function: 00000000FC5CE424>",
+  SetDeletedHandler = "<function: 000000007CABEA34>",
+  SetDragCondition = "<function: 00000001E95E3314>",
+  SetDrawPriority = "<function: 00000001D3D695C4>",
+  SetDrawableLayerAlpha = "<function: 00000001E95E2A54>",
+  SetExtent = "<function: 00000001D3F50534>",
+  SetHandler = "<function: 00000001E9699264>",
+  SetHeight = "<function: 00000001E4B18654>",
+  SetLText = "<function: 00000001EED59084>",
+  SetLayerColor = "<function: 00000002001972F4>",
+  SetMaxResizingExtent = "<function: 00000001EE7C8154>",
+  SetMinMaxValues = "<function: 000000020019A3B4>",
+  SetMinMaxValuesForString = "<function: 00000001FDEDB594>",
+  SetMinResizingExtent = "<function: 00000001EE7B2C54>",
+  SetMoveAnimation = "<function: 00000001F6234EB4>",
+  SetOrientation = "<function: 00000001FD7594C4>",
+  SetResizingBorderSize = "<function: 00000001EE74BBC4>",
+  SetRotation = "<function: 000000020019A374>",
+  SetScale = "<function: 00000001E507C264>",
+  SetScaleAnimation = "<function: 00000001FDEDB994>",
+  SetSounds = "<function: 00000001EE8ACD84>",
+  SetStartAnimation = "<function: 00000001F62796F4>",
+  SetText = "<function: 00000001EED58BC4>",
+  SetValue = "<function: 00000001D3E56A94>",
+  SetValueForString = "<function: 00000001D3E05ED4>",
+  SetWidth = "<function: 00000001D3BD7A14>",
+  Show = "<function: 00000001D47A2244>",
+  StartMoving = "<function: 00000001EE8AD5C4>",
+  StartSizing = "<function: 00000001EE8AD744>",
+  StopMovingOrSizing = "<function: 00000001EE768184>",
+  TriggerMoveAnimation = "<function: 00000000CD6C1414>",
+  UseDynamicContentState = "<function: 00000001E967C164>",
+  UseDynamicDrawableState = "<function: 00000001D442FF14>",
+  UseResizing = "<function: 00000001EE768284>",
+  __this = "<userdata: 000000016BB98E60>",
+}

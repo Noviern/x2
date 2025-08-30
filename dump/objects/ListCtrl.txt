@@ -1,257 +1,139 @@
-AP_BOTTOM = 8 -- objects/ListCtrl
-AP_BOTTOMLEFT = 2 -- objects/ListCtrl
-AP_BOTTOMRIGHT = 3 -- objects/ListCtrl
-AP_CENTER = 4 -- objects/ListCtrl
-AP_LEFT = 6 -- objects/ListCtrl
-AP_RIGHT = 7 -- objects/ListCtrl
-AP_TOP = 5 -- objects/ListCtrl
-AP_TOPLEFT = 0 -- objects/ListCtrl
-AP_TOPRIGHT = 1 -- objects/ListCtrl
-CT_ABILITY = 2 -- objects/ListCtrl
-CT_EXPEDITION_NAME = 3 -- objects/ListCtrl
-CT_NAME = 1 -- objects/ListCtrl
-DC_ALWAYS = 0 -- objects/ListCtrl
-DC_SHIFT_KEY_DOWN = 1 -- objects/ListCtrl
-LCCIT_BUTTON = 1 -- objects/ListCtrl
-LCCIT_STRING = 0 -- objects/ListCtrl
-LCCIT_TEXTBOX = 3 -- objects/ListCtrl
-LCCIT_WINDOW = 2 -- objects/ListCtrl
-ListCtrl = { -- objects/ListCtrl
-  __this = <userdata>, -- objects/ListCtrl
-} -- objects/ListCtrl
-
-function ListCtrl:AddAnchor() end
-
-function ListCtrl:ApplyUIScale() end
-
-function ListCtrl:AttachWidget() end
-
-function ListCtrl:BindWidth() end
-
-function ListCtrl:CancelRequestCharacterCacheData() end
-
-function ListCtrl:ChangeChildAnchorByScrollValue() end
-
-function ListCtrl:CheckOutOfScreen() end
-
-function ListCtrl:ClearSelection() end
-
-function ListCtrl:Clickable() end
-
-function ListCtrl:CorrectOffsetByScreen() end
-
-function ListCtrl:CreateChildWidget() end
-
-function ListCtrl:CreateChildWidgetByType() end
-
-function ListCtrl:CreateColorDrawable() end
-
-function ListCtrl:CreateColorDrawableByKey() end
-
-function ListCtrl:CreateDrawable() end
-
-function ListCtrl:CreateEffectDrawable() end
-
-function ListCtrl:CreateEffectDrawableByKey() end
-
-function ListCtrl:CreateIconDrawable() end
-
-function ListCtrl:CreateImageDrawable() end
-
-function ListCtrl:CreateNinePartDrawable() end
-
-function ListCtrl:CreateOveredImage() end
-
-function ListCtrl:CreateSelectedImage() end
-
-function ListCtrl:CreateTextDrawable() end
-
-function ListCtrl:CreateThreeColorDrawable() end
-
-function ListCtrl:CreateThreePartDrawable() end
-
-function ListCtrl:DeleteAllDatas() end
-
-function ListCtrl:DeleteData() end
-
-function ListCtrl:DeleteDataByIndex() end
-
-function ListCtrl:DeleteRows() end
-
-function ListCtrl:DetachWidget() end
-
-function ListCtrl:DisableDrawables() end
-
-function ListCtrl:DisableDrawablesWithChildren() end
-
-function ListCtrl:Enable() end
-
-function ListCtrl:EnableDrag() end
-
-function ListCtrl:EnableDrawables() end
-
-function ListCtrl:EnableDrawablesWithChildren() end
-
-function ListCtrl:EnableFocus() end
-
-function ListCtrl:EnableHidingIsRemove() end
-
-function ListCtrl:EnableKeyboard() end
-
-function ListCtrl:EnablePick() end
-
-function ListCtrl:EnableScroll() end
-
-function ListCtrl:GetAlpha() end
-
-function ListCtrl:GetAttachedWidget() end
-
-function ListCtrl:GetEffectiveExtent() end
-
-function ListCtrl:GetEffectiveOffset() end
-
-function ListCtrl:GetExtent() end
-
-function ListCtrl:GetHeight() end
-
-function ListCtrl:GetId() end
-
-function ListCtrl:GetName() end
-
-function ListCtrl:GetObjectType() end
-
-function ListCtrl:GetOffset() end
-
-function ListCtrl:GetParent() end
-
-function ListCtrl:GetRotation() end
-
-function ListCtrl:GetSelectedIdx() end
-
-function ListCtrl:GetText() end
-
-function ListCtrl:GetUILayer() end
-
-function ListCtrl:GetValue() end
-
-function ListCtrl:GetWidth() end
-
-function ListCtrl:HasHandler() end
-
-function ListCtrl:InheritAnimationData() end
-
-function ListCtrl:InsertColumn() end
-
-function ListCtrl:InsertData() end
-
-function ListCtrl:InsertRows() end
-
-function ListCtrl:IsDescendantWidget() end
-
-function ListCtrl:IsEnabled() end
-
-function ListCtrl:IsMouseOver() end
-
-function ListCtrl:IsNowAnimation() end
-
-function ListCtrl:IsValidUIObject() end
-
-function ListCtrl:IsVisible() end
-
-function ListCtrl:Lower() end
-
-function ListCtrl:MoveTo() end
-
-function ListCtrl:Raise() end
-
-function ListCtrl:RegisterEvent() end
-
-function ListCtrl:ReleaseDeletedHandler() end
-
-function ListCtrl:ReleaseHandler() end
-
-function ListCtrl:RemoveAllAnchors() end
-
-function ListCtrl:RemoveAllDrawables() end
-
-function ListCtrl:RemoveDrawable() end
-
-function ListCtrl:RequestCharacterCacheData() end
-
-function ListCtrl:Select() end
-
-function ListCtrl:SetAlpha() end
-
-function ListCtrl:SetAlphaAnimation() end
-
-function ListCtrl:SetCategory() end
-
-function ListCtrl:SetCharacterCacheDataHandler() end
-
-function ListCtrl:SetColumnWidth() end
-
-function ListCtrl:SetDelegator() end
-
-function ListCtrl:SetDeletedHandler() end
-
-function ListCtrl:SetDragCondition() end
-
-function ListCtrl:SetDrawPriority() end
-
-function ListCtrl:SetDrawableLayerAlpha() end
-
-function ListCtrl:SetExtent() end
-
-function ListCtrl:SetHandler() end
-
-function ListCtrl:SetHeaderColumnHeight() end
-
-function ListCtrl:SetHeight() end
-
-function ListCtrl:SetLText() end
-
-function ListCtrl:SetLayerColor() end
-
-function ListCtrl:SetMaxResizingExtent() end
-
-function ListCtrl:SetMinResizingExtent() end
-
-function ListCtrl:SetMoveAnimation() end
-
-function ListCtrl:SetOveredImageOffset() end
-
-function ListCtrl:SetResizingBorderSize() end
-
-function ListCtrl:SetRotation() end
-
-function ListCtrl:SetScale() end
-
-function ListCtrl:SetScaleAnimation() end
-
-function ListCtrl:SetSelectedImageOffset() end
-
-function ListCtrl:SetSounds() end
-
-function ListCtrl:SetStartAnimation() end
-
-function ListCtrl:SetText() end
-
-function ListCtrl:SetUseDoubleClick() end
-
-function ListCtrl:SetWidth() end
-
-function ListCtrl:Show() end
-
-function ListCtrl:StartMoving() end
-
-function ListCtrl:StartSizing() end
-
-function ListCtrl:StopMovingOrSizing() end
-
-function ListCtrl:TriggerMoveAnimation() end
-
-function ListCtrl:UseDynamicContentState() end
-
-function ListCtrl:UseDynamicDrawableState() end
-
-function ListCtrl:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+LCCIT_BUTTON = 1
+LCCIT_STRING = 0
+LCCIT_TEXTBOX = 3
+LCCIT_WINDOW = 2
+ListCtrl = {
+  AddAnchor = "<function: 00000001E4C42434>",
+  ApplyUIScale = "<function: 00000001E95F5794>",
+  AttachWidget = "<function: 00000001D3E809E4>",
+  BindWidth = "<function: 00000001D48EDFD4>",
+  CancelRequestCharacterCacheData = "<function: 00000001D45C5E44>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001B5DA77C4>",
+  CheckOutOfScreen = "<function: 00000001E95B9F44>",
+  ClearSelection = "<function: 00000001E4EBAA24>",
+  Clickable = "<function: 00000001E27A9644>",
+  CorrectOffsetByScreen = "<function: 00000001D3E812A4>",
+  CreateChildWidget = "<function: 00000001D3F6D054>",
+  CreateChildWidgetByType = "<function: 00000001EE74F8C4>",
+  CreateColorDrawable = "<function: 00000001E9623314>",
+  CreateColorDrawableByKey = "<function: 00000001D3BA0114>",
+  CreateDrawable = "<function: 00000001E4F62E44>",
+  CreateEffectDrawable = "<function: 00000001AFA97A94>",
+  CreateEffectDrawableByKey = "<function: 00000001AFA9E154>",
+  CreateIconDrawable = "<function: 00000001C8A1FF84>",
+  CreateImageDrawable = "<function: 00000001E4A9B444>",
+  CreateNinePartDrawable = "<function: 00000001E1B52A04>",
+  CreateOveredImage = "<function: 00000001E95F5A14>",
+  CreateSelectedImage = "<function: 00000001E4B40354>",
+  CreateTextDrawable = "<function: 00000001E27510E4>",
+  CreateThreeColorDrawable = "<function: 00000001E958F184>",
+  CreateThreePartDrawable = "<function: 00000001D4905F14>",
+  DeleteAllDatas = "<function: 000000007CAEE834>",
+  DeleteData = "<function: 00000001D4563A04>",
+  DeleteDataByIndex = "<function: 00000001E96C1224>",
+  DeleteRows = "<function: 00000001D4891F94>",
+  DetachWidget = "<function: 00000001E5068224>",
+  DisableDrawables = "<function: 000000007CAED1B4>",
+  DisableDrawablesWithChildren = "<function: 00000000FC8CF3E4>",
+  Enable = "<function: 00000001F663A004>",
+  EnableDrag = "<function: 00000001E96DC6E4>",
+  EnableDrawables = "<function: 00000001D4596FC4>",
+  EnableDrawablesWithChildren = "<function: 00000001B5D4ADC4>",
+  EnableFocus = "<function: 00000001D48A4E94>",
+  EnableHidingIsRemove = "<function: 00000001D48BA614>",
+  EnableKeyboard = "<function: 00000001E963B654>",
+  EnablePick = "<function: 00000001D3BE37D4>",
+  EnableScroll = "<function: 00000001AFA8CD54>",
+  GetAlpha = "<function: 00000001D4103004>",
+  GetAttachedWidget = "<function: 00000001E95C0204>",
+  GetEffectiveExtent = "<function: 00000001E95C7544>",
+  GetEffectiveOffset = "<function: 00000001E9626C54>",
+  GetExtent = "<function: 00000001E4D55404>",
+  GetHeight = "<function: 00000001AF087EF4>",
+  GetId = "<function: 00000001C562EDA4>",
+  GetName = "<function: 00000001D3DAAD84>",
+  GetObjectType = "<function: 00000001E4CA7544>",
+  GetOffset = "<function: 00000001E1A2DC24>",
+  GetParent = "<function: 00000001E95BCA04>",
+  GetRotation = "<function: 00000001E963D094>",
+  GetSelectedIdx = "<function: 00000001C8A1D7C4>",
+  GetText = "<function: 00000001D4361314>",
+  GetUILayer = "<function: 00000001E957DE84>",
+  GetValue = "<function: 00000001D434D654>",
+  GetWidth = "<function: 000000007CAD30F4>",
+  HasHandler = "<function: 00000001E96327D4>",
+  InheritAnimationData = "<function: 00000001E95C40C4>",
+  InsertColumn = "<function: 00000001D4893114>",
+  InsertData = "<function: 00000001AFA81C94>",
+  InsertRows = "<function: 00000001EEBB1904>",
+  IsDescendantWidget = "<function: 00000001E9610654>",
+  IsEnabled = "<function: 00000001D3C8F254>",
+  IsMouseOver = "<function: 00000001E4F33934>",
+  IsNowAnimation = "<function: 00000001E1B07134>",
+  IsValidUIObject = "<function: 00000001D401B6E4>",
+  IsVisible = "<function: 00000001E4FFBA14>",
+  Lower = "<function: 00000001FDCDEF34>",
+  MoveTo = "<function: 00000001F8389224>",
+  Raise = "<function: 00000001CEA837A4>",
+  RegisterEvent = "<function: 00000001E95AE784>",
+  ReleaseDeletedHandler = "<function: 00000001E9621014>",
+  ReleaseHandler = "<function: 00000001C5611C24>",
+  RemoveAllAnchors = "<function: 00000001EEBB4944>",
+  RemoveAllDrawables = "<function: 00000001D3F8C314>",
+  RemoveDrawable = "<function: 00000001AF0347B4>",
+  RequestCharacterCacheData = "<function: 00000001D3DA2644>",
+  Select = "<function: 00000001E4F2A3F4>",
+  SetAlpha = "<function: 00000001D3CEEDB4>",
+  SetAlphaAnimation = "<function: 00000000FC529A04>",
+  SetCategory = "<function: 00000001E95B68C4>",
+  SetCharacterCacheDataHandler = "<function: 00000001E95C7FC4>",
+  SetColumnWidth = "<function: 00000001E95B0E04>",
+  SetDelegator = "<function: 00000001C8A13684>",
+  SetDeletedHandler = "<function: 00000001B5DB89C4>",
+  SetDragCondition = "<function: 00000001E4AA3404>",
+  SetDrawPriority = "<function: 00000001FBE60854>",
+  SetDrawableLayerAlpha = "<function: 00000001E96266D4>",
+  SetExtent = "<function: 00000000CD78F044>",
+  SetHandler = "<function: 00000000FC622DA4>",
+  SetHeaderColumnHeight = "<function: 00000001E1918BC4>",
+  SetHeight = "<function: 00000001A254DCC4>",
+  SetLText = "<function: 00000001E4F25934>",
+  SetLayerColor = "<function: 00000001D3D00E34>",
+  SetMaxResizingExtent = "<function: 00000001E95C4C04>",
+  SetMinResizingExtent = "<function: 00000001D403CEA4>",
+  SetMoveAnimation = "<function: 00000001E278C704>",
+  SetOveredImageOffset = "<function: 00000001D3BBD6D4>",
+  SetResizingBorderSize = "<function: 00000001E960A554>",
+  SetRotation = "<function: 00000001D3DF0B14>",
+  SetScale = "<function: 00000001D3BC2654>",
+  SetScaleAnimation = "<function: 00000001D3E11BD4>",
+  SetSelectedImageOffset = "<function: 00000000CD62DF74>",
+  SetSounds = "<function: 00000001D442F054>",
+  SetStartAnimation = "<function: 00000001EE737A04>",
+  SetText = "<function: 00000000FA024624>",
+  SetUseDoubleClick = "<function: 00000001D3E05794>",
+  SetWidth = "<function: 00000000FC608264>",
+  Show = "<function: 00000001D4A6D744>",
+  StartMoving = "<function: 00000001B5DBFE84>",
+  StartSizing = "<function: 00000001E1A89364>",
+  StopMovingOrSizing = "<function: 00000001D43E7EC4>",
+  TriggerMoveAnimation = "<function: 00000000CD701914>",
+  UseDynamicContentState = "<function: 00000001E95BC304>",
+  UseDynamicDrawableState = "<function: 00000001D441BF84>",
+  UseResizing = "<function: 00000001D3E84AE4>",
+  __this = "<userdata: 00000001FC542C90>",
+}

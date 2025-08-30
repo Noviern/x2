@@ -1,352 +1,185 @@
-AP_BOTTOM = 8 -- objects/RoadMap
-AP_BOTTOMLEFT = 2 -- objects/RoadMap
-AP_BOTTOMRIGHT = 3 -- objects/RoadMap
-AP_CENTER = 4 -- objects/RoadMap
-AP_LEFT = 6 -- objects/RoadMap
-AP_RIGHT = 7 -- objects/RoadMap
-AP_TOP = 5 -- objects/RoadMap
-AP_TOPLEFT = 0 -- objects/RoadMap
-AP_TOPRIGHT = 1 -- objects/RoadMap
-CT_ABILITY = 2 -- objects/RoadMap
-CT_EXPEDITION_NAME = 3 -- objects/RoadMap
-CT_NAME = 1 -- objects/RoadMap
-DC_ALWAYS = 0 -- objects/RoadMap
-DC_SHIFT_KEY_DOWN = 1 -- objects/RoadMap
-MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/RoadMap
-RoadMap = { -- objects/RoadMap
-  __this = <userdata>, -- objects/RoadMap
-} -- objects/RoadMap
-
-function RoadMap:AddAnchor() end
-
-function RoadMap:AddGivenQuestInfo() end
-
-function RoadMap:AddNotifyQuestInfo() end
-
-function RoadMap:ApplyUIScale() end
-
-function RoadMap:AttachWidget() end
-
-function RoadMap:BindWidth() end
-
-function RoadMap:CancelRequestCharacterCacheData() end
-
-function RoadMap:ChangeChildAnchorByScrollValue() end
-
-function RoadMap:CheckOutOfScreen() end
-
-function RoadMap:ClearAllInfo() end
-
-function RoadMap:ClearBossTelescopeInfo() end
-
-function RoadMap:ClearCarryingBackpackSlaveInfo() end
-
-function RoadMap:ClearCompletedQuestInfo() end
-
-function RoadMap:ClearCorpseInfo() end
-
-function RoadMap:ClearDoodadInfo() end
-
-function RoadMap:ClearFishSchoolInfo() end
-
-function RoadMap:ClearGivenQuestStaticInfo() end
-
-function RoadMap:ClearHousingInfo() end
-
-function RoadMap:ClearMySlaveInfo() end
-
-function RoadMap:ClearNotifyQuestInfo() end
-
-function RoadMap:ClearNpcInfo() end
-
-function RoadMap:ClearShipTelescopeInfo() end
-
-function RoadMap:ClearTransferTelescopeInfo() end
-
-function RoadMap:Clickable() end
-
-function RoadMap:CorrectOffsetByScreen() end
-
-function RoadMap:CreateChildWidget() end
-
-function RoadMap:CreateChildWidgetByType() end
-
-function RoadMap:CreateColorDrawable() end
-
-function RoadMap:CreateColorDrawableByKey() end
-
-function RoadMap:CreateDrawable() end
-
-function RoadMap:CreateEffectDrawable() end
-
-function RoadMap:CreateEffectDrawableByKey() end
-
-function RoadMap:CreateIconDrawable() end
-
-function RoadMap:CreateImageDrawable() end
-
-function RoadMap:CreateNinePartDrawable() end
-
-function RoadMap:CreateTextDrawable() end
-
-function RoadMap:CreateThreeColorDrawable() end
-
-function RoadMap:CreateThreePartDrawable() end
-
-function RoadMap:DetachWidget() end
-
-function RoadMap:DisableDrawables() end
-
-function RoadMap:DisableDrawablesWithChildren() end
-
-function RoadMap:Enable() end
-
-function RoadMap:EnableDrag() end
-
-function RoadMap:EnableDrawables() end
-
-function RoadMap:EnableDrawablesWithChildren() end
-
-function RoadMap:EnableFocus() end
-
-function RoadMap:EnableHidingIsRemove() end
-
-function RoadMap:EnableKeyboard() end
-
-function RoadMap:EnablePick() end
-
-function RoadMap:EnableScroll() end
-
-function RoadMap:GetAlpha() end
-
-function RoadMap:GetAttachedWidget() end
-
-function RoadMap:GetEffectiveExtent() end
-
-function RoadMap:GetEffectiveOffset() end
-
-function RoadMap:GetExtent() end
-
-function RoadMap:GetHeight() end
-
-function RoadMap:GetId() end
-
-function RoadMap:GetName() end
-
-function RoadMap:GetObjectType() end
-
-function RoadMap:GetOffset() end
-
-function RoadMap:GetParent() end
-
-function RoadMap:GetPlayerSextants() end
-
-function RoadMap:GetPlayerViewPos() end
-
-function RoadMap:GetRotation() end
-
-function RoadMap:GetText() end
-
-function RoadMap:GetTooltipController() end
-
-function RoadMap:GetUILayer() end
-
-function RoadMap:GetValue() end
-
-function RoadMap:GetWidth() end
-
-function RoadMap:HasHandler() end
-
-function RoadMap:InheritAnimationData() end
-
-function RoadMap:InitMapData() end
-
-function RoadMap:IsDescendantWidget() end
-
-function RoadMap:IsEnabled() end
-
-function RoadMap:IsMouseOver() end
-
-function RoadMap:IsNowAnimation() end
-
-function RoadMap:IsPingMode() end
-
-function RoadMap:IsValidUIObject() end
-
-function RoadMap:IsVisible() end
-
-function RoadMap:Lower() end
-
-function RoadMap:MapWidgetShown() end
-
-function RoadMap:MoveTo() end
-
-function RoadMap:OnLeftClick() end
-
-function RoadMap:Raise() end
-
-function RoadMap:RegisterEvent() end
-
-function RoadMap:ReleaseDeletedHandler() end
-
-function RoadMap:ReleaseHandler() end
-
-function RoadMap:ReloadAllInfo() end
-
-function RoadMap:RemoveAllAnchors() end
-
-function RoadMap:RemoveAllDrawables() end
-
-function RoadMap:RemoveBossTelescopeInfo() end
-
-function RoadMap:RemoveCarryingBackpackSlaveInfo() end
-
-function RoadMap:RemoveDrawable() end
-
-function RoadMap:RemoveFishSchoolInfo() end
-
-function RoadMap:RemoveGivenQuestInfo() end
-
-function RoadMap:RemoveNotifyQuestInfo() end
-
-function RoadMap:RemoveShipTelescopeInfo() end
-
-function RoadMap:RemoveTransferTelescopeInfo() end
-
-function RoadMap:RequestCharacterCacheData() end
-
-function RoadMap:ResetCursor() end
-
-function RoadMap:SetAlpha() end
-
-function RoadMap:SetAlphaAnimation() end
-
-function RoadMap:SetCategory() end
-
-function RoadMap:SetCharacterCacheDataHandler() end
-
-function RoadMap:SetDelegator() end
-
-function RoadMap:SetDeletedHandler() end
-
-function RoadMap:SetDragCondition() end
-
-function RoadMap:SetDrawPriority() end
-
-function RoadMap:SetDrawableLayerAlpha() end
-
-function RoadMap:SetExpandRatio() end
-
-function RoadMap:SetExtent() end
-
-function RoadMap:SetHandler() end
-
-function RoadMap:SetHeight() end
-
-function RoadMap:SetLText() end
-
-function RoadMap:SetLayerColor() end
-
-function RoadMap:SetMapSize() end
-
-function RoadMap:SetMaxResizingExtent() end
-
-function RoadMap:SetMinResizingExtent() end
-
-function RoadMap:SetMoveAnimation() end
-
-function RoadMap:SetPingBtn() end
-
-function RoadMap:SetPingWidget() end
-
-function RoadMap:SetPlayerDrawable() end
-
-function RoadMap:SetResizingBorderSize() end
-
-function RoadMap:SetRoadMapNpc() end
-
-function RoadMap:SetRotation() end
-
-function RoadMap:SetScale() end
-
-function RoadMap:SetScaleAnimation() end
-
-function RoadMap:SetSkillEffectWidget() end
-
-function RoadMap:SetSounds() end
-
-function RoadMap:SetStartAnimation() end
-
-function RoadMap:SetText() end
-
-function RoadMap:SetTooltipColor() end
-
-function RoadMap:SetWidth() end
-
-function RoadMap:Show() end
-
-function RoadMap:ShowLeaderPing() end
-
-function RoadMap:ShowSkillMapEffect() end
-
-function RoadMap:StartMoving() end
-
-function RoadMap:StartNotifyQuestEffect() end
-
-function RoadMap:StartSizing() end
-
-function RoadMap:StopMovingOrSizing() end
-
-function RoadMap:TriggerMoveAnimation() end
-
-function RoadMap:UpdateAllDrawableAnchor() end
-
-function RoadMap:UpdateBossTelescopeArea() end
-
-function RoadMap:UpdateBossTelescopeInfo() end
-
-function RoadMap:UpdateCarryingBackpackSlaveInfo() end
-
-function RoadMap:UpdateCompletedQuestInfo() end
-
-function RoadMap:UpdateCorpseInfo() end
-
-function RoadMap:UpdateCurZoneGroupNpcInfo() end
-
-function RoadMap:UpdateDominionInfo() end
-
-function RoadMap:UpdateDoodadInfo() end
-
-function RoadMap:UpdateFactionRezDistrictInfo() end
-
-function RoadMap:UpdateFishSchoolArea() end
-
-function RoadMap:UpdateFishSchoolInfo() end
-
-function RoadMap:UpdateGivenQuestStaticInfo() end
-
-function RoadMap:UpdateHousingInfo() end
-
-function RoadMap:UpdateMonitorNpcInfo() end
-
-function RoadMap:UpdateMySlaveInfo() end
-
-function RoadMap:UpdateNpcInfo() end
-
-function RoadMap:UpdatePingInfo() end
-
-function RoadMap:UpdateShipTelescopeInfo() end
-
-function RoadMap:UpdateTelescopeArea() end
-
-function RoadMap:UpdateTransferTelescopeArea() end
-
-function RoadMap:UpdateTransferTelescopeInfo() end
-
-function RoadMap:UpdateZoneInfo() end
-
-function RoadMap:UseDynamicContentState() end
-
-function RoadMap:UseDynamicDrawableState() end
-
-function RoadMap:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+MAX_SKILL_MAP_EFFECT_COUNT = 6
+RoadMap = {
+  AddAnchor = "<function: 00000001C89F2F04>",
+  AddGivenQuestInfo = "<function: 00000001C8A1FC84>",
+  AddNotifyQuestInfo = "<function: 00000001EE731C44>",
+  ApplyUIScale = "<function: 00000001AFA81A94>",
+  AttachWidget = "<function: 00000001A2562B04>",
+  BindWidth = "<function: 00000001E95FA794>",
+  CancelRequestCharacterCacheData = "<function: 00000000CD6EED94>",
+  ChangeChildAnchorByScrollValue = "<function: 00000000FC527C84>",
+  CheckOutOfScreen = "<function: 00000001E9680824>",
+  ClearAllInfo = "<function: 00000001C8A15604>",
+  ClearBossTelescopeInfo = "<function: 00000001F621F7F4>",
+  ClearCarryingBackpackSlaveInfo = "<function: 00000001E9633E14>",
+  ClearCompletedQuestInfo = "<function: 00000001E967C3A4>",
+  ClearCorpseInfo = "<function: 00000001C5601C64>",
+  ClearDoodadInfo = "<function: 00000001EE7C7994>",
+  ClearFishSchoolInfo = "<function: 00000001E4C869C4>",
+  ClearGivenQuestStaticInfo = "<function: 00000001EEB50644>",
+  ClearHousingInfo = "<function: 00000001E95A6544>",
+  ClearMySlaveInfo = "<function: 000000022878B4F4>",
+  ClearNotifyQuestInfo = "<function: 00000001D40B03C4>",
+  ClearNpcInfo = "<function: 00000001B5DAF8C4>",
+  ClearShipTelescopeInfo = "<function: 00000001E95F7294>",
+  ClearTransferTelescopeInfo = "<function: 00000001E2733324>",
+  Clickable = "<function: 00000001E96680E4>",
+  CorrectOffsetByScreen = "<function: 00000001E96C29A4>",
+  CreateChildWidget = "<function: 00000001D4536DF4>",
+  CreateChildWidgetByType = "<function: 00000001D3DD4C84>",
+  CreateColorDrawable = "<function: 00000001EEBA7F44>",
+  CreateColorDrawableByKey = "<function: 00000001E4B39554>",
+  CreateDrawable = "<function: 00000001E95FA894>",
+  CreateEffectDrawable = "<function: 00000001E18DBF34>",
+  CreateEffectDrawableByKey = "<function: 00000001D3B974D4>",
+  CreateIconDrawable = "<function: 00000001E95D65C4>",
+  CreateImageDrawable = "<function: 00000001D3F7D094>",
+  CreateNinePartDrawable = "<function: 000000007C84A9F4>",
+  CreateTextDrawable = "<function: 00000001E95B0C44>",
+  CreateThreeColorDrawable = "<function: 000000007C869374>",
+  CreateThreePartDrawable = "<function: 00000001E4F297F4>",
+  DetachWidget = "<function: 00000001B5D87E44>",
+  DisableDrawables = "<function: 00000001EE73C4C4>",
+  DisableDrawablesWithChildren = "<function: 00000001F663A104>",
+  Enable = "<function: 00000001CEA5B6E4>",
+  EnableDrag = "<function: 00000000FC629F24>",
+  EnableDrawables = "<function: 00000001E4BAEE24>",
+  EnableDrawablesWithChildren = "<function: 00000001E9635194>",
+  EnableFocus = "<function: 00000001D3D65B44>",
+  EnableHidingIsRemove = "<function: 00000001D45693C4>",
+  EnableKeyboard = "<function: 00000001D44D1F34>",
+  EnablePick = "<function: 000000007CAE53F4>",
+  EnableScroll = "<function: 00000001F83A4924>",
+  GetAlpha = "<function: 000000007CB0DE34>",
+  GetAttachedWidget = "<function: 00000001D3EF1834>",
+  GetEffectiveExtent = "<function: 00000001E967F824>",
+  GetEffectiveOffset = "<function: 00000001D3DCF1C4>",
+  GetExtent = "<function: 00000001E4DBA4C4>",
+  GetHeight = "<function: 00000001E959BF04>",
+  GetId = "<function: 00000001E9641294>",
+  GetName = "<function: 00000001E95B7044>",
+  GetObjectType = "<function: 00000001D3EC08A4>",
+  GetOffset = "<function: 00000001AF062C34>",
+  GetParent = "<function: 00000001E961F0D4>",
+  GetPlayerSextants = "<function: 00000001D401D5E4>",
+  GetPlayerViewPos = "<function: 00000000FC8D8A64>",
+  GetRotation = "<function: 00000001EE7CC294>",
+  GetText = "<function: 00000001E1A6D2A4>",
+  GetTooltipController = "<function: 00000001D43C5104>",
+  GetUILayer = "<function: 00000001D3FD9114>",
+  GetValue = "<function: 00000001E19E5154>",
+  GetWidth = "<function: 00000001E965C854>",
+  HasHandler = "<function: 00000001E969A124>",
+  InheritAnimationData = "<function: 00000001E49C9664>",
+  InitMapData = "<function: 00000001E95C0D04>",
+  IsDescendantWidget = "<function: 00000001E4B55B54>",
+  IsEnabled = "<function: 00000001E4FEF694>",
+  IsMouseOver = "<function: 00000001E960DA14>",
+  IsNowAnimation = "<function: 00000001F889E984>",
+  IsPingMode = "<function: 00000001CEA52724>",
+  IsValidUIObject = "<function: 00000001E9627214>",
+  IsVisible = "<function: 00000001E9623254>",
+  Lower = "<function: 00000001D48DE754>",
+  MapWidgetShown = "<function: 00000001D46D8AB4>",
+  MoveTo = "<function: 00000001E4F34334>",
+  OnLeftClick = "<function: 00000001E956CF44>",
+  Raise = "<function: 00000001D4749CB4>",
+  RegisterEvent = "<function: 00000001E96684A4>",
+  ReleaseDeletedHandler = "<function: 00000001F88ADBC4>",
+  ReleaseHandler = "<function: 00000001E4E54C64>",
+  ReloadAllInfo = "<function: 00000001D462DFD4>",
+  RemoveAllAnchors = "<function: 00000001E964E494>",
+  RemoveAllDrawables = "<function: 00000001E95B0E44>",
+  RemoveBossTelescopeInfo = "<function: 00000001E95BE184>",
+  RemoveCarryingBackpackSlaveInfo = "<function: 00000001EE8D2244>",
+  RemoveDrawable = "<function: 00000001E4BAEEE4>",
+  RemoveFishSchoolInfo = "<function: 00000001E959CC84>",
+  RemoveGivenQuestInfo = "<function: 00000001E4B98A24>",
+  RemoveNotifyQuestInfo = "<function: 00000001E967C6A4>",
+  RemoveShipTelescopeInfo = "<function: 00000001D3BFF594>",
+  RemoveTransferTelescopeInfo = "<function: 00000001E9689964>",
+  RequestCharacterCacheData = "<function: 00000001E95BC204>",
+  ResetCursor = "<function: 00000001EE7D3B14>",
+  SetAlpha = "<function: 00000001E968A724>",
+  SetAlphaAnimation = "<function: 00000001EED78A04>",
+  SetCategory = "<function: 00000001E48FE304>",
+  SetCharacterCacheDataHandler = "<function: 00000000FC8B9DA4>",
+  SetDelegator = "<function: 00000001E8F6B6B4>",
+  SetDeletedHandler = "<function: 00000001E95E3094>",
+  SetDragCondition = "<function: 000000007CADB4B4>",
+  SetDrawPriority = "<function: 00000000FC619FE4>",
+  SetDrawableLayerAlpha = "<function: 00000001EE8A3084>",
+  SetExpandRatio = "<function: 00000002276E06B4>",
+  SetExtent = "<function: 00000001E96A15A4>",
+  SetHandler = "<function: 00000001D4628494>",
+  SetHeight = "<function: 00000001D409CA44>",
+  SetLText = "<function: 00000000FC536EC4>",
+  SetLayerColor = "<function: 00000001D3FE45D4>",
+  SetMapSize = "<function: 00000001E95D1084>",
+  SetMaxResizingExtent = "<function: 00000001D3D5B344>",
+  SetMinResizingExtent = "<function: 00000001E1AA4BF4>",
+  SetMoveAnimation = "<function: 00000001B5DBDA84>",
+  SetPingBtn = "<function: 00000000CD626134>",
+  SetPingWidget = "<function: 00000001E969A1A4>",
+  SetPlayerDrawable = "<function: 00000001E9679A24>",
+  SetResizingBorderSize = "<function: 00000001D4621DD4>",
+  SetRoadMapNpc = "<function: 00000001C8A23304>",
+  SetRotation = "<function: 00000000FC8A3C64>",
+  SetScale = "<function: 00000001E19B0594>",
+  SetScaleAnimation = "<function: 00000001E96C9724>",
+  SetSkillEffectWidget = "<function: 00000001E968F5A4>",
+  SetSounds = "<function: 00000001E95D5844>",
+  SetStartAnimation = "<function: 00000001E96CB9A4>",
+  SetText = "<function: 00000001E9614794>",
+  SetTooltipColor = "<function: 00000001E4C60034>",
+  SetWidth = "<function: 00000001E95D9B04>",
+  Show = "<function: 00000000FC62DAE4>",
+  ShowLeaderPing = "<function: 00000001E9696BA4>",
+  ShowSkillMapEffect = "<function: 00000000FC5CE7E4>",
+  StartMoving = "<function: 00000001D4098904>",
+  StartNotifyQuestEffect = "<function: 00000001E8F1F734>",
+  StartSizing = "<function: 00000001E95D5704>",
+  StopMovingOrSizing = "<function: 00000001E96713E4>",
+  TriggerMoveAnimation = "<function: 00000001EE7E5E14>",
+  UpdateAllDrawableAnchor = "<function: 00000001F621F4B4>",
+  UpdateBossTelescopeArea = "<function: 00000001FBE73A94>",
+  UpdateBossTelescopeInfo = "<function: 00000001EE73C544>",
+  UpdateCarryingBackpackSlaveInfo = "<function: 00000001E95BE844>",
+  UpdateCompletedQuestInfo = "<function: 00000001EED4EE04>",
+  UpdateCorpseInfo = "<function: 00000001E48ED304>",
+  UpdateCurZoneGroupNpcInfo = "<function: 00000001E96DC224>",
+  UpdateDominionInfo = "<function: 00000001A71405C4>",
+  UpdateDoodadInfo = "<function: 00000001E4E9CB64>",
+  UpdateFactionRezDistrictInfo = "<function: 00000001D40F1804>",
+  UpdateFishSchoolArea = "<function: 00000001E96674E4>",
+  UpdateFishSchoolInfo = "<function: 00000000FC550504>",
+  UpdateGivenQuestStaticInfo = "<function: 00000001D403E824>",
+  UpdateHousingInfo = "<function: 00000001E272AE64>",
+  UpdateMonitorNpcInfo = "<function: 00000001E9610554>",
+  UpdateMySlaveInfo = "<function: 00000001E9635254>",
+  UpdateNpcInfo = "<function: 00000001E9612654>",
+  UpdatePingInfo = "<function: 00000001E95D5444>",
+  UpdateShipTelescopeInfo = "<function: 00000001C8A17E44>",
+  UpdateTelescopeArea = "<function: 00000001D3D83AC4>",
+  UpdateTransferTelescopeArea = "<function: 00000001E4F1B734>",
+  UpdateTransferTelescopeInfo = "<function: 00000001E95CDA84>",
+  UpdateZoneInfo = "<function: 00000001AFA82F94>",
+  UseDynamicContentState = "<function: 00000001E4F2AC74>",
+  UseDynamicDrawableState = "<function: 00000001D4606F54>",
+  UseResizing = "<function: 00000001D3E33594>",
+  __this = "<userdata: 000000025C24ABC0>",
+}

@@ -1,1 +1,1 @@
-X2Dyeing = {} -- api/X2Dyeing
+X2Dyeing = {}

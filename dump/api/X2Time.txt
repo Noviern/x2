@@ -1,5 +1,4 @@
-X2Time = {} -- api/X2Time
-
-function X2Time:GetGameTime() end
-
-function X2Time:GetServerTime() end
+X2Time = {
+  GetGameTime = "<function: 00000001D4404504>",
+  GetServerTime = "<function: 00000001FDA81C24>",
+}

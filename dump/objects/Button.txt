@@ -1,317 +1,171 @@
-AP_BOTTOM = 8 -- objects/Button
-AP_BOTTOMLEFT = 2 -- objects/Button
-AP_BOTTOMRIGHT = 3 -- objects/Button
-AP_CENTER = 4 -- objects/Button
-AP_LEFT = 6 -- objects/Button
-AP_RIGHT = 7 -- objects/Button
-AP_TOP = 5 -- objects/Button
-AP_TOPLEFT = 0 -- objects/Button
-AP_TOPRIGHT = 1 -- objects/Button
-Button = { -- objects/Button
-  __this = <userdata>, -- objects/Button
-  style = { -- objects/Button
-    __this = <userdata>, -- objects/Button
-  }, -- objects/Button
-} -- objects/Button
-CT_ABILITY = 2 -- objects/Button
-CT_EXPEDITION_NAME = 3 -- objects/Button
-CT_NAME = 1 -- objects/Button
-DC_ALWAYS = 0 -- objects/Button
-DC_SHIFT_KEY_DOWN = 1 -- objects/Button
-UI_BUTTON_DISABLED = 3 -- objects/Button
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/Button
-UI_BUTTON_MAX = 4 -- objects/Button
-UI_BUTTON_NORMAL = 0 -- objects/Button
-UI_BUTTON_PUSHED = 2 -- objects/Button
-
-function Button.style:GetId() end
-
-function Button.style:GetLineHeight() end
-
-function Button.style:GetName() end
-
-function Button.style:GetObjectType() end
-
-function Button.style:GetTextWidth() end
-
-function Button.style:IsValidUIObject() end
-
-function Button.style:SetAlign() end
-
-function Button.style:SetColor() end
-
-function Button.style:SetColorByKey() end
-
-function Button.style:SetEllipsis() end
-
-function Button.style:SetFont() end
-
-function Button.style:SetFontSize() end
-
-function Button.style:SetOutline() end
-
-function Button.style:SetShadow() end
-
-function Button.style:SetSnap() end
-
-function Button:AddAnchor() end
-
-function Button:ApplyUIScale() end
-
-function Button:AttachWidget() end
-
-function Button:BindWidth() end
-
-function Button:CancelRequestCharacterCacheData() end
-
-function Button:ChangeChildAnchorByScrollValue() end
-
-function Button:CheckOutOfScreen() end
-
-function Button:Clickable() end
-
-function Button:CorrectOffsetByScreen() end
-
-function Button:CreateChildWidget() end
-
-function Button:CreateChildWidgetByType() end
-
-function Button:CreateColorDrawable() end
-
-function Button:CreateColorDrawableByKey() end
-
-function Button:CreateDrawable() end
-
-function Button:CreateEffectDrawable() end
-
-function Button:CreateEffectDrawableByKey() end
-
-function Button:CreateIconDrawable() end
-
-function Button:CreateImageDrawable() end
-
-function Button:CreateNinePartDrawable() end
-
-function Button:CreateStateDrawable() end
-
-function Button:CreateTextDrawable() end
-
-function Button:CreateThreeColorDrawable() end
-
-function Button:CreateThreePartDrawable() end
-
-function Button:DeregisterForClicks() end
-
-function Button:DetachWidget() end
-
-function Button:DisableDrawables() end
-
-function Button:DisableDrawablesWithChildren() end
-
-function Button:Enable() end
-
-function Button:EnableDrag() end
-
-function Button:EnableDrawables() end
-
-function Button:EnableDrawablesWithChildren() end
-
-function Button:EnableFocus() end
-
-function Button:EnableHidingIsRemove() end
-
-function Button:EnableKeyboard() end
-
-function Button:EnablePick() end
-
-function Button:EnableScroll() end
-
-function Button:GetAlpha() end
-
-function Button:GetAttachedWidget() end
-
-function Button:GetButtonState() end
-
-function Button:GetDisabledBackground() end
-
-function Button:GetDisabledColor() end
-
-function Button:GetEffectiveExtent() end
-
-function Button:GetEffectiveOffset() end
-
-function Button:GetExtent() end
-
-function Button:GetHeight() end
-
-function Button:GetHighlightBackground() end
-
-function Button:GetHighlightColor() end
-
-function Button:GetId() end
-
-function Button:GetName() end
-
-function Button:GetNormalBackground() end
-
-function Button:GetNormalColor() end
-
-function Button:GetObjectType() end
-
-function Button:GetOffset() end
-
-function Button:GetParent() end
-
-function Button:GetPushedBackground() end
-
-function Button:GetPushedColor() end
-
-function Button:GetRotation() end
-
-function Button:GetText() end
-
-function Button:GetUILayer() end
-
-function Button:GetValue() end
-
-function Button:GetWidth() end
-
-function Button:HasHandler() end
-
-function Button:InheritAnimationData() end
-
-function Button:IsDescendantWidget() end
-
-function Button:IsEnabled() end
-
-function Button:IsMouseOver() end
-
-function Button:IsNowAnimation() end
-
-function Button:IsValidUIObject() end
-
-function Button:IsVisible() end
-
-function Button:Lower() end
-
-function Button:MoveTo() end
-
-function Button:Raise() end
-
-function Button:RegisterEvent() end
-
-function Button:RegisterForClicks() end
-
-function Button:ReleaseDeletedHandler() end
-
-function Button:ReleaseHandler() end
-
-function Button:RemoveAllAnchors() end
-
-function Button:RemoveAllDrawables() end
-
-function Button:RemoveDrawable() end
-
-function Button:RequestCharacterCacheData() end
-
-function Button:SetAlpha() end
-
-function Button:SetAlphaAnimation() end
-
-function Button:SetAutoClipChar() end
-
-function Button:SetAutoResize() end
-
-function Button:SetButtonState() end
-
-function Button:SetCategory() end
-
-function Button:SetCharacterCacheDataHandler() end
-
-function Button:SetDelegator() end
-
-function Button:SetDeletedHandler() end
-
-function Button:SetDisabledBackground() end
-
-function Button:SetDisabledColor() end
-
-function Button:SetDisabledTextColor() end
-
-function Button:SetDragCondition() end
-
-function Button:SetDrawPriority() end
-
-function Button:SetDrawableLayerAlpha() end
-
-function Button:SetExtent() end
-
-function Button:SetFocus() end
-
-function Button:SetHandler() end
-
-function Button:SetHeight() end
-
-function Button:SetHighlightBackground() end
-
-function Button:SetHighlightColor() end
-
-function Button:SetHighlightTextColor() end
-
-function Button:SetInset() end
-
-function Button:SetLText() end
-
-function Button:SetLayerColor() end
-
-function Button:SetMaxResizingExtent() end
-
-function Button:SetMinResizingExtent() end
-
-function Button:SetMoveAnimation() end
-
-function Button:SetNormalBackground() end
-
-function Button:SetNormalColor() end
-
-function Button:SetPushedBackground() end
-
-function Button:SetPushedColor() end
-
-function Button:SetPushedTextColor() end
-
-function Button:SetResizingBorderSize() end
-
-function Button:SetRotation() end
-
-function Button:SetScale() end
-
-function Button:SetScaleAnimation() end
-
-function Button:SetSounds() end
-
-function Button:SetStartAnimation() end
-
-function Button:SetStyle() end
-
-function Button:SetText() end
-
-function Button:SetTextColor() end
-
-function Button:SetWidth() end
-
-function Button:Show() end
-
-function Button:StartMoving() end
-
-function Button:StartSizing() end
-
-function Button:StopMovingOrSizing() end
-
-function Button:TriggerMoveAnimation() end
-
-function Button:UseDynamicContentState() end
-
-function Button:UseDynamicDrawableState() end
-
-function Button:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+Button = {
+  AddAnchor = "<function: 00000001D3D85204>",
+  ApplyUIScale = "<function: 00000001D48EF314>",
+  AttachWidget = "<function: 00000001EE7D2594>",
+  BindWidth = "<function: 00000001D3FDBED4>",
+  CancelRequestCharacterCacheData = "<function: 00000001E8ED99E4>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E95C41C4>",
+  CheckOutOfScreen = "<function: 0000000228DF47A4>",
+  Clickable = "<function: 00000001E4EA2A24>",
+  CorrectOffsetByScreen = "<function: 00000001E4AE7244>",
+  CreateChildWidget = "<function: 00000001D3D66CC4>",
+  CreateChildWidgetByType = "<function: 00000001EE7D2854>",
+  CreateColorDrawable = "<function: 00000001D3C611D4>",
+  CreateColorDrawableByKey = "<function: 00000001D4468414>",
+  CreateDrawable = "<function: 00000001D3CADF94>",
+  CreateEffectDrawable = "<function: 00000001A713EC84>",
+  CreateEffectDrawableByKey = "<function: 00000001E4EC0424>",
+  CreateIconDrawable = "<function: 00000001D4467ED4>",
+  CreateImageDrawable = "<function: 00000001D46334D4>",
+  CreateNinePartDrawable = "<function: 00000001E96B9AA4>",
+  CreateStateDrawable = "<function: 00000001E1B42C44>",
+  CreateTextDrawable = "<function: 00000001D45FD0D4>",
+  CreateThreeColorDrawable = "<function: 00000001E1AE59B4>",
+  CreateThreePartDrawable = "<function: 00000001E19020B4>",
+  DeregisterForClicks = "<function: 00000001D4665C24>",
+  DetachWidget = "<function: 00000001EEB67B04>",
+  DisableDrawables = "<function: 00000001E502EA54>",
+  DisableDrawablesWithChildren = "<function: 00000001E4F21874>",
+  Enable = "<function: 00000001E1A89BE4>",
+  EnableDrag = "<function: 00000001E19E86D4>",
+  EnableDrawables = "<function: 00000001D44FE6B4>",
+  EnableDrawablesWithChildren = "<function: 00000001E4B747D4>",
+  EnableFocus = "<function: 00000001E4EAE764>",
+  EnableHidingIsRemove = "<function: 00000001E1A828E4>",
+  EnableKeyboard = "<function: 00000001E8EF9DE4>",
+  EnablePick = "<function: 00000001E4DECA14>",
+  EnableScroll = "<function: 00000001E4EAE264>",
+  GetAlpha = "<function: 00000001D3F74C14>",
+  GetAttachedWidget = "<function: 00000001A2725494>",
+  GetButtonState = "<function: 00000001E4BDD1A4>",
+  GetDisabledBackground = "<function: 00000001D45CABC4>",
+  GetDisabledColor = "<function: 00000001E1A4EBE4>",
+  GetEffectiveExtent = "<function: 00000001E96A70E4>",
+  GetEffectiveOffset = "<function: 00000001D4008A64>",
+  GetExtent = "<function: 00000001E963BD54>",
+  GetHeight = "<function: 00000001D44DCAF4>",
+  GetHighlightBackground = "<function: 00000001D4163EB4>",
+  GetHighlightColor = "<function: 00000001E95ABCC4>",
+  GetId = "<function: 00000001E8EC7B24>",
+  GetName = "<function: 00000001E4C518F4>",
+  GetNormalBackground = "<function: 00000001D3E339D4>",
+  GetNormalColor = "<function: 00000001E19F3154>",
+  GetObjectType = "<function: 00000001D434E714>",
+  GetOffset = "<function: 00000001E1905BF4>",
+  GetParent = "<function: 00000001D45A03C4>",
+  GetPushedBackground = "<function: 00000001A255AF84>",
+  GetPushedColor = "<function: 00000001D44F1574>",
+  GetRotation = "<function: 00000001D44F1474>",
+  GetText = "<function: 00000001D3FDE494>",
+  GetUILayer = "<function: 000000007CABF3F4>",
+  GetValue = "<function: 00000001D45E0C94>",
+  GetWidth = "<function: 00000001D403CC24>",
+  HasHandler = "<function: 0000000253633914>",
+  InheritAnimationData = "<function: 00000001E1B06534>",
+  IsDescendantWidget = "<function: 00000001E4B6C894>",
+  IsEnabled = "<function: 00000001E956CE04>",
+  IsMouseOver = "<function: 00000001D49394E4>",
+  IsNowAnimation = "<function: 00000001E48DEEC4>",
+  IsValidUIObject = "<function: 00000001E48E0E44>",
+  IsVisible = "<function: 00000001D48D1ED4>",
+  Lower = "<function: 00000001D4685CA4>",
+  MoveTo = "<function: 00000001D4628E14>",
+  Raise = "<function: 00000001E95C4084>",
+  RegisterEvent = "<function: 00000001D44885D4>",
+  RegisterForClicks = "<function: 00000001D3D911C4>",
+  ReleaseDeletedHandler = "<function: 00000001D40525A4>",
+  ReleaseHandler = "<function: 00000001E4A3A164>",
+  RemoveAllAnchors = "<function: 000000025367C354>",
+  RemoveAllDrawables = "<function: 00000001D3FF9224>",
+  RemoveDrawable = "<function: 00000001E4E87BA4>",
+  RequestCharacterCacheData = "<function: 00000001D44FF574>",
+  SetAlpha = "<function: 00000001A7137E84>",
+  SetAlphaAnimation = "<function: 00000001E191AAC4>",
+  SetAutoClipChar = "<function: 00000001E962FE54>",
+  SetAutoResize = "<function: 000000025372DDE4>",
+  SetButtonState = "<function: 00000001D40FD7C4>",
+  SetCategory = "<function: 00000001D3DDD4D4>",
+  SetCharacterCacheDataHandler = "<function: 00000001D3F8E3D4>",
+  SetDelegator = "<function: 00000001D3C9FC54>",
+  SetDeletedHandler = "<function: 00000000CD7E40C4>",
+  SetDisabledBackground = "<function: 00000001EE731B04>",
+  SetDisabledColor = "<function: 00000001C8A51CC4>",
+  SetDisabledTextColor = "<function: 00000001D3FDC014>",
+  SetDragCondition = "<function: 00000001D4759444>",
+  SetDrawPriority = "<function: 00000001E95B8244>",
+  SetDrawableLayerAlpha = "<function: 00000001E4F358F4>",
+  SetExtent = "<function: 00000001E4E20254>",
+  SetFocus = "<function: 00000001E4E982E4>",
+  SetHandler = "<function: 00000001E96301D4>",
+  SetHeight = "<function: 00000001D45C8284>",
+  SetHighlightBackground = "<function: 000000007C869FB4>",
+  SetHighlightColor = "<function: 00000001A7132744>",
+  SetHighlightTextColor = "<function: 00000001E8EEEC64>",
+  SetInset = "<function: 00000001E95CED84>",
+  SetLText = "<function: 00000001D46DB074>",
+  SetLayerColor = "<function: 00000001E19F7B94>",
+  SetMaxResizingExtent = "<function: 00000001D45EE514>",
+  SetMinResizingExtent = "<function: 00000001D4637394>",
+  SetMoveAnimation = "<function: 00000001E4B13CD4>",
+  SetNormalBackground = "<function: 00000000FC8D01A4>",
+  SetNormalColor = "<function: 00000001EE7C6014>",
+  SetPushedBackground = "<function: 00000002525B94B4>",
+  SetPushedColor = "<function: 00000001A712BBC4>",
+  SetPushedTextColor = "<function: 00000001A7138A04>",
+  SetResizingBorderSize = "<function: 00000001E5002254>",
+  SetRotation = "<function: 00000001D45CAC84>",
+  SetScale = "<function: 00000001D3FF5AE4>",
+  SetScaleAnimation = "<function: 00000001EED74FC4>",
+  SetSounds = "<function: 00000001F624F7F4>",
+  SetStartAnimation = "<function: 00000001D3FF09E4>",
+  SetStyle = "<function: 00000001D491C2A4>",
+  SetText = "<function: 00000001AFAAF8D4>",
+  SetTextColor = "<function: 00000001E4EA50A4>",
+  SetWidth = "<function: 00000001A712BC04>",
+  Show = "<function: 00000001D443E154>",
+  StartMoving = "<function: 00000001EE765184>",
+  StartSizing = "<function: 00000000FC8C24E4>",
+  StopMovingOrSizing = "<function: 00000001E4A25AE4>",
+  TriggerMoveAnimation = "<function: 00000001E95C5C84>",
+  UseDynamicContentState = "<function: 00000001E96C9FA4>",
+  UseDynamicDrawableState = "<function: 00000001E963A814>",
+  UseResizing = "<function: 00000001D44FDC34>",
+  __this = "<userdata: 00000002521676E0>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DCFAF0>",
+  },
+}
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+UI_BUTTON_DISABLED = 3
+UI_BUTTON_HIGHLIGHTED = 1
+UI_BUTTON_MAX = 4
+UI_BUTTON_NORMAL = 0
+UI_BUTTON_PUSHED = 2

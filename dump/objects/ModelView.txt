@@ -1,399 +1,208 @@
-AP_BOTTOM = 8 -- objects/ModelView
-AP_BOTTOMLEFT = 2 -- objects/ModelView
-AP_BOTTOMRIGHT = 3 -- objects/ModelView
-AP_CENTER = 4 -- objects/ModelView
-AP_LEFT = 6 -- objects/ModelView
-AP_RIGHT = 7 -- objects/ModelView
-AP_TOP = 5 -- objects/ModelView
-AP_TOPLEFT = 0 -- objects/ModelView
-AP_TOPRIGHT = 1 -- objects/ModelView
-CT_ABILITY = 2 -- objects/ModelView
-CT_EXPEDITION_NAME = 3 -- objects/ModelView
-CT_NAME = 1 -- objects/ModelView
-DC_ALWAYS = 0 -- objects/ModelView
-DC_SHIFT_KEY_DOWN = 1 -- objects/ModelView
-ModelView = { -- objects/ModelView
-  __this = <userdata>, -- objects/ModelView
-} -- objects/ModelView
-
-function ModelView:AddAnchor() end
-
-function ModelView:AddRotation() end
-
-function ModelView:AdjustCameraPos() end
-
-function ModelView:AdjustCameraPosToModel() end
-
-function ModelView:ApplyCustomizerParamToUnit() end
-
-function ModelView:ApplyModel() end
-
-function ModelView:ApplyPresetParam() end
-
-function ModelView:ApplyUIScale() end
-
-function ModelView:AttachWidget() end
-
-function ModelView:BindWidth() end
-
-function ModelView:CancelRequestCharacterCacheData() end
-
-function ModelView:ChangeChildAnchorByScrollValue() end
-
-function ModelView:CheckOutOfScreen() end
-
-function ModelView:ClearModel() end
-
-function ModelView:Clickable() end
-
-function ModelView:CorrectOffsetByScreen() end
-
-function ModelView:CreateChildWidget() end
-
-function ModelView:CreateChildWidgetByType() end
-
-function ModelView:CreateColorDrawable() end
-
-function ModelView:CreateColorDrawableByKey() end
-
-function ModelView:CreateDrawable() end
-
-function ModelView:CreateEffectDrawable() end
-
-function ModelView:CreateEffectDrawableByKey() end
-
-function ModelView:CreateIconDrawable() end
-
-function ModelView:CreateImageDrawable() end
-
-function ModelView:CreateNinePartDrawable() end
-
-function ModelView:CreateTextDrawable() end
-
-function ModelView:CreateThreeColorDrawable() end
-
-function ModelView:CreateThreePartDrawable() end
-
-function ModelView:DetachWidget() end
-
-function ModelView:DisableDrawables() end
-
-function ModelView:DisableDrawablesWithChildren() end
-
-function ModelView:Enable() end
-
-function ModelView:EnableDrag() end
-
-function ModelView:EnableDrawables() end
-
-function ModelView:EnableDrawablesWithChildren() end
-
-function ModelView:EnableFocus() end
-
-function ModelView:EnableHidingIsRemove() end
-
-function ModelView:EnableKeyboard() end
-
-function ModelView:EnablePick() end
-
-function ModelView:EnableScroll() end
-
-function ModelView:EquipCostume() end
-
-function ModelView:EquipItem() end
-
-function ModelView:GetAlpha() end
-
-function ModelView:GetAttachedWidget() end
-
-function ModelView:GetCustomBodyNormal() end
-
-function ModelView:GetCustomDeco() end
-
-function ModelView:GetCustomEyebrow() end
-
-function ModelView:GetCustomEyebrowColor() end
-
-function ModelView:GetCustomFaceDiffuse() end
-
-function ModelView:GetCustomFaceNormal() end
-
-function ModelView:GetCustomHair() end
-
-function ModelView:GetCustomHairColor() end
-
-function ModelView:GetCustomHorn() end
-
-function ModelView:GetCustomHornColor() end
-
-function ModelView:GetCustomLipColor() end
-
-function ModelView:GetCustomMakeUp() end
-
-function ModelView:GetCustomPreviewCloth() end
-
-function ModelView:GetCustomPupil() end
-
-function ModelView:GetCustomPupilColor() end
-
-function ModelView:GetCustomScar() end
-
-function ModelView:GetCustomSkinColor() end
-
-function ModelView:GetCustomTail() end
-
-function ModelView:GetCustomTattoo() end
-
-function ModelView:GetCustomizingDecoColor() end
-
-function ModelView:GetCustomizingOddEyeUsable() end
-
-function ModelView:GetEffectiveExtent() end
-
-function ModelView:GetEffectiveOffset() end
-
-function ModelView:GetExtent() end
-
-function ModelView:GetFaceTargetCurValue() end
-
-function ModelView:GetGender() end
-
-function ModelView:GetHeight() end
-
-function ModelView:GetId() end
-
-function ModelView:GetName() end
-
-function ModelView:GetObjectType() end
-
-function ModelView:GetOffset() end
-
-function ModelView:GetParent() end
-
-function ModelView:GetRace() end
-
-function ModelView:GetRotation() end
-
-function ModelView:GetScarStatus() end
-
-function ModelView:GetSelectedPresetIndex() end
-
-function ModelView:GetText() end
-
-function ModelView:GetTwoToneHairStatus() end
-
-function ModelView:GetUILayer() end
-
-function ModelView:GetValue() end
-
-function ModelView:GetWidth() end
-
-function ModelView:HasDiffWithClientUnit() end
-
-function ModelView:HasHandler() end
-
-function ModelView:InheritAnimationData() end
-
-function ModelView:Init() end
-
-function ModelView:InitBeautyShop() end
-
-function ModelView:InitByModelRef() end
-
-function ModelView:InitCustomizerControl() end
-
-function ModelView:IsDescendantWidget() end
-
-function ModelView:IsEnabled() end
-
-function ModelView:IsFrozen() end
-
-function ModelView:IsMouseOver() end
-
-function ModelView:IsNowAnimation() end
-
-function ModelView:IsValidUIObject() end
-
-function ModelView:IsVisible() end
-
-function ModelView:Lower() end
-
-function ModelView:ModifyFaceParamValue() end
-
-function ModelView:MoveTo() end
-
-function ModelView:PayBeautyShop() end
-
-function ModelView:PlayAnimation() end
-
-function ModelView:Raise() end
-
-function ModelView:RegisterEvent() end
-
-function ModelView:ReleaseDeletedHandler() end
-
-function ModelView:ReleaseHandler() end
-
-function ModelView:RemoveAllAnchors() end
-
-function ModelView:RemoveAllDrawables() end
-
-function ModelView:RemoveDrawable() end
-
-function ModelView:RemoveEquipSlot() end
-
-function ModelView:RequestCharacterCacheData() end
-
-function ModelView:ResetBeautyShop() end
-
-function ModelView:ResetEquips() end
-
-function ModelView:SetAlpha() end
-
-function ModelView:SetAlphaAnimation() end
-
-function ModelView:SetBackColor() end
-
-function ModelView:SetBeautyShopMode() end
-
-function ModelView:SetCameraPos() end
-
-function ModelView:SetCategory() end
-
-function ModelView:SetCharacterCacheDataHandler() end
-
-function ModelView:SetCustomizingBodyNormal() end
-
-function ModelView:SetCustomizingDeco() end
-
-function ModelView:SetCustomizingDecoColor() end
-
-function ModelView:SetCustomizingEyebrow() end
-
-function ModelView:SetCustomizingEyebrowColor() end
-
-function ModelView:SetCustomizingFaceDiffuse() end
-
-function ModelView:SetCustomizingFaceNormal() end
-
-function ModelView:SetCustomizingHair() end
-
-function ModelView:SetCustomizingHairColor() end
-
-function ModelView:SetCustomizingHairDefaultColor() end
-
-function ModelView:SetCustomizingHairTwoToneColor() end
-
-function ModelView:SetCustomizingHorn() end
-
-function ModelView:SetCustomizingHornColor() end
-
-function ModelView:SetCustomizingLipColor() end
-
-function ModelView:SetCustomizingMakeUp() end
-
-function ModelView:SetCustomizingPreviewCloth() end
-
-function ModelView:SetCustomizingPupil() end
-
-function ModelView:SetCustomizingPupilColor() end
-
-function ModelView:SetCustomizingScar() end
-
-function ModelView:SetCustomizingSkinColor() end
-
-function ModelView:SetCustomizingTail() end
-
-function ModelView:SetCustomizingTattoo() end
-
-function ModelView:SetDelegator() end
-
-function ModelView:SetDeletedHandler() end
-
-function ModelView:SetDisableColorGrading() end
-
-function ModelView:SetDragCondition() end
-
-function ModelView:SetDrawPriority() end
-
-function ModelView:SetDrawableLayerAlpha() end
-
-function ModelView:SetEquipSlotFromCharacter() end
-
-function ModelView:SetExtent() end
-
-function ModelView:SetFov() end
-
-function ModelView:SetFreeze() end
-
-function ModelView:SetHandler() end
-
-function ModelView:SetHeight() end
-
-function ModelView:SetIngameShopMode() end
-
-function ModelView:SetLText() end
-
-function ModelView:SetLayerColor() end
-
-function ModelView:SetMaxResizingExtent() end
-
-function ModelView:SetMinResizingExtent() end
-
-function ModelView:SetModelViewBackground() end
-
-function ModelView:SetModelViewCoords() end
-
-function ModelView:SetModelViewExtent() end
-
-function ModelView:SetMoveAnimation() end
-
-function ModelView:SetResizingBorderSize() end
-
-function ModelView:SetRotation() end
-
-function ModelView:SetScale() end
-
-function ModelView:SetScaleAnimation() end
-
-function ModelView:SetSmile() end
-
-function ModelView:SetSounds() end
-
-function ModelView:SetStartAnimation() end
-
-function ModelView:SetText() end
-
-function ModelView:SetTextureSize() end
-
-function ModelView:SetWidth() end
-
-function ModelView:Show() end
-
-function ModelView:ShowItem() end
-
-function ModelView:StartMoving() end
-
-function ModelView:StartSizing() end
-
-function ModelView:StopAnimation() end
-
-function ModelView:StopMovingOrSizing() end
-
-function ModelView:ToggleCosplayEquipped() end
-
-function ModelView:TriggerMoveAnimation() end
-
-function ModelView:UnequipItemSlot() end
-
-function ModelView:UpdateDyeColor() end
-
-function ModelView:UseDynamicContentState() end
-
-function ModelView:UseDynamicDrawableState() end
-
-function ModelView:UseResizing() end
-
-function ModelView:ZoomInOut() end
-
-function ModelView:ZoomInOutBeautyShop() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+ModelView = {
+  AddAnchor = "<function: 00000001D3D85E84>",
+  AddRotation = "<function: 00000000FC8973E4>",
+  AdjustCameraPos = "<function: 00000000CD6ECF14>",
+  AdjustCameraPosToModel = "<function: 00000001D47287F4>",
+  ApplyCustomizerParamToUnit = "<function: 00000001E4F1B9F4>",
+  ApplyModel = "<function: 00000001C8A0D504>",
+  ApplyPresetParam = "<function: 00000001E95D9704>",
+  ApplyUIScale = "<function: 00000001E96434D4>",
+  AttachWidget = "<function: 00000001E96C0C64>",
+  BindWidth = "<function: 00000001D40988C4>",
+  CancelRequestCharacterCacheData = "<function: 00000001E966F824>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001D43C40C4>",
+  CheckOutOfScreen = "<function: 00000001C8A06A84>",
+  ClearModel = "<function: 00000001E4EC0364>",
+  Clickable = "<function: 00000001E95B5584>",
+  CorrectOffsetByScreen = "<function: 00000001C8A06A44>",
+  CreateChildWidget = "<function: 00000001E4E9A064>",
+  CreateChildWidgetByType = "<function: 00000001D467D9E4>",
+  CreateColorDrawable = "<function: 00000001D3DAA204>",
+  CreateColorDrawableByKey = "<function: 00000001D3E13954>",
+  CreateDrawable = "<function: 00000001F627B834>",
+  CreateEffectDrawable = "<function: 00000001F83D1B64>",
+  CreateEffectDrawableByKey = "<function: 00000001A2723194>",
+  CreateIconDrawable = "<function: 00000001D3E1B2D4>",
+  CreateImageDrawable = "<function: 00000001D3E15C54>",
+  CreateNinePartDrawable = "<function: 00000001F66055C4>",
+  CreateTextDrawable = "<function: 00000001F8389564>",
+  CreateThreeColorDrawable = "<function: 00000001F838F424>",
+  CreateThreePartDrawable = "<function: 00000001E4F5FA44>",
+  DetachWidget = "<function: 00000001E1ABD474>",
+  DisableDrawables = "<function: 00000001E95AAE44>",
+  DisableDrawablesWithChildren = "<function: 00000001EE72B4C4>",
+  Enable = "<function: 000000007CAFEC74>",
+  EnableDrag = "<function: 00000001D45C5004>",
+  EnableDrawables = "<function: 00000001E95A8804>",
+  EnableDrawablesWithChildren = "<function: 00000001E95AAEC4>",
+  EnableFocus = "<function: 00000001E95C3344>",
+  EnableHidingIsRemove = "<function: 00000001E4F342B4>",
+  EnableKeyboard = "<function: 00000001D456C604>",
+  EnablePick = "<function: 00000001D49872A4>",
+  EnableScroll = "<function: 00000001A2725754>",
+  EquipCostume = "<function: 00000001E95D17C4>",
+  EquipItem = "<function: 00000000684547C4>",
+  GetAlpha = "<function: 000000007C849FB4>",
+  GetAttachedWidget = "<function: 00000001EE73B444>",
+  GetCustomBodyNormal = "<function: 00000001D444FC14>",
+  GetCustomDeco = "<function: 00000001E4F2DC74>",
+  GetCustomEyebrow = "<function: 00000001D4700F34>",
+  GetCustomEyebrowColor = "<function: 00000001E4F2DC34>",
+  GetCustomFaceDiffuse = "<function: 00000001D48B3E54>",
+  GetCustomFaceNormal = "<function: 00000001D4464B54>",
+  GetCustomHair = "<function: 00000001E963F054>",
+  GetCustomHairColor = "<function: 00000001E4EA57E4>",
+  GetCustomHorn = "<function: 00000001E963E094>",
+  GetCustomHornColor = "<function: 00000000CD65D7F4>",
+  GetCustomLipColor = "<function: 00000001AF07C2F4>",
+  GetCustomMakeUp = "<function: 00000001E9624A14>",
+  GetCustomPreviewCloth = "<function: 00000001E95A6F44>",
+  GetCustomPupil = "<function: 00000001E4F1ADB4>",
+  GetCustomPupilColor = "<function: 00000001E4A35D64>",
+  GetCustomScar = "<function: 00000000CD62E834>",
+  GetCustomSkinColor = "<function: 00000001AF9D9C94>",
+  GetCustomTail = "<function: 00000001AFA7BD54>",
+  GetCustomTattoo = "<function: 00000001E9624994>",
+  GetCustomizingDecoColor = "<function: 00000001E27B2AC4>",
+  GetCustomizingOddEyeUsable = "<function: 00000001E95EDE94>",
+  GetEffectiveExtent = "<function: 000000007CB0E6B4>",
+  GetEffectiveOffset = "<function: 00000001E9692CE4>",
+  GetExtent = "<function: 00000001EE8BE8C4>",
+  GetFaceTargetCurValue = "<function: 00000001E193DB04>",
+  GetGender = "<function: 00000001B5D87344>",
+  GetHeight = "<function: 00000001D3E271D4>",
+  GetId = "<function: 00000001EE86AC44>",
+  GetName = "<function: 00000001D3BD8F54>",
+  GetObjectType = "<function: 00000001E1A951F4>",
+  GetOffset = "<function: 00000001E96920E4>",
+  GetParent = "<function: 00000001D3CF05F4>",
+  GetRace = "<function: 00000001EE7BA754>",
+  GetRotation = "<function: 00000000FC8B9B64>",
+  GetScarStatus = "<function: 00000001D3D9A0C4>",
+  GetSelectedPresetIndex = "<function: 00000001E9606094>",
+  GetText = "<function: 00000001E96C0C24>",
+  GetTwoToneHairStatus = "<function: 00000001E4E004D4>",
+  GetUILayer = "<function: 00000001E95DD044>",
+  GetValue = "<function: 00000001D43C4184>",
+  GetWidth = "<function: 00000001D43F5804>",
+  HasDiffWithClientUnit = "<function: 00000001E4EAF0A4>",
+  HasHandler = "<function: 00000001D45C5F04>",
+  InheritAnimationData = "<function: 00000001F66605C4>",
+  Init = "<function: 00000001E4C573F4>",
+  InitBeautyShop = "<function: 00000001D3BEC0D4>",
+  InitByModelRef = "<function: 00000001D3F8F094>",
+  InitCustomizerControl = "<function: 00000001D3B94694>",
+  IsDescendantWidget = "<function: 00000001D3EC0B64>",
+  IsEnabled = "<function: 00000000FA0294E4>",
+  IsFrozen = "<function: 00000001E4EB69A4>",
+  IsMouseOver = "<function: 00000001E9641F14>",
+  IsNowAnimation = "<function: 00000001E4F6BC84>",
+  IsValidUIObject = "<function: 00000001EE7E2014>",
+  IsVisible = "<function: 00000001E9641F94>",
+  Lower = "<function: 00000001EE764EC4>",
+  ModifyFaceParamValue = "<function: 00000001E27223E4>",
+  MoveTo = "<function: 00000001D46333D4>",
+  PayBeautyShop = "<function: 00000001A257E944>",
+  PlayAnimation = "<function: 00000001D46FF274>",
+  Raise = "<function: 00000001E95A9004>",
+  RegisterEvent = "<function: 0000000228DF4164>",
+  ReleaseDeletedHandler = "<function: 0000000228DE52E4>",
+  ReleaseHandler = "<function: 00000001E8F7B5F4>",
+  RemoveAllAnchors = "<function: 00000001E966C164>",
+  RemoveAllDrawables = "<function: 00000001E95D5E84>",
+  RemoveDrawable = "<function: 00000001E95D4B84>",
+  RemoveEquipSlot = "<function: 00000001D4468394>",
+  RequestCharacterCacheData = "<function: 00000001EE737904>",
+  ResetBeautyShop = "<function: 00000001C8A0D144>",
+  ResetEquips = "<function: 00000001E9626F94>",
+  SetAlpha = "<function: 00000001E4A31824>",
+  SetAlphaAnimation = "<function: 00000001E95D1E44>",
+  SetBackColor = "<function: 00000001E4EC03A4>",
+  SetBeautyShopMode = "<function: 00000001F83960A4>",
+  SetCameraPos = "<function: 00000001E1AFBEF4>",
+  SetCategory = "<function: 000000007C85A9B4>",
+  SetCharacterCacheDataHandler = "<function: 00000001E95D4B04>",
+  SetCustomizingBodyNormal = "<function: 00000001E9624494>",
+  SetCustomizingDeco = "<function: 00000001E9619A14>",
+  SetCustomizingDecoColor = "<function: 00000001E9619C54>",
+  SetCustomizingEyebrow = "<function: 00000001E9620DD4>",
+  SetCustomizingEyebrowColor = "<function: 00000001E1925704>",
+  SetCustomizingFaceDiffuse = "<function: 000000007CAFD674>",
+  SetCustomizingFaceNormal = "<function: 00000001E1A833E4>",
+  SetCustomizingHair = "<function: 00000001D4549CF4>",
+  SetCustomizingHairColor = "<function: 00000001D3FA8494>",
+  SetCustomizingHairDefaultColor = "<function: 00000001E5024BD4>",
+  SetCustomizingHairTwoToneColor = "<function: 00000001E963D114>",
+  SetCustomizingHorn = "<function: 00000001D3D91904>",
+  SetCustomizingHornColor = "<function: 00000001E95C49C4>",
+  SetCustomizingLipColor = "<function: 00000001D3D53B74>",
+  SetCustomizingMakeUp = "<function: 00000001E9620D94>",
+  SetCustomizingPreviewCloth = "<function: 00000001E963D194>",
+  SetCustomizingPupil = "<function: 00000001E963A694>",
+  SetCustomizingPupilColor = "<function: 00000001E498F614>",
+  SetCustomizingScar = "<function: 00000001A2547A44>",
+  SetCustomizingSkinColor = "<function: 00000001D3EC0D64>",
+  SetCustomizingTail = "<function: 00000001E95C4A04>",
+  SetCustomizingTattoo = "<function: 00000001AF048DF4>",
+  SetDelegator = "<function: 00000001EE73BD84>",
+  SetDeletedHandler = "<function: 00000001D4554E84>",
+  SetDisableColorGrading = "<function: 00000001E2735D24>",
+  SetDragCondition = "<function: 00000001E95AFF84>",
+  SetDrawPriority = "<function: 00000001A2725714>",
+  SetDrawableLayerAlpha = "<function: 00000001A27231D4>",
+  SetEquipSlotFromCharacter = "<function: 00000001E4F369B4>",
+  SetExtent = "<function: 00000001E4B58C54>",
+  SetFov = "<function: 00000001D3B93814>",
+  SetFreeze = "<function: 00000001E504BBA4>",
+  SetHandler = "<function: 00000001E9611F54>",
+  SetHeight = "<function: 00000001B5DA60C4>",
+  SetIngameShopMode = "<function: 00000001F665C204>",
+  SetLText = "<function: 00000001E968DB24>",
+  SetLayerColor = "<function: 00000001D45EDE94>",
+  SetMaxResizingExtent = "<function: 00000001EE7C6A14>",
+  SetMinResizingExtent = "<function: 00000001D3D74E04>",
+  SetModelViewBackground = "<function: 00000001E96117D4>",
+  SetModelViewCoords = "<function: 00000001E95FB654>",
+  SetModelViewExtent = "<function: 00000001E95FB4D4>",
+  SetMoveAnimation = "<function: 00000001E963CF14>",
+  SetResizingBorderSize = "<function: 00000001E9643494>",
+  SetRotation = "<function: 00000001E19270C4>",
+  SetScale = "<function: 00000001E95C0A04>",
+  SetScaleAnimation = "<function: 00000001E961BD94>",
+  SetSmile = "<function: 00000001A2553484>",
+  SetSounds = "<function: 00000001D3E7A0A4>",
+  SetStartAnimation = "<function: 00000001E963E154>",
+  SetText = "<function: 00000001D43D9404>",
+  SetTextureSize = "<function: 00000001E4EC5E64>",
+  SetWidth = "<function: 00000001D3D18D74>",
+  Show = "<function: 00000001E9641FD4>",
+  ShowItem = "<function: 00000000FC8D8F64>",
+  StartMoving = "<function: 00000001D3F8EFD4>",
+  StartSizing = "<function: 00000001D3F8FA14>",
+  StopAnimation = "<function: 00000000CD63F5B4>",
+  StopMovingOrSizing = "<function: 00000001D3CD0F94>",
+  ToggleCosplayEquipped = "<function: 00000001D3BBEA54>",
+  TriggerMoveAnimation = "<function: 00000001F88CE484>",
+  UnequipItemSlot = "<function: 00000001E95CD604>",
+  UpdateDyeColor = "<function: 00000001D46FF0F4>",
+  UseDynamicContentState = "<function: 00000001D43E73C4>",
+  UseDynamicDrawableState = "<function: 00000001E4F23674>",
+  UseResizing = "<function: 00000001D3F9B0D4>",
+  ZoomInOut = "<function: 00000000FC899AE4>",
+  ZoomInOutBeautyShop = "<function: 00000000FA0218A4>",
+  __this = "<userdata: 000000011A27C490>",
+}

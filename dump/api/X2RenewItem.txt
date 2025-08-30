@@ -1,1 +1,1 @@
-X2RenewItem = {} -- api/X2RenewItem
+X2RenewItem = {}

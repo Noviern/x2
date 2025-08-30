@@ -1,1 +1,1 @@
-X2Security = {} -- api/X2Security
+X2Security = {}

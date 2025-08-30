@@ -1,11 +1,9 @@
-CRU_DOUBLE_GAUGE = 3 -- api/X2CombatResource
-CRU_DOUBLE_GAUGE_2 = 4 -- api/X2CombatResource
-CRU_GAUGE = 1 -- api/X2CombatResource
-CRU_OVERLAP = 2 -- api/X2CombatResource
-X2CombatResource = {} -- api/X2CombatResource
-
-function X2CombatResource:CheckCombatResourceMaxPointByGroupType() end
-
-function X2CombatResource:GetCombatResourceInfo() end
-
-function X2CombatResource:GetCombatResourceInfoByGroupType() end
+CRU_DOUBLE_GAUGE = 3
+CRU_DOUBLE_GAUGE_2 = 4
+CRU_GAUGE = 1
+CRU_OVERLAP = 2
+X2CombatResource = {
+  CheckCombatResourceMaxPointByGroupType = "<function: 00000001D3C8F7D4>",
+  GetCombatResourceInfo = "<function: 00000001D48F0DD4>",
+  GetCombatResourceInfoByGroupType = "<function: 00000001E19412C4>",
+}

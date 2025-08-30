@@ -1,291 +1,162 @@
-AP_BOTTOM = 8 -- objects/GameTooltip
-AP_BOTTOMLEFT = 2 -- objects/GameTooltip
-AP_BOTTOMRIGHT = 3 -- objects/GameTooltip
-AP_CENTER = 4 -- objects/GameTooltip
-AP_LEFT = 6 -- objects/GameTooltip
-AP_RIGHT = 7 -- objects/GameTooltip
-AP_TOP = 5 -- objects/GameTooltip
-AP_TOPLEFT = 0 -- objects/GameTooltip
-AP_TOPRIGHT = 1 -- objects/GameTooltip
-CT_ABILITY = 2 -- objects/GameTooltip
-CT_EXPEDITION_NAME = 3 -- objects/GameTooltip
-CT_NAME = 1 -- objects/GameTooltip
-DC_ALWAYS = 0 -- objects/GameTooltip
-DC_SHIFT_KEY_DOWN = 1 -- objects/GameTooltip
-GameTooltip = { -- objects/GameTooltip
-  __this = <userdata>, -- objects/GameTooltip
-  style = { -- objects/GameTooltip
-    __this = <userdata>, -- objects/GameTooltip
-  }, -- objects/GameTooltip
-} -- objects/GameTooltip
-UFT_CUPLABOR = "|p8;" -- objects/GameTooltip
-UFT_CURHP = "|p2;" -- objects/GameTooltip
-UFT_CURMP = "|p5;" -- objects/GameTooltip
-UFT_GEARSCORE = "|p12;" -- objects/GameTooltip
-UFT_MAXHP = "|p3;" -- objects/GameTooltip
-UFT_MAXLABOR = "|p9;" -- objects/GameTooltip
-UFT_MAXMP = "|p6;" -- objects/GameTooltip
-UFT_NAME = "|p1;" -- objects/GameTooltip
-UFT_PERHP = "|p4;" -- objects/GameTooltip
-UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/GameTooltip
-UFT_PERMP = "|p7;" -- objects/GameTooltip
-UFT_PVPHONOR = "|p10;" -- objects/GameTooltip
-UFT_PVPKILL = "|p11;" -- objects/GameTooltip
-
-function GameTooltip.style:GetId() end
-
-function GameTooltip.style:GetLineHeight() end
-
-function GameTooltip.style:GetName() end
-
-function GameTooltip.style:GetObjectType() end
-
-function GameTooltip.style:GetTextWidth() end
-
-function GameTooltip.style:IsValidUIObject() end
-
-function GameTooltip.style:SetAlign() end
-
-function GameTooltip.style:SetColor() end
-
-function GameTooltip.style:SetColorByKey() end
-
-function GameTooltip.style:SetEllipsis() end
-
-function GameTooltip.style:SetFont() end
-
-function GameTooltip.style:SetFontSize() end
-
-function GameTooltip.style:SetOutline() end
-
-function GameTooltip.style:SetShadow() end
-
-function GameTooltip.style:SetSnap() end
-
-function GameTooltip:AddAnchor() end
-
-function GameTooltip:AddAnotherSideLine() end
-
-function GameTooltip:AddLine() end
-
-function GameTooltip:ApplyUIScale() end
-
-function GameTooltip:AttachLowerSpaceLine() end
-
-function GameTooltip:AttachUpperSpaceLine() end
-
-function GameTooltip:AttachWidget() end
-
-function GameTooltip:BindWidth() end
-
-function GameTooltip:CancelRequestCharacterCacheData() end
-
-function GameTooltip:ChangeChildAnchorByScrollValue() end
-
-function GameTooltip:CheckOutOfScreen() end
-
-function GameTooltip:ClearLines() end
-
-function GameTooltip:Clickable() end
-
-function GameTooltip:CorrectOffsetByScreen() end
-
-function GameTooltip:CreateChildWidget() end
-
-function GameTooltip:CreateChildWidgetByType() end
-
-function GameTooltip:CreateColorDrawable() end
-
-function GameTooltip:CreateColorDrawableByKey() end
-
-function GameTooltip:CreateDrawable() end
-
-function GameTooltip:CreateEffectDrawable() end
-
-function GameTooltip:CreateEffectDrawableByKey() end
-
-function GameTooltip:CreateIconDrawable() end
-
-function GameTooltip:CreateImageDrawable() end
-
-function GameTooltip:CreateNinePartDrawable() end
-
-function GameTooltip:CreateTextDrawable() end
-
-function GameTooltip:CreateThreeColorDrawable() end
-
-function GameTooltip:CreateThreePartDrawable() end
-
-function GameTooltip:DetachWidget() end
-
-function GameTooltip:DisableDrawables() end
-
-function GameTooltip:DisableDrawablesWithChildren() end
-
-function GameTooltip:Enable() end
-
-function GameTooltip:EnableDrag() end
-
-function GameTooltip:EnableDrawables() end
-
-function GameTooltip:EnableDrawablesWithChildren() end
-
-function GameTooltip:EnableFocus() end
-
-function GameTooltip:EnableHidingIsRemove() end
-
-function GameTooltip:EnableKeyboard() end
-
-function GameTooltip:EnablePick() end
-
-function GameTooltip:EnableScroll() end
-
-function GameTooltip:GetAlpha() end
-
-function GameTooltip:GetAttachedWidget() end
-
-function GameTooltip:GetEffectiveExtent() end
-
-function GameTooltip:GetEffectiveOffset() end
-
-function GameTooltip:GetExtent() end
-
-function GameTooltip:GetHeight() end
-
-function GameTooltip:GetHeightToLastLine() end
-
-function GameTooltip:GetId() end
-
-function GameTooltip:GetLastLine() end
-
-function GameTooltip:GetLineCount() end
-
-function GameTooltip:GetLineSpace() end
-
-function GameTooltip:GetName() end
-
-function GameTooltip:GetObjectType() end
-
-function GameTooltip:GetOffset() end
-
-function GameTooltip:GetParent() end
-
-function GameTooltip:GetRotation() end
-
-function GameTooltip:GetText() end
-
-function GameTooltip:GetUILayer() end
-
-function GameTooltip:GetValue() end
-
-function GameTooltip:GetWidth() end
-
-function GameTooltip:HasHandler() end
-
-function GameTooltip:InheritAnimationData() end
-
-function GameTooltip:IsDescendantWidget() end
-
-function GameTooltip:IsEnabled() end
-
-function GameTooltip:IsMouseOver() end
-
-function GameTooltip:IsNowAnimation() end
-
-function GameTooltip:IsValidUIObject() end
-
-function GameTooltip:IsVisible() end
-
-function GameTooltip:Lower() end
-
-function GameTooltip:MoveTo() end
-
-function GameTooltip:Raise() end
-
-function GameTooltip:RegisterEvent() end
-
-function GameTooltip:ReleaseDeletedHandler() end
-
-function GameTooltip:ReleaseHandler() end
-
-function GameTooltip:RemoveAllAnchors() end
-
-function GameTooltip:RemoveAllDrawables() end
-
-function GameTooltip:RemoveDrawable() end
-
-function GameTooltip:RequestCharacterCacheData() end
-
-function GameTooltip:SetAlpha() end
-
-function GameTooltip:SetAlphaAnimation() end
-
-function GameTooltip:SetAutoWordwrap() end
-
-function GameTooltip:SetCategory() end
-
-function GameTooltip:SetCharacterCacheDataHandler() end
-
-function GameTooltip:SetDelegator() end
-
-function GameTooltip:SetDeletedHandler() end
-
-function GameTooltip:SetDragCondition() end
-
-function GameTooltip:SetDrawPriority() end
-
-function GameTooltip:SetDrawableLayerAlpha() end
-
-function GameTooltip:SetExtent() end
-
-function GameTooltip:SetHandler() end
-
-function GameTooltip:SetHeight() end
-
-function GameTooltip:SetInset() end
-
-function GameTooltip:SetLText() end
-
-function GameTooltip:SetLayerColor() end
-
-function GameTooltip:SetLineSpace() end
-
-function GameTooltip:SetMaxResizingExtent() end
-
-function GameTooltip:SetMinResizingExtent() end
-
-function GameTooltip:SetMoveAnimation() end
-
-function GameTooltip:SetResizingBorderSize() end
-
-function GameTooltip:SetRotation() end
-
-function GameTooltip:SetScale() end
-
-function GameTooltip:SetScaleAnimation() end
-
-function GameTooltip:SetSounds() end
-
-function GameTooltip:SetStartAnimation() end
-
-function GameTooltip:SetText() end
-
-function GameTooltip:SetTooltipData() end
-
-function GameTooltip:SetWidth() end
-
-function GameTooltip:Show() end
-
-function GameTooltip:StartMoving() end
-
-function GameTooltip:StartSizing() end
-
-function GameTooltip:StopMovingOrSizing() end
-
-function GameTooltip:TriggerMoveAnimation() end
-
-function GameTooltip:UseDynamicContentState() end
-
-function GameTooltip:UseDynamicDrawableState() end
-
-function GameTooltip:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+GameTooltip = {
+  AddAnchor = "<function: 000000007C8D4984>",
+  AddAnotherSideLine = "<function: 00000001D47B8AC4>",
+  AddLine = "<function: 00000000FC88D4A4>",
+  ApplyUIScale = "<function: 00000001D40DFE84>",
+  AttachLowerSpaceLine = "<function: 00000001AFA9CFD4>",
+  AttachUpperSpaceLine = "<function: 00000001E9642F14>",
+  AttachWidget = "<function: 00000001D48B5454>",
+  BindWidth = "<function: 000000007C8D0204>",
+  CancelRequestCharacterCacheData = "<function: 00000001E961C9D4>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001D3B9A694>",
+  CheckOutOfScreen = "<function: 00000001D3BAAD14>",
+  ClearLines = "<function: 00000001E9643094>",
+  Clickable = "<function: 00000001B5DB8444>",
+  CorrectOffsetByScreen = "<function: 00000001D3D147F4>",
+  CreateChildWidget = "<function: 00000000FC5FE264>",
+  CreateChildWidgetByType = "<function: 00000001E964B454>",
+  CreateColorDrawable = "<function: 00000001D3E27314>",
+  CreateColorDrawableByKey = "<function: 00000001E96672A4>",
+  CreateDrawable = "<function: 00000000CD6D2054>",
+  CreateEffectDrawable = "<function: 00000001C56131E4>",
+  CreateEffectDrawableByKey = "<function: 00000001D40C1C04>",
+  CreateIconDrawable = "<function: 00000001E9671464>",
+  CreateImageDrawable = "<function: 00000001E9667724>",
+  CreateNinePartDrawable = "<function: 00000001C8A66084>",
+  CreateTextDrawable = "<function: 00000001E96714A4>",
+  CreateThreeColorDrawable = "<function: 00000001E9671524>",
+  CreateThreePartDrawable = "<function: 00000001D3F44C34>",
+  DetachWidget = "<function: 00000001D3BEA654>",
+  DisableDrawables = "<function: 00000001E9624294>",
+  DisableDrawablesWithChildren = "<function: 00000001D3CD3E94>",
+  Enable = "<function: 00000001E9626714>",
+  EnableDrag = "<function: 00000001D3BE7A14>",
+  EnableDrawables = "<function: 00000001E8E4BF54>",
+  EnableDrawablesWithChildren = "<function: 00000001D478B444>",
+  EnableFocus = "<function: 00000001E9627D54>",
+  EnableHidingIsRemove = "<function: 00000001B5D46384>",
+  EnableKeyboard = "<function: 00000001B5D46304>",
+  EnablePick = "<function: 00000001AFA8A054>",
+  EnableScroll = "<function: 00000001D3C8FED4>",
+  GetAlpha = "<function: 00000000CD6D9E94>",
+  GetAttachedWidget = "<function: 00000001D3BB5154>",
+  GetEffectiveExtent = "<function: 00000001F88A7CC4>",
+  GetEffectiveOffset = "<function: 000000007C8C6DC4>",
+  GetExtent = "<function: 00000001E272F9E4>",
+  GetHeight = "<function: 00000001E4B11414>",
+  GetHeightToLastLine = "<function: 00000001AFA604D4>",
+  GetId = "<function: 00000001D4677F24>",
+  GetLastLine = "<function: 00000000CD790504>",
+  GetLineCount = "<function: 00000000FC894F24>",
+  GetLineSpace = "<function: 00000000FC8D05E4>",
+  GetName = "<function: 00000001D4786744>",
+  GetObjectType = "<function: 00000001F65FC4C4>",
+  GetOffset = "<function: 00000001E1AFB334>",
+  GetParent = "<function: 00000001F626F4B4>",
+  GetRotation = "<function: 00000001E4F34B34>",
+  GetText = "<function: 00000001A258E584>",
+  GetUILayer = "<function: 00000001D475F6C4>",
+  GetValue = "<function: 00000001B5DADA04>",
+  GetWidth = "<function: 00000001AFABF054>",
+  HasHandler = "<function: 00000001E95A66C4>",
+  InheritAnimationData = "<function: 00000001F88BC944>",
+  IsDescendantWidget = "<function: 00000001D3C0E554>",
+  IsEnabled = "<function: 00000001E96269D4>",
+  IsMouseOver = "<function: 00000001E4CDC344>",
+  IsNowAnimation = "<function: 00000001E961C8D4>",
+  IsValidUIObject = "<function: 00000001D4784684>",
+  IsVisible = "<function: 00000001E4B33E54>",
+  Lower = "<function: 00000001E4A336E4>",
+  MoveTo = "<function: 00000000FC5E6124>",
+  Raise = "<function: 00000001D3CCA7D4>",
+  RegisterEvent = "<function: 00000001E9601C94>",
+  ReleaseDeletedHandler = "<function: 00000001D3CCEC94>",
+  ReleaseHandler = "<function: 00000001D3CCEB54>",
+  RemoveAllAnchors = "<function: 000000007C8F60C4>",
+  RemoveAllDrawables = "<function: 00000001E8E50D54>",
+  RemoveDrawable = "<function: 00000001E961CB94>",
+  RequestCharacterCacheData = "<function: 00000001E961C994>",
+  SetAlpha = "<function: 00000000CD6D9D94>",
+  SetAlphaAnimation = "<function: 00000001C8A55B04>",
+  SetAutoWordwrap = "<function: 00000001E966B3A4>",
+  SetCategory = "<function: 00000001D3E0EDD4>",
+  SetCharacterCacheDataHandler = "<function: 00000001E961CB54>",
+  SetDelegator = "<function: 00000001E961C954>",
+  SetDeletedHandler = "<function: 00000001E9601F14>",
+  SetDragCondition = "<function: 00000001E4BEE864>",
+  SetDrawPriority = "<function: 00000001D3FE4CD4>",
+  SetDrawableLayerAlpha = "<function: 00000001D3BB57D4>",
+  SetExtent = "<function: 00000001E1A29CA4>",
+  SetHandler = "<function: 00000001E487D0F4>",
+  SetHeight = "<function: 00000001F6600C04>",
+  SetInset = "<function: 000000007C874BB4>",
+  SetLText = "<function: 00000001B5DADB04>",
+  SetLayerColor = "<function: 00000001E4B00C04>",
+  SetLineSpace = "<function: 00000000CD6E0754>",
+  SetMaxResizingExtent = "<function: 00000001E1B50AC4>",
+  SetMinResizingExtent = "<function: 00000001E4B6CA94>",
+  SetMoveAnimation = "<function: 00000001D4454B54>",
+  SetResizingBorderSize = "<function: 00000001D3EA1564>",
+  SetRotation = "<function: 00000000FC6249E4>",
+  SetScale = "<function: 00000001C8A58604>",
+  SetScaleAnimation = "<function: 00000001E4CFD9C4>",
+  SetSounds = "<function: 00000001E95A6784>",
+  SetStartAnimation = "<function: 00000001E9614654>",
+  SetText = "<function: 00000001B5DAD544>",
+  SetTooltipData = "<function: 00000001FBE7E9D4>",
+  SetWidth = "<function: 00000001F6600844>",
+  Show = "<function: 00000001EED52344>",
+  StartMoving = "<function: 00000001E9650854>",
+  StartSizing = "<function: 00000001E9650E14>",
+  StopMovingOrSizing = "<function: 00000000FC5EC764>",
+  TriggerMoveAnimation = "<function: 000000007CB09874>",
+  UseDynamicContentState = "<function: 00000001E95C3884>",
+  UseDynamicDrawableState = "<function: 00000001E96C1064>",
+  UseResizing = "<function: 00000001E968FD24>",
+  __this = "<userdata: 00000001F53FD930>",
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD5270>",
+  },
+}
+UFT_CUPLABOR = "|p8;"
+UFT_CURHP = "|p2;"
+UFT_CURMP = "|p5;"
+UFT_GEARSCORE = "|p12;"
+UFT_MAXHP = "|p3;"
+UFT_MAXLABOR = "|p9;"
+UFT_MAXMP = "|p6;"
+UFT_NAME = "|p1;"
+UFT_PERHP = "|p4;"
+UFT_PERIOD_LEADERSHIP = "|p13;"
+UFT_PERMP = "|p7;"
+UFT_PVPHONOR = "|p10;"
+UFT_PVPKILL = "|p11;"

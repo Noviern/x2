@@ -1,237 +1,127 @@
-AP_BOTTOM = 8 -- objects/CircleDiagram
-AP_BOTTOMLEFT = 2 -- objects/CircleDiagram
-AP_BOTTOMRIGHT = 3 -- objects/CircleDiagram
-AP_CENTER = 4 -- objects/CircleDiagram
-AP_LEFT = 6 -- objects/CircleDiagram
-AP_RIGHT = 7 -- objects/CircleDiagram
-AP_TOP = 5 -- objects/CircleDiagram
-AP_TOPLEFT = 0 -- objects/CircleDiagram
-AP_TOPRIGHT = 1 -- objects/CircleDiagram
-CT_ABILITY = 2 -- objects/CircleDiagram
-CT_EXPEDITION_NAME = 3 -- objects/CircleDiagram
-CT_NAME = 1 -- objects/CircleDiagram
-CircleDiagram = { -- objects/CircleDiagram
-  __this = <userdata>, -- objects/CircleDiagram
-} -- objects/CircleDiagram
-DC_ALWAYS = 0 -- objects/CircleDiagram
-DC_SHIFT_KEY_DOWN = 1 -- objects/CircleDiagram
-
-function CircleDiagram:AddAnchor() end
-
-function CircleDiagram:AddPoint() end
-
-function CircleDiagram:AddPointsByAngle() end
-
-function CircleDiagram:ApplyUIScale() end
-
-function CircleDiagram:AttachWidget() end
-
-function CircleDiagram:BindWidth() end
-
-function CircleDiagram:CancelRequestCharacterCacheData() end
-
-function CircleDiagram:ChangeChildAnchorByScrollValue() end
-
-function CircleDiagram:CheckOutOfScreen() end
-
-function CircleDiagram:ClearPoints() end
-
-function CircleDiagram:Clickable() end
-
-function CircleDiagram:CorrectOffsetByScreen() end
-
-function CircleDiagram:CreateChildWidget() end
-
-function CircleDiagram:CreateChildWidgetByType() end
-
-function CircleDiagram:CreateColorDrawable() end
-
-function CircleDiagram:CreateColorDrawableByKey() end
-
-function CircleDiagram:CreateDrawable() end
-
-function CircleDiagram:CreateEffectDrawable() end
-
-function CircleDiagram:CreateEffectDrawableByKey() end
-
-function CircleDiagram:CreateIconDrawable() end
-
-function CircleDiagram:CreateImageDrawable() end
-
-function CircleDiagram:CreateNinePartDrawable() end
-
-function CircleDiagram:CreateTextDrawable() end
-
-function CircleDiagram:CreateThreeColorDrawable() end
-
-function CircleDiagram:CreateThreePartDrawable() end
-
-function CircleDiagram:DetachWidget() end
-
-function CircleDiagram:DisableDrawables() end
-
-function CircleDiagram:DisableDrawablesWithChildren() end
-
-function CircleDiagram:Enable() end
-
-function CircleDiagram:EnableDrag() end
-
-function CircleDiagram:EnableDrawables() end
-
-function CircleDiagram:EnableDrawablesWithChildren() end
-
-function CircleDiagram:EnableFocus() end
-
-function CircleDiagram:EnableHidingIsRemove() end
-
-function CircleDiagram:EnableKeyboard() end
-
-function CircleDiagram:EnablePick() end
-
-function CircleDiagram:EnableScroll() end
-
-function CircleDiagram:GetAlpha() end
-
-function CircleDiagram:GetAttachedWidget() end
-
-function CircleDiagram:GetCenterOffset() end
-
-function CircleDiagram:GetEffectiveExtent() end
-
-function CircleDiagram:GetEffectiveOffset() end
-
-function CircleDiagram:GetExtent() end
-
-function CircleDiagram:GetHeight() end
-
-function CircleDiagram:GetId() end
-
-function CircleDiagram:GetName() end
-
-function CircleDiagram:GetObjectType() end
-
-function CircleDiagram:GetOffset() end
-
-function CircleDiagram:GetParent() end
-
-function CircleDiagram:GetPointOffset() end
-
-function CircleDiagram:GetRotation() end
-
-function CircleDiagram:GetText() end
-
-function CircleDiagram:GetUILayer() end
-
-function CircleDiagram:GetValue() end
-
-function CircleDiagram:GetWidth() end
-
-function CircleDiagram:HasHandler() end
-
-function CircleDiagram:InheritAnimationData() end
-
-function CircleDiagram:IsDescendantWidget() end
-
-function CircleDiagram:IsEnabled() end
-
-function CircleDiagram:IsMouseOver() end
-
-function CircleDiagram:IsNowAnimation() end
-
-function CircleDiagram:IsValidUIObject() end
-
-function CircleDiagram:IsVisible() end
-
-function CircleDiagram:Lower() end
-
-function CircleDiagram:MoveTo() end
-
-function CircleDiagram:Raise() end
-
-function CircleDiagram:RegisterEvent() end
-
-function CircleDiagram:ReleaseDeletedHandler() end
-
-function CircleDiagram:ReleaseHandler() end
-
-function CircleDiagram:RemoveAllAnchors() end
-
-function CircleDiagram:RemoveAllDrawables() end
-
-function CircleDiagram:RemoveDrawable() end
-
-function CircleDiagram:RequestCharacterCacheData() end
-
-function CircleDiagram:SetAlpha() end
-
-function CircleDiagram:SetAlphaAnimation() end
-
-function CircleDiagram:SetCategory() end
-
-function CircleDiagram:SetCharacterCacheDataHandler() end
-
-function CircleDiagram:SetDelegator() end
-
-function CircleDiagram:SetDeletedHandler() end
-
-function CircleDiagram:SetDiagramColor() end
-
-function CircleDiagram:SetDragCondition() end
-
-function CircleDiagram:SetDrawPriority() end
-
-function CircleDiagram:SetDrawableLayerAlpha() end
-
-function CircleDiagram:SetExtent() end
-
-function CircleDiagram:SetHandler() end
-
-function CircleDiagram:SetHeight() end
-
-function CircleDiagram:SetLText() end
-
-function CircleDiagram:SetLayerColor() end
-
-function CircleDiagram:SetLineThickness() end
-
-function CircleDiagram:SetMaxResizingExtent() end
-
-function CircleDiagram:SetMaxValue() end
-
-function CircleDiagram:SetMinResizingExtent() end
-
-function CircleDiagram:SetMoveAnimation() end
-
-function CircleDiagram:SetPointValue() end
-
-function CircleDiagram:SetResizingBorderSize() end
-
-function CircleDiagram:SetRotation() end
-
-function CircleDiagram:SetScale() end
-
-function CircleDiagram:SetScaleAnimation() end
-
-function CircleDiagram:SetSounds() end
-
-function CircleDiagram:SetStartAnimation() end
-
-function CircleDiagram:SetText() end
-
-function CircleDiagram:SetWidth() end
-
-function CircleDiagram:Show() end
-
-function CircleDiagram:StartMoving() end
-
-function CircleDiagram:StartSizing() end
-
-function CircleDiagram:StopMovingOrSizing() end
-
-function CircleDiagram:TriggerMoveAnimation() end
-
-function CircleDiagram:UseDynamicContentState() end
-
-function CircleDiagram:UseDynamicDrawableState() end
-
-function CircleDiagram:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+CircleDiagram = {
+  AddAnchor = "<function: 000000007C8854F4>",
+  AddPoint = "<function: 00000001E1B21984>",
+  AddPointsByAngle = "<function: 00000001D3BC1194>",
+  ApplyUIScale = "<function: 00000001E9611294>",
+  AttachWidget = "<function: 00000001E4F63444>",
+  BindWidth = "<function: 000000007C8854B4>",
+  CancelRequestCharacterCacheData = "<function: 00000001D3F7C214>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E961C654>",
+  CheckOutOfScreen = "<function: 00000001F838F1A4>",
+  ClearPoints = "<function: 00000001D3CEE774>",
+  Clickable = "<function: 00000001E1923384>",
+  CorrectOffsetByScreen = "<function: 00000001F8383FA4>",
+  CreateChildWidget = "<function: 00000001CEAB4664>",
+  CreateChildWidgetByType = "<function: 00000000CD729E54>",
+  CreateColorDrawable = "<function: 00000001D3D21134>",
+  CreateColorDrawableByKey = "<function: 00000001E95AFE04>",
+  CreateDrawable = "<function: 00000001A2547844>",
+  CreateEffectDrawable = "<function: 00000001B5D73EC4>",
+  CreateEffectDrawableByKey = "<function: 00000001E963C154>",
+  CreateIconDrawable = "<function: 00000001D45CE3D4>",
+  CreateImageDrawable = "<function: 00000001E4F43F34>",
+  CreateNinePartDrawable = "<function: 00000001A25479C4>",
+  CreateTextDrawable = "<function: 00000001E4F40A74>",
+  CreateThreeColorDrawable = "<function: 00000001E95CB384>",
+  CreateThreePartDrawable = "<function: 00000001A2547A04>",
+  DetachWidget = "<function: 00000001E4F2CC74>",
+  DisableDrawables = "<function: 00000000FC5CDE24>",
+  DisableDrawablesWithChildren = "<function: 00000001E961EF14>",
+  Enable = "<function: 00000000CD628A74>",
+  EnableDrag = "<function: 00000001D49887E4>",
+  EnableDrawables = "<function: 00000001D3F01B74>",
+  EnableDrawablesWithChildren = "<function: 00000001E9643814>",
+  EnableFocus = "<function: 00000000FC52CF44>",
+  EnableHidingIsRemove = "<function: 00000001A71193C4>",
+  EnableKeyboard = "<function: 00000001E96244D4>",
+  EnablePick = "<function: 00000001E95A2944>",
+  EnableScroll = "<function: 00000001E961C614>",
+  GetAlpha = "<function: 00000001EEB8DB04>",
+  GetAttachedWidget = "<function: 00000001E95A2CC4>",
+  GetCenterOffset = "<function: 00000001D49D20B4>",
+  GetEffectiveExtent = "<function: 00000001F624B274>",
+  GetEffectiveOffset = "<function: 00000001F838F164>",
+  GetExtent = "<function: 00000001EEB70704>",
+  GetHeight = "<function: 000000007C885434>",
+  GetId = "<function: 00000001D3CE5E74>",
+  GetName = "<function: 00000001E9641B14>",
+  GetObjectType = "<function: 00000001E4961AD4>",
+  GetOffset = "<function: 00000001AF0472F4>",
+  GetParent = "<function: 00000000FC8D3824>",
+  GetPointOffset = "<function: 00000001D4356214>",
+  GetRotation = "<function: 00000001E18AD0F4>",
+  GetText = "<function: 00000001E4F63404>",
+  GetUILayer = "<function: 00000001A710A404>",
+  GetValue = "<function: 00000000FA01A9A4>",
+  GetWidth = "<function: 00000000FC6333E4>",
+  HasHandler = "<function: 00000001E9617294>",
+  InheritAnimationData = "<function: 00000001E96414D4>",
+  IsDescendantWidget = "<function: 00000001E96289D4>",
+  IsEnabled = "<function: 00000001D40B0AC4>",
+  IsMouseOver = "<function: 00000001E19A8354>",
+  IsNowAnimation = "<function: 00000001E9641514>",
+  IsValidUIObject = "<function: 00000001E9639614>",
+  IsVisible = "<function: 00000001F65F54C4>",
+  Lower = "<function: 00000001D45E8F54>",
+  MoveTo = "<function: 00000001E95B1C84>",
+  Raise = "<function: 00000001D478B484>",
+  RegisterEvent = "<function: 000000007CAE4434>",
+  ReleaseDeletedHandler = "<function: 00000001B5DA3A04>",
+  ReleaseHandler = "<function: 00000001E95C04C4>",
+  RemoveAllAnchors = "<function: 00000001F6243DF4>",
+  RemoveAllDrawables = "<function: 00000001D4045B64>",
+  RemoveDrawable = "<function: 00000001E4EAD3A4>",
+  RequestCharacterCacheData = "<function: 00000001D3E12014>",
+  SetAlpha = "<function: 00000001D478B4C4>",
+  SetAlphaAnimation = "<function: 00000001D4469014>",
+  SetCategory = "<function: 00000000FC8D38E4>",
+  SetCharacterCacheDataHandler = "<function: 00000001D3FD9054>",
+  SetDelegator = "<function: 00000001F6229F74>",
+  SetDeletedHandler = "<function: 00000001B5DA39C4>",
+  SetDiagramColor = "<function: 00000001E1AE1EB4>",
+  SetDragCondition = "<function: 00000001E8F3DB34>",
+  SetDrawPriority = "<function: 00000001E963C794>",
+  SetDrawableLayerAlpha = "<function: 00000001E963C1D4>",
+  SetExtent = "<function: 00000001AF0471B4>",
+  SetHandler = "<function: 00000001E95C7204>",
+  SetHeight = "<function: 00000001AF046FF4>",
+  SetLText = "<function: 00000001E50367D4>",
+  SetLayerColor = "<function: 00000001D43F1844>",
+  SetLineThickness = "<function: 00000001E1AE2D34>",
+  SetMaxResizingExtent = "<function: 00000001E9610394>",
+  SetMaxValue = "<function: 00000001E1A07994>",
+  SetMinResizingExtent = "<function: 00000001E9610314>",
+  SetMoveAnimation = "<function: 00000001E963FB54>",
+  SetPointValue = "<function: 00000001D40AFF44>",
+  SetResizingBorderSize = "<function: 00000001E9611254>",
+  SetRotation = "<function: 00000001E1A05A94>",
+  SetScale = "<function: 00000001E9618554>",
+  SetScaleAnimation = "<function: 00000001D4489794>",
+  SetSounds = "<function: 00000001E95B1B84>",
+  SetStartAnimation = "<function: 00000001E9613D94>",
+  SetText = "<function: 00000000FA01E664>",
+  SetWidth = "<function: 00000001CEA401E4>",
+  Show = "<function: 00000001D45EC6D4>",
+  StartMoving = "<function: 00000001E95B1BC4>",
+  StartSizing = "<function: 00000001E95B1C44>",
+  StopMovingOrSizing = "<function: 00000001E9609D94>",
+  TriggerMoveAnimation = "<function: 00000001E9641494>",
+  UseDynamicContentState = "<function: 00000001D43E8804>",
+  UseDynamicDrawableState = "<function: 00000001D43E7F04>",
+  UseResizing = "<function: 00000001E9610294>",
+  __this = "<userdata: 000000024BB21B30>",
+}
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1

@@ -1,2 +1,2 @@
-Console = {} -- api/X2Console
-X2Console = {} -- api/X2Console
+Console = {}
+X2Console = {}

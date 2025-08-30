@@ -1,1890 +1,979 @@
-AP_BOTTOM = 8 -- objects/Combobox
-AP_BOTTOMLEFT = 2 -- objects/Combobox
-AP_BOTTOMRIGHT = 3 -- objects/Combobox
-AP_CENTER = 4 -- objects/Combobox
-AP_LEFT = 6 -- objects/Combobox
-AP_RIGHT = 7 -- objects/Combobox
-AP_TOP = 5 -- objects/Combobox
-AP_TOPLEFT = 0 -- objects/Combobox
-AP_TOPRIGHT = 1 -- objects/Combobox
-CT_ABILITY = 2 -- objects/Combobox
-CT_EXPEDITION_NAME = 3 -- objects/Combobox
-CT_NAME = 1 -- objects/Combobox
-Combobox = { -- objects/Combobox
-  __this = <userdata>, -- objects/Combobox
-  dropdown = { -- objects/Combobox
-    downBtn = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-      style = { -- objects/Combobox
-        __this = <userdata>, -- objects/Combobox
-      }, -- objects/Combobox
-    }, -- objects/Combobox
-    itemStyle = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-    }, -- objects/Combobox
-    itemStyleSub = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-    }, -- objects/Combobox
-    upBtn = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-      style = { -- objects/Combobox
-        __this = <userdata>, -- objects/Combobox
-      }, -- objects/Combobox
-    }, -- objects/Combobox
-    vslider = { -- objects/Combobox
-      thumb = { -- objects/Combobox
-        __this = <userdata>, -- objects/Combobox
-        style = { -- objects/Combobox
-          __this = <userdata>, -- objects/Combobox
-        }, -- objects/Combobox
-      }, -- objects/Combobox
-    }, -- objects/Combobox
-  }, -- objects/Combobox
-  selector = { -- objects/Combobox
-    guideTextStyle = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-    }, -- objects/Combobox
-    prefixStyle = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-    }, -- objects/Combobox
-    style = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-    }, -- objects/Combobox
-  }, -- objects/Combobox
-  selectorBtn = { -- objects/Combobox
-    __this = <userdata>, -- objects/Combobox
-    style = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-    }, -- objects/Combobox
-  }, -- objects/Combobox
-  toggle = { -- objects/Combobox
-    __this = <userdata>, -- objects/Combobox
-    style = { -- objects/Combobox
-      __this = <userdata>, -- objects/Combobox
-    }, -- objects/Combobox
-  }, -- objects/Combobox
-} -- objects/Combobox
-DC_ALWAYS = 0 -- objects/Combobox
-DC_SHIFT_KEY_DOWN = 1 -- objects/Combobox
-
-function Combobox.dropdown.downBtn.style:GetId() end
-
-function Combobox.dropdown.downBtn.style:GetLineHeight() end
-
-function Combobox.dropdown.downBtn.style:GetName() end
-
-function Combobox.dropdown.downBtn.style:GetObjectType() end
-
-function Combobox.dropdown.downBtn.style:GetTextWidth() end
-
-function Combobox.dropdown.downBtn.style:IsValidUIObject() end
-
-function Combobox.dropdown.downBtn.style:SetAlign() end
-
-function Combobox.dropdown.downBtn.style:SetColor() end
-
-function Combobox.dropdown.downBtn.style:SetColorByKey() end
-
-function Combobox.dropdown.downBtn.style:SetEllipsis() end
-
-function Combobox.dropdown.downBtn.style:SetFont() end
-
-function Combobox.dropdown.downBtn.style:SetFontSize() end
-
-function Combobox.dropdown.downBtn.style:SetOutline() end
-
-function Combobox.dropdown.downBtn.style:SetShadow() end
-
-function Combobox.dropdown.downBtn.style:SetSnap() end
-
-function Combobox.dropdown.downBtn:AddAnchor() end
-
-function Combobox.dropdown.downBtn:ApplyUIScale() end
-
-function Combobox.dropdown.downBtn:AttachWidget() end
-
-function Combobox.dropdown.downBtn:BindWidth() end
-
-function Combobox.dropdown.downBtn:CancelRequestCharacterCacheData() end
-
-function Combobox.dropdown.downBtn:ChangeChildAnchorByScrollValue() end
-
-function Combobox.dropdown.downBtn:CheckOutOfScreen() end
-
-function Combobox.dropdown.downBtn:Clickable() end
-
-function Combobox.dropdown.downBtn:CorrectOffsetByScreen() end
-
-function Combobox.dropdown.downBtn:CreateChildWidget() end
-
-function Combobox.dropdown.downBtn:CreateChildWidgetByType() end
-
-function Combobox.dropdown.downBtn:CreateColorDrawable() end
-
-function Combobox.dropdown.downBtn:CreateColorDrawableByKey() end
-
-function Combobox.dropdown.downBtn:CreateDrawable() end
-
-function Combobox.dropdown.downBtn:CreateEffectDrawable() end
-
-function Combobox.dropdown.downBtn:CreateEffectDrawableByKey() end
-
-function Combobox.dropdown.downBtn:CreateIconDrawable() end
-
-function Combobox.dropdown.downBtn:CreateImageDrawable() end
-
-function Combobox.dropdown.downBtn:CreateNinePartDrawable() end
-
-function Combobox.dropdown.downBtn:CreateStateDrawable() end
-
-function Combobox.dropdown.downBtn:CreateTextDrawable() end
-
-function Combobox.dropdown.downBtn:CreateThreeColorDrawable() end
-
-function Combobox.dropdown.downBtn:CreateThreePartDrawable() end
-
-function Combobox.dropdown.downBtn:DeregisterForClicks() end
-
-function Combobox.dropdown.downBtn:DetachWidget() end
-
-function Combobox.dropdown.downBtn:DisableDrawables() end
-
-function Combobox.dropdown.downBtn:DisableDrawablesWithChildren() end
-
-function Combobox.dropdown.downBtn:Enable() end
-
-function Combobox.dropdown.downBtn:EnableDrag() end
-
-function Combobox.dropdown.downBtn:EnableDrawables() end
-
-function Combobox.dropdown.downBtn:EnableDrawablesWithChildren() end
-
-function Combobox.dropdown.downBtn:EnableFocus() end
-
-function Combobox.dropdown.downBtn:EnableHidingIsRemove() end
-
-function Combobox.dropdown.downBtn:EnableKeyboard() end
-
-function Combobox.dropdown.downBtn:EnablePick() end
-
-function Combobox.dropdown.downBtn:EnableScroll() end
-
-function Combobox.dropdown.downBtn:GetAlpha() end
-
-function Combobox.dropdown.downBtn:GetAttachedWidget() end
-
-function Combobox.dropdown.downBtn:GetButtonState() end
-
-function Combobox.dropdown.downBtn:GetDisabledBackground() end
-
-function Combobox.dropdown.downBtn:GetDisabledColor() end
-
-function Combobox.dropdown.downBtn:GetEffectiveExtent() end
-
-function Combobox.dropdown.downBtn:GetEffectiveOffset() end
-
-function Combobox.dropdown.downBtn:GetExtent() end
-
-function Combobox.dropdown.downBtn:GetHeight() end
-
-function Combobox.dropdown.downBtn:GetHighlightBackground() end
-
-function Combobox.dropdown.downBtn:GetHighlightColor() end
-
-function Combobox.dropdown.downBtn:GetId() end
-
-function Combobox.dropdown.downBtn:GetName() end
-
-function Combobox.dropdown.downBtn:GetNormalBackground() end
-
-function Combobox.dropdown.downBtn:GetNormalColor() end
-
-function Combobox.dropdown.downBtn:GetObjectType() end
-
-function Combobox.dropdown.downBtn:GetOffset() end
-
-function Combobox.dropdown.downBtn:GetParent() end
-
-function Combobox.dropdown.downBtn:GetPushedBackground() end
-
-function Combobox.dropdown.downBtn:GetPushedColor() end
-
-function Combobox.dropdown.downBtn:GetRotation() end
-
-function Combobox.dropdown.downBtn:GetText() end
-
-function Combobox.dropdown.downBtn:GetUILayer() end
-
-function Combobox.dropdown.downBtn:GetValue() end
-
-function Combobox.dropdown.downBtn:GetWidth() end
-
-function Combobox.dropdown.downBtn:HasHandler() end
-
-function Combobox.dropdown.downBtn:InheritAnimationData() end
-
-function Combobox.dropdown.downBtn:IsDescendantWidget() end
-
-function Combobox.dropdown.downBtn:IsEnabled() end
-
-function Combobox.dropdown.downBtn:IsMouseOver() end
-
-function Combobox.dropdown.downBtn:IsNowAnimation() end
-
-function Combobox.dropdown.downBtn:IsValidUIObject() end
-
-function Combobox.dropdown.downBtn:IsVisible() end
-
-function Combobox.dropdown.downBtn:Lower() end
-
-function Combobox.dropdown.downBtn:MoveTo() end
-
-function Combobox.dropdown.downBtn:Raise() end
-
-function Combobox.dropdown.downBtn:RegisterEvent() end
-
-function Combobox.dropdown.downBtn:RegisterForClicks() end
-
-function Combobox.dropdown.downBtn:ReleaseDeletedHandler() end
-
-function Combobox.dropdown.downBtn:ReleaseHandler() end
-
-function Combobox.dropdown.downBtn:RemoveAllAnchors() end
-
-function Combobox.dropdown.downBtn:RemoveAllDrawables() end
-
-function Combobox.dropdown.downBtn:RemoveDrawable() end
-
-function Combobox.dropdown.downBtn:RequestCharacterCacheData() end
-
-function Combobox.dropdown.downBtn:SetAlpha() end
-
-function Combobox.dropdown.downBtn:SetAlphaAnimation() end
-
-function Combobox.dropdown.downBtn:SetAutoClipChar() end
-
-function Combobox.dropdown.downBtn:SetAutoResize() end
-
-function Combobox.dropdown.downBtn:SetButtonState() end
-
-function Combobox.dropdown.downBtn:SetCategory() end
-
-function Combobox.dropdown.downBtn:SetCharacterCacheDataHandler() end
-
-function Combobox.dropdown.downBtn:SetDelegator() end
-
-function Combobox.dropdown.downBtn:SetDeletedHandler() end
-
-function Combobox.dropdown.downBtn:SetDisabledBackground() end
-
-function Combobox.dropdown.downBtn:SetDisabledColor() end
-
-function Combobox.dropdown.downBtn:SetDisabledTextColor() end
-
-function Combobox.dropdown.downBtn:SetDragCondition() end
-
-function Combobox.dropdown.downBtn:SetDrawPriority() end
-
-function Combobox.dropdown.downBtn:SetDrawableLayerAlpha() end
-
-function Combobox.dropdown.downBtn:SetExtent() end
-
-function Combobox.dropdown.downBtn:SetFocus() end
-
-function Combobox.dropdown.downBtn:SetHandler() end
-
-function Combobox.dropdown.downBtn:SetHeight() end
-
-function Combobox.dropdown.downBtn:SetHighlightBackground() end
-
-function Combobox.dropdown.downBtn:SetHighlightColor() end
-
-function Combobox.dropdown.downBtn:SetHighlightTextColor() end
-
-function Combobox.dropdown.downBtn:SetInset() end
-
-function Combobox.dropdown.downBtn:SetLText() end
-
-function Combobox.dropdown.downBtn:SetLayerColor() end
-
-function Combobox.dropdown.downBtn:SetMaxResizingExtent() end
-
-function Combobox.dropdown.downBtn:SetMinResizingExtent() end
-
-function Combobox.dropdown.downBtn:SetMoveAnimation() end
-
-function Combobox.dropdown.downBtn:SetNormalBackground() end
-
-function Combobox.dropdown.downBtn:SetNormalColor() end
-
-function Combobox.dropdown.downBtn:SetPushedBackground() end
-
-function Combobox.dropdown.downBtn:SetPushedColor() end
-
-function Combobox.dropdown.downBtn:SetPushedTextColor() end
-
-function Combobox.dropdown.downBtn:SetResizingBorderSize() end
-
-function Combobox.dropdown.downBtn:SetRotation() end
-
-function Combobox.dropdown.downBtn:SetScale() end
-
-function Combobox.dropdown.downBtn:SetScaleAnimation() end
-
-function Combobox.dropdown.downBtn:SetSounds() end
-
-function Combobox.dropdown.downBtn:SetStartAnimation() end
-
-function Combobox.dropdown.downBtn:SetStyle() end
-
-function Combobox.dropdown.downBtn:SetText() end
-
-function Combobox.dropdown.downBtn:SetTextColor() end
-
-function Combobox.dropdown.downBtn:SetWidth() end
-
-function Combobox.dropdown.downBtn:Show() end
-
-function Combobox.dropdown.downBtn:StartMoving() end
-
-function Combobox.dropdown.downBtn:StartSizing() end
-
-function Combobox.dropdown.downBtn:StopMovingOrSizing() end
-
-function Combobox.dropdown.downBtn:TriggerMoveAnimation() end
-
-function Combobox.dropdown.downBtn:UseDynamicContentState() end
-
-function Combobox.dropdown.downBtn:UseDynamicDrawableState() end
-
-function Combobox.dropdown.downBtn:UseResizing() end
-
-function Combobox.dropdown.itemStyle:GetId() end
-
-function Combobox.dropdown.itemStyle:GetLineHeight() end
-
-function Combobox.dropdown.itemStyle:GetName() end
-
-function Combobox.dropdown.itemStyle:GetObjectType() end
-
-function Combobox.dropdown.itemStyle:GetTextWidth() end
-
-function Combobox.dropdown.itemStyle:IsValidUIObject() end
-
-function Combobox.dropdown.itemStyle:SetAlign() end
-
-function Combobox.dropdown.itemStyle:SetColor() end
-
-function Combobox.dropdown.itemStyle:SetColorByKey() end
-
-function Combobox.dropdown.itemStyle:SetEllipsis() end
-
-function Combobox.dropdown.itemStyle:SetFont() end
-
-function Combobox.dropdown.itemStyle:SetFontSize() end
-
-function Combobox.dropdown.itemStyle:SetOutline() end
-
-function Combobox.dropdown.itemStyle:SetShadow() end
-
-function Combobox.dropdown.itemStyle:SetSnap() end
-
-function Combobox.dropdown.itemStyleSub:GetId() end
-
-function Combobox.dropdown.itemStyleSub:GetLineHeight() end
-
-function Combobox.dropdown.itemStyleSub:GetName() end
-
-function Combobox.dropdown.itemStyleSub:GetObjectType() end
-
-function Combobox.dropdown.itemStyleSub:GetTextWidth() end
-
-function Combobox.dropdown.itemStyleSub:IsValidUIObject() end
-
-function Combobox.dropdown.itemStyleSub:SetAlign() end
-
-function Combobox.dropdown.itemStyleSub:SetColor() end
-
-function Combobox.dropdown.itemStyleSub:SetColorByKey() end
-
-function Combobox.dropdown.itemStyleSub:SetEllipsis() end
-
-function Combobox.dropdown.itemStyleSub:SetFont() end
-
-function Combobox.dropdown.itemStyleSub:SetFontSize() end
-
-function Combobox.dropdown.itemStyleSub:SetOutline() end
-
-function Combobox.dropdown.itemStyleSub:SetShadow() end
-
-function Combobox.dropdown.itemStyleSub:SetSnap() end
-
-function Combobox.dropdown.upBtn.style:GetId() end
-
-function Combobox.dropdown.upBtn.style:GetLineHeight() end
-
-function Combobox.dropdown.upBtn.style:GetName() end
-
-function Combobox.dropdown.upBtn.style:GetObjectType() end
-
-function Combobox.dropdown.upBtn.style:GetTextWidth() end
-
-function Combobox.dropdown.upBtn.style:IsValidUIObject() end
-
-function Combobox.dropdown.upBtn.style:SetAlign() end
-
-function Combobox.dropdown.upBtn.style:SetColor() end
-
-function Combobox.dropdown.upBtn.style:SetColorByKey() end
-
-function Combobox.dropdown.upBtn.style:SetEllipsis() end
-
-function Combobox.dropdown.upBtn.style:SetFont() end
-
-function Combobox.dropdown.upBtn.style:SetFontSize() end
-
-function Combobox.dropdown.upBtn.style:SetOutline() end
-
-function Combobox.dropdown.upBtn.style:SetShadow() end
-
-function Combobox.dropdown.upBtn.style:SetSnap() end
-
-function Combobox.dropdown.upBtn:AddAnchor() end
-
-function Combobox.dropdown.upBtn:ApplyUIScale() end
-
-function Combobox.dropdown.upBtn:AttachWidget() end
-
-function Combobox.dropdown.upBtn:BindWidth() end
-
-function Combobox.dropdown.upBtn:CancelRequestCharacterCacheData() end
-
-function Combobox.dropdown.upBtn:ChangeChildAnchorByScrollValue() end
-
-function Combobox.dropdown.upBtn:CheckOutOfScreen() end
-
-function Combobox.dropdown.upBtn:Clickable() end
-
-function Combobox.dropdown.upBtn:CorrectOffsetByScreen() end
-
-function Combobox.dropdown.upBtn:CreateChildWidget() end
-
-function Combobox.dropdown.upBtn:CreateChildWidgetByType() end
-
-function Combobox.dropdown.upBtn:CreateColorDrawable() end
-
-function Combobox.dropdown.upBtn:CreateColorDrawableByKey() end
-
-function Combobox.dropdown.upBtn:CreateDrawable() end
-
-function Combobox.dropdown.upBtn:CreateEffectDrawable() end
-
-function Combobox.dropdown.upBtn:CreateEffectDrawableByKey() end
-
-function Combobox.dropdown.upBtn:CreateIconDrawable() end
-
-function Combobox.dropdown.upBtn:CreateImageDrawable() end
-
-function Combobox.dropdown.upBtn:CreateNinePartDrawable() end
-
-function Combobox.dropdown.upBtn:CreateStateDrawable() end
-
-function Combobox.dropdown.upBtn:CreateTextDrawable() end
-
-function Combobox.dropdown.upBtn:CreateThreeColorDrawable() end
-
-function Combobox.dropdown.upBtn:CreateThreePartDrawable() end
-
-function Combobox.dropdown.upBtn:DeregisterForClicks() end
-
-function Combobox.dropdown.upBtn:DetachWidget() end
-
-function Combobox.dropdown.upBtn:DisableDrawables() end
-
-function Combobox.dropdown.upBtn:DisableDrawablesWithChildren() end
-
-function Combobox.dropdown.upBtn:Enable() end
-
-function Combobox.dropdown.upBtn:EnableDrag() end
-
-function Combobox.dropdown.upBtn:EnableDrawables() end
-
-function Combobox.dropdown.upBtn:EnableDrawablesWithChildren() end
-
-function Combobox.dropdown.upBtn:EnableFocus() end
-
-function Combobox.dropdown.upBtn:EnableHidingIsRemove() end
-
-function Combobox.dropdown.upBtn:EnableKeyboard() end
-
-function Combobox.dropdown.upBtn:EnablePick() end
-
-function Combobox.dropdown.upBtn:EnableScroll() end
-
-function Combobox.dropdown.upBtn:GetAlpha() end
-
-function Combobox.dropdown.upBtn:GetAttachedWidget() end
-
-function Combobox.dropdown.upBtn:GetButtonState() end
-
-function Combobox.dropdown.upBtn:GetDisabledBackground() end
-
-function Combobox.dropdown.upBtn:GetDisabledColor() end
-
-function Combobox.dropdown.upBtn:GetEffectiveExtent() end
-
-function Combobox.dropdown.upBtn:GetEffectiveOffset() end
-
-function Combobox.dropdown.upBtn:GetExtent() end
-
-function Combobox.dropdown.upBtn:GetHeight() end
-
-function Combobox.dropdown.upBtn:GetHighlightBackground() end
-
-function Combobox.dropdown.upBtn:GetHighlightColor() end
-
-function Combobox.dropdown.upBtn:GetId() end
-
-function Combobox.dropdown.upBtn:GetName() end
-
-function Combobox.dropdown.upBtn:GetNormalBackground() end
-
-function Combobox.dropdown.upBtn:GetNormalColor() end
-
-function Combobox.dropdown.upBtn:GetObjectType() end
-
-function Combobox.dropdown.upBtn:GetOffset() end
-
-function Combobox.dropdown.upBtn:GetParent() end
-
-function Combobox.dropdown.upBtn:GetPushedBackground() end
-
-function Combobox.dropdown.upBtn:GetPushedColor() end
-
-function Combobox.dropdown.upBtn:GetRotation() end
-
-function Combobox.dropdown.upBtn:GetText() end
-
-function Combobox.dropdown.upBtn:GetUILayer() end
-
-function Combobox.dropdown.upBtn:GetValue() end
-
-function Combobox.dropdown.upBtn:GetWidth() end
-
-function Combobox.dropdown.upBtn:HasHandler() end
-
-function Combobox.dropdown.upBtn:InheritAnimationData() end
-
-function Combobox.dropdown.upBtn:IsDescendantWidget() end
-
-function Combobox.dropdown.upBtn:IsEnabled() end
-
-function Combobox.dropdown.upBtn:IsMouseOver() end
-
-function Combobox.dropdown.upBtn:IsNowAnimation() end
-
-function Combobox.dropdown.upBtn:IsValidUIObject() end
-
-function Combobox.dropdown.upBtn:IsVisible() end
-
-function Combobox.dropdown.upBtn:Lower() end
-
-function Combobox.dropdown.upBtn:MoveTo() end
-
-function Combobox.dropdown.upBtn:Raise() end
-
-function Combobox.dropdown.upBtn:RegisterEvent() end
-
-function Combobox.dropdown.upBtn:RegisterForClicks() end
-
-function Combobox.dropdown.upBtn:ReleaseDeletedHandler() end
-
-function Combobox.dropdown.upBtn:ReleaseHandler() end
-
-function Combobox.dropdown.upBtn:RemoveAllAnchors() end
-
-function Combobox.dropdown.upBtn:RemoveAllDrawables() end
-
-function Combobox.dropdown.upBtn:RemoveDrawable() end
-
-function Combobox.dropdown.upBtn:RequestCharacterCacheData() end
-
-function Combobox.dropdown.upBtn:SetAlpha() end
-
-function Combobox.dropdown.upBtn:SetAlphaAnimation() end
-
-function Combobox.dropdown.upBtn:SetAutoClipChar() end
-
-function Combobox.dropdown.upBtn:SetAutoResize() end
-
-function Combobox.dropdown.upBtn:SetButtonState() end
-
-function Combobox.dropdown.upBtn:SetCategory() end
-
-function Combobox.dropdown.upBtn:SetCharacterCacheDataHandler() end
-
-function Combobox.dropdown.upBtn:SetDelegator() end
-
-function Combobox.dropdown.upBtn:SetDeletedHandler() end
-
-function Combobox.dropdown.upBtn:SetDisabledBackground() end
-
-function Combobox.dropdown.upBtn:SetDisabledColor() end
-
-function Combobox.dropdown.upBtn:SetDisabledTextColor() end
-
-function Combobox.dropdown.upBtn:SetDragCondition() end
-
-function Combobox.dropdown.upBtn:SetDrawPriority() end
-
-function Combobox.dropdown.upBtn:SetDrawableLayerAlpha() end
-
-function Combobox.dropdown.upBtn:SetExtent() end
-
-function Combobox.dropdown.upBtn:SetFocus() end
-
-function Combobox.dropdown.upBtn:SetHandler() end
-
-function Combobox.dropdown.upBtn:SetHeight() end
-
-function Combobox.dropdown.upBtn:SetHighlightBackground() end
-
-function Combobox.dropdown.upBtn:SetHighlightColor() end
-
-function Combobox.dropdown.upBtn:SetHighlightTextColor() end
-
-function Combobox.dropdown.upBtn:SetInset() end
-
-function Combobox.dropdown.upBtn:SetLText() end
-
-function Combobox.dropdown.upBtn:SetLayerColor() end
-
-function Combobox.dropdown.upBtn:SetMaxResizingExtent() end
-
-function Combobox.dropdown.upBtn:SetMinResizingExtent() end
-
-function Combobox.dropdown.upBtn:SetMoveAnimation() end
-
-function Combobox.dropdown.upBtn:SetNormalBackground() end
-
-function Combobox.dropdown.upBtn:SetNormalColor() end
-
-function Combobox.dropdown.upBtn:SetPushedBackground() end
-
-function Combobox.dropdown.upBtn:SetPushedColor() end
-
-function Combobox.dropdown.upBtn:SetPushedTextColor() end
-
-function Combobox.dropdown.upBtn:SetResizingBorderSize() end
-
-function Combobox.dropdown.upBtn:SetRotation() end
-
-function Combobox.dropdown.upBtn:SetScale() end
-
-function Combobox.dropdown.upBtn:SetScaleAnimation() end
-
-function Combobox.dropdown.upBtn:SetSounds() end
-
-function Combobox.dropdown.upBtn:SetStartAnimation() end
-
-function Combobox.dropdown.upBtn:SetStyle() end
-
-function Combobox.dropdown.upBtn:SetText() end
-
-function Combobox.dropdown.upBtn:SetTextColor() end
-
-function Combobox.dropdown.upBtn:SetWidth() end
-
-function Combobox.dropdown.upBtn:Show() end
-
-function Combobox.dropdown.upBtn:StartMoving() end
-
-function Combobox.dropdown.upBtn:StartSizing() end
-
-function Combobox.dropdown.upBtn:StopMovingOrSizing() end
-
-function Combobox.dropdown.upBtn:TriggerMoveAnimation() end
-
-function Combobox.dropdown.upBtn:UseDynamicContentState() end
-
-function Combobox.dropdown.upBtn:UseDynamicDrawableState() end
-
-function Combobox.dropdown.upBtn:UseResizing() end
-
-function Combobox.dropdown.vslider.thumb.style:GetId() end
-
-function Combobox.dropdown.vslider.thumb.style:GetLineHeight() end
-
-function Combobox.dropdown.vslider.thumb.style:GetName() end
-
-function Combobox.dropdown.vslider.thumb.style:GetObjectType() end
-
-function Combobox.dropdown.vslider.thumb.style:GetTextWidth() end
-
-function Combobox.dropdown.vslider.thumb.style:IsValidUIObject() end
-
-function Combobox.dropdown.vslider.thumb.style:SetAlign() end
-
-function Combobox.dropdown.vslider.thumb.style:SetColor() end
-
-function Combobox.dropdown.vslider.thumb.style:SetColorByKey() end
-
-function Combobox.dropdown.vslider.thumb.style:SetEllipsis() end
-
-function Combobox.dropdown.vslider.thumb.style:SetFont() end
-
-function Combobox.dropdown.vslider.thumb.style:SetFontSize() end
-
-function Combobox.dropdown.vslider.thumb.style:SetOutline() end
-
-function Combobox.dropdown.vslider.thumb.style:SetShadow() end
-
-function Combobox.dropdown.vslider.thumb.style:SetSnap() end
-
-function Combobox.dropdown.vslider.thumb:AddAnchor() end
-
-function Combobox.dropdown.vslider.thumb:ApplyUIScale() end
-
-function Combobox.dropdown.vslider.thumb:AttachWidget() end
-
-function Combobox.dropdown.vslider.thumb:BindWidth() end
-
-function Combobox.dropdown.vslider.thumb:CancelRequestCharacterCacheData() end
-
-function Combobox.dropdown.vslider.thumb:ChangeChildAnchorByScrollValue() end
-
-function Combobox.dropdown.vslider.thumb:CheckOutOfScreen() end
-
-function Combobox.dropdown.vslider.thumb:Clickable() end
-
-function Combobox.dropdown.vslider.thumb:CorrectOffsetByScreen() end
-
-function Combobox.dropdown.vslider.thumb:CreateChildWidget() end
-
-function Combobox.dropdown.vslider.thumb:CreateChildWidgetByType() end
-
-function Combobox.dropdown.vslider.thumb:CreateColorDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateColorDrawableByKey() end
-
-function Combobox.dropdown.vslider.thumb:CreateDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateEffectDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateEffectDrawableByKey() end
-
-function Combobox.dropdown.vslider.thumb:CreateIconDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateImageDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateNinePartDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateStateDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateTextDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateThreeColorDrawable() end
-
-function Combobox.dropdown.vslider.thumb:CreateThreePartDrawable() end
-
-function Combobox.dropdown.vslider.thumb:DeregisterForClicks() end
-
-function Combobox.dropdown.vslider.thumb:DetachWidget() end
-
-function Combobox.dropdown.vslider.thumb:DisableDrawables() end
-
-function Combobox.dropdown.vslider.thumb:DisableDrawablesWithChildren() end
-
-function Combobox.dropdown.vslider.thumb:Enable() end
-
-function Combobox.dropdown.vslider.thumb:EnableDrag() end
-
-function Combobox.dropdown.vslider.thumb:EnableDrawables() end
-
-function Combobox.dropdown.vslider.thumb:EnableDrawablesWithChildren() end
-
-function Combobox.dropdown.vslider.thumb:EnableFocus() end
-
-function Combobox.dropdown.vslider.thumb:EnableHidingIsRemove() end
-
-function Combobox.dropdown.vslider.thumb:EnableKeyboard() end
-
-function Combobox.dropdown.vslider.thumb:EnablePick() end
-
-function Combobox.dropdown.vslider.thumb:EnableScroll() end
-
-function Combobox.dropdown.vslider.thumb:GetAlpha() end
-
-function Combobox.dropdown.vslider.thumb:GetAttachedWidget() end
-
-function Combobox.dropdown.vslider.thumb:GetButtonState() end
-
-function Combobox.dropdown.vslider.thumb:GetDisabledBackground() end
-
-function Combobox.dropdown.vslider.thumb:GetDisabledColor() end
-
-function Combobox.dropdown.vslider.thumb:GetEffectiveExtent() end
-
-function Combobox.dropdown.vslider.thumb:GetEffectiveOffset() end
-
-function Combobox.dropdown.vslider.thumb:GetExtent() end
-
-function Combobox.dropdown.vslider.thumb:GetHeight() end
-
-function Combobox.dropdown.vslider.thumb:GetHighlightBackground() end
-
-function Combobox.dropdown.vslider.thumb:GetHighlightColor() end
-
-function Combobox.dropdown.vslider.thumb:GetId() end
-
-function Combobox.dropdown.vslider.thumb:GetName() end
-
-function Combobox.dropdown.vslider.thumb:GetNormalBackground() end
-
-function Combobox.dropdown.vslider.thumb:GetNormalColor() end
-
-function Combobox.dropdown.vslider.thumb:GetObjectType() end
-
-function Combobox.dropdown.vslider.thumb:GetOffset() end
-
-function Combobox.dropdown.vslider.thumb:GetParent() end
-
-function Combobox.dropdown.vslider.thumb:GetPushedBackground() end
-
-function Combobox.dropdown.vslider.thumb:GetPushedColor() end
-
-function Combobox.dropdown.vslider.thumb:GetRotation() end
-
-function Combobox.dropdown.vslider.thumb:GetText() end
-
-function Combobox.dropdown.vslider.thumb:GetUILayer() end
-
-function Combobox.dropdown.vslider.thumb:GetValue() end
-
-function Combobox.dropdown.vslider.thumb:GetWidth() end
-
-function Combobox.dropdown.vslider.thumb:HasHandler() end
-
-function Combobox.dropdown.vslider.thumb:InheritAnimationData() end
-
-function Combobox.dropdown.vslider.thumb:IsDescendantWidget() end
-
-function Combobox.dropdown.vslider.thumb:IsEnabled() end
-
-function Combobox.dropdown.vslider.thumb:IsMouseOver() end
-
-function Combobox.dropdown.vslider.thumb:IsNowAnimation() end
-
-function Combobox.dropdown.vslider.thumb:IsValidUIObject() end
-
-function Combobox.dropdown.vslider.thumb:IsVisible() end
-
-function Combobox.dropdown.vslider.thumb:Lower() end
-
-function Combobox.dropdown.vslider.thumb:MoveTo() end
-
-function Combobox.dropdown.vslider.thumb:Raise() end
-
-function Combobox.dropdown.vslider.thumb:RegisterEvent() end
-
-function Combobox.dropdown.vslider.thumb:RegisterForClicks() end
-
-function Combobox.dropdown.vslider.thumb:ReleaseDeletedHandler() end
-
-function Combobox.dropdown.vslider.thumb:ReleaseHandler() end
-
-function Combobox.dropdown.vslider.thumb:RemoveAllAnchors() end
-
-function Combobox.dropdown.vslider.thumb:RemoveAllDrawables() end
-
-function Combobox.dropdown.vslider.thumb:RemoveDrawable() end
-
-function Combobox.dropdown.vslider.thumb:RequestCharacterCacheData() end
-
-function Combobox.dropdown.vslider.thumb:SetAlpha() end
-
-function Combobox.dropdown.vslider.thumb:SetAlphaAnimation() end
-
-function Combobox.dropdown.vslider.thumb:SetAutoClipChar() end
-
-function Combobox.dropdown.vslider.thumb:SetAutoResize() end
-
-function Combobox.dropdown.vslider.thumb:SetButtonState() end
-
-function Combobox.dropdown.vslider.thumb:SetCategory() end
-
-function Combobox.dropdown.vslider.thumb:SetCharacterCacheDataHandler() end
-
-function Combobox.dropdown.vslider.thumb:SetDelegator() end
-
-function Combobox.dropdown.vslider.thumb:SetDeletedHandler() end
-
-function Combobox.dropdown.vslider.thumb:SetDisabledBackground() end
-
-function Combobox.dropdown.vslider.thumb:SetDisabledColor() end
-
-function Combobox.dropdown.vslider.thumb:SetDisabledTextColor() end
-
-function Combobox.dropdown.vslider.thumb:SetDragCondition() end
-
-function Combobox.dropdown.vslider.thumb:SetDrawPriority() end
-
-function Combobox.dropdown.vslider.thumb:SetDrawableLayerAlpha() end
-
-function Combobox.dropdown.vslider.thumb:SetExtent() end
-
-function Combobox.dropdown.vslider.thumb:SetFocus() end
-
-function Combobox.dropdown.vslider.thumb:SetHandler() end
-
-function Combobox.dropdown.vslider.thumb:SetHeight() end
-
-function Combobox.dropdown.vslider.thumb:SetHighlightBackground() end
-
-function Combobox.dropdown.vslider.thumb:SetHighlightColor() end
-
-function Combobox.dropdown.vslider.thumb:SetHighlightTextColor() end
-
-function Combobox.dropdown.vslider.thumb:SetInset() end
-
-function Combobox.dropdown.vslider.thumb:SetLText() end
-
-function Combobox.dropdown.vslider.thumb:SetLayerColor() end
-
-function Combobox.dropdown.vslider.thumb:SetMaxResizingExtent() end
-
-function Combobox.dropdown.vslider.thumb:SetMinResizingExtent() end
-
-function Combobox.dropdown.vslider.thumb:SetMoveAnimation() end
-
-function Combobox.dropdown.vslider.thumb:SetNormalBackground() end
-
-function Combobox.dropdown.vslider.thumb:SetNormalColor() end
-
-function Combobox.dropdown.vslider.thumb:SetPushedBackground() end
-
-function Combobox.dropdown.vslider.thumb:SetPushedColor() end
-
-function Combobox.dropdown.vslider.thumb:SetPushedTextColor() end
-
-function Combobox.dropdown.vslider.thumb:SetResizingBorderSize() end
-
-function Combobox.dropdown.vslider.thumb:SetRotation() end
-
-function Combobox.dropdown.vslider.thumb:SetScale() end
-
-function Combobox.dropdown.vslider.thumb:SetScaleAnimation() end
-
-function Combobox.dropdown.vslider.thumb:SetSounds() end
-
-function Combobox.dropdown.vslider.thumb:SetStartAnimation() end
-
-function Combobox.dropdown.vslider.thumb:SetStyle() end
-
-function Combobox.dropdown.vslider.thumb:SetText() end
-
-function Combobox.dropdown.vslider.thumb:SetTextColor() end
-
-function Combobox.dropdown.vslider.thumb:SetWidth() end
-
-function Combobox.dropdown.vslider.thumb:Show() end
-
-function Combobox.dropdown.vslider.thumb:StartMoving() end
-
-function Combobox.dropdown.vslider.thumb:StartSizing() end
-
-function Combobox.dropdown.vslider.thumb:StopMovingOrSizing() end
-
-function Combobox.dropdown.vslider.thumb:TriggerMoveAnimation() end
-
-function Combobox.dropdown.vslider.thumb:UseDynamicContentState() end
-
-function Combobox.dropdown.vslider.thumb:UseDynamicDrawableState() end
-
-function Combobox.dropdown.vslider.thumb:UseResizing() end
-
-function Combobox.selector.guideTextStyle:GetId() end
-
-function Combobox.selector.guideTextStyle:GetLineHeight() end
-
-function Combobox.selector.guideTextStyle:GetName() end
-
-function Combobox.selector.guideTextStyle:GetObjectType() end
-
-function Combobox.selector.guideTextStyle:GetTextWidth() end
-
-function Combobox.selector.guideTextStyle:IsValidUIObject() end
-
-function Combobox.selector.guideTextStyle:SetAlign() end
-
-function Combobox.selector.guideTextStyle:SetColor() end
-
-function Combobox.selector.guideTextStyle:SetColorByKey() end
-
-function Combobox.selector.guideTextStyle:SetEllipsis() end
-
-function Combobox.selector.guideTextStyle:SetFont() end
-
-function Combobox.selector.guideTextStyle:SetFontSize() end
-
-function Combobox.selector.guideTextStyle:SetOutline() end
-
-function Combobox.selector.guideTextStyle:SetShadow() end
-
-function Combobox.selector.guideTextStyle:SetSnap() end
-
-function Combobox.selector.prefixStyle:GetId() end
-
-function Combobox.selector.prefixStyle:GetLineHeight() end
-
-function Combobox.selector.prefixStyle:GetName() end
-
-function Combobox.selector.prefixStyle:GetObjectType() end
-
-function Combobox.selector.prefixStyle:GetTextWidth() end
-
-function Combobox.selector.prefixStyle:IsValidUIObject() end
-
-function Combobox.selector.prefixStyle:SetAlign() end
-
-function Combobox.selector.prefixStyle:SetColor() end
-
-function Combobox.selector.prefixStyle:SetColorByKey() end
-
-function Combobox.selector.prefixStyle:SetEllipsis() end
-
-function Combobox.selector.prefixStyle:SetFont() end
-
-function Combobox.selector.prefixStyle:SetFontSize() end
-
-function Combobox.selector.prefixStyle:SetOutline() end
-
-function Combobox.selector.prefixStyle:SetShadow() end
-
-function Combobox.selector.prefixStyle:SetSnap() end
-
-function Combobox.selector.style:GetId() end
-
-function Combobox.selector.style:GetLineHeight() end
-
-function Combobox.selector.style:GetName() end
-
-function Combobox.selector.style:GetObjectType() end
-
-function Combobox.selector.style:GetTextWidth() end
-
-function Combobox.selector.style:IsValidUIObject() end
-
-function Combobox.selector.style:SetAlign() end
-
-function Combobox.selector.style:SetColor() end
-
-function Combobox.selector.style:SetColorByKey() end
-
-function Combobox.selector.style:SetEllipsis() end
-
-function Combobox.selector.style:SetFont() end
-
-function Combobox.selector.style:SetFontSize() end
-
-function Combobox.selector.style:SetOutline() end
-
-function Combobox.selector.style:SetShadow() end
-
-function Combobox.selector.style:SetSnap() end
-
-function Combobox.selectorBtn.style:GetId() end
-
-function Combobox.selectorBtn.style:GetLineHeight() end
-
-function Combobox.selectorBtn.style:GetName() end
-
-function Combobox.selectorBtn.style:GetObjectType() end
-
-function Combobox.selectorBtn.style:GetTextWidth() end
-
-function Combobox.selectorBtn.style:IsValidUIObject() end
-
-function Combobox.selectorBtn.style:SetAlign() end
-
-function Combobox.selectorBtn.style:SetColor() end
-
-function Combobox.selectorBtn.style:SetColorByKey() end
-
-function Combobox.selectorBtn.style:SetEllipsis() end
-
-function Combobox.selectorBtn.style:SetFont() end
-
-function Combobox.selectorBtn.style:SetFontSize() end
-
-function Combobox.selectorBtn.style:SetOutline() end
-
-function Combobox.selectorBtn.style:SetShadow() end
-
-function Combobox.selectorBtn.style:SetSnap() end
-
-function Combobox.selectorBtn:AddAnchor() end
-
-function Combobox.selectorBtn:ApplyUIScale() end
-
-function Combobox.selectorBtn:AttachWidget() end
-
-function Combobox.selectorBtn:BindWidth() end
-
-function Combobox.selectorBtn:CancelRequestCharacterCacheData() end
-
-function Combobox.selectorBtn:ChangeChildAnchorByScrollValue() end
-
-function Combobox.selectorBtn:CheckOutOfScreen() end
-
-function Combobox.selectorBtn:Clickable() end
-
-function Combobox.selectorBtn:CorrectOffsetByScreen() end
-
-function Combobox.selectorBtn:CreateChildWidget() end
-
-function Combobox.selectorBtn:CreateChildWidgetByType() end
-
-function Combobox.selectorBtn:CreateColorDrawable() end
-
-function Combobox.selectorBtn:CreateColorDrawableByKey() end
-
-function Combobox.selectorBtn:CreateDrawable() end
-
-function Combobox.selectorBtn:CreateEffectDrawable() end
-
-function Combobox.selectorBtn:CreateEffectDrawableByKey() end
-
-function Combobox.selectorBtn:CreateIconDrawable() end
-
-function Combobox.selectorBtn:CreateImageDrawable() end
-
-function Combobox.selectorBtn:CreateNinePartDrawable() end
-
-function Combobox.selectorBtn:CreateStateDrawable() end
-
-function Combobox.selectorBtn:CreateTextDrawable() end
-
-function Combobox.selectorBtn:CreateThreeColorDrawable() end
-
-function Combobox.selectorBtn:CreateThreePartDrawable() end
-
-function Combobox.selectorBtn:DeregisterForClicks() end
-
-function Combobox.selectorBtn:DetachWidget() end
-
-function Combobox.selectorBtn:DisableDrawables() end
-
-function Combobox.selectorBtn:DisableDrawablesWithChildren() end
-
-function Combobox.selectorBtn:Enable() end
-
-function Combobox.selectorBtn:EnableDrag() end
-
-function Combobox.selectorBtn:EnableDrawables() end
-
-function Combobox.selectorBtn:EnableDrawablesWithChildren() end
-
-function Combobox.selectorBtn:EnableFocus() end
-
-function Combobox.selectorBtn:EnableHidingIsRemove() end
-
-function Combobox.selectorBtn:EnableKeyboard() end
-
-function Combobox.selectorBtn:EnablePick() end
-
-function Combobox.selectorBtn:EnableScroll() end
-
-function Combobox.selectorBtn:GetAlpha() end
-
-function Combobox.selectorBtn:GetAttachedWidget() end
-
-function Combobox.selectorBtn:GetButtonState() end
-
-function Combobox.selectorBtn:GetDisabledBackground() end
-
-function Combobox.selectorBtn:GetDisabledColor() end
-
-function Combobox.selectorBtn:GetEffectiveExtent() end
-
-function Combobox.selectorBtn:GetEffectiveOffset() end
-
-function Combobox.selectorBtn:GetExtent() end
-
-function Combobox.selectorBtn:GetHeight() end
-
-function Combobox.selectorBtn:GetHighlightBackground() end
-
-function Combobox.selectorBtn:GetHighlightColor() end
-
-function Combobox.selectorBtn:GetId() end
-
-function Combobox.selectorBtn:GetName() end
-
-function Combobox.selectorBtn:GetNormalBackground() end
-
-function Combobox.selectorBtn:GetNormalColor() end
-
-function Combobox.selectorBtn:GetObjectType() end
-
-function Combobox.selectorBtn:GetOffset() end
-
-function Combobox.selectorBtn:GetParent() end
-
-function Combobox.selectorBtn:GetPushedBackground() end
-
-function Combobox.selectorBtn:GetPushedColor() end
-
-function Combobox.selectorBtn:GetRotation() end
-
-function Combobox.selectorBtn:GetText() end
-
-function Combobox.selectorBtn:GetUILayer() end
-
-function Combobox.selectorBtn:GetValue() end
-
-function Combobox.selectorBtn:GetWidth() end
-
-function Combobox.selectorBtn:HasHandler() end
-
-function Combobox.selectorBtn:InheritAnimationData() end
-
-function Combobox.selectorBtn:IsDescendantWidget() end
-
-function Combobox.selectorBtn:IsEnabled() end
-
-function Combobox.selectorBtn:IsMouseOver() end
-
-function Combobox.selectorBtn:IsNowAnimation() end
-
-function Combobox.selectorBtn:IsValidUIObject() end
-
-function Combobox.selectorBtn:IsVisible() end
-
-function Combobox.selectorBtn:Lower() end
-
-function Combobox.selectorBtn:MoveTo() end
-
-function Combobox.selectorBtn:Raise() end
-
-function Combobox.selectorBtn:RegisterEvent() end
-
-function Combobox.selectorBtn:RegisterForClicks() end
-
-function Combobox.selectorBtn:ReleaseDeletedHandler() end
-
-function Combobox.selectorBtn:ReleaseHandler() end
-
-function Combobox.selectorBtn:RemoveAllAnchors() end
-
-function Combobox.selectorBtn:RemoveAllDrawables() end
-
-function Combobox.selectorBtn:RemoveDrawable() end
-
-function Combobox.selectorBtn:RequestCharacterCacheData() end
-
-function Combobox.selectorBtn:SetAlpha() end
-
-function Combobox.selectorBtn:SetAlphaAnimation() end
-
-function Combobox.selectorBtn:SetAutoClipChar() end
-
-function Combobox.selectorBtn:SetAutoResize() end
-
-function Combobox.selectorBtn:SetButtonState() end
-
-function Combobox.selectorBtn:SetCategory() end
-
-function Combobox.selectorBtn:SetCharacterCacheDataHandler() end
-
-function Combobox.selectorBtn:SetDelegator() end
-
-function Combobox.selectorBtn:SetDeletedHandler() end
-
-function Combobox.selectorBtn:SetDisabledBackground() end
-
-function Combobox.selectorBtn:SetDisabledColor() end
-
-function Combobox.selectorBtn:SetDisabledTextColor() end
-
-function Combobox.selectorBtn:SetDragCondition() end
-
-function Combobox.selectorBtn:SetDrawPriority() end
-
-function Combobox.selectorBtn:SetDrawableLayerAlpha() end
-
-function Combobox.selectorBtn:SetExtent() end
-
-function Combobox.selectorBtn:SetFocus() end
-
-function Combobox.selectorBtn:SetHandler() end
-
-function Combobox.selectorBtn:SetHeight() end
-
-function Combobox.selectorBtn:SetHighlightBackground() end
-
-function Combobox.selectorBtn:SetHighlightColor() end
-
-function Combobox.selectorBtn:SetHighlightTextColor() end
-
-function Combobox.selectorBtn:SetInset() end
-
-function Combobox.selectorBtn:SetLText() end
-
-function Combobox.selectorBtn:SetLayerColor() end
-
-function Combobox.selectorBtn:SetMaxResizingExtent() end
-
-function Combobox.selectorBtn:SetMinResizingExtent() end
-
-function Combobox.selectorBtn:SetMoveAnimation() end
-
-function Combobox.selectorBtn:SetNormalBackground() end
-
-function Combobox.selectorBtn:SetNormalColor() end
-
-function Combobox.selectorBtn:SetPushedBackground() end
-
-function Combobox.selectorBtn:SetPushedColor() end
-
-function Combobox.selectorBtn:SetPushedTextColor() end
-
-function Combobox.selectorBtn:SetResizingBorderSize() end
-
-function Combobox.selectorBtn:SetRotation() end
-
-function Combobox.selectorBtn:SetScale() end
-
-function Combobox.selectorBtn:SetScaleAnimation() end
-
-function Combobox.selectorBtn:SetSounds() end
-
-function Combobox.selectorBtn:SetStartAnimation() end
-
-function Combobox.selectorBtn:SetStyle() end
-
-function Combobox.selectorBtn:SetText() end
-
-function Combobox.selectorBtn:SetTextColor() end
-
-function Combobox.selectorBtn:SetWidth() end
-
-function Combobox.selectorBtn:Show() end
-
-function Combobox.selectorBtn:StartMoving() end
-
-function Combobox.selectorBtn:StartSizing() end
-
-function Combobox.selectorBtn:StopMovingOrSizing() end
-
-function Combobox.selectorBtn:TriggerMoveAnimation() end
-
-function Combobox.selectorBtn:UseDynamicContentState() end
-
-function Combobox.selectorBtn:UseDynamicDrawableState() end
-
-function Combobox.selectorBtn:UseResizing() end
-
-function Combobox.toggle.style:GetId() end
-
-function Combobox.toggle.style:GetLineHeight() end
-
-function Combobox.toggle.style:GetName() end
-
-function Combobox.toggle.style:GetObjectType() end
-
-function Combobox.toggle.style:GetTextWidth() end
-
-function Combobox.toggle.style:IsValidUIObject() end
-
-function Combobox.toggle.style:SetAlign() end
-
-function Combobox.toggle.style:SetColor() end
-
-function Combobox.toggle.style:SetColorByKey() end
-
-function Combobox.toggle.style:SetEllipsis() end
-
-function Combobox.toggle.style:SetFont() end
-
-function Combobox.toggle.style:SetFontSize() end
-
-function Combobox.toggle.style:SetOutline() end
-
-function Combobox.toggle.style:SetShadow() end
-
-function Combobox.toggle.style:SetSnap() end
-
-function Combobox.toggle:AddAnchor() end
-
-function Combobox.toggle:ApplyUIScale() end
-
-function Combobox.toggle:AttachWidget() end
-
-function Combobox.toggle:BindWidth() end
-
-function Combobox.toggle:CancelRequestCharacterCacheData() end
-
-function Combobox.toggle:ChangeChildAnchorByScrollValue() end
-
-function Combobox.toggle:CheckOutOfScreen() end
-
-function Combobox.toggle:Clickable() end
-
-function Combobox.toggle:CorrectOffsetByScreen() end
-
-function Combobox.toggle:CreateChildWidget() end
-
-function Combobox.toggle:CreateChildWidgetByType() end
-
-function Combobox.toggle:CreateColorDrawable() end
-
-function Combobox.toggle:CreateColorDrawableByKey() end
-
-function Combobox.toggle:CreateDrawable() end
-
-function Combobox.toggle:CreateEffectDrawable() end
-
-function Combobox.toggle:CreateEffectDrawableByKey() end
-
-function Combobox.toggle:CreateIconDrawable() end
-
-function Combobox.toggle:CreateImageDrawable() end
-
-function Combobox.toggle:CreateNinePartDrawable() end
-
-function Combobox.toggle:CreateStateDrawable() end
-
-function Combobox.toggle:CreateTextDrawable() end
-
-function Combobox.toggle:CreateThreeColorDrawable() end
-
-function Combobox.toggle:CreateThreePartDrawable() end
-
-function Combobox.toggle:DeregisterForClicks() end
-
-function Combobox.toggle:DetachWidget() end
-
-function Combobox.toggle:DisableDrawables() end
-
-function Combobox.toggle:DisableDrawablesWithChildren() end
-
-function Combobox.toggle:Enable() end
-
-function Combobox.toggle:EnableDrag() end
-
-function Combobox.toggle:EnableDrawables() end
-
-function Combobox.toggle:EnableDrawablesWithChildren() end
-
-function Combobox.toggle:EnableFocus() end
-
-function Combobox.toggle:EnableHidingIsRemove() end
-
-function Combobox.toggle:EnableKeyboard() end
-
-function Combobox.toggle:EnablePick() end
-
-function Combobox.toggle:EnableScroll() end
-
-function Combobox.toggle:GetAlpha() end
-
-function Combobox.toggle:GetAttachedWidget() end
-
-function Combobox.toggle:GetButtonState() end
-
-function Combobox.toggle:GetDisabledBackground() end
-
-function Combobox.toggle:GetDisabledColor() end
-
-function Combobox.toggle:GetEffectiveExtent() end
-
-function Combobox.toggle:GetEffectiveOffset() end
-
-function Combobox.toggle:GetExtent() end
-
-function Combobox.toggle:GetHeight() end
-
-function Combobox.toggle:GetHighlightBackground() end
-
-function Combobox.toggle:GetHighlightColor() end
-
-function Combobox.toggle:GetId() end
-
-function Combobox.toggle:GetName() end
-
-function Combobox.toggle:GetNormalBackground() end
-
-function Combobox.toggle:GetNormalColor() end
-
-function Combobox.toggle:GetObjectType() end
-
-function Combobox.toggle:GetOffset() end
-
-function Combobox.toggle:GetParent() end
-
-function Combobox.toggle:GetPushedBackground() end
-
-function Combobox.toggle:GetPushedColor() end
-
-function Combobox.toggle:GetRotation() end
-
-function Combobox.toggle:GetText() end
-
-function Combobox.toggle:GetUILayer() end
-
-function Combobox.toggle:GetValue() end
-
-function Combobox.toggle:GetWidth() end
-
-function Combobox.toggle:HasHandler() end
-
-function Combobox.toggle:InheritAnimationData() end
-
-function Combobox.toggle:IsDescendantWidget() end
-
-function Combobox.toggle:IsEnabled() end
-
-function Combobox.toggle:IsMouseOver() end
-
-function Combobox.toggle:IsNowAnimation() end
-
-function Combobox.toggle:IsValidUIObject() end
-
-function Combobox.toggle:IsVisible() end
-
-function Combobox.toggle:Lower() end
-
-function Combobox.toggle:MoveTo() end
-
-function Combobox.toggle:Raise() end
-
-function Combobox.toggle:RegisterEvent() end
-
-function Combobox.toggle:RegisterForClicks() end
-
-function Combobox.toggle:ReleaseDeletedHandler() end
-
-function Combobox.toggle:ReleaseHandler() end
-
-function Combobox.toggle:RemoveAllAnchors() end
-
-function Combobox.toggle:RemoveAllDrawables() end
-
-function Combobox.toggle:RemoveDrawable() end
-
-function Combobox.toggle:RequestCharacterCacheData() end
-
-function Combobox.toggle:SetAlpha() end
-
-function Combobox.toggle:SetAlphaAnimation() end
-
-function Combobox.toggle:SetAutoClipChar() end
-
-function Combobox.toggle:SetAutoResize() end
-
-function Combobox.toggle:SetButtonState() end
-
-function Combobox.toggle:SetCategory() end
-
-function Combobox.toggle:SetCharacterCacheDataHandler() end
-
-function Combobox.toggle:SetDelegator() end
-
-function Combobox.toggle:SetDeletedHandler() end
-
-function Combobox.toggle:SetDisabledBackground() end
-
-function Combobox.toggle:SetDisabledColor() end
-
-function Combobox.toggle:SetDisabledTextColor() end
-
-function Combobox.toggle:SetDragCondition() end
-
-function Combobox.toggle:SetDrawPriority() end
-
-function Combobox.toggle:SetDrawableLayerAlpha() end
-
-function Combobox.toggle:SetExtent() end
-
-function Combobox.toggle:SetFocus() end
-
-function Combobox.toggle:SetHandler() end
-
-function Combobox.toggle:SetHeight() end
-
-function Combobox.toggle:SetHighlightBackground() end
-
-function Combobox.toggle:SetHighlightColor() end
-
-function Combobox.toggle:SetHighlightTextColor() end
-
-function Combobox.toggle:SetInset() end
-
-function Combobox.toggle:SetLText() end
-
-function Combobox.toggle:SetLayerColor() end
-
-function Combobox.toggle:SetMaxResizingExtent() end
-
-function Combobox.toggle:SetMinResizingExtent() end
-
-function Combobox.toggle:SetMoveAnimation() end
-
-function Combobox.toggle:SetNormalBackground() end
-
-function Combobox.toggle:SetNormalColor() end
-
-function Combobox.toggle:SetPushedBackground() end
-
-function Combobox.toggle:SetPushedColor() end
-
-function Combobox.toggle:SetPushedTextColor() end
-
-function Combobox.toggle:SetResizingBorderSize() end
-
-function Combobox.toggle:SetRotation() end
-
-function Combobox.toggle:SetScale() end
-
-function Combobox.toggle:SetScaleAnimation() end
-
-function Combobox.toggle:SetSounds() end
-
-function Combobox.toggle:SetStartAnimation() end
-
-function Combobox.toggle:SetStyle() end
-
-function Combobox.toggle:SetText() end
-
-function Combobox.toggle:SetTextColor() end
-
-function Combobox.toggle:SetWidth() end
-
-function Combobox.toggle:Show() end
-
-function Combobox.toggle:StartMoving() end
-
-function Combobox.toggle:StartSizing() end
-
-function Combobox.toggle:StopMovingOrSizing() end
-
-function Combobox.toggle:TriggerMoveAnimation() end
-
-function Combobox.toggle:UseDynamicContentState() end
-
-function Combobox.toggle:UseDynamicDrawableState() end
-
-function Combobox.toggle:UseResizing() end
-
-function Combobox:AddAnchor() end
-
-function Combobox:ApplyUIScale() end
-
-function Combobox:AttachWidget() end
-
-function Combobox:BindWidth() end
-
-function Combobox:CancelRequestCharacterCacheData() end
-
-function Combobox:ChangeChildAnchorByScrollValue() end
-
-function Combobox:CheckOutOfScreen() end
-
-function Combobox:Clickable() end
-
-function Combobox:CorrectOffsetByScreen() end
-
-function Combobox:CreateChildWidget() end
-
-function Combobox:CreateChildWidgetByType() end
-
-function Combobox:CreateColorDrawable() end
-
-function Combobox:CreateColorDrawableByKey() end
-
-function Combobox:CreateDrawable() end
-
-function Combobox:CreateEffectDrawable() end
-
-function Combobox:CreateEffectDrawableByKey() end
-
-function Combobox:CreateIconDrawable() end
-
-function Combobox:CreateImageDrawable() end
-
-function Combobox:CreateNinePartDrawable() end
-
-function Combobox:CreateTextDrawable() end
-
-function Combobox:CreateThreeColorDrawable() end
-
-function Combobox:CreateThreePartDrawable() end
-
-function Combobox:DetachWidget() end
-
-function Combobox:DisableDrawables() end
-
-function Combobox:DisableDrawablesWithChildren() end
-
-function Combobox:Enable() end
-
-function Combobox:EnableDrag() end
-
-function Combobox:EnableDrawables() end
-
-function Combobox:EnableDrawablesWithChildren() end
-
-function Combobox:EnableFocus() end
-
-function Combobox:EnableHidingIsRemove() end
-
-function Combobox:EnableKeyboard() end
-
-function Combobox:EnablePick() end
-
-function Combobox:EnableScroll() end
-
-function Combobox:GetAlpha() end
-
-function Combobox:GetAttachedWidget() end
-
-function Combobox:GetEffectiveExtent() end
-
-function Combobox:GetEffectiveOffset() end
-
-function Combobox:GetExtent() end
-
-function Combobox:GetHeight() end
-
-function Combobox:GetId() end
-
-function Combobox:GetName() end
-
-function Combobox:GetObjectType() end
-
-function Combobox:GetOffset() end
-
-function Combobox:GetParent() end
-
-function Combobox:GetRotation() end
-
-function Combobox:GetText() end
-
-function Combobox:GetUILayer() end
-
-function Combobox:GetValue() end
-
-function Combobox:GetWidth() end
-
-function Combobox:HasHandler() end
-
-function Combobox:InheritAnimationData() end
-
-function Combobox:Insert() end
-
-function Combobox:IsDescendantWidget() end
-
-function Combobox:IsEnabled() end
-
-function Combobox:IsMouseOver() end
-
-function Combobox:IsNowAnimation() end
-
-function Combobox:IsValidUIObject() end
-
-function Combobox:IsVisible() end
-
-function Combobox:Lower() end
-
-function Combobox:MoveTo() end
-
-function Combobox:PauseAutocomplete() end
-
-function Combobox:Raise() end
-
-function Combobox:RegisterEvent() end
-
-function Combobox:ReleaseDeletedHandler() end
-
-function Combobox:ReleaseHandler() end
-
-function Combobox:RemoveAllAnchors() end
-
-function Combobox:RemoveAllDrawables() end
-
-function Combobox:RemoveDrawable() end
-
-function Combobox:RequestCharacterCacheData() end
-
-function Combobox:SetAlpha() end
-
-function Combobox:SetAlphaAnimation() end
-
-function Combobox:SetAutocomplete() end
-
-function Combobox:SetCategory() end
-
-function Combobox:SetCharacterCacheDataHandler() end
-
-function Combobox:SetDelegator() end
-
-function Combobox:SetDeletedHandler() end
-
-function Combobox:SetDragCondition() end
-
-function Combobox:SetDrawPriority() end
-
-function Combobox:SetDrawableLayerAlpha() end
-
-function Combobox:SetDropdownVisibleLimit() end
-
-function Combobox:SetEditable() end
-
-function Combobox:SetExtent() end
-
-function Combobox:SetHandler() end
-
-function Combobox:SetHeight() end
-
-function Combobox:SetLText() end
-
-function Combobox:SetLayerColor() end
-
-function Combobox:SetMaxResizingExtent() end
-
-function Combobox:SetMinResizingExtent() end
-
-function Combobox:SetMoveAnimation() end
-
-function Combobox:SetResizingBorderSize() end
-
-function Combobox:SetRotation() end
-
-function Combobox:SetScale() end
-
-function Combobox:SetScaleAnimation() end
-
-function Combobox:SetSounds() end
-
-function Combobox:SetStartAnimation() end
-
-function Combobox:SetText() end
-
-function Combobox:SetWidth() end
-
-function Combobox:Show() end
-
-function Combobox:StartMoving() end
-
-function Combobox:StartSizing() end
-
-function Combobox:StopMovingOrSizing() end
-
-function Combobox:TriggerMoveAnimation() end
-
-function Combobox:UseDynamicContentState() end
-
-function Combobox:UseDynamicDrawableState() end
-
-function Combobox:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+Combobox = {
+  AddAnchor = "<function: 00000001D434FA54>",
+  ApplyUIScale = "<function: 00000001E96C94A4>",
+  AttachWidget = "<function: 00000001D4539234>",
+  BindWidth = "<function: 00000000FC600FA4>",
+  CancelRequestCharacterCacheData = "<function: 00000001E963D0D4>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001D3BCFF14>",
+  CheckOutOfScreen = "<function: 00000001D48920D4>",
+  Clickable = "<function: 00000001E4E7B764>",
+  CorrectOffsetByScreen = "<function: 00000001E1A9F034>",
+  CreateChildWidget = "<function: 00000001E193FF04>",
+  CreateChildWidgetByType = "<function: 00000001E96A7464>",
+  CreateColorDrawable = "<function: 00000001D46B5FE4>",
+  CreateColorDrawableByKey = "<function: 00000001E96A1D24>",
+  CreateDrawable = "<function: 00000001E4AD2F84>",
+  CreateEffectDrawable = "<function: 00000000CD7273D4>",
+  CreateEffectDrawableByKey = "<function: 00000001EE764CC4>",
+  CreateIconDrawable = "<function: 00000001E271E124>",
+  CreateImageDrawable = "<function: 00000001D4052C64>",
+  CreateNinePartDrawable = "<function: 00000001AFAB98D4>",
+  CreateTextDrawable = "<function: 00000001E4EBE0E4>",
+  CreateThreeColorDrawable = "<function: 00000001D3FE6ED4>",
+  CreateThreePartDrawable = "<function: 00000000CD7B6504>",
+  DetachWidget = "<function: 00000001E9611514>",
+  DisableDrawables = "<function: 00000001D4015D64>",
+  DisableDrawablesWithChildren = "<function: 00000001D48CB3D4>",
+  Enable = "<function: 00000001D3DAC984>",
+  EnableDrag = "<function: 00000001E4E43E14>",
+  EnableDrawables = "<function: 00000001D44CEC74>",
+  EnableDrawablesWithChildren = "<function: 00000001E8F38AB4>",
+  EnableFocus = "<function: 00000001F622C0B4>",
+  EnableHidingIsRemove = "<function: 000000007CADEA34>",
+  EnableKeyboard = "<function: 00000001AF9D3994>",
+  EnablePick = "<function: 00000001E487D0B4>",
+  EnableScroll = "<function: 00000001E96776A4>",
+  GetAlpha = "<function: 00000001D3EA8324>",
+  GetAttachedWidget = "<function: 00000001D4775AC4>",
+  GetEffectiveExtent = "<function: 00000001E96C8824>",
+  GetEffectiveOffset = "<function: 00000001E95D9684>",
+  GetExtent = "<function: 00000001E9626194>",
+  GetHeight = "<function: 00000001E4CEA044>",
+  GetId = "<function: 00000001D4105E44>",
+  GetName = "<function: 00000001E4C79E34>",
+  GetObjectType = "<function: 00000001E48CAEC4>",
+  GetOffset = "<function: 00000001EE72BF84>",
+  GetParent = "<function: 00000001D3E14C94>",
+  GetRotation = "<function: 00000001E959A704>",
+  GetText = "<function: 00000001D472BCF4>",
+  GetUILayer = "<function: 00000001E4C570F4>",
+  GetValue = "<function: 00000001E4E71FA4>",
+  GetWidth = "<function: 00000001D3EB3B64>",
+  HasHandler = "<function: 00000001D444C894>",
+  InheritAnimationData = "<function: 00000001D403CD64>",
+  Insert = "<function: 00000001D4987724>",
+  IsDescendantWidget = "<function: 00000000CD6C1614>",
+  IsEnabled = "<function: 00000001D48F3854>",
+  IsMouseOver = "<function: 00000001D4603414>",
+  IsNowAnimation = "<function: 00000001F88FDA44>",
+  IsValidUIObject = "<function: 00000001D4599D04>",
+  IsVisible = "<function: 00000001D44683D4>",
+  Lower = "<function: 00000000FA0296E4>",
+  MoveTo = "<function: 00000001D46F01F4>",
+  PauseAutocomplete = "<function: 00000001D49EDE74>",
+  Raise = "<function: 00000001E48C8344>",
+  RegisterEvent = "<function: 00000001D4597E44>",
+  ReleaseDeletedHandler = "<function: 00000001E4DBC244>",
+  ReleaseHandler = "<function: 00000001E4DBCD44>",
+  RemoveAllAnchors = "<function: 00000001E5044114>",
+  RemoveAllDrawables = "<function: 00000001E4C5B9F4>",
+  RemoveDrawable = "<function: 00000001E1A4DE24>",
+  RequestCharacterCacheData = "<function: 00000001E9692F64>",
+  SetAlpha = "<function: 00000001E4B886E4>",
+  SetAlphaAnimation = "<function: 00000001E271D124>",
+  SetAutocomplete = "<function: 00000001E4BA96E4>",
+  SetCategory = "<function: 00000001E4EA7164>",
+  SetCharacterCacheDataHandler = "<function: 00000001E966F7E4>",
+  SetDelegator = "<function: 00000001E95C3C04>",
+  SetDeletedHandler = "<function: 00000001E9658D94>",
+  SetDragCondition = "<function: 00000001F6257534>",
+  SetDrawPriority = "<function: 00000001D44E57F4>",
+  SetDrawableLayerAlpha = "<function: 00000001E1905C34>",
+  SetDropdownVisibleLimit = "<function: 00000001E8F6F234>",
+  SetEditable = "<function: 00000001E963C254>",
+  SetExtent = "<function: 00000001E4FCA754>",
+  SetHandler = "<function: 00000001E49B89D4>",
+  SetHeight = "<function: 00000001D45DAC14>",
+  SetLText = "<function: 00000001D44FF7B4>",
+  SetLayerColor = "<function: 00000001D47ADC84>",
+  SetMaxResizingExtent = "<function: 00000000FC609724>",
+  SetMinResizingExtent = "<function: 00000001D4485C54>",
+  SetMoveAnimation = "<function: 00000001B5D6C444>",
+  SetResizingBorderSize = "<function: 00000001E963B714>",
+  SetRotation = "<function: 00000001E4FEB554>",
+  SetScale = "<function: 00000001E4EBDEA4>",
+  SetScaleAnimation = "<function: 00000001D4645594>",
+  SetSounds = "<function: 00000001E4F24CB4>",
+  SetStartAnimation = "<function: 000000007CADA8F4>",
+  SetText = "<function: 00000001EEBB4F04>",
+  SetWidth = "<function: 00000001E4A2DA24>",
+  Show = "<function: 00000001E1B15384>",
+  StartMoving = "<function: 00000001E4BD08A4>",
+  StartSizing = "<function: 00000001F624DE34>",
+  StopMovingOrSizing = "<function: 00000001E9576E84>",
+  TriggerMoveAnimation = "<function: 00000001E4F3DE34>",
+  UseDynamicContentState = "<function: 00000001E9676EE4>",
+  UseDynamicDrawableState = "<function: 00000001E4F1B974>",
+  UseResizing = "<function: 00000001D44D9474>",
+  __this = "<userdata: 000000016BB99430>",
+  dropdown = {
+    downBtn = {
+      AddAnchor = "<function: 00000001D3D85204>",
+      ApplyUIScale = "<function: 00000001D48EF314>",
+      AttachWidget = "<function: 00000001EE7D2594>",
+      BindWidth = "<function: 00000001D3FDBED4>",
+      CancelRequestCharacterCacheData = "<function: 00000001E8ED99E4>",
+      ChangeChildAnchorByScrollValue = "<function: 00000001E95C41C4>",
+      CheckOutOfScreen = "<function: 0000000228DF47A4>",
+      Clickable = "<function: 00000001E4EA2A24>",
+      CorrectOffsetByScreen = "<function: 00000001E4AE7244>",
+      CreateChildWidget = "<function: 00000001D3D66CC4>",
+      CreateChildWidgetByType = "<function: 00000001EE7D2854>",
+      CreateColorDrawable = "<function: 00000001D3C611D4>",
+      CreateColorDrawableByKey = "<function: 00000001D4468414>",
+      CreateDrawable = "<function: 00000001D3CADF94>",
+      CreateEffectDrawable = "<function: 00000001A713EC84>",
+      CreateEffectDrawableByKey = "<function: 00000001E4EC0424>",
+      CreateIconDrawable = "<function: 00000001D4467ED4>",
+      CreateImageDrawable = "<function: 00000001D46334D4>",
+      CreateNinePartDrawable = "<function: 00000001E96B9AA4>",
+      CreateStateDrawable = "<function: 00000001E1B42C44>",
+      CreateTextDrawable = "<function: 00000001D45FD0D4>",
+      CreateThreeColorDrawable = "<function: 00000001E1AE59B4>",
+      CreateThreePartDrawable = "<function: 00000001E19020B4>",
+      DeregisterForClicks = "<function: 00000001D4665C24>",
+      DetachWidget = "<function: 00000001EEB67B04>",
+      DisableDrawables = "<function: 00000001E502EA54>",
+      DisableDrawablesWithChildren = "<function: 00000001E4F21874>",
+      Enable = "<function: 00000001E1A89BE4>",
+      EnableDrag = "<function: 00000001E19E86D4>",
+      EnableDrawables = "<function: 00000001D44FE6B4>",
+      EnableDrawablesWithChildren = "<function: 00000001E4B747D4>",
+      EnableFocus = "<function: 00000001E4EAE764>",
+      EnableHidingIsRemove = "<function: 00000001E1A828E4>",
+      EnableKeyboard = "<function: 00000001E8EF9DE4>",
+      EnablePick = "<function: 00000001E4DECA14>",
+      EnableScroll = "<function: 00000001E4EAE264>",
+      GetAlpha = "<function: 00000001D3F74C14>",
+      GetAttachedWidget = "<function: 00000001A2725494>",
+      GetButtonState = "<function: 00000001E4BDD1A4>",
+      GetDisabledBackground = "<function: 00000001D45CABC4>",
+      GetDisabledColor = "<function: 00000001E1A4EBE4>",
+      GetEffectiveExtent = "<function: 00000001E96A70E4>",
+      GetEffectiveOffset = "<function: 00000001D4008A64>",
+      GetExtent = "<function: 00000001E963BD54>",
+      GetHeight = "<function: 00000001D44DCAF4>",
+      GetHighlightBackground = "<function: 00000001D4163EB4>",
+      GetHighlightColor = "<function: 00000001E95ABCC4>",
+      GetId = "<function: 00000001E8EC7B24>",
+      GetName = "<function: 00000001E4C518F4>",
+      GetNormalBackground = "<function: 00000001D3E339D4>",
+      GetNormalColor = "<function: 00000001E19F3154>",
+      GetObjectType = "<function: 00000001D434E714>",
+      GetOffset = "<function: 00000001E1905BF4>",
+      GetParent = "<function: 00000001D45A03C4>",
+      GetPushedBackground = "<function: 00000001A255AF84>",
+      GetPushedColor = "<function: 00000001D44F1574>",
+      GetRotation = "<function: 00000001D44F1474>",
+      GetText = "<function: 00000001D3FDE494>",
+      GetUILayer = "<function: 000000007CABF3F4>",
+      GetValue = "<function: 00000001D45E0C94>",
+      GetWidth = "<function: 00000001D403CC24>",
+      HasHandler = "<function: 0000000253633914>",
+      InheritAnimationData = "<function: 00000001E1B06534>",
+      IsDescendantWidget = "<function: 00000001E4B6C894>",
+      IsEnabled = "<function: 00000001E956CE04>",
+      IsMouseOver = "<function: 00000001D49394E4>",
+      IsNowAnimation = "<function: 00000001E48DEEC4>",
+      IsValidUIObject = "<function: 00000001E48E0E44>",
+      IsVisible = "<function: 00000001D48D1ED4>",
+      Lower = "<function: 00000001D4685CA4>",
+      MoveTo = "<function: 00000001D4628E14>",
+      Raise = "<function: 00000001E95C4084>",
+      RegisterEvent = "<function: 00000001D44885D4>",
+      RegisterForClicks = "<function: 00000001D3D911C4>",
+      ReleaseDeletedHandler = "<function: 00000001D40525A4>",
+      ReleaseHandler = "<function: 00000001E4A3A164>",
+      RemoveAllAnchors = "<function: 000000025367C354>",
+      RemoveAllDrawables = "<function: 00000001D3FF9224>",
+      RemoveDrawable = "<function: 00000001E4E87BA4>",
+      RequestCharacterCacheData = "<function: 00000001D44FF574>",
+      SetAlpha = "<function: 00000001A7137E84>",
+      SetAlphaAnimation = "<function: 00000001E191AAC4>",
+      SetAutoClipChar = "<function: 00000001E962FE54>",
+      SetAutoResize = "<function: 000000025372DDE4>",
+      SetButtonState = "<function: 00000001D40FD7C4>",
+      SetCategory = "<function: 00000001D3DDD4D4>",
+      SetCharacterCacheDataHandler = "<function: 00000001D3F8E3D4>",
+      SetDelegator = "<function: 00000001D3C9FC54>",
+      SetDeletedHandler = "<function: 00000000CD7E40C4>",
+      SetDisabledBackground = "<function: 00000001EE731B04>",
+      SetDisabledColor = "<function: 00000001C8A51CC4>",
+      SetDisabledTextColor = "<function: 00000001D3FDC014>",
+      SetDragCondition = "<function: 00000001D4759444>",
+      SetDrawPriority = "<function: 00000001E95B8244>",
+      SetDrawableLayerAlpha = "<function: 00000001E4F358F4>",
+      SetExtent = "<function: 00000001E4E20254>",
+      SetFocus = "<function: 00000001E4E982E4>",
+      SetHandler = "<function: 00000001E96301D4>",
+      SetHeight = "<function: 00000001D45C8284>",
+      SetHighlightBackground = "<function: 000000007C869FB4>",
+      SetHighlightColor = "<function: 00000001A7132744>",
+      SetHighlightTextColor = "<function: 00000001E8EEEC64>",
+      SetInset = "<function: 00000001E95CED84>",
+      SetLText = "<function: 00000001D46DB074>",
+      SetLayerColor = "<function: 00000001E19F7B94>",
+      SetMaxResizingExtent = "<function: 00000001D45EE514>",
+      SetMinResizingExtent = "<function: 00000001D4637394>",
+      SetMoveAnimation = "<function: 00000001E4B13CD4>",
+      SetNormalBackground = "<function: 00000000FC8D01A4>",
+      SetNormalColor = "<function: 00000001EE7C6014>",
+      SetPushedBackground = "<function: 00000002525B94B4>",
+      SetPushedColor = "<function: 00000001A712BBC4>",
+      SetPushedTextColor = "<function: 00000001A7138A04>",
+      SetResizingBorderSize = "<function: 00000001E5002254>",
+      SetRotation = "<function: 00000001D45CAC84>",
+      SetScale = "<function: 00000001D3FF5AE4>",
+      SetScaleAnimation = "<function: 00000001EED74FC4>",
+      SetSounds = "<function: 00000001F624F7F4>",
+      SetStartAnimation = "<function: 00000001D3FF09E4>",
+      SetStyle = "<function: 00000001D491C2A4>",
+      SetText = "<function: 00000001AFAAF8D4>",
+      SetTextColor = "<function: 00000001E4EA50A4>",
+      SetWidth = "<function: 00000001A712BC04>",
+      Show = "<function: 00000001D443E154>",
+      StartMoving = "<function: 00000001EE765184>",
+      StartSizing = "<function: 00000000FC8C24E4>",
+      StopMovingOrSizing = "<function: 00000001E4A25AE4>",
+      TriggerMoveAnimation = "<function: 00000001E95C5C84>",
+      UseDynamicContentState = "<function: 00000001E96C9FA4>",
+      UseDynamicDrawableState = "<function: 00000001E963A814>",
+      UseResizing = "<function: 00000001D44FDC34>",
+      __this = "<userdata: 000000025216ECB0>",
+      style = {
+        GetId = "<function: 000000025336B2B4>",
+        GetLineHeight = "<function: 00000001B5DA5044>",
+        GetName = "<function: 00000001E4A0DAA4>",
+        GetObjectType = "<function: 00000001E4FF3494>",
+        GetTextWidth = "<function: 00000001A714E8C4>",
+        IsValidUIObject = "<function: 00000001EE765144>",
+        SetAlign = "<function: 00000001D3FEF764>",
+        SetColor = "<function: 00000001E4E58464>",
+        SetColorByKey = "<function: 00000001E8F7D5B4>",
+        SetEllipsis = "<function: 00000000683E5E34>",
+        SetFont = "<function: 00000001A714DFC4>",
+        SetFontSize = "<function: 00000001A714E004>",
+        SetOutline = "<function: 00000001E4D51F04>",
+        SetShadow = "<function: 00000001EE72BDC4>",
+        SetSnap = "<function: 00000001E1A3CE64>",
+        __this = "<userdata: 00000001E6DCD570>",
+      },
+    },
+    itemStyle = {
+      GetId = "<function: 000000025336B2B4>",
+      GetLineHeight = "<function: 00000001B5DA5044>",
+      GetName = "<function: 00000001E4A0DAA4>",
+      GetObjectType = "<function: 00000001E4FF3494>",
+      GetTextWidth = "<function: 00000001A714E8C4>",
+      IsValidUIObject = "<function: 00000001EE765144>",
+      SetAlign = "<function: 00000001D3FEF764>",
+      SetColor = "<function: 00000001E4E58464>",
+      SetColorByKey = "<function: 00000001E8F7D5B4>",
+      SetEllipsis = "<function: 00000000683E5E34>",
+      SetFont = "<function: 00000001A714DFC4>",
+      SetFontSize = "<function: 00000001A714E004>",
+      SetOutline = "<function: 00000001E4D51F04>",
+      SetShadow = "<function: 00000001EE72BDC4>",
+      SetSnap = "<function: 00000001E1A3CE64>",
+      __this = "<userdata: 00000001E6DD04F0>",
+    },
+    itemStyleSub = {
+      GetId = "<function: 000000025336B2B4>",
+      GetLineHeight = "<function: 00000001B5DA5044>",
+      GetName = "<function: 00000001E4A0DAA4>",
+      GetObjectType = "<function: 00000001E4FF3494>",
+      GetTextWidth = "<function: 00000001A714E8C4>",
+      IsValidUIObject = "<function: 00000001EE765144>",
+      SetAlign = "<function: 00000001D3FEF764>",
+      SetColor = "<function: 00000001E4E58464>",
+      SetColorByKey = "<function: 00000001E8F7D5B4>",
+      SetEllipsis = "<function: 00000000683E5E34>",
+      SetFont = "<function: 00000001A714DFC4>",
+      SetFontSize = "<function: 00000001A714E004>",
+      SetOutline = "<function: 00000001E4D51F04>",
+      SetShadow = "<function: 00000001EE72BDC4>",
+      SetSnap = "<function: 00000001E1A3CE64>",
+      __this = "<userdata: 00000001E6DD0770>",
+    },
+    upBtn = {
+      AddAnchor = "<function: 00000001D3D85204>",
+      ApplyUIScale = "<function: 00000001D48EF314>",
+      AttachWidget = "<function: 00000001EE7D2594>",
+      BindWidth = "<function: 00000001D3FDBED4>",
+      CancelRequestCharacterCacheData = "<function: 00000001E8ED99E4>",
+      ChangeChildAnchorByScrollValue = "<function: 00000001E95C41C4>",
+      CheckOutOfScreen = "<function: 0000000228DF47A4>",
+      Clickable = "<function: 00000001E4EA2A24>",
+      CorrectOffsetByScreen = "<function: 00000001E4AE7244>",
+      CreateChildWidget = "<function: 00000001D3D66CC4>",
+      CreateChildWidgetByType = "<function: 00000001EE7D2854>",
+      CreateColorDrawable = "<function: 00000001D3C611D4>",
+      CreateColorDrawableByKey = "<function: 00000001D4468414>",
+      CreateDrawable = "<function: 00000001D3CADF94>",
+      CreateEffectDrawable = "<function: 00000001A713EC84>",
+      CreateEffectDrawableByKey = "<function: 00000001E4EC0424>",
+      CreateIconDrawable = "<function: 00000001D4467ED4>",
+      CreateImageDrawable = "<function: 00000001D46334D4>",
+      CreateNinePartDrawable = "<function: 00000001E96B9AA4>",
+      CreateStateDrawable = "<function: 00000001E1B42C44>",
+      CreateTextDrawable = "<function: 00000001D45FD0D4>",
+      CreateThreeColorDrawable = "<function: 00000001E1AE59B4>",
+      CreateThreePartDrawable = "<function: 00000001E19020B4>",
+      DeregisterForClicks = "<function: 00000001D4665C24>",
+      DetachWidget = "<function: 00000001EEB67B04>",
+      DisableDrawables = "<function: 00000001E502EA54>",
+      DisableDrawablesWithChildren = "<function: 00000001E4F21874>",
+      Enable = "<function: 00000001E1A89BE4>",
+      EnableDrag = "<function: 00000001E19E86D4>",
+      EnableDrawables = "<function: 00000001D44FE6B4>",
+      EnableDrawablesWithChildren = "<function: 00000001E4B747D4>",
+      EnableFocus = "<function: 00000001E4EAE764>",
+      EnableHidingIsRemove = "<function: 00000001E1A828E4>",
+      EnableKeyboard = "<function: 00000001E8EF9DE4>",
+      EnablePick = "<function: 00000001E4DECA14>",
+      EnableScroll = "<function: 00000001E4EAE264>",
+      GetAlpha = "<function: 00000001D3F74C14>",
+      GetAttachedWidget = "<function: 00000001A2725494>",
+      GetButtonState = "<function: 00000001E4BDD1A4>",
+      GetDisabledBackground = "<function: 00000001D45CABC4>",
+      GetDisabledColor = "<function: 00000001E1A4EBE4>",
+      GetEffectiveExtent = "<function: 00000001E96A70E4>",
+      GetEffectiveOffset = "<function: 00000001D4008A64>",
+      GetExtent = "<function: 00000001E963BD54>",
+      GetHeight = "<function: 00000001D44DCAF4>",
+      GetHighlightBackground = "<function: 00000001D4163EB4>",
+      GetHighlightColor = "<function: 00000001E95ABCC4>",
+      GetId = "<function: 00000001E8EC7B24>",
+      GetName = "<function: 00000001E4C518F4>",
+      GetNormalBackground = "<function: 00000001D3E339D4>",
+      GetNormalColor = "<function: 00000001E19F3154>",
+      GetObjectType = "<function: 00000001D434E714>",
+      GetOffset = "<function: 00000001E1905BF4>",
+      GetParent = "<function: 00000001D45A03C4>",
+      GetPushedBackground = "<function: 00000001A255AF84>",
+      GetPushedColor = "<function: 00000001D44F1574>",
+      GetRotation = "<function: 00000001D44F1474>",
+      GetText = "<function: 00000001D3FDE494>",
+      GetUILayer = "<function: 000000007CABF3F4>",
+      GetValue = "<function: 00000001D45E0C94>",
+      GetWidth = "<function: 00000001D403CC24>",
+      HasHandler = "<function: 0000000253633914>",
+      InheritAnimationData = "<function: 00000001E1B06534>",
+      IsDescendantWidget = "<function: 00000001E4B6C894>",
+      IsEnabled = "<function: 00000001E956CE04>",
+      IsMouseOver = "<function: 00000001D49394E4>",
+      IsNowAnimation = "<function: 00000001E48DEEC4>",
+      IsValidUIObject = "<function: 00000001E48E0E44>",
+      IsVisible = "<function: 00000001D48D1ED4>",
+      Lower = "<function: 00000001D4685CA4>",
+      MoveTo = "<function: 00000001D4628E14>",
+      Raise = "<function: 00000001E95C4084>",
+      RegisterEvent = "<function: 00000001D44885D4>",
+      RegisterForClicks = "<function: 00000001D3D911C4>",
+      ReleaseDeletedHandler = "<function: 00000001D40525A4>",
+      ReleaseHandler = "<function: 00000001E4A3A164>",
+      RemoveAllAnchors = "<function: 000000025367C354>",
+      RemoveAllDrawables = "<function: 00000001D3FF9224>",
+      RemoveDrawable = "<function: 00000001E4E87BA4>",
+      RequestCharacterCacheData = "<function: 00000001D44FF574>",
+      SetAlpha = "<function: 00000001A7137E84>",
+      SetAlphaAnimation = "<function: 00000001E191AAC4>",
+      SetAutoClipChar = "<function: 00000001E962FE54>",
+      SetAutoResize = "<function: 000000025372DDE4>",
+      SetButtonState = "<function: 00000001D40FD7C4>",
+      SetCategory = "<function: 00000001D3DDD4D4>",
+      SetCharacterCacheDataHandler = "<function: 00000001D3F8E3D4>",
+      SetDelegator = "<function: 00000001D3C9FC54>",
+      SetDeletedHandler = "<function: 00000000CD7E40C4>",
+      SetDisabledBackground = "<function: 00000001EE731B04>",
+      SetDisabledColor = "<function: 00000001C8A51CC4>",
+      SetDisabledTextColor = "<function: 00000001D3FDC014>",
+      SetDragCondition = "<function: 00000001D4759444>",
+      SetDrawPriority = "<function: 00000001E95B8244>",
+      SetDrawableLayerAlpha = "<function: 00000001E4F358F4>",
+      SetExtent = "<function: 00000001E4E20254>",
+      SetFocus = "<function: 00000001E4E982E4>",
+      SetHandler = "<function: 00000001E96301D4>",
+      SetHeight = "<function: 00000001D45C8284>",
+      SetHighlightBackground = "<function: 000000007C869FB4>",
+      SetHighlightColor = "<function: 00000001A7132744>",
+      SetHighlightTextColor = "<function: 00000001E8EEEC64>",
+      SetInset = "<function: 00000001E95CED84>",
+      SetLText = "<function: 00000001D46DB074>",
+      SetLayerColor = "<function: 00000001E19F7B94>",
+      SetMaxResizingExtent = "<function: 00000001D45EE514>",
+      SetMinResizingExtent = "<function: 00000001D4637394>",
+      SetMoveAnimation = "<function: 00000001E4B13CD4>",
+      SetNormalBackground = "<function: 00000000FC8D01A4>",
+      SetNormalColor = "<function: 00000001EE7C6014>",
+      SetPushedBackground = "<function: 00000002525B94B4>",
+      SetPushedColor = "<function: 00000001A712BBC4>",
+      SetPushedTextColor = "<function: 00000001A7138A04>",
+      SetResizingBorderSize = "<function: 00000001E5002254>",
+      SetRotation = "<function: 00000001D45CAC84>",
+      SetScale = "<function: 00000001D3FF5AE4>",
+      SetScaleAnimation = "<function: 00000001EED74FC4>",
+      SetSounds = "<function: 00000001F624F7F4>",
+      SetStartAnimation = "<function: 00000001D3FF09E4>",
+      SetStyle = "<function: 00000001D491C2A4>",
+      SetText = "<function: 00000001AFAAF8D4>",
+      SetTextColor = "<function: 00000001E4EA50A4>",
+      SetWidth = "<function: 00000001A712BC04>",
+      Show = "<function: 00000001D443E154>",
+      StartMoving = "<function: 00000001EE765184>",
+      StartSizing = "<function: 00000000FC8C24E4>",
+      StopMovingOrSizing = "<function: 00000001E4A25AE4>",
+      TriggerMoveAnimation = "<function: 00000001E95C5C84>",
+      UseDynamicContentState = "<function: 00000001E96C9FA4>",
+      UseDynamicDrawableState = "<function: 00000001E963A814>",
+      UseResizing = "<function: 00000001D44FDC34>",
+      __this = "<userdata: 00000002521707E0>",
+      style = {
+        GetId = "<function: 000000025336B2B4>",
+        GetLineHeight = "<function: 00000001B5DA5044>",
+        GetName = "<function: 00000001E4A0DAA4>",
+        GetObjectType = "<function: 00000001E4FF3494>",
+        GetTextWidth = "<function: 00000001A714E8C4>",
+        IsValidUIObject = "<function: 00000001EE765144>",
+        SetAlign = "<function: 00000001D3FEF764>",
+        SetColor = "<function: 00000001E4E58464>",
+        SetColorByKey = "<function: 00000001E8F7D5B4>",
+        SetEllipsis = "<function: 00000000683E5E34>",
+        SetFont = "<function: 00000001A714DFC4>",
+        SetFontSize = "<function: 00000001A714E004>",
+        SetOutline = "<function: 00000001E4D51F04>",
+        SetShadow = "<function: 00000001EE72BDC4>",
+        SetSnap = "<function: 00000001E1A3CE64>",
+        __this = "<userdata: 00000001E6DD13F0>",
+      },
+    },
+    vslider = {
+      thumb = {
+        AddAnchor = "<function: 00000001D3D85204>",
+        ApplyUIScale = "<function: 00000001D48EF314>",
+        AttachWidget = "<function: 00000001EE7D2594>",
+        BindWidth = "<function: 00000001D3FDBED4>",
+        CancelRequestCharacterCacheData = "<function: 00000001E8ED99E4>",
+        ChangeChildAnchorByScrollValue = "<function: 00000001E95C41C4>",
+        CheckOutOfScreen = "<function: 0000000228DF47A4>",
+        Clickable = "<function: 00000001E4EA2A24>",
+        CorrectOffsetByScreen = "<function: 00000001E4AE7244>",
+        CreateChildWidget = "<function: 00000001D3D66CC4>",
+        CreateChildWidgetByType = "<function: 00000001EE7D2854>",
+        CreateColorDrawable = "<function: 00000001D3C611D4>",
+        CreateColorDrawableByKey = "<function: 00000001D4468414>",
+        CreateDrawable = "<function: 00000001D3CADF94>",
+        CreateEffectDrawable = "<function: 00000001A713EC84>",
+        CreateEffectDrawableByKey = "<function: 00000001E4EC0424>",
+        CreateIconDrawable = "<function: 00000001D4467ED4>",
+        CreateImageDrawable = "<function: 00000001D46334D4>",
+        CreateNinePartDrawable = "<function: 00000001E96B9AA4>",
+        CreateStateDrawable = "<function: 00000001E1B42C44>",
+        CreateTextDrawable = "<function: 00000001D45FD0D4>",
+        CreateThreeColorDrawable = "<function: 00000001E1AE59B4>",
+        CreateThreePartDrawable = "<function: 00000001E19020B4>",
+        DeregisterForClicks = "<function: 00000001D4665C24>",
+        DetachWidget = "<function: 00000001EEB67B04>",
+        DisableDrawables = "<function: 00000001E502EA54>",
+        DisableDrawablesWithChildren = "<function: 00000001E4F21874>",
+        Enable = "<function: 00000001E1A89BE4>",
+        EnableDrag = "<function: 00000001E19E86D4>",
+        EnableDrawables = "<function: 00000001D44FE6B4>",
+        EnableDrawablesWithChildren = "<function: 00000001E4B747D4>",
+        EnableFocus = "<function: 00000001E4EAE764>",
+        EnableHidingIsRemove = "<function: 00000001E1A828E4>",
+        EnableKeyboard = "<function: 00000001E8EF9DE4>",
+        EnablePick = "<function: 00000001E4DECA14>",
+        EnableScroll = "<function: 00000001E4EAE264>",
+        GetAlpha = "<function: 00000001D3F74C14>",
+        GetAttachedWidget = "<function: 00000001A2725494>",
+        GetButtonState = "<function: 00000001E4BDD1A4>",
+        GetDisabledBackground = "<function: 00000001D45CABC4>",
+        GetDisabledColor = "<function: 00000001E1A4EBE4>",
+        GetEffectiveExtent = "<function: 00000001E96A70E4>",
+        GetEffectiveOffset = "<function: 00000001D4008A64>",
+        GetExtent = "<function: 00000001E963BD54>",
+        GetHeight = "<function: 00000001D44DCAF4>",
+        GetHighlightBackground = "<function: 00000001D4163EB4>",
+        GetHighlightColor = "<function: 00000001E95ABCC4>",
+        GetId = "<function: 00000001E8EC7B24>",
+        GetName = "<function: 00000001E4C518F4>",
+        GetNormalBackground = "<function: 00000001D3E339D4>",
+        GetNormalColor = "<function: 00000001E19F3154>",
+        GetObjectType = "<function: 00000001D434E714>",
+        GetOffset = "<function: 00000001E1905BF4>",
+        GetParent = "<function: 00000001D45A03C4>",
+        GetPushedBackground = "<function: 00000001A255AF84>",
+        GetPushedColor = "<function: 00000001D44F1574>",
+        GetRotation = "<function: 00000001D44F1474>",
+        GetText = "<function: 00000001D3FDE494>",
+        GetUILayer = "<function: 000000007CABF3F4>",
+        GetValue = "<function: 00000001D45E0C94>",
+        GetWidth = "<function: 00000001D403CC24>",
+        HasHandler = "<function: 0000000253633914>",
+        InheritAnimationData = "<function: 00000001E1B06534>",
+        IsDescendantWidget = "<function: 00000001E4B6C894>",
+        IsEnabled = "<function: 00000001E956CE04>",
+        IsMouseOver = "<function: 00000001D49394E4>",
+        IsNowAnimation = "<function: 00000001E48DEEC4>",
+        IsValidUIObject = "<function: 00000001E48E0E44>",
+        IsVisible = "<function: 00000001D48D1ED4>",
+        Lower = "<function: 00000001D4685CA4>",
+        MoveTo = "<function: 00000001D4628E14>",
+        Raise = "<function: 00000001E95C4084>",
+        RegisterEvent = "<function: 00000001D44885D4>",
+        RegisterForClicks = "<function: 00000001D3D911C4>",
+        ReleaseDeletedHandler = "<function: 00000001D40525A4>",
+        ReleaseHandler = "<function: 00000001E4A3A164>",
+        RemoveAllAnchors = "<function: 000000025367C354>",
+        RemoveAllDrawables = "<function: 00000001D3FF9224>",
+        RemoveDrawable = "<function: 00000001E4E87BA4>",
+        RequestCharacterCacheData = "<function: 00000001D44FF574>",
+        SetAlpha = "<function: 00000001A7137E84>",
+        SetAlphaAnimation = "<function: 00000001E191AAC4>",
+        SetAutoClipChar = "<function: 00000001E962FE54>",
+        SetAutoResize = "<function: 000000025372DDE4>",
+        SetButtonState = "<function: 00000001D40FD7C4>",
+        SetCategory = "<function: 00000001D3DDD4D4>",
+        SetCharacterCacheDataHandler = "<function: 00000001D3F8E3D4>",
+        SetDelegator = "<function: 00000001D3C9FC54>",
+        SetDeletedHandler = "<function: 00000000CD7E40C4>",
+        SetDisabledBackground = "<function: 00000001EE731B04>",
+        SetDisabledColor = "<function: 00000001C8A51CC4>",
+        SetDisabledTextColor = "<function: 00000001D3FDC014>",
+        SetDragCondition = "<function: 00000001D4759444>",
+        SetDrawPriority = "<function: 00000001E95B8244>",
+        SetDrawableLayerAlpha = "<function: 00000001E4F358F4>",
+        SetExtent = "<function: 00000001E4E20254>",
+        SetFocus = "<function: 00000001E4E982E4>",
+        SetHandler = "<function: 00000001E96301D4>",
+        SetHeight = "<function: 00000001D45C8284>",
+        SetHighlightBackground = "<function: 000000007C869FB4>",
+        SetHighlightColor = "<function: 00000001A7132744>",
+        SetHighlightTextColor = "<function: 00000001E8EEEC64>",
+        SetInset = "<function: 00000001E95CED84>",
+        SetLText = "<function: 00000001D46DB074>",
+        SetLayerColor = "<function: 00000001E19F7B94>",
+        SetMaxResizingExtent = "<function: 00000001D45EE514>",
+        SetMinResizingExtent = "<function: 00000001D4637394>",
+        SetMoveAnimation = "<function: 00000001E4B13CD4>",
+        SetNormalBackground = "<function: 00000000FC8D01A4>",
+        SetNormalColor = "<function: 00000001EE7C6014>",
+        SetPushedBackground = "<function: 00000002525B94B4>",
+        SetPushedColor = "<function: 00000001A712BBC4>",
+        SetPushedTextColor = "<function: 00000001A7138A04>",
+        SetResizingBorderSize = "<function: 00000001E5002254>",
+        SetRotation = "<function: 00000001D45CAC84>",
+        SetScale = "<function: 00000001D3FF5AE4>",
+        SetScaleAnimation = "<function: 00000001EED74FC4>",
+        SetSounds = "<function: 00000001F624F7F4>",
+        SetStartAnimation = "<function: 00000001D3FF09E4>",
+        SetStyle = "<function: 00000001D491C2A4>",
+        SetText = "<function: 00000001AFAAF8D4>",
+        SetTextColor = "<function: 00000001E4EA50A4>",
+        SetWidth = "<function: 00000001A712BC04>",
+        Show = "<function: 00000001D443E154>",
+        StartMoving = "<function: 00000001EE765184>",
+        StartSizing = "<function: 00000000FC8C24E4>",
+        StopMovingOrSizing = "<function: 00000001E4A25AE4>",
+        TriggerMoveAnimation = "<function: 00000001E95C5C84>",
+        UseDynamicContentState = "<function: 00000001E96C9FA4>",
+        UseDynamicDrawableState = "<function: 00000001E963A814>",
+        UseResizing = "<function: 00000001D44FDC34>",
+        __this = "<userdata: 000000025216F5C0>",
+        style = {
+          GetId = "<function: 000000025336B2B4>",
+          GetLineHeight = "<function: 00000001B5DA5044>",
+          GetName = "<function: 00000001E4A0DAA4>",
+          GetObjectType = "<function: 00000001E4FF3494>",
+          GetTextWidth = "<function: 00000001A714E8C4>",
+          IsValidUIObject = "<function: 00000001EE765144>",
+          SetAlign = "<function: 00000001D3FEF764>",
+          SetColor = "<function: 00000001E4E58464>",
+          SetColorByKey = "<function: 00000001E8F7D5B4>",
+          SetEllipsis = "<function: 00000000683E5E34>",
+          SetFont = "<function: 00000001A714DFC4>",
+          SetFontSize = "<function: 00000001A714E004>",
+          SetOutline = "<function: 00000001E4D51F04>",
+          SetShadow = "<function: 00000001EE72BDC4>",
+          SetSnap = "<function: 00000001E1A3CE64>",
+          __this = "<userdata: 00000001E6DD1670>",
+        },
+      },
+    },
+  },
+  selector = {
+    guideTextStyle = {
+      GetId = "<function: 000000025336B2B4>",
+      GetLineHeight = "<function: 00000001B5DA5044>",
+      GetName = "<function: 00000001E4A0DAA4>",
+      GetObjectType = "<function: 00000001E4FF3494>",
+      GetTextWidth = "<function: 00000001A714E8C4>",
+      IsValidUIObject = "<function: 00000001EE765144>",
+      SetAlign = "<function: 00000001D3FEF764>",
+      SetColor = "<function: 00000001E4E58464>",
+      SetColorByKey = "<function: 00000001E8F7D5B4>",
+      SetEllipsis = "<function: 00000000683E5E34>",
+      SetFont = "<function: 00000001A714DFC4>",
+      SetFontSize = "<function: 00000001A714E004>",
+      SetOutline = "<function: 00000001E4D51F04>",
+      SetShadow = "<function: 00000001EE72BDC4>",
+      SetSnap = "<function: 00000001E1A3CE64>",
+      __this = "<userdata: 00000001E6DCF870>",
+    },
+    prefixStyle = {
+      GetId = "<function: 000000025336B2B4>",
+      GetLineHeight = "<function: 00000001B5DA5044>",
+      GetName = "<function: 00000001E4A0DAA4>",
+      GetObjectType = "<function: 00000001E4FF3494>",
+      GetTextWidth = "<function: 00000001A714E8C4>",
+      IsValidUIObject = "<function: 00000001EE765144>",
+      SetAlign = "<function: 00000001D3FEF764>",
+      SetColor = "<function: 00000001E4E58464>",
+      SetColorByKey = "<function: 00000001E8F7D5B4>",
+      SetEllipsis = "<function: 00000000683E5E34>",
+      SetFont = "<function: 00000001A714DFC4>",
+      SetFontSize = "<function: 00000001A714E004>",
+      SetOutline = "<function: 00000001E4D51F04>",
+      SetShadow = "<function: 00000001EE72BDC4>",
+      SetSnap = "<function: 00000001E1A3CE64>",
+      __this = "<userdata: 00000001E6DD0270>",
+    },
+    style = {
+      GetId = "<function: 000000025336B2B4>",
+      GetLineHeight = "<function: 00000001B5DA5044>",
+      GetName = "<function: 00000001E4A0DAA4>",
+      GetObjectType = "<function: 00000001E4FF3494>",
+      GetTextWidth = "<function: 00000001A714E8C4>",
+      IsValidUIObject = "<function: 00000001EE765144>",
+      SetAlign = "<function: 00000001D3FEF764>",
+      SetColor = "<function: 00000001E4E58464>",
+      SetColorByKey = "<function: 00000001E8F7D5B4>",
+      SetEllipsis = "<function: 00000000683E5E34>",
+      SetFont = "<function: 00000001A714DFC4>",
+      SetFontSize = "<function: 00000001A714E004>",
+      SetOutline = "<function: 00000001E4D51F04>",
+      SetShadow = "<function: 00000001EE72BDC4>",
+      SetSnap = "<function: 00000001E1A3CE64>",
+      __this = "<userdata: 00000001E6DCE1F0>",
+    },
+  },
+  selectorBtn = {
+    AddAnchor = "<function: 00000001D3D85204>",
+    ApplyUIScale = "<function: 00000001D48EF314>",
+    AttachWidget = "<function: 00000001EE7D2594>",
+    BindWidth = "<function: 00000001D3FDBED4>",
+    CancelRequestCharacterCacheData = "<function: 00000001E8ED99E4>",
+    ChangeChildAnchorByScrollValue = "<function: 00000001E95C41C4>",
+    CheckOutOfScreen = "<function: 0000000228DF47A4>",
+    Clickable = "<function: 00000001E4EA2A24>",
+    CorrectOffsetByScreen = "<function: 00000001E4AE7244>",
+    CreateChildWidget = "<function: 00000001D3D66CC4>",
+    CreateChildWidgetByType = "<function: 00000001EE7D2854>",
+    CreateColorDrawable = "<function: 00000001D3C611D4>",
+    CreateColorDrawableByKey = "<function: 00000001D4468414>",
+    CreateDrawable = "<function: 00000001D3CADF94>",
+    CreateEffectDrawable = "<function: 00000001A713EC84>",
+    CreateEffectDrawableByKey = "<function: 00000001E4EC0424>",
+    CreateIconDrawable = "<function: 00000001D4467ED4>",
+    CreateImageDrawable = "<function: 00000001D46334D4>",
+    CreateNinePartDrawable = "<function: 00000001E96B9AA4>",
+    CreateStateDrawable = "<function: 00000001E1B42C44>",
+    CreateTextDrawable = "<function: 00000001D45FD0D4>",
+    CreateThreeColorDrawable = "<function: 00000001E1AE59B4>",
+    CreateThreePartDrawable = "<function: 00000001E19020B4>",
+    DeregisterForClicks = "<function: 00000001D4665C24>",
+    DetachWidget = "<function: 00000001EEB67B04>",
+    DisableDrawables = "<function: 00000001E502EA54>",
+    DisableDrawablesWithChildren = "<function: 00000001E4F21874>",
+    Enable = "<function: 00000001E1A89BE4>",
+    EnableDrag = "<function: 00000001E19E86D4>",
+    EnableDrawables = "<function: 00000001D44FE6B4>",
+    EnableDrawablesWithChildren = "<function: 00000001E4B747D4>",
+    EnableFocus = "<function: 00000001E4EAE764>",
+    EnableHidingIsRemove = "<function: 00000001E1A828E4>",
+    EnableKeyboard = "<function: 00000001E8EF9DE4>",
+    EnablePick = "<function: 00000001E4DECA14>",
+    EnableScroll = "<function: 00000001E4EAE264>",
+    GetAlpha = "<function: 00000001D3F74C14>",
+    GetAttachedWidget = "<function: 00000001A2725494>",
+    GetButtonState = "<function: 00000001E4BDD1A4>",
+    GetDisabledBackground = "<function: 00000001D45CABC4>",
+    GetDisabledColor = "<function: 00000001E1A4EBE4>",
+    GetEffectiveExtent = "<function: 00000001E96A70E4>",
+    GetEffectiveOffset = "<function: 00000001D4008A64>",
+    GetExtent = "<function: 00000001E963BD54>",
+    GetHeight = "<function: 00000001D44DCAF4>",
+    GetHighlightBackground = "<function: 00000001D4163EB4>",
+    GetHighlightColor = "<function: 00000001E95ABCC4>",
+    GetId = "<function: 00000001E8EC7B24>",
+    GetName = "<function: 00000001E4C518F4>",
+    GetNormalBackground = "<function: 00000001D3E339D4>",
+    GetNormalColor = "<function: 00000001E19F3154>",
+    GetObjectType = "<function: 00000001D434E714>",
+    GetOffset = "<function: 00000001E1905BF4>",
+    GetParent = "<function: 00000001D45A03C4>",
+    GetPushedBackground = "<function: 00000001A255AF84>",
+    GetPushedColor = "<function: 00000001D44F1574>",
+    GetRotation = "<function: 00000001D44F1474>",
+    GetText = "<function: 00000001D3FDE494>",
+    GetUILayer = "<function: 000000007CABF3F4>",
+    GetValue = "<function: 00000001D45E0C94>",
+    GetWidth = "<function: 00000001D403CC24>",
+    HasHandler = "<function: 0000000253633914>",
+    InheritAnimationData = "<function: 00000001E1B06534>",
+    IsDescendantWidget = "<function: 00000001E4B6C894>",
+    IsEnabled = "<function: 00000001E956CE04>",
+    IsMouseOver = "<function: 00000001D49394E4>",
+    IsNowAnimation = "<function: 00000001E48DEEC4>",
+    IsValidUIObject = "<function: 00000001E48E0E44>",
+    IsVisible = "<function: 00000001D48D1ED4>",
+    Lower = "<function: 00000001D4685CA4>",
+    MoveTo = "<function: 00000001D4628E14>",
+    Raise = "<function: 00000001E95C4084>",
+    RegisterEvent = "<function: 00000001D44885D4>",
+    RegisterForClicks = "<function: 00000001D3D911C4>",
+    ReleaseDeletedHandler = "<function: 00000001D40525A4>",
+    ReleaseHandler = "<function: 00000001E4A3A164>",
+    RemoveAllAnchors = "<function: 000000025367C354>",
+    RemoveAllDrawables = "<function: 00000001D3FF9224>",
+    RemoveDrawable = "<function: 00000001E4E87BA4>",
+    RequestCharacterCacheData = "<function: 00000001D44FF574>",
+    SetAlpha = "<function: 00000001A7137E84>",
+    SetAlphaAnimation = "<function: 00000001E191AAC4>",
+    SetAutoClipChar = "<function: 00000001E962FE54>",
+    SetAutoResize = "<function: 000000025372DDE4>",
+    SetButtonState = "<function: 00000001D40FD7C4>",
+    SetCategory = "<function: 00000001D3DDD4D4>",
+    SetCharacterCacheDataHandler = "<function: 00000001D3F8E3D4>",
+    SetDelegator = "<function: 00000001D3C9FC54>",
+    SetDeletedHandler = "<function: 00000000CD7E40C4>",
+    SetDisabledBackground = "<function: 00000001EE731B04>",
+    SetDisabledColor = "<function: 00000001C8A51CC4>",
+    SetDisabledTextColor = "<function: 00000001D3FDC014>",
+    SetDragCondition = "<function: 00000001D4759444>",
+    SetDrawPriority = "<function: 00000001E95B8244>",
+    SetDrawableLayerAlpha = "<function: 00000001E4F358F4>",
+    SetExtent = "<function: 00000001E4E20254>",
+    SetFocus = "<function: 00000001E4E982E4>",
+    SetHandler = "<function: 00000001E96301D4>",
+    SetHeight = "<function: 00000001D45C8284>",
+    SetHighlightBackground = "<function: 000000007C869FB4>",
+    SetHighlightColor = "<function: 00000001A7132744>",
+    SetHighlightTextColor = "<function: 00000001E8EEEC64>",
+    SetInset = "<function: 00000001E95CED84>",
+    SetLText = "<function: 00000001D46DB074>",
+    SetLayerColor = "<function: 00000001E19F7B94>",
+    SetMaxResizingExtent = "<function: 00000001D45EE514>",
+    SetMinResizingExtent = "<function: 00000001D4637394>",
+    SetMoveAnimation = "<function: 00000001E4B13CD4>",
+    SetNormalBackground = "<function: 00000000FC8D01A4>",
+    SetNormalColor = "<function: 00000001EE7C6014>",
+    SetPushedBackground = "<function: 00000002525B94B4>",
+    SetPushedColor = "<function: 00000001A712BBC4>",
+    SetPushedTextColor = "<function: 00000001A7138A04>",
+    SetResizingBorderSize = "<function: 00000001E5002254>",
+    SetRotation = "<function: 00000001D45CAC84>",
+    SetScale = "<function: 00000001D3FF5AE4>",
+    SetScaleAnimation = "<function: 00000001EED74FC4>",
+    SetSounds = "<function: 00000001F624F7F4>",
+    SetStartAnimation = "<function: 00000001D3FF09E4>",
+    SetStyle = "<function: 00000001D491C2A4>",
+    SetText = "<function: 00000001AFAAF8D4>",
+    SetTextColor = "<function: 00000001E4EA50A4>",
+    SetWidth = "<function: 00000001A712BC04>",
+    Show = "<function: 00000001D443E154>",
+    StartMoving = "<function: 00000001EE765184>",
+    StartSizing = "<function: 00000000FC8C24E4>",
+    StopMovingOrSizing = "<function: 00000001E4A25AE4>",
+    TriggerMoveAnimation = "<function: 00000001E95C5C84>",
+    UseDynamicContentState = "<function: 00000001E96C9FA4>",
+    UseDynamicDrawableState = "<function: 00000001E963A814>",
+    UseResizing = "<function: 00000001D44FDC34>",
+    __this = "<userdata: 0000000252169B20>",
+    style = {
+      GetId = "<function: 000000025336B2B4>",
+      GetLineHeight = "<function: 00000001B5DA5044>",
+      GetName = "<function: 00000001E4A0DAA4>",
+      GetObjectType = "<function: 00000001E4FF3494>",
+      GetTextWidth = "<function: 00000001A714E8C4>",
+      IsValidUIObject = "<function: 00000001EE765144>",
+      SetAlign = "<function: 00000001D3FEF764>",
+      SetColor = "<function: 00000001E4E58464>",
+      SetColorByKey = "<function: 00000001E8F7D5B4>",
+      SetEllipsis = "<function: 00000000683E5E34>",
+      SetFont = "<function: 00000001A714DFC4>",
+      SetFontSize = "<function: 00000001A714E004>",
+      SetOutline = "<function: 00000001E4D51F04>",
+      SetShadow = "<function: 00000001EE72BDC4>",
+      SetSnap = "<function: 00000001E1A3CE64>",
+      __this = "<userdata: 00000001E6DD09F0>",
+    },
+  },
+  toggle = {
+    AddAnchor = "<function: 00000001D3D85204>",
+    ApplyUIScale = "<function: 00000001D48EF314>",
+    AttachWidget = "<function: 00000001EE7D2594>",
+    BindWidth = "<function: 00000001D3FDBED4>",
+    CancelRequestCharacterCacheData = "<function: 00000001E8ED99E4>",
+    ChangeChildAnchorByScrollValue = "<function: 00000001E95C41C4>",
+    CheckOutOfScreen = "<function: 0000000228DF47A4>",
+    Clickable = "<function: 00000001E4EA2A24>",
+    CorrectOffsetByScreen = "<function: 00000001E4AE7244>",
+    CreateChildWidget = "<function: 00000001D3D66CC4>",
+    CreateChildWidgetByType = "<function: 00000001EE7D2854>",
+    CreateColorDrawable = "<function: 00000001D3C611D4>",
+    CreateColorDrawableByKey = "<function: 00000001D4468414>",
+    CreateDrawable = "<function: 00000001D3CADF94>",
+    CreateEffectDrawable = "<function: 00000001A713EC84>",
+    CreateEffectDrawableByKey = "<function: 00000001E4EC0424>",
+    CreateIconDrawable = "<function: 00000001D4467ED4>",
+    CreateImageDrawable = "<function: 00000001D46334D4>",
+    CreateNinePartDrawable = "<function: 00000001E96B9AA4>",
+    CreateStateDrawable = "<function: 00000001E1B42C44>",
+    CreateTextDrawable = "<function: 00000001D45FD0D4>",
+    CreateThreeColorDrawable = "<function: 00000001E1AE59B4>",
+    CreateThreePartDrawable = "<function: 00000001E19020B4>",
+    DeregisterForClicks = "<function: 00000001D4665C24>",
+    DetachWidget = "<function: 00000001EEB67B04>",
+    DisableDrawables = "<function: 00000001E502EA54>",
+    DisableDrawablesWithChildren = "<function: 00000001E4F21874>",
+    Enable = "<function: 00000001E1A89BE4>",
+    EnableDrag = "<function: 00000001E19E86D4>",
+    EnableDrawables = "<function: 00000001D44FE6B4>",
+    EnableDrawablesWithChildren = "<function: 00000001E4B747D4>",
+    EnableFocus = "<function: 00000001E4EAE764>",
+    EnableHidingIsRemove = "<function: 00000001E1A828E4>",
+    EnableKeyboard = "<function: 00000001E8EF9DE4>",
+    EnablePick = "<function: 00000001E4DECA14>",
+    EnableScroll = "<function: 00000001E4EAE264>",
+    GetAlpha = "<function: 00000001D3F74C14>",
+    GetAttachedWidget = "<function: 00000001A2725494>",
+    GetButtonState = "<function: 00000001E4BDD1A4>",
+    GetDisabledBackground = "<function: 00000001D45CABC4>",
+    GetDisabledColor = "<function: 00000001E1A4EBE4>",
+    GetEffectiveExtent = "<function: 00000001E96A70E4>",
+    GetEffectiveOffset = "<function: 00000001D4008A64>",
+    GetExtent = "<function: 00000001E963BD54>",
+    GetHeight = "<function: 00000001D44DCAF4>",
+    GetHighlightBackground = "<function: 00000001D4163EB4>",
+    GetHighlightColor = "<function: 00000001E95ABCC4>",
+    GetId = "<function: 00000001E8EC7B24>",
+    GetName = "<function: 00000001E4C518F4>",
+    GetNormalBackground = "<function: 00000001D3E339D4>",
+    GetNormalColor = "<function: 00000001E19F3154>",
+    GetObjectType = "<function: 00000001D434E714>",
+    GetOffset = "<function: 00000001E1905BF4>",
+    GetParent = "<function: 00000001D45A03C4>",
+    GetPushedBackground = "<function: 00000001A255AF84>",
+    GetPushedColor = "<function: 00000001D44F1574>",
+    GetRotation = "<function: 00000001D44F1474>",
+    GetText = "<function: 00000001D3FDE494>",
+    GetUILayer = "<function: 000000007CABF3F4>",
+    GetValue = "<function: 00000001D45E0C94>",
+    GetWidth = "<function: 00000001D403CC24>",
+    HasHandler = "<function: 0000000253633914>",
+    InheritAnimationData = "<function: 00000001E1B06534>",
+    IsDescendantWidget = "<function: 00000001E4B6C894>",
+    IsEnabled = "<function: 00000001E956CE04>",
+    IsMouseOver = "<function: 00000001D49394E4>",
+    IsNowAnimation = "<function: 00000001E48DEEC4>",
+    IsValidUIObject = "<function: 00000001E48E0E44>",
+    IsVisible = "<function: 00000001D48D1ED4>",
+    Lower = "<function: 00000001D4685CA4>",
+    MoveTo = "<function: 00000001D4628E14>",
+    Raise = "<function: 00000001E95C4084>",
+    RegisterEvent = "<function: 00000001D44885D4>",
+    RegisterForClicks = "<function: 00000001D3D911C4>",
+    ReleaseDeletedHandler = "<function: 00000001D40525A4>",
+    ReleaseHandler = "<function: 00000001E4A3A164>",
+    RemoveAllAnchors = "<function: 000000025367C354>",
+    RemoveAllDrawables = "<function: 00000001D3FF9224>",
+    RemoveDrawable = "<function: 00000001E4E87BA4>",
+    RequestCharacterCacheData = "<function: 00000001D44FF574>",
+    SetAlpha = "<function: 00000001A7137E84>",
+    SetAlphaAnimation = "<function: 00000001E191AAC4>",
+    SetAutoClipChar = "<function: 00000001E962FE54>",
+    SetAutoResize = "<function: 000000025372DDE4>",
+    SetButtonState = "<function: 00000001D40FD7C4>",
+    SetCategory = "<function: 00000001D3DDD4D4>",
+    SetCharacterCacheDataHandler = "<function: 00000001D3F8E3D4>",
+    SetDelegator = "<function: 00000001D3C9FC54>",
+    SetDeletedHandler = "<function: 00000000CD7E40C4>",
+    SetDisabledBackground = "<function: 00000001EE731B04>",
+    SetDisabledColor = "<function: 00000001C8A51CC4>",
+    SetDisabledTextColor = "<function: 00000001D3FDC014>",
+    SetDragCondition = "<function: 00000001D4759444>",
+    SetDrawPriority = "<function: 00000001E95B8244>",
+    SetDrawableLayerAlpha = "<function: 00000001E4F358F4>",
+    SetExtent = "<function: 00000001E4E20254>",
+    SetFocus = "<function: 00000001E4E982E4>",
+    SetHandler = "<function: 00000001E96301D4>",
+    SetHeight = "<function: 00000001D45C8284>",
+    SetHighlightBackground = "<function: 000000007C869FB4>",
+    SetHighlightColor = "<function: 00000001A7132744>",
+    SetHighlightTextColor = "<function: 00000001E8EEEC64>",
+    SetInset = "<function: 00000001E95CED84>",
+    SetLText = "<function: 00000001D46DB074>",
+    SetLayerColor = "<function: 00000001E19F7B94>",
+    SetMaxResizingExtent = "<function: 00000001D45EE514>",
+    SetMinResizingExtent = "<function: 00000001D4637394>",
+    SetMoveAnimation = "<function: 00000001E4B13CD4>",
+    SetNormalBackground = "<function: 00000000FC8D01A4>",
+    SetNormalColor = "<function: 00000001EE7C6014>",
+    SetPushedBackground = "<function: 00000002525B94B4>",
+    SetPushedColor = "<function: 00000001A712BBC4>",
+    SetPushedTextColor = "<function: 00000001A7138A04>",
+    SetResizingBorderSize = "<function: 00000001E5002254>",
+    SetRotation = "<function: 00000001D45CAC84>",
+    SetScale = "<function: 00000001D3FF5AE4>",
+    SetScaleAnimation = "<function: 00000001EED74FC4>",
+    SetSounds = "<function: 00000001F624F7F4>",
+    SetStartAnimation = "<function: 00000001D3FF09E4>",
+    SetStyle = "<function: 00000001D491C2A4>",
+    SetText = "<function: 00000001AFAAF8D4>",
+    SetTextColor = "<function: 00000001E4EA50A4>",
+    SetWidth = "<function: 00000001A712BC04>",
+    Show = "<function: 00000001D443E154>",
+    StartMoving = "<function: 00000001EE765184>",
+    StartSizing = "<function: 00000000FC8C24E4>",
+    StopMovingOrSizing = "<function: 00000001E4A25AE4>",
+    TriggerMoveAnimation = "<function: 00000001E95C5C84>",
+    UseDynamicContentState = "<function: 00000001E96C9FA4>",
+    UseDynamicDrawableState = "<function: 00000001E963A814>",
+    UseResizing = "<function: 00000001D44FDC34>",
+    __this = "<userdata: 000000025216DA90>",
+    style = {
+      GetId = "<function: 000000025336B2B4>",
+      GetLineHeight = "<function: 00000001B5DA5044>",
+      GetName = "<function: 00000001E4A0DAA4>",
+      GetObjectType = "<function: 00000001E4FF3494>",
+      GetTextWidth = "<function: 00000001A714E8C4>",
+      IsValidUIObject = "<function: 00000001EE765144>",
+      SetAlign = "<function: 00000001D3FEF764>",
+      SetColor = "<function: 00000001E4E58464>",
+      SetColorByKey = "<function: 00000001E8F7D5B4>",
+      SetEllipsis = "<function: 00000000683E5E34>",
+      SetFont = "<function: 00000001A714DFC4>",
+      SetFontSize = "<function: 00000001A714E004>",
+      SetOutline = "<function: 00000001E4D51F04>",
+      SetShadow = "<function: 00000001EE72BDC4>",
+      SetSnap = "<function: 00000001E1A3CE64>",
+      __this = "<userdata: 00000001E6DCE6F0>",
+    },
+  },
+}
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1

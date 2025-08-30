@@ -1,11 +1,7 @@
-X2Sound = {} -- api/X2Sound
-
-function X2Sound:IsPlaying() end
-
-function X2Sound:PlayMusic() end
-
-function X2Sound:PlayUISound() end
-
-function X2Sound:StopMusic() end
-
-function X2Sound:StopSound() end
+X2Sound = {
+  IsPlaying = "<function: 00000001E8E42654>",
+  PlayMusic = "<function: 00000001E4F37134>",
+  PlayUISound = "<function: 00000001D43BEA04>",
+  StopMusic = "<function: 00000001E4F24AF4>",
+  StopSound = "<function: 00000001E4F96FC4>",
+}

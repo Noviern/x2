@@ -1,380 +1,203 @@
-AP_BOTTOM = 8 -- objects/X2Editbox
-AP_BOTTOMLEFT = 2 -- objects/X2Editbox
-AP_BOTTOMRIGHT = 3 -- objects/X2Editbox
-AP_CENTER = 4 -- objects/X2Editbox
-AP_LEFT = 6 -- objects/X2Editbox
-AP_RIGHT = 7 -- objects/X2Editbox
-AP_TOP = 5 -- objects/X2Editbox
-AP_TOPLEFT = 0 -- objects/X2Editbox
-AP_TOPRIGHT = 1 -- objects/X2Editbox
-CT_ABILITY = 2 -- objects/X2Editbox
-CT_EXPEDITION_NAME = 3 -- objects/X2Editbox
-CT_NAME = 1 -- objects/X2Editbox
-DC_ALWAYS = 0 -- objects/X2Editbox
-DC_SHIFT_KEY_DOWN = 1 -- objects/X2Editbox
-X2Editbox = { -- objects/X2Editbox
-  __this = <userdata>, -- objects/X2Editbox
-  guideTextStyle = { -- objects/X2Editbox
-    __this = <userdata>, -- objects/X2Editbox
-  }, -- objects/X2Editbox
-  prefixStyle = { -- objects/X2Editbox
-    __this = <userdata>, -- objects/X2Editbox
-  }, -- objects/X2Editbox
-  style = { -- objects/X2Editbox
-    __this = <userdata>, -- objects/X2Editbox
-  }, -- objects/X2Editbox
-} -- objects/X2Editbox
-
-function X2Editbox.guideTextStyle:GetId() end
-
-function X2Editbox.guideTextStyle:GetLineHeight() end
-
-function X2Editbox.guideTextStyle:GetName() end
-
-function X2Editbox.guideTextStyle:GetObjectType() end
-
-function X2Editbox.guideTextStyle:GetTextWidth() end
-
-function X2Editbox.guideTextStyle:IsValidUIObject() end
-
-function X2Editbox.guideTextStyle:SetAlign() end
-
-function X2Editbox.guideTextStyle:SetColor() end
-
-function X2Editbox.guideTextStyle:SetColorByKey() end
-
-function X2Editbox.guideTextStyle:SetEllipsis() end
-
-function X2Editbox.guideTextStyle:SetFont() end
-
-function X2Editbox.guideTextStyle:SetFontSize() end
-
-function X2Editbox.guideTextStyle:SetOutline() end
-
-function X2Editbox.guideTextStyle:SetShadow() end
-
-function X2Editbox.guideTextStyle:SetSnap() end
-
-function X2Editbox.prefixStyle:GetId() end
-
-function X2Editbox.prefixStyle:GetLineHeight() end
-
-function X2Editbox.prefixStyle:GetName() end
-
-function X2Editbox.prefixStyle:GetObjectType() end
-
-function X2Editbox.prefixStyle:GetTextWidth() end
-
-function X2Editbox.prefixStyle:IsValidUIObject() end
-
-function X2Editbox.prefixStyle:SetAlign() end
-
-function X2Editbox.prefixStyle:SetColor() end
-
-function X2Editbox.prefixStyle:SetColorByKey() end
-
-function X2Editbox.prefixStyle:SetEllipsis() end
-
-function X2Editbox.prefixStyle:SetFont() end
-
-function X2Editbox.prefixStyle:SetFontSize() end
-
-function X2Editbox.prefixStyle:SetOutline() end
-
-function X2Editbox.prefixStyle:SetShadow() end
-
-function X2Editbox.prefixStyle:SetSnap() end
-
-function X2Editbox.style:GetId() end
-
-function X2Editbox.style:GetLineHeight() end
-
-function X2Editbox.style:GetName() end
-
-function X2Editbox.style:GetObjectType() end
-
-function X2Editbox.style:GetTextWidth() end
-
-function X2Editbox.style:IsValidUIObject() end
-
-function X2Editbox.style:SetAlign() end
-
-function X2Editbox.style:SetColor() end
-
-function X2Editbox.style:SetColorByKey() end
-
-function X2Editbox.style:SetEllipsis() end
-
-function X2Editbox.style:SetFont() end
-
-function X2Editbox.style:SetFontSize() end
-
-function X2Editbox.style:SetOutline() end
-
-function X2Editbox.style:SetShadow() end
-
-function X2Editbox.style:SetSnap() end
-
-function X2Editbox:AddAnchor() end
-
-function X2Editbox:AddHistoryLine() end
-
-function X2Editbox:ApplyUIScale() end
-
-function X2Editbox:AttachWidget() end
-
-function X2Editbox:BindWidth() end
-
-function X2Editbox:CancelRequestCharacterCacheData() end
-
-function X2Editbox:ChangeChildAnchorByScrollValue() end
-
-function X2Editbox:CheckNamePolicy() end
-
-function X2Editbox:CheckOutOfScreen() end
-
-function X2Editbox:ClearFocus() end
-
-function X2Editbox:ClearString() end
-
-function X2Editbox:ClearTextOnEnter() end
-
-function X2Editbox:Clickable() end
-
-function X2Editbox:CorrectOffsetByScreen() end
-
-function X2Editbox:CreateChildWidget() end
-
-function X2Editbox:CreateChildWidgetByType() end
-
-function X2Editbox:CreateColorDrawable() end
-
-function X2Editbox:CreateColorDrawableByKey() end
-
-function X2Editbox:CreateDrawable() end
-
-function X2Editbox:CreateEffectDrawable() end
-
-function X2Editbox:CreateEffectDrawableByKey() end
-
-function X2Editbox:CreateIconDrawable() end
-
-function X2Editbox:CreateImageDrawable() end
-
-function X2Editbox:CreateNinePartDrawable() end
-
-function X2Editbox:CreateTextDrawable() end
-
-function X2Editbox:CreateThreeColorDrawable() end
-
-function X2Editbox:CreateThreePartDrawable() end
-
-function X2Editbox:DetachWidget() end
-
-function X2Editbox:DisableDrawables() end
-
-function X2Editbox:DisableDrawablesWithChildren() end
-
-function X2Editbox:Enable() end
-
-function X2Editbox:EnableDrag() end
-
-function X2Editbox:EnableDrawables() end
-
-function X2Editbox:EnableDrawablesWithChildren() end
-
-function X2Editbox:EnableFocus() end
-
-function X2Editbox:EnableHidingIsRemove() end
-
-function X2Editbox:EnableKeyboard() end
-
-function X2Editbox:EnablePick() end
-
-function X2Editbox:EnableScroll() end
-
-function X2Editbox:GetAlpha() end
-
-function X2Editbox:GetAttachedWidget() end
-
-function X2Editbox:GetEffectiveExtent() end
-
-function X2Editbox:GetEffectiveOffset() end
-
-function X2Editbox:GetExtent() end
-
-function X2Editbox:GetHeight() end
-
-function X2Editbox:GetId() end
-
-function X2Editbox:GetName() end
-
-function X2Editbox:GetObjectType() end
-
-function X2Editbox:GetOffset() end
-
-function X2Editbox:GetParent() end
-
-function X2Editbox:GetRotation() end
-
-function X2Editbox:GetText() end
-
-function X2Editbox:GetUILayer() end
-
-function X2Editbox:GetValue() end
-
-function X2Editbox:GetWidth() end
-
-function X2Editbox:HasHandler() end
-
-function X2Editbox:InheritAnimationData() end
-
-function X2Editbox:IsDescendantWidget() end
-
-function X2Editbox:IsDigit() end
-
-function X2Editbox:IsEnabled() end
-
-function X2Editbox:IsMouseOver() end
-
-function X2Editbox:IsNowAnimation() end
-
-function X2Editbox:IsNowComposition() end
-
-function X2Editbox:IsPassword() end
-
-function X2Editbox:IsValidUIObject() end
-
-function X2Editbox:IsVisible() end
-
-function X2Editbox:Lower() end
-
-function X2Editbox:MaxTextLength() end
-
-function X2Editbox:MoveTo() end
-
-function X2Editbox:Raise() end
-
-function X2Editbox:RegisterEvent() end
-
-function X2Editbox:ReleaseDeletedHandler() end
-
-function X2Editbox:ReleaseHandler() end
-
-function X2Editbox:RemoveAllAnchors() end
-
-function X2Editbox:RemoveAllDrawables() end
-
-function X2Editbox:RemoveDrawable() end
-
-function X2Editbox:RequestCharacterCacheData() end
-
-function X2Editbox:SetAlpha() end
-
-function X2Editbox:SetAlphaAnimation() end
-
-function X2Editbox:SetCategory() end
-
-function X2Editbox:SetCharacterCacheDataHandler() end
-
-function X2Editbox:SetCursorColor() end
-
-function X2Editbox:SetCursorColorByColorKey() end
-
-function X2Editbox:SetCursorHeight() end
-
-function X2Editbox:SetCursorOffset() end
-
-function X2Editbox:SetDelegator() end
-
-function X2Editbox:SetDeletedHandler() end
-
-function X2Editbox:SetDigit() end
-
-function X2Editbox:SetDigitEmpty() end
-
-function X2Editbox:SetDigitMax() end
-
-function X2Editbox:SetDragCondition() end
-
-function X2Editbox:SetDrawPriority() end
-
-function X2Editbox:SetDrawableLayerAlpha() end
-
-function X2Editbox:SetEnglish() end
-
-function X2Editbox:SetExtent() end
-
-function X2Editbox:SetFocus() end
-
-function X2Editbox:SetGuideText() end
-
-function X2Editbox:SetGuideTextInset() end
-
-function X2Editbox:SetHandler() end
-
-function X2Editbox:SetHeight() end
-
-function X2Editbox:SetHistoryLines() end
-
-function X2Editbox:SetInitVal() end
-
-function X2Editbox:SetInset() end
-
-function X2Editbox:SetLText() end
-
-function X2Editbox:SetLayerColor() end
-
-function X2Editbox:SetMaxResizingExtent() end
-
-function X2Editbox:SetMaxTextLength() end
-
-function X2Editbox:SetMinResizingExtent() end
-
-function X2Editbox:SetMoveAnimation() end
-
-function X2Editbox:SetPassword() end
-
-function X2Editbox:SetPossibleFirstZero() end
-
-function X2Editbox:SetPrefixInset() end
-
-function X2Editbox:SetPrefixText() end
-
-function X2Editbox:SetReClickable() end
-
-function X2Editbox:SetReadOnly() end
-
-function X2Editbox:SetResizingBorderSize() end
-
-function X2Editbox:SetRotation() end
-
-function X2Editbox:SetScale() end
-
-function X2Editbox:SetScaleAnimation() end
-
-function X2Editbox:SetSounds() end
-
-function X2Editbox:SetStartAnimation() end
-
-function X2Editbox:SetText() end
-
-function X2Editbox:SetWidth() end
-
-function X2Editbox:Show() end
-
-function X2Editbox:StartMoving() end
-
-function X2Editbox:StartSizing() end
-
-function X2Editbox:StopMovingOrSizing() end
-
-function X2Editbox:TriggerMoveAnimation() end
-
-function X2Editbox:UseDynamicContentState() end
-
-function X2Editbox:UseDynamicDrawableState() end
-
-function X2Editbox:UseResizing() end
-
-function X2Editbox:UseSelectAllWhenFocused() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+X2Editbox = {
+  AddAnchor = "<function: 00000000FA020F24>",
+  AddHistoryLine = "<function: 000000007CAF0174>",
+  ApplyUIScale = "<function: 00000000CD726D94>",
+  AttachWidget = "<function: 00000001D3C95814>",
+  BindWidth = "<function: 00000001E9683DE4>",
+  CancelRequestCharacterCacheData = "<function: 00000001E95A8E04>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E960D0D4>",
+  CheckNamePolicy = "<function: 00000001E272F3A4>",
+  CheckOutOfScreen = "<function: 00000001EE884344>",
+  ClearFocus = "<function: 00000001EE8CC6C4>",
+  ClearString = "<function: 00000001D452F7F4>",
+  ClearTextOnEnter = "<function: 00000001F622C9F4>",
+  Clickable = "<function: 00000001E95F5454>",
+  CorrectOffsetByScreen = "<function: 00000001EE8D5A04>",
+  CreateChildWidget = "<function: 00000001F83BF164>",
+  CreateChildWidgetByType = "<function: 00000000FC8A3C24>",
+  CreateColorDrawable = "<function: 00000001EE821214>",
+  CreateColorDrawableByKey = "<function: 00000001E9679D24>",
+  CreateDrawable = "<function: 00000001EE80B0D4>",
+  CreateEffectDrawable = "<function: 00000001E4BC89E4>",
+  CreateEffectDrawableByKey = "<function: 00000001E963D3D4>",
+  CreateIconDrawable = "<function: 00000001D3CD5594>",
+  CreateImageDrawable = "<function: 00000001E8F1EF34>",
+  CreateNinePartDrawable = "<function: 00000001CEA784A4>",
+  CreateTextDrawable = "<function: 00000000FC54B384>",
+  CreateThreeColorDrawable = "<function: 00000001D3FF02A4>",
+  CreateThreePartDrawable = "<function: 00000001E4BB6064>",
+  DetachWidget = "<function: 00000001EE740404>",
+  DisableDrawables = "<function: 00000000FC620A24>",
+  DisableDrawablesWithChildren = "<function: 00000001D3BFF694>",
+  Enable = "<function: 00000001D44F81B4>",
+  EnableDrag = "<function: 00000001D4787CC4>",
+  EnableDrawables = "<function: 00000000FC607364>",
+  EnableDrawablesWithChildren = "<function: 00000000CD647A34>",
+  EnableFocus = "<function: 00000001D3D9A104>",
+  EnableHidingIsRemove = "<function: 000000007CAC1174>",
+  EnableKeyboard = "<function: 00000001EE73F204>",
+  EnablePick = "<function: 00000001E4C2AA74>",
+  EnableScroll = "<function: 00000001D4796244>",
+  GetAlpha = "<function: 00000001EEB5F644>",
+  GetAttachedWidget = "<function: 00000001D3F52634>",
+  GetEffectiveExtent = "<function: 00000001D3E10494>",
+  GetEffectiveOffset = "<function: 00000001D49A1D34>",
+  GetExtent = "<function: 00000001E9677FA4>",
+  GetHeight = "<function: 00000001EE7DA614>",
+  GetId = "<function: 00000001E9610E54>",
+  GetName = "<function: 00000001D45F2114>",
+  GetObjectType = "<function: 000000007CAF0734>",
+  GetOffset = "<function: 00000001E958B484>",
+  GetParent = "<function: 00000001E9691E64>",
+  GetRotation = "<function: 00000001EE8CA9C4>",
+  GetText = "<function: 00000001EEBAEA44>",
+  GetUILayer = "<function: 00000001C8A11884>",
+  GetValue = "<function: 00000001E4A930C4>",
+  GetWidth = "<function: 00000001EE8A9E44>",
+  HasHandler = "<function: 00000001E96C1D24>",
+  InheritAnimationData = "<function: 00000001D49B6F34>",
+  IsDescendantWidget = "<function: 00000001E1AB2D34>",
+  IsDigit = "<function: 00000001D489E854>",
+  IsEnabled = "<function: 00000001E96C6264>",
+  IsMouseOver = "<function: 00000001E9627DD4>",
+  IsNowAnimation = "<function: 00000001E96995A4>",
+  IsNowComposition = "<function: 00000001E1AB5634>",
+  IsPassword = "<function: 00000001EEB7B384>",
+  IsValidUIObject = "<function: 00000001A25AC584>",
+  IsVisible = "<function: 00000001EE87A184>",
+  Lower = "<function: 000000007CAF3A34>",
+  MaxTextLength = "<function: 00000001E96660A4>",
+  MoveTo = "<function: 00000001E4F362F4>",
+  Raise = "<function: 00000001D40418E4>",
+  RegisterEvent = "<function: 00000001B5DBEE04>",
+  ReleaseDeletedHandler = "<function: 00000001EE73D644>",
+  ReleaseHandler = "<function: 00000001E966A0E4>",
+  RemoveAllAnchors = "<function: 00000000FC5FE8A4>",
+  RemoveAllDrawables = "<function: 00000001EEB5D6C4>",
+  RemoveDrawable = "<function: 00000001D43BDC84>",
+  RequestCharacterCacheData = "<function: 00000001E9600394>",
+  SetAlpha = "<function: 00000001D49C6F74>",
+  SetAlphaAnimation = "<function: 00000001D40A7C04>",
+  SetCategory = "<function: 00000001F627B534>",
+  SetCharacterCacheDataHandler = "<function: 00000001EE8BAC44>",
+  SetCursorColor = "<function: 00000001EE881F44>",
+  SetCursorColorByColorKey = "<function: 00000001E963B454>",
+  SetCursorHeight = "<function: 00000001EEB69844>",
+  SetCursorOffset = "<function: 00000001EE81F1D4>",
+  SetDelegator = "<function: 00000001EE8D5144>",
+  SetDeletedHandler = "<function: 00000001EEB3DAC4>",
+  SetDigit = "<function: 00000001EE7EEA54>",
+  SetDigitEmpty = "<function: 00000001D4767384>",
+  SetDigitMax = "<function: 00000001EE7FF4D4>",
+  SetDragCondition = "<function: 00000001EEBA8A44>",
+  SetDrawPriority = "<function: 00000001D3FDB014>",
+  SetDrawableLayerAlpha = "<function: 00000001E1AA3134>",
+  SetEnglish = "<function: 00000001EE72EBC4>",
+  SetExtent = "<function: 00000001E4EA5AA4>",
+  SetFocus = "<function: 00000001F83D2164>",
+  SetGuideText = "<function: 00000001B5D46244>",
+  SetGuideTextInset = "<function: 00000001D43D23C4>",
+  SetHandler = "<function: 00000001E96A03A4>",
+  SetHeight = "<function: 00000001EE7F8AD4>",
+  SetHistoryLines = "<function: 00000001EE769244>",
+  SetInitVal = "<function: 00000001EE8D0C04>",
+  SetInset = "<function: 00000000FC62AA24>",
+  SetLText = "<function: 00000001E4B08714>",
+  SetLayerColor = "<function: 00000001D3D83104>",
+  SetMaxResizingExtent = "<function: 00000001D473C874>",
+  SetMaxTextLength = "<function: 00000001EE749404>",
+  SetMinResizingExtent = "<function: 00000001EE72ED84>",
+  SetMoveAnimation = "<function: 00000000CD6E5E54>",
+  SetPassword = "<function: 00000001D401D0A4>",
+  SetPossibleFirstZero = "<function: 00000001D40C9244>",
+  SetPrefixInset = "<function: 00000001E96A8764>",
+  SetPrefixText = "<function: 00000001EE8DC604>",
+  SetReClickable = "<function: 00000001E95C9E84>",
+  SetReadOnly = "<function: 00000001E4BD0CA4>",
+  SetResizingBorderSize = "<function: 00000001EE7D8BD4>",
+  SetRotation = "<function: 00000001E273BF24>",
+  SetScale = "<function: 00000001E4A02FE4>",
+  SetScaleAnimation = "<function: 00000001E95BC384>",
+  SetSounds = "<function: 00000001EEB54884>",
+  SetStartAnimation = "<function: 00000001EE897AC4>",
+  SetText = "<function: 00000001EE887D04>",
+  SetWidth = "<function: 00000001E963C454>",
+  Show = "<function: 00000001EE75EC44>",
+  StartMoving = "<function: 00000001EE766744>",
+  StartSizing = "<function: 00000001FD763B04>",
+  StopMovingOrSizing = "<function: 00000001E4A8E884>",
+  TriggerMoveAnimation = "<function: 00000001E9607794>",
+  UseDynamicContentState = "<function: 00000001E4F1BCF4>",
+  UseDynamicDrawableState = "<function: 00000001EE7C2314>",
+  UseResizing = "<function: 00000001E4D49F04>",
+  UseSelectAllWhenFocused = "<function: 00000001E9699FA4>",
+  __this = "<userdata: 0000000257F477A0>",
+  guideTextStyle = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD5770>",
+  },
+  prefixStyle = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD2CF0>",
+  },
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD68F0>",
+  },
+}

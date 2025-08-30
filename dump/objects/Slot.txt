@@ -1,403 +1,224 @@
-AP_BOTTOM = 8 -- objects/Slot
-AP_BOTTOMLEFT = 2 -- objects/Slot
-AP_BOTTOMRIGHT = 3 -- objects/Slot
-AP_CENTER = 4 -- objects/Slot
-AP_LEFT = 6 -- objects/Slot
-AP_RIGHT = 7 -- objects/Slot
-AP_TOP = 5 -- objects/Slot
-AP_TOPLEFT = 0 -- objects/Slot
-AP_TOPRIGHT = 1 -- objects/Slot
-CT_ABILITY = 2 -- objects/Slot
-CT_EXPEDITION_NAME = 3 -- objects/Slot
-CT_NAME = 1 -- objects/Slot
-DC_ALWAYS = 0 -- objects/Slot
-DC_SHIFT_KEY_DOWN = 1 -- objects/Slot
-ISLOT_ABILITY_VIEW = 243 -- objects/Slot
-ISLOT_ACTION = 254 -- objects/Slot
-ISLOT_BAG = 2 -- objects/Slot
-ISLOT_BANK = 3 -- objects/Slot
-ISLOT_COFFER = 4 -- objects/Slot
-ISLOT_CONSTANT = 249 -- objects/Slot
-ISLOT_EQUIPMENT = 1 -- objects/Slot
-ISLOT_GUILD_BANK = 33 -- objects/Slot
-ISLOT_HEIR_SKILL_VIEW = 234 -- objects/Slot
-ISLOT_INSTANT_KILL_STREAK = 244 -- objects/Slot
-ISLOT_MODE_ACTION = 246 -- objects/Slot
-ISLOT_ORIGIN_SKILL_VIEW = 233 -- objects/Slot
-ISLOT_PET_BATTLE_ACTION = 239 -- objects/Slot
-ISLOT_PET_RIDE_ACTION = 248 -- objects/Slot
-ISLOT_PRELIMINARY_EQUIPMENT = 7 -- objects/Slot
-ISLOT_SHORTCUT_ACTION = 235 -- objects/Slot
-ISLOT_SKILL_ALERT = 232 -- objects/Slot
-Slot = { -- objects/Slot
-  __this = <userdata>, -- objects/Slot
-  cooltime_style = { -- objects/Slot
-    __this = <userdata>, -- objects/Slot
-  }, -- objects/Slot
-  style = { -- objects/Slot
-    __this = <userdata>, -- objects/Slot
-  }, -- objects/Slot
-} -- objects/Slot
-UI_BUTTON_DISABLED = 3 -- objects/Slot
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/Slot
-UI_BUTTON_MAX = 4 -- objects/Slot
-UI_BUTTON_NORMAL = 0 -- objects/Slot
-UI_BUTTON_PUSHED = 2 -- objects/Slot
-
-function Slot.cooltime_style:GetId() end
-
-function Slot.cooltime_style:GetLineHeight() end
-
-function Slot.cooltime_style:GetName() end
-
-function Slot.cooltime_style:GetObjectType() end
-
-function Slot.cooltime_style:GetTextWidth() end
-
-function Slot.cooltime_style:IsValidUIObject() end
-
-function Slot.cooltime_style:SetAlign() end
-
-function Slot.cooltime_style:SetColor() end
-
-function Slot.cooltime_style:SetColorByKey() end
-
-function Slot.cooltime_style:SetEllipsis() end
-
-function Slot.cooltime_style:SetFont() end
-
-function Slot.cooltime_style:SetFontSize() end
-
-function Slot.cooltime_style:SetOutline() end
-
-function Slot.cooltime_style:SetShadow() end
-
-function Slot.cooltime_style:SetSnap() end
-
-function Slot.style:GetId() end
-
-function Slot.style:GetLineHeight() end
-
-function Slot.style:GetName() end
-
-function Slot.style:GetObjectType() end
-
-function Slot.style:GetTextWidth() end
-
-function Slot.style:IsValidUIObject() end
-
-function Slot.style:SetAlign() end
-
-function Slot.style:SetColor() end
-
-function Slot.style:SetColorByKey() end
-
-function Slot.style:SetEllipsis() end
-
-function Slot.style:SetFont() end
-
-function Slot.style:SetFontSize() end
-
-function Slot.style:SetOutline() end
-
-function Slot.style:SetShadow() end
-
-function Slot.style:SetSnap() end
-
-function Slot:AddAnchor() end
-
-function Slot:ApplyUIScale() end
-
-function Slot:AttachWidget() end
-
-function Slot:BindWidth() end
-
-function Slot:CancelRequestCharacterCacheData() end
-
-function Slot:ChangeChildAnchorByScrollValue() end
-
-function Slot:ChangeIconLayer() end
-
-function Slot:CheckOutOfScreen() end
-
-function Slot:Clickable() end
-
-function Slot:CorrectOffsetByScreen() end
-
-function Slot:CreateChildWidget() end
-
-function Slot:CreateChildWidgetByType() end
-
-function Slot:CreateColorDrawable() end
-
-function Slot:CreateColorDrawableByKey() end
-
-function Slot:CreateDrawable() end
-
-function Slot:CreateEffectDrawable() end
-
-function Slot:CreateEffectDrawableByKey() end
-
-function Slot:CreateIconDrawable() end
-
-function Slot:CreateImageDrawable() end
-
-function Slot:CreateNinePartDrawable() end
-
-function Slot:CreateStateDrawable() end
-
-function Slot:CreateTextDrawable() end
-
-function Slot:CreateThreeColorDrawable() end
-
-function Slot:CreateThreePartDrawable() end
-
-function Slot:DeregisterForClicks() end
-
-function Slot:DetachWidget() end
-
-function Slot:DisableDefaultClick() end
-
-function Slot:DisableDrawables() end
-
-function Slot:DisableDrawablesWithChildren() end
-
-function Slot:Enable() end
-
-function Slot:EnableDrag() end
-
-function Slot:EnableDrawables() end
-
-function Slot:EnableDrawablesWithChildren() end
-
-function Slot:EnableFocus() end
-
-function Slot:EnableHidingIsRemove() end
-
-function Slot:EnableKeyboard() end
-
-function Slot:EnablePick() end
-
-function Slot:EnableScroll() end
-
-function Slot:EstablishItem() end
-
-function Slot:EstablishSkill() end
-
-function Slot:EstablishSkillAlert() end
-
-function Slot:EstablishSkillSlot() end
-
-function Slot:EstablishSlot() end
-
-function Slot:EstablishVirtualSlot() end
-
-function Slot:GetAlpha() end
-
-function Slot:GetAttachedWidget() end
-
-function Slot:GetBindedType() end
-
-function Slot:GetButtonState() end
-
-function Slot:GetDisabledBackground() end
-
-function Slot:GetDisabledColor() end
-
-function Slot:GetEffectiveExtent() end
-
-function Slot:GetEffectiveOffset() end
-
-function Slot:GetExtent() end
-
-function Slot:GetExtraInfo() end
-
-function Slot:GetHeight() end
-
-function Slot:GetHighlightBackground() end
-
-function Slot:GetHighlightColor() end
-
-function Slot:GetHotKey() end
-
-function Slot:GetId() end
-
-function Slot:GetItemLevelRequirment() end
-
-function Slot:GetName() end
-
-function Slot:GetNormalBackground() end
-
-function Slot:GetNormalColor() end
-
-function Slot:GetObjectType() end
-
-function Slot:GetOffset() end
-
-function Slot:GetParent() end
-
-function Slot:GetPassiveBuffType() end
-
-function Slot:GetPushedBackground() end
-
-function Slot:GetPushedColor() end
-
-function Slot:GetRotation() end
-
-function Slot:GetSkillType() end
-
-function Slot:GetText() end
-
-function Slot:GetTooltip() end
-
-function Slot:GetUILayer() end
-
-function Slot:GetValue() end
-
-function Slot:GetWidth() end
-
-function Slot:HasHandler() end
-
-function Slot:InheritAnimationData() end
-
-function Slot:IsDescendantWidget() end
-
-function Slot:IsEmpty() end
-
-function Slot:IsEnabled() end
-
-function Slot:IsMouseOver() end
-
-function Slot:IsNowAnimation() end
-
-function Slot:IsValidUIObject() end
-
-function Slot:IsVisible() end
-
-function Slot:Lower() end
-
-function Slot:MoveTo() end
-
-function Slot:Raise() end
-
-function Slot:RegisterEvent() end
-
-function Slot:RegisterForClicks() end
-
-function Slot:ReleaseDeletedHandler() end
-
-function Slot:ReleaseHandler() end
-
-function Slot:ReleaseSlot() end
-
-function Slot:RemoveAllAnchors() end
-
-function Slot:RemoveAllDrawables() end
-
-function Slot:RemoveDrawable() end
-
-function Slot:RequestCharacterCacheData() end
-
-function Slot:ResetState() end
-
-function Slot:SetAlpha() end
-
-function Slot:SetAlphaAnimation() end
-
-function Slot:SetAutoClipChar() end
-
-function Slot:SetAutoResize() end
-
-function Slot:SetButtonState() end
-
-function Slot:SetCategory() end
-
-function Slot:SetCharacterCacheDataHandler() end
-
-function Slot:SetDelegator() end
-
-function Slot:SetDeletedHandler() end
-
-function Slot:SetDisabledBackground() end
-
-function Slot:SetDisabledColor() end
-
-function Slot:SetDisabledTextColor() end
-
-function Slot:SetDragCondition() end
-
-function Slot:SetDrawPriority() end
-
-function Slot:SetDrawableLayerAlpha() end
-
-function Slot:SetExtent() end
-
-function Slot:SetFocus() end
-
-function Slot:SetHandler() end
-
-function Slot:SetHeight() end
-
-function Slot:SetHighlightBackground() end
-
-function Slot:SetHighlightColor() end
-
-function Slot:SetHighlightTextColor() end
-
-function Slot:SetInset() end
-
-function Slot:SetLText() end
-
-function Slot:SetLayerColor() end
-
-function Slot:SetMaxResizingExtent() end
-
-function Slot:SetMinResizingExtent() end
-
-function Slot:SetMoveAnimation() end
-
-function Slot:SetNormalBackground() end
-
-function Slot:SetNormalColor() end
-
-function Slot:SetPushedBackground() end
-
-function Slot:SetPushedColor() end
-
-function Slot:SetPushedTextColor() end
-
-function Slot:SetResizingBorderSize() end
-
-function Slot:SetRotation() end
-
-function Slot:SetScale() end
-
-function Slot:SetScaleAnimation() end
-
-function Slot:SetSounds() end
-
-function Slot:SetStartAnimation() end
-
-function Slot:SetStyle() end
-
-function Slot:SetText() end
-
-function Slot:SetTextColor() end
-
-function Slot:SetWidth() end
-
-function Slot:Show() end
-
-function Slot:StartMoving() end
-
-function Slot:StartSizing() end
-
-function Slot:StopMovingOrSizing() end
-
-function Slot:TriggerMoveAnimation() end
-
-function Slot:UseDynamicContentState() end
-
-function Slot:UseDynamicDrawableState() end
-
-function Slot:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+ISLOT_ABILITY_VIEW = 243
+ISLOT_ACTION = 254
+ISLOT_BAG = 2
+ISLOT_BANK = 3
+ISLOT_COFFER = 4
+ISLOT_CONSTANT = 249
+ISLOT_EQUIPMENT = 1
+ISLOT_GUILD_BANK = 33
+ISLOT_HEIR_SKILL_VIEW = 234
+ISLOT_INSTANT_KILL_STREAK = 244
+ISLOT_MODE_ACTION = 246
+ISLOT_ORIGIN_SKILL_VIEW = 233
+ISLOT_PET_BATTLE_ACTION = 239
+ISLOT_PET_RIDE_ACTION = 248
+ISLOT_PRELIMINARY_EQUIPMENT = 7
+ISLOT_SHORTCUT_ACTION = 235
+ISLOT_SKILL_ALERT = 232
+Slot = {
+  AddAnchor = "<function: 00000001D3F44674>",
+  ApplyUIScale = "<function: 00000001CEA932E4>",
+  AttachWidget = "<function: 00000000CD6833F4>",
+  BindWidth = "<function: 00000001E96529D4>",
+  CancelRequestCharacterCacheData = "<function: 00000001D48FFF14>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001EE8C3E44>",
+  ChangeIconLayer = "<function: 00000001E963DD94>",
+  CheckOutOfScreen = "<function: 00000001E9691D24>",
+  Clickable = "<function: 00000001E95EFF54>",
+  CorrectOffsetByScreen = "<function: 00000001E96A45E4>",
+  CreateChildWidget = "<function: 00000001EE8A1644>",
+  CreateChildWidgetByType = "<function: 00000001EE8A1684>",
+  CreateColorDrawable = "<function: 00000001F88A8884>",
+  CreateColorDrawableByKey = "<function: 00000001CEA6E4A4>",
+  CreateDrawable = "<function: 00000001EE895A44>",
+  CreateEffectDrawable = "<function: 00000001E4C9B6C4>",
+  CreateEffectDrawableByKey = "<function: 00000001EE7FB294>",
+  CreateIconDrawable = "<function: 00000001E4C82334>",
+  CreateImageDrawable = "<function: 00000001CEA790A4>",
+  CreateNinePartDrawable = "<function: 00000001EEB53644>",
+  CreateStateDrawable = "<function: 00000001F88E65C4>",
+  CreateTextDrawable = "<function: 00000001D47167F4>",
+  CreateThreeColorDrawable = "<function: 00000001EEBA25C4>",
+  CreateThreePartDrawable = "<function: 00000001EEB4EC44>",
+  DeregisterForClicks = "<function: 00000001E4A1E2E4>",
+  DetachWidget = "<function: 00000001D49CA034>",
+  DisableDefaultClick = "<function: 00000001E95B55C4>",
+  DisableDrawables = "<function: 00000001E96A2C24>",
+  DisableDrawablesWithChildren = "<function: 00000001FDA7F3E4>",
+  Enable = "<function: 00000001EED10904>",
+  EnableDrag = "<function: 00000001E95FA454>",
+  EnableDrawables = "<function: 00000001E96A2BE4>",
+  EnableDrawablesWithChildren = "<function: 00000001FDEDD1D4>",
+  EnableFocus = "<function: 00000001C89F7F44>",
+  EnableHidingIsRemove = "<function: 00000001E95EFED4>",
+  EnableKeyboard = "<function: 00000001C89F8004>",
+  EnablePick = "<function: 00000001E95F9794>",
+  EnableScroll = "<function: 00000001EE8C3C84>",
+  EstablishItem = "<function: 00000001EE74ACC4>",
+  EstablishSkill = "<function: 000000007C875434>",
+  EstablishSkillAlert = "<function: 00000000FA021B24>",
+  EstablishSkillSlot = "<function: 00000001C8A60E84>",
+  EstablishSlot = "<function: 00000001D4367BD4>",
+  EstablishVirtualSlot = "<function: 00000001F888FB84>",
+  GetAlpha = "<function: 00000001F624C4F4>",
+  GetAttachedWidget = "<function: 00000001EE7D6814>",
+  GetBindedType = "<function: 00000000FC5BF664>",
+  GetButtonState = "<function: 00000001D3FCF714>",
+  GetDisabledBackground = "<function: 00000001EE74B044>",
+  GetDisabledColor = "<function: 00000001E199D754>",
+  GetEffectiveExtent = "<function: 00000001EE81E454>",
+  GetEffectiveOffset = "<function: 00000001E9691CE4>",
+  GetExtent = "<function: 00000001EE7C81D4>",
+  GetExtraInfo = "<function: 00000001F627B1B4>",
+  GetHeight = "<function: 00000001EE7EB8D4>",
+  GetHighlightBackground = "<function: 00000001EE7B6B14>",
+  GetHighlightColor = "<function: 000000007CABC5B4>",
+  GetHotKey = "<function: 000000007CABDA74>",
+  GetId = "<function: 00000001EE8D2E44>",
+  GetItemLevelRequirment = "<function: 00000001E4A8F284>",
+  GetName = "<function: 00000001EE86E9C4>",
+  GetNormalBackground = "<function: 00000001EE74B004>",
+  GetNormalColor = "<function: 00000000FC896DE4>",
+  GetObjectType = "<function: 00000001EE76B504>",
+  GetOffset = "<function: 00000001EE7F12D4>",
+  GetParent = "<function: 00000001E4C036E4>",
+  GetPassiveBuffType = "<function: 00000001EE74AD04>",
+  GetPushedBackground = "<function: 00000001E96C22A4>",
+  GetPushedColor = "<function: 00000001CEA3E924>",
+  GetRotation = "<function: 00000001C8A27BC4>",
+  GetSkillType = "<function: 00000001E4A87004>",
+  GetText = "<function: 00000001D4A53604>",
+  GetTooltip = "<function: 00000001F8389024>",
+  GetUILayer = "<function: 00000001D3C9F7D4>",
+  GetValue = "<function: 00000001EE8C4004>",
+  GetWidth = "<function: 00000001EE8CFDC4>",
+  HasHandler = "<function: 00000001E9663C64>",
+  InheritAnimationData = "<function: 00000001E96884A4>",
+  IsDescendantWidget = "<function: 00000001EE87A0C4>",
+  IsEmpty = "<function: 00000001E966B124>",
+  IsEnabled = "<function: 00000001C89EB184>",
+  IsMouseOver = "<function: 00000001E96675E4>",
+  IsNowAnimation = "<function: 00000001E96884E4>",
+  IsValidUIObject = "<function: 00000001EE81E6D4>",
+  IsVisible = "<function: 00000001EE8C4C04>",
+  Lower = "<function: 00000001E27490A4>",
+  MoveTo = "<function: 00000001EE7C9994>",
+  Raise = "<function: 00000001FFFDAEC4>",
+  RegisterEvent = "<function: 00000001EE8A1844>",
+  RegisterForClicks = "<function: 00000001D48DD014>",
+  ReleaseDeletedHandler = "<function: 00000001B5D94E04>",
+  ReleaseHandler = "<function: 00000001E4AC7044>",
+  ReleaseSlot = "<function: 00000001D3FF5824>",
+  RemoveAllAnchors = "<function: 00000000FC8DECE4>",
+  RemoveAllDrawables = "<function: 00000001E493A844>",
+  RemoveDrawable = "<function: 00000001E969F3E4>",
+  RequestCharacterCacheData = "<function: 00000001D48FF914>",
+  ResetState = "<function: 00000001E4EC8EB4>",
+  SetAlpha = "<function: 00000001FFFDAF04>",
+  SetAlphaAnimation = "<function: 00000001EEB5E444>",
+  SetAutoClipChar = "<function: 00000001E963DCD4>",
+  SetAutoResize = "<function: 00000001F65F2F04>",
+  SetButtonState = "<function: 00000001D3D80B04>",
+  SetCategory = "<function: 00000001E4C03724>",
+  SetCharacterCacheDataHandler = "<function: 00000001E967C824>",
+  SetDelegator = "<function: 00000001E9688AE4>",
+  SetDeletedHandler = "<function: 00000001E4EA6DE4>",
+  SetDisabledBackground = "<function: 00000001EE8D8784>",
+  SetDisabledColor = "<function: 00000001D3D50974>",
+  SetDisabledTextColor = "<function: 00000001D3BD7994>",
+  SetDragCondition = "<function: 00000001E4E3EFD4>",
+  SetDrawPriority = "<function: 00000001EE8C3484>",
+  SetDrawableLayerAlpha = "<function: 00000001E4F456F4>",
+  SetExtent = "<function: 00000001EE8914C4>",
+  SetFocus = "<function: 00000001F83E0DE4>",
+  SetHandler = "<function: 00000001CEA8F8E4>",
+  SetHeight = "<function: 00000001EE7C4054>",
+  SetHighlightBackground = "<function: 00000001EE8ACC84>",
+  SetHighlightColor = "<function: 00000001D3BD7AD4>",
+  SetHighlightTextColor = "<function: 00000001EE760344>",
+  SetInset = "<function: 00000000FC541144>",
+  SetLText = "<function: 00000001EEB53384>",
+  SetLayerColor = "<function: 00000001EE7E7014>",
+  SetMaxResizingExtent = "<function: 00000001B5D96404>",
+  SetMinResizingExtent = "<function: 00000001EE7CCE54>",
+  SetMoveAnimation = "<function: 00000001AFA8B714>",
+  SetNormalBackground = "<function: 00000001EED30084>",
+  SetNormalColor = "<function: 00000001E96C2324>",
+  SetPushedBackground = "<function: 00000001EE805C94>",
+  SetPushedColor = "<function: 00000001EE760304>",
+  SetPushedTextColor = "<function: 00000001EE8C0EC4>",
+  SetResizingBorderSize = "<function: 00000001EED18004>",
+  SetRotation = "<function: 00000001FDEDD114>",
+  SetScale = "<function: 00000001D48F0554>",
+  SetScaleAnimation = "<function: 00000001EE897884>",
+  SetSounds = "<function: 00000001D49D1CF4>",
+  SetStartAnimation = "<function: 00000001E9688464>",
+  SetStyle = "<function: 00000001E963DD54>",
+  SetText = "<function: 00000001EE8C4084>",
+  SetTextColor = "<function: 00000001E96C21E4>",
+  SetWidth = "<function: 00000001EE86ECC4>",
+  Show = "<function: 00000001E1AA0DF4>",
+  StartMoving = "<function: 00000001D4900D94>",
+  StartSizing = "<function: 00000001E4FDFD54>",
+  StopMovingOrSizing = "<function: 00000001E27B2984>",
+  TriggerMoveAnimation = "<function: 00000001E9688224>",
+  UseDynamicContentState = "<function: 00000001EE8A36C4>",
+  UseDynamicDrawableState = "<function: 00000001FDA7F424>",
+  UseResizing = "<function: 00000001E27357E4>",
+  __this = "<userdata: 00000002521710F0>",
+  cooltime_style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD3470>",
+  },
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD6B70>",
+  },
+}
+UI_BUTTON_DISABLED = 3
+UI_BUTTON_HIGHLIGHTED = 1
+UI_BUTTON_MAX = 4
+UI_BUTTON_NORMAL = 0
+UI_BUTTON_PUSHED = 2

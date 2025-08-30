@@ -1,6 +1,6 @@
-MAX_RETURN_DISTRICT = 200 -- api/X2Warp
-PSC_ALL = 7 -- api/X2Warp
-PSC_NAME = 1 -- api/X2Warp
-PSC_WORLD = 4 -- api/X2Warp
-PSC_ZONE = 2 -- api/X2Warp
-X2Warp = {} -- api/X2Warp
+MAX_RETURN_DISTRICT = 200
+PSC_ALL = 7
+PSC_NAME = 1
+PSC_WORLD = 4
+PSC_ZONE = 2
+X2Warp = {}

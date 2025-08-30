@@ -74,38 +74,27 @@ local function clear_globals()
 end
 
 local function snapshot_globals(name)
-  local var_lines, func_lines = dump(filter(_G))
-  local require_comment = " -- " .. name
+  local addon_global_vars = filter(_G)
+  local output = dump(addon_global_vars)
 
-  var_lines = string.gsub(var_lines, "\n", require_comment .. "\n")
-
-  if var_lines ~= "" then
-    var_lines = var_lines .. require_comment
-  end
-
-  local filePath = "../Documents/Addon/aad/" .. name .. ".txt"
+  local filePath = "../Documents/Addon/aaad/" .. name .. ".txt"
   local file = assert(io.open(filePath, "w"))
 
-  if name == "src/objects/Textbox" then
+  if name == "dump/objects/Textbox" then
     file:write(os.time(), "\n")
   end
 
-  file:write(var_lines)
-
-  if func_lines ~= "" then
-    file:write("\n\n" .. func_lines)
-  end
-
+  file:write(output)
   file:close()
 
   clear_globals()
 end
 
-snapshot_globals("src/api/Addon")
+snapshot_globals("dump/api/Addon")
 
 for api_name, api_id in pairs(API) do
   ADDON:ImportAPI(api_id)
-  snapshot_globals("src/api/" .. api_name)
+  snapshot_globals("dump/api/" .. api_name)
 end
 
 ---@TODO: I still need to dump the Drawables.
@@ -114,196 +103,196 @@ end
 ADDON:ImportObject(OBJECT.Avi)
 ADDON:ImportObject(OBJECT.TextStyle)
 Avi = UIParent:CreateWidget("avi", "avi", "UIParent")
-snapshot_globals("src/objects/Avi")
+snapshot_globals("dump/objects/Avi")
 
 ADDON:ImportObject(OBJECT.Button)
 ADDON:ImportObject(OBJECT.TextStyle)
 Button = UIParent:CreateWidget("button", "button", "UIParent")
-snapshot_globals("src/objects/Button")
+snapshot_globals("dump/objects/Button")
 
 ADDON:ImportObject(OBJECT.ChatTab)
 ADDON:ImportObject(OBJECT.TextStyle)
 ChatWindow = UIParent:CreateWidget("chatwindow", "chatwindow", "UIParent")
-snapshot_globals("src/objects/ChatTab")
+snapshot_globals("dump/objects/ChatTab")
 
 ADDON:ImportObject(OBJECT.CheckButton)
 ADDON:ImportObject(OBJECT.TextStyle)
 CheckButton = UIParent:CreateWidget("checkbutton", "checkbutton", "UIParent")
-snapshot_globals("src/objects/CheckButton")
+snapshot_globals("dump/objects/CheckButton")
 
 ADDON:ImportObject(OBJECT.CircleDiagram)
 ADDON:ImportObject(OBJECT.TextStyle)
 CircleDiagram = UIParent:CreateWidget("circlediagram", "circlediagram", "UIParent")
-snapshot_globals("src/objects/CircleDiagram")
+snapshot_globals("dump/objects/CircleDiagram")
 
 ADDON:ImportObject(OBJECT.ColorPicker)
 ADDON:ImportObject(OBJECT.TextStyle)
 ColorPicker = UIParent:CreateWidget("colorpicker", "colorpicker", "UIParent")
-snapshot_globals("src/objects/ColorPicker")
+snapshot_globals("dump/objects/ColorPicker")
 
 ADDON:ImportObject(OBJECT.Combobox)
 ADDON:ImportObject(OBJECT.TextStyle)
 Combobox = UIParent:CreateWidget("combobox", "combobox", "UIParent")
-snapshot_globals("src/objects/Combobox")
+snapshot_globals("dump/objects/Combobox")
 
 ADDON:ImportObject(OBJECT.CooldownButton)
 ADDON:ImportObject(OBJECT.TextStyle)
 CooldownButton = UIParent:CreateWidget("cooldownbutton", "cooldownbutton", "UIParent")
-snapshot_globals("src/objects/CooldownButton")
+snapshot_globals("dump/objects/CooldownButton")
 
 ADDON:ImportObject(OBJECT.CooldownConstantButton)
 ADDON:ImportObject(OBJECT.TextStyle)
 CooldownConstantButton = UIParent:CreateWidget("cooldownconstantbutton", "cooldownconstantbutton", "UIParent")
-snapshot_globals("src/objects/CooldownConstantButton")
+snapshot_globals("dump/objects/CooldownConstantButton")
 
 ADDON:ImportObject(OBJECT.CooldownInventoryButton)
 ADDON:ImportObject(OBJECT.TextStyle)
 CooldownInventoryButton = UIParent:CreateWidget("cooldowninventorybutton", "cooldowninventorybutton", "UIParent")
-snapshot_globals("src/objects/CooldownInventoryButton")
+snapshot_globals("dump/objects/CooldownInventoryButton")
 
 ADDON:ImportObject(OBJECT.DamageDisplay)
 ADDON:ImportObject(OBJECT.TextStyle)
 DamageDisplay = UIParent:CreateWidget("damagedisplay", "damagedisplay", "UIParent")
-snapshot_globals("src/objects/DamageDisplay")
+snapshot_globals("dump/objects/DamageDisplay")
 
 ADDON:ImportObject(OBJECT.DynamicList)
 ADDON:ImportObject(OBJECT.TextStyle)
 DynamicList = UIParent:CreateWidget("dynamiclist", "dynamiclist", "UIParent")
-snapshot_globals("src/objects/DynamicList")
+snapshot_globals("dump/objects/DynamicList")
 
 ADDON:ImportObject(OBJECT.Editbox)
 ADDON:ImportObject(OBJECT.TextStyle)
 Editbox = UIParent:CreateWidget("editbox", "editbox", "UIParent")
-snapshot_globals("src/objects/Editbox")
+snapshot_globals("dump/objects/Editbox")
 
 ADDON:ImportObject(OBJECT.EditboxMultiline)
 ADDON:ImportObject(OBJECT.TextStyle)
 EditboxMultiline = UIParent:CreateWidget("editboxmultiline", "editboxmultiline", "UIParent")
-snapshot_globals("src/objects/EditboxMultiline")
+snapshot_globals("dump/objects/EditboxMultiline")
 
 ADDON:ImportObject(OBJECT.EmptyWidget)
 ADDON:ImportObject(OBJECT.TextStyle)
 EmptyWidget = UIParent:CreateWidget("emptywidget", "emptywidget", "UIParent")
-snapshot_globals("src/objects/EmptyWidget")
+snapshot_globals("dump/objects/EmptyWidget")
 
 ADDON:ImportObject(OBJECT.Folder)
 ADDON:ImportObject(OBJECT.TextStyle)
 Folder = UIParent:CreateWidget("folder", "folder", "UIParent")
-snapshot_globals("src/objects/Folder")
+snapshot_globals("dump/objects/Folder")
 
 ADDON:ImportObject(OBJECT.GameTooltip)
 ADDON:ImportObject(OBJECT.TextStyle)
 GameTooltip = UIParent:CreateWidget("gametooltip", "gametooltip", "UIParent")
-snapshot_globals("src/objects/GameTooltip")
+snapshot_globals("dump/objects/GameTooltip")
 
 ADDON:ImportObject(OBJECT.Grid)
 ADDON:ImportObject(OBJECT.TextStyle)
 Grid = UIParent:CreateWidget("grid", "grid", "UIParent")
-snapshot_globals("src/objects/Grid")
+snapshot_globals("dump/objects/Grid")
 
 ADDON:ImportObject(OBJECT.Label)
 ADDON:ImportObject(OBJECT.TextStyle)
 Label = UIParent:CreateWidget("label", "label", "UIParent")
-snapshot_globals("src/objects/Label")
+snapshot_globals("dump/objects/Label")
 
 ADDON:ImportObject(OBJECT.Line)
 ADDON:ImportObject(OBJECT.TextStyle)
 Line = UIParent:CreateWidget("line", "line", "UIParent")
-snapshot_globals("src/objects/Line")
+snapshot_globals("dump/objects/Line")
 
 ADDON:ImportObject(OBJECT.ListCtrl)
 ADDON:ImportObject(OBJECT.TextStyle)
 ListCtrl = UIParent:CreateWidget("listctrl", "listctrl", "UIParent")
-snapshot_globals("src/objects/ListCtrl")
+snapshot_globals("dump/objects/ListCtrl")
 
 ADDON:ImportObject(OBJECT.Listbox)
 ADDON:ImportObject(OBJECT.TextStyle)
 Listbox = UIParent:CreateWidget("listbox", "listbox", "UIParent")
-snapshot_globals("src/objects/Listbox")
+snapshot_globals("dump/objects/Listbox")
 
 ADDON:ImportObject(OBJECT.MegaphoneChatEdit)
 ADDON:ImportObject(OBJECT.TextStyle)
 MegaphoneChatEdit = UIParent:CreateWidget("megaphonechatedit", "megaphonechatedit", "UIParent")
-snapshot_globals("src/objects/MegaphoneChatEdit")
+snapshot_globals("dump/objects/MegaphoneChatEdit")
 
 ADDON:ImportObject(OBJECT.Message)
 ADDON:ImportObject(OBJECT.TextStyle)
 Message = UIParent:CreateWidget("message", "message", "UIParent")
-snapshot_globals("src/objects/Message")
+snapshot_globals("dump/objects/Message")
 
 ADDON:ImportObject(OBJECT.ModelView)
 ADDON:ImportObject(OBJECT.TextStyle)
 ModelView = UIParent:CreateWidget("modelview", "modelview", "UIParent")
-snapshot_globals("src/objects/ModelView")
+snapshot_globals("dump/objects/ModelView")
 
 ADDON:ImportObject(OBJECT.Pageable)
 ADDON:ImportObject(OBJECT.TextStyle)
 Pageable = UIParent:CreateWidget("pageable", "pageable", "UIParent")
-snapshot_globals("src/objects/Pageable")
+snapshot_globals("dump/objects/Pageable")
 
 ADDON:ImportObject(OBJECT.PaintColorPicker)
 ADDON:ImportObject(OBJECT.TextStyle)
 PaintColorPicker = UIParent:CreateWidget("paintcolorpicker", "paintcolorpicker", "UIParent")
-snapshot_globals("src/objects/PaintColorPicker")
+snapshot_globals("dump/objects/PaintColorPicker")
 
 ADDON:ImportObject(OBJECT.RadioGroup)
 ADDON:ImportObject(OBJECT.TextStyle)
 RadioGroup = UIParent:CreateWidget("radiogroup", "radiogroup", "UIParent")
-snapshot_globals("src/objects/RadioGroup")
+snapshot_globals("dump/objects/RadioGroup")
 
 ADDON:ImportObject(OBJECT.RoadMap)
 ADDON:ImportObject(OBJECT.TextStyle)
 RoadMap = UIParent:CreateWidget("roadmap", "roadmap", "UIParent")
-snapshot_globals("src/objects/RoadMap")
+snapshot_globals("dump/objects/RoadMap")
 
 ADDON:ImportObject(OBJECT.Slider)
 ADDON:ImportObject(OBJECT.TextStyle)
 Slider = UIParent:CreateWidget("slider", "slider", "UIParent")
-snapshot_globals("src/objects/Slider")
+snapshot_globals("dump/objects/Slider")
 
 ADDON:ImportObject(OBJECT.Slot)
 ADDON:ImportObject(OBJECT.TextStyle)
 Slot = UIParent:CreateWidget("slot", "slot", "UIParent")
-snapshot_globals("src/objects/Slot")
+snapshot_globals("dump/objects/Slot")
 
 ADDON:ImportObject(OBJECT.StatusBar)
 ADDON:ImportObject(OBJECT.TextStyle)
 StatusBar = UIParent:CreateWidget("statusbar", "statusbar", "UIParent")
-snapshot_globals("src/objects/StatusBar")
+snapshot_globals("dump/objects/StatusBar")
 
 ADDON:ImportObject(OBJECT.Tab)
 ADDON:ImportObject(OBJECT.TextStyle)
 Tab = UIParent:CreateWidget("tab", "tab", "UIParent")
-snapshot_globals("src/objects/Tab")
+snapshot_globals("dump/objects/Tab")
 
 ADDON:ImportObject(OBJECT.Textbox)
 ADDON:ImportObject(OBJECT.TextStyle)
 Textbox = UIParent:CreateWidget("textbox", "textbox", "UIParent")
-snapshot_globals("src/objects/Textbox")
+snapshot_globals("dump/objects/Textbox")
 
 ADDON:ImportObject(OBJECT.UnitframeTooltip)
 ADDON:ImportObject(OBJECT.TextStyle)
 UnitframeTooltip = UIParent:CreateWidget("unitframetooltip", "unitframetooltip", "UIParent")
-snapshot_globals("src/objects/UnitframeTooltip")
+snapshot_globals("dump/objects/UnitframeTooltip")
 
 ADDON:ImportObject(OBJECT.Webbrowser)
 ADDON:ImportObject(OBJECT.TextStyle)
 Webbrowser = UIParent:CreateWidget("webbrowser", "webbrowser", "UIParent")
-snapshot_globals("src/objects/Webbrowser")
+snapshot_globals("dump/objects/Webbrowser")
 
 ADDON:ImportObject(OBJECT.Window)
 ADDON:ImportObject(OBJECT.TextStyle)
 Window = UIParent:CreateWidget("window", "window", "UIParent")
-snapshot_globals("src/objects/Window")
+snapshot_globals("dump/objects/Window")
 
 ADDON:ImportObject(OBJECT.WorldMap)
 ADDON:ImportObject(OBJECT.TextStyle)
 WorldMap = UIParent:CreateWidget("worldmap", "worldmap", "UIParent")
-snapshot_globals("src/objects/WorldMap")
+snapshot_globals("dump/objects/WorldMap")
 
 ADDON:ImportObject(OBJECT.X2Editbox)
 ADDON:ImportObject(OBJECT.TextStyle)
 X2Editbox = UIParent:CreateWidget("x2editbox", "x2editbox", "UIParent")
-snapshot_globals("src/objects/X2Editbox")
+snapshot_globals("dump/objects/X2Editbox")
 
 ADDON:ChatLog("Dumped globals.")

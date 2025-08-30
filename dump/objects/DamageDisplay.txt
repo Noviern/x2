@@ -1,309 +1,170 @@
-AP_BOTTOM = 8 -- objects/DamageDisplay
-AP_BOTTOMLEFT = 2 -- objects/DamageDisplay
-AP_BOTTOMRIGHT = 3 -- objects/DamageDisplay
-AP_CENTER = 4 -- objects/DamageDisplay
-AP_LEFT = 6 -- objects/DamageDisplay
-AP_RIGHT = 7 -- objects/DamageDisplay
-AP_TOP = 5 -- objects/DamageDisplay
-AP_TOPLEFT = 0 -- objects/DamageDisplay
-AP_TOPRIGHT = 1 -- objects/DamageDisplay
-CT_ABILITY = 2 -- objects/DamageDisplay
-CT_EXPEDITION_NAME = 3 -- objects/DamageDisplay
-CT_NAME = 1 -- objects/DamageDisplay
-DC_ALWAYS = 0 -- objects/DamageDisplay
-DC_SHIFT_KEY_DOWN = 1 -- objects/DamageDisplay
-DamageDisplay = { -- objects/DamageDisplay
-  __this = <userdata>, -- objects/DamageDisplay
-  extraStyle = { -- objects/DamageDisplay
-    __this = <userdata>, -- objects/DamageDisplay
-  }, -- objects/DamageDisplay
-  style = { -- objects/DamageDisplay
-    __this = <userdata>, -- objects/DamageDisplay
-  }, -- objects/DamageDisplay
-} -- objects/DamageDisplay
-LAT_AFTERIMAGE = 4 -- objects/DamageDisplay
-LAT_COUNT = 2 -- objects/DamageDisplay
-LAT_LINEAR_DISPLAY = 16 -- objects/DamageDisplay
-LAT_MOVE = 1 -- objects/DamageDisplay
-LAT_NONE = 0 -- objects/DamageDisplay
-LAT_SHAKE = 8 -- objects/DamageDisplay
-PCT_DEFAULT = 0 -- objects/DamageDisplay
-PCT_SHIP_COLLISION = 1 -- objects/DamageDisplay
-
-function DamageDisplay.extraStyle:GetId() end
-
-function DamageDisplay.extraStyle:GetLineHeight() end
-
-function DamageDisplay.extraStyle:GetName() end
-
-function DamageDisplay.extraStyle:GetObjectType() end
-
-function DamageDisplay.extraStyle:GetTextWidth() end
-
-function DamageDisplay.extraStyle:IsValidUIObject() end
-
-function DamageDisplay.extraStyle:SetAlign() end
-
-function DamageDisplay.extraStyle:SetColor() end
-
-function DamageDisplay.extraStyle:SetColorByKey() end
-
-function DamageDisplay.extraStyle:SetEllipsis() end
-
-function DamageDisplay.extraStyle:SetFont() end
-
-function DamageDisplay.extraStyle:SetFontSize() end
-
-function DamageDisplay.extraStyle:SetOutline() end
-
-function DamageDisplay.extraStyle:SetShadow() end
-
-function DamageDisplay.extraStyle:SetSnap() end
-
-function DamageDisplay.style:GetId() end
-
-function DamageDisplay.style:GetLineHeight() end
-
-function DamageDisplay.style:GetName() end
-
-function DamageDisplay.style:GetObjectType() end
-
-function DamageDisplay.style:GetTextWidth() end
-
-function DamageDisplay.style:IsValidUIObject() end
-
-function DamageDisplay.style:SetAlign() end
-
-function DamageDisplay.style:SetColor() end
-
-function DamageDisplay.style:SetColorByKey() end
-
-function DamageDisplay.style:SetEllipsis() end
-
-function DamageDisplay.style:SetFont() end
-
-function DamageDisplay.style:SetFontSize() end
-
-function DamageDisplay.style:SetOutline() end
-
-function DamageDisplay.style:SetShadow() end
-
-function DamageDisplay.style:SetSnap() end
-
-function DamageDisplay:AddAnchor() end
-
-function DamageDisplay:Animation() end
-
-function DamageDisplay:ApplyUIScale() end
-
-function DamageDisplay:AttachWidget() end
-
-function DamageDisplay:BindWidth() end
-
-function DamageDisplay:CancelRequestCharacterCacheData() end
-
-function DamageDisplay:ChangeChildAnchorByScrollValue() end
-
-function DamageDisplay:CheckOutOfScreen() end
-
-function DamageDisplay:Clickable() end
-
-function DamageDisplay:CorrectOffsetByScreen() end
-
-function DamageDisplay:CreateChildWidget() end
-
-function DamageDisplay:CreateChildWidgetByType() end
-
-function DamageDisplay:CreateColorDrawable() end
-
-function DamageDisplay:CreateColorDrawableByKey() end
-
-function DamageDisplay:CreateDrawable() end
-
-function DamageDisplay:CreateEffectDrawable() end
-
-function DamageDisplay:CreateEffectDrawableByKey() end
-
-function DamageDisplay:CreateIconDrawable() end
-
-function DamageDisplay:CreateImageDrawable() end
-
-function DamageDisplay:CreateNinePartDrawable() end
-
-function DamageDisplay:CreateTextDrawable() end
-
-function DamageDisplay:CreateThreeColorDrawable() end
-
-function DamageDisplay:CreateThreePartDrawable() end
-
-function DamageDisplay:DetachWidget() end
-
-function DamageDisplay:DisableDrawables() end
-
-function DamageDisplay:DisableDrawablesWithChildren() end
-
-function DamageDisplay:Enable() end
-
-function DamageDisplay:EnableDrag() end
-
-function DamageDisplay:EnableDrawables() end
-
-function DamageDisplay:EnableDrawablesWithChildren() end
-
-function DamageDisplay:EnableFocus() end
-
-function DamageDisplay:EnableHidingIsRemove() end
-
-function DamageDisplay:EnableKeyboard() end
-
-function DamageDisplay:EnablePick() end
-
-function DamageDisplay:EnableScroll() end
-
-function DamageDisplay:GetActualDrawn() end
-
-function DamageDisplay:GetAlpha() end
-
-function DamageDisplay:GetAttachedWidget() end
-
-function DamageDisplay:GetEffectiveExtent() end
-
-function DamageDisplay:GetEffectiveOffset() end
-
-function DamageDisplay:GetExtent() end
-
-function DamageDisplay:GetHeight() end
-
-function DamageDisplay:GetId() end
-
-function DamageDisplay:GetInset() end
-
-function DamageDisplay:GetName() end
-
-function DamageDisplay:GetObjectType() end
-
-function DamageDisplay:GetOffset() end
-
-function DamageDisplay:GetParent() end
-
-function DamageDisplay:GetRotation() end
-
-function DamageDisplay:GetText() end
-
-function DamageDisplay:GetUILayer() end
-
-function DamageDisplay:GetValue() end
-
-function DamageDisplay:GetWidth() end
-
-function DamageDisplay:HasHandler() end
-
-function DamageDisplay:InheritAnimationData() end
-
-function DamageDisplay:IsDescendantWidget() end
-
-function DamageDisplay:IsEnabled() end
-
-function DamageDisplay:IsMouseOver() end
-
-function DamageDisplay:IsNowAnimation() end
-
-function DamageDisplay:IsValidUIObject() end
-
-function DamageDisplay:IsVisible() end
-
-function DamageDisplay:Lower() end
-
-function DamageDisplay:MoveTo() end
-
-function DamageDisplay:Raise() end
-
-function DamageDisplay:RegisterEvent() end
-
-function DamageDisplay:ReleaseDeletedHandler() end
-
-function DamageDisplay:ReleaseHandler() end
-
-function DamageDisplay:RemoveAllAnchors() end
-
-function DamageDisplay:RemoveAllDrawables() end
-
-function DamageDisplay:RemoveDrawable() end
-
-function DamageDisplay:RequestCharacterCacheData() end
-
-function DamageDisplay:SetAlpha() end
-
-function DamageDisplay:SetAlphaAnimation() end
-
-function DamageDisplay:SetAnimFrameInfo() end
-
-function DamageDisplay:SetCategory() end
-
-function DamageDisplay:SetCharacterCacheDataHandler() end
-
-function DamageDisplay:SetDelegator() end
-
-function DamageDisplay:SetDeletedHandler() end
-
-function DamageDisplay:SetDragCondition() end
-
-function DamageDisplay:SetDrawPriority() end
-
-function DamageDisplay:SetDrawableLayerAlpha() end
-
-function DamageDisplay:SetExtent() end
-
-function DamageDisplay:SetHandler() end
-
-function DamageDisplay:SetHeight() end
-
-function DamageDisplay:SetInitPos() end
-
-function DamageDisplay:SetInset() end
-
-function DamageDisplay:SetLText() end
-
-function DamageDisplay:SetLayerColor() end
-
-function DamageDisplay:SetMaxResizingExtent() end
-
-function DamageDisplay:SetMinResizingExtent() end
-
-function DamageDisplay:SetMoveAnimation() end
-
-function DamageDisplay:SetPositionCalculationType() end
-
-function DamageDisplay:SetResizingBorderSize() end
-
-function DamageDisplay:SetRotation() end
-
-function DamageDisplay:SetScale() end
-
-function DamageDisplay:SetScaleAnimation() end
-
-function DamageDisplay:SetSounds() end
-
-function DamageDisplay:SetStartAnimation() end
-
-function DamageDisplay:SetText() end
-
-function DamageDisplay:SetUnitId() end
-
-function DamageDisplay:SetWidth() end
-
-function DamageDisplay:Show() end
-
-function DamageDisplay:StartMoving() end
-
-function DamageDisplay:StartSizing() end
-
-function DamageDisplay:StopMovingOrSizing() end
-
-function DamageDisplay:TriggerMoveAnimation() end
-
-function DamageDisplay:UseDynamicContentState() end
-
-function DamageDisplay:UseDynamicDrawableState() end
-
-function DamageDisplay:UseResizing() end
+AP_BOTTOM = 8
+AP_BOTTOMLEFT = 2
+AP_BOTTOMRIGHT = 3
+AP_CENTER = 4
+AP_LEFT = 6
+AP_RIGHT = 7
+AP_TOP = 5
+AP_TOPLEFT = 0
+AP_TOPRIGHT = 1
+CT_ABILITY = 2
+CT_EXPEDITION_NAME = 3
+CT_NAME = 1
+DC_ALWAYS = 0
+DC_SHIFT_KEY_DOWN = 1
+DamageDisplay = {
+  AddAnchor = "<function: 00000001E964E594>",
+  Animation = "<function: 00000001E4EA5524>",
+  ApplyUIScale = "<function: 00000001D4901854>",
+  AttachWidget = "<function: 00000000FC8B2864>",
+  BindWidth = "<function: 00000001E964E094>",
+  CancelRequestCharacterCacheData = "<function: 00000001C8A1FF44>",
+  ChangeChildAnchorByScrollValue = "<function: 00000001E1A0ADD4>",
+  CheckOutOfScreen = "<function: 00000001E95F3654>",
+  Clickable = "<function: 00000000CD656E34>",
+  CorrectOffsetByScreen = "<function: 00000001E95F8454>",
+  CreateChildWidget = "<function: 00000001AFAAA414>",
+  CreateChildWidgetByType = "<function: 00000001AF9BF154>",
+  CreateColorDrawable = "<function: 00000001E95B66C4>",
+  CreateColorDrawableByKey = "<function: 00000001E9624B54>",
+  CreateDrawable = "<function: 00000001E9610A94>",
+  CreateEffectDrawable = "<function: 00000001E95F01D4>",
+  CreateEffectDrawableByKey = "<function: 00000001E968C4E4>",
+  CreateIconDrawable = "<function: 0000000200020684>",
+  CreateImageDrawable = "<function: 00000000CD7CC384>",
+  CreateNinePartDrawable = "<function: 00000001E9610B14>",
+  CreateTextDrawable = "<function: 00000001E95EE3D4>",
+  CreateThreeColorDrawable = "<function: 00000001E95EF2D4>",
+  CreateThreePartDrawable = "<function: 00000001E95B6584>",
+  DetachWidget = "<function: 00000001E4EC58A4>",
+  DisableDrawables = "<function: 00000001E95E2894>",
+  DisableDrawablesWithChildren = "<function: 00000001E9632714>",
+  Enable = "<function: 00000001E95F8754>",
+  EnableDrag = "<function: 00000001E96233D4>",
+  EnableDrawables = "<function: 00000001D4039F24>",
+  EnableDrawablesWithChildren = "<function: 00000001D3D17274>",
+  EnableFocus = "<function: 00000001E95F89D4>",
+  EnableHidingIsRemove = "<function: 00000001E95F94D4>",
+  EnableKeyboard = "<function: 00000001E95F8AD4>",
+  EnablePick = "<function: 00000001E9623394>",
+  EnableScroll = "<function: 00000001D3E75664>",
+  GetActualDrawn = "<function: 00000001D4589B04>",
+  GetAlpha = "<function: 00000001E961A0D4>",
+  GetAttachedWidget = "<function: 00000001E961CCD4>",
+  GetEffectiveExtent = "<function: 000000007C8DB804>",
+  GetEffectiveOffset = "<function: 00000001E95F1014>",
+  GetExtent = "<function: 00000001E49C6F64>",
+  GetHeight = "<function: 00000001E4F34AB4>",
+  GetId = "<function: 00000000CD7F8444>",
+  GetInset = "<function: 00000001E4B10D94>",
+  GetName = "<function: 00000001E9641614>",
+  GetObjectType = "<function: 00000001E27D3EC4>",
+  GetOffset = "<function: 00000001E96204D4>",
+  GetParent = "<function: 00000001E95F8594>",
+  GetRotation = "<function: 00000001E4FD2C94>",
+  GetText = "<function: 00000001E961CC94>",
+  GetUILayer = "<function: 00000001E1B52C44>",
+  GetValue = "<function: 00000001D3E77FA4>",
+  GetWidth = "<function: 00000001E4F34A74>",
+  HasHandler = "<function: 00000001D3EFBDF4>",
+  InheritAnimationData = "<function: 00000001D4946EE4>",
+  IsDescendantWidget = "<function: 00000001AFAAA3D4>",
+  IsEnabled = "<function: 00000001E95F8814>",
+  IsMouseOver = "<function: 00000001E963C054>",
+  IsNowAnimation = "<function: 00000001D4948464>",
+  IsValidUIObject = "<function: 00000001E96415D4>",
+  IsVisible = "<function: 0000000228A4F1D4>",
+  Lower = "<function: 00000001E4A1DF64>",
+  MoveTo = "<function: 00000001E9603954>",
+  Raise = "<function: 00000001E4E3B954>",
+  RegisterEvent = "<function: 00000001E95EA054>",
+  ReleaseDeletedHandler = "<function: 00000001E8EB9864>",
+  ReleaseHandler = "<function: 00000001F622A7B4>",
+  RemoveAllAnchors = "<function: 00000001E95B1284>",
+  RemoveAllDrawables = "<function: 00000001D4036624>",
+  RemoveDrawable = "<function: 00000001E8E29294>",
+  RequestCharacterCacheData = "<function: 00000000FA01E7A4>",
+  SetAlpha = "<function: 00000001E95B1D04>",
+  SetAlphaAnimation = "<function: 00000001D493B464>",
+  SetAnimFrameInfo = "<function: 00000001D47A3944>",
+  SetCategory = "<function: 00000001E95F8694>",
+  SetCharacterCacheDataHandler = "<function: 00000001C8A58204>",
+  SetDelegator = "<function: 00000001D495B524>",
+  SetDeletedHandler = "<function: 00000001E4FA5744>",
+  SetDragCondition = "<function: 00000001E9623414>",
+  SetDrawPriority = "<function: 00000001D3E2E1D4>",
+  SetDrawableLayerAlpha = "<function: 00000001AFA52BD4>",
+  SetExtent = "<function: 00000001D4464D14>",
+  SetHandler = "<function: 00000001E4FB17C4>",
+  SetHeight = "<function: 00000001E95C3D44>",
+  SetInitPos = "<function: 00000001E1AFBBF4>",
+  SetInset = "<function: 00000001D3FDAE14>",
+  SetLText = "<function: 00000001E95E2014>",
+  SetLayerColor = "<function: 00000001D40E9484>",
+  SetMaxResizingExtent = "<function: 00000001E95C5AC4>",
+  SetMinResizingExtent = "<function: 00000001E95BCB44>",
+  SetMoveAnimation = "<function: 00000001D493BE64>",
+  SetPositionCalculationType = "<function: 00000001D43B2404>",
+  SetResizingBorderSize = "<function: 00000001D460AED4>",
+  SetRotation = "<function: 00000000FC8D7964>",
+  SetScale = "<function: 00000001D4901A54>",
+  SetScaleAnimation = "<function: 00000001D493B4E4>",
+  SetSounds = "<function: 000000007CAA8274>",
+  SetStartAnimation = "<function: 00000001D493BEA4>",
+  SetText = "<function: 00000001D3E7A424>",
+  SetUnitId = "<function: 00000001D48DCD54>",
+  SetWidth = "<function: 00000001E95C3D04>",
+  Show = "<function: 00000001E4A938C4>",
+  StartMoving = "<function: 00000001D3EA8F64>",
+  StartSizing = "<function: 00000001E4F2A9F4>",
+  StopMovingOrSizing = "<function: 00000001E96039D4>",
+  TriggerMoveAnimation = "<function: 00000001D493BFA4>",
+  UseDynamicContentState = "<function: 00000001E4B1DBD4>",
+  UseDynamicDrawableState = "<function: 00000000FA031AE4>",
+  UseResizing = "<function: 00000001E95B1084>",
+  __this = "<userdata: 00000001E1792AA0>",
+  extraStyle = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD27F0>",
+  },
+  style = {
+    GetId = "<function: 000000025336B2B4>",
+    GetLineHeight = "<function: 00000001B5DA5044>",
+    GetName = "<function: 00000001E4A0DAA4>",
+    GetObjectType = "<function: 00000001E4FF3494>",
+    GetTextWidth = "<function: 00000001A714E8C4>",
+    IsValidUIObject = "<function: 00000001EE765144>",
+    SetAlign = "<function: 00000001D3FEF764>",
+    SetColor = "<function: 00000001E4E58464>",
+    SetColorByKey = "<function: 00000001E8F7D5B4>",
+    SetEllipsis = "<function: 00000000683E5E34>",
+    SetFont = "<function: 00000001A714DFC4>",
+    SetFontSize = "<function: 00000001A714E004>",
+    SetOutline = "<function: 00000001E4D51F04>",
+    SetShadow = "<function: 00000001EE72BDC4>",
+    SetSnap = "<function: 00000001E1A3CE64>",
+    __this = "<userdata: 00000001E6DD1DF0>",
+  },
+}
+LAT_AFTERIMAGE = 4
+LAT_COUNT = 2
+LAT_LINEAR_DISPLAY = 16
+LAT_MOVE = 1
+LAT_NONE = 0
+LAT_SHAKE = 8
+PCT_DEFAULT = 0
+PCT_SHIP_COLLISION = 1
