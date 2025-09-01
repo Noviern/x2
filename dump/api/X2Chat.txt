@@ -138,5 +138,5 @@ QMS_READY_MAIN = 7
 QMS_READY_NORMAL = 9
 QMS_READY_SAGA = 8
 X2Chat = {
-  DispatchChatMessage = "<function: 00000001E1A251A4>",
+  DispatchChatMessage = "<function: 00000001C7E93244>",
 }

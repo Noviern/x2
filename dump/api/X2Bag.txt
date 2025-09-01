@@ -1,4 +1,4 @@
 X2Bag = {
-  EquipBagItem = "<function: 00000001A254DF84>",
-  GetBagItemInfo = "<function: 00000001E4B55654>",
+  EquipBagItem = "<function: 00000000CF573704>",
+  GetBagItemInfo = "<function: 00000001C7E8CB84>",
 }

@@ -15,6 +15,6 @@ TMROLE_NONE = 0
 TMROLE_RANGED_DEALER = 4
 TMROLE_TANKER = 1
 X2Team = {
-  GetRole = "<function: 00000001AF048F34>",
-  SetRole = "<function: 00000001E1AB98F4>",
+  GetRole = "<function: 00000001C7E8E684>",
+  SetRole = "<function: 00000001C7E8A904>",
 }

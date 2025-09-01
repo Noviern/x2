@@ -13,7 +13,7 @@ MFCR_FAIL_LIMIT = 1
 MFCR_FAIL_WAIT = 2
 MFCR_SUCCESS = 0
 X2Craft = {
-  GetCraftBaseInfo = "<function: 00000001D459E744>",
-  GetCraftMaterialInfo = "<function: 00000001D459EE44>",
-  GetCraftProductInfo = "<function: 00000001D45BFFC4>",
+  GetCraftBaseInfo = "<function: 00000001C7E88544>",
+  GetCraftMaterialInfo = "<function: 00000001C7E85884>",
+  GetCraftProductInfo = "<function: 00000001C7E88604>",
 }

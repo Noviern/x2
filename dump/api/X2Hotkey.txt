@@ -1,9 +1,9 @@
 X2Hotkey = {
-  EnableHotkey = "<function: 00000001FBEA1114>",
-  GetOptionBinding = "<function: 00000001A7140AC4>",
-  GetOptionBindingButton = "<function: 00000001E8F71474>",
-  IsOverridableAction = "<function: 00000000FA01BDA4>",
-  IsValidActionName = "<function: 00000001AF04A034>",
-  SetOptionBindingButtonWithIndex = "<function: 00000001E8E547D4>",
-  SetOptionBindingWithIndex = "<function: 00000001FBE8FAD4>",
+  EnableHotkey = "<function: 00000001C7E88384>",
+  GetOptionBinding = "<function: 00000001C7E87E44>",
+  GetOptionBindingButton = "<function: 00000001C7E88A04>",
+  IsOverridableAction = "<function: 00000001C7E8E384>",
+  IsValidActionName = "<function: 00000001C7E850C4>",
+  SetOptionBindingButtonWithIndex = "<function: 00000001C7E85F84>",
+  SetOptionBindingWithIndex = "<function: 00000001C7E85784>",
 }

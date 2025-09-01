@@ -1,2 +1,6 @@
 SIK_DESCRIPTION = 1
-X2Skill = "<circular table: 00000001E1AB9B74 >"
+X2Skill = {
+  GetCooldown = "<function: 00000000CF43F914>",
+  GetSkillTooltip = "<function: 00000001C7E90744>",
+  Info = "<function: 00000001C7E88E84>",
+}

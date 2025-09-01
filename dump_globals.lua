@@ -76,16 +76,27 @@ end
 local function snapshot_globals(name)
   local addon_global_vars = filter(_G)
   local output = dump(addon_global_vars)
+  local outputSize = #output
 
   local filePath = "../Documents/Addon/aaad/" .. name .. ".txt"
-  local file = assert(io.open(filePath, "w"))
+  local file = io.open(filePath, "rb")
+  local currentFileSize = 0
 
-  if name == "dump/objects/Textbox" then
-    file:write(os.time(), "\n")
+  if file then
+    currentFileSize = file:seek("end")
+    file:close()
   end
 
-  file:write(output)
-  file:close()
+  -- Check if this output is different in size indicating a change has happened.
+  -- This probably isnt the best way to do this but i can't check the contents
+  -- because the function memory addresses change every time they are dumped.
+  if outputSize > 0 and outputSize ~= currentFileSize then
+    file = assert(io.open(filePath, "wb"))
+    ADDON:ChatLog("Dumped " .. name)
+    ADDON:ChatLog(outputSize .. " " .. currentFileSize)
+    file:write(output)
+    file:close()
+  end
 
   clear_globals()
 end
@@ -98,7 +109,6 @@ for api_name, api_id in pairs(API) do
 end
 
 ---@TODO: I still need to dump the Drawables.
----@TODO: These need to be local and maybe injected into global to keep out of my global type space.
 
 ADDON:ImportObject(OBJECT.Avi)
 ADDON:ImportObject(OBJECT.TextStyle)

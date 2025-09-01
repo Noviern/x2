@@ -1,4 +1,4 @@
 X2SiegeWeapon = {
-  GetSiegeWeaponSpeed = "<function: 00000001D40638E4>",
-  GetSiegeWeaponTurnSpeed = "<function: 00000001E8E2AD54>",
+  GetSiegeWeaponSpeed = "<function: 00000001C7E8AE44>",
+  GetSiegeWeaponTurnSpeed = "<function: 00000001C7E8AE84>",
 }

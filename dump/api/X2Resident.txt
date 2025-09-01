@@ -11,7 +11,7 @@ HOUSING_LIST_FILTER_SMALL = 7
 HOUSING_LIST_FILTER_UNDERWATER_STRUCTURE = 6
 HOUSING_LIST_FILTER_WORKTABLE = 4
 X2Resident = {
-  FilterHousingTradeList = "<function: 00000001D4A851C4>",
-  GetResidentBoardContent = "<function: 00000001CEA6A324>",
-  RequestHousingTradeList = "<function: 00000001E4BDE4E4>",
+  FilterHousingTradeList = "<function: 00000001C7E86044>",
+  GetResidentBoardContent = "<function: 00000000CF43BB54>",
+  RequestHousingTradeList = "<function: 00000001C7E88A84>",
 }

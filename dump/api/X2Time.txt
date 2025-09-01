@@ -1,4 +1,4 @@
 X2Time = {
-  GetGameTime = "<function: 00000001D4404504>",
-  GetServerTime = "<function: 00000001FDA81C24>",
+  GetGameTime = "<function: 00000001C7E82784>",
+  GetServerTime = "<function: 00000001C7E8BF04>",
 }

@@ -1,10 +1,10 @@
 X2Locale = {
-  GetKeyboardLayout = "<function: 00000001D4492454>",
-  GetLocale = "<function: 00000001A70EEEC4>",
-  GetLocaleIndex = "<function: 0000000253845654>",
-  HasLocalizeUiText = "<function: 00000001B5DAD844>",
-  LocalizeFormatUiText = "<function: 00000001D48A1294>",
-  LocalizeNonUiText = "<function: 00000001E19D2C14>",
-  LocalizeUiText = "<function: 00000001A7133904>",
-  TextFormating = "<function: 00000001D3DCED84>",
+  GetKeyboardLayout = "<function: 00000001C7E8B184>",
+  GetLocale = "<function: 00000001C7E8AF04>",
+  GetLocaleIndex = "<function: 00000001C7E8AF44>",
+  HasLocalizeUiText = "<function: 00000001C7E8AC84>",
+  LocalizeFormatUiText = "<function: 00000001C7E8AD84>",
+  LocalizeNonUiText = "<function: 00000001C7E8B1C4>",
+  LocalizeUiText = "<function: 00000001C7E8AD44>",
+  TextFormating = "<function: 00000001C7E8AEC4>",
 }

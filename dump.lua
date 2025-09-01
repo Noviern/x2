@@ -103,9 +103,9 @@ function dump(tbl, ctx)
   end
 
   -- remove the current table and its path
-  if ctx.depth == 1 then
-    ctx.seen[tbl_ref] = nil
-  end
+  -- if ctx.depth == 0 then
+  ctx.seen[tbl_ref] = nil
+  -- end
 
   table.sort(lines)
   local output

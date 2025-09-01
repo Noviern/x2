@@ -1,7 +1,7 @@
 X2Sound = {
-  IsPlaying = "<function: 00000001E8E42654>",
-  PlayMusic = "<function: 00000001E4F37134>",
-  PlayUISound = "<function: 00000001D43BEA04>",
-  StopMusic = "<function: 00000001E4F24AF4>",
-  StopSound = "<function: 00000001E4F96FC4>",
+  IsPlaying = "<function: 00000000CF571584>",
+  PlayMusic = "<function: 00000001C7E8DC84>",
+  PlayUISound = "<function: 00000001C7E8EB44>",
+  StopMusic = "<function: 00000001C7E881C4>",
+  StopSound = "<function: 00000001C7E88B44>",
 }

@@ -154,5 +154,5 @@ MST_TRANSFER_CARRIAGE = 76
 MST_TRANSFER_CRUISER = 144
 MST_TRANSFER_LANDSHIP = 77
 X2Map = {
-  GetZoneStateInfoByZoneId = "<function: 00000001E4A2BB24>",
+  GetZoneStateInfoByZoneId = "<function: 00000001C7E8E744>",
 }
