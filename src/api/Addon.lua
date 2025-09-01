@@ -626,6 +626,8 @@ ZST_INVALID = 0                                   -- api/Addon
 ---@field xlarge number
 ---@field xxlarge number
 
+---@alias ContentTriggerFunc fun(show: boolean, data?: table)
+
 ---Adds a button to the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID The category ID for the menu.
 ---@param uiCategory UIC The UI category ID. Use an ID above 1000 for custom UICs to avoid conflicts with default categories or other addons.
@@ -750,12 +752,10 @@ function ADDON:ImportObject(objectId) end
 ---```
 function ADDON:LoadData(key) end
 
----@alias RegisterContentTriggerFunc fun(show: boolean, data?: table)
-
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
 ---@param uiCategory UIC The UI category to register the function to.
----@param triggerFunc RegisterContentTriggerFunc The function to register as a trigger.
+---@param triggerFunc ContentTriggerFunc The function to register as a trigger.
 ---@return boolean success `true` if registration was successful, `false` otherwise.
 ---@usage
 ---```lua
@@ -771,7 +771,7 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---existing UI categories.
 ---@param uiCategory UIC The UI component to register the widget to.
 ---@param widget Widget The widget to register.
----@param triggerFunc? function The optional trigger function for the widget.
+---@param triggerFunc? ContentTriggerFunc The optional trigger function for the widget.
 ---@return Widget|nil widget The registered widget, or `nil` if registration failed.
 ---@usage
 ---```lua
@@ -1181,6 +1181,7 @@ function UIParent:IsRenderThreadSupported() end
 ---@see UIEVENT_TYPE
 function UIParent:ReleaseEventHandler(eventName, handler) end
 
+---@TODO: I dont like this many overload, ive tried generics but they dont work on alias functions.
 ---Sets an event handler for the specified UI event (more than 255 events will
 ---crash the game).
 ---@param eventName UIEVENT_TYPE The UI event to set the handler for.

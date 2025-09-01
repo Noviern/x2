@@ -158,10 +158,9 @@ MST_TRANSFER_LANDSHIP = 77                -- api/X2Map
 ---@class X2Map
 X2Map = {}                                -- api/X2Map
 
----@TODO: This may not be complete, check all zones.
 ---api/X2Map
 ---@class ZoneStateInfo
----@field conflictState number
+---@field conflictState ZONE_STATE
 ---@field dropRate? number
 ---@field goldRate? number
 ---@field festivalName? string
@@ -174,11 +173,11 @@ X2Map = {}                                -- api/X2Map
 ---@field isNuiaProtectedZone boolean
 ---@field isPeaceZone boolean
 ---@field isSiegeZone boolean
----@field localDevelopmentName string
----@field localDevelopmentStep number
+---@field localDevelopmentName? string
+---@field localDevelopmentStep? number
 ---@field lockTime? number
 ---@field nonPeaceState boolean
----@field nonRate boolean
+---@field nonRate? boolean
 ---@field remainTime? number
 ---@field warChaos boolean
 ---@field zoneName string

@@ -12,7 +12,6 @@ X2Bag = {} -- api/X2Bag
 ---```
 function X2Bag:EquipBagItem(slot, isAuxEquip) end
 
----@TODO: It seems the slot id is buggy and starts at 2? and bagId doesnt matter? min max slot, bagId does it matter?
 ---Retrieves item information for the specified slot if it exists.
 ---@param bagId 1 The bag ID.
 ---@param slot number The slot to query. (min:  `1`)
