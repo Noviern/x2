@@ -36,234 +36,6 @@ RACE_WARBORN = 8              -- api/X2Unit
 ---@class X2Unit
 X2Unit = {}                   -- api/X2Unit
 
----@TODO: UnitBuffTooltip, UnitDeBuffTooltip, GetBuffTooltip use BIK as a third param?
-
----@enum UNIT
-local UNIT = {
-  PLAYER       = "player",
-  PLAYERPET1   = "playerpet1", ---mount
-  PLAYERPET2   = "playerpet2", ---pet
-  SLAVE        = "slave",
-  TARGET       = "target",
-  TARGETTARGET = "targettarget",
-  WATCHTARGET  = "watchtarget",
-  TEAM1        = "team1", -- team = the current raid/can be co raid
-  TEAM2        = "team2",
-  TEAM3        = "team3",
-  TEAM4        = "team4",
-  TEAM5        = "team5",
-  TEAM6        = "team6",
-  TEAM7        = "team7",
-  TEAM8        = "team8",
-  TEAM9        = "team9",
-  TEAM10       = "team10",
-  TEAM11       = "team11",
-  TEAM12       = "team12",
-  TEAM13       = "team13",
-  TEAM14       = "team14",
-  TEAM15       = "team15",
-  TEAM16       = "team16",
-  TEAM17       = "team17",
-  TEAM18       = "team18",
-  TEAM19       = "team19",
-  TEAM20       = "team20",
-  TEAM21       = "team21",
-  TEAM22       = "team22",
-  TEAM23       = "team23",
-  TEAM24       = "team24",
-  TEAM25       = "team25",
-  TEAM26       = "team26",
-  TEAM27       = "team27",
-  TEAM28       = "team28",
-  TEAM29       = "team29",
-  TEAM30       = "team30",
-  TEAM31       = "team31",
-  TEAM32       = "team32",
-  TEAM33       = "team33",
-  TEAM34       = "team34",
-  TEAM35       = "team35",
-  TEAM36       = "team36",
-  TEAM37       = "team37",
-  TEAM38       = "team38",
-  TEAM39       = "team39",
-  TEAM40       = "team40",
-  TEAM41       = "team41",
-  TEAM42       = "team42",
-  TEAM43       = "team43",
-  TEAM44       = "team44",
-  TEAM45       = "team45",
-  TEAM46       = "team46",
-  TEAM47       = "team47",
-  TEAM48       = "team48",
-  TEAM49       = "team49",
-  TEAM50       = "team50",
-  TEAM_1_1     = "team_1_1",
-  TEAM_1_2     = "team_1_2",
-  TEAM_1_3     = "team_1_3",
-  TEAM_1_4     = "team_1_4",
-  TEAM_1_5     = "team_1_5",
-  TEAM_1_6     = "team_1_6",
-  TEAM_1_7     = "team_1_7",
-  TEAM_1_8     = "team_1_8",
-  TEAM_1_9     = "team_1_9",
-  TEAM_1_10    = "team_1_10",
-  TEAM_1_11    = "team_1_11",
-  TEAM_1_12    = "team_1_12",
-  TEAM_1_13    = "team_1_13",
-  TEAM_1_14    = "team_1_14",
-  TEAM_1_15    = "team_1_15",
-  TEAM_1_16    = "team_1_16",
-  TEAM_1_17    = "team_1_17",
-  TEAM_1_18    = "team_1_18",
-  TEAM_1_19    = "team_1_19",
-  TEAM_1_20    = "team_1_20",
-  TEAM_1_21    = "team_1_21",
-  TEAM_1_22    = "team_1_22",
-  TEAM_1_23    = "team_1_23",
-  TEAM_1_24    = "team_1_24",
-  TEAM_1_25    = "team_1_25",
-  TEAM_1_26    = "team_1_26",
-  TEAM_1_27    = "team_1_27",
-  TEAM_1_28    = "team_1_28",
-  TEAM_1_29    = "team_1_29",
-  TEAM_1_30    = "team_1_30",
-  TEAM_1_31    = "team_1_31",
-  TEAM_1_32    = "team_1_32",
-  TEAM_1_33    = "team_1_33",
-  TEAM_1_34    = "team_1_34",
-  TEAM_1_35    = "team_1_35",
-  TEAM_1_36    = "team_1_36",
-  TEAM_1_37    = "team_1_37",
-  TEAM_1_38    = "team_1_38",
-  TEAM_1_39    = "team_1_39",
-  TEAM_1_40    = "team_1_40",
-  TEAM_1_41    = "team_1_41",
-  TEAM_1_42    = "team_1_42",
-  TEAM_1_43    = "team_1_43",
-  TEAM_1_44    = "team_1_44",
-  TEAM_1_45    = "team_1_45",
-  TEAM_1_46    = "team_1_46",
-  TEAM_1_47    = "team_1_47",
-  TEAM_1_48    = "team_1_48",
-  TEAM_1_49    = "team_1_49",
-  TEAM_1_50    = "team_1_50",
-  TEAM_2_1     = "team_2_1",
-  TEAM_2_2     = "team_2_2",
-  TEAM_2_3     = "team_2_3",
-  TEAM_2_4     = "team_2_4",
-  TEAM_2_5     = "team_2_5",
-  TEAM_2_6     = "team_2_6",
-  TEAM_2_7     = "team_2_7",
-  TEAM_2_8     = "team_2_8",
-  TEAM_2_9     = "team_2_9",
-  TEAM_2_10    = "team_2_10",
-  TEAM_2_11    = "team_2_11",
-  TEAM_2_12    = "team_2_12",
-  TEAM_2_13    = "team_2_13",
-  TEAM_2_14    = "team_2_14",
-  TEAM_2_15    = "team_2_15",
-  TEAM_2_16    = "team_2_16",
-  TEAM_2_17    = "team_2_17",
-  TEAM_2_18    = "team_2_18",
-  TEAM_2_19    = "team_2_19",
-  TEAM_2_20    = "team_2_20",
-  TEAM_2_21    = "team_2_21",
-  TEAM_2_22    = "team_2_22",
-  TEAM_2_23    = "team_2_23",
-  TEAM_2_24    = "team_2_24",
-  TEAM_2_25    = "team_2_25",
-  TEAM_2_26    = "team_2_26",
-  TEAM_2_27    = "team_2_27",
-  TEAM_2_28    = "team_2_28",
-  TEAM_2_29    = "team_2_29",
-  TEAM_2_30    = "team_2_30",
-  TEAM_2_31    = "team_2_31",
-  TEAM_2_32    = "team_2_32",
-  TEAM_2_33    = "team_2_33",
-  TEAM_2_34    = "team_2_34",
-  TEAM_2_35    = "team_2_35",
-  TEAM_2_36    = "team_2_36",
-  TEAM_2_37    = "team_2_37",
-  TEAM_2_38    = "team_2_38",
-  TEAM_2_39    = "team_2_39",
-  TEAM_2_40    = "team_2_40",
-  TEAM_2_41    = "team_2_41",
-  TEAM_2_42    = "team_2_42",
-  TEAM_2_43    = "team_2_43",
-  TEAM_2_44    = "team_2_44",
-  TEAM_2_45    = "team_2_45",
-  TEAM_2_46    = "team_2_46",
-  TEAM_2_47    = "team_2_47",
-  TEAM_2_48    = "team_2_48",
-  TEAM_2_49    = "team_2_49",
-  TEAM_2_50    = "team_2_50",
-}
-
----api/X2Unit
----@class TargetAbilityTemplate
----@field index number
----@field level number
----@field name string
-
----api/X2Unit
----@class TargetAbility
----@field [1] TargetAbilityTemplate
----@field [2] TargetAbilityTemplate
----@field [3] TargetAbilityTemplate
-
----@TODO: Dont I have something similar to this already?
----api/X2Unit
----@class UnitClass
----@field [1] ABILITY_TYPE
----@field [2] ABILITY_TYPE
----@field [3] ABILITY_TYPE
-
----api/X2Unit
----@class UnitInfo
----@field class UnitClass
----@field expeditionName string
----@field faction string
----@field family_name string
----@field heirLevel number
----@field hp string
----@field level number
----@field maxHp string
----@field name string
----@field type string
-
----api/X2Unit
----@class BuffInfo
----@field buff_id number
----@field path string
----@field stack number
----@field timeLeft? number
-
----api/X2Unit
----@class BuffTooltip: BuffInfo
----@field category string
----@field description string
----@field duration number
----@field mine boolean
----@field name string
----@field path? string
----@field stack? number
----@field timeLef? number
----@field timeUnit? string
----@field tipType string
-
----api/X2Unit
----@class CastingInfo
----@field castingTime number
----@field castingUseable boolean
----@field currCastingTime number
----@field showTargetCastingTime boolean
----@field spellName string
-
----api/X2Unit
----@class UnitDistance
----@field distance number
----@field over_distance boolean
-
 ---Retrieves the current zone group ID.
 ---@return ZONE_ID currentZoneGroup The current zone group ID.
 ---@nodiscard
@@ -363,7 +135,7 @@ function X2Unit:GetUnitWorldPositionByTarget(unit, isLocal) end
 ---Retrieves buff information for the specified buff index of the unit if in
 ---render range.
 ---@param unit UNIT The unit to query.
----@param buffIndex number The buff index.
+---@param buffIndex number The buff index. (min: `1`)
 ---@return BuffInfo unitBuffInfo The buff information, or an empty table if not in range.
 ---@nodiscard
 ---@usage
@@ -388,7 +160,8 @@ function X2Unit:UnitBuffCount(unit) end
 ---Retrieves the buff tooltip for the specified buff index of the unit if in
 ---render range.
 ---@param unit UNIT The unit to query.
----@param buffIndex number The buff index.
+---@param buffIndex number The buff index. (min: `1`)
+---@param neededInfo? BIK Optional additional information for the buff.
 ---@return BuffTooltip|nil unitBuffTooltip The buff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@usage
@@ -397,7 +170,7 @@ function X2Unit:UnitBuffCount(unit) end
 ---```
 ---@see UNIT
 ---@see BuffTooltip
-function X2Unit:UnitBuffTooltip(unit, buffIndex) end
+function X2Unit:UnitBuffTooltip(unit, buffIndex, neededInfo) end
 
 ---Retrieves casting information for the specified unit if in render range.
 ---@param unit UNIT The unit to query.
@@ -414,7 +187,7 @@ function X2Unit:UnitCastingInfo(unit) end
 ---Retrieves debuff information for the specified buff index of the unit if in
 ---render range.
 ---@param unit UNIT The unit to query.
----@param deBuffIndex number The debuff index.
+---@param deBuffIndex number The debuff index. (min: `1`)
 ---@return BuffInfo unitDebuffInfo The debuff information, or an empty table if not in range.
 ---@nodiscard
 ---@usage
@@ -439,7 +212,8 @@ function X2Unit:UnitDeBuffCount(unit) end
 ---Retrieves the debuff tooltip for the specified buff index of the unit if in
 ---render range.
 ---@param unit UNIT The unit to query.
----@param deBuffIndex number The debuff index.
+---@param deBuffIndex number The debuff index. (min: `1`)
+---@param neededInfo? BIK Optional additional information for the buff.
 ---@return BuffTooltip|nil unitDebuffTooltip The debuff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@usage
@@ -448,7 +222,7 @@ function X2Unit:UnitDeBuffCount(unit) end
 ---```
 ---@see UNIT
 ---@see BuffTooltip
-function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex) end
+function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex, neededInfo) end
 
 ---Retrieves the distance between the player and the specified unit's boundary
 ---box if in render range.
@@ -504,12 +278,12 @@ function X2Unit:UnitHealthInfo(unit) end
 ---Retrieves hidden buff information for the specified buff index of the unit if
 ---it exists.
 ---@param unit UNIT The unit to query.
----@param buffIndex number The hidden buff index.
+---@param buffIndex number The hidden buff index. (min: `1`)
 ---@return BuffInfo unitHiddenBuffInfo The hidden buff information, or an empty table if not found.
 ---@nodiscard
 ---@usage
 ---```lua
----local unitHiddenBuffInfo =
+---local unitHiddenBuffInfo = X2Unit:UnitHiddenBuff("player", 1)
 ---```
 ---@see UNIT
 ---@see BuffInfo
@@ -529,7 +303,8 @@ function X2Unit:UnitHiddenBuffCount(unit) end
 ---Retrieves the hidden buff tooltip for the specified buff index of the unit if
 ---it exists.
 ---@param unit UNIT The unit to query.
----@param buffIndex number The hidden buff index.
+---@param buffIndex number The hidden buff index. (min: `1`)
+---@param neededInfo? BIK Optional additional information for the buff.
 ---@return BuffTooltip|nil unitHiddenBuffTooltip The hidden buff tooltip, or `nil` if not found.
 ---@nodiscard
 ---@usage
@@ -538,7 +313,7 @@ function X2Unit:UnitHiddenBuffCount(unit) end
 ---```
 ---@see UNIT
 ---@see BuffTooltip
-function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex) end
+function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex, neededInfo) end
 
 ---Retrieves the level of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
@@ -624,7 +399,7 @@ function X2Unit:UnitNameWithWorld(unit) end
 ---Retrieves the removable debuff for the specified buff index of the unit if it
 ---exists.
 ---@param unit UNIT The unit to query.
----@param deBuffIndex number The debuff index.
+---@param deBuffIndex number The debuff index. (min: `1`)
 ---@return nil removableDebuff The removable debuff tooltip (currently unimplemented).
 ---@nodiscard
 ---@usage
@@ -646,11 +421,12 @@ function X2Unit:UnitRemovableDebuff(unit, deBuffIndex) end
 ---@see UNIT
 function X2Unit:UnitRemovableDebuffCount(unit) end
 
----@TODO: Needs testing, unsure of removable debuffs.
+---@TODO: Needs testing, unsure of removable debuffs. check if neededInfo exists.
 ---Retrieves the removable debuff tooltip for the specified buff index of the
 ---unit if it exists.
 ---@param unit UNIT The unit to query.
----@param deBuffIndex number The debuff index.
+---@param deBuffIndex number The debuff index. (min: `1`)
+---@param neededInfo? BIK Optional additional information for the buff.
 ---@return nil removableDebuffTooltip The removable debuff tooltip (currently unimplemented).
 ---@nodiscard
 ---@usage
@@ -658,4 +434,4 @@ function X2Unit:UnitRemovableDebuffCount(unit) end
 ---local removableDebuffTooltip = X2Unit:UnitRemovableDebuffTooltip("player", 1)
 ---```
 ---@see UNIT
-function X2Unit:UnitRemovableDebuffTooltip(unit, deBuffIndex) end
+function X2Unit:UnitRemovableDebuffTooltip(unit, deBuffIndex, neededInfo) end

@@ -22,12 +22,6 @@ SHOP_OPEN_RANDOM_SHOP = 5        -- api/X2Store
 ---@class X2Store
 X2Store = {}                     -- api/X2Store
 
----api/X2Store
----@class ZoneInfo
----@field continentName string
----@field id number
----@field zoneGroupName string
-
 ---Retrieves a list of zone information for all zones where packs can be
 ---crafted.
 ---@return ZoneInfo[] productionZoneGroups A table of zone information for the production zone groups.

@@ -40,15 +40,7 @@ POOR_ITEM_GRADE = 1                     -- api/X2Item
 X2Item = {}                             -- api/X2Item
 
 ---api/X2Item
----@enum LINKKIND
-local LINKKIND = {
-  AUCTION   = "1",
-  COFFER    = "2",
-  GUILDBANK = "3",
-}
-
----api/X2Item
----
+---Item Information Kind
 ---Values can be added together to get more information.
 ---@alias IIK
 ---| `IIK_CATEGORY`

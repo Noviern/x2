@@ -1,0 +1,7914 @@
+---objects/WorldMap
+---@enum ZONE_CLIMATE
+local ZONE_CLIMATE = {
+  NONE      = 1,
+  TEMPERATE = 2,
+  TROPICAL  = 3,
+  SUBARCTIC = 4
+}
+
+---objects/WorldMap
+---@enum WORLD_MAP_ZOOM
+local WORLD_MAP_ZOOM = {
+  WORLD     = 1,
+  CONTINENT = 2,
+  ZONE      = 3,
+  CITY      = 4,
+}
+
+---@enum UI_LAYER
+local UI_LAYER = {
+  BACKGROUND     = "background",
+  DIALOG         = "dialog",
+  GAME           = "game",
+  HUD            = "hud",
+  NORMAL         = "normal",
+  QUESTDIRECTING = "questdirecting",
+  SYSTEM         = "system",
+  TOOLTIP        = "tooltip",
+}
+
+---@enum TAB_CORNER
+local TAB_CORNER = {
+  TOPLEFT     = "TOPLEFT",
+  TOPRIGHT    = "TOPRIGHT",
+  BOTOMLEFT   = "BOTTOMLEFT",
+  BOTTOMRIGHT = "BOTTOMRIGHT",
+}
+
+---@enum ORIENTATION
+local ORIENTATION = {
+  HORIZONTAL = "HORIZONTAL",
+  NORMAL     = "normal",
+  VERTICAL   = "VERTICAL",
+}
+
+---objects/Slot
+---@enum ITEM_GRADE_TYPE
+local ITEM_GRADE_TYPE = {
+  NONE      = 0, ---@TODO: In Message.lua this would be BASIC not NONE.
+  BAISC     = 1, ---@TODO: In Message.lua this would be CRUDE not BASIC.
+  GRAND     = 2,
+  RARE      = 3,
+  ARCANE    = 4,
+  HEROIC    = 5,
+  UNIQUE    = 6,
+  CELESTIAL = 7,
+  DIVNE     = 8,
+  EPIC      = 9,
+  LEGENDARY = 10,
+  MYTHIC    = 11,
+  ETERNAL   = 12,
+}
+
+---@enum SKILL_ALERT_STATUS_BUFF_TAG
+local SKILL_ALERT_STATUS_BUFF_TAG = {
+  STUN        = 1,
+  IMPALE      = 2,
+  STAGGER     = 3,
+  TRIP        = 4,
+  FEAR        = 5,
+  SLEEP       = 6,
+  SNARE       = 7,
+  SLOW        = 8,
+  SILENCE     = 9,
+  SHACKLE     = 10,
+  IMPRISONED  = 11, ---@TODO: Confirm this.
+  LAUNCHED    = 12,
+  FROZEN      = 13,
+  DEEP_FREEZE = 14,
+  POISON      = 15,
+  BLEED       = 16,
+  SHAKEN      = 17,
+  ENERVATED   = 18,
+  CHARMED     = 19,
+  BUBBLE      = 20,
+  PETRIFIED   = 21, ---@TODO: Confirm this.
+}
+
+---@enum BIND_TYPE
+local BIND_TYPE = {
+  NONE        = "none",
+  PET_SKILL   = "pet_skill",
+  SKILL       = "skill",
+  ITEM        = "item",
+  SLAVE_SKILL = "slave_skill",
+  BUFF        = "buff",
+  FUNCTION    = "function",
+}
+
+---objects/Slider
+---@enum SLIDER_SCROLL_TYPE
+local SLIDER_SCROLL_TYPE = {
+  VERTICAL   = 0,
+  HORIZONTAL = 1,
+}
+
+---objects/ModelView
+---@enum EYE
+local EYE = {
+  LEFT  = 1,
+  RIGHT = 2,
+  BOTH  = 3, -- LEFT, @TODO: Third eye maybe?
+}
+
+---objects/ModelView
+---@enum (key) GENDER_ID
+local GENDER_ID = {
+  [0] = "none",
+  [1] = "male",
+  [2] = "female",
+}
+
+---objects/ModelView
+---@enum GENDER
+local GENDER = {
+  [0] = "none",
+  [1] = "male",
+  [2] = "female",
+}
+
+---objects/ModelView
+---@enum (key) RACE_ID
+local RACE_ID = {
+  [0] = "none",
+  [1] = "nuian",
+  [2] = "fairy",
+  [3] = "dwarf",
+  [4] = "elf",
+  [5] = "harani",
+  [6] = "firran",
+  [7] = "returned",
+  [8] = "warborn",
+  [9] = "daru",
+}
+
+---objects/ModelView
+---@enum RACE
+local RACE = {
+  [0] = "none",
+  [1] = "nuian",
+  [2] = "fairy",
+  [3] = "dwarf",
+  [4] = "elf",
+  [5] = "harani",
+  [6] = "firran",
+  [7] = "returned",
+  [8] = "warborn",
+  [9] = "daru",
+}
+
+---objects/ModelView
+---@enum BEAUTY_SHOP_ZOOM
+local BEAUTY_SHOP_ZOOM = {
+  FIRST  = -1,
+  SECOND = 0,
+  THIRD  = 1,
+  FOURTH = 2,
+}
+
+---objects/Message
+---@enum LINKTYPE
+local LINKTYPE = {
+  CHARACTER = "character",
+  CRAFT     = "craft",
+  INVALID   = "invalid",
+  ITEM      = "item",
+  NONE      = "none",
+  QUEST     = "quest",
+  RAID      = "raid",
+  SQUAD     = "squad",
+  URL       = "url",
+}
+
+---objects/Grid
+---@enum HEADER_TYPE
+local HEADER_TYPE = {
+  LEFT = "left",
+  TOP  = "top",
+}
+
+---@enum LINE_ALIGN
+local LINE_ALIGN = {
+  left  = "left",
+  right = "right"
+}
+
+---@enum FOLDER_STATE
+local FOLDER_STATE = {
+  CLOSE = "close",
+  OPEN = "open",
+}
+
+---objects/EffectDrawable
+---@enum EFFECT_PRIORITY
+local EFFECT_PRIORITY = {
+  ALPHA  = "alpha",
+  SCALEX = "scalex",
+  ROTATE = "rotate",
+  COLORR = "colorr",
+}
+
+---objects/EffectDrawable
+---@enum MOVE_TYPE
+local MOVE_TYPE = {
+  LEFT   = "left",
+  TOP    = "top",
+  RIGHT  = "right",
+  BOTTOM = "bottom",
+  CIRCLE = "circle",
+}
+
+---objects/Combobox
+---@enum AUTOCOMPLETE_TYPE
+local AUTOCOMPLETE_TYPE = {
+  APPELLATION      = "appellation",
+  INGAMESHOPGOODS  = "ingameShopGoods",
+  ITEM             = "item",
+  ITEMFORDEBUG     = "itemForDebug",
+  ITEMTYPEFORDEBUG = "itemTypeForDebug",
+  STORE            = "store",
+}
+
+---objects/Combobox
+---@enum AUTOCOMPLETE_FILTER
+local AUTOCOMPLETE_FILTER = {
+  AUCTIONABLE   = "auctionable",
+  CRAFTMATERIAL = "craftMaterial",
+  CRAFTPRODUCT  = "craftProduct",
+  EMPTY         = "",
+}
+
+---@TODO: This is also used by Editboxbase:SetCursorColorByColorKey and Line:SetLineColorByKey so this needs to be renamed and moved.
+---objects/ColorDrawable
+---
+---ui/setting/etc_color.g
+---@enum ETC_COLOR
+local ETC_COLOR = {
+  ACTION_SLOT_STATE_IMG_ABLE              = "action_slot_state_img_able",
+  ACTION_SLOT_STATE_IMG_CAN_LEARN         = "action_slot_state_img_can_learn",
+  ACTION_SLOT_STATE_IMG_CANT_OR_NOT_LEARN =
+  "action_slot_state_img_cant_or_not_learn",
+  ACTION_SLOT_STATE_IMG_DISABLE           = "action_slot_state_img_disable",
+  COMMON_BLACK_BG                         = "common_black_bg",
+  COMMON_WHITE_BG                         = "common_white_bg",
+  CRAFT_STEP_DISABLE                      = "craft_step_disable",
+  CRAFT_STEP_ENABLE                       = "craft_step_enable",
+  EDITBOX_CURSOR_DEFAULT                  = "editbox_cursor_default",
+  EDITBOX_CURSOR_LIGHT                    = "editbox_cursor_light",
+  ICON_BUTTON_OVERLAY_BLACK               = "icon_button_overlay_black",
+  ICON_BUTTON_OVERLAY_NONE                = "icon_button_overlay_none",
+  ICON_BUTTON_OVERLAY_RED                 = "icon_button_overlay_red",
+  ICON_BUTTON_OVERLAY_YELLOW              = "icon_button_overlay_yellow",
+  LOGIN_STAGE_BLACK_BG                    = "login_stage_black_bg",
+  MAP_HP_BAR                              = "map_hp_bar",
+  MAP_HP_BAR_BG                           = "map_hp_bar_bg",
+  MARKET_PRICE_COLUMN_OVER                = "market_price_column_over",
+  MARKET_PRICE_LAST_COLUMN                = "market_price_last_column",
+  MARKET_PRICE_LINE_DAILY                 = "market_price_line_daily",
+  MARKET_PRICE_LINE_WEEKLY                = "market_price_line_weekly",
+  MARKET_PRICE_VOLUME                     = "market_price_volume",
+  MARKET_PRICT_CELL                       = "market_prict_cell",
+  QUEST_CONTENT_DIRECTING_FADE_IN         = "quest_content_directing_fade_in",
+  QUEST_CONTENT_DIRECTING_FADE_OUT        = "quest_content_directing_fade_out",
+  QUEST_CONTENT_DIRECTING_UNDER_PANEL     = "quest_content_directing_under_panel",
+  QUICK_SLOT_BG                           = "quick_slot_bg",
+  TEXTURE_CHECK_WINDOW_BG                 = "texture_check_window_bg",
+  TEXTURE_CHECK_WINDOW_DATA_LABEL         = "texture_check_window_data_label",
+  TEXTURE_CHECK_WINDOW_RECT               = "texture_check_window_rect",
+  TEXTURE_CHECK_WINDOW_TOOLTIP_BG         = "texture_check_window_tooltip_bg",
+  WEB_BROWSER_BACKGROUND                  = "web_browser_background",
+}
+
+---objects/Button
+---@enum UI_BUTTON_STATE_TEXT
+local UI_BUTTON_STATE_TEXT = {
+  NORMAL      = "NORMAL",
+  HIGHLIGHTED = "HIGHLIGHTED",
+  PUSHED      = "PUSHED",
+  DISABLED    = "DISABLED",
+}
+
+---@TODO: Move to Addon?
+---@enum MOUSE_BUTTON
+local MOUSE_BUTTON = {
+  LEFT  = "LeftButton",
+  RIGHT = "RightButton",
+}
+
+---@TODO: Not all of these may exist.
+---ui/setting/button_style.g
+---@enum BUTTON_STYLE
+local BUTTON_STYLE = {
+  ACCEPT_V                            = "accept_v",
+  ACTIONBAR_LOCK                      = "actionbar_lock",
+  ACTIONBAR_ROTATE                    = "actionbar_rotate",
+  ACTIONBAR_UNLOCK                    = "actionbar_unlock",
+  ALL_ABILITY                         = "all_ability",
+  ALL_REPAIR                          = "all_repair",
+  ASSASSIN                            = "assassin",
+  ASSASSIN_SELECTED                   = "assassin_selected",
+  AUCTION_POST_BIND                   = "auction_post_bind",
+  AUCTION_SUCCESSOR                   = "auction_successor",
+  AUCTION_SUCCESSOR_GREY              = "auction_successor_grey",
+  BANNER_CLOSE                        = "banner_close",
+  BTN_CLOSE_DEFAULT                   = "btn_close_default",
+  BTN_CLOSE_MINI                      = "btn_close_mini",
+  BTN_RAID_RECRUIT                    = "btn_raid_recruit",
+  BUTLER_CHANGE_LOOK                  = "butler_change_look",
+  BUTTON_COMMON_BOOK                  = "button_common_book",
+  BUTTON_COMMON_OPTION                = "button_common_option",
+  BUTTON_COMPLETE                     = "button_complete",
+  BUTTON_DARU                         = "button_daru",
+  BUTTON_REQUEST                      = "button_request",
+  BUTTON_SEARCH                       = "button_search",
+  CANCEL_FIX_ITEM                     = "cancel_fix_item",
+  CANCEL_MINI                         = "cancel_mini",
+  CANCEL_SEARCH_IN_INVENTORY          = "cancel_search_in_inventory",
+  CHAR_SELECT_PAGE_REPRESENT_CHAR     = "char_select_page_represent_char",
+  CHARACTER                           = "character",
+  CHARACTER_EQUIP_CLOSE               = "character_equip_close",
+  CHARACTER_EQUIP_OPEN                = "character_equip_open",
+  CHARACTER_INFO_BLESS_UTHSTIN        = "character_info_bless_uthstin",
+  CHARACTER_INFO_BTN_SHOP             = "character_info_btn_shop",
+  CHARACTER_INFO_CHANGE               = "character_info_change",
+  CHARACTER_INFO_DETAIL_BTN           = "character_info_detail_btn",
+  CHARACTER_LOCK_OFF                  = "character_lock_off",
+  CHARACTER_LOCK_ON                   = "character_lock_on",
+  CHARACTER_SEARCH                    = "character_search",
+  CHARACTER_SLOT_CREATED              = "character_slot_created",
+  CHARACTER_SLOT_CREATED_RED          = "character_slot_created_red",
+  CHARACTER_SLOT_CREATED_RED_SELECTED = "character_slot_created_red_selected",
+  CHARACTER_SLOT_CREATED_SELECTED     = "character_slot_created_selected",
+  CHARACTER_SLOT_ENCHANT              = "character_slot_enchant",
+  CHARACTER_SLOT_EQUIPMENT            = "character_slot_equipment",
+  CHARACTER_SLOT_IMPOSSIBLE           = "character_slot_impossible",
+  CHARACTER_SLOT_POSSIBLE             = "character_slot_possible",
+  CHARACTER_SWAP                      = "character_swap",
+  CHARACTER_SWAP_ON                   = "character_swap_on",
+  CHAT_TAB_SELECTED                   = "chat_tab_selected",
+  CHAT_TAB_UNSELECTED                 = "chat_tab_unselected",
+  COMBAT_RESOURCE_CLOSE               = "combat_resource_close",
+  COMBAT_RESOURCE_OPEN                = "combat_resource_open",
+  COMMON_BACK                         = "common_back",
+  COMMON_HUD                          = "common_hud",
+  COMMON_NEW_CLOSE                    = "common_new_close",
+  CONFIG                              = "config",
+  CUSTOMIZING_FREEZE                  = "customizing_freeze",
+  CUSTOMIZING_LOAD                    = "customizing_load",
+  CUSTOMIZING_RESET                   = "customizing_reset",
+  CUSTOMIZING_SAVE                    = "customizing_save",
+  CUSTOMIZING_SCROLL                  = "customizing_scroll",
+  CUSTOMIZING_SCROLL_DOWN             = "customizing_scroll_down",
+  CUSTOMIZING_SCROLL_UP               = "customizing_scroll_up",
+  CUSTOMIZING_SLIDER                  = "customizing_slider",
+  CUSTOMIZING_TAB_SELECTED            = "customizing_tab_selected",
+  CUSTOMIZING_TAB_UNSELECTED          = "customizing_tab_unselected",
+  DEPOSIT_WITHDRAWAL                  = "deposit_withdrawal",
+  DOWN_ARROW                          = "down_arrow",
+  DWARF                               = "dwarf",
+  DWARF_SELECTED                      = "dwarf_selected",
+  ELF                                 = "elf",
+  ELF_SELECTED                        = "elf_selected",
+  EQUIP_SCROLL_BUTTON_DOWN            = "equip_scroll_button_down",
+  EQUIP_SCROLL_BUTTON_UP              = "equip_scroll_button_up",
+  EQUIPMENT_MAP                       = "equipment_map",
+  ESC                                 = "esc",
+  EXIT                                = "exit",
+  EXPANSION                           = "expansion",
+  EXPANSION_SMALL                     = "expansion_small",
+  EXPEDITION_WAR_ALARM                = "expedition_war_alarm",
+  FAIRY                               = "fairy",
+  FAIRY_SELECTED                      = "fairy_selected",
+  FIGHT                               = "fight",
+  FIGHT_SELECTED                      = "fight_selected",
+  FIRRAN                              = "firran",
+  FIRRAN_SELECTED                     = "firran_selected",
+  FIRST_PAGE                          = "first_page",
+  FIX                                 = "fix",
+  FIX_ITEM                            = "fix_item",
+  GRID_FOLDER_DOWN_ARROW              = "grid_folder_down_arrow",
+  GRID_FOLDER_RIGHT_ARROW             = "grid_folder_right_arrow",
+  GRID_FOLDER_UP_ARROW                = "grid_folder_up_arrow",
+  HARANI                              = "harani",
+  HARANI_SELECTED                     = "harani_selected",
+  HATRED                              = "hatred",
+  HATRED_SELECTED                     = "hatred_selected",
+  HOUSING_DEMOLISH                    = "housing_demolish",
+  HOUSING_REMOVE                      = "housing_remove",
+  HOUSING_ROTATION                    = "housing_rotation",
+  HOUSING_SALE                        = "housing_sale",
+  HOUSING_UCC                         = "housing_ucc",
+  HUD_BTN_ARCHELIFE_OFF               = "hud_btn_archelife_off",
+  HUD_BTN_CHAT_ADD_TAB                = "hud_btn_chat_add_tab",
+  HUD_BTN_CHAT_SCROLL_DOWN_BOTTOM     = "hud_btn_chat_scroll_down_bottom",
+  HUD_BTN_EVENTCENTER                 = "hud_btn_eventcenter",
+  HUD_BTN_HERO_REPUTATION             = "hud_btn_hero_reputation",
+  HUD_BTN_IME_ENGLISH                 = "hud_btn_ime_english",
+  HUD_BTN_IME_KOREA                   = "hud_btn_ime_korea",
+  HUD_BTN_INGAMESHOP                  = "hud_btn_ingameshop",
+  HUD_BTN_INSTANCE                    = "hud_btn_instance",
+  HUD_BTN_MERCHANT                    = "hud_btn_merchant",
+  HUD_BTN_URL_LINK                    = "hud_btn_url_link",
+  HUD_INSTANCE                        = "hud_instance",
+  INGAMESHOP_BEAUTYSHOP               = "ingameshop_beautyshop",
+  INGAMESHOP_BUY                      = "ingameshop_buy",
+  INGAMESHOP_CART                     = "ingameshop_cart",
+  INGAMESHOP_CHARGE_CASH              = "ingameshop_charge_cash",
+  INGAMESHOP_GENDER_TRANSFER          = "ingameshop_gender_transfer",
+  INGAMESHOP_PRESENT                  = "ingameshop_present",
+  INSTANCE_OUT                        = "instance_out",
+  INSTANCE_REENTRY                    = "instance_reentry",
+  INVENTORY_SORT                      = "inventory_sort",
+  ITEM_ENCHANT                        = "item_enchant",
+  ITEM_GUIDE                          = "item_guide",
+  ITEM_LOCK_IN_BAG                    = "item_lock_in_bag",
+  LAST_PAGE                           = "last_page",
+  LEFT_ARROW                          = "left_arrow",
+  LIST                                = "list",
+  LOCATION                            = "location",
+  LOCK_EQUIP_ITEM                     = "lock_equip_item",
+  LOCK_ITEM                           = "lock_item",
+  LOGIN_STAGE_CHARACTER_CREATE        = "login_stage_character_create",
+  LOGIN_STAGE_ENTER_WORLD             = "login_stage_enter_world",
+  LOGIN_STAGE_EXIT_GAME               = "login_stage_exit_game",
+  LOGIN_STAGE_GAME_START              = "login_stage_game_start",
+  LOGIN_STAGE_MODEL_CHANGE            = "login_stage_model_change",
+  LOGIN_STAGE_OPTION_GAME             = "login_stage_option_game",
+  LOGIN_STAGE_STAFF                   = "login_stage_staff",
+  LOGIN_STAGE_TEXT_DEFAULT            = "login_stage_text_default",
+  LOGIN_STAGE_TEXT_SMALL              = "login_stage_text_small",
+  LOGIN_STAGE_USER_UI                 = "login_stage_user_ui",
+  LOOK_CONVERT                        = "look_convert",
+  LOOT_GACHA                          = "loot_gacha",
+  LOVE                                = "love",
+  LOVE_SELECTED                       = "love_selected",
+  MADNESS                             = "madness",
+  MADNESS_SELECTED                    = "madness_selected",
+  MAGIC                               = "magic",
+  MAGIC_SELECTED                      = "magic_selected",
+  MAIL_ALL_MAIL_DELETE                = "mail_all_mail_delete",
+  MAIL_READ_MAIL_DELETE               = "mail_read_mail_delete",
+  MAIL_RECEIVE_ALL_ITEM               = "mail_receive_all_item",
+  MAIL_RECEIVE_MONEY                  = "mail_receive_money",
+  MAIL_SELECTED_DELETE                = "mail_selected_delete",
+  MAIL_TAKE                           = "mail_take",
+  MAN                                 = "man",
+  MAN_SELECTED                        = "man_selected",
+  MAP_ALPHA                           = "map_alpha",
+  MAP_ALPHA_SELECT                    = "map_alpha_select",
+  MAP_ERASER                          = "map_eraser",
+  MAP_POSITION                        = "map_position",
+  MENU                                = "menu",
+  MINIMAP_OFF                         = "minimap_off",
+  MINIMAP_ON                          = "minimap_on",
+  MINIMAP_PING                        = "minimap_ping",
+  MINIMAP_PLAYERCENTER                = "minimap_playercenter",
+  MINIMAP_RESIZE                      = "minimap_resize",
+  MINIMAP_SUBOPTION                   = "minimap_suboption",
+  MINIMAP_ZOOMIN                      = "minimap_zoomin",
+  MINIMAP_ZOOMOUT                     = "minimap_zoomout",
+  MINUS                               = "minus",
+  MODELVIEW_ROTATE_LEFT               = "modelview_rotate_left",
+  MODELVIEW_ROTATE_RIGHT              = "modelview_rotate_right",
+  MY_ABILITY                          = "my_ability",
+  NEXT_PAGE                           = "next_page",
+  NEXT_PAGE_ACTION_BAR                = "next_page_action_bar",
+  NEXT_PAGE_TUTORIAL                  = "next_page_tutorial",
+  NUIAN                               = "nuian",
+  NUIAN_SELECTED                      = "nuian_selected",
+  OPEN_BATTLEFIELD                    = "open_battlefield",
+  PART_REPAIR                         = "part_repair",
+  PLAY                                = "play",
+  PLEASURE                            = "pleasure",
+  PLEASURE_SELECTED                   = "pleasure_selected",
+  PLUS                                = "plus",
+  PORTAL_RENAME                       = "portal_rename",
+  PORTAL_SPAWN                        = "portal_spawn",
+  PREMIUM_BUY_IN_CHAR_SEL_PAGE        = "premium_buy_in_char_sel_page",
+  PREV_PAGE                           = "prev_page",
+  PREV_PAGE_ACTION_BAR                = "prev_page_action_bar",
+  PREV_PAGE_BACK                      = "prev_page_back",
+  PREV_PAGE_TUTORIAL                  = "prev_page_tutorial",
+  PRICE                               = "price",
+  QUEST_CLOSE                         = "quest_close",
+  QUEST_CUTSCENE_CLOSE                = "quest_cutscene_close",
+  QUEST_OPEN                          = "quest_open",
+  QUESTION_MARK                       = "question_mark",
+  RAID_RECALL                         = "raid_recall",
+  RAID_RECRUIT_ALARM                  = "raid_recruit_alarm",
+  RANDOMBOX                           = "randombox",
+  READY_TO_SIEGE_ALARM                = "ready_to_siege_alarm",
+  RECEIVE_ITEM                        = "receive_item",
+  REJECT_X                            = "reject_x",
+  REPAIR                              = "repair",
+  REPORT                              = "report",
+  RIGHT_ARROW                         = "right_arrow",
+  ROSTER_SETTING                      = "roster_setting",
+  SAVE                                = "save",
+  SEARCH_MINI                         = "search_mini",
+  SEARCH_MINI_GREEN                   = "search_mini_green",
+  SIEGE_WAR_ALARM                     = "siege_war_alarm",
+  SLIDER_SCROLL_BUTTON_DOWN           = "slider_scroll_button_down",
+  SLIDER_SCROLL_BUTTON_UP             = "slider_scroll_button_up",
+  SQUAD_MINI_VIEW_CLOSE               = "squad_mini_view_close",
+  SQUAD_MINI_VIEW_OPEN                = "squad_mini_view_open",
+  SURVEY_FORM_ALARM                   = "survey_form_alarm",
+  TEXT_DEFAULT                        = "text_default",
+  TEXT_DEFAULT_SMALL                  = "text_default_small",
+  TRADE_CHECK_GREEN                   = "trade_check_green",
+  TRADE_CHECK_YELLOW                  = "trade_check_yellow",
+  UNLOCK_EQUIP_ITEM                   = "unlock_equip_item",
+  UNLOCK_ITEM                         = "unlock_item",
+  UP_ARROW                            = "up_arrow",
+  UTHSTIN_STAT_MAX_EXPAND             = "uthstin_stat_max_expand",
+  WARBORN                             = "warborn",
+  WARBORN_SELECTED                    = "warborn_selected",
+  WASTEBASKET_SHAPE                   = "wastebasket_shape",
+  WASTEBASKET_SHAPE_SMALL             = "wastebasket_shape_small",
+  WILD                                = "wild",
+  WILD_SELECTED                       = "wild_selected",
+  WOMAN                               = "woman",
+  WOMAN_SELECTED                      = "woman_selected",
+  WRITE                               = "write",
+  ZONE_PERMISSION_OUT                 = "zone_permission_out",
+  ZONE_PERMISSION_WAIT                = "zone_permission_wait",
+}
+
+---objects/Avi
+---@enum AVI_PATH
+local AVI_PATH = {
+  ALL_01_RECRUIT        = "objects/machinima/avi/all_01_recruit.avi",
+  ALL_02_MEMORY         = "objects/machinima/avi/all_02_memory.avi",
+  ALL_04_SON            = "objects/machinima/avi/all_04_son.avi",
+  ALL_15_PLATEAU        = "objects/machinima/avi/all_15_plateau.avi",
+  ALL_16_RIVER          = "objects/machinima/avi/all_16_river.avi",
+  ALL_17_POST           = "objects/machinima/avi/all_17_post.avi",
+  ALL_19_INVADE         = "objects/machinima/avi/all_19_invade.avi",
+  ALL_20_POLLUTE        = "objects/machinima/avi/all_20_pollute.avi",
+  ALL_21_PURIFY_C12     = "objects/machinima/avi/all_21_purify_c12.avi",
+  ALL_21_PURIFY_C43     = "objects/machinima/avi/all_21_purify_c43.avi",
+  ALL_23_SANDGLASS_01   = "objects/machinima/avi/all_23_sandglass_01.avi",
+  ALL_23_SANDGLASS_02   = "objects/machinima/avi/all_23_sandglass_02.avi",
+  ALL_24_GATE           = "objects/machinima/avi/all_24_gate.avi",
+  ALL_29_ARRIVAL        = "objects/machinima/avi/all_29_arrival.avi",
+  ALL_35_DEATH01        = "objects/machinima/avi/all_35_death01.avi",
+  ALL_41_ABBYS          = "objects/machinima/avi/all_41_abbys.avi",
+  ALL_42_ALTAR          = "objects/machinima/avi/all_42_altar.avi",
+  BLACK                 = "objects/machinima/avi/black.avi",
+  CI                    = "objects/machinima/avi/ci.avi",
+  DW_03_GOLEM_AVI       = "objects/machinima/avi/dw_03_golem_avi.avi",
+  ETC_01_ANTHALON       = "objects/machinima/avi/etc_01_anthalon.avi",
+  ETC_02_KRAKEN         = "objects/machinima/avi/etc_02_kraken.avi",
+  ETC_03_REVI           = "objects/machinima/avi/etc_03_revi.avi",
+  ETC_04_KRAKEN         = "objects/machinima/avi/etc_04_kraken.avi",
+  ETC_05_LEVI           = "objects/machinima/avi/etc_05_levi.avi",
+  ETC_06_LIBRARY_1      = "objects/machinima/avi/etc_06_library_1.avi",
+  ETC_06_LIBRARY_2      = "objects/machinima/avi/etc_06_library_2.avi",
+  ETC_06_LIBRARY_3      = "objects/machinima/avi/etc_06_library_3.avi",
+  ETC_06_LIBRARY_4      = "objects/machinima/avi/etc_06_library_4.avi",
+  ETC_07_FEAST_00       = "objects/machinima/avi/etc_07_feast_00.avi",
+  ETC_07_FEAST_01       = "objects/machinima/avi/etc_07_feast_01.avi",
+  ETC_07_FEAST_02       = "objects/machinima/avi/etc_07_feast_02.avi",
+  ETC_07_FEAST_03       = "objects/machinima/avi/etc_07_feast_03.avi",
+  ETC_07_FEAST_04       = "objects/machinima/avi/etc_07_feast_04.avi",
+  ETC_09_HEIR           = "objects/machinima/avi/etc_09_heir.avi",
+  ETC_10_NUIA           = "objects/machinima/avi/etc_10_nuia.avi",
+  ETC_10_NUIA_SOUND     = "objects/machinima/avi/etc_10_nuia_sound.avi",
+  ETC_11_HARIHARA       = "objects/machinima/avi/etc_11_harihara.avi",
+  ETC_11_HARIHARA_SOUND = "objects/machinima/avi/etc_11_harihara_sound.avi",
+  ETC_12_PIRATE         = "objects/machinima/avi/etc_12_pirate.avi",
+  ETC_12_PIRATE_SOUND   = "objects/machinima/avi/etc_12_pirate_sound.avi",
+  ETC_14_KADUM          = "objects/machinima/avi/etc_14_kadum.avi",
+  ETC_15_SURVIVOR       = "objects/machinima/avi/etc_15_survivor.avi",
+  ID_300_01             = "objects/machinima/avi/id_300_01.avi",
+  ID_300_06_DW          = "objects/machinima/avi/id_300_06_dw.avi",
+  ID_300_06_EL          = "objects/machinima/avi/id_300_06_el.avi",
+  ID_300_06_FE          = "objects/machinima/avi/id_300_06_fe.avi",
+  ID_300_06_HA          = "objects/machinima/avi/id_300_06_ha.avi",
+  ID_300_06_NU          = "objects/machinima/avi/id_300_06_nu.avi",
+  OP_EL                 = "objects/machinima/avi/op_el.avi",
+  OP_FE                 = "objects/machinima/avi/op_fe.avi",
+  OP_HA                 = "objects/machinima/avi/op_ha.avi",
+  OP_NU                 = "objects/machinima/avi/op_nu.avi",
+  OP_START              = "objects/machinima/avi/op_start.avi",
+  SL_ALL_01             = "objects/machinima/avi/sl_all_01.avi",
+  SL_ALL_02             = "objects/machinima/avi/sl_all_02.avi",
+  SL_ALL_03             = "objects/machinima/avi/sl_all_03.avi",
+  SL_ALL_04             = "objects/machinima/avi/sl_all_04.avi",
+  SL_ALL_05             = "objects/machinima/avi/sl_all_05.avi",
+  SL_ALL_06             = "objects/machinima/avi/sl_all_06.avi",
+  SL_ALL_07             = "objects/machinima/avi/sl_all_07.avi",
+  SL_ALL_07_WA          = "objects/machinima/avi/sl_all_07_wa.avi",
+  SL_ALL_08             = "objects/machinima/avi/sl_all_08.avi",
+  SL_ALL_09             = "objects/machinima/avi/sl_all_09.avi",
+  SL_ALL_10             = "objects/machinima/avi/sl_all_10.avi",
+  SL_ALL_11             = "objects/machinima/avi/sl_all_11.avi",
+  SL_ALL_12             = "objects/machinima/avi/sl_all_12.avi",
+  SL_ALL_13             = "objects/machinima/avi/sl_all_13.avi",
+  SL_ALL_14             = "objects/machinima/avi/sl_all_14.avi",
+  SL_ALL_15             = "objects/machinima/avi/sl_all_15.avi",
+  SL_ALL_16             = "objects/machinima/avi/sl_all_16.avi",
+  SL_DW_001             = "objects/machinima/avi/sl_dw_001.avi",
+  SL_DW_002             = "objects/machinima/avi/sl_dw_002.avi",
+  SL_DW_003             = "objects/machinima/avi/sl_dw_003.avi",
+  SL_DW_004             = "objects/machinima/avi/sl_dw_004.avi",
+  SL_DW_005             = "objects/machinima/avi/sl_dw_005.avi",
+  SL_DW_006             = "objects/machinima/avi/sl_dw_006.avi",
+  SL_DW_007             = "objects/machinima/avi/sl_dw_007.avi",
+  SL_DW_008             = "objects/machinima/avi/sl_dw_008.avi",
+  SL_EL_001             = "objects/machinima/avi/sl_el_001.avi",
+  SL_EL_002             = "objects/machinima/avi/sl_el_002.avi",
+  SL_EL_003             = "objects/machinima/avi/sl_el_003.avi",
+  SL_EL_004             = "objects/machinima/avi/sl_el_004.avi",
+  SL_EL_005             = "objects/machinima/avi/sl_el_005.avi",
+  SL_EL_007             = "objects/machinima/avi/sl_el_007.avi",
+  SL_EL_008             = "objects/machinima/avi/sl_el_008.avi",
+  SL_EL_009             = "objects/machinima/avi/sl_el_009.avi",
+  SL_EL_010             = "objects/machinima/avi/sl_el_010.avi",
+  SL_EL_011             = "objects/machinima/avi/sl_el_011.avi",
+  SL_EL_012             = "objects/machinima/avi/sl_el_012.avi",
+  SL_EL_013             = "objects/machinima/avi/sl_el_013.avi",
+  SL_EL_014             = "objects/machinima/avi/sl_el_014.avi",
+  SL_EL_015             = "objects/machinima/avi/sl_el_015.avi",
+  SL_EL_016             = "objects/machinima/avi/sl_el_016.avi",
+  SL_EL_017             = "objects/machinima/avi/sl_el_017.avi",
+  SL_EL_018             = "objects/machinima/avi/sl_el_018.avi",
+  SL_EL_019             = "objects/machinima/avi/sl_el_019.avi",
+  SL_EL_021             = "objects/machinima/avi/sl_el_021.avi",
+  SL_EL_022             = "objects/machinima/avi/sl_el_022.avi",
+  SL_EL_023             = "objects/machinima/avi/sl_el_023.avi",
+  SL_EL_024             = "objects/machinima/avi/sl_el_024.avi",
+  SL_EL_028             = "objects/machinima/avi/sl_el_028.avi",
+  SL_FE_001             = "objects/machinima/avi/sl_fe_001.avi",
+  SL_FE_002             = "objects/machinima/avi/sl_fe_002.avi",
+  SL_FE_003             = "objects/machinima/avi/sl_fe_003.avi",
+  SL_FE_004             = "objects/machinima/avi/sl_fe_004.avi",
+  SL_FE_005             = "objects/machinima/avi/sl_fe_005.avi",
+  SL_FE_006             = "objects/machinima/avi/sl_fe_006.avi",
+  SL_FE_007             = "objects/machinima/avi/sl_fe_007.avi",
+  SL_FE_008             = "objects/machinima/avi/sl_fe_008.avi",
+  SL_FE_009             = "objects/machinima/avi/sl_fe_009.avi",
+  SL_FE_010             = "objects/machinima/avi/sl_fe_010.avi",
+  SL_FE_011             = "objects/machinima/avi/sl_fe_011.avi",
+  SL_FE_012             = "objects/machinima/avi/sl_fe_012.avi",
+  SL_FE_013             = "objects/machinima/avi/sl_fe_013.avi",
+  SL_FE_014             = "objects/machinima/avi/sl_fe_014.avi",
+  SL_FE_015             = "objects/machinima/avi/sl_fe_015.avi",
+  SL_FE_016             = "objects/machinima/avi/sl_fe_016.avi",
+  SL_FE_017             = "objects/machinima/avi/sl_fe_017.avi",
+  SL_FE_018             = "objects/machinima/avi/sl_fe_018.avi",
+  SL_FE_019             = "objects/machinima/avi/sl_fe_019.avi",
+  SL_FE_020             = "objects/machinima/avi/sl_fe_020.avi",
+  SL_FE_021             = "objects/machinima/avi/sl_fe_021.avi",
+  SL_FE_022             = "objects/machinima/avi/sl_fe_022.avi",
+  SL_FE_023             = "objects/machinima/avi/sl_fe_023.avi",
+  SL_FE_024             = "objects/machinima/avi/sl_fe_024.avi",
+  SL_FE_028             = "objects/machinima/avi/sl_fe_028.avi",
+  SL_FE_029             = "objects/machinima/avi/sl_fe_029.avi",
+  SL_HA_001             = "objects/machinima/avi/sl_ha_001.avi",
+  SL_HA_002             = "objects/machinima/avi/sl_ha_002.avi",
+  SL_HA_003             = "objects/machinima/avi/sl_ha_003.avi",
+  SL_HA_004             = "objects/machinima/avi/sl_ha_004.avi",
+  SL_HA_005             = "objects/machinima/avi/sl_ha_005.avi",
+  SL_HA_006             = "objects/machinima/avi/sl_ha_006.avi",
+  SL_HA_007             = "objects/machinima/avi/sl_ha_007.avi",
+  SL_HA_009             = "objects/machinima/avi/sl_ha_009.avi",
+  SL_HA_010             = "objects/machinima/avi/sl_ha_010.avi",
+  SL_HA_011             = "objects/machinima/avi/sl_ha_011.avi",
+  SL_HA_012             = "objects/machinima/avi/sl_ha_012.avi",
+  SL_HA_013             = "objects/machinima/avi/sl_ha_013.avi",
+  SL_HA_014             = "objects/machinima/avi/sl_ha_014.avi",
+  SL_HA_015             = "objects/machinima/avi/sl_ha_015.avi",
+  SL_HA_016             = "objects/machinima/avi/sl_ha_016.avi",
+  SL_HA_017             = "objects/machinima/avi/sl_ha_017.avi",
+  SL_HA_018             = "objects/machinima/avi/sl_ha_018.avi",
+  SL_HA_019             = "objects/machinima/avi/sl_ha_019.avi",
+  SL_HA_020             = "objects/machinima/avi/sl_ha_020.avi",
+  SL_HA_022             = "objects/machinima/avi/sl_ha_022.avi",
+  SL_HA_023             = "objects/machinima/avi/sl_ha_023.avi",
+  SL_HA_024             = "objects/machinima/avi/sl_ha_024.avi",
+  SL_HA_028             = "objects/machinima/avi/sl_ha_028.avi",
+  SL_HA_029             = "objects/machinima/avi/sl_ha_029.avi",
+  SL_NU_001             = "objects/machinima/avi/sl_nu_001.avi",
+  SL_NU_002             = "objects/machinima/avi/sl_nu_002.avi",
+  SL_NU_004             = "objects/machinima/avi/sl_nu_004.avi",
+  SL_NU_005             = "objects/machinima/avi/sl_nu_005.avi",
+  SL_NU_006             = "objects/machinima/avi/sl_nu_006.avi",
+  SL_NU_007             = "objects/machinima/avi/sl_nu_007.avi",
+  SL_NU_008             = "objects/machinima/avi/sl_nu_008.avi",
+  SL_NU_010             = "objects/machinima/avi/sl_nu_010.avi",
+  SL_NU_011             = "objects/machinima/avi/sl_nu_011.avi",
+  SL_NU_012             = "objects/machinima/avi/sl_nu_012.avi",
+  SL_NU_013             = "objects/machinima/avi/sl_nu_013.avi",
+  SL_NU_014             = "objects/machinima/avi/sl_nu_014.avi",
+  SL_NU_015             = "objects/machinima/avi/sl_nu_015.avi",
+  SL_NU_016             = "objects/machinima/avi/sl_nu_016.avi",
+  SL_NU_017             = "objects/machinima/avi/sl_nu_017.avi",
+  SL_NU_018             = "objects/machinima/avi/sl_nu_018.avi",
+  SL_NU_019             = "objects/machinima/avi/sl_nu_019.avi",
+  SL_NU_020             = "objects/machinima/avi/sl_nu_020.avi",
+  SL_NU_021             = "objects/machinima/avi/sl_nu_021.avi",
+  SL_NU_024             = "objects/machinima/avi/sl_nu_024.avi",
+  SL_WB_001             = "objects/machinima/avi/sl_wb_001.avi",
+  SL_WB_002             = "objects/machinima/avi/sl_wb_002.avi",
+  SL_WB_003             = "objects/machinima/avi/sl_wb_003.avi",
+  SL_WB_004             = "objects/machinima/avi/sl_wb_004.avi",
+  SL_WB_005             = "objects/machinima/avi/sl_wb_005.avi",
+  SL_WB_006             = "objects/machinima/avi/sl_wb_006.avi",
+  SL_WB_007             = "objects/machinima/avi/sl_wb_007.avi",
+  SL_WB_008             = "objects/machinima/avi/sl_wb_008.avi",
+  WB_06_FAIL            = "objects/machinima/avi/wb_06_fail.avi",
+  WB_07_DREAM           = "objects/machinima/avi/wb_07_dream.avi",
+  WB_08_PRAY            = "objects/machinima/avi/wb_08_pray.avi",
+}
+
+---@enum UNIT
+local UNIT = {
+  PLAYER       = "player",
+  PLAYERPET1   = "playerpet1", ---mount
+  PLAYERPET2   = "playerpet2", ---pet
+  SLAVE        = "slave",
+  TARGET       = "target",
+  TARGETTARGET = "targettarget",
+  WATCHTARGET  = "watchtarget",
+  TEAM1        = "team1", -- team = the current raid/can be co raid
+  TEAM2        = "team2",
+  TEAM3        = "team3",
+  TEAM4        = "team4",
+  TEAM5        = "team5",
+  TEAM6        = "team6",
+  TEAM7        = "team7",
+  TEAM8        = "team8",
+  TEAM9        = "team9",
+  TEAM10       = "team10",
+  TEAM11       = "team11",
+  TEAM12       = "team12",
+  TEAM13       = "team13",
+  TEAM14       = "team14",
+  TEAM15       = "team15",
+  TEAM16       = "team16",
+  TEAM17       = "team17",
+  TEAM18       = "team18",
+  TEAM19       = "team19",
+  TEAM20       = "team20",
+  TEAM21       = "team21",
+  TEAM22       = "team22",
+  TEAM23       = "team23",
+  TEAM24       = "team24",
+  TEAM25       = "team25",
+  TEAM26       = "team26",
+  TEAM27       = "team27",
+  TEAM28       = "team28",
+  TEAM29       = "team29",
+  TEAM30       = "team30",
+  TEAM31       = "team31",
+  TEAM32       = "team32",
+  TEAM33       = "team33",
+  TEAM34       = "team34",
+  TEAM35       = "team35",
+  TEAM36       = "team36",
+  TEAM37       = "team37",
+  TEAM38       = "team38",
+  TEAM39       = "team39",
+  TEAM40       = "team40",
+  TEAM41       = "team41",
+  TEAM42       = "team42",
+  TEAM43       = "team43",
+  TEAM44       = "team44",
+  TEAM45       = "team45",
+  TEAM46       = "team46",
+  TEAM47       = "team47",
+  TEAM48       = "team48",
+  TEAM49       = "team49",
+  TEAM50       = "team50",
+  TEAM_1_1     = "team_1_1",
+  TEAM_1_2     = "team_1_2",
+  TEAM_1_3     = "team_1_3",
+  TEAM_1_4     = "team_1_4",
+  TEAM_1_5     = "team_1_5",
+  TEAM_1_6     = "team_1_6",
+  TEAM_1_7     = "team_1_7",
+  TEAM_1_8     = "team_1_8",
+  TEAM_1_9     = "team_1_9",
+  TEAM_1_10    = "team_1_10",
+  TEAM_1_11    = "team_1_11",
+  TEAM_1_12    = "team_1_12",
+  TEAM_1_13    = "team_1_13",
+  TEAM_1_14    = "team_1_14",
+  TEAM_1_15    = "team_1_15",
+  TEAM_1_16    = "team_1_16",
+  TEAM_1_17    = "team_1_17",
+  TEAM_1_18    = "team_1_18",
+  TEAM_1_19    = "team_1_19",
+  TEAM_1_20    = "team_1_20",
+  TEAM_1_21    = "team_1_21",
+  TEAM_1_22    = "team_1_22",
+  TEAM_1_23    = "team_1_23",
+  TEAM_1_24    = "team_1_24",
+  TEAM_1_25    = "team_1_25",
+  TEAM_1_26    = "team_1_26",
+  TEAM_1_27    = "team_1_27",
+  TEAM_1_28    = "team_1_28",
+  TEAM_1_29    = "team_1_29",
+  TEAM_1_30    = "team_1_30",
+  TEAM_1_31    = "team_1_31",
+  TEAM_1_32    = "team_1_32",
+  TEAM_1_33    = "team_1_33",
+  TEAM_1_34    = "team_1_34",
+  TEAM_1_35    = "team_1_35",
+  TEAM_1_36    = "team_1_36",
+  TEAM_1_37    = "team_1_37",
+  TEAM_1_38    = "team_1_38",
+  TEAM_1_39    = "team_1_39",
+  TEAM_1_40    = "team_1_40",
+  TEAM_1_41    = "team_1_41",
+  TEAM_1_42    = "team_1_42",
+  TEAM_1_43    = "team_1_43",
+  TEAM_1_44    = "team_1_44",
+  TEAM_1_45    = "team_1_45",
+  TEAM_1_46    = "team_1_46",
+  TEAM_1_47    = "team_1_47",
+  TEAM_1_48    = "team_1_48",
+  TEAM_1_49    = "team_1_49",
+  TEAM_1_50    = "team_1_50",
+  TEAM_2_1     = "team_2_1",
+  TEAM_2_2     = "team_2_2",
+  TEAM_2_3     = "team_2_3",
+  TEAM_2_4     = "team_2_4",
+  TEAM_2_5     = "team_2_5",
+  TEAM_2_6     = "team_2_6",
+  TEAM_2_7     = "team_2_7",
+  TEAM_2_8     = "team_2_8",
+  TEAM_2_9     = "team_2_9",
+  TEAM_2_10    = "team_2_10",
+  TEAM_2_11    = "team_2_11",
+  TEAM_2_12    = "team_2_12",
+  TEAM_2_13    = "team_2_13",
+  TEAM_2_14    = "team_2_14",
+  TEAM_2_15    = "team_2_15",
+  TEAM_2_16    = "team_2_16",
+  TEAM_2_17    = "team_2_17",
+  TEAM_2_18    = "team_2_18",
+  TEAM_2_19    = "team_2_19",
+  TEAM_2_20    = "team_2_20",
+  TEAM_2_21    = "team_2_21",
+  TEAM_2_22    = "team_2_22",
+  TEAM_2_23    = "team_2_23",
+  TEAM_2_24    = "team_2_24",
+  TEAM_2_25    = "team_2_25",
+  TEAM_2_26    = "team_2_26",
+  TEAM_2_27    = "team_2_27",
+  TEAM_2_28    = "team_2_28",
+  TEAM_2_29    = "team_2_29",
+  TEAM_2_30    = "team_2_30",
+  TEAM_2_31    = "team_2_31",
+  TEAM_2_32    = "team_2_32",
+  TEAM_2_33    = "team_2_33",
+  TEAM_2_34    = "team_2_34",
+  TEAM_2_35    = "team_2_35",
+  TEAM_2_36    = "team_2_36",
+  TEAM_2_37    = "team_2_37",
+  TEAM_2_38    = "team_2_38",
+  TEAM_2_39    = "team_2_39",
+  TEAM_2_40    = "team_2_40",
+  TEAM_2_41    = "team_2_41",
+  TEAM_2_42    = "team_2_42",
+  TEAM_2_43    = "team_2_43",
+  TEAM_2_44    = "team_2_44",
+  TEAM_2_45    = "team_2_45",
+  TEAM_2_46    = "team_2_46",
+  TEAM_2_47    = "team_2_47",
+  TEAM_2_48    = "team_2_48",
+  TEAM_2_49    = "team_2_49",
+  TEAM_2_50    = "team_2_50",
+}
+
+---@enum KEYBOARD_LAYOUT
+local KEYBOARD_LAYOUT = {
+  NONE     = "",
+  KOREAN   = "KOREAN",
+  JAPANESE = "JAPANESE"
+}
+
+---@enum (key) LOCALE_INDEX
+local LOCALE_INDEX = {
+  [-1] = "INVALID",
+  [0]  = "KO",
+  [1]  = "ZH_CN",
+  [2]  = "EN_US",
+  [3]  = "JA",
+  [4]  = "ZH_TW",
+  [5]  = "RU",
+  [6]  = "DE",
+  [7]  = "FR",
+  [8]  = "TH",
+  [9]  = "IND",
+  [10] = "EN_SG",
+}
+
+---@enum LOCALE_STR
+local LOCALE_STR = {
+  INVALID = "", -- TODO: No idea what this would be.
+  KO      = "ko",
+  ZH_CN   = "zh_cn",
+  EN_US   = "en_us",
+  JA      = "ja",
+  ZH_TW   = "zh_tw",
+  RU      = "ru",
+  DE      = "de",
+  FR      = "fr",
+  TH      = "th",
+  IND     = "ind",
+  EN_SG   = "en_sg",
+}
+
+---api/X2Item
+---@enum LINKKIND
+local LINKKIND = {
+  AUCTION   = "1",
+  COFFER    = "2",
+  GUILDBANK = "3",
+}
+
+---@TODO: This is not complete!
+---api/X2Hotkey
+---@enum HOTKEY_ACTION
+local HOTKEY_ACTION = {
+  MOVEFORWARD                           = "moveforward",
+  MOVEBACK                              = "moveback",
+  MOVELEFT                              = "moveleft",
+  MOVERIGHT                             = "moveright",
+  TURNLEFT                              = "turnleft",
+  TURNRIGHT                             = "turnright",
+  AUTORUN                               = "autorun",
+  JUMP                                  = "jump",
+  DOWN                                  = "down",
+  TOGGLE_WALK                           = "toggle_walk",
+  OPEN_CHAT                             = "open_chat",
+  TOGGLE_BAG                            = "toggle_bag",
+  TOGGLE_SPELLBOOK                      = "toggle_spellbook",
+  TOGGLE_CHARACTER                      = "toggle_character",
+  TOGGLE_QUEST                          = "toggle_quest",
+  TOGGLE_CRAFT_BOOK                     = "toggle_craft_book",
+  CYCLE_HOSTILE_FORWARD                 = "cycle_hostile_forward",
+  CYCLE_HOSTILE_BACKWARD                = "cycle_hostile_backward",
+  CYCLE_FRIENDLY_FORWARD                = "cycle_friendly_forward",
+  CYCLE_FRIENDLY_BACKWARD               = "cycle_friendly_backward",
+  SCREENSHOTMODE                        = "screenshotmode",
+  TOGGLE_COMMUNITY                      = "toggle_community",
+  TOGGLE_WEB_MESSENGER                  = "toggle_web_messenger",
+  TOGGLE_WEB_PLAY_DIARY                 = "toggle_web_play_diary",
+  ACTIVATE_WEAPON                       = "activate_weapon",
+  SELF_TARGET                           = "self_target",
+  PET_TARGET                            = "pet_target",
+  TOGGLE_FORCE_ATTACK                   = "toggle_force_attack",
+  FRONT_CAMERA                          = "front_camera",
+  LEFT_CAMERA                           = "left_camera",
+  RIGHT_CAMERA                          = "right_camera",
+  BACK_CAMERA                           = "back_camera",
+  CYCLE_CAMERA_COUNTER_CLOCKWISE        = "cycle_camera_counter_clockwise",
+  CYCLE_CAMERA_CLOCKWISE                = "cycle_camera_clockwise",
+  TOGGLE_RAID_TEAM_MANAGER              = "toggle_raid_team_manager",
+  OPEN_CONFIG                           = "open_config",
+  DO_INTERACTION_1                      = "do_interaction_1",
+  DO_INTERACTION_2                      = "do_interaction_2",
+  DO_INTERACTION_3                      = "do_interaction_3",
+  DO_INTERACTION_4                      = "do_interaction_4",
+  TOGGLE_NAMETAG                        = "toggle_nametag",
+  TOGGLE_RAID_FRAME                     = "toggle_raid_frame",
+  OVER_HEAD_MARKER                      = "over_head_marker",
+  DOF_TOGGLE                            = "dof_toggle",
+  DOF_AUTO_FOCUS                        = "dof_auto_focus",
+  DOF_ADD_DIST                          = "dof_add_dist",
+  DOF_SUB_DIST                          = "dof_sub_dist",
+  DOF_ADD_RANGE                         = "dof_add_range",
+  DOF_SUB_RANGE                         = "dof_sub_range",
+  TOGGLE_COMMERCIAL_MAIL                = "toggle_commercial_mail",
+  TOGGLE_COMMON_FARM_INFO               = "toggle_common_farm_info",
+  ACTION_BAR_PAGE_PREV                  = "action_bar_page_prev",
+  ACTION_BAR_PAGE_NEXT                  = "action_bar_page_next",
+  REPLY_LAST_WHISPERED                  = "reply_last_whispered",
+  REPLY_LAST_WHISPER                    = "reply_last_whisper",
+  SET_WATCH_TARGET                      = "set_watch_target",
+  TOGGLE_RANKING                        = "toggle_ranking",
+  TOGGLE_INGAMESHOP                     = "toggle_ingameshop",
+  TOGGLE_ACHIEVEMENT                    = "toggle_achievement",
+  QUEST_DIRECTING_INTERACTION           = "quest_directing_interaction",
+  OPEN_TARGET_EQUIPMENT                 = "open_target_equipment",
+  TOGGLE_AUCTION                        = "toggle_auction",
+  TOGGLE_MAIL                           = "toggle_mail",
+  TOGGLE_BATTLE_FIELD                   = "toggle_battle_field",
+  TOGGLE_HERO                           = "toggle_hero",
+  SWAP_PRELIMINARY_EQUIPMENT            = "swap_preliminary_equipment",
+  TARGETS_TARGET_TO_TARGET              = "targets_target_to_target",
+  WATCH_TARGETS_TARGET_TO_TARGET        = "watch_targets_target_to_target",
+  OVER_HEAD_MARKER_TO_TARGET            = "over_head_marker_to_target",
+  CYCLE_HOSTILE_HEAD_MARKER_FORWARD     = "cycle_hostile_head_marker_forward",
+  CYCLE_HOSTILE_HEAD_MARKER_BACKWARD    = "cycle_hostile_head_marker_backward",
+  CYCLE_FRIENDLY_HEAD_MARKER_FORWARD    = "cycle_friendly_head_marker_forward",
+  CYCLE_FRIENDLY_HEAD_MARKER_BACKWARD   = "cycle_friendly_head_marker_backward",
+  TOGGLE_CHRONICLE_BOOK                 = "toggle_chronicle_book",
+  TOGGLE_BUTLER_INFO                    = "toggle_butler_info",
+  TOGGLE_RANDOM_SHOP                    = "toggle_random_shop",
+  TOGGLE_COMMUNITY_EXPEDITION_TAB       = "toggle_community_expedition_tab",
+  TOGGLE_COMMUNITY_FACTION_TAB          = "toggle_community_faction_tab",
+  TOGGLE_COMMUNITY_FAMILY_TAB           = "toggle_community_family_tab",
+  ACTION_BAR_BUTTON                     = "action_bar_button",
+  ACTION_BAR_PAGE                       = "action_bar_page",
+  BATTLE_PET_ACTION_BAR_BUTTON          = "battle_pet_action_bar_button",
+  CHANGE_ROADMAP_SIZE                   = "change_roadmap_size",
+  INSTANT_KILL_STREAK_ACTION_BAR_BUTTON = "instant_kill_streak_action_bar_button",
+  MODE_ACTION_BAR_BUTTON                = "mode_action_bar_button",
+  RIDE_PET_ACTION_BAR_BUTTON            = "ride_pet_action_bar_button",
+  ROUND_TARGET                          = "round_target",
+  TEAM_TARGET                           = "team_target",
+  TOGGLE_SHOW_GUIDE_DECAL               = "toggle_show_guide_decal",
+  TOGGLE_SPECIALTY_INFO                 = "toggle_specialty_info",
+  TOGGLE_WEB_PLAY_DIARY_INSTANT         = "toggle_web_play_diary_instant",
+  TOGGLE_WEB_WIKI                       = "toggle_web_wiki",
+  TOGGLE_WORLDMAP                       = "toggle_worldmap",
+  ZOOM_IN                               = "zoom_in",
+}
+
+---api/X2Hotkey
+---@enum HOTKEY_MANAGER
+local HOTKEY_MANAGER = {
+  PRIMARY   = 1,
+  SECONDARY = 2,
+}
+
+---api/X2Chat
+---@enum (key) CHAT_MESSAGE_RELATION
+local CHAT_MESSAGE_RELATION = {
+  [0] = "invalid",
+  [1] = "hostile",
+  [2] = "neutral",
+  [3] = "friendly"
+}
+
+
+---api/X2Auction
+---@enum AUCTION_GRADE_FILTER
+local AUCTION_GRADE_FILTER = {
+  ALL       = 1,
+  BASIC     = 2,
+  GRAND     = 3,
+  RARE      = 4,
+  ARCANE    = 5,
+  HEROIC    = 6,
+  UNIQUE    = 7,
+  CELESTIAL = 8,
+  DIVINE    = 9,
+  EPIC      = 10,
+  LEGENDARY = 11,
+  MYTHIC    = 12,
+  ETERNAL   = 13,
+}
+
+---api/X2Auction
+---@enum AUCTION_CATEGORY
+local AUCTION_CATEGORY = {
+  ALL                     = 0,
+  DAGGER                  = 1,
+  SWORD                   = 2,
+  BLADE                   = 3,
+  SPEAR                   = 4,
+  AXE                     = 5,
+  MACE                    = 6,
+  STAFF                   = 7,
+  TWOHAND_SWORD           = 8,
+  TWOHAND_BLADE           = 9,
+  TWOHAND_SPEAR           = 10,
+  TWOHAND_AXE             = 11,
+  TWOHAND_MACE            = 12,
+  TWOHAND_STAFF           = 13,
+  BOW                     = 14,
+  LIGHT_ARMOR_HEAD        = 15,
+  LIGHT_ARMOR_CHEST       = 16,
+  LIGHT_ARMOR_WAIST       = 17,
+  LIGHT_ARMOR_ARMS        = 18,
+  LIGHT_ARMOR_HANDS       = 19,
+  LIGHT_ARMOR_LEGS        = 20,
+  LIGHT_ARMOR_FEET        = 21,
+  NORMAL_ARMOR_HEAD       = 22,
+  NORMAL_ARMOR_CHEST      = 23,
+  NORMAL_ARMOR_WAIST      = 24,
+  NORMAL_ARMOR_ARMS       = 25,
+  NORMAL_ARMOR_HANDS      = 26,
+  NORMAL_ARMOR_LEGS       = 27,
+  NORMAL_ARMOR_FEET       = 28,
+  HEAVY_ARMOR_HEAD        = 29,
+  HEAVY_ARMOR_CHEST       = 30,
+  HEAVY_ARMOR_WAIST       = 31,
+  HEAVY_ARMOR_ARMS        = 32,
+  HEAVY_ARMOR_HANDS       = 33,
+  HEAVY_ARMOR_LEGS        = 34,
+  HEAVY_ARMOR_FEET        = 35,
+  ORE                     = 36,
+  RAW_LUMBER              = 37,
+  ROCK                    = 38,
+  RAWHIDE                 = 39,
+  FIBER                   = 40,
+  PARTS                   = 41,
+  MEAT                    = 42,
+  MARINE_PRODUCT          = 43,
+  GRAIN                   = 44,
+  VEGETABLES              = 45,
+  FRUIT                   = 46,
+  SPICE                   = 47,
+  DRUG_MATERIAL           = 48,
+  FLOWER                  = 49,
+  SOIL                    = 50,
+  JEWEL                   = 51,
+  PAPER                   = 52,
+  METAL                   = 53,
+  WOOD                    = 54,
+  STONE                   = 55,
+  LEATHER                 = 56,
+  CLOTH                   = 57,
+  MACHINE                 = 58,
+  GLASS                   = 59,
+  RUBBER                  = 60,
+  NOBLE_METAL             = 61,
+  ALCHEMY_MATERIAL        = 62,
+  CRAFT_MATERIAL          = 63,
+  ANIMAL                  = 64,
+  YOUNG_PLANT             = 65,
+  SEED                    = 66,
+  FURNITURE               = 67,
+  ADVENTURE               = 68,
+  TOY                     = 69,
+  DYE                     = 70,
+  COOKING_OIL             = 71,
+  SEASONING               = 72,
+  MOON_STONE_SCALE_RED    = 73,
+  MOON_STONE_SCALE_YELLOW = 74,
+  MOON_STONE_SCALE_GREEN  = 75,
+  MOON_STONE_SCALE_BLUE   = 76,
+  MOON_STONE_SCALE_PURPLE = 77,
+  MOON_STONE_SHADOW_CRAFT = 78,
+  MOON_STONE_SHADOW_HONOR = 79,
+  SHOTGUN                 = 80,
+}
+
+---@enum UIEVENT_TYPE
+local UIEVENT_TYPE = {
+  -- ABILITY_CHANGED = function(newAbility: string, oldAbility: string)
+  ABILITY_CHANGED                                = "ABILITY_CHANGED",
+
+  -- ABILITY_EXP_CHANGED = function(expStr: string)
+  ABILITY_EXP_CHANGED                            = "ABILITY_EXP_CHANGED",
+
+  -- ABILITY_SET_CHANGED = function(responseType: number)
+  ABILITY_SET_CHANGED                            = "ABILITY_SET_CHANGED",
+
+  -- ABILITY_SET_USABLE_SLOT_COUNT_CHANGED = function(responseType)
+  ABILITY_SET_USABLE_SLOT_COUNT_CHANGED          = "ABILITY_SET_USABLE_SLOT_COUNT_CHANGED",
+
+  -- ACCOUNT_ATTENDANCE_ADDED = function()
+  ACCOUNT_ATTENDANCE_ADDED                       = "ACCOUNT_ATTENDANCE_ADDED",
+
+  -- ACCOUNT_ATTENDANCE_LOADED = function()
+  ACCOUNT_ATTENDANCE_LOADED                      = "ACCOUNT_ATTENDANCE_LOADED",
+
+  -- ACCOUNT_ATTRIBUTE_UPDATED = function(kind, extraKind, state: boolean)
+  ACCOUNT_ATTRIBUTE_UPDATED                      = "ACCOUNT_ATTRIBUTE_UPDATED",
+
+  -- ACCOUNT_RESTRICT_NOTICE = function()
+  ACCOUNT_RESTRICT_NOTICE                        = "ACCOUNT_RESTRICT_NOTICE",
+
+  -- ACHIEVEMENT_UPDATE = function(status: string, newAchievementType: number)
+  ACHIEVEMENT_UPDATE                             = "ACHIEVEMENT_UPDATE",
+
+  -- ACQUAINTANCE_LOGIN = function(cmf: CMF, charName: string)
+  ACQUAINTANCE_LOGIN                             = "ACQUAINTANCE_LOGIN",
+
+  -- ACTABILITY_EXPERT_CHANGED = function(actabilityId, name: string, diff: number|string, final: number|string)
+  ACTABILITY_EXPERT_CHANGED                      = "ACTABILITY_EXPERT_CHANGED",
+
+  -- ACTABILITY_EXPERT_EXPANDED = function()
+  ACTABILITY_EXPERT_EXPANDED                     = "ACTABILITY_EXPERT_EXPANDED",
+
+  -- ACTABILITY_EXPERT_GRADE_CHANGED = function(actabilityId, isUpgrade: boolean, name: string, gradeName: string)
+  ACTABILITY_EXPERT_GRADE_CHANGED                = "ACTABILITY_EXPERT_GRADE_CHANGED",
+
+  -- ACTABILITY_MODIFIER_UPDATE = function()
+  ACTABILITY_MODIFIER_UPDATE                     = "ACTABILITY_MODIFIER_UPDATE",
+
+  -- ACTABILITY_REFRESH_ALL = function()
+  ACTABILITY_REFRESH_ALL                         = "ACTABILITY_REFRESH_ALL",
+
+  -- ACTION_BAR_AUTO_REGISTERED = function(slotIndex: number)
+  ACTION_BAR_AUTO_REGISTERED                     = "ACTION_BAR_AUTO_REGISTERED",
+
+  -- ACTION_BAR_PAGE_CHANGED = function(page: number)
+  ACTION_BAR_PAGE_CHANGED                        = "ACTION_BAR_PAGE_CHANGED",
+
+  -- ACTIONS_UPDATE = function()
+  ACTIONS_UPDATE                                 = "ACTIONS_UPDATE",
+
+  -- ADD_GIVEN_QUEST_INFO = function(arg1, arg2)
+  ADD_GIVEN_QUEST_INFO                           = "ADD_GIVEN_QUEST_INFO",
+
+  -- ADD_NOTIFY_QUEST_INFO = function(arg)
+  ADD_NOTIFY_QUEST_INFO                          = "ADD_NOTIFY_QUEST_INFO",
+
+  -- ADDED_ITEM = function(itemLinkText: string, itemCount: number, itemTaskType: string, tradeOtherName: string)
+  ADDED_ITEM                                     = "ADDED_ITEM",
+
+  -- ADDON_LOADED = function()
+  ADDON_LOADED                                   = "ADDON_LOADED",
+
+  -- AGGRO_METER_CLEARED = function()
+  AGGRO_METER_CLEARED                            = "AGGRO_METER_CLEARED",
+
+  -- AGGRO_METER_UPDATED = function()
+  AGGRO_METER_UPDATED                            = "AGGRO_METER_UPDATED",
+
+  -- ALL_SIEGE_RAID_TEAM_INFOS = function(teamInfos)
+  ALL_SIEGE_RAID_TEAM_INFOS                      = "ALL_SIEGE_RAID_TEAM_INFOS",
+
+  -- ANTIBOT_PUNISH = function(message)
+  ANTIBOT_PUNISH                                 = "ANTIBOT_PUNISH",
+
+  -- APPELLATION_CHANGED = function(stringId: string, isChanged: boolean)
+  APPELLATION_CHANGED                            = "APPELLATION_CHANGED",
+
+  -- APPELLATION_GAINED = function(str: string)
+  APPELLATION_GAINED                             = "APPELLATION_GAINED",
+
+  -- APPELLATION_STAMP_SET = function()
+  APPELLATION_STAMP_SET                          = "APPELLATION_STAMP_SET",
+
+  -- ARCHE_PASS_BUY = function(passType)
+  ARCHE_PASS_BUY                                 = "ARCHE_PASS_BUY",
+
+  -- ARCHE_PASS_COMPLETED = function(passType, allDone: boolean)
+  ARCHE_PASS_COMPLETED                           = "ARCHE_PASS_COMPLETED",
+
+  -- ARCHE_PASS_DROPPED = function(passType)
+  ARCHE_PASS_DROPPED                             = "ARCHE_PASS_DROPPED",
+
+  -- ARCHE_PASS_EXPIRED = function(passType)
+  ARCHE_PASS_EXPIRED                             = "ARCHE_PASS_EXPIRED",
+
+  -- ARCHE_PASS_LOADED = function()
+  ARCHE_PASS_LOADED                              = "ARCHE_PASS_LOADED",
+
+  -- ARCHE_PASS_MISSION_CHANGED = function()
+  ARCHE_PASS_MISSION_CHANGED                     = "ARCHE_PASS_MISSION_CHANGED",
+
+  -- ARCHE_PASS_MISSION_COMPLETED = function()
+  ARCHE_PASS_MISSION_COMPLETED                   = "ARCHE_PASS_MISSION_COMPLETED",
+
+  -- ARCHE_PASS_OWNED = function(passType)
+  ARCHE_PASS_OWNED                               = "ARCHE_PASS_OWNED",
+
+  -- ARCHE_PASS_RESETED = function(passType)
+  ARCHE_PASS_RESETED                             = "ARCHE_PASS_RESETED",
+
+  -- ARCHE_PASS_STARTED = function(passType)
+  ARCHE_PASS_STARTED                             = "ARCHE_PASS_STARTED",
+
+  -- ARCHE_PASS_UPDATE_POINT = function(point)
+  ARCHE_PASS_UPDATE_POINT                        = "ARCHE_PASS_UPDATE_POINT",
+
+  -- ARCHE_PASS_UPDATE_REWARD_ITEM = function(complete)
+  ARCHE_PASS_UPDATE_REWARD_ITEM                  = "ARCHE_PASS_UPDATE_REWARD_ITEM",
+
+  -- ARCHE_PASS_UPDATE_TIER = function(tier)
+  ARCHE_PASS_UPDATE_TIER                         = "ARCHE_PASS_UPDATE_TIER",
+
+  -- ARCHE_PASS_UPGRADE_PREMIUM = function()
+  ARCHE_PASS_UPGRADE_PREMIUM                     = "ARCHE_PASS_UPGRADE_PREMIUM",
+
+  -- ASK_BUY_LABOR_POWER_POTION = function()
+  ASK_BUY_LABOR_POWER_POTION                     = "ASK_BUY_LABOR_POWER_POTION",
+
+  -- ASK_FORCE_ATTACK = function(forceAttackLevel)
+  ASK_FORCE_ATTACK                               = "ASK_FORCE_ATTACK",
+
+  -- AUCTION_BIDDED = function(itemName, moneyStr)
+  AUCTION_BIDDED                                 = "AUCTION_BIDDED",
+
+  -- AUCTION_BIDDEN = function(itemName: string, moneyStr: string)
+  AUCTION_BIDDEN                                 = "AUCTION_BIDDEN",
+
+  -- AUCTION_BOUGHT = function()
+  AUCTION_BOUGHT                                 = "AUCTION_BOUGHT",
+
+  -- AUCTION_BOUGHT_BY_SOMEONE = function(itemName, moneyStr)
+  AUCTION_BOUGHT_BY_SOMEONE                      = "AUCTION_BOUGHT_BY_SOMEONE",
+
+  -- AUCTION_CANCELED = function(itemName)
+  AUCTION_CANCELED                               = "AUCTION_CANCELED",
+
+  -- AUCTION_CHARACTER_LEVEL_TOO_LOW = function(msg)
+  AUCTION_CHARACTER_LEVEL_TOO_LOW                = "AUCTION_CHARACTER_LEVEL_TOO_LOW",
+
+  -- AUCTION_ITEM_ATTACHMENT_STATE_CHANGED = function(attached)
+  AUCTION_ITEM_ATTACHMENT_STATE_CHANGED          = "AUCTION_ITEM_ATTACHMENT_STATE_CHANGED",
+
+  -- AUCTION_ITEM_PUT_UP = function(itemName)
+  AUCTION_ITEM_PUT_UP                            = "AUCTION_ITEM_PUT_UP",
+
+  -- AUCTION_ITEM_SEARCH = function()
+  AUCTION_ITEM_SEARCH                            = "AUCTION_ITEM_SEARCH",
+
+  -- AUCTION_ITEM_SEARCHED = function(clearLastSearchArticle)
+  AUCTION_ITEM_SEARCHED                          = "AUCTION_ITEM_SEARCHED",
+
+  -- AUCTION_LOWEST_PRICE = function(itemType, grade, price)
+  AUCTION_LOWEST_PRICE                           = "AUCTION_LOWEST_PRICE",
+
+  -- AUCTION_PERMISSION_BY_CRAFT = function(icraftType)
+  AUCTION_PERMISSION_BY_CRAFT                    = "AUCTION_PERMISSION_BY_CRAFT",
+
+  -- AUCTION_TOGGLE = function()
+  AUCTION_TOGGLE                                 = "AUCTION_TOGGLE",
+
+  -- AUDIENCE_JOINED = function(audienceName: string)
+  AUDIENCE_JOINED                                = "AUDIENCE_JOINED",
+
+  -- AUDIENCE_LEFT = function(audienceName: string)
+  AUDIENCE_LEFT                                  = "AUDIENCE_LEFT",
+
+  -- BAD_USER_LIST_UPDATE = function()
+  BAD_USER_LIST_UPDATE                           = "BAD_USER_LIST_UPDATE",
+
+  -- BADWORD_USER_REPORED_RESPONE_MSG = function(success: boolean)
+  BADWORD_USER_REPORED_RESPONE_MSG               = "BADWORD_USER_REPORED_RESPONE_MSG",
+
+  -- BAG_EXPANDED = function()
+  BAG_EXPANDED                                   = "BAG_EXPANDED",
+
+  -- BAG_ITEM_CONFIRMED = function()
+  BAG_ITEM_CONFIRMED                             = "BAG_ITEM_CONFIRMED",
+
+  -- BAG_REAL_INDEX_SHOW = function(isRealSlotShow: boolean)
+  BAG_REAL_INDEX_SHOW                            = "BAG_REAL_INDEX_SHOW",
+
+  -- BAG_TAB_CREATED = function()
+  BAG_TAB_CREATED                                = "BAG_TAB_CREATED",
+
+  -- BAG_TAB_REMOVED = function()
+  BAG_TAB_REMOVED                                = "BAG_TAB_REMOVED",
+
+  -- BAG_TAB_SORTED = function()
+  BAG_TAB_SORTED                                 = "BAG_TAB_SORTED",
+
+  -- BAG_TAB_SWITCHED = function()
+  BAG_TAB_SWITCHED                               = "BAG_TAB_SWITCHED",
+
+  -- BAG_UPDATE = function(bagId: number, slotId: number)
+  BAG_UPDATE                                     = "BAG_UPDATE",
+
+  -- BAN_PLAYER_RESULT = function(param)
+  BAN_PLAYER_RESULT                              = "BAN_PLAYER_RESULT",
+
+  -- BANK_EXPANDED = function()
+  BANK_EXPANDED                                  = "BANK_EXPANDED",
+
+  -- BANK_REAL_INDEX_SHOW = function(isRealSlotShow: boolean)
+  BANK_REAL_INDEX_SHOW                           = "BANK_REAL_INDEX_SHOW",
+
+  -- BANK_TAB_CREATED = function()
+  BANK_TAB_CREATED                               = "BANK_TAB_CREATED",
+
+  -- BANK_TAB_REMOVED = function()
+  BANK_TAB_REMOVED                               = "BANK_TAB_REMOVED",
+
+  -- BANK_TAB_SORTED = function()
+  BANK_TAB_SORTED                                = "BANK_TAB_SORTED",
+
+  -- BANK_TAB_SWITCHED = function()
+  BANK_TAB_SWITCHED                              = "BANK_TAB_SWITCHED",
+
+  -- BANK_UPDATE = function(bagId: number, slotId: number)
+  BANK_UPDATE                                    = "BANK_UPDATE",
+
+  -- BEAUTYSHOP_CLOSE_BY_SYSTEM = function()
+  BEAUTYSHOP_CLOSE_BY_SYSTEM                     = "BEAUTYSHOP_CLOSE_BY_SYSTEM",
+
+  -- BLESS_UTHSTIN_EXTEND_MAX_STATS = function()
+  BLESS_UTHSTIN_EXTEND_MAX_STATS                 = "BLESS_UTHSTIN_EXTEND_MAX_STATS",
+
+  -- BLESS_UTHSTIN_ITEM_SLOT_CLEAR = function()
+  BLESS_UTHSTIN_ITEM_SLOT_CLEAR                  = "BLESS_UTHSTIN_ITEM_SLOT_CLEAR",
+
+  -- BLESS_UTHSTIN_ITEM_SLOT_SET = function(msgapplycountlimit)
+  BLESS_UTHSTIN_ITEM_SLOT_SET                    = "BLESS_UTHSTIN_ITEM_SLOT_SET",
+
+  -- BLESS_UTHSTIN_MESSAGE = function(messageType: number)
+  BLESS_UTHSTIN_MESSAGE                          = "BLESS_UTHSTIN_MESSAGE",
+
+  -- BLESS_UTHSTIN_UPDATE_STATS = function()
+  BLESS_UTHSTIN_UPDATE_STATS                     = "BLESS_UTHSTIN_UPDATE_STATS",
+
+  -- BLESS_UTHSTIN_WILL_APPLY_STATS = function(itemType, incStatsKind, decStatsKind, incStatsPoint, decStatsPoint)
+  BLESS_UTHSTIN_WILL_APPLY_STATS                 = "BLESS_UTHSTIN_WILL_APPLY_STATS",
+
+  -- BLOCKED_USER_LIST = function(msg: string)
+  BLOCKED_USER_LIST                              = "BLOCKED_USER_LIST",
+
+  -- BLOCKED_USER_UPDATE = function()
+  BLOCKED_USER_UPDATE                            = "BLOCKED_USER_UPDATE",
+
+  -- BLOCKED_USERS_INFO = function()
+  BLOCKED_USERS_INFO                             = "BLOCKED_USERS_INFO",
+
+  -- BOT_SUSPECT_REPORTED = function(sourceName: string, targetName: string)
+  BOT_SUSPECT_REPORTED                           = "BOT_SUSPECT_REPORTED",
+
+  -- BUFF_SKILL_CHANGED = function(onePetBar: table)
+  BUFF_SKILL_CHANGED                             = "BUFF_SKILL_CHANGED",
+
+  -- BUFF_UPDATE = function(action, target: string)
+  BUFF_UPDATE                                    = "BUFF_UPDATE",
+
+  -- BUILD_CONDITION = function(param)
+  BUILD_CONDITION                                = "BUILD_CONDITION",
+
+  -- BUILDER_END = function()
+  BUILDER_END                                    = "BUILDER_END",
+
+  -- BUILDER_STEP = function(step)
+  BUILDER_STEP                                   = "BUILDER_STEP",
+
+  -- BUTLER_INFO_UPDATED = function(event: string, noError: boolean)
+  BUTLER_INFO_UPDATED                            = "BUTLER_INFO_UPDATED",
+
+  -- BUTLER_UI_COMMAND = function(mode: number)
+  BUTLER_UI_COMMAND                              = "BUTLER_UI_COMMAND",
+
+  -- BUY_RESULT_AA_POINT = function(result, moneyString)
+  BUY_RESULT_AA_POINT                            = "BUY_RESULT_AA_POINT",
+
+  -- BUY_SPECIALTY_CONTENT_INFO = function(list: table)
+  BUY_SPECIALTY_CONTENT_INFO                     = "BUY_SPECIALTY_CONTENT_INFO",
+
+  -- CANCEL_CRAFT_ORDER = function(result)
+  CANCEL_CRAFT_ORDER                             = "CANCEL_CRAFT_ORDER",
+
+  -- CANCEL_REBUILD_HOUSE_CAMERA_MODE = function()
+  CANCEL_REBUILD_HOUSE_CAMERA_MODE               = "CANCEL_REBUILD_HOUSE_CAMERA_MODE",
+
+  -- CANDIDATE_LIST_CHANGED = function()
+  CANDIDATE_LIST_CHANGED                         = "CANDIDATE_LIST_CHANGED",
+
+  -- CANDIDATE_LIST_HIDE = function()
+  CANDIDATE_LIST_HIDE                            = "CANDIDATE_LIST_HIDE",
+
+  -- CANDIDATE_LIST_SELECTION_CHANGED = function()
+  CANDIDATE_LIST_SELECTION_CHANGED               = "CANDIDATE_LIST_SELECTION_CHANGED",
+
+  -- CANDIDATE_LIST_SHOW = function()
+  CANDIDATE_LIST_SHOW                            = "CANDIDATE_LIST_SHOW",
+
+  -- CHANGE_ACTABILITY_DECO_NUM = function()
+  CHANGE_ACTABILITY_DECO_NUM                     = "CHANGE_ACTABILITY_DECO_NUM",
+
+  -- CHANGE_CONTRIBUTION_POINT_TO_PLAYER = function(isGain: boolean, diff, total)
+  CHANGE_CONTRIBUTION_POINT_TO_PLAYER            = "CHANGE_CONTRIBUTION_POINT_TO_PLAYER",
+
+  -- CHANGE_CONTRIBUTION_POINT_TO_STORE = function()
+  CHANGE_CONTRIBUTION_POINT_TO_STORE             = "CHANGE_CONTRIBUTION_POINT_TO_STORE",
+
+  -- CHANGE_MY_LANGUAGE = function()
+  CHANGE_MY_LANGUAGE                             = "CHANGE_MY_LANGUAGE",
+
+  -- CHANGE_OPTION = function(optionType: number, infoTable: table)
+  CHANGE_OPTION                                  = "CHANGE_OPTION",
+
+  -- CHANGE_PAY_INFO = function(oldPayMethod, newPayMethod, oldPayLocation, newPayLocation)
+  CHANGE_PAY_INFO                                = "CHANGE_PAY_INFO",
+
+  -- CHANGE_VISUAL_RACE_ENDED = function()
+  CHANGE_VISUAL_RACE_ENDED                       = "CHANGE_VISUAL_RACE_ENDED",
+
+  -- CHANGED_AUTO_USE_AAPOINT = function()
+  CHANGED_AUTO_USE_AAPOINT                       = "CHANGED_AUTO_USE_AAPOINT",
+
+  -- CHANGED_MSG = function()
+  CHANGED_MSG                                    = "CHANGED_MSG",
+
+  -- CHAT_DICE_VALUE = function(msg: string)
+  CHAT_DICE_VALUE                                = "CHAT_DICE_VALUE",
+
+  -- CHAT_EMOTION = function(message: string)
+  CHAT_EMOTION                                   = "CHAT_EMOTION",
+
+  -- CHAT_FAILED = function(message: string, channelName)
+  CHAT_FAILED                                    = "CHAT_FAILED",
+
+  -- CHAT_JOINED_CHANNEL = function(channel, name)
+  CHAT_JOINED_CHANNEL                            = "CHAT_JOINED_CHANNEL",
+
+  -- CHAT_LEAVED_CHANNEL = function(channel, name)
+  CHAT_LEAVED_CHANNEL                            = "CHAT_LEAVED_CHANNEL",
+
+  -- CHAT_MESSAGE = function(channel, relation, name, message, info)
+  CHAT_MESSAGE                                   = "CHAT_MESSAGE",
+
+  -- CHAT_MSG_ALARM = function(text)
+  CHAT_MSG_ALARM                                 = "CHAT_MSG_ALARM",
+
+  -- CHAT_MSG_DOODAD = function(message, author, speakerId, tailType, showTime, fadeTime, hasNext, qtype, forceFinished)
+  CHAT_MSG_DOODAD                                = "CHAT_MSG_DOODAD",
+
+  -- CHAT_MSG_QUEST = function(message, author, authorId, tailType, showTime, fadeTime, currentBubbleType, qtype, forceFinished)
+  CHAT_MSG_QUEST                                 = "CHAT_MSG_QUEST",
+
+  -- CHECK_TEXTURE = function(texturePath)
+  CHECK_TEXTURE                                  = "CHECK_TEXTURE",
+
+  -- CLEAR_BOSS_TELESCOPE_INFO = function()
+  CLEAR_BOSS_TELESCOPE_INFO                      = "CLEAR_BOSS_TELESCOPE_INFO",
+
+  -- CLEAR_CARRYING_BACKPACK_SLAVE_INFO = function()
+  CLEAR_CARRYING_BACKPACK_SLAVE_INFO             = "CLEAR_CARRYING_BACKPACK_SLAVE_INFO",
+
+  -- CLEAR_COMPLETED_QUEST_INFO = function()
+  CLEAR_COMPLETED_QUEST_INFO                     = "CLEAR_COMPLETED_QUEST_INFO",
+
+  -- CLEAR_CORPSE_INFO = function()
+  CLEAR_CORPSE_INFO                              = "CLEAR_CORPSE_INFO",
+
+  -- CLEAR_DOODAD_INFO = function()
+  CLEAR_DOODAD_INFO                              = "CLEAR_DOODAD_INFO",
+
+  -- CLEAR_FISH_SCHOOL_INFO = function()
+  CLEAR_FISH_SCHOOL_INFO                         = "CLEAR_FISH_SCHOOL_INFO",
+
+  -- CLEAR_GIVEN_QUEST_STATIC_INFO = function()
+  CLEAR_GIVEN_QUEST_STATIC_INFO                  = "CLEAR_GIVEN_QUEST_STATIC_INFO",
+
+  -- CLEAR_HOUSING_INFO = function()
+  CLEAR_HOUSING_INFO                             = "CLEAR_HOUSING_INFO",
+
+  -- CLEAR_MY_SLAVE_POS_INFO = function()
+  CLEAR_MY_SLAVE_POS_INFO                        = "CLEAR_MY_SLAVE_POS_INFO",
+
+  -- CLEAR_NOTIFY_QUEST_INFO = function()
+  CLEAR_NOTIFY_QUEST_INFO                        = "CLEAR_NOTIFY_QUEST_INFO",
+
+  -- CLEAR_NPC_INFO = function()
+  CLEAR_NPC_INFO                                 = "CLEAR_NPC_INFO",
+
+  -- CLEAR_SHIP_TELESCOPE_INFO = function()
+  CLEAR_SHIP_TELESCOPE_INFO                      = "CLEAR_SHIP_TELESCOPE_INFO",
+
+  -- CLEAR_TRANSFER_TELESCOPE_INFO = function()
+  CLEAR_TRANSFER_TELESCOPE_INFO                  = "CLEAR_TRANSFER_TELESCOPE_INFO",
+
+  -- CLOSE_CRAFT_ORDER = function()
+  CLOSE_CRAFT_ORDER                              = "CLOSE_CRAFT_ORDER",
+
+  -- CLOSE_MUSIC_SHEET = function()
+  CLOSE_MUSIC_SHEET                              = "CLOSE_MUSIC_SHEET",
+
+  -- COFFER_INTERACTION_END = function()
+  COFFER_INTERACTION_END                         = "COFFER_INTERACTION_END",
+
+  -- COFFER_INTERACTION_START = function()
+  COFFER_INTERACTION_START                       = "COFFER_INTERACTION_START",
+
+  -- COFFER_REAL_INDEX_SHOW = function(isRealSlotShow)
+  COFFER_REAL_INDEX_SHOW                         = "COFFER_REAL_INDEX_SHOW",
+
+  -- COFFER_TAB_CREATED = function()
+  COFFER_TAB_CREATED                             = "COFFER_TAB_CREATED",
+
+  -- COFFER_TAB_REMOVED = function()
+  COFFER_TAB_REMOVED                             = "COFFER_TAB_REMOVED",
+
+  -- COFFER_TAB_SORTED = function()
+  COFFER_TAB_SORTED                              = "COFFER_TAB_SORTED",
+
+  -- COFFER_TAB_SWITCHED = function()
+  COFFER_TAB_SWITCHED                            = "COFFER_TAB_SWITCHED",
+
+  -- COFFER_UPDATE = function(bagId, slotId)
+  COFFER_UPDATE                                  = "COFFER_UPDATE",
+
+  -- COMBAT_MSG = function(targetUnitId, combatEvent, source, target, ...)
+  COMBAT_MSG                                     = "COMBAT_MSG",
+
+  -- COMBAT_TEXT = function(targetUnitId, combatEvent, source, target, ...)
+  COMBAT_TEXT                                    = "COMBAT_TEXT",
+
+  -- COMBAT_TEXT_COLLISION = function(targetUnitId, combatEvent, source, target, ...)
+  COMBAT_TEXT_COLLISION                          = "COMBAT_TEXT_COLLISION",
+
+  -- COMBAT_TEXT_SYNERGY = function(...)
+  COMBAT_TEXT_SYNERGY                            = "COMBAT_TEXT_SYNERGY",
+
+  -- COMMON_FARM_UPDATED = function()
+  COMMON_FARM_UPDATED                            = "COMMON_FARM_UPDATED",
+
+  -- COMMUNITY_ERROR = function(msg)
+  COMMUNITY_ERROR                                = "COMMUNITY_ERROR",
+
+  -- COMPLETE_ACHIEVEMENT = function(newAchievementType)
+  COMPLETE_ACHIEVEMENT                           = "COMPLETE_ACHIEVEMENT",
+
+  -- COMPLETE_CRAFT_ORDER = function(info)
+  COMPLETE_CRAFT_ORDER                           = "COMPLETE_CRAFT_ORDER",
+
+  -- COMPLETE_QUEST_CONTEXT_DOODAD = function(qtype, useDirectingMode, doodadId)
+  COMPLETE_QUEST_CONTEXT_DOODAD                  = "COMPLETE_QUEST_CONTEXT_DOODAD",
+
+  -- COMPLETE_QUEST_CONTEXT_NPC = function(qtype, useDirectingMode, npcId)
+  COMPLETE_QUEST_CONTEXT_NPC                     = "COMPLETE_QUEST_CONTEXT_NPC",
+
+  -- CONSOLE_WRITE = function()
+  CONSOLE_WRITE                                  = "CONSOLE_WRITE",
+
+  -- CONVERT_TO_RAID_TEAM = function()
+  CONVERT_TO_RAID_TEAM                           = "CONVERT_TO_RAID_TEAM",
+
+  -- COPY_RAID_MEMBERS_TO_CLIPBOARD = function()
+  COPY_RAID_MEMBERS_TO_CLIPBOARD                 = "COPY_RAID_MEMBERS_TO_CLIPBOARD",
+
+  -- CRAFT_DOODAD_INFO = function()
+  CRAFT_DOODAD_INFO                              = "CRAFT_DOODAD_INFO",
+
+  -- CRAFT_ENDED = function(leftCount)
+  CRAFT_ENDED                                    = "CRAFT_ENDED",
+
+  -- CRAFT_FAILED = function(itemLinkText)
+  CRAFT_FAILED                                   = "CRAFT_FAILED",
+
+  -- CRAFT_ORDER_ENTRY_SEARCHED = function(infos, totalCount, page)
+  CRAFT_ORDER_ENTRY_SEARCHED                     = "CRAFT_ORDER_ENTRY_SEARCHED",
+
+  -- CRAFT_RECIPE_ADDED = function()
+  CRAFT_RECIPE_ADDED                             = "CRAFT_RECIPE_ADDED",
+
+  -- CRAFT_STARTED = function(leftCount)
+  CRAFT_STARTED                                  = "CRAFT_STARTED",
+
+  -- CRAFT_TRAINED = function()
+  CRAFT_TRAINED                                  = "CRAFT_TRAINED",
+
+  -- CRAFTING_END = function()
+  CRAFTING_END                                   = "CRAFTING_END",
+
+  -- CRAFTING_START = function(doodadId, count)
+  CRAFTING_START                                 = "CRAFTING_START",
+
+  -- CREATE_CHARACTER_FAILED = function(key)
+  CREATE_CHARACTER_FAILED                        = "CREATE_CHARACTER_FAILED",
+
+  -- CREATE_ORIGIN_UCC_ITEM = function()
+  CREATE_ORIGIN_UCC_ITEM                         = "CREATE_ORIGIN_UCC_ITEM",
+
+  -- CRIME_REPORTED = function(diffPoint, diffRecord, diffScore)
+  CRIME_REPORTED                                 = "CRIME_REPORTED",
+
+  -- DEBUFF_UPDATE = function(action, target)
+  DEBUFF_UPDATE                                  = "DEBUFF_UPDATE",
+
+  -- DELETE_CRAFT_ORDER = function()
+  DELETE_CRAFT_ORDER                             = "DELETE_CRAFT_ORDER",
+
+  -- DELETE_PORTAL = function()
+  DELETE_PORTAL                                  = "DELETE_PORTAL",
+
+  -- DESTROY_PAPER = function()
+  DESTROY_PAPER                                  = "DESTROY_PAPER",
+
+  ---values 1 to 14
+  -- 14 = {
+  --   dailyAvg = "0",
+  --   maxPrice = "0",
+  --   minPrice = "0",
+  --   volume = 0,
+  --   weeklyAvg = "0",
+  -- }
+  -- DIAGONAL_ASR = function(itemName: strings, itemGrade: ITEM_GRADE_TYPE, askMarketPriceUi: boolean, values: table)
+  DIAGONAL_ASR                                   = "DIAGONAL_ASR",
+
+  -- DIAGONAL_LINE = function()
+  DIAGONAL_LINE                                  = "DIAGONAL_LINE",
+
+  -- DICE_BID_RULE_CHANGED = function(diceBidRule)
+  DICE_BID_RULE_CHANGED                          = "DICE_BID_RULE_CHANGED",
+
+  -- DISCONNECT_FROM_AUTH = function()
+  DISCONNECT_FROM_AUTH                           = "DISCONNECT_FROM_AUTH",
+
+  -- DISCONNECTED_BY_WORLD = function(title, body)
+  DISCONNECTED_BY_WORLD                          = "DISCONNECTED_BY_WORLD",
+
+  -- DISMISS_PET = function(onePetFrame, mateType)
+  DISMISS_PET                                    = "DISMISS_PET",
+
+  -- DIVE_END = function()
+  DIVE_END                                       = "DIVE_END",
+
+  -- DIVE_START = function()
+  DIVE_START                                     = "DIVE_START",
+
+  -- DOMINION = function(action, zoneGroupName, expeditionName)
+  DOMINION                                       = "DOMINION",
+
+  -- DOMINION_GUARD_TOWER_STATE_NOTICE = function(key, name, factionName)
+  DOMINION_GUARD_TOWER_STATE_NOTICE              = "DOMINION_GUARD_TOWER_STATE_NOTICE",
+
+  -- DOMINION_GUARD_TOWER_UPDATE_TOOLTIP = function(unitId)
+  DOMINION_GUARD_TOWER_UPDATE_TOOLTIP            = "DOMINION_GUARD_TOWER_UPDATE_TOOLTIP",
+
+  -- DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED = function()
+  DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED       =
+  "DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED",
+
+  -- DOMINION_SIEGE_PERIOD_CHANGED = function(action, zoneGroupType, zoneGroupName, defenseName, offenseName, periodName, isMyInfo, team)
+  DOMINION_SIEGE_PERIOD_CHANGED                  = "DOMINION_SIEGE_PERIOD_CHANGED",
+
+  -- DOMINION_SIEGE_SYSTEM_NOTICE = function()
+  DOMINION_SIEGE_SYSTEM_NOTICE                   = "DOMINION_SIEGE_SYSTEM_NOTICE",
+
+  -- DOMINION_SIEGE_UPDATE_TIMER = function(secondHalf)
+  DOMINION_SIEGE_UPDATE_TIMER                    = "DOMINION_SIEGE_UPDATE_TIMER",
+
+  -- DOODAD_LOGIC = function()
+  DOODAD_LOGIC                                   = "DOODAD_LOGIC",
+
+  -- DOODAD_PHASE_MSG = function(text)
+  DOODAD_PHASE_MSG                               = "DOODAD_PHASE_MSG",
+
+  -- DOODAD_PHASE_UI_MSG = function(phaseMsgInfo)
+  DOODAD_PHASE_UI_MSG                            = "DOODAD_PHASE_UI_MSG",
+
+  -- DRAW_DOODAD_SIGN_TAG = function(tooltip)
+  DRAW_DOODAD_SIGN_TAG                           = "DRAW_DOODAD_SIGN_TAG",
+
+  -- DRAW_DOODAD_TOOLTIP = function(info)
+  DRAW_DOODAD_TOOLTIP                            = "DRAW_DOODAD_TOOLTIP",
+
+  -- DYEING_END = function()
+  DYEING_END                                     = "DYEING_END",
+
+  -- DYEING_START = function()
+  DYEING_START                                   = "DYEING_START",
+
+  -- DYNAMIC_ACTION_BAR_HIDE = function()
+  DYNAMIC_ACTION_BAR_HIDE                        = "DYNAMIC_ACTION_BAR_HIDE",
+
+  -- DYNAMIC_ACTION_BAR_SHOW = function(dynamicActionType)
+  DYNAMIC_ACTION_BAR_SHOW                        = "DYNAMIC_ACTION_BAR_SHOW",
+
+  -- ENABLE_TEAM_AREA_INVITATION = function(enable)
+  ENABLE_TEAM_AREA_INVITATION                    = "ENABLE_TEAM_AREA_INVITATION",
+
+  -- ENCHANT_EXAMINE = function()
+  ENCHANT_EXAMINE                                = "ENCHANT_EXAMINE",
+
+  -- ENCHANT_RESULT = function(resultCode, itemLink, oldGrade, newGrade, breakRewardItemType, breakRewardItemCount, breakRewardByMail)
+  ENCHANT_RESULT                                 = "ENCHANT_RESULT",
+
+  -- ENCHANT_SAY_ABILITY = function()
+  ENCHANT_SAY_ABILITY                            = "ENCHANT_SAY_ABILITY",
+
+  -- END_HERO_ELECTION_PERIOD = function()
+  END_HERO_ELECTION_PERIOD                       = "END_HERO_ELECTION_PERIOD",
+
+  -- END_QUEST_CHAT_BUBBLE = function(playedBubble)
+  END_QUEST_CHAT_BUBBLE                          = "END_QUEST_CHAT_BUBBLE",
+
+  -- ENDED_DUEL = function()
+  ENDED_DUEL                                     = "ENDED_DUEL",
+
+  -- ENTER_ANOTHER_ZONEGROUP = function(zoneId)
+  ENTER_ANOTHER_ZONEGROUP                        = "ENTER_ANOTHER_ZONEGROUP",
+
+  -- ENTER_ENCHANT_ITEM_MODE = function(mode)
+  ENTER_ENCHANT_ITEM_MODE                        = "ENTER_ENCHANT_ITEM_MODE",
+
+  -- ENTER_GACHA_LOOT_MODE = function()
+  ENTER_GACHA_LOOT_MODE                          = "ENTER_GACHA_LOOT_MODE",
+
+  -- ENTER_ITEM_LOOK_CONVERT_MODE = function()
+  ENTER_ITEM_LOOK_CONVERT_MODE                   = "ENTER_ITEM_LOOK_CONVERT_MODE",
+
+  -- ENTER_WORLD_CANCELLED = function()
+  ENTER_WORLD_CANCELLED                          = "ENTER_WORLD_CANCELLED",
+
+  -- ENTERED_INSTANT_GAME_ZONE = function()
+  ENTERED_INSTANT_GAME_ZONE                      = "ENTERED_INSTANT_GAME_ZONE",
+
+  -- ENTERED_LOADING = function(worldImagePath)
+  ENTERED_LOADING                                = "ENTERED_LOADING",
+
+  -- ENTERED_LOGIN = function()
+  ENTERED_LOGIN                                  = "ENTERED_LOGIN",
+
+  -- ENTERED_SCREEN_SHOT_CAMERA_MODE = function()
+  ENTERED_SCREEN_SHOT_CAMERA_MODE                = "ENTERED_SCREEN_SHOT_CAMERA_MODE",
+
+  -- ENTERED_SUBZONE = function(zoneName)
+  ENTERED_SUBZONE                                = "ENTERED_SUBZONE",
+
+  -- ENTERED_WORLD = function()
+  ENTERED_WORLD                                  = "ENTERED_WORLD",
+
+  -- ENTERED_WORLD_SELECT = function()
+  ENTERED_WORLD_SELECT                           = "ENTERED_WORLD_SELECT",
+
+  -- EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT = function()
+  EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT   =
+  "EQUIP_SLOT_REINFORCE_MSG_CHAGNE_LEVEL_EFFECT",
+
+  -- EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT = function(equipSlot, level)
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT          = "EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT",
+
+  -- EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP = function(equipSlot, level)
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP              = "EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP",
+
+  -- EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT = function(equipSlotAttribute, level)
+  EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT            = "EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT",
+
+  -- EQUIP_SLOT_REINFORCE_UPDATE = function(equipSlot)
+  EQUIP_SLOT_REINFORCE_UPDATE                    = "EQUIP_SLOT_REINFORCE_UPDATE",
+
+  -- ESC_MENU_ADD_BUTTON = function()
+  ESC_MENU_ADD_BUTTON                            = "ESC_MENU_ADD_BUTTON",
+
+  -- ESCAPE_END = function()
+  ESCAPE_END                                     = "ESCAPE_END",
+
+  -- ESCAPE_START = function(waitTime)
+  ESCAPE_START                                   = "ESCAPE_START",
+
+  -- EVENT_SCHEDULE_START = function(msg)
+  EVENT_SCHEDULE_START                           = "EVENT_SCHEDULE_START",
+
+  -- EVENT_SCHEDULE_STOP = function(msg)
+  EVENT_SCHEDULE_STOP                            = "EVENT_SCHEDULE_STOP",
+
+  -- EXP_CHANGED = function(stringId, expNum, expStr)
+  EXP_CHANGED                                    = "EXP_CHANGED",
+
+  -- EXPEDITION_APPLICANT_ACCEPT = function(expeditionName)
+  EXPEDITION_APPLICANT_ACCEPT                    = "EXPEDITION_APPLICANT_ACCEPT",
+
+  -- EXPEDITION_APPLICANT_REJECT = function(expeditionName)
+  EXPEDITION_APPLICANT_REJECT                    = "EXPEDITION_APPLICANT_REJECT",
+
+  -- EXPEDITION_BUFF_CHANGE = function(expedition, buff, before, after)
+  EXPEDITION_BUFF_CHANGE                         = "EXPEDITION_BUFF_CHANGE",
+
+  -- EXPEDITION_EXP = function(amount, amountStr)
+  EXPEDITION_EXP                                 = "EXPEDITION_EXP",
+
+  -- EXPEDITION_HISTORY = function(type)
+  EXPEDITION_HISTORY                             = "EXPEDITION_HISTORY",
+
+  -- EXPEDITION_LEVEL_UP = function(title, desc)
+  EXPEDITION_LEVEL_UP                            = "EXPEDITION_LEVEL_UP",
+
+  -- EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT = function(charId)
+  EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT         =
+  "EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT",
+
+  -- EXPEDITION_MANAGEMENT_APPLICANT_ADD = function(expeditionId)
+  EXPEDITION_MANAGEMENT_APPLICANT_ADD            = "EXPEDITION_MANAGEMENT_APPLICANT_ADD",
+
+  -- EXPEDITION_MANAGEMENT_APPLICANT_DEL = function(expeditionId)
+  EXPEDITION_MANAGEMENT_APPLICANT_DEL            = "EXPEDITION_MANAGEMENT_APPLICANT_DEL",
+
+  -- EXPEDITION_MANAGEMENT_APPLICANT_REJECT = function(charId)
+  EXPEDITION_MANAGEMENT_APPLICANT_REJECT         =
+  "EXPEDITION_MANAGEMENT_APPLICANT_REJECT",
+
+  -- EXPEDITION_MANAGEMENT_APPLICANTS = function(infos)
+  EXPEDITION_MANAGEMENT_APPLICANTS               = "EXPEDITION_MANAGEMENT_APPLICANTS",
+
+  -- EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED = function()
+  EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED   =
+  "EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED",
+
+  -- EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED = function()
+  EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED      =
+  "EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED",
+
+  -- EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED = function()
+  EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED    =
+  "EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED",
+
+  -- EXPEDITION_MANAGEMENT_MEMBERS_INFO = function(totalCount, startIndex, memberInfos)
+  EXPEDITION_MANAGEMENT_MEMBERS_INFO             = "EXPEDITION_MANAGEMENT_MEMBERS_INFO",
+
+  -- EXPEDITION_MANAGEMENT_POLICY_CHANGED = function()
+  EXPEDITION_MANAGEMENT_POLICY_CHANGED           = "EXPEDITION_MANAGEMENT_POLICY_CHANGED",
+
+  -- EXPEDITION_MANAGEMENT_RECRUITMENT_ADD = function(info)
+  EXPEDITION_MANAGEMENT_RECRUITMENT_ADD          = "EXPEDITION_MANAGEMENT_RECRUITMENT_ADD",
+
+  -- EXPEDITION_MANAGEMENT_RECRUITMENT_DEL = function(expeditionId)
+  EXPEDITION_MANAGEMENT_RECRUITMENT_DEL          = "EXPEDITION_MANAGEMENT_RECRUITMENT_DEL",
+
+  -- EXPEDITION_MANAGEMENT_RECRUITMENTS = function(total, perPageItemCount, infos)
+  EXPEDITION_MANAGEMENT_RECRUITMENTS             = "EXPEDITION_MANAGEMENT_RECRUITMENTS",
+
+  -- EXPEDITION_MANAGEMENT_ROLE_CHANGED = function()
+  EXPEDITION_MANAGEMENT_ROLE_CHANGED             = "EXPEDITION_MANAGEMENT_ROLE_CHANGED",
+
+  -- EXPEDITION_MANAGEMENT_UPDATED = function()
+  EXPEDITION_MANAGEMENT_UPDATED                  = "EXPEDITION_MANAGEMENT_UPDATED",
+
+  -- EXPEDITION_RANKING = function()
+  EXPEDITION_RANKING                             = "EXPEDITION_RANKING",
+
+  -- EXPEDITION_SUMMON_SUGGEST = function()
+  EXPEDITION_SUMMON_SUGGEST                      = "EXPEDITION_SUMMON_SUGGEST",
+
+  -- EXPEDITION_WAR_DECLARATION_FAILED = function(errorMsg, param)
+  EXPEDITION_WAR_DECLARATION_FAILED              = "EXPEDITION_WAR_DECLARATION_FAILED",
+
+  -- EXPEDITION_WAR_DECLARATION_MONEY = function(unitId, name, money)
+  EXPEDITION_WAR_DECLARATION_MONEY               = "EXPEDITION_WAR_DECLARATION_MONEY",
+
+  -- EXPEDITION_WAR_KILL_SCORE = function(toggle)
+  EXPEDITION_WAR_KILL_SCORE                      = "EXPEDITION_WAR_KILL_SCORE",
+
+  -- EXPEDITION_WAR_SET_PROTECT_DATE = function()
+  EXPEDITION_WAR_SET_PROTECT_DATE                = "EXPEDITION_WAR_SET_PROTECT_DATE",
+
+  -- EXPEDITION_WAR_STATE = function(related, state, declarer, defendant, winner)
+  EXPEDITION_WAR_STATE                           = "EXPEDITION_WAR_STATE",
+
+  -- EXPIRED_ITEM = function(itemLinkText)
+  EXPIRED_ITEM                                   = "EXPIRED_ITEM",
+
+  -- FACTION_CHANGED = function()
+  FACTION_CHANGED                                = "FACTION_CHANGED",
+
+  -- FACTION_COMPETITION_INFO = function(info)
+  FACTION_COMPETITION_INFO                       = "FACTION_COMPETITION_INFO",
+
+  -- FACTION_COMPETITION_RESULT = function()
+  FACTION_COMPETITION_RESULT                     = "FACTION_COMPETITION_RESULT",
+
+  -- FACTION_COMPETITION_UPDATE_POINT = function(infos)
+  FACTION_COMPETITION_UPDATE_POINT               = "FACTION_COMPETITION_UPDATE_POINT",
+
+  -- FACTION_RELATION_ACCEPTED = function(name, factionName)
+  FACTION_RELATION_ACCEPTED                      = "FACTION_RELATION_ACCEPTED",
+
+  -- FACTION_RELATION_CHANGED = function(isHostile, f1Name, f2Name)
+  FACTION_RELATION_CHANGED                       = "FACTION_RELATION_CHANGED",
+
+  -- FACTION_RELATION_COUNT = function()
+  FACTION_RELATION_COUNT                         = "FACTION_RELATION_COUNT",
+
+  -- FACTION_RELATION_DENIED = function(name)
+  FACTION_RELATION_DENIED                        = "FACTION_RELATION_DENIED",
+
+  -- FACTION_RELATION_HISTORY = function()
+  FACTION_RELATION_HISTORY                       = "FACTION_RELATION_HISTORY",
+
+  -- FACTION_RELATION_REQUESTED = function(name, factionName)
+  FACTION_RELATION_REQUESTED                     = "FACTION_RELATION_REQUESTED",
+
+  -- FACTION_RELATION_WILL_CHANGE = function(f1Name, f2Name)
+  FACTION_RELATION_WILL_CHANGE                   = "FACTION_RELATION_WILL_CHANGE",
+
+  -- FACTION_RENAMED = function(isExpedition, oldName, newName)
+  FACTION_RENAMED                                = "FACTION_RENAMED",
+
+  -- FADE_INOUT_DONE = function(param)
+  FADE_INOUT_DONE                                = "FADE_INOUT_DONE",
+
+  -- FAIL_WEB_PLAY_DIARY_INSTANT = function()
+  FAIL_WEB_PLAY_DIARY_INSTANT                    = "FAIL_WEB_PLAY_DIARY_INSTANT",
+
+  -- FAILED_TO_SET_PET_AUTO_SKILL = function(onePetBar, mateType)
+  FAILED_TO_SET_PET_AUTO_SKILL                   = "FAILED_TO_SET_PET_AUTO_SKILL",
+
+  -- FAMILY_ERROR = function(msg)
+  FAMILY_ERROR                                   = "FAMILY_ERROR",
+
+  -- FAMILY_EXP_ADD = function(amount)
+  FAMILY_EXP_ADD                                 = "FAMILY_EXP_ADD",
+
+  -- FAMILY_INFO_REFRESH = function()
+  FAMILY_INFO_REFRESH                            = "FAMILY_INFO_REFRESH",
+
+  -- FAMILY_LEVEL_UP = function(levelName)
+  FAMILY_LEVEL_UP                                = "FAMILY_LEVEL_UP",
+
+  -- FAMILY_MEMBER = function(owner, member, role, title)
+  FAMILY_MEMBER                                  = "FAMILY_MEMBER",
+
+  -- FAMILY_MEMBER_ADDED = function(owner, member, title)
+  FAMILY_MEMBER_ADDED                            = "FAMILY_MEMBER_ADDED",
+
+  -- FAMILY_MEMBER_KICKED = function(member)
+  FAMILY_MEMBER_KICKED                           = "FAMILY_MEMBER_KICKED",
+
+  -- FAMILY_MEMBER_LEFT = function(member)
+  FAMILY_MEMBER_LEFT                             = "FAMILY_MEMBER_LEFT",
+
+  -- FAMILY_MEMBER_ONLINE = function()
+  FAMILY_MEMBER_ONLINE                           = "FAMILY_MEMBER_ONLINE",
+
+  -- FAMILY_MGR = function()
+  FAMILY_MGR                                     = "FAMILY_MGR",
+
+  -- FAMILY_NAME_CHANGED = function(FAMILY_NAME_CHANGED)
+  FAMILY_NAME_CHANGED                            = "FAMILY_NAME_CHANGED",
+
+  -- FAMILY_OWNER_CHANGED = function(owner)
+  FAMILY_OWNER_CHANGED                           = "FAMILY_OWNER_CHANGED",
+
+  -- FAMILY_REFRESH = function()
+  FAMILY_REFRESH                                 = "FAMILY_REFRESH",
+
+  -- FAMILY_REMOVED = function()
+  FAMILY_REMOVED                                 = "FAMILY_REMOVED",
+
+  -- FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL = function(cooltime)
+  FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL        =
+  "FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL",
+
+  -- FIND_FACTION_REZ_DISTRICT_DURATION_FAIL = function(remain)
+  FIND_FACTION_REZ_DISTRICT_DURATION_FAIL        =
+  "FIND_FACTION_REZ_DISTRICT_DURATION_FAIL",
+
+  -- FOLDER_STATE_CHANGED = function(arg)
+  FOLDER_STATE_CHANGED                           = "FOLDER_STATE_CHANGED",
+
+  -- FORCE_ATTACK_CHANGED = function(id, isNewState)
+  FORCE_ATTACK_CHANGED                           = "FORCE_ATTACK_CHANGED",
+
+  -- FRIENDLIST = function(msg)
+  FRIENDLIST                                     = "FRIENDLIST",
+
+  -- FRIENDLIST_INFO = function(totalCount, memberInfos)
+  FRIENDLIST_INFO                                = "FRIENDLIST_INFO",
+
+  -- FRIENDLIST_UPDATE = function(updateType, dataField)
+  FRIENDLIST_UPDATE                              = "FRIENDLIST_UPDATE",
+
+  -- GACHA_LOOT_PACK_LOG = function(logs)
+  GACHA_LOOT_PACK_LOG                            = "GACHA_LOOT_PACK_LOG",
+
+  -- GACHA_LOOT_PACK_RESULT = function(results)
+  GACHA_LOOT_PACK_RESULT                         = "GACHA_LOOT_PACK_RESULT",
+
+  -- GAME_EVENT_EMPTY = function()
+  GAME_EVENT_EMPTY                               = "GAME_EVENT_EMPTY",
+
+  -- GAME_EVENT_INFO_LIST_UPDATED = function()
+  GAME_EVENT_INFO_LIST_UPDATED                   = "GAME_EVENT_INFO_LIST_UPDATED",
+
+  -- GAME_EVENT_INFO_REQUESTED = function()
+  GAME_EVENT_INFO_REQUESTED                      = "GAME_EVENT_INFO_REQUESTED",
+
+  -- GAME_SCHEDULE = function()
+  GAME_SCHEDULE                                  = "GAME_SCHEDULE",
+
+  -- GENDER_TRANSFERED = function()
+  GENDER_TRANSFERED                              = "GENDER_TRANSFERED",
+
+  -- GLIDER_MOVED_INTO_BAG = function()
+  GLIDER_MOVED_INTO_BAG                          = "GLIDER_MOVED_INTO_BAG",
+
+  -- GOODS_MAIL_INBOX_ITEM_TAKEN = function(index)
+  GOODS_MAIL_INBOX_ITEM_TAKEN                    = "GOODS_MAIL_INBOX_ITEM_TAKEN",
+
+  -- GOODS_MAIL_INBOX_MONEY_TAKEN = function()
+  GOODS_MAIL_INBOX_MONEY_TAKEN                   = "GOODS_MAIL_INBOX_MONEY_TAKEN",
+
+  -- GOODS_MAIL_INBOX_TAX_PAID = function()
+  GOODS_MAIL_INBOX_TAX_PAID                      = "GOODS_MAIL_INBOX_TAX_PAID",
+
+  -- GOODS_MAIL_INBOX_UPDATE = function(read)
+  GOODS_MAIL_INBOX_UPDATE                        = "GOODS_MAIL_INBOX_UPDATE",
+
+  -- GOODS_MAIL_RETURNED = function()
+  GOODS_MAIL_RETURNED                            = "GOODS_MAIL_RETURNED",
+
+  -- GOODS_MAIL_SENT_SUCCESS = function()
+  GOODS_MAIL_SENT_SUCCESS                        = "GOODS_MAIL_SENT_SUCCESS",
+
+  -- GOODS_MAIL_SENTBOX_UPDATE = function()
+  GOODS_MAIL_SENTBOX_UPDATE                      = "GOODS_MAIL_SENTBOX_UPDATE",
+
+  -- GOODS_MAIL_WRITE_ITEM_UPDATE = function()
+  GOODS_MAIL_WRITE_ITEM_UPDATE                   = "GOODS_MAIL_WRITE_ITEM_UPDATE",
+
+  -- GRADE_ENCHANT_BROADCAST = function(characterName, resultCode, itemLink, oldGrade, newGrade)
+  GRADE_ENCHANT_BROADCAST                        = "GRADE_ENCHANT_BROADCAST",
+
+  -- GRADE_ENCHANT_RESULT = function(resultCode, itemLink, oldGrade, newGrade, breakRewardItemType, breakRewardItemCount, breakRewardByMail)
+  GRADE_ENCHANT_RESULT                           = "GRADE_ENCHANT_RESULT",
+
+  -- GUARDTOWER_HEALTH_CHANGED = function()
+  GUARDTOWER_HEALTH_CHANGED                      = "GUARDTOWER_HEALTH_CHANGED",
+
+  -- GUILD_BANK_INDEX_SHOW = function() -- Crash
+  -- GUILD_BANK_INDEX_SHOW = "GUILD_BANK_INDEX_SHOW", -- Crash
+
+  -- GUILD_BANK_INTERACTION_END = function()
+  GUILD_BANK_INTERACTION_END                     = "GUILD_BANK_INTERACTION_END",
+
+  -- GUILD_BANK_INTERACTION_START = function()
+  GUILD_BANK_INTERACTION_START                   = "GUILD_BANK_INTERACTION_START",
+
+  -- GUILD_BANK_INVEN_SHOW = function()
+  GUILD_BANK_INVEN_SHOW                          = "GUILD_BANK_INVEN_SHOW",
+
+  -- GUILD_BANK_MONEY_UPDATE = function()
+  GUILD_BANK_MONEY_UPDATE                        = "GUILD_BANK_MONEY_UPDATE",
+
+  -- GUILD_BANK_REAL_INDEX_SHOW = function()
+  GUILD_BANK_REAL_INDEX_SHOW                     = "GUILD_BANK_REAL_INDEX_SHOW",
+
+  -- GUILD_BANK_TAB_CREATED = function()
+  GUILD_BANK_TAB_CREATED                         = "GUILD_BANK_TAB_CREATED",
+
+  -- GUILD_BANK_TAB_REMOVED = function()
+  GUILD_BANK_TAB_REMOVED                         = "GUILD_BANK_TAB_REMOVED",
+
+  -- GUILD_BANK_TAB_SORTED = function()
+  GUILD_BANK_TAB_SORTED                          = "GUILD_BANK_TAB_SORTED",
+
+  -- GUILD_BANK_TAB_SWITCHED = function()
+  GUILD_BANK_TAB_SWITCHED                        = "GUILD_BANK_TAB_SWITCHED",
+
+  -- GUILD_BANK_UPDATE = function()
+  GUILD_BANK_UPDATE                              = "GUILD_BANK_UPDATE",
+
+  -- HEIR_LEVEL_UP = function(myUnit, unitId)
+  HEIR_LEVEL_UP                                  = "HEIR_LEVEL_UP",
+
+  -- HEIR_SKILL_ACTIVE_TYPE_MSG = function(activeType, ability, text, pos)
+  HEIR_SKILL_ACTIVE_TYPE_MSG                     = "HEIR_SKILL_ACTIVE_TYPE_MSG",
+
+  -- HEIR_SKILL_LEARN = function(text, pos)
+  HEIR_SKILL_LEARN                               = "HEIR_SKILL_LEARN",
+
+  -- HEIR_SKILL_RESET = function(isAll, text, info)
+  HEIR_SKILL_RESET                               = "HEIR_SKILL_RESET",
+
+  -- HEIR_SKILL_UPDATE = function()
+  HEIR_SKILL_UPDATE                              = "HEIR_SKILL_UPDATE",
+
+  -- HERO_ALL_SCORE_UPDATED = function(factionID)
+  HERO_ALL_SCORE_UPDATED                         = "HERO_ALL_SCORE_UPDATED",
+
+  -- HERO_ANNOUNCE_REMAIN_TIME = function(remainTime, isStartTime)
+  HERO_ANNOUNCE_REMAIN_TIME                      = "HERO_ANNOUNCE_REMAIN_TIME",
+
+  -- HERO_CANDIDATE_NOTI = function()
+  HERO_CANDIDATE_NOTI                            = "HERO_CANDIDATE_NOTI",
+
+  -- HERO_CANDIDATES_ANNOUNCED = function(title, desc)
+  HERO_CANDIDATES_ANNOUNCED                      = "HERO_CANDIDATES_ANNOUNCED",
+
+  -- HERO_ELECTION = function()
+  HERO_ELECTION                                  = "HERO_ELECTION",
+
+  -- HERO_ELECTION_DAY_ALERT = function(title, desc)
+  HERO_ELECTION_DAY_ALERT                        = "HERO_ELECTION_DAY_ALERT",
+
+  -- HERO_ELECTION_RESULT = function(title, desc)
+  HERO_ELECTION_RESULT                           = "HERO_ELECTION_RESULT",
+
+  -- HERO_ELECTION_VOTED = function()
+  HERO_ELECTION_VOTED                            = "HERO_ELECTION_VOTED",
+
+  -- HERO_NOTI = function()
+  HERO_NOTI                                      = "HERO_NOTI",
+
+  -- HERO_RANK_DATA_RETRIEVED = function(factionID)
+  HERO_RANK_DATA_RETRIEVED                       = "HERO_RANK_DATA_RETRIEVED",
+
+  -- HERO_RANK_DATA_TIMEOUT = function()
+  HERO_RANK_DATA_TIMEOUT                         = "HERO_RANK_DATA_TIMEOUT",
+
+  -- HERO_SCORE_UPDATED = function()
+  HERO_SCORE_UPDATED                             = "HERO_SCORE_UPDATED",
+
+  -- HERO_SEASON_OFF = function()
+  HERO_SEASON_OFF                                = "HERO_SEASON_OFF",
+
+  -- HERO_SEASON_UPDATED = function()
+  HERO_SEASON_UPDATED                            = "HERO_SEASON_UPDATED",
+
+  -- HIDE_ROADMAP_TOOLTIP = function(text)
+  HIDE_ROADMAP_TOOLTIP                           = "HIDE_ROADMAP_TOOLTIP",
+
+  -- HIDE_SKILL_MAP_EFFECT = function(index)
+  HIDE_SKILL_MAP_EFFECT                          = "HIDE_SKILL_MAP_EFFECT",
+
+  -- HIDE_WORLDMAP_TOOLTIP = function()
+  HIDE_WORLDMAP_TOOLTIP                          = "HIDE_WORLDMAP_TOOLTIP",
+
+  -- HOUSE_BUILD_INFO = function(hType, bTax, hTax, heavyTaxHouseCount, normalTaxHouseCount, isHeavyTaxHouse, hostileTaxRate, depositString, taxType, completion)
+  HOUSE_BUILD_INFO                               = "HOUSE_BUILD_INFO",
+
+  -- HOUSE_BUY_FAIL = function()
+  HOUSE_BUY_FAIL                                 = "HOUSE_BUY_FAIL",
+
+  -- HOUSE_BUY_SUCCESS = function(houseName)
+  HOUSE_BUY_SUCCESS                              = "HOUSE_BUY_SUCCESS",
+
+  -- HOUSE_CANCEL_SELL_FAIL = function()
+  HOUSE_CANCEL_SELL_FAIL                         = "HOUSE_CANCEL_SELL_FAIL",
+
+  -- HOUSE_CANCEL_SELL_SUCCESS = function(houseName)
+  HOUSE_CANCEL_SELL_SUCCESS                      = "HOUSE_CANCEL_SELL_SUCCESS",
+
+  -- HOUSE_DECO_UPDATED = function()
+  HOUSE_DECO_UPDATED                             = "HOUSE_DECO_UPDATED",
+
+  -- HOUSE_FARM_MSG = function(name, total, harvestable)
+  HOUSE_FARM_MSG                                 = "HOUSE_FARM_MSG",
+
+  -- HOUSE_INFO_UPDATED = function()
+  HOUSE_INFO_UPDATED                             = "HOUSE_INFO_UPDATED",
+
+  -- HOUSE_INTERACTION_END = function()
+  HOUSE_INTERACTION_END                          = "HOUSE_INTERACTION_END",
+
+  -- HOUSE_INTERACTION_START = function(structureType, viewType)
+  HOUSE_INTERACTION_START                        = "HOUSE_INTERACTION_START",
+
+  -- HOUSE_PERMISSION_UPDATED = function()
+  HOUSE_PERMISSION_UPDATED                       = "HOUSE_PERMISSION_UPDATED",
+
+  -- HOUSE_REBUILD_TAX_INFO = function()
+  HOUSE_REBUILD_TAX_INFO                         = "HOUSE_REBUILD_TAX_INFO",
+
+  -- HOUSE_ROTATE_CONFIRM = function()
+  HOUSE_ROTATE_CONFIRM                           = "HOUSE_ROTATE_CONFIRM",
+
+  -- HOUSE_SALE_SUCCESS = function(houseName)
+  HOUSE_SALE_SUCCESS                             = "HOUSE_SALE_SUCCESS",
+
+  -- HOUSE_SET_SELL_FAIL = function()
+  HOUSE_SET_SELL_FAIL                            = "HOUSE_SET_SELL_FAIL",
+
+  -- HOUSE_SET_SELL_SUCCESS = function(houseName)
+  HOUSE_SET_SELL_SUCCESS                         = "HOUSE_SET_SELL_SUCCESS",
+
+  -- HOUSE_STEP_INFO_UPDATED = function(structureType)
+  HOUSE_STEP_INFO_UPDATED                        = "HOUSE_STEP_INFO_UPDATED",
+
+  -- HOUSE_TAX_INFO = function(dominionTaxRate, hostileTaxRate, taxString, dueTime, prepayTime, weeksWithoutPay, weeksPrepay, isAlreadyPaid, isHeavyTaxHouse, depositString, taxType, id)
+  HOUSE_TAX_INFO                                 = "HOUSE_TAX_INFO",
+
+  -- HOUSING_UCC_CLOSE = function()
+  HOUSING_UCC_CLOSE                              = "HOUSING_UCC_CLOSE",
+
+  -- HOUSING_UCC_ITEM_SLOT_CLEAR = function()
+  HOUSING_UCC_ITEM_SLOT_CLEAR                    = "HOUSING_UCC_ITEM_SLOT_CLEAR",
+
+  -- HOUSING_UCC_ITEM_SLOT_SET = function()
+  HOUSING_UCC_ITEM_SLOT_SET                      = "HOUSING_UCC_ITEM_SLOT_SET",
+
+  -- HOUSING_UCC_LEAVE = function()
+  HOUSING_UCC_LEAVE                              = "HOUSING_UCC_LEAVE",
+
+  -- HOUSING_UCC_UPDATED = function()
+  HOUSING_UCC_UPDATED                            = "HOUSING_UCC_UPDATED",
+
+  -- HPW_ZONE_STATE_CHANGE = function(zoneId: ZONE_ID)
+  HPW_ZONE_STATE_CHANGE                          = "HPW_ZONE_STATE_CHANGE",
+
+  -- HPW_ZONE_STATE_WAR_END = function(zoneId, points)
+  HPW_ZONE_STATE_WAR_END                         = "HPW_ZONE_STATE_WAR_END",
+
+  -- IME_STATUS_CHANGED = function()
+  IME_STATUS_CHANGED                             = "IME_STATUS_CHANGED",
+
+  -- INDUN_INITAL_ROUND_INFO = function()
+  INDUN_INITAL_ROUND_INFO                        = "INDUN_INITAL_ROUND_INFO",
+
+  -- INDUN_ROUND_END = function(success, round, isBossRound, lastRound)
+  INDUN_ROUND_END                                = "INDUN_ROUND_END",
+
+  -- INDUN_ROUND_START = function(round, isBossRound)
+  INDUN_ROUND_START                              = "INDUN_ROUND_START",
+
+  -- INDUN_UPDATE_ROUND_INFO = function()
+  INDUN_UPDATE_ROUND_INFO                        = "INDUN_UPDATE_ROUND_INFO",
+
+  -- INGAME_SHOP_BUY_RESULT = function()
+  INGAME_SHOP_BUY_RESULT                         = "INGAME_SHOP_BUY_RESULT",
+
+  -- INIT_CHRONICLE_INFO = function()
+  INIT_CHRONICLE_INFO                            = "INIT_CHRONICLE_INFO",
+
+  -- INSERT_CRAFT_ORDER = function()
+  INSERT_CRAFT_ORDER                             = "INSERT_CRAFT_ORDER",
+
+  -- INSTANCE_ENTERABLE_MSG = function(info)
+  INSTANCE_ENTERABLE_MSG                         = "INSTANCE_ENTERABLE_MSG",
+
+  -- INSTANT_GAME_BEST_RATING_REWARD = function()
+  INSTANT_GAME_BEST_RATING_REWARD                = "INSTANT_GAME_BEST_RATING_REWARD",
+
+  -- INSTANT_GAME_END = function()
+  INSTANT_GAME_END                               = "INSTANT_GAME_END",
+
+  -- INSTANT_GAME_JOIN_APPLY = function()
+  INSTANT_GAME_JOIN_APPLY                        = "INSTANT_GAME_JOIN_APPLY",
+
+  -- INSTANT_GAME_JOIN_CANCEL = function()
+  INSTANT_GAME_JOIN_CANCEL                       = "INSTANT_GAME_JOIN_CANCEL",
+
+  -- INSTANT_GAME_KILL = function(msgInfo)
+  INSTANT_GAME_KILL                              = "INSTANT_GAME_KILL",
+
+  -- INSTANT_GAME_PICK_BUFFS = function()
+  INSTANT_GAME_PICK_BUFFS                        = "INSTANT_GAME_PICK_BUFFS",
+
+  -- INSTANT_GAME_READY = function()
+  INSTANT_GAME_READY                             = "INSTANT_GAME_READY",
+
+  -- INSTANT_GAME_RETIRE = function()
+  INSTANT_GAME_RETIRE                            = "INSTANT_GAME_RETIRE",
+
+  -- INSTANT_GAME_ROUND_RESULT = function(resultState, resultRound)
+  INSTANT_GAME_ROUND_RESULT                      = "INSTANT_GAME_ROUND_RESULT",
+
+  -- INSTANT_GAME_START = function()
+  INSTANT_GAME_START                             = "INSTANT_GAME_START",
+
+  -- INSTANT_GAME_START_POINT_RETURN_MSG = function(remainSec)
+  INSTANT_GAME_START_POINT_RETURN_MSG            = "INSTANT_GAME_START_POINT_RETURN_MSG",
+
+  -- INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME = function(remainTime)
+  INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME          = "INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME",
+
+  -- INSTANT_GAME_VISIT_COUNT_RESET = function()
+  INSTANT_GAME_VISIT_COUNT_RESET                 = "INSTANT_GAME_VISIT_COUNT_RESET",
+
+  -- INSTANT_GAME_WAIT = function()
+  INSTANT_GAME_WAIT                              = "INSTANT_GAME_WAIT",
+
+  -- INTERACTION_END = function()
+  INTERACTION_END                                = "INTERACTION_END",
+
+  -- INTERACTION_START = function()
+  INTERACTION_START                              = "INTERACTION_START",
+
+  -- INVALID_NAME_POLICY = function(namePolicyType)
+  INVALID_NAME_POLICY                            = "INVALID_NAME_POLICY",
+
+  -- INVEN_SLOT_SPLIT = function(invenType, slot)
+  INVEN_SLOT_SPLIT                               = "INVEN_SLOT_SPLIT",
+
+  -- ITEM_ACQUISITION_BY_LOOT = function(charName, itemLinkText, itemCount)
+  ITEM_ACQUISITION_BY_LOOT                       = "ITEM_ACQUISITION_BY_LOOT",
+
+  -- ITEM_CHANGE_MAPPING_RESULT = function(result, oldGrade, oldGearScore, itemLink, bonusRate)
+  ITEM_CHANGE_MAPPING_RESULT                     = "ITEM_CHANGE_MAPPING_RESULT",
+
+  -- ITEM_ENCHANT_MAGICAL_RESULT = function(resultCode, itemLink, gemItemType)
+  ITEM_ENCHANT_MAGICAL_RESULT                    = "ITEM_ENCHANT_MAGICAL_RESULT",
+
+  -- ITEM_EQUIP_RESULT = function(ItemEquipResult)
+  ITEM_EQUIP_RESULT                              = "ITEM_EQUIP_RESULT",
+
+  -- ITEM_LOOK_CONVERTED = function(itemLinkText)
+  ITEM_LOOK_CONVERTED                            = "ITEM_LOOK_CONVERTED",
+
+  -- ITEM_LOOK_CONVERTED_EFFECT = function()
+  ITEM_LOOK_CONVERTED_EFFECT                     = "ITEM_LOOK_CONVERTED_EFFECT",
+
+  -- ITEM_REFURBISHMENT_RESULT = function(result, itemLink, beforeScale, afterScale)
+  ITEM_REFURBISHMENT_RESULT                      = "ITEM_REFURBISHMENT_RESULT",
+
+  -- ITEM_SMELTING_RESULT = function(resultCode, itemLink, smeltingItemType)
+  ITEM_SMELTING_RESULT                           = "ITEM_SMELTING_RESULT",
+
+  -- ITEM_SOCKET_UPGRADE = function(socketItemType)
+  ITEM_SOCKET_UPGRADE                            = "ITEM_SOCKET_UPGRADE",
+
+  -- ITEM_SOCKETING_RESULT = function(resultCode, itemLink, socketItemType, install)
+  ITEM_SOCKETING_RESULT                          = "ITEM_SOCKETING_RESULT",
+
+  -- JURY_OK_COUNT = function(count, total)
+  JURY_OK_COUNT                                  = "JURY_OK_COUNT",
+
+  -- JURY_WAITING_NUMBER = function(num)
+  JURY_WAITING_NUMBER                            = "JURY_WAITING_NUMBER",
+
+  -- LABORPOWER_CHANGED = function(diff, laborPower)
+  LABORPOWER_CHANGED                             = "LABORPOWER_CHANGED",
+
+  -- LEAVE_ENCHANT_ITEM_MODE = function()
+  LEAVE_ENCHANT_ITEM_MODE                        = "LEAVE_ENCHANT_ITEM_MODE",
+
+  -- LEAVE_GACHA_LOOT_MODE = function()
+  LEAVE_GACHA_LOOT_MODE                          = "LEAVE_GACHA_LOOT_MODE",
+
+  -- LEAVE_ITEM_LOOK_CONVERT_MODE = function()
+  LEAVE_ITEM_LOOK_CONVERT_MODE                   = "LEAVE_ITEM_LOOK_CONVERT_MODE",
+
+  -- LEAVED_INSTANT_GAME_ZONE = function()
+  LEAVED_INSTANT_GAME_ZONE                       = "LEAVED_INSTANT_GAME_ZONE",
+
+  -- LEAVING_WORLD_CANCELED = function()
+  LEAVING_WORLD_CANCELED                         = "LEAVING_WORLD_CANCELED",
+
+  -- LEAVING_WORLD_STARTED = function(waitTime, exitTarget, idleKick)
+  LEAVING_WORLD_STARTED                          = "LEAVING_WORLD_STARTED",
+
+  -- LEFT_LOADING = function()
+  LEFT_LOADING                                   = "LEFT_LOADING",
+
+  -- LEFT_LOGIN = function()
+  LEFT_LOGIN                                     = "LEFT_LOGIN",
+
+  -- LEFT_SCREEN_SHOT_CAMERA_MODE = function()
+  LEFT_SCREEN_SHOT_CAMERA_MODE                   = "LEFT_SCREEN_SHOT_CAMERA_MODE",
+
+  -- LEFT_SUBZONE = function()
+  LEFT_SUBZONE                                   = "LEFT_SUBZONE",
+
+  -- LEFT_WORLD = function()
+  LEFT_WORLD                                     = "LEFT_WORLD",
+
+  -- LEVEL_CHANGED = function(_, stringId)
+  LEVEL_CHANGED                                  = "LEVEL_CHANGED",
+
+  -- LOGIN_CHARACTER_UPDATED = function(status, characterIndex)
+  LOGIN_CHARACTER_UPDATED                        = "LOGIN_CHARACTER_UPDATED",
+
+  -- LOGIN_DENIED = function()
+  LOGIN_DENIED                                   = "LOGIN_DENIED",
+
+  -- LOOT_BAG_CHANGED = function(setTime)
+  LOOT_BAG_CHANGED                               = "LOOT_BAG_CHANGED",
+
+  -- LOOT_BAG_CLOSE = function()
+  LOOT_BAG_CLOSE                                 = "LOOT_BAG_CLOSE",
+
+  -- LOOT_DICE = function(charName, itemLinkText, diceValue)
+  LOOT_DICE                                      = "LOOT_DICE",
+
+  -- LOOT_PACK_ITEM_BROADCAST = function(characterName, sourceName, useItemLink, resultItemLink)
+  LOOT_PACK_ITEM_BROADCAST                       = "LOOT_PACK_ITEM_BROADCAST",
+
+  -- LOOTING_RULE_BOP_CHANGED = function(rollForBop)
+  LOOTING_RULE_BOP_CHANGED                       = "LOOTING_RULE_BOP_CHANGED",
+
+  -- LOOTING_RULE_GRADE_CHANGED = function(grade)
+  LOOTING_RULE_GRADE_CHANGED                     = "LOOTING_RULE_GRADE_CHANGED",
+
+  -- LOOTING_RULE_MASTER_CHANGED = function(charName)
+  LOOTING_RULE_MASTER_CHANGED                    = "LOOTING_RULE_MASTER_CHANGED",
+
+  -- LOOTING_RULE_METHOD_CHANGED = function(lootMethod)
+  LOOTING_RULE_METHOD_CHANGED                    = "LOOTING_RULE_METHOD_CHANGED",
+
+  -- LP_MANAGE_CHARACTER_CHANGED = function()
+  LP_MANAGE_CHARACTER_CHANGED                    = "LP_MANAGE_CHARACTER_CHANGED",
+
+  -- MAIL_INBOX_ATTACHMENT_TAKEN_ALL = function(mailId)
+  MAIL_INBOX_ATTACHMENT_TAKEN_ALL                = "MAIL_INBOX_ATTACHMENT_TAKEN_ALL",
+
+  -- MAIL_INBOX_ITEM_TAKEN = function(index)
+  MAIL_INBOX_ITEM_TAKEN                          = "MAIL_INBOX_ITEM_TAKEN",
+
+  -- MAIL_INBOX_MONEY_TAKEN = function()
+  MAIL_INBOX_MONEY_TAKEN                         = "MAIL_INBOX_MONEY_TAKEN",
+
+  -- MAIL_INBOX_TAX_PAID = function()
+  MAIL_INBOX_TAX_PAID                            = "MAIL_INBOX_TAX_PAID",
+
+  -- MAIL_INBOX_UPDATE = function(read, mailListKind)
+  MAIL_INBOX_UPDATE                              = "MAIL_INBOX_UPDATE",
+
+  -- MAIL_RETURNED = function()
+  MAIL_RETURNED                                  = "MAIL_RETURNED",
+
+  -- MAIL_SENT_SUCCESS = function()
+  MAIL_SENT_SUCCESS                              = "MAIL_SENT_SUCCESS",
+
+  -- MAIL_SENTBOX_UPDATE = function(read, mailListKind)
+  MAIL_SENTBOX_UPDATE                            = "MAIL_SENTBOX_UPDATE",
+
+  -- MAIL_WRITE_ITEM_UPDATE = function(index)
+  MAIL_WRITE_ITEM_UPDATE                         = "MAIL_WRITE_ITEM_UPDATE",
+
+  -- MAP_EVENT_CHANGED = function()
+  MAP_EVENT_CHANGED                              = "MAP_EVENT_CHANGED",
+
+  -- MATE_SKILL_LEARNED = function(mateType, text)
+  MATE_SKILL_LEARNED                             = "MATE_SKILL_LEARNED",
+
+  -- MATE_STATE_UPDATE = function(mateType, stateIndex)
+  MATE_STATE_UPDATE                              = "MATE_STATE_UPDATE",
+
+  -- MEGAPHONE_MESSAGE = function(show, channel, name, message, isMyMessage)
+  MEGAPHONE_MESSAGE                              = "MEGAPHONE_MESSAGE",
+
+  -- MIA_MAIL_INBOX_ITEM_TAKEN = function()
+  MIA_MAIL_INBOX_ITEM_TAKEN                      = "MIA_MAIL_INBOX_ITEM_TAKEN",
+
+  -- MIA_MAIL_INBOX_MONEY_TAKEN = function()
+  MIA_MAIL_INBOX_MONEY_TAKEN                     = "MIA_MAIL_INBOX_MONEY_TAKEN",
+
+  -- MIA_MAIL_INBOX_TAX_PAID = function()
+  MIA_MAIL_INBOX_TAX_PAID                        = "MIA_MAIL_INBOX_TAX_PAID",
+
+  -- MIA_MAIL_INBOX_UPDATE = function()
+  MIA_MAIL_INBOX_UPDATE                          = "MIA_MAIL_INBOX_UPDATE",
+
+  -- MIA_MAIL_RETURNED = function()
+  MIA_MAIL_RETURNED                              = "MIA_MAIL_RETURNED",
+
+  -- MIA_MAIL_SENT_SUCCESS = function()
+  MIA_MAIL_SENT_SUCCESS                          = "MIA_MAIL_SENT_SUCCESS",
+
+  -- MIA_MAIL_SENTBOX_UPDATE = function()
+  MIA_MAIL_SENTBOX_UPDATE                        = "MIA_MAIL_SENTBOX_UPDATE",
+
+  -- MIA_MAIL_WRITE_ITEM_UPDATE = function()
+  MIA_MAIL_WRITE_ITEM_UPDATE                     = "MIA_MAIL_WRITE_ITEM_UPDATE",
+
+  -- MINE_AMOUNT = function()
+  MINE_AMOUNT                                    = "MINE_AMOUNT",
+
+  -- MINI_SCOREBOARD_CHANGED = function(status, info)
+  MINI_SCOREBOARD_CHANGED                        = "MINI_SCOREBOARD_CHANGED",
+
+  -- MODE_ACTIONS_UPDATE = function()
+  MODE_ACTIONS_UPDATE                            = "MODE_ACTIONS_UPDATE",
+
+  -- MONEY_ACQUISITION_BY_LOOT = function(charName, moneyStr)
+  MONEY_ACQUISITION_BY_LOOT                      = "MONEY_ACQUISITION_BY_LOOT",
+
+  -- MOUNT_BAG_UPDATE = function()
+  MOUNT_BAG_UPDATE                               = "MOUNT_BAG_UPDATE",
+
+  -- MOUNT_PET = function(onePetBar, mateType, isMyPet)
+  MOUNT_PET                                      = "MOUNT_PET",
+
+  -- MOUNT_SLOT_CHANGED = function()
+  MOUNT_SLOT_CHANGED                             = "MOUNT_SLOT_CHANGED",
+
+  -- MOUSE_CLICK = function()
+  MOUSE_CLICK                                    = "MOUSE_CLICK",
+
+  -- MOUSE_DOWN = function(widgetId)
+  MOUSE_DOWN                                     = "MOUSE_DOWN",
+
+  -- MOUSE_UP = function()
+  MOUSE_UP                                       = "MOUSE_UP",
+
+  -- MOVE_SPEED_CHANGE = function()
+  MOVE_SPEED_CHANGE                              = "MOVE_SPEED_CHANGE",
+
+  -- MOVIE_ABORT = function()
+  MOVIE_ABORT                                    = "MOVIE_ABORT",
+
+  -- MOVIE_LOAD = function()
+  MOVIE_LOAD                                     = "MOVIE_LOAD",
+
+  -- MOVIE_START = function()
+  MOVIE_START                                    = "MOVIE_START",
+
+  -- MOVIE_STOP = function()
+  MOVIE_STOP                                     = "MOVIE_STOP",
+
+  -- MULTI_QUEST_CONTEXT_SELECT = function(targetNpc, qtype, useDirectingMode, targetId, interactionValue)
+  MULTI_QUEST_CONTEXT_SELECT                     = "MULTI_QUEST_CONTEXT_SELECT",
+
+  -- MULTI_QUEST_CONTEXT_SELECT_LIST = function(questList)
+  MULTI_QUEST_CONTEXT_SELECT_LIST                = "MULTI_QUEST_CONTEXT_SELECT_LIST",
+
+  -- NAME_TAG_MODE_CHANGED_MSG = function(changedNameTagMode)
+  NAME_TAG_MODE_CHANGED_MSG                      = "NAME_TAG_MODE_CHANGED_MSG",
+
+  -- NATION_DOMINION = function(zoneGroupType, force)
+  NATION_DOMINION                                = "NATION_DOMINION",
+
+  -- NAVI_MARK_POS_TO_MAP = function()
+  NAVI_MARK_POS_TO_MAP                           = "NAVI_MARK_POS_TO_MAP",
+
+  -- NAVI_MARK_REMOVE = function()
+  NAVI_MARK_REMOVE                               = "NAVI_MARK_REMOVE",
+
+  -- NEW_DAY_STARTED = function()
+  NEW_DAY_STARTED                                = "NEW_DAY_STARTED",
+
+  -- NEW_SKILL_POINT = function(point)
+  NEW_SKILL_POINT                                = "NEW_SKILL_POINT",
+
+  -- NEXT_SIEGE_INFO = function(siegeInfo)
+  NEXT_SIEGE_INFO                                = "NEXT_SIEGE_INFO",
+
+  -- NOTICE_MESSAGE = function(noticeType, color, visibleTime, message, name)
+  NOTICE_MESSAGE                                 = "NOTICE_MESSAGE",
+
+  -- NOTIFY_AUTH_ADVERTISING_MESSAGE = function(msg, remainTime)
+  NOTIFY_AUTH_ADVERTISING_MESSAGE                = "NOTIFY_AUTH_ADVERTISING_MESSAGE",
+
+  -- NOTIFY_AUTH_BILLING_MESSAGE = function(msg, remainTime)
+  NOTIFY_AUTH_BILLING_MESSAGE                    = "NOTIFY_AUTH_BILLING_MESSAGE",
+
+  -- NOTIFY_AUTH_DISCONNECTION_MESSAGE = function(msg, remainTime)
+  NOTIFY_AUTH_DISCONNECTION_MESSAGE              = "NOTIFY_AUTH_DISCONNECTION_MESSAGE",
+
+  -- NOTIFY_AUTH_FATIGUE_MESSAGE = function(msg, remainTime)
+  NOTIFY_AUTH_FATIGUE_MESSAGE                    = "NOTIFY_AUTH_FATIGUE_MESSAGE",
+
+  -- NOTIFY_AUTH_NOTICE_MESSAGE = function(message, visibleTime, needCountdown)
+  NOTIFY_AUTH_NOTICE_MESSAGE                     = "NOTIFY_AUTH_NOTICE_MESSAGE",
+
+  -- NOTIFY_AUTH_TC_FATIGUE_MESSAGE = function(msg, remainTime)
+  NOTIFY_AUTH_TC_FATIGUE_MESSAGE                 = "NOTIFY_AUTH_TC_FATIGUE_MESSAGE",
+
+  -- NOTIFY_WEB_TRANSFER_STATE = function(arg)
+  NOTIFY_WEB_TRANSFER_STATE                      = "NOTIFY_WEB_TRANSFER_STATE",
+
+  -- NPC_CRAFT_ERROR = function()
+  NPC_CRAFT_ERROR                                = "NPC_CRAFT_ERROR",
+
+  -- NPC_CRAFT_UPDATE = function()
+  NPC_CRAFT_UPDATE                               = "NPC_CRAFT_UPDATE",
+
+  -- NPC_INTERACTION_END = function()
+  NPC_INTERACTION_END                            = "NPC_INTERACTION_END",
+
+  -- NPC_INTERACTION_START = function(value, addedValue, npcId)
+  NPC_INTERACTION_START                          = "NPC_INTERACTION_START",
+
+  -- NPC_UNIT_EQUIPMENT_CHANGED = function()
+  NPC_UNIT_EQUIPMENT_CHANGED                     = "UNIT_NPC_EQUIPMENT_CHANGED",
+
+  -- NUONS_ARROW_SHOW = function(visible)
+  NUONS_ARROW_SHOW                               = "NUONS_ARROW_SHOW",
+
+  -- NUONS_ARROW_UI_MSG = function(nuonsMsgInfo)
+  NUONS_ARROW_UI_MSG                             = "NUONS_ARROW_UI_MSG",
+
+  -- NUONS_ARROW_UPDATE = function(data)
+  NUONS_ARROW_UPDATE                             = "NUONS_ARROW_UPDATE",
+
+  -- ONE_AND_ONE_CHAT_ADD_MESSAGE = function(channelId, speakerName, message, isSpeakerGm)
+  ONE_AND_ONE_CHAT_ADD_MESSAGE                   = "ONE_AND_ONE_CHAT_ADD_MESSAGE",
+
+  -- ONE_AND_ONE_CHAT_END = function(channelId)
+  ONE_AND_ONE_CHAT_END                           = "ONE_AND_ONE_CHAT_END",
+
+  -- ONE_AND_ONE_CHAT_START = function(channelId, targetName)
+  ONE_AND_ONE_CHAT_START                         = "ONE_AND_ONE_CHAT_START",
+
+  -- OPEN_ARS = function(number, timeout)
+  OPEN_ARS                                       = "OPEN_ARS",
+
+  -- OPEN_CHAT = function()
+  OPEN_CHAT                                      = "OPEN_CHAT",
+
+  -- OPEN_COMMON_FARM_INFO = function(commonFarmType)
+  OPEN_COMMON_FARM_INFO                          = "OPEN_COMMON_FARM_INFO",
+
+  -- OPEN_CONFIG = function()
+  OPEN_CONFIG                                    = "OPEN_CONFIG",
+
+  -- OPEN_CRAFT_ORDER_BOARD = function(tabName)
+  OPEN_CRAFT_ORDER_BOARD                         = "OPEN_CRAFT_ORDER_BOARD",
+
+  -- OPEN_EMBLEM_IMPRINT_UI = function()
+  OPEN_EMBLEM_IMPRINT_UI                         = "OPEN_EMBLEM_IMPRINT_UI",
+
+  -- OPEN_EMBLEM_UPLOAD_UI = function(doodad)
+  OPEN_EMBLEM_UPLOAD_UI                          = "OPEN_EMBLEM_UPLOAD_UI",
+
+  -- OPEN_EXPEDITION_PORTAL_LIST = function(addPortal, interactionDoodad, expeditionOwner)
+  OPEN_EXPEDITION_PORTAL_LIST                    = "OPEN_EXPEDITION_PORTAL_LIST",
+
+  -- OPEN_MUSIC_SHEET = function(isShow, itemIdString, isWide)
+  OPEN_MUSIC_SHEET                               = "OPEN_MUSIC_SHEET",
+
+  -- OPEN_NAVI_DOODAD_NAMING_DIALOG = function()
+  OPEN_NAVI_DOODAD_NAMING_DIALOG                 = "OPEN_NAVI_DOODAD_NAMING_DIALOG",
+
+  -- OPEN_OTP = function(currentTry, maxTry, onTime)
+  OPEN_OTP                                       = "OPEN_OTP",
+
+  -- OPEN_PAPER = function(type, idx)
+  OPEN_PAPER                                     = "OPEN_PAPER",
+
+  -- OPEN_PCCERT = function(currentTry, maxTry, onTime)
+  OPEN_PCCERT                                    = "OPEN_PCCERT",
+
+  -- OPEN_PROMOTION_EVENT_URL = function(url)
+  OPEN_PROMOTION_EVENT_URL                       = "OPEN_PROMOTION_EVENT_URL",
+
+  -- OPEN_SECURE_CARD = function(secureCardIndex, currentTry, onTime)
+  OPEN_SECURE_CARD                               = "OPEN_SECURE_CARD",
+
+  -- OPEN_WORLD_QUEUE = function()
+  OPEN_WORLD_QUEUE                               = "OPEN_WORLD_QUEUE",
+
+  -- OPTIMIZATION_BUTTON_MESSAGE = function() -- Crash
+  -- OPTIMIZATION_BUTTON_MESSAGE = "OPTIMIZATION_BUTTON_MESSAGE", -- Crash
+
+  -- OPTIMIZATION_RESULT_MESSAGE = function(activated)
+  OPTIMIZATION_RESULT_MESSAGE                    = "OPTIMIZATION_RESULT_MESSAGE",
+
+  -- OPTION_RESET = function()
+  OPTION_RESET                                   = "OPTION_RESET",
+
+  -- PASSENGER_MOUNT_PET = function(onePetBar, mateType)
+  PASSENGER_MOUNT_PET                            = "PASSENGER_MOUNT_PET",
+
+  -- PASSENGER_UNMOUNT_PET = function(onePetBar, mateType)
+  PASSENGER_UNMOUNT_PET                          = "PASSENGER_UNMOUNT_PET",
+
+  -- PET_AUTO_SKILL_CHANGED = function(onePetBar, mateType)
+  PET_AUTO_SKILL_CHANGED                         = "PET_AUTO_SKILL_CHANGED",
+
+  -- PET_FOLLOWING_MASTER = function(onePetBar, mateType)
+  PET_FOLLOWING_MASTER                           = "PET_FOLLOWING_MASTER",
+
+  -- PET_STOP_BY_MASTER = function(onePetBar, mateType)
+  PET_STOP_BY_MASTER                             = "PET_STOP_BY_MASTER",
+
+  -- PETMATE_BOUND = function()
+  PETMATE_BOUND                                  = "PETMATE_BOUND",
+
+  -- PETMATE_UNBOUND = function()
+  PETMATE_UNBOUND                                = "PETMATE_UNBOUND",
+
+  -- PLAYER_AA_POINT = function(change, changeStr, itemTaskType, info)
+  PLAYER_AA_POINT                                = "PLAYER_AA_POINT",
+
+  -- PLAYER_ABILITY_LEVEL_CHANGED = function()
+  PLAYER_ABILITY_LEVEL_CHANGED                   = "PLAYER_ABILITY_LEVEL_CHANGED",
+
+  -- PLAYER_BANK_AA_POINT = function()
+  PLAYER_BANK_AA_POINT                           = "PLAYER_BANK_AA_POINT",
+
+  -- PLAYER_BANK_MONEY = function()
+  PLAYER_BANK_MONEY                              = "PLAYER_BANK_MONEY",
+
+  -- PLAYER_BM_POINT = function(oldBmPoint)
+  PLAYER_BM_POINT                                = "PLAYER_BM_POINT",
+
+  -- PLAYER_GEAR_POINT = function()
+  PLAYER_GEAR_POINT                              = "PLAYER_GEAR_POINT",
+
+  -- PLAYER_HONOR_POINT = function(amount, amountStr, isCombatInHonorPointWar)
+  PLAYER_HONOR_POINT                             = "PLAYER_HONOR_POINT",
+
+  -- PLAYER_HONOR_POINT_CHANGED_IN_HPW = function(amount)
+  PLAYER_HONOR_POINT_CHANGED_IN_HPW              = "PLAYER_HONOR_POINT_CHANGED_IN_HPW",
+
+  -- PLAYER_JURY_POINT = function()
+  PLAYER_JURY_POINT                              = "PLAYER_JURY_POINT",
+
+  -- PLAYER_LEADERSHIP_POINT = function(amount, amountStr)
+  PLAYER_LEADERSHIP_POINT                        = "PLAYER_LEADERSHIP_POINT",
+
+  -- PLAYER_LIVING_POINT = function(amount, amountStr)
+  PLAYER_LIVING_POINT                            = "PLAYER_LIVING_POINT",
+
+  -- PLAYER_MONEY = function(change, changeStr, itemTaskType, info)
+  PLAYER_MONEY                                   = "PLAYER_MONEY",
+
+  -- PLAYER_RESURRECTED = function()
+  PLAYER_RESURRECTED                             = "PLAYER_RESURRECTED",
+
+  -- PLAYER_RESURRECTION = function(name)
+  PLAYER_RESURRECTION                            = "PLAYER_RESURRECTION",
+
+  -- PLAYER_VISUAL_RACE = function()
+  PLAYER_VISUAL_RACE                             = "PLAYER_VISUAL_RACE",
+
+  -- POST_CRAFT_ORDER = function(result)
+  POST_CRAFT_ORDER                               = "POST_CRAFT_ORDER",
+
+  -- PRELIMINARY_EQUIP_UPDATE = function()
+  PRELIMINARY_EQUIP_UPDATE                       = "PRELIMINARY_EQUIP_UPDATE",
+
+  -- PREMIUM_FIRST_BUY_BONUS = function()
+  PREMIUM_FIRST_BUY_BONUS                        = "PREMIUM_FIRST_BUY_BONUS",
+
+  -- PREMIUM_GRADE_CHANGE = function(prevPremiumGrade, presentPremiumGrade)
+  PREMIUM_GRADE_CHANGE                           = "PREMIUM_GRADE_CHANGE",
+
+  -- PREMIUM_LABORPOWER_CHANGED = function(onlineDiff, offlineDiff)
+  PREMIUM_LABORPOWER_CHANGED                     = "PREMIUM_LABORPOWER_CHANGED",
+
+  -- PREMIUM_POINT_CHANGE = function()
+  PREMIUM_POINT_CHANGE                           = "PREMIUM_POINT_CHANGE",
+
+  -- PREMIUM_SERVICE_BUY_RESULT = function(err)
+  PREMIUM_SERVICE_BUY_RESULT                     = "PREMIUM_SERVICE_BUY_RESULT",
+
+  -- PREMIUM_SERVICE_LIST_UPDATED = function()
+  PREMIUM_SERVICE_LIST_UPDATED                   = "PREMIUM_SERVICE_LIST_UPDATED",
+
+  -- PROCESS_CRAFT_ORDER = function(result, processType)
+  PROCESS_CRAFT_ORDER                            = "PROCESS_CRAFT_ORDER",
+
+  -- PROGRESS_TALK_QUEST_CONTEXT = function(qtype, useDirectingMode, npcId, doodadId)
+  PROGRESS_TALK_QUEST_CONTEXT                    = "PROGRESS_TALK_QUEST_CONTEXT",
+
+  -- QUEST_CHAT_LET_IT_DONE = function()
+  QUEST_CHAT_LET_IT_DONE                         = "QUEST_CHAT_LET_IT_DONE",
+
+  -- QUEST_CHAT_RESTART = function()
+  QUEST_CHAT_RESTART                             = "QUEST_CHAT_RESTART",
+
+  -- QUEST_CONTEXT_CONDITION_EVENT = function(objText, condition)
+  QUEST_CONTEXT_CONDITION_EVENT                  = "QUEST_CONTEXT_CONDITION_EVENT",
+
+  -- QUEST_CONTEXT_OBJECTIVE_EVENT = function(objText)
+  QUEST_CONTEXT_OBJECTIVE_EVENT                  = "QUEST_CONTEXT_OBJECTIVE_EVENT",
+
+  -- QUEST_CONTEXT_UPDATED = function(qType, status)
+  QUEST_CONTEXT_UPDATED                          = "QUEST_CONTEXT_UPDATED",
+
+  -- QUEST_DIRECTING_MODE_END = function()
+  QUEST_DIRECTING_MODE_END                       = "QUEST_DIRECTING_MODE_END",
+
+  -- QUEST_DIRECTING_MODE_HOT_KEY = function(arg)
+  QUEST_DIRECTING_MODE_HOT_KEY                   = "QUEST_DIRECTING_MODE_HOT_KEY",
+
+  -- QUEST_ERROR_INFO = function(errNum, qtype)
+  QUEST_ERROR_INFO                               = "QUEST_ERROR_INFO",
+
+  -- QUEST_HIDDEN_COMPLETE = function(qtype)
+  QUEST_HIDDEN_COMPLETE                          = "QUEST_HIDDEN_COMPLETE",
+
+  -- QUEST_HIDDEN_READY = function(qtype)
+  QUEST_HIDDEN_READY                             = "QUEST_HIDDEN_READY",
+
+  -- QUEST_LEFT_TIME_UPDATED = function(qtype, leftTime)
+  QUEST_LEFT_TIME_UPDATED                        = "QUEST_LEFT_TIME_UPDATED",
+
+  -- QUEST_MSG = function(arg1, arg2)
+  QUEST_MSG                                      = "QUEST_MSG",
+
+  -- QUEST_NOTIFIER_START = function()
+  QUEST_NOTIFIER_START                           = "QUEST_NOTIFIER_START",
+
+  -- QUEST_QUICK_CLOSE_EVENT = function(qtype)
+  QUEST_QUICK_CLOSE_EVENT                        = "QUEST_QUICK_CLOSE_EVENT",
+
+  -- RAID_APPLICANT_LIST = function(data)
+  RAID_APPLICANT_LIST                            = "RAID_APPLICANT_LIST",
+
+  -- RAID_FRAME_SIMPLE_VIEW = function(simple)
+  RAID_FRAME_SIMPLE_VIEW                         = "RAID_FRAME_SIMPLE_VIEW",
+
+  -- RAID_RECRUIT_DETAIL = function(data)
+  RAID_RECRUIT_DETAIL                            = "RAID_RECRUIT_DETAIL",
+
+  -- RAID_RECRUIT_HUD = function(infos)
+  RAID_RECRUIT_HUD                               = "RAID_RECRUIT_HUD",
+
+  -- RAID_RECRUIT_LIST = function(data)
+  RAID_RECRUIT_LIST                              = "RAID_RECRUIT_LIST",
+
+  -- RANDOM_SHOP_INFO = function(isHide, isdailyReset)
+  RANDOM_SHOP_INFO                               = "RANDOM_SHOP_INFO",
+
+  -- RANDOM_SHOP_OPEN_HOT_KEY = function() -- Crash
+  -- RANDOM_SHOP_OPEN_HOT_KEY = "RANDOM_SHOP_OPEN_HOT_KEY", -- Crash
+
+  -- RANDOM_SHOP_UPDATE = function()
+  RANDOM_SHOP_UPDATE                             = "RANDOM_SHOP_UPDATE",
+
+  -- RANK_ALARM_MSG = function(rankType, msg)
+  RANK_ALARM_MSG                                 = "RANK_ALARM_MSG",
+
+  -- RANK_DATA_RECEIVED = function()
+  RANK_DATA_RECEIVED                             = "RANK_DATA_RECEIVED",
+
+  -- RANK_LOCK = function()
+  RANK_LOCK                                      = "RANK_LOCK",
+
+  -- RANK_PERSONAL_DATA = function()
+  RANK_PERSONAL_DATA                             = "RANK_PERSONAL_DATA",
+
+  -- RANK_RANKER_APPEARANCE = function(charID)
+  RANK_RANKER_APPEARANCE                         = "RANK_RANKER_APPEARANCE",
+
+  -- RANK_REWARD_SNAPSHOTS = function(rankType, divisionId)
+  RANK_REWARD_SNAPSHOTS                          = "RANK_REWARD_SNAPSHOTS",
+
+  -- RANK_SEASON_RESULT_RECEIVED = function()
+  RANK_SEASON_RESULT_RECEIVED                    = "RANK_SEASON_RESULT_RECEIVED",
+
+  -- RANK_SNAPSHOTS = function(rankType, divisionId)
+  RANK_SNAPSHOTS                                 = "RANK_SNAPSHOTS",
+
+  -- RANK_UNLOCK = function()
+  RANK_UNLOCK                                    = "RANK_UNLOCK",
+
+  -- READY_TO_CONNECT_WORLD = function()
+  READY_TO_CONNECT_WORLD                         = "READY_TO_CONNECT_WORLD",
+
+  -- RECOVERABLE_EXP = function(stringId, expNum)
+  RECOVERABLE_EXP                                = "RECOVERABLE_EXP",
+
+  -- RECOVERED_EXP = function(stringId, expNum)
+  RECOVERED_EXP                                  = "RECOVERED_EXP",
+
+  -- REENTRY_NOTIFY_DISABLE = function()
+  REENTRY_NOTIFY_DISABLE                         = "REENTRY_NOTIFY_DISABLE",
+
+  -- REENTRY_NOTIFY_ENABLE = function(param)
+  REENTRY_NOTIFY_ENABLE                          = "REENTRY_NOTIFY_ENABLE",
+
+  -- REFRESH_COMBAT_RESOURCE = function(resetBar, groupType, resourceType, point)
+  REFRESH_COMBAT_RESOURCE                        = "REFRESH_COMBAT_RESOURCE",
+
+  -- REFRESH_COMBAT_RESOURCE_UPDATE_TIME = function(updateReesourceType, nowTime, show)
+  REFRESH_COMBAT_RESOURCE_UPDATE_TIME            = "REFRESH_COMBAT_RESOURCE_UPDATE_TIME",
+
+  -- REFRESH_SQUAD_LIST = function()
+  REFRESH_SQUAD_LIST                             = "REFRESH_SQUAD_LIST",
+
+  -- REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE = function()
+  REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE     =
+  "REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE",
+
+  -- REFRESH_WORLD_QUEUE = function()
+  REFRESH_WORLD_QUEUE                            = "REFRESH_WORLD_QUEUE",
+
+  -- RELOAD_CASH = function(money)
+  RELOAD_CASH                                    = "RELOAD_CASH",
+
+  -- REMOVE_BOSS_TELESCOPE_INFO = function(arg)
+  REMOVE_BOSS_TELESCOPE_INFO                     = "REMOVE_BOSS_TELESCOPE_INFO",
+
+  -- REMOVE_CARRYING_BACKPACK_SLAVE_INFO = function(arg)
+  REMOVE_CARRYING_BACKPACK_SLAVE_INFO            = "REMOVE_CARRYING_BACKPACK_SLAVE_INFO",
+
+  -- REMOVE_FISH_SCHOOL_INFO = function(arg)
+  REMOVE_FISH_SCHOOL_INFO                        = "REMOVE_FISH_SCHOOL_INFO",
+
+  -- REMOVE_GIVEN_QUEST_INFO = function(arg1, arg2)
+  REMOVE_GIVEN_QUEST_INFO                        = "REMOVE_GIVEN_QUEST_INFO",
+
+  -- REMOVE_NOTIFY_QUEST_INFO = function(arg)
+  REMOVE_NOTIFY_QUEST_INFO                       = "REMOVE_NOTIFY_QUEST_INFO",
+
+  -- REMOVE_PING = function()
+  REMOVE_PING                                    = "REMOVE_PING",
+
+  -- REMOVE_SHIP_TELESCOPE_INFO = function(arg)
+  REMOVE_SHIP_TELESCOPE_INFO                     = "REMOVE_SHIP_TELESCOPE_INFO",
+
+  -- REMOVE_TRANSFER_TELESCOPE_INFO = function(arg)
+  REMOVE_TRANSFER_TELESCOPE_INFO                 = "REMOVE_TRANSFER_TELESCOPE_INFO",
+
+  -- REMOVED_ITEM = function(itemLinkText, itemCount, removeState, itemTaskType, tradeOtherName)
+  REMOVED_ITEM                                   = "REMOVED_ITEM",
+
+  -- RENAME_CHARACTER_FAILED = function(key)
+  RENAME_CHARACTER_FAILED                        = "RENAME_CHARACTER_FAILED",
+
+  -- RENAME_PORTAL = function()
+  RENAME_PORTAL                                  = "RENAME_PORTAL",
+
+  -- RENEW_ITEM_SUCCEEDED = function()
+  RENEW_ITEM_SUCCEEDED                           = "RENEW_ITEM_SUCCEEDED",
+
+  -- REPORT_BAD_USER_UPDATE = function()
+  REPORT_BAD_USER_UPDATE                         = "BAD_USER_LIST_UPDATE",
+
+  -- REPORT_CRIME = function(doodadName, locationName)
+  REPORT_CRIME                                   = "REPORT_CRIME",
+
+  -- REPRESENT_CHARACTER_RESULT = function(isLoginLoad, success, isClearRequest)
+  REPRESENT_CHARACTER_RESULT                     = "REPRESENT_CHARACTER_RESULT",
+
+  -- REPUTATION_GIVEN = function()
+  REPUTATION_GIVEN                               = "REPUTATION_GIVEN",
+
+  -- REQUIRE_DELAY_TO_CHAT = function(channel, delay, remain)
+  REQUIRE_DELAY_TO_CHAT                          = "REQUIRE_DELAY_TO_CHAT",
+
+  -- REQUIRE_ITEM_TO_CHAT = function(channel)
+  REQUIRE_ITEM_TO_CHAT                           = "REQUIRE_ITEM_TO_CHAT",
+
+  -- RESET_INGAME_SHOP_MODELVIEW = function()
+  RESET_INGAME_SHOP_MODELVIEW                    = "RESET_INGAME_SHOP_MODELVIEW",
+
+  -- RESIDENT_BOARD_TYPE = function(boardType)
+  RESIDENT_BOARD_TYPE                            = "RESIDENT_BOARD_TYPE",
+
+  -- RESIDENT_HOUSING_TRADE_LIST = function(infos, rownum, filter, searchword, refresh)
+  RESIDENT_HOUSING_TRADE_LIST                    = "RESIDENT_HOUSING_TRADE_LIST",
+
+  -- RESIDENT_MEMBER_LIST = function(total, start, refresh, members)
+  RESIDENT_MEMBER_LIST                           = "RESIDENT_MEMBER_LIST",
+
+  -- RESIDENT_SERVICE_POINT_CHANGED = function(zoneGroupName, amount, total)
+  RESIDENT_SERVICE_POINT_CHANGED                 = "RESIDENT_SERVICE_POINT_CHANGED",
+
+  -- RESIDENT_TOWNHALL = function(info)
+  RESIDENT_TOWNHALL                              = "RESIDENT_TOWNHALL",
+
+  -- RESIDENT_ZONE_STATE_CHANGE = function()
+  RESIDENT_ZONE_STATE_CHANGE                     = "RESIDENT_ZONE_STATE_CHANGE",
+
+  -- ROLLBACK_FAVORITE_CRAFTS = function(datas)
+  ROLLBACK_FAVORITE_CRAFTS                       = "ROLLBACK_FAVORITE_CRAFTS",
+
+  -- RULING_CLOSED = function()
+  RULING_CLOSED                                  = "RULING_CLOSED",
+
+  -- RULING_STATUS = function(count, total, sentenceType, sentenceTime)
+  RULING_STATUS                                  = "RULING_STATUS",
+
+  -- SAVE_PORTAL = function()
+  SAVE_PORTAL                                    = "SAVE_PORTAL",
+
+  -- SAVE_SCREEN_SHOT = function(path)
+  SAVE_SCREEN_SHOT                               = "SAVE_SCREEN_SHOT",
+
+  -- SCALE_ENCHANT_BROADCAST = function(characterName, resultCode, itemLink, oldScale, newScale)
+  SCALE_ENCHANT_BROADCAST                        = "SCALE_ENCHANT_BROADCAST",
+
+  -- SCHEDULE_ITEM_SENT = function()
+  SCHEDULE_ITEM_SENT                             = "SCHEDULE_ITEM_SENT",
+
+  -- SCHEDULE_ITEM_UPDATED = function()
+  SCHEDULE_ITEM_UPDATED                          = "SCHEDULE_ITEM_UPDATED",
+
+  -- SECOND_PASSWORD_ACCOUNT_LOCKED = function()
+  SECOND_PASSWORD_ACCOUNT_LOCKED                 = "SECOND_PASSWORD_ACCOUNT_LOCKED",
+
+  -- SECOND_PASSWORD_CHANGE_COMPLETED = function(result)
+  SECOND_PASSWORD_CHANGE_COMPLETED               = "SECOND_PASSWORD_CHANGE_COMPLETED",
+
+  -- SECOND_PASSWORD_CHECK_COMPLETED = function(success)
+  SECOND_PASSWORD_CHECK_COMPLETED                = "SECOND_PASSWORD_CHECK_COMPLETED",
+
+  -- SECOND_PASSWORD_CHECK_OVER_FAILED = function()
+  SECOND_PASSWORD_CHECK_OVER_FAILED              = "SECOND_PASSWORD_CHECK_OVER_FAILED",
+
+  -- SECOND_PASSWORD_CLEAR_COMPLETED = function(success)
+  SECOND_PASSWORD_CLEAR_COMPLETED                = "SECOND_PASSWORD_CLEAR_COMPLETED",
+
+  -- SECOND_PASSWORD_CREATION_COMPLETED = function(success)
+  SECOND_PASSWORD_CREATION_COMPLETED             = "SECOND_PASSWORD_CREATION_COMPLETED",
+
+  -- SELECT_SQUAD_LIST = function(data)
+  SELECT_SQUAD_LIST                              = "SELECT_SQUAD_LIST",
+
+  -- SELECTED_INSTANCE_DIFFICULT = function(difficult)
+  SELECTED_INSTANCE_DIFFICULT                    = "SELECTED_INSTANCE_DIFFICULT",
+
+  -- SELL_SPECIALTY = function(text)
+  SELL_SPECIALTY                                 = "SELL_SPECIALTY",
+
+  -- SELL_SPECIALTY_CONTENT_INFO = function(list)
+  SELL_SPECIALTY_CONTENT_INFO                    = "SELL_SPECIALTY_CONTENT_INFO",
+
+  -- SENSITIVE_OPERATION_VERIFY = function(seqNum, url)
+  SENSITIVE_OPERATION_VERIFY                     = "SENSITIVE_OPERATION_VERIFY",
+
+  -- SENSITIVE_OPERATION_VERIFY_SUCCESS = function()
+  SENSITIVE_OPERATION_VERIFY_SUCCESS             = "SENSITIVE_OPERATION_VERIFY_SUCCESS",
+
+  -- SET_DEFAULT_EXPAND_RATIO = function(isSameZone)
+  SET_DEFAULT_EXPAND_RATIO                       = "SET_DEFAULT_EXPAND_RATIO",
+
+  -- SET_EFFECT_ICON_VISIBLE = function(isShow, arg)
+  SET_EFFECT_ICON_VISIBLE                        = "SET_EFFECT_ICON_VISIBLE",
+
+  -- SET_LOGIN_BROWSER_URL = function()
+  SET_LOGIN_BROWSER_URL                          = "SET_LOGIN_BROWSER_URL",
+
+  -- SET_OVERHEAD_MARK = function(unitId, index, visible)
+  SET_OVERHEAD_MARK                              = "SET_OVERHEAD_MARK",
+
+  -- SET_PING_MODE = function(arg)
+  SET_PING_MODE                                  = "SET_PING_MODE",
+
+  -- SET_REBUILD_HOUSE_CAMERA_MODE = function()
+  SET_REBUILD_HOUSE_CAMERA_MODE                  = "SET_REBUILD_HOUSE_CAMERA_MODE",
+
+  -- SET_ROADMAP_PICKABLE = function(pick)
+  SET_ROADMAP_PICKABLE                           = "SET_ROADMAP_PICKABLE",
+
+  -- SET_UI_MESSAGE = function()
+  SET_UI_MESSAGE                                 = "SET_UI_MESSAGE",
+
+  -- SET_WEB_MESSENGE_COUNT = function()
+  SET_WEB_MESSENGE_COUNT                         = "SET_WEB_MESSENGE_COUNT",
+
+  -- SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW = function(zoneName, accumulatePoint, state)
+  SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW         =
+  "SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW",
+
+  -- SHOW_ADD_TAB_WINDOW = function()
+  SHOW_ADD_TAB_WINDOW                            = "SHOW_ADD_TAB_WINDOW",
+
+  -- SHOW_ADDED_ITEM = function(item, count, taskType)
+  SHOW_ADDED_ITEM                                = "SHOW_ADDED_ITEM",
+
+  -- SHOW_BANNER = function(show, instanceType, remainPreNoticeTime)
+  SHOW_BANNER                                    = "SHOW_BANNER",
+
+  -- SHOW_CHARACTER_ABILITY_WINDOW = function(show, byCutscene)
+  SHOW_CHARACTER_ABILITY_WINDOW                  = "SHOW_CHARACTER_ABILITY_WINDOW",
+
+  -- SHOW_CHARACTER_CREATE_WINDOW = function(show)
+  SHOW_CHARACTER_CREATE_WINDOW                   = "SHOW_CHARACTER_CREATE_WINDOW",
+
+  -- SHOW_CHARACTER_CUSTOMIZE_WINDOW = function(show)
+  SHOW_CHARACTER_CUSTOMIZE_WINDOW                = "SHOW_CHARACTER_CUSTOMIZE_WINDOW",
+
+  -- SHOW_CHARACTER_SELECT_WINDOW = function(visible)
+  SHOW_CHARACTER_SELECT_WINDOW                   = "SHOW_CHARACTER_SELECT_WINDOW",
+
+  -- SHOW_CHAT_TAB_CONTEXT = function()
+  SHOW_CHAT_TAB_CONTEXT                          = "SHOW_CHAT_TAB_CONTEXT",
+
+  -- SHOW_CRIME_RECORDS = function(trialState)
+  SHOW_CRIME_RECORDS                             = "SHOW_CRIME_RECORDS",
+
+  -- SHOW_DEFENDANT_WAIT_JURY = function()
+  SHOW_DEFENDANT_WAIT_JURY                       = "SHOW_DEPENDANT_WAIT_JURY",
+
+  -- SHOW_DEFENDANT_WAIT_TRIAL = function()
+  SHOW_DEFENDANT_WAIT_TRIAL                      = "SHOW_DEPENDANT_WAIT_TRIAL",
+
+  -- SHOW_GAME_RATING = function()
+  SHOW_GAME_RATING                               = "SHOW_GAME_RATING",
+
+  -- SHOW_HEALTH_NOTICE = function()
+  SHOW_HEALTH_NOTICE                             = "SHOW_HEALTH_NOTICE",
+
+  -- SHOW_HIDDEN_BUFF = function()
+  SHOW_HIDDEN_BUFF                               = "SHOW_HIDDEN_BUFF",
+
+  -- SHOW_LOGIN_WINDOW = function(show)
+  SHOW_LOGIN_WINDOW                              = "SHOW_LOGIN_WINDOW",
+
+  -- SHOW_PRIVACY_POLICY_WINDOW = function(show)
+  SHOW_PRIVACY_POLICY_WINDOW                     = "SHOW_PRIVACY_POLICY_WINDOW",
+
+  -- SHOW_RAID_FRAME_SETTINGS = function()
+  SHOW_RAID_FRAME_SETTINGS                       = "SHOW_RAID_FRAME_SETTINGS",
+
+  -- SHOW_RECOMMEND_USING_SECOND_PASSWORD = function()
+  SHOW_RECOMMEND_USING_SECOND_PASSWORD           = "SHOW_RECOMMEND_USING_SECOND_PASSWORD",
+
+  -- SHOW_RENAME_EXPEIDITON = function(byItem, triedName, ownerWnd)
+  SHOW_RENAME_EXPEIDITON                         = "SHOW_RENAME_EXPEIDITON",
+
+  -- SHOW_ROADMAP_TOOLTIP = function(tooltipInfo, tooltipCount)
+  SHOW_ROADMAP_TOOLTIP                           = "SHOW_ROADMAP_TOOLTIP",
+
+  -- SHOW_SERVER_SELECT_WINDOW = function(visible)
+  SHOW_SERVER_SELECT_WINDOW                      = "SHOW_SERVER_SELECT_WINDOW",
+
+  -- SHOW_SEXTANT_POS = function(argTable)
+  SHOW_SEXTANT_POS                               = "SHOW_SEXTANT_POS",
+
+  -- SHOW_SLAVE_INFO = function()
+  SHOW_SLAVE_INFO                                = "SHOW_SLAVE_INFO",
+
+  -- SHOW_VERDICTS = function(p1, p2, p3, p4, p5)
+  SHOW_VERDICTS                                  = "SHOW_VERDICTS",
+
+  -- SHOW_WORLDMAP_LOCATION = function(zoneId, x, y, z)
+  SHOW_WORLDMAP_LOCATION                         = "SHOW_WORLDMAP_LOCATION",
+
+  -- SHOW_WORLDMAP_TOOLTIP = function(tooltipInfo, tooltipCount)
+  SHOW_WORLDMAP_TOOLTIP                          = "SHOW_WORLDMAP_TOOLTIP",
+
+  -- SIEGE_APPOINT_RESULT = function(isDefender, faction)
+  SIEGE_APPOINT_RESULT                           = "SIEGE_APPOINT_RESULT",
+
+  -- SIEGE_RAID_REGISTER_LIST = function(zoneGroupType, bRegistState, bListUpdate)
+  SIEGE_RAID_REGISTER_LIST                       = "SIEGE_RAID_REGISTER_LIST",
+
+  -- SIEGE_RAID_TEAM_INFO = function(info)
+  SIEGE_RAID_TEAM_INFO                           = "SIEGE_RAID_TEAM_INFO",
+
+  -- SIEGE_WAR_ENDED = function()
+  SIEGE_WAR_ENDED                                = "SIEGE_WAR_ENDED",
+
+  -- SIEGEWEAPON_BOUND = function()
+  SIEGEWEAPON_BOUND                              = "SIEGEWEAPON_BOUND",
+
+  -- SIEGEWEAPON_UNBOUND = function()
+  SIEGEWEAPON_UNBOUND                            = "SIEGEWEAPON_UNBOUND",
+
+  -- SIM_DOODAD_MSG = function(code)
+  SIM_DOODAD_MSG                                 = "SIM_DOODAD_MSG",
+
+  -- SKILL_ALERT_ADD = function(statusBuffType, buffId, remainTime, name)
+  SKILL_ALERT_ADD                                = "SKILL_ALERT_ADD",
+
+  -- SKILL_ALERT_REMOVE = function(statusBuffType)
+  SKILL_ALERT_REMOVE                             = "SKILL_ALERT_REMOVE",
+
+  -- SKILL_CHANGED = function(text, level, ability)
+  SKILL_CHANGED                                  = "SKILL_CHANGED",
+
+  -- SKILL_DEBUG_MSG = function(resultCode, param, skillType)
+  SKILL_DEBUG_MSG                                = "SKILL_DEBUG_MSG",
+
+  -- SKILL_LEARNED = function(text)
+  SKILL_LEARNED                                  = "SKILL_LEARNED",
+
+  -- SKILL_MAP_EFFECT = function(info)
+  SKILL_MAP_EFFECT                               = "SKILL_MAP_EFFECT",
+
+  -- SKILL_MSG = function(resultCode, param, skillType)
+  SKILL_MSG                                      = "SKILL_MSG",
+
+  -- SKILL_SELECTIVE_ITEM = function(list, usingSlotIndex)
+  SKILL_SELECTIVE_ITEM                           = "SKILL_SELECTIVE_ITEM",
+
+  -- SKILL_SELECTIVE_ITEM_NOT_AVAILABLE = function()
+  SKILL_SELECTIVE_ITEM_NOT_AVAILABLE             = "SKILL_SELECTIVE_ITEM_NOT_AVAILABLE",
+
+  -- SKILL_SELECTIVE_ITEM_READY_STATUS = function(status)
+  SKILL_SELECTIVE_ITEM_READY_STATUS              = "SKILL_SELECTIVE_ITEM_READY_STATUS",
+
+  -- SKILL_UPGRADED = function(skillType)
+  SKILL_UPGRADED                                 = "SKILL_UPGRADED",
+
+  -- SKILLS_RESET = function(ability)
+  SKILLS_RESET                                   = "SKILLS_RESET",
+
+  -- SLAVE_SHIP_BOARDING = function()
+  SLAVE_SHIP_BOARDING                            = "SLAVE_SHIP_BOARDING",
+
+  -- SLAVE_SHIP_UNBOARDING = function()
+  SLAVE_SHIP_UNBOARDING                          = "SLAVE_SHIP_UNBOARDING",
+
+  -- SLAVE_SPAWN = function()
+  SLAVE_SPAWN                                    = "SLAVE_SPAWN",
+
+  -- SPAWN_PET = function(mateType)
+  SPAWN_PET                                      = "SPAWN_PET",
+
+  -- SPECIAL_ABILITY_LEARNED = function(recvAbility)
+  SPECIAL_ABILITY_LEARNED                        = "SPECIAL_ABILITY_LEARNED",
+
+  -- SPECIALTY_CONTENT_RECIPE_INFO = function(list)
+  SPECIALTY_CONTENT_RECIPE_INFO                  = "SPECIALTY_CONTENT_RECIPE_INFO",
+
+  -- SPECIALTY_RATIO_BETWEEN_INFO = function(specialtyRatioTable)
+  SPECIALTY_RATIO_BETWEEN_INFO                   = "SPECIALTY_RATIO_BETWEEN_INFO",
+
+  -- SPELLCAST_START = function(spellName, castingTime, caster, castingUseable)
+  SPELLCAST_START                                = "SPELLCAST_START",
+
+  -- SPELLCAST_STOP = function(caster)
+  SPELLCAST_STOP                                 = "SPELLCAST_STOP",
+
+  -- SPELLCAST_SUCCEEDED = function(caster)
+  SPELLCAST_SUCCEEDED                            = "SPELLCAST_SUCCEEDED",
+
+  -- START_CHAT_BUBBLE = function()
+  START_CHAT_BUBBLE                              = "START_CHAT_BUBBLE",
+
+  -- START_HERO_ELECTION_PERIOD = function()
+  START_HERO_ELECTION_PERIOD                     = "START_HERO_ELECTION_PERIOD",
+
+  -- START_QUEST_CONTEXT = function(qtype, useDirectingMode, npcId)
+  START_QUEST_CONTEXT                            = "START_QUEST_CONTEXT",
+
+  -- START_QUEST_CONTEXT_DOODAD = function(qtype, useDirectingMode, doodadId)
+  START_QUEST_CONTEXT_DOODAD                     = "START_QUEST_CONTEXT_DOODAD",
+
+  -- START_QUEST_CONTEXT_NPC = function(qtype, useDirectingMode, npcId)
+  START_QUEST_CONTEXT_NPC                        = "START_QUEST_CONTEXT_NPC",
+
+  -- START_QUEST_CONTEXT_SPHERE = function(qtype, stype)
+  START_QUEST_CONTEXT_SPHERE                     = "START_QUEST_CONTEXT_SPHERE",
+
+  -- START_SENSITIVE_OPERATION = function(remainTime)
+  START_SENSITIVE_OPERATION                      = "START_SENSITIVE_OPERATION",
+
+  -- START_TALK_QUEST_CONTEXT = function(doodadId)
+  START_TALK_QUEST_CONTEXT                       = "START_TALK_QUEST_CONTEXT",
+
+  -- START_TODAY_ASSIGNMENT = function(stepName)
+  START_TODAY_ASSIGNMENT                         = "START_TODAY_ASSIGNMENT",
+
+  -- STARTED_DUEL = function()
+  STARTED_DUEL                                   = "STARTED_DUEL",
+
+  -- STARTING_QUEST_COMPLETED = function()
+  STARTING_QUEST_COMPLETED                       = "STARTING_QUEST_COMPLETED",
+
+  -- STICKED_MSG = function()
+  STICKED_MSG                                    = "STICKED_MSG",
+
+  -- STILL_LOADING = function(loadingProgress)
+  STILL_LOADING                                  = "STILL_LOADING",
+
+  -- STORE_ADD_BUY_ITEM = function()
+  STORE_ADD_BUY_ITEM                             = "STORE_ADD_BUY_ITEM",
+
+  -- STORE_ADD_SELL_ITEM = function(slotNumber)
+  STORE_ADD_SELL_ITEM                            = "STORE_ADD_SELL_ITEM",
+
+  -- STORE_BUY = function(itemLinkText, stackCount)
+  STORE_BUY                                      = "STORE_BUY",
+
+  -- STORE_FULL = function()
+  STORE_FULL                                     = "STORE_FULL",
+
+  -- STORE_SELL = function(itemLinkText, stackCount)
+  STORE_SELL                                     = "STORE_SELL",
+
+  -- STORE_SOLD_LIST = function(soldItems)
+  STORE_SOLD_LIST                                = "STORE_SOLD_LIST",
+
+  -- STORE_TRADE_FAILED = function()
+  STORE_TRADE_FAILED                             = "STORE_TRADE_FAILED",
+
+  -- SURVEY_FORM_UPDATE = function()
+  SURVEY_FORM_UPDATE                             = "SURVEY_FORM_UPDATE",
+
+  -- SWITCH_ENCHANT_ITEM_MODE = function(mode)
+  SWITCH_ENCHANT_ITEM_MODE                       = "SWITCH_ENCHANT_ITEM_MODE",
+
+  -- SYNC_PORTAL = function()
+  SYNC_PORTAL                                    = "SYNC_PORTAL",
+
+  -- SYS_INDUN_STAT_UPDATED = function()
+  SYS_INDUN_STAT_UPDATED                         = "SYS_INDUN_STAT_UPDATED",
+
+  -- SYSMSG = function(msg)
+  SYSMSG                                         = "SYSMSG",
+
+  -- TARGET_CHANGED = function(stringId, targetType)
+  TARGET_CHANGED                                 = "TARGET_CHANGED",
+
+  -- TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO = function(curHp, maxHp)
+  TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO     =
+  "TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO",
+
+  -- TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION = function(target, curHp, maxHp)
+  TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION   =
+  "TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION",
+
+  -- TARGET_OVER = function(arg, arg2)
+  TARGET_OVER                                    = "TARGET_OVER",
+
+  -- TARGET_TO_TARGET_CHANGED = function(stringId, targetType)
+  TARGET_TO_TARGET_CHANGED                       = "TARGET_TO_TARGET_CHANGED",
+
+  -- TEAM_JOINT_BREAK = function(requester, enable)
+  TEAM_JOINT_BREAK                               = "TEAM_JOINT_BREAK",
+
+  -- TEAM_JOINT_BROKEN = function()
+  TEAM_JOINT_BROKEN                              = "TEAM_JOINT_BROKEN",
+
+  -- TEAM_JOINT_CHAT = function()
+  TEAM_JOINT_CHAT                                = "TEAM_JOINT_CHAT",
+
+  -- TEAM_JOINT_RESPONSE = function()
+  TEAM_JOINT_RESPONSE                            = "TEAM_JOINT_RESPONSE",
+
+  -- TEAM_JOINT_TARGET = function(isJointable)
+  TEAM_JOINT_TARGET                              = "TEAM_JOINT_TARGET",
+
+  -- TEAM_JOINTED = function()
+  TEAM_JOINTED                                   = "TEAM_JOINTED",
+
+  -- TEAM_MEMBER_DISCONNECTED = function(isParty, jointOrder, stringId, memberIndex)
+  TEAM_MEMBER_DISCONNECTED                       = "TEAM_MEMBER_DISCONNECTED",
+
+  -- TEAM_MEMBER_UNIT_ID_CHANGED = function(oldStringId, stringId)
+  TEAM_MEMBER_UNIT_ID_CHANGED                    = "TEAM_MEMBER_UNIT_ID_CHANGED",
+
+  -- TEAM_MEMBERS_CHANGED = function(reason, value)
+  TEAM_MEMBERS_CHANGED                           = "TEAM_MEMBERS_CHANGED",
+
+  -- TEAM_ROLE_CHANGED = function(jointOrder, memberIndex, role)
+  TEAM_ROLE_CHANGED                              = "TEAM_ROLE_CHANGED",
+
+  -- TEAM_SUMMON_SUGGEST = function()
+  TEAM_SUMMON_SUGGEST                            = "TEAM_SUMMON_SUGGEST",
+
+  -- TENCENT_HEALTH_CARE_URL = function(url, width, height)
+  TENCENT_HEALTH_CARE_URL                        = "TENCENT_HEALTH_CARE_URL",
+
+  -- TIME_MESSAGE = function(key, timeTable)
+  TIME_MESSAGE                                   = "TIME_MESSAGE",
+
+  -- TOGGLE_CHANGE_VISUAL_RACE = function(data)
+  TOGGLE_CHANGE_VISUAL_RACE                      = "TOGGLE_CHANGE_VISUAL_RACE",
+
+  -- TOGGLE_COMMUNITY = function()
+  TOGGLE_COMMUNITY                               = "TOGGLE_COMMUNITY",
+
+  -- TOGGLE_CRAFT = function()
+  TOGGLE_CRAFT                                   = "TOGGLE_CRAFT",
+
+  -- TOGGLE_FACTION = function()
+  TOGGLE_FACTION                                 = "TOGGLE_FACTION",
+
+  -- TOGGLE_FOLLOW = function(on)
+  TOGGLE_FOLLOW                                  = "TOGGLE_FOLLOW",
+
+  -- TOGGLE_IN_GAME_NOTICE = function(url)
+  TOGGLE_IN_GAME_NOTICE                          = "TOGGLE_IN_GAME_NOTICE",
+
+  -- TOGGLE_MEGAPHONE_CHAT = function()
+  TOGGLE_MEGAPHONE_CHAT                          = "TOGGLE_MEGAPHONE_CHAT",
+
+  -- TOGGLE_PARTY_FRAME = function(show)
+  TOGGLE_PARTY_FRAME                             = "TOGGLE_PARTY_FRAME",
+
+  -- TOGGLE_PET_MANAGE = function()
+  TOGGLE_PET_MANAGE                              = "TOGGLE_PET_MANAGE",
+
+  -- TOGGLE_PORTAL_DIALOG = function(addPortal, skillTypeNumber, itemTypeNumber)
+  TOGGLE_PORTAL_DIALOG                           = "TOGGLE_PORTAL_DIALOG",
+
+  -- TOGGLE_RAID_FRAME = function(show)
+  TOGGLE_RAID_FRAME                              = "TOGGLE_RAID_FRAME",
+
+  -- TOGGLE_RAID_FRAME_PARTY = function(party, visible)
+  TOGGLE_RAID_FRAME_PARTY                        = "TOGGLE_RAID_FRAME_PARTY",
+
+  -- TOGGLE_RAID_FRAME2 = function()
+  TOGGLE_RAID_FRAME2                             = "TOGGLE_RAID_FRAME2",
+
+  -- TOGGLE_ROADMAP = function()
+  TOGGLE_ROADMAP                                 = "TOGGLE_ROADMAP",
+
+  -- TOGGLE_WALK = function(speed)
+  TOGGLE_WALK                                    = "TOGGLE_WALK",
+
+  -- TOWER_DEF_INFO_UPDATE = function()
+  TOWER_DEF_INFO_UPDATE                          = "TOWER_DEF_INFO_UPDATE",
+
+  -- TOWER_DEF_MSG = function(towerDefInfo)
+  TOWER_DEF_MSG                                  = "TOWER_DEF_MSG",
+
+  -- TRADE_CAN_START = function(unitIdStr)
+  TRADE_CAN_START                                = "TRADE_CAN_START",
+
+  -- TRADE_CANCELED = function()
+  TRADE_CANCELED                                 = "TRADE_CANCELED",
+
+  -- TRADE_ITEM_PUTUP = function(inventoryIdx, amount)
+  TRADE_ITEM_PUTUP                               = "TRADE_ITEM_PUTUP",
+
+  -- TRADE_ITEM_TOOKDOWN = function(inventoryIdx)
+  TRADE_ITEM_TOOKDOWN                            = "TRADE_ITEM_TOOKDOWN",
+
+  -- TRADE_ITEM_UPDATED = function()
+  TRADE_ITEM_UPDATED                             = "TRADE_ITEM_UPDATED",
+
+  -- TRADE_LOCKED = function()
+  TRADE_LOCKED                                   = "TRADE_LOCKED",
+
+  -- TRADE_MADE = function()
+  TRADE_MADE                                     = "TRADE_MADE",
+
+  -- TRADE_MONEY_PUTUP = function(money)
+  TRADE_MONEY_PUTUP                              = "TRADE_MONEY_PUTUP",
+
+  -- TRADE_OK = function()
+  TRADE_OK                                       = "TRADE_OK",
+
+  -- TRADE_OTHER_ITEM_PUTUP = function(otherIdx, type, stackCount, tooltip)
+  TRADE_OTHER_ITEM_PUTUP                         = "TRADE_OTHER_ITEM_PUTUP",
+
+  -- TRADE_OTHER_ITEM_TOOKDOWN = function(otherIdx)
+  TRADE_OTHER_ITEM_TOOKDOWN                      = "TRADE_OTHER_ITEM_TOOKDOWN",
+
+  -- TRADE_OTHER_LOCKED = function()
+  TRADE_OTHER_LOCKED                             = "TRADE_OTHER_LOCKED",
+
+  -- TRADE_OTHER_MONEY_PUTUP = function(money)
+  TRADE_OTHER_MONEY_PUTUP                        = "TRADE_OTHER_MONEY_PUTUP",
+
+  -- TRADE_OTHER_OK = function()
+  TRADE_OTHER_OK                                 = "TRADE_OTHER_OK",
+
+  -- TRADE_STARTED = function(targetName)
+  TRADE_STARTED                                  = "TRADE_STARTED",
+
+  -- TRADE_UI_TOGGLE = function()
+  TRADE_UI_TOGGLE                                = "TRADE_UI_TOGGLE",
+
+  -- TRADE_UNLOCKED = function()
+  TRADE_UNLOCKED                                 = "TRADE_UNLOCKED",
+
+  -- TRANSFORM_COMBAT_RESOURCE = function(groupType)
+  TRANSFORM_COMBAT_RESOURCE                      = "TRANSFORM_COMBAT_RESOURCE",
+
+  -- TRIAL_CANCELED = function()
+  TRIAL_CANCELED                                 = "TRIAL_CANCELED",
+
+  -- TRIAL_CLOSED = function()
+  TRIAL_CLOSED                                   = "TRIAL_CLOSED",
+
+  -- TRIAL_MESSAGE = function(text)
+  TRIAL_MESSAGE                                  = "TRIAL_MESSAGE",
+
+  -- TRIAL_STATUS = function(state, juryCount, remainTime)
+  TRIAL_STATUS                                   = "TRIAL_STATUS",
+
+  -- TRIAL_TIMER = function(state, remainTable)
+  TRIAL_TIMER                                    = "TRIAL_TIMER",
+
+  -- TRY_LOOT_DICE = function(key, timeStamp, itemLink)
+  TRY_LOOT_DICE                                  = "TRY_LOOT_DICE",
+
+  -- TUTORIAL_EVENT = function(id, info)
+  TUTORIAL_EVENT                                 = "TUTORIAL_EVENT",
+
+  -- TUTORIAL_HIDE_FROM_OPTION = function()
+  TUTORIAL_HIDE_FROM_OPTION                      = "TUTORIAL_HIDE_FROM_OPTION",
+
+  -- UCC_IMPRINT_SUCCEEDED = function()
+  UCC_IMPRINT_SUCCEEDED                          = "UCC_IMPRINT_SUCCEEDED",
+
+  -- UI_ADDON = function()
+  UI_ADDON                                       = "UI_ADDON",
+
+  -- UI_PERMISSION_UPDATE = function()
+  UI_PERMISSION_UPDATE                           = "UI_PERMISSION_UPDATE",
+
+  -- UI_RELOADED = function()
+  UI_RELOADED                                    = "UI_RELOADED",
+
+  -- ULC_ACTIVATE = function(ulcType)
+  ULC_ACTIVATE                                   = "ULC_ACTIVATE",
+
+  -- ULC_SKILL_MSG = function(resultCode, param)
+  ULC_SKILL_MSG                                  = "ULC_SKILL_MSG",
+
+  -- UNFINISHED_BUILD_HOUSE = function(message)
+  UNFINISHED_BUILD_HOUSE                         = "UNFINISHED_BUILD_HOUSE",
+
+  -- UNIT_COMBAT_STATE_CHANGED = function(bool, unitId)
+  UNIT_COMBAT_STATE_CHANGED                      = "UNIT_COMBAT_STATE_CHANGED",
+
+  -- UNIT_DEAD = function(stringId, lossExp, lossDurabilityRatio)
+  UNIT_DEAD                                      = "UNIT_DEAD",
+
+  -- UNIT_DEAD_NOTICE = function(name)
+  UNIT_DEAD_NOTICE                               = "UNIT_DEAD_NOTICE",
+
+  -- UNIT_ENTERED_SIGHT = function(unitId, unitType, curHp, maxHp)
+  UNIT_ENTERED_SIGHT                             = "UNIT_ENTERED_SIGHT",
+
+  -- UNIT_EQUIPMENT_CHANGED = function(equipSlot)
+  UNIT_EQUIPMENT_CHANGED                         = "UNIT_EQUIPMENT_CHANGED",
+
+  -- UNIT_KILL_STREAK = function(killStreakInfo)
+  UNIT_KILL_STREAK                               = "UNIT_KILL_STREAK",
+
+  -- UNIT_LEAVED_SIGHT = function(unitId, unitType)
+  UNIT_LEAVED_SIGHT                              = "UNIT_LEAVED_SIGHT",
+
+  -- UNIT_NAME_CHANGED = function(unitId)
+  UNIT_NAME_CHANGED                              = "UNIT_NAME_CHANGED",
+
+  -- UNIT_NPC_EQUIPMENT_CHANGED = function()
+  UNIT_NPC_EQUIPMENT_CHANGED                     = "UNIT_NPC_EQUIPMENT_CHANGED",
+
+  -- UNITFRAME_ABILITY_UPDATE = function(unitId)
+  UNITFRAME_ABILITY_UPDATE                       = "UNITFRAME_ABILITY_UPDATE",
+
+  -- UNMOUNT_PET = function(onePetBar, mateType, isMyPet) -- Crash?
+  -- UNMOUNT_PET = "UNMOUNT_PET", -- Crash?
+
+  -- UPDATE_BINDINGS = function()
+  UPDATE_BINDINGS                                = "UPDATE_BINDINGS",
+
+  -- UPDATE_BOSS_TELESCOPE_AREA = function()
+  UPDATE_BOSS_TELESCOPE_AREA                     = "UPDATE_BOSS_TELESCOPE_AREA",
+
+  -- UPDATE_BOSS_TELESCOPE_INFO = function()
+  UPDATE_BOSS_TELESCOPE_INFO                     = "UPDATE_BOSS_TELESCOPE_INFO",
+
+  -- UPDATE_BOT_CHECK_INFO = function(totalTime, remainTime, count, question)
+  UPDATE_BOT_CHECK_INFO                          = "UPDATE_BOT_CHECK_INFO",
+
+  -- UPDATE_BUBBLE = function()
+  UPDATE_BUBBLE                                  = "BUBBLE_UPDATE",
+
+  -- UPDATE_CARRYING_BACKPACK_SLAVE_INFO = function()
+  UPDATE_CARRYING_BACKPACK_SLAVE_INFO            = "UPDATE_CARRYING_BACKPACK_SLAVE_INFO",
+
+  -- UPDATE_CHANGE_VISUAL_RACE_WND = function(fired)
+  UPDATE_CHANGE_VISUAL_RACE_WND                  = "UPDATE_CHANGE_VISUAL_RACE_WND",
+
+  -- UPDATE_CHRONICLE_INFO = function(info)
+  UPDATE_CHRONICLE_INFO                          = "UPDATE_CHRONICLE_INFO",
+
+  -- UPDATE_CHRONICLE_NOTIFIER = function(init, mainKey)
+  UPDATE_CHRONICLE_NOTIFIER                      = "UPDATE_CHRONICLE_NOTIFIER",
+
+  -- UPDATE_CLIENT_DRIVEN_INFO = function(sceneInfo)
+  UPDATE_CLIENT_DRIVEN_INFO                      = "UPDATE_CLIENT_DRIVEN_INFO",
+
+  -- UPDATE_COMPLETED_QUEST_INFO = function()
+  UPDATE_COMPLETED_QUEST_INFO                    = "UPDATE_COMPLETED_QUEST_INFO",
+
+  -- UPDATE_CONTENT_ROSTER_WINDOW = function(updateInfo)
+  UPDATE_CONTENT_ROSTER_WINDOW                   = "UPDATE_CONTENT_ROSTER_WINDOW",
+
+  -- UPDATE_CORPSE_INFO = function()
+  UPDATE_CORPSE_INFO                             = "UPDATE_CORPSE_INFO",
+
+  -- UPDATE_CRAFT_ORDER_ITEM_FEE = function(info)
+  UPDATE_CRAFT_ORDER_ITEM_FEE                    = "UPDATE_CRAFT_ORDER_ITEM_FEE",
+
+  -- UPDATE_CRAFT_ORDER_ITEM_SLOT = function(info)
+  UPDATE_CRAFT_ORDER_ITEM_SLOT                   = "UPDATE_CRAFT_ORDER_ITEM_SLOT",
+
+  -- UPDATE_CRAFT_ORDER_SKILL = function(key, fired)
+  UPDATE_CRAFT_ORDER_SKILL                       = "UPDATE_CRAFT_ORDER_SKILL",
+
+  -- UPDATE_DEFENCE_INFO = function(info)
+  UPDATE_DEFENCE_INFO                            = "UPDATE_DEFENCE_INFO",
+
+  -- UPDATE_DOMINION_INFO = function()
+  UPDATE_DOMINION_INFO                           = "UPDATE_DOMINION_INFO",
+
+  -- UPDATE_DOODAD_INFO = function()
+  UPDATE_DOODAD_INFO                             = "UPDATE_DOODAD_INFO",
+
+  -- UPDATE_DURABILITY_STATUS = function(frame, added, removed)
+  UPDATE_DURABILITY_STATUS                       = "UPDATE_DURABILITY_STATUS",
+
+  -- UPDATE_DYEING_EXCUTABLE = function(executeable)
+  UPDATE_DYEING_EXCUTABLE                        = "UPDATE_DYEING_EXCUTABLE",
+
+  -- UPDATE_ENCHANT_ITEM_MODE = function(isExcutable, isLock)
+  UPDATE_ENCHANT_ITEM_MODE                       = "UPDATE_ENCHANT_ITEM_MODE",
+
+  -- UPDATE_EXPEDITION_PORTAL = function()
+  UPDATE_EXPEDITION_PORTAL                       = "UPDATE_EXPEDITION_PORTAL",
+
+  -- UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT = function(count)
+  UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT =
+  "UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT",
+
+  -- UPDATE_FACTION_REZ_DISTRICT = function()
+  UPDATE_FACTION_REZ_DISTRICT                    = "UPDATE_FACTION_REZ_DISTRICT",
+
+  -- UPDATE_FISH_SCHOOL_AREA = function()
+  UPDATE_FISH_SCHOOL_AREA                        = "UPDATE_FISH_SCHOOL_AREA",
+
+  -- UPDATE_FISH_SCHOOL_INFO = function()
+  UPDATE_FISH_SCHOOL_INFO                        = "UPDATE_FISH_SCHOOL_INFO",
+
+  -- UPDATE_GACHA_LOOT_MODE = function(isExcutable, isLock)
+  UPDATE_GACHA_LOOT_MODE                         = "UPDATE_GACHA_LOOT_MODE",
+
+  -- UPDATE_GIVEN_QUEST_STATIC_INFO = function()
+  UPDATE_GIVEN_QUEST_STATIC_INFO                 = "UPDATE_GIVEN_QUEST_STATIC_INFO",
+
+  -- UPDATE_HERO_ELECTION_CONDITION = function()
+  UPDATE_HERO_ELECTION_CONDITION                 = "UPDATE_HERO_ELECTION_CONDITION",
+
+  -- UPDATE_HIDE_OPTIMIZATION_BUTTON = function()
+  -- UPDATE_HIDE_OPTIMIZATION_BUTTON = "UPDATE_HIDE_OPTIMIZATION_BUTTON", -- Crash-
+
+  -- UPDATE_HOUSING_INFO = function()
+  UPDATE_HOUSING_INFO                            = "UPDATE_HOUSING_INFO",
+
+  -- UPDATE_HOUSING_TOOLTIP = function(unitId)
+  UPDATE_HOUSING_TOOLTIP                         = "UPDATE_HOUSING_TOOLTIP",
+
+  -- UPDATE_INGAME_BEAUTYSHOP_STATUS = function()
+  UPDATE_INGAME_BEAUTYSHOP_STATUS                = "UPDATE_INGAME_BEAUTYSHOP_STATUS",
+
+  -- UPDATE_INGAME_SHOP = function(arg1, arg2, arg3, arg4)
+  UPDATE_INGAME_SHOP                             = "UPDATE_INGAME_SHOP",
+
+  -- UPDATE_INGAME_SHOP_VIEW = function(arg1, arg2)
+  UPDATE_INGAME_SHOP_VIEW                        = "UPDATE_INGAME_SHOP_VIEW",
+
+  -- UPDATE_INSTANT_GAME_INVITATION_COUNT = function(accept, totalSize)
+  UPDATE_INSTANT_GAME_INVITATION_COUNT           = "UPDATE_INSTANT_GAME_INVITATION_COUNT",
+
+  -- UPDATE_INSTANT_GAME_KILLSTREAK = function(count)
+  UPDATE_INSTANT_GAME_KILLSTREAK                 = "UPDATE_INSTANT_GAME_KILLSTREAK",
+
+  -- UPDATE_INSTANT_GAME_KILLSTREAK_COUNT = function(count)
+  UPDATE_INSTANT_GAME_KILLSTREAK_COUNT           = "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT",
+
+  -- UPDATE_INSTANT_GAME_SCORES = function()
+  UPDATE_INSTANT_GAME_SCORES                     = "UPDATE_INSTANT_GAME_SCORES",
+
+  -- UPDATE_INSTANT_GAME_STATE = function()
+  UPDATE_INSTANT_GAME_STATE                      = "UPDATE_INSTANT_GAME_STATE",
+
+  -- UPDATE_INSTANT_GAME_TIME = function()
+  UPDATE_INSTANT_GAME_TIME                       = "UPDATE_INSTANT_GAME_TIME",
+
+  -- UPDATE_ITEM_LOOK_CONVERT_MODE = function()
+  UPDATE_ITEM_LOOK_CONVERT_MODE                  = "UPDATE_ITEM_LOOK_CONVERT_MODE",
+
+  -- UPDATE_MAIN_MENU_EXPEDITION = function() -- Crash
+  -- UPDATE_MAIN_MENU_EXPEDITION = "UPDATE_MAIN_MENU_EXPEDITION", -- Crash-
+
+  -- UPDATE_MONITOR_NPC = function()
+  UPDATE_MONITOR_NPC                             = "UPDATE_MONITOR_NPC",
+
+  -- UPDATE_MY_SLAVE_POS_INFO = function()
+  UPDATE_MY_SLAVE_POS_INFO                       = "UPDATE_MY_SLAVE_POS_INFO",
+
+  -- UPDATE_NPC_INFO = function()
+  UPDATE_NPC_INFO                                = "UPDATE_NPC_INFO",
+
+  -- UPDATE_NPC_INFO_BROADCASTING = function(info)
+  UPDATE_NPC_INFO_BROADCASTING                   = "UPDATE_NPC_INFO_BROADCASTING",
+
+  -- UPDATE_OPTION_BINDINGS = function(overrided: boolean, oldAction: string|EmptyString, newAction: string|nil)
+  -- trigggers when you try to change a keybind
+  UPDATE_OPTION_BINDINGS                         = "UPDATE_OPTION_BINDINGS",
+
+  -- UPDATE_PING_INFO = function()
+  UPDATE_PING_INFO                               = "UPDATE_PING_INFO",
+
+  -- UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL = function(infos)
+  UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL       =
+  "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL",
+
+  -- UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT = function(info)
+  UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT           = "UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT",
+
+  -- UPDATE_RETURN_ACCOUNT_STATUS = function(status)
+  UPDATE_RETURN_ACCOUNT_STATUS                   = "UPDATE_RETURN_ACCOUNT_STATUS",
+
+  -- UPDATE_ROADMAP_ANCHOR = function(file)
+  UPDATE_ROADMAP_ANCHOR                          = "UPDATE_ROADMAP_ANCHOR",
+
+  -- UPDATE_ROSTER_MEMBER_INFO = function(rosterId)
+  UPDATE_ROSTER_MEMBER_INFO                      = "UPDATE_ROSTER_MEMBER_INFO",
+
+  -- UPDATE_ROUTE_MAP = function()
+  UPDATE_ROUTE_MAP                               = "UPDATE_ROUTE_MAP",
+
+  -- UPDATE_SHIP_TELESCOPE_INFO = function()
+  UPDATE_SHIP_TELESCOPE_INFO                     = "UPDATE_SHIP_TELESCOPE_INFO",
+
+  -- UPDATE_SHORTCUT_SKILLS = function()
+  UPDATE_SHORTCUT_SKILLS                         = "UPDATE_SHORTCUT_SKILLS",
+
+  -- UPDATE_SIEGE_SCORE = function(offensePoint, outlawPoint)
+  UPDATE_SIEGE_SCORE                             = "UPDATE_SIEGE_SCORE",
+
+  -- UPDATE_SKILL_ACTIVE_TYPE = function()
+  UPDATE_SKILL_ACTIVE_TYPE                       = "UPDATE_SKILL_ACTIVE_TYPE",
+
+  -- UPDATE_SLAVE_EQUIPMENT_SLOT = function(reload)
+  UPDATE_SLAVE_EQUIPMENT_SLOT                    = "UPDATE_SLAVE_EQUIPMENT_SLOT",
+
+  -- UPDATE_SPECIALTY_RATIO = function(sellItem)
+  UPDATE_SPECIALTY_RATIO                         = "UPDATE_SPECIALTY_RATIO",
+
+  -- UPDATE_SQUAD = function()
+  UPDATE_SQUAD                                   = "UPDATE_SQUAD",
+
+  -- UPDATE_TELESCOPE_AREA = function()
+  UPDATE_TELESCOPE_AREA                          = "UPDATE_TELESCOPE_AREA",
+
+  -- UPDATE_TODAY_ASSIGNMENT = function(todayInfo)
+  UPDATE_TODAY_ASSIGNMENT                        = "UPDATE_TODAY_ASSIGNMENT",
+
+  -- UPDATE_TODAY_ASSIGNMENT_RESET_COUNT = function(count)
+  UPDATE_TODAY_ASSIGNMENT_RESET_COUNT            = "UPDATE_TODAY_ASSIGNMENT_RESET_COUNT",
+
+  -- UPDATE_TRANSFER_TELESCOPE_AREA = function()
+  UPDATE_TRANSFER_TELESCOPE_AREA                 = "UPDATE_TRANSFER_TELESCOPE_AREA",
+
+  -- UPDATE_TRANSFER_TELESCOPE_INFO = function()
+  UPDATE_TRANSFER_TELESCOPE_INFO                 = "UPDATE_TRANSFER_TELESCOPE_INFO",
+
+  -- UPDATE_ZONE_INFO = function()
+  UPDATE_ZONE_INFO                               = "UPDATE_ZONE_INFO",
+
+  -- UPDATE_ZONE_LEVEL_INFO = function(level, id)
+  UPDATE_ZONE_LEVEL_INFO                         = "UPDATE_ZONE_LEVEL_INFO",
+
+  -- UPDATE_ZONE_PERMISSION = function()
+  UPDATE_ZONE_PERMISSION                         = "UPDATE_ZONE_PERMISSION",
+
+  -- VIEW_CASH_BUY_WINDOW = function(sellType)
+  VIEW_CASH_BUY_WINDOW                           = "VIEW_CASH_BUY_WINDOW",
+
+  -- WAIT_FRIEND_ADD_ALARM = function()
+  WAIT_FRIEND_ADD_ALARM                          = "WAIT_FRIEND_ADD_ALARM",
+
+  -- WAIT_FRIENDLIST_UPDATE = function(updateType)
+  WAIT_FRIENDLIST_UPDATE                         = "WAIT_FRIENDLIST_UPDATE",
+
+  -- WAIT_REPLY_FROM_SERVER = function(arg)
+  WAIT_REPLY_FROM_SERVER                         = "WAIT_REPLY_FROM_SERVER",
+
+  -- WATCH_TARGET_CHANGED = function(stringId)
+  WATCH_TARGET_CHANGED                           = "WATCH_TARGET_CHANGED",
+
+  -- WEB_BROWSER_ESC_EVENT = function(browser)
+  WEB_BROWSER_ESC_EVENT                          = "WEB_BROWSER_ESC_EVENT",
+
+  -- WORLD_MESSAGE = function(msg, iconKey, info)
+  WORLD_MESSAGE                                  = "WORLD_MESSAGE",
+
+  -- ZONE_SCORE_CONTENT_STATE = function(states)
+  ZONE_SCORE_CONTENT_STATE                       = "ZONE_SCORE_CONTENT_STATE",
+
+  -- ZONE_SCORE_UPDATED = function(kind, info)
+  ZONE_SCORE_UPDATED                             = "ZONE_SCORE_UPDATED",
+}
+
+-- ---@enum (key) OBJECT_NAME
+-- local OBJECT_NAME = {
+--   avi = "OBJECT.Avi",
+--   button = "OBJECT.Button",
+--   chatwindow = "OBJECT.ChatTab",
+--   checkbutton = "OBJECT.CheckButton",
+--   circlediagram = "OBJECT.CircleDiagram",
+--   colorpicker = "OBJECT.ColorPicker",
+--   combobox = "OBJECT.Combobox",
+--   cooldownbutton = "OBJECT.CooldownButton",
+--   cooldownconstantbutton = "OBJECT.CooldownConstantButton",
+--   cooldowninventorybutton = "OBJECT.CooldownInventoryButton",
+--   damagedisplay = "OBJECT.DamageDisplay",
+--   dynamiclist = "OBJECT.DynamicList",
+--   editbox = "OBJECT.Editbox",
+--   editboxmultiline = "OBJECT.EditboxMultiline",
+--   emptywidget = "OBJECT.EmptyWidget",
+--   folder = "OBJECT.Folder",
+--   gametooltip = "OBJECT.GameTooltip",
+--   grid = "OBJECT.Grid",
+--   label = "OBJECT.Label",
+--   line = "OBJECT.Line",
+--   listbox = "OBJECT.Listbox",
+--   listctrl = "OBJECT.ListCtrl",
+--   megaphonechatedit = "OBJECT.MegaphoneChatEdit",
+--   message = "OBJECT.Message",
+--   modelview = "OBJECT.ModelView",
+--   pageable = "OBJECT.Pageable",
+--   paintcolorpicker = "OBJECT.PaintColorPicker",
+--   radiogroup = "OBJECT.RadioGroup",
+--   roadmap = "OBJECT.RoadMap",
+--   slider = "OBJECT.Slider",
+--   slot = "OBJECT.Slot",
+--   statusbar = "OBJECT.StatusBar",
+--   tab = "OBJECT.Tab",
+--   textbox = "OBJECT.Textbox",
+--   unitframetooltip = "OBJECT.UnitframeTooltip",
+--   webbrowser = "OBJECT.Webbrowser",
+--   window = "OBJECT.Window",
+--   worldmap = "OBJECT.WorldMap",
+--   x2editbox = "OBJECT.X2Editbox",
+-- }
+---@enum OBJECT_NAME
+local OBJECT_NAME = {
+  Avi = "avi",
+  Button = "button",
+  ChatTab = "chatwindow",
+  CheckButton = "checkbutton",
+  CircleDiagram = "circlediagram",
+  ColorPicker = "colorpicker",
+  Combobox = "combobox",
+  CooldownButton = "cooldownbutton",
+  CooldownConstantButton = "cooldownconstantbutton",
+  CooldownInventoryButton = "cooldowninventorybutton",
+  DamageDisplay = "damagedisplay",
+  DynamicList = "dynamiclist",
+  Editbox = "editbox",
+  EditboxMultiline = "editboxmultiline",
+  EmptyWidget = "emptywidget",
+  Folder = "folder",
+  GameTooltip = "gametooltip",
+  Grid = "grid",
+  Label = "label",
+  Line = "line",
+  Listbox = "listbox",
+  ListCtrl = "listctrl",
+  MegaphoneChatEdit = "megaphonechatedit",
+  Message = "message",
+  ModelView = "modelview",
+  Pageable = "pageable",
+  PaintColorPicker = "paintcolorpicker",
+  RadioGroup = "radiogroup",
+  RoadMap = "roadmap",
+  Slider = "slider",
+  Slot = "slot",
+  StatusBar = "statusbar",
+  Tab = "tab",
+  Textbox = "textbox",
+  UnitframeTooltip = "unitframetooltip",
+  Webbrowser = "webbrowser",
+  Window = "window",
+  WorldMap = "worldmap",
+  X2Editbox = "x2editbox",
+}
+
+---Found in ui/common/esc_menu.g
+---@enum ESC_MENU_ICON_KEY
+local ESC_MENU_ICON_KEY = {
+  INFO = "info",
+  BAG = "bag",
+  SKILL = "skill",
+  QUEST = "quest",
+  ACHIEVEMENT = "achievement",
+  COMMUNITY = "community",
+  UTHTIN = "uthtin",
+  RANKING = "ranking",
+  AUCTION = "auction",
+  MAIL = "mail",
+  PURCHASE = "purchase",
+  ITEM_ENCYCLOPEDIA = "item_encyclopedia",
+  MAP = "map",
+  FOLIO = "folio",
+  PUBLIC_FARM = "public_farm",
+  BUTLER = "butler",
+  TRADE = "trade",
+  OPTIMIZER = "optimizer",
+  WIKI = "wiki",
+  FAQ = "faq",
+  MESSAGE = "message",
+  CHRONICLE = "chronicle",
+  LOCK = "lock",
+  RAID = "raid",
+  HERO = "hero",
+  DAIRY = "dairy",
+  TGOS = "tgos",
+  GUIDE = "guide",
+  PRICE = "price",
+  MANAGER_ICON_ESC = "manager_icon_esc",
+  EMPTY = "",
+}
+
+---@enum UIBOUND_KEY
+local UIBOUND_KEY = {
+  UI_BOUND_BATTLEFIELD_ACTIONBAR = "ui_bound_battlefield_actionbar",
+  UI_BOUND_MEGAPHONE_FRAME = "ui_bound_megaphone_frame",
+  UI_BOUND_COMBATRESOURCE = "ui_bound_combatResource",
+  UI_BOUND_INVITE_JURY_POPUP = "ui_bound_invite_jury_popup",
+  UI_BOUND_MOBILIZATION_ORDER_POPUP = "ui_bound_mobilization_order_popup",
+  UI_BOUND_CRAFTFRAME = "ui_bound_craftFrame",
+  UI_BOUND_CRAFTORDERBOARD = "ui_bound_craftOrderBoard",
+  UI_BOUND_COMBATRESOURCEFRAME = "ui_bound_combatResourceFrame",
+  UI_BOUND_MODESKILLACTIONBAR = "ui_bound_modeSkillActionBar",
+  UI_BOUND_PETINFOWINDOW = "ui_bound_petInfoWindow",
+  UI_BOUND_SHORTCUTSKILLACTIONBAR = "ui_bound_shortcutSkillActionBar",
+  UI_BOUND_SAGABOOK = "ui_bound_sagaBook",
+  UI_BOUND_QUESTNOTIFIER = "ui_bound_questNotifier",
+  UI_BOUND_QUESTLIST = "ui_bound_questList",
+  UI_BOUND_RAIDFRAME = "ui_bound_raidFrame",
+  UI_BOUND_PLAYERFRAME = "ui_bound_playerFrame",
+  UI_BOUND_TARGETTOTARGET = "ui_bound_targettotarget",
+  UI_BOUND_TARGETFRAME = "ui_bound_targetFrame",
+  UI_BOUND_WATCHTARGET = "ui_bound_watchtarget",
+  UI_BOUND_CHATWINDOW = "ui_bound_chatWindow[id]", -- A id is required and can be obtained from `X2Chat:AllChatWindowIds()`
+}
+
+---This needs updated to the new console_vars.txt
+---@enum CONSOLE_VAR
+local CONSOLE_VAR = {
+  E_GI = "e_GI",
+  R_DOFMINZ = "r_dofMinZ",
+  MRAC = "mrac",
+  R_GLOWANAMORPHICFLARES = "r_glowanamorphicflares",
+  WATCHING_UNIT_MOVEMENT_DEBUG = "watching_unit_movement_debug",
+  ROPE_SKILL_CONTROLLER_CUT_ANGVEL = "rope_skill_controller_cut_angvel",
+  CAMERA_USE_SHAKE = "camera_use_shake",
+  R_SHADOWSUSECLIPVOLUME = "r_ShadowsUseClipVolume",
+  E_SKY_TYPE = "e_sky_type",
+  CB_CLOSEUP_SCALE = "cb_closeup_scale",
+  CB_CLOSEUP_SPEED = "cb_closeup_speed",
+  R_TEXTURESSTREAMINGMIPFADING = "r_texturesstreamingmipfading",
+  CA_DEBUGCOMMANDBUFFER = "ca_DebugCommandBuffer",
+  E_MODELVIEW_PREFAB_LIGHT_OFFSET_FROM_CENTER =
+  "e_modelview_Prefab_light_offset_from_center",
+  P_WIREFRAME_DISTANCE = "p_wireframe_distance",
+  MOVEMENT_VERIFY_MIN_Z_POS = "movement_verify_min_z_pos",
+  INPUT_DEBUG = "input_debug",
+  LUA_DEBUGGER = "lua_debugger",
+  E_GIRSMSIZE = "e_GIRSMSize",
+  LUA_USE_BINARY = "lua_use_binary",
+  CL_TAKE_SCREEN_SHOT = "cl_take_screen_shot",
+  MATE_SPAWN_DEBUG = "mate_spawn_debug",
+  AI_DEBUGDRAWBULLETEVENTS = "ai_DebugDrawBulletEvents",
+  CAMERA_MOVE_SLOWDOWN = "camera_move_slowdown",
+  SYS_BUDGET_TRIS_BRUSH = "sys_budget_tris_brush",
+  ES_PROFILEENTITIES = "es_profileentities",
+  R_HDRBRIGHTTHRESHOLD = "r_HDRBrightThreshold",
+  G_LOCALPACKETRATE = "g_localPacketRate",
+  R_OPTIMISEDLIGHTSETUP = "r_OptimisedLightSetup",
+  E_LOD_SKIN_RATIO = "e_lod_skin_ratio",
+  R_CUBEMAPGENERATING = "r_cubemapgenerating",
+  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_TOO_FAST =
+  "movement_verify_detailed_warp_speed_too_fast",
+  CA_BLENDOUTTIME = "ca_BlendOutTime",
+  R_SHADOWJITTERING = "r_ShadowJittering",
+  R_FORCEZCLEARWITHCOLOR = "r_ForceZClearWithColor",
+  LOG_ALLOWDIRECTLOGGINGFROMANYTHREAD = "log_AllowDirectLoggingFromAnyThread",
+  AC_DEBUGANIMEFFECTS = "ac_debugAnimEffects",
+  R_ERRORSTRING = "r_ErrorString",
+  OPTION_USE_CLONE_MODE = "option_use_clone_mode",
+  ROPE_SKILL_CONTROLLER_FADEOUT_TIME = "rope_skill_controller_fadeout_time",
+  AI_NOUPDATE = "ai_NoUpdate",
+  E_STREAM_CGF = "e_stream_cgf",
+  EFFECT_DEBUG_FILTER_UNIT = "effect_debug_filter_unit",
+  SYS_MEMORY_DEBUG = "sys_memory_debug",
+  MOVEMENT_VERIFY_MAX_PACKET_INTERVAL = "movement_verify_max_packet_interval",
+  E_OBJ_STATS = "e_obj_stats",
+  AC_DEBUGANIMERROR = "ac_debugAnimError",
+  R_TEXTURESSTREAMINGDEBUG = "r_TexturesStreamingDebug",
+  R_NOHWGAMMA = "r_NoHWGamma",
+  P_RAY_FADEIN = "p_ray_fadein",
+  EFFECT_DEBUG_STATE = "effect_debug_state",
+  E_TERRAIN_DEFORMATIONS = "e_terrain_deformations",
+  AI_MAXSIGNALDURATION = "ai_MaxSignalDuration",
+  ATT_SCALE_TEST_DRAWN = "att_scale_test_drawn",
+  Q_SHADERTERRAIN = "q_ShaderTerrain",
+  R_WATERREFLECTIONSQUALITY = "r_WaterReflectionsQuality",
+  CA_AMC_SMOOTHTURN = "ca_AMC_SmoothTurn",
+  OPTION_USE_WATER_REFLECTION = "option_use_water_reflection",
+  E_TERRAIN_LOADING_LOG = "e_terrain_loading_log",
+  P_NET_MINSNAPDIST = "p_net_minsnapdist",
+  E_TERRAIN_CRATER_DEPTH_MAX = "e_terrain_crater_depth_max",
+  R_SHOOTINGSTAR_RESPAWNNOW = "r_shootingstar_respawnnow",
+  AI_TIMETOAGGROCANCELBYNOSKILL = "ai_TimeToAggroCancelByNoSkill",
+  NAME_TAG_MODE = "name_tag_mode",
+  PROFILE_DISK_MAX_DRAW_ITEMS = "profile_disk_max_draw_items",
+  INSTANCE_INDEX = "instance_index",
+  R_CBSTATIC = "r_CBStatic",
+  CA_DRAWCC = "ca_DrawCC",
+  E_BRUSH_STREAMING_DIST_RATIO = "e_brush_streaming_dist_ratio",
+  AI_DEBUGDRAWASTAROPENLIST = "ai_DebugDrawAStarOpenList",
+  R_SCISSOR = "r_Scissor",
+  SYS_STREAMING_SLEEP = "sys_streaming_sleep",
+  CON_RESTRICTED = "con_restricted",
+  AG_LOGTRANSITIONS = "ag_logtransitions",
+  G_DISPLAYIGNORELIST = "g_displayIgnoreList",
+  E_DECALS_HIT_CACHE = "e_decals_hit_cache",
+  DUMMY = "dummy",
+  CAMERA_FAR_CLIP = "camera_far_clip",
+  E_FOG = "e_fog",
+  E_OBJ = "e_obj",
+  E_SUN = "e_sun",
+  R_HDRPRESETS = "r_HDRPresets",
+  R_TERRAINSPECULAR_COLORB = "r_TerrainSpecular_ColorB",
+  R_TERRAINSPECULAR_COLORG = "r_TerrainSpecular_ColorG",
+  R_TERRAINSPECULAR_COLORR = "r_TerrainSpecular_ColorR",
+  E_TERRAIN_LAYER_TEST = "e_terrain_layer_test",
+  E_VIEW_DIST_RATIO_DETAIL = "e_view_dist_ratio_detail",
+  SYS_FLOAT_EXCEPTIONS = "sys_float_exceptions",
+  R_TERRAINAO_FADEDIST = "r_TerrainAO_FadeDist",
+  R_HDRGRAINAMOUNT = "r_HDRGrainAmount",
+  R_LOG = "r_Log",
+  S_HDR = "s_HDR",
+  CL_DEBUGFREEZESHAKE = "cl_debugFreezeShake",
+  SV_VOICE_ENABLE_GROUPS = "sv_voice_enable_groups",
+  AI_LOGCONSOLEVERBOSITY = "ai_LogConsoleVerbosity",
+  G_UNIT_COLLIDE_BOTTOM_BOX_MAX_SIZE_GAP =
+  "g_unit_collide_bottom_box_max_size_gap",
+  SWIM_JUMP_PERMISSION_RANGE = "swim_jump_permission_range",
+  CL_CHECK_RESURRECTABLE_POS_DEBUG = "cl_check_resurrectable_pos_debug",
+  X_FLOAT1 = "x_float1",
+  X_FLOAT2 = "x_float2",
+  X_FLOAT3 = "x_float3",
+  AI_INTERESTSCALINGSCAN = "ai_InterestScalingScan",
+  AI_INTERESTSCALINGVIEW = "ai_InterestScalingView",
+  R_STEREODEVICE = "r_StereoDevice",
+  TIP_OF_DAY_NUMBER = "tip_of_day_number",
+  HTTP_PASSWORD = "http_password",
+  D3D9_IBPOOLS = "d3d9_IBPools",
+  MOVEMENT_VERIFY_GRAVITY_HEIGHT_TOLERANCE =
+  "movement_verify_gravity_height_tolerance",
+  E_FOLIAGE_BROKEN_BRANCHES_DAMPING = "e_foliage_broken_branches_damping",
+  AIM_ASSISTAIMENABLED = "aim_assistAimEnabled",
+  SYS_BUDGET_DP_ROAD = "sys_budget_dp_road",
+  TAB_TARGETING_FAN_ANGLE = "tab_targeting_fan_angle",
+  CUSTOM_APPLY_DRESSING_GAP = "custom_apply_dressing_gap",
+  CA_USEDECALS = "ca_UseDecals",
+  I_PARTICLEEFFECTS = "i_particleeffects",
+  E_SHADOWS_SLOPE_BIAS = "e_shadows_slope_bias",
+  R_SSAODEBUG = "r_SSAODebug",
+  AG_BREAKMODE = "ag_breakmode",
+  PL_DEBUG_JUMP2Y_MULT = "pl_debug_jump2y_mult",
+  E_SHADOWSTESSELLATEDLIGHTS = "e_ShadowsTessellateDLights",
+  R_SSAOTEMPORALCONVERGENCE = "r_SSAOTemporalConvergence",
+  ES_ENABLE_FULL_SCRIPT_SAVE = "es_enable_full_script_save",
+  BOT_SHORT_TEST_MODE = "bot_short_test_mode",
+  E_COVERCGFDEBUG = "e_CoverCgfDebug",
+  R_NIGHTVISIONSONARMULTIPLIER = "r_NightVisionSonarMultiplier",
+  R_SHADOWSPARTICLEKERNELSIZE = "r_ShadowsParticleKernelSize",
+  E_VOXTERMIXMASK = "e_VoxTerMixMask",
+  SS_MAX_WARP_DIST = "ss_max_warp_dist",
+  CA_MAXFACELOD = "ca_MaxFaceLOD",
+  SV_SHIP_MASS_DEBUG = "sv_ship_mass_debug",
+  SYS_GAME_FOLDER = "sys_game_folder",
+  E_MAX_VIEW_DST_FULL_DIST_CAM_HEIGHT = "e_max_view_dst_full_dist_cam_height",
+  S_OBSTRUCTIONMAXPIERECABILITY = "s_ObstructionMaxPierecability",
+  E_VISAREAFOGFADINGTIME = "e_VisareaFogFadingTime",
+  NAME_TAG_FADE_OUT_DISTANCE = "name_tag_fade_out_distance",
+  SV_MAXMEMORYUSAGE = "sv_maxmemoryusage",
+  R_POSTPROCESSEFFECTSFILTERS = "r_PostProcessEffectsFilters",
+  CA_DUMPUSEDANIMS = "ca_DumpUsedAnims",
+  PL_DEBUG_JUMP2Z_MULT = "pl_debug_jump2z_mult",
+  E_DEFERRED_LOADER_STATS = "e_deferred_loader_stats",
+  G_QUICKGAME_PING2_LEVEL = "g_quickGame_ping2_level",
+  E_OBJ_TREE_MIN_NODE_SIZE = "e_obj_tree_min_node_size",
+  R_SSAO_VISUALISE = "r_SSAO_Visualise",
+  NEXT_OPTION_SOUND = "next_option_sound",
+  R_GLITTERSPECULARPOW = "r_GlitterSpecularPow",
+  SYS_FIRSTLAUNCH = "sys_firstlaunch",
+  SS_DEFERRED_OBJECT_LOADING = "ss_deferred_object_loading",
+  R_CUSTOMRESWIDTH = "r_CustomResWidth",
+  AUX_PHYS_EXCLUDE_HAIR = "aux_phys_exclude_hair",
+  E_MATERIAL_STATS = "e_material_stats",
+  E_CHARACTER_LIGHT_MIN_DIST = "e_character_light_min_dist",
+  E_FOLIAGE_BRANCHES_DAMPING = "e_foliage_branches_damping",
+  P_MAX_VELOCITY = "p_max_velocity",
+  E_GSM_FOCUS_OFFSET_TYPE = "e_gsm_focus_offset_type",
+  S_OUTPUTCONFIG = "s_OutputConfig",
+  AIM_ASSISTVERTICALSCALE = "aim_assistVerticalScale",
+  NAME_TAG_ICON_GAP = "name_tag_icon_gap",
+  E_GICACHE = "e_GICache",
+  S_MUSICSPEAKERCENTERVOLUME = "s_MusicSpeakerCenterVolume",
+  MOVEMENT_VERIFY_MOVE_SPEED_SAMPLING_TIME =
+  "movement_verify_move_speed_sampling_time",
+  R_RELOADSHADERS = "r_ReloadShaders",
+  E_VIEW_DIST_RATIO = "e_view_dist_ratio",
+  AIM_ASSISTCROSSHAIRDEBUG = "aim_assistCrosshairDebug",
+  AI_IGNOREVISIBILITYCHECKS = "ai_IgnoreVisibilityChecks",
+  R_TERRAINSPECULAR_STRENGTH = "r_TerrainSpecular_Strength",
+  R_TEXTURE_DB_STREAMING_CHECK_INTEGRITY =
+  "r_texture_db_streaming_check_integrity",
+  E_PARTICLES_LOW_UPDATE_DIST = "e_particles_low_update_dist",
+  R_TEXNOANISO = "r_TexNoAniso",
+  CAMERA_INTERACTION_NPC_FADEIN_TIME = "camera_interaction_npc_fadein_time",
+  E_SCISSOR_DEBUG = "e_scissor_debug",
+  NAME_TAG_LARGE_APP_STAMP_OFFSET_NORMAL =
+  "name_tag_large_app_stamp_offset_normal",
+  S_PRECACHEDURATION = "s_PrecacheDuration",
+  P_PROFILE_FUNCTIONS = "p_profile_functions",
+  CL_SPRINTBLUR = "cl_sprintBlur",
+  AI_PATHFINDERUPDATECOUNT = "ai_PathfinderUpdateCount",
+  AI_THREADEDVOLUMENAVPREPROCESS = "ai_ThreadedVolumeNavPreprocess",
+  E_VOXTERHEIGHTMAPEDITINGCUSTOMLAYERINFO =
+  "e_VoxTerHeightmapEditingCustomLayerInfo",
+  R_FOGDENSITYSCALE = "r_FogDensityScale",
+  R_GEOMINSTANCINGTHRESHOLD = "r_GeomInstancingThreshold",
+  G_SHOW_LOOT_WINDOW = "g_show_loot_window",
+  PL_FALL_START_VELOCITY = "pl_fall_start_velocity",
+  NAME_TAG_HP_BG_HEIGHT_OFFSET = "name_tag_hp_bg_height_offset",
+  R_VISAREAVOLUMEOVERSIZE = "r_visareavolumeoversize",
+  CAMERA_DIVE_ANGLE = "camera_dive_angle",
+  I_XINPUT = "i_xinput",
+  SOUND_ENABLE_BUBBLE_EFFECT_VOICE = "sound_enable_bubble_effect_voice",
+  CL_DEBUGBASEQUAT = "cl_debugBasequat",
+  E_TERRAIN_TEXTURE_DEBUG = "e_terrain_texture_debug",
+  R_SHADERSASYNCREADING = "r_ShadersAsyncReading",
+  E_STREAMPREDICTIONDISTANCENEAR = "e_StreamPredictionDistanceNear",
+  CAMERA_DIVE_PITCH = "camera_dive_pitch",
+  CL_SHIP_SUBMERGE_UPDATE_FREQ = "cl_ship_submerge_update_freq",
+  AC_DEBUGSELECTIONPARAMS = "ac_debugSelectionParams",
+  DECORATION_SMART_POSITIONING_MAX_DIST = "decoration_smart_positioning_max_dist",
+  CR_ROTATEDAMPINGMAX = "cr_rotateDampingMax",
+  I_STATICFIRESOUNDS = "i_staticfiresounds",
+  R_CREATEZBUFFERTEXTURE = "r_CreateZBufferTexture",
+  P_COUNT_OBJECTS = "p_count_objects",
+  AUTO_SELF_TARGETING = "auto_self_targeting",
+  PL_ZEROGGYROFADEEXP = "pl_zeroGGyroFadeExp",
+  CA_DRAWLOCATOR = "ca_DrawLocator",
+  E_VIEW_DIST_RATIO_LIGHT = "e_view_dist_ratio_light",
+  R_TERRAINSPECULAR_MODEL = "r_TerrainSpecular_Model",
+  CA_DRAWVEGINFO = "ca_DrawVEGInfo",
+  R_TEXSTAGINGMAXCOUNT = "r_texStagingMaxCount",
+  SHIP_RUDDER_FORCE = "ship_rudder_force",
+  R_MESHHOLDMEMDURATION = "r_meshHoldMemDuration",
+  AI_DRAWFAKEHITEFFECTS = "ai_DrawFakeHitEffects",
+  G_UNIT_COLLIDE_REAR_BOUND_RATE = "g_unit_collide_rear_bound_rate",
+  CL_FROZENMOUSEMULT = "cl_frozenMouseMult",
+  R_TEXATLASSIZE = "r_TexAtlasSize",
+  Q_SHADERPOSTPROCESS = "q_ShaderPostProcess",
+  OPTION_HIDE_MOBILIZATION_ORDER = "option_hide_mobilization_order",
+  R_ENVCMRESOLUTION = "r_EnvCMResolution",
+  S_FILECACHEMANAGERSIZE = "s_FileCacheManagerSize",
+  S_STREAMDIALOGINTOMEMORY = "s_StreamDialogIntoMemory",
+  P_MAX_SUBSTEPS = "p_max_substeps",
+  CA_GC_DEBUG = "ca_gc_debug",
+  S_PRELOADWEAPONPROJECTS = "s_PreloadWeaponProjects",
+  SYS_BUDGET_PARTICLE_GAME = "sys_budget_particle_game",
+  SYS_BUDGET_PARTICLE_ITEM = "sys_budget_particle_item",
+  R_OCEANSECTORSIZE = "r_OceanSectorSize",
+  E_OBJECT_STREAMING_LOG = "e_object_streaming_log",
+  NAME_TAG_OUTLINE = "name_tag_outline",
+  UI_MODELVIEW_ENABLE = "ui_modelview_enable",
+  AI_DRAWFORMATIONS = "ai_DrawFormations",
+  VEHICLE_CONTROLLER_DEBUG_SPEED = "vehicle_controller_debug_speed",
+  SYS_LOWSPECPAK = "sys_LowSpecPak",
+  R_TEXTURESSTREAMINGRESIDENCYTHROTTLE = "r_texturesstreamingResidencyThrottle",
+  E_SHADOWS_CULL_TERRAIN_ACCURATELY = "e_shadows_cull_terrain_accurately",
+  SHOW_LADDER = "show_ladder",
+  R_DESIREWIDTH = "r_desireWidth",
+  E_GSMEXTENDLASTLODUSEVARIANCE = "e_GsmExtendLastLodUseVariance",
+  SYS_BUDGET_TRIANGLES = "sys_budget_triangles",
+  E_MODELVIEW_PREFAB_CAM_DIST = "e_modelview_Prefab_cam_dist",
+  CL_RIGHTHAND = "cl_righthand",
+  GT_SHOW = "gt_show",
+  LOG_VERBOSITY = "log_Verbosity",
+  R_DEFERREDDECALS = "r_DeferredDecals",
+  AI_UPDATEALLALWAYS = "ai_UpdateAllAlways",
+  AI_DRAWNAVTYPE = "ai_DrawNavType",
+  NET_ACTOR_SYNC_PERIOD = "net_actor_sync_period",
+  P_NOTIFY_EPSILON_RIGID = "p_notify_epsilon_rigid",
+  E_BRUSHES = "e_brushes",
+  NAME_TAG_HP_COLOR_MULTIPLIER_ON_BGMODE =
+  "name_tag_hp_color_multiplier_on_bgmode",
+  E_DEFERREDPHYSICSEVENTS = "e_DeferredPhysicsEvents",
+  R_RAINIGNORENEAREST = "r_RainIgnoreNearest",
+  CA_ITEM_OFFSET_DEBUG = "ca_item_offset_debug",
+  GAMEOPTION_FINALIZE_UPDATE = "gameoption_finalize_update",
+  S_PLAYBACKFILTER = "s_PlaybackFilter",
+  CA_NOANIM = "ca_NoAnim",
+  CA_USEIMG_CAF = "ca_UseIMG_CAF",
+  E_PHYS_OCEAN_CELL = "e_phys_ocean_cell",
+  R_NVDOF_BOKEHINTENSITY = "r_NVDOF_BokehIntensity",
+  OPTION_GAME_LOG_LIFE_TIME = "option_game_log_life_time",
+  CA_USELOOKIK = "ca_UseLookIK",
+  G_EMP_STYLE = "g_emp_style",
+  R_ALLOWHARDWARESRGBWRITE = "r_AllowHardwareSRGBWrite",
+  R_HDROFFSET = "r_HDROffset",
+  PICKING_DISTANCE = "picking_distance",
+  E_LEVEL_AUTO_PRECACHE_TERRAIN_AND_PROC_VEGET =
+  "e_level_auto_precache_terrain_and_proc_veget",
+  R_NVSSAO_COARSEAO = "r_NVSSAO_CoarseAO",
+  E_TERRAIN_TEXTURE_BUFFERS = "e_terrain_texture_buffers",
+  CL_FROZENANGLEMAX = "cl_frozenAngleMax",
+  CL_FROZENANGLEMIN = "cl_frozenAngleMin",
+  MAP_SHOW_ZONE_SECTORS = "map_show_zone_sectors",
+  EFFECT_FILTER_LOOP = "effect_filter_loop",
+  E_STREAMPREDICTIONAHEADDEBUG = "e_StreamPredictionAheadDebug",
+  E_GSM_LODS_NUM = "e_gsm_lods_num",
+  P_SINGLE_STEP_MODE = "p_single_step_mode",
+  FORCE_SHOW_WEAPON_VISUAL = "force_show_weapon_visual",
+  PEPSIMAN = "pepsiman",
+  E_GSM_CACHE_LOD_OFFSET = "e_gsm_cache_lod_offset",
+  CAMERA_DIVE_START_DEPTH = "camera_dive_start_depth",
+  E_LEVEL_AUTO_PRECACHE_TEXTURES_AND_SHADERS =
+  "e_level_auto_precache_textures_and_shaders",
+  E_VOXTERPLANARPROJECTION = "e_VoxTerPlanarProjection",
+  R_SSAO_RADIUS_MULTIPLER = "r_SSAO_radius_multipler",
+  AI_INTERESTENABLESCAN = "ai_InterestEnableScan",
+  AI_SIGHTRANGEMEDIUMILLUMMOD = "ai_SightRangeMediumIllumMod",
+  DEPARTURE_SERVER_PASSPORT_PASS_HIGH = "departure_server_passport_pass_high",
+  R_RAINMAXVIEWDIST = "r_RainMaxViewDist",
+  S_ERRORSOUND = "s_ErrorSound",
+  R_MAXSUITPULSESPEEDMULTIPLIER = "r_MaxSuitPulseSpeedMultiplier",
+  AI_DRAWFAKEDAMAGEIND = "ai_DrawFakeDamageInd",
+  HR_ROTATEFACTOR = "hr_rotateFactor",
+  NAME_TAG_OFFSET = "name_tag_offset",
+  NET_PHYS_PINGSMOOTH = "net_phys_pingsmooth",
+  ALN_DEBUG_FILTER = "aln_debug_filter",
+  CA_USEAIMIK = "ca_UseAimIK",
+  CA_TRAVELSPEEDSCALEMAX = "ca_travelSpeedScaleMax",
+  CA_TRAVELSPEEDSCALEMIN = "ca_travelSpeedScaleMin",
+  CA_DRAWATTACHMENTOBB = "ca_DrawAttachmentOBB",
+  NAME_TAG_TEXT_LINE_OFFSET = "name_tag_text_line_offset",
+  R_RAINOCCLUDERSIZETRESHOLD = "r_RainOccluderSizeTreshold",
+  E_GSM_EXTRA_RANGE_SHADOW_TEXTURE_SIZE = "e_gsm_extra_range_shadow_texture_size",
+  DEPARTURE_SERVER_PASSPORT_PASS_LOW = "departure_server_passport_pass_low",
+  CA_USEMORPH = "ca_UseMorph",
+  R_LOGTEXSTREAMING = "r_LogTexStreaming",
+  R_TEXMINANISOTROPY = "r_TexMinAnisotropy",
+  P_MAX_OBJECT_SPLASHES = "p_max_object_splashes",
+  UI_ALIGN_LINE_FEED = "ui_align_line_feed",
+  SYS_LOGALLOCATIONS = "sys_logallocations",
+  G_STRESSTESTCUSTOMIZER = "g_stressTestCustomizer",
+  SYS_ENTITIES = "sys_entities",
+  AC_DEBUGTEXT = "ac_debugText",
+  UM_DECAL_SHADOW_RATIO = "um_decal_shadow_ratio",
+  R_VEGETATIONSPRITESGENDEBUG = "r_VegetationSpritesGenDebug",
+  R_SHADERSNOCOMPILE = "r_ShadersNoCompile",
+  AC_FORCENOSIMPLEMOVEMENT = "ac_forceNoSimpleMovement",
+  FIXED_TIME_STEP = "fixed_time_step",
+  R_SSGIQUALITY = "r_SSGIQuality",
+  MEMSTATSMAXDEPTH = "MemStatsMaxDepth",
+  NAME_TAG_RENDER_SHADOW = "name_tag_render_shadow",
+  E_CBUFFER_DEBUG = "e_cbuffer_debug",
+  D3D9_PIP_BUFF_SIZE = "d3d9_pip_buff_size",
+  NAME_TAG_HOSTILE_SHOW = "name_tag_hostile_show",
+  R_STEREOOUTPUT = "r_StereoOutput",
+  R_SSREFLCUTOFF = "r_SSReflCutoff",
+  NAME_TAG_HP_WIDTH_ON_BGMODE = "name_tag_hp_width_on_bgmode",
+  CA_DRAWSKELETON = "ca_DrawSkeleton",
+  E_PARTICLES_MAX_SCREEN_FILL = "e_particles_max_screen_fill",
+  SYS_DEV_SCRIPT_FOLDER = "sys_dev_script_folder",
+  E_CHARACTER_LIGHT = "e_character_light",
+  E_DECALS_MAX_STATIC_MESH_TRIS = "e_decals_max_static_mesh_tris",
+  S_OBSTRUCTION = "s_Obstruction",
+  COMBAT_SYNC_FRAMEHOLD = "combat_sync_framehold",
+  SYS_AFFINITY_MAIN = "sys_affinity_main",
+  R_PROFILECHAR = "r_ProfileChar",
+  R_PROFILEDIPS = "r_ProfileDIPs",
+  G_SPECTATORCOLLISIONS = "g_spectatorcollisions",
+  MFX_ENABLE = "mfx_Enable",
+  R_TESSELLATIONDEBUG = "r_TessellationDebug",
+  E_WATER_OCEAN = "e_water_ocean",
+  ES_LOGDRAWNACTORS = "es_LogDrawnActors",
+  CA_GC_MAX_COUNT = "ca_gc_max_count",
+  S_VISAREASPROPAGATION = "s_VisAreasPropagation",
+  CA_STOREANIMNAMESONLOAD = "ca_StoreAnimNamesOnLoad",
+  E_WATER_WAVES = "e_water_waves",
+  E_CUSTOM_BUILD_EXTRAMAPS_FROMSHADERQUALITY =
+  "e_custom_build_extramaps_fromshaderquality",
+  E_MODELVIEW_PREFAB_LIGHT_COLOR_RGB = "e_modelview_Prefab_light_color_rgb",
+  ES_FARPHYSTIMEOUT = "es_FarPhysTimeout",
+  UI_MODELVIEW_UPDATE_TIMES = "ui_modelview_update_times",
+  EXPR_MODE = "expr_mode",
+  G_AIMDEBUG = "g_aimdebug",
+  R_VEGETATIONSPRITESNOGEN = "r_VegetationSpritesNoGen",
+  NET_BW_AGGRESSIVENESS = "net_bw_aggressiveness",
+  R_USESOFTPARTICLES = "r_UseSoftParticles",
+  R_TEXTURESSTREAMPOOLSIZE = "r_TexturesStreamPoolSize",
+  S_SOUNDINFO = "s_SoundInfo",
+  R_THERMALVISIONVIEWCLOAKFREQUENCYPRIMARY =
+  "r_ThermalVisionViewCloakFrequencyPrimary",
+  S_XMADECODERS = "s_XMADecoders",
+  E_MESH_SIMPLIFY = "e_mesh_simplify",
+  R_DEFERREDSHADINGCUBEMAPS = "r_DeferredShadingCubeMaps",
+  E_VEGETATION_USE_TERRAIN_COLOR = "e_vegetation_use_terrain_color",
+  R_NVSSAO_RADIUS = "r_NVSSAO_Radius",
+  AI_SIMPLEWAYPTPASSABILITY = "ai_SimpleWayptPassability",
+  R_POSTPROCESSHUD3D = "r_PostProcessHUD3D",
+  CA_SMOOTHSTRAFEWITHANGLE = "ca_SmoothStrafeWithAngle",
+  G_ACTOR_USE_FOOTSTEP_EFFECT = "g_actor_use_footstep_effect",
+  FOLLOW_MAX_DISTANCE = "follow_max_distance",
+  R_OCEANRENDTYPE = "r_OceanRendType",
+  E_MAX_VIEW_DST = "e_max_view_dst",
+  E_OBJ_QUALITY = "e_obj_quality",
+  R_ALLOWFP16MESHES = "r_AllowFP16Meshes",
+  E_LOD_MAX = "e_lod_max",
+  E_LOD_MIN = "e_lod_min",
+  SYS_PROFILELEVELLOADING = "sys_ProfileLevelLoading",
+  DELAY_MUL_FOR_ZH_CN_LETTER = "delay_mul_for_zh_cn_letter",
+  E_TIME_OF_DAY = "e_time_of_day",
+  CA_TEST = "ca_Test",
+  CA_THREAD = "ca_thread",
+  G_DEBUG_PHYSICALIZE_RIGID = "g_debug_physicalize_rigid",
+  SYS_VTUNE = "sys_vtune",
+  E_TIME_OF_DAY_ENGINE_UPDATE = "e_time_of_day_engine_update",
+  CAMERA_MOVE_SPEED = "camera_move_speed",
+  CA_STREAM_CAL = "ca_stream_cal",
+  CA_STREAM_CDF = "ca_stream_cdf",
+  CA_STREAM_CHR = "ca_stream_chr",
+  AG_ADJUSTTOCATCHUP = "ag_adjustToCatchUp",
+  LOGIN_CAMERA_ZOOM_VELOCITY_POWER = "login_camera_zoom_velocity_power",
+  P_ACCURACY_MC = "p_accuracy_MC",
+  CA_MERGEMAXNUMLODS = "ca_MergeMaxNumLods",
+  AUX_USE_WEAPON = "aux_use_weapon",
+  AI_DRAWNODELINKTYPE = "ai_DrawNodeLinkType",
+  S_MAXACTIVESOUNDS = "s_MaxActiveSounds",
+  E_SHADOWS_FRUSTUMS = "e_shadows_frustums",
+  G_PROFILE = "g_profile",
+  CL_ACTORSAFEMODE = "cl_actorsafemode",
+  R_SHADOWSSLOPESCALEBIAS = "r_ShadowsSlopeScaleBias",
+  CA_USEDBA = "ca_UseDBA",
+  AI_UPDATEPROXY = "ai_UpdateProxy",
+  OPTION_CUSTOM_ADDON_FONTS = "option_custom_addon_fonts",
+  PL_ZEROGENABLEGBOOTS = "pl_zeroGEnableGBoots",
+  ROPE_SKILL_CONTROLLER_MAXFORCE = "rope_skill_controller_maxforce",
+  SOUND_TARGET_COMBAT_SOUND_VOLUME = "sound_target_combat_sound_volume",
+  CA_USELINEAROP = "ca_UseLinearOP",
+  E_CHARACTER_LIGHT_COLOR_B = "e_character_light_color_b",
+  E_CHARACTER_LIGHT_COLOR_G = "e_character_light_color_g",
+  E_CHARACTER_LIGHT_COLOR_R = "e_character_light_color_r",
+  E_STREAM_FOR_PHYSICS = "e_stream_for_physics",
+  R_NVSSAO_AMBIENTLIGHTOCCLUSION_HIGHQUALITY =
+  "r_NVSSAO_AmbientLightOcclusion_HighQuality",
+  PL_ZEROGGYROFADEANGLEINNER = "pl_zeroGGyroFadeAngleInner",
+  MFX_PFX_MINSCALE = "mfx_pfx_minScale",
+  R_MERGERENDERCHUNKS = "r_MergeRenderChunks",
+  ROPE_SKILL_CONTROLLER_SWING_FORCE = "rope_skill_controller_swing_force",
+  P_DAMPING_GROUP_SIZE = "p_damping_group_size",
+  PL_ZEROGGYROFADEANGLEOUTER = "pl_zeroGGyroFadeAngleOuter",
+  G_RAGDOLL_DAMPING_MAX = "g_ragdoll_damping_max",
+  S_SFXVOLUME = "s_SFXVolume",
+  DB_LOCATION = "db_location",
+  CA_LODCOUNTMAX = "ca_LodCountMax",
+  AG_LOGSOUNDS = "ag_logsounds",
+  TEST_WORLD_CONGESTION = "test_world_congestion",
+  AC_ANIMERRORCLAMP = "ac_animErrorClamp",
+  CL_SHIP_MASS_UPDATE_FREQ = "cl_ship_mass_update_freq",
+  SYS_PAKLOGMISSINGFILES = "sys_PakLogMissingFiles",
+  E_PARTICLES_GC_PERIOD = "e_particles_gc_period",
+  CL_CEF_USE_X2_LOG = "cl_cef_use_x2_log",
+  NAME_SHOW_TAG_SPHERE = "name_show_tag_sphere",
+  NET_HIGHLATENCYTHRESHOLD = "net_highlatencythreshold",
+  R_POSTAAMODE = "r_PostAAMode",
+  E_GINUMCASCADES = "e_GINumCascades",
+  FG_SYSTEMENABLE = "fg_SystemEnable",
+  MOVEMENT_VERIFY_DUMP_LOG = "movement_verify_dump_log",
+  MFX_PARTICLEIMPACTTHRESH = "mfx_ParticleImpactThresh",
+  UM_PLANE_SHADOW_RATIO = "um_plane_shadow_ratio",
+  E_PARTICLES_LIGHTS_VIEW_DIST_RATIO = "e_particles_lights_view_dist_ratio",
+  AI_PROTORODLOGSCALE = "ai_ProtoRODLogScale",
+  R_RAINOCCLADDITIONALSIZE = "r_rainOcclAdditionalSize",
+  E_SHADOWS_CAST_VIEW_DIST_RATIO_CHARACTER =
+  "e_shadows_cast_view_dist_ratio_character",
+  AI_AMBIENTFIREQUOTA = "ai_AmbientFireQuota",
+  G_SHOWUPDATESTATE = "g_showUpdateState",
+  E_CBUFFER_TERRAIN_SHIFT_NEAR = "e_cbuffer_terrain_shift_near",
+  R_MESHUSESUMMEDAREA = "r_meshUseSummedArea",
+  E_VOXTERONTHEFLYINTEGRATION = "e_VoxTerOnTheFlyIntegration",
+  CA_STREAM_FACIAL = "ca_stream_facial",
+  R_SHADEREMAILTAGS = "r_ShaderEmailTags",
+  E_CBUFFER_LIGHTS_DEBUG_SIDE = "e_cbuffer_lights_debug_side",
+  CG_SYNC_DELAY = "cg_sync_delay",
+  E_PARTICLES_DECALS = "e_particles_decals",
+  SYS_AFFINITY_PHYSICS = "sys_affinity_physics",
+  E_STREAMCGFMAXTASKSINPROGRESS = "e_StreamCgfMaxTasksInProgress",
+  PROFILE_DISK_BUDGET = "profile_disk_budget",
+  CA_CACHINGMODELFILES = "ca_CachingModelFiles",
+  G_UNIT_COLLIDE_REPORT_INTERVAL = "g_unit_collide_report_interval",
+  QUEST_TARGET_CAM_MOVE = "quest_target_cam_move",
+  USER_MUSIC_DISABLE_SELF = "user_music_disable_self",
+  R_OCEANTEXUPDATE = "r_OceanTexUpdate",
+  I_XINPUT_POLL_TIME = "i_xinput_poll_time",
+  OPTION_MAP_GIVEN_QUEST_DISTANCE = "option_map_given_quest_distance",
+  E_DETAIL_MATERIALS_HIGHLIGHT = "e_detail_materials_highlight",
+  R_SHADERSBLACKLISTGL = "r_ShadersBlackListGL",
+  R_SHADERSBLACKLISTRT = "r_ShadersBlackListRT",
+  CA_DISABLEANIMBONES = "ca_disableAnimBones",
+  E_VOXTERHEIGHTMAPEDITING = "e_VoxTerHeightmapEditing",
+  CLOTH_STIFFNESS = "cloth_stiffness",
+  P_SPLASH_FORCE0 = "p_splash_force0",
+  P_SPLASH_FORCE1 = "p_splash_force1",
+  CA_LODDISTRATIO = "ca_LodDistRatio",
+  PL_FALL_DEBUG = "pl_fall_debug",
+  CG_DEBUG_DRAW = "cg_debug_draw",
+  E_CBUFFER_OCCLUDERS_VIEW_DIST_RATIO = "e_cbuffer_occluders_view_dist_ratio",
+  AG_DEBUGERRORS = "ag_debugErrors",
+  E_VEGETATION_SPRITES_DISTANCE_CUSTOM_RATIO_MIN =
+  "e_vegetation_sprites_distance_custom_ratio_min",
+  E_SCREENSHOT_SAVE_PATH = "e_screenshot_save_path",
+  SYS_BUDGET_DP_VEGETATION = "sys_budget_dp_vegetation",
+  SS_AUTO_CELL_LOADING = "ss_auto_cell_loading",
+  SV_DEDICATEDCPUVARIANCE = "sv_DedicatedCPUVariance",
+  AI_LOCATE = "ai_Locate",
+  D3D9_RESETDEVICEAFTERLOADING = "d3d9_ResetDeviceAfterLoading",
+  E_VISAREA_INCLUDE_RADIUS = "e_visarea_include_radius",
+  R_STEREOHUDSCREENDIST = "r_StereoHudScreenDist",
+  QUEST_CAMERA_USE = "quest_camera_use",
+  CA_SKELETONEFFECTSMAXCOUNT = "ca_SkeletonEffectsMaxCount",
+  E_STATOBJ_USE_LOD_READY_CACHE = "e_statobj_use_lod_ready_cache",
+  E_SELECTED_COLOR_B = "e_selected_color_b",
+  E_SELECTED_COLOR_G = "e_selected_color_g",
+  E_SELECTED_COLOR_R = "e_selected_color_r",
+  P_FIXED_TIMESTEP = "p_fixed_timestep",
+  E_PORTALS_BIG_ENTITIES_FIX = "e_portals_big_entities_fix",
+  CG_HIDE = "cg_hide",
+  R_ENVCMUPDATEINTERVAL = "r_EnvCMupdateInterval",
+  PROFILE_SAMPLER_MAX_SAMPLES = "profile_sampler_max_samples",
+  FG_INSPECTORLOG = "fg_inspectorLog",
+  E_PARTICLES_FILTER = "e_particles_filter",
+  E_SHADOWS_OMNI_MIN_TEXTURE_SIZE = "e_shadows_omni_min_texture_size",
+  DRAW_WIND_AREA = "draw_wind_area",
+  NET_VEHICLE_CONTROLLER_DEBUG = "net_vehicle_controller_debug",
+  SPECIALTY_DEBUG = "specialty_debug",
+  R_VEGETATIONSPRITESGENALWAYS = "r_VegetationSpritesGenAlways",
+  CA_MIRROR_TEST = "ca_mirror_test",
+  CAMERA_MIN_PITCH = "camera_min_pitch",
+  S_DUMPEVENTSTRUCTURE = "s_DumpEventStructure",
+  AUTH_SERVERSVC = "auth_serversvc",
+  E_PHYS_BULLET_COLL_DIST = "e_phys_bullet_coll_dist",
+  CA_DEATHBLENDTIME = "ca_DeathBlendTime",
+  R_SHADERSLOGCACHEMISSES = "r_ShadersLogCacheMisses",
+  MOVEMENT_VERIFY_MOVE_SPEED_ENABLE = "movement_verify_move_speed_enable",
+  SYS_STREAMCALLBACKTIMEBUDGET = "sys_StreamCallbackTimeBudget",
+  PL_DEBUG_JUMPING = "pl_debug_jumping",
+  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_ERROR_RATE =
+  "movement_verify_move_speed_report_error_rate",
+  AI_SOMSPEEDCOMBAT = "ai_SOMSpeedCombat",
+  AI_DRAWREADIBILITIES = "ai_DrawReadibilities",
+  PL_FALLDAMAGE_SPEEDFATAL = "pl_fallDamage_SpeedFatal",
+  BOT_PROFILER_TYPE = "bot_profiler_type",
+  CA_LIPSYNC_VERTEX_DRAG = "ca_lipsync_vertex_drag",
+  AI_DEBUGINTERESTSYSTEM = "ai_DebugInterestSystem",
+  R_GEFORCE7 = "r_geforce7",
+  SYS_BUDGET_TRIS_TERRAIN_DETAIL_3D = "sys_budget_tris_terrain_detail_3d",
+  S_MUSICSPEAKERLFEVOLUME = "s_MusicSpeakerLFEVolume",
+  AI_BIGBRUSHCHECKLIMITSIZE = "ai_BigBrushCheckLimitSize",
+  OPTION_SKILL_ALERT_POSITION = "option_skill_alert_position",
+  SYS_BACKGROUND_TASK_BUDGET = "sys_background_task_budget",
+  AC_ENABLEPROCEDURALLEANING = "ac_enableProceduralLeaning",
+  R_THERMALVISION = "r_ThermalVision",
+  E_VEGETATION_SPRITE_MAX_PIXEL = "e_vegetation_sprite_max_pixel",
+  R_DISPLACEMENTFACTOR = "r_DisplacementFactor",
+  ES_LOG_COLLISIONS = "es_log_collisions",
+  R_STENCILFLUSHSHADERRESET = "r_StencilFlushShaderReset",
+  R_EXCLUDESHADER = "r_ExcludeShader",
+  PROFILE_DISK_MAX_ITEMS = "profile_disk_max_items",
+  E_CBUFFER_VERSION = "e_cbuffer_version",
+  G_IGNORE_TRADE_INVITE = "g_ignore_trade_invite",
+  AI_PROTORODSPEEDMOD = "ai_ProtoRODSpeedMod",
+  CP_ZONE_PICKING = "cp_zone_picking",
+  CA_LOG_UNKNOWN_BONE_LIST = "ca_log_unknown_bone_list",
+  E_STREAMCGFDEBUGMINOBJSIZE = "e_StreamCgfDebugMinObjSize",
+  R_SHOWRENDERTARGET_FULLSCREEN = "r_ShowRenderTarget_FullScreen",
+  R_CUSTOMRESMAXSIZE = "r_CustomResMaxSize",
+  AG_MEASUREACTUALSPEEDS = "ag_measureActualSpeeds",
+  E_SHADOWS_OMNI_MAX_TEXTURE_SIZE = "e_shadows_omni_max_texture_size",
+  E_CBUFFER = "e_cbuffer",
+  CA_LODCLAMPTHRESHOLD = "ca_LodClampThreshold",
+  E_GSM_SCATTER_LOD_DIST = "e_gsm_scatter_lod_dist",
+  Q_SHADERVEGETATION = "q_ShaderVegetation",
+  E_DECALS_DEFFERED_STATIC = "e_decals_deffered_static",
+  R_NIGHTVISIONSONARRADIUS = "r_NightVisionSonarRadius",
+  R_SSGIAMOUNT = "r_SSGIAmount",
+  E_GISECONDARYOCCLUSION = "e_GISecondaryOcclusion",
+  SYS_DEACTIVATECONSOLE = "sys_DeactivateConsole",
+  LOG_FILEKEEPOPEN = "log_FileKeepOpen",
+  R_TEXTURESSTREAMSYSTEMPOOLSIZE = "r_TexturesStreamSystemPoolSize",
+  VEHICLE_CONTROLLER_DEBUG = "vehicle_controller_debug",
+  R_HDRBRIGHTNESS = "r_HDRBrightness",
+  CA_DRAWAIMIKVEGRID = "ca_DrawAimIKVEGrid",
+  E_CHARACTER_LIGHT_OFFSET_X = "e_character_light_offset_x",
+  E_CHARACTER_LIGHT_OFFSET_Y = "e_character_light_offset_y",
+  E_CHARACTER_LIGHT_OFFSET_Z = "e_character_light_offset_z",
+  E_DECALS_FORCE_DEFERRED = "e_decals_force_deferred",
+  AI_PROTORODSILHUETTE = "ai_ProtoRODSilhuette",
+  USE_DATA_MINING_MANAGER = "use_data_mining_manager",
+  DEPARTURE_SERVER_PASSPORT = "departure_server_passport",
+  G_CUSTOMIZER_ENABLE_CUTSCENE = "g_customizer_enable_cutscene",
+  AI_DRAWSMARTOBJECTS = "ai_DrawSmartObjects",
+  AI_DEBUGDRAWBANNEDNAVSOS = "ai_DebugDrawBannedNavsos",
+  E_OCCLUSION_VOLUMES = "e_occlusion_volumes",
+  CA_UNLOADANIM = "ca_UnloadAnim",
+  MOVEMENT_VERIFY_SPEED_ERROR_RATE = "movement_verify_speed_error_rate",
+  R_SOFTALPHATEST = "r_SoftAlphaTest",
+  CA_DRAWDECALSBBOXES = "ca_DrawDecalsBBoxes",
+  R_WAITRENDERTHREADATDEVICELOST = "r_waitRenderThreadAtDeviceLost",
+  R_GEOMINSTANCINGDEBUG = "r_GeominstancingDebug",
+  E_SCREENSHOT = "e_screenshot",
+  LOGIN_FAST_START = "login_fast_start",
+  INVISIBLE_DEBUG = "invisible_debug",
+  AG_LOG_ENTITY = "ag_log_entity",
+  CA_MESHMERGEMODE = "ca_MeshMergeMode",
+  AI_PROTORODREACTIONTIME = "ai_ProtoRODReactionTime",
+  P_CHARACTERIK = "p_characterik",
+  R_SHOOTINGSTAR_WIDTH = "r_shootingstar_width",
+  SYS_BUDGET_TRIS_ROAD = "sys_budget_tris_road",
+  BOT_USE_AUTOMATIC_STARTUP = "bot_use_automatic_startup",
+  S_BLOCKALIGNSIZE = "s_BlockAlignSize",
+  S_SPEAKERCONFIG = "s_SpeakerConfig",
+  INTRO_ZONE_ID = "intro_zone_id",
+  R_SOLIDWIREFRAME = "r_solidWireframe",
+  AG_SHOWMOVEMENT = "ag_showmovement",
+  R_USEPARTICLESHALFRES = "r_UseParticlesHalfRes",
+  R_LOG_STREAM_DB_FAILED_FILE = "r_log_stream_db_failed_file",
+  AI_AGENTSTATSDIST = "ai_AgentStatsDist",
+  OPTION_HIDE_ENCHANT_BROADCAST = "option_hide_enchant_broadcast",
+  ES_UPDATEENTITIES = "es_UpdateEntities",
+  E_CHARACTER_LIGHT_RADIUS = "e_character_light_radius",
+  R_GLITTERAMOUNT = "r_GlitterAmount",
+  ES_DISABLETRIGGERS = "es_DisableTriggers",
+  IMPULSE_MASS_MIN = "impulse_mass_min",
+  NAME_TAG_ICON_SIZE_RATIO = "name_tag_icon_size_ratio",
+  SV_UNIT_COLLIDE_DAMEAGE_DEBUG = "sv_unit_collide_dameage_debug",
+  OPTION_USE_KR_FONTS = "option_use_kr_fonts",
+  E_SHADOWS_RES_SCALE = "e_shadows_res_scale",
+  SYS_BUDGET_FRAME_TIME = "sys_budget_frame_time",
+  E_SHADOWS_CAST_VIEW_DIST_RATIO_LIGHTS = "e_shadows_cast_view_dist_ratio_lights",
+  R_GETSCREENSHOT = "r_GetScreenShot",
+  R_HDRRANGEADAPTATIONSPEED = "r_HDRRangeAdaptationSpeed",
+  MODEL_STREAMING_DEBUG = "model_streaming_debug",
+  MUSIC_SLIENT_DURATION_MAX = "music_slient_duration_max",
+  MUSIC_SLIENT_DURATION_MIN = "music_slient_duration_min",
+  SYS_CONSOLE_DRAW_ALWAYS = "sys_console_draw_always",
+  SYS_PHYSICS_CPU_AUTO = "sys_physics_cpu_auto",
+  SV_TIMEOUT_DISCONNECT = "sv_timeout_disconnect",
+  E_STREAMCGFUPDATEPERNODEDISTANCE = "e_StreamCgfUpdatePerNodeDistance",
+  S_SOFTWARECHANNELS = "s_SoftwareChannels",
+  GLIDER_HIDE_AT_SHEATH = "glider_hide_at_sheath",
+  E_CUSTOM_TEXTURE_SHARE = "e_custom_texture_share",
+  QUEST_CAM_DOF_RANGE = "quest_cam_dof_range",
+  E_DISSOLVEDISTMAX = "e_DissolveDistMax",
+  E_DISSOLVEDISTMIN = "e_DissolveDistMin",
+  R_REFLECTIONS = "r_Reflections",
+  S_HWCHANNELS = "s_HWChannels",
+  E_PARTICLES_LIGHTS = "e_particles_lights",
+  IGNORE_UI_PERMISSION = "ignore_ui_permission",
+  E_DISSOLVEDIST = "e_DissolveDist",
+  E_DISSOLVETIME = "e_DissolveTime",
+  CA_GAMECONTROLLEDSTRAFING = "ca_GameControlledStrafing",
+  AC_MCMHORLOCALPLAYER = "ac_MCMHorLocalPlayer",
+  R_SSDOAMOUNT = "r_ssdoAmount",
+  R_SHADERSPRECACHEALLLIGHTS = "r_ShadersPrecacheAllLights",
+  S_VARIATIONLIMITER = "s_VariationLimiter",
+  AI_DRAWSPAWNER = "ai_DrawSpawner",
+  R_TEXTURESSTREAMINGUPLOADPERFRAME = "r_texturesStreamingUploadPerFrame",
+  LOG_WRITETOFILE = "log_WriteToFile",
+  E_CUSTOM_DRESSING_TIME_MAX = "e_custom_dressing_time_max",
+  E_PARTICLES_RECEIVE_SHADOWS = "e_particles_receive_shadows",
+  UI_GAME_PROVIDER = "ui_game_provider",
+  S_X2CULLINGBYMAXCHANNEL = "s_X2CullingByMaxChannel",
+  E_DYNAMIC_LIGHT_MAX_COUNT = "e_dynamic_light_max_count",
+  CA_DECALSIZEMULTIPLIER = "ca_DecalSizeMultiplier",
+  OPTION_USE_CLOUD = "option_use_cloud",
+  G_ENABLEFRIENDLYFALLANDPLAY = "g_enableFriendlyFallAndPlay",
+  COMBAT_MSG_ALPHA_VISIBILITY = "combat_msg_alpha_visibility",
+  AI_DRAWDIRECTPATHTEST = "ai_DrawDirectPathTest",
+  R_BEAMS = "r_Beams",
+  CL_UNIT_COLLIDE_DAMEAGE_DEBUG = "cl_unit_collide_dameage_debug",
+  CA_CACHINGCDFFILES = "ca_CachingCDFFiles",
+  R_FLUSH = "r_Flush",
+  R_GAMMA = "r_Gamma",
+  E_OBJ_TREE_SHADOW_DEBUG = "e_obj_tree_shadow_debug",
+  E_PARTICLES_MIDDLE = "e_particles_middle",
+  R_SHADOWSSTENCILPREPASS = "r_ShadowsStencilPrePass",
+  AI_DEBUGDRAWPLAYERACTIONS = "ai_DebugDrawPlayerActions",
+  LUA_LOADING_PROFILER = "lua_loading_profiler",
+  R_SSAO_AMOUNT = "r_SSAO_amount",
+  E_OBJECT_STREAMING_STATS = "e_object_streaming_stats",
+  R_NVDOF = "r_NVDOF",
+  ES_UPDATECONTAINER = "es_UpdateContainer",
+  NET_INPUT_DUMP = "net_input_dump",
+  R_GRAPHSTYLE = "r_GraphStyle",
+  R_STATS = "r_Stats",
+  R_VSYNC = "r_VSync",
+  R_WIDTH = "r_Width",
+  E_DISSOLVE_TRANSITION_THRESHOLD = "e_dissolve_transition_threshold",
+  R_DEFERREDSHADINGLIGHTVOLUMES = "r_DeferredShadingLightVolumes",
+  NET_CHANNELSTATS = "net_channelstats",
+  R_NVDOF_NEARBLURSIZE = "r_NVDOF_NearBlurSize",
+  E_PARTICLES_SOURCE_FILTER = "e_particles_source_filter",
+  AI_DRAWPROBABLETARGET = "ai_DrawProbableTarget",
+  AC_PREDICTIONPROBABILITYORI = "ac_predictionProbabilityOri",
+  AC_PREDICTIONPROBABILITYPOS = "ac_predictionProbabilityPos",
+  PL_ZEROGENABLEGYROFADE = "pl_zeroGEnableGyroFade",
+  GLIDER_DEBUG = "glider_debug",
+  S_FILEACCESS = "s_FileAccess",
+  UM_STEER_WHEEL_ROTATE_POWER = "um_steer_wheel_rotate_power",
+  SOUND_ENABLE_QUEST_SUMMARY_VOICE = "sound_enable_quest_summary_voice",
+  CU_STREAM_METHOD = "cu_stream_method",
+  R_FORCEDIFFUSESPECCLEAR = "r_ForceDiffuseSpecClear",
+  E_VEGETATION_MEM_SORT_TEST = "e_vegetation_mem_sort_test",
+  EXITONQUIT = "ExitOnQuit",
+  E_STREAMCGFDEBUGFILTER = "e_StreamCgfDebugFilter",
+  E_STREAMCGFDEBUGHEATMAP = "e_StreamCgfDebugHeatMap",
+  AI_SIGHTRANGEDARKILLUMMOD = "ai_SightRangeDarkIllumMod",
+  MEMINFO = "MemInfo",
+  AC_DEBUGMOTIONPARAMS = "ac_debugMotionParams",
+  R_CBSTATICDEBUG = "r_CBStaticDebug",
+  R_VEGETATIONSPRITESMAXUPDATE = "r_VegetationSpritesMaxUpdate",
+  R_TEXTURESSTREAMADAPTIVEMARGIN = "r_TexturesStreamAdaptiveMargin",
+  G_BREAKIMPULSESCALE = "g_breakImpulseScale",
+  P_ENFORCE_CONTACTS = "p_enforce_contacts",
+  V_DUMPFRICTION = "v_dumpFriction",
+  E_JOINT_STRENGTH_SCALE = "e_joint_strength_scale",
+  PREFAB_USE_MMF = "prefab_use_mmf",
+  OPTION_ENABLE_COMBAT_CHAT_LOG = "option_enable_combat_chat_log",
+  G_TREE_CUT_REUSE_DIST = "g_tree_cut_reuse_dist",
+  R_TEXTURESSTREAMSYSTEMLIMITCHECKTIME = "r_TexturesStreamSystemLimitCheckTime",
+  ES_VISCHECKFORUPDATE = "es_VisCheckForUpdate",
+  P_MAX_PLANE_CONTACTS_DISTRESS = "p_max_plane_contacts_distress",
+  NAME_TAG_HP_WIDTH = "name_tag_hp_width",
+  R_SHOWTIMEGRAPH = "r_ShowTimeGraph",
+  R_STEREOEYEDIST = "r_StereoEyeDist",
+  BOT_WORLD_ID = "bot_world_id",
+  SYS_DLL_GAME = "sys_dll_game",
+  NET_ACTOR_CONTROLLER_DEBUG = "net_actor_controller_debug",
+  NET_ACTOR_CONTROLLER_DELAY = "net_actor_controller_delay",
+  R_HDRRANGEADAPTLBUFFERMAX = "r_HDRRangeAdaptLBufferMax",
+  R_RAINLAYERSPERFRAME = "r_RainLayersPerFrame",
+  SYS_BUDGET_PARTICLE_ETC = "sys_budget_particle_etc",
+  SYS_BUDGET_PARTICLE_MFX = "sys_budget_particle_mfx",
+  CA_CHAREDITMODEL = "ca_CharEditModel",
+  E_TERRAIN_DEFORMATIONS_OBSTRUCT_OBJECT_SIZE_RATIO =
+  "e_terrain_deformations_obstruct_object_size_ratio",
+  R_TEXTURESSTREAMINGRESIDENCYENABLED = "r_texturesstreamingResidencyEnabled",
+  E_VEGETATION_DISABLE_BENDING_DISTANCE = "e_vegetation_disable_bending_distance",
+  CL_UNIT_COLLIDE_EFFECT_INTERVAL = "cl_unit_collide_effect_interval",
+  R_BUFFERUPLOAD_WRITEMODE = "r_BufferUpload_WriteMode",
+  R_MESHPOOLSIZE = "r_MeshPoolSize",
+  E_PARTICLES_OBJECT_COLLISIONS = "e_particles_object_collisions",
+  E_MODELVIEW_PREFAB_LIGHT_OFFSET_X = "e_modelview_Prefab_light_offset_x",
+  E_MODELVIEW_PREFAB_LIGHT_OFFSET_Y = "e_modelview_Prefab_light_offset_y",
+  E_MODELVIEW_PREFAB_LIGHT_OFFSET_Z = "e_modelview_Prefab_light_offset_z",
+  CA_GC_CHECK_COUNT = "ca_gc_check_count",
+  CA_ALLOWMULTIPLEEFFECTSOFSAMENAME = "ca_AllowMultipleEffectsOfSameName",
+  NAME_TAG_CUSTOM_GAUGE_SIZE_RATIO = "name_tag_custom_gauge_size_ratio",
+  UM_STREAM_PREFAB_SWITCH = "um_stream_prefab_switch",
+  SWIM_DEAD_ANIM_DEBUG = "swim_dead_anim_debug",
+  E_PARTICLES_DYNAMIC_PARTICLE_COUNT = "e_particles_dynamic_particle_count",
+  R_TEXTURESSTREAMINGDEBUGDUMPINTOLOG = "r_TexturesStreamingDebugDumpIntoLog",
+  CA_DRAWBASEMESH = "ca_DrawBaseMesh",
+  NET_DEFAULTCHANNELPACKETRATETOLERANCELOW =
+  "net_defaultChannelPacketRateToleranceLow",
+  E_MATERIAL_LOADING_PROFILE = "e_material_loading_profile",
+  E_PARTICLES_TRAIL_MIN_SEG_SIZE = "e_particles_trail_min_seg_size",
+  AUTO_ENEMY_TARGETING = "auto_enemy_targeting",
+  MOVEMENT_VERIFY_SAMPLE_MAX = "movement_verify_sample_max",
+  CAMERA_DAMPING_USE_PHYSICS_SPEED = "camera_damping_use_physics_speed",
+  CA_DEBUGANIMMEMTRACKING = "ca_DebugAnimMemTracking",
+  R_TEXTURESSTREAMINGRESIDENCYTIME = "r_texturesstreamingResidencyTime",
+  R_WATERREFLECTIONSMINVISUPDATEFACTORMUL =
+  "r_WaterReflectionsMinVisUpdateFactorMul",
+  E_TESSELLATION = "e_Tessellation",
+  R_DESIREHEIGHT = "r_desireHeight",
+  E_GSM_EXTRA_RANGE_SHADOW = "e_gsm_extra_range_shadow",
+  G_BREAKAGELOG = "g_breakagelog",
+  E_DECALS_PRECREATE = "e_decals_precreate",
+  R_DYNTEXATLASVOXTERRAINSIZE = "r_dyntexatlasvoxterrainsize",
+  S_REVERBDELAY = "s_ReverbDelay",
+  SYS_BUDGET_TRIS_ENTITY = "sys_budget_tris_entity",
+  CP_DEBUG_RAY_WORLD_INTERSECTION_RWI_FLAGS =
+  "cp_debug_ray_world_intersection_rwi_flags",
+  AUTO_DISCONNECT_TIMER = "auto_disconnect_timer",
+  G_WALKMULTIPLIER = "g_walkMultiplier",
+  AI_ADJUSTPATHSAROUNDDYNAMICOBSTACLES = "ai_AdjustPathsAroundDynamicObstacles",
+  R_SHADOWSGRIDALIGNED = "r_ShadowsGridAligned",
+  P_MAX_CONTACT_GAP_PLAYER = "p_max_contact_gap_player",
+  UM_SHIP_FULL_SAIL_SPEED_RATE = "um_ship_full_sail_speed_rate",
+  E_CGF_VERIFY = "e_cgf_verify",
+  R_WATERREFLECTIONSMINVISUPDATEDISTANCEMUL =
+  "r_WaterReflectionsMinVisUpdateDistanceMul",
+  E_CBUFFER_TERRAIN_DISTANCE_NEAR = "e_cbuffer_terrain_distance_near",
+  R_TEXGRID = "r_TexGrid",
+  NAME_TAG_FONT_SIZE_ON_BGMODE = "name_tag_font_size_on_bgmode",
+  PROFILE_DISK_TIMEFRAME = "profile_disk_timeframe",
+  BOT_SCAN_AREA_FILTER = "bot_scan_area_filter",
+  R_NVDOF_BOKEHLUMINANCE = "r_NVDOF_BokehLuminance",
+  NET_DEFAULTCHANNELPACKETRATETOLERANCEHIGH =
+  "net_defaultChannelPacketRateToleranceHigh",
+  R_BEAMSDISTFACTOR = "r_BeamsDistFactor",
+  PELVIS_SHAKE_KNOCKBACK = "pelvis_shake_knockback",
+  D3D9_UI_BUFFER_SIZE = "d3d9_ui_buffer_size",
+  G_GODMODE = "g_godMode",
+  R_TEXTURESSTREAMINGMIPCLAMPDVD = "r_TexturesStreamingMipClampDVD",
+  E_TESSELLATIONMAXDISTANCE = "e_TessellationMaxDistance",
+  OPTION_WEAPON_EFFECT = "option_weapon_effect",
+  OVER_HEAD_MARKER_WIDTH = "over_head_marker_width",
+  E_GSM_TERRAIN_INCLUDE_OBJECTS = "e_gsm_terrain_include_objects",
+  DT_MELEETIME = "dt_meleeTime",
+  R_SILHOUETTESIZE = "r_silhouetteSize",
+  R_NIGHTVISIONSONARLIFETIME = "r_NightVisionSonarLifetime",
+  E_VOXEL_AO_SCALE = "e_voxel_ao_scale",
+  E_PROCVEGETATIONMAXOBJECTSINCHUNK = "e_ProcVegetationMaxObjectsInChunk",
+  S_OBSTRUCTIONMAXVALUE = "s_ObstructionMaxValue",
+  G_IGNORE_FAMILY_INVITE = "g_ignore_family_invite",
+  E_SHADOWS_ON_ALPHA_BLENDED = "e_shadows_on_alpha_blended",
+  E_GICASCADESRATIO = "e_GICascadesRatio",
+  E_GSMVIEWSPACE = "e_GsmViewSpace",
+  CA_LOADHEADERS = "ca_LoadHeaders",
+  P_PROHIBIT_UNPROJECTION = "p_prohibit_unprojection",
+  FLY_STANCE_ENABLE = "fly_stance_enable",
+  E_WATER_TESSELATION_SWATH_WIDTH = "e_water_tesselation_swath_width",
+  NET_DEFAULTCHANNELBITRATETOLERANCEHIGH =
+  "net_defaultChannelBitRateToleranceHigh",
+  SHOW_DOF_VALUE = "show_dof_value",
+  E_PARTICLES_STREAM = "e_particles_stream",
+  PL_ZEROGSPEEDMODEENERGYCONSUMPTION = "pl_zeroGSpeedModeEnergyConsumption",
+  G_DEBUG_SYNC_WITHOUT_PHYSICS = "g_debug_sync_without_physics",
+  CA_SMOOTHSTRAFE = "ca_SmoothStrafe",
+  CD_NO_SPAWN = "cd_no_spawn",
+  E_OCCLUSION_CULLING_VIEW_DIST_RATIO = "e_occlusion_culling_view_dist_ratio",
+  E_COARSESHADOWMGRDEBUG = "e_CoarseShadowMgrDebug",
+  R_USEPARTICLESMERGING = "r_UseParticlesMerging",
+  E_CHARACTER_BACK_LIGHT = "e_character_back_light",
+  E_GIBLENDRATIO = "e_GIBlendRatio",
+  SYS_SLEEP_BACKGROUND = "sys_sleep_background",
+  R_SHOWLIGHTBOUNDS = "r_ShowLightBounds",
+  AI_MOVEMENTSPEEDMEDIUMILLUMMOD = "ai_MovementSpeedMediumIllumMod",
+  E_PARTICLES_THREAD = "e_particles_thread",
+  E_DEBUG_DRAWSHOWONLYLOD = "e_debug_drawShowOnlyLod",
+  HS_IGNORE_DOMINION_AREA = "hs_ignore_dominion_area",
+  E_GIGLOSSYREFLECTIONS = "e_GIGlossyReflections",
+  NET_VOICE_TRAIL_PACKETS = "net_voice_trail_packets",
+  OPTION_SHADOW_VIEW_DIST_RATIO_CHARACTER =
+  "option_shadow_view_dist_ratio_character",
+  PROFILE_EVENT_TOLERANCE = "profile_event_tolerance",
+  P_MAX_CONTACT_GAP_SIMPLE = "p_max_contact_gap_simple",
+  R_DUALMATERIALCULLINGDIST = "r_DualMaterialCullingDist",
+  CP_WORLD_PICKING = "cp_world_picking",
+  CP_DEBUG_RAY_WORLD_INTERSECTION_ENTITY_QUERY_FLAGS =
+  "cp_debug_ray_world_intersection_entity_query_flags",
+  E_VOXTERSHADOWS = "e_VoxTerShadows",
+  AI_SYSTEMUPDATE = "ai_SystemUpdate",
+  E_DETAIL_MATERIALS_ZPASS_NORMAL_DRAW_DIST =
+  "e_detail_materials_zpass_normal_draw_dist",
+  SYS_NO_CRASH_DIALOG = "sys_no_crash_dialog",
+  TIME_SCALE = "time_scale",
+  AI_INTERESTDETECTMOVEMENT = "ai_InterestDetectMovement",
+  E_DECALS_MERGE = "e_decals_merge",
+  SOUND_OTHERS_MATERIAL_EFFECT_SOUND_VOLUME =
+  "sound_others_material_effect_sound_volume",
+  CA_LODSKIPTASKINFLECTIONOFRATIO = "ca_LodSkipTaskInflectionOfRatio",
+  R_SHOWNORMALS = "r_ShowNormals",
+  I_OFFSET_UP = "i_offset_up",
+  PL_DEBUG_FILTER = "pl_debug_filter",
+  AI_DRAWMODIFIERS = "ai_DrawModifiers",
+  I_FORCEFEEDBACK = "i_forcefeedback",
+  CA_DEBUGANIMUSAGEONFILEACCESS = "ca_DebugAnimUsageOnFileAccess",
+  PL_CURVINGSLOWDOWNSPEEDSCALE = "pl_curvingSlowdownSpeedScale",
+  G_GRABLOG = "g_grabLog",
+  AI_GENCRYORGWATERGRAPH = "ai_genCryOrgWaterGraph",
+  SOUND_OTHERS_COMBAT_SOUND_VOLUME = "sound_others_combat_sound_volume",
+  CL_WEB_UPLOAD_RESERVED_SCREENSHOT_FILE_NAME =
+  "cl_web_upload_reserved_screenshot_file_name",
+  E_WATER_OCEAN_SOFT_PARTICLES = "e_water_ocean_soft_particles",
+  BLINK_DEBUG = "blink_debug",
+  OPTION_VIEW_DIST_RATIO = "option_view_dist_ratio",
+  SYS_MIN_STEP = "sys_min_step",
+  R_MESHVOLATILEPOOLSIZE = "r_MeshVolatilePoolSize",
+  AG_PHYSERRORINNERRADIUSFACTOR = "ag_physErrorInnerRadiusFactor",
+  CLICK_TO_MOVE = "click_to_move",
+  AG_ACTION = "ag_action",
+  CAMERA_SMOOTH_FADEOUT_MATE = "camera_smooth_fadeout_mate",
+  CL_HEADBOBLIMIT = "cl_headBobLimit",
+  AUX_PHYS_ACTIVE_ALL = "aux_phys_active_all",
+  AC_FRAMETIME = "ac_frametime",
+  SYS_BUDGET_SYSTEM_MEMORY_MESH = "sys_budget_system_memory_mesh",
+  DECORATION_SMART_POSITIONING_LOOP_COUNT =
+  "decoration_smart_positioning_loop_count",
+  S_GAMEMASTERVOLUME = "s_GameMasterVolume",
+  CA_LOADDBH = "ca_LoadDBH",
+  PL_ZEROGTHRUSTERRESPONSIVENESS = "pl_zeroGThrusterResponsiveness",
+  AG_LOGDRAWNACTORS = "ag_logDrawnActors",
+  CA_LODDIST = "ca_LodDist",
+  CA_SAMESKELETONEFFECTSMAXCOUNT = "ca_SameSkeletonEffectsMaxCount",
+  SYS_BUDGET_SYSTEM_MEMORY = "sys_budget_system_memory",
+  R_DEFERREDDECALSMSAA = "r_deferredDecalsMSAA",
+  GLIDER_START_WITH_DOUBLE_JUMP = "glider_start_with_double_jump",
+  OVERHEAD_MARKER_FIXED_SIZE = "overhead_marker_fixed_size",
+  AI_DYNAMICWAYPOINTUPDATETIME = "ai_DynamicWaypointUpdateTime",
+  AC_TARGETCORRECTIONTIMESCALE = "ac_targetcorrectiontimescale",
+  VAR_AGGRO_METER = "var_aggro_meter",
+  R_OCEANLODDIST = "r_OceanLodDist",
+  CA_DEBUGFACIALEYES = "ca_DebugFacialEyes",
+  AI_DRAWPATTERNS = "ai_DrawPatterns",
+  R_MEASUREOVERDRAW = "r_MeasureOverdraw",
+  E_NO_LOD_CHR_TRIS = "e_no_lod_chr_tris",
+  EFFECT_MAX_SAME_ITEM_PER_SOURCE = "effect_max_same_item_per_source",
+  SV_BANDWIDTH = "sv_bandwidth",
+  R_PARTICLES_LIGHTS_NO_MERGE_SIZE = "r_particles_lights_no_merge_size",
+  E_PARTICLES_PRELOAD = "e_particles_preload",
+  PREFAB_CACHE_XML = "prefab_cache_xml",
+  R_NVSSAO_ONLYOCCLUDEAMBIENT = "r_NVSSAO_OnlyOccludeAmbient",
+  OPTION_VIEW_DISTANCE = "option_view_distance",
+  E_MODELVIEW_PREFAB_LIGHT_SPECUALR_MULTY =
+  "e_modelview_Prefab_light_specualr_multy",
+  AI_DEBUGDRAWDAMAGEPARTS = "ai_DebugDrawDamageParts",
+  E_VOXTERHIDEINTEGRATED = "e_VoxTerHideIntegrated",
+  CD_UNMOUNT_AUTO = "cd_unmount_auto",
+  S_DEBUGMUSIC = "s_DebugMusic",
+  PROFILE_DISK = "profile_disk",
+  PROFILE_PEAK = "profile_peak",
+  R_TEXTURELODMAXLOD = "r_TextureLodMaxLod",
+  P_LIST_ACTIVE_OBJECTS = "p_list_active_objects",
+  AC_TERRAIN_FOOT_ALIGN = "ac_terrain_foot_align",
+  S_DEBUGSOUND = "s_DebugSound",
+  R_DEBUGPATCHWORK = "r_debugPatchwork",
+  MOV_LOADING = "mov_loading",
+  BOT_REPLAY = "bot_replay",
+  AI_ATTEMPTSTRAIGHTPATH = "ai_AttemptStraightPath",
+  SWIM_JUMP_END_DEPTH = "swim_jump_end_depth",
+  E_TIME_OF_DAY_DEBUG = "e_time_of_day_debug",
+  E_BBOXES = "e_bboxes",
+  E_LOAD_ONLY_SUB_ZONE_SHAPE = "e_load_only_sub_zone_shape",
+  S_LANGUAGESCONVERSION = "s_LanguagesConversion",
+  UM_SHOW_ATTACH_POINT = "um_show_attach_point",
+  R_SSDORADIUSMAX = "r_ssdoRadiusMax",
+  R_SSDORADIUSMIN = "r_ssdoRadiusMin",
+  CA_CHRBASELOD = "ca_ChrBaseLOD",
+  NUMBER_OF_BACK_VISUAL = "number_of_back_visual",
+  MODEL_STREAMING_ENABLE = "model_streaming_enable",
+  E_TIME_OF_DAY_SPEED = "e_time_of_day_speed",
+  CD_INDICATOR_TIME = "cd_indicator_time",
+  AI_PATHFINDERUPDATETIME = "ai_PathfinderUpdateTime",
+  PL_FALL_START_HEIGHT = "pl_fall_start_height",
+  USE_CELERITY_WITH_DOUBLE_FORWARD = "use_celerity_with_double_forward",
+  CA_PRINTDESIREDSPEED = "ca_PrintDesiredSpeed",
+  ES_ACTIVATEENTITY = "es_activateEntity",
+  LOG_VERBOSITYOVERRIDESWRITETOFILE = "log_VerbosityOverridesWriteToFile",
+  R_DOFMINZSCALE = "r_dofMinZScale",
+  E_SKIP_PRECACHE = "e_skip_precache",
+  E_MODELVIEW_PREFAB_ROT_X = "e_modelview_Prefab_rot_x",
+  E_MODELVIEW_PREFAB_ROT_Z = "e_modelview_Prefab_rot_z",
+  E_MODELVIEW_PREFAB_SCALE = "e_modelview_Prefab_scale",
+  CL_ACCOUNT = "cl_account",
+  E_AMBIENT_MULTIPLIER_NO_POINT_LIGHTS = "e_ambient_multiplier_no_point_lights",
+  R_CUSTOMRESHEIGHT = "r_CustomResHeight",
+  E_SUN_CLIPPLANE_RANGE = "e_sun_clipplane_range",
+  R_SSGIRADIUS = "r_SSGIRadius",
+  R_COLORGRADING = "r_ColorGrading",
+  AI_WARNINGSERRORSLIMITINGAME = "ai_WarningsErrorsLimitInGame",
+  R_SHADERSADDLISTRT = "r_ShadersAddListRT",
+  AG_DEBUGLAYER = "ag_debugLayer",
+  AG_DEBUGMUSIC = "ag_debugMusic",
+  S_DIALOGVOLUME = "s_DialogVolume",
+  NAME_TAG_LARGE_APP_STAMP_SIZE_RATIO = "name_tag_large_app_stamp_size_ratio",
+  CG_TRACE_SPAWN = "cg_trace_spawn",
+  CD_USE_MESH_TO_COLLIDE_CHECK = "cd_use_mesh_to_collide_check",
+  P_MAX_LCPCG_SUBITERS = "p_max_LCPCG_subiters",
+  AI_DRAWGROUPTACTIC = "ai_DrawGroupTactic",
+  PELVIS_SHAKE_SCALE = "pelvis_shake_scale",
+  E_CLOUDS = "e_clouds",
+  NET_DEFAULTCHANNELBITRATETOLERANCELOW = "net_defaultChannelBitRateToleranceLow",
+  E_DECALS_CLIP = "e_decals_clip",
+  AI_DONOTLOADNAVIGATIONDATA = "ai_doNotLoadNavigationData",
+  R_USEPARTICLESGLOW = "r_UseParticlesGlow",
+  R_LOGSHADERS = "r_LogShaders",
+  AG_DEBUG = "ag_debug",
+  AG_HUMANBLENDING = "ag_humanBlending",
+  CAMERA_DEBUG_TARGET_DIST = "camera_debug_target_dist",
+  SYS_USE_LIMIT_FPS = "sys_use_limit_fps",
+  E_TERRAIN_LOD_RATIO = "e_terrain_lod_ratio",
+  NAME_TAG_HP_BG_WIDTH_OFFSET = "name_tag_hp_bg_width_offset",
+  AG_QUEUE = "ag_queue",
+  E_DECALS = "e_decals",
+  P_NOGEOMLOAD = "p_noGeomLoad",
+  S_PROFILING = "s_Profiling",
+  ES_UPDATEPHYSICS = "es_UpdatePhysics",
+  AUTH_SERVERADDR = "auth_serveraddr",
+  AUTH_SERVERPORT = "auth_serverport",
+  CAM_TARGET = "cam_target",
+  E_ALLOWFP16TERRAIN = "e_AllowFP16Terrain",
+  E_SHADOWSOCCLUSIONCULLINGCASTER = "e_ShadowsOcclusionCullingCaster",
+  R_NIGHTVISIONFINALMUL = "r_NightVisionFinalMul",
+  R_STARS_SIZE = "r_stars_size",
+  PL_ZEROGSPEEDMULTSPEED = "pl_zeroGSpeedMultSpeed",
+  VPN_EXTERNAL_IP = "vpn_external_ip",
+  G_FROSTDECAY = "g_frostDecay",
+  CA_ENABLEASSETTURNING = "ca_EnableAssetTurning",
+  BOT_AUTOMATIC_SHUTDOWN = "bot_automatic_shutdown",
+  AI_MAXVISRAYSPERFRAME = "ai_MaxVisRaysPerFrame",
+  AC_ENTITYANIMCLAMP = "ac_entityAnimClamp",
+  R_SHADOWSPARTICLENORMALEFFECT = "r_ShadowsParticleNormalEffect",
+  R_SONARVISION = "r_SonarVision",
+  E_LOD_RATIO = "e_lod_ratio",
+  SHIP_RUDDER_FORCE_MIN = "ship_rudder_force_min",
+  CL_SERVERADDR = "cl_serveraddr",
+  CL_SERVERPORT = "cl_serverport",
+  G_QUICKGAME_DEBUG = "g_quickGame_debug",
+  E_VEGETATION_CULL_TEST_BOUND_OFFSET = "e_vegetation_cull_test_bound_offset",
+  R_STARS_SHARPNESS = "r_stars_sharpness",
+  DS_AUTORELOADSCRIPTS = "ds_AutoReloadScripts",
+  AC_DEBUGTWEAKTRAJECTORYFIT = "ac_debugTweakTrajectoryFit",
+  S_HRTF_DSP = "s_HRTF_DSP",
+  UM_SHOW_SHIP_BOUNDINGBOX = "um_show_ship_boundingbox",
+  R_NOLOADTEXTURES = "r_NoLoadTextures",
+  NAME_TAG_FACTION_SHOW = "name_tag_faction_show",
+  MOVEMENT_VERIFY_TARGET_MAX = "movement_verify_target_max",
+  E_AMBIENT_BOOST_NO_POINT_LIGHTS_B = "e_ambient_boost_no_point_lights_b",
+  E_AMBIENT_BOOST_NO_POINT_LIGHTS_G = "e_ambient_boost_no_point_lights_g",
+  E_AMBIENT_BOOST_NO_POINT_LIGHTS_R = "e_ambient_boost_no_point_lights_r",
+  DT_ENABLE = "dt_enable",
+  CLOTH_MASS_DECAY_ATTACHED_SCALE = "cloth_mass_decay_attached_scale",
+  AI_PROTORODHEALTHGRAPH = "ai_ProtoRODHealthGraph",
+  G_ROUNDLIMIT = "g_roundlimit",
+  V_DRAW_SLIP = "v_draw_slip",
+  E_FLOCKS = "e_flocks",
+  R_SSDORADIUS = "r_ssdoRadius",
+  P_NUM_BODIES_LARGE_GROUP = "p_num_bodies_large_group",
+  ES_HITDEADBODIES = "es_HitDeadBodies",
+  CA_BODYPARTATTACHMENTCULLINGRATION = "ca_BodyPartAttachmentCullingRation",
+  UI_DRAW_ACHIEVEMENT_TYPE = "ui_draw_achievement_type",
+  E_VIEW_DIST_RATIO_VEGETATION = "e_view_dist_ratio_vegetation",
+  AI_DRAWTARGETS = "ai_DrawTargets",
+  MOVEMENT_LEVITATION_HACK_BUFF_START_TIME =
+  "movement_levitation_hack_buff_start_time",
+  FG_ABORTONLOADERROR = "fg_abortOnLoadError",
+  NET_ENABLE_TFRC = "net_enable_tfrc",
+  P_ACCURACY_LCPCG_NO_IMPROVEMENT = "p_accuracy_LCPCG_no_improvement",
+  R_PARTICLES_LIGHTS_MERGE_RANGE = "r_particles_lights_merge_range",
+  CON_DISPLAY_LAST_MESSAGES = "con_display_last_messages",
+  AI_SERVERDEBUGSTATSTARGET = "ai_serverDebugStatsTarget",
+  MOVEMENT_BOOST_MUL = "movement_boost_mul",
+  CA_DRAWLINKVERTICES = "ca_DrawLinkVertices",
+  AG_CACHE_QUERY_RESULTS = "ag_cache_query_results",
+  E_DYNAMIC_LIGHT_MAX_SHADOW_COUNT = "e_dynamic_light_max_shadow_count",
+  R_BEAMSHELPERS = "r_BeamsHelpers",
+  NET_VOICE_AVERAGEBITRATE = "net_voice_averagebitrate",
+  R_SSAO_RADIUS = "r_SSAO_radius",
+  R_STEREOGAMMAADJUSTMENT = "r_StereoGammaAdjustment",
+  AIM_ASSISTRESTRICTIONTIMEOUT = "aim_assistRestrictionTimeout",
+  R_IMPOSTERRATIO = "r_ImposterRatio",
+  R_IMPOSTERSDRAW = "r_ImpostersDraw",
+  E_CUSTOM_MAX_CLONE_MODEL_1 = "e_custom_max_clone_model_1",
+  E_CUSTOM_MAX_CLONE_MODEL_2 = "e_custom_max_clone_model_2",
+  E_CUSTOM_MAX_CLONE_MODEL_3 = "e_custom_max_clone_model_3",
+  E_CUSTOM_MAX_CLONE_MODEL_4 = "e_custom_max_clone_model_4",
+  E_CUSTOM_MAX_CLONE_MODEL_5 = "e_custom_max_clone_model_5",
+  Q_SHADERGENERAL = "q_ShaderGeneral",
+  CB_FADEOUT_SCALE = "cb_fadeout_scale",
+  ROPE_SKILL_CONTROLLER_CUT_VEL = "rope_skill_controller_cut_vel",
+  CB_FADEOUT_SPEED = "cb_fadeout_speed",
+  LOGIN_CAMERA_ZOOM_BASE_VELOCITY = "login_camera_zoom_base_velocity",
+  E_DEBUG_DRAWSHOWONLYCOMPOUND = "e_debug_drawShowOnlyCompound",
+  R_RC_AUTOINVOKE = "r_RC_AutoInvoke",
+  E_ENTITYSUPPRESSIONLEVEL = "e_EntitySuppressionLevel",
+  R_TEXTURESSTREAMINGMIPBIAS = "r_TexturesStreamingMipBias",
+  R_MOTIONBLURMAXVIEWDIST = "r_MotionBlurMaxViewDist",
+  E_OBJECTLAYERSACTIVATIONPHYSICS = "e_ObjectLayersActivationPhysics",
+  P_PLAYERS_CAN_BREAK = "p_players_can_break",
+  R_POSTPROCESSMINIMAL = "r_PostProcessMinimal",
+  R_ENABLEERRORCHECK = "r_EnableErrorCheck",
+  E_GSMCASTFROMTERRAIN = "e_GsmCastFromTerrain",
+  SYS_BUDGET_TRIS_SHADOW = "sys_budget_tris_shadow",
+  G_RAGDOLL_DAMPING_TIME = "g_ragdoll_damping_time",
+  CAQ_RANDOMIDLE_INTERVAL = "caq_randomidle_interval",
+  S_COMPRESSION = "s_Compression",
+  E_SCREENSHOT_MAP_NEAR_PLANE_OFFSET = "e_screenshot_map_near_plane_offset",
+  AI_DRAWAGENTFOV = "ai_DrawagentFOV",
+  SS_AUTO_ORIGIN_CHANGE = "ss_auto_origin_change",
+  R_WATERRIPPLERESOLUTION = "r_WaterRippleResolution",
+  D3D9_IBPOOLSIZE = "d3d9_IBPoolSize",
+  NAME_TAG_SELF_ENABLE = "name_tag_self_enable",
+  EFFECT_DEBUG_FILTER_GROUP = "effect_debug_filter_group",
+  E_COVERAGEBUFFERACCURATEOBBTEST = "e_CoverageBufferAccurateOBBTest",
+  E_VEGETATION_SPRITES = "e_vegetation_sprites",
+  S_HDRFADE = "s_HDRFade",
+  CL_FROZENKEYMULT = "cl_frozenKeyMult",
+  CA_DEBUGFACIAL = "ca_DebugFacial",
+  P_PENALTY_SCALE = "p_penalty_scale",
+  CAMERA_ALIGN_SPRUNG_BASE = "camera_align_sprung_base",
+  AI_SMARTOBJECTUPDATETIME = "ai_SmartObjectUpdateTime",
+  NAME_TAG_APPELLATION_SHOW = "name_tag_appellation_show",
+  R_STEREOSCREENDIST = "r_StereoScreenDist",
+  E_PARTICLESEMITTERPOOLSIZE = "e_ParticlesEmitterPoolSize",
+  ES_MAXPHYSDIST = "es_MaxPhysDist",
+  E_VIEW_DIST_DOODAD_MIN = "e_view_dist_doodad_min",
+  CON_SCROLL_MAX = "con_scroll_max",
+  NAME_TAG_MY_MATE_SHOW = "name_tag_my_mate_show",
+  SYS_BUDGET_PARTICLE_ENTITY = "sys_budget_particle_entity",
+  SYS_TASKTHREAD0_CPU = "sys_TaskThread0_CPU",
+  SYS_TASKTHREAD1_CPU = "sys_TaskThread1_CPU",
+  SYS_AFFINITY_RENDER = "sys_affinity_render",
+  SYS_TASKTHREAD2_CPU = "sys_TaskThread2_CPU",
+  SYS_TASKTHREAD3_CPU = "sys_TaskThread3_CPU",
+  E_USE_GEM_EFFECT = "e_use_gem_effect",
+  SYS_TASKTHREAD4_CPU = "sys_TaskThread4_CPU",
+  SYS_TASKTHREAD5_CPU = "sys_TaskThread5_CPU",
+  S_VUMETER = "s_VUMeter",
+  E_PARTICLES_MIN_DRAW_ALPHA = "e_particles_min_draw_alpha",
+  R_VALIDATEDRAW = "r_ValidateDraw",
+  E_AUTOPRECACHECGFMAXTASKS = "e_AutoPrecacheCgfMaxTasks",
+  R_TEXNORMALMAPTYPE = "r_TexNormalMapType",
+  CAMERA_TILT_START_PITCH = "camera_tilt_start_pitch",
+  V_INVERTPITCHCONTROL = "v_invertPitchControl",
+  P_PROFILE = "p_profile",
+  SYS_CPU_USAGE_UPDATE_INTERVAL = "sys_cpu_usage_update_interval",
+  CP_DEBUG_SAFE_ZONE = "cp_debug_safe_zone",
+  R_RAINOCCLVIEWERDIST = "r_rainOcclViewerDist",
+  ES_REMOVEENTITY = "es_removeEntity",
+  ITEM_MAKER_INFO_SHOW_TOOLTIP = "item_maker_info_show_tooltip",
+  ROPE_SKILL_CONTROLLER_RELATIVE_WATERLEVEL_FOR_CHANGE_TO_FLYMODE =
+  "rope_skill_controller_relative_waterlevel_for_change_to_flymode",
+  CAMERA_FREE_IGNORE_ALL = "camera_free_ignore_all",
+  CL_CHECK_TELEPORT_TO_UNIT = "cl_check_teleport_to_unit",
+  G_UNIT_COLLIDE_PROCESS_FREQUENCY = "g_unit_collide_process_frequency",
+  ES_DRAWRENDERBBOX = "es_DrawRenderBBox",
+  QUEST_CHAT_BUBBLE_RATE = "quest_chat_bubble_rate",
+  R_EXCLUDEMESH = "r_ExcludeMesh",
+  AI_INTERESTSCALINGMOVEMENT = "ai_InterestScalingMovement",
+  CAMERA_ZOOM_SENSITIVITY = "camera_zoom_sensitivity",
+  AIM_ASSISTMAXDISTANCE = "aim_assistMaxDistance",
+  R_WATERRIPPLE = "r_WaterRipple",
+  G_ACTOR_STANCE_DEBUG = "g_actor_stance_debug",
+  MIN_TIME_STEP = "min_time_step",
+  E_SHADOWS_ARRANGE_DEFERRED_TEXTURE_SIZE =
+  "e_shadows_arrange_deferred_texture_size",
+  G_DETACHCAMERA = "g_detachCamera",
+  I_MOUSE_ACCEL_MAX = "i_mouse_accel_max",
+  E_SHADOWS_TERRAIN_TEXTURE_SIZE = "e_shadows_terrain_texture_size",
+  I_DEBUG = "i_debug",
+  NET_VOICE_LEAD_PACKETS = "net_voice_lead_packets",
+  COMBAT_AUTOATTACK_TRIGGER = "combat_autoattack_trigger",
+  R_TERRAINSPECULAR_INDEXOFREFRACTION = "r_TerrainSpecular_IndexOfRefraction",
+  AC_DEBUGSELECTION = "ac_debugSelection",
+  R_DRAWVALIDATION = "r_DrawValidation",
+  G_UNIT_COLLIDE_SIDE_BOUND_RATE = "g_unit_collide_side_bound_rate",
+  R_RAINOCCLUDERROOFDRAWDISTANCE = "r_rainOccluderRoofDrawDistance",
+  P_SPLASH_VEL0 = "p_splash_vel0",
+  P_SPLASH_VEL1 = "p_splash_vel1",
+  S_MEMORYPOOLSOUNDPRIMARYRATIO = "s_MemoryPoolSoundPrimaryRatio",
+  AG_BREAKONQUERY = "ag_breakOnQuery",
+  CL_FROZENSTEPS = "cl_frozenSteps",
+  E_CUSTOM_TEXTURE_LOD = "e_custom_texture_lod",
+  CL_HITSHAKE = "cl_hitShake",
+  R_MSAA_DEBUG = "r_MSAA_debug",
+  P_DRAWPRIMITIVES = "p_drawPrimitives",
+  PL_ZEROGGYROSTRENGTH = "pl_zeroGGyroStrength",
+  E_CBUFFER_BIAS = "e_cbuffer_bias",
+  I_OFFSET_FRONT = "i_offset_front",
+  SV_AISYSTEM = "sv_AISystem",
+  COMBAT_MSG_VISIBILITY = "combat_msg_visibility",
+  R_USEMERGEDPOSTS = "r_UseMergedPosts",
+  NET_DEFAULTCHANNELPACKETRATEDESIRED = "net_defaultChannelPacketRateDesired",
+  SWIM_JUMP_SPLASH_EFFECT_DEBUG = "swim_jump_splash_effect_debug",
+  E_DETAIL_MATERIALS_VIEW_DIST_XY = "e_detail_materials_view_dist_xy",
+  AC_DEBUGLOCATIONSGRAPHS = "ac_debugLocationsGraphs",
+  E_TERRAIN_OCCLUSION_CULLING_STEP_SIZE = "e_terrain_occlusion_culling_step_size",
+  R_POSTPROCESSEFFECTSGAMEFX = "r_PostProcessEffectsGameFx",
+  E_SHADOWS_OPTIMIZE = "e_shadows_optimize",
+  I_OFFSET_RIGHT = "i_offset_right",
+  S_MUSICMAXPATTERNS = "s_MusicMaxPatterns",
+  TEST_WORLD_QUEUE = "test_world_queue",
+  R_ZFIGHTINGEXTRUDE = "r_ZFightingExtrude",
+  LOG_SPAMDELAY = "log_SpamDelay",
+  S_GAMEREVERBMANAGERPAUSE = "s_GameReverbManagerPause",
+  E_DEBUG_DRAW_LOD_WARNING_DEFAULT_LOD_RATIO =
+  "e_debug_draw_lod_warning_default_lod_ratio",
+  SYS_SAVECVARS = "sys_SaveCVars",
+  R_HDRRANGEADAPTLBUFFERMAXRANGE = "r_HDRRangeAdaptLBufferMaxRange",
+  P_NET_VELSNAPMUL = "p_net_velsnapmul",
+  MOVEMENT_VERIFY_ONGROUND_ERROR_RATE = "movement_verify_onground_error_rate",
+  E_STREAM_AREAS = "e_stream_areas",
+  R_TEXRESOLUTION = "r_TexResolution",
+  AG_PATH_FINDING_DEBUG = "ag_path_finding_debug",
+  R_FASTFULLSCREENQUAD = "r_FastFullScreenQuad",
+  AI_EVENT_DEBUG = "ai_event_debug",
+  QUEUED_SKILL_MARGIN = "queued_skill_margin",
+  E_WATER_OCEAN_SIMULATE_ON_ZONE = "e_water_ocean_simulate_on_zone",
+  SYS_PHYSICS = "sys_physics",
+  E_DETAIL_MATERIALS_VIEW_DIST_Z = "e_detail_materials_view_dist_z",
+  E_MTTEST = "e_MtTest",
+  E_CBUFFER_MAX_ADD_RENDER_MESH_TIME = "e_cbuffer_max_add_render_mesh_time",
+  E_VOXTERTEXFORMAT = "e_VoxTerTexFormat",
+  CA_DISABLESKINBONES = "ca_disableSkinBones",
+  OPTION_TERRAIN_DETAIL = "option_terrain_detail",
+  E_PROC_VEGETATION_MIN_DENSITY = "e_proc_vegetation_min_density",
+  AC_COLLIDERMODEAI = "ac_ColliderModeAI",
+  R_TEXTURESSTREAMINGMINREADSIZEKB = "r_texturesstreamingMinReadSizeKB",
+  E_CBUFFER_TERRAIN_Z_OFFSET = "e_cbuffer_terrain_z_offset",
+  AI_FORCESTANCE = "ai_ForceStance",
+  P_BREAK_ON_VALIDATION = "p_break_on_validation",
+  ES_DEBUG_NOT_SEEN_TIMEOUT = "es_debug_not_seen_timeout",
+  LUA_STOPONERROR = "lua_StopOnError",
+  CA_MOTIONBLURMOVEMENTTHRESHOLD = "ca_MotionBlurMovementThreshold",
+  E_STREAMCGFFASTUPDATEMAXDISTANCE = "e_StreamCgfFastUpdateMaxDistance",
+  V_WIND_MINSPEED = "v_wind_minspeed",
+  R_HDRRANGEADAPTMAX = "r_HDRRangeAdaptMax",
+  SV_DEDICATEDCPUPERCENT = "sv_DedicatedCPUPercent",
+  E_RNTMPDATAPOOLMAXFRAMES = "e_RNTmpDataPoolMaxFrames",
+  CLIENT_DDCMS_PATH = "client_ddcms_path",
+  G_PROCEDURAL_BREAKING = "g_procedural_breaking",
+  AI_PREDICTIVEPATHFOLLOWING = "ai_PredictivePathFollowing",
+  NET_INACTIVITYTIMEOUT = "net_inactivitytimeout",
+  AI_DEBUGDRAWSTANCESIZE = "ai_DebugDrawStanceSize",
+  E_SHADOWSLODBIASFIXED = "e_ShadowsLodBiasFixed",
+  S_MIDIFILE = "s_MidiFile",
+  D3D9_ALLOWSOFTWARE = "d3d9_AllowSoftware",
+  E_VEGETATIONSPRITESBATCHING = "e_VegetationSpritesBatching",
+  G_QUICKGAME_PREFER_LAN = "g_quickGame_prefer_lan",
+  E_SHADOWSLODBIASINVIS = "e_ShadowsLodBiasInvis",
+  CAMERA_HIT_TEST_RADIUS = "camera_hit_test_radius",
+  E_DISSOLVEDISTBAND = "e_DissolveDistband",
+  DISTRICT_SHAPE = "district_shape",
+  BOT_ACCOUNT = "bot_account",
+  E_SHADOWS_WATER = "e_shadows_water",
+  R_GPUPROFILER = "r_GPUProfiler",
+  E_GIITERATIONS = "e_GIIterations",
+  R_BUFFERUPLOAD_ENABLE = "r_BufferUpload_Enable",
+  R_MAXDUALMTLDEPTH = "r_MaxDualMtlDepth",
+  NET_SCHEDULER_DEBUG = "net_scheduler_debug",
+  G_SUDDENDEATHTIME = "g_suddendeathtime",
+  AIM_ASSISTAUTOCOEFF = "aim_assistAutoCoeff",
+  R_WATERREFLECTIONS = "r_WaterReflections",
+  E_STREAM_FOR_VISUALS = "e_stream_for_visuals",
+  AI_DEBUGDRAWEXPENSIVEACCESSORYQUOTA = "ai_DebugDrawExpensiveAccessoryQuota",
+  S_MUSICINFODEBUGFILTER = "s_MusicInfoDebugFilter",
+  E_PROCVEGETATIONMAXSECTORSINCACHE = "e_ProcVegetationMaxSectorsInCache",
+  AG_FORCEADJUST = "ag_forceAdjust",
+  R_TEXTURESSTREAMING = "r_TexturesStreaming",
+  R_DEPTHOFFIELDBOKEH = "r_DepthOfFieldBokeh",
+  CD_PASS_COLLIDE = "cd_pass_collide",
+  QUADRUPED_IDLE_ALIGN = "quadruped_idle_align",
+  CA_AMC_TURNLEANING = "ca_AMC_TurnLeaning",
+  R_POSTAASTENCILCULLING = "r_PostAAStencilCulling",
+  AG_LOCKTOENTITY = "ag_lockToEntity",
+  OPTION_CHARACTER_LOD = "option_character_lod",
+  R_SHOWGAMMAREFERENCE = "r_ShowGammaReference",
+  R_TESSELLATIONTRIANGLESIZE = "r_TessellationTriangleSize",
+  R_HDRRANGEADAPTMAXRANGE = "r_HDRRangeAdaptMaxRange",
+  CAMERA_USE_FADE_OUT = "camera_use_fade_out",
+  SHOW_GUIDEDECAL = "show_guidedecal",
+  R_TEXTURESSTREAMINGRESIDENCYTIMETESTLIMIT =
+  "r_texturesstreamingResidencyTimeTestLimit",
+  E_CBUFFER_OCCLUDERS_LOD_RATIO = "e_cbuffer_occluders_lod_ratio",
+  ANGLE_DEBUG = "angle_debug",
+  R_CORONAFADE = "r_CoronaFade",
+  E_GSM_FOCUS_ON_UNIT = "e_gsm_focus_on_unit",
+  ROPE_SKILL_CONTROLLER_FINISH_ACCEL_VELOCITY =
+  "rope_skill_controller_finish_accel_velocity",
+  MAX_ARROW_SCALE_RATE = "max_arrow_scale_rate",
+  MAX_ARROW_SCALE_TIME = "max_arrow_scale_time",
+  ALN_DEBUG_MOVEMENT = "aln_debug_movement",
+  UM_DECAL_SHADOW = "um_decal_shadow",
+  R_TEXTURESSTREAMPOOLLIMITRATIO = "r_TexturesStreamPoolLimitRatio",
+  SYS_BUDGET_SOUND_CHANNELS = "sys_budget_sound_channels",
+  PL_ZEROGBASESPEED = "pl_zeroGBaseSpeed",
+  E_CBUFFER_TERRAIN_SHIFT = "e_cbuffer_terrain_shift",
+  DS_LOGLEVEL = "ds_LogLevel",
+  OCEANWAVESCONSTANTA = "OceanWavesConstantA",
+  OCEANWAVESCONSTANTB = "OceanWavesConstantB",
+  R_TEXTURESSTREAMINGDEBUGFILTER = "r_TexturesStreamingDebugfilter",
+  AG_DEBUGEXACTPOS = "ag_debugExactPos",
+  E_STATOBJ_VERIFY = "e_statobj_verify",
+  ES_MAXPHYSDISTINVISIBLE = "es_MaxPhysDistInvisible",
+  R_MOON_REFLECTION_BOOST = "r_moon_reflection_boost",
+  AG_SIGNAL = "ag_signal",
+  R_USEPARTICLESHALFRES_MINCOUNT = "r_UseParticlesHalfRes_MinCount",
+  E_RENDER = "e_render",
+  E_STATOBJ_LOG = "e_statobj_log",
+  AG_STANCE = "ag_stance",
+  CA_APPLYJOINTVELOCITIESMODE = "ca_ApplyJointVelocitiesMode",
+  AI_FORCEALLOWSTRAFING = "ai_ForceAllowStrafing",
+  I_UNLIMITEDAMMO = "i_unlimitedammo",
+  CL_SHALLOWWATERSPEEDMULPLAYER = "cl_shallowWaterSpeedMulPlayer",
+  E_STREAMCGFPOOLSIZE = "e_StreamCgfPoolSize",
+  E_MODELVIEW_PREFAB_LIGHT_NUMBER = "e_modelview_Prefab_light_number",
+  E_VEGETATION_NODE_LEVEL = "e_vegetation_node_level",
+  CD_CATTLE_UPDATE_DISTANCE = "cd_cattle_update_distance",
+  CA_SERIALIZESKELETONANIM = "ca_SerializeSkeletonAnim",
+  CA_USEAIMIKREFPOSE = "ca_UseAimIKRefPose",
+  BOT_PROFILER_CELL_SIZE = "bot_profiler_cell_size",
+  R_DEFERREDSHADINGSTENCILPREPASS = "r_DeferredShadingStencilPrepass",
+  AC_COLLIDERMODEPLAYER = "ac_ColliderModePlayer",
+  CA_EYES_PROCEDURAL = "ca_eyes_procedural",
+  CD_SHOW_ERRORS = "cd_show_errors",
+  ES_DEBUG = "es_debug",
+  AI_PROTOROD = "ai_ProtoROD",
+  OPTION_SHADER_QUALITY = "option_shader_quality",
+  R_LIGHTBUFFEROPTIMIZED = "r_LightBufferOptimized",
+  E_SHADOWS_SOFTER_DISTANT_LODS = "e_shadows_softer_distant_lods",
+  R_SHADERSUSESCRIPTCACHE = "r_ShadersUseScriptCache",
+  E_FOLIAGE_BRANCHES_TIMEOUT = "e_foliage_branches_timeout",
+  PL_DEBUG_MOVEMENT = "pl_debug_movement",
+  S_HDRDEBUG = "s_HDRDebug",
+  AIM_ASSISTSEARCHBOX = "aim_assistSearchBox",
+  E_CUSTOM_DYNAMIC_LOD_DEBUG = "e_custom_dynamic_lod_debug",
+  E_STREAMPREDICTIONMAXVISAREARECURSION = "e_StreamPredictionMaxVisAreaRecursion",
+  S_MUSICENABLE = "s_MusicEnable",
+  S_STOPSOUNDSIMMEDIATELY = "s_StopSoundsImmediately",
+  R_REDUCERTCHANGE = "r_ReduceRtChange",
+  CA_SKIPANIMTASK = "ca_SkipAnimTask",
+  R_DETAILNUMLAYERS = "r_DetailNumLayers",
+  CP_DEBUG_RAY_WORLD_INTERSECTION = "cp_debug_ray_world_intersection",
+  S_HDRRANGE = "s_HDRRange",
+  E_VEGETATION_CULL_TEST_MAX_DIST = "e_vegetation_cull_test_max_dist",
+  AI_LOGSIGNALS = "ai_LogSignals",
+  R_BATCHING = "r_Batching",
+  PL_ZEROGSPEEDMULTNORMALSPRINT = "pl_zeroGSpeedMultNormalSprint",
+  E_TERRAIN_CRATER_DEPTH = "e_terrain_crater_depth",
+  P_MAX_LCPCG_MICROITERS_FINAL = "p_max_LCPCG_microiters_final",
+  NAME_TAG_FADE_OUT_MARGIN = "name_tag_fade_out_margin",
+  OPTION_SOUND = "option_sound",
+  OPTION_WATER = "option_water",
+  E_HW_OCCLUSION_CULLING_WATER = "e_hw_occlusion_culling_water",
+  AI_IGNOREPLAYER = "ai_IgnorePlayer",
+  S_MUSICFORMAT = "s_MusicFormat",
+  CA_DISABLE_THREAD = "ca_disable_thread",
+  ES_UPDATESCRIPT = "es_UpdateScript",
+  E_TERRAIN_TEXTURE_LOD_RATIO = "e_terrain_texture_lod_ratio",
+  P_MAX_CONTACTS = "p_max_contacts",
+  S_HDRLOUDNESSFALLOFF = "s_HDRLoudnessFalloff",
+  AI_STEEPSLOPEUPVALUE = "ai_SteepSlopeUpValue",
+  LUA_LOGGING_LAST_CALLMETHOD = "lua_logging_last_callmethod",
+  EFFECT_DEBUG_PARTICLE = "effect_debug_particle",
+  R_COLORBITS = "r_ColorBits",
+  E_TERRAIN_OCCLUSION_CULLING_MAX_DIST = "e_terrain_occlusion_culling_max_dist",
+  GT_DEBUG = "gt_debug",
+  AIM_ASSISTSINGLECOEFF = "aim_assistSingleCoeff",
+  UM_CRAWL_GROUNDALIGN_SMOOTH_TIME = "um_crawl_groundalign_smooth_time",
+  R_WATERUPDATECHANGE = "r_WaterUpdateChange",
+  E_SHADOWS_MAX_TEXTURE_SIZE = "e_shadows_max_texture_size",
+  E_SHADOWSTESSELLATECASCADES = "e_ShadowsTessellateCascades",
+  DISTANCE_HELPER = "distance_helper",
+  E_MODELVIEW_PREFAB_LIGHT_RADIUS = "e_modelview_Prefab_light_radius",
+  MATE_X_OFFSET = "mate_x_offset",
+  R_VISAREADEBUG = "r_visareaDebug",
+  R_IMPOSTERSUPDATEPERFRAME = "r_ImpostersUpdatePerFrame",
+  G_IGNORE_CHAT_FILTER = "g_ignore_chat_filter",
+  NAME_TAG_RENDER_SIZE = "name_tag_render_size",
+  CA_NODEFORM = "ca_NoDeform",
+  SYS_BUDGET_TRIS_TERRAIN_DETAIL = "sys_budget_tris_terrain_detail",
+  R_TEXTURESSTREAMUSEMIPOFFSET = "r_texturesStreamUseMipOffset",
+  R_AUXGEOM = "r_auxGeom",
+  E_VOXTER = "e_VoxTer",
+  CAMERA_MAX_DIST_DEBUG = "camera_max_dist_debug",
+  AG_SAFEEXACTPOSITIONING = "ag_safeExactPositioning",
+  AI_LOGFILEVERBOSITY = "ai_LogFileVerbosity",
+  S_ALLOWNOTCACHEDACCESS = "s_AllowNotCachedAccess",
+  R_USEGSPARTICLES = "r_UseGSParticles",
+  R_SHADERSALWAYSUSECOLORS = "r_ShadersAlwaysUseColors",
+  SYS_PRELOAD = "sys_preload",
+  NET_LOG = "net_log",
+  QUEUED_SKILL_DEBUG = "queued_skill_debug",
+  S_UNUSEDSOUNDCOUNT = "s_UnusedSoundCount",
+  R_THERMALVISIONVIEWCLOAKFREQUENCYSECONDARY =
+  "r_ThermalVisionViewCloakFrequencySecondary",
+  BUILDER_ROTATE_ANGLE = "builder_rotate_angle",
+  R_GENERALPASSGEOMETRYSORTING = "r_GeneralPassGeometrySorting",
+  AI_DRAWRADARDIST = "ai_DrawRadarDist",
+  AI_SOMSPEEDRELAXED = "ai_SOMSpeedRelaxed",
+  AI_DEFAULTWALKABILITY = "ai_DefaultWalkability",
+  USER_MUSIC_DISABLE_OTHERS = "user_music_disable_others",
+  E_TERRAIN_IB_STATS = "e_terrain_ib_stats",
+  AI_FORCELOOKAIMTARGET = "ai_ForceLookAimTarget",
+  CA_SKIPLOADTHINFAT = "ca_SkipLoadThinFat",
+  LOG_DOODAD_INTERACTION = "log_doodad_interaction",
+  HS_SIMPLE_GRID_DRAW = "hs_simple_grid_draw",
+  G_PREROUNDTIME = "g_preroundtime",
+  E_CBUFFER_DRAW_OCCLUDERS = "e_cbuffer_draw_occluders",
+  S_MEMORYPOOLSYSTEM = "s_MemoryPoolSystem",
+  S_ADPCMDECODERS = "s_ADPCMDecoders",
+  CAMERA_ALIGN_SPRUNG_RATIO = "camera_align_sprung_ratio",
+  AC_DEBUGFILTER = "ac_DebugFilter",
+  G_PLAY_DIE_ANIM = "g_play_die_anim",
+  E_COARSESHADOWMASK = "e_CoarseShadowMask",
+  AG_LOGEFFECTS = "ag_logeffects",
+  AG_PHYSERROROUTERRADIUSFACTOR = "ag_physErrorOuterRadiusFactor",
+  E_HW_OCCLUSION_CULLING_OBJECTS = "e_hw_occlusion_culling_objects",
+  R_NVDOF_BOKEHSIZE = "r_NVDOF_BokehSize",
+  S_GAMESFXVOLUME = "s_GameSFXVolume",
+  S_X2CULLINGMAXCHANNELRATIO = "s_X2CullingMaxChannelRatio",
+  SKILL_CONTROLLER_DEBUG = "skill_controller_debug",
+  E_PARTICLES_HIGH = "e_particles_high",
+  E_LOD_SYNC_VIEW_DIST = "e_lod_sync_view_dist",
+  COMBAT_MSG_LEVEL = "combat_msg_level",
+  R_TEXTURESSTREAMINGDEBUGMINMIP = "r_TexturesStreamingDebugMinMip",
+  R_SHOWTEXTURE = "r_ShowTexture",
+  S_UNLOADPROJECTS = "s_UnloadProjects",
+  R_SHADERCOMPILERSERVER = "r_ShaderCompilerServer",
+  R_WATERUPDATEFACTOR = "r_WaterUpdateFactor",
+  NET_DEFAULTCHANNELBITRATEDESIRED = "net_defaultChannelBitRateDesired",
+  AI_DRAWNODE = "ai_DrawNode",
+  AI_DRAWPATH = "ai_DrawPath",
+  AI_DRAWTYPE = "ai_DrawType",
+  R_SHADOWBLUR = "r_ShadowBlur",
+  R_SHADOWPASS = "r_ShadowPass",
+  E_TEMP_POOL_SIZE = "e_temp_pool_size",
+  D3D9_NULLREFDEVICE = "d3d9_NullRefDevice",
+  CA_DRAWAIMPOSES = "ca_DrawAimPoses",
+  E_CBUFFER_TEST_MODE = "e_cbuffer_test_mode",
+  CA_DRAWWIREFRAME = "ca_DrawWireframe",
+  D3D9_RB_VERTS = "d3d9_rb_Verts",
+  CAMERA_ZOOM_CATCH_UP_BASE_VELOCITY = "camera_zoom_catch_up_base_velocity",
+  SWIM_DEBUG = "swim_debug",
+  R_NVSSAO_SCENESCALE = "r_NVSSAO_SceneScale",
+  R_SHADOWSOMNILIGHTLIMIT = "r_ShadowsOmniLightLimit",
+  E_WATER_TESSELATION_AMOUNTX = "e_water_tesselation_amountX",
+  E_WATER_TESSELATION_AMOUNTY = "e_water_tesselation_amountY",
+  E_COVERAGEBUFFERCULLINDIVIDUALBRUSHESMAXNODESIZE =
+  "e_CoverageBufferCullIndividualBrushesMaxNodeSize",
+  AI_RECORDER = "ai_Recorder",
+  AC_DEBUGFUTUREANIMPATH = "ac_debugFutureAnimPath",
+  AI_LIMITPHYSICSREQUESTPERFRAME = "ai_LimitPhysicsRequestPerFrame",
+  MOUSE_CLEAR_TARGETING = "mouse_clear_targeting",
+  TAB_TARGETING_HISTORY_EXPIRE_TIME = "tab_targeting_history_expire_time",
+  AI_ENABLESYSTEMAGGROCANCEL = "ai_EnableSystemAggroCancel",
+  E_RAM_MAPS = "e_ram_maps",
+  AI_UPDATEFROMUNITID = "ai_UpdateFromUnitId",
+  OPTION_SKILL_ALERT_ENABLE = "option_skill_alert_enable",
+  AI_PUPPETDIRSPEEDCONTROL = "ai_PuppetDirSpeedControl",
+  PL_DEBUG_LADDERS = "pl_debug_ladders",
+  AI_PROTORODALIVETIME = "ai_ProtoRODAliveTime",
+  E_SCREENSHOT_QUALITY = "e_screenshot_quality",
+  R_HDRDEBUG = "r_HDRDebug",
+  NAME_TAG_HOSTILE_MATE_SHOW = "name_tag_hostile_mate_show",
+  R_SHADERCOMPILERDONTCACHE = "r_ShaderCompilerDontCache",
+  AC_DEBUGCOLLIDERMODE = "ac_debugColliderMode",
+  AI_EXTRARADIUSDURINGBEAUTIFICATION = "ai_ExtraRadiusDuringBeautification",
+  R_HDRLEVEL = "r_HDRLevel",
+  CA_DEBUGANIMUPDATES = "ca_DebugAnimUpdates",
+  R_DEFERREDSHADINGTILESX = "r_DeferredShadingTilesX",
+  R_DEFERREDSHADINGTILESY = "r_DeferredShadingTilesY",
+  MODEL_STREAMING_MAX_TASK = "model_streaming_max_task",
+  E_HWOCCLUSIONCULLINGOBJECTS = "e_HwOcclusionCullingObjects",
+  R_PARTICLES_LIGHTS_LIMIT = "r_particles_lights_limit",
+  NET_LAN_SCANPORT_FIRST = "net_lan_scanport_first",
+  SYS_ROOT = "sys_root",
+  SYS_SPEC = "sys_spec",
+  AIM_ASSISTSNAPDISTANCE = "aim_assistSnapDistance",
+  E_MIPMAP_SHOW = "e_mipmap_show",
+  SOUND_OTHERS_SKILL_SOUND_VOLUME = "sound_others_skill_sound_volume",
+  E_GSM_RANGE_START = "e_gsm_range_start",
+  UA_FILTER = "ua_filter",
+  AI_BANNEDNAVSOTIME = "ai_BannedNavSoTime",
+  UM_USE_ATTACHMENT = "um_use_attachment",
+  DT_TIME = "dt_time",
+  UI_DOUBLE_CLICK_INTERVAL = "ui_double_click_interval",
+  CD_BUILDER_SNAP = "cd_builder_snap",
+  R_DEFERREDDECALSLOWSPEC = "r_DeferredDecalsLowSpec",
+  E_CHARACTER_LIGHT_MAX_DIST = "e_character_light_max_dist",
+  MOV_NOCUTSCENES = "mov_NoCutscenes",
+  OPTION_HIDE_OPTIMIZATION_BUTTON = "option_hide_optimization_button",
+  PL_ZEROGFLOATDURATION = "pl_zeroGFloatDuration",
+  TRANSFER_DEBUG = "transfer_debug",
+  R_DEBUGREFRACTION = "r_DebugRefraction",
+  R_TERRAINAO = "r_TerrainAO",
+  CAMERA_CLOSE_UP_FADE_OUT_DISTANCE = "camera_close_up_fade_out_distance",
+  I_DEBUG_MP_FLOWGRAPH = "i_debug_mp_flowgraph",
+  BLINK_DEBUG_CURSOR = "blink_debug_cursor",
+  RAGDOLL_HIT_BONE = "ragdoll_hit_bone",
+  R_USEPARTICLESHALFRESDEBUG = "r_UseParticlesHalfResDebug",
+  E_DYNAMIC_LIGHT = "e_dynamic_light",
+  FG_PROFILE = "fg_profile",
+  R_USEPARTICLESHALFRESFORCE = "r_UseParticlesHalfResForce",
+  MOVEMENT_VERIFY_ONGROUND_HEIGHT_TOLERANCE =
+  "movement_verify_onground_height_tolerance",
+  E_SHADOWSDEBUG = "e_ShadowsDebug",
+  R_WATERUPDATEDISTANCE = "r_WaterUpdateDistance",
+  CL_SCREENEFFECTS = "cl_screeneffects",
+  SIMULATE_ACTOR_GC_HACK = "simulate_actor_gc_hack",
+  E_GSM_RANGE_RATE = "e_gsm_range_rate",
+  E_GSM_RANGE_STEP = "e_gsm_range_step",
+  ES_BBOXES = "es_bboxes",
+  R_DISPLAYINFO = "r_DisplayInfo",
+  E_DISSOLVE = "e_dissolve",
+  R_TEXTURESSTREAMINGIGNORE = "r_TexturesStreamingIgnore",
+  BOT_PARAM_1 = "bot_param_1",
+  BOT_PARAM_2 = "bot_param_2",
+  BOT_PARAM_3 = "bot_param_3",
+  LOG_TICK = "log_tick",
+  AI_WARNINGPHYSICSREQUESTCOUNT = "ai_WarningPhysicsRequestCount",
+  CA_DRAWPERFORMANCEOPTION = "ca_DrawPerformanceOption",
+  E_VEGETATION_SPRITES_DISTANCE_RATIO = "e_vegetation_sprites_distance_ratio",
+  AI_WATEROCCLUSION = "ai_WaterOcclusion",
+  R_RENDERMESHLOCKLOG = "r_RenderMeshLockLog",
+  AG_AVERAGETRAVELSPEED = "ag_averageTravelSpeed",
+  G_IGNORE_RAID_JOINT = "g_ignore_raid_joint",
+  E_PARTICLES_TRAIL_DEBUG = "e_particles_trail_debug",
+  SV_GS_REPORT = "sv_gs_report",
+  MFX_TIMEOUT = "mfx_Timeout",
+  ROPE_CHANGE_ASSET_TEST = "rope_change_asset_test",
+  R_SHADERCOMPILERPORT = "r_ShaderCompilerPort",
+  CAMERA_MOVE_ACCEL_TIME = "camera_move_accel_time",
+  AC_DEBUGLOCATIONS = "ac_debugLocations",
+  NET_ACTOR_FORCE_SYNC_PERIOD = "net_actor_force_sync_period",
+  AI_AUTOBALANCE = "ai_Autobalance",
+  UI_DRAW_LEVEL = "ui_draw_level",
+  P_JOINT_DMG_ACCUM_THRESH = "p_joint_dmg_accum_thresh",
+  PROFILE_WEIGHTING = "profile_weighting",
+  G_RAGDOLL_MINE_MAX = "g_ragdoll_minE_max",
+  AI_DRAWANCHORS = "ai_DrawAnchors",
+  P_GROUP_DAMPING = "p_group_damping",
+  P_JOINT_DMG_ACCUM = "p_joint_dmg_accum",
+  E_SCREENSHOT_MIN_SLICES = "e_screenshot_min_slices",
+  NET_CONNECTIVITY_DETECTION_INTERVAL = "net_connectivity_detection_interval",
+  PREFAB_STREAM_XML = "prefab_stream_xml",
+  CU_NO_SPAWN = "cu_no_spawn",
+  R_SSREFLEXP = "r_SSReflExp",
+  CAMERA_TEST = "camera_test",
+  SYS_BUDGET_TRIS_TERRAIN = "sys_budget_tris_terrain",
+  R_NORMALSLENGTH = "r_NormalsLength",
+  S_SOUNDINFOLOGFILE = "s_SoundInfoLogFile",
+  NEXT_SYS_SPEC_FULL = "next_sys_spec_full",
+  E_DETAIL_OBJECTS = "e_detail_objects",
+  SOUND_MY_MATERIAL_EFFECT_SOUND_VOLUME = "sound_my_material_effect_sound_volume",
+  P_PROFILE_ENTITIES = "p_profile_entities",
+  AC_MCMHOROTHERPLAYER = "ac_MCMHorOtherPlayer",
+  G_UNIT_COLLIDE_BOTTOM_BOX_SIZE_RATE = "g_unit_collide_bottom_box_size_rate",
+  E_GSM_EXTRA_RANGE_SUN_UPDATE_RATIO = "e_gsm_extra_range_sun_update_ratio",
+  P_SKIP_REDUNDANT_COLLDET = "p_skip_redundant_colldet",
+  S_DUMMYSOUND = "s_DummySound",
+  E_TARGET_DECALS_DEFFERED = "e_target_decals_deffered",
+  E_TERRAIN_RENDER_PROFILE = "e_terrain_render_profile",
+  CA_DRAWNORMALS = "ca_DrawNormals",
+  CA_DEBUGSUBSTATETRANSITIONS = "ca_DebugSubstateTransitions",
+  E_VIEW_DIST_CUSTOM_RATIO = "e_view_dist_custom_ratio",
+  AI_PROFILEGOALS = "ai_ProfileGoals",
+  S_STREAMPROJECTFILES = "s_StreamProjectFiles",
+  R_BEAMSMAXSLICES = "r_BeamsMaxSlices",
+  R_SHADERSSAVELISTREMOTE = "r_shadersSaveListRemote",
+  V_HELP_TANK_STEERING = "v_help_tank_steering",
+  E_VEGETATION_MIN_SIZE = "e_vegetation_min_size",
+  AA_MAXDIST = "aa_maxDist",
+  CA_FALLANDPLAYSTANDUPDURATION = "ca_fallAndPlayStandUpDuration",
+  E_CBUFFER_DEBUG_DRAW_SCALE = "e_cbuffer_debug_draw_scale",
+  R_SHADOWSMASKRESOLUTION = "r_ShadowsMaskResolution",
+  P_NOTIFY_EPSILON_LIVING = "p_notify_epsilon_living",
+  NET_DEFAULTCHANNELIDLEPACKETRATEDESIRED =
+  "net_defaultChannelIdlePacketRateDesired",
+  G_ENABLEITEMS = "g_enableitems",
+  PL_ZEROGSPEEDMULTNORMAL = "pl_zeroGSpeedMultNormal",
+  FR_FTURN_SCALE = "fr_fturn_scale",
+  CAMERA_MIN_DIST = "camera_min_dist",
+  PL_DEBUG_JUMP_MULT = "pl_debug_jump_mult",
+  E_VEGETATION_ALPHA_BLEND = "e_vegetation_alpha_blend",
+  SYS_TRACKVIEW = "sys_trackview",
+  QUEST_CAM_DOF_BLUR = "quest_cam_dof_blur",
+  ES_STREAMDEBUG = "es_StreamDebug",
+  R_POSTAAINEDITINGMODE = "r_PostAAInEditingMode",
+  E_FOLIAGE_WIND_ACTIVATION_DIST = "e_foliage_wind_activation_dist",
+  CD_DEBUG = "cd_debug",
+  AI_INTERESTSYSTEM = "ai_InterestSystem",
+  AI_CLOAKINCREMENTMOD = "ai_CloakIncrementMod",
+  E_GSM_COMBINED = "e_gsm_combined",
+  S_UNLOADDATA = "s_UnloadData",
+  R_SHADERSIGNOREINCLUDESCHANGING = "r_ShadersIgnoreIncludesChanging",
+  R_TEXTURESSTREAMINGONLYVIDEO = "r_TexturesStreamingOnlyVideo",
+  R_USEDUALMATERIAL = "r_UseDualMaterial",
+  G_USELASTKEYINPUT = "g_useLastKeyInput",
+  R_SHOWRENDERTARGET = "r_ShowRenderTarget",
+  R_SUPERSAMPLING = "r_Supersampling",
+  R_RAINDROPSEFFECT = "r_RainDropsEffect",
+  BOT_SHOW = "bot_show",
+  BOT_TYPE = "bot_type",
+  R_SHADOWGEN = "r_ShadowGen",
+  AI_DRAWFAKETRACERS = "ai_DrawFakeTracers",
+  NET_TCP_NODELAY = "net_tcp_nodelay",
+  E_VOXTERTEXRANGESCALE = "e_VoxTerTexRangeScale",
+  OPTION_SHADOW_DIST = "option_shadow_dist",
+  I_ICEEFFECTS = "i_iceeffects",
+  E_CBUFFER_TREE_DEBUG = "e_cbuffer_tree_debug",
+  E_CBUFFER_TREE_DEPTH = "e_cbuffer_tree_depth",
+  R_SHADOWGENMODE = "r_ShadowGenMode",
+  R_SHADOWSPARTICLEJITTERAMOUNT = "r_ShadowsParticleJitterAmount",
+  BOT_PASSWORD = "bot_password",
+  CA_TEST_PROFILE_SHOT = "ca_test_profile_shot",
+  PROFILE_PAGEFAULTS = "profile_pagefaults",
+  UM_DEBUG_EXACT_AABB = "um_debug_exact_aabb",
+  G_IGNORE_DUEL_INVITE = "g_ignore_duel_invite",
+  TAB_TARGETING_ROUND_DIST = "tab_targeting_round_dist",
+  P_JUMP_TO_PROFILE_ENT = "p_jump_to_profile_ent",
+  S_MAXMIDICHANNELS = "s_MaxMIDIChannels",
+  G_DIE_ANIM_FORCE = "g_die_anim_force",
+  CA_USEPHYSICS = "ca_UsePhysics",
+  E_CUSTOM_MAX_MODEL_LOW = "e_custom_max_model_low",
+  E_CUSTOM_MAX_MODEL_MID = "e_custom_max_model_mid",
+  CA_DRAWTANGENTS = "ca_DrawTangents",
+  SYS_MOVIE_UPDATE_POSITION = "sys_movie_update_position",
+  SIMULATE_ACTOR_PUSH_HACK = "simulate_actor_push_hack",
+  P_MAX_CONTACT_GAP = "p_max_contact_gap",
+  E_PARTICLES_DYNAMIC_QUALITY = "e_particles_dynamic_quality",
+  AI_DEBUGPATHFINDING = "ai_DebugPathfinding",
+  E_DECALSPLACEMENTTESTAREASIZE = "e_DecalsPlacementTestAreaSize",
+  AI_STEEPSLOPEACROSSVALUE = "ai_SteepSlopeAcrossValue",
+  P_NET_ANGSNAPMUL = "p_net_angsnapmul",
+  S_RECORDCONFIG = "s_RecordConfig",
+  E_PARTICLES_QUALITY = "e_particles_quality",
+  MOV_EFFECT = "mov_effect",
+  CHECK_CUSTOM_TEXTURE_LOD_GAP = "check_custom_texture_lod_gap",
+  G_IGNORE_SQUAD_INVITE = "g_ignore_squad_invite",
+  CA_GC_DURATION = "ca_gc_duration",
+  R_SHADOWSSUNMASKBLURRINESS = "r_ShadowsSunMaskBlurriness",
+  SOUND_CHARACTER_LISTENER = "sound_character_listener",
+  G_UNIT_COLLIDE_BOTTOM_BOX_MIN_HEIGHT_SIZE_GAP =
+  "g_unit_collide_bottom_box_min_height_size_gap",
+  INSTANCE_ID = "instance_id",
+  R_WATERCAUSTICS = "r_WaterCaustics",
+  P_DEBUG_JOINTS = "p_debug_joints",
+  CA_LOADUNCOMPRESSEDCHUNKS = "ca_LoadUncompressedChunks",
+  E_TERRAIN_OCCLUSION_CULLING_VERSION = "e_terrain_occlusion_culling_version",
+  UM_VEHICLE_GROUND_ALIGN = "um_vehicle_ground_align",
+  CAPTURE_FILE_FORMAT = "capture_file_format",
+  AI_INCLUDENONCOLENTITIESINNAVIGATION = "ai_IncludeNonColEntitiesInNavigation",
+  BAN_TIMEOUT = "ban_timeout",
+  R_MOTIONBLUR = "r_MotionBlur",
+  OPTION_CAMERA_FOV_LIMIT = "option_camera_fov_limit",
+  CA_DRAWCGAASSKIN = "ca_DrawCGAAsSkin",
+  AI_DEBUGDRAWAMBIENTFIRE = "ai_DebugDrawAmbientFire",
+  R_USEPARTICLESREFRACTION = "r_UseParticlesRefraction",
+  MOVEMENT_VERIFY_AIRSTANDING_HEIGHT_TOLERANCE =
+  "movement_verify_airstanding_height_tolerance",
+  R_BEAMSSOFTCLIP = "r_BeamsSoftClip",
+  AC_CLAMPTIMEENTITY = "ac_clampTimeEntity",
+  SKIP_AG_UPDATE = "skip_ag_update",
+  SV_GS_TRACKSTATS = "sv_gs_trackstats",
+  ROPE_SKILL_CONTROLLER_JUMP_VELOCITY = "rope_skill_controller_jump_velocity",
+  AUX_PHYS_MAX_UNIT_NUM = "aux_phys_max_unit_num",
+  NET_HIGHLATENCYTIMELIMIT = "net_highlatencytimelimit",
+  R_SHOWLIGHT = "r_ShowLight",
+  R_SHOWLINES = "r_ShowLines",
+  CA_FACIALSEQUENCEMAXCOUNT = "ca_FacialSequenceMaxCount",
+  DS_LOADEXCELSCRIPTS = "ds_LoadExcelScripts",
+  OPTION_ANIMATION = "option_animation",
+  E_CUSTOM_CLONE_MODE = "e_custom_clone_mode",
+  AC_DEBUGANIMTARGET = "ac_debugAnimTarget",
+  SV_SERVERNAME = "sv_servername",
+  R_CORONASIZESCALE = "r_CoronaSizeScale",
+  NET_PHYS_DEBUG = "net_phys_debug",
+  CA_LODRADIUSINFLECTION = "ca_LodRadiusInflection",
+  R_TEXTURELODDISTANCERATIO = "r_TextureLodDistanceRatio",
+  FOLLOW_DEBUG = "follow_debug",
+  S_FILEOPENHANDLEMAX = "s_FileOpenHandleMax",
+  LUA_GC_MUL = "lua_gc_mul",
+  E_MODEL_DECALS = "e_model_decals",
+  E_FOLIAGE_STIFFNESS = "e_foliage_stiffness",
+  S_MUSICVOLUME = "s_MusicVolume",
+  CA_LOCKFEETWITHIK = "ca_LockFeetWithIK",
+  FR_FSPEED_SCALE = "fr_fspeed_scale",
+  AI_OBSTACLESIZETHRESHOLD = "ai_ObstacleSizeThreshold",
+  E_SHADOWS = "e_shadows",
+  E_DYNAMIC_LIGHT_FORCE_DEFERRED = "e_dynamic_light_force_deferred",
+  S_REVERBTYPE = "s_ReverbType",
+  GM_STARTUP = "gm_startup",
+  CA_DRAWBINORMALS = "ca_DrawBinormals",
+  S_SOUNDMOODSDSP = "s_SoundMoodsDSP",
+  E_TIMEDEMO_FRAMES = "e_timedemo_frames",
+  E_MODELVIEW_PREFAB_CAMERA_OFFSET_X = "e_modelview_Prefab_camera_offset_x",
+  E_MODELVIEW_PREFAB_CAMERA_OFFSET_Y = "e_modelview_Prefab_camera_offset_y",
+  E_MODELVIEW_PREFAB_CAMERA_OFFSET_Z = "e_modelview_Prefab_camera_offset_z",
+  BASIC_CURSOR_SHAPE = "basic_cursor_shape",
+  S_AUDIOPRELOADSFILE = "s_AudioPreloadsFile",
+  S_MEMORYPOOLSOUNDPRIMARY = "s_MemoryPoolSoundPrimary",
+  LUA_HANDLE = "lua_handle",
+  CA_MODELVIEWLOG = "ca_modelViewLog",
+  E_MAX_VIEW_DST_SPEC_LERP = "e_max_view_dst_spec_lerp",
+  SHOW_AIM_POINT = "show_aim_point",
+  AI_DEBUGDRAWVEGETATIONCOLLISIONDIST = "ai_DebugDrawVegetationCollisionDist",
+  E_GSM_TERRAIN_SUN_UPDATE_TIME = "e_gsm_terrain_sun_update_time",
+  E_ROADS = "e_roads",
+  E_ROPES = "e_ropes",
+  AI_DEBUGDRAWDYNAMICHIDEOBJECTSRANGE = "ai_DebugDrawDynamicHideObjectsRange",
+  E_SLEEP = "e_sleep",
+  OPTION_SET_OPTIMIZATION_MODE = "option_set_optimization_mode",
+  CA_SPINEOFFSETMULINSTANDUP = "ca_spineOffsetMulInStandUp",
+  CA_DRAWFACEATTACHMENTS = "ca_DrawFaceAttachments",
+  E_VOXEL = "e_voxel",
+  E_STAT_OBJ_MERGE = "e_stat_obj_merge",
+  SOUND_MOOD_COMBAT_ENABLE = "sound_mood_combat_enable",
+  E_PARTICLES_LOD = "e_particles_lod",
+  E_PARTICLES_LOW = "e_particles_low",
+  E_CAMERAFREEZE = "e_CameraFreeze",
+  AC_CLAMPTIMEANIMATION = "ac_clampTimeAnimation",
+  PL_FLYINGVELOCITYMULTIPLIER = "pl_flyingVelocityMultiplier",
+  NAME_TAG_FONT_NAME = "name_tag_font_name",
+  D3D9_DEBUGRUNTIME = "d3d9_debugruntime",
+  NAME_TAG_FONT_SIZE = "name_tag_font_size",
+  E_DEFAULT_MATERIAL = "e_default_material",
+  OPTION_SHOW_COMBAT_RESOURCE_WINDOW = "option_show_combat_resource_window",
+  MOVEMENT_VERIFY_MOVE_SPEED_BIG_ENOUGH_VEL =
+  "movement_verify_move_speed_big_enough_vel",
+  AG_EP_CORRECTMOVEMENT = "ag_ep_correctMovement",
+  R_SHADOWSADAPTIONMIN = "r_ShadowsAdaptionMin",
+  R_POSTPROCESSEFFECTSPARAMSBLENDING = "r_PostProcessEffectsParamsBlending",
+  SUB_ZONE_DEBUG = "sub_zone_debug",
+  CL_VOICE_RECORDING = "cl_voice_recording",
+  E_STREAMPREDICTIONMINFARZONEDISTANCE = "e_StreamPredictionMinFarZoneDistance",
+  EA_SHOW = "ea_show",
+  LOG_INCLUDEMEMORY = "log_IncludeMemory",
+  CA_DRAWPOSITIONPOST = "ca_DrawPositionPost",
+  R_VARIANCESHADOWMAPBLURAMOUNT = "r_VarianceShadowMapBlurAmount",
+  E_AUTOPRECACHECGF = "e_AutoPrecacheCgf",
+  R_SHOOTINGSTAR_RESPAWNTIME = "r_shootingstar_respawntime",
+  E_CBUFFER_TERRAIN_DISTANCE = "e_cbuffer_terrain_distance",
+  R_DETAILTEXTURES = "r_DetailTextures",
+  V_ALTITUDELIMIT = "v_altitudeLimit",
+  P_MAX_DEBRIS_MASS = "p_max_debris_mass",
+  OPTION_ENABLE_MISC_CHAT_LOG = "option_enable_misc_chat_log",
+  R_BINARYSHADERAUTOGEN = "r_binaryShaderAutoGen",
+  R_USESRGB = "r_UseSRGB",
+  CL_INVERTMOUSE = "cl_invertMouse",
+  OCEANWINDSPEED = "OceanWindSpeed",
+  CA_USEFACIALANIMATION = "ca_UseFacialAnimation",
+  S_VEHCLEMUSICVOLUME = "s_VehcleMusicVolume",
+  E_DECALS_ALLOW_GAME_DECALS = "e_decals_allow_game_decals",
+  E_ZONEWEATHEREFFECT = "e_zoneWeatherEffect",
+  E_PROC_VEGETATION_MAX_VIEW_DISTANCE = "e_proc_vegetation_max_view_distance",
+  P_MAX_WORLD_STEP = "p_max_world_step",
+  R_SILHOUETTECOLORAMOUNT = "r_silhouetteColorAmount",
+  CA_LOADDATABASE = "ca_LoadDatabase",
+  E_SCREENSHOT_MAP_FAR_PLANE_OFFSET = "e_screenshot_map_far_plane_offset",
+  V_ROCKBOATS = "v_rockBoats",
+  CL_ZONE_ID = "cl_zone_id",
+  R_NODRAWSHADERS = "r_NoDrawShaders",
+  CAPTURE_FOLDER = "capture_folder",
+  NAME_TAG_MARK_SIZE_RATIO = "name_tag_mark_size_ratio",
+  MFX_MAXFOOTSTEPCOUNT = "mfx_MaxFootStepCount",
+  P_USE_DISTANCE_CONTACTS = "p_use_distance_contacts",
+  CAPTURE_FRAMES = "capture_frames",
+  V_DEBUGMOUNTEDWEAPON = "v_debugMountedWeapon",
+  CR_SENSITIVITY = "cr_sensitivity",
+  SWIM_SIDE_SPEED_MUL = "swim_side_speed_mul",
+  OPTION_CAMERA_DIST_LIMIT = "option_camera_dist_limit",
+  R_TEXTURESSTREAMINGPOSTPONETHRESHOLDKB =
+  "r_texturesstreamingPostponeThresholdKB",
+  R_NVSSAO_POWEREXPONENT = "r_NVSSAO_PowerExponent",
+  E_SKY_BOX = "e_sky_box",
+  P_TIME_GRANULARITY = "p_time_granularity",
+  SOUND_TARGET_SKILL_SOUND_VOLUME = "sound_target_skill_sound_volume",
+  DUMP_LUA_IN_LOADING = "dump_lua_in_loading",
+  CL_ACCOUNT_ID = "cl_account_id",
+  R_MULTITHREADFLUSH = "r_MultiThreadFlush",
+  E_CBUFFER_TERRAIN_LOD_RATIO = "e_cbuffer_terrain_lod_ratio",
+  CA_FACIALANIMATIONFRAMERATE = "ca_FacialAnimationFramerate",
+  S_MUSICSPEAKERFRONTVOLUME = "s_MusicSpeakerFrontVolume",
+  CA_DRAWLOOKIK = "ca_DrawLookIK",
+  AC_DEBUGXXXVALUES = "ac_debugXXXValues",
+  R_NVSSAO_DETAILAO = "r_NVSSAO_DetailAO",
+  MFX_PFX_MAXSCALE = "mfx_pfx_maxScale",
+  E_DETAIL_MATERIALS = "e_detail_materials",
+  SWIM_BACK_SPEED_MUL = "swim_back_speed_mul",
+  E_LOD_MIN_TRIS = "e_lod_min_tris",
+  SWIM_UP_SPEED_MUL = "swim_up_speed_mul",
+  AI_DRAWBEAUTIFYPATH = "ai_drawBeautifyPath",
+  OPTION_SKELETON_EFFECT = "option_skeleton_effect",
+  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_CRITICAL_POINT =
+  "movement_verify_move_speed_report_critical_point",
+  R_TEXTURESSTREAMINGPOSTPONEMIPS = "r_texturesstreamingPostponeMips",
+  P_RWI_QUEUE_DEBUG = "p_rwi_queue_debug",
+  CA_LIPSYNC_PHONEME_CROSSFADE = "ca_lipsync_phoneme_crossfade",
+  R_SHADERSASYNCCOMPILING = "r_ShadersAsyncCompiling",
+  TIME_OF_DAY_SYNC = "time_of_day_sync",
+  E_MATERIALS = "e_materials",
+  R_HDREYEADAPTIONCACHE = "r_HDREyeAdaptionCache",
+  R_ENABLEAUXGEOM = "r_enableAuxGeom",
+  S_MPEGDECODERS = "s_MPEGDecoders",
+  R_NVDOF_TEST_MODE = "r_NVDOF_Test_Mode",
+  R_COLORGRADINGCHARTSCACHE = "r_ColorGradingChartsCache",
+  HR_ROTATETIME = "hr_rotateTime",
+  R_DEFERREDSHADINGDEPTHBOUNDSTEST = "r_DeferredShadingDepthBoundsTest",
+  E_DYNAMIC_LIGHT_CONSISTENT_SORT_ORDER = "e_dynamic_light_consistent_sort_order",
+  R_SUNSHAFTS = "r_sunshafts",
+  P_MAX_UNPROJ_VEL = "p_max_unproj_vel",
+  P_POD_LIFE_TIME = "p_pod_life_time",
+  G_ROUNDTIME = "g_roundtime",
+  ES_MINIMPULSEVEL = "es_MinImpulseVel",
+  CA_PHYSICSPROCESSIMPACT = "ca_physicsProcessImpact",
+  R_DEFERREDSHADINGDEBUG = "r_DeferredShadingDebug",
+  R_SHADERSCACHEOPTIMISELOG = "r_ShadersCacheOptimiseLog",
+  CAMERA_LIMIT_FADEOUT_DISTANCE = "camera_limit_fadeout_distance",
+  E_WATER_TESSELATION_AMOUNT = "e_water_tesselation_amount",
+  G_CUSTOMIZER_STREAM_CUTSCENE = "g_customizer_stream_cutscene",
+  G_UNIT_COLLIDE_BOTTOM_BOX_HEIGHT_SIZE_RATE =
+  "g_unit_collide_bottom_box_height_size_rate",
+  E_GIAMOUNT = "e_GIAmount",
+  R_DEFERREDSHADINGTILED = "r_DeferredShadingTiled",
+  AI_DYNAMICTRIANGULARUPDATETIME = "ai_DynamicTriangularUpdateTime",
+  ES_SPLASHTIMEOUT = "es_SplashTimeout",
+  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_PRETTY_FAST =
+  "movement_verify_detailed_warp_speed_pretty_fast",
+  R_DYNTEXATLASSPRITESMAXSIZE = "r_DynTexAtlasSpritesMaxSize",
+  E_FORCE_DETAIL_LEVEL_FOR_RESOLUTION = "e_force_detail_level_for_resolution",
+  OPTION_ANTI_ALIASING = "option_anti_aliasing",
+  R_VEGETATIONSPRITESNOBEND = "r_VegetationSpritesNoBend",
+  R_MULTITHREADED = "r_MultiThreaded",
+  AI_DRAWNODELINKCUTOFF = "ai_DrawNodeLinkCutoff",
+  E_CBUFFER_OCCLUDERS_TEST_MIN_TRIS_NUM = "e_cbuffer_occluders_test_min_tris_num",
+  S_SOUNDENABLE = "s_SoundEnable",
+  E_MAX_ENTITY_LIGHTS = "e_max_entity_lights",
+  NET_ACTOR_CONTROLLER_DEBUG_FILTER = "net_actor_controller_debug_filter",
+  LOG_FILEMERGETIME = "log_FileMergeTime",
+  P_NET_SMOOTHTIME = "p_net_smoothtime",
+  S_CINEMAVOLUME = "s_CinemaVolume",
+  AI_DRAWREFPOINTS = "ai_DrawRefPoints",
+  CON_CHAR_SIZE = "con_char_size",
+  CL_MOTIONBLUR = "cl_motionBlur",
+  MOVEMENT_HACK_REPORT_DEBUG = "movement_hack_report_debug",
+  CAMERA_DAMPING_DEFAULT = "camera_damping_default",
+  R_SSREFLECTIONS = "r_SSReflections",
+  R_MOTIONBLURFRAMETIMESCALE = "r_MotionBlurFrameTimeScale",
+  SV_BIND = "sv_bind",
+  SV_PORT = "sv_port",
+  E_VEGETATION_WIND = "e_vegetation_wind",
+  AI_EXTRAVEHICLEAVOIDANCERADIUSSMALL = "ai_ExtraVehicleAvoidanceRadiusSmall",
+  BOT_TEMPORY_DUMP_SIZE = "bot_tempory_dump_size",
+  G_GOFORCEFASTUPDATE = "g_goForceFastUpdate",
+  WORLD_WIDGET_MOUSE_UP_THRESHOLD_TIME = "world_widget_mouse_up_threshold_time",
+  MOVEMENT_VERIFY_MOVE_SPEED_MAX_CLIMBING_VEL =
+  "movement_verify_move_speed_max_climbing_vel",
+  R_REFRACTION = "r_refraction",
+  E_GSM_RANGE_STEP_OBJECT = "e_gsm_range_step_object",
+  CD_STREAM_VIEW_DIST_RATIO = "cd_stream_view_dist_ratio",
+  R_CSTEST = "r_CSTest",
+  CA_DOPRECACHEANIM = "ca_DoPrecacheAnim",
+  PICKING_DEBUG = "picking_debug",
+  E_STREAMPREDICTIONAHEAD = "e_StreamPredictionAhead",
+  CLOTH_MAX_TIMESTEP = "cloth_max_timestep",
+  R_POSTPROCESSOPTIMIZE = "r_PostProcessOptimize",
+  R_WATERGODRAYS = "r_WaterGodRays",
+  R_OCEANHEIGHTSCALE = "r_OceanHeightScale",
+  ES_DEBUGFINDENTITY = "es_DebugFindEntity",
+  G_BREAKTIMEOUTFRAMES = "g_breaktimeoutframes",
+  MOVEMENT_VERIFY_GRAVITY_ERROR_TOLERANCE =
+  "movement_verify_gravity_error_tolerance",
+  G_ENABLEIDLECHECK = "g_enableIdleCheck",
+  OCEANWAVESSPEED = "OceanWavesSpeed",
+  MODIFIER_SHOW = "modifier_show",
+  R_DRIVER = "r_Driver",
+  MOVEMENT_VERIFY_IGNORE_MSEC_AFTER_SKILL_CONTROLLER =
+  "movement_verify_ignore_msec_after_skill_controller",
+  CA_LIPSYNC_DEBUG = "ca_lipsync_debug",
+  S_DOPPLER = "s_Doppler",
+  R_DRAWNEARZRANGE = "r_DrawNearZRange",
+  CL_SHADOW = "cl_shadow",
+  R_SSAO_AMOUNT_MULTIPLER = "r_SSAO_amount_multipler",
+  HS_FOUNDATION_RADIUS = "hs_foundation_radius",
+  ES_STREAM = "es_Stream",
+  R_GLITTERSIZE = "r_GlitterSize",
+  PL_ZEROGSWITCHABLEGYRO = "pl_zeroGSwitchableGyro",
+  CA_USEATTACHMENTITEMEFFECT = "ca_useAttachmentItemEffect",
+  CA_STREAM_DEBUG = "ca_stream_debug",
+  E_LOWSPEC_MODE = "e_lowspec_mode",
+  R_TEXTURESSTREAMINGDONTKEEPSYSTEMMODE = "r_TexturesStreamingDontKeepSystemMode",
+  G_CUSTOM_TEXTURE_MIPMAP_MIN_SIZE = "g_custom_texture_mipmap_min_size",
+  E_OBJECTSTREEBBOXES = "e_ObjectsTreeBBoxes",
+  R_NVDOF_INFOCUSRANGE = "r_NVDOF_InFocusRange",
+  NAME_TAG_HP_SHOW = "name_tag_hp_show",
+  R_PARTICLEVERTHEAPSIZE = "r_ParticleVertHeapSize",
+  AI_DEBUGDRAWVOLUMEVOXELS = "ai_DebugDrawVolumeVoxels",
+  SYS_MAIN_CPU = "sys_main_CPU",
+  NAME_TAG_SHADOW_ALPHA = "name_tag_shadow_alpha",
+  CA_RANDOMSCALING = "ca_RandomScaling",
+  E_SUN_ANGLE_SNAP_DOT = "e_sun_angle_snap_dot",
+  E_SUN_ANGLE_SNAP_SEC = "e_sun_angle_snap_sec",
+  NAME_TAG_SHADOW_DELTA = "name_tag_shadow_delta",
+  CL_TPVYAW = "cl_tpvYaw",
+  R_HDRRENDERING = "r_HDRRendering",
+  DS_PRECACHESOUNDS = "ds_PrecacheSounds",
+  SKILL_DETAIL_DAMAGE_SHOW_TOOLTIP = "skill_detail_damage_show_tooltip",
+  SV_VOICECODEC = "sv_voicecodec",
+  AI_DEBUGDRAW = "ai_DebugDraw",
+  R_DEFERREDSHADINGDBTSTENCIL = "r_DeferredShadingDBTstencil",
+  PL_ZEROGAIMRESPONSIVENESS = "pl_zeroGAimResponsiveness",
+  AC_DEBUGPREDICTION = "ac_debugPrediction",
+  R_FLARES = "r_Flares",
+  OPTION_OPTIMIZATION_ENABLE = "option_optimization_enable",
+  E_VOXEL_MAKE_SHADOWS = "e_voxel_make_shadows",
+  R_DETAILSCALE = "r_DetailScale",
+  AI_DIRECTPATHMODE = "ai_DirectPathMode",
+  SYS_WER = "sys_WER",
+  AUTO_ATTACK_ROTATION = "auto_attack_rotation",
+  OPTION_VIEW_DIST_RATIO_VEGETATION = "option_view_dist_ratio_vegetation",
+  CA_DBAUNLOADUNREGISTERTIME = "ca_DBAUnloadUnregisterTime",
+  E_SHADOWS_CLOUDS = "e_shadows_clouds",
+  R_WATERCAUSTICSDISTANCE = "r_WaterCausticsDistance",
+  CL_USER_KEY = "cl_user_key",
+  E_DETAIL_MATERIALS_DEBUG = "e_detail_materials_debug",
+  S_X2CULLINGBYDISTANCE = "s_X2CullingByDistance",
+  BOT_PROFILE_PERIOD = "bot_profile_period",
+  MAP_SHOW_RETURN_POINTS = "map_show_return_points",
+  SYS_BUDGET_DP_TERRAIN_DETAIL_3D = "sys_budget_dp_terrain_detail_3d",
+  P_MAX_PLANE_CONTACTS = "p_max_plane_contacts",
+  E_PARTICLES_VERYHIGH = "e_particles_veryhigh",
+  UM_PLANE_SHADOW = "um_plane_shadow",
+  MOVEMENT_VERIFY_DETAILED_WARP_DIST_PRETTY_FAR =
+  "movement_verify_detailed_warp_dist_pretty_far",
+  PL_ZEROGPARTICLETRAIL = "pl_zeroGParticleTrail",
+  HR_DOTANGLE = "hr_dotAngle",
+  E_XML_CACHE_GC = "e_xml_cache_gc",
+  NET_ACTOR_CONTROLLER_SMOOTH_TIME = "net_actor_controller_smooth_time",
+  R_VEGETATIONSPRITESTEXRES = "r_VegetationSpritesTexRes",
+  CON_CHAR_SCALE = "con_char_scale",
+  R_SHADOWSDEFEROMNILIGHTLIMIT = "r_ShadowsDeferOmniLightLimit",
+  R_DYNTEXATLASDYNTEXSRCSIZE = "r_dyntexatlasdyntexsrcsize",
+  G_DIE_ANIM_DEGREE = "g_die_anim_Degree",
+  MOVEMENT_VERIFY_ENABLE = "movement_verify_enable",
+  BOT_RESTART_DEALY_TIME = "bot_restart_dealy_time",
+  D3D9_TRIPLEBUFFERING = "d3d9_TripleBuffering",
+  PL_ZEROGDASHENERGYCONSUMPTION = "pl_zeroGDashEnergyConsumption",
+  R_HEIGHT = "r_Height",
+  FR_XTURN = "fr_xturn",
+  FR_YTURN = "fr_yturn",
+  CA_UNLOADANIMATIONCAF = "ca_UnloadAnimationCAF",
+  CA_UNLOADANIMATIONDBA = "ca_UnloadAnimationDBA",
+  G_BREAKAGE_PARTICLES_LIMIT = "g_breakage_particles_limit",
+  P_UNPROJ_VEL_SCALE = "p_unproj_vel_scale",
+  R_HDRBRIGHTOFFSET = "r_HDRBrightOffset",
+  HS_IGNORE_BUILD_AVAILABLE_TIME = "hs_ignore_build_available_time",
+  E_TERRAIN_OCCLUSION_CULLING_PRECISION_DIST_RATIO =
+  "e_terrain_occlusion_culling_precision_dist_ratio",
+  E_FACE_RESET_DEBUG = "e_face_reset_debug",
+  PLAYER_DEBUG_NAME = "player_debug_name",
+  ES_DRAWAREAS = "es_DrawAreas",
+  NEXT_R_DRIVER = "next_r_Driver",
+  R_WATERUPDATETIMEMAX = "r_WaterUpdateTimeMax",
+  R_WATERUPDATETIMEMIN = "r_WaterUpdateTimeMin",
+  E_CBUFFER_DEBUG_FREEZE = "e_cbuffer_debug_freeze",
+  E_WIND_AREAS = "e_wind_areas",
+  CL_VOICE_VOLUME = "cl_voice_volume",
+  E_PRECACHE_LEVEL = "e_precache_level",
+  CA_LODCOUNT = "ca_LodCount",
+  MAP_SHOW_SUB_ZONE_AREA = "map_show_sub_zone_area",
+  CA_LODDIST0 = "ca_LodDist0",
+  R_SHADOWSDEPTHBOUNDNV = "r_ShadowsDepthBoundNV",
+  S_MUSICPROFILING = "s_MusicProfiling",
+  PROFILE_GRAPHSCALE = "profile_graphScale",
+  R_SHADERSDONTFLUSH = "r_shadersdontflush",
+  E_PARTICLES_NORMAL_UPDATE_DIST = "e_particles_normal_update_dist",
+  AI_RADIUSFORAUTOFORBIDDEN = "ai_RadiusForAutoForbidden",
+  E_COVERAGEBUFFERAABBEXPAND = "e_CoverageBufferAABBExpand",
+  SV_LANONLY = "sv_lanonly",
+  NAME_TAG_FRIENDLY_SHOW = "name_tag_friendly_show",
+  S_LOADNONBLOCKING = "s_LoadNonBlocking",
+  S_SPAMFILTERTIMEOUT = "s_SpamFilterTimeout",
+  E_PARTICLES_DEBUG = "e_particles_debug",
+  E_TERRAIN_TEXTURE_SYNC_LOAD = "e_terrain_texture_sync_load",
+  E_OBJ_TREE_MAX_NODE_SIZE = "e_obj_tree_max_node_size",
+  HS_DEBUGDRAW = "hs_debugdraw",
+  R_TERRAINSPECULAR_ACCURATEFRESNEL = "r_TerrainSpecular_AccurateFresnel",
+  NAME_TAG_EXPEDITIONFAMILY = "name_tag_expeditionfamily",
+  E_DEFERRED_CELL_LOADER_LOG = "e_deferred_cell_loader_log",
+  G_DEBUG_PSYCHOKINESIS = "g_debug_psychokinesis",
+  R_HDRBLUESHIFT = "r_HDRBlueShift",
+  NET_VOICE_PROXIMITY = "net_voice_proximity",
+  R_DEFERREDSHADINGLIGHTLODRATIO = "r_DeferredShadingLightLodRatio",
+  CAMERA_FOV_ON_16BY9_SCREEN = "camera_fov_on_16by9_screen",
+  CA_LOGDRAWNACTORS = "ca_logDrawnActors",
+  E_PARTICLES_STATS = "e_particles_stats",
+  S_MIDIVOLUME = "s_MIDIVolume",
+  RAISE_EXCEPTION = "raise_exception",
+  E_DISSOLVE_TRANSITION_TIME = "e_dissolve_transition_time",
+  E_DECALS_UPDATE_SILHOUETTE_SCOPE = "e_decals_update_silhouette_scope",
+  OPTION_EXPERIMENTAL_OPT = "option_experimental_opt",
+  NAME_TAG_BOTTOM_MARGIN_ON_BGMODE = "name_tag_bottom_margin_on_bgmode",
+  E_STATOBJTESTOBB = "e_StatObjTestOBB",
+  E_WATER_VOLUMES = "e_water_volumes",
+  R_TEXLOGNONSTREAM = "r_TexLogNonStream",
+  CLOTH_MAX_SAFE_STEP = "cloth_max_safe_step",
+  FR_SPEED_SCALE = "fr_speed_scale",
+  S_FORMATSAMPLERATE = "s_FormatSampleRate",
+  P_TICK_BREAKABLE = "p_tick_breakable",
+  R_SHADOWSADAPTIONSIZE = "r_ShadowsAdaptionSize",
+  E_STATOBJ_STATS = "e_statobj_stats",
+  E_TERRAIN_OCCLUSION_CULLING_STEP_SIZE_DELTA =
+  "e_terrain_occlusion_culling_step_size_delta",
+  BOT_ZONE_ID = "bot_zone_id",
+  AI_ENABLEWARNINGSERRORS = "ai_EnableWarningsErrors",
+  AI_DEBUGDRAWCOLLISIONEVENTS = "ai_DebugDrawCollisionEvents",
+  R_TEXTURESFILTERINGQUALITY = "r_TexturesFilteringQuality",
+  R_WATERREFLECTIONSMGPU = "r_WaterReflectionsMGPU",
+  G_HIDE_TUTORIAL = "g_hide_tutorial",
+  P_LATTICE_MAX_ITERS = "p_lattice_max_iters",
+  E_PROC_VEGETATION = "e_proc_vegetation",
+  SYS_BUDGET_VIDEO_MEMORY = "sys_budget_video_memory",
+  CAMERA_SMOOTH_FADEOUT = "camera_smooth_fadeout",
+  CLOTH_AIR_RESISTANCE = "cloth_air_resistance",
+  G_IGNORE_RAID_INVITE = "g_ignore_raid_invite",
+  CR_MOUSEROTATESPEEDMAX = "cr_mouseRotateSpeedMax",
+  I_LIGHTEFFECTS = "i_lighteffects",
+  MFX_PFX_MAXDIST = "mfx_pfx_maxDist",
+  SYS_PHYSICS_CPU = "sys_physics_CPU",
+  CA_DEBUGFOOTPLANTS = "ca_DebugFootPlants",
+  R_NVSSAO_FOGDISTANCE = "r_NVSSAO_FogDistance",
+  DATA_MINING_FILE_OPEN = "data_mining_file_open",
+  AI_DEBUGDRAWHIDESPOTRANGE = "ai_DebugDrawHidespotRange",
+  R_TEXBINDMODE = "r_TexBindMode",
+  S_SOUNDMOODS = "s_SoundMoods",
+  R_TEXTURECOMPRESSOR = "r_TextureCompressor",
+  AC_ANIMERRORMAXANGLE = "ac_animErrorMaxAngle",
+  E_MIXED_NORMALS_REPORT = "e_mixed_normals_report",
+  S_GAMEDIALOGVOLUME = "s_GameDialogVolume",
+  AI_DEBUGDRAWLIGHTLEVEL = "ai_DebugDrawLightLevel",
+  CURSOR_SIZE = "cursor_size",
+  R_EYEADAPTATIONBASE = "r_EyeAdaptationBase",
+  R_COLORGRADINGDOF = "r_ColorGradingDof",
+  E_DECALS_DEFFERED_DYNAMIC = "e_decals_deffered_dynamic",
+  AI_ENABLEUNBENDING = "ai_EnableUnbending",
+  R_CLOUDSUPDATEALWAYS = "r_CloudsUpdateAlways",
+  NEXT_R_MULTITHREADED = "next_r_MultiThreaded",
+  R_SHADERSREMOTECOMPILER = "r_ShadersRemoteCompiler",
+  R_DEFERREDDECALSDEBUG = "r_deferredDecalsDebug",
+  R_TEXTURESSTREAMINGDEBUGMINSIZE = "r_TexturesStreamingDebugMinSize",
+  R_TEXTURESSTREAMINGMINMIPMAP = "r_texturesstreamingMinMipmap",
+  S_MEMORYPOOLSOUNDSECONDARYRATIO = "s_MemoryPoolSoundSecondaryRatio",
+  S_NOFOCUSVOLUME = "s_NoFocusVolume",
+  R_TERRAINSPECULAR_ROUGHNESS = "r_TerrainSpecular_Roughness",
+  R_SILHOUETTEQUALITY = "r_silhouetteQuality",
+  CL_GS_NICK = "cl_gs_nick",
+  NAME_TAG_FACTION_SELECTION = "name_tag_faction_selection",
+  I_MOUSE_SMOOTH = "i_mouse_smooth",
+  E_CUSTOM_MAX_MODEL_HIGH = "e_custom_max_model_high",
+  R_SHADERSLAZYUNLOAD = "r_ShadersLazyUnload",
+  S_FINDLOSTEVENTS = "s_FindLostEvents",
+  CA_DRAWCGA = "ca_DrawCGA",
+  CA_DRAWCHR = "ca_DrawCHR",
+  V_DEBUGSOUNDS = "v_debugSounds",
+  CA_DBAUNLOADREMOVETIME = "ca_DBAUnloadRemoveTime",
+  FIRE_ACTION_ON_BUTTON_DOWN = "fire_action_on_button_down",
+  R_NVSSAO_FOGENABLE = "r_NVSSAO_FogEnable",
+  R_SSAO_DEPTH_RANGE = "r_SSAO_depth_range",
+  ES_MAXIMPULSEADJMASS = "es_MaxImpulseAdjMass",
+  AI_EXTRAVEHICLEAVOIDANCERADIUSBIG = "ai_ExtraVehicleAvoidanceRadiusBig",
+  AI_INTERESTSCALINGEYECATCHING = "ai_InterestScalingEyeCatching",
+  CA_DRAWATTACHMENTRADIUS = "ca_DrawAttachmentRadius",
+  P_MAX_LCPCG_CONTACTS = "p_max_LCPCG_contacts",
+  NAME_TAG_FIXED_SIZE_MODE = "name_tag_fixed_size_mode",
+  E_STAT_OBJ_MERGE_MAX_TRIS_PER_DRAWCALL =
+  "e_stat_obj_merge_max_tris_per_drawcall",
+  R_SHADERSUSEINSTANCELOOKUPTABLE = "r_ShadersUseInstanceLookUpTable",
+  R_NIGHTVISIONBRIGHTLEVEL = "r_NightVisionBrightLevel",
+  R_NVSSAO = "r_NVSSAO",
+  ES_NOT_SEEN_TIMEOUT = "es_not_seen_timeout",
+  UI_DRAW_QUEST_TYPE = "ui_draw_quest_type",
+  CA_GET_OP_FROM_KEY = "ca_get_op_from_key",
+  AI_STATSTARGET = "ai_StatsTarget",
+  OPTION_USE_SHADOW = "option_use_shadow",
+  R_RAINAMOUNT = "r_RainAmount",
+  E_ON_DEMAND_PHYSICS = "e_on_demand_physics",
+  AI_DYNAMICWAYPOINTUPDATECOUNT = "ai_DynamicWaypointUpdateCount",
+  R_POSTAAEDGEFILTER = "r_PostAAEdgeFilter",
+  OPTION_TEXTURE_BG = "option_texture_bg",
+  CA_LODSKIPTASKRATIO = "ca_LodSkipTaskRatio",
+  E_GIOFFSET = "e_GIOffset",
+  MFX_RAISEDSOUNDIMPACTTHRESH = "mfx_RaisedSoundImpactThresh",
+  E_CUSTOM_MAX_MODEL = "e_custom_max_model",
+  UM_DEBUG = "um_debug",
+  CA_USEBONELOD = "ca_useBoneLOD",
+  E_SCREENSHOT_MAP_SIZE_X = "e_screenshot_map_size_x",
+  E_SCREENSHOT_MAP_SIZE_Y = "e_screenshot_map_size_y",
+  P_MIN_SEPARATION_SPEED = "p_min_separation_speed",
+  P_MAX_ENTITY_CELLS = "p_max_entity_cells",
+  EFFECT_MAX_FX = "effect_max_fx",
+  S_OBSTRUCTIONACCURACY = "s_ObstructionAccuracy",
+  R_POSTPROCESSEFFECTS = "r_PostProcessEffects",
+  AI_DEBUGDRAWSOUNDEVENTS = "ai_DebugDrawSoundEvents",
+  G_USE_PHYSICALIZE_RIGID = "g_use_physicalize_rigid",
+  S_HDRLOUDNESSMAXFALLOFF = "s_HDRLoudnessMaxFalloff",
+  S_OFFSCREENENABLE = "s_OffscreenEnable",
+  HR_FOVTIME = "hr_fovTime",
+  R_SSAO_CONTRAST = "r_SSAO_contrast",
+  SWIM_JUMP_SPEED = "swim_jump_speed",
+  E_GSM_EXTRA_RANGE_SUN_UPDATE_TIME = "e_gsm_extra_range_sun_update_time",
+  E_GSM_EXTRA_RANGE_SUN_UPDATE_TYPE = "e_gsm_extra_range_sun_update_type",
+  R_POSTAA = "r_PostAA",
+  NET_INPUT_TRACE = "net_input_trace",
+  UI_DISABLE_CAPTION = "ui_disable_caption",
+  OPTION_USE_FOOTSTEP = "option_use_footstep",
+  R_USECOMPACTHDRFORMAT = "r_UseCompactHDRFormat",
+  LOCALE_SETTING = "locale_setting",
+  OVER_HEAD_MARKER_HEIGHT = "over_head_marker_height",
+  UM_SHIP_SPEED_RATE_SMOOTH_TIME = "um_ship_speed_rate_smooth_time",
+  E_CHAR_DEBUG_DRAW = "e_char_debug_draw",
+  R_DISPLAYINFOGRAPH = "r_DisplayInfoGraph",
+  S_X2CULLINGDISTANCERATIO = "s_X2CullingDistanceRatio",
+  FG_NODEBUGTEXT = "fg_noDebugText",
+  DOODAD_CRATER_DEBUG = "doodad_crater_debug",
+  R_TEXTURESSTREAMINGMAXREQUESTEDMB = "r_TexturesStreamingMaxRequestedMB",
+  CAMERA_USE_FX_CAM_FOV = "camera_use_fx_cam_fov",
+  E_CBUFFER_LAZY_TEST = "e_cbuffer_lazy_test",
+  E_RECURSION = "e_recursion",
+  UM_PICKING_SPHERE_MAX_SCALE_DIST = "um_picking_sphere_max_scale_dist",
+  OPTION_CUSTOM_ADDON_UI = "option_custom_addon_ui",
+  CAN_SURVEY_IN_FUTURE = "can_survey_in_future",
+  AG_LOG = "ag_log",
+  R_TEXTURESSTREAMINGMAXREQUESTEDJOBS = "r_TexturesStreamingMaxRequestedJobs",
+  AI_DRAWPATHADJUSTMENT = "ai_DrawPathAdjustment",
+  BOT_RESTART_AFTER_CRASH = "bot_restart_after_crash",
+  SV_REQUIREINPUTDEVICE = "sv_requireinputdevice",
+  R_USESILHOUETTE = "r_usesilhouette",
+  SV_MAXSPECTATORS = "sv_maxspectators",
+  R_DEFERREDSHADINGTILEDRATIO = "r_DeferredShadingTiledRatio",
+  AI_DEBUGDRAWCROWDCONTROL = "ai_DebugDrawCrowdControl",
+  P_ACCURACY_LCPCG = "p_accuracy_LCPCG",
+  E_MATERIAL_NO_LOAD = "e_material_no_load",
+  E_PARTICLES_MIN_DRAW_PIXELS = "e_particles_min_draw_pixels",
+  I_SOUNDEFFECTS = "i_soundeffects",
+  AI_DRAWAREAS = "ai_DrawAreas",
+  P_MAX_APPROX_CAPS = "p_max_approx_caps",
+  R_CONTRAST = "r_Contrast",
+  NET_ACTOR_CONTROLLER_INTERPOLATE_METHOD =
+  "net_actor_controller_interpolate_method",
+  R_EYEADAPTATIONLOCAL = "r_EyeAdaptationLocal",
+  Q_SHADERGLASS = "q_ShaderGlass",
+  AI_DRAWGOALS = "ai_DrawGoals",
+  AI_DRAWGROUP = "ai_DrawGroup",
+  AI_DRAWTRAJECTORY = "ai_DrawTrajectory",
+  CA_USEALLJOINTS = "ca_UseAllJoints",
+  Q_SHADERFX = "q_ShaderFX",
+  R_EYEADAPTATIONSPEED = "r_EyeAdaptationSpeed",
+  Q_SHADERMETAL = "q_ShaderMetal",
+  R_HDRVIGNETTING = "r_HDRVignetting",
+  R_TEXMAXANISOTROPY = "r_TexMaxAnisotropy",
+  S_MAXEVENTCOUNT = "s_MaxEventCount",
+  AI_DRAWRADAR = "ai_DrawRadar",
+  R_SHADOWSDEFERREDMODE = "r_ShadowsDeferredMode",
+  NAME_TAG_FRIENDLY_MATE_SHOW = "name_tag_friendly_mate_show",
+  AI_DRAWSTATS = "ai_DrawStats",
+  AC_MCMFILTER = "ac_MCMFilter",
+  Q_SHADERWATER = "q_ShaderWater",
+  AC_TEMPLATEMCMS = "ac_templateMCMs",
+  UM_PICKING_SPHERE_MAX_SCALE = "um_picking_sphere_max_scale",
+  OPTION_ITEM_MOUNT_ONLY_MY_PET = "option_item_mount_only_my_pet",
+  R_DEBUGLIGHTVOLUMES = "r_DebugLightVolumes",
+  BUDGET = "budget",
+  R_TEXTURESSTREAMPOOLIDEALRATIO = "r_TexturesStreamPoolIdealRatio",
+  R_TEXNOLOAD = "r_TexNoLoad",
+  LOGIN_CAMERA_ZOOM_DELTA_RATE = "login_camera_zoom_delta_rate",
+  USE_AUTO_REGIST_DISTRICT = "use_auto_regist_district",
+  E_STREAMPREDICTIONMINREPORTDISTANCE = "e_StreamPredictionMinReportDistance",
+  CA_SAVEAABB = "ca_SaveAABB",
+  NET_RTT_CONVERGENCE_FACTOR = "net_rtt_convergence_factor",
+  AI_DEBUGDRAWGRENADEEVENTS = "ai_DebugDrawGrenadeEvents",
+  R_WATERCAUSTICSDEFERRED = "r_WaterCausticsDeferred",
+  CD_PASS_GARDEN = "cd_pass_garden",
+  CA_AMC = "ca_AMC",
+  E_VOXTERRELAXATION = "e_VoxTerRelaxation",
+  P_EVENT_COUNT_DEBUG = "p_event_count_debug",
+  R_STARS_ROTATE = "r_stars_rotate",
+  SHIP_MOVEMENT_CONTROLLER_DEBUG = "ship_movement_controller_debug",
+  AI_UNBENDINGTHRESHOLD = "ai_UnbendingThreshold",
+  P_RAY_ON_GRID_MAX_SIZE = "p_ray_on_grid_max_size",
+  NAME_TAG_NPC_SHOW = "name_tag_npc_show",
+  E_PARTICLES_LEAN_LIFETIME_TEST = "e_particles_lean_lifetime_test",
+  E_SKETCH_MODE = "e_sketch_mode",
+  S_DRAWOBSTRUCTION = "s_DrawObstruction",
+  CL_BOB = "cl_bob",
+  CL_FOV = "cl_fov",
+  R_TEXTURE_DB_STREAMING = "r_texture_db_streaming",
+  S_MUSICCATEGORY = "s_MusicCategory",
+  R_FOGRAMPSCALE = "r_FogRampScale",
+  R_TEXLOG = "r_TexLog",
+  AI_BEAUTIFYPATH = "ai_BeautifyPath",
+  E_PARTICLES_LANDMARK = "e_particles_landmark",
+  CAMERA_INTERACTION_NPC_FADEOUT_TIME = "camera_interaction_npc_fadeout_time",
+  SYS_MAX_STEP = "sys_max_step",
+  R_NVSSAO_USENORMALS = "r_NVSSAO_UseNormals",
+  R_CORONACOLORSCALE = "r_CoronaColorScale",
+  R_ZFIGHTINGDEPTHSCALE = "r_ZFightingDepthScale",
+  CA_ATTACHMENTCULLINGRATION = "ca_AttachmentCullingRation",
+  G_UNIT_COLLIDE_FRONT_BOUND_RATE = "g_unit_collide_front_bound_rate",
+  TAB_TARGETING_DEBUG = "tab_targeting_debug",
+  LOG_FILETHREAD = "log_FileThread",
+  CON_SHOWONLOAD = "con_showonload",
+  R_POSTPROCESSEFFECTSRESET = "r_PostProcessEffectsReset",
+  AC_MCMHORNPC = "ac_MCMHorNPC",
+  R_POINTSLIGHTSHAFTS = "r_pointslightshafts",
+  R_PROFILESHADERS = "r_ProfileShaders",
+  E_DISSOLVEDISTFACTOR = "e_DissolveDistFactor",
+  P_MAX_PLAYER_VELOCITY = "p_max_player_velocity",
+  CL_CHECK_RESURRECTABLE_POS = "cl_check_resurrectable_pos",
+  PARTY_DEFAULT_ACCEPT = "party_default_accept",
+  R_DYNTEXMAXSIZE = "r_DynTexMaxSize",
+  E_LODS = "e_lods",
+  E_WIND = "e_wind",
+  R_USEPOM = "r_UsePOM",
+  R_MSAA_QUALITY = "r_MSAA_quality",
+  SKILLMOVING = "skillMoving",
+  E_ALLOW_CVARS_SERIALIZATION = "e_allow_cvars_serialization",
+  S_FILECACHEMANAGERENABLE = "s_FileCacheManagerEnable",
+  MAX_INTERACTION_DOODAD_DISTANCE = "max_interaction_doodad_distance",
+  OPTION_EFFECT = "option_effect",
+  E_FLOCKS_HUNT = "e_flocks_hunt",
+  SWIM_BUOY_SPEED = "swim_buoy_speed",
+  R_TEXSKYQUALITY = "r_TexSkyQuality",
+  CE_DEBUG = "ce_debug",
+  SYS_MAX_FPS = "sys_max_fps",
+  TAB_TARGETING_HISTORY_MAX = "tab_targeting_history_max",
+  R_USEHWSKINNING = "r_UseHWSkinning",
+  AC_DEBUGENTITYPARAMS = "ac_debugEntityParams",
+  CAMERA_BUILDING_SOMETHING_FADEOUT_VEL = "camera_building_something_fadeout_vel",
+  CA_SHAREMERGEDMESH = "ca_ShareMergedMesh",
+  CLOTH_STIFFNESS_NORM = "cloth_stiffness_norm",
+  CLOTH_STIFFNESS_TANG = "cloth_stiffness_tang",
+  CLOTH_FRICTION = "cloth_friction",
+  KEYBOARD_MOVEMENT = "keyboard_movement",
+  R_SCATTERINGMAXDIST = "r_ScatteringMaxDist",
+  AI_CLOAKMAXDIST = "ai_CloakMaxDist",
+  CAQ_DEBUG = "caq_debug",
+  PROFILE_ALLTHREADS = "profile_allthreads",
+  E_SCREENSHOT_MAP_CENTER_X = "e_screenshot_map_center_x",
+  E_SCREENSHOT_MAP_CENTER_Y = "e_screenshot_map_center_y",
+  CAMERA_TARGET_GROUND_ALIGN = "camera_target_ground_align",
+  R_SHADOWGENGS = "r_ShadowGenGS",
+  R_FULLSCREEN = "r_Fullscreen",
+  CA_FACEBASELOD = "ca_FaceBaseLOD",
+  LOOT_DEBUG_STATE = "loot_debug_state",
+  MAP_SHOW_TRANSFER_PATH = "map_show_transfer_path",
+  SYS_WARNINGS = "sys_warnings",
+  CA_FOOTANCHORING = "ca_FootAnchoring",
+  CA_DOANIMTASKPERFRAME = "ca_DoAnimTaskPerFrame",
+  R_SHADOWSBIAS = "r_ShadowsBias",
+  CAMERA_ROT_MAX_INERTIA = "camera_rot_max_inertia",
+  G_FAKE = "g_fake",
+  QUEST_CAMERA_DEBUG = "quest_camera_debug",
+  CA_JOINTVELOCITYMAX = "ca_JointVelocityMax",
+  SWIM_DOWN_SPEED_MUL = "swim_down_speed_mul",
+  CB_DIST_TEST = "cb_dist_test",
+  CA_USEATTEFFECTRELATIVEOFFSET = "ca_useAttEffectRelativeOffset",
+  E_PROFILE_LEVEL_LOADING = "e_profile_level_loading",
+  SOUND_SOURCE_COMBAT_SOUND_VOLUME = "sound_source_combat_sound_volume",
+  MOVEMENT_VERIFY_DETAILED_WARP_DIST_FAR =
+  "movement_verify_detailed_warp_dist_far",
+  DDCMS_TIME_OFFSET = "ddcms_time_offset",
+  ATT_SCALE_TEST_WORN = "att_scale_test_worn",
+  OVER_HEAD_MARKER_OFFSET = "over_head_marker_offset",
+  E_GSM_FOCUS_OFFSET_VAL = "e_gsm_focus_offset_val",
+  R_SHADERSDELAYFLUSH = "r_ShadersDelayFlush",
+  CL_WEB_UPLOAD_RESERVED_SCREENSHOT_PATH =
+  "cl_web_upload_reserved_screenshot_path",
+  AI_ALLTIME = "ai_AllTime",
+  CA_USELINKVERTICES = "ca_UseLinkVertices",
+  AI_INTERESTSWITCHBOOST = "ai_InterestSwitchBoost",
+  R_RAINMAXVIEWDIST_DEFERRED = "r_RainMaxViewDist_Deferred",
+  R_GEOMINSTANCING = "r_GeomInstancing",
+  R_TEXBUMPRESOLUTION = "r_TexBumpResolution",
+  R_NVSSAO_BLURSHARPNESS = "r_NVSSAO_BlurSharpness",
+  E_TERRAIN = "e_terrain",
+  E_STREAMPREDICTIONTEXELDENSITY = "e_StreamPredictionTexelDensity",
+  P_APPROX_CAPS_LEN = "p_approx_caps_len",
+  R_PARTICLEINDHEAPSIZE = "r_ParticleIndHeapSize",
+  D3D9_VBPOOLS = "d3d9_VBPools",
+  QUEST_GUIDE_DECAL_SIZE = "quest_guide_decal_size",
+  DOODAD_SMART_POSITIONING = "doodad_smart_positioning",
+  NET_SHIP_CONTROLLER_SMOOTH_TIME = "net_ship_controller_smooth_time",
+  R_ENVTEXRESOLUTION = "r_EnvTexResolution",
+  V_SPRINTSPEED = "v_sprintSpeed",
+  NAME_TAG_QUEST_MARK_SMOOTH_MARGIN = "name_tag_quest_mark_smooth_margin",
+  CD_STREAMING = "cd_streaming",
+  E_PARTICLES_DYNAMIC_PARTICLE_LIFE = "e_particles_dynamic_particle_life",
+  NET_PHYS_LAGSMOOTH = "net_phys_lagsmooth",
+  NAME_TAG_PARTY_SHOW = "name_tag_party_show",
+  CA_LODDISTMAX = "ca_LodDistMax",
+  CA_DEBUGMODELCACHE = "ca_DebugModelCache",
+  AI_DEBUGDRAWREINFORCEMENTS = "ai_DebugDrawReinforcements",
+  LOG_DEBUGGERVERBOSITY = "log_DebuggerVerbosity",
+  ES_SORTUPDATESBYCLASS = "es_sortupdatesbyclass",
+  E_DECALS_SCISSOR = "e_decals_scissor",
+  ES_HELPERS = "es_helpers",
+  CA_XL13RANDOMCOUNT = "ca_xl13RandomCount",
+  S_STREAMBUFFERSIZE = "s_StreamBufferSize",
+  R_NVSSAO_BIAS = "r_NVSSAO_Bias",
+  S_FORMATRESAMPLER = "s_FormatResampler",
+  ES_DEBRISLIFETIMESCALE = "es_DebrisLifetimeScale",
+  E_TIME_SMOOTHING = "e_time_smoothing",
+  CL_SHALLOWWATERSPEEDMULAI = "cl_shallowWaterSpeedMulAI",
+  P_GEB_MAX_CELLS = "p_GEB_max_cells",
+  E_SHADOWS_UPDATE_VIEW_DIST_RATIO = "e_shadows_update_view_dist_ratio",
+  SYS_BUDGET_DP_TERRAIN_DETAIL = "sys_budget_dp_terrain_detail",
+  OCEANWINDDIRECTION = "OceanWindDirection",
+  AI_AMBIENTFIREUPDATEINTERVAL = "ai_AmbientFireUpdateInterval",
+  R_REFLECTIONSOFFSET = "r_ReflectionsOffset",
+  E_MATERIAL_REFCOUNT_CHECK_LOGGING = "e_material_refcount_check_logging",
+  DOODAD_SMART_POSITIONING_MAX_DIST = "doodad_smart_positioning_max_dist",
+  AI_PROTORODGRENADES = "ai_ProtoRODGrenades",
+  CA_IGNORECUTSCENEANIM = "ca_ignoreCutSceneAnim",
+  E_SKY_QUALITY = "e_sky_quality",
+  LOG_INCLUDETIME = "log_IncludeTime",
+  E_VIEWDISTRATIOPORTALS = "e_ViewDistRatioPortals",
+  CA_ALLOWFP16CHARACTERS = "ca_AllowFP16Characters",
+  S_REVERBDYNAMIC = "s_ReverbDynamic",
+  P_LIST_OBJECTS = "p_list_objects",
+  R_REFRACTIONPARTIALRESOLVES = "r_RefractionPartialResolves",
+  P_DEBUG_EXPLOSIONS = "p_debug_explosions",
+  E_TERRAIN_OCCLUSION_CULLING_PRECISION = "e_terrain_occlusion_culling_precision",
+  DECORATION_SMART_POSITIONING = "decoration_smart_positioning",
+  E_SHADER_CONSTANT_METRICS = "e_shader_constant_metrics",
+  AC_MCMHOR = "ac_MCMHor",
+  AC_MCMVER = "ac_MCMVer",
+  SYS_AFFINITY = "sys_affinity",
+  E_CBUFFER_CLIP_PLANES_NUM = "e_cbuffer_clip_planes_num",
+  E_VOLOBJ_SHADOW_STRENGTH = "e_volobj_shadow_strength",
+  ACTION_DEBUG_STATE = "action_debug_state",
+  Q_RENDERER = "q_Renderer",
+  CAMERA_ZOOM_CATCH_UP_VELOCITY_POWER = "camera_zoom_catch_up_velocity_power",
+  SYS_BUDGET_TRIS_VEGETATION = "sys_budget_tris_vegetation",
+  ES_USEPHYSVISIBILITYCHECKS = "es_UsePhysVisibilityChecks",
+  AI_DRAWDISTANCELUT = "ai_DrawDistanceLUT",
+  ES_DEACTIVATEENTITY = "es_deactivateEntity",
+  E_DEBUG_DRAW_LOD_ERROR_NO_LOD_TRIS = "e_debug_draw_lod_error_no_lod_tris",
+  R_SHADOWPOOLMAXFRAMES = "r_ShadowPoolMaxFrames",
+  R_WIREFRAME = "r_wireframe",
+  MOVEMENT_VERIFY_MOVE_SPEED_CRITICAL_TOLERANCE =
+  "movement_verify_move_speed_critical_tolerance",
+  P_MAX_MC_MASS_RATIO = "p_max_MC_mass_ratio",
+  R_CULLGEOMETRYFORLIGHTS = "r_CullGeometryForLights",
+  E_VEGETATION_USE_LIST = "e_vegetation_use_list",
+  R_DEPTHOFFIELD = "r_DepthOfField",
+  E_VEGETATION_SPRITES_CAST_SHADOW = "e_vegetation_sprites_cast_shadow",
+  D3D9_VBPOOLSIZE = "d3d9_VBPoolSize",
+  OPTION_SHADOW_VIEW_DIST_RATIO = "option_shadow_view_dist_ratio",
+  G_GROUNDEFFECTSDEBUG = "g_groundeffectsdebug",
+  R_SHOWVIDEOMEMORYSTATS = "r_ShowVideoMemoryStats",
+  CAMERA_ROT_SPEED = "camera_rot_speed",
+  R_SHOWDYNTEXTUREFILTER = "r_ShowDynTextureFilter",
+  G_USE_CHAT_TIME_STAMP = "g_use_chat_time_stamp",
+  R_NODRAWNEAR = "r_NoDrawNear",
+  E_TERRAIN_NORMAL_MAP = "e_terrain_normal_map",
+  AI_EXTRAFORBIDDENRADIUSDURINGBEAUTIFICATION =
+  "ai_ExtraForbiddenRadiusDuringBeautification",
+  P_MAX_SUBSTEPS_LARGE_GROUP = "p_max_substeps_large_group",
+  R_NIGHTVISIONVIEWDIST = "r_NightVisionViewDist",
+  E_STREAMPREDICTIONDISTANCEFAR = "e_StreamPredictionDistanceFar",
+  LOCALE = "locale",
+  R_USEZPASS = "r_UseZPass",
+  CL_SPRINTSHAKE = "cl_sprintShake",
+  AIM_ASSISTTRIGGERENABLED = "aim_assistTriggerEnabled",
+  LOG_FILEVERBOSITY = "log_FileVerbosity",
+  R_SSDOAMBIENTAMOUNT = "r_ssdoAmbientAmount",
+  AI_DYNAMICVOLUMEUPDATETIME = "ai_DynamicVolumeUpdateTime",
+  CA_DRAWATTACHMENTS = "ca_DrawAttachments",
+  E_VEGETATION_BENDING = "e_vegetation_bending",
+  R_SHOWTANGENTS = "r_ShowTangents",
+  AI_UPDATEINTERVAL = "ai_UpdateInterval",
+  E_VOXEL_LODS_NUM = "e_voxel_lods_num",
+  ES_UPDATECOLLISION = "es_UpdateCollision",
+  SYS_CRASHTEST = "sys_crashtest",
+  R_WATERREFLECTIONSUSEMINOFFSET = "r_WaterReflectionsUseMinOffset",
+  E_VIEW_DIST_MIN = "e_view_dist_min",
+  AI_RECORDFILTER = "ai_RecordFilter",
+  E_TERRAIN_TEXTURE_STREAMING_DEBUG = "e_terrain_texture_streaming_debug",
+  AG_ITEM = "ag_item",
+  AI_DRAWGETENCLOSINGFAILURES = "ai_DrawGetEnclosingFailures",
+  BOT_FLY_MODE = "bot_fly_mode",
+  PROFILE_FILTER = "profile_filter",
+  HS_SHOW_HOUSING_AREA = "hs_show_housing_area",
+  CD_VIEW_DIST_RATIO = "cd_view_dist_ratio",
+  R_NVSSAO_BLURENABLE = "r_NVSSAO_BlurEnable",
+  CR_INVERT_X_AXIS = "cr_invert_x_axis",
+  MFX_DEBUGFOOTSTEP = "mfx_DebugFootStep",
+  CL_HEADBOB = "cl_headBob",
+  AI_CLOAKMINDIST = "ai_CloakMinDist",
+  NET_ENABLE_VOICE_CHAT = "net_enable_voice_chat",
+  R_STEREOSTRENGTH = "r_StereoStrength",
+  R_USEALPHABLEND = "r_UseAlphaBlend",
+  TAB_TARGETING_Z_LIMIT = "tab_targeting_z_limit",
+  R_SHOOTINGSTAR_LIFETIME = "r_shootingstar_lifetime",
+  CA_ANIMWARNINGLEVEL = "ca_AnimWarningLevel",
+  E_SKY_UPDATE_RATE = "e_sky_update_rate",
+  R_TEXMAXSIZE = "r_TexMaxSize",
+  G_RAGDOLL_MINE_TIME = "g_ragdoll_minE_time",
+  R_SHADOWSFORWARDPASS = "r_ShadowsForwardPass",
+  UI_LOCALIZED_TEXT_DEBUG = "ui_localized_text_debug",
+  R_RENDERMESHHASHGRIDUNITSIZE = "r_RenderMeshHashGridUnitSize",
+  CR_INVERT_Y_AXIS = "cr_invert_y_axis",
+  S_DOPPLERSCALE = "s_DopplerScale",
+  P_MIN_LCPCG_IMPROVEMENT = "p_min_LCPCG_improvement",
+  P_MAX_LCPCG_ITERS = "p_max_LCPCG_iters",
+  CA_PARAMETRICPOOLSIZE = "ca_ParametricPoolSize",
+  E_SHADOWS_UNIT_CUBE_CLIP = "e_shadows_unit_cube_clip",
+  G_SHOWIDLESTATS = "g_showIdleStats",
+  OPTION_TERRAIN_LOD = "option_terrain_lod",
+  S_OBSTRUCTIONUPDATE = "s_ObstructionUpdate",
+  G_IGNORE_EXPEDITION_INVITE = "g_ignore_expedition_invite",
+  R_TESTSPLITSCREEN = "r_testSplitScreen",
+  E_DECALS_NEIGHBOR_MAX_LIFE_TIME = "e_decals_neighbor_max_life_time",
+  ACTION_BAR_LOCK = "action_bar_lock",
+  ACTION_BAR_PAGE = "action_bar_page",
+  CON_DEBUG = "con_debug",
+  E_CBUFFER_TERRAIN = "e_cbuffer_terrain",
+  E_STATOBJBUFFERRENDERTASKS = "e_StatObjBufferRenderTasks",
+  KEYBOARD_ROTATE_SPEED = "keyboard_rotate_speed",
+  AI_RECORDER_BUFFER = "ai_Recorder_Buffer",
+  MFX_SERIALIZEFGEFFECTS = "mfx_SerializeFGEffects",
+  SYS_DEDICATED_SLEEP_TEST = "sys_dedicated_sleep_test",
+  R_SHOOTINGSTAR = "r_shootingstar",
+  AI_PROTORODAFFECTMOVE = "ai_ProtoRODAffectMove",
+  NAME_TAG_CUSTOM_GAUGE_OFFSET_NORMAL = "name_tag_custom_gauge_offset_normal",
+  E_PARTICLES_DECALS_FORCE_DEFERRED = "e_particles_decals_force_deferred",
+  R_NOPREPROCESS = "r_NoPreprocess",
+  PREFAB_CACHE_XML_GC = "prefab_cache_xml_gc",
+  AI_USEOBJECTPOSWITHEXACTPOS = "ai_UseObjectPosWithExactPos",
+  CA_GROUNDALIGNMENT = "ca_GroundAlignment",
+  R_STEREOFLIPEYES = "r_StereoFlipEyes",
+  R_DEPTHOFFIELDBOKEHQUALITY = "r_DepthOfFieldBokehQuality",
+  E_TERRAIN_OCCLUSION_CULLING_DEBUG = "e_terrain_occlusion_culling_debug",
+  NAME_TAG_QUEST_OFFSET = "name_tag_quest_offset",
+  SS_DEBUG_UI = "ss_debug_ui",
+  CL_PACKETRATE = "cl_packetRate",
+  CL_GS_PASSWORD = "cl_gs_password",
+  SYS_BUDGET_DP_TERRAIN = "sys_budget_dp_terrain",
+  E_CBUFFER_HW = "e_cbuffer_hw",
+  E_CBUFFER_LC = "e_cbuffer_lc",
+  NAME_TAG_QUEST_OPTION = "name_tag_quest_option",
+  SV_LEVELROTATION = "sv_levelrotation",
+  G_VISIBILITYTIMEOUTTIME = "g_VisibilityTimeoutTime",
+  S_MUSICSTREAMING = "s_MusicStreaming",
+  TAB_TARGETING_FAN_DIST = "tab_targeting_fan_dist",
+  EFFECT_FILTER_GROUP = "effect_filter_group",
+  G_IGNORE_PARTY_INVITE = "g_ignore_party_invite",
+  R_SPLITSCREENACTIVE = "r_SplitScreenActive",
+  E_VISAREA_TEST_MODE = "e_visarea_test_mode",
+  R_DEFERREDSHADINGSORTLIGHTS = "r_DeferredShadingSortLights",
+  CL_INVERTCONTROLLER = "cl_invertController",
+  RAGDOLL_HIT = "ragdoll_hit",
+  SCAN_LOG_LEVEL = "scan_log_level",
+  R_SHADOWSPCFILTERING = "r_ShadowsPCFiltering",
+  R_SHADERSSAVELIST = "r_ShadersSaveList",
+  V_DRAW_SUSPENSION = "v_draw_suspension",
+  R_VEGETATIONALPHATESTONLY = "r_VegetationAlphaTestOnly",
+  R_FXAA = "r_fxaa",
+  R_GLOW = "r_Glow",
+  R_MSAA = "r_MSAA",
+  R_RAIN = "r_Rain",
+  R_SSAO = "r_SSAO",
+  R_SSDO = "r_ssdo",
+  R_SSGI = "r_SSGI",
+  R_TXAA = "r_TXAA",
+  R_MESHPRECACHE = "r_MeshPrecache",
+  R_TEXSTAGINGGCTIME = "r_texStagingGCTime",
+  CL_SHALLOWWATERDEPTHHI = "cl_shallowWaterDepthHi",
+  CL_SHALLOWWATERDEPTHLO = "cl_shallowWaterDepthLo",
+  E_DEBUG_DRAW_FILTER = "e_debug_draw_filter",
+  UM_SHOW_AIM_POINT = "um_show_aim_point",
+  R_TEXTURE_ANISOTROPIC_LEVEL = "r_Texture_Anisotropic_Level",
+  DOODAD_IGNORE_CHECKING_AREA = "doodad_ignore_checking_area",
+  PL_ZEROGUPDOWN = "pl_zeroGUpDown",
+  S_FORMATTYPE = "s_FormatType",
+  S_REVERBECHODSP = "s_ReverbEchoDSP",
+  CL_HITBLUR = "cl_hitBlur",
+  R_ENVLCMUPDATEINTERVAL = "r_EnvLCMupdateInterval",
+  R_WATERREFLECTIONSMINVISIBLEPIXELSUPDATE =
+  "r_WaterReflectionsMinVisiblePixelsUpdate",
+  E_DECALS_OVERLAPPING = "e_decals_overlapping",
+  E_CGF_LOADING_PROFILE = "e_cgf_loading_profile",
+  DOODAD_SMART_POSITIONING_LOOP_COUNT = "doodad_smart_positioning_loop_count",
+  R_SHADOWBLURINESS = "r_ShadowBluriness",
+  CA_USEPOSTKINEMATIC = "ca_UsePostKinematic",
+  LUA_GC_PAUSE = "lua_gc_pause",
+  P_MAX_LCPCG_MICROITERS = "p_max_LCPCG_microiters",
+  S_MINREPEATSOUNDTIMEOUT = "s_MinRepeatSoundTimeout",
+  E_TERRAIN_LM_GEN_THRESHOLD = "e_terrain_lm_gen_threshold",
+  I_BUFFEREDKEYS = "i_bufferedkeys",
+  R_CUSTOMVISIONS = "r_CustomVisions",
+  UM_SHOW_ATTACHED_CHILD = "um_show_attached_child",
+  FR_XSPEED = "fr_xspeed",
+  P_LIMIT_SIMPLE_SOLVER_ENERGY = "p_limit_simple_solver_energy",
+  S_GAMEMUSICVOLUME = "s_GameMusicVolume",
+  CAPTURE_MISC_RENDER_BUFFERS = "capture_misc_render_buffers",
+  S_MAXCHANNELS = "s_MaxChannels",
+  CL_WEB_SESSION_KEY = "cl_web_session_key",
+  S_OBSTRUCTIONVISAREA = "s_ObstructionVisArea",
+  SV_PASSWORD = "sv_password",
+  MOVEMENT_LOG = "movement_log",
+  HS_IGNORE_HOUSING_AREA = "hs_ignore_housing_area",
+  SV_MAP = "sv_map",
+  SOUND_SOURCE_SKILL_SOUND_VOLUME = "sound_source_skill_sound_volume",
+  SYS_AI = "sys_AI",
+  E_CHARACTER_NO_MERGE_RENDER_CHUNKS = "e_character_no_merge_render_chunks",
+  CA_THREAD0AFFINITY = "ca_thread0Affinity",
+  SMART_GROUND_TARGETING = "smart_ground_targeting",
+  SLOT_COOLDOWN_VISIBLE = "slot_cooldown_visible",
+  E_CACHENEARESTCUBEPICKING = "e_CacheNearestCubePicking",
+  G_IGNORE_JURY_INVITE = "g_ignore_jury_invite",
+  AUTO_USE_ONLY_MY_PORTAL = "auto_use_only_my_portal",
+  CA_DEBUGADIKTARGETS = "ca_DebugADIKTargets",
+  R_MESHLOG = "r_meshlog",
+  R_CORONAS = "r_Coronas",
+  R_USEFURPASS = "r_usefurpass",
+  FR_YSPEED = "fr_yspeed",
+  R_DEPTHBITS = "r_DepthBits",
+  AG_FPANIMPOP = "ag_fpAnimPop",
+  S_COMPRESSEDDIALOG = "s_CompressedDialog",
+  AI_DEBUGDRAWOBSTRSPHERES = "ai_DebugDrawObstrSpheres",
+  CAMERA_FOV_ON_5BY4_SCREEN = "camera_fov_on_5by4_screen",
+  AG_PHYSERRORMAXOUTERRADIUS = "ag_physErrorMaxOuterRadius",
+  R_NVSSAO_AMBIENTLIGHTOCCLUSION_LOWQUALITY =
+  "r_NVSSAO_AmbientLightOcclusion_LowQuality",
+  NET_LANBROWSER = "net_lanbrowser",
+  E_WATER_WAVES_TESSELATION_AMOUNT = "e_water_waves_tesselation_amount",
+  OPTION_USE_NO_ZPASS = "option_use_no_zpass",
+  CAQ_FIST_RANDOMIDLE_INTERVAL = "caq_fist_randomidle_interval",
+  AI_SERVERDEBUGTARGET = "ai_serverDebugTarget",
+  S_PRIORITYTHRESHOLD = "s_PriorityThreshold",
+  FR_ZSPEED = "fr_zspeed",
+  NET_ENABLE_FAST_PING = "net_enable_fast_ping",
+  CLOTH_MASS_DECAY = "cloth_mass_decay",
+  R_MSAA_AMD_RESOLVESSUBRESOURCE_WORKAROUND =
+  "r_MSAA_amd_resolvessubresource_workaround",
+  S_X2CULLINGDISTANCE = "s_X2CullingDistance",
+  G_RAGDOLL_BLENDANIM = "g_ragdoll_BlendAnim",
+  R_CONDITIONALRENDERING = "r_ConditionalRendering",
+  OPTION_TEXTURE_CHARACTER = "option_texture_character",
+  LOGIN_FIRST_MOVIE = "login_first_movie",
+  AC_DISABLEFANCYTRANSITIONS = "ac_disableFancyTransitions",
+  CA_HIDEFACIALANIMWARNING = "ca_hideFacialAnimWarning",
+  R_TEXMINSIZE = "r_TexMinSize",
+  R_MEASUREOVERDRAWSCALE = "r_MeasureOverdrawScale",
+  ES_UPDATEAI = "es_UpdateAI",
+  R_NVDOF_BEFORETONEMAP = "r_NVDOF_BeforeToneMap",
+  EDITOR_SERVERADDR = "editor_serveraddr",
+  CAMERA_FOV_DIST_CONTROLL = "camera_fov_dist_controll",
+  EDITOR_SERVERPORT = "editor_serverport",
+  R_TEXPOSTPONELOADING = "r_TexPostponeLoading",
+  POSTURE_DEBUG = "posture_debug",
+  E_SHADOWS_ON_WATER = "e_shadows_on_water",
+  AC_DEBUGMOVEMENTCONTROLMETHODS = "ac_debugMovementControlMethods",
+  MOVEMENT_VERIFY_DETAILED_WARP_DIST_TOO_FAR =
+  "movement_verify_detailed_warp_dist_too_far",
+  E_VOXTERTEXBUILDONCPU = "e_VoxTerTexBuildOnCPU",
+  CL_DEBUG_SKILL_MSG = "cl_debug_skill_msg",
+  AI_ALLOWACCURACYINCREASE = "ai_AllowAccuracyIncrease",
+  G_DEBUGNETPLAYERINPUT = "g_debugNetPlayerInput",
+  S_OBSTRUCTIONMAXRADIUS = "s_ObstructionMaxRadius",
+  E_VEGETATION_DISABLE_DISTANT_BENDING = "e_vegetation_disable_distant_bending",
+  R_COLORGRADINGCHARTS = "r_ColorGradingCharts",
+  UI_DRAW_NPC_TYPE = "ui_draw_npc_type",
+  G_ACTOR_STANCE_USE_QUEUE = "g_actor_stance_use_queue",
+  SKILL_SYNERGY_INFO_SHOW_TOOLTIP = "skill_synergy_info_show_tooltip",
+  CA_FULLANIMSTATISTICS = "ca_fullAnimStatistics",
+  FR_TURN_SCALE = "fr_turn_scale",
+  P_USE_UNPROJ_VEL = "p_use_unproj_vel",
+  E_SHADOWS_CONST_BIAS = "e_shadows_const_bias",
+  R_SHADERSASYNCACTIVATION = "r_ShadersAsyncActivation",
+  CU_STREAM_EQUIP_CHANGE = "cu_stream_equip_change",
+  CA_DOPRECACHE = "ca_DoPrecache",
+  S_REVERBDEBUGDRAW = "s_ReverbDebugDraw",
+  SYS_SLEEP_TEST = "sys_sleep_test",
+  E_RECURSION_OCCLUSION_CULLING = "e_recursion_occlusion_culling",
+  STIRRUP_ALIGN_ROT = "stirrup_align_rot",
+  E_WATER_OCEAN_BOTTOM = "e_water_ocean_bottom",
+  E_DEBUG_LIGHTS = "e_debug_lights",
+  R_PROFILETERRAINDETAIL = "r_profileTerrainDetail",
+  C_SHAKEMULT = "c_shakeMult",
+  AC_FORCESIMPLEMOVEMENT = "ac_forceSimpleMovement",
+  EFFECT_MAX_GROUPS = "effect_max_groups",
+  R_SSDOAMBIENTPOW = "r_ssdoAmbientPow",
+  R_NIGHTVISIONAMBIENTMUL = "r_NightVisionAmbientMul",
+  R_SHADERSINTERFACEVERSION = "r_ShadersInterfaceVersion",
+  CL_FROZENSOUNDDELTA = "cl_frozenSoundDelta",
+  OPTION_NAME_TAG_MODE = "option_name_tag_mode",
+  R_TEXTURE_PRECACHE_LIMIT = "r_texture_precache_limit",
+  X_INT1 = "x_int1",
+  X_INT2 = "x_int2",
+  X_INT3 = "x_int3",
+  ES_ONDEMANDPHYSICS = "es_OnDemandPhysics",
+  CA_UNLOADANIMTIME = "ca_UnloadAnimTime",
+  SYS_MEMORY_CLEANUP = "sys_memory_cleanup",
+  R_OCEANMAXSPLASHES = "r_OceanMaxSplashes",
+  E_UNDER_WEAR_DEBUG = "e_under_wear_debug",
+  E_VOXEL_AO_RADIUS = "e_voxel_ao_radius",
+  E_OBJ_FAST_REGISTER = "e_obj_fast_register",
+  E_GSM_DEPTH_BOUNDS_DEBUG = "e_gsm_depth_bounds_debug",
+  E_STREAMCGFGRIDUPDATEDISTANCE = "e_StreamCgfGridUpdateDistance",
+  CL_CHECK_TELEPORT_TO_UNIT_DEBUG = "cl_check_teleport_to_unit_debug",
+  R_HDRBRIGHTLEVEL = "r_HDRBrightLevel",
+  R_EYEADAPTATIONFACTOR = "r_EyeAdaptationFactor",
+  HIT_ASSISTMULTIPLAYERENABLED = "hit_assistMultiplayerEnabled",
+  E_VEGETATION_CREATE_COLLISION_ONLY = "e_vegetation_create_collision_only",
+  HR_FOVAMT = "hr_fovAmt",
+  EQUIP_REQUIREMENTS_NON_CHECK = "equip_requirements_non_check",
+  MATE_Y_OFFSET = "mate_y_offset",
+  NAME_TAG_DOWN_SCALE_LIMIT = "name_tag_down_scale_limit",
+  ES_DRAWAREAGRID = "es_DrawAreaGrid",
+  CL_TGWINDEX = "cl_tgwindex",
+  R_BRIGHTNESS = "r_Brightness",
+  R_TEXRESOLUTION_CONDITIONAL = "r_TexResolution_Conditional",
+  R_SHADOWSORTHOGONAL = "r_ShadowsOrthogonal",
+  R_HDRTEXFORMAT = "r_HDRTexFormat",
+  PROFILE_GRAPH = "profile_graph",
+  E_PARTICLES_LOD_ONOFF = "e_particles_lod_onoff",
+  CA_VALIDATE = "ca_Validate",
+  SYS_FLUSH_SYSTEM_FILE_CACHE = "sys_flush_system_file_cache",
+  UI_STATS = "ui_stats",
+  DRAW_TORNADO_AREA = "draw_tornado_area",
+  E_TERRAIN_BBOXES = "e_terrain_bboxes",
+  R_PROFILESHADERSSMOOTH = "r_ProfileShadersSmooth",
+  E_DEBUG_DRAW_LOD_ERROR_MIN_REDUCE_RATIO =
+  "e_debug_draw_lod_error_min_reduce_ratio",
+  AI_SOUNDPERCEPTION = "ai_SoundPerception",
+  G_QUICKGAME_PING1_LEVEL = "g_quickGame_ping1_level",
+  DS_WARNONMISSINGLOC = "ds_WarnOnMissingLoc",
+  SYS_BUDGET_DP_CHARACTER = "sys_budget_dp_character",
+  CA_USEJOINTMASKING = "ca_UseJointMasking",
+  R_SSAO_DOWNSCALE = "r_SSAO_downscale",
+  R_DEFERREDSHADINGSCISSOR = "r_DeferredShadingScissor",
+  NET_SHIP_NO_INTERPOLATE = "net_ship_no_interpolate",
+  CA_FACIALANIMATIONRADIUS = "ca_FacialAnimationRadius",
+  E_OCCLUSION_VOLUMES_VIEW_DIST_RATIO = "e_occlusion_volumes_view_dist_ratio",
+  TAB_TARGETING_DIR = "tab_targeting_dir",
+  R_IRRADIANCEVOLUMES = "r_IrradianceVolumes",
+  CR_SENSITIVITYMAX = "cr_sensitivityMax",
+  CR_SENSITIVITYMIN = "cr_sensitivityMin",
+  R_STEREOMODE = "r_StereoMode",
+  R_DETAILDISTANCE = "r_DetailDistance",
+  V_ALTITUDELIMITLOWEROFFSET = "v_altitudeLimitLowerOffset",
+  AIM_ASSISTCROSSHAIRSIZE = "aim_assistCrosshairSize",
+  MEMSTATSFILTER = "MemStatsFilter",
+  PROFILE_SMOOTH = "profile_smooth",
+  P_DO_STEP = "p_do_step",
+  R_SUPERSAMPLINGFILTER = "r_SupersamplingFilter",
+  AG_DRAWACTORPOS = "ag_drawActorPos",
+  E_COVERAGEBUFFERROTATIONSAFECHECK = "e_CoverageBufferRotationSafeCheck",
+  R_USESHADOWSPOOL = "r_UseShadowsPool",
+  R_LIGHTSSINGLEPASS = "r_LightsSinglePass",
+  CA_USEFILEAFTERDBH = "ca_UseFileAfterDBH",
+  AI_USECALCULATIONSTOPPERCOUNTER = "ai_UseCalculationStopperCounter",
+  MOVEMENT_VERIFY_SPEED_SAMPLE_MIN = "movement_verify_speed_sample_min",
+  R_SHADERSDEBUG = "r_ShadersDebug",
+  ROPE_SKILL_CONTROLLER_TARGET_MOVED_AWAY_DIST =
+  "rope_skill_controller_target_moved_away_dist",
+  CA_LIPSYNC_PHONEME_STRENGTH = "ca_lipsync_phoneme_strength",
+  R_FOGDEPTHTEST = "r_FogDepthTest",
+  CA_LIPSYNC_PHONEME_OFFSET = "ca_lipsync_phoneme_offset",
+  R_GLITTERVARIATION = "r_GlitterVariation",
+  UA_SHOW = "ua_show",
+  E_SHADOWS_CAST_VIEW_DIST_RATIO = "e_shadows_cast_view_dist_ratio",
+  S_INACTIVESOUNDITERATIONTIMEOUT = "s_InactiveSoundIterationTimeout",
+  P_CULL_DISTANCE = "p_cull_distance",
+  NAME_TAG_PERSPECTIVE_RATE = "name_tag_perspective_rate",
+  R_SHOWDYNTEXTURES = "r_ShowDynTextures",
+  R_DEBUGRENDERMODE = "r_DebugRenderMode",
+  MAX_UNIT_IN_WORLD = "max_unit_in_world",
+  E_VEGETATION = "e_vegetation",
+  CLOTH_THICKNESS = "cloth_thickness",
+  I_MOUSE_INERTIA = "i_mouse_inertia",
+  G_VISIBILITYTIMEOUT = "g_VisibilityTimeout",
+  R_COLORGRADINGFILTERS = "r_ColorGradingFilters",
+  R_TEXHWMIPSGENERATION = "r_TexHWMipsGeneration",
+  DISABLE_PRIVATE_MESSAGE_MUSIC = "disable_private_message_music",
+  S_MEMORYPOOLSOUNDSECONDARY = "s_MemoryPoolSoundSecondary",
+  R_TERRAINSPECULAR_METALLICNESS = "r_TerrainSpecular_Metallicness",
+  R_DOFMINZBLENDMULT = "r_dofMinZBlendMult",
+  BATTLESHIP_OPTION = "battleship_option",
+  E_SCREENSHOT_FILE_FORMAT = "e_screenshot_file_format",
+  R_ZPASSDEPTHSORTING = "r_ZPassDepthSorting",
+  G_QUICKGAME_PREFER_MYCOUNTRY = "g_quickGame_prefer_mycountry",
+  SYS_PHYSICS_CLIENT = "sys_physics_client",
+  AI_ENABLEASSERTS = "ai_EnableAsserts",
+  CLOTH_DAMPING = "cloth_damping",
+  E_FOGVOLUMES = "e_fogvolumes",
+  MEMSTATS = "MemStats",
+  S_GAMEVEHICLEMUSICVOLUME = "s_GameVehicleMusicVolume",
+  R_HDRBLOOMMUL = "r_HDRBloomMul",
+  WORLD_SERVERADDR = "world_serveraddr",
+  WORLD_SERVERPORT = "world_serverport",
+  SYS_BUDGET_TRIS_CHARACTER = "sys_budget_tris_character",
+  CAMERA_FOV_FROM_ENTITY = "camera_fov_from_entity",
+  E_TERRAIN_LOG = "e_terrain_log",
+  E_CUSTOM_MAX_CLONE_MODEL = "e_custom_max_clone_model",
+  S_GAMEMIDIVOLUME = "s_GameMIDIVolume",
+  P_DRAW_HELPERS = "p_draw_helpers",
+  R_CHARACTER_NODEFORM = "r_Character_NoDeform",
+  CLIENT_DEFAULT_ZONE = "client_default_zone",
+  CA_CALTHREAD = "ca_CALthread",
+  R_SHOWTEXTIMEGRAPH = "r_ShowTexTimeGraph",
+  E_RAYCASTING_DEBUG = "e_raycasting_debug",
+  CAMERA_ALIGN = "camera_align",
+  UCC_VER = "ucc_ver",
+  S_NETWORKAUDITION = "s_NetworkAudition",
+  R_ENVCMWRITE = "r_EnvCMWrite",
+  R_SHADERSEDITING = "r_ShadersEditing",
+  E_DEBUG_DRAW = "e_debug_draw",
+  E_DEBUG_MASK = "e_debug_mask",
+  E_PARTICLESCOARSESHADOWMASK = "e_ParticlesCoarseShadowMask",
+  CA_DEBUGCRITICALERRORS = "ca_DebugCriticalErrors",
+  CA_ANIMACTIONDEBUG = "ca_AnimActionDebug",
+  R_DYNTEXATLASCLOUDSMAXSIZE = "r_DynTexAtlasCloudsMaxSize",
+  NAME_TAG_CUSTOM_GAUGE_OFFSET_HPBAR = "name_tag_custom_gauge_offset_hpbar",
+  AI_SKILL_DEBUG = "ai_skill_debug",
+  R_SHADERSADDLISTRTANDRT = "r_ShadersAddListRTAndRT",
+  V_PROFILEMOVEMENT = "v_profileMovement",
+  NAME_TAG_SIZE_SCALE_ON_BGMODE = "name_tag_size_scale_on_bgmode",
+  PROJECTILE_DEBUG = "projectile_debug",
+  SYS_BUDGET_PARTICLE = "sys_budget_particle",
+  CA_DRAWSKELETONNAME = "ca_DrawSkeletonName",
+  PLAYER_DEBUG_STATE = "player_debug_state",
+  MFX_ENABLEFGEFFECTS = "mfx_EnableFGEffects",
+  G_QUICKGAME_MAP = "g_quickGame_map",
+  ES_UPDATECOLLISIONSCRIPT = "es_UpdateCollisionScript",
+  ES_DEBUGEVENTS = "es_DebugEvents",
+  HS_SIMPLE_CASTLE_GRID_DRAW = "hs_simple_castle_grid_draw",
+  CD_OPTIMIZE_UPDATE_TM = "cd_optimize_update_tm",
+  S_CULLINGBYCACHE = "s_CullingByCache",
+  R_SHADERSSUBMITREQUESTLINE = "r_ShadersSubmitRequestline",
+  R_DEBUGLIGHTS = "r_DebugLights",
+  AI_RECORDLOG = "ai_RecordLog",
+  CA_CHEAP = "ca_Cheap",
+  NAME_TAG_LARGE_APP_STAMP_OFFSET_HPBAR = "name_tag_large_app_stamp_offset_hpbar",
+  E_GSM_RANGE_STEP_TERRAIN = "e_gsm_range_step_terrain",
+  R_PRELOADUSERSHADERCACHE = "r_PreloadUserShaderCache",
+  R_COLORGRADINGLEVELS = "r_ColorGradingLevels",
+  E_CULL_VEG_ACTIVATION = "e_cull_veg_activation",
+  E_SHADOWS_OPTIMISED_OBJECT_CULLING = "e_shadows_optimised_object_culling",
+  CL_GS_EMAIL = "cl_gs_email",
+  NET_ACTOR_CONTROLLER_DELAY_MARGIN = "net_actor_controller_delay_margin",
+  S_HDRFALLOFF = "s_HDRFalloff",
+  CUSTOM_SKILL_QUEUE = "custom_skill_queue",
+  E_GIPROPAGATIONAMP = "e_GIPropagationAmp",
+  CA_DBH_LEVEL = "ca_dbh_level",
+  R_NIGHTVISION = "r_NightVision",
+  AC_ANIMERRORMAXDISTANCE = "ac_animErrorMaxDistance",
+  PL_FALLDAMAGE_SPEEDBIAS = "pl_fallDamage_SpeedBias",
+  PL_FALLDAMAGE_SPEEDSAFE = "pl_fallDamage_SpeedSafe",
+  AI_USEALTERNATIVEREADABILITY = "ai_UseAlternativeReadability",
+  MOVEMENT_VERIFY_AIRSTANDING_ERROR_RATE =
+  "movement_verify_airstanding_error_rate",
+  ES_CHARZOFFSETSPEED = "es_CharZOffsetSpeed",
+  E_TERRAIN_DRAW_THIS_SECTOR_ONLY = "e_terrain_draw_this_sector_only",
+  CAMERA_MOVE_HOLD_Z = "camera_move_hold_z",
+  OPTION_VOLUMETRIC_EFFECT = "option_volumetric_effect",
+  AC_ENABLEEXTRASOLIDCOLLIDER = "ac_enableExtraSolidCollider",
+  AI_PROTORODFIRERANGE = "ai_ProtoRODFireRange",
+  E_TERRAIN_OCCLUSION_CULLING = "e_terrain_occlusion_culling",
+  OCEANWAVESAMOUNT = "OceanWavesAmount",
+  R_DEBUGSCREENEFFECTS = "r_DebugScreenEffects",
+  QUEST_SOURCE_CAM_OFFSET = "quest_source_cam_offset",
+  MFX_SOUNDIMPACTTHRESH = "mfx_SoundImpactThresh",
+  G_QUICKGAME_MODE = "g_quickGame_mode",
+  R_TXAA_DEBUGMODE = "r_TXAA_DebugMode",
+  CA_DEBUGSKELETONEFFECTS = "ca_DebugSkeletonEffects",
+  E_DEBUG_DRAW_OBJSTATS_WARNING_TRIS = "e_debug_draw_objstats_warning_tris",
+  E_VOXTERSHAPECHECK = "e_VoxTerShapeCheck",
+  SOUND_ENABLE_NPC_CHAT_BUBBLE_VOICE = "sound_enable_npc_chat_bubble_voice",
+  E_GSMEXTENDLASTLODUSEADDITIVEBLENDING = "e_GsmExtendLastLodUseAdditiveBlending",
+  P_MAX_MC_VEL = "p_max_MC_vel",
+  CA_DEBUGANIMUSAGE = "ca_DebugAnimUsage",
+  G_LOGIDLESTATS = "g_LogIdleStats",
+  D3D9_RB_TRIS = "d3d9_rb_Tris",
+  G_ENABLELOADINGSCREEN = "g_enableloadingscreen",
+  CA_MEMORYUSAGELOG = "ca_MemoryUsageLog",
+  R_NVDOF_FARBLURSIZE = "r_NVDOF_FarBlurSize",
+  REPLAY_BUFFER_SIZE = "replay_buffer_size",
+  UCC_SHOW_ID = "ucc_show_id",
+  GLIDING_MOUSE_AD = "gliding_mouse_ad",
+  GLIDING_MOUSE_WS = "gliding_mouse_ws",
+  LOGIN_LOCALIZATION = "login_localization",
+  CA_DRAWPOSITIONPRE = "ca_DrawPositionPre",
+  R_WINDOWX = "r_WindowX",
+  R_WINDOWY = "r_WindowY",
+  P_DRAW_HELPERS_NUM = "p_draw_helpers_num",
+  E_TERRAIN_OPTIMISED_IB = "e_terrain_optimised_ib",
+  LOCALIZED_TEXTS_DB_LOCATION = "localized_texts_db_location",
+  ROPE_SKILL_CONTROLLER_AIR_TIME_FOR_CHANGE_TO_FLYMODE =
+  "rope_skill_controller_air_time_for_change_to_flymode",
+  DS_LOADSOUNDSSYNC = "ds_LoadSoundsSync",
+  E_COVERAGEBUFFERTOLERANCE = "e_CoverageBufferTolerance",
+  CL_COUNTRY_CODE = "cl_country_code",
+  P_MAX_MC_ITERS = "p_max_MC_iters",
+  S_PRECACHEDATA = "s_PrecacheData",
+  SS_MIN_LOADING_DIST_RATIO = "ss_min_loading_dist_ratio",
+  E_GSM_CACHE = "e_gsm_cache",
+  PL_ZEROGSPEEDMULTSPEEDSPRINT = "pl_zeroGSpeedMultSpeedSprint",
+  CAMERA_DIVE_ENABLE = "camera_dive_enable",
+  E_STREAMCGFDEBUG = "e_StreamCgfDebug",
+  E_GSM_STATS = "e_gsm_stats",
+  E_DIST_FOR_WSBBOX_UPDATE = "e_dist_for_wsbbox_update",
+  E_DYNAMIC_LIGHT_FRAME_ID_VIS_TEST = "e_dynamic_light_frame_id_vis_test",
+  SV_RANKED = "sv_ranked",
+  I_MOUSE_BUFFERED = "i_mouse_buffered",
+  MEMSTATSTHRESHOLD = "MemStatsThreshold",
+  R_MOTIONBLURSHUTTERSPEED = "r_MotionBlurShutterSpeed",
+  BOT_SELECT_CHAR_INDEX = "bot_select_char_index",
+  E_RECURSION_VIEW_DIST_RATIO = "e_recursion_view_dist_ratio",
+  R_ZPASSONLY = "r_ZPassOnly",
+  E_CBUFFER_RESOLUTION = "e_cbuffer_resolution",
+  E_SHADOWS_ADAPT_SCALE = "e_shadows_adapt_scale",
+  E_SCREENSHOT_DEBUG = "e_screenshot_debug",
+  CL_FREECAMDAMPING = "cl_freeCamDamping",
+  R_ARMOURPULSESPEEDMULTIPLIER = "r_ArmourPulseSpeedMultiplier",
+  NET_STATS_LOGIN = "net_stats_login",
+  S_DRAWSOUNDS = "s_DrawSounds",
+  ES_IMPULSESCALE = "es_ImpulseScale",
+  R_HDRSCURVEMAX = "r_HDRSCurveMax",
+  R_HDRSCURVEMIN = "r_HDRSCurveMin",
+  E_GSM_FORCE_TERRAIN_INCLUDE_OBJECTS = "e_gsm_force_terrain_include_objects",
+  UM_VEHICLE_DEEP_WATER_SPEED_RATIO = "um_vehicle_deep_water_speed_ratio",
+  CAMERA_MAX_DIST = "camera_max_dist",
+  R_NIGHTVISIONCAMMOVNOISEAMOUNT = "r_NightVisionCamMovNoiseAmount",
+  R_DRAWNEARFARPLANE = "r_DrawNearFarPlane",
+  AI_PATHFINDTIMELIMIT = "ai_PathfindTimeLimit",
+  S_GAMECINEMAVOLUME = "s_GameCinemaVolume",
+  P_NET_MINSNAPDOT = "p_net_minsnapdot",
+  E_SCREENSHOT_WIDTH = "e_screenshot_width",
+  AI_OVERLAYMESSAGEDURATION = "ai_OverlayMessageDuration",
+  NET_ACTOR_CONTROLLER_RAGDOLL_SMOOTH_TIME =
+  "net_actor_controller_ragdoll_smooth_time",
+  SYS_SSINFO = "sys_SSInfo",
+  SV_DEDICATEDMAXRATE = "sv_DedicatedMaxRate",
+  R_DRAWNEARFOV = "r_DrawNearFoV",
+  R_SHADERSUNLOADBINCACHES = "r_shadersUnLoadBinCaches",
+  R_SHADOWSX2CUSTOMBIAS = "r_ShadowsX2CustomBias",
+  AI_TICKCOUNTER = "ai_TickCounter",
+  G_JOINT_BREAKING = "g_joint_breaking",
+  R_TEXTURESSTREAMINGNOUPLOAD = "r_TexturesStreamingNoUpload",
+  ROPE_MAX_ALLOWED_STEP = "rope_max_allowed_step",
+  CR_ROTATEDAMPINGSPEED = "cr_rotateDampingSpeed",
+  R_SHADERSDIRECTORY = "r_ShadersDirectory",
+  MOVEMENT_VERIFY_DETAILED_WARP_SPEED_FAST =
+  "movement_verify_detailed_warp_speed_fast",
+  E_SKY_BOX_DEBUG = "e_sky_box_debug",
+  P_MAX_LCPCG_SUBITERS_FINAL = "p_max_LCPCG_subiters_final",
+  R_CUSTOMRESPREVIEW = "r_CustomResPreview",
+  CL_WORLD_COOKIE = "cl_world_cookie",
+  AI_DRAWSHOOTING = "ai_DrawShooting",
+  E_ENTITIES = "e_entities",
+  NAME_TAG_HP_HEIGHT_OFFSET_ON_BGMODE = "name_tag_hp_height_offset_on_bgmode",
+  R_HDRFILMICTOE = "r_HDRFilmicToe",
+  AI_DRAWHIDESPOTS = "ai_DrawHidespots",
+  CAMERA_DEBUG_TARGET_POS = "camera_debug_target_pos",
+  G_IGNORE_WHISPER_INVITE = "g_ignore_whisper_invite",
+  SV_INPUT_TIMEOUT = "sv_input_timeout",
+  R_SHADOWTEXFORMAT = "r_ShadowTexFormat",
+  E_GIMAXDISTANCE = "e_GIMaxDistance",
+  TQOS_PERFORMANCE_REPORT_PERIOD = "tqos_performance_report_period",
+  R_COLORGRADINGSELECTIVECOLOR = "r_ColorGradingSelectiveColor",
+  UM_SHIP_DEBUG = "um_ship_debug",
+  Q_SHADERHDR = "q_ShaderHDR",
+  Q_SHADERICE = "q_ShaderIce",
+  Q_SHADERSKY = "q_ShaderSky",
+  AC_PREDICTIONSMOOTHINGORI = "ac_predictionSmoothingOri",
+  AC_PREDICTIONSMOOTHINGPOS = "ac_predictionSmoothingPos",
+  AC_TRIGGERCORRECTIONTIMESCALE = "ac_triggercorrectiontimescale",
+  P_RAY_PEAK_TIME = "p_ray_peak_time",
+  R_SHADERSASYNCMAXTHREADS = "r_ShadersAsyncMaxThreads",
+  CP_DEBUG_PICKED_ENTITY = "cp_debug_picked_entity",
+  REPLAY_PLAY_CAMERA = "replay_play_camera",
+  DYNAMIC_ACTION_BAR_DISTANCE = "dynamic_action_bar_distance",
+  E_STREAMCGFVISOBJPRIORITY = "e_StreamCgfVisObjPriority",
+  NAME_TAG_HP_HEIGHT = "name_tag_hp_height",
+  DYNAMIC_ACTION_BAR_COMBO_POP = "dynamic_action_bar_combo_pop",
+  AC_DEBUGCARRYCORRECTION = "ac_debugCarryCorrection",
+  E_SCREENSHOT_HEIGHT = "e_screenshot_height",
+  E_DEFORMABLE_OBJECTS = "e_deformable_objects",
+  AG_LOGSELECTIONS = "ag_logselections",
+  G_TEAMLOCK = "g_teamlock",
+  E_CUSTOM_DYNAMIC_LOD = "e_custom_dynamic_lod",
+  E_USE_ENHANCED_EFFECT = "e_use_enhanced_effect",
+  R_SHOOTINGSTAR_LENGTH = "r_shootingstar_length",
+  NAME_TAG_HP_HEIGHT_ON_BGMODE = "name_tag_hp_height_on_bgmode",
+  R_CLOUDSDEBUG = "r_CloudsDebug",
+  NET_SHIP_CONTROLLER_DEBUG = "net_ship_controller_debug",
+  DATA_MINING_REPORT_INTERVAL = "data_mining_report_interval",
+  SYS_SPEC_FULL = "sys_spec_full",
+  AI_ALLOWACCURACYDECREASE = "ai_AllowAccuracyDecrease",
+  CA_DEBUG_PHYS_LOADING = "ca_debug_phys_loading",
+  NET_LAN_SCANPORT_NUM = "net_lan_scanport_num",
+  E_AMBIENT_OCCLUSION = "e_ambient_occlusion",
+  CG_SYNC_DELAY_MAX = "cg_sync_delay_max",
+  MAX_TIME_STEP = "max_time_step",
+  R_PIXELSYNC = "r_PixelSync",
+  AG_FORCEINSIDEERRORDISC = "ag_forceInsideErrorDisc",
+  UM_VEHICLE_WATER_SPEED_RATIO = "um_vehicle_water_speed_ratio",
+  VEHICLE_CONTROLLER_GROUNDALIGN_SMOOTH_TIME =
+  "vehicle_controller_GroundAlign_smooth_time",
+  SYS_BUDGET_DP = "sys_budget_dp",
+  E_SCREENSHOT_MAP_CAMHEIGHT = "e_screenshot_map_camheight",
+  R_SHADERSPREACTIVATE = "r_ShadersPreactivate",
+  G_DIFFICULTYLEVEL = "g_difficultyLevel",
+  PROFILE = "profile",
+  R_STEREONEARGEOSCALE = "r_StereoNearGeoScale",
+  NAME_TAG_HP_WIDTH_OFFSET_ON_BGMODE = "name_tag_hp_width_offset_on_bgmode",
+  R_DEFERREDSHADINGLIGHTSTENCILRATIO = "r_DeferredShadingLightStencilRatio",
+  AI_DRAWVISCHECKQUEUE = "ai_DrawVisCheckQueue",
+  R_ENVTEXUPDATEINTERVAL = "r_EnvTexUpdateInterval",
+  E_VOXEL_FILL_MODE = "e_voxel_fill_mode",
+  UI_SKILL_ACCESSOR_UPDATE_INTERVAL = "ui_skill_accessor_update_interval",
+  R_SHADOWPOOLMAXTIMESLICEDUPDATESPERFRAME =
+  "r_ShadowPoolMaxTimeslicedUpdatesPerFrame",
+  AI_PROTORODREGENTIME = "ai_ProtoRODRegenTime",
+  CAMERA_CLOSE_UP_FADE_OUT_DURATION = "camera_close_up_fade_out_duration",
+  NET_STATS_PASS = "net_stats_pass",
+  MOVEMENT_VERIFY_MOVE_SPEED_REPORT_SKIP_RATE =
+  "movement_verify_move_speed_report_skip_rate",
+  P_LOG_LATTICE_TENSION = "p_log_lattice_tension",
+  CAMERA_PITCH_ALIGN_SPEED = "camera_pitch_align_speed",
+  HIT_ASSISTSINGLEPLAYERENABLED = "hit_assistSingleplayerEnabled",
+  P_MAX_LCPCG_FRUITLESS_ITERS = "p_max_LCPCG_fruitless_iters",
+  E_PHYS_FOLIAGE = "e_phys_foliage",
+  E_DECALS_DEFFERED_DYNAMIC_MIN_SIZE = "e_decals_deffered_dynamic_min_size",
+  NET_ADAPTIVE_FAST_PING = "net_adaptive_fast_ping",
+  E_PARTICLES_DISABLE_EQUIPMENTS = "e_particles_disable_equipments",
+  CON_LINE_BUFFER_SIZE = "con_line_buffer_size",
+  R_TEXTURESSTREAMINGSYNC = "r_TexturesStreamingSync",
+  R_OCCLUSIONQUERIESMGPU = "r_OcclusionQueriesMGPU",
+  E_MODELVIEW_PREFAB_OFFSET_X = "e_modelview_Prefab_offset_x",
+  E_MODELVIEW_PREFAB_OFFSET_Y = "e_modelview_Prefab_offset_y",
+  E_MODELVIEW_PREFAB_OFFSET_Z = "e_modelview_Prefab_offset_z",
+  SOUND_ENABLE_ONLY_ACTIVATED = "sound_enable_only_activated",
+  G_BLOOD = "g_blood",
+  CA_CLOTH_VARS_RESET = "ca_cloth_vars_reset",
+  SS_USE_IN_GAME_LOADING = "ss_use_in_game_loading",
+  CL_PASSWORD = "cl_password",
+  R_SSGIBLUR = "r_SSGIBlur",
+  E_TIMER_DEBUG = "e_timer_debug",
+  R_SSDOOPTIMIZED = "r_SSDOOptimized",
+  WORLD_WIDGET_MOUSE_UP_THRESHOLD = "world_widget_mouse_up_threshold",
+  CAMERA_MOVE_MAX_INERTIA = "camera_move_max_inertia",
+  CL_SENSITIVITYZEROG = "cl_sensitivityZeroG",
+  AI_DRAWOFFSET = "ai_DrawOffset",
+  CA_DRAWSKELETONFILTER = "ca_drawSkeletonFilter",
+  CAMERA_DIVE_END_DEPTH = "camera_dive_end_depth",
+  AI_CROWDCONTROLINPATHFIND = "ai_CrowdControlInPathfind",
+  G_QUICKGAME_MIN_PLAYERS = "g_quickGame_min_players",
+  CA_DELAYTRANSITIONATLOADING = "ca_DelayTransitionAtLoading",
+  R_SHADOWSPARTICLEANIMJITTERAMOUNT = "r_ShadowsParticleAnimJitterAmount",
+  AI_DEBUGDRAWADAPTIVEURGENCY = "ai_DebugDrawAdaptiveUrgency",
+  E_CHARACTER_LIGHT_SPECUALR_MULTY = "e_character_light_specualr_multy",
+  CA_USEASSETDEFINEDLOD = "ca_UseAssetDefinedLod",
+  E_PARTICLES_MAX_DRAW_SCREEN = "e_particles_max_draw_screen",
+  DISTANCE_METER = "distance_meter",
+  R_USEEDGEAA = "r_UseEdgeAA",
+  SYS_BUDGET_SYSTEM_MEMORY_TEXTURE = "sys_budget_system_memory_texture",
+  CA_ATTACHMENTSHADOWCULLINGDIST = "ca_AttachmentShadowCullingDist",
+  I_MOUSE_ACCEL = "i_mouse_accel",
+  AG_PHYSERRORMINOUTERRADIUS = "ag_physErrorMinOuterRadius",
+  E_WATER_OCEAN_FFT = "e_water_ocean_fft",
+  E_PORTALS = "e_portals",
+  TRANSFER_STATION_LOWER = "transfer_station_lower",
+  AI_SPRINTDISTANCE = "ai_sprintDistance",
+  OCEANWAVESSIZE = "OceanWavesSize",
+  R_DEFERREDSHADINGHEIGHTBASEDAMBIENT = "r_DeferredShadingHeightBasedAmbient",
+  CL_SENSITIVITY = "cl_sensitivity",
+  E_PARTICLESPOOLSIZE = "e_ParticlesPoolSize",
+  MAX_UNIT_FOR_TEST = "max_unit_for_test",
+  R_MULTIGPU = "r_MultiGPU",
+  E_STREAMPREDICTIONUPDATETIMESLICE = "e_StreamPredictionUpdateTimeSlice",
+  E_CUSTOMIZER_SETTINGS_VACUUM = "e_customizer_settings_vacuum",
+  OPTION_CAMERA_FOV_SET = "option_camera_fov_set",
+  BOT_ENABLE_ENGINE_PROFILER = "bot_enable_engine_profiler",
+  R_STENCILBITS = "r_StencilBits",
+  AI_MOVEMENTSPEEDDARKILLUMMOD = "ai_MovementSpeedDarkIllumMod",
+  AC_DISABLESLIDINGCONTACTEVENTS = "ac_disableSlidingContactEvents",
+  SYS_BUDGET_DP_ENTITY = "sys_budget_dp_entity",
+  CL_IMMIGRATION_PASSPORT_HASH = "cl_immigration_passport_hash",
+  R_SSDOAMBIENTCLAMP = "r_ssdoAmbientClamp",
+  CA_USECOMPILEDCALFILE = "ca_UseCompiledCalFile",
+  AG_EP_SHOWPATH = "ag_ep_showPath",
+  Q_SHADERSHADOW = "q_ShaderShadow",
+  R_SCRATCHES = "r_Scratches",
+  E_TERRAIN_AO = "e_terrain_ao",
+  E_VOXEL_BUILD = "e_voxel_build",
+  R_REFLECTIONSQUALITY = "r_ReflectionsQuality",
+  E_VOXEL_DEBUG = "e_voxel_debug",
+  CL_NEARPLANE = "cl_nearPlane",
+  COMBAT_MSG_DISPLAY_SHIP_COLLISION = "combat_msg_display_ship_collision",
+  NAME_TAG_HP_OFFSET = "name_tag_hp_offset",
+  R_FOGGLASSBACKBUFFERRESOLVEDEBUG = "r_FogGlassBackbufferResolveDebug",
+  SYS_BUDGET_DP_BRUSH = "sys_budget_dp_brush",
+  ES_DEBUGTIMERS = "es_DebugTimers",
+  E_FOLIAGE_BRANCHES_STIFFNESS = "e_foliage_branches_stiffness",
+  R_USEMATERIALLAYERS = "r_UseMaterialLayers",
+  NAME_TAG_FADING_DURATION = "name_tag_fading_duration",
+  SYS_NOUPDATE = "sys_noupdate",
+  MOVEMENT_VERIFY_SPEED_ERROR_TOLERANCE = "movement_verify_speed_error_tolerance",
+  QUEST_GUIDE_DECAL_OFFSET = "quest_guide_decal_offset",
+  V_STABILIZEVTOL = "v_stabilizeVTOL",
+  S_REVERBREFLECTIONDELAY = "s_ReverbReflectionDelay",
+  CA_MERGEATTACHMENTMESHES = "ca_MergeAttachmentMeshes",
+  OPTION_HIDE_BLOODLUST_MODE = "option_hide_bloodlust_mode",
+  UI_EVENTPROFILE = "ui_eventProfile",
+  CA_DRAWBBOX = "ca_DrawBBox",
+  E_GSM_FORCE_EXTRA_RANGE_INCLUDE_OBJECTS =
+  "e_gsm_force_extra_range_include_objects",
+  CL_CROUCHTOGGLE = "cl_crouchToggle",
+  NET_BACKOFFTIMEOUT = "net_backofftimeout",
+  MFX_DEBUG = "mfx_Debug",
+  E_SHADOWS_TERRAIN = "e_shadows_terrain",
+  V_PA_SURFACE = "v_pa_surface",
+  P_SPLASH_DIST0 = "p_splash_dist0",
+  P_SPLASH_DIST1 = "p_splash_dist1",
+  R_RAINDISTMULTIPLIER = "r_RainDistMultiplier",
+  R_SHADERSINTCOMPILER = "r_ShadersIntCompiler",
+  R_DISTANT_RAIN = "r_distant_rain",
+  S_MUSICSPEAKERBACKVOLUME = "s_MusicSpeakerBackVolume",
+  R_TEXTURESSTREAMINGPOSTPONETHRESHOLDMIP =
+  "r_texturesstreamingPostponeThresholdMip",
+  R_NIGHTVISIONCAMMOVNOISEBLENDSPEED = "r_NightVisionCamMovNoiseBlendSpeed",
+  G_DEBUGAIMLOOK = "g_debugaimlook",
+  PICKING_TARGET = "picking_target",
+  G_DEBUG_SYNC_SKIP_ENTITY_UPDATE = "g_debug_sync_skip_entity_update",
+  E_PARTICLES = "e_particles",
+  SV_GAMERULES = "sv_gamerules",
+  PELVIS_SHAKE_TIME = "pelvis_shake_time",
+  PELVIS_SHAKE_WARP = "pelvis_shake_warp",
+  R_MSAA_SAMPLES = "r_MSAA_samples",
+  CA_FORCEUPDATESKELETONS = "ca_ForceUpdateSkeletons",
+  NAME_TAG_UP_SCALE_LIMIT = "name_tag_up_scale_limit",
+  PROFILE_NETWORK = "profile_network",
+  CD_FURNITURE_UPDATE_DISTANCE = "cd_furniture_update_distance",
+  E_VOXEL_MAKE_PHYSICS = "e_voxel_make_physics",
+  CA_LODCOUNTRATIO = "ca_LodCountRatio",
+  R_SHADOWSMASKDOWNSCALE = "r_ShadowsMaskDownScale",
+  SV_PACKETRATE = "sv_packetRate",
+  CA_DRAWIDLE2MOVEDIR = "ca_DrawIdle2MoveDir",
+  CA_DRAWFOOTPLANTS = "ca_DrawFootPlants",
+  S_VOL0TURNSVIRTUAL = "s_Vol0TurnsVirtual",
+  ES_UPDATETIMER = "es_UpdateTimer",
+  AI_LIMITNODEGETENCLOSING = "ai_LimitNodeGetEnclosing",
+  ES_SPLASHTHRESHOLD = "es_SplashThreshold",
+  R_HDRSATURATION = "r_HDRSaturation",
+  OPTION_USE_DOF = "option_use_dof",
+  OPTION_USE_HDR = "option_use_hdr",
+  R_SSAO_QUALITY = "r_SSAO_quality",
+  AUX_USE_SIMPLE_TARGET = "aux_use_simple_target",
+  PROFILE_SAMPLER = "profile_sampler",
+  G_QUICKGAME_PREFER_FAVORITES = "g_quickGame_prefer_favorites",
+  E_ON_DEMAND_MAXSIZE = "e_on_demand_maxsize",
+  E_DECALS_LIFE_TIME_SCALE = "e_decals_life_time_scale",
+  R_SHADERUSAGEDELAY = "r_ShaderUsageDelay",
+  CL_BANDWIDTH = "cl_bandwidth",
+  CA_LODCOUNT0 = "ca_LodCount0",
+  D3D9_TEXTUREFILTER = "d3d9_TextureFilter",
+  MOVEMENT_VERIFY_MOVE_SPEED_OVER_TOLERANCE =
+  "movement_verify_move_speed_over_tolerance",
+  ES_HITCHARACTERS = "es_HitCharacters",
+  NAME_TAG_EXPEDITION_SHOW = "name_tag_expedition_show",
+  AUX_USE_COLLIDE = "aux_use_collide",
+  CL_FROZENSENSMAX = "cl_frozenSensMax",
+  CL_FROZENSENSMIN = "cl_frozenSensMin",
+  CA_ENABLEASSETSTRAFING = "ca_EnableAssetStrafing",
+  DATA_MINING_PERF_INTERVAL = "data_mining_perf_interval",
+  CL_WEB_SESSION_ENC_KEY = "cl_web_session_enc_key",
+  E_SOFT_PARTICLES = "e_soft_particles",
+  NET_ACTOR_CONTROLLER_DEBUG_RAGDOLL = "net_actor_controller_debug_ragdoll",
+  AI_DRAWUPDATE = "ai_DrawUpdate",
+  D3D9_NVPERFHUD = "d3d9_NVPerfHUD",
+  E_WRITE_CHARACTER_PATCHWORK_DDS = "e_write_character_patchwork_dds",
+  PL_ZEROGSPEEDMAXSPEED = "pl_zeroGSpeedMaxSpeed",
+  G_BUDDYMESSAGESINGAME = "g_buddyMessagesIngame",
+  COMBO_DEBUG = "combo_debug",
+  AG_SHOWPHYSSYNC = "ag_showPhysSync",
+  PROFILE_DISK_TYPE_FILTER = "profile_disk_type_filter",
+  CAMERA_MAX_PITCH = "camera_max_pitch",
+  R_SHADOWSADAPTIONRANGECLAMP = "r_ShadowsAdaptionRangeClamp",
+  E_VEGETATION_SPRITES_MIN_DISTANCE = "e_vegetation_sprites_min_distance",
+  CA_DRAWEMPTYATTACHMENTS = "ca_DrawEmptyAttachments",
+  E_TERRAIN_OCCLUSION_CULLING_MAX_STEPS = "e_terrain_occlusion_culling_max_steps",
+  AUX_USE_BREAST = "aux_use_breast",
+  NEXT_OPTION_EXPERIMENTAL_OPT = "next_option_experimental_opt",
+  CA_FPWEAPONINCAMSPACE = "ca_FPWeaponInCamSpace",
+  E_DECALS_WRAP_DEBUG = "e_decals_wrap_debug",
+  E_CUSTOM_THREAD_CUT_MESH = "e_custom_thread_cut_mesh",
+  SKILL_CASTER_ROTATION = "skill_caster_rotation",
+  AI_DEBUGDRAWHASHSPACEAROUND = "ai_DebugDrawHashSpaceAround",
+  G_PLAYERINTERACTORRADIUS = "g_playerInteractorRadius",
+  CA_DEBUGANIMATIONSTREAMING = "ca_DebugAnimationStreaming",
+  LUA_STACKONMALLOC = "lua_stackonmalloc",
+  S_MUSICSPEAKERSIDEVOLUME = "s_MusicSpeakerSideVolume",
+  AI_INTERESTSCALINGAMBIENT = "ai_InterestScalingAmbient",
+  SYS_USER_FOLDER = "sys_user_folder",
+  CA_DEBUGCAPS = "ca_DebugCaps",
+  CA_DEBUGTEXT = "ca_DebugText",
+  SYS_BUDGET_SOUND_MEMORY = "sys_budget_sound_memory",
+}
+
+---@enum RESIDENT_BOARD_TYPE
+local RESIDENT_BOARD_TYPE = {
+  FABRIC = 1,  -- Nuia/Haranya
+  LEATHER = 2, -- Nuia/Haranya
+  LUMBER = 3,  -- Nuia/Haranya
+  IRON = 4,    -- Nuia/Haranya
+  PRINCE = 5,  -- Auroria
+  QUEEN = 6,   -- Auroria
+  ANCESTOR = 7 -- Auroria
+}
+
+---@enum ABILITY_TYPE
+local ABILITY_TYPE = {
+  BATTLERAGE = 1,
+  WITCHCRAFT = 2,
+  DEFENSE = 3,
+  AURAMANCY = 4,
+  OCCULTISM = 5,
+  ARCHERY = 6,
+  SORCERY = 7,
+  SHADOWPLAY = 8,
+  SONGCRAFT = 9,
+  VITALISM = 10,
+  MALEDICTION = 11,
+  SWIFTBLADE = 12,
+  GUNSLINGER = 13,
+  SPELLDANCE = 14
+}
+
+---game\ui_ArcheRage\settings\font_color.g
+---@enum FONT_COLOR_KEY
+local FONT_COLOR_KEY = {
+  ACTION_SLOT_KEY_BINDING = "action_slot_key_binding",
+  ADAMANT = "adamant",
+  AGGRO_METER = "aggro_meter",
+  ALL_IN_ITEM_GRADE_COMBOBOX = "all_in_item_grade_combobox",
+  ASSASSIN = "assassin",
+  BATTLEFIELD_BLUE = "battlefield_blue",
+  BATTLEFIELD_ORANGE = "battlefield_orange",
+  BATTLEFIELD_RED = "battlefield_red",
+  BATTLEFIELD_YELLOW = "battlefield_yellow",
+  BEIGE = "beige",
+  BLACK = "black",
+  BLUE = "blue",
+  BLUE_CHAT = "blue_chat",
+  BLUE_GREEN = "blue_green",
+  BRIGHT_BLUE = "bright_blue",
+  BRIGHT_GRAY = "bright_gray",
+  BRIGHT_GREEN = "bright_green",
+  BRIGHT_PURPLE = "bright_purple",
+  BRIGHT_YELLOW = "bright_yellow",
+  BROWN = "brown",
+  BTN_DF = "btn_df",
+  BTN_DIS = "btn_dis",
+  BTN_ON = "btn_on",
+  BTN_OV = "btn_ov",
+  BUBBLE_CHAT_ETC = "bubble_chat_etc",
+  BUBBLE_CHAT_SAY = "bubble_chat_say",
+  BUBBLE_CHAT_SAY_HOSTILE = "bubble_chat_say_hostile",
+  BUBBLE_CHAT_SAY_NPC = "bubble_chat_say_npc",
+  BUBBLE_NAME_FRIENDLY_CHAR = "bubble_name_friendly_char",
+  BUBBLE_NAME_FRIENDLY_NPC = "bubble_name_friendly_npc",
+  BUBBLE_NAME_HOSTILE = "bubble_name_hostile",
+  CANDIDATE_LIST_SELECTED = "candidate_list_selected",
+  CASH_BROWN = "cash_brown",
+  CHARACTER_SLOT_DF = "character_slot_df",
+  CHARACTER_SLOT_DIS = "character_slot_dis",
+  CHARACTER_SLOT_ON = "character_slot_on",
+  CHARACTER_SLOT_OV = "character_slot_ov",
+  CHARACTER_SLOT_SUCCESSOR_DF = "character_slot_successor_df",
+  CHARACTER_SLOT_SUCCESSOR_DIS = "character_slot_successor_dis",
+  CHARACTER_SLOT_SUCCESSOR_ON = "character_slot_successor_on",
+  CHARACTER_SLOT_SUCCESSOR_OV = "character_slot_successor_ov",
+  CHAT_FOLIO = "chat_folio",
+  CHAT_TAB_UNSELECTED_DF = "chat_tab_unselected_df",
+  CHAT_TAB_UNSELECTED_DIS = "chat_tab_unselected_dis",
+  CHAT_TAB_UNSELECTED_OV = "chat_tab_unselected_ov",
+  CHECK_BTN_DF = "check_btn_df",
+  CHECK_BTN_DIS = "check_btn_dis",
+  CHECK_BTN_ON = "check_btn_on",
+  CHECK_BTN_OV = "check_btn_ov",
+  CHECK_BUTTON_LIGHT = "check_button_light",
+  CHECK_TEXTURE_TOOLTIP = "check_texture_tooltip",
+  COMBAT_ABSORB = "combat_absorb",
+  COMBAT_COLLISION_ME = "combat_collision_me",
+  COMBAT_COLLISION_OTHER = "combat_collision_other",
+  COMBAT_COMBAT_START = "combat_combat_start",
+  COMBAT_DAMAGED_SPELL = "combat_damaged_spell",
+  COMBAT_DAMAGED_SWING = "combat_damaged_swing",
+  COMBAT_DEBUFF = "combat_debuff",
+  COMBAT_ENERGIZE_MP = "combat_energize_mp",
+  COMBAT_GAIN_EXP = "combat_gain_exp",
+  COMBAT_GAIN_HONOR_POINT = "combat_gain_honor_point",
+  COMBAT_HEAL = "combat_heal",
+  COMBAT_SKILL = "combat_skill",
+  COMBAT_SWING = "combat_swing",
+  COMBAT_SWING_DODGE = "combat_swing_dodge",
+  COMBAT_SWING_MISS = "combat_swing_miss",
+  COMBAT_SYNERGY = "combat_synergy",
+  COMBAT_TEXT = "combat_text",
+  COMBAT_TEXT_DEFAULT = "combat_text_default",
+  COMMERCIAL_MAIL_DATE = "commercial_mail_date",
+  CONGESTION_HIGH = "congestion_high",
+  CONGESTION_LOW = "congestion_low",
+  CONGESTION_MIDDLE = "congestion_middle",
+  CONTEXT_MENU_DF = "context_menu_df",
+  CONTEXT_MENU_DIS = "context_menu_dis",
+  CONTEXT_MENU_ON = "context_menu_on",
+  CONTEXT_MENU_OV = "context_menu_ov",
+  CUSTOMIZING_DF = "customizing_df",
+  CUSTOMIZING_DIS = "customizing_dis",
+  CUSTOMIZING_ON = "customizing_on",
+  CUSTOMIZING_OV = "customizing_ov",
+  DARK_BEIGE = "dark_beige",
+  DARK_GRAY = "dark_gray",
+  DARK_RED = "dark_red",
+  DARK_SKY = "dark_sky",
+  DAY_EVENT = "day_event",
+  DEATH_01 = "death_01",
+  DEATH_02 = "death_02",
+  DEEP_ORANGE = "deep_orange",
+  DEFAULT = "default",
+  DEFAULT_GRAY = "default_gray",
+  DEFAULT_ROW_ALPHA = "default_row_alpha",
+  DETAIL_DEMAGE = "detail_demage",
+  DOODAD = "doodad",
+  EMERALD_GREEN = "emerald_green",
+  EVOLVING = "evolving",
+  EVOLVING_1 = "evolving_1",
+  EVOLVING_2 = "evolving_2",
+  EVOLVING_3 = "evolving_3",
+  EVOLVING_4 = "evolving_4",
+  EVOLVING_GRAY = "evolving_gray",
+  EXP_ORANGE = "exp_orange",
+  EXPEDITION_WAR_DECLARER = "expedition_war_declarer",
+  FACTION_FRIENDLY_NPC = "faction_friendly_npc",
+  FACTION_FRIENDLY_PC = "faction_friendly_pc",
+  FACTION_PARTY = "faction_party",
+  FACTION_RAID = "faction_raid",
+  FIGHT = "fight",
+  GENDER_FEMALE = "gender_female",
+  GENDER_MALE = "gender_male",
+  GRAY = "gray",
+  GRAY_BEIGE = "gray_beige",
+  GRAY_PINK = "gray_pink",
+  GRAY_PURPLE = "gray_purple",
+  GREEN = "green",
+  GUIDE_TEXT_IN_EDITBOX = "guide_text_in_editbox",
+  HATRED_01 = "hatred_01",
+  HATRED_02 = "hatred_02",
+  HIGH_TITLE = "high_title",
+  HOSTILE_FORCES = "hostile_forces",
+  ILLUSION = "illusion",
+  INGAMESHOP_SUBMENU_SEPERATOR = "ingameshop_submenu_seperator",
+  INQUIRE_NOTIFY = "inquire_notify",
+  ITEM_LEVEL = "item_level",
+  LABOR_ENERGY_OFFLINE = "labor_energy_offline",
+  LABOR_POWER_ACCOUNT = "labor_power_account",
+  LABOR_POWER_LOCAL = "labor_power_local",
+  LEMON = "lemon",
+  LEVEL_CHARACTER = "level_character",
+  LEVEL_UP_BLUE = "level_up_blue",
+  LIGHT_BLUE = "light_blue",
+  LIGHT_GRAY = "light_gray",
+  LIGHT_GREEN = "light_green",
+  LIGHT_RED = "light_red",
+  LIGHT_SKYBLUE = "light_skyblue",
+  LIME = "lime",
+  LOADING_CONTENT = "loading_content",
+  LOADING_PERCENT = "loading_percent",
+  LOADING_TIP = "loading_tip",
+  LOGIN_STAGE_BLUE = "login_stage_blue",
+  LOGIN_STAGE_BROWN = "login_stage_brown",
+  LOGIN_STAGE_BUTTON_ON = "login_stage_button_on",
+  LOGIN_STAGE_BUTTON_OV = "login_stage_button_ov",
+  LOGIN_STAGE_CHARACTER_SLOT_IMPOSSIBLE = "login_stage_character_slot_impossible",
+  LOGIN_STAGE_CHARACTER_SLOT_POSSIBLE = "login_stage_character_slot_possible",
+  LOOT_GACHA_COSUME_ITEM_NAME = "loot_gacha_cosume_item_name",
+  LOVE_01 = "love_01",
+  LOVE_02 = "love_02",
+  MADNESS_01 = "madness_01",
+  MADNESS_02 = "madness_02",
+  MADNESS_03 = "madness_03",
+  MAGIC = "magic",
+  MAP_TITLE = "map_title",
+  MAP_ZONE_COLOR_STATE_DEFAULT = "map_zone_color_state_default",
+  MAP_ZONE_COLOR_STATE_FESTIVAL = "map_zone_color_state_festival",
+  MAP_ZONE_COLOR_STATE_HIGH = "map_zone_color_state_high",
+  MAP_ZONE_COLOR_STATE_PEACE = "map_zone_color_state_peace",
+  MEDIUM_BROWN = "medium_brown",
+  MEDIUM_BROWN_ROW_ALPHA = "medium_brown_row_alpha",
+  MEDIUM_YELLOW = "medium_yellow",
+  MEGAPHONE = "megaphone",
+  MELON = "melon",
+  MIDDLE_BROWN = "middle_brown",
+  MIDDLE_TITLE = "middle_title",
+  MIDDLE_TITLE_ROW_ALPHA = "middle_title_row_alpha",
+  MILEAGE = "mileage",
+  MILEAGE_ARCHELIFE = "mileage_archelife",
+  MILEAGE_EVENT = "mileage_event",
+  MILEAGE_FREE = "mileage_free",
+  MILEAGE_PCROOM = "mileage_pcroom",
+  MINT_LIGHT_BLUE = "mint_light_blue",
+  MONEY_ITEM_DELPI = "money_item_delpi",
+  MONEY_ITEM_KEY = "money_item_key",
+  MONEY_ITEM_NETCAFE = "money_item_netcafe",
+  MONEY_ITEM_STAR = "money_item_star",
+  MSG_ZONE_COLOR_STATE_DEFAULT = "msg_zone_color_state_default",
+  MSG_ZONE_COLOR_STATE_FESTIVAL = "msg_zone_color_state_festival",
+  MSG_ZONE_COLOR_STATE_HIGH = "msg_zone_color_state_high",
+  MSG_ZONE_COLOR_STATE_PEACE = "msg_zone_color_state_peace",
+  MUSTARD_YELLOW = "mustard_yellow",
+  MY_ABILITY_BUTTON_DF = "my_ability_button_df",
+  MY_ABILITY_BUTTON_ON = "my_ability_button_on",
+  NATION_GREEN = "nation_green",
+  NATION_MAP_FRIENDLY = "nation_map_friendly",
+  NATION_MAP_HOSTILE = "nation_map_hostile",
+  NATION_MAP_LIGEANCE = "nation_map_ligeance",
+  NATION_MAP_NATIVE = "nation_map_native",
+  NATION_MAP_NONE_OWNER = "nation_map_none_owner",
+  NATION_MAP_WAR = "nation_map_war",
+  NEW_BUTTON_ON = "new_button_on",
+  NOTICE_ORANGE = "notice_orange",
+  NOTIFY_MESSAGE = "notify_message",
+  OFF_GRAY = "off_gray",
+  OPTION_KEY_LIST_BUTTON_OV = "option_key_list_button_ov",
+  OPTION_LIST_BUTTON_DIS = "option_list_button_dis",
+  ORANGE = "orange",
+  ORANGE_BROWN = "orange_brown",
+  ORIGINAL_DARK_ORANGE = "original_dark_orange",
+  ORIGINAL_LIGHT_GRAY = "original_light_gray",
+  ORIGINAL_ORANGE = "original_orange",
+  OVERLAP_BG_COLOR = "overlap_bg_color",
+  PLEASURE_01 = "pleasure_01",
+  PLEASURE_02 = "pleasure_02",
+  POPUP_MENU_BINDING_KEY = "popup_menu_binding_key",
+  PURE_BLACK = "pure_black",
+  PURE_RED = "pure_red",
+  PURPLE = "purple",
+  QUEST_DIRECTING_BUTTON_ON = "quest_directing_button_on",
+  QUEST_DIRECTING_BUTTON_OV = "quest_directing_button_ov",
+  QUEST_MAIN = "quest_main",
+  QUEST_MESSAGE = "quest_message",
+  QUEST_NORMAL = "quest_normal",
+  QUEST_TASK = "quest_task",
+  RAID_COMMAND_MESSAGE = "raid_command_message",
+  RAID_FRAME_MY_NAME = "raid_frame_my_name",
+  RAID_PARTY_BLUE = "raid_party_blue",
+  RAID_PARTY_ORANGE = "raid_party_orange",
+  RED = "red",
+  REWARD = "reward",
+  ROLE_DEALER = "role_dealer",
+  ROLE_HEALER = "role_healer",
+  ROLE_NONE = "role_none",
+  ROLE_TANKER = "role_tanker",
+  ROMANCE_01 = "romance_01",
+  ROMANCE_02 = "romance_02",
+  ROSE_PINK = "rose_pink",
+  ROUND_MESSAGE_IN_INSTANCE = "round_message_in_instance",
+  SCARLET_RED = "scarlet_red",
+  SEA_BLUE = "sea_blue",
+  SEA_DEEP_BLUE = "sea_deep_blue",
+  SINERGY = "sinergy",
+  SKIN_ITEM = "skin_item",
+  SKY = "sky",
+  SKY_GRAY = "sky_gray",
+  SKYBLUE = "skyblue",
+  SOCKET = "socket",
+  SODA_BLUE = "soda_blue",
+  SOFT_BROWN = "soft_brown",
+  SOFT_GREEN = "soft_green",
+  SOFT_RED = "soft_red",
+  SOFT_YELLOW = "soft_yellow",
+  START_ITEM = "start_item",
+  STAT_ITEM = "stat_item",
+  SUB_MENU_IN_MAIN_MENU_DF = "sub_menu_in_main_menu_df",
+  SUB_MENU_IN_MAIN_MENU_DIS = "sub_menu_in_main_menu_dis",
+  SUB_MENU_IN_MAIN_MENU_ON = "sub_menu_in_main_menu_on",
+  SUB_MENU_IN_MAIN_MENU_OV = "sub_menu_in_main_menu_ov",
+  SUBZONE_STATE_ALARM = "subzone_state_alarm",
+  SUCCESSOR = "successor",
+  SUCCESSOR_DEEP = "successor_deep",
+  SUCCESSOR_EXP = "successor_exp",
+  TARGET_FRAME_NAME_FRIENDLY = "target_frame_name_friendly",
+  TARGET_FRAME_NAME_HOSTILE = "target_frame_name_hostile",
+  TARGET_FRAME_NAME_NEUTRAL = "target_frame_name_neutral",
+  TEAM_BLUE = "team_blue",
+  TEAM_HUD_BLUE = "team_hud_blue",
+  TEAM_HUD_BTN_TEXT_DF = "team_hud_btn_text_df",
+  TEAM_HUD_BTN_TEXT_DIS = "team_hud_btn_text_dis",
+  TEAM_HUD_BTN_TEXT_ON = "team_hud_btn_text_on",
+  TEAM_HUD_BTN_TEXT_OV = "team_hud_btn_text_ov",
+  TEAM_VIOLET = "team_violet",
+  TEXT_BTN_DF = "text_btn_df",
+  TEXT_BTN_DIS = "text_btn_dis",
+  TEXT_BTN_ON = "text_btn_on",
+  TEXT_BTN_OV = "text_btn_ov",
+  TITLE = "title",
+  TITLE_BUTTON_DIS = "title_button_dis",
+  TOOLTIP_DEFAULT = "tooltip_default",
+  TOOLTIP_ZONE_COLOR_STATE_DEFAULT = "tooltip_zone_color_state_default",
+  TOOLTIP_ZONE_COLOR_STATE_HIGH = "tooltip_zone_color_state_high",
+  TOOLTIP_ZONE_COLOR_STATE_PEACE = "tooltip_zone_color_state_peace",
+  TRANSPARENCY = "transparency",
+  TRIBE_BTN_DF = "tribe_btn_df",
+  TRIBE_BTN_DIS = "tribe_btn_dis",
+  TRIBE_BTN_ON = "tribe_btn_on",
+  TRIBE_BTN_OV = "tribe_btn_ov",
+  TUTORIAL_GUIDE = "tutorial_guide",
+  TUTORIAL_SCREENSHOT_POINT = "tutorial_screenshot_point",
+  TUTORIAL_TITLE = "tutorial_title",
+  UNIT_GRADE_BOSS_A = "unit_grade_boss_a",
+  UNIT_GRADE_BOSS_B = "unit_grade_boss_b",
+  UNIT_GRADE_BOSS_C = "unit_grade_boss_c",
+  UNIT_GRADE_BOSS_S = "unit_grade_boss_s",
+  UNIT_GRADE_STRONG = "unit_grade_strong",
+  UNIT_GRADE_WEAK = "unit_grade_weak",
+  USER_TRAL_RED = "user_tral_red",
+  VERSION_INFO = "version_info",
+  VIOLET = "violet",
+  VOCATION = "vocation",
+  WHITE = "white",
+  WHITE_BUTTTON_DF = "white_buttton_df",
+  WHITE_BUTTTON_DIS = "white_buttton_dis",
+  WHITE_BUTTTON_ON = "white_buttton_on",
+  WILD = "wild",
+  WILL = "will",
+  WORLD_MAP_LATITUDE = "world_map_latitude",
+  WORLD_MAP_LONGITUDE = "world_map_longitude",
+  WORLD_MAP_LONGITUDE_2 = "world_map_longitude_2",
+  WORLD_NAME_0 = "world_name_0",
+  WORLD_NAME_1 = "world_name_1",
+  YELLOW = "yellow",
+  YELLOW_OCHER = "yellow_ocher",
+  ZONE_DANGER_ORANGE = "zone_danger_orange",
+  ZONE_DISPUTE_OGANGE = "zone_dispute_ogange",
+  ZONE_FESTIVAL_GREEN = "zone_festival_green",
+  ZONE_INFORMER_NAME = "zone_informer_name",
+  ZONE_PEACE_BLUE = "zone_peace_blue",
+  ZONE_WAR_RED = "zone_war_red",
+}
+
+---Obtained from db sound_pack_items sound_pack_id = 203
+---@enum SOUND_NAME
+local SOUND_NAME = {
+  BATTLEFIELD_1_SECOUND = "battlefield_1_secound",
+  BATTLEFIELD_2_SECOUND = "battlefield_2_secound",
+  BATTLEFIELD_3_SECOUND = "battlefield_3_secound",
+  BATTLEFIELD_4_SECOUND = "battlefield_4_secound",
+  BATTLEFIELD_5_SECOUND = "battlefield_5_secound",
+  BATTLEFIELD_ALREADY_START = "battlefield_already_start",
+  BATTLEFIELD_DEFEAT = "battlefield_defeat",
+  BATTLEFIELD_DRAW = "battlefield_draw",
+  BATTLEFIELD_END = "battlefield_end",
+  BATTLEFIELD_KILL_AMAZING_SPIRIT = "battlefield_kill_amazing_spirit",
+  BATTLEFIELD_KILL_DESTRUCTION_GOD = "battlefield_kill_destruction_god",
+  BATTLEFIELD_KILL_EYES_ON_FIRE = "battlefield_kill_eyes_on_fire",
+  BATTLEFIELD_KILL_FIFTH = "battlefield_kill_fifth",
+  BATTLEFIELD_KILL_FIRST = "battlefield_kill_first",
+  BATTLEFIELD_KILL_FOURTH = "battlefield_kill_fourth",
+  BATTLEFIELD_KILL_MORE_THAN_SIXTH = "battlefield_kill_more_than_sixth",
+  BATTLEFIELD_KILL_SECOND = "battlefield_kill_second",
+  BATTLEFIELD_KILL_THIRD = "battlefield_kill_third",
+  BATTLEFIELD_START = "battlefield_start",
+  BATTLEFIELD_WIN = "battlefield_win",
+  CDI_SCENE_ARTILLERY_CONTENTS2 = "cdi_scene_artillery_contents2",
+  CDI_SCENE_ARTILLERY_QUEST_ACCEPT_TITLE =
+  "cdi_scene_artillery_quest_accept_title",
+  CDI_SCENE_ARTILLERY_TITLE = "cdi_scene_artillery_title",
+  CDI_SCENE_COMBAT_CONTENTS2 = "cdi_scene_combat_contents2",
+  CDI_SCENE_COMBAT_CONTENTS3 = "cdi_scene_combat_contents3",
+  CDI_SCENE_COMBAT_TITLE = "cdi_scene_combat_title",
+  CDI_SCENE_COMPLETE_QUEST_TITLE = "cdi_scene_complete_quest_title",
+  CDI_SCENE_FIND_CAPTAIN_TITLE = "cdi_scene_find_captain_title",
+  CDI_SCENE_GLIDER_QUEST_ACCEPT_TITLE = "cdi_scene_glider_quest_accept_title",
+  CDI_SCENE_GO_TO_OLDMAN_TITLE = "cdi_scene_go_to_oldman_title",
+  CDI_SCENE_GUARDTOWER_TITLE = "cdi_scene_guardtower_title",
+  CDI_SCENE_LADDER_CONTENTS1 = "cdi_scene_ladder_contents1",
+  CDI_SCENE_LADDER_TITLE = "cdi_scene_ladder_title",
+  CDI_SCENE_QUEST_ACCEPT_TITLE = "cdi_scene_quest_accept_title",
+  CDI_SCENE_SIEGE_CONTENTS2 = "cdi_scene_siege_contents2",
+  CDI_SCENE_SIEGE_QUEST_ACCEPT_TITLE = "cdi_scene_siege_quest_accept_title",
+  CDI_SCENE_SIEGE_TITLE = "cdi_scene_siege_title",
+  CDI_SCENE_START_CONTENTS2 = "cdi_scene_start_contents2",
+  CDI_SCENE_TRIBE_QUEST_ACCEPT_TITLE = "cdi_scene_tribe_quest_accept_title",
+  EDIT_BOX_TEXT_ADDED = "edit_box_text_added",
+  EDIT_BOX_TEXT_DELETED = "edit_box_text_deleted",
+  EVENT_ACTABILITY_EXPERT_CHANGED = "event_actability_expert_changed",
+  EVENT_AUCTION_ITEM_PUTDOWN = "event_auction_item_putdown",
+  EVENT_AUCTION_ITEM_PUTUP = "event_auction_item_putup",
+  EVENT_COMMERCIAL_MAIL_ALARM = "event_commercial_mail_alarm",
+  EVENT_CURRENT_MAIL_DELETE = "event_current_mail_delete",
+  EVENT_EXPLORED_REGION = "event_explored_region",
+  EVENT_ITEM_ADDED = "event_item_added",
+  EVENT_ITEM_ANCIENT_ADDED = "event_item_ancient_added",
+  EVENT_ITEM_ARTIFACT_ADDED = "event_item_artifact_added",
+  EVENT_ITEM_EPIC_ADDED = "event_item_epic_added",
+  EVENT_ITEM_HEROIC_ADDED = "event_item_heroic_added",
+  EVENT_ITEM_LEGENDARY_ADDED = "event_item_legendary_added",
+  EVENT_ITEM_MYTHIC_ADDED = "event_item_mythic_added",
+  EVENT_ITEM_RARE_ADDED = "event_item_rare_added",
+  EVENT_ITEM_SOCKETING_RESULT_FAIL = "event_item_socketing_result_fail",
+  EVENT_ITEM_SOCKETING_RESULT_SUCCESS = "event_item_socketing_result_success",
+  EVENT_ITEM_UNCOMMON_ADDED = "event_item_uncommon_added",
+  EVENT_ITEM_UNIQUE_ADDED = "event_item_unique_added",
+  EVENT_ITEM_WONDER_ADDED = "event_item_wonder_added",
+  EVENT_MAIL_ALARM = "event_mail_alarm",
+  EVENT_MAIL_DELETE = "event_mail_delete",
+  EVENT_MAIL_READ_CHANGED = "event_mail_read_changed",
+  EVENT_MAIL_SEND = "event_mail_send",
+  EVENT_MESSAGE_BOX_ABILITY_CHANGE_ONOK = "event_message_box_ability_change_onok",
+  EVENT_MESSAGE_BOX_AUTION_BID_ONOK = "event_message_box_aution_bid_onok",
+  EVENT_MESSAGE_BOX_AUTION_DIRECT_ONOK = "event_message_box_aution_direct_onok",
+  EVENT_MESSAGE_BOX_DEFAULT_ONOK = "event_message_box_default_onok",
+  EVENT_MESSAGE_BOX_ITEM_DESTROY_ONOK = "event_message_box_item_destroy_onok",
+  EVENT_NATION_INDEPENDENCE = "event_nation_independence",
+  EVENT_QUEST_COMPLETED_DAILY = "event_quest_completed_daily",
+  EVENT_QUEST_COMPLETED_DAILY_HUNT = "event_quest_completed_daily_hunt",
+  EVENT_QUEST_COMPLETED_GROUP = "event_quest_completed_group",
+  EVENT_QUEST_COMPLETED_HIDDEN = "event_quest_completed_hidden",
+  EVENT_QUEST_COMPLETED_LIVELIHOOD = "event_quest_completed_livelihood",
+  EVENT_QUEST_COMPLETED_MAIN = "event_quest_completed_main",
+  EVENT_QUEST_COMPLETED_NORMAL = "event_quest_completed_normal",
+  EVENT_QUEST_COMPLETED_SAGA = "event_quest_completed_saga",
+  EVENT_QUEST_COMPLETED_TASK = "event_quest_completed_task",
+  EVENT_QUEST_COMPLETED_TUTORIAL = "event_quest_completed_tutorial",
+  EVENT_QUEST_COMPLETED_WEEKLY = "event_quest_completed_weekly",
+  EVENT_QUEST_DIRECTING_MODE = "event_quest_directing_mode",
+  EVENT_QUEST_DROPPED_DAILY = "event_quest_dropped_daily",
+  EVENT_QUEST_DROPPED_DAILY_HUNT = "event_quest_dropped_daily_hunt",
+  EVENT_QUEST_DROPPED_GROUP = "event_quest_dropped_group",
+  EVENT_QUEST_DROPPED_HIDDEN = "event_quest_dropped_hidden",
+  EVENT_QUEST_DROPPED_LIVELIHOOD = "event_quest_dropped_livelihood",
+  EVENT_QUEST_DROPPED_MAIN = "event_quest_dropped_main",
+  EVENT_QUEST_DROPPED_NORMAL = "event_quest_dropped_normal",
+  EVENT_QUEST_DROPPED_SAGA = "event_quest_dropped_saga",
+  EVENT_QUEST_DROPPED_TASK = "event_quest_dropped_task",
+  EVENT_QUEST_DROPPED_TUTORIAL = "event_quest_dropped_tutorial",
+  EVENT_QUEST_DROPPED_WEEKLY = "event_quest_dropped_weekly",
+  EVENT_QUEST_FAILED_DAILY = "event_quest_failed_daily",
+  EVENT_QUEST_FAILED_DAILY_HUNT = "event_quest_failed_daily_hunt",
+  EVENT_QUEST_FAILED_GROUP = "event_quest_failed_group",
+  EVENT_QUEST_FAILED_HIDDEN = "event_quest_failed_hidden",
+  EVENT_QUEST_FAILED_LIVELIHOOD = "event_quest_failed_livelihood",
+  EVENT_QUEST_FAILED_MAIN = "event_quest_failed_main",
+  EVENT_QUEST_FAILED_NORMAL = "event_quest_failed_normal",
+  EVENT_QUEST_FAILED_SAGA = "event_quest_failed_saga",
+  EVENT_QUEST_FAILED_TASK = "event_quest_failed_task",
+  EVENT_QUEST_FAILED_TUTORIAL = "event_quest_failed_tutorial",
+  EVENT_QUEST_FAILED_WEEKLY = "event_quest_failed_weekly",
+  EVENT_QUEST_LIST_CHANGED = "event_quest_list_changed",
+  EVENT_QUEST_STARTED_DAILY = "event_quest_started_daily",
+  EVENT_QUEST_STARTED_DAILY_HUNT = "event_quest_started_daily_hunt",
+  EVENT_QUEST_STARTED_GROUP = "event_quest_started_group",
+  EVENT_QUEST_STARTED_HIDDEN = "event_quest_started_hidden",
+  EVENT_QUEST_STARTED_LIVELIHOOD = "event_quest_started_livelihood",
+  EVENT_QUEST_STARTED_MAIN = "event_quest_started_main",
+  EVENT_QUEST_STARTED_NORMAL = "event_quest_started_normal",
+  EVENT_QUEST_STARTED_SAGA = "event_quest_started_saga",
+  EVENT_QUEST_STARTED_TASK = "event_quest_started_task",
+  EVENT_QUEST_STARTED_TUTORIAL = "event_quest_started_tutorial",
+  EVENT_QUEST_STARTED_WEEKLY = "event_quest_started_weekly",
+  EVENT_SIEGE_DEFEAT = "event_siege_defeat",
+  EVENT_SIEGE_READY_TO_SIEGE = "event_siege_ready_to_siege",
+  EVENT_SIEGE_VICTORY = "event_siege_victory",
+  EVENT_TRADE_CAN_NOT_PUTUP = "event_trade_can_not_putup",
+  EVENT_TRADE_ITEM_AND_MONEY_RECV = "event_trade_item_and_money_recv",
+  EVENT_TRADE_ITEM_PUTUP = "event_trade_item_putup",
+  EVENT_TRADE_ITEM_RECV = "event_trade_item_recv",
+  EVENT_TRADE_ITEM_TOOKDOWN = "event_trade_item_tookdown",
+  EVENT_TRADE_LOCK = "event_trade_lock",
+  EVENT_TRADE_MONEY_RECV = "event_trade_money_recv",
+  EVENT_TRADE_UNLOCK = "event_trade_unlock",
+  EVENT_ULC_ACTIVATE = "event_ulc_activate",
+  EVENT_WEB_MESSENGER_ALARM = "event_web_messenger_alarm",
+  GENDER_TRANSFER = "gender_transfer",
+  HIGH_RANK_ACHIEVEMENT = "high_rank_achievement",
+  ITEM_SYNTHESIS_RESULT = "item_synthesis_result",
+  LISTBOX_ITEM_SELECTED = "listbox_item_selected",
+  LISTBOX_ITEM_TOGGLED = "listbox_item_toggled",
+  LISTBOX_OVER = "listbox_over",
+  LOGIN_STAGE_MUSIC_BEFORE_LOGIN = "login_stage_music_before_login",
+  LOGIN_STAGE_MUSIC_CHARACTER_STAGE = "login_stage_music_character_stage",
+  LOGIN_STAGE_MUSIC_CREATOR = "login_stage_music_creator",
+  LOGIN_STAGE_MUSIC_WORLD_SELECT = "login_stage_music_world_select",
+  LOGIN_STAGE_READY_TO_CONNECT_WORLD = "login_stage_ready_to_connect_world",
+  LOGIN_STAGE_START_GAME = "login_stage_start_game",
+  LOGIN_STAGE_TRY_LOGIN = "login_stage_try_login",
+  LOGIN_STAGE_WORLD_SELECT = "login_stage_world_select",
+  LOW_RANK_ACHIEVEMENT = "low_rank_achievement",
+  MAKEUP_DONE = "makeup_done",
+  SUCCESSOR_SKILL_CHANGE = "successor_skill_change",
+  SUCCESSOR_SKILL_SELECT = "successor_skill_select",
+  TUTORIAL_CONTENTS_2584_2_1 = "tutorial_contents_2584_2_1",
+  TUTORIAL_CONTENTS_2584_2_2 = "tutorial_contents_2584_2_2",
+  TUTORIAL_CONTENTS_2585_2_1 = "tutorial_contents_2585_2_1",
+  TUTORIAL_CONTENTS_2585_2_2 = "tutorial_contents_2585_2_2",
+  TUTORIAL_CONTENTS_2586_2_1 = "tutorial_contents_2586_2_1",
+  TUTORIAL_CONTENTS_2586_2_2 = "tutorial_contents_2586_2_2",
+  TUTORIAL_CONTENTS_2587_1_1 = "tutorial_contents_2587_1_1",
+  TUTORIAL_CONTENTS_2588_1_1 = "tutorial_contents_2588_1_1",
+  TUTORIAL_CONTENTS_2589_2_1 = "tutorial_contents_2589_2_1",
+  TUTORIAL_CONTENTS_2589_2_2 = "tutorial_contents_2589_2_2",
+  TUTORIAL_CONTENTS_2590_2_1 = "tutorial_contents_2590_2_1",
+  TUTORIAL_CONTENTS_2590_2_2 = "tutorial_contents_2590_2_2",
+  TUTORIAL_CONTENTS_2591_1_1 = "tutorial_contents_2591_1_1",
+  TUTORIAL_CONTENTS_2592_1_1 = "tutorial_contents_2592_1_1",
+  TUTORIAL_CONTENTS_2593_1_1 = "tutorial_contents_2593_1_1",
+  TUTORIAL_CONTENTS_2594_2_1 = "tutorial_contents_2594_2_1",
+  TUTORIAL_CONTENTS_2594_2_2 = "tutorial_contents_2594_2_2",
+  TUTORIAL_CONTENTS_2595_1_1 = "tutorial_contents_2595_1_1",
+  TUTORIAL_CONTENTS_2596_2_1 = "tutorial_contents_2596_2_1",
+  TUTORIAL_CONTENTS_2596_2_2 = "tutorial_contents_2596_2_2",
+  TUTORIAL_CONTENTS_2597_1_1 = "tutorial_contents_2597_1_1",
+  TUTORIAL_CONTENTS_2598_2_1 = "tutorial_contents_2598_2_1",
+  TUTORIAL_CONTENTS_2598_2_2 = "tutorial_contents_2598_2_2",
+  TUTORIAL_CONTENTS_2599_1_1 = "tutorial_contents_2599_1_1",
+  TUTORIAL_CONTENTS_2600_1_1 = "tutorial_contents_2600_1_1",
+  TUTORIAL_CONTENTS_2601_1_1 = "tutorial_contents_2601_1_1",
+  TUTORIAL_CONTENTS_2602_1_1 = "tutorial_contents_2602_1_1",
+  TUTORIAL_CONTENTS_2603_1_1 = "tutorial_contents_2603_1_1",
+  TUTORIAL_CONTENTS_2604_1_1 = "tutorial_contents_2604_1_1",
+  TUTORIAL_CONTENTS_2605_1_1 = "tutorial_contents_2605_1_1",
+  TUTORIAL_CONTENTS_2606_1_1 = "tutorial_contents_2606_1_1",
+  TUTORIAL_CONTENTS_2607_1_1 = "tutorial_contents_2607_1_1",
+  TUTORIAL_CONTENTS_2608_1_1 = "tutorial_contents_2608_1_1",
+  TUTORIAL_CONTENTS_2609_2_1 = "tutorial_contents_2609_2_1",
+  TUTORIAL_CONTENTS_2609_2_2 = "tutorial_contents_2609_2_2",
+  TUTORIAL_CONTENTS_2610_1_1 = "tutorial_contents_2610_1_1",
+  TUTORIAL_CONTENTS_2611_1_1 = "tutorial_contents_2611_1_1",
+  TUTORIAL_CONTENTS_2612_1_1 = "tutorial_contents_2612_1_1",
+  TUTORIAL_CONTENTS_2613_1_1 = "tutorial_contents_2613_1_1",
+  TUTORIAL_CONTENTS_2614_1_1 = "tutorial_contents_2614_1_1",
+  TUTORIAL_CONTENTS_2615_1_1 = "tutorial_contents_2615_1_1",
+  TUTORIAL_CONTENTS_2616_1_1 = "tutorial_contents_2616_1_1",
+  TUTORIAL_CONTENTS_2617_1_1 = "tutorial_contents_2617_1_1",
+  TUTORIAL_CONTENTS_2618_1_1 = "tutorial_contents_2618_1_1",
+  TUTORIAL_CONTENTS_2619_1_1 = "tutorial_contents_2619_1_1",
+  TUTORIAL_CONTENTS_2620_1_1 = "tutorial_contents_2620_1_1",
+  TUTORIAL_CONTENTS_2621_1_1 = "tutorial_contents_2621_1_1",
+  TUTORIAL_CONTENTS_2622_1_1 = "tutorial_contents_2622_1_1",
+  TUTORIAL_CONTENTS_2623_1_1 = "tutorial_contents_2623_1_1",
+  TUTORIAL_CONTENTS_2624_1_1 = "tutorial_contents_2624_1_1",
+  TUTORIAL_CONTENTS_2625_1_1 = "tutorial_contents_2625_1_1",
+  TUTORIAL_CONTENTS_2626_1_1 = "tutorial_contents_2626_1_1",
+  TUTORIAL_CONTENTS_2627_1_1 = "tutorial_contents_2627_1_1",
+  TUTORIAL_CONTENTS_2628_1_1 = "tutorial_contents_2628_1_1",
+  TUTORIAL_CONTENTS_2629_1_1 = "tutorial_contents_2629_1_1",
+  TUTORIAL_CONTENTS_2630_1_1 = "tutorial_contents_2630_1_1",
+  TUTORIAL_CONTENTS_2631_1_1 = "tutorial_contents_2631_1_1",
+  TUTORIAL_CONTENTS_2632_1_1 = "tutorial_contents_2632_1_1",
+  TUTORIAL_CONTENTS_2633_1_1 = "tutorial_contents_2633_1_1",
+  TUTORIAL_CONTENTS_2634_1_1 = "tutorial_contents_2634_1_1",
+  TUTORIAL_CONTENTS_2635_1_1 = "tutorial_contents_2635_1_1",
+  TUTORIAL_CONTENTS_2636_1_1 = "tutorial_contents_2636_1_1",
+  TUTORIAL_CONTENTS_2639_1_1 = "tutorial_contents_2639_1_1",
+  TUTORIAL_CONTENTS_2640_1_1 = "tutorial_contents_2640_1_1",
+  TUTORIAL_CONTENTS_2641_1_1 = "tutorial_contents_2641_1_1",
+  TUTORIAL_CONTENTS_2642_1_1 = "tutorial_contents_2642_1_1",
+  TUTORIAL_CONTENTS_2643_1_1 = "tutorial_contents_2643_1_1",
+  TUTORIAL_CONTENTS_2644_1_1 = "tutorial_contents_2644_1_1",
+  TUTORIAL_CONTENTS_2645_1_1 = "tutorial_contents_2645_1_1",
+  TUTORIAL_CONTENTS_2646_1_1 = "tutorial_contents_2646_1_1",
+  TUTORIAL_CONTENTS_2647_1_1 = "tutorial_contents_2647_1_1",
+  TUTORIAL_CONTENTS_2648_1_1 = "tutorial_contents_2648_1_1",
+  TUTORIAL_CONTENTS_2649_1_1 = "tutorial_contents_2649_1_1",
+  TUTORIAL_CONTENTS_2650_1_1 = "tutorial_contents_2650_1_1",
+  TUTORIAL_CONTENTS_2651_1_1 = "tutorial_contents_2651_1_1",
+  TUTORIAL_CONTENTS_2652_1_1 = "tutorial_contents_2652_1_1",
+  TUTORIAL_CONTENTS_2653_1_1 = "tutorial_contents_2653_1_1",
+}
+
+---@TODO: This should be [number] = "string" unless i make this a global, need to update this, this also doesnt include sub_zones
+---@enum ZONE_ID
+local ZONE_ID = {
+  W_GWEONID_FOREST_1 = 1,
+  W_MARIANOPLE_1 = 2,
+  W_GARANGDOL_PLAINS_1 = 3,
+  E_SUNRISE_PENINSULA_1 = 4,
+  W_SOLZREED_1 = 5,
+  W_LILYUT_MEADOW_1 = 6,
+  E_RAINBOW_FIELD_1 = 7,
+  W_TWO_CROWNS_1 = 8,
+  E_MAHADEVI_1 = 9,
+  W_BRONZE_ROCK_1 = 10,
+  E_FALCONY_PLATEAU_1 = 11,
+  E_SINGING_LAND_1 = 12,
+  E_SUNNY_WILDERNESS_1 = 13,
+  E_STEPPE_BELT_1 = 14,
+  E_RUINS_OF_HARIHARALAYA_1 = 15,
+  E_LOKAS_CHECKERS_1 = 16,
+  E_YNYSTERE_1 = 17,
+  W_WHITE_FOREST_1 = 18,
+  W_THE_CARCASS_1 = 19,
+  W_CROSS_PLAINS_1 = 20,
+  W_CRADLE_OF_GENESIS_1 = 21,
+  W_GOLDEN_PLAINS_1 = 22,
+  E_HASLA_1 = 23,
+  E_TIGER_SPINE_MOUNTAINS_1 = 24,
+  E_ANCIENT_FOREST = 25,
+  W_HELL_SWAMP_1 = 26,
+  W_LONG_SAND_1 = 27,
+  W_BARREN_LAND = 28,
+  S_LOST_ISLAND = 30,
+  INSTANCE_TRAINING_CAMP = 31,
+  INSTANCE_SILENT_COLOSSUS = 32,
+  O_SALPIMARI = 33,
+  O_NUIMARI = 34,
+  S_SILENT_SEA_1 = 36,
+  S_GOLDEN_SEA_1 = 39,
+  S_CRESCENT_SEA = 40,
+  LOCK_GOLDEN_SEA = 41,
+  W_FROZEN_TOP_1 = 42,
+  O_SEONYEOKMARI = 43,
+  O_REST_LAND = 44,
+  INSTANCE_BURNTCASTLE_ARMORY = 45,
+  INSTANCE_HADIR_FARM = 46,
+  INSTANCE_SAL_TEMPLE = 47,
+  E_WHITE_ISLAND = 48,
+  ARCHE_MALL = 49,
+  INSTANCE_CUTTINGWIND_DEADMINE = 50,
+  INSTANCE_HOWLING_ABYSS = 51,
+  INSTANCE_CRADLE_OF_DESTRUCTION = 52,
+  TEST_INSTANCE_VIOLENT_MAELSTROM = 53,
+  O_ABYSS_GATE = 54,
+  INSTANCE_NACHASHGAR = 55,
+  O_LAND_OF_SUNLIGHTS = 56,
+  O_RUINS_OF_GOLD = 57,
+  INSTANCE_HOWLING_ABYSS_2 = 58,
+  S_FREEDOM_ISLAND = 59,
+  S_PIRATE_ISLAND = 60,
+  O_SHINING_SHORE_1 = 61,
+  INSTANCE_IMMORTAL_ISLE = 62,
+  O_THE_GREAT_REEDS = 63,
+  INSTANCE_IMMORTAL_ISLE_EASY = 64,
+  O_LIBRARY_2 = 65,
+  INSTANCE_NACHASHGAR_EASY = 66,
+  O_LIBRARY_1 = 67,
+  INSTANCE_PROLOGUE = 68,
+  O_LIBRARY_3 = 69,
+  INSTANCE_LIBRARY_1 = 70,
+  INSTANCE_LIBRARY_2 = 71,
+  INSTANCE_LIBRARY_3 = 72,
+  INSTANCE_LIBRARY_BOSS_1 = 73,
+  INSTANCE_LIBRARY_BOSS_2 = 74,
+  INSTANCE_LIBRARY_BOSS_3 = 75,
+  INSTANCE_LIBRARY_TOWER_DEFENSE = 76,
+  INSTANCE_TRAINING_CAMP_1ON1 = 77,
+  O_DEW_PLAINS = 78,
+  W_MIRROR_KINGDOM_1 = 79,
+  S_BROKEN_MIRRORS_SEA_1 = 80,
+  INSTANCE_BATTLE_FIELD = 81,
+  O_EPHERIUM_1 = 82,
+  INSTANCE_HADIR_FARM_HARD = 83,
+  INSTANCE_BURNTCASTLE_ARMORY_HARD = 84,
+  INSTANCE_LIBRARY_HEART = 85,
+  INSTANCE_SAL_TEMPLE_HARD = 86,
+  INSTANCE_CUTTINGWIND_DEADMINE_HARD = 87,
+  INSTANCE_CRADLE_OF_DESTRUCTION_HARD = 88,
+  INSTANCE_FEAST_GARDEN = 89,
+  INSTANCE_TRAINING_CAMP_NO_ITEM = 90,
+  INSTANCE_THE_JUDGE_OF_UTHSTIN = 91,
+  INSTANCE_BATTLE_FIELD_OF_FEAST = 92,
+  W_HANUIMARU_1 = 93,
+  INSTANCE_PROLOGUE_IZUNA = 94,
+  S_BOILING_SEA_4 = 95,
+  E_SYLVINA_REGION = 96,
+  INSTANCE_SEA_OF_CHAOS = 97,
+  O_ROOM_OF_QUEEN_1 = 98,
+  E_LOKALOKA_MOUNTAINS_1 = 99,
+  O_ROOM_OF_QUEEN_2 = 100,
+  O_ROOM_OF_QUEEN_3 = 101,
+  O_CANDLESTICK_OF_SEA = 102,
+  O_WHALE_SONG_BAY = 103,
+  S_WHALE_SWELL_STRAIT = 104,
+  INSTANCE_HANGING_GARDENS_OF_IPNA = 105,
+  INSTANCE_FESTIVAL_CAMP_1ON1 = 106,
+  O_HIRAMA_THE_WEST_1 = 107,
+  INSTANCE_GOLDEN_PLAINS = 108,
+  INSTANCE_GOLDEN_PLAINS_WAR = 109,
+  O_HIRAMA_THE_EAST_1 = 110,
+  INSTANCE_LIBRARY_NEW_BOSS_1 = 111,
+  INSTANCE_LIBRARY_NEW_BOSS_2 = 112,
+  INSTANCE_LIBRARY_NEW_BOSS_3 = 113,
+  TEST_ARCANEEARTH = 114,
+  INSTANCE_LIBRARY_NEW_HEART = 115,
+  LIBRARY_LOBBY_1F = 116,
+  LIBRARY_LOBBY_2F = 117,
+  LIBRARY_LOBBY_3F = 118,
+  LIBRARY_LOBBY_4F = 119,
+  INSTANCE_LIBRARY_BOSS_TOTAL = 120,
+  INSTANCE_CARCASS = 121,
+  INSTANCE_THE_LAST_DAY_OF_HIRAMAKAND = 122,
+  INSTANCE_CHALLENGE_TOWER = 125,
+  ZONE_INSTANCE_DEFENSE_OF_FEAST = 126,
+  INSTANCE_SEA_SURVIVAL = 127,
+  INSTANCE_SEA_SURVIVAL_2 = 129,
+  INSTANCE_ETERNITY = 130,
+  INSTANCE_DEW_PLAIN = 131,
+  INSTANCE_DEWPLANE_BOSS = 132,
+  THE_GARDEN_1 = 133,
+  GATEKEEPER_HALL = 134,
+  INSTANCE_HANUIMARU = 135,
+  INSTANCE_RESTRAINT_OF_POWER = 136,
+  INSTANCE_PHANTOM_OF_DELPHINAD = 137,
+  INSTANCE_ARENA_2ON2 = 138,
+  O_LAND_OF_MAGIC = 139,
+  O_MOUNT_IPNIR_1 = 140,
+  INSTANCE_GARUDA_NEST = 141,
+  INSTANCE_MOUNT_IPNIR_STORY = 142,
+  INSTANCE_EVENT_CAMP_1ON1 = 143,
+  CBSUH_NONPC = 144,
+  INSTANCE_BLACK_THORN = 145,
+  INSTANCE_BLACK_SPIKE = 146,
+  O_WESTERN_PRAIRIE_1 = 147,
+  INSTANCE_NACHASHGAR_ANCIENT = 148,
+  INSTANCE_CUTTLEFISH_EVENT_ZONE = 149,
+  INSTANCE_DIMENSIONAL_DEFENCE = 150,
+  INSTANCE_EVENT_HANUIMARU = 151,
+  W_GOLDEN_MOSS_FOREST = 152,
+  INSTANCE_TRAINING_CAMP_1ON1_GA = 153,
+  INSTANCE_BURNTCASTLE_ARMORY_NIGHTMARE = 154,
+  INSTANCE_DIVIDED_CROSSROAD = 155,
+  INSTANCE_NORYETTE_BATTLEFIELD = 156,
+  INSTANCE_LIFE_DUNGEON_DARU = 158,
+  INSTANCE_GOLDEN_PLAINS_GA = 159,
+}
+
+---@TODO: taken from db zones
+---@enum ZONE_KEY
+local ZONE_KEY = {}
+
+---@TODO: Populate this.
+---@enum ZONE_NAME
+local ZONE_NAME = {}
+
+---Taken from db ui_esc_menu_categories
+---@enum ESC_MENU_CATEGORY_ID
+local ESC_MENU_CATEGORY_ID = {
+  CHARACTER = 1,
+  COMBAT = 2,
+  SHOP = 3,
+  CONVENIENCE = 4,
+  SYSTEM = 5,
+}
+
+---Taken from `ui\setting\etc_color.g`
+---@enum DRAWABLE_COLOR_KEY
+local DRAWABLE_COLOR_KEY = {
+  ACTION_SLOT_STATE_IMG_ABLE              = "action_slot_state_img_able",
+  ACTION_SLOT_STATE_IMG_CAN_LEARN         = "action_slot_state_img_can_learn",
+  ACTION_SLOT_STATE_IMG_CANT_OR_NOT_LEARN = "action_slot_state_img_cant_or_not_learn",
+  ACTION_SLOT_STATE_IMG_DISABLE           = "action_slot_state_img_disable",
+  COMMON_BLACK_BG                         = "common_black_bg",
+  COMMON_WHITE_BG                         = "common_white_bg",
+  CRAFT_STEP_DISABLE                      = "craft_step_disable",
+  CRAFT_STEP_ENABLE                       = "craft_step_enable",
+  EDITBOX_CURSOR_DEFAULT                  = "editbox_cursor_default",
+  EDITBOX_CURSOR_LIGHT                    = "editbox_cursor_light",
+  ICON_BUTTON_OVERLAY_BLACK               = "icon_button_overlay_black",
+  ICON_BUTTON_OVERLAY_NONE                = "icon_button_overlay_none",
+  ICON_BUTTON_OVERLAY_RED                 = "icon_button_overlay_red",
+  ICON_BUTTON_OVERLAY_YELLOW              = "icon_button_overlay_yellow",
+  LOGIN_STAGE_BLACK_BG                    = "login_stage_black_bg",
+  MAP_HP_BAR                              = "map_hp_bar",
+  MAP_HP_BAR_BG                           = "map_hp_bar_bg",
+  MARKET_PRICE_COLUMN_OVER                = "market_price_column_over",
+  MARKET_PRICE_LAST_COLUMN                = "market_price_last_column",
+  MARKET_PRICE_LINE_DAILY                 = "market_price_line_daily",
+  MARKET_PRICE_LINE_WEEKLY                = "market_price_line_weekly",
+  MARKET_PRICE_VOLUME                     = "market_price_volume",
+  MARKET_PRICT_CELL                       = "market_prict_cell",
+  QUEST_CONTENT_DIRECTING_FADE_IN         = "quest_content_directing_fade_in",
+  QUEST_CONTENT_DIRECTING_FADE_OUT        = "quest_content_directing_fade_out",
+  QUEST_CONTENT_DIRECTING_UNDER_PANEL     = "quest_content_directing_under_panel",
+  QUICK_SLOT_BG                           = "quick_slot_bg",
+  TEXTURE_CHECK_WINDOW_BG                 = "texture_check_window_bg",
+  TEXTURE_CHECK_WINDOW_DATA_LABEL         = "texture_check_window_data_label",
+  TEXTURE_CHECK_WINDOW_RECT               = "texture_check_window_rect",
+  TEXTURE_CHECK_WINDOW_TOOLTIP_BG         = "texture_check_window_tooltip_bg",
+  WEB_BROWSER_BACKGROUND                  = "web_browser_background",
+}
+
+---@enum WIDGET_EVENT_TYPE
+local WIDGET_EVENT_TYPE = {
+  ONACCEPTFOCUS            = "OnAcceptFocus",
+  ONALPHAANIMEEND          = "OnAlphaAnimeEnd",
+  ONBOUNDCHANGED           = "OnBoundChanged",
+  ONCHANGEDANCHOR          = "OnChangedAnchor",
+  ONCHECKCHANGED           = "OnCheckChanged",
+  ONCLICK                  = "OnClick",
+  ONCLOSEBYESC             = "OnCloseByEsc",
+  ONCONTENTUPDATED         = "OnContentUpdated",
+  ONCURSORMOVED            = "OnCursorMoved",
+  ONDRAGRECEIVE            = "OnDragReceive",
+  ONDRAGSTART              = "OnDragStart",
+  ONDRAGSTOP               = "OnDragStop",
+  ONDYNAMICLISTUPDATEDVIEW = "OnDynamicListUpdatedView",
+  ONEFFECT                 = "OnEffect",
+  ONENABLECHANGED          = "OnEnableChanged",
+  ONENDFADEIN              = "OnEndFadeIn",
+  ONENDFADEOUT             = "OnEndFadeOut",
+  ONENTER                  = "OnEnter",
+  ONENTERPRESSED           = "OnEnterPressed",
+  ONESCAPEPRESSED          = "OnEscapePressed",
+  ONEVENT                  = "OnEvent",
+  ONHIDE                   = "OnHide",
+  ONKEYDOWN                = "OnKeyDown",
+  ONKEYUP                  = "OnKeyUp",
+  ONLEAVE                  = "OnLeave",
+  ONLISTBOXTOGGLED         = "OnListboxToggled",
+  ONMODELCHANGED           = "OnModelChanged",
+  ONMOUSEDOWN              = "OnMouseDown",
+  ONMOUSEMOVE              = "OnMouseMove",
+  ONMOUSEUP                = "OnMouseUp",
+  ONMOVEDPOSITION          = "OnMovedPosition",
+  ONPAGECHANGED            = "OnPageChanged",
+  ONPERMISSIONCHANGED      = "OnPermissionChanged",
+  ONRADIOCHANGED           = "OnRadioChanged",
+  ONRESTRICTED             = "OnRestricted",
+  ONSCALE                  = "OnScale",
+  ONSCALEANIMEEND          = "OnScaleAnimeEnd",
+  ONSELCHANGED             = "OnSelChanged",
+  ONSHOW                   = "OnShow",
+  ONSLIDERCHANGED          = "OnSliderChanged",
+  ONTABCHANGED             = "OnTabChanged",
+  ONTEXTCHANGED            = "OnTextChanged",
+  ONTOOLTIP                = "OnTooltip",
+  ONUPDATE                 = "OnUpdate",
+  ONVISIBLECHANGED         = "OnVisibleChanged",
+  ONWHEELDOWN              = "OnWheelDown",
+  ONWHEELUP                = "OnWheelUp",
+  PRECLICK                 = "PreClick",
+  PREUSE                   = "PreUse",
+}
+
+---@enum KEY_MODIFIER
+local KEY_MODIFIER = {
+  NONE  = 0,
+  SHIFT = 34,
+  CTRL  = 17,
+  ALT   = 68,
+}
+
+---@enum PING_TYPE
+local PING_TYPE = {
+  PING   = 1,
+  ENEMY  = 2,
+  ATTACK = 3,
+  LINE   = 4,
+  ERASER = 5,
+}
+
+---@enum ANCHOR_POINT
+local ANCHOR_POINT = {
+  TOP_LEFT     = "TOPLEFT",
+  TOP          = "TOP",
+  TOP_RIGHT    = "TOPRIGHT",
+  LEFT         = "LEFT",
+  CENTER       = "CENTER",
+  RIGHT        = "RIGHT",
+  BOTTOM_LEFT  = "BOTTOMLEFT",
+  BOTTOM       = "BOTTOM",
+  BOTTOM_RIGHT = "BOTTOMRIGHT",
+}
+
+---@enum DRAWABLE_NAME_LAYER
+local DRAWABLE_NAME_LAYER = {
+  ARTWORK     = "artwork",
+  BACKGROUND  = "background",
+  OVERLAY     = "overlay",
+  OVEROVERLAY = "overoverlay",
+}

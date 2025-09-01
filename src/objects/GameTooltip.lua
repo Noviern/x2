@@ -28,12 +28,6 @@ UFT_PERMP = "|p7;"              -- objects/GameTooltip
 UFT_PVPHONOR = "|p10;"          -- objects/GameTooltip
 UFT_PVPKILL = "|p11;"           -- objects/GameTooltip
 
----@enum LINE_ALIGN
-local LINE_ALIGN = {
-  left  = "left",
-  right = "right"
-}
-
 ---objects/GameTooltip
 ---@class GameTooltip: Widget
 ---@field style TextStyle

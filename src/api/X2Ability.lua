@@ -43,23 +43,14 @@ SPECIAL_PASSIVE_SKILL = 190          -- api/X2Ability
 X2Ability = {}                       -- api/X2Ability
 
 ---api/X2Ability
----@class ActabilityInfo
----@field name string
----@field type number
----@field point number
----@field modifyPoint number
----@field grade number
-
----api/X2Ability
----
----As of 6/10/2025 only `BIK_DESCRIPTION` appears to work.
+---Values can be added together to get more information.
 ---@alias BIK number
 ---| `BIK_DESCRIPTION`
----| `BIK_RUNTIME_ALL` Broken
----| `BIK_RUNTIME_DURATION` Broken
----| `BIK_RUNTIME_MINE` Broken
----| `BIK_RUNTIME_STACK` Broken
----| `BIK_RUNTIME_TIMELEFT` Broken
+---| `BIK_RUNTIME_ALL`
+---| `BIK_RUNTIME_DURATION`
+---| `BIK_RUNTIME_MINE`
+---| `BIK_RUNTIME_STACK`
+---| `BIK_RUNTIME_TIMELEFT`
 
 ---Retrieves a list of all the player's actability information.
 ---@return ActabilityInfo[] allMyActabilityInfos A table of actability information.
@@ -71,7 +62,7 @@ X2Ability = {}                       -- api/X2Ability
 ---@see ActabilityInfo
 function X2Ability:GetAllMyActabilityInfos() end
 
----@TODO: Find a buff where itemLevel actually matters.
+---@TODO: Find a buff where itemLevel actually matters. Only BIK_DESCRIPTION appears to work.
 ---Retrieves information for the buff tooltip based on the buff type and item
 ---level.
 ---@param buffType number The type of buff.

@@ -16,13 +16,6 @@ DC_ALWAYS = 0          -- objects/Line
 DC_SHIFT_KEY_DOWN = 1  -- objects/Line
 
 ---objects/Line
----@class Point
----@field beginX number
----@field beginY number
----@field endX number
----@field endY number
-
----objects/Line
 ---@class Line: Widget
 ---@class line: Line
 local Line = {}

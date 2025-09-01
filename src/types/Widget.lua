@@ -2,14 +2,6 @@
 
 ---@TODO: Should Widgetbase and Widget be merged?
 
----@enum DRAWABLE_NAME_LAYER
-local DRAWABLE_NAME_LAYER = {
-  ARTWORK     = "artwork",
-  BACKGROUND  = "background",
-  OVERLAY     = "overlay",
-  OVEROVERLAY = "overoverlay",
-}
-
 ---@class Widget: Widgetbase, Uibounds, Uiobject
 local Widget = {}
 

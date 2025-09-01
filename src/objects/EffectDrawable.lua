@@ -11,25 +11,6 @@ AP_TOPLEFT = 0     -- objects/EffectDrawable
 AP_TOPRIGHT = 1    -- objects/EffectDrawable
 
 ---objects/EffectDrawable
----@enum EFFECT_PRIORITY
-local EFFECT_PRIORITY = {
-  ALPHA  = "alpha",
-  SCALEX = "scalex",
-  ROTATE = "rotate",
-  COLORR = "colorr",
-}
-
----objects/EffectDrawable
----@enum MOVE_TYPE
-local MOVE_TYPE = {
-  LEFT   = "left",
-  TOP    = "top",
-  RIGHT  = "right",
-  BOTTOM = "bottom",
-  CIRCLE = "circle",
-}
-
----objects/EffectDrawable
 ---@class EffectDrawable: DrawableDDS
 local EffectDrawable = {}
 

@@ -30,16 +30,6 @@ X2Resident = {}                              -- api/X2Resident
 ---| `HOUSING_LIST_FILTER_UNDERWATER_STRUCTURE`
 ---| `HOUSING_LIST_FILTER_WORKTABLE`
 
----api/X2Resident
----@class ResidentBoardContent
----@field [1] string?
----@field [2] string?
----@field [3] string?
----@field [4] string?
----@field contents ResidentBoardContent
----@field faction string
----@field title string
-
 ---@TODO: Unsure how the unknown is used, appears to always return `false`.
 ---Searches for housing trade listings in the current zone with the given
 ---filter and search word, triggering the `RESIDENT_HOUSING_TRADE_LIST` event.

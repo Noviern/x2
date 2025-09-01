@@ -15,13 +15,6 @@ CT_NAME = 1            -- objects/StatusBar
 DC_ALWAYS = 0          -- objects/StatusBar
 DC_SHIFT_KEY_DOWN = 1  -- objects/StatusBar
 
----@enum ORIENTATION
-local ORIENTATION = {
-  HORIZONTAL = "HORIZONTAL",
-  NORMAL     = "normal",
-  VERTICAL   = "VERTICAL",
-}
-
 ---objects/StatusBar
 ---@class StatusBar: Widget
 ---@class statusbar: StatusBar

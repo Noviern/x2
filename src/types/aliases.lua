@@ -1,0 +1,91 @@
+---@alias WIDGET_TYPES
+---| Avi
+---| Button
+---| ChatWindow
+---| Checkbutton
+---| CircleDiagram
+---| ColorPicker
+---| Combobox
+---| CooldownButton
+---| CooldownConstantButton
+---| CooldownInventoryButton
+---| DamageDisplay
+---| DynamicList
+---| Editbox
+---| EditboxMultiline
+---| EmptyWidget
+---| Folder
+---| GameTooltip
+---| Grid
+---| Label
+---| Line
+---| Listbox
+---| ListCtrl
+---| MegaphoneChatEdit
+---| Message
+---| ModelView
+---| Pageable
+---| PaintColorPicker
+---| RadioGroup
+---| RoadMap
+---| Slider
+---| Slot
+---| StatusBar
+---| Tab
+---| Textbox
+---| UnitframeTooltip
+---| Webbrowser
+---| Window
+---| WorldMap
+---| X2EditBox
+
+---@TODO: Some events can only be used by certain widget types. Need to finish defining these
+---@alias OnAcceptFocus fun(self: Widget)
+---@alias OnAlphaAnimeEnd fun(self: Widget)
+---@alias OnBoundChanged fun()
+---@alias OnChangedAnchor fun(self: Widget)
+---@alias OnCheckChanged fun()
+---@alias OnClick fun(self: Widget, mouseButton: MOUSE_BUTTON, doubleClick: boolean, keyModifier: KEY_MODIFIER)
+---@alias OnCloseByEsc fun(self: Widget)
+---@alias OnContentUpdated fun(self: Widget, action: string, arg2, arg3)
+---@alias OnCursorMoved fun(self: Widget)
+---@alias OnDragReceive fun(self: Widget)
+---@alias OnDragStart fun(self: Widget)
+---@alias OnDragStop fun(self: Widget)
+---@alias OnDynamicListUpdatedView fun()
+---@alias OnEffect fun()
+---@alias OnEnableChanged fun()
+---@alias OnEndFadeIn fun(self: Widget)
+---@alias OnEndFadeOut fun(self: Widget)
+---@alias OnEnter fun(self: Widget)
+---@alias OnEnterPressed fun(self: Widget)
+---@alias OnEscapePressed fun(self: Widgetbase)
+---@alias OnEvent fun(self: Widget, event: UIEVENT_TYPE, ...: any)
+---@alias OnHide fun(self: Widget)
+---@alias OnKeyDown fun(self: Widget, key: string)
+---@alias OnKeyUp fun(self: Widget, key: string)
+---@alias OnLeave fun(self: Widget)
+---@alias OnListboxToggled fun(self: Widget)
+---@alias OnModelChanged fun(self: Widget)
+---@alias OnMouseDown fun(self: Widget, mouseButton: MOUSE_BUTTON)
+---@alias OnMouseMove fun(self: Widget)
+---@alias OnMouseUp fun(self: Widget, mouseButton: MOUSE_BUTTON)
+---@alias OnMovedPosition fun(self: Widget)
+---@alias OnPageChanged fun(self: Widget)
+---@alias OnPermissionChanged fun()
+---@alias OnRadioChanged fun(index, data)
+---@alias OnRestricted fun()
+---@alias OnScale fun(self: Widget)
+---@alias OnScaleAnimeEnd fun(self: Widget)
+---@alias OnSelChanged fun(self: Widget, selectedIndex: number, doubleClick?: boolean)
+---@alias OnShow fun(self: Widget)
+---@alias OnSliderChanged fun(self: Widget, value: number)
+---@alias OnTabChanged fun(self: Widget, selected: number, viewSelected: number)
+---@alias OnTextChanged fun(self: Widget)
+---@alias OnTooltip fun(self: Widget) ---@TODO: , text, posX, posY, off)
+---@alias OnUpdate fun(frameTime: number)
+---@alias OnVisibleChanged fun(self: Widget, visible: boolean)
+---@alias OnWheelDown fun(self: Widget, delta: number)
+---@alias OnWheelUp fun(self: Widget, delta: number)
+---@alias PreClick fun(self: Widget)
+---@alias PreUse fun(self: Widget)

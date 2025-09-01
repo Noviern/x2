@@ -16,13 +16,6 @@ DC_ALWAYS = 0          -- objects/Grid
 DC_SHIFT_KEY_DOWN = 1  -- objects/Grid
 
 ---objects/Grid
----@enum HEADER_TYPE
-local HEADER_TYPE = {
-  LEFT = "left",
-  TOP  = "top",
-}
-
----objects/Grid
 ---@class Grid: Widget
 ---@class grid: Grid
 local Grid = {}

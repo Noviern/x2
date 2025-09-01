@@ -16,26 +16,6 @@ DC_ALWAYS = 0          -- objects/Combobox
 DC_SHIFT_KEY_DOWN = 1  -- objects/Combobox
 
 ---objects/Combobox
----@enum AUTOCOMPLETE_TYPE
-local AUTOCOMPLETE_TYPE = {
-  APPELLATION      = "appellation",
-  INGAMESHOPGOODS  = "ingameShopGoods",
-  ITEM             = "item",
-  ITEMFORDEBUG     = "itemForDebug",
-  ITEMTYPEFORDEBUG = "itemTypeForDebug",
-  STORE            = "store",
-}
-
----objects/Combobox
----@enum AUTOCOMPLETE_FILTER
-local AUTOCOMPLETE_FILTER = {
-  AUCTIONABLE   = "auctionable",
-  CRAFTMATERIAL = "craftMaterial",
-  CRAFTPRODUCT  = "craftProduct",
-  EMPTY         = "",
-}
-
----objects/Combobox
 ---@class Combobox: Widget
 ---@field dropdown ComboboxDropDown
 ---@field selector X2EditBox
@@ -82,13 +62,3 @@ function Combobox:SetDropdownVisibleLimit(limit) end
 ---widget:SetEditable(true)
 ---```
 function Combobox:SetEditable(editable) end
-
----@class ComboboxDropDown: Listbox
----@field downBtn Button
----@field upBtn Button
----@field vslider Vslider
-local ComboboxDropDown = {}
-
----@class Vslider: Slider
----@field thumb Button
-local Vslider = {}

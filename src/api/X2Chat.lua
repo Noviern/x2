@@ -173,27 +173,6 @@ X2Chat = {}                              -- api/X2Chat
 ---| `CHAT_ZONE`
 
 ---api/X2Chat
----@enum (key) CHAT_MESSAGE_RELATION
-local CHAT_MESSAGE_RELATION = {
-  [0] = "invalid",
-  [1] = "hostile",
-  [2] = "neutral",
-  [3] = "friendly"
-}
-
----api/X2Chat
----@class CHAT_MESSAGE_INFO
----@field charId string
----@field displayLocale number
----@field factionName string
----@field isUserChat boolean
----@field npcBubbleChat boolean
----@field speakerInChatBound boolean
----@field specifyName string
----@field trialPosition string
----@field unitId string
-
----api/X2Chat
 ---Channel Message Filter
 ---@alias CMF
 ---| `CMF_ACQ_CONSUME_GROUP`
@@ -283,7 +262,7 @@ local CHAT_MESSAGE_RELATION = {
 ---| `CMF_ZONE`
 
 ---api/X2Chat
----@alias CHAT_MESSAGE_LOCALE
+---@alias LOCALE
 ---| `LOCALE_DE` 6
 ---| `LOCALE_EN_SG` 10
 ---| `LOCALE_EN_US` 2
@@ -296,14 +275,6 @@ local CHAT_MESSAGE_RELATION = {
 ---| `LOCALE_TH` 8
 ---| `LOCALE_ZH_CN` 1
 ---| `LOCALE_ZH_TW` 4
-
----api/X2Chat
----@class CHAT_MESSAGE_OPTION
----@field isOtherWorldMessage? boolean
----@field isUserChat boolean
----@field messageLocale? CHAT_MESSAGE_LOCALE
----@field npcBubbleChat? boolean
----@field specifyName? string
 
 ---@TODO: Can option be used for all CMF?
 ---Sends a message to the specified chat channel.

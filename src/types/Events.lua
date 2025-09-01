@@ -1187,8 +1187,8 @@ local ENCHANT_ITEM_MODE = {
 ---
 ---@alias FACTION_RELATION_WILL_CHANGE_HANDLER fun(f1Name, f2Name)
 
----
----@alias FACTION_RENAMED_HANDLER fun(isExpedition, oldName, newName)
+---Event is triggered if a nation or guild is renamed.
+---@alias FACTION_RENAMED_HANDLER fun(isExpedition: boolean, oldName: string, newName: string)
 
 ---
 ---@alias FADE_INOUT_DONE_HANDLER fun(param)
@@ -1602,7 +1602,7 @@ local HOUSE_STRUCTURE_TYPE = {
 ---
 ---@alias INSTANT_GAME_ROUND_RESULT_HANDLER fun(resultState, resultRound)
 
----
+---Event triggers when an instance game starts.
 ---@alias INSTANT_GAME_START_HANDLER fun()
 
 ---
@@ -1847,11 +1847,18 @@ local HOUSE_STRUCTURE_TYPE = {
 ---
 ---@alias MOVIE_STOP_HANDLER fun()
 
----
----@alias MULTI_QUEST_CONTEXT_SELECT_HANDLER fun(targetNpc, qtype, useDirectingMode, targetId, interactionValue)
+---Event triggers when the player interacts with a npc that has multiple quests.
+---@alias MULTI_QUEST_CONTEXT_SELECT_HANDLER fun(targetNpc: boolean, qtype: number, useDirectingMode: boolean, targetId: string, interactionValue: string)
 
----
----@alias MULTI_QUEST_CONTEXT_SELECT_LIST_HANDLER fun(questList)
+---@class QuestItem
+---@field order number
+---@field qtype number
+
+---@class QuestSelectList
+---@field gives QuestItem[]
+
+---Event triggers when the player interacts with a npc that has multiple quests.
+---@alias MULTI_QUEST_CONTEXT_SELECT_LIST_HANDLER fun(questList: QuestSelectList)
 
 ---@enum NAME_TAG_MODE
 local NAME_TAG_MODE = {
@@ -2273,8 +2280,8 @@ local QUEST_STATUS = {
 ---
 ---@alias REMOVE_PING_HANDLER fun()
 
----
----@alias REMOVE_SHIP_TELESCOPE_INFO_HANDLER fun(arg)
+---Event triggers when a ship is no longer on the telescope.
+---@alias REMOVE_SHIP_TELESCOPE_INFO_HANDLER fun(arg: number)
 
 ---
 ---@alias REMOVE_TRANSFER_TELESCOPE_INFO_HANDLER fun(arg)
@@ -2386,7 +2393,8 @@ local QUEST_STATUS = {
 ---Event triggers when a player increases the temper of their equipment.
 ---@alias SCALE_ENCHANT_BROADCAST_HANDLER fun(characterName: string, resultCode: number, itemLink: string, oldScale: string, newScale: string)
 
----
+---Event triggers when the player clicks on an scheduled item (loyalty token) to
+---collect it.
 ---@alias SCHEDULE_ITEM_SENT_HANDLER fun()
 
 ---Event triggers every minute to update the schedule.
@@ -2680,7 +2688,7 @@ local SKILL_TYPE = {
 ---
 ---@alias SKILL_SELECTIVE_ITEM_NOT_AVAILABLE_HANDLER fun()
 
----
+---Event triggers when the player attempts to open an item that has a selection.
 ---@alias SKILL_SELECTIVE_ITEM_READY_STATUS_HANDLER fun(status: boolean)
 
 ---
@@ -2744,7 +2752,7 @@ local SKILL_TYPE = {
 ---
 ---@alias START_TALK_QUEST_CONTEXT_HANDLER fun(doodadId)
 
----
+---Event triggers when the player opens a daily assignment.
 ---@alias START_TODAY_ASSIGNMENT_HANDLER fun(stepName)
 
 ---
@@ -3019,7 +3027,7 @@ local TEAM_CHANGE_REASON = {
 ---Event triggers every second a player is in a trial.
 ---@alias TRIAL_TIMER_HANDLER fun(state: TRIAL_STATE, remainTable: Time)
 
----
+---Event triggers when an item that needs to be rolled on drops.
 ---@alias TRY_LOOT_DICE_HANDLER fun(key: number, timeStamp: number, itemLink: string)
 
 ---
@@ -3085,8 +3093,8 @@ local UNIT_TYPE = {
 ---Event triggers when a unit leaves the players sight.
 ---@alias UNIT_LEAVED_SIGHT_HANDLER fun(unitId: number, unitType: UNIT_TYPE)
 
----
----@alias UNIT_NAME_CHANGED_HANDLER fun(unitId)
+---Event triggers when a units name changes.
+---@alias UNIT_NAME_CHANGED_HANDLER fun(unitId: string)
 
 ---
 ---@alias UNIT_NPC_EQUIPMENT_CHANGED_HANDLER fun()

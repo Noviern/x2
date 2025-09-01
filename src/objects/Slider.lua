@@ -16,13 +16,6 @@ DC_ALWAYS = 0          -- objects/Slider
 DC_SHIFT_KEY_DOWN = 1  -- objects/Slider
 
 ---objects/Slider
----@enum SLIDER_SCROLL_TYPE
-local SLIDER_SCROLL_TYPE = {
-  VERTICAL   = 0,
-  HORIZONTAL = 1,
-}
-
----objects/Slider
 ---@class Slider: Widget
 ---@class slider: Slider
 local Slider = {}

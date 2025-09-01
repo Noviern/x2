@@ -15,18 +15,6 @@ CT_NAME = 1            -- objects/Window
 DC_ALWAYS = 0          -- objects/Window
 DC_SHIFT_KEY_DOWN = 1  -- objects/Window
 
----@enum UI_LAYER
-local UI_LAYER = {
-  BACKGROUND     = "background",
-  DIALOG         = "dialog",
-  GAME           = "game",
-  HUD            = "hud",
-  NORMAL         = "normal",
-  QUESTDIRECTING = "questdirecting",
-  SYSTEM         = "system",
-  TOOLTIP        = "tooltip",
-}
-
 ---objects/Window
 ---@class Window: Widget
 ---@field modalBackgroundWindow EmptyWidget

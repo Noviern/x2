@@ -15,12 +15,6 @@ CT_NAME = 1            -- objects/Folder
 DC_ALWAYS = 0          -- objects/Folder
 DC_SHIFT_KEY_DOWN = 1  -- objects/Folder
 
----@enum FOLDER_STATE
-local FOLDER_STATE = {
-  CLOSE = "close",
-  OPEN = "open",
-}
-
 ---objects/Folder
 ---@class Folder: Widget
 ---@field style TextStyle

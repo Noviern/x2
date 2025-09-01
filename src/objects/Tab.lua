@@ -15,14 +15,6 @@ CT_NAME = 1            -- objects/Tab
 DC_ALWAYS = 0          -- objects/Tab
 DC_SHIFT_KEY_DOWN = 1  -- objects/Tab
 
----@enum TAB_CORNER
-local TAB_CORNER = {
-  TOPLEFT     = "TOPLEFT",
-  TOPRIGHT    = "TOPRIGHT",
-  BOTOMLEFT   = "BOTTOMLEFT",
-  BOTTOMRIGHT = "BOTTOMRIGHT",
-}
-
 ---objects/Tab
 ---@class Tab: Widget, Tabbase
 ---@field selectedButton? Button[]

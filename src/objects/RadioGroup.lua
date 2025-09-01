@@ -16,10 +16,6 @@ DC_ALWAYS = 0          -- objects/RadioGroup
 DC_SHIFT_KEY_DOWN = 1  -- objects/RadioGroup
 
 ---objects/RadioGroup
----@class RadioItem: EmptyWidget
----@field check Checkbutton
-
----objects/RadioGroup
 ---@class RadioGroup: Widget
 ---@field frame? RadioItem[]
 ---@class radiogroup: RadioGroup

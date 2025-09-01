@@ -354,16 +354,6 @@ ZST_CONQUEST_WAR = 1                              -- api/Addon
 ZST_INVALID = 0                                   -- api/Addon
 
 ---api/Addon
----@class AppellationBuffInfo
----@field buff_id number
----@field category string
----@field description string
----@field name string
----@field path string
----@field tipType string
-
----api/Addon
----
 ---UICategory
 ---@alias UIC
 ---| `UIC_ABILITY_CHANGE`
@@ -491,6 +481,121 @@ ZST_INVALID = 0                                   -- api/Addon
 ---| `UIC_WORLDMAP`
 
 ---api/Addon
+---@alias UI_TEXT_CATEGORY_ID
+---| `ABILITY_CATEGORY_DESCRIPTION_TEXT`
+---| `ABILITY_CATEGORY_TEXT`
+---| `ABILITY_CHANGER_TEXT`
+---| `ATTRIBUTE_TEXT`
+---| `ATTRIBUTE_VARIATION_TEXT`
+---| `AUCTION_TEXT`
+---| `BATTLE_FIELD_TEXT`
+---| `BEAUTYSHOP_TEXT`
+---| `CASTING_BAR_TEXT`
+---| `CHARACTER_CREATE_TEXT`
+---| `CHARACTER_POPUP_SUBTITLE_TEXT`
+---| `CHARACTER_POPUP_SUBTITLE_TOOLTIP_TEXT`
+---| `CHARACTER_SELECT_TEXT`
+---| `CHARACTER_SUBTITLE_INFO_TOOLTIP_TEXT`
+---| `CHARACTER_SUBTITLE_TEXT`
+---| `CHARACTER_SUBTITLE_TOOLTIP_TEXT`
+---| `CHARACTER_TITLE_TEXT`
+---| `CHAT_CHANNEL_TEXT`
+---| `CHAT_COMBAT_LOG_TEXT`
+---| `CHAT_CREATE_TAB_TEXT`
+---| `CHAT_FORCE_ATTACK_TEXT`
+---| `CHAT_LIST_TEXT`
+---| `CHAT_SYSTEM_TEXT`
+---| `COMBAT_MESSAGE_TEXT`
+---| `COMBAT_TEXT`
+---| `COMBINED_ABILITY_NAME_TEXT`
+---| `COMMON_TEXT`
+---| `COMMUNITY_TEXT`
+---| `COMPOSITION_TEXT`
+---| `CRAFT_TEXT`
+---| `CUSTOMIZING_TEXT`
+---| `DATE_TIME_TEXT`
+---| `DUEL_TEXT`
+---| `EQUIP_SLOT_TYPE_TEXT`
+---| `EXPEDITION_TEXT`
+---| `FACTION_TEXT`
+---| `FARM_TEXT`
+---| `GENDER_TEXT`
+---| `GRAVE_YARD_TEXT`
+---| `HERO_TEXT`
+---| `HONOR_POINT_WAR_TEXT`
+---| `HOUSING_PERMISSIONS_TEXT`
+---| `HOUSING_TEXT`
+---| `INFOBAR_MENU_TEXT`
+---| `INFOBAR_MENU_TIP_TEXT`
+---| `INGAMESHOP_TEXT`
+---| `INSTANT_GAME_TEXT`
+---| `INVEN_TEXT`
+---| `ITEM_LOOK_CONVERT_TEXT`
+---| `KEY_BINDING_TEXT`
+---| `LEARNING_TEXT`
+---| `LEVEL_CHANGED_TEXT`
+---| `LOADING_TEXT`
+---| `LOGIN_CROWDED_TEXT`
+---| `LOGIN_DELETE_TEXT`
+---| `LOGIN_TEXT`
+---| `LOOT_METHOD_TEXT`
+---| `LOOT_TEXT`
+---| `MAIL_TEXT`
+---| `MAP_TEXT`
+---| `MONEY_TEXT`
+---| `MSG_BOX_BODY_TEXT`
+---| `MSG_BOX_BTN_TEXT`
+---| `MSG_BOX_TITLE_TEXT`
+---| `MUSIC_TEXT`
+---| `NATION_TEXT`
+---| `OPTION_TEXT`
+---| `PARTY_TEXT`
+---| `PERIOD_TIME_TEXT`
+---| `PET_TEXT`
+---| `PHYSICAL_ENCHANT_TEXT`
+---| `PLAYER_POPUP_TEXT`
+---| `PORTAL_TEXT`
+---| `PREMIUM_TEXT`
+---| `PRIEST_TEXT`
+---| `PROTECT_SENSITIVE_OPERATION_TEXT`
+---| `QUEST_ACT_OBJ_PTN_TEXT`
+---| `QUEST_ACT_OBJ_TEXT`
+---| `QUEST_CONDITION_TEXT`
+---| `QUEST_DISTANCE_TEXT`
+---| `QUEST_INTERACTION_TEXT`
+---| `QUEST_OBJ_STATUS_TEXT`
+---| `QUEST_SPHERE_TEXT`
+---| `QUEST_STATUS_TEXT`
+---| `QUEST_TEXT`
+---| `RACE_DETAIL_DESCRIPTION_TEXT`
+---| `RACE_TEXT`
+---| `RAID_TEXT`
+---| `RANKING_TEXT`
+---| `REPAIR_TEXT`
+---| `RESTRICT_TEXT`
+---| `SECOND_PASSWORD_TEXT`
+---| `SERVER_TEXT`
+---| `SKILL_TEXT`
+---| `SKILL_TRAINING_MSG_TEXT`
+---| `SLAVE_TEXT`
+---| `STABLER_TEXT`
+---| `STORE_TEXT`
+---| `TARGET_POPUP_TEXT`
+---| `TEAM_TEXT`
+---| `TERRITORY_TEXT`
+---| `TOOLTIP_TEXT`
+---| `TRADE_TEXT`
+---| `TRIAL_TEXT`
+---| `TUTORIAL_TEXT`
+---| `UCC_TEXT`
+---| `UNIT_FRAME_TEXT`
+---| `UNIT_GRADE_TEXT`
+---| `UNIT_KIND_TEXT`
+---| `UTIL_TEXT`
+---| `WEB_TEXT`
+---| `WINDOW_TITLE_TEXT`
+
+---api/Addon
 ---Ui Object Type
 ---@alias UOT
 ---| `UOT_EDITBOX`
@@ -505,6 +610,8 @@ ZST_INVALID = 0                                   -- api/Addon
 ---| `UOT_TEXT_STYLE`
 ---| `UOT_X2_EDITBOX`
 
+---@TODO: keep track of this
+---api/Addon
 ---@alias UOT_DRAWABLE
 ---| `UOT_COLOR_DRAWABLE`  # We don't have access to this global yet but it does exist in the codebase.
 ---| `UOT_IMAGE_DRAWABLE`
@@ -512,120 +619,6 @@ ZST_INVALID = 0                                   -- api/Addon
 ---| `UOT_THREE_PART_DRAWABLE` # We don't have access to this global yet but it does exist in the codebase.
 
 ---api/Addon
----@class EscMenuButtonData
----@field path string
----@field x? number
----@field y? number
----@field w number 25
----@field h number 25
-
----api/Addon
----@class AddonInfo
----@field name string
----@field enabled boolean
-
----api/Addon
----@class RGBAColor : number[]
----@field [1] number Red (min: `0`, max: `1`)
----@field [2] number Green (min: `0`, max: `1`)
----@field [3] number Blue (min: `0`, max: `1`)
----@field [4] number Alpha (min: `0`, max: `1`)
-
----api/Addon
----@class Time
----@field year number
----@field month number
----@field day number
----@field hour number
----@field minute number
----@field second number
-
----api/Addon
----@class TextureColors
----@field [string] RGBAColor
-
----api/Addon
----@class TextureColorKey
----@field [1] number Red (min: `0`, max: `1`)
----@field [2] number Green (min: `0`, max: `1`)
----@field [3] number Blue (min: `0`, max: `1`)
-
----api/Addon
----@class TextureCoords
----@field [1] number x
----@field [2] number y
----@field [3] number width
----@field [4] number height
-
----api/Addon
----@class TextureInset
----@field [1] number leftPadding
----@field [2] number topPadding
----@field [3] number rightPadding
----@field [4] number bottomPadding
-
----api/Addon
----@class TextureDimensions
----@field [1] number resized width
----@field [2] number resized height
-
----api/Addon
----@class TextureData
----@field offset number[]
----@field colors TextureColors
----@field colorKey TextureColorKey
----@field coords TextureCoords
----@field inset TextureInset
----@field extent TextureDimensions
-
----api/Addon
----@class TextureKeyData
----@field width number
----@field height number
----@field keys string[]
-
----api/Addon
----@class ScreenResolution
----@field x number width of screen
----@field y number height of screen
----@field scale number
-
----api/Addon
----@class Bound
----@field x number
----@field y number
----@field width number unscaled width
----@field height number unscaled height
-
----api/Addon
----@class UIBound
----@field screenResolution ScreenResolution
----@field bound Bound
-
----api/Addon
----@class Vec3
----@field x? number
----@field y? number
----@field z? number
----@field [1]? number x
----@field [2]? number y
----@field [3]? number z
-
----api/Addon
----@class VirtualMemoryStats
----@field workingSet number
----@field usage number
-
----api/Addon
----@class FontSizeList
----@field default number
----@field small number
----@field middle number
----@field large number
----@field cinema number
----@field xlarge number
----@field xxlarge number
-
 ---@alias ContentTriggerFunc fun(show: boolean, data?: table)
 
 ---Adds a button to the escape menu for the related addon.

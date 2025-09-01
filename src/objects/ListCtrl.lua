@@ -28,10 +28,6 @@ LCCIT_WINDOW = 2       -- objects/ListCtrl
 ---| `LCCIT_WINDOW`
 
 ---objects/ListCtrl
----@class ListCtrlItem: Window
----@field subItems Label[]
-
----objects/ListCtrl
 ---@class ListCtrl: Widget
 ---@field column? Button[]
 ---@field items? ListCtrlItem[]

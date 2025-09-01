@@ -1,11 +1,5 @@
 ---@meta _
 
----@class InsetData: number[]
----@field [1]? number Left
----@field [2]? number Top
----@field [3]? number Bottom
----@field [4]? number Right
-
 ---@class Editboxbase
 ---@field guideTextStyle TextStyle
 ---@field style TextStyle

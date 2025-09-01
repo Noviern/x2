@@ -1,18 +1,5 @@
 ---@meta _
 
----@enum ANCHOR_POINT
-local ANCHOR_POINT = {
-  TOP_LEFT     = "TOPLEFT",
-  TOP          = "TOP",
-  TOP_RIGHT    = "TOPRIGHT",
-  LEFT         = "LEFT",
-  CENTER       = "CENTER",
-  RIGHT        = "RIGHT",
-  BOTTOM_LEFT  = "BOTTOMLEFT",
-  BOTTOM       = "BOTTOM",
-  BOTTOM_RIGHT = "BOTTOMRIGHT",
-}
-
 ---@class Uibounds
 local Uibounds = {}
 

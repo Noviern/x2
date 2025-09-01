@@ -19,24 +19,6 @@ MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/WorldMap
 ---@TODO: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
 
 ---objects/WorldMap
----@enum ZONE_CLIMATE
-local ZONE_CLIMATE = {
-  NONE      = 1,
-  TEMPERATE = 2,
-  TROPICAL  = 3,
-  SUBARCTIC = 4
-}
-
----objects/WorldMap
----@enum WORLD_MAP_ZOOM
-local WORLD_MAP_ZOOM = {
-  WORLD     = 1,
-  CONTINENT = 2,
-  ZONE      = 3,
-  CITY      = 4,
-}
-
----objects/WorldMap
 ---@class WorldMap: Widget, Map
 ---@class worldmap: WorldMap
 local WorldMap = {}

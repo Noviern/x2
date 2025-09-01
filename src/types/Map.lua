@@ -1,24 +1,5 @@
 ---@meta _
 
----@class SEXTANT
----@field deg_lat number
----@field deg_long number
----@field latitude "W"|"N"|"E"|"S"
----@field longitude "W"|"N"|"E"|"S"
----@field min_lat number
----@field min_long number
----@field sec_lat number
----@field sec_long number
-
----@enum PING_TYPE
-local PING_TYPE = {
-  PING   = 1,
-  ENEMY  = 2,
-  ATTACK = 3,
-  LINE   = 4,
-  ERASER = 5,
-}
-
 ---@class Map
 local Map = {}
 
