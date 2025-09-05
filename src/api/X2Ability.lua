@@ -44,13 +44,30 @@ X2Ability = {}                       -- api/X2Ability
 
 ---api/X2Ability
 ---Values can be added together to get more information.
----@alias BIK number
+---@alias BIK
 ---| `BIK_DESCRIPTION`
 ---| `BIK_RUNTIME_ALL`
 ---| `BIK_RUNTIME_DURATION`
 ---| `BIK_RUNTIME_MINE`
 ---| `BIK_RUNTIME_STACK`
 ---| `BIK_RUNTIME_TIMELEFT`
+
+---@alias SKILL
+---| `ACTIVE_SKILL_1`
+---| `ACTIVE_SKILL_2`
+---| `ACTIVE_SKILL_3`
+---| `ATTACK_SKILL`
+---| `EMOTION_SKILL`
+---| `GENERAL_SKILL`
+---| `JOB_SKILL`
+---| `PASSIVE_SKILL_1`
+---| `PASSIVE_SKILL_2`
+---| `PASSIVE_SKILL_3`
+---| `SPECIAL_ABILITY_MUTATION_SKILL`
+---| `SPECIAL_ACTIVE_SKILL`
+---| `SPECIAL_PASSIVE_SKILL`
+
+function X2Ability:GetActiveAbility() end
 
 ---Retrieves a list of all the player's actability information.
 ---@return ActabilityInfo[] allMyActabilityInfos A table of actability information.
@@ -74,6 +91,27 @@ function X2Ability:GetAllMyActabilityInfos() end
 ---```lua
 ---local buffTooltipDesc = X2Ability:GetBuffTooltip(5700, 1, BIK_DESCRIPTION)
 ---```
----@see BIK
+---@see BIK 
 ---@see AppellationBuffInfo
 function X2Ability:GetBuffTooltip(buffType, itemLevel, neededInfo) end
+
+---Returns actability information for the player.
+---@param actabilityGroupType ACTABILITY_ID The actability group type to query.
+---@return ActabilityGroupTypeInfo|nil myActabilityInfo The actability information, or `nil` if not found.
+---@usage
+---```
+---local myActabilityInfo = X2Ability:GetMyActabilityInfo(1)
+---```
+---@see ACTABILITY_ID
+function X2Ability:GetMyActabilityInfo(actabilityGroupType) end
+
+---Returns if the ability is active.
+---@param index ABILITY_TYPE The ability type to check.
+---@return boolean activeAbility `true` if the ability is active, `false` otherwise.
+---@nodiscard
+---@usage
+---```
+---local activeAbility = X2Ability:IsActiveAbility(1)
+---```
+---@see ABILITY_TYPE
+function X2Ability:IsActiveAbility(index) end
