@@ -1,32 +1,24 @@
 ---@meta _
 
-AF_ALL = 1                  -- api/X2Achievement
-AF_COMPLETE = 2             -- api/X2Achievement
-AF_INVALID = 0              -- api/X2Achievement
-AF_TRACING = 4              -- api/X2Achievement
-AF_UNCOMPLETE = 3           -- api/X2Achievement
-EAK_ACHIEVEMENT = 2         -- api/X2Achievement
-EAK_ARCHERAGE = 4           -- api/X2Achievement
-EAK_COLLECTION = 3          -- api/X2Achievement
-EAK_RACIAL_MISSION = 1      -- api/X2Achievement
+AF_ALL = 1                  -- api/X2Achievement ACHIEVEMENT_FILTER
+AF_COMPLETE = 2             -- api/X2Achievement ACHIEVEMENT_FILTER
+AF_INVALID = 0              -- api/X2Achievement ACHIEVEMENT_FILTER
+AF_TRACING = 4              -- api/X2Achievement ACHIEVEMENT_FILTER
+AF_UNCOMPLETE = 3           -- api/X2Achievement ACHIEVEMENT_FILTER
+EAK_ACHIEVEMENT = 2         -- api/X2Achievement ACHIEVEMENT_KIND
+EAK_ARCHERAGE = 4           -- api/X2Achievement ACHIEVEMENT_KIND
+EAK_COLLECTION = 3          -- api/X2Achievement ACHIEVEMENT_KIND
+EAK_RACIAL_MISSION = 1      -- api/X2Achievement ACHIEVEMENT_KIND
 MAX_TRACING_ACHIEVEMENT = 6 -- api/X2Achievement
-TADT_ARCHE_PASS = 5         -- api/X2Achievement
-TADT_EXPEDITION = 2         -- api/X2Achievement
-TADT_EXPEDITION_PUBLIC = 6  -- api/X2Achievement
-TADT_FAMILY = 3             -- api/X2Achievement
-TADT_HERO = 4               -- api/X2Achievement
-TADT_MAX = 7                -- api/X2Achievement
-TADT_TODAY = 1              -- api/X2Achievement
+TADT_ARCHE_PASS = 5         -- api/X2Achievement TODAY_TYPE
+TADT_EXPEDITION = 2         -- api/X2Achievement TODAY_TYPE
+TADT_EXPEDITION_PUBLIC = 6  -- api/X2Achievement TODAY_TYPE
+TADT_FAMILY = 3             -- api/X2Achievement TODAY_TYPE
+TADT_HERO = 4               -- api/X2Achievement TODAY_TYPE
+TADT_MAX = 7                -- api/X2Achievement TODAY_TYPE
+TADT_TODAY = 1              -- api/X2Achievement TODAY_TYPE
 ---@class X2Achievement
 X2Achievement = {}          -- api/X2Achievement
-
----api/X2Achievement
----Enum Achievement Kind
----@alias ACHIEVEMENT_KIND
----| `EAK_ACHIEVEMENT`
----| `EAK_ARCHERAGE`
----| `EAK_COLLECTION`
----| `EAK_RACIAL_MISSION`
 
 ---api/X2Achievement
 ---Achievement Filter
@@ -36,6 +28,14 @@ X2Achievement = {}          -- api/X2Achievement
 ---| `AF_INVALID` Doesnt work. Produces the same result as AF_ALL.
 ---| `AF_TRACING`
 ---| `AF_UNCOMPLETE` Doesnt work. Produces the same result as AF_ALL.
+
+---api/X2Achievement
+---Enum Achievement Kind
+---@alias ACHIEVEMENT_KIND
+---| `EAK_ACHIEVEMENT`
+---| `EAK_ARCHERAGE`
+---| `EAK_COLLECTION`
+---| `EAK_RACIAL_MISSION`
 
 ---api/X2Achievement
 ---Today Achievement Daily Type

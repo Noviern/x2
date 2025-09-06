@@ -1,117 +1,117 @@
 ---@meta _
 
-ABILITY_CATEGORY_DESCRIPTION_TEXT = 54            -- api/Addon
-ABILITY_CATEGORY_TEXT = 49                        -- api/Addon
-ABILITY_CHANGER_TEXT = 20                         -- api/Addon
+ABILITY_CATEGORY_DESCRIPTION_TEXT = 54            -- api/Addon UI_TEXT_CATEGORY_ID
+ABILITY_CATEGORY_TEXT = 49                        -- api/Addon UI_TEXT_CATEGORY_ID
+ABILITY_CHANGER_TEXT = 20                         -- api/Addon UI_TEXT_CATEGORY_ID
 ---@class ADDON
-ADDON = {}                                        -- api/Addon
-ATTRIBUTE_TEXT = 44                               -- api/Addon
-ATTRIBUTE_VARIATION_TEXT = 135                    -- api/Addon
-AUCTION_TEXT = 107                                -- api/Addon
-BATTLE_FIELD_TEXT = 35                            -- api/Addon
-BEAUTYSHOP_TEXT = 124                             -- api/Addon
-BINDING = 96                                      -- api/Addon
-BUTLER = 136                                      -- api/Addon
-CASTING_BAR_TEXT = 64                             -- api/Addon
-CHARACTER_CREATE_TEXT = 51                        -- api/Addon
-CHARACTER_POPUP_SUBTITLE_TEXT = 42                -- api/Addon
-CHARACTER_POPUP_SUBTITLE_TOOLTIP_TEXT = 43        -- api/Addon
-CHARACTER_SELECT_TEXT = 24                        -- api/Addon
-CHARACTER_SUBTITLE_INFO_TOOLTIP_TEXT = 77         -- api/Addon
-CHARACTER_SUBTITLE_TEXT = 40                      -- api/Addon
-CHARACTER_SUBTITLE_TOOLTIP_TEXT = 41              -- api/Addon
-CHARACTER_TITLE_TEXT = 39                         -- api/Addon
-CHAT_CHANNEL_TEXT = 88                            -- api/Addon
-CHAT_COMBAT_LOG_TEXT = 90                         -- api/Addon
-CHAT_CREATE_TAB_TEXT = 108                        -- api/Addon
-CHAT_FILTERING = 109                              -- api/Addon
-CHAT_FORCE_ATTACK_TEXT = 63                       -- api/Addon
-CHAT_LIST_TEXT = 62                               -- api/Addon
-CHAT_SYSTEM_TEXT = 89                             -- api/Addon
-COMBAT_MESSAGE_TEXT = 87                          -- api/Addon
-COMBAT_TEXT = 78                                  -- api/Addon
-COMBINED_ABILITY_NAME_TEXT = 86                   -- api/Addon
-COMMON_TEXT = 45                                  -- api/Addon
-COMMUNITY_TEXT = 92                               -- api/Addon
-COMPOSITION_TEXT = 121                            -- api/Addon
-CRAFT_TEXT = 74                                   -- api/Addon
-CUSTOMIZING_TEXT = 99                             -- api/Addon
-DATE_TIME_TEXT = 102                              -- api/Addon
-DOMINION = 97                                     -- api/Addon
-DUEL_TEXT = 115                                   -- api/Addon
-EQUIP_SLOT_TYPE_TEXT = 50                         -- api/Addon
-ERROR_MSG = 1                                     -- api/Addon
-EXPEDITION_TEXT = 95                              -- api/Addon
-FACTION_TEXT = 91                                 -- api/Addon
-FARM_TEXT = 110                                   -- api/Addon
-GENDER_TEXT = 48                                  -- api/Addon
-GRAVE_YARD_TEXT = 72                              -- api/Addon
-HARIHARA_FACTION_ID = 149                         -- api/Addon
-HERO_TEXT = 133                                   -- api/Addon
-HONOR_POINT_WAR_TEXT = 117                        -- api/Addon
-HOUSING_PERMISSIONS_TEXT = 71                     -- api/Addon
-HOUSING_TEXT = 70                                 -- api/Addon
-INFOBAR_MENU_TEXT = 57                            -- api/Addon
-INFOBAR_MENU_TIP_TEXT = 58                        -- api/Addon
-INGAMESHOP_TEXT = 120                             -- api/Addon
-INSTANT_GAME_TEXT = 34                            -- api/Addon
-INVEN_TEXT = 94                                   -- api/Addon
-ITEM_GRADE = 103                                  -- api/Addon
-ITEM_LOOK_CONVERT_TEXT = 126                      -- api/Addon
-KEY_BINDING_TEXT = 17                             -- api/Addon
-LEARNING_TEXT = 30                                -- api/Addon
-LEVEL_CHANGED_TEXT = 46                           -- api/Addon
-LOADING_TEXT = 26                                 -- api/Addon
-LOGIN_CROWDED_TEXT = 25                           -- api/Addon
-LOGIN_DELETE_TEXT = 5                             -- api/Addon
-LOGIN_ERROR = 2                                   -- api/Addon
-LOGIN_TEXT = 4                                    -- api/Addon
-LOOT_METHOD_TEXT = 56                             -- api/Addon
-LOOT_TEXT = 80                                    -- api/Addon
-MAIL_TEXT = 18                                    -- api/Addon
-MAP_TEXT = 60                                     -- api/Addon
-MONEY_TEXT = 3                                    -- api/Addon
-MONSTER_FACTION_ID = 115                          -- api/Addon
-MSG_BOX_BODY_TEXT = 29                            -- api/Addon
-MSG_BOX_BTN_TEXT = 27                             -- api/Addon
-MSG_BOX_TITLE_TEXT = 28                           -- api/Addon
-MUSIC_TEXT = 119                                  -- api/Addon
-NATION_TEXT = 123                                 -- api/Addon
-NUIA_FACTION_ID = 148                             -- api/Addon
-OPTION_TEXT = 22                                  -- api/Addon
-OUTLAW_FACTION_ID = 114                           -- api/Addon
-PARTY_TEXT = 55                                   -- api/Addon
-PC_IN_ALL_FACTION_ID = 5                          -- api/Addon
-PERIOD_TIME_TEXT = 101                            -- api/Addon
-PET_TEXT = 19                                     -- api/Addon
-PHYSICAL_ENCHANT_TEXT = 84                        -- api/Addon
-PLAYER_POPUP_TEXT = 132                           -- api/Addon
-PORTAL_TEXT = 67                                  -- api/Addon
-PREMIUM_TEXT = 129                                -- api/Addon
-PRIEST_TEXT = 21                                  -- api/Addon
-PROTECT_SENSITIVE_OPERATION_TEXT = 130            -- api/Addon
-QUEST_ACT_OBJ_PTN_TEXT = 116                      -- api/Addon
-QUEST_ACT_OBJ_TEXT = 9                            -- api/Addon
-QUEST_CONDITION_TEXT = 13                         -- api/Addon
-QUEST_DISTANCE_TEXT = 12                          -- api/Addon
-QUEST_ERROR = 14                                  -- api/Addon
-QUEST_INTERACTION_TEXT = 10                       -- api/Addon
-QUEST_OBJ_STATUS_TEXT = 8                         -- api/Addon
-QUEST_SPHERE_TEXT = 11                            -- api/Addon
-QUEST_STATUS_TEXT = 7                             -- api/Addon
-QUEST_TEXT = 6                                    -- api/Addon
-RACE_DETAIL_DESCRIPTION_TEXT = 53                 -- api/Addon
-RACE_TEXT = 47                                    -- api/Addon
-RAID_TEXT = 105                                   -- api/Addon
-RANKING_TEXT = 127                                -- api/Addon
-REPAIR_TEXT = 93                                  -- api/Addon
-RESTRICT_TEXT = 114                               -- api/Addon
-SECOND_PASSWORD_TEXT = 122                        -- api/Addon
-SERVER_TEXT = 23                                  -- api/Addon
-SKILL_TEXT = 61                                   -- api/Addon
-SKILL_TRAINING_MSG_TEXT = 76                      -- api/Addon
-SLAVE_KIND = 100                                  -- api/Addon
-SLAVE_TEXT = 118                                  -- api/Addon
+ADDON = {}                                        -- api/Addon ADDON
+ATTRIBUTE_TEXT = 44                               -- api/Addon UI_TEXT_CATEGORY_ID
+ATTRIBUTE_VARIATION_TEXT = 135                    -- api/Addon UI_TEXT_CATEGORY_ID
+AUCTION_TEXT = 107                                -- api/Addon UI_TEXT_CATEGORY_ID
+BATTLE_FIELD_TEXT = 35                            -- api/Addon UI_TEXT_CATEGORY_ID
+BEAUTYSHOP_TEXT = 124                             -- api/Addon UI_TEXT_CATEGORY_ID
+BINDING = 96                                      -- api/Addon UI_TEXT_CATEGORY_ID
+BUTLER = 136                                      -- api/Addon UI_TEXT_CATEGORY_ID
+CASTING_BAR_TEXT = 64                             -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_CREATE_TEXT = 51                        -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_POPUP_SUBTITLE_TEXT = 42                -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_POPUP_SUBTITLE_TOOLTIP_TEXT = 43        -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_SELECT_TEXT = 24                        -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_SUBTITLE_INFO_TOOLTIP_TEXT = 77         -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_SUBTITLE_TEXT = 40                      -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_SUBTITLE_TOOLTIP_TEXT = 41              -- api/Addon UI_TEXT_CATEGORY_ID
+CHARACTER_TITLE_TEXT = 39                         -- api/Addon UI_TEXT_CATEGORY_ID
+CHAT_CHANNEL_TEXT = 88                            -- api/Addon UI_TEXT_CATEGORY_ID
+CHAT_COMBAT_LOG_TEXT = 90                         -- api/Addon UI_TEXT_CATEGORY_ID
+CHAT_CREATE_TAB_TEXT = 108                        -- api/Addon UI_TEXT_CATEGORY_ID
+CHAT_FILTERING = 109                              -- api/Addon UI_TEXT_CATEGORY_ID
+CHAT_FORCE_ATTACK_TEXT = 63                       -- api/Addon UI_TEXT_CATEGORY_ID
+CHAT_LIST_TEXT = 62                               -- api/Addon UI_TEXT_CATEGORY_ID
+CHAT_SYSTEM_TEXT = 89                             -- api/Addon UI_TEXT_CATEGORY_ID
+COMBAT_MESSAGE_TEXT = 87                          -- api/Addon UI_TEXT_CATEGORY_ID
+COMBAT_TEXT = 78                                  -- api/Addon UI_TEXT_CATEGORY_ID
+COMBINED_ABILITY_NAME_TEXT = 86                   -- api/Addon UI_TEXT_CATEGORY_ID
+COMMON_TEXT = 45                                  -- api/Addon UI_TEXT_CATEGORY_ID
+COMMUNITY_TEXT = 92                               -- api/Addon UI_TEXT_CATEGORY_ID
+COMPOSITION_TEXT = 121                            -- api/Addon UI_TEXT_CATEGORY_ID
+CRAFT_TEXT = 74                                   -- api/Addon UI_TEXT_CATEGORY_ID
+CUSTOMIZING_TEXT = 99                             -- api/Addon UI_TEXT_CATEGORY_ID
+DATE_TIME_TEXT = 102                              -- api/Addon UI_TEXT_CATEGORY_ID
+DOMINION = 97                                     -- api/Addon UI_TEXT_CATEGORY_ID
+DUEL_TEXT = 115                                   -- api/Addon UI_TEXT_CATEGORY_ID
+EQUIP_SLOT_TYPE_TEXT = 50                         -- api/Addon UI_TEXT_CATEGORY_ID
+ERROR_MSG = 1                                     -- api/Addon UI_TEXT_CATEGORY_ID
+EXPEDITION_TEXT = 95                              -- api/Addon UI_TEXT_CATEGORY_ID
+FACTION_TEXT = 91                                 -- api/Addon UI_TEXT_CATEGORY_ID
+FARM_TEXT = 110                                   -- api/Addon UI_TEXT_CATEGORY_ID
+GENDER_TEXT = 48                                  -- api/Addon UI_TEXT_CATEGORY_ID
+GRAVE_YARD_TEXT = 72                              -- api/Addon UI_TEXT_CATEGORY_ID
+HARIHARA_FACTION_ID = 149                         -- api/Addon FACTION_TYPE
+HERO_TEXT = 133                                   -- api/Addon UI_TEXT_CATEGORY_ID
+HONOR_POINT_WAR_TEXT = 117                        -- api/Addon UI_TEXT_CATEGORY_ID
+HOUSING_PERMISSIONS_TEXT = 71                     -- api/Addon UI_TEXT_CATEGORY_ID
+HOUSING_TEXT = 70                                 -- api/Addon UI_TEXT_CATEGORY_ID
+INFOBAR_MENU_TEXT = 57                            -- api/Addon UI_TEXT_CATEGORY_ID
+INFOBAR_MENU_TIP_TEXT = 58                        -- api/Addon UI_TEXT_CATEGORY_ID
+INGAMESHOP_TEXT = 120                             -- api/Addon UI_TEXT_CATEGORY_ID
+INSTANT_GAME_TEXT = 34                            -- api/Addon UI_TEXT_CATEGORY_ID
+INVEN_TEXT = 94                                   -- api/Addon UI_TEXT_CATEGORY_ID
+ITEM_GRADE = 103                                  -- api/Addon UI_TEXT_CATEGORY_ID
+ITEM_LOOK_CONVERT_TEXT = 126                      -- api/Addon UI_TEXT_CATEGORY_ID
+KEY_BINDING_TEXT = 17                             -- api/Addon UI_TEXT_CATEGORY_ID
+LEARNING_TEXT = 30                                -- api/Addon UI_TEXT_CATEGORY_ID
+LEVEL_CHANGED_TEXT = 46                           -- api/Addon UI_TEXT_CATEGORY_ID
+LOADING_TEXT = 26                                 -- api/Addon UI_TEXT_CATEGORY_ID
+LOGIN_CROWDED_TEXT = 25                           -- api/Addon UI_TEXT_CATEGORY_ID
+LOGIN_DELETE_TEXT = 5                             -- api/Addon UI_TEXT_CATEGORY_ID
+LOGIN_ERROR = 2                                   -- api/Addon UI_TEXT_CATEGORY_ID
+LOGIN_TEXT = 4                                    -- api/Addon UI_TEXT_CATEGORY_ID
+LOOT_METHOD_TEXT = 56                             -- api/Addon UI_TEXT_CATEGORY_ID
+LOOT_TEXT = 80                                    -- api/Addon UI_TEXT_CATEGORY_ID
+MAIL_TEXT = 18                                    -- api/Addon UI_TEXT_CATEGORY_ID
+MAP_TEXT = 60                                     -- api/Addon UI_TEXT_CATEGORY_ID
+MONEY_TEXT = 3                                    -- api/Addon UI_TEXT_CATEGORY_ID
+MONSTER_FACTION_ID = 115                          -- api/Addon FACTION_TYPE
+MSG_BOX_BODY_TEXT = 29                            -- api/Addon UI_TEXT_CATEGORY_ID
+MSG_BOX_BTN_TEXT = 27                             -- api/Addon UI_TEXT_CATEGORY_ID
+MSG_BOX_TITLE_TEXT = 28                           -- api/Addon UI_TEXT_CATEGORY_ID
+MUSIC_TEXT = 119                                  -- api/Addon UI_TEXT_CATEGORY_ID
+NATION_TEXT = 123                                 -- api/Addon UI_TEXT_CATEGORY_ID
+NUIA_FACTION_ID = 148                             -- api/Addon FACTION_TYPE
+OPTION_TEXT = 22                                  -- api/Addon UI_TEXT_CATEGORY_ID
+OUTLAW_FACTION_ID = 114                           -- api/Addon FACTION_TYPE
+PARTY_TEXT = 55                                   -- api/Addon UI_TEXT_CATEGORY_ID
+PC_IN_ALL_FACTION_ID = 5                          -- api/Addon FACTION_TYPE
+PERIOD_TIME_TEXT = 101                            -- api/Addon UI_TEXT_CATEGORY_ID
+PET_TEXT = 19                                     -- api/Addon UI_TEXT_CATEGORY_ID
+PHYSICAL_ENCHANT_TEXT = 84                        -- api/Addon UI_TEXT_CATEGORY_ID
+PLAYER_POPUP_TEXT = 132                           -- api/Addon UI_TEXT_CATEGORY_ID
+PORTAL_TEXT = 67                                  -- api/Addon UI_TEXT_CATEGORY_ID
+PREMIUM_TEXT = 129                                -- api/Addon UI_TEXT_CATEGORY_ID
+PRIEST_TEXT = 21                                  -- api/Addon UI_TEXT_CATEGORY_ID
+PROTECT_SENSITIVE_OPERATION_TEXT = 130            -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_ACT_OBJ_PTN_TEXT = 116                      -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_ACT_OBJ_TEXT = 9                            -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_CONDITION_TEXT = 13                         -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_DISTANCE_TEXT = 12                          -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_ERROR = 14                                  -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_INTERACTION_TEXT = 10                       -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_OBJ_STATUS_TEXT = 8                         -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_SPHERE_TEXT = 11                            -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_STATUS_TEXT = 7                             -- api/Addon UI_TEXT_CATEGORY_ID
+QUEST_TEXT = 6                                    -- api/Addon UI_TEXT_CATEGORY_ID
+RACE_DETAIL_DESCRIPTION_TEXT = 53                 -- api/Addon UI_TEXT_CATEGORY_ID
+RACE_TEXT = 47                                    -- api/Addon UI_TEXT_CATEGORY_ID
+RAID_TEXT = 105                                   -- api/Addon UI_TEXT_CATEGORY_ID
+RANKING_TEXT = 127                                -- api/Addon UI_TEXT_CATEGORY_ID
+REPAIR_TEXT = 93                                  -- api/Addon UI_TEXT_CATEGORY_ID
+RESTRICT_TEXT = 114                               -- api/Addon UI_TEXT_CATEGORY_ID
+SECOND_PASSWORD_TEXT = 122                        -- api/Addon UI_TEXT_CATEGORY_ID
+SERVER_TEXT = 23                                  -- api/Addon UI_TEXT_CATEGORY_ID
+SKILL_TEXT = 61                                   -- api/Addon UI_TEXT_CATEGORY_ID
+SKILL_TRAINING_MSG_TEXT = 76                      -- api/Addon UI_TEXT_CATEGORY_ID
+SLAVE_KIND = 100                                  -- api/Addon UI_TEXT_CATEGORY_ID
+SLAVE_TEXT = 118                                  -- api/Addon UI_TEXT_CATEGORY_ID
 SOUND_2D = 2                                      -- api/Addon
 SOUND_3D = 4                                      -- api/Addon
 SOUND_CULLING = 16384                             -- api/Addon
@@ -166,192 +166,328 @@ SOUND_STOP_MODE_EVENT_FADE = 1                    -- api/Addon
 SOUND_STOP_MODE_ON_SYNC_POINT = 2                 -- api/Addon
 SOUND_STREAM = 32                                 -- api/Addon
 SOUND_VOICE = 2097152                             -- api/Addon
-STABLER_TEXT = 68                                 -- api/Addon
-STORE_TEXT = 65                                   -- api/Addon
-Sound = {}                                        -- api/Addon
-TARGET_POPUP_TEXT = 75                            -- api/Addon
-TEAM_TEXT = 106                                   -- api/Addon
-TERRITORY_TEXT = 111                              -- api/Addon
-TIME = 98                                         -- api/Addon
-TOOLTIP_TEXT = 33                                 -- api/Addon
-TRADE_TEXT = 16                                   -- api/Addon
-TRIAL_TEXT = 113                                  -- api/Addon
-TUTORIAL_TEXT = 15                                -- api/Addon
-UCC_TEXT = 73                                     -- api/Addon
+STABLER_TEXT = 68                                 -- api/Addon UI_TEXT_CATEGORY_ID
+STORE_TEXT = 65                                   -- api/Addon UI_TEXT_CATEGORY_ID
+Sound = {}                                        -- api/Addon @TODO: Does this ever get populated?
+TARGET_POPUP_TEXT = 75                            -- api/Addon UI_TEXT_CATEGORY_ID
+TEAM_TEXT = 106                                   -- api/Addon UI_TEXT_CATEGORY_ID
+TERRITORY_TEXT = 111                              -- api/Addon UI_TEXT_CATEGORY_ID
+TIME = 98                                         -- api/Addon UI_TEXT_CATEGORY_ID
+TOOLTIP_TEXT = 33                                 -- api/Addon UI_TEXT_CATEGORY_ID
+TRADE_TEXT = 16                                   -- api/Addon UI_TEXT_CATEGORY_ID
+TRIAL_TEXT = 113                                  -- api/Addon UI_TEXT_CATEGORY_ID
+TUTORIAL_TEXT = 15                                -- api/Addon UI_TEXT_CATEGORY_ID
+UCC_TEXT = 73                                     -- api/Addon UI_TEXT_CATEGORY_ID
 UCST_UNIT = 42                                    -- api/Addon
-UI = UIParent                                     -- api/Addon
-UIC_ABILITY_CHANGE = 57                           -- api/Addon
-UIC_ACHIEVEMENT = 25                              -- api/Addon
-UIC_ACTABILITY = 91                               -- api/Addon
-UIC_ADDON = 80                                    -- api/Addon
-UIC_APPELLATION = 65                              -- api/Addon
-UIC_AUCTION = 58                                  -- api/Addon
-UIC_AUTH_MSG_WND = 20                             -- api/Addon
-UIC_BAG = 22                                      -- api/Addon
-UIC_BANK = 59                                     -- api/Addon
-UIC_BEAUTY_SHOP = 74                              -- api/Addon
-UIC_BLESS_UTHSTIN = 66                            -- api/Addon
-UIC_BUTLER_INFO = 115                             -- api/Addon
-UIC_CHALLENGE = 81                                -- api/Addon
-UIC_CHANGE_VISUAL_RACE = 118                      -- api/Addon
-UIC_CHARACTER_INFO = 21                           -- api/Addon
-UIC_CHARACTER_INFO_VISUAL_RACE = 117              -- api/Addon
-UIC_CHECK_BOT_WND = 47                            -- api/Addon
-UIC_CHECK_SECOND_PASSWORD = 99                    -- api/Addon
-UIC_CHRONICLE_BOOK_WND = 114                      -- api/Addon
-UIC_CLEAR_SECOND_PASSWORD = 98                    -- api/Addon
-UIC_CLIENT_DIRVEN_CONTENTS = 10                   -- api/Addon
-UIC_CLIENT_DIRVEN_TITLE = 9                       -- api/Addon
-UIC_CLIENT_DRIVEN_EXIT_BTN = 11                   -- api/Addon
-UIC_COFFER = 106                                  -- api/Addon
-UIC_COMMERCIAL_MAIL = 78                          -- api/Addon
-UIC_COMMUNITY = 120                               -- api/Addon
-UIC_CRAFT_BOOK = 28                               -- api/Addon
-UIC_CRAFT_ORDER = 29                              -- api/Addon
-UIC_CREATE_EXPEDITION = 53                        -- api/Addon
-UIC_DEATH_AND_RESURRECTION_WND = 18               -- api/Addon
-UIC_DEV_WINDOW = 52                               -- api/Addon
-UIC_DROPDOWN_LIST = 44                            -- api/Addon
-UIC_DYNAMIC_ACTIONBAR = 6                         -- api/Addon
-UIC_ENCHANT = 68                                  -- api/Addon
-UIC_ENTER_SECOND_PASSWORD = 122                   -- api/Addon
-UIC_EQUIP_SLOT_REINFORCE = 102                    -- api/Addon
-UIC_EQUIP_SLOT_REINFORCE_TAB = 203                -- api/Addon
-UIC_EVENT_CENTER = 50                             -- api/Addon
-UIC_EXIT_GAME = 89                                -- api/Addon
-UIC_EXPAND_INVENTORY = 72                         -- api/Addon
-UIC_EXPAND_JOB = 87                               -- api/Addon
-UIC_EXPEDITION = 32                               -- api/Addon
-UIC_EXPEDITION_GUILD_FUNCTION_CHANGE_BUFF = 202   -- api/Addon
-UIC_FAMILY = 85                                   -- api/Addon
-UIC_FOLLOW = 92                                   -- api/Addon
-UIC_FORCE_ATTACK = 113                            -- api/Addon
-UIC_FRIEND = 35                                   -- api/Addon
-UIC_GAME_EXIT_FRAME = 14                          -- api/Addon
-UIC_GAME_TOOLTIP_WND = 19                         -- api/Addon
-UIC_GUILD_BANK = 201                              -- api/Addon
-UIC_HERO = 48                                     -- api/Addon
-UIC_HERO_ELECTION = 108                           -- api/Addon
-UIC_HIDDEN_QUEST = 109                            -- api/Addon
-UIC_INGAME_SHOP = 73                              -- api/Addon
-UIC_INTERACT_SECOND_PASSWORD = 97                 -- api/Addon
-UIC_ITEM_GUIDE = 51                               -- api/Addon
-UIC_ITEM_LOCK = 71                                -- api/Addon
-UIC_ITEM_REPAIR = 70                              -- api/Addon
-UIC_LOCAL_DEVELOPMENT_BOARD = 107                 -- api/Addon
-UIC_LOOK_CONVERT = 69                             -- api/Addon
-UIC_LOOT_GACHA = 67                               -- api/Addon
-UIC_MAIL = 79                                     -- api/Addon
-UIC_MAIN_ACTION_BAR = 17                          -- api/Addon
-UIC_MAKE_CRAFT_ORDER = 30                         -- api/Addon
-UIC_MARKET_PRICE = 94                             -- api/Addon
-UIC_MEGAPHONE = 103                               -- api/Addon
-UIC_MODE_ACTIONBAR = 7                            -- api/Addon
-UIC_MY_FARM_INFO = 31                             -- api/Addon
-UIC_NATION = 36                                   -- api/Addon
-UIC_NOTIFY_ACTABILITY = 100                       -- api/Addon
-UIC_NOTIFY_SKILL = 101                            -- api/Addon
-UIC_OPTIMIZATION = 121                            -- api/Addon
-UIC_OPTION_FRAME = 12                             -- api/Addon
-UIC_PARTY = 84                                    -- api/Addon
-UIC_PLAYER_EQUIPMENT = 90                         -- api/Addon
-UIC_PLAYER_UNITFRAME = 1                          -- api/Addon
-UIC_PREMIUM = 75                                  -- api/Addon
-UIC_QUEST_CINEMA_FADE_WND = 16                    -- api/Addon
-UIC_QUEST_CINEMA_WND = 15                         -- api/Addon
-UIC_QUEST_LIST = 23                               -- api/Addon
-UIC_QUEST_NOTIFIER = 24                           -- api/Addon
-UIC_RAID = 86                                     -- api/Addon
-UIC_RAID_RECRUIT = 34                             -- api/Addon
-UIC_RAID_TEAM_MANAGER = 33                        -- api/Addon
-UIC_RANK = 4                                      -- api/Addon
-UIC_RANK_LOCAL_VIEW = 5                           -- api/Addon
-UIC_RECOVER_EXP = 55                              -- api/Addon
-UIC_RENAME_EXPEDITION = 54                        -- api/Addon
-UIC_REPORT_BAD_USER = 93                          -- api/Addon
-UIC_REQUEST_BATTLEFIELD = 77                      -- api/Addon
-UIC_RESIDENT_TOWNHALL = 61                        -- api/Addon
-UIC_RETURN_ACCOUNT_REWARD_WND = 112               -- api/Addon
-UIC_ROSTER_MANAGER_WND = 116                      -- api/Addon
-UIC_SCHEDULE_ITEM = 76                            -- api/Addon
-UIC_SELECT_CHARACTER = 88                         -- api/Addon
-UIC_SET_SECOND_PASSWORD = 96                      -- api/Addon
-UIC_SHORTCUT_ACTIONBAR = 8                        -- api/Addon
-UIC_SIEGE_RAID_REGISTER_WND = 110                 -- api/Addon
-UIC_SIEGE_RAID_TEAM_MEMBER_LIST_WND = 111         -- api/Addon
-UIC_SKILL = 26                                    -- api/Addon
-UIC_SLAVE_EQUIPMENT = 45                          -- api/Addon
-UIC_SPECIALTY_BUY = 62                            -- api/Addon
-UIC_SPECIALTY_INFO = 41                           -- api/Addon
-UIC_SPECIALTY_SELL = 63                           -- api/Addon
-UIC_SQUAD = 104                                   -- api/Addon
-UIC_SQUAD_MINIVIEW = 105                          -- api/Addon
-UIC_STABLER = 119                                 -- api/Addon
-UIC_STORE = 60                                    -- api/Addon
-UIC_SYSTEM_CONFIG_FRAME = 13                      -- api/Addon
-UIC_TARGET_EQUIPMENT = 46                         -- api/Addon
-UIC_TARGET_UNITFRAME = 2                          -- api/Addon
-UIC_TGOS = 42                                     -- api/Addon
-UIC_TRADE = 82                                    -- api/Addon
-UIC_TRADER = 56                                   -- api/Addon
-UIC_TRADE_GOOD_PRICE_INFORMATION = 64             -- api/Addon
-UIC_UI_AVI = 49                                   -- api/Addon
-UIC_WEB_HELP = 40                                 -- api/Addon
-UIC_WEB_MESSENGER = 37                            -- api/Addon
-UIC_WEB_PLAY_DIARY = 38                           -- api/Addon
-UIC_WEB_PLAY_DIARY_INSTANCE = 95                  -- api/Addon
-UIC_WEB_WIKI = 39                                 -- api/Addon
-UIC_WHISPER = 83                                  -- api/Addon
-UIC_WORLDMAP = 27                                 -- api/Addon
+UI = UIParent                                     -- api/Addon UIParent
+UIC_ABILITY_CHANGE = 57                           -- api/Addon UIC
+UIC_ACHIEVEMENT = 25                              -- api/Addon UIC
+UIC_ACTABILITY = 91                               -- api/Addon UIC
+UIC_ADDON = 80                                    -- api/Addon UIC
+UIC_APPELLATION = 65                              -- api/Addon UIC
+UIC_AUCTION = 58                                  -- api/Addon UIC
+UIC_AUTH_MSG_WND = 20                             -- api/Addon UIC
+UIC_BAG = 22                                      -- api/Addon UIC
+UIC_BANK = 59                                     -- api/Addon UIC
+UIC_BEAUTY_SHOP = 74                              -- api/Addon UIC
+UIC_BLESS_UTHSTIN = 66                            -- api/Addon UIC
+UIC_BUTLER_INFO = 115                             -- api/Addon UIC
+UIC_CHALLENGE = 81                                -- api/Addon UIC
+UIC_CHANGE_VISUAL_RACE = 118                      -- api/Addon UIC
+UIC_CHARACTER_INFO = 21                           -- api/Addon UIC
+UIC_CHARACTER_INFO_VISUAL_RACE = 117              -- api/Addon UIC
+UIC_CHECK_BOT_WND = 47                            -- api/Addon UIC
+UIC_CHECK_SECOND_PASSWORD = 99                    -- api/Addon UIC
+UIC_CHRONICLE_BOOK_WND = 114                      -- api/Addon UIC
+UIC_CLEAR_SECOND_PASSWORD = 98                    -- api/Addon UIC
+UIC_CLIENT_DIRVEN_CONTENTS = 10                   -- api/Addon UIC
+UIC_CLIENT_DIRVEN_TITLE = 9                       -- api/Addon UIC
+UIC_CLIENT_DRIVEN_EXIT_BTN = 11                   -- api/Addon UIC
+UIC_COFFER = 106                                  -- api/Addon UIC
+UIC_COMMERCIAL_MAIL = 78                          -- api/Addon UIC
+UIC_COMMUNITY = 120                               -- api/Addon UIC
+UIC_CRAFT_BOOK = 28                               -- api/Addon UIC
+UIC_CRAFT_ORDER = 29                              -- api/Addon UIC
+UIC_CREATE_EXPEDITION = 53                        -- api/Addon UIC
+UIC_DEATH_AND_RESURRECTION_WND = 18               -- api/Addon UIC
+UIC_DEV_WINDOW = 52                               -- api/Addon UIC
+UIC_DROPDOWN_LIST = 44                            -- api/Addon UIC
+UIC_DYNAMIC_ACTIONBAR = 6                         -- api/Addon UIC
+UIC_ENCHANT = 68                                  -- api/Addon UIC
+UIC_ENTER_SECOND_PASSWORD = 122                   -- api/Addon UIC
+UIC_EQUIP_SLOT_REINFORCE = 102                    -- api/Addon UIC
+UIC_EQUIP_SLOT_REINFORCE_TAB = 203                -- api/Addon UIC
+UIC_EVENT_CENTER = 50                             -- api/Addon UIC
+UIC_EXIT_GAME = 89                                -- api/Addon UIC
+UIC_EXPAND_INVENTORY = 72                         -- api/Addon UIC
+UIC_EXPAND_JOB = 87                               -- api/Addon UIC
+UIC_EXPEDITION = 32                               -- api/Addon UIC
+UIC_EXPEDITION_GUILD_FUNCTION_CHANGE_BUFF = 202   -- api/Addon UIC
+UIC_FAMILY = 85                                   -- api/Addon UIC
+UIC_FOLLOW = 92                                   -- api/Addon UIC
+UIC_FORCE_ATTACK = 113                            -- api/Addon UIC
+UIC_FRIEND = 35                                   -- api/Addon UIC
+UIC_GAME_EXIT_FRAME = 14                          -- api/Addon UIC
+UIC_GAME_TOOLTIP_WND = 19                         -- api/Addon UIC
+UIC_GUILD_BANK = 201                              -- api/Addon UIC
+UIC_HERO = 48                                     -- api/Addon UIC
+UIC_HERO_ELECTION = 108                           -- api/Addon UIC
+UIC_HIDDEN_QUEST = 109                            -- api/Addon UIC
+UIC_INGAME_SHOP = 73                              -- api/Addon UIC
+UIC_INTERACT_SECOND_PASSWORD = 97                 -- api/Addon UIC
+UIC_ITEM_GUIDE = 51                               -- api/Addon UIC
+UIC_ITEM_LOCK = 71                                -- api/Addon UIC
+UIC_ITEM_REPAIR = 70                              -- api/Addon UIC
+UIC_LOCAL_DEVELOPMENT_BOARD = 107                 -- api/Addon UIC
+UIC_LOOK_CONVERT = 69                             -- api/Addon UIC
+UIC_LOOT_GACHA = 67                               -- api/Addon UIC
+UIC_MAIL = 79                                     -- api/Addon UIC
+UIC_MAIN_ACTION_BAR = 17                          -- api/Addon UIC
+UIC_MAKE_CRAFT_ORDER = 30                         -- api/Addon UIC
+UIC_MARKET_PRICE = 94                             -- api/Addon UIC
+UIC_MEGAPHONE = 103                               -- api/Addon UIC
+UIC_MODE_ACTIONBAR = 7                            -- api/Addon UIC
+UIC_MY_FARM_INFO = 31                             -- api/Addon UIC
+UIC_NATION = 36                                   -- api/Addon UIC
+UIC_NOTIFY_ACTABILITY = 100                       -- api/Addon UIC
+UIC_NOTIFY_SKILL = 101                            -- api/Addon UIC
+UIC_OPTIMIZATION = 121                            -- api/Addon UIC
+UIC_OPTION_FRAME = 12                             -- api/Addon UIC
+UIC_PARTY = 84                                    -- api/Addon UIC
+UIC_PLAYER_EQUIPMENT = 90                         -- api/Addon UIC
+UIC_PLAYER_UNITFRAME = 1                          -- api/Addon UIC
+UIC_PREMIUM = 75                                  -- api/Addon UIC
+UIC_QUEST_CINEMA_FADE_WND = 16                    -- api/Addon UIC
+UIC_QUEST_CINEMA_WND = 15                         -- api/Addon UIC
+UIC_QUEST_LIST = 23                               -- api/Addon UIC
+UIC_QUEST_NOTIFIER = 24                           -- api/Addon UIC
+UIC_RAID = 86                                     -- api/Addon UIC
+UIC_RAID_RECRUIT = 34                             -- api/Addon UIC
+UIC_RAID_TEAM_MANAGER = 33                        -- api/Addon UIC
+UIC_RANK = 4                                      -- api/Addon UIC
+UIC_RANK_LOCAL_VIEW = 5                           -- api/Addon UIC
+UIC_RECOVER_EXP = 55                              -- api/Addon UIC
+UIC_RENAME_EXPEDITION = 54                        -- api/Addon UIC
+UIC_REPORT_BAD_USER = 93                          -- api/Addon UIC
+UIC_REQUEST_BATTLEFIELD = 77                      -- api/Addon UIC
+UIC_RESIDENT_TOWNHALL = 61                        -- api/Addon UIC
+UIC_RETURN_ACCOUNT_REWARD_WND = 112               -- api/Addon UIC
+UIC_ROSTER_MANAGER_WND = 116                      -- api/Addon UIC
+UIC_SCHEDULE_ITEM = 76                            -- api/Addon UIC
+UIC_SELECT_CHARACTER = 88                         -- api/Addon UIC
+UIC_SET_SECOND_PASSWORD = 96                      -- api/Addon UIC
+UIC_SHORTCUT_ACTIONBAR = 8                        -- api/Addon UIC
+UIC_SIEGE_RAID_REGISTER_WND = 110                 -- api/Addon UIC
+UIC_SIEGE_RAID_TEAM_MEMBER_LIST_WND = 111         -- api/Addon UIC
+UIC_SKILL = 26                                    -- api/Addon UIC
+UIC_SLAVE_EQUIPMENT = 45                          -- api/Addon UIC
+UIC_SPECIALTY_BUY = 62                            -- api/Addon UIC
+UIC_SPECIALTY_INFO = 41                           -- api/Addon UIC
+UIC_SPECIALTY_SELL = 63                           -- api/Addon UIC
+UIC_SQUAD = 104                                   -- api/Addon UIC
+UIC_SQUAD_MINIVIEW = 105                          -- api/Addon UIC
+UIC_STABLER = 119                                 -- api/Addon UIC
+UIC_STORE = 60                                    -- api/Addon UIC
+UIC_SYSTEM_CONFIG_FRAME = 13                      -- api/Addon UIC
+UIC_TARGET_EQUIPMENT = 46                         -- api/Addon UIC
+UIC_TARGET_UNITFRAME = 2                          -- api/Addon UIC
+UIC_TGOS = 42                                     -- api/Addon UIC
+UIC_TRADE = 82                                    -- api/Addon UIC
+UIC_TRADER = 56                                   -- api/Addon UIC
+UIC_TRADE_GOOD_PRICE_INFORMATION = 64             -- api/Addon UIC
+UIC_UI_AVI = 49                                   -- api/Addon UIC
+UIC_WEB_HELP = 40                                 -- api/Addon UIC
+UIC_WEB_MESSENGER = 37                            -- api/Addon UIC
+UIC_WEB_PLAY_DIARY = 38                           -- api/Addon UIC
+UIC_WEB_PLAY_DIARY_INSTANCE = 95                  -- api/Addon UIC
+UIC_WEB_WIKI = 39                                 -- api/Addon UIC
+UIC_WHISPER = 83                                  -- api/Addon UIC
+UIC_WORLDMAP = 27                                 -- api/Addon UIC
 ---@class UIParent
-UIParent = {}                                     -- api/Addon
-UM_ACHIEVEMENT_NAME = 26                          -- api/Addon
-UM_AREA_SPHERE = 7                                -- api/Addon
-UM_DAY = 20                                       -- api/Addon
-UM_DOODAD_NAME = 10                               -- api/Addon
-UM_EXPEDITION_LEADER_NAME_BY_ZONEGROUP = 17       -- api/Addon
-UM_EXPEDITION_NAME_BY_ZONEGROUP = 16              -- api/Addon
-UM_HOUR = 21                                      -- api/Addon
-UM_ITEM_NAME = 11                                 -- api/Addon
-UM_MINUTE = 22                                    -- api/Addon
-UM_MONTH = 19                                     -- api/Addon
-UM_NPC_GROUP_NAME = 9                             -- api/Addon
-UM_NPC_NAME = 8                                   -- api/Addon
-UM_PC_CLASS = 4                                   -- api/Addon
-UM_PC_GENDER = 3                                  -- api/Addon
-UM_PC_NAME = 1                                    -- api/Addon
-UM_PC_RACE = 2                                    -- api/Addon
-UM_QUEST_NAME = 15                                -- api/Addon
-UM_SECOND = 23                                    -- api/Addon
-UM_SOURCE_NAME = 12                               -- api/Addon
-UM_SPECIFY_TARGET_NAME = 14                       -- api/Addon
-UM_SUB_ZONE_NAME = 6                              -- api/Addon
-UM_TARGET_NAME = 13                               -- api/Addon
-UM_YEAR = 18                                      -- api/Addon
-UM_ZONE_NAME = 5                                  -- api/Addon
-UNIT_FRAME_TEXT = 38                              -- api/Addon
-UNIT_GRADE_TEXT = 37                              -- api/Addon
-UNIT_KIND_TEXT = 36                               -- api/Addon
-UOT_EDITBOX = 3                                   -- api/Addon
-UOT_EDITBOX_MULTILINE = 4                         -- api/Addon
-UOT_EMPTY_WIDGET = 46                             -- api/Addon
-UOT_IMAGE_DRAWABLE = 10                           -- api/Addon
-UOT_LABEL = 1                                     -- api/Addon
-UOT_LISTBOX = 5                                   -- api/Addon
-UOT_LIST_CTRL = 45                                -- api/Addon
-UOT_NINE_PART_DRAWABLE = 8                        -- api/Addon
-UOT_SLIDER = 24                                   -- api/Addon
-UOT_TEXT_STYLE = 13                               -- api/Addon
-UOT_X2_EDITBOX = 53                               -- api/Addon
-UR_FRIENDLY = 3                                   -- api/Addon
-UR_HOSTILE = 1                                    -- api/Addon
-UR_NEUTRAL = 2                                    -- api/Addon
-UTIL_TEXT = 31                                    -- api/Addon
-WEB_TEXT = 112                                    -- api/Addon
-WINDOW_TITLE_TEXT = 134                           -- api/Addon
-X2 = ADDON                                        -- api/Addon
-ZST_CONQUEST_WAR = 1                              -- api/Addon
-ZST_INVALID = 0                                   -- api/Addon
+UIParent = {}                                     -- api/Addon UIParent
+UM_ACHIEVEMENT_NAME = 26                          -- api/Addon UM
+UM_AREA_SPHERE = 7                                -- api/Addon UM
+UM_DAY = 20                                       -- api/Addon UM
+UM_DOODAD_NAME = 10                               -- api/Addon UM
+UM_EXPEDITION_LEADER_NAME_BY_ZONEGROUP = 17       -- api/Addon UM
+UM_EXPEDITION_NAME_BY_ZONEGROUP = 16              -- api/Addon UM
+UM_HOUR = 21                                      -- api/Addon UM
+UM_ITEM_NAME = 11                                 -- api/Addon UM
+UM_MINUTE = 22                                    -- api/Addon UM
+UM_MONTH = 19                                     -- api/Addon UM
+UM_NPC_GROUP_NAME = 9                             -- api/Addon UM
+UM_NPC_NAME = 8                                   -- api/Addon UM
+UM_PC_CLASS = 4                                   -- api/Addon UM
+UM_PC_GENDER = 3                                  -- api/Addon UM
+UM_PC_NAME = 1                                    -- api/Addon UM
+UM_PC_RACE = 2                                    -- api/Addon UM
+UM_QUEST_NAME = 15                                -- api/Addon UM
+UM_SECOND = 23                                    -- api/Addon UM
+UM_SOURCE_NAME = 12                               -- api/Addon UM
+UM_SPECIFY_TARGET_NAME = 14                       -- api/Addon UM
+UM_SUB_ZONE_NAME = 6                              -- api/Addon UM
+UM_TARGET_NAME = 13                               -- api/Addon UM
+UM_YEAR = 18                                      -- api/Addon UM
+UM_ZONE_NAME = 5                                  -- api/Addon UM
+UNIT_FRAME_TEXT = 38                              -- api/Addon UI_TEXT_CATEGORY_ID
+UNIT_GRADE_TEXT = 37                              -- api/Addon UI_TEXT_CATEGORY_ID
+UNIT_KIND_TEXT = 36                               -- api/Addon UI_TEXT_CATEGORY_ID
+UOT_EDITBOX = 3                                   -- api/Addon UOT
+UOT_EDITBOX_MULTILINE = 4                         -- api/Addon UOT
+UOT_EMPTY_WIDGET = 46                             -- api/Addon UOT
+UOT_IMAGE_DRAWABLE = 10                           -- api/Addon UOT
+UOT_LABEL = 1                                     -- api/Addon UOT
+UOT_LISTBOX = 5                                   -- api/Addon UOT
+UOT_LIST_CTRL = 45                                -- api/Addon UOT
+UOT_NINE_PART_DRAWABLE = 8                        -- api/Addon UOT
+UOT_SLIDER = 24                                   -- api/Addon UOT
+UOT_TEXT_STYLE = 13                               -- api/Addon UOT
+UOT_X2_EDITBOX = 53                               -- api/Addon UOT
+UR_FRIENDLY = 3                                   -- api/Addon UR
+UR_HOSTILE = 1                                    -- api/Addon UR
+UR_NEUTRAL = 2                                    -- api/Addon UR
+UTIL_TEXT = 31                                    -- api/Addon UI_TEXT_CATEGORY_ID
+WEB_TEXT = 112                                    -- api/Addon UI_TEXT_CATEGORY_ID
+WINDOW_TITLE_TEXT = 134                           -- api/Addon UI_TEXT_CATEGORY_ID
+X2 = ADDON                                        -- api/Addon ADDON
+ZST_CONQUEST_WAR = 1                              -- api/Addon ZST
+ZST_INVALID = 0                                   -- api/Addon ZST
+
+---api/Addon
+---@alias ContentTriggerFunc fun(show: boolean, data?: table)
+
+---api/Addon
+---@alias FACTION_TYPE
+---| `HARIHARA_FACTION_ID`
+---| `MONSTER_FACTION_ID`
+---| `NUIA_FACTION_ID`
+---| `OUTLAW_FACTION_ID`
+---| `PC_IN_ALL_FACTION_ID`
+
+---api/Addon
+---@alias UI_TEXT_CATEGORY_ID
+---| `ABILITY_CATEGORY_DESCRIPTION_TEXT`
+---| `ABILITY_CATEGORY_TEXT`
+---| `ABILITY_CHANGER_TEXT`
+---| `ATTRIBUTE_TEXT`
+---| `ATTRIBUTE_VARIATION_TEXT`
+---| `AUCTION_TEXT`
+---| `BATTLE_FIELD_TEXT`
+---| `BEAUTYSHOP_TEXT`
+---| `BINDING`
+---| `BUTLER`
+---| `CASTING_BAR_TEXT`
+---| `CHARACTER_CREATE_TEXT`
+---| `CHARACTER_POPUP_SUBTITLE_TEXT`
+---| `CHARACTER_POPUP_SUBTITLE_TOOLTIP_TEXT`
+---| `CHARACTER_SELECT_TEXT`
+---| `CHARACTER_SUBTITLE_INFO_TOOLTIP_TEXT`
+---| `CHARACTER_SUBTITLE_TEXT`
+---| `CHARACTER_SUBTITLE_TOOLTIP_TEXT`
+---| `CHARACTER_TITLE_TEXT`
+---| `CHAT_CHANNEL_TEXT`
+---| `CHAT_COMBAT_LOG_TEXT`
+---| `CHAT_CREATE_TAB_TEXT`
+---| `CHAT_FILTERING`
+---| `CHAT_FORCE_ATTACK_TEXT`
+---| `CHAT_LIST_TEXT`
+---| `CHAT_SYSTEM_TEXT`
+---| `COMBAT_MESSAGE_TEXT`
+---| `COMBAT_TEXT`
+---| `COMBINED_ABILITY_NAME_TEXT`
+---| `COMMON_TEXT`
+---| `COMMUNITY_TEXT`
+---| `COMPOSITION_TEXT`
+---| `CRAFT_TEXT`
+---| `CUSTOMIZING_TEXT`
+---| `DATE_TIME_TEXT`
+---| `DOMINION`
+---| `DUEL_TEXT`
+---| `EQUIP_SLOT_TYPE_TEXT`
+---| `ERROR_MSG`
+---| `EXPEDITION_TEXT`
+---| `FACTION_TEXT`
+---| `FARM_TEXT`
+---| `GENDER_TEXT`
+---| `GRAVE_YARD_TEXT`
+---| `HERO_TEXT`
+---| `HONOR_POINT_WAR_TEXT`
+---| `HOUSING_PERMISSIONS_TEXT`
+---| `HOUSING_TEXT`
+---| `INFOBAR_MENU_TEXT`
+---| `INFOBAR_MENU_TIP_TEXT`
+---| `INGAMESHOP_TEXT`
+---| `INSTANT_GAME_TEXT`
+---| `INVEN_TEXT`
+---| `ITEM_GRADE`
+---| `ITEM_LOOK_CONVERT_TEXT`
+---| `KEY_BINDING_TEXT`
+---| `LEARNING_TEXT`
+---| `LEVEL_CHANGED_TEXT`
+---| `LOADING_TEXT`
+---| `LOGIN_CROWDED_TEXT`
+---| `LOGIN_DELETE_TEXT`
+---| `LOGIN_ERROR`
+---| `LOGIN_TEXT`
+---| `LOOT_METHOD_TEXT`
+---| `LOOT_TEXT`
+---| `MAIL_TEXT`
+---| `MAP_TEXT`
+---| `MONEY_TEXT`
+---| `MSG_BOX_BODY_TEXT`
+---| `MSG_BOX_BTN_TEXT`
+---| `MSG_BOX_TITLE_TEXT`
+---| `MUSIC_TEXT`
+---| `NATION_TEXT`
+---| `OPTION_TEXT`
+---| `PARTY_TEXT`
+---| `PERIOD_TIME_TEXT`
+---| `PET_TEXT`
+---| `PHYSICAL_ENCHANT_TEXT`
+---| `PLAYER_POPUP_TEXT`
+---| `PORTAL_TEXT`
+---| `PREMIUM_TEXT`
+---| `PRIEST_TEXT`
+---| `PROTECT_SENSITIVE_OPERATION_TEXT`
+---| `QUEST_ACT_OBJ_PTN_TEXT`
+---| `QUEST_ACT_OBJ_TEXT`
+---| `QUEST_CONDITION_TEXT`
+---| `QUEST_DISTANCE_TEXT`
+---| `QUEST_ERROR`
+---| `QUEST_INTERACTION_TEXT`
+---| `QUEST_OBJ_STATUS_TEXT`
+---| `QUEST_SPHERE_TEXT`
+---| `QUEST_STATUS_TEXT`
+---| `QUEST_TEXT`
+---| `RACE_DETAIL_DESCRIPTION_TEXT`
+---| `RACE_TEXT`
+---| `RAID_TEXT`
+---| `RANKING_TEXT`
+---| `REPAIR_TEXT`
+---| `RESTRICT_TEXT`
+---| `SECOND_PASSWORD_TEXT`
+---| `SERVER_TEXT`
+---| `SKILL_TEXT`
+---| `SKILL_TRAINING_MSG_TEXT`
+---| `SLAVE_KIND`
+---| `SLAVE_TEXT`
+---| `STABLER_TEXT`
+---| `STORE_TEXT`
+---| `TARGET_POPUP_TEXT`
+---| `TEAM_TEXT`
+---| `TERRITORY_TEXT`
+---| `TIME`
+---| `TOOLTIP_TEXT`
+---| `TRADE_TEXT`
+---| `TRIAL_TEXT`
+---| `TUTORIAL_TEXT`
+---| `UCC_TEXT`
+---| `UNIT_FRAME_TEXT`
+---| `UNIT_GRADE_TEXT`
+---| `UNIT_KIND_TEXT`
+---| `UTIL_TEXT`
+---| `WEB_TEXT`
+---| `WINDOW_TITLE_TEXT`
 
 ---api/Addon
 ---UICategory
@@ -481,119 +617,32 @@ ZST_INVALID = 0                                   -- api/Addon
 ---| `UIC_WORLDMAP`
 
 ---api/Addon
----@alias UI_TEXT_CATEGORY_ID
----| `ABILITY_CATEGORY_DESCRIPTION_TEXT`
----| `ABILITY_CATEGORY_TEXT`
----| `ABILITY_CHANGER_TEXT`
----| `ATTRIBUTE_TEXT`
----| `ATTRIBUTE_VARIATION_TEXT`
----| `AUCTION_TEXT`
----| `BATTLE_FIELD_TEXT`
----| `BEAUTYSHOP_TEXT`
----| `CASTING_BAR_TEXT`
----| `CHARACTER_CREATE_TEXT`
----| `CHARACTER_POPUP_SUBTITLE_TEXT`
----| `CHARACTER_POPUP_SUBTITLE_TOOLTIP_TEXT`
----| `CHARACTER_SELECT_TEXT`
----| `CHARACTER_SUBTITLE_INFO_TOOLTIP_TEXT`
----| `CHARACTER_SUBTITLE_TEXT`
----| `CHARACTER_SUBTITLE_TOOLTIP_TEXT`
----| `CHARACTER_TITLE_TEXT`
----| `CHAT_CHANNEL_TEXT`
----| `CHAT_COMBAT_LOG_TEXT`
----| `CHAT_CREATE_TAB_TEXT`
----| `CHAT_FORCE_ATTACK_TEXT`
----| `CHAT_LIST_TEXT`
----| `CHAT_SYSTEM_TEXT`
----| `COMBAT_MESSAGE_TEXT`
----| `COMBAT_TEXT`
----| `COMBINED_ABILITY_NAME_TEXT`
----| `COMMON_TEXT`
----| `COMMUNITY_TEXT`
----| `COMPOSITION_TEXT`
----| `CRAFT_TEXT`
----| `CUSTOMIZING_TEXT`
----| `DATE_TIME_TEXT`
----| `DUEL_TEXT`
----| `EQUIP_SLOT_TYPE_TEXT`
----| `EXPEDITION_TEXT`
----| `FACTION_TEXT`
----| `FARM_TEXT`
----| `GENDER_TEXT`
----| `GRAVE_YARD_TEXT`
----| `HERO_TEXT`
----| `HONOR_POINT_WAR_TEXT`
----| `HOUSING_PERMISSIONS_TEXT`
----| `HOUSING_TEXT`
----| `INFOBAR_MENU_TEXT`
----| `INFOBAR_MENU_TIP_TEXT`
----| `INGAMESHOP_TEXT`
----| `INSTANT_GAME_TEXT`
----| `INVEN_TEXT`
----| `ITEM_LOOK_CONVERT_TEXT`
----| `KEY_BINDING_TEXT`
----| `LEARNING_TEXT`
----| `LEVEL_CHANGED_TEXT`
----| `LOADING_TEXT`
----| `LOGIN_CROWDED_TEXT`
----| `LOGIN_DELETE_TEXT`
----| `LOGIN_TEXT`
----| `LOOT_METHOD_TEXT`
----| `LOOT_TEXT`
----| `MAIL_TEXT`
----| `MAP_TEXT`
----| `MONEY_TEXT`
----| `MSG_BOX_BODY_TEXT`
----| `MSG_BOX_BTN_TEXT`
----| `MSG_BOX_TITLE_TEXT`
----| `MUSIC_TEXT`
----| `NATION_TEXT`
----| `OPTION_TEXT`
----| `PARTY_TEXT`
----| `PERIOD_TIME_TEXT`
----| `PET_TEXT`
----| `PHYSICAL_ENCHANT_TEXT`
----| `PLAYER_POPUP_TEXT`
----| `PORTAL_TEXT`
----| `PREMIUM_TEXT`
----| `PRIEST_TEXT`
----| `PROTECT_SENSITIVE_OPERATION_TEXT`
----| `QUEST_ACT_OBJ_PTN_TEXT`
----| `QUEST_ACT_OBJ_TEXT`
----| `QUEST_CONDITION_TEXT`
----| `QUEST_DISTANCE_TEXT`
----| `QUEST_INTERACTION_TEXT`
----| `QUEST_OBJ_STATUS_TEXT`
----| `QUEST_SPHERE_TEXT`
----| `QUEST_STATUS_TEXT`
----| `QUEST_TEXT`
----| `RACE_DETAIL_DESCRIPTION_TEXT`
----| `RACE_TEXT`
----| `RAID_TEXT`
----| `RANKING_TEXT`
----| `REPAIR_TEXT`
----| `RESTRICT_TEXT`
----| `SECOND_PASSWORD_TEXT`
----| `SERVER_TEXT`
----| `SKILL_TEXT`
----| `SKILL_TRAINING_MSG_TEXT`
----| `SLAVE_TEXT`
----| `STABLER_TEXT`
----| `STORE_TEXT`
----| `TARGET_POPUP_TEXT`
----| `TEAM_TEXT`
----| `TERRITORY_TEXT`
----| `TOOLTIP_TEXT`
----| `TRADE_TEXT`
----| `TRIAL_TEXT`
----| `TUTORIAL_TEXT`
----| `UCC_TEXT`
----| `UNIT_FRAME_TEXT`
----| `UNIT_GRADE_TEXT`
----| `UNIT_KIND_TEXT`
----| `UTIL_TEXT`
----| `WEB_TEXT`
----| `WINDOW_TITLE_TEXT`
+---@TODO: ? ?
+---@alias UM
+---| `UM_ACHIEVEMENT_NAME`
+---| `UM_AREA_SPHERE`
+---| `UM_DAY`
+---| `UM_DOODAD_NAME`
+---| `UM_EXPEDITION_LEADER_NAME_BY_ZONEGROUP`
+---| `UM_EXPEDITION_NAME_BY_ZONEGROUP`
+---| `UM_HOUR`
+---| `UM_ITEM_NAME`
+---| `UM_MINUTE`
+---| `UM_MONTH`
+---| `UM_NPC_GROUP_NAME`
+---| `UM_NPC_NAME`
+---| `UM_PC_CLASS`
+---| `UM_PC_GENDER`
+---| `UM_PC_NAME`
+---| `UM_PC_RACE`
+---| `UM_QUEST_NAME`
+---| `UM_SECOND`
+---| `UM_SOURCE_NAME`
+---| `UM_SPECIFY_TARGET_NAME`
+---| `UM_SUB_ZONE_NAME`
+---| `UM_TARGET_NAME`
+---| `UM_YEAR`
+---| `UM_ZONE_NAME`
 
 ---api/Addon
 ---Ui Object Type
@@ -613,13 +662,23 @@ ZST_INVALID = 0                                   -- api/Addon
 ---@TODO: keep track of this
 ---api/Addon
 ---@alias UOT_DRAWABLE
----| `UOT_COLOR_DRAWABLE`  # We don't have access to this global yet but it does exist in the codebase.
 ---| `UOT_IMAGE_DRAWABLE`
 ---| `UOT_NINE_PART_DRAWABLE`
----| `UOT_THREE_PART_DRAWABLE` # We don't have access to this global yet but it does exist in the codebase.
+---`UOT_COLOR_DRAWABLE`  # We don't have access to this global yet but it does exist in the codebase.
+---`UOT_THREE_PART_DRAWABLE` # We don't have access to this global yet but it does exist in the codebase.
 
 ---api/Addon
----@alias ContentTriggerFunc fun(show: boolean, data?: table)
+---Unit Relation
+---@alias UR
+---| `UR_FRIENDLY`
+---| `UR_HOSTILE`
+---| `UR_NEUTRAL`
+
+---api/Addon
+---Zone State Type
+---@alias ZST
+---| `ZST_CONQUEST_WAR`
+---| `ZST_INVALID`
 
 ---Adds a button to the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID The category ID for the menu.
@@ -813,7 +872,6 @@ function ADDON:SaveData(key, data) end
 ---```
 function ADDON:SetAddonEnable(name, enable) end
 
----@TODO: Test data more on existing UI categories.
 ---Shows or hides the UI category and returns whether the operation succeeded.
 ---@param uiCategory UIC The UI category to show or hide.
 ---@param show boolean `true` to show, `false` to hide the component.
@@ -828,7 +886,6 @@ function ADDON:SetAddonEnable(name, enable) end
 ---@see UIC
 function ADDON:ShowContent(uiCategory, show, data) end
 
----@TODO: Test data more on existing UI categories.
 ---Toggles the visibility of the UI category and returns whether the operation
 ---succeeded.
 ---@param uiCategory UIC The UI category to toggle.
@@ -870,7 +927,7 @@ function UIParent:ClearUIBound(key) end
 ---@see OBJECT_NAME
 ---@see Widget
 ---@see WIDGET_TYPES
----@overload fun(self: self, widgetName: OBJECT_NAME, id: string, parentId: "UIParent"|string|Widget, category?: string)
+---@overload fun(self: self, widgetName: OBJECT_NAME, id: string, parentId: string|Widget, category?: string)
 function UIParent:CreateWidget(widgetName, id, parentId, category) end
 
 ---@TODO: currently unusable without SetAccountUITimeStamp
@@ -978,7 +1035,7 @@ function UIParent:GetFrameTime() end
 ---```
 function UIParent:GetId() end
 
----Checks if permission for the specified UI category has been granted.
+---Retrieves the permission state for the specified UI category.
 ---@param uiCategory UIC The UI category to check.
 ---@return boolean permission `true` if permission is granted, `false` otherwise.
 ---@nodiscard
@@ -1174,7 +1231,7 @@ function UIParent:IsRenderThreadSupported() end
 ---@see UIEVENT_TYPE
 function UIParent:ReleaseEventHandler(eventName, handler) end
 
----@TODO: I dont like this many overload, ive tried generics but they dont work on alias functions.
+---@TODO: I dont like this many overloads, ive tried generics but they dont work on alias functions.
 ---Sets an event handler for the specified UI event (more than 255 events will
 ---crash the game).
 ---@param eventName UIEVENT_TYPE The UI event to set the handler for.
@@ -1233,8 +1290,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ASK_FORCE_ATTACK", handler: ASK_FORCE_ATTACK_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_BIDDED", handler: AUCTION_BIDDED_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_BIDDEN", handler: AUCTION_BIDDEN_HANDLER)
----@overload fun(self: self, eventName: "AUCTION_BOUGHT", handler: AUCTION_BOUGHT_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_BOUGHT_BY_SOMEONE", handler: AUCTION_BOUGHT_BY_SOMEONE_HANDLER)
+---@overload fun(self: self, eventName: "AUCTION_BOUGHT", handler: AUCTION_BOUGHT_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_CANCELED", handler: AUCTION_CANCELED_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_CHARACTER_LEVEL_TOO_LOW", handler: AUCTION_CHARACTER_LEVEL_TOO_LOW_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_ITEM_ATTACHMENT_STATE_CHANGED", handler: AUCTION_ITEM_ATTACHMENT_STATE_CHANGED_HANDLER)
@@ -1333,9 +1390,9 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "COFFER_TAB_SWITCHED", handler: COFFER_TAB_SWITCHED_HANDLER)
 ---@overload fun(self: self, eventName: "COFFER_UPDATE", handler: COFFER_UPDATE_HANDLER)
 ---@overload fun(self: self, eventName: "COMBAT_MSG", handler: COMBAT_MSG_HANDLER)
----@overload fun(self: self, eventName: "COMBAT_TEXT", handler: COMBAT_TEXT_HANDLER)
 ---@overload fun(self: self, eventName: "COMBAT_TEXT_COLLISION", handler: COMBAT_TEXT_COLLISION_HANDLER)
 ---@overload fun(self: self, eventName: "COMBAT_TEXT_SYNERGY", handler: COMBAT_TEXT_SYNERGY_HANDLER)
+---@overload fun(self: self, eventName: "COMBAT_TEXT", handler: COMBAT_TEXT_HANDLER)
 ---@overload fun(self: self, eventName: "COMMON_FARM_UPDATED", handler: COMMON_FARM_UPDATED_HANDLER)
 ---@overload fun(self: self, eventName: "COMMUNITY_ERROR", handler: COMMUNITY_ERROR_HANDLER)
 ---@overload fun(self: self, eventName: "COMPLETE_ACHIEVEMENT", handler: COMPLETE_ACHIEVEMENT_HANDLER)
@@ -1369,13 +1426,13 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "DISMISS_PET", handler: DISMISS_PET_HANDLER)
 ---@overload fun(self: self, eventName: "DIVE_END", handler: DIVE_END_HANDLER)
 ---@overload fun(self: self, eventName: "DIVE_START", handler: DIVE_START_HANDLER)
----@overload fun(self: self, eventName: "DOMINION", handler: DOMINION_HANDLER)
 ---@overload fun(self: self, eventName: "DOMINION_GUARD_TOWER_STATE_NOTICE", handler: DOMINION_GUARD_TOWER_STATE_NOTICE_HANDLER)
 ---@overload fun(self: self, eventName: "DOMINION_GUARD_TOWER_UPDATE_TOOLTIP", handler: DOMINION_GUARD_TOWER_UPDATE_TOOLTIP_HANDLER)
 ---@overload fun(self: self, eventName: "DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED", handler: DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "DOMINION_SIEGE_PERIOD_CHANGED", handler: DOMINION_SIEGE_PERIOD_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "DOMINION_SIEGE_SYSTEM_NOTICE", handler: DOMINION_SIEGE_SYSTEM_NOTICE_HANDLER)
 ---@overload fun(self: self, eventName: "DOMINION_SIEGE_UPDATE_TIMER", handler: DOMINION_SIEGE_UPDATE_TIMER_HANDLER)
+---@overload fun(self: self, eventName: "DOMINION", handler: DOMINION_HANDLER)
 ---@overload fun(self: self, eventName: "DOODAD_LOGIC", handler: DOODAD_LOGIC_HANDLER)
 ---@overload fun(self: self, eventName: "DOODAD_PHASE_MSG", handler: DOODAD_PHASE_MSG_HANDLER)
 ---@overload fun(self: self, eventName: "DOODAD_PHASE_UI_MSG", handler: DOODAD_PHASE_UI_MSG_HANDLER)
@@ -1402,8 +1459,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ENTERED_LOGIN", handler: ENTERED_LOGIN_HANDLER)
 ---@overload fun(self: self, eventName: "ENTERED_SCREEN_SHOT_CAMERA_MODE", handler: ENTERED_SCREEN_SHOT_CAMERA_MODE_HANDLER)
 ---@overload fun(self: self, eventName: "ENTERED_SUBZONE", handler: ENTERED_SUBZONE_HANDLER)
----@overload fun(self: self, eventName: "ENTERED_WORLD", handler: ENTERED_WORLD_HANDLER)
 ---@overload fun(self: self, eventName: "ENTERED_WORLD_SELECT", handler: ENTERED_WORLD_SELECT_HANDLER)
+---@overload fun(self: self, eventName: "ENTERED_WORLD", handler: ENTERED_WORLD_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT", handler: EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT", handler: EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP", handler: EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP_HANDLER)
@@ -1463,11 +1520,11 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "FAMILY_EXP_ADD", handler: FAMILY_EXP_ADD_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_INFO_REFRESH", handler: FAMILY_INFO_REFRESH_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_LEVEL_UP", handler: FAMILY_LEVEL_UP_HANDLER)
----@overload fun(self: self, eventName: "FAMILY_MEMBER", handler: FAMILY_MEMBER_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_MEMBER_ADDED", handler: FAMILY_MEMBER_ADDED_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_MEMBER_KICKED", handler: FAMILY_MEMBER_KICKED_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_MEMBER_LEFT", handler: FAMILY_MEMBER_LEFT_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_MEMBER_ONLINE", handler: FAMILY_MEMBER_ONLINE_HANDLER)
+---@overload fun(self: self, eventName: "FAMILY_MEMBER", handler: FAMILY_MEMBER_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_MGR", handler: FAMILY_MGR_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_NAME_CHANGED", handler: FAMILY_NAME_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_OWNER_CHANGED", handler: FAMILY_OWNER_CHANGED_HANDLER)
@@ -1477,9 +1534,9 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "FIND_FACTION_REZ_DISTRICT_DURATION_FAIL", handler: FIND_FACTION_REZ_DISTRICT_DURATION_FAIL_HANDLER)
 ---@overload fun(self: self, eventName: "FOLDER_STATE_CHANGED", handler: FOLDER_STATE_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "FORCE_ATTACK_CHANGED", handler: FORCE_ATTACK_CHANGED_HANDLER)
----@overload fun(self: self, eventName: "FRIENDLIST", handler: FRIENDLIST_HANDLER)
 ---@overload fun(self: self, eventName: "FRIENDLIST_INFO", handler: FRIENDLIST_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "FRIENDLIST_UPDATE", handler: FRIENDLIST_UPDATE_HANDLER)
+---@overload fun(self: self, eventName: "FRIENDLIST", handler: FRIENDLIST_HANDLER)
 ---@overload fun(self: self, eventName: "GACHA_LOOT_PACK_LOG", handler: GACHA_LOOT_PACK_LOG_HANDLER)
 ---@overload fun(self: self, eventName: "GACHA_LOOT_PACK_RESULT", handler: GACHA_LOOT_PACK_RESULT_HANDLER)
 ---@overload fun(self: self, eventName: "GAME_EVENT_EMPTY", handler: GAME_EVENT_EMPTY_HANDLER)
@@ -1518,10 +1575,10 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "HERO_ANNOUNCE_REMAIN_TIME", handler: HERO_ANNOUNCE_REMAIN_TIME_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_CANDIDATE_NOTI", handler: HERO_CANDIDATE_NOTI_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_CANDIDATES_ANNOUNCED", handler: HERO_CANDIDATES_ANNOUNCED_HANDLER)
----@overload fun(self: self, eventName: "HERO_ELECTION", handler: HERO_ELECTION_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_ELECTION_DAY_ALERT", handler: HERO_ELECTION_DAY_ALERT_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_ELECTION_RESULT", handler: HERO_ELECTION_RESULT_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_ELECTION_VOTED", handler: HERO_ELECTION_VOTED_HANDLER)
+---@overload fun(self: self, eventName: "HERO_ELECTION", handler: HERO_ELECTION_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_NOTI", handler: HERO_NOTI_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_RANK_DATA_RETRIEVED", handler: HERO_RANK_DATA_RETRIEVED_HANDLER)
 ---@overload fun(self: self, eventName: "HERO_RANK_DATA_TIMEOUT", handler: HERO_RANK_DATA_TIMEOUT_HANDLER)
@@ -1531,6 +1588,7 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "HIDE_ROADMAP_TOOLTIP", handler: HIDE_ROADMAP_TOOLTIP_HANDLER)
 ---@overload fun(self: self, eventName: "HIDE_SKILL_MAP_EFFECT", handler: HIDE_SKILL_MAP_EFFECT_HANDLER)
 ---@overload fun(self: self, eventName: "HIDE_WORLDMAP_TOOLTIP", handler: HIDE_WORLDMAP_TOOLTIP_HANDLER)
+---@overload fun(self: self, eventName: "HOTKEY_ACTION", handler: HOTKEY_ACTION_HANDLER)
 ---@overload fun(self: self, eventName: "HOUSE_BUILD_INFO", handler: HOUSE_BUILD_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "HOUSE_BUY_FAIL", handler: HOUSE_BUY_FAIL_HANDLER)
 ---@overload fun(self: self, eventName: "HOUSE_BUY_SUCCESS", handler: HOUSE_BUY_SUCCESS_HANDLER)
@@ -1574,8 +1632,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "INSTANT_GAME_READY", handler: INSTANT_GAME_READY_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_RETIRE", handler: INSTANT_GAME_RETIRE_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_ROUND_RESULT", handler: INSTANT_GAME_ROUND_RESULT_HANDLER)
----@overload fun(self: self, eventName: "INSTANT_GAME_START", handler: INSTANT_GAME_START_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_START_POINT_RETURN_MSG", handler: INSTANT_GAME_START_POINT_RETURN_MSG_HANDLER)
+---@overload fun(self: self, eventName: "INSTANT_GAME_START", handler: INSTANT_GAME_START_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME", handler: INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_VISIT_COUNT_RESET", handler: INSTANT_GAME_VISIT_COUNT_RESET_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_WAIT", handler: INSTANT_GAME_WAIT_HANDLER)
@@ -1587,8 +1645,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ITEM_CHANGE_MAPPING_RESULT", handler: ITEM_CHANGE_MAPPING_RESULT_HANDLER)
 ---@overload fun(self: self, eventName: "ITEM_ENCHANT_MAGICAL_RESULT", handler: ITEM_ENCHANT_MAGICAL_RESULT_HANDLER)
 ---@overload fun(self: self, eventName: "ITEM_EQUIP_RESULT", handler: ITEM_EQUIP_RESULT_HANDLER)
----@overload fun(self: self, eventName: "ITEM_LOOK_CONVERTED", handler: ITEM_LOOK_CONVERTED_HANDLER)
 ---@overload fun(self: self, eventName: "ITEM_LOOK_CONVERTED_EFFECT", handler: ITEM_LOOK_CONVERTED_EFFECT_HANDLER)
+---@overload fun(self: self, eventName: "ITEM_LOOK_CONVERTED", handler: ITEM_LOOK_CONVERTED_HANDLER)
 ---@overload fun(self: self, eventName: "ITEM_REFURBISHMENT_RESULT", handler: ITEM_REFURBISHMENT_RESULT_HANDLER)
 ---@overload fun(self: self, eventName: "ITEM_SMELTING_RESULT", handler: ITEM_SMELTING_RESULT_HANDLER)
 ---@overload fun(self: self, eventName: "ITEM_SOCKET_UPGRADE", handler: ITEM_SOCKET_UPGRADE_HANDLER)
@@ -1655,8 +1713,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "MOVIE_LOAD", handler: MOVIE_LOAD_HANDLER)
 ---@overload fun(self: self, eventName: "MOVIE_START", handler: MOVIE_START_HANDLER)
 ---@overload fun(self: self, eventName: "MOVIE_STOP", handler: MOVIE_STOP_HANDLER)
----@overload fun(self: self, eventName: "MULTI_QUEST_CONTEXT_SELECT", handler: MULTI_QUEST_CONTEXT_SELECT_HANDLER)
 ---@overload fun(self: self, eventName: "MULTI_QUEST_CONTEXT_SELECT_LIST", handler: MULTI_QUEST_CONTEXT_SELECT_LIST_HANDLER)
+---@overload fun(self: self, eventName: "MULTI_QUEST_CONTEXT_SELECT", handler: MULTI_QUEST_CONTEXT_SELECT_HANDLER)
 ---@overload fun(self: self, eventName: "NAME_TAG_MODE_CHANGED_MSG", handler: NAME_TAG_MODE_CHANGED_MSG_HANDLER)
 ---@overload fun(self: self, eventName: "NATION_DOMINION", handler: NATION_DOMINION_HANDLER)
 ---@overload fun(self: self, eventName: "NAVI_MARK_POS_TO_MAP", handler: NAVI_MARK_POS_TO_MAP_HANDLER)
@@ -1714,8 +1772,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "PLAYER_BANK_MONEY", handler: PLAYER_BANK_MONEY_HANDLER)
 ---@overload fun(self: self, eventName: "PLAYER_BM_POINT", handler: PLAYER_BM_POINT_HANDLER)
 ---@overload fun(self: self, eventName: "PLAYER_GEAR_POINT", handler: PLAYER_GEAR_POINT_HANDLER)
----@overload fun(self: self, eventName: "PLAYER_HONOR_POINT", handler: PLAYER_HONOR_POINT_HANDLER)
 ---@overload fun(self: self, eventName: "PLAYER_HONOR_POINT_CHANGED_IN_HPW", handler: PLAYER_HONOR_POINT_CHANGED_IN_HPW_HANDLER)
+---@overload fun(self: self, eventName: "PLAYER_HONOR_POINT", handler: PLAYER_HONOR_POINT_HANDLER)
 ---@overload fun(self: self, eventName: "PLAYER_JURY_POINT", handler: PLAYER_JURY_POINT_HANDLER)
 ---@overload fun(self: self, eventName: "PLAYER_LEADERSHIP_POINT", handler: PLAYER_LEADERSHIP_POINT_HANDLER)
 ---@overload fun(self: self, eventName: "PLAYER_LIVING_POINT", handler: PLAYER_LIVING_POINT_HANDLER)
@@ -1768,8 +1826,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "RECOVERED_EXP", handler: RECOVERED_EXP_HANDLER)
 ---@overload fun(self: self, eventName: "REENTRY_NOTIFY_DISABLE", handler: REENTRY_NOTIFY_DISABLE_HANDLER)
 ---@overload fun(self: self, eventName: "REENTRY_NOTIFY_ENABLE", handler: REENTRY_NOTIFY_ENABLE_HANDLER)
----@overload fun(self: self, eventName: "REFRESH_COMBAT_RESOURCE", handler: REFRESH_COMBAT_RESOURCE_HANDLER)
 ---@overload fun(self: self, eventName: "REFRESH_COMBAT_RESOURCE_UPDATE_TIME", handler: REFRESH_COMBAT_RESOURCE_UPDATE_TIME_HANDLER)
+---@overload fun(self: self, eventName: "REFRESH_COMBAT_RESOURCE", handler: REFRESH_COMBAT_RESOURCE_HANDLER)
 ---@overload fun(self: self, eventName: "REFRESH_SQUAD_LIST", handler: REFRESH_SQUAD_LIST_HANDLER)
 ---@overload fun(self: self, eventName: "REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE", handler: REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE_HANDLER)
 ---@overload fun(self: self, eventName: "REFRESH_WORLD_QUEUE", handler: REFRESH_WORLD_QUEUE_HANDLER)
@@ -1815,10 +1873,10 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "SECOND_PASSWORD_CREATION_COMPLETED", handler: SECOND_PASSWORD_CREATION_COMPLETED_HANDLER)
 ---@overload fun(self: self, eventName: "SELECT_SQUAD_LIST", handler: SELECT_SQUAD_LIST_HANDLER)
 ---@overload fun(self: self, eventName: "SELECTED_INSTANCE_DIFFICULT", handler: SELECTED_INSTANCE_DIFFICULT_HANDLER)
----@overload fun(self: self, eventName: "SELL_SPECIALTY", handler: SELL_SPECIALTY_HANDLER)
 ---@overload fun(self: self, eventName: "SELL_SPECIALTY_CONTENT_INFO", handler: SELL_SPECIALTY_CONTENT_INFO_HANDLER)
----@overload fun(self: self, eventName: "SENSITIVE_OPERATION_VERIFY", handler: SENSITIVE_OPERATION_VERIFY_HANDLER)
+---@overload fun(self: self, eventName: "SELL_SPECIALTY", handler: SELL_SPECIALTY_HANDLER)
 ---@overload fun(self: self, eventName: "SENSITIVE_OPERATION_VERIFY_SUCCESS", handler: SENSITIVE_OPERATION_VERIFY_SUCCESS_HANDLER)
+---@overload fun(self: self, eventName: "SENSITIVE_OPERATION_VERIFY", handler: SENSITIVE_OPERATION_VERIFY_HANDLER)
 ---@overload fun(self: self, eventName: "SET_DEFAULT_EXPAND_RATIO", handler: SET_DEFAULT_EXPAND_RATIO_HANDLER)
 ---@overload fun(self: self, eventName: "SET_EFFECT_ICON_VISIBLE", handler: SET_EFFECT_ICON_VISIBLE_HANDLER)
 ---@overload fun(self: self, eventName: "SET_LOGIN_BROWSER_URL", handler: SET_LOGIN_BROWSER_URL_HANDLER)
@@ -1869,9 +1927,9 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "SKILL_LEARNED", handler: SKILL_LEARNED_HANDLER)
 ---@overload fun(self: self, eventName: "SKILL_MAP_EFFECT", handler: SKILL_MAP_EFFECT_HANDLER)
 ---@overload fun(self: self, eventName: "SKILL_MSG", handler: SKILL_MSG_HANDLER)
----@overload fun(self: self, eventName: "SKILL_SELECTIVE_ITEM", handler: SKILL_SELECTIVE_ITEM_HANDLER)
 ---@overload fun(self: self, eventName: "SKILL_SELECTIVE_ITEM_NOT_AVAILABLE", handler: SKILL_SELECTIVE_ITEM_NOT_AVAILABLE_HANDLER)
 ---@overload fun(self: self, eventName: "SKILL_SELECTIVE_ITEM_READY_STATUS", handler: SKILL_SELECTIVE_ITEM_READY_STATUS_HANDLER)
+---@overload fun(self: self, eventName: "SKILL_SELECTIVE_ITEM", handler: SKILL_SELECTIVE_ITEM_HANDLER)
 ---@overload fun(self: self, eventName: "SKILL_UPGRADED", handler: SKILL_UPGRADED_HANDLER)
 ---@overload fun(self: self, eventName: "SKILLS_RESET", handler: SKILLS_RESET_HANDLER)
 ---@overload fun(self: self, eventName: "SLAVE_SHIP_BOARDING", handler: SLAVE_SHIP_BOARDING_HANDLER)
@@ -1886,10 +1944,10 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "SPELLCAST_SUCCEEDED", handler: SPELLCAST_SUCCEEDED_HANDLER)
 ---@overload fun(self: self, eventName: "START_CHAT_BUBBLE", handler: START_CHAT_BUBBLE_HANDLER)
 ---@overload fun(self: self, eventName: "START_HERO_ELECTION_PERIOD", handler: START_HERO_ELECTION_PERIOD_HANDLER)
----@overload fun(self: self, eventName: "START_QUEST_CONTEXT", handler: START_QUEST_CONTEXT_HANDLER)
 ---@overload fun(self: self, eventName: "START_QUEST_CONTEXT_DOODAD", handler: START_QUEST_CONTEXT_DOODAD_HANDLER)
 ---@overload fun(self: self, eventName: "START_QUEST_CONTEXT_NPC", handler: START_QUEST_CONTEXT_NPC_HANDLER)
 ---@overload fun(self: self, eventName: "START_QUEST_CONTEXT_SPHERE", handler: START_QUEST_CONTEXT_SPHERE_HANDLER)
+---@overload fun(self: self, eventName: "START_QUEST_CONTEXT", handler: START_QUEST_CONTEXT_HANDLER)
 ---@overload fun(self: self, eventName: "START_SENSITIVE_OPERATION", handler: START_SENSITIVE_OPERATION_HANDLER)
 ---@overload fun(self: self, eventName: "START_TALK_QUEST_CONTEXT", handler: START_TALK_QUEST_CONTEXT_HANDLER)
 ---@overload fun(self: self, eventName: "START_TODAY_ASSIGNMENT", handler: START_TODAY_ASSIGNMENT_HANDLER)
@@ -1937,8 +1995,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "TOGGLE_PARTY_FRAME", handler: TOGGLE_PARTY_FRAME_HANDLER)
 ---@overload fun(self: self, eventName: "TOGGLE_PET_MANAGE", handler: TOGGLE_PET_MANAGE_HANDLER)
 ---@overload fun(self: self, eventName: "TOGGLE_PORTAL_DIALOG", handler: TOGGLE_PORTAL_DIALOG_HANDLER)
----@overload fun(self: self, eventName: "TOGGLE_RAID_FRAME", handler: TOGGLE_RAID_FRAME_HANDLER)
 ---@overload fun(self: self, eventName: "TOGGLE_RAID_FRAME_PARTY", handler: TOGGLE_RAID_FRAME_PARTY_HANDLER)
+---@overload fun(self: self, eventName: "TOGGLE_RAID_FRAME", handler: TOGGLE_RAID_FRAME_HANDLER)
 ---@overload fun(self: self, eventName: "TOGGLE_RAID_FRAME2", handler: TOGGLE_RAID_FRAME2_HANDLER)
 ---@overload fun(self: self, eventName: "TOGGLE_ROADMAP", handler: TOGGLE_ROADMAP_HANDLER)
 ---@overload fun(self: self, eventName: "TOGGLE_WALK", handler: TOGGLE_WALK_HANDLER)
@@ -1978,8 +2036,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ULC_SKILL_MSG", handler: ULC_SKILL_MSG_HANDLER)
 ---@overload fun(self: self, eventName: "UNFINISHED_BUILD_HOUSE", handler: UNFINISHED_BUILD_HOUSE_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_COMBAT_STATE_CHANGED", handler: UNIT_COMBAT_STATE_CHANGED_HANDLER)
----@overload fun(self: self, eventName: "UNIT_DEAD", handler: UNIT_DEAD_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_DEAD_NOTICE", handler: UNIT_DEAD_NOTICE_HANDLER)
+---@overload fun(self: self, eventName: "UNIT_DEAD", handler: UNIT_DEAD_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_ENTERED_SIGHT", handler: UNIT_ENTERED_SIGHT_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_EQUIPMENT_CHANGED", handler: UNIT_EQUIPMENT_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_KILL_STREAK", handler: UNIT_KILL_STREAK_HANDLER)
@@ -2020,19 +2078,19 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "UPDATE_HOUSING_INFO", handler: UPDATE_HOUSING_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_HOUSING_TOOLTIP", handler: UPDATE_HOUSING_TOOLTIP_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_INGAME_BEAUTYSHOP_STATUS", handler: UPDATE_INGAME_BEAUTYSHOP_STATUS_HANDLER)
----@overload fun(self: self, eventName: "UPDATE_INGAME_SHOP", handler: UPDATE_INGAME_SHOP_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_INGAME_SHOP_VIEW", handler: UPDATE_INGAME_SHOP_VIEW_HANDLER)
+---@overload fun(self: self, eventName: "UPDATE_INGAME_SHOP", handler: UPDATE_INGAME_SHOP_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_INSTANT_GAME_INVITATION_COUNT", handler: UPDATE_INSTANT_GAME_INVITATION_COUNT_HANDLER)
----@overload fun(self: self, eventName: "UPDATE_INSTANT_GAME_KILLSTREAK", handler: UPDATE_INSTANT_GAME_KILLSTREAK_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT", handler: UPDATE_INSTANT_GAME_KILLSTREAK_COUNT_HANDLER)
+---@overload fun(self: self, eventName: "UPDATE_INSTANT_GAME_KILLSTREAK", handler: UPDATE_INSTANT_GAME_KILLSTREAK_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_INSTANT_GAME_SCORES", handler: UPDATE_INSTANT_GAME_SCORES_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_INSTANT_GAME_STATE", handler: UPDATE_INSTANT_GAME_STATE_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_INSTANT_GAME_TIME", handler: UPDATE_INSTANT_GAME_TIME_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_ITEM_LOOK_CONVERT_MODE", handler: UPDATE_ITEM_LOOK_CONVERT_MODE_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_MONITOR_NPC", handler: UPDATE_MONITOR_NPC_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_MY_SLAVE_POS_INFO", handler: UPDATE_MY_SLAVE_POS_INFO_HANDLER)
----@overload fun(self: self, eventName: "UPDATE_NPC_INFO", handler: UPDATE_NPC_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_NPC_INFO_BROADCASTING", handler: UPDATE_NPC_INFO_BROADCASTING_HANDLER)
+---@overload fun(self: self, eventName: "UPDATE_NPC_INFO", handler: UPDATE_NPC_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_OPTION_BINDINGS", handler: UPDATE_OPTION_BINDINGS_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_PING_INFO", handler: UPDATE_PING_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL", handler: UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL_HANDLER)
@@ -2049,8 +2107,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "UPDATE_SPECIALTY_RATIO", handler: UPDATE_SPECIALTY_RATIO_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_SQUAD", handler: UPDATE_SQUAD_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_TELESCOPE_AREA", handler: UPDATE_TELESCOPE_AREA_HANDLER)
----@overload fun(self: self, eventName: "UPDATE_TODAY_ASSIGNMENT", handler: UPDATE_TODAY_ASSIGNMENT_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_TODAY_ASSIGNMENT_RESET_COUNT", handler: UPDATE_TODAY_ASSIGNMENT_RESET_COUNT_HANDLER)
+---@overload fun(self: self, eventName: "UPDATE_TODAY_ASSIGNMENT", handler: UPDATE_TODAY_ASSIGNMENT_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_TRANSFER_TELESCOPE_AREA", handler: UPDATE_TRANSFER_TELESCOPE_AREA_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_TRANSFER_TELESCOPE_INFO", handler: UPDATE_TRANSFER_TELESCOPE_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_ZONE_INFO", handler: UPDATE_ZONE_INFO_HANDLER)
@@ -2067,7 +2125,7 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ZONE_SCORE_UPDATED", handler: ZONE_SCORE_UPDATED_HANDLER)
 function UIParent:SetEventHandler(eventName, handler) end
 
----Sets/Saves the UI bound for the specified key.
+---Saves the UI bound for the specified key.
 ---@param key UIBOUND_KEY The key to set the UI bound for.
 ---@param uiBound UIBound The UI bound to set.
 ---@usage

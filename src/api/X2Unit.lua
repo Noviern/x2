@@ -1,40 +1,89 @@
 ---@meta _
 
-BANVOTE_TYPE_CHECK_ENABLE = 0 -- api/X2Unit
-BANVOTE_TYPE_START_VOTE = 1   -- api/X2Unit
-BANVOTE_TYPE_VOTE_AGREE = 2   -- api/X2Unit
-BANVOTE_TYPE_VOTE_CLEAR = 3   -- api/X2Unit
-BRT_CHEATING = 3              -- api/X2Unit
-BRT_CHILLING_EFFECT = 4       -- api/X2Unit
-BRT_NON_PARTICIPATE = 1       -- api/X2Unit
-BRT_NO_MANNER_CHAT = 2        -- api/X2Unit
-BRT_NO_REASON = 0             -- api/X2Unit
-DUEL_TYPE_INVALID = 0         -- api/X2Unit
-DUEL_TYPE_PARTY = 2           -- api/X2Unit
-DUEL_TYPE_SOLO = 1            -- api/X2Unit
-GAME_TYPE_BATTLE_FIELD = 1    -- api/X2Unit
-GAME_TYPE_CONFLICT_ZONE = 5   -- api/X2Unit
-GAME_TYPE_INDUN = 3           -- api/X2Unit
-GAME_TYPE_NORMAL = 0          -- api/X2Unit
-GAME_TYPE_SEAMLESS = 2        -- api/X2Unit
-GAME_TYPE_SIEGE = 4           -- api/X2Unit
-GENDER_FEMALE = 2             -- api/X2Unit
-GENDER_MALE = 1               -- api/X2Unit
-GENDER_NONE = 0               -- api/X2Unit
+BANVOTE_TYPE_CHECK_ENABLE = 0 -- api/X2Unit BANVOTE_TYPE
+BANVOTE_TYPE_START_VOTE = 1   -- api/X2Unit BANVOTE_TYPE
+BANVOTE_TYPE_VOTE_AGREE = 2   -- api/X2Unit BANVOTE_TYPE
+BANVOTE_TYPE_VOTE_CLEAR = 3   -- api/X2Unit BANVOTE_TYPE
+BRT_CHEATING = 3              -- api/X2Unit BRT
+BRT_CHILLING_EFFECT = 4       -- api/X2Unit BRT
+BRT_NON_PARTICIPATE = 1       -- api/X2Unit BRT
+BRT_NO_MANNER_CHAT = 2        -- api/X2Unit BRT
+BRT_NO_REASON = 0             -- api/X2Unit BRT
+DUEL_TYPE_INVALID = 0         -- api/X2Unit DUEL_TYPE
+DUEL_TYPE_PARTY = 2           -- api/X2Unit DUEL_TYPE
+DUEL_TYPE_SOLO = 1            -- api/X2Unit DUEL_TYPE
+GAME_TYPE_BATTLE_FIELD = 1    -- api/X2Unit GAME_TYPE
+GAME_TYPE_CONFLICT_ZONE = 5   -- api/X2Unit GAME_TYPE
+GAME_TYPE_INDUN = 3           -- api/X2Unit GAME_TYPE
+GAME_TYPE_NORMAL = 0          -- api/X2Unit GAME_TYPE
+GAME_TYPE_SEAMLESS = 2        -- api/X2Unit GAME_TYPE
+GAME_TYPE_SIEGE = 4           -- api/X2Unit GAME_TYPE
+GENDER_FEMALE = 2             -- api/X2Unit GENDER
+GENDER_MALE = 1               -- api/X2Unit GENDER
+GENDER_NONE = 0               -- api/X2Unit GENDER
 MAX_MODE_ACTION_COUNT = 20    -- api/X2Unit
 MAX_OVER_HEAD_MARKER = 12     -- api/X2Unit
-RACE_DARU = 9                 -- api/X2Unit
-RACE_DWARF = 3                -- api/X2Unit
-RACE_ELF = 4                  -- api/X2Unit
-RACE_FAIRY = 2                -- api/X2Unit
-RACE_FERRE = 6                -- api/X2Unit
-RACE_HARIHARAN = 5            -- api/X2Unit
-RACE_NONE = 0                 -- api/X2Unit
-RACE_NUIAN = 1                -- api/X2Unit
-RACE_RETURNED = 7             -- api/X2Unit
-RACE_WARBORN = 8              -- api/X2Unit
+RACE_DARU = 9                 -- api/X2Unit RACE_ID
+RACE_DWARF = 3                -- api/X2Unit RACE_ID
+RACE_ELF = 4                  -- api/X2Unit RACE_ID
+RACE_FAIRY = 2                -- api/X2Unit RACE_ID
+RACE_FERRE = 6                -- api/X2Unit RACE_ID
+RACE_HARIHARAN = 5            -- api/X2Unit RACE_ID
+RACE_NONE = 0                 -- api/X2Unit RACE_ID
+RACE_NUIAN = 1                -- api/X2Unit RACE_ID
+RACE_RETURNED = 7             -- api/X2Unit RACE_ID
+RACE_WARBORN = 8              -- api/X2Unit RACE_ID
 ---@class X2Unit
 X2Unit = {}                   -- api/X2Unit
+
+---api/X2Unit
+---@alias BANVOTE_TYPE
+---| `BANVOTE_TYPE_CHECK_ENABLE`
+---| `BANVOTE_TYPE_START_VOTE`
+---| `BANVOTE_TYPE_VOTE_AGREE`
+---| `BANVOTE_TYPE_VOTE_CLEAR`
+
+---api/X2Unit
+---Banvote Reason Type
+---@alias BRT
+---| `BRT_CHEATING`
+---| `BRT_CHILLING_EFFECT`
+---| `BRT_NON_PARTICIPATE`
+---| `BRT_NO_MANNER_CHAT`
+---| `BRT_NO_REASON`
+
+---api/X2Unit
+---@alias DUEL_TYPE
+---| `DUEL_TYPE_PARTY`
+---| `DUEL_TYPE_SOLO`
+
+---api/X2Unit
+---@alias GAME_TYPE
+---| `GAME_TYPE_BATTLE_FIELD`
+---| `GAME_TYPE_CONFLICT_ZONE`
+---| `GAME_TYPE_INDUN`
+---| `GAME_TYPE_NORMAL`
+---| `GAME_TYPE_SEAMLESS`
+---| `GAME_TYPE_SIEGE`
+
+---api/X2Unit
+---@alias GENDER_ID
+---| `GENDER_FEMALE`
+---| `GENDER_MALE`
+---| `GENDER_NONE`
+
+---api/X2Unit
+---@alias RACE_ID
+---| `RACE_DARU`
+---| `RACE_DWARF`
+---| `RACE_ELF`
+---| `RACE_FAIRY`
+---| `RACE_FERRE`
+---| `RACE_HARIHARAN`
+---| `RACE_NONE`
+---| `RACE_NUIAN`
+---| `RACE_RETURNED`
+---| `RACE_WARBORN`
 
 ---Retrieves the current zone group ID.
 ---@return ZONE_ID currentZoneGroup The current zone group ID.
@@ -317,7 +366,7 @@ function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex, neededInfo) end
 
 ---Retrieves the level of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return number|nil unitLevel The unit's level 1 to 55, or `nil` if not found.
+---@return ABILITY_ACTIVATION_LEVEL|number|nil unitLevel The unit's level 1 to 55, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```lua

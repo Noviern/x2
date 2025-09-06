@@ -1,30 +1,72 @@
 ---@meta _
 
-PG_PREMIUM_0 = 1                 -- api/X2PremiumService
-PG_PREMIUM_1 = 2                 -- api/X2PremiumService
-PG_PREMIUM_2 = 3                 -- api/X2PremiumService
-PG_PREMIUM_3 = 4                 -- api/X2PremiumService
-PG_PREMIUM_4 = 5                 -- api/X2PremiumService
-PG_PREMIUM_5 = 6                 -- api/X2PremiumService
-PG_PREMIUM_6 = 7                 -- api/X2PremiumService
-PG_PREMIUM_7 = 8                 -- api/X2PremiumService
-PG_PREMIUM_8 = 9                 -- api/X2PremiumService
-PSBFR_AA_POINT = 3               -- api/X2PremiumService
-PSBFR_CASH = 2                   -- api/X2PremiumService
-PSBFR_NONE = 0                   -- api/X2PremiumService
-PSBFR_NORMAL = 1                 -- api/X2PremiumService
-PSBMT_CUSTOM = 3                 -- api/X2PremiumService
-PSBMT_PECENT = 2                 -- api/X2PremiumService
-PSBMT_VALUE = 1                  -- api/X2PremiumService
-PSBM_ADD_MAX_LABOR_POWER = 4     -- api/X2PremiumService
-PSBM_AUCTION_POST_AUTHORITY = 10 -- api/X2PremiumService
-PSBM_BATTLE_FILED_LOSE = 7       -- api/X2PremiumService
-PSBM_BATTLE_FILED_WIN = 6        -- api/X2PremiumService
-PSBM_GIVE_MILEAGE = 5            -- api/X2PremiumService
-PSBM_GLADIATOR_FILED_LOSE = 9    -- api/X2PremiumService
-PSBM_GLADIATOR_FILED_WIN = 8     -- api/X2PremiumService
-PSBM_OFFLINE_LABOR_POWER = 3     -- api/X2PremiumService
-PSBM_ONLINE_LABOR_POWER = 2      -- api/X2PremiumService
-PSBM_ONLY_PREMIUM_QUEST = 1      -- api/X2PremiumService
+PG_PREMIUM_0 = 1                 -- api/X2PremiumService PG
+PG_PREMIUM_1 = 2                 -- api/X2PremiumService PG
+PG_PREMIUM_2 = 3                 -- api/X2PremiumService PG
+PG_PREMIUM_3 = 4                 -- api/X2PremiumService PG
+PG_PREMIUM_4 = 5                 -- api/X2PremiumService PG
+PG_PREMIUM_5 = 6                 -- api/X2PremiumService PG
+PG_PREMIUM_6 = 7                 -- api/X2PremiumService PG
+PG_PREMIUM_7 = 8                 -- api/X2PremiumService PG
+PG_PREMIUM_8 = 9                 -- api/X2PremiumService PG
+PSBFR_AA_POINT = 3               -- api/X2PremiumService PSBFR
+PSBFR_CASH = 2                   -- api/X2PremiumService PSBFR
+PSBFR_NONE = 0                   -- api/X2PremiumService PSBFR
+PSBFR_NORMAL = 1                 -- api/X2PremiumService PSBFR
+PSBMT_CUSTOM = 3                 -- api/X2PremiumService PSBMT
+PSBMT_PECENT = 2                 -- api/X2PremiumService PSBMT
+PSBMT_VALUE = 1                  -- api/X2PremiumService PSBMT
+PSBM_ADD_MAX_LABOR_POWER = 4     -- api/X2PremiumService PSBM
+PSBM_AUCTION_POST_AUTHORITY = 10 -- api/X2PremiumService PSBM
+PSBM_BATTLE_FILED_LOSE = 7       -- api/X2PremiumService PSBM
+PSBM_BATTLE_FILED_WIN = 6        -- api/X2PremiumService PSBM
+PSBM_GIVE_MILEAGE = 5            -- api/X2PremiumService PSBM
+PSBM_GLADIATOR_FILED_LOSE = 9    -- api/X2PremiumService PSBM
+PSBM_GLADIATOR_FILED_WIN = 8     -- api/X2PremiumService PSBM
+PSBM_OFFLINE_LABOR_POWER = 3     -- api/X2PremiumService PSBM
+PSBM_ONLINE_LABOR_POWER = 2      -- api/X2PremiumService PSBM
+PSBM_ONLY_PREMIUM_QUEST = 1      -- api/X2PremiumService PSBM
 ---@class X2PremiumService
 X2PremiumService = {}            -- api/X2PremiumService
+
+---api/X2PremiumService
+---Premium Grade
+---@alias PG
+---| `PG_PREMIUM_0`
+---| `PG_PREMIUM_1`
+---| `PG_PREMIUM_2`
+---| `PG_PREMIUM_3`
+---| `PG_PREMIUM_4`
+---| `PG_PREMIUM_5`
+---| `PG_PREMIUM_6`
+---| `PG_PREMIUM_7`
+---| `PG_PREMIUM_8`
+
+---api/X2PremiumService
+---Premium Service Buy Fail Result
+---@alias PSBFR
+---| `PSBFR_AA_POINT`
+---| `PSBFR_CASH`
+---| `PSBFR_NONE`
+---| `PSBFR_NORMAL`
+
+---api/X2PremiumService
+---@TODO: Premium Service Buy Money/Message Type
+---@alias PSBMT
+---| `PSBMT_CUSTOM`
+---| `PSBMT_PECENT`
+---| `PSBMT_VALUE`
+
+---api/X2PremiumService
+---@TODO: Premium Service Buy Message
+---@alias PSBM
+---| `PSBM_ADD_MAX_LABOR_POWER`
+---| `PSBM_AUCTION_POST_AUTHORITY`
+---| `PSBM_BATTLE_FILED_LOSE`
+---| `PSBM_BATTLE_FILED_WIN`
+---| `PSBM_GIVE_MILEAGE`
+---| `PSBM_GLADIATOR_FILED_LOSE`
+---| `PSBM_GLADIATOR_FILED_WIN`
+---| `PSBM_OFFLINE_LABOR_POWER`
+---| `PSBM_ONLINE_LABOR_POWER`
+---| `PSBM_ONLY_PREMIUM_QUEST`

@@ -3,19 +3,19 @@
 MAX_COMMUNITY_SUMMON = 50             -- api/X2Team
 RAID_RECRUIT_EXPIRE_DELAY_MINUTE = 20 -- api/X2Team
 RAID_TEAM_RECRUIT_LIST_REQ = 2        -- api/X2Team
-SIEGE_RAID_TEAM_ALL_INFO = 0          -- api/X2Team
-SIEGE_RAID_TEAM_INFO_BY_FACTION = 1   -- api/X2Team
-TEAM_JOINT_MENU_CHAT = 1              -- api/X2Team
-TEAM_JOINT_MENU_TARGET = 2            -- api/X2Team
-TEAM_JOINT_REQUEST = 3                -- api/X2Team
-TEAM_LOOT_FREE_FOR_ALL = 0            -- api/X2Team
-TEAM_LOOT_MASTER_LOOTER = 2           -- api/X2Team
-TEAM_LOOT_ROUND_ROBIN = 1             -- api/X2Team
-TMROLE_DEALER = 3                     -- api/X2Team
-TMROLE_HEALER = 2                     -- api/X2Team
-TMROLE_NONE = 0                       -- api/X2Team
-TMROLE_RANGED_DEALER = 4              -- api/X2Team
-TMROLE_TANKER = 1                     -- api/X2Team
+SIEGE_RAID_TEAM_ALL_INFO = 0          -- api/X2Team SIEGE_RAID
+SIEGE_RAID_TEAM_INFO_BY_FACTION = 1   -- api/X2Team SIEGE_RAID
+TEAM_JOINT_MENU_CHAT = 1              -- api/X2Team TEAM_JOIN
+TEAM_JOINT_MENU_TARGET = 2            -- api/X2Team TEAM_JOIN
+TEAM_JOINT_REQUEST = 3                -- api/X2Team TEAM_JOIN
+TEAM_LOOT_FREE_FOR_ALL = 0            -- api/X2Team TEAM_LOOT
+TEAM_LOOT_MASTER_LOOTER = 2           -- api/X2Team TEAM_LOOT
+TEAM_LOOT_ROUND_ROBIN = 1             -- api/X2Team TEAM_LOOT
+TMROLE_DEALER = 3                     -- api/X2Team TEAM_ROLE
+TMROLE_HEALER = 2                     -- api/X2Team TEAM_ROLE
+TMROLE_NONE = 0                       -- api/X2Team TEAM_ROLE
+TMROLE_RANGED_DEALER = 4              -- api/X2Team TEAM_ROLE
+TMROLE_TANKER = 1                     -- api/X2Team TEAM_ROLE
 ---@class X2Team
 X2Team = {}                           -- api/X2Team
 

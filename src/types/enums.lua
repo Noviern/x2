@@ -105,42 +105,11 @@ local SLIDER_SCROLL_TYPE = {
 }
 
 ---objects/ModelView
----@enum EYE
-local EYE = {
-  LEFT  = 1,
-  RIGHT = 2,
-  BOTH  = 3, -- LEFT, @TODO: Third eye maybe?
-}
-
----objects/ModelView
----@enum (key) GENDER_ID
-local GENDER_ID = {
-  [0] = "none",
-  [1] = "male",
-  [2] = "female",
-}
-
----objects/ModelView
 ---@enum GENDER
 local GENDER = {
   [0] = "none",
   [1] = "male",
   [2] = "female",
-}
-
----objects/ModelView
----@enum (key) RACE_ID
-local RACE_ID = {
-  [0] = "none",
-  [1] = "nuian",
-  [2] = "fairy",
-  [3] = "dwarf",
-  [4] = "elf",
-  [5] = "harani",
-  [6] = "firran",
-  [7] = "returned",
-  [8] = "warborn",
-  [9] = "daru",
 }
 
 ---objects/ModelView
@@ -1037,16 +1006,6 @@ local HOTKEY_MANAGER = {
   PRIMARY   = 1,
   SECONDARY = 2,
 }
-
----api/X2Chat
----@enum (key) CHAT_MESSAGE_RELATION
-local CHAT_MESSAGE_RELATION = {
-  [0] = "invalid",
-  [1] = "hostile",
-  [2] = "neutral",
-  [3] = "friendly"
-}
-
 
 ---api/X2Auction
 ---@enum AUCTION_GRADE_FILTER
@@ -7050,24 +7009,6 @@ local RESIDENT_BOARD_TYPE = {
   ANCESTOR = 7 -- Auroria
 }
 
----@enum ABILITY_TYPE
-local ABILITY_TYPE = {
-  BATTLERAGE = 1,
-  WITCHCRAFT = 2,
-  DEFENSE = 3,
-  AURAMANCY = 4,
-  OCCULTISM = 5,
-  ARCHERY = 6,
-  SORCERY = 7,
-  SHADOWPLAY = 8,
-  SONGCRAFT = 9,
-  VITALISM = 10,
-  MALEDICTION = 11,
-  SWIFTBLADE = 12,
-  GUNSLINGER = 13,
-  SPELLDANCE = 14
-}
-
 ---game\ui_ArcheRage\settings\font_color.g
 ---@enum FONT_COLOR_KEY
 local FONT_COLOR_KEY = {
@@ -7911,4 +7852,311 @@ local DRAWABLE_NAME_LAYER = {
   BACKGROUND  = "background",
   OVERLAY     = "overlay",
   OVEROVERLAY = "overoverlay",
+}
+
+---@TODO: dont like this name
+---@enum ABILITY_TYPE2
+local ABILITY_TYPE2 = {
+  FIGHT    = "fight",    -- Battlerage
+  ILLUSION = "illusion", -- Witchcraft
+  ADAMANT  = "adamant",  -- Defense
+  WILL     = "will",     -- Auramancy
+  DEATH    = "death",    -- Occultism
+  WILD     = "wild",     -- Archery
+  MAGIC    = "magic",    -- Sorcery
+  VOCATION = "vocation", -- Shadowplay
+  ROMANCE  = "romance",  -- Songcraft
+  LOVE     = "love",     -- Vitalism
+  HATRED   = "hatred",   -- Malediction
+  ASSASSIN = "assassin", -- Swiftblade
+  MADNESS  = "madness",  -- Gunslinger
+  PLEASURE = "pleasure", -- Spelldance
+}
+
+---@enum RESPONSE_TYPE
+local RESPONE_TYPE = {
+  SAVED_JOB   = 1,
+  CHANGED_JOB = 2,
+  DELETED_JOB = 3,
+}
+
+---db actability_groups
+---@enum ACTABILITY_ID
+local ACTABILITY_ID = {
+  ALCHEMY                   = 1,
+  CONSTRUCTION              = 2,
+  COOKING                   = 3,
+  HANDICRAFTS               = 4,
+  HUSBANDRY                 = 5,
+  FARMING                   = 6,
+  FISHING                   = 7,
+  LOGGING                   = 8,
+  GATHERING                 = 9,
+  MACHINING                 = 10,
+  METALWORK                 = 11,
+  PRINTING                  = 12,
+  MINING                    = 13,
+  MASONRY                   = 14,
+  TAILORING                 = 15,
+  LEATHERWORK               = 16,
+  WEAPONRY                  = 17,
+  CARPENTRY                 = 18,
+  QUEST                     = 19,
+  LARCENY                   = 20,
+  NUIAN_LANGUAGE            = 21,
+  ELVEN_LANGUAGE            = 22,
+  DWARVEN_LANGUAGE          = 23,
+  FAERIE_LANGUAGE           = 24,
+  HARANI_LANGUAGE           = 25,
+  FIRRAN_LANGUAGE           = 26,
+  WARBORN_LANGUAGE          = 27,
+  RETURNED_LANGUAGE         = 28,
+  NUIA_CONTINENT_DIALECT    = 29,
+  HARANYA_CONTINENT_DIALECT = 30,
+  COMMERCE                  = 31,
+  MIRAGE_ISLE               = 32,
+  ARTISTRY                  = 33,
+  EXPLORATION               = 34,
+  ZONES                     = 36,
+  DUNGEONS                  = 37,
+  OTHER                     = 38,
+}
+
+---db actability_groups
+---@enum ACTABILITY_NAME
+local ACTABILITY_NAME = {
+  ALCHEMY                   = "Alchemy",
+  CONSTRUCTION              = "Construction",
+  COOKING                   = "Cooking",
+  HANDICRAFTS               = "Handicrafts",
+  HUSBANDRY                 = "Husbandry",
+  FARMING                   = "Farming",
+  FISHING                   = "Fishing",
+  LOGGING                   = "Logging",
+  GATHERING                 = "Gathering",
+  MACHINING                 = "Machining",
+  METALWORK                 = "Metalwork",
+  PRINTING                  = "Printing",
+  MINING                    = "Mining",
+  MASONRY                   = "Masonry",
+  TAILORING                 = "Tailoring",
+  LEATHERWORK               = "Leatherwork",
+  WEAPONRY                  = "Weaponry",
+  CARPENTRY                 = "Carpentry",
+  QUEST                     = "Quest",
+  LARCENY                   = "Larceny",
+  NUIAN_LANGUAGE            = "Nuian Language",
+  ELVEN_LANGUAGE            = "Elven Language",
+  DWARVEN_LANGUAGE          = "Dwarven Language",
+  FAERIE_LANGUAGE           = "Faerie Language",
+  HARANI_LANGUAGE           = "Harani Language",
+  FIRRAN_LANGUAGE           = "Firran Language",
+  WARBORN_LANGUAGE          = "Warborn Language",
+  RETURNED_LANGUAGE         = "Returned Language",
+  NUIA_CONTINENT_DIALECT    = "Nuia Continent Dialect",
+  HARANYA_CONTINENT_DIALECT = "Haranya Continent Dialect",
+  COMMERCE                  = "Commerce",
+  MIRAGE_ISLE               = "Mirage Isle",
+  ARTISTRY                  = "Artistry",
+  EXPLORATION               = "Exploration",
+  ZONES                     = "Zones",
+  DUNGEONS                  = "Dungeons",
+  OTHER                     = "Other",
+}
+
+---db expert_limits
+---@enum ACTABILITY_GRADE
+local ACTABILITY_GRADE = {
+  AMATEUR   = "Amateur",
+  NOVICE    = "Novice",
+  VETERAN   = "Veteran",
+  EXPERT    = "Expert",
+  MASTER    = "Master",
+  AUTHORITY = "Authority",
+  CHAMPION  = "Champion",
+  ADEPT     = "Adept",
+  HERALD    = "Herald",
+  VIRTUOSO  = "Virtuoso",
+  CELEBRITY = "Celebrity",
+  FAMED     = "Famed",
+}
+
+---@enum BUFF_ACTION
+local BUFF_ACTION = {
+  CREATE = "create",
+  DESTROY = "destroy"
+}
+
+---@enum BUFF_TARGET
+local BUFF_TARGET = {
+  CHARACTER = "character",
+  SLAVE     = "slave",
+  MATE      = "mate",
+}
+
+---@TODO: This may not be complete.
+---@enum BUTLER_EVENT
+local BUTLER_EVENT = {
+  EQUIPMENT                          = "equipment",
+  GARDEN                             = "garden",
+  HARVEST_SLOT                       = "harvestSlot",
+  LABOW_POWER                        = "labowPower", --- This is misspelt on purpose to match xlgames.
+  PRODUCTION_COST                    = "productionCost",
+  PRODUCTION_COST_FREE_CHARGED_COUNT = "production_cost_free_charged_count",
+  RESERVED_HARVEST                   = "reservedHarvest",
+  RESERVED_SLOT                      = "reservedSlot",
+  TRACTOR                            = "tractor",
+  SPECIALTY_TRADE_SLOT               = "specialtyTradeSlot",
+}
+
+---@enum COMBAT_HIT_TYPE
+local COMBAT_HIT_TYPE = {
+  CRITIAL = "CRITICAL",
+  HIT     = "HIT",
+  IMMUNE  = "IMMUNE",
+}
+
+---@enum DICE_BID_TYPE
+local DICE_BID_TYPE = {
+  AUTO_BID            = 2,
+  AUTO_PASS           = 3,
+  CONFIRMATION_WINDOW = 1,
+}
+
+---@enum SIEGE_ACTION
+local SIEGE_ACTION = {
+  CHANGE_STATE = "change_state",
+  IGNORE       = "ignore",
+}
+
+---@enum SIEGE_PERIOD_NAME
+local SIEGE_PERIOD_NAME = {
+  SIEGE_PERIOD_HERO_VOLUNTEER = "siege_period_hero_volunteer",
+  SIEGE_PERIOD_PEACE          = "siege_period_peace",
+}
+
+---@enum ENCHANT_ITEM_MODE
+local ENCHANT_ITEM_MODE = {
+  AWAKEN           = "awaken",
+  ELEMENT          = "element",
+  EVOLVING         = "evolving",
+  EVOLVING_RE_ROLL = "evolving_re_roll",
+  GEM              = "gem",
+  GRADE            = "grade",
+  REFURBISHMENT    = "refurbishment",
+  SMELTING         = "smelting",
+  SOCKET_EXTRACT   = "socket_extract",
+  SOCKET_INSERT    = "socket_insert",
+  SOCKET_REMOVE    = "socket_remove",
+  SOCKET_UPGRADE   = "socket_upgrade",
+}
+
+---@enum FRIEND_LIST_UPDATE_TYPE
+local FRIEND_LIST_UPDATE_TYPE = {
+  INSERT = "insert",
+  DELETE = "delete",
+}
+
+---@TODO: I can probably use this in Slot
+---@enum HEIR_SKILL_TYPE
+local HEIR_SKILL_TYPE = {
+  FLAME     = 1,
+  LIFE      = 2,
+  QUAKE     = 3,
+  STONE     = 4,
+  WAVE      = 5,
+  MIST      = 6,
+  GALE      = 7,
+  LIGHTNING = 8,
+}
+
+---@enum HOUSE_STRUCTURE_TYPE
+local HOUSE_STRUCTURE_TYPE = {
+  HOUSING = "housing",
+}
+
+---@enum NAME_TAG_MODE_OFFSET
+local NAME_TAG_MODE_OFFSET = {
+  DEFAULT  = NAME_TAG_MODE_DEFAULT + 1,
+  COMBAT   = NAME_TAG_MODE_BATTLE + 1,
+  VOCATION = NAME_TAG_MODE_LIFE + 1,
+  BOX      = NAME_TAG_MODE_BOX + 1,
+}
+
+---@enum QUEST_STATUS
+local QUEST_STATUS = {
+  DROPPED = "dropped",
+  STARTED = "started",
+  UPDATED = "updated",
+}
+
+---@enum SKILL_TYPE
+local SKILL_TYPE = {
+  BUFF  = "buff",
+  SKILL = "skill",
+}
+
+---@enum ENCHANT_MODE
+local ENCHANT_MODE = {
+  GRADE            = "grade",
+  SOCKET_INSERT    = "socket_insert",
+  SOCKET_REMOVE    = "socket_remove",
+  SOCKET_EXTRACT   = "socket_extract",
+  SOCKET_UPGRADE   = "socket_upgrade",
+  GEM              = "gem",
+  EVOLVING         = "evolving",
+  EVOLVING_RE_ROLL = "evolving_re_roll",
+  ELEMENT          = "element",
+  REFURBISHMENT    = "refurbishment",
+  SMELTING         = "smelting", -- unsure what this is.
+  AWAKEN           = "awaken",
+}
+
+---@TODO: This may not be complete.
+---@enum TARGET_TYPE
+local TARGET_TYPE = {
+  DOODAD  = "doodad",
+  NOTHING = "nothing",
+  UI      = "ui",
+  UNIT    = "unit",
+}
+
+---@enum TEAM_CHANGE_REASON
+local TEAM_CHANGE_REASON = {
+  JOINED    = "joined",
+  LEAVED    = "leaved",
+  REFRESHED = "refreshed",
+}
+
+---@enum UNIT_TYPE
+local UNIT_TYPE = {
+  HOUSING = "housing",
+  NPC = "npc",
+}
+
+---@TODO: Figure out a new name for this.
+---@enum INGAME_SHOP_TYPE
+local UPDATE_INGAME_SHOP_TYPE = {
+  CART           = "cart",
+  CHECKTIME      = "checkTime",
+  EXCHANGE_RATIO = "exchange_ratio",
+  GOODS          = "goods",
+  MAINTAB        = "maintab",
+  SELECTED_GOODS = "selected_goods",
+  SUBTAB         = "subtab",
+}
+
+---@enum INGAME_SHOP_VIEW_TYPE
+local INGAME_SHOP_VIEW_TYPE = {
+  ENTER_MODE = "enter_mode",
+  LEAVE_MODE = "leave_mode",
+  LEAVE_SORT = "leave_sort",
+}
+
+---@enum ZONE_LEVEL
+local ZONE_LEVEL = {
+  WORLD     = 0,
+  CONTINENT = 1,
+  ZONE      = 2,
+  CITY      = 3,
 }

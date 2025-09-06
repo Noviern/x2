@@ -1,9 +1,17 @@
 ---@meta _
 
-SKILL_ALERT_POS_BASIC = 1   -- api/X2SkillAlert
-SKILL_ALERT_POS_FIRST = 2   -- api/X2SkillAlert
-SKILL_ALERT_POS_INVALID = 0 -- api/X2SkillAlert
-SKILL_ALERT_POS_OFF = 4     -- api/X2SkillAlert
-SKILL_ALERT_POS_SECOND = 3  -- api/X2SkillAlert
+SKILL_ALERT_POS_BASIC = 1   -- api/X2SkillAlert SKILL_ALERT_POS
+SKILL_ALERT_POS_FIRST = 2   -- api/X2SkillAlert SKILL_ALERT_POS
+SKILL_ALERT_POS_INVALID = 0 -- api/X2SkillAlert SKILL_ALERT_POS
+SKILL_ALERT_POS_OFF = 4     -- api/X2SkillAlert SKILL_ALERT_POS
+SKILL_ALERT_POS_SECOND = 3  -- api/X2SkillAlert SKILL_ALERT_POS
 ---@class X2SkillAlert
 X2SkillAlert = {}           -- api/X2SkillAlert
+
+---api/X2SkillAlert
+---@alias SKILL_ALERT_POS
+---| `SKILL_ALERT_POS_BASIC`
+---| `SKILL_ALERT_POS_FIRST`
+---| `SKILL_ALERT_POS_INVALID`
+---| `SKILL_ALERT_POS_OFF`
+---| `SKILL_ALERT_POS_SECOND`

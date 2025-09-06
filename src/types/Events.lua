@@ -1,34 +1,12 @@
----@TODO: dont like this name
----@enum ABILITY_TYPE2
-local ABILITY_TYPE2 = {
-  FIGHT    = "fight",    -- Battlerage
-  ILLUSION = "illusion", -- Witchcraft
-  ADAMANT  = "adamant",  -- Defense
-  WILL     = "will",     -- Auramancy
-  DEATH    = "death",    -- Occultism
-  WILD     = "wild",     -- Archery
-  MAGIC    = "magic",    -- Sorcery
-  VOCATION = "vocation", -- Shadowplay
-  ROMANCE  = "romance",  -- Songcraft
-  LOVE     = "love",     -- Vitalism
-  HATRED   = "hatred",   -- Malediction
-  ASSASSIN = "assassin", -- Swiftblade
-  MADNESS  = "madness",  -- Gunslinger
-  PLEASURE = "pleasure", -- Spelldance
-}
+---@TODO: new  ui event notify action name and hotkey is released state​
+---
+---@alias HOTKEY_ACTION_HANDLER fun(actionName: string, keyUp: boolean)
 
 ---Event triggers when one of the players ability is changed.
 ---@alias ABILITY_CHANGED_HANDLER fun(newAbility: ABILITY_TYPE2, oldAbility: ABILITY_TYPE2)
 
 ---
 ---@alias ABILITY_EXP_CHANGED_HANDLER fun(expStr: string)
-
----@enum RESPONSE_TYPE
-local RESPONE_TYPE = {
-  SAVED_JOB   = 1,
-  CHANGED_JOB = 2,
-  DELETED_JOB = 3,
-}
 
 ---Event triggers when the players statsaver set is saved, changed, or deleted
 ---@alias ABILITY_SET_CHANGED_HANDLER fun(responseType: RESPONSE_TYPE)
@@ -61,107 +39,6 @@ local RESPONE_TYPE = {
 
 ---
 ---@alias ACTABILITY_EXPERT_EXPANDED_HANDLER fun()
-
----db actability_groups
----@enum ACTABILITY_ID
-local ACTABILITY_ID = {
-  ALCHEMY                   = 1,
-  CONSTRUCTION              = 2,
-  COOKING                   = 3,
-  HANDICRAFTS               = 4,
-  HUSBANDRY                 = 5,
-  FARMING                   = 6,
-  FISHING                   = 7,
-  LOGGING                   = 8,
-  GATHERING                 = 9,
-  MACHINING                 = 10,
-  METALWORK                 = 11,
-  PRINTING                  = 12,
-  MINING                    = 13,
-  MASONRY                   = 14,
-  TAILORING                 = 15,
-  LEATHERWORK               = 16,
-  WEAPONRY                  = 17,
-  CARPENTRY                 = 18,
-  QUEST                     = 19,
-  LARCENY                   = 20,
-  NUIAN_LANGUAGE            = 21,
-  ELVEN_LANGUAGE            = 22,
-  DWARVEN_LANGUAGE          = 23,
-  FAERIE_LANGUAGE           = 24,
-  HARANI_LANGUAGE           = 25,
-  FIRRAN_LANGUAGE           = 26,
-  WARBORN_LANGUAGE          = 27,
-  RETURNED_LANGUAGE         = 28,
-  NUIA_CONTINENT_DIALECT    = 29,
-  HARANYA_CONTINENT_DIALECT = 30,
-  COMMERCE                  = 31,
-  MIRAGE_ISLE               = 32,
-  ARTISTRY                  = 33,
-  EXPLORATION               = 34,
-  ZONES                     = 36,
-  DUNGEONS                  = 37,
-  OTHER                     = 38,
-}
-
----db actability_groups
----@enum ACTABILITY_NAME
-local ACTABILITY_NAME = {
-  ALCHEMY                   = "Alchemy",
-  CONSTRUCTION              = "Construction",
-  COOKING                   = "Cooking",
-  HANDICRAFTS               = "Handicrafts",
-  HUSBANDRY                 = "Husbandry",
-  FARMING                   = "Farming",
-  FISHING                   = "Fishing",
-  LOGGING                   = "Logging",
-  GATHERING                 = "Gathering",
-  MACHINING                 = "Machining",
-  METALWORK                 = "Metalwork",
-  PRINTING                  = "Printing",
-  MINING                    = "Mining",
-  MASONRY                   = "Masonry",
-  TAILORING                 = "Tailoring",
-  LEATHERWORK               = "Leatherwork",
-  WEAPONRY                  = "Weaponry",
-  CARPENTRY                 = "Carpentry",
-  QUEST                     = "Quest",
-  LARCENY                   = "Larceny",
-  NUIAN_LANGUAGE            = "Nuian Language",
-  ELVEN_LANGUAGE            = "Elven Language",
-  DWARVEN_LANGUAGE          = "Dwarven Language",
-  FAERIE_LANGUAGE           = "Faerie Language",
-  HARANI_LANGUAGE           = "Harani Language",
-  FIRRAN_LANGUAGE           = "Firran Language",
-  WARBORN_LANGUAGE          = "Warborn Language",
-  RETURNED_LANGUAGE         = "Returned Language",
-  NUIA_CONTINENT_DIALECT    = "Nuia Continent Dialect",
-  HARANYA_CONTINENT_DIALECT = "Haranya Continent Dialect",
-  COMMERCE                  = "Commerce",
-  MIRAGE_ISLE               = "Mirage Isle",
-  ARTISTRY                  = "Artistry",
-  EXPLORATION               = "Exploration",
-  ZONES                     = "Zones",
-  DUNGEONS                  = "Dungeons",
-  OTHER                     = "Other",
-}
-
----db expert_limits
----@enum ACTABILITY_GRADE
-local ACTABILITY_GRADE = {
-  AMATEUR   = "Amateur",
-  NOVICE    = "Novice",
-  VETERAN   = "Veteran",
-  EXPERT    = "Expert",
-  MASTER    = "Master",
-  AUTHORITY = "Authority",
-  CHAMPION  = "Champion",
-  ADEPT     = "Adept",
-  HERALD    = "Herald",
-  VIRTUOSO  = "Virtuoso",
-  CELEBRITY = "Celebrity",
-  FAMED     = "Famed",
-}
 
 ---Event triggers when the players proficiency level changes.
 ---@alias ACTABILITY_EXPERT_GRADE_CHANGED_HANDLER fun(actabilityId: ACTABILITY_ID, isUpgrade: boolean, name: ACTABILITY_NAME, gradeName: ACTABILITY_GRADE)
@@ -200,20 +77,6 @@ local ACTABILITY_GRADE = {
 
 ---
 ---@alias AGGRO_METER_UPDATED_HANDLER fun()
-
----@class SiegeRaidTeam
----@field defense boolean
----@field fName string
----@field isWaitWar boolean
----@field membetCount number
----@field ownerName string
----@field period string = "siege_period_ready_to_siege",
----@field ranking number
-
----@class SiegeRaidTeamInfos
----@field [1] SiegeRaidTeam
----@field [2] SiegeRaidTeam
----@field [3] SiegeRaidTeam
 
 ---
 ---@alias ALL_SIEGE_RAID_TEAM_INFOS_HANDLER fun(teamInfos: SiegeRaidTeamInfos)
@@ -414,19 +277,6 @@ local ACTABILITY_GRADE = {
 ---
 ---@alias BUFF_SKILL_CHANGED_HANDLER fun(onePetBar: table)
 
----@enum BUFF_ACTION
-local BUFF_ACTION = {
-  CREATE = "create",
-  DESTROY = "destroy"
-}
-
----@enum BUFF_TARGET
-local BUFF_TARGET = {
-  CHARACTER = "character",
-  SLAVE     = "slave",
-  MATE      = "mate",
-}
-
 ---Event triggers when a buff is created or destroyed for a unit.
 ---@alias BUFF_UPDATE_HANDLER fun(action: BUFF_ACTION, target: BUFF_TARGET)
 
@@ -438,21 +288,6 @@ local BUFF_TARGET = {
 
 ---
 ---@alias BUILDER_STEP_HANDLER fun(step)
-
----@TODO: This may not be complete.
----@enum BUTLER_EVENT
-local BUTLER_EVENT = {
-  EQUIPMENT                          = "equipment",
-  GARDEN                             = "garden",
-  HARVEST_SLOT                       = "harvestSlot",
-  LABOW_POWER                        = "labowPower", --- This is misspelt on purpose to match xlgames.
-  PRODUCTION_COST                    = "productionCost",
-  PRODUCTION_COST_FREE_CHARGED_COUNT = "production_cost_free_charged_count",
-  RESERVED_HARVEST                   = "reservedHarvest",
-  RESERVED_SLOT                      = "reservedSlot",
-  TRACTOR                            = "tractor",
-  SPECIALTY_TRADE_SLOT               = "specialtyTradeSlot",
-}
 
 ---Event triggers when the player is updating the farmhand.
 ---@alias BUTLER_INFO_UPDATED_HANDLER fun(event: BUTLER_EVENT, noError: boolean)
@@ -528,7 +363,7 @@ local BUTLER_EVENT = {
 ---@alias CHAT_LEAVED_CHANNEL_HANDLER fun(channel: CHAT_MESSAGE_CHANNEL, name: string)
 
 ---Event triggers when a chat message occurs.
----@alias CHAT_MESSAGE_HANDLER fun(channel: CHAT_MESSAGE_CHANNEL, relation: CHAT_MESSAGE_RELATION, name: string, message: string, info: CHAT_MESSAGE_INFO)
+---@alias CHAT_MESSAGE_HANDLER fun(channel: CHAT_MESSAGE_CHANNEL, relation: UR, name: string, message: string, info: CHAT_MESSAGE_INFO)
 
 ---
 ---@alias CHAT_MSG_ALARM_HANDLER fun(text)
@@ -643,13 +478,6 @@ local BUTLER_EVENT = {
 --   11 = 12.75, --h
 -- }
 
----@enum COMBAT_HIT_TYPE
-local COMBAT_HIT_TYPE = {
-  CRITIAL = "CRITICAL",
-  HIT     = "HIT",
-  IMMUNE  = "IMMUNE",
-}
-
 ---
 ---@alias COMBAT_TEXT_HANDLER fun(sourceUnitId: string, targetUnitId: string, amount: number, a: number, b: string, hitType: string, d: COMBAT_HIT_TYPE, e: boolean, f: number, g: boolean, distance: number)
 
@@ -708,32 +536,6 @@ local COMBAT_HIT_TYPE = {
 ---
 ---@alias CRAFT_FAILED_HANDLER fun(itemLinkText)
 
----@class CraftOrderEntry
----@field chargeFee string
----@field consumeLp number
----@field craftCount number
----@field craftGrade number
----@field craftType number
----@field enableAct boolean
----@field enableLp boolean
----@field entryId number
----@field entryIndex number
----@field fee string
----@field mine number
----@field remainTime number
----@field requireLp number
----@field totalFee string
-
----@class CraftOrderEntries
----@field [1]? CraftOrderEntry
----@field [2]? CraftOrderEntry
----@field [3]? CraftOrderEntry
----@field [4]? CraftOrderEntry
----@field [5]? CraftOrderEntry
----@field [6]? CraftOrderEntry
----@field [7]? CraftOrderEntry
----@field [8]? CraftOrderEntry
-
 ---Event triggers when crafting order entries are requested.
 ---@alias CRAFT_ORDER_ENTRY_SEARCHED_HANDLER fun(infos: CraftOrderEntries, totalCount: number, page: number)
 
@@ -773,42 +575,11 @@ local COMBAT_HIT_TYPE = {
 ---
 ---@alias DESTROY_PAPER_HANDLER fun()
 
----@class DiagonalASRDailyInfo
----@field dailyAvg string
----@field maxPrice string
----@field minPrice string
----@field volume number
----@field weeklyAvg string
-
----@TODO: Not sure if all 14 always show.
----@class DiagonalASRInfo
----@field [1] DiagonalASRDailyInfo
----@field [2] DiagonalASRDailyInfo
----@field [3] DiagonalASRDailyInfo
----@field [4] DiagonalASRDailyInfo
----@field [5] DiagonalASRDailyInfo
----@field [6] DiagonalASRDailyInfo
----@field [7] DiagonalASRDailyInfo
----@field [8] DiagonalASRDailyInfo
----@field [9] DiagonalASRDailyInfo
----@field [10] DiagonalASRDailyInfo
----@field [11] DiagonalASRDailyInfo
----@field [12] DiagonalASRDailyInfo
----@field [13] DiagonalASRDailyInfo
----@field [14] DiagonalASRDailyInfo
-
 ---Event triggers when the market price of an item is requested.
 ---@alias DIAGONAL_ASR_HANDLER fun(itemName: string, itemGrade: ITEM_GRADE_TYPE, askMarketPriceUi: boolean, values: DiagonalASRInfo)
 
 ---
 ---@alias DIAGONAL_LINE_HANDLER fun()
-
----@enum DICE_BID_TYPE
-local DICE_BID_TYPE = {
-  AUTO_BID            = 2,
-  AUTO_PASS           = 3,
-  CONFIRMATION_WINDOW = 1,
-}
 
 ---Event triggers when the players bid type changes.
 ---@alias DICE_BID_RULE_CHANGED_HANDLER fun(diceBidRule: DICE_BID_TYPE)
@@ -818,13 +589,6 @@ local DICE_BID_TYPE = {
 
 ---Event triggers every 500ms when the player has disconnected from the world.
 ---@alias DISCONNECTED_BY_WORLD_HANDLER fun(title: string, body: string)
-
----@TODO: Should this be renamed to playerpet1 playerpet2?
----@enum MATE_TYPE
-local MATE_TYPE = {
-  MOUNT     = 1,
-  BATTLEPET = 2
-}
 
 ---@TODO: Does this trigger for other players?
 ---Event triggers when the player dismisses a pet.
@@ -848,28 +612,6 @@ local MATE_TYPE = {
 ---
 ---@alias DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED_HANDLER fun()
 
----@enum SIEGE_ACTION
-local SIEGE_ACTION = {
-  CHANGE_STATE = "change_state",
-  IGNORE       = "ignore",
-}
-
----@enum SIEGE_PERIOD_NAME
-local SIEGE_PERIOD_NAME = {
-  SIEGE_PERIOD_HERO_VOLUNTEER = "siege_period_hero_volunteer",
-  SIEGE_PERIOD_PEACE          = "siege_period_peace",
-}
-
----@class SiegeInfo
----@field action SIEGE_ACTION
----@field defenseName string
----@field isMyInfo boolean
----@field offenseName string
----@field periodName SIEGE_PERIOD_NAME
----@field team string
----@field zoneGroupName ZONE_NAME
----@field zoneGroupType ZONE_ID
-
 ---Event triggers when the siege period changes.
 ---@alias DOMINION_SIEGE_PERIOD_CHANGED_HANDLER fun(siegeInfo: SiegeInfo)
 
@@ -885,13 +627,6 @@ local SIEGE_PERIOD_NAME = {
 
 ---Event triggers when a doodad phase message occurs. (ex: Strength of the Faction message)
 ---@alias DOODAD_PHASE_MSG_HANDLER fun(text: string)
-
----@class PhaseMsgInfo
----@field color string
----@field iconKey string
----@field msg string
----@field titleColor string
----@field titleMsg string
 
 ---@TODO: Clearify this more.
 ---Event triggers when a title UI message appears.
@@ -939,22 +674,6 @@ local SIEGE_PERIOD_NAME = {
 
 ---Event triggers when the player enters another zone group.
 ---@alias ENTER_ANOTHER_ZONEGROUP_HANDLER fun(zoneId: ZONE_ID)
-
----@enum ENCHANT_ITEM_MODE
-local ENCHANT_ITEM_MODE = {
-  AWAKEN           = "awaken",
-  ELEMENT          = "element",
-  EVOLVING         = "evolving",
-  EVOLVING_RE_ROLL = "evolving_re_roll",
-  GEM              = "gem",
-  GRADE            = "grade",
-  REFURBISHMENT    = "refurbishment",
-  SMELTING         = "smelting",
-  SOCKET_EXTRACT   = "socket_extract",
-  SOCKET_INSERT    = "socket_insert",
-  SOCKET_REMOVE    = "socket_remove",
-  SOCKET_UPGRADE   = "socket_upgrade",
-}
 
 ---@TODO: Needs more testing.
 ---
@@ -1006,12 +725,6 @@ local ENCHANT_ITEM_MODE = {
 ---Event triggers when the player increases the ipnysh level of an equipment
 ---slot.
 ---@alias EQUIP_SLOT_REINFORCE_UPDATE_HANDLER fun(equipSlot)
-
----@class EscMenuAddButtonInfo
----@field categoryId ESC_MENU_CATEGORY_ID
----@field uiContentType UIC
----@field iconKey ESC_MENU_ICON_KEY
----@field name string
 
 ---Event triggers when a new button is added to the escape menu.
 ---@alias ESC_MENU_ADD_BUTTON_HANDLER fun(info: EscMenuAddButtonInfo)
@@ -1074,21 +787,6 @@ local ENCHANT_ITEM_MODE = {
 ---
 ---@alias EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED_HANDLER fun()
 
----@TODO: Enum for faction. ABILITY_TYPE2 needs its own UnitClass enum to names instead of ids
----@class MemberInfo
----@field [1] string Name
----@field [2] number Basic Level
----@field [3] ABILITY_TYPE2[] Class
----@field [4] number Guild Role
----@field [5] EmptyTable Connection Status (empty)
----@field [6] string Memo
----@field [7] boolean Online
----@field [8] boolean Party
----@field [9] number Contribution Points
----@field [10] number Ancestral Level
----@field [11] number Weekly Contribution Points
----@field [12]? any CHK
-
 ---Event triggers when the player views the members tab in their guild.
 ---@alias EXPEDITION_MANAGEMENT_MEMBERS_INFO_HANDLER fun(totalCount: number, startIndex: number, memberInfos: MemberInfo[])
 
@@ -1100,26 +798,6 @@ local ENCHANT_ITEM_MODE = {
 
 ---
 ---@alias EXPEDITION_MANAGEMENT_RECRUITMENT_DEL_HANDLER fun(expeditionId)
-
----@class GuildInterests
----@field [1] number Dungeon
----@field [2] number War
----@field [3] number Naval Battles
----@field [4] number Raid
----@field [5] number Adventure
----@field [6] number Crafting
-
----@class GuildRecruitmentInfo
----@field apply boolean
----@field expeditionId number
----@field expedition_level number
----@field expedition_name string
----@field interests GuildInterests
----@field introduce string
----@field memberCount number
----@field owner_name string
----@field pull boolean Full
----@field remainTime number
 
 ---Event triggers when the player opens the guild recruitment tab.
 ---@alias EXPEDITION_MANAGEMENT_RECRUITMENTS_HANDLER fun(total: number, perPageItemCount: number, infos: GuildRecruitmentInfo[])
@@ -1256,27 +934,8 @@ local ENCHANT_ITEM_MODE = {
 ---Event triggers when the player sends a friend request.
 ---@alias FRIENDLIST_HANDLER fun(msg: string)
 
----@TODO: Enum for faction.
----@class FriendInfo
----@field [1] string Name
----@field [2] number Basic Level
----@field [3] UnitClass Class
----@field [4] Time Last login
----@field [5] RACE_ID
----@field [6] boolean Online
----@field [7] boolean Party
----@field [8] number Ancestral Level = 40,
----@field [9] number Faction
----@field [10]? number CHK
-
 ---Event triggers when the player opens their friend list.
 ---@alias FRIENDLIST_INFO_HANDLER fun(totalCount: number, memberInfos: FriendInfo[]|EmptyTable)
-
----@enum FRIEND_LIST_UPDATE_TYPE
-local FRIEND_LIST_UPDATE_TYPE = {
-  INSERT = "insert",
-  DELETE = "delete",
-}
 
 ---Event triggers when the players friend list updates.
 ---@alias FRIENDLIST_UPDATE_HANDLER fun(updateType: FRIEND_LIST_UPDATE_TYPE, dataField: FriendInfo|string)
@@ -1378,19 +1037,6 @@ local FRIEND_LIST_UPDATE_TYPE = {
 ---
 ---@alias HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER fun(activeType, ability, text, pos)
 
----@TODO: I can probably use this in Slot
----@enum HEIR_SKILL_TYPE
-local HEIR_SKILL_TYPE = {
-  FLAME     = 1,
-  LIFE      = 2,
-  QUAKE     = 3,
-  STONE     = 4,
-  WAVE      = 5,
-  MIST      = 6,
-  GALE      = 7,
-  LIGHTNING = 8,
-}
-
 ---Event triggers when the player changes an ancestral skill.
 ---@alias HEIR_SKILL_LEARN_HANDLER fun(text: string, pos: HEIR_SKILL_TYPE)
 
@@ -1402,7 +1048,7 @@ local HEIR_SKILL_TYPE = {
 
 ---Event triggers when the player tries to retrieve hero information or hero
 ---mission status.
----@alias HERO_ALL_SCORE_UPDATED_HANDLER fun(factionID: number)
+---@alias HERO_ALL_SCORE_UPDATED_HANDLER fun(factionID: FACTION_TYPE)
 
 ---
 ---@alias HERO_ANNOUNCE_REMAIN_TIME_HANDLER fun(remainTime, isStartTime)
@@ -1429,7 +1075,7 @@ local HEIR_SKILL_TYPE = {
 ---@alias HERO_NOTI_HANDLER fun()
 
 ---Event triggers when the player tries to retrieve hero information.
----@alias HERO_RANK_DATA_RETRIEVED_HANDLER fun(factionID: number)
+---@alias HERO_RANK_DATA_RETRIEVED_HANDLER fun(factionID: FACTION_TYPE)
 
 ---
 ---@alias HERO_RANK_DATA_TIMEOUT_HANDLER fun()
@@ -1500,11 +1146,6 @@ local HEIR_SKILL_TYPE = {
 ---
 ---@alias HOUSE_SET_SELL_SUCCESS_HANDLER fun(houseName)
 
----@enum HOUSE_STRUCTURE_TYPE
-local HOUSE_STRUCTURE_TYPE = {
-  HOUSING = "housing",
-}
-
 ---
 ---@alias HOUSE_STEP_INFO_UPDATED_HANDLER fun(structureType: HOUSE_STRUCTURE_TYPE)
 
@@ -1557,11 +1198,6 @@ local HOUSE_STRUCTURE_TYPE = {
 ---Event triggers when a crafting order is listed.
 ---@alias INSERT_CRAFT_ORDER_HANDLER fun()
 
----@class InstanceEnterableInfo
----@field content string
----@field iconKey string
----@field title string
-
 ---Event triggers when an instance is now enterable.
 ---@alias INSTANCE_ENTERABLE_MSG_HANDLER fun(info: InstanceEnterableInfo)
 
@@ -1576,16 +1212,6 @@ local HOUSE_STRUCTURE_TYPE = {
 
 ---Event triggers when an instance queue has been canceled.
 ---@alias INSTANT_GAME_JOIN_CANCEL_HANDLER fun()
-
----@class InstanceGameKillInfo
----@field killer string
----@field killerCorps string
----@field killerCorpsKill number
----@field killerKillstreak number
----@field ruleMode number
----@field victim string
----@field victimCorps string
----@field victimCorpsDeath number
 
 ---Event triggers when a player kills another player in an instance.
 ---@alias INSTANT_GAME_KILL_HANDLER fun(msgInfo: InstanceGameKillInfo)
@@ -1639,8 +1265,8 @@ local HOUSE_STRUCTURE_TYPE = {
 ---
 ---@alias ITEM_ENCHANT_MAGICAL_RESULT_HANDLER fun(resultCode, itemLink, gemItemType)
 
----
----@alias ITEM_EQUIP_RESULT_HANDLER fun(ItemEquipResult)
+---Event triggers when the player attempt to equip a item to a mate/slave and it fails.
+---@alias ITEM_EQUIP_RESULT_HANDLER fun(ItemEquipResult: ITEM_MATE)
 
 ---
 ---@alias ITEM_LOOK_CONVERTED_HANDLER fun(itemLinkText)
@@ -1685,7 +1311,7 @@ local HOUSE_STRUCTURE_TYPE = {
 ---@alias LEAVING_WORLD_CANCELED_HANDLER fun()
 
 ---Event triggers if the player is leaving the world.
----@alias LEAVING_WORLD_STARTED_HANDLER fun(waitTime: number, exitTarget: number, idleKick: boolean)
+---@alias LEAVING_WORLD_STARTED_HANDLER fun(waitTime: number, exitTarget: EXIT_TARGET, idleKick: boolean)
 
 ---Event triggers when the player is finished loading.
 ---@alias LEFT_LOADING_HANDLER fun()
@@ -1850,26 +1476,11 @@ local HOUSE_STRUCTURE_TYPE = {
 ---Event triggers when the player interacts with a npc that has multiple quests.
 ---@alias MULTI_QUEST_CONTEXT_SELECT_HANDLER fun(targetNpc: boolean, qtype: number, useDirectingMode: boolean, targetId: string, interactionValue: string)
 
----@class QuestItem
----@field order number
----@field qtype number
-
----@class QuestSelectList
----@field gives QuestItem[]
-
 ---Event triggers when the player interacts with a npc that has multiple quests.
 ---@alias MULTI_QUEST_CONTEXT_SELECT_LIST_HANDLER fun(questList: QuestSelectList)
 
----@enum NAME_TAG_MODE
-local NAME_TAG_MODE = {
-  DEFAULT  = 1,
-  COMBAT   = 2,
-  VOCATION = 3,
-  BOX      = 4,
-}
-
 ---Event triggers when the player changes the name tag mode.
----@alias NAME_TAG_MODE_CHANGED_MSG_HANDLER fun(changedNameTagMode: NAME_TAG_MODE)
+---@alias NAME_TAG_MODE_CHANGED_MSG_HANDLER fun(changedNameTagMode: NAME_TAG_MODE_OFFSET)
 
 ---
 ---@alias NATION_DOMINION_HANDLER fun(zoneGroupType, force)
@@ -1885,12 +1496,6 @@ local NAME_TAG_MODE = {
 
 ---
 ---@alias NEW_SKILL_POINT_HANDLER fun(point)
-
----@class NextSiegeInfo
----@field hour number
----@field min number
----@field week string
----@field zoneGroupName string
 
 ---Event triggers when the next siege information is required.
 ---@alias NEXT_SIEGE_INFO_HANDLER fun(siegeInfo: NextSiegeInfo)
@@ -2117,13 +1722,6 @@ local NAME_TAG_MODE = {
 ---Eventt triggers when the players quest updates.
 ---@alias QUEST_CONTEXT_OBJECTIVE_EVENT_HANDLER fun(objText: string)
 
----@enum QUEST_STATUS
-local QUEST_STATUS = {
-  DROPPED = "dropped",
-  STARTED = "started",
-  UPDATED = "updated",
-}
-
 ---Event triggers when the players quest updates.
 ---@alias QUEST_CONTEXT_UPDATED_HANDLER fun(qType: number, status: QUEST_STATUS)
 
@@ -2134,7 +1732,7 @@ local QUEST_STATUS = {
 ---@alias QUEST_DIRECTING_MODE_HOT_KEY_HANDLER fun(arg: number)
 
 ---
----@alias QUEST_ERROR_INFO_HANDLER fun(errNum, qtype)
+---@alias QUEST_ERROR_INFO_HANDLER fun(errNum: QSTATFAILED_MAYBE_QUEST_LIST_FULL|number, qtype: number)
 
 ---
 ---@alias QUEST_HIDDEN_COMPLETE_HANDLER fun(qtype)
@@ -2161,31 +1759,12 @@ local QUEST_STATUS = {
 ---changing raid window zoom setting.
 ---@alias RAID_FRAME_SIMPLE_VIEW_HANDLER fun(simple: boolean)
 
----@class RaidRecruitDetailInfo
----@field createTime string
----@field hour number
----@field limitGearPoint number
----@field limitLevel number
----@field minute number
----@field msg string
----@field ownerExpedition string
----@field ownerId string
----@field ownerLevel number
----@field ownerName string
----@field subType number
----@field subTypeName string
----@field type number
-
 ---Event triggers when the player views thed details of a raid recruit.
 ---@alias RAID_RECRUIT_DETAIL_HANDLER fun(data: RaidRecruitDetailInfo)
 
 ---@TODO: test this more.
 ---Event triggers when the raid hud changes.
 ---@alias RAID_RECRUIT_HUD_HANDLER fun(infos: EmptyTable)
-
----@class RaidRecruitListInfo
----@field recruiter boolean
----@field subRecruiter boolean
 
 ---@TODO: This has other triggers
 ---Event triggers when the player views the raid recruit window.
@@ -2323,49 +1902,14 @@ local QUEST_STATUS = {
 ---Event triggers when the player views the residents board type.
 ---@alias RESIDENT_BOARD_TYPE_HANDLER fun(boardType: RESIDENT_BOARD_TYPE)
 
----@class ResidentHousing
----@field decoextendnum number
----@field decolimitnum number
----@field division string
----@field kind string
----@field posx number
----@field posy number
----@field posz number
----@field price number
----@field sellername string
----@field zoneId ZONE_ID
-
 ---Event triggers when the player views the housing sales tab of a zone.
 ---@alias RESIDENT_HOUSING_TRADE_LIST_HANDLER fun(infos: ResidentHousing, rownum: number, filter: number, searchword: string, refresh: number)
-
----@class ResidentMember
----@field [1] string Name
----@field [2] number Basic Level
----@field [3] number Contribution
----@field [4] number Family
----@field [5] boolean Online
----@field [6] boolean Party
----@field [7] boolean CHK
----@field [8] number Ancestral Level
----@field [9] number Contribution Rank
 
 ---Event triggers when the player views the housing residents tab of a zone.
 ---@alias RESIDENT_MEMBER_LIST_HANDLER fun(total: number, start: number, refresh: number, members: ResidentMember[])
 
 ---
 ---@alias RESIDENT_SERVICE_POINT_CHANGED_HANDLER fun(zoneGroupName, amount, total)
-
----@class ResidentInfo
----@field huntingCharge number
----@field isResident boolean
----@field localCharge? string
----@field localEffect string
----@field localFaction string
----@field localFactionIcon string
----@field memberCount? number
----@field name string
----@field refreshRemain? number
----@field servicePoint? number
 
 ---Event triggers when the player accesses the task board at resident townhall
 ---of the zone.
@@ -2417,28 +1961,6 @@ local QUEST_STATUS = {
 
 ---
 ---@alias SECOND_PASSWORD_CREATION_COMPLETED_HANDLER fun(success)
-
----@class SquadInfo
----@field buttonEnable boolean
----@field buttonType number
----@field curMemberCount number
----@field explanationText string
----@field fieldType number
----@field isMySquad boolean
----@field limitGearScore number
----@field limitLevel number
----@field maxMemberCount number
----@field nameCacheQueryId string
----@field openType number
----@field ownerLevel number
----@field squadId number
----@field worldName string
----@field zoneGroupType number
-
----@class SelectSquadList
----@field curPage number
----@field listInfo SquadInfo[]|EmptyTable
----@field maxCount number
 
 ---Event triggers when the player view the Recruit/Search page for instances.
 ---@alias SELECT_SQUAD_LIST_HANDLER fun(data: SelectSquadList)
@@ -2568,10 +2090,6 @@ local QUEST_STATUS = {
 ---Event triggers when the world map has a location to be shown.
 ---@alias SHOW_WORLDMAP_LOCATION_HANDLER fun(zoneId: ZONE_KEY, x: number, y: number, z: number)
 
----@class TooltipInfo
----@field text string
----@field tooltipType string @TODO: Only found normal
-
 ---Event triggers when a tooltip is shown on the worldmap.
 ---@alias SHOW_WORLDMAP_TOOLTIP_HANDLER fun(tooltipInfo, tooltipCount: number)
 
@@ -2580,33 +2098,6 @@ local QUEST_STATUS = {
 
 ---
 ---@alias SIEGE_RAID_REGISTER_LIST_HANDLER fun(zoneGroupType, bRegistState, bListUpdate)
-
----@class SiegeRaidMemberInfo
----@field ability ABILITY_TYPE[]
----@field gearScore number
----@field heirLevel number
----@field level number
----@field name string
-
----@class SiegeRaidScheduleInfo
----@field endHour number
----@field endMin number
----@field startHour number
----@field startMin number
----@field weekDay string
-
----@class SiegeRaidZoneInfo
----@field commanderName string
----@field factionId number
----@field memberCnt number
----@field memberMax number
----@field scheduleInfo SiegeRaidScheduleInfo
----@field siegeState string = "siege_state_ready_to_siege",
----@field zoneName string = "Heedmar",
-
----@class SiegeRaidInfo
----@field memberInfo SiegeRaidMemberInfo[]
----@field zoneInfo SiegeRaidZoneInfo
 
 ---
 ---@alias SIEGE_RAID_TEAM_INFO_HANDLER fun(info: SiegeRaidZoneInfo)
@@ -2635,51 +2126,14 @@ local QUEST_STATUS = {
 ---
 ---@alias SKILL_DEBUG_MSG_HANDLER fun(resultCode, param, skillType)
 
----@enum SKILL_TYPE
-local SKILL_TYPE = {
-  BUFF  = "buff",
-  SKILL = "skill",
-}
-
 ---Event triggers when the player learns a skill.
 ---@alias SKILL_LEARNED_HANDLER fun(text: string, skillType: SKILL_TYPE)
-
----@class SkillMapEffectInfo
----@field a number
----@field b number
----@field g number
----@field index number
----@field r number
----@field radius number
----@field textureKey string
----@field texturePath string
----@field time number
----@field useEffect boolean
----@field x number
----@field y number
----@field z number
 
 ---Event triggers when the worldmap has an effect that that needs to be shown.
 ---@alias SKILL_MAP_EFFECT_HANDLER fun(info: SkillMapEffectInfo)
 
 ---Event triggers when the player uses as skill has a message.
 ---@alias SKILL_MSG_HANDLER fun(resultCode: string, param: string, skillType: number)
-
----@class SkillSelectiveItemTable
----@field count number
----@field grade number
----@field idx number
----@field name string
----@field selectable boolean
----@field type number
-
----@class SkillSelectiveItemList
----@field is_multi boolean
----@field itemTables SkillSelectiveItemTable[]
----@field maxTryCount number
----@field popup_text string
----@field select number
----@field srcItem ItemInfo
 
 ---Event triggers when the player is trying tos select an item from a supply
 ---kit.
@@ -2792,22 +2246,6 @@ local SKILL_TYPE = {
 ---
 ---@alias SURVEY_FORM_UPDATE_HANDLER fun()
 
----@enum ENCHANT_MODE
-local ENCHANT_MODE = {
-  GRADE            = "grade",
-  SOCKET_INSERT    = "socket_insert",
-  SOCKET_REMOVE    = "socket_remove",
-  SOCKET_EXTRACT   = "socket_extract",
-  SOCKET_UPGRADE   = "socket_upgrade",
-  GEM              = "gem",
-  EVOLVING         = "evolving",
-  EVOLVING_RE_ROLL = "evolving_re_roll",
-  ELEMENT          = "element",
-  REFURBISHMENT    = "refurbishment",
-  SMELTING         = "smelting", -- unsure what this is.
-  AWAKEN           = "awaken",
-}
-
 ---Event triggers when the player changes their enchanting mode.
 ---@alias SWITCH_ENCHANT_ITEM_MODE_HANDLER fun(mode: ENCHANT_MODE)
 
@@ -2828,15 +2266,6 @@ local ENCHANT_MODE = {
 
 ---
 ---@alias TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION_HANDLER fun(target, curHp, maxHp)
-
----@TODO: This may not be complete.
----@enum TARGET_TYPE
-local TARGET_TYPE = {
-  DOODAD  = "doodad",
-  NOTHING = "nothing",
-  UI      = "ui",
-  UNIT    = "unit",
-}
 
 ---Event triggers when the players mouse is over a target.
 ---@alias TARGET_OVER_HANDLER fun(targetType: TARGET_TYPE, target: string|number)
@@ -2867,20 +2296,6 @@ local TARGET_TYPE = {
 
 ---Event triggers when a team members unit id changes.
 ---@alias TEAM_MEMBER_UNIT_ID_CHANGED_HANDLER fun(oldStringId: string, stringId: string)
-
----@enum TEAM_CHANGE_REASON
-local TEAM_CHANGE_REASON = {
-  JOINED    = "joined",
-  LEAVED    = "leaved",
-  REFRESHED = "refreshed",
-}
-
----@class TeamMember
----@field isParty boolean
----@field jointOrder number 1 or 2
----@field memberIndex number
----@field name string
----@field teamRoleType string
 
 ---Event triggers when the players team changes.
 ---@alias TEAM_MEMBERS_CHANGED_HANDLER fun(reason: TEAM_CHANGE_REASON, value: TeamMember)
@@ -2945,14 +2360,6 @@ local TEAM_CHANGE_REASON = {
 
 ---Event triggers when a tower defense information updates.
 ---@alias TOWER_DEF_INFO_UPDATE_HANDLER fun()
-
----@class TowerDefInfo
----@field color string
----@field iconKey string
----@field msg string
----@field step string
----@field titleMsg string
----@field zoneGroup ZONE_ID @TODO: Might not be ZONE_ID
 
 ---Event triggers when a tower defense message occurs.
 ---@alias TOWER_DEF_MSG_HANDLER fun(towerDefInfo: TowerDefInfo)
@@ -3067,25 +2474,11 @@ local TEAM_CHANGE_REASON = {
 ---Event triggers when a player dies.
 ---@alias UNIT_DEAD_NOTICE_HANDLER fun(name: string)
 
----@enum UNIT_TYPE
-local UNIT_TYPE = {
-  HOUSING = "housing",
-  NPC = "npc",
-}
-
 ---Event triggers when a unit enters the players sight.
 ---@alias UNIT_ENTERED_SIGHT_HANDLER fun(unitId: number, unitType: UNIT_TYPE, curHp: string, maxHp: string)
 
 ---Event triggers when the player changes their gear.
 ---@alias UNIT_EQUIPMENT_CHANGED_HANDLER fun(equipSlot: ES)
-
----@class KillStreakInfo
----@field gameType number
----@field killerKillStreak number
----@field killerName string
----@field param1 number
----@field param2 number threeKillCount
----@field victimName number
 
 ---Event triggers when a player is on a kill streak.
 ---@alias UNIT_KILL_STREAK_HANDLER fun(killStreakInfo: KillStreakInfo)
@@ -3097,7 +2490,7 @@ local UNIT_TYPE = {
 ---@alias UNIT_NAME_CHANGED_HANDLER fun(unitId: string)
 
 ---
----@alias UNIT_NPC_EQUIPMENT_CHANGED_HANDLER fun()
+---@alias UNIT_NPC_EQUIPMENT_CHANGED_HANDLER fun(arg: number)
 
 ---Event triggers when a player changes their class.
 ---@alias UNITFRAME_ABILITY_UPDATE_HANDLER fun(unitId: string)
@@ -3144,18 +2537,8 @@ local UNIT_TYPE = {
 ---Event triggers when the player dies and when the player respawns.
 ---@alias UPDATE_CORPSE_INFO_HANDLER fun()
 
----@class CraftOrderItemFee
----@field defaultFee string
----@field maxFee string
----@field minFee string
-
 ---Event triggers when the player is attempting to list a requested item.
 ---@alias UPDATE_CRAFT_ORDER_ITEM_FEE_HANDLER fun(info: CraftOrderItemFee)
-
----@class CraftOrderItemSlot
----@field craftCount number
----@field craftGrade number
----@field craftType number
 
 ---Event triggers when the request slot updates.
 ---@alias UPDATE_CRAFT_ORDER_ITEM_SLOT_HANDLER fun(info?: CraftOrderItemSlot)
@@ -3188,7 +2571,7 @@ local UNIT_TYPE = {
 ---Event triggers when the players guild assignments reset.
 ---@alias UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT_HANDLER fun(count: number)
 
----
+---Event triggers when a hero activates a hero respawn spot.
 ---@alias UPDATE_FACTION_REZ_DISTRICT_HANDLER fun()
 
 ---
@@ -3220,27 +2603,8 @@ local UNIT_TYPE = {
 ---
 ---@alias UPDATE_INGAME_BEAUTYSHOP_STATUS_HANDLER fun()
 
----@TODO: Figure out a new name for this.
----@enum INGAME_SHOP_TYPE
-local UPDATE_INGAME_SHOP_TYPE = {
-  CART           = "cart",
-  CHECKTIME      = "checkTime",
-  EXCHANGE_RATIO = "exchange_ratio",
-  GOODS          = "goods",
-  MAINTAB        = "maintab",
-  SELECTED_GOODS = "selected_goods",
-  SUBTAB         = "subtab",
-}
-
 ---Event triggers when the in game shop recieves an event.
 ---@alias UPDATE_INGAME_SHOP_HANDLER fun(updateType: INGAME_SHOP_TYPE, page?: number, totalItems?: number, arg4?)
-
----@enum INGAME_SHOP_VIEW_TYPE
-local INGAME_SHOP_VIEW_TYPE = {
-  ENTER_MODE = "enter_mode",
-  LEAVE_MODE = "leave_mode",
-  LEAVE_SORT = "leave_sort",
-}
 
 ---@TODO:: What types of mode exists? Ive seen 1 and 2.
 ---Event triggers when the in game shops view changes.
@@ -3252,8 +2616,8 @@ local INGAME_SHOP_VIEW_TYPE = {
 ---
 ---@alias UPDATE_INSTANT_GAME_KILLSTREAK_HANDLER fun(count)
 
----
----@alias UPDATE_INSTANT_GAME_KILLSTREAK_COUNT_HANDLER fun(count)
+---Event triggers when the player kills another player in a instance.
+---@alias UPDATE_INSTANT_GAME_KILLSTREAK_COUNT_HANDLER fun(count: number)
 
 ---Event triggers when an instance score updates.
 ---@alias UPDATE_INSTANT_GAME_SCORES_HANDLER fun()
@@ -3291,11 +2655,6 @@ local INGAME_SHOP_VIEW_TYPE = {
 
 ---Event triggers when the player is attemping to revert a crafting order.
 ---@alias UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL_HANDLER fun(infos: ItemInfo)
-
----@class CraftOrderInfo
----@field craftCount number
----@field craftGrade number @TODO: Is this ITEM_GRADE_TYPE?
----@field craftType number
 
 ---Event triggers when the player is attempting to revert a crafting order.
 ---@alias UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT_HANDLER fun(info?: CraftOrderInfo)
@@ -3352,14 +2711,6 @@ local INGAME_SHOP_VIEW_TYPE = {
 ---Event triggers when the player enters a new zone.
 ---@alias UPDATE_ZONE_INFO_HANDLER fun()
 
----@enum ZONE_LEVEL
-local ZONE_LEVEL = {
-  WORLD     = 0,
-  CONTINENT = 1,
-  ZONE      = 2,
-  CITY      = 3,
-}
-
 ---Event triggers when the world map zone zoom level changes.
 ---@alias UPDATE_ZONE_LEVEL_INFO_HANDLER fun(level: ZONE_LEVEL, id: ZONE_ID)
 
@@ -3383,16 +2734,6 @@ local ZONE_LEVEL = {
 
 ---
 ---@alias WEB_BROWSER_ESC_EVENT_HANDLER fun(browser)
-
----@class WorldMessageInfo
----@field factionName string
----@field motherFactionName string
----@field name string
----@field sextant SEXTANT
----@field trgFactionName string
----@field trgMotherFactionName string
----@field trgName string
----@field zoneGroupName string
 
 ---Event triggers when a world message occurs.
 ---@alias WORLD_MESSAGE_HANDLER fun(msg: string, iconKey: string, info: table)

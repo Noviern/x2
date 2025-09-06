@@ -1,21 +1,49 @@
 ---@meta _
 
-COPT_INSTANT = 2                    -- api/X2Craft
-COPT_INVALID = 0                    -- api/X2Craft
-COPT_PC = 1                         -- api/X2Craft
-COSK_ACTABILITY_GROUP = 1           -- api/X2Craft
-COSK_DEFAULT = 0                    -- api/X2Craft
-COSK_FEE = 2                        -- api/X2Craft
-COSO_ASC = 0                        -- api/X2Craft
-COSO_DESC = 1                       -- api/X2Craft
+COPT_INSTANT = 2                    -- api/X2Craft COPT
+COPT_INVALID = 0                    -- api/X2Craft COPT
+COPT_PC = 1                         -- api/X2Craft COPT
+COSK_ACTABILITY_GROUP = 1           -- api/X2Craft COSK
+COSK_DEFAULT = 0                    -- api/X2Craft COSK
+COSK_FEE = 2                        -- api/X2Craft COSK
+COSO_ASC = 0                        -- api/X2Craft COSO
+COSO_DESC = 1                       -- api/X2Craft COSO
 CRAFT_ORDER_ENTRY_PER_CHARACTER = 5 -- api/X2Craft
 CRAFT_ORDER_ENTRY_PER_SEARCH = 8    -- api/X2Craft
-MFCR_FAIL = 3                       -- api/X2Craft
-MFCR_FAIL_LIMIT = 1                 -- api/X2Craft
-MFCR_FAIL_WAIT = 2                  -- api/X2Craft
-MFCR_SUCCESS = 0                    -- api/X2Craft
+MFCR_FAIL = 3                       -- api/X2Craft MFCR
+MFCR_FAIL_LIMIT = 1                 -- api/X2Craft MFCR
+MFCR_FAIL_WAIT = 2                  -- api/X2Craft MFCR
+MFCR_SUCCESS = 0                    -- api/X2Craft MFCR
 ---@class X2Craft
 X2Craft = {}                        -- api/X2Craft
+
+---api/X2Craft
+---Craft Order Process Type
+---@alias COPT
+---| `COPT_INSTANT`
+---| `COPT_INVALID`
+---| `COPT_PC`
+
+---api/X2Craft
+---Craft Order Sort Kind
+---@alias COSK
+---| `COSK_ACTABILITY_GROUP`
+---| `COSK_DEFAULT`
+---| `COSK_FEE`
+
+---api/X2Craft
+---Craft Order Sort Order
+---@alias COSO
+---| `COSO_ASC`
+---| `COSO_DESC`
+
+---api/X2Craft
+---Modify Favorite Craft Recipe
+---@alias MFCR
+---| `MFCR_FAIL`
+---| `MFCR_FAIL_LIMIT`
+---| `MFCR_FAIL_WAIT`
+---| `MFCR_SUCCESS`
 
 ---Retrieves the base craft information for the specified craft type, excluding material information.
 ---@param craftType number The type of craft to query.

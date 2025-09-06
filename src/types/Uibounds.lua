@@ -9,7 +9,7 @@ local Uibounds = {}
 ---@param y number The y-coordinate offset.
 ---@usage
 ---```lua
----widget:AddAnchor("TOPLEFT", "UIParent", 0, 0)
+---widget:AddAnchor("TOPLEFT", 0, 0)
 ---```
 ---@see ANCHOR_POINT
 function Uibounds:AddAnchor(anchor, x, y) end

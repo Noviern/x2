@@ -21,6 +21,7 @@ MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/RoadMap
 ---@class roadmap: RoadMap
 local RoadMap = {}
 
+---@TODO: Document this
 function RoadMap:InitMapData() end
 
 ---Checks if the RoadMap is in ping mode.

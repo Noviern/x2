@@ -1,6 +1,6 @@
 ---@meta _
 
-SIK_DESCRIPTION = 1 -- api/X2Skill
+SIK_DESCRIPTION = 1 -- api/X2Skill SIK
 ---@class X2Skill
 X2Skill = {}        -- api/X2Skill
 
@@ -11,10 +11,9 @@ X2Skill = {}        -- api/X2Skill
 ---| `SIK_DESCRIPTION`
 ---| `4` Not defined but can be used to get almost everything thats not the description.
 
----@TODO: gcd is the players gcd not the skill
 ---Retrieves the cooldown information for a specified skill.
 ---@param skillId number The ID of the skill.
----@param ignoreGlobalCooldown boolean `true` to return the skill's specific cooldown, `false` to return the global cooldown. If the skill has been used and has a remaining time, this parameter is overridden to `true`, showing the skill's cooldown instead of the global cooldown.
+---@param ignoreGlobalCooldown boolean `true` to return the skills specific cooldown, `false` to return the player's global cooldown. If the skill has been used and has a remaining time, this parameter is overridden to `true`, showing the skills cooldown instead of the player's global cooldown.
 ---@return number|nil remainTime The remaining cooldown time in milliseconds, or `nil` if the skillId doesn't exist. (default: `0`)
 ---@return number|nil totalTime The total cooldown time in milliseconds, or `nil` if the skillId doesn't exist. (default: `0`)
 ---@nodiscard

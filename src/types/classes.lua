@@ -140,7 +140,6 @@ local Vslider = {}
 ---@field path string
 ---@field tipType string
 
----@TODO: this is similar to BuffTooltip
 ---api/X2Ability
 ---@class ActabilityInfo
 ---@field name string
@@ -150,7 +149,7 @@ local Vslider = {}
 ---@field grade number
 
 ---api/X2Chat
----@class CHAT_MESSAGE_OPTION
+---@class ChatMessageOption
 ---@field isOtherWorldMessage? boolean
 ---@field isUserChat boolean
 ---@field messageLocale? LOCALE
@@ -707,3 +706,368 @@ local Vslider = {}
 ---@field [2]? number Top
 ---@field [3]? number Bottom
 ---@field [4]? number Right
+
+---@class SiegeRaidTeam
+---@field defense boolean
+---@field fName string
+---@field isWaitWar boolean
+---@field membetCount number
+---@field ownerName string
+---@field period string = "siege_period_ready_to_siege",
+---@field ranking number
+
+---@class SiegeRaidTeamInfos
+---@field [1] SiegeRaidTeam
+---@field [2] SiegeRaidTeam
+---@field [3] SiegeRaidTeam
+---@class CraftOrderEntry
+---@field chargeFee string
+---@field consumeLp number
+---@field craftCount number
+---@field craftGrade number
+---@field craftType number
+---@field enableAct boolean
+---@field enableLp boolean
+---@field entryId number
+---@field entryIndex number
+---@field fee string
+---@field mine number
+---@field remainTime number
+---@field requireLp number
+---@field totalFee string
+
+---@class CraftOrderEntries
+---@field [1]? CraftOrderEntry
+---@field [2]? CraftOrderEntry
+---@field [3]? CraftOrderEntry
+---@field [4]? CraftOrderEntry
+---@field [5]? CraftOrderEntry
+---@field [6]? CraftOrderEntry
+---@field [7]? CraftOrderEntry
+---@field [8]? CraftOrderEntry
+
+---@class DiagonalASRDailyInfo
+---@field dailyAvg string
+---@field maxPrice string
+---@field minPrice string
+---@field volume number
+---@field weeklyAvg string
+
+---@TODO: Not sure if all 14 always show.
+---@class DiagonalASRInfo
+---@field [1] DiagonalASRDailyInfo
+---@field [2] DiagonalASRDailyInfo
+---@field [3] DiagonalASRDailyInfo
+---@field [4] DiagonalASRDailyInfo
+---@field [5] DiagonalASRDailyInfo
+---@field [6] DiagonalASRDailyInfo
+---@field [7] DiagonalASRDailyInfo
+---@field [8] DiagonalASRDailyInfo
+---@field [9] DiagonalASRDailyInfo
+---@field [10] DiagonalASRDailyInfo
+---@field [11] DiagonalASRDailyInfo
+---@field [12] DiagonalASRDailyInfo
+---@field [13] DiagonalASRDailyInfo
+---@field [14] DiagonalASRDailyInfo
+
+---@class SiegeInfo
+---@field action SIEGE_ACTION
+---@field defenseName string
+---@field isMyInfo boolean
+---@field offenseName string
+---@field periodName SIEGE_PERIOD_NAME
+---@field team string
+---@field zoneGroupName ZONE_NAME
+---@field zoneGroupType ZONE_ID
+
+---@class PhaseMsgInfo
+---@field color string
+---@field iconKey string
+---@field msg string
+---@field titleColor string
+---@field titleMsg string
+
+---@class EscMenuAddButtonInfo
+---@field categoryId ESC_MENU_CATEGORY_ID
+---@field uiContentType UIC
+---@field iconKey ESC_MENU_ICON_KEY
+---@field name string
+
+---@TODO: Enum for faction. ABILITY_TYPE2 needs its own UnitClass enum to names instead of ids
+---@class MemberInfo
+---@field [1] string Name
+---@field [2] number Basic Level
+---@field [3] ABILITY_TYPE2[] Class
+---@field [4] number Guild Role
+---@field [5] EmptyTable Connection Status (empty)
+---@field [6] string Memo
+---@field [7] boolean Online
+---@field [8] boolean Party
+---@field [9] number Contribution Points
+---@field [10] number Ancestral Level
+---@field [11] number Weekly Contribution Points
+---@field [12]? any CHK
+
+---@class GuildInterests
+---@field [1] number Dungeon
+---@field [2] number War
+---@field [3] number Naval Battles
+---@field [4] number Raid
+---@field [5] number Adventure
+---@field [6] number Crafting
+
+---@class GuildRecruitmentInfo
+---@field apply boolean
+---@field expeditionId number
+---@field expedition_level number
+---@field expedition_name string
+---@field interests GuildInterests
+---@field introduce string
+---@field memberCount number
+---@field owner_name string
+---@field pull boolean Full
+---@field remainTime number
+
+---@TODO: Enum for faction.
+---@class FriendInfo
+---@field [1] string Name
+---@field [2] number Basic Level
+---@field [3] UnitClass Class
+---@field [4] Time Last login
+---@field [5] RACE_ID
+---@field [6] boolean Online
+---@field [7] boolean Party
+---@field [8] number Ancestral Level = 40,
+---@field [9] number Faction
+---@field [10]? number CHK
+
+---@class InstanceEnterableInfo
+---@field content string
+---@field iconKey string
+---@field title string
+
+---@class InstanceGameKillInfo
+---@field killer string
+---@field killerCorps string
+---@field killerCorpsKill number
+---@field killerKillstreak number
+---@field ruleMode number
+---@field victim string
+---@field victimCorps string
+---@field victimCorpsDeath number
+
+---@class QuestItem
+---@field order number @TODO: QUEST_MARK_ORDER?
+---@field qtype number
+
+---@class QuestSelectList
+---@field gives QuestItem[]
+---@TODO: letItDones? completes? gives?
+
+---@class NextSiegeInfo
+---@field hour number
+---@field min number
+---@field week string
+---@field zoneGroupName string
+
+---@class RaidRecruitDetailInfo
+---@field createTime string
+---@field hour number
+---@field limitGearPoint number
+---@field limitLevel number
+---@field minute number
+---@field msg string
+---@field ownerExpedition string
+---@field ownerId string
+---@field ownerLevel number
+---@field ownerName string
+---@field subType number
+---@field subTypeName string
+---@field type number
+
+---@class RaidRecruitListInfo
+---@field recruiter boolean
+---@field subRecruiter boolean
+
+---@class ResidentHousing
+---@field decoextendnum number
+---@field decolimitnum number
+---@field division string
+---@field kind string
+---@field posx number
+---@field posy number
+---@field posz number
+---@field price number
+---@field sellername string
+---@field zoneId ZONE_ID
+
+---@class ResidentMember
+---@field [1] string Name
+---@field [2] number Basic Level
+---@field [3] number Contribution
+---@field [4] number Family
+---@field [5] boolean Online
+---@field [6] boolean Party
+---@field [7] boolean CHK
+---@field [8] number Ancestral Level
+---@field [9] number Contribution Rank
+
+---@class ResidentInfo
+---@field huntingCharge number
+---@field isResident boolean
+---@field localCharge? string
+---@field localEffect string
+---@field localFaction string
+---@field localFactionIcon string
+---@field memberCount? number
+---@field name string
+---@field refreshRemain? number
+---@field servicePoint? number
+
+---@class SquadInfo
+---@field buttonEnable boolean
+---@field buttonType number
+---@field curMemberCount number
+---@field explanationText string
+---@field fieldType number
+---@field isMySquad boolean
+---@field limitGearScore number
+---@field limitLevel number
+---@field maxMemberCount number
+---@field nameCacheQueryId string
+---@field openType number
+---@field ownerLevel number
+---@field squadId number
+---@field worldName string
+---@field zoneGroupType number
+
+---@class SelectSquadList
+---@field curPage number
+---@field listInfo SquadInfo[]|EmptyTable
+---@field maxCount number
+
+---@class TooltipInfo
+---@field text string
+---@field tooltipType string @TODO: Only found normal
+
+---@class SiegeRaidMemberInfo
+---@field ability ABILITY_TYPE[]
+---@field gearScore number
+---@field heirLevel number
+---@field level number
+---@field name string
+
+---@class SiegeRaidScheduleInfo
+---@field endHour number
+---@field endMin number
+---@field startHour number
+---@field startMin number
+---@field weekDay string
+
+---@class SiegeRaidZoneInfo
+---@field commanderName string
+---@field factionId number
+---@field memberCnt number
+---@field memberMax number
+---@field scheduleInfo SiegeRaidScheduleInfo
+---@field siegeState string = "siege_state_ready_to_siege",
+---@field zoneName string = "Heedmar",
+
+---@class SiegeRaidInfo
+---@field memberInfo SiegeRaidMemberInfo[]
+---@field zoneInfo SiegeRaidZoneInfo
+
+---@class SkillMapEffectInfo
+---@field a number
+---@field b number
+---@field g number
+---@field index number
+---@field r number
+---@field radius number
+---@field textureKey string
+---@field texturePath string
+---@field time number
+---@field useEffect boolean
+---@field x number
+---@field y number
+---@field z number
+
+---@class SkillSelectiveItemTable
+---@field count number
+---@field grade number
+---@field idx number
+---@field name string
+---@field selectable boolean
+---@field type number
+
+---@class SkillSelectiveItemList
+---@field is_multi boolean
+---@field itemTables SkillSelectiveItemTable[]
+---@field maxTryCount number
+---@field popup_text string
+---@field select number
+---@field srcItem ItemInfo
+
+---@class TeamMember
+---@field isParty boolean
+---@field jointOrder number 1 or 2
+---@field memberIndex number
+---@field name string
+---@field teamRoleType string
+
+---@class TowerDefInfo
+---@field color string
+---@field iconKey string
+---@field msg string
+---@field step string
+---@field titleMsg string
+---@field zoneGroup ZONE_ID @TODO: Might not be ZONE_ID
+
+---@class KillStreakInfo
+---@field gameType number
+---@field killerKillStreak number
+---@field killerName string
+---@field param1 number
+---@field param2 number threeKillCount
+---@field victimName number
+
+---@class CraftOrderItemFee
+---@field defaultFee string
+---@field maxFee string
+---@field minFee string
+
+---@class CraftOrderItemSlot
+---@field craftCount number
+---@field craftGrade number
+---@field craftType number
+
+---@class CraftOrderInfo
+---@field craftCount number
+---@field craftGrade number @TODO: Is this ITEM_GRADE_TYPE?
+---@field craftType number
+
+---@class WorldMessageInfo
+---@field factionName string
+---@field motherFactionName string
+---@field name string
+---@field sextant SEXTANT
+---@field trgFactionName string
+---@field trgMotherFactionName string
+---@field trgName string
+---@field zoneGroupName string
+
+---@class ActabilityGroupTypeInfo: ActabilityInfo
+---@field viewGroupType number
+
+---@class ActiveAbility
+---@field bool boolean
+---@field exp string
+---@field level number
+---@field levelPercent number
+---@field nextLevelTotalExp string
+---@field type ABILITY_TYPE
+
+---@class ActiveAbilities
+---@field [1] ActiveAbility
+---@field [2]? ActiveAbility
+---@field [3]? ActiveAbility

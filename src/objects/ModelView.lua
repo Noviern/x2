@@ -232,17 +232,18 @@ function ModelView:GetCustomPreviewCloth() end
 
 ---@TODO: never got this to work
 ---Retrieves the custom pupil index for a given range.
----@param range number
+---@param range PR
 ---@return number|nil index
 ---@nodiscard
 ---@usage
 ---```lua
 ---local index = widget:GetCustomPupil(0)
 ---```
+---@see PR
 function ModelView:GetCustomPupil(range) end
 
 ---Retrieves the custom pupil color for a specified eye.
----@param range EYE
+---@param range PR
 ---@return number red (min: `0`, max: `255`, default: `0`)
 ---@return number green (min: `0`, max: `255`, default: `0`)
 ---@return number blue (min: `0`, max: `255`, default: `0`)
@@ -251,7 +252,7 @@ function ModelView:GetCustomPupil(range) end
 ---```lua
 ---local red, green, blue = widget:GetCustomPupilColor()
 ---```
----@see EYE
+---@see PR
 function ModelView:GetCustomPupilColor(range) end
 
 ---Retrieves the custom scar index.
@@ -623,7 +624,8 @@ function ModelView:SetCustomizingPreviewCloth(index) end
 ---@TODO: usage still needed
 ---Sets the custom pupil index for a specified range.
 ---@param index number
----@param range number
+---@param range PR
+---@see PR
 function ModelView:SetCustomizingPupil(index, range) end
 
 ---@TODO: usage still needed
@@ -631,7 +633,8 @@ function ModelView:SetCustomizingPupil(index, range) end
 ---@param r number (min: `0`, max: `255`)
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
----@param range number
+---@param range PR
+---@see PR
 function ModelView:SetCustomizingPupilColor(r, g, b, range) end
 
 ---@TODO: usage still needed

@@ -180,11 +180,12 @@ function Button:SetAutoClipChar(resize) end
 function Button:SetAutoResize(resize) end
 
 ---@TODO: There is something very wrong with this. Almost none of the states match their actual state.
----@TODO: FAKE STATE > REAL STATE
----@TODO: NORMAL = HIGHLIGHTED
----@TODO: HIGHLIGHTED = DISABLED
----@TODO: PUSHED = PUSHED
----@TODO: DISABLED = NORMAL
+---FAKE STATE > REAL STATE
+---NORMAL = HIGHLIGHTED
+---HIGHLIGHTED = DISABLED
+---PUSHED = PUSHED
+---DISABLED = NORMAL
+
 ---Sets the state of the button.
 ---@param state UI_BUTTON_STATE_TEXT The state to set. (default: `DISABLED`)
 ---@usage

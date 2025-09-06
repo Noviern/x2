@@ -1,29 +1,61 @@
 ---@meta _
 
-CBK_NORMAL = 1                        -- api/X2Quest
-CBK_SYSTEM = 3                        -- api/X2Quest
-CBK_THINK = 2                         -- api/X2Quest
-DOW_FRIDAY = 6                        -- api/X2Quest
-DOW_INVALID = 8                       -- api/X2Quest
-DOW_MONDAY = 2                        -- api/X2Quest
-DOW_SATURDAY = 7                      -- api/X2Quest
-DOW_SUNDAY = 1                        -- api/X2Quest
-DOW_THURSDAY = 5                      -- api/X2Quest
-DOW_TUESDAY = 3                       -- api/X2Quest
-DOW_WEDNESDAY = 4                     -- api/X2Quest
+CBK_NORMAL = 1                        -- api/X2Quest CBK
+CBK_SYSTEM = 3                        -- api/X2Quest CBK
+CBK_THINK = 2                         -- api/X2Quest CBK
+DOW_FRIDAY = 6                        -- api/X2Quest DOW
+DOW_INVALID = 8                       -- api/X2Quest DOW
+DOW_MONDAY = 2                        -- api/X2Quest DOW
+DOW_SATURDAY = 7                      -- api/X2Quest DOW
+DOW_SUNDAY = 1                        -- api/X2Quest DOW
+DOW_THURSDAY = 5                      -- api/X2Quest DOW
+DOW_TUESDAY = 3                       -- api/X2Quest DOW
+DOW_WEDNESDAY = 4                     -- api/X2Quest DOW
 MAX_CHRONICLE_INFO_ACTIVE_COUNT = 5   -- api/X2Quest
 MAX_QUEST_OBJECTIVE = 10              -- api/X2Quest
 QCS_COMPLETED = 5                     -- api/X2Quest
-QSTATFAILED_MAYBE_QUEST_LIST_FULL = 6 -- api/X2Quest
-QUEST_MARK_ORDER_DAILY = 3            -- api/X2Quest
-QUEST_MARK_ORDER_DAILY_HUNT = 5       -- api/X2Quest
-QUEST_MARK_ORDER_LIVELIHOOD = 6       -- api/X2Quest
-QUEST_MARK_ORDER_MAIN = 1             -- api/X2Quest
-QUEST_MARK_ORDER_NORMAL = 7           -- api/X2Quest
-QUEST_MARK_ORDER_SAGA = 2             -- api/X2Quest
-QUEST_MARK_ORDER_WEEKLY = 4           -- api/X2Quest
+QSTATFAILED_MAYBE_QUEST_LIST_FULL = 6 -- api/X2Quest QSTATFAILED_MAYBE_QUEST_LIST_FULL
+QUEST_MARK_ORDER_DAILY = 3            -- api/X2Quest QUEST_MARK_ODER
+QUEST_MARK_ORDER_DAILY_HUNT = 5       -- api/X2Quest QUEST_MARK_ODER
+QUEST_MARK_ORDER_LIVELIHOOD = 6       -- api/X2Quest QUEST_MARK_ODER
+QUEST_MARK_ORDER_MAIN = 1             -- api/X2Quest QUEST_MARK_ODER
+QUEST_MARK_ORDER_NORMAL = 7           -- api/X2Quest QUEST_MARK_ODER
+QUEST_MARK_ORDER_SAGA = 2             -- api/X2Quest QUEST_MARK_ODER
+QUEST_MARK_ORDER_WEEKLY = 4           -- api/X2Quest QUEST_MARK_ODER
 ---@class X2Quest
 X2Quest = {}                          -- api/X2Quest
+
+---api/X2Quest
+---Chat Bubble Kind
+---@alias CBK
+---| `CBK_NORMAL`
+---| `CBK_SYSTEM`
+---| `CBK_THINK`
+
+---api/X2Quest
+---Day Of the Week
+---@alias DOW
+---| `DOW_FRIDAY`
+---| `DOW_INVALID`
+---| `DOW_MONDAY`
+---| `DOW_SATURDAY`
+---| `DOW_SUNDAY`
+---| `DOW_THURSDAY`
+---| `DOW_TUESDAY`
+---| `DOW_WEDNESDAY`
+
+---api/X2Quest
+---@alias QSTATFAILED_MAYBE_QUEST_LIST_FULL QSTATFAILED_MAYBE_QUEST_LIST_FULL
+
+---api/X2Quest
+---@alias QUEST_MARK_ORDER
+---| `QUEST_MARK_ORDER_DAILY`
+---| `QUEST_MARK_ORDER_DAILY_HUNT`
+---| `QUEST_MARK_ORDER_LIVELIHOOD`
+---| `QUEST_MARK_ORDER_MAIN`
+---| `QUEST_MARK_ORDER_NORMAL`
+---| `QUEST_MARK_ORDER_SAGA`
+---| `QUEST_MARK_ORDER_WEEKLY`
 
 ---Retrieves the count of all active quests, including completed ones.
 ---@return number activeQuestListCount The number of active quests.

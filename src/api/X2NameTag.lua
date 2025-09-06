@@ -1,12 +1,25 @@
 ---@meta _
 
-NAME_TAG_FACTION_EXPEDITION = 0 -- api/X2NameTag
-NAME_TAG_FACTION_FACTION = 1    -- api/X2NameTag
-NAME_TAG_FACTION_FAMILY = 2     -- api/X2NameTag
-NAME_TAG_MODE_BATTLE = 1        -- api/X2NameTag
-NAME_TAG_MODE_BOX = 3           -- api/X2NameTag
-NAME_TAG_MODE_DEFAULT = 0       -- api/X2NameTag
-NAME_TAG_MODE_LIFE = 2          -- api/X2NameTag
+NAME_TAG_FACTION_EXPEDITION = 0 -- api/X2NameTag NAME_TAG_FACTION
+NAME_TAG_FACTION_FACTION = 1    -- api/X2NameTag NAME_TAG_FACTION
+NAME_TAG_FACTION_FAMILY = 2     -- api/X2NameTag NAME_TAG_FACTION
+NAME_TAG_MODE_BATTLE = 1        -- api/X2NameTag NAME_TAG_MODE
+NAME_TAG_MODE_BOX = 3           -- api/X2NameTag NAME_TAG_MODE
+NAME_TAG_MODE_DEFAULT = 0       -- api/X2NameTag NAME_TAG_MODE
+NAME_TAG_MODE_LIFE = 2          -- api/X2NameTag NAME_TAG_MODE
 NAME_TAG_MODE_MAX = 4           -- api/X2NameTag
 ---@class X2NameTag
 X2NameTag = {}                  -- api/X2NameTag
+
+---api/X2NameTag
+---@alias NAME_TAG_FACTION
+---| `NAME_TAG_FACTION_EXPEDITION`
+---| `NAME_TAG_FACTION_FACTION`
+---| `NAME_TAG_FACTION_FAMILY`
+
+---api/X2NameTag
+---@alias NAME_TAG_MODE
+---| `NAME_TAG_MODE_BATTLE`
+---| `NAME_TAG_MODE_BOX`
+---| `NAME_TAG_MODE_DEFAULT`
+---| `NAME_TAG_MODE_LIFE`

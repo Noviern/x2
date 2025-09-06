@@ -37,8 +37,6 @@ UI_BUTTON_MAX = 4               -- objects/Slot
 UI_BUTTON_NORMAL = 0            -- objects/Slot
 UI_BUTTON_PUSHED = 2            -- objects/Slot
 
----@TODO: Should ITEM_GRADE_TYPE be moved to globals.lua and made a global? used also in Message.lua
-
 ---objects/Slot
 ---@alias SLOT_TYPE
 ---| `ISLOT_ABILITY_VIEW`
@@ -101,7 +99,6 @@ function Slot:EstablishItem(itemType, itemGrade) end
 ---```
 function Slot:EstablishSkill(skillType) end
 
----@TODO: Clarify statusBuffTag, remain, and duration parameters.
 ---Establishes a skill alert for the Slot.
 ---@param statusBuffTag SKILL_ALERT_STATUS_BUFF_TAG The status buff tag.
 ---@param remain number The remaining time for the alert in milliseconds.
@@ -125,6 +122,26 @@ function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 ---@see SLOT_TYPE
 function Slot:EstablishSkillSlot(slotType, slotIdx) end
 
+---```
+---widget:EstablishSlot(ISLOT_ABILITY_VIEW, ATTACK_SKILL + 1)
+---@widget:EstablishSlot(ISLOT_ACTION, 1)
+---widget:EstablishSlot(ISLOT_BAG, 1)
+---widget:EstablishSlot(ISLOT_BANK, 1)
+---widget:EstablishSlot(ISLOT_COFFER, 1)
+---@widget:EstablishSlot(ISLOT_CONSTANT,
+---widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Dont forget to subtract 1!
+---@widget:EstablishSlot(ISLOT_GUILD_BANK, 1)
+---widget:EstablishSlot(ISLOT_HEIR_SKILL_VIEW, 1)
+---@widget:EstablishSlot(ISLOT_INSTANT_KILL_STREAK,
+---widget:EstablishSlot(ISLOT_MODE_ACTION, 1)
+---widget:EstablishSlot(ISLOT_ORIGIN_SKILL_VIEW, 1)
+---widget:EstablishSlot(ISLOT_PET_BATTLE_ACTION, 1)
+---widget:EstablishSlot(ISLOT_PET_RIDE_ACTION, 1)
+---widget:EstablishSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1) -- Dont forget to subtract 1!
+---@widget:EstablishSlot(ISLOT_SHORTCUT_ACTION,
+---@widget:EstablishSlot(ISLOT_SKILL_ALERT,
+---```
+
 ---@TODO: Create overloads for each ISLOT?
 ---Establishes a slot with the specified type and index. Triggers the event `OnContentUpdated`.
 ---@param slotType SLOT_TYPE The type of the slot.
@@ -134,7 +151,16 @@ function Slot:EstablishSkillSlot(slotType, slotIdx) end
 ---widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Dont forget to subtract 1!
 ---```
 ---@see SLOT_TYPE
+---@overload fun(self: self, slotType: 1, slotIdx: ES, virtualSlotIdx: number) ---@TODO: ISLOT_EQUIPMENT currently does not display but left click shows the weapon
+---@overload fun(self: self, slotType: 7, slotIdx: PES, virtualSlotIdx: number) ---@TODO: ISLOT_PRELIMINARY_EQUIPMENT currently does not display but left click shows the weapon
+---@overload fun(self: self, slotType: 234, slotIdx: HEIR_SKILL_TYPE, virtualSlotIdx: number) ---@TODO: ISLOT_HEIR_SKILL_VIEW 
+---@overload fun(self: self, slotType: 243, slotIdx: SKILL, virtualSlotIdx: number) ---@TODO: ISLOT_ABILITY_VIEW
 function Slot:EstablishSlot(slotType, slotIdx) end
+
+---@TODO: should i make every variable a alias?
+---@alias ISLOT_ABILITY_VIEW 243
+
+---@alias PES `ES_MAINHAND`|`ES_OFFHAND`
 
 ---@TODO: Clarify purpose of virtualSlotIdx.
 ---Establishes a virtual slot for the Slot. Triggers the event `OnContentUpdated`.
@@ -146,6 +172,7 @@ function Slot:EstablishSlot(slotType, slotIdx) end
 ---widget:EstablishVirtualSlot(ISLOT_ACTION, 1, 1)
 ---```
 ---@see SLOT_TYPE
+---@overload fun(self: self, slotType: `ISLOT_PRELIMINARY_EQUIPMENT`, slotIdx: PES, virtualSlotIdx: number) ---@TODO: currently does not display but left click shows the weapon
 function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 
 ---Retrieves the binded type of the Slot.

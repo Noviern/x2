@@ -1,144 +1,144 @@
 ---@meta _
 
-CHAT_ALL_SERVER = 18                     -- api/X2Chat
-CHAT_BIG_MEGAPHONE = 15                  -- api/X2Chat
-CHAT_DAILY_MSG = -2                      -- api/X2Chat
-CHAT_EXPEDITION = 7                      -- api/X2Chat
-CHAT_FACTION = 6                         -- api/X2Chat
-CHAT_FAMILY = 9                          -- api/X2Chat
-CHAT_FIND_PARTY = 3                      -- api/X2Chat
-CHAT_GM_LISTEN = 12                      -- api/X2Chat
-CHAT_INVALID = -7                        -- api/X2Chat
-CHAT_LOCALE_SERVER = 19                  -- api/X2Chat
-CHAT_NOTICE = -1                         -- api/X2Chat
-CHAT_PARTY = 4                           -- api/X2Chat
-CHAT_PLAY_MUSIC = 13                     -- api/X2Chat
-CHAT_RACE = 14                           -- api/X2Chat
-CHAT_RAID = 5                            -- api/X2Chat
-CHAT_RAID_COMMAND = 10                   -- api/X2Chat
-CHAT_REPLYWHISPER = -5                   -- api/X2Chat
-CHAT_SAY = 0                             -- api/X2Chat
-CHAT_SMALL_MEGAPHONE = 16                -- api/X2Chat
-CHAT_SQUAD = 17                          -- api/X2Chat
-CHAT_SYSTEM = 8                          -- api/X2Chat
-CHAT_TRADE = 2                           -- api/X2Chat
-CHAT_TRIAL = 11                          -- api/X2Chat
-CHAT_USER = 20                           -- api/X2Chat
-CHAT_WHISPER = -3                        -- api/X2Chat
-CHAT_WHISPERED = -4                      -- api/X2Chat
-CHAT_ZONE = 1                            -- api/X2Chat
-CIK_DEFAULT = 1                          -- api/X2Chat
-CMF_ACQ_CONSUME_GROUP = 36               -- api/X2Chat
-CMF_ADDED_ITEM_GROUP = 33                -- api/X2Chat
-CMF_ADDED_ITEM_SELF = 34                 -- api/X2Chat
-CMF_ADDED_ITEM_TEAM = 35                 -- api/X2Chat
-CMF_ALL_SERVER = 60                      -- api/X2Chat
-CMF_BEGIN_USE = 2                        -- api/X2Chat
-CMF_BEHAVIOR_RESULT = 46                 -- api/X2Chat
-CMF_BIG_MEGAPHONE = 54                   -- api/X2Chat
-CMF_CHANNEL_INFO = 13                    -- api/X2Chat
-CMF_COMBAT_DEAD = 31                     -- api/X2Chat
-CMF_COMBAT_DST_GROUP = 15                -- api/X2Chat
-CMF_COMBAT_DST_OTHER = 19                -- api/X2Chat
-CMF_COMBAT_DST_SELF = 18                 -- api/X2Chat
-CMF_COMBAT_ENVIRONMENTAL_DMANAGE = 30    -- api/X2Chat
-CMF_COMBAT_MELEE_DAMAGE = 21             -- api/X2Chat
-CMF_COMBAT_MELEE_GROUP = 20              -- api/X2Chat
-CMF_COMBAT_MELEE_MISSED = 22             -- api/X2Chat
-CMF_COMBAT_SPELL_AURA = 29               -- api/X2Chat
-CMF_COMBAT_SPELL_CAST = 28               -- api/X2Chat
-CMF_COMBAT_SPELL_DAMAGE = 24             -- api/X2Chat
-CMF_COMBAT_SPELL_ENERGIZE = 27           -- api/X2Chat
-CMF_COMBAT_SPELL_GROUP = 23              -- api/X2Chat
-CMF_COMBAT_SPELL_HEALED = 26             -- api/X2Chat
-CMF_COMBAT_SPELL_MISSED = 25             -- api/X2Chat
-CMF_COMBAT_SRC_GROUP = 14                -- api/X2Chat
-CMF_COMBAT_SRC_OTHER = 17                -- api/X2Chat
-CMF_COMBAT_SRC_SELF = 16                 -- api/X2Chat
-CMF_COMMUNITY = 65                       -- api/X2Chat
-CMF_CONNECT_ALERT = 61                   -- api/X2Chat
-CMF_CONNECT_EXPEDITION = 64              -- api/X2Chat
-CMF_CONNECT_FAMILY = 63                  -- api/X2Chat
-CMF_CONNECT_FRIEND = 62                  -- api/X2Chat
-CMF_DE = 72                              -- api/X2Chat
-CMF_DOMINION_AND_SIEGE_INFO = 44         -- api/X2Chat
-CMF_EMOTIOIN_EXPRESS = 48                -- api/X2Chat
-CMF_END_USE = 77                         -- api/X2Chat
-CMF_EN_SG = 76                           -- api/X2Chat
-CMF_EN_US = 67                           -- api/X2Chat
-CMF_ETC_GROUP = 49                       -- api/X2Chat
-CMF_EXPEDITION = 6                       -- api/X2Chat
-CMF_FACTION = 7                          -- api/X2Chat
-CMF_FAMILY = 50                          -- api/X2Chat
-CMF_FIND_PARTY = 10                      -- api/X2Chat
-CMF_FR = 73                              -- api/X2Chat
-CMF_HERO_SEASON_UPDATED = 58             -- api/X2Chat
-CMF_IND = 75                             -- api/X2Chat
-CMF_JA = 69                              -- api/X2Chat
-CMF_KO = 66                              -- api/X2Chat
-CMF_LANG_BEGIN = 66                      -- api/X2Chat
-CMF_LANG_END = 76                        -- api/X2Chat
-CMF_LOCALE_SERVER = 77                   -- api/X2Chat
-CMF_LOOT_METHOD_CHANGED = 37             -- api/X2Chat
-CMF_NONE = 1                             -- api/X2Chat
-CMF_NOTICE = 11                          -- api/X2Chat
-CMF_OTHER_CONTINENT = 59                 -- api/X2Chat
-CMF_PARTY = 4                            -- api/X2Chat
-CMF_PARTY_AND_RAID_INFO = 43             -- api/X2Chat
-CMF_PLAY_MUSIC = 57                      -- api/X2Chat
-CMF_QUEST_INFO = 47                      -- api/X2Chat
-CMF_RACE = 53                            -- api/X2Chat
-CMF_RAID = 5                             -- api/X2Chat
-CMF_RAID_COMMAND = 51                    -- api/X2Chat
-CMF_RU = 70                              -- api/X2Chat
-CMF_SAY = 2                              -- api/X2Chat
-CMF_SELF_CONTRIBUTION_POINT_CHANGED = 41 -- api/X2Chat
-CMF_SELF_HONOR_POINT_CHANGED = 39        -- api/X2Chat
-CMF_SELF_LEADERSHIP_POINT_CHANGED = 42   -- api/X2Chat
-CMF_SELF_LIVING_POINT_CHANGED = 40       -- api/X2Chat
-CMF_SELF_MONEY_CHANGED = 38              -- api/X2Chat
-CMF_SELF_SKILL_INFO = 32                 -- api/X2Chat
-CMF_SMALL_MEGAPHONE = 55                 -- api/X2Chat
-CMF_SQUAD = 56                           -- api/X2Chat
-CMF_SYSTEM = 12                          -- api/X2Chat
-CMF_TH = 74                              -- api/X2Chat
-CMF_TRADE = 9                            -- api/X2Chat
-CMF_TRADE_STORE_MSG = 45                 -- api/X2Chat
-CMF_TRIAL = 52                           -- api/X2Chat
-CMF_WHISPER = 3                          -- api/X2Chat
-CMF_ZH_CN = 68                           -- api/X2Chat
-CMF_ZH_TW = 71                           -- api/X2Chat
-CMF_ZONE = 8                             -- api/X2Chat
-CMSP_LEFT = 0                            -- api/X2Chat
-CMSP_RIGHT = 1                           -- api/X2Chat
-COLLISION_PART_BOTTOM = 3                -- api/X2Chat
-COLLISION_PART_FRONT = 0                 -- api/X2Chat
-COLLISION_PART_REAR = 2                  -- api/X2Chat
-COLLISION_PART_SIDE = 1                  -- api/X2Chat
-COLLISION_PART_TOP = 4                   -- api/X2Chat
-LOCALE_DE = 6                            -- api/X2Chat
-LOCALE_EN_SG = 10                        -- api/X2Chat
-LOCALE_EN_US = 2                         -- api/X2Chat
-LOCALE_FR = 7                            -- api/X2Chat
-LOCALE_IND = 9                           -- api/X2Chat
-LOCALE_INVALID = -1                      -- api/X2Chat
-LOCALE_JA = 3                            -- api/X2Chat
-LOCALE_KO = 0                            -- api/X2Chat
-LOCALE_RU = 5                            -- api/X2Chat
-LOCALE_TH = 8                            -- api/X2Chat
-LOCALE_ZH_CN = 1                         -- api/X2Chat
-LOCALE_ZH_TW = 4                         -- api/X2Chat
-QMS_CHECKPOINT = 5                       -- api/X2Chat
-QMS_GIVE_MAIN = 1                        -- api/X2Chat
-QMS_GIVE_NORMAL = 3                      -- api/X2Chat
-QMS_GIVE_REPEAT = 4                      -- api/X2Chat
-QMS_GIVE_SAGA = 2                        -- api/X2Chat
-QMS_LET_IT_DONE = 11                     -- api/X2Chat
-QMS_OVER_DONE = 10                       -- api/X2Chat
-QMS_PROGRESS = 6                         -- api/X2Chat
-QMS_READY_MAIN = 7                       -- api/X2Chat
-QMS_READY_NORMAL = 9                     -- api/X2Chat
-QMS_READY_SAGA = 8                       -- api/X2Chat
+CHAT_ALL_SERVER = 18                     -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_BIG_MEGAPHONE = 15                  -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_DAILY_MSG = -2                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_EXPEDITION = 7                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_FACTION = 6                         -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_FAMILY = 9                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_FIND_PARTY = 3                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_GM_LISTEN = 12                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_INVALID = -7                        -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_LOCALE_SERVER = 19                  -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_NOTICE = -1                         -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_PARTY = 4                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_PLAY_MUSIC = 13                     -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_RACE = 14                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_RAID = 5                            -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_RAID_COMMAND = 10                   -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_REPLYWHISPER = -5                   -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_SAY = 0                             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_SMALL_MEGAPHONE = 16                -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_SQUAD = 17                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_SYSTEM = 8                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_TRADE = 2                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_TRIAL = 11                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_USER = 20                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_WHISPER = -3                        -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_WHISPERED = -4                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CHAT_ZONE = 1                            -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CIK_DEFAULT = 1                          -- api/X2Chat CIK
+CMF_ACQ_CONSUME_GROUP = 36               -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ADDED_ITEM_GROUP = 33                -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ADDED_ITEM_SELF = 34                 -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ADDED_ITEM_TEAM = 35                 -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ALL_SERVER = 60                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_BEGIN_USE = 2                        -- api/X2Chat CMF_SPECIAL
+CMF_BEHAVIOR_RESULT = 46                 -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_BIG_MEGAPHONE = 54                   -- api/X2Chat CMF_SPECIAL
+CMF_CHANNEL_INFO = 13                    -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_DEAD = 31                     -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_DST_GROUP = 15                -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_DST_OTHER = 19                -- api/X2Chat CMF_SPECIAL
+CMF_COMBAT_DST_SELF = 18                 -- api/X2Chat CMF_SPECIAL
+CMF_COMBAT_ENVIRONMENTAL_DMANAGE = 30    -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_MELEE_DAMAGE = 21             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_MELEE_GROUP = 20              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_MELEE_MISSED = 22             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SPELL_AURA = 29               -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SPELL_CAST = 28               -- api/X2Chat CMF_SPECIAL
+CMF_COMBAT_SPELL_DAMAGE = 24             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SPELL_ENERGIZE = 27           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SPELL_GROUP = 23              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SPELL_HEALED = 26             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SPELL_MISSED = 25             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SRC_GROUP = 14                -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_COMBAT_SRC_OTHER = 17                -- api/X2Chat CMF_SPECIAL
+CMF_COMBAT_SRC_SELF = 16                 -- api/X2Chat CMF_SPECIAL
+CMF_COMMUNITY = 65                       -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_CONNECT_ALERT = 61                   -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_CONNECT_EXPEDITION = 64              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_CONNECT_FAMILY = 63                  -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_CONNECT_FRIEND = 62                  -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_DE = 72                              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_DOMINION_AND_SIEGE_INFO = 44         -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_EMOTIOIN_EXPRESS = 48                -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_END_USE = 77                         -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_EN_SG = 76                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_EN_US = 67                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ETC_GROUP = 49                       -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_EXPEDITION = 6                       -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_FACTION = 7                          -- api/X2Chat CMF_SPECIAL
+CMF_FAMILY = 50                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_FIND_PARTY = 10                      -- api/X2Chat CMF_SPECIAL
+CMF_FR = 73                              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_HERO_SEASON_UPDATED = 58             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_IND = 75                             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_JA = 69                              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_KO = 66                              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_LANG_BEGIN = 66                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_LANG_END = 76                        -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_LOCALE_SERVER = 77                   -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_LOOT_METHOD_CHANGED = 37             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_NONE = 1                             -- api/X2Chat CMF_SPECIAL
+CMF_NOTICE = 11                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_OTHER_CONTINENT = 59                 -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_PARTY = 4                            -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_PARTY_AND_RAID_INFO = 43             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_PLAY_MUSIC = 57                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_QUEST_INFO = 47                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_RACE = 53                            -- api/X2Chat CMF_SPECIAL
+CMF_RAID = 5                             -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_RAID_COMMAND = 51                    -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_RU = 70                              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SAY = 2                              -- api/X2Chat CMF_SPECIAL
+CMF_SELF_CONTRIBUTION_POINT_CHANGED = 41 -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SELF_HONOR_POINT_CHANGED = 39        -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SELF_LEADERSHIP_POINT_CHANGED = 42   -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SELF_LIVING_POINT_CHANGED = 40       -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SELF_MONEY_CHANGED = 38              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SELF_SKILL_INFO = 32                 -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SMALL_MEGAPHONE = 55                 -- api/X2Chat CMF_SPECIAL
+CMF_SQUAD = 56                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_SYSTEM = 12                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_TH = 74                              -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_TRADE = 9                            -- api/X2Chat CMF_SPECIAL
+CMF_TRADE_STORE_MSG = 45                 -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_TRIAL = 52                           -- api/X2Chat CMF_SPECIAL
+CMF_WHISPER = 3                          -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ZH_CN = 68                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ZH_TW = 71                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
+CMF_ZONE = 8                             -- api/X2Chat CMF_SPECIAL
+CMSP_LEFT = 0                            -- api/X2Chat CMSP
+CMSP_RIGHT = 1                           -- api/X2Chat CMSP
+COLLISION_PART_BOTTOM = 3                -- api/X2Chat COLLISION_PART
+COLLISION_PART_FRONT = 0                 -- api/X2Chat COLLISION_PART
+COLLISION_PART_REAR = 2                  -- api/X2Chat COLLISION_PART
+COLLISION_PART_SIDE = 1                  -- api/X2Chat COLLISION_PART
+COLLISION_PART_TOP = 4                   -- api/X2Chat COLLISION_PART
+LOCALE_DE = 6                            -- api/X2Chat LOCALE
+LOCALE_EN_SG = 10                        -- api/X2Chat LOCALE
+LOCALE_EN_US = 2                         -- api/X2Chat LOCALE
+LOCALE_FR = 7                            -- api/X2Chat LOCALE
+LOCALE_IND = 9                           -- api/X2Chat LOCALE
+LOCALE_INVALID = -1                      -- api/X2Chat LOCALE
+LOCALE_JA = 3                            -- api/X2Chat LOCALE
+LOCALE_KO = 0                            -- api/X2Chat LOCALE
+LOCALE_RU = 5                            -- api/X2Chat LOCALE
+LOCALE_TH = 8                            -- api/X2Chat LOCALE
+LOCALE_ZH_CN = 1                         -- api/X2Chat LOCALE
+LOCALE_ZH_TW = 4                         -- api/X2Chat LOCALE
+QMS_CHECKPOINT = 5                       -- api/X2Chat QMS
+QMS_GIVE_MAIN = 1                        -- api/X2Chat QMS
+QMS_GIVE_NORMAL = 3                      -- api/X2Chat QMS
+QMS_GIVE_REPEAT = 4                      -- api/X2Chat QMS
+QMS_GIVE_SAGA = 2                        -- api/X2Chat QMS
+QMS_LET_IT_DONE = 11                     -- api/X2Chat QMS
+QMS_OVER_DONE = 10                       -- api/X2Chat QMS
+QMS_PROGRESS = 6                         -- api/X2Chat QMS
+QMS_READY_MAIN = 7                       -- api/X2Chat QMS
+QMS_READY_NORMAL = 9                     -- api/X2Chat QMS
+QMS_READY_SAGA = 8                       -- api/X2Chat QMS
 ---@class X2Chat
 X2Chat = {}                              -- api/X2Chat
 
@@ -171,6 +171,11 @@ X2Chat = {}                              -- api/X2Chat
 ---| `CHAT_WHISPER`
 ---| `CHAT_WHISPERED`
 ---| `CHAT_ZONE`
+
+---api/X2Chat
+---Chat Icon Kind
+---@alias CIK
+---| `CIK_DEFAULT`
 
 ---api/X2Chat
 ---Channel Message Filter
@@ -262,6 +267,20 @@ X2Chat = {}                              -- api/X2Chat
 ---| `CMF_ZONE`
 
 ---api/X2Chat
+---Chat Message Scroll Position
+---@alias CMSP
+---| `CMSP_LEFT`
+---| `CMSP_RIGHT`
+
+---api/X2Chat
+---@alias COLLISION_PART
+---| `COLLISION_PART_BOTTOM`
+---| `COLLISION_PART_FRONT`
+---| `COLLISION_PART_REAR`
+---| `COLLISION_PART_SIDE`
+---| `COLLISION_PART_TOP`
+
+---api/X2Chat
 ---@alias LOCALE
 ---| `LOCALE_DE` 6
 ---| `LOCALE_EN_SG` 10
@@ -276,18 +295,32 @@ X2Chat = {}                              -- api/X2Chat
 ---| `LOCALE_ZH_CN` 1
 ---| `LOCALE_ZH_TW` 4
 
----@TODO: Can option be used for all CMF?
+---api/X2Chat
+---@TODO: Quest ? ?
+---@alias QMS
+---| `QMS_CHECKPOINT`
+---| `QMS_GIVE_MAIN`
+---| `QMS_GIVE_NORMAL`
+---| `QMS_GIVE_REPEAT`
+---| `QMS_GIVE_SAGA`
+---| `QMS_LET_IT_DONE`
+---| `QMS_OVER_DONE`
+---| `QMS_PROGRESS`
+---| `QMS_READY_MAIN`
+---| `QMS_READY_NORMAL`
+---| `QMS_READY_SAGA`
+
 ---Sends a message to the specified chat channel.
 ---@param filter CMF|CMF_SPECIAL The chat Channel Message Filter.
 ---@param message string The message to send.
----@param option? CHAT_MESSAGE_OPTION Optional chat message settings. (Required for all `CMF_SPECIAL`)
+---@param option? ChatMessageOption Optional chat message settings. (Required for all `CMF_SPECIAL`)
 ---@usage
 ---```lua
 ---X2Chat:DispatchChatMessage(CMF_SYSTEM, "Hello, ArcheRage!")
----X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = `true` })
+---X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = true })
 ---```
 ---@see CMF
 ---@see CMF_SPECIAL
----@see CHAT_MESSAGE_OPTION
----@overload fun(self: self, filter: CMF_SPECIAL, message: "|o; TEXT HERE - option is required for this.", option: CHAT_MESSAGE_OPTION)
+---@see ChatMessageOption
+---@overload fun(self: self, filter: CMF_SPECIAL, message: "|o; TEXT HERE - option is required for this.", option: ChatMessageOption)
 function X2Chat:DispatchChatMessage(filter, message, option) end

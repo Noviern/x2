@@ -1,10 +1,19 @@
 ---@meta _
 
-ADD_GARDEN_MODE = 2       -- api/X2Butler
-CHANGE_LOOK_MODE = 5      -- api/X2Butler
-RECHARGE_COST_MODE = 3    -- api/X2Butler
-REGISTER_HARVEST_MODE = 4 -- api/X2Butler
-REGISTER_TRACTOR_MODE = 6 -- api/X2Butler
-SWAP_EQUIPMENT_MODE = 1   -- api/X2Butler
+ADD_GARDEN_MODE = 2       -- api/X2Butler BUTLER_MODE
+CHANGE_LOOK_MODE = 5      -- api/X2Butler BUTLER_MODE
+RECHARGE_COST_MODE = 3    -- api/X2Butler BUTLER_MODE
+REGISTER_HARVEST_MODE = 4 -- api/X2Butler BUTLER_MODE
+REGISTER_TRACTOR_MODE = 6 -- api/X2Butler BUTLER_MODE
+SWAP_EQUIPMENT_MODE = 1   -- api/X2Butler BUTLER_MODE
 ---@class X2Butler
 X2Butler = {}             -- api/X2Butler
+
+---api/X2Butler
+---@alias BUTLER_MODE
+---| `ADD_GARDEN_MODE`
+---| `CHANGE_LOOK_MODE`
+---| `RECHARGE_COST_MODE`
+---| `REGISTER_HARVEST_MODE`
+---| `REGISTER_TRACTOR_MODE`
+---| `SWAP_EQUIPMENT_MODE`

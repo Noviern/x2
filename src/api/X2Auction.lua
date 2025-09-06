@@ -1,13 +1,27 @@
 ---@meta _
 
-ASK_ACCOUNT_BUFF = 3 -- api/X2Auction
-ASK_NORMAL = 0       -- api/X2Auction
-ASK_PCBANG = 1       -- api/X2Auction
-ASK_PREMIUM = 2      -- api/X2Auction
-PT_BID = 0           -- api/X2Auction
-PT_PARTITION = 1     -- api/X2Auction
+ASK_ACCOUNT_BUFF = 3 -- api/X2Auction ASK
+ASK_NORMAL = 0       -- api/X2Auction ASK
+ASK_PCBANG = 1       -- api/X2Auction ASK
+ASK_PREMIUM = 2      -- api/X2Auction ASK
+PT_BID = 0           -- api/X2Auction PT
+PT_PARTITION = 1     -- api/X2Auction PT
 ---@class X2Auction
 X2Auction = {}       -- api/X2Auction
+
+---api/X2Auction
+---@TODO: Auction Search Kind?
+---@alias ASK
+---| `ASK_ACCOUNT_BUFF`
+---| `ASK_NORMAL`
+---| `ASK_PCBANG`
+---| `ASK_PREMIUM`
+
+---api/X2Auction
+---Post Type
+---@alias PT
+---| `PT_BID`
+---| `PT_PARTITION`
 
 ---Requests the market price for an item, triggering the `DIAGONAL_ASR` event.
 ---@param itemType number The type of item.
