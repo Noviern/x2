@@ -12,8 +12,8 @@ AP_TOPRIGHT = 1        -- objects/ChatMessage
 CT_ABILITY = 2         -- objects/ChatMessage
 CT_EXPEDITION_NAME = 3 -- objects/ChatMessage
 CT_NAME = 1            -- objects/ChatMessage
-DC_ALWAYS = 0          -- objects/ChatMessage
-DC_SHIFT_KEY_DOWN = 1  -- objects/ChatMessage
+DC_ALWAYS = 0          -- objects/ChatMessage DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/ChatMessage DRAG_CONDITION
 
 ---@TODO: scriptsbin\x2ui\chat\chat_window.lua uses these methods but unsure what widget type it is as its never explicitly stated.
 

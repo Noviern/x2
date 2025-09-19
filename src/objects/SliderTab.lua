@@ -12,5 +12,5 @@ AP_TOPRIGHT = 1        -- objects/SliderTab
 CT_ABILITY = 2         -- objects/SliderTab
 CT_EXPEDITION_NAME = 3 -- objects/SliderTab
 CT_NAME = 1            -- objects/SliderTab
-DC_ALWAYS = 0          -- objects/SliderTab
-DC_SHIFT_KEY_DOWN = 1  -- objects/SliderTab
+DC_ALWAYS = 0          -- objects/SliderTab DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/SliderTab DRAG_CONDITION

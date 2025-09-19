@@ -9,9 +9,16 @@ AP_RIGHT = 7         -- objects/ImageDrawable
 AP_TOP = 5           -- objects/ImageDrawable
 AP_TOPLEFT = 0       -- objects/ImageDrawable
 AP_TOPRIGHT = 1      -- objects/ImageDrawable
-DAT_LINEAR_ALPHA = 4 -- objects/ImageDrawable
-DAT_LINEAR_SCALE = 2 -- objects/ImageDrawable
-DAT_MOVE = 1         -- objects/ImageDrawable
+DAT_LINEAR_ALPHA = 4 -- objects/ImageDrawable DAT
+DAT_LINEAR_SCALE = 2 -- objects/ImageDrawable DAT
+DAT_MOVE = 1         -- objects/ImageDrawable DAT
+
+---objects/ImageDrawable
+---Drawable Animation Type
+---@alias DAT
+---| `DAT_LINEAR_ALPHA`
+---| `DAT_LINEAR_SCALE`
+---| `DAT_MOVE`
 
 ---objects/ImageDrawable
 ---@class ImageDrawable: DrawableDDS

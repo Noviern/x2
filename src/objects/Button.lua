@@ -14,13 +14,13 @@ AP_TOPRIGHT = 1           -- objects/Button
 CT_ABILITY = 2            -- objects/Button
 CT_EXPEDITION_NAME = 3    -- objects/Button
 CT_NAME = 1               -- objects/Button
-DC_ALWAYS = 0             -- objects/Button
-DC_SHIFT_KEY_DOWN = 1     -- objects/Button
-UI_BUTTON_DISABLED = 3    -- objects/Button
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/Button
-UI_BUTTON_MAX = 4         -- objects/Button The count of UI_BUTTON states.
-UI_BUTTON_NORMAL = 0      -- objects/Button
-UI_BUTTON_PUSHED = 2      -- objects/Button
+DC_ALWAYS = 0             -- objects/Button DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1     -- objects/Button DRAG_CONDITION
+UI_BUTTON_DISABLED = 3    -- objects/Button UI_BUTTON_STATE
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/Button UI_BUTTON_STATE
+UI_BUTTON_MAX = 4         -- objects/Button
+UI_BUTTON_NORMAL = 0      -- objects/Button UI_BUTTON_STATE
+UI_BUTTON_PUSHED = 2      -- objects/Button UI_BUTTON_STATE
 
 ---objects/Button
 ---@alias UI_BUTTON_STATE
@@ -32,10 +32,10 @@ UI_BUTTON_PUSHED = 2      -- objects/Button
 ---objects/Button
 ---@class Button: Widget
 ---@field style TextStyle
----@class button: Button
 local Button = {}
+---@class button: Button
 
----@TODO: What is the default layer?
+---@TODO: What is the default layer? layer might not actually exist.
 ---Creates a drawable for the specified button state and type.
 ---@param state UI_BUTTON_STATE The button state (e.g., normal, pushed, disabled).
 ---@param drawableType UOT_DRAWABLE The type of drawable to create.
@@ -50,6 +50,14 @@ local Button = {}
 ---@see UI_BUTTON_STATE
 ---@see UOT_DRAWABLE
 ---@see DrawableDDS
+---@see ColorDrawable
+---@see NinePartDrawable
+---@see ThreePartDrawable
+---@see ImageDrawable
+---@overload fun(self: self, state: UI_BUTTON_STATE, drawableType: 7, path: string, layer?: DRAWABLE_NAME_LAYER): ColorDrawable
+---@overload fun(self: self, state: UI_BUTTON_STATE, drawableType: UOT_NINE_PART_DRAWABLE, path: string, layer?: DRAWABLE_NAME_LAYER): NinePartDrawable
+---@overload fun(self: self, state: UI_BUTTON_STATE, drawableType: 9, path: string, layer?: DRAWABLE_NAME_LAYER): ThreePartDrawable
+---@overload fun(self: self, state: UI_BUTTON_STATE, drawableType: UOT_IMAGE_DRAWABLE, path: string, layer?: DRAWABLE_NAME_LAYER): ImageDrawable
 function Button:CreateStateDrawable(state, drawableType, path, layer) end
 
 ---Disables clicking for the specified mouse button.

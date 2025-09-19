@@ -12,8 +12,8 @@ AP_TOPRIGHT = 1        -- objects/MegaphoneChatEdit
 CT_ABILITY = 2         -- objects/MegaphoneChatEdit
 CT_EXPEDITION_NAME = 3 -- objects/MegaphoneChatEdit
 CT_NAME = 1            -- objects/MegaphoneChatEdit
-DC_ALWAYS = 0          -- objects/MegaphoneChatEdit
-DC_SHIFT_KEY_DOWN = 1  -- objects/MegaphoneChatEdit
+DC_ALWAYS = 0          -- objects/MegaphoneChatEdit DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/MegaphoneChatEdit DRAG_CONDITION
 
 ---objects/MegaphoneChatEdit
 ---@class MegaphoneChatEdit: Editbox, ChatEdit

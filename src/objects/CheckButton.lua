@@ -12,19 +12,19 @@ AP_TOPRIGHT = 1           -- objects/CheckButton
 CT_ABILITY = 2            -- objects/CheckButton
 CT_EXPEDITION_NAME = 3    -- objects/CheckButton
 CT_NAME = 1               -- objects/CheckButton
-DC_ALWAYS = 0             -- objects/CheckButton
-DC_SHIFT_KEY_DOWN = 1     -- objects/CheckButton
-UI_BUTTON_DISABLED = 3    -- objects/CheckButton
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/CheckButton
+DC_ALWAYS = 0             -- objects/CheckButton DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1     -- objects/CheckButton DRAG_CONDITION
+UI_BUTTON_DISABLED = 3    -- objects/CheckButton UI_BUTTON_STATE
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/CheckButton UI_BUTTON_STATE
 UI_BUTTON_MAX = 4         -- objects/CheckButton
-UI_BUTTON_NORMAL = 0      -- objects/CheckButton
-UI_BUTTON_PUSHED = 2      -- objects/CheckButton
+UI_BUTTON_NORMAL = 0      -- objects/CheckButton UI_BUTTON_STATE
+UI_BUTTON_PUSHED = 2      -- objects/CheckButton UI_BUTTON_STATE
 
 ---objects/CheckButton
 ---@class Checkbutton: Button
----@class checkbutton: Checkbutton
 ---@field style TextStyle
 local Checkbutton = {}
+---@class checkbutton: Checkbutton
 
 ---Returns a boolean indicating the state of the Checkbutton.
 ---@return boolean checked `true` if the Checkbutton is checked, `false` otherwise.

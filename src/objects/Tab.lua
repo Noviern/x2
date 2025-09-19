@@ -12,16 +12,16 @@ AP_TOPRIGHT = 1        -- objects/Tab
 CT_ABILITY = 2         -- objects/Tab
 CT_EXPEDITION_NAME = 3 -- objects/Tab
 CT_NAME = 1            -- objects/Tab
-DC_ALWAYS = 0          -- objects/Tab
-DC_SHIFT_KEY_DOWN = 1  -- objects/Tab
+DC_ALWAYS = 0          -- objects/Tab DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Tab DRAG_CONDITION
 
 ---objects/Tab
 ---@class Tab: Widget, Tabbase
 ---@field selectedButton? Button[]
 ---@field unselectedButton? Button[]
 ---@field window? Window[]
----@class tab: Tab
 local Tab = {}
+---@class tab: Tab
 
 ---Adds a new tab to the Tab with specified button and window widgets.
 ---@param tabName string The name of the tab.

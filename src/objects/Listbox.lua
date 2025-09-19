@@ -12,15 +12,15 @@ AP_TOPRIGHT = 1        -- objects/Listbox
 CT_ABILITY = 2         -- objects/Listbox
 CT_EXPEDITION_NAME = 3 -- objects/Listbox
 CT_NAME = 1            -- objects/Listbox
-DC_ALWAYS = 0          -- objects/Listbox
-DC_SHIFT_KEY_DOWN = 1  -- objects/Listbox
+DC_ALWAYS = 0          -- objects/Listbox DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Listbox DRAG_CONDITION
 
 ---objects/Listbox
 ---@class Listbox: Widget
 ---@field itemStyle TextStyle
 ---@field itemStyleSub TextStyle
----@class listbox: Listbox
 local Listbox = {}
+---@class listbox: Listbox
 
 ---Appends an item to the Listbox with the specified key, value, and optional
 ---color.

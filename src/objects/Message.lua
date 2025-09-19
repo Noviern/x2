@@ -12,14 +12,14 @@ AP_TOPRIGHT = 1        -- objects/Message
 CT_ABILITY = 2         -- objects/Message
 CT_EXPEDITION_NAME = 3 -- objects/Message
 CT_NAME = 1            -- objects/Message
-DC_ALWAYS = 0          -- objects/Message
-DC_SHIFT_KEY_DOWN = 1  -- objects/Message
+DC_ALWAYS = 0          -- objects/Message DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Message DRAG_CONDITION
 
 ---objects/Message
 ---@class Message: Widget
 ---@field style TextStyle
----@class message: Message
 local Message = {}
+---@class message: Message
 
 ---Adds a message to the Message. Must be used after defining the widgets
 ---dimensions.

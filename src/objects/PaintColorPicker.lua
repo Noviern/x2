@@ -12,15 +12,15 @@ AP_TOPRIGHT = 1        -- objects/PaintColorPicker
 CT_ABILITY = 2         -- objects/PaintColorPicker
 CT_EXPEDITION_NAME = 3 -- objects/PaintColorPicker
 CT_NAME = 1            -- objects/PaintColorPicker
-DC_ALWAYS = 0          -- objects/PaintColorPicker
-DC_SHIFT_KEY_DOWN = 1  -- objects/PaintColorPicker
+DC_ALWAYS = 0          -- objects/PaintColorPicker DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/PaintColorPicker DRAG_CONDITION
 
 ---objects/PaintColorPicker
 ---@class PaintColorPicker: Widget
 ---@field luminanceWidget EmptyWidget
 ---@field spectrumWidget EmptyWidget
----@class paintcolorpicker: PaintColorPicker
 local PaintColorPicker = {}
+---@class paintcolorpicker: PaintColorPicker
 
 ---Retrieves the HSL color values of the PaintColorPicker.
 ---@return number hue The hue component. (min: `0`, max: `1`)

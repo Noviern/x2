@@ -12,8 +12,8 @@ AP_TOPRIGHT = 1           -- objects/CooldownButton
 CT_ABILITY = 2            -- objects/CooldownButton
 CT_EXPEDITION_NAME = 3    -- objects/CooldownButton
 CT_NAME = 1               -- objects/CooldownButton
-DC_ALWAYS = 0             -- objects/CooldownButton
-DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownButton
+DC_ALWAYS = 0             -- objects/CooldownButton DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownButton DRAG_CONDITION
 UI_BUTTON_DISABLED = 3    -- objects/CooldownButton
 UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownButton
 UI_BUTTON_MAX = 4         -- objects/CooldownButton
@@ -23,8 +23,8 @@ UI_BUTTON_PUSHED = 2      -- objects/CooldownButton
 
 ---objects/CooldownButton
 ---@class CooldownButton: Button
----@class cooldownbutton: CooldownButton
 local CooldownButton = {}
+---@class cooldownbutton: CooldownButton
 
 ---@TODO: I never got this to work. Broken?
 ---Sets the cooldown for the CooldownButton.

@@ -12,10 +12,10 @@ AP_TOPRIGHT = 1        -- objects/X2Editbox
 CT_ABILITY = 2         -- objects/X2Editbox
 CT_EXPEDITION_NAME = 3 -- objects/X2Editbox
 CT_NAME = 1            -- objects/X2Editbox
-DC_ALWAYS = 0          -- objects/X2Editbox
-DC_SHIFT_KEY_DOWN = 1  -- objects/X2Editbox
+DC_ALWAYS = 0          -- objects/X2Editbox DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/X2Editbox DRAG_CONDITION
 
 ---objects/X2Editbox
 ---@class X2EditBox: Editbox
----@class x2editbox: X2EditBox
 local X2EditBox = {}
+---@class x2editbox: X2EditBox

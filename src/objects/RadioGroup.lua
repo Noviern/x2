@@ -12,14 +12,14 @@ AP_TOPRIGHT = 1        -- objects/RadioGroup
 CT_ABILITY = 2         -- objects/RadioGroup
 CT_EXPEDITION_NAME = 3 -- objects/RadioGroup
 CT_NAME = 1            -- objects/RadioGroup
-DC_ALWAYS = 0          -- objects/RadioGroup
-DC_SHIFT_KEY_DOWN = 1  -- objects/RadioGroup
+DC_ALWAYS = 0          -- objects/RadioGroup DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/RadioGroup DRAG_CONDITION
 
 ---objects/RadioGroup
 ---@class RadioGroup: Widget
 ---@field frame? RadioItem[]
----@class radiogroup: RadioGroup
 local RadioGroup = {}
+---@class radiogroup: RadioGroup
 
 ---Checks the radio item at the specified index in the RadioGroup.
 ---@param index number The index of the radio item to check.

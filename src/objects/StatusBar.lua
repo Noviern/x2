@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/StatusBar
 CT_ABILITY = 2         -- objects/StatusBar
 CT_EXPEDITION_NAME = 3 -- objects/StatusBar
 CT_NAME = 1            -- objects/StatusBar
-DC_ALWAYS = 0          -- objects/StatusBar
-DC_SHIFT_KEY_DOWN = 1  -- objects/StatusBar
+DC_ALWAYS = 0          -- objects/StatusBar DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/StatusBar DRAG_CONDITION
 
 ---objects/StatusBar
 ---@class StatusBar: Widget
----@class statusbar: StatusBar
 local StatusBar = {}
+---@class statusbar: StatusBar
 
 ---@TODO: Broken?
 ---Adds a child widget to the StatusBar with specified anchoring.

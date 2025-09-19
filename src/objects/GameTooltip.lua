@@ -12,27 +12,44 @@ AP_TOPRIGHT = 1                 -- objects/GameTooltip
 CT_ABILITY = 2                  -- objects/GameTooltip
 CT_EXPEDITION_NAME = 3          -- objects/GameTooltip
 CT_NAME = 1                     -- objects/GameTooltip
-DC_ALWAYS = 0                   -- objects/GameTooltip
-DC_SHIFT_KEY_DOWN = 1           -- objects/GameTooltip
-UFT_CUPLABOR = "|p8;"           -- objects/GameTooltip
-UFT_CURHP = "|p2;"              -- objects/GameTooltip
-UFT_CURMP = "|p5;"              -- objects/GameTooltip
-UFT_GEARSCORE = "|p12;"         -- objects/GameTooltip
-UFT_MAXHP = "|p3;"              -- objects/GameTooltip
-UFT_MAXLABOR = "|p9;"           -- objects/GameTooltip
-UFT_MAXMP = "|p6;"              -- objects/GameTooltip
-UFT_NAME = "|p1;"               -- objects/GameTooltip
-UFT_PERHP = "|p4;"              -- objects/GameTooltip
-UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/GameTooltip
-UFT_PERMP = "|p7;"              -- objects/GameTooltip
-UFT_PVPHONOR = "|p10;"          -- objects/GameTooltip
-UFT_PVPKILL = "|p11;"           -- objects/GameTooltip
+DC_ALWAYS = 0                   -- objects/GameTooltip DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1           -- objects/GameTooltip DRAG_CONDITION
+UFT_CUPLABOR = "|p8;"           -- objects/GameTooltip UFT
+UFT_CURHP = "|p2;"              -- objects/GameTooltip UFT
+UFT_CURMP = "|p5;"              -- objects/GameTooltip UFT
+UFT_GEARSCORE = "|p12;"         -- objects/GameTooltip UFT
+UFT_MAXHP = "|p3;"              -- objects/GameTooltip UFT
+UFT_MAXLABOR = "|p9;"           -- objects/GameTooltip UFT
+UFT_MAXMP = "|p6;"              -- objects/GameTooltip UFT
+UFT_NAME = "|p1;"               -- objects/GameTooltip UFT
+UFT_PERHP = "|p4;"              -- objects/GameTooltip UFT
+UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/GameTooltip UFT
+UFT_PERMP = "|p7;"              -- objects/GameTooltip UFT
+UFT_PVPHONOR = "|p10;"          -- objects/GameTooltip UFT
+UFT_PVPKILL = "|p11;"           -- objects/GameTooltip UFT
+
+---objects/GameTooltip
+---@TODO: ? ? ?
+---@alias UFT
+---| `UFT_CUPLABOR`
+---| `UFT_CURHP`
+---| `UFT_CURMP`
+---| `UFT_GEARSCORE`
+---| `UFT_MAXHP`
+---| `UFT_MAXLABOR`
+---| `UFT_MAXMP`
+---| `UFT_NAME`
+---| `UFT_PERHP`
+---| `UFT_PERIOD_LEADERSHIP`
+---| `UFT_PERMP`
+---| `UFT_PVPHONOR`
+---| `UFT_PVPKILL`
 
 ---objects/GameTooltip
 ---@class GameTooltip: Widget
 ---@field style TextStyle
----@class gametooltip: GameTooltip
 local GameTooltip = {}
+---@class gametooltip: GameTooltip
 
 ---Adds text to an existing line in the GameTooltip on the opposite side.
 ---@param index number The line index to add the text to. (Starts at `0`)

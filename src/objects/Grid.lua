@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/Grid
 CT_ABILITY = 2         -- objects/Grid
 CT_EXPEDITION_NAME = 3 -- objects/Grid
 CT_NAME = 1            -- objects/Grid
-DC_ALWAYS = 0          -- objects/Grid
-DC_SHIFT_KEY_DOWN = 1  -- objects/Grid
+DC_ALWAYS = 0          -- objects/Grid DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Grid DRAG_CONDITION
 
 ---objects/Grid
 ---@class Grid: Widget
----@class grid: Grid
 local Grid = {}
+---@class grid: Grid
 
 ---Clears the item from the Grid.
 ---@usage

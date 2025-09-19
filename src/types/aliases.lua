@@ -1,3 +1,5 @@
+---@alias DRAG_CONDITION `DC_ALWAYS` | `DC_SHIFT_KEY_DOWN`
+
 ---@alias WIDGET_TYPES
 ---| Avi
 ---| Button

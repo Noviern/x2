@@ -1050,8 +1050,8 @@
 ---mission status.
 ---@alias HERO_ALL_SCORE_UPDATED_HANDLER fun(factionID: FACTION_TYPE)
 
----
----@alias HERO_ANNOUNCE_REMAIN_TIME_HANDLER fun(remainTime, isStartTime)
+---Event triggers every 10 seconds when hero annoucement is about to happen.
+---@alias HERO_ANNOUNCE_REMAIN_TIME_HANDLER fun(remainTime: number, isStartTime: boolean)
 
 ---
 ---@alias HERO_CANDIDATE_NOTI_HANDLER fun()
@@ -1759,7 +1759,7 @@
 ---changing raid window zoom setting.
 ---@alias RAID_FRAME_SIMPLE_VIEW_HANDLER fun(simple: boolean)
 
----Event triggers when the player views thed details of a raid recruit.
+---Event triggers when the player views the details of a raid recruit.
 ---@alias RAID_RECRUIT_DETAIL_HANDLER fun(data: RaidRecruitDetailInfo)
 
 ---@TODO: test this more.

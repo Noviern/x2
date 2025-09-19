@@ -12,14 +12,14 @@ AP_TOPRIGHT = 1        -- objects/DynamicList
 CT_ABILITY = 2         -- objects/DynamicList
 CT_EXPEDITION_NAME = 3 -- objects/DynamicList
 CT_NAME = 1            -- objects/DynamicList
-DC_ALWAYS = 0          -- objects/DynamicList
-DC_SHIFT_KEY_DOWN = 1  -- objects/DynamicList
+DC_ALWAYS = 0          -- objects/DynamicList DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/DynamicList DRAG_CONDITION
 
 ---objects/DynamicList
 ---@class DynamicList: Widget
 ---@field content EmptyWidget TODO: This has a anchor field EmptyWidget
----@class dynamiclist: DynamicList
 local DynamicList = {}
+---@class dynamiclist: DynamicList
 
 ---Clears all data from the DynamicList.
 ---@usage

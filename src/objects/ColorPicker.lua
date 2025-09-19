@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/ColorPicker
 CT_ABILITY = 2         -- objects/ColorPicker
 CT_EXPEDITION_NAME = 3 -- objects/ColorPicker
 CT_NAME = 1            -- objects/ColorPicker
-DC_ALWAYS = 0          -- objects/ColorPicker
-DC_SHIFT_KEY_DOWN = 1  -- objects/ColorPicker
+DC_ALWAYS = 0          -- objects/ColorPicker DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/ColorPicker DRAG_CONDITION
 
 ---objects/ColorPicker
 ---@class ColorPicker: Widget
----@class colorpicker: ColorPicker
 local ColorPicker = {}
+---@class colorpicker: ColorPicker
 
 ---Retrieves the color at the specified point on the ColorPicker.
 ---@param xPos number The x-coordinate of the point.

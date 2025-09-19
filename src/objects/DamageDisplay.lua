@@ -12,17 +12,18 @@ AP_TOPRIGHT = 1         -- objects/DamageDisplay
 CT_ABILITY = 2          -- objects/DamageDisplay
 CT_EXPEDITION_NAME = 3  -- objects/DamageDisplay
 CT_NAME = 1             -- objects/DamageDisplay
-DC_ALWAYS = 0           -- objects/DamageDisplay
-DC_SHIFT_KEY_DOWN = 1   -- objects/DamageDisplay
-LAT_AFTERIMAGE = 4      -- objects/DamageDisplay
-LAT_COUNT = 2           -- objects/DamageDisplay
-LAT_LINEAR_DISPLAY = 16 -- objects/DamageDisplay
-LAT_MOVE = 1            -- objects/DamageDisplay
-LAT_NONE = 0            -- objects/DamageDisplay
-LAT_SHAKE = 8           -- objects/DamageDisplay
-PCT_DEFAULT = 0         -- objects/DamageDisplay
-PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay
+DC_ALWAYS = 0           -- objects/DamageDisplay DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1   -- objects/DamageDisplay DRAG_CONDITION
+LAT_AFTERIMAGE = 4      -- objects/DamageDisplay LAT
+LAT_COUNT = 2           -- objects/DamageDisplay LAT
+LAT_LINEAR_DISPLAY = 16 -- objects/DamageDisplay LAT
+LAT_MOVE = 1            -- objects/DamageDisplay LAT
+LAT_NONE = 0            -- objects/DamageDisplay LAT
+LAT_SHAKE = 8           -- objects/DamageDisplay LAT
+PCT_DEFAULT = 0         -- objects/DamageDisplay PCT
+PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay PCT
 
+---@TODO: ? ? ?
 ---@alias LAT
 ---| `LAT_AFTERIMAGE`
 ---| `LAT_COUNT`
@@ -32,6 +33,7 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay
 ---| `LAT_SHAKE`
 
 ---objects/DamageDisplay
+---@TODO: ? ? ?
 ---@alias PCT
 ---| `PCT_DEFAULT`
 ---| `PCT_SHIP_COLLISION`
@@ -40,8 +42,8 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay
 ---@class DamageDisplay: Widget
 ---@field extraStyle TextStyle
 ---@field style TextStyle
----@class damagedisplay: DamageDisplay
 local DamageDisplay = {}
+---@class damagedisplay: DamageDisplay
 
 ---Enables or disables animation for the DamageDisplay.
 ---@param anim boolean `true` to enable animation, `false` to disable. (default: `false`)

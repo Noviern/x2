@@ -12,18 +12,18 @@ AP_TOPRIGHT = 1           -- objects/CooldownInventoryButton
 CT_ABILITY = 2            -- objects/CooldownInventoryButton
 CT_EXPEDITION_NAME = 3    -- objects/CooldownInventoryButton
 CT_NAME = 1               -- objects/CooldownInventoryButton
-DC_ALWAYS = 0             -- objects/CooldownInventoryButton
-DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownInventoryButton
-UI_BUTTON_DISABLED = 3    -- objects/CooldownInventoryButton
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownInventoryButton
+DC_ALWAYS = 0             -- objects/CooldownInventoryButton DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownInventoryButton DRAG_CONDITION
+UI_BUTTON_DISABLED = 3    -- objects/CooldownInventoryButton UI_BUTTON_STATE
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownInventoryButton UI_BUTTON_STATE
 UI_BUTTON_MAX = 4         -- objects/CooldownInventoryButton
-UI_BUTTON_NORMAL = 0      -- objects/CooldownInventoryButton
-UI_BUTTON_PUSHED = 2      -- objects/CooldownInventoryButton
+UI_BUTTON_NORMAL = 0      -- objects/CooldownInventoryButton UI_BUTTON_STATE
+UI_BUTTON_PUSHED = 2      -- objects/CooldownInventoryButton UI_BUTTON_STATE
 
 ---objects/CooldownInventoryButton
 ---@class CooldownInventoryButton: CooldownButton
----@class cooldowninventorybutton: CooldownInventoryButton
 local CooldownInventoryButton = {}
+---@class cooldowninventorybutton: CooldownInventoryButton
 
 ---@TODO: Broken?
 ---Sets the bag item slot for the CooldownInventoryButton.

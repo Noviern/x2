@@ -12,14 +12,14 @@ AP_TOPRIGHT = 1                -- objects/RoadMap
 CT_ABILITY = 2                 -- objects/RoadMap
 CT_EXPEDITION_NAME = 3         -- objects/RoadMap
 CT_NAME = 1                    -- objects/RoadMap
-DC_ALWAYS = 0                  -- objects/RoadMap
-DC_SHIFT_KEY_DOWN = 1          -- objects/RoadMap
+DC_ALWAYS = 0                  -- objects/RoadMap DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1          -- objects/RoadMap DRAG_CONDITION
 MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/RoadMap
 
 ---objects/RoadMap
 ---@class RoadMap: Widget, Map
----@class roadmap: RoadMap
 local RoadMap = {}
+---@class roadmap: RoadMap
 
 ---@TODO: Document this
 function RoadMap:InitMapData() end

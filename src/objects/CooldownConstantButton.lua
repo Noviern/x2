@@ -12,17 +12,18 @@ AP_TOPRIGHT = 1           -- objects/CooldownConstantButton
 CT_ABILITY = 2            -- objects/CooldownConstantButton
 CT_EXPEDITION_NAME = 3    -- objects/CooldownConstantButton
 CT_NAME = 1               -- objects/CooldownConstantButton
-DC_ALWAYS = 0             -- objects/CooldownConstantButton
-DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownConstantButton
-UI_BUTTON_DISABLED = 3    -- objects/CooldownConstantButton
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownConstantButton
+DC_ALWAYS = 0             -- objects/CooldownConstantButton DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownConstantButton DRAG_CONDITION
+UI_BUTTON_DISABLED = 3    -- objects/CooldownConstantButton UI_BUTTON_STATE
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownConstantButton UI_BUTTON_STATE
 UI_BUTTON_MAX = 4         -- objects/CooldownConstantButton
-UI_BUTTON_NORMAL = 0      -- objects/CooldownConstantButton
-UI_BUTTON_PUSHED = 2      -- objects/CooldownConstantButton
+UI_BUTTON_NORMAL = 0      -- objects/CooldownConstantButton UI_BUTTON_STATE
+UI_BUTTON_PUSHED = 2      -- objects/CooldownConstantButton UI_BUTTON_STATE
 
 ---objects/CooldownConstantButton
 ---@class CooldownConstantButton: CooldownButton
 local CooldownConstantButton = {}
+---@class cooldownconstantbutton: CooldownConstantButton
 
 ---@TODO: Broken?
 ---Sets the item type for the CooldownConstantButton.

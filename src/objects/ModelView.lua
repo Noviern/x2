@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/ModelView
 CT_ABILITY = 2         -- objects/ModelView
 CT_EXPEDITION_NAME = 3 -- objects/ModelView
 CT_NAME = 1            -- objects/ModelView
-DC_ALWAYS = 0          -- objects/ModelView
-DC_SHIFT_KEY_DOWN = 1  -- objects/ModelView
+DC_ALWAYS = 0          -- objects/ModelView DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/ModelView DRAG_CONDITION
 
 ---objects/ModelView
 ---@class ModelView: Widget
----@class modelview: ModelView
 local ModelView = {}
+---@class modelview: ModelView
 
 ---Adds rotation `angle` to the ModelView. positive is left negative is right
 ---@param angle number in degrees

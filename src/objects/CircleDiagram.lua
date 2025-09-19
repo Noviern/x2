@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/CircleDiagram
 CT_ABILITY = 2         -- objects/CircleDiagram
 CT_EXPEDITION_NAME = 3 -- objects/CircleDiagram
 CT_NAME = 1            -- objects/CircleDiagram
-DC_ALWAYS = 0          -- objects/CircleDiagram
-DC_SHIFT_KEY_DOWN = 1  -- objects/CircleDiagram
+DC_ALWAYS = 0          -- objects/CircleDiagram DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/CircleDiagram DRAG_CONDITION
 
 ---objects/CircleDiagram
 ---@class CircleDiagram: Widget
----@class circlediagram: CircleDiagram
 local CircleDiagram = {}
+---@class circlediagram: CircleDiagram
 
 ---Adds a point at the specified offset coordinates for the CircleDiagram.
 ---@param offX number The x-coordinate offset.

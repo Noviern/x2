@@ -12,30 +12,30 @@ AP_TOPRIGHT = 1                 -- objects/Slot
 CT_ABILITY = 2                  -- objects/Slot
 CT_EXPEDITION_NAME = 3          -- objects/Slot
 CT_NAME = 1                     -- objects/Slot
-DC_ALWAYS = 0                   -- objects/Slot
-DC_SHIFT_KEY_DOWN = 1           -- objects/Slot
-ISLOT_ABILITY_VIEW = 243        -- objects/Slot
-ISLOT_ACTION = 254              -- objects/Slot
-ISLOT_BAG = 2                   -- objects/Slot
-ISLOT_BANK = 3                  -- objects/Slot
-ISLOT_COFFER = 4                -- objects/Slot
-ISLOT_CONSTANT = 249            -- objects/Slot
-ISLOT_EQUIPMENT = 1             -- objects/Slot
-ISLOT_GUILD_BANK = 33           -- objects/Slot
-ISLOT_HEIR_SKILL_VIEW = 234     -- objects/Slot
-ISLOT_INSTANT_KILL_STREAK = 244 -- objects/Slot
-ISLOT_MODE_ACTION = 246         -- objects/Slot
-ISLOT_ORIGIN_SKILL_VIEW = 233   -- objects/Slot
-ISLOT_PET_BATTLE_ACTION = 239   -- objects/Slot
-ISLOT_PET_RIDE_ACTION = 248     -- objects/Slot
-ISLOT_PRELIMINARY_EQUIPMENT = 7 -- objects/Slot
-ISLOT_SHORTCUT_ACTION = 235     -- objects/Slot
-ISLOT_SKILL_ALERT = 232         -- objects/Slot
-UI_BUTTON_DISABLED = 3          -- objects/Slot
-UI_BUTTON_HIGHLIGHTED = 1       -- objects/Slot
+DC_ALWAYS = 0                   -- objects/Slot DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1           -- objects/Slot DRAG_CONDITION
+ISLOT_ABILITY_VIEW = 243        -- objects/Slot SLOT_TYPE
+ISLOT_ACTION = 254              -- objects/Slot SLOT_TYPE
+ISLOT_BAG = 2                   -- objects/Slot SLOT_TYPE
+ISLOT_BANK = 3                  -- objects/Slot SLOT_TYPE
+ISLOT_COFFER = 4                -- objects/Slot SLOT_TYPE
+ISLOT_CONSTANT = 249            -- objects/Slot SLOT_TYPE
+ISLOT_EQUIPMENT = 1             -- objects/Slot SLOT_TYPE
+ISLOT_GUILD_BANK = 33           -- objects/Slot SLOT_TYPE
+ISLOT_HEIR_SKILL_VIEW = 234     -- objects/Slot SLOT_TYPE
+ISLOT_INSTANT_KILL_STREAK = 244 -- objects/Slot SLOT_TYPE
+ISLOT_MODE_ACTION = 246         -- objects/Slot SLOT_TYPE
+ISLOT_ORIGIN_SKILL_VIEW = 233   -- objects/Slot SLOT_TYPE
+ISLOT_PET_BATTLE_ACTION = 239   -- objects/Slot SLOT_TYPE
+ISLOT_PET_RIDE_ACTION = 248     -- objects/Slot SLOT_TYPE
+ISLOT_PRELIMINARY_EQUIPMENT = 7 -- objects/Slot SLOT_TYPE
+ISLOT_SHORTCUT_ACTION = 235     -- objects/Slot SLOT_TYPE
+ISLOT_SKILL_ALERT = 232         -- objects/Slot SLOT_TYPE
+UI_BUTTON_DISABLED = 3          -- objects/Slot UI_BUTTON_STATE
+UI_BUTTON_HIGHLIGHTED = 1       -- objects/Slot UI_BUTTON_STATE
 UI_BUTTON_MAX = 4               -- objects/Slot
-UI_BUTTON_NORMAL = 0            -- objects/Slot
-UI_BUTTON_PUSHED = 2            -- objects/Slot
+UI_BUTTON_NORMAL = 0            -- objects/Slot UI_BUTTON_STATE
+UI_BUTTON_PUSHED = 2            -- objects/Slot UI_BUTTON_STATE
 
 ---objects/Slot
 ---@alias SLOT_TYPE
@@ -62,8 +62,8 @@ UI_BUTTON_PUSHED = 2            -- objects/Slot
 ---@field cooltime_style TextStyle
 ---@field icon IconDrawable
 ---@field style TextStyle
----@class slot: Slot
 local Slot = {}
+---@class slot: Slot
 
 ---Changes the icon layer for the Slot.
 ---@param nameLayer DRAWABLE_NAME_LAYER The name of the layer to set.
@@ -153,7 +153,7 @@ function Slot:EstablishSkillSlot(slotType, slotIdx) end
 ---@see SLOT_TYPE
 ---@overload fun(self: self, slotType: 1, slotIdx: ES, virtualSlotIdx: number) ---@TODO: ISLOT_EQUIPMENT currently does not display but left click shows the weapon
 ---@overload fun(self: self, slotType: 7, slotIdx: PES, virtualSlotIdx: number) ---@TODO: ISLOT_PRELIMINARY_EQUIPMENT currently does not display but left click shows the weapon
----@overload fun(self: self, slotType: 234, slotIdx: HEIR_SKILL_TYPE, virtualSlotIdx: number) ---@TODO: ISLOT_HEIR_SKILL_VIEW 
+---@overload fun(self: self, slotType: 234, slotIdx: HEIR_SKILL_TYPE, virtualSlotIdx: number) ---@TODO: ISLOT_HEIR_SKILL_VIEW
 ---@overload fun(self: self, slotType: 243, slotIdx: SKILL, virtualSlotIdx: number) ---@TODO: ISLOT_ABILITY_VIEW
 function Slot:EstablishSlot(slotType, slotIdx) end
 

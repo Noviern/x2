@@ -12,16 +12,17 @@ AP_TOPRIGHT = 1        -- objects/Editbox
 CT_ABILITY = 2         -- objects/Editbox
 CT_EXPEDITION_NAME = 3 -- objects/Editbox
 CT_NAME = 1            -- objects/Editbox
-DC_ALWAYS = 0          -- objects/Editbox
-DC_SHIFT_KEY_DOWN = 1  -- objects/Editbox
+DC_ALWAYS = 0          -- objects/Editbox DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Editbox DRAG_CONDITION
 
 ---@TODO: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
 
 ---objects/Editbox
+
 ---@class Editbox: Widget, Editboxbase
 ---@field prefixStyle TextStyle
----@class editbox: Editbox
 local Editbox = {}
+---@class editbox: Editbox
 
 ---Adds a text entry to the Editbox history.
 ---@param text string The text to add to the history.
@@ -33,7 +34,7 @@ function Editbox:AddHistoryLine(text) end
 
 ---@TODO: Verify nameType and NRT_CHARACTER usage.
 ---Checks the name policy for the Editbox.
----@param nameType number The name type to check against (e.g., NRT_CHARACTER).
+---@param nameType NRT The name type to check against (e.g., NRT_CHARACTER).
 ---@usage
 ---```lua
 ---widget:CheckNamePolicy(NRT_CHARACTER)

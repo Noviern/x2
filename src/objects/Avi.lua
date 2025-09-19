@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/Avi
 CT_ABILITY = 2         -- objects/Avi
 CT_EXPEDITION_NAME = 3 -- objects/Avi
 CT_NAME = 1            -- objects/Avi
-DC_ALWAYS = 0          -- objects/Avi
-DC_SHIFT_KEY_DOWN = 1  -- objects/Avi
+DC_ALWAYS = 0          -- objects/Avi DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Avi DRAG_CONDITION
 
 ---objects/Avi
 ---@class Avi: Widget
----@class avi: Avi
 local Avi = {}
+---@class avi: Avi
 
 ---Sets the AVI file to be used by the widget.
 ---@param fileName AVI_PATH The path to the AVI file.

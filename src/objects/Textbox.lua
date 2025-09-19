@@ -12,14 +12,14 @@ AP_TOPRIGHT = 1        -- objects/Textbox
 CT_ABILITY = 2         -- objects/Textbox
 CT_EXPEDITION_NAME = 3 -- objects/Textbox
 CT_NAME = 1            -- objects/Textbox
-DC_ALWAYS = 0          -- objects/Textbox
-DC_SHIFT_KEY_DOWN = 1  -- objects/Textbox
+DC_ALWAYS = 0          -- objects/Textbox DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Textbox DRAG_CONDITION
 
 ---objects/Textbox
 ---@class Textbox: Widget
 ---@field style TextStyle
----@class textbox: Textbox
 local Textbox = {}
+---@class textbox: Textbox
 
 ---Retrieves the inset of the Textbox.
 ---@return number left The left inset. (default: `0`)

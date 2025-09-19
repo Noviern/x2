@@ -12,12 +12,12 @@ AP_TOPRIGHT = 1        -- objects/EmptyWidget
 CT_ABILITY = 2         -- objects/EmptyWidget
 CT_EXPEDITION_NAME = 3 -- objects/EmptyWidget
 CT_NAME = 1            -- objects/EmptyWidget
-DC_ALWAYS = 0          -- objects/EmptyWidget
-DC_SHIFT_KEY_DOWN = 1  -- objects/EmptyWidget
+DC_ALWAYS = 0          -- objects/EmptyWidget DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/EmptyWidget DRAG_CONDITION
 
 ---@class EmptyWidget: Widget
----@class emptywidget: EmptyWidget
 local EmptyWidget = {}
+---@class emptywidget: EmptyWidget
 
 ---@TODO: Not sure if this works.
 ---Sets whether to draw the border for the EmptyWidget and specifies its color.

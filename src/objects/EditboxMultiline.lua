@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/EditboxMultiline
 CT_ABILITY = 2         -- objects/EditboxMultiline
 CT_EXPEDITION_NAME = 3 -- objects/EditboxMultiline
 CT_NAME = 1            -- objects/EditboxMultiline
-DC_ALWAYS = 0          -- objects/EditboxMultiline
-DC_SHIFT_KEY_DOWN = 1  -- objects/EditboxMultiline
+DC_ALWAYS = 0          -- objects/EditboxMultiline DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/EditboxMultiline DRAG_CONDITION
 
 ---objects/EditboxMultiline
 ---@class EditboxMultiline: Widget, Editboxbase
----@class editboxmultiline: EditboxMultiline
 local EditboxMultiline = {}
+---@class editboxmultiline: EditboxMultiline
 
 ---Clears all text in the EditboxMultiline.
 function EditboxMultiline:Clear() end

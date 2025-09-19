@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/Pageable
 CT_ABILITY = 2         -- objects/Pageable
 CT_EXPEDITION_NAME = 3 -- objects/Pageable
 CT_NAME = 1            -- objects/Pageable
-DC_ALWAYS = 0          -- objects/Pageable
-DC_SHIFT_KEY_DOWN = 1  -- objects/Pageable
+DC_ALWAYS = 0          -- objects/Pageable DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Pageable DRAG_CONDITION
 
 ---objects/Pageable
 ---@class Pageable: Widget
----@class pageable: Pageable
 local Pageable = {}
+---@class pageable: Pageable
 
 ---Adds a widget to the specified page of the Pageable.
 ---@param widget Widget The widget to add.

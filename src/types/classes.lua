@@ -577,7 +577,7 @@ local Vslider = {}
 ---@class FrameInfo
 ---@field alpha? number
 ---@field animTime? number
----@field animType? LAT This can add multiple LAT
+---@field animType? DAT|LAT|CTA This can add multiple LAT
 ---@field h? number
 ---@field moveX? number
 ---@field moveY? number

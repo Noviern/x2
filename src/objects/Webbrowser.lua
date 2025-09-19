@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/Webbrowser
 CT_ABILITY = 2         -- objects/Webbrowser
 CT_EXPEDITION_NAME = 3 -- objects/Webbrowser
 CT_NAME = 1            -- objects/Webbrowser
-DC_ALWAYS = 0          -- objects/Webbrowser
-DC_SHIFT_KEY_DOWN = 1  -- objects/Webbrowser
+DC_ALWAYS = 0          -- objects/Webbrowser DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Webbrowser DRAG_CONDITION
 
 ---objects/Webbrowser
 ---@class Webbrowser: Widget
----@class webbrowser: Webbrowser
 local Webbrowser = {}
+---@class webbrowser: Webbrowser
 
 ---Clears focus from the Webbrowser.
 ---@usage

@@ -12,14 +12,14 @@ AP_TOPRIGHT = 1        -- objects/Label
 CT_ABILITY = 2         -- objects/Label
 CT_EXPEDITION_NAME = 3 -- objects/Label
 CT_NAME = 1            -- objects/Label
-DC_ALWAYS = 0          -- objects/Label
-DC_SHIFT_KEY_DOWN = 1  -- objects/Label
+DC_ALWAYS = 0          -- objects/Label DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Label DRAG_CONDITION
 
 ---objects/Label
 ---@class Label: Widget
 ---@field style TextStyle
----@class label: Label
 local Label = {}
+---@class label: Label
 
 ---Retrieves the inset of the Label.
 ---@return number left The left inset. (default: `0`)

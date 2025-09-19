@@ -12,8 +12,8 @@ AP_TOPRIGHT = 1        -- objects/ChatEdit
 CT_ABILITY = 2         -- objects/ChatEdit
 CT_EXPEDITION_NAME = 3 -- objects/ChatEdit
 CT_NAME = 1            -- objects/ChatEdit
-DC_ALWAYS = 0          -- objects/ChatEdit
-DC_SHIFT_KEY_DOWN = 1  -- objects/ChatEdit
+DC_ALWAYS = 0          -- objects/ChatEdit DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/ChatEdit DRAG_CONDITION
 
 -- @field SetChatTypeColor fun(self: self, chatType, r: number, g: number, b: number, a: number) ---@TODO: This does not exist.
 

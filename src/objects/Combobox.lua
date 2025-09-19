@@ -12,8 +12,8 @@ AP_TOPRIGHT = 1        -- objects/Combobox
 CT_ABILITY = 2         -- objects/Combobox
 CT_EXPEDITION_NAME = 3 -- objects/Combobox
 CT_NAME = 1            -- objects/Combobox
-DC_ALWAYS = 0          -- objects/Combobox
-DC_SHIFT_KEY_DOWN = 1  -- objects/Combobox
+DC_ALWAYS = 0          -- objects/Combobox DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Combobox DRAG_CONDITION
 
 ---objects/Combobox
 ---@class Combobox: Widget
@@ -21,8 +21,8 @@ DC_SHIFT_KEY_DOWN = 1  -- objects/Combobox
 ---@field selector X2EditBox
 ---@field selectorBtn Button
 ---@field toggle Button
----@class combobox: Combobox
 local Combobox = {}
+---@class combobox: Combobox
 
 ---@TODO: Clarify how this works; possibly creates a list for autocomplete.
 ---Inserts data into the Combobox for autocomplete functionality.

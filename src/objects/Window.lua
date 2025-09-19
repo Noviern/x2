@@ -12,15 +12,15 @@ AP_TOPRIGHT = 1        -- objects/Window
 CT_ABILITY = 2         -- objects/Window
 CT_EXPEDITION_NAME = 3 -- objects/Window
 CT_NAME = 1            -- objects/Window
-DC_ALWAYS = 0          -- objects/Window
-DC_SHIFT_KEY_DOWN = 1  -- objects/Window
+DC_ALWAYS = 0          -- objects/Window DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Window DRAG_CONDITION
 
 ---objects/Window
 ---@class Window: Widget
 ---@field modalBackgroundWindow EmptyWidget
 ---@field titleStyle TextStyle
----@class window: Window
 local Window = {}
+---@class window: Window
 
 ---Enables or disables closing the Window when the Escape key is pressed.
 ---@param escape boolean `true` to enable close on Escape, `false` to disable. (default: `false`)

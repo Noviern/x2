@@ -5,6 +5,7 @@
 ---@class Widget: Widgetbase, Uibounds, Uiobject
 local Widget = {}
 
+---@TODO: How does this work?
 ---Disables drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 ---@usage

@@ -1,7 +1,5 @@
 ---@meta _
 
----@alias DRAG_CONDITION `DC_ALWAYS` | `DC_SHIFT_KEY_DOWN`
-
 ---@class Widgetbase
 ---@field [string] any
 local Widgetbase = {}

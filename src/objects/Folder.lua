@@ -12,14 +12,14 @@ AP_TOPRIGHT = 1        -- objects/Folder
 CT_ABILITY = 2         -- objects/Folder
 CT_EXPEDITION_NAME = 3 -- objects/Folder
 CT_NAME = 1            -- objects/Folder
-DC_ALWAYS = 0          -- objects/Folder
-DC_SHIFT_KEY_DOWN = 1  -- objects/Folder
+DC_ALWAYS = 0          -- objects/Folder DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Folder DRAG_CONDITION
 
 ---objects/Folder
 ---@class Folder: Widget
 ---@field style TextStyle
----@class folder: Folder
 local Folder = {}
+---@class folder: Folder
 
 ---Closes the Folder.
 ---@usage

@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/Slider
 CT_ABILITY = 2         -- objects/Slider
 CT_EXPEDITION_NAME = 3 -- objects/Slider
 CT_NAME = 1            -- objects/Slider
-DC_ALWAYS = 0          -- objects/Slider
-DC_SHIFT_KEY_DOWN = 1  -- objects/Slider
+DC_ALWAYS = 0          -- objects/Slider DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Slider DRAG_CONDITION
 
 ---objects/Slider
 ---@class Slider: Widget
----@class slider: Slider
 local Slider = {}
+---@class slider: Slider
 
 ---Moves the slider down for vertical orientation or right for horizontal
 ---orientation.

@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/ChatTab
 CT_ABILITY = 2         -- objects/ChatTab
 CT_EXPEDITION_NAME = 3 -- objects/ChatTab
 CT_NAME = 1            -- objects/ChatTab
-DC_ALWAYS = 0          -- objects/ChatTab
-DC_SHIFT_KEY_DOWN = 1  -- objects/ChatTab
+DC_ALWAYS = 0          -- objects/ChatTab DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/ChatTab DRAG_CONDITION
 
 ---objects/ChatTab
 ---@class ChatWindow: Widget, Tabbase
----@class chatwindow: ChatWindow
 local ChatWindow = {}
+---@class chatwindow: ChatWindow
 
 ---Adds a new tab to the ChatWindow with the specified name and optional widget.
 ---@param tabName string The name of the tab.

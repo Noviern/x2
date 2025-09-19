@@ -335,11 +335,13 @@ UNIT_KIND_TEXT = 36                               -- api/Addon UI_TEXT_CATEGORY_
 UOT_EDITBOX = 3                                   -- api/Addon UOT
 UOT_EDITBOX_MULTILINE = 4                         -- api/Addon UOT
 UOT_EMPTY_WIDGET = 46                             -- api/Addon UOT
-UOT_IMAGE_DRAWABLE = 10                           -- api/Addon UOT
+UOT_IMAGE_DRAWABLE = 10                           -- api/Addon UOT UOT_DRAWABLE
+---@alias UOT_IMAGE_DRAWABLE 10
 UOT_LABEL = 1                                     -- api/Addon UOT
 UOT_LISTBOX = 5                                   -- api/Addon UOT
 UOT_LIST_CTRL = 45                                -- api/Addon UOT
-UOT_NINE_PART_DRAWABLE = 8                        -- api/Addon UOT
+UOT_NINE_PART_DRAWABLE = 8                        -- api/Addon UOT UOT_DRAWABLE
+---@alias UOT_NINE_PART_DRAWABLE 8
 UOT_SLIDER = 24                                   -- api/Addon UOT
 UOT_TEXT_STYLE = 13                               -- api/Addon UOT
 UOT_X2_EDITBOX = 53                               -- api/Addon UOT
@@ -662,10 +664,10 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 ---@TODO: keep track of this
 ---api/Addon
 ---@alias UOT_DRAWABLE
+---| `7` UOT_COLOR_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
 ---| `UOT_IMAGE_DRAWABLE`
 ---| `UOT_NINE_PART_DRAWABLE`
----`UOT_COLOR_DRAWABLE`  # We don't have access to this global yet but it does exist in the codebase.
----`UOT_THREE_PART_DRAWABLE` # We don't have access to this global yet but it does exist in the codebase.
+---| `9` UOT_THREE_PART_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
 
 ---api/Addon
 ---Unit Relation

@@ -12,16 +12,16 @@ AP_TOPRIGHT = 1                -- objects/WorldMap
 CT_ABILITY = 2                 -- objects/WorldMap
 CT_EXPEDITION_NAME = 3         -- objects/WorldMap
 CT_NAME = 1                    -- objects/WorldMap
-DC_ALWAYS = 0                  -- objects/WorldMap
-DC_SHIFT_KEY_DOWN = 1          -- objects/WorldMap
+DC_ALWAYS = 0                  -- objects/WorldMap DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1          -- objects/WorldMap DRAG_CONDITION
 MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/WorldMap
 
 ---@TODO: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
 
 ---objects/WorldMap
 ---@class WorldMap: Widget, Map
----@class worldmap: WorldMap
 local WorldMap = {}
+---@class worldmap: WorldMap
 
 ---Retrieves climate information for a specific zone.
 ---@param zoneId ZONE_ID The ID of the zone.

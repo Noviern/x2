@@ -12,13 +12,13 @@ AP_TOPRIGHT = 1        -- objects/Line
 CT_ABILITY = 2         -- objects/Line
 CT_EXPEDITION_NAME = 3 -- objects/Line
 CT_NAME = 1            -- objects/Line
-DC_ALWAYS = 0          -- objects/Line
-DC_SHIFT_KEY_DOWN = 1  -- objects/Line
+DC_ALWAYS = 0          -- objects/Line DRAG_CONDITION
+DC_SHIFT_KEY_DOWN = 1  -- objects/Line DRAG_CONDITION
 
 ---objects/Line
 ---@class Line: Widget
----@class line: Line
 local Line = {}
+---@class line: Line
 
 ---Clears all points from the Line.
 ---@usage
