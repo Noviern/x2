@@ -92,6 +92,13 @@ function X2Hotkey:IsOverridableAction(action) end
 ---@see HOTKEY_ACTION
 function X2Hotkey:IsValidActionName(action) end
 
+---Saves currently set hotkeys. **Danger!** Currently will erase all hotkeys after reloading.
+---@usage
+---```lua
+---X2Hotkey:SaveHotKey()
+---```
+function X2Hotkey:SaveHotKey() end
+
 ---Binds a key to a action and registers the key to fire the `HOTKEY_ACTION`
 ---event when pressed and released.
 ---@param actionName string custom action

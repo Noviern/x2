@@ -1,6 +1,7 @@
 SIK_DESCRIPTION = 1
 X2Skill = {
-  GetCooldown = "<function: 00000000CF43F914>",
-  GetSkillTooltip = "<function: 00000001C7E90744>",
-  Info = "<function: 00000001C7E88E84>",
+  GetCooldown = "<function: 000000023501BF94>",
+  GetMateCooldown = "<function: 00000001B7F5EB04>",
+  GetSkillTooltip = "<function: 0000000223E54114>",
+  Info = "<function: 0000000223E5E414>",
 }

@@ -23,6 +23,19 @@ X2Skill = {}        -- api/X2Skill
 ---```
 function X2Skill:GetCooldown(skillId, ignoreGlobalCooldown) end
 
+---Retrieves the cooldown information for a specified skill for the mate.
+---@param skillId number The ID of the skill.
+---@param ignoreGlobalCooldown boolean `true` to return the skill's specific cooldown, `false` to return the global cooldown.
+---@param mateType MATE_TYPE The type of mate to query.
+---@return number|nil remainTime The remaining cooldown time in milliseconds, or `nil` if the skillId doesn't exist.
+---@nodiscard
+---@usage
+---```lua
+---local remainTime = X2Skill:GetMateCooldown(9000168, false, MATE_TYPE_RIDE)
+---```
+---@see MATE_TYPE
+function X2Skill:GetMateCooldown(skillId, ignoreGlobalCooldown, mateType) end
+
 ---@TODO: Not sure how the itemType works with skillId
 ---Returns tooltip information for a skill, filtered by an optional scope.
 ---@param skillId number The ID of the skill.
