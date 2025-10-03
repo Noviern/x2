@@ -713,11 +713,11 @@
 ---
 ---@alias EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT_HANDLER fun()
 
----
----@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER fun(equipSlot, level)
+---Event triggers when the players ipnysh equipment slot effect levels up.
+---@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER fun(equipSlot: ES, level: number)
 
----
----@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP_HANDLER fun(equipSlot, level)
+---Event triggers when the players ipnysh equipment slot levels up.
+---@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP_HANDLER fun(equipSlot: ES, level: number)
 
 ---
 ---@alias EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_HANDLER fun(equipSlotAttribute, level)
@@ -823,13 +823,13 @@
 ---Event triggers when the player views the current dominion status.
 ---@alias EXPEDITION_WAR_KILL_SCORE_HANDLER fun(toggle: boolean)
 
----
+---Event triggers when the players guild dominion protection date changes.
 ---@alias EXPEDITION_WAR_SET_PROTECT_DATE_HANDLER fun()
 
 ---
 ---@alias EXPEDITION_WAR_STATE_HANDLER fun(related, state, declarer, defendant, winner)
 
----Event triggers when a item expires for the player.
+---Event triggers when an item expires for the player.
 ---@alias EXPIRED_ITEM_HANDLER fun(itemLinkText: string)
 
 ---
@@ -965,7 +965,7 @@
 ---into their bag.
 ---@alias GLIDER_MOVED_INTO_BAG_HANDLER fun()
 
----
+---Event triggers when the player takes an item from their marketplace mailbox.
 ---@alias GOODS_MAIL_INBOX_ITEM_TAKEN_HANDLER fun(index)
 
 ---
@@ -974,8 +974,8 @@
 ---
 ---@alias GOODS_MAIL_INBOX_TAX_PAID_HANDLER fun()
 
----
----@alias GOODS_MAIL_INBOX_UPDATE_HANDLER fun(read)
+---Event triggers when the players marketplace mail updates.
+---@alias GOODS_MAIL_INBOX_UPDATE_HANDLER fun(read: boolean, arg: number)
 
 ---
 ---@alias GOODS_MAIL_RETURNED_HANDLER fun()
@@ -995,8 +995,8 @@
 ---Event triggers when the player regrades an item.
 ---@alias GRADE_ENCHANT_RESULT_HANDLER fun(resultCode: number, itemLink: string, oldGrade: ITEM_GRADE_TYPE, newGrade: ITEM_GRADE_TYPE, breakRewardItemType: number, breakRewardItemCount: number, breakRewardByMail: boolean)
 
----
----@alias GUARDTOWER_HEALTH_CHANGED_HANDLER fun()
+---Event triggers when a guard tower health changes.
+---@alias GUARDTOWER_HEALTH_CHANGED_HANDLER fun(arg1: string, arg2: string, arg3: string)
 
 ---
 ---@alias GUILD_BANK_INDEX_SHOW_HANDLER fun() -- Crash
@@ -1189,7 +1189,7 @@
 ---
 ---@alias INDUN_UPDATE_ROUND_INFO_HANDLER fun()
 
----
+---Event triggers when the player attempts to purchase an item from the marketplace.
 ---@alias INGAME_SHOP_BUY_RESULT_HANDLER fun()
 
 ---
@@ -1265,7 +1265,7 @@
 ---
 ---@alias ITEM_ENCHANT_MAGICAL_RESULT_HANDLER fun(resultCode, itemLink, gemItemType)
 
----Event triggers when the player attempt to equip a item to a mate/slave and it fails.
+---Event triggers when the player attempt to equip an item to a mate/slave and it fails.
 ---@alias ITEM_EQUIP_RESULT_HANDLER fun(ItemEquipResult: ITEM_MATE)
 
 ---
@@ -1770,7 +1770,7 @@
 ---Event triggers when the player views the raid recruit window.
 ---@alias RAID_RECRUIT_LIST_HANDLER fun(data: RaidRecruitListInfo)
 
----
+---Event triggers when the manastorm shop updates.
 ---@alias RANDOM_SHOP_INFO_HANDLER fun(isHide: boolean, isdailyReset: boolean)
 
 ---
@@ -1832,7 +1832,7 @@
 ---Event triggers when the players squad list has refreshed.
 ---@alias REFRESH_SQUAD_LIST_HANDLER fun(arg?: boolean)
 
----
+---Event triggers when the stores purchase count for a limited item changes. 
 ---@alias REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE_HANDLER fun()
 
 ---
@@ -2370,8 +2370,7 @@
 ---
 ---@alias TRADE_CANCELED_HANDLER fun()
 
----@TODO: a player or the player?
----Event triggers when a player puts an item up for trade.
+---Event triggers when the player puts an item up for trade.
 ---@alias TRADE_ITEM_PUTUP_HANDLER fun(inventoryIdx: number, amount: number)
 
 ---
@@ -2380,14 +2379,14 @@
 ---
 ---@alias TRADE_ITEM_UPDATED_HANDLER fun()
 
----Event triggers when there player locks their trade.
+---Event triggers when the player locks their trade.
 ---@alias TRADE_LOCKED_HANDLER fun()
 
 ---Event triggers when a trade has been made.
 ---@alias TRADE_MADE_HANDLER fun()
 
----
----@alias TRADE_MONEY_PUTUP_HANDLER fun(money)
+---Event triggers when the player puts up money on their trade.
+---@alias TRADE_MONEY_PUTUP_HANDLER fun(money: string)
 
 ---Event triggers when the player confirms the trade.
 ---@alias TRADE_OK_HANDLER fun()
@@ -2398,13 +2397,13 @@
 ---
 ---@alias TRADE_OTHER_ITEM_TOOKDOWN_HANDLER fun(otherIdx)
 
----Event triggers when the player being traded with locks their trade.
+---Event triggers when the other player being traded with locks their trade.
 ---@alias TRADE_OTHER_LOCKED_HANDLER fun()
 
 ---
 ---@alias TRADE_OTHER_MONEY_PUTUP_HANDLER fun(money)
 
----Event triggers when the player being traded with confirms their trade.
+---Event triggers when the other player being traded with confirms their trade.
 ---@alias TRADE_OTHER_OK_HANDLER fun()
 
 ---Event triggers when the player starts trading with another player.
@@ -2556,13 +2555,14 @@
 ---Event triggers when the player opens the map.
 ---@alias UPDATE_DOODAD_INFO_HANDLER fun()
 
----
----@alias UPDATE_DURABILITY_STATUS_HANDLER fun(frame, added, removed)
+---@TODO: This may be reversed
+---Event triggers when the players durability on their gear changes.
+---@alias UPDATE_DURABILITY_STATUS_HANDLER fun(added: boolean, removed: boolean)
 
 ---
 ---@alias UPDATE_DYEING_EXCUTABLE_HANDLER fun(executeable)
 
----Event triggers when a item is about to be enchanted and when at the start of the item being enchanted.
+---Event triggers when an item is about to be enchanted and when at the start of the item being enchanted.
 ---@alias UPDATE_ENCHANT_ITEM_MODE_HANDLER fun(isExcutable: boolean, isLock: boolean)
 
 ---
@@ -2594,7 +2594,7 @@
 ---
 ---@alias UPDATE_HIDE_OPTIMIZATION_BUTTON_HANDLER fun()
 
----
+---Event triggers when the housing information for the map updates.
 ---@alias UPDATE_HOUSING_INFO_HANDLER fun()
 
 ---
@@ -2640,7 +2640,7 @@
 ---Event triggers every 5 seconds to update the players slave (vehicle) position information.
 ---@alias UPDATE_MY_SLAVE_POS_INFO_HANDLER fun()
 
----
+---Event triggers when npc information for the map has changed.
 ---@alias UPDATE_NPC_INFO_HANDLER fun()
 
 ---
@@ -2678,8 +2678,8 @@
 ---
 ---@alias UPDATE_SHORTCUT_SKILLS_HANDLER fun()
 
----
----@alias UPDATE_SIEGE_SCORE_HANDLER fun(offensePoint, outlawPoint)
+---Event triggers when the siege score changes.
+---@alias UPDATE_SIEGE_SCORE_HANDLER fun(offensePoint: number, outlawPoint: number)
 
 ---
 ---@alias UPDATE_SKILL_ACTIVE_TYPE_HANDLER fun()
