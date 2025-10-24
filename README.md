@@ -1,7 +1,4 @@
 # ArcheAge Addon Definitions
-
-![Showcase.mp4](doc/showcase.mp4)
-
 Provides documentation, definitions, and IntelliSense for ArcheAge Addons.
 
 ![Shows method documentation](doc/img/documentation.png)
