@@ -1,4 +1,7 @@
 # ArcheAge Addon Definitions
+
+![Showcase.mp4](doc/showcase.mp4)
+
 Provides documentation, definitions, and IntelliSense for ArcheAge Addons.
 
 ![Shows method documentation](doc/img/documentation.png)
@@ -7,7 +10,7 @@ Provides documentation, definitions, and IntelliSense for ArcheAge Addons.
 
 ## How To Use IntelliSense ([VSCode](https://code.visualstudio.com/))
 1. Clone or [download this repo](https://github.com/Noviern/AAAD/archive/refs/heads/master.zip).
-2. Extract and place in `C:\ArcheRage\Documents`.
+2. Extract and place in `C:\ArcheRage\Documents\Addon`.
 3. Install VSCode Extension [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua).
 
 ![Shows Lua extension install page](doc/img/install.png)
