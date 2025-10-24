@@ -14,7 +14,7 @@ DOW_WEDNESDAY = 4                     -- api/X2Quest DOW
 MAX_CHRONICLE_INFO_ACTIVE_COUNT = 5   -- api/X2Quest
 MAX_QUEST_OBJECTIVE = 10              -- api/X2Quest
 QCS_COMPLETED = 5                     -- api/X2Quest
-QSTATFAILED_MAYBE_QUEST_LIST_FULL = 6 -- api/X2Quest QSTATFAILED_MAYBE_QUEST_LIST_FULL
+QSTATFAILED_MAYBE_QUEST_LIST_FULL = 6 -- api/X2Quest
 QUEST_MARK_ORDER_DAILY = 3            -- api/X2Quest QUEST_MARK_ODER
 QUEST_MARK_ORDER_DAILY_HUNT = 5       -- api/X2Quest QUEST_MARK_ODER
 QUEST_MARK_ORDER_LIVELIHOOD = 6       -- api/X2Quest QUEST_MARK_ODER
@@ -43,9 +43,6 @@ X2Quest = {}                          -- api/X2Quest
 ---| `DOW_THURSDAY`
 ---| `DOW_TUESDAY`
 ---| `DOW_WEDNESDAY`
-
----api/X2Quest
----@alias QSTATFAILED_MAYBE_QUEST_LIST_FULL QSTATFAILED_MAYBE_QUEST_LIST_FULL
 
 ---api/X2Quest
 ---@alias QUEST_MARK_ORDER
@@ -96,7 +93,7 @@ function X2Quest:GetQuestContextMainTitle(questType) end
 ---```
 function X2Quest:IsCompleted(questType) end
 
----@TODO: Broken? Tried both active quest index and quest ID.
+---@FIXME: Broken? Tried both active quest index and quest ID.
 ---Sets the specified quest as the active tracked quest.
 ---@param idx number The quest index or ID to track (type unclear).
 function X2Quest:SetTrackingActiveQuest(idx) end

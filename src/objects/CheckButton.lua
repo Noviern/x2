@@ -1,19 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8             -- objects/CheckButton
-AP_BOTTOMLEFT = 2         -- objects/CheckButton
-AP_BOTTOMRIGHT = 3        -- objects/CheckButton
-AP_CENTER = 4             -- objects/CheckButton
-AP_LEFT = 6               -- objects/CheckButton
-AP_RIGHT = 7              -- objects/CheckButton
-AP_TOP = 5                -- objects/CheckButton
-AP_TOPLEFT = 0            -- objects/CheckButton
-AP_TOPRIGHT = 1           -- objects/CheckButton
-CT_ABILITY = 2            -- objects/CheckButton
-CT_EXPEDITION_NAME = 3    -- objects/CheckButton
-CT_NAME = 1               -- objects/CheckButton
-DC_ALWAYS = 0             -- objects/CheckButton DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1     -- objects/CheckButton DRAG_CONDITION
 UI_BUTTON_DISABLED = 3    -- objects/CheckButton UI_BUTTON_STATE
 UI_BUTTON_HIGHLIGHTED = 1 -- objects/CheckButton UI_BUTTON_STATE
 UI_BUTTON_MAX = 4         -- objects/CheckButton
@@ -54,7 +40,7 @@ function Checkbutton:SetChecked(state) end
 ---@see DrawableDDS
 function Checkbutton:SetCheckedBackground(checkedTable) end
 
----@TODO: Not sure how to see the disabled state as SetButtonState doesnt work.
+---@TODO: Not sure how to see the disabled state as SetButtonState doesnt work assuming that would change it to a disabledchecked state.
 ---Sets the background for the disabled checked state of the Checkbutton.
 ---@param disabledCheckedTable DrawableDDS The table defining the disabled checked state background.
 ---@usage

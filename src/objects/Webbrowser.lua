@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Webbrowser
-AP_BOTTOMLEFT = 2      -- objects/Webbrowser
-AP_BOTTOMRIGHT = 3     -- objects/Webbrowser
-AP_CENTER = 4          -- objects/Webbrowser
-AP_LEFT = 6            -- objects/Webbrowser
-AP_RIGHT = 7           -- objects/Webbrowser
-AP_TOP = 5             -- objects/Webbrowser
-AP_TOPLEFT = 0         -- objects/Webbrowser
-AP_TOPRIGHT = 1        -- objects/Webbrowser
-CT_ABILITY = 2         -- objects/Webbrowser
-CT_EXPEDITION_NAME = 3 -- objects/Webbrowser
-CT_NAME = 1            -- objects/Webbrowser
-DC_ALWAYS = 0          -- objects/Webbrowser DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Webbrowser DRAG_CONDITION
-
 ---objects/Webbrowser
 ---@class Webbrowser: Widget
 local Webbrowser = {}
@@ -36,7 +21,7 @@ function Webbrowser:ClearFocus() end
 ---```
 function Webbrowser:GetURL() end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Loads a blank page in the Webbrowser.
 ---@usage
 ---```lua
@@ -44,7 +29,7 @@ function Webbrowser:GetURL() end
 ---```
 function Webbrowser:LoadBlankPage() end
 
----@TODO: RightButton doesnt appear to work.
+---@FIXME: RightButton doesnt appear to work.
 ---Simulates a mouse down event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
 ---@usage
@@ -62,7 +47,7 @@ function Webbrowser:MouseDown(button) end
 ---```
 function Webbrowser:MouseMove() end
 
----@TODO: RightButton doesnt appear to work.
+---@FIXME: RightButton doesnt appear to work.
 ---Simulates a mouse up event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
 ---@usage
@@ -72,7 +57,7 @@ function Webbrowser:MouseMove() end
 ---@see MOUSE_BUTTON
 function Webbrowser:MouseUp(button) end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the expedition BBS page in the Webbrowser.'
 ---@usage
 ---```lua
@@ -80,7 +65,7 @@ function Webbrowser:MouseUp(button) end
 ---```
 function Webbrowser:RequestExpeditionBBS() end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the expedition home page in the Webbrowser.
 ---@usage
 ---```lua
@@ -97,7 +82,7 @@ function Webbrowser:RequestExpeditionHome() end
 ---```
 function Webbrowser:RequestExternalPage(url) end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the help page in the Webbrowser.
 ---@usage
 ---```lua
@@ -105,7 +90,7 @@ function Webbrowser:RequestExternalPage(url) end
 ---```
 function Webbrowser:RequestHelp() end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the messenger page in the Webbrowser.
 ---@usage
 ---```lua
@@ -113,7 +98,7 @@ function Webbrowser:RequestHelp() end
 ---```
 function Webbrowser:RequestMessenger() end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the messenger page for a specific PC name in the Webbrowser.
 ---@param pcName string The PC name for the messenger request.
 ---@usage
@@ -122,7 +107,7 @@ function Webbrowser:RequestMessenger() end
 ---```
 function Webbrowser:RequestMessengerByPcName(pcName) end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the messenger page based on the current target in the Webbrowser.
 ---@usage
 ---```lua
@@ -130,7 +115,7 @@ function Webbrowser:RequestMessengerByPcName(pcName) end
 ---```
 function Webbrowser:RequestMessengerOnTarget() end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the play diary page in the Webbrowser.
 ---@usage
 ---```lua
@@ -138,7 +123,7 @@ function Webbrowser:RequestMessengerOnTarget() end
 ---```
 function Webbrowser:RequestPlayDiary() end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the play diary page for a specific PC name in the Webbrowser.
 ---@param pcName string The PC name for the play diary request.
 ---@usage
@@ -147,7 +132,7 @@ function Webbrowser:RequestPlayDiary() end
 ---```
 function Webbrowser:RequestPlayDiaryByPcName(pcName) end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests an instant play diary page by file name in the Webbrowser.
 ---@param fileName string The file name for the play diary.
 ---@usage
@@ -156,7 +141,7 @@ function Webbrowser:RequestPlayDiaryByPcName(pcName) end
 ---```
 function Webbrowser:RequestPlayDiaryInstant(fileName) end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the play diary page based on the current target in the Webbrowser.
 ---@usage
 ---```lua
@@ -164,7 +149,7 @@ function Webbrowser:RequestPlayDiaryInstant(fileName) end
 ---```
 function Webbrowser:RequestPlayDiaryOnTarget() end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests verification for a sensitive operation with the specified URL.
 ---@param url string The URL for the sensitive operation.
 ---@usage
@@ -173,7 +158,7 @@ function Webbrowser:RequestPlayDiaryOnTarget() end
 ---```
 function Webbrowser:RequestSensitiveOperationVerify(url) end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests a TGOS operation in the Webbrowser.
 ---@param arg number The argument for the TGOS request.
 ---@usage
@@ -182,7 +167,7 @@ function Webbrowser:RequestSensitiveOperationVerify(url) end
 ---```
 function Webbrowser:RequestTGOS(arg) end
 
----@TODO: Broken?
+---@FIXME: Broken?
 ---Requests the wiki page in the Webbrowser.
 ---@usage
 ---```lua
@@ -238,7 +223,7 @@ function Webbrowser:SetLoadingDrawable(drawable) end
 ---```
 function Webbrowser:SetMsgToParent(toParent) end
 
----@TODO: Right now this isnt necessary to call.
+---@FIXME: Right now this isnt necessary to call as only "background" confirmed working.
 ---Sets the UI layer for the Webbrowser.
 ---@param layer "background" The UI layer to set (only "background" confirmed working).
 ---@usage
@@ -255,12 +240,11 @@ function Webbrowser:SetUiLayer(layer) end
 ---```
 function Webbrowser:SetURL(url) end
 
----@TODO: Broken?
 ---Sets the zoom level for the Webbrowser.
----@param level number The zoom level to set.
+---@param level number The zoom level to set. (default: `1`)
 ---@usage
 ---```lua
----widget:SetZoomLevel(1)
+---widget:SetZoomLevel(2)
 ---```
 function Webbrowser:SetZoomLevel(level) end
 

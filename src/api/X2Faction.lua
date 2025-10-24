@@ -39,7 +39,7 @@ X2Faction = {}                     -- api/X2Faction
 ---| `EGFT_SHOP`
 
 ---api/X2Faction
----@TODO: Expedition ? ?
+---Expedition History Page
 ---@alias EHP
 ---| `EHP_INSTANCE`
 ---| `EHP_MANAGEMENT`
@@ -47,7 +47,7 @@ X2Faction = {}                     -- api/X2Faction
 ---| `EHP_WAR`
 
 ---api/X2Faction
----@TODO: ? ? ?
+---Expedition Instance Member Status
 ---@alias EIMS
 ---| `EIMS_END`
 ---| `EIMS_START`

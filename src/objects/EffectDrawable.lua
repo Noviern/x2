@@ -1,15 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- objects/EffectDrawable
-AP_BOTTOMLEFT = 2  -- objects/EffectDrawable
-AP_BOTTOMRIGHT = 3 -- objects/EffectDrawable
-AP_CENTER = 4      -- objects/EffectDrawable
-AP_LEFT = 6        -- objects/EffectDrawable
-AP_RIGHT = 7       -- objects/EffectDrawable
-AP_TOP = 5         -- objects/EffectDrawable
-AP_TOPLEFT = 0     -- objects/EffectDrawable
-AP_TOPRIGHT = 1    -- objects/EffectDrawable
-
 ---objects/EffectDrawable
 ---@class EffectDrawable: DrawableDDS
 local EffectDrawable = {}

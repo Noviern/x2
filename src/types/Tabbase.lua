@@ -32,7 +32,7 @@ function Tabbase:RemoveTab(idx) end
 function Tabbase:SelectTab(idx) end
 
 ---Sets the gap between tabs in the Tabbase.
----@param gap number The gap size between tabs.
+---@param gap number The gap size between tabs. (default: `0`)
 ---@usage
 ---```lua
 ---widget:SetGap(10)
@@ -40,7 +40,7 @@ function Tabbase:SelectTab(idx) end
 function Tabbase:SetGap(gap) end
 
 ---Sets the offset for the Tabbase.
----@param offset number The offset value for the tabs.
+---@param offset number The offset value for the tabs. (default: `0`)
 ---@usage
 ---```lua
 ---widget:SetOffset(10)

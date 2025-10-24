@@ -7,6 +7,10 @@ EST = Equip Slot Type, for instance earring 1 and earring 2 are of both the same
 appelation = title
 expedition = guild
 
+indun = instance dungeon?
+
+BLESS_UTHSTIN stat migration
+
 UOT_EDITBOX = 3
 Ui Object Type
 thumb_df df == default

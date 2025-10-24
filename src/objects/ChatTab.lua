@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/ChatTab
-AP_BOTTOMLEFT = 2      -- objects/ChatTab
-AP_BOTTOMRIGHT = 3     -- objects/ChatTab
-AP_CENTER = 4          -- objects/ChatTab
-AP_LEFT = 6            -- objects/ChatTab
-AP_RIGHT = 7           -- objects/ChatTab
-AP_TOP = 5             -- objects/ChatTab
-AP_TOPLEFT = 0         -- objects/ChatTab
-AP_TOPRIGHT = 1        -- objects/ChatTab
-CT_ABILITY = 2         -- objects/ChatTab
-CT_EXPEDITION_NAME = 3 -- objects/ChatTab
-CT_NAME = 1            -- objects/ChatTab
-DC_ALWAYS = 0          -- objects/ChatTab DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/ChatTab DRAG_CONDITION
-
 ---objects/ChatTab
 ---@class ChatWindow: Widget, Tabbase
 local ChatWindow = {}
@@ -41,7 +26,7 @@ function ChatWindow:AddTab(tabName, widget) end
 ---```
 function ChatWindow:AllowTabSwitch(allow) end
 
----@TODO: Clarify return table structure.
+---@FIXME: returns self.
 ---Retrieves the add button for the ChatWindow.
 ---@return table addButton The add button.
 ---@nodiscard
@@ -60,7 +45,7 @@ function ChatWindow:GetAddButton() end
 ---```
 function ChatWindow:GetCaretDrawable() end
 
----@TODO: Verify if this is broken (returns self).
+---@FIXME: returns self.
 ---Retrieves the chat edit widget for the ChatWindow.
 ---@return table chatEdit The chat edit widget.
 ---@nodiscard
@@ -70,7 +55,7 @@ function ChatWindow:GetCaretDrawable() end
 ---```
 function ChatWindow:GetChatEdit() end
 
----@TODO: Verify if this is broken (returns self).
+---@FIXME: returns self.
 ---Retrieves the chat method selector for the ChatWindow.
 ---@return table chatMethodSelector The chat method selector.
 ---@nodiscard
@@ -80,9 +65,9 @@ function ChatWindow:GetChatEdit() end
 ---```
 function ChatWindow:GetChatMethodSelector() end
 
----@TODO: Verify if this is broken (returns self).
+---@FIXME: returns self.
 ---Retrieves the IME toggle button for the ChatWindow.
----@return Button imeToggleButton The IME toggle button.
+---@return table imeToggleButton The IME toggle button.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -120,7 +105,7 @@ function ChatWindow:GetLockNotifyDrawable() end
 ---@see ThreePartDrawable
 function ChatWindow:GetRightLineDrawable() end
 
----@TODO: Verify if this is broken (returns self).
+---@FIXME: returns self.
 ---Retrieves the URL button for the ChatWindow.
 ---@return table urlButton The URL button.
 ---@nodiscard
@@ -130,7 +115,7 @@ function ChatWindow:GetRightLineDrawable() end
 ---```
 function ChatWindow:GetUrlButton() end
 
----@TODO: Clarify purpose of caret offset.
+---@FIXME: Broken?
 ---Sets the offset for the caret in the ChatWindow.
 ---@param x number The x-offset.
 ---@param y number The y-offset.
@@ -148,7 +133,6 @@ function ChatWindow:SetCaretOffset(x, y) end
 ---```
 function ChatWindow:SetChatWindowId(id) end
 
----@TODO: Verify content offset behavior.
 ---Sets the content offset for the ChatWindow.
 ---@param topLeftXOffset number The x-offset for the top-left corner.
 ---@param topLeftYOffset number The y-offset for the top-left corner.
@@ -223,7 +207,6 @@ function ChatWindow:SetRightLineOffset(offset) end
 ---```
 function ChatWindow:SetSlideTimeInDragging(time) end
 
----@TODO: Verify tab area height behavior.
 ---Sets the height of the tab area in the ChatWindow.
 ---@param height number The height of the tab area.
 ---@usage
@@ -232,7 +215,6 @@ function ChatWindow:SetSlideTimeInDragging(time) end
 ---```
 function ChatWindow:SetTabAreaHeight(height) end
 
----@TODO: Confirm inset behavior for tab area.
 ---Sets the inset for the tab area in the ChatWindow.
 ---@param left number The left inset.
 ---@param top number The top inset.

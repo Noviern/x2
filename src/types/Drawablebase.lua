@@ -1,6 +1,6 @@
 ---@meta _
 
----@TODO: These dont appear to exist on any drawable and they dont appear in the scriptsbin. Im also missing TextureDrawable and Drawable
+---@FIXME: These dont appear to exist on any drawable and they dont appear in the scriptsbin. Im also missing TextureDrawable and Drawable
 ------@field GetEffectPhaseCount fun(self: self)
 ------@field GetEffectPhaseProperties fun(self: self, phase)
 ------@field GetMoveEffectPhaseCount fun(self: self)
@@ -31,9 +31,13 @@ function Drawablebase:IsVisible() end
 ---```
 function Drawablebase:SetColor(r, g, b, a) end
 
----@TODO: Verify if this is broken.
----Sets the rotation angle of the Drawablebase.
----@param angle number The rotation angle.
+---Sets the rotation angle of the Drawablebase. Works on `ImageDrawable` and
+---`IconDrawable`.
+---@param angle number The rotation angle in degrees.
+---@usage
+---```lua
+---drawabble:SetRotation(45)
+---```
 function Drawablebase:SetRotation(angle) end
 
 ---@TODO: Unsure what is the default, id imagine its false.
@@ -45,7 +49,6 @@ function Drawablebase:SetRotation(angle) end
 ---```
 function Drawablebase:SetSRGB(srgb) end
 
----@TODO: Confirm if this is redundant with Drawablebase:Show.
 ---Shows or hides the Drawablebase.
 ---@param visible boolean `true` to show, `false` to hide. (default: `true`)
 ---@usage
@@ -54,7 +57,6 @@ function Drawablebase:SetSRGB(srgb) end
 ---```
 function Drawablebase:SetVisible(visible) end
 
----@TODO: Verify behavior for different Drawables.
 ---Sets the visibility condition based on a string value range.
 ---@param minValue string The minimum value for visibility.
 ---@param maxValue string The maximum value for visibility.

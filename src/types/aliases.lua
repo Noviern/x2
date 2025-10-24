@@ -1,46 +1,3 @@
----@alias DRAG_CONDITION `DC_ALWAYS` | `DC_SHIFT_KEY_DOWN`
-
----@alias WIDGET_TYPES
----| Avi
----| Button
----| ChatWindow
----| Checkbutton
----| CircleDiagram
----| ColorPicker
----| Combobox
----| CooldownButton
----| CooldownConstantButton
----| CooldownInventoryButton
----| DamageDisplay
----| DynamicList
----| Editbox
----| EditboxMultiline
----| EmptyWidget
----| Folder
----| GameTooltip
----| Grid
----| Label
----| Line
----| Listbox
----| ListCtrl
----| MegaphoneChatEdit
----| Message
----| ModelView
----| Pageable
----| PaintColorPicker
----| RadioGroup
----| RoadMap
----| Slider
----| Slot
----| StatusBar
----| Tab
----| Textbox
----| UnitframeTooltip
----| Webbrowser
----| Window
----| WorldMap
----| X2EditBox
-
 ---@TODO: Some events can only be used by certain widget types. Need to finish defining these
 ---@alias OnAcceptFocus fun(self: Widget)
 ---@alias OnAlphaAnimeEnd fun(self: Widget)
@@ -61,7 +18,7 @@
 ---@alias OnEndFadeOut fun(self: Widget)
 ---@alias OnEnter fun(self: Widget)
 ---@alias OnEnterPressed fun(self: Widget)
----@alias OnEscapePressed fun(self: Widgetbase)
+---@alias OnEscapePressed fun(self: Widget)
 ---@alias OnEvent fun(self: Widget, event: UIEVENT_TYPE, ...: any)
 ---@alias OnHide fun(self: Widget)
 ---@alias OnKeyDown fun(self: Widget, key: string)
@@ -84,10 +41,22 @@
 ---@alias OnSliderChanged fun(self: Widget, value: number)
 ---@alias OnTabChanged fun(self: Widget, selected: number, viewSelected: number)
 ---@alias OnTextChanged fun(self: Widget)
----@alias OnTooltip fun(self: Widget) ---@TODO: , text, posX, posY, off)
+---@alias OnTooltip fun(self: Widget, text?: string, posX?: number, posY?: number, off?: boolean)
 ---@alias OnUpdate fun(frameTime: number)
 ---@alias OnVisibleChanged fun(self: Widget, visible: boolean)
 ---@alias OnWheelDown fun(self: Widget, delta: number)
 ---@alias OnWheelUp fun(self: Widget, delta: number)
 ---@alias PreClick fun(self: Widget)
 ---@alias PreUse fun(self: Widget)
+
+-- -@enum NPC_INTERACTION_ADDED_VALUE
+local NPC_INTERACTION_ADDED_VALUE = {
+  COMPLETE = "complete",
+  START    = "start",
+  TALK     = "talk",
+}
+
+---@alias NPC_INTERACTION_ADDED_VALUE
+---| "complete" # b
+---| "start"
+---| "complete"

@@ -83,7 +83,7 @@ X2InGameShop = {}                     -- api/X2InGameShop
 ---| `BFR_TRANSFER_CHARACTER`
 
 ---api/X2InGameShop
----@TODO: Buy ?
+---Buy Mode
 ---@alias BM
 ---| `BM_CART_ALL`
 ---| `BM_SELECTED`
@@ -96,7 +96,7 @@ X2InGameShop = {}                     -- api/X2InGameShop
 ---| `CFR_NORMAL`
 
 ---api/X2InGameShop
----@TODO: Command UI?
+---Command Ui
 ---@alias CU
 ---| `CU_ALL`
 ---| `CU_BUY`
@@ -105,7 +105,7 @@ X2InGameShop = {}                     -- api/X2InGameShop
 ---| `CU_NONE`
 
 ---api/X2InGameShop
----@TODO: ? ? ?
+---@TODO: ? ? ? Goods Received Way
 ---@alias ICS
 ---| `ICS_GRW_CHARGED_MAIL`
 ---| `ICS_GRW_EXPRESSS_MAIL`

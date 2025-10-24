@@ -1,23 +1,9 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/ListCtrl
-AP_BOTTOMLEFT = 2      -- objects/ListCtrl
-AP_BOTTOMRIGHT = 3     -- objects/ListCtrl
-AP_CENTER = 4          -- objects/ListCtrl
-AP_LEFT = 6            -- objects/ListCtrl
-AP_RIGHT = 7           -- objects/ListCtrl
-AP_TOP = 5             -- objects/ListCtrl
-AP_TOPLEFT = 0         -- objects/ListCtrl
-AP_TOPRIGHT = 1        -- objects/ListCtrl
-CT_ABILITY = 2         -- objects/ListCtrl
-CT_EXPEDITION_NAME = 3 -- objects/ListCtrl
-CT_NAME = 1            -- objects/ListCtrl
-DC_ALWAYS = 0          -- objects/ListCtrl DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/ListCtrl DRAG_CONDITION
-LCCIT_BUTTON = 1       -- objects/ListCtrl LCCIT
-LCCIT_STRING = 0       -- objects/ListCtrl LCCIT
-LCCIT_TEXTBOX = 3      -- objects/ListCtrl LCCIT
-LCCIT_WINDOW = 2       -- objects/ListCtrl LCCIT
+LCCIT_BUTTON = 1  -- objects/ListCtrl LCCIT
+LCCIT_STRING = 0  -- objects/ListCtrl LCCIT
+LCCIT_TEXTBOX = 3 -- objects/ListCtrl LCCIT
+LCCIT_WINDOW = 2  -- objects/ListCtrl LCCIT
 
 ---objects/ListCtrl
 ---ListCtrl Column Item Type

@@ -13,7 +13,7 @@ IGLMC_SOCKET_CHANGE = 10 -- api/X2ItemGuide IGLMC
 ---@class X2ItemGuide
 X2ItemGuide = {}         -- api/X2ItemGuide
 
----@TODO: Item Guide Loot Master Category?
+---Item Guide Loot Master Category
 ---@alias IGLMC
 ---| `IGLMC_BOSS`
 ---| `IGLMC_CRAFT`

@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Textbox
-AP_BOTTOMLEFT = 2      -- objects/Textbox
-AP_BOTTOMRIGHT = 3     -- objects/Textbox
-AP_CENTER = 4          -- objects/Textbox
-AP_LEFT = 6            -- objects/Textbox
-AP_RIGHT = 7           -- objects/Textbox
-AP_TOP = 5             -- objects/Textbox
-AP_TOPLEFT = 0         -- objects/Textbox
-AP_TOPRIGHT = 1        -- objects/Textbox
-CT_ABILITY = 2         -- objects/Textbox
-CT_EXPEDITION_NAME = 3 -- objects/Textbox
-CT_NAME = 1            -- objects/Textbox
-DC_ALWAYS = 0          -- objects/Textbox DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Textbox DRAG_CONDITION
-
 ---objects/Textbox
 ---@class Textbox: Widget
 ---@field style TextStyle
@@ -42,20 +27,18 @@ function Textbox:GetInset() end
 ---```
 function Textbox:GetLineCount() end
 
----@TODO: Broken?
----Retrieves the length in pixels of the specified line in the Textbox.
+---Retrieves the scaled UI width in pixels of the specified line in the Textbox.
 ---@param lineNum number The line number.
----@return number lineLength The length of the line in pixels. (default: `0`)
+---@return number lineWidth The scaled UI width of the line in pixels. (default: `0`)
 ---@nodiscard
 ---@usage
 ---```lua
----local lineLegnth = widget:GetLineLength(1)
+---local lineWidth = widget:GetLineLength(1)
 ---```
 function Textbox:GetLineLength(lineNum) end
 
----@TODO: Verify why this doesn't match GetLineLength results. BRoken?
----Retrieves the width of the longest line in the Textbox.
----@return number longestLineWidth The width of the longest line. (default: `0`)
+---Retrieves the unscaled UI width of the longest line in the Textbox.
+---@return number longestLineWidth The unscaled UI width of the longest line. (default: `0`)
 ---@nodiscard
 ---@usage
 ---```lua
@@ -63,9 +46,8 @@ function Textbox:GetLineLength(lineNum) end
 ---```
 function Textbox:GetLongestLineWidth() end
 
----@TODO: Broken? Currently its adding the height of each character and returning that.
----Retrieves the total text height of the Textbox.
----@return number textHeight The total text height. (default: `-1`)
+---Retrieves the total unscaled UI text height of the Textbox.
+---@return number textHeight The total unscaled UI text height. (default: `-1`)
 ---@nodiscard
 ---@usage
 ---```lua
@@ -73,9 +55,8 @@ function Textbox:GetLongestLineWidth() end
 ---```
 function Textbox:GetTextHeight() end
 
----@TODO: Investigate why this always returns 0.
 ---Retrieves the text length of the Textbox.
----@return number textLength The text length. (default: `0`)
+---@return number textLength The text length. (default: `-1`)
 ---@nodiscard
 ---@usage
 ---```lua

@@ -1,19 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8           -- objects/DamageDisplay
-AP_BOTTOMLEFT = 2       -- objects/DamageDisplay
-AP_BOTTOMRIGHT = 3      -- objects/DamageDisplay
-AP_CENTER = 4           -- objects/DamageDisplay
-AP_LEFT = 6             -- objects/DamageDisplay
-AP_RIGHT = 7            -- objects/DamageDisplay
-AP_TOP = 5              -- objects/DamageDisplay
-AP_TOPLEFT = 0          -- objects/DamageDisplay
-AP_TOPRIGHT = 1         -- objects/DamageDisplay
-CT_ABILITY = 2          -- objects/DamageDisplay
-CT_EXPEDITION_NAME = 3  -- objects/DamageDisplay
-CT_NAME = 1             -- objects/DamageDisplay
-DC_ALWAYS = 0           -- objects/DamageDisplay DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1   -- objects/DamageDisplay DRAG_CONDITION
 LAT_AFTERIMAGE = 4      -- objects/DamageDisplay LAT
 LAT_COUNT = 2           -- objects/DamageDisplay LAT
 LAT_LINEAR_DISPLAY = 16 -- objects/DamageDisplay LAT
@@ -23,7 +9,7 @@ LAT_SHAKE = 8           -- objects/DamageDisplay LAT
 PCT_DEFAULT = 0         -- objects/DamageDisplay PCT
 PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay PCT
 
----@TODO: ? ? ?
+---Linear Animation Type
 ---@alias LAT
 ---| `LAT_AFTERIMAGE`
 ---| `LAT_COUNT`
@@ -33,7 +19,7 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay PCT
 ---| `LAT_SHAKE`
 
 ---objects/DamageDisplay
----@TODO: ? ? ?
+---Position Calculation Type
 ---@alias PCT
 ---| `PCT_DEFAULT`
 ---| `PCT_SHIP_COLLISION`
@@ -55,10 +41,10 @@ function DamageDisplay:Animation(anim) end
 
 ---@TODO: Clarify what actual drawn values represent.
 ---Retrieves the actual drawn inset of the DamageDisplay.
----@return number left The left inset.
----@return number top The top inset.
----@return number right The right inset.
----@return number bottom The bottom inset.
+---@return number left The left inset. (default: `0`)
+---@return number top The top inset. (default: `0`)
+---@return number right The right inset. (default: `0`)
+---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
 ---@usage
 ---```lua
@@ -67,10 +53,10 @@ function DamageDisplay:Animation(anim) end
 function DamageDisplay:GetActualDrawn() end
 
 ---Retrieves the inset of the DamageDisplay.
----@return number left The left inset.
----@return number top The top inset.
----@return number right The right inset.
----@return number bottom The bottom inset.
+---@return number left The left inset. (default: `0`)
+---@return number top The top inset. (default: `0`)
+---@return number right The right inset. (default: `0`)
+---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
 ---@usage
 ---```lua

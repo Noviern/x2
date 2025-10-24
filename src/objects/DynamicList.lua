@@ -1,23 +1,16 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/DynamicList
-AP_BOTTOMLEFT = 2      -- objects/DynamicList
-AP_BOTTOMRIGHT = 3     -- objects/DynamicList
-AP_CENTER = 4          -- objects/DynamicList
-AP_LEFT = 6            -- objects/DynamicList
-AP_RIGHT = 7           -- objects/DynamicList
-AP_TOP = 5             -- objects/DynamicList
-AP_TOPLEFT = 0         -- objects/DynamicList
-AP_TOPRIGHT = 1        -- objects/DynamicList
-CT_ABILITY = 2         -- objects/DynamicList
-CT_EXPEDITION_NAME = 3 -- objects/DynamicList
-CT_NAME = 1            -- objects/DynamicList
-DC_ALWAYS = 0          -- objects/DynamicList DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/DynamicList DRAG_CONDITION
+---objects/DynamicList
+---@class DynamicListAnchor: EmptyWidget
+---@field main EmptyWidget[] `DynamicList:InitCreateWidgetPool()` is required for this to exist.
+
+---objects/DynamicList
+---@class DynamicListContent: EmptyWidget
+---@field anchor DynamicListAnchor
 
 ---objects/DynamicList
 ---@class DynamicList: Widget
----@field content EmptyWidget TODO: This has a anchor field EmptyWidget
+---@field content DynamicListContent
 local DynamicList = {}
 ---@class dynamiclist: DynamicList
 
@@ -40,7 +33,7 @@ function DynamicList:ClearData() end
 ---@see NinePartDrawable
 function DynamicList:CreateOveredImage(layerStr) end
 
----@TODO: Confirm behavior of child touch enabling.
+---@TODO: Confirm behavior of child touch enabling. `false` may be the default.
 ---Enables or disables touch interaction for child elements in the DynamicList.
 ---@param isEnable boolean `true` to enable child touch, `false` to disable.
 function DynamicList:EnableChildTouch(isEnable) end
@@ -74,8 +67,12 @@ function DynamicList:GetMainIndex(mainKey) end
 
 ---@TODO: Verify return table structure.
 ---Retrieves the main list of the DynamicList.
----@return table The main list data.
+---@return table list The main list data.
 ---@nodiscard
+---@usage
+---```lua
+---local list = widget:GetMainList()
+---```
 function DynamicList:GetMainList() end
 
 ---Retrieves the maximum scroll value for the DynamicList.
@@ -89,14 +86,23 @@ function DynamicList:GetScrollMaxValue() end
 
 ---@TODO: Clarify return values and their meaning.
 ---Retrieves information about the currently selected item.
----@return number The key of the selected item.
----@return number The depth of the selected item.
+---@return number key The key of the selected item. (default: `-1`)
+---@return number depth The depth of the selected item. (default: `0`)
 ---@nodiscard
+---@usage
+---```lua
+---local key, depth = widget:GetSelectedItemInfo()
+---```
 function DynamicList:GetSelectedItemInfo() end
 
----@TODO: Verify bgDrawType and its correct type (UOT).
+---@TODO: Verify bgDrawType.
 ---Initializes the background draw type for the DynamicList.
----@param bgDrawType UOT The background draw type.
+---@param bgDrawType UOT_DRAWABLE The background draw type.
+---@usage
+---```lua
+---widget:InitBgType(UOT_NINE_PART_DRAWABLE)
+---```
+---@see UOT_DRAWABLE
 function DynamicList:InitBgType(bgDrawType) end
 
 ---@TODO: Confirm purpose and behavior.
@@ -124,11 +130,18 @@ function DynamicList:InitCreateWidgetPool() end
 ---```
 function DynamicList:InitFunc(mainLayout, mainData, subLayout, subData) end
 
----@TODO: Verify height parameters and their effect.
 ---Initializes height settings for the DynamicList.
 ---@param viewHeight number The view height.
 ---@param mainHeight number The main item height.
 ---@param subHeight number The sub-item height.
+---@usage
+---```lua
+---local viewRowCount   = 3
+---local mainItemHeight = 73
+---local viewHeight     = mainItemHeight * viewRowCount
+---local subItemHeight  = 29
+---widget:InitHeight(viewHeight, mainItemHeight, subItemHeight)
+---```
 function DynamicList:InitHeight(viewHeight, mainHeight, subHeight) end
 
 ---@TODO: Clarify index, mainKey, and subDatas structure.
@@ -156,6 +169,10 @@ function DynamicList:IsSelectedItem(key, depth) end
 
 ---@TODO: Confirm item list loading behavior.
 ---Loads the item list for the DynamicList.
+---@usage
+---```lua
+---widget:LoadItemList()
+---```
 function DynamicList:LoadItemList() end
 
 ---@TODO: Clarify height parameter and movement effect.
@@ -185,12 +202,19 @@ function DynamicList:PushData(mainKey, subDatas) end
 
 ---@TODO: Verify item list saving behavior.
 ---Saves the item list for the DynamicList.
+---@usage
+---```lua
+---widget:SaveItemList()
+---```
 function DynamicList:SaveItemList() end
 
----@TODO: Clarify gap parameters and their effect.
 ---Sets the gaps between main and sub-list items in the DynamicList.
 ---@param mainGap number The gap between main items.
 ---@param subListGap number The gap between sub-list items.
+---@usage
+---```lua
+---widget:SetGaps(5, 5)
+---```
 function DynamicList:SetGaps(mainGap, subListGap) end
 
 ---@TODO: Confirm key and depth usage for selection.
@@ -224,4 +248,8 @@ function DynamicList:UpdateData(mainKey, subDatas) end
 
 ---@TODO: Confirm view update behavior.
 ---Updates the view of the DynamicList.
+---@usage
+---```lua
+---widget:UpdateView()
+---```
 function DynamicList:UpdateView() end

@@ -1,21 +1,6 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Editbox
-AP_BOTTOMLEFT = 2      -- objects/Editbox
-AP_BOTTOMRIGHT = 3     -- objects/Editbox
-AP_CENTER = 4          -- objects/Editbox
-AP_LEFT = 6            -- objects/Editbox
-AP_RIGHT = 7           -- objects/Editbox
-AP_TOP = 5             -- objects/Editbox
-AP_TOPLEFT = 0         -- objects/Editbox
-AP_TOPRIGHT = 1        -- objects/Editbox
-CT_ABILITY = 2         -- objects/Editbox
-CT_EXPEDITION_NAME = 3 -- objects/Editbox
-CT_NAME = 1            -- objects/Editbox
-DC_ALWAYS = 0          -- objects/Editbox DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Editbox DRAG_CONDITION
-
----@TODO: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
+---@FIXME: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
 
 ---objects/Editbox
 
@@ -32,7 +17,6 @@ local Editbox = {}
 ---```
 function Editbox:AddHistoryLine(text) end
 
----@TODO: Verify nameType and NRT_CHARACTER usage.
 ---Checks the name policy for the Editbox.
 ---@param nameType NRT The name type to check against (e.g., NRT_CHARACTER).
 ---@usage
@@ -90,9 +74,12 @@ function Editbox:IsPassword() end
 ---```
 function Editbox:SetDigit(digit) end
 
----@TODO: Clarify empty parameter purpose.
 ---Sets whether the Editbox allows empty digit input.
 ---@param empty boolean `true` to allow empty input, `false` to disallow.
+---@usage
+---```lua
+---widget:SetDigitEmpty(true)
+---```
 function Editbox:SetDigitEmpty(empty) end
 
 ---Sets the maximum value for digit input in the Editbox.

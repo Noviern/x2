@@ -18,14 +18,14 @@ CDR_SAVE_SUCCESS = 2                 -- api/X2Customizer CDR
 X2Customizer = {}                    -- api/X2Customizer
 
 ---api/X2Customizer
----@TODO: ? ? ?
+---Beauty Shop Status
 ---@alias BSS
 ---| `BSS_GENDER_TRANSFERED`
 ---| `BSS_INVALID_PLACE`
 ---| `BSS_POSSIBLE`
 
 ---api/X2Customizer
----@TODO: Customizer ? Result
+---Custom Data Result
 ---@alias CDR
 ---| `CDR_DELETE_SUCCESS`
 ---| `CDR_ERROR_AS_INVALID_DATA`

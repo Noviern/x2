@@ -9,7 +9,7 @@ VS_WIN = 3              -- api/X2BattleField VS
 X2BattleField = {}      -- api/X2BattleField
 
 ---api/X2BattleField
----@TODO: ? ? ? ?
+---Npc Information BroadCast
 ---@alias NIBC
 ---| `NIBC_BUFF_LEFT_TIME`
 ---| `NIBC_BUFF_STACK`

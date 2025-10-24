@@ -459,8 +459,6 @@ FONT_PATH = {
   DEFAULT = "font_main",
   SUB = "font_sub",
   COMBAT = "font_combat",
-
-  ---@TODO: These have special conditions.
   IMG_COMBAT = "img_font_combat",
   IMG_ACTION_BAR = "img_font_action_bar",
   IMG_NPC_HPBAR = "img_font_npc_hpbar"
@@ -500,3 +498,88 @@ TEXTBOX_LINE_SPACE = {
   TOOLTIP = 0,
   QUESTGUIDE = 3
 }
+
+function ParseCombatMessage(combatEvent, ...)
+  local pos = combatEvent:find("_")
+  local arg = { ... }
+  local prefix = combatEvent:sub(1, pos - 1)
+  local suffix = combatEvent:sub(pos + 1)
+  local result = {}
+  local index = 0
+  local function GetNextIndex()
+    index = index + 1
+    return index
+  end
+  if prefix == "MELEE" then
+  elseif prefix == "SPELL" then
+    result.spellId     = arg[GetNextIndex()]
+    result.spellName   = arg[GetNextIndex()]
+    result.spellSchool = arg[GetNextIndex()]
+  elseif prefix == "ENVIRONMENTAL" then
+    result.source  = arg[GetNextIndex()]
+    result.subType = arg[GetNextIndex()]
+    if result.subType ~= nil and result.subType ~= -1 then
+      result.mySlave = arg[GetNextIndex()]
+    end
+  end
+  if suffix == "DAMAGE" or suffix == "DOT_DAMAGE" then
+    result.damage = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+    result.hitType = arg[GetNextIndex()]
+    result.reduced = arg[GetNextIndex()]
+    result.elementDamage = arg[GetNextIndex()]
+    result.showElementEffect = arg[GetNextIndex()]
+    result.elementType = arg[GetNextIndex()]
+    result.synergy = arg[GetNextIndex()]
+  elseif suffix == "MISSED" then
+    result.missType = arg[GetNextIndex()]
+    result.damage = arg[GetNextIndex()]
+    result.reduced = arg[GetNextIndex()]
+    result.elementDamage = arg[GetNextIndex()]
+    result.showElementEffect = arg[GetNextIndex()]
+    result.elementType = arg[GetNextIndex()]
+  elseif suffix == "HEALED" then
+    result.heal = arg[GetNextIndex()]
+    result.hitType = arg[GetNextIndex()]
+    result.showElementEffect = arg[GetNextIndex()]
+    result.elementType = arg[GetNextIndex()]
+  elseif suffix == "ENERGIZE" then
+    result.amount = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+  elseif suffix == "DRAIN" then
+    result.amount = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+  elseif suffix == "LEECH" then
+    result.amount = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+  elseif suffix == "CAST_FAILED" then
+    result.failType = arg[GetNextIndex()]
+  elseif suffix == "AURA_APPLIED" or suffix == "AURA_REMOVED" then
+    result.auraType = arg[GetNextIndex()]
+    result.combatText = arg[GetNextIndex()]
+  end
+  return result
+end
+
+---Dumps a table line by line to the chat.
+---@param var table
+---@param ctx? ctx
+function ADDON:ChatLogTable(var, ctx)
+  local output = dump(var, ctx)
+  for line in output:gmatch("([^\n]*)\n?") do
+    ADDON:ChatLog(line)
+  end
+end
+
+---@generic T
+---@param value T|EmptyTable|nil
+---@return T
+function widgetassert(value)
+  assert(value ~= nil, "Not set.")
+
+  local notEmpty = next(value) ~= nil
+  local hasMetatable = getmetatable(value) ~= nil
+  assert(notEmpty and hasMetatable, "Did you forget to import the object?")
+
+  return value
+end

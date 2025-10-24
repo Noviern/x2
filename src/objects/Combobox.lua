@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Combobox
-AP_BOTTOMLEFT = 2      -- objects/Combobox
-AP_BOTTOMRIGHT = 3     -- objects/Combobox
-AP_CENTER = 4          -- objects/Combobox
-AP_LEFT = 6            -- objects/Combobox
-AP_RIGHT = 7           -- objects/Combobox
-AP_TOP = 5             -- objects/Combobox
-AP_TOPLEFT = 0         -- objects/Combobox
-AP_TOPRIGHT = 1        -- objects/Combobox
-CT_ABILITY = 2         -- objects/Combobox
-CT_EXPEDITION_NAME = 3 -- objects/Combobox
-CT_NAME = 1            -- objects/Combobox
-DC_ALWAYS = 0          -- objects/Combobox DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Combobox DRAG_CONDITION
-
 ---objects/Combobox
 ---@class Combobox: Widget
 ---@field dropdown ComboboxDropDown
@@ -37,14 +22,19 @@ function Combobox:Insert(datas) end
 ---```
 function Combobox:PauseAutocomplete(pause) end
 
----@TODO: Verify which filters are valid for each type.
 ---Sets the autocomplete type and filter for the Combobox.
----@param type AUTOCOMPLETE_TYPE The autocomplete type.
----@param filter AUTOCOMPLETE_FILTER The autocomplete filter.
+---@param type string The autocomplete type.
+---@param filter string The autocomplete filter.
 ---@usage
 ---```lua
 ---widget:SetAutocomplete("item", "")
 ---```
+---@overload fun(self: self, type: "appellation", filter: "")
+---@overload fun(self: self, type: "ingameShopGoods", filter: "ingameShopGoods")
+---@overload fun(self: self, type: "item", filter: AUTOCOMPLETE_FILTER)
+---@overload fun(self: self, type: "itemForDebug", filter: "")
+---@overload fun(self: self, type: "itemTypeForDebug", filter: "")
+---@overload fun(self: self, type: "store", filter: "")
 function Combobox:SetAutocomplete(type, filter) end
 
 ---Sets the maximum number of visible items in the Combobox dropdown.

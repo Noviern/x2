@@ -15,7 +15,7 @@ X2CombatResource = {}  -- api/X2CombatResource
 ---| `CRU_GAUGE`
 ---| `CRU_OVERLAP`
 
----@TODO: Broken? Always returns false.
+---@FIXME: Broken? Always returns false.
 ---Checks if the combat resource for the specified group type is at its maximum.
 ---@param groupType ABILITY_TYPE The group type to check.
 ---@return boolean maxPointByGroupType `true` if the combat resource is at maximum, `false` otherwise.
@@ -36,7 +36,6 @@ function X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType) end
 ---local combatResourceInfo = X2CombatResource:GetCombatResourceInfo()
 ---```
 ---@see CombatResourceInfo
----@see ABILITY_TYPE
 function X2CombatResource:GetCombatResourceInfo() end
 
 ---Retrieves combat resource information for the specified group type if the

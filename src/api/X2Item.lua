@@ -40,7 +40,7 @@ POOR_ITEM_GRADE = 1                     -- api/X2Item
 X2Item = {}                             -- api/X2Item
 
 ---api/X2Item
----@TODO: ? ? Mileage
+---Buy Mode Mileage
 ---@alias BM_MILEAGE
 ---| `BM_MILEAGE_ITEM_TYPE`
 ---| `BM_MILEAGE_USABLE_ONE_ITEM_TYPE`
@@ -67,7 +67,7 @@ X2Item = {}                             -- api/X2Item
 ---| `IIK_TYPE`
 
 ---api/X2Item
----@TODO: ? ? ? ?
+---Item Socket Upgrade State
 ---@alias ISUS
 ---| `ISUS_MAX_UPGRADE`
 ---| `ISUS_MISS_MATCH`

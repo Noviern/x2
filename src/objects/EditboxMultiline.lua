@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/EditboxMultiline
-AP_BOTTOMLEFT = 2      -- objects/EditboxMultiline
-AP_BOTTOMRIGHT = 3     -- objects/EditboxMultiline
-AP_CENTER = 4          -- objects/EditboxMultiline
-AP_LEFT = 6            -- objects/EditboxMultiline
-AP_RIGHT = 7           -- objects/EditboxMultiline
-AP_TOP = 5             -- objects/EditboxMultiline
-AP_TOPLEFT = 0         -- objects/EditboxMultiline
-AP_TOPRIGHT = 1        -- objects/EditboxMultiline
-CT_ABILITY = 2         -- objects/EditboxMultiline
-CT_EXPEDITION_NAME = 3 -- objects/EditboxMultiline
-CT_NAME = 1            -- objects/EditboxMultiline
-DC_ALWAYS = 0          -- objects/EditboxMultiline DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/EditboxMultiline DRAG_CONDITION
-
 ---objects/EditboxMultiline
 ---@class EditboxMultiline: Widget, Editboxbase
 local EditboxMultiline = {}
@@ -59,7 +44,6 @@ function EditboxMultiline:GetLineCount() end
 ---```
 function EditboxMultiline:GetLineHeight() end
 
----@TODO: Is this broken similar to Textbox:GetTextHeight?
 ---Retrieves the total height of the text in the EditboxMultiline.
 ---@return number textHeight The total text height.
 ---@nodiscard

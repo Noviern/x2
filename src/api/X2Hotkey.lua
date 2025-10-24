@@ -3,8 +3,21 @@
 ---@class X2Hotkey
 X2Hotkey = {} -- api/X2Hotkey
 
----@TODO: without X2Hotkey:SaveHotKey() all keys/actions must be set each reload.
----@TODO: action option button is the the button in the settings that can be changed and applied.
+---When working with hotkeys its best to do everything on another character so
+---you dont mess up your main.
+---There are current active bindings and then current option button bindings that can be changed and applied.
+
+---Sets all current bindings to their option button.
+---
+---**This must be used before `X2Hotkey:SaveHotKey()` or all hotkeys will be
+---erased upon reloading!**
+---@usage
+---```lua
+---X2Hotkey:BindingToOption()
+----- Set a new binding.
+---X2Hotkey:SaveHotKey()
+---```
+function X2Hotkey:BindingToOption() end
 
 ---Enables or disables the hotkey system.
 ---@param enable boolean `true` to enable the hotkey system, `false` to disable it. (default: `true`)
@@ -92,17 +105,30 @@ function X2Hotkey:IsOverridableAction(action) end
 ---@see HOTKEY_ACTION
 function X2Hotkey:IsValidActionName(action) end
 
----Saves currently set hotkeys. **Danger!** Currently will erase all hotkeys after reloading.
+---@TODO:
 ---@usage
 ---```lua
+---X2Hotkey:OptionToBinding()
+---```
+function X2Hotkey:OptionToBinding() end
+
+---Saves currently set hotkeys. Triggers the `UPDATE_BINDINGS` event.
+---
+---**`X2Hotkey:BindingToOption()` must be used before or all hotkeys will
+---be erased upon reloading!**
+---@usage
+---```lua
+---X2Hotkey:BindingToOption()
+----- Set a new binding here.
 ---X2Hotkey:SaveHotKey()
 ---```
 function X2Hotkey:SaveHotKey() end
 
----Binds a key to a action and registers the key to fire the `HOTKEY_ACTION`
----event when pressed and released.
----@param actionName string custom action
----@param key string
+---Binds a key to an action and registers the key to fire the `HOTKEY_ACTION`
+---event when pressed and released. This can't be saved but the hotkey can be
+---used immediately.
+---@param actionName string The custom action name to bind.
+---@param key string The key to bind to the action.
 ---@usage
 ---```lua
 ---X2Hotkey:SetBindingUiEvent("my_custom_action_name", "CTRL-`")
@@ -111,7 +137,8 @@ function X2Hotkey:SaveHotKey() end
 function X2Hotkey:SetBindingUiEvent(actionName, key) end
 
 ---Binds a key to a action in the specified index and registers the key to fire
----the `HOTKEY_ACTION` event when pressed and released.
+---the `HOTKEY_ACTION` event when pressed and released. This can't be saved but
+---the hotkey can be used immediately.
 ---@param actionName string The custom action name to bind.
 ---@param key string The key to bind to the action.
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
@@ -135,36 +162,46 @@ function X2Hotkey:SetBindingUiEventWithIndex(actionName, key, index) end
 ---@see HOTKEY_MANAGER
 function X2Hotkey:SetOptionBindingButtonWithIndex(action, key, keyType) end
 
----Binds a key to a action option button.
+---Binds a key to a action option button and once saved registers the key to
+---fire the `HOTKEY_ACTION` event when pressed and released.
 ---@param actionName string The custom action name to bind.
 ---@param key string The key to bind to the action.
 ---@usage
 ---```lua
+---X2Hotkey:BindingToOption()
 ---X2Hotkey:SetOptionBindingUiEvent("my_custom_action_name", "CTRL-`")
+---X2Hotkey:SaveHotKey()
 ---```
 function X2Hotkey:SetOptionBindingUiEvent(actionName, key) end
 
----Binds a key to a custom action option button in the specified index.
+---Binds a key to a custom action option button in the specified index and once
+---saved registers the key to fire the `HOTKEY_ACTION` event when pressed and
+---released.
 ---@param actionName string The custom action name to bind.
 ---@param key string The key to bind to the action.
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
 ---@usage
 ---```lua
----X2Hotkey:SetOptionBindingUiEventWithIndex("my_custom_action_name", "CTRL-`", 1)
+---X2Hotkey:BindingToOption()
+---X2Hotkey:SetOptionBindingUiEventWithIndex("my_custom_action_name", "SHIFT-`", 1)
+---X2Hotkey:SaveHotKey()
 ---```
 ---@see HOTKEY_ACTION
 ---@see HOTKEY_MANAGER
 function X2Hotkey:SetOptionBindingUiEventWithIndex(actionName, key, index) end
 
 ---Binds a key to a action option button in the specified index with additional
----arguments. Can trigger the `UPDATE_OPTION_BINDINGS` event if the button key has changed.
+---arguments. Can trigger the `UPDATE_OPTION_BINDINGS` event if the button key
+---has changed.
 ---@param action HOTKEY_ACTION The hotkey action to bind.
 ---@param key string The key to bind.
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
 ---@param arg number The additional argument for the binding. (min: `0`)
 ---@usage
 ---```lua
+---X2Hotkey:BindingToOption()
 ---X2Hotkey:SetOptionBindingWithIndex("front_camera", "`", 1, 0)
+---X2Hotkey:SaveHotKey()
 ---```
 ---@see HOTKEY_ACTION
 ---@see HOTKEY_MANAGER

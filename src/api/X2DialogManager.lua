@@ -118,6 +118,7 @@ X2DialogManager = {}                              -- api/X2DialogManager
 
 ---api/X2DialogManager
 ---Dialog Button Type
+---@alias DBT
 ---| `DBT_NONE`
 ---| `DBT_OK`
 ---| `DBT_OK_CANCEL`
@@ -228,7 +229,7 @@ X2DialogManager = {}                              -- api/X2DialogManager
 ---| `DLG_TRADE`
 
 ---api/X2DialogManager
----@TODO: ? ? ?
+---Item Recharge Type
 ---@alias IRT
 ---| `IRT_BUFF`
 ---| `IRT_INVALID`

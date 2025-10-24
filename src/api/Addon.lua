@@ -168,7 +168,7 @@ SOUND_STREAM = 32                                 -- api/Addon
 SOUND_VOICE = 2097152                             -- api/Addon
 STABLER_TEXT = 68                                 -- api/Addon UI_TEXT_CATEGORY_ID
 STORE_TEXT = 65                                   -- api/Addon UI_TEXT_CATEGORY_ID
-Sound = {}                                        -- api/Addon @TODO: Does this ever get populated?
+Sound = {}                                        -- api/Addon
 TARGET_POPUP_TEXT = 75                            -- api/Addon UI_TEXT_CATEGORY_ID
 TEAM_TEXT = 106                                   -- api/Addon UI_TEXT_CATEGORY_ID
 TERRITORY_TEXT = 111                              -- api/Addon UI_TEXT_CATEGORY_ID
@@ -646,6 +646,7 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 ---| `UM_YEAR`
 ---| `UM_ZONE_NAME`
 
+---@TODO: should this have OBJECT values?
 ---api/Addon
 ---Ui Object Type
 ---@alias UOT
@@ -661,7 +662,6 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 ---| `UOT_TEXT_STYLE`
 ---| `UOT_X2_EDITBOX`
 
----@TODO: keep track of this
 ---api/Addon
 ---@alias UOT_DRAWABLE
 ---| `7` UOT_COLOR_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
@@ -735,10 +735,10 @@ function ADDON:FireAddon(name) end
 function ADDON:GetAddonInfos() end
 
 ---Retrieves the registered content frame for the specified UI category.
----Restricted to custom UI categories registered in the addon. Can not be used
----to get content frames from other addons.
+---Restricted to custom UI categories registered in the addon. Cannot be used to
+---get content frames from other addons.
 ---@param uiCategory number The UI category ID.
----@return Widget|nil contentFrame The content frame.
+---@return Widget|nil contentFrame The content frame, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -912,13 +912,11 @@ function ADDON:ToggleContent(uiCategory, data) end
 ---@see UIBOUND_KEY
 function UIParent:ClearUIBound(key) end
 
----@TODO: How does category work?
 ---Creates a widget of the specified type with the given ID and parent.
 ---@generic T
 ---@param widgetName `T` The type of widget to create.
 ---@param id string The unique identifier for the widget. If the name already exists it will cause a UI Logic Error.
 ---@param parentId "UIParent"|string|Widget The parent `Widget` or "UIParent" for the widget.
----@param category? string Optional category for the widget.
 ---@return T|EmptyTable|nil
 ---@nodiscard
 ---@usage
@@ -929,19 +927,17 @@ function UIParent:ClearUIBound(key) end
 ---@see OBJECT_NAME
 ---@see Widget
 ---@see WIDGET_TYPES
----@overload fun(self: self, widgetName: OBJECT_NAME, id: string, parentId: string|Widget, category?: string)
+---@overload fun(self: self, widgetName: OBJECT_NAME, id: string, parentId: string|Widget)
 function UIParent:CreateWidget(widgetName, id, parentId, category) end
 
----@TODO: currently unusable without SetAccountUITimeStamp
----@FIXME:
+---@FIXME: currently unusable without SetAccountUITimeStamp
 ---Retrieves the account UI timestamp for the specified key.
 ---@param key string The key to retrieve the timestamp for.
 ---@return string accountUITimeStamp The timestamp associated with the key.
 ---@nodiscard
 function UIParent:GetAccountUITimeStamp(key) end
 
----@TODO: Seems to be buggy? Shows the wrong day.
----Retrieves the character today's played timestamp.
+---Retrieves the date the character was last active based on when it last receives 20 leadership in a day.
 ---@return string characterTodayPlayedTimeStamp The timestamp in `YYYY-M-D` format.
 ---@nodiscard
 ---@usage
@@ -987,9 +983,8 @@ function UIParent:GetCurrentTimeStamp() end
 ---```
 function UIParent:GetEntityByName(sEntityName) end
 
----@TODO: Not sure if there are keys other than "inventory_guide_line_space"
 ---Retrieves the value for the specified key.
----@param key string The key to retrieve the value for.
+---@param key "inventory_guide_line_space" The key to retrieve the value for.
 ---@return number etcValue The value associated with the key.
 ---@nodiscard
 ---@usage
@@ -2160,32 +2155,31 @@ function UIParent:SetUIBound(key, uiBound) end
 ---```
 function UIParent:SetUIScale(scale, immediatelyApply) end
 
----@TODO: What does this function do?
----@FIXME:
----Sets whether to use a comma in number formatting.
----@param use boolean Whether to enable comma usage.
+---Sets whether to allow comma usage in number formatting.
+---@param use boolean Whether to enable comma usage. The default is set by the game region.
+---@usage
+---```lua
+---UIParent:SetUseInsertComma(true)
+---ADDON:ChatLog(tostring(X2Unit:UnitGearScore("player", true)))
+---```
 function UIParent:SetUseInsertComma(use) end
 
----@TODO: Broken?
----@FIXME:
+---@FIXME: Broken?
 ---Sets the camera view angles in radians.
 ---@param angles Vec3 The camera angles to set.
 function UIParent:SetViewCameraAngles(angles) end
 
----@TODO: Broken?
----@FIXME:
+---@FIXME: Broken?
 ---Sets the camera view direction.
 ---@param dir Vec3 The camera direction to set.
 function UIParent:SetViewCameraDir(dir) end
 
----@TODO: Broken?
----@FIXME:
+---@FIXME: Broken?
 ---Sets the camera field of view.
 ---@param fov number The field of view to set.
 function UIParent:SetViewCameraFov(fov) end
 
----@TODO: Broken?
----@FIXME:
+---@FIXME: Broken?
 ---Sets the camera view position.
 ---@param pos Vec3 The camera position to set.
 function UIParent:SetViewCameraPos(pos) end

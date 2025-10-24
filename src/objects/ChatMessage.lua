@@ -1,21 +1,6 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/ChatMessage
-AP_BOTTOMLEFT = 2      -- objects/ChatMessage
-AP_BOTTOMRIGHT = 3     -- objects/ChatMessage
-AP_CENTER = 4          -- objects/ChatMessage
-AP_LEFT = 6            -- objects/ChatMessage
-AP_RIGHT = 7           -- objects/ChatMessage
-AP_TOP = 5             -- objects/ChatMessage
-AP_TOPLEFT = 0         -- objects/ChatMessage
-AP_TOPRIGHT = 1        -- objects/ChatMessage
-CT_ABILITY = 2         -- objects/ChatMessage
-CT_EXPEDITION_NAME = 3 -- objects/ChatMessage
-CT_NAME = 1            -- objects/ChatMessage
-DC_ALWAYS = 0          -- objects/ChatMessage DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/ChatMessage DRAG_CONDITION
-
----@TODO: scriptsbin\x2ui\chat\chat_window.lua uses these methods but unsure what widget type it is as its never explicitly stated.
+---@FIXME: scriptsbin\x2ui\chat\chat_window.lua uses these methods but unsure what widget type it is as its never explicitly stated.
 
 ---objects/ChatMessage
 ---@class ChatMessage

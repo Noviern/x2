@@ -23,6 +23,7 @@ X2Auction = {}       -- api/X2Auction
 ---| `PT_BID`
 ---| `PT_PARTITION`
 
+---@FIXME: Buggy: only opens if UI was opened previously.
 ---Requests the market price for an item, triggering the `DIAGONAL_ASR` event.
 ---@param itemType number The type of item.
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
@@ -34,7 +35,7 @@ X2Auction = {}       -- api/X2Auction
 ---@see ITEM_GRADE_TYPE
 function X2Auction:AskMarketPrice(itemType, itemGrade, askMarketPriceUi) end
 
----@TODO: this is broken and doesnt always return a value, needs more testing
+---@FIXME: this is broken and doesnt always return a value, needs more testing
 ---Retrieves the lowest market price for an item.
 ---@param itemType number The type of item.
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.

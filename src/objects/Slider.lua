@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Slider
-AP_BOTTOMLEFT = 2      -- objects/Slider
-AP_BOTTOMRIGHT = 3     -- objects/Slider
-AP_CENTER = 4          -- objects/Slider
-AP_LEFT = 6            -- objects/Slider
-AP_RIGHT = 7           -- objects/Slider
-AP_TOP = 5             -- objects/Slider
-AP_TOPLEFT = 0         -- objects/Slider
-AP_TOPRIGHT = 1        -- objects/Slider
-CT_ABILITY = 2         -- objects/Slider
-CT_EXPEDITION_NAME = 3 -- objects/Slider
-CT_NAME = 1            -- objects/Slider
-DC_ALWAYS = 0          -- objects/Slider DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Slider DRAG_CONDITION
-
 ---objects/Slider
 ---@class Slider: Widget
 local Slider = {}
@@ -49,7 +34,6 @@ function Slider:GetMinMaxValues() end
 ---@see SLIDER_SCROLL_TYPE
 function Slider:GetOrientation() end
 
----@TODO: Can this be anything or just Button?
 ---Retrieves the thumb button widget of the Slider.
 ---@return Button|nil thumbButtonWidget The thumb button widget, or `nil` if not set.
 ---@nodiscard

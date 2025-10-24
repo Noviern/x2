@@ -131,7 +131,7 @@
 ---@field repairable number
 ---@field requiredCondition RequiredConditionInfo
 ---@field scalable boolean
----@field securityState number
+---@field securityState ITEM_SECURITY
 ---@field sellable boolean
 ---@field setItems SetItemsInfo[]
 ---@field sideEffect boolean

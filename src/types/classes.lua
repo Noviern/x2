@@ -177,24 +177,24 @@ local Vslider = {}
 ---@field canProgress boolean
 ---@field categoryName string
 ---@field complete boolean
----@field completeDate? Time TODO: This is set if complete == true
+---@field completeDate? Time This is set if complete == true
 ---@field completeNum number
----@field completeSubCount? number TODO: I think this is only set if highRank == true
+---@field completeSubCount? number @TODO: I think this is only set if highRank == true
 ---@field current number
 ---@field desc string
 ---@field grade number
 ---@field highRank boolean
----@field highRankAchievementType? number mainType TODO: I think this is only set if highRank == false
+---@field highRankAchievementType? number mainType @TODO: I think this is only set if highRank == false
 ---@field iconPath string
 ---@field isHidden boolean
----@field isParentComplete? boolean TODO: I think this is only set if highRank == false
+---@field isParentComplete? boolean @TODO: I think this is only set if highRank == false
 ---@field name string
----@field objective? number[] TODO: I think this is only set if highRank == true
----@field reward? RewardInfo TODO: I think this is only set if highRank == true
+---@field objective? number[] @TODO: I think this is only set if highRank == true
+---@field reward? RewardInfo @TODO: I think this is only set if highRank == true
 ---@field subCategoryName string
 ---@field subCategoryType number
 ---@field summary string
----@field totalSubCount? number TODO: I think this is only set if highRank == true
+---@field totalSubCount? number @TODO: I think this is only set if highRank == true
 ---@field tracing boolean
 ---@field type number
 
@@ -435,6 +435,7 @@ local Vslider = {}
 ---@field faction string
 ---@field title string
 
+---@TODO: Slot:GetExtraInfo() returns only skillPoints
 ---api/X2Skill
 ---@class SkillInfo
 ---@field abilityName string
@@ -465,8 +466,6 @@ local Vslider = {}
 ---@field desc string
 ---@field resultbuffkind boolean
 ---@field resulticon string
-
----@TODO: Should SkillTooltip be moved to Addon because its also used in Slot:GetTooltip()
 
 ---api/X2Skill
 ---@class SkillTooltip
@@ -516,7 +515,6 @@ local Vslider = {}
 ---@field [2] TargetAbilityTemplate
 ---@field [3] TargetAbilityTemplate
 
----@TODO: Dont I have something similar to this already?
 ---api/X2Unit
 ---@class UnitClass
 ---@field [1] ABILITY_TYPE
@@ -577,7 +575,7 @@ local Vslider = {}
 ---@class FrameInfo
 ---@field alpha? number
 ---@field animTime? number
----@field animType? DAT|LAT|CTA This can add multiple LAT
+---@field animType? DAT|LAT This can add multiple LAT
 ---@field h? number
 ---@field moveX? number
 ---@field moveY? number
@@ -711,15 +709,16 @@ local Vslider = {}
 ---@field defense boolean
 ---@field fName string
 ---@field isWaitWar boolean
----@field membetCount number
+---@field membetCount number xlgames misspelt this
 ---@field ownerName string
----@field period string = "siege_period_ready_to_siege",
+---@field period string 
 ---@field ranking number
 
 ---@class SiegeRaidTeamInfos
 ---@field [1] SiegeRaidTeam
 ---@field [2] SiegeRaidTeam
 ---@field [3] SiegeRaidTeam
+
 ---@class CraftOrderEntry
 ---@field chargeFee string
 ---@field consumeLp number
@@ -828,7 +827,7 @@ local Vslider = {}
 ---@field pull boolean Full
 ---@field remainTime number
 
----@TODO: Enum for faction.
+---@TODO: Enum for faction. this provides a different faction id?
 ---@class FriendInfo
 ---@field [1] string Name
 ---@field [2] number Basic Level
@@ -868,7 +867,7 @@ local Vslider = {}
 ---@field hour number
 ---@field min number
 ---@field week string
----@field zoneGroupName string
+---@field zoneGroupName ZONE_NAME
 
 ---@class RaidRecruitDetailInfo
 ---@field createTime string
@@ -939,7 +938,7 @@ local Vslider = {}
 ---@field ownerLevel number
 ---@field squadId number
 ---@field worldName string
----@field zoneGroupType number
+---@field zoneGroupType number @TODO: ZONE_ID?
 
 ---@class SelectSquadList
 ---@field curPage number
@@ -971,7 +970,7 @@ local Vslider = {}
 ---@field memberMax number
 ---@field scheduleInfo SiegeRaidScheduleInfo
 ---@field siegeState string = "siege_state_ready_to_siege",
----@field zoneName string = "Heedmar",
+---@field zoneName string @TODO: ZONE_NAME?
 
 ---@class SiegeRaidInfo
 ---@field memberInfo SiegeRaidMemberInfo[]
@@ -1054,7 +1053,7 @@ local Vslider = {}
 ---@field trgFactionName string
 ---@field trgMotherFactionName string
 ---@field trgName string
----@field zoneGroupName string
+---@field zoneGroupName ZONE_NAME
 
 ---@class ActabilityGroupTypeInfo: ActabilityInfo
 ---@field viewGroupType number
@@ -1071,3 +1070,181 @@ local Vslider = {}
 ---@field [1] ActiveAbility
 ---@field [2]? ActiveAbility
 ---@field [3]? ActiveAbility
+
+---@class ChangeVisualRace
+---@field itemId number
+---@field raceList number[]
+---@field skillType number
+---@field time number
+
+---@class GachaLootPackItemLog
+---@field itemGrade ITEM_GRADE_TYPE
+---@field itemType number
+---@field stackSize number
+
+---@class GachaLootPackLog
+---@field [1] GachaLootPackItemLog Gold
+---@field [2] GachaLootPackItemLog Item
+
+---@class GachaLootPackItemResult
+---@field grade ITEM_GRADE_TYPE
+---@field linkText string
+---@field stackSize number
+
+---@class GachaLootPackResult
+---@field [1] GachaLootPackItemResult Gold
+---@field [2] GachaLootPackItemResult Item
+
+---@class TutorialInfo
+---@field [1] { title: string }
+---@field [2] { [1]: string }
+
+---@class FactionPointInfo
+---@field factionId FACTION_TYPE
+---@field point number
+
+---@class FactionCompetitionPointInfo
+---@field pointList FactionPointInfo[]
+
+---@class CompleteCraftOrderInfo
+---@field craftCount number
+---@field craftGrade ITEM_GRADE_TYPE
+---@field craftType number
+
+---@class SpecialtySupplyInfo
+---@field iconCoord string
+---@field iconPath string
+---@field label string
+---@field priceIndex number
+
+---@class SpecialtyBaseInfo
+---@field item ItemInfo
+---@field noEventRefund string
+---@field ratio number
+---@field refund string
+---@field supply SpecialtySupplyInfo
+
+---@class SpecialtyInfo: SpecialtyBaseInfo
+---@field count number
+---@field delay number
+---@field specialtyZone ZONE_ID
+
+---@class SpecialtyContentInfo: SpecialtyBaseInfo
+---@field stock number
+
+---@class SellSpecialtyInfo
+---@field count number
+---@field freshnessRatio number
+---@field item ItemInfo
+---@field noEventRefund string
+---@field ratio number
+---@field refund string
+---@field refundItemCount number
+---@field refundItemType number
+---@field sellerRatio number
+---@field specialtyZone ZONE_ID
+---@field supply SpecialtySupplyInfo
+
+---@class ChronicleInfo
+---@field mainKey number
+---@field openKey number
+---@field status "active"|"complete"|string
+
+---@class ChangeOptionInfo
+---@field display false
+
+------
+
+---@TODO: Rewrite these
+
+---@class CombatSpellPrefix
+---@field spellId number
+---@field spellName string
+---@field spellSchool string
+
+---@class CombatEnvironmentalPrefix
+---@field source string
+---@field subType number
+---@field mySlave? any @TODO:
+
+---@class CombatDamageSuffix
+---@field damage number
+---@field powerType "HEALTH"|"MANA"
+---@field hitType "HIT"|"CRITICAL" @TODO: COMBAT_HIT_TYPE?
+---@field reduced number
+---@field elementDamage number
+---@field showElementEffect boolean
+---@field elementType number
+---@field synergy boolean
+
+---@class CombatMissSuffix
+---@field missType "MISS"|"DODGE"|"BLOCK"|"PARRY"|"IMMUNE"|"RESIST"
+---@field damage number
+---@field reduced number
+---@field elementDamage number
+---@field showElementEffect boolean
+---@field elementType number
+
+---@class CombatAuraSuffix
+---@field auraType "BUFF"|"DEBUFF"
+---@field combatText boolean
+
+---@class CombatHealedSuffix
+---@field heal number
+---@field hitType "HIT"|"CRITICAL"
+---@field showElementEffect boolean
+---@field elementType number
+
+---@class CombatCastFailedSuffix
+---@field failType any @TODO:
+
+---@class CombatEnvironmentalDamage: CombatEnvironmentalPrefix, CombatDamageSuffix
+
+---@class CombatMeleeDamage: CombatDamageSuffix
+
+---@class CombatMeleeMissed: CombatMissSuffix
+
+---@class CombatSpellAuraApplied: CombatSpellPrefix, CombatAuraSuffix
+
+---@class CombatSpellAuraRemoved: CombatSpellPrefix, CombatAuraSuffix
+
+---@class CombatSpellCastFailed: CombatSpellPrefix, CombatCastFailedSuffix
+
+---@class CombatSpellCastStart: CombatSpellPrefix
+
+---@class CombatSpellCastSuccess: CombatSpellPrefix
+
+---@class CombatSpellDamage: CombatSpellPrefix, CombatDamageSuffix
+
+---@class CombatSpellDotDamage: CombatSpellPrefix, CombatDamageSuffix
+
+---@class CombatSpellEnergize: CombatSpellPrefix
+
+---@class CombatSpellHealed: CombatSpellPrefix, CombatHealedSuffix
+
+---@class CombatSpellMissed: CombatSpellPrefix, CombatMissSuffix
+
+----
+
+---@class FactionCompetitionInfo
+---@field zoneIn boolean
+
+---@class FactionCompetitionResultInfos
+---@field pointList FactionPointInfo[]
+---@field winFaction FACTION_TYPE
+
+---@class SpecialtyRatioInfo
+---@field itemInfo ItemInfo
+---@field ratio number
+
+---@class NpcBroadcastingInfo
+---@field broadcastingType NIBC
+---@field buffName string
+---@field buffType number
+---@field iconPath string
+---@field stack number
+
+---@class ReentryParam
+---@field [1] boolean reentry
+---@field [2] number timeLeft in milliseconds
+---@field [3]? string instanceName

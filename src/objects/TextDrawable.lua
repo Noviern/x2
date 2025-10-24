@@ -1,15 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- objects/TextDrawable
-AP_BOTTOMLEFT = 2  -- objects/TextDrawable
-AP_BOTTOMRIGHT = 3 -- objects/TextDrawable
-AP_CENTER = 4      -- objects/TextDrawable
-AP_LEFT = 6        -- objects/TextDrawable
-AP_RIGHT = 7       -- objects/TextDrawable
-AP_TOP = 5         -- objects/TextDrawable
-AP_TOPLEFT = 0     -- objects/TextDrawable
-AP_TOPRIGHT = 1    -- objects/TextDrawable
-
 ---objects/TextDrawable
 ---@class TextDrawable: Drawablebase
 ---@field style TextStyle
@@ -54,8 +44,7 @@ function TextDrawable:SetOutline(outline) end
 ---```
 function TextDrawable:SetShadow(shadow) end
 
----@TODO: Unsure what this does.
----Enables or disables snapping for the TextDrawable.
+---Enables or disables pixel snapping for the TextDrawable.
 ---@param snap boolean `true` to enable snapping, `false` to disable.
 ---@usage
 ---```lua

@@ -1,32 +1,23 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/StatusBar
-AP_BOTTOMLEFT = 2      -- objects/StatusBar
-AP_BOTTOMRIGHT = 3     -- objects/StatusBar
-AP_CENTER = 4          -- objects/StatusBar
-AP_LEFT = 6            -- objects/StatusBar
-AP_RIGHT = 7           -- objects/StatusBar
-AP_TOP = 5             -- objects/StatusBar
-AP_TOPLEFT = 0         -- objects/StatusBar
-AP_TOPRIGHT = 1        -- objects/StatusBar
-CT_ABILITY = 2         -- objects/StatusBar
-CT_EXPEDITION_NAME = 3 -- objects/StatusBar
-CT_NAME = 1            -- objects/StatusBar
-DC_ALWAYS = 0          -- objects/StatusBar DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/StatusBar DRAG_CONDITION
-
 ---objects/StatusBar
 ---@class StatusBar: Widget
 local StatusBar = {}
 ---@class statusbar: StatusBar
 
----@TODO: Broken?
 ---Adds a child widget to the StatusBar with specified anchoring.
----@param anchorChild table The child widget to anchor.
+---@param anchorChild DrawableDDS The child widget to anchor.
 ---@param childAnchorPoint ANCHOR_POINT The anchor point on the child widget.
 ---@param anchorOigin? ANCHOR_POINT The origin anchor point (optional).
 ---@param x? number The x-offset (optional).
 ---@param y? number The y-offset (optional).
+---@usage
+---```lua
+---local shadowDeco = widget:CreateDrawable(TEXTURE_PATH.DEFAULT, "gage_shadow", "artwork")
+---widget:AddAnchorChildToBar(shadowDeco, "TOPLEFT", "TOPRIGHT", 0, -1)
+---```
+---@see DrawableDDS
+---@see ANCHOR_POINT
 function StatusBar:AddAnchorChildToBar(anchorChild, childAnchorPoint, anchorOigin, x, y) end
 
 ---Retrieves the color of the StatusBar.
@@ -70,7 +61,7 @@ function StatusBar:GetMinMaxValues() end
 function StatusBar:GetOrientation() end
 
 ---Retrieves the current value of the StatusBar.
----@return string value The current value. (default: `0`)
+---@return string value The current value. (default: `"0"`)
 ---@nodiscard
 ---@usage
 ---```lua
@@ -78,10 +69,9 @@ function StatusBar:GetOrientation() end
 ---```
 function StatusBar:GetValue() end
 
----@TODO: Clarify purpose and behavior.
----Checks if the StatusBar's image color changes based on the value.
+---Checks the value against `StatusBar:GetValue()`.
 ---@param value string The value to check.
----@return boolean `true` if the color changes, `false` otherwise.
+---@return boolean `true` if the value is greater than `StatusBar:GetValue()`, `false` otherwise.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -160,7 +150,7 @@ function StatusBar:SetMinMaxValues(min, max) end
 function StatusBar:SetMinMaxValuesForString(min, max) end
 
 ---Sets the orientation of the StatusBar.
----@param orientation ORIENTATION The orientation to set.
+---@param orientation ORIENTATION The orientation to set. (default: `"HORIZONTAL"`)
 ---@usage
 ---```lua
 ---widget:SetOrientation("VERTICAL")

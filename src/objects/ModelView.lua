@@ -1,19 +1,6 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/ModelView
-AP_BOTTOMLEFT = 2      -- objects/ModelView
-AP_BOTTOMRIGHT = 3     -- objects/ModelView
-AP_CENTER = 4          -- objects/ModelView
-AP_LEFT = 6            -- objects/ModelView
-AP_RIGHT = 7           -- objects/ModelView
-AP_TOP = 5             -- objects/ModelView
-AP_TOPLEFT = 0         -- objects/ModelView
-AP_TOPRIGHT = 1        -- objects/ModelView
-CT_ABILITY = 2         -- objects/ModelView
-CT_EXPEDITION_NAME = 3 -- objects/ModelView
-CT_NAME = 1            -- objects/ModelView
-DC_ALWAYS = 0          -- objects/ModelView DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/ModelView DRAG_CONDITION
+---@TODO: view all of game\ui to find ids like hair color horn etc
 
 ---objects/ModelView
 ---@class ModelView: Widget
@@ -39,7 +26,7 @@ function ModelView:AddRotation(angle) end
 ---```
 function ModelView:AdjustCameraPos(offsetX, offsetY, offsetZ) end
 
----@TODO: unsurew how this works
+---@TODO: unsure how this works
 ---Adjusts the camera position relative to the model in the ModelView.
 ---@param offsetY number
 ---@param offsetZ number

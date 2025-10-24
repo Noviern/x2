@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Line
-AP_BOTTOMLEFT = 2      -- objects/Line
-AP_BOTTOMRIGHT = 3     -- objects/Line
-AP_CENTER = 4          -- objects/Line
-AP_LEFT = 6            -- objects/Line
-AP_RIGHT = 7           -- objects/Line
-AP_TOP = 5             -- objects/Line
-AP_TOPLEFT = 0         -- objects/Line
-AP_TOPRIGHT = 1        -- objects/Line
-CT_ABILITY = 2         -- objects/Line
-CT_EXPEDITION_NAME = 3 -- objects/Line
-CT_NAME = 1            -- objects/Line
-DC_ALWAYS = 0          -- objects/Line DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Line DRAG_CONDITION
-
 ---objects/Line
 ---@class Line: Widget
 local Line = {}

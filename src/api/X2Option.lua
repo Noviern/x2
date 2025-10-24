@@ -157,10 +157,11 @@ X2Option = {}                                    -- api/X2Option
 
 ---api/X2Option
 ---Option Item Save Level Type
+---@TODO: db options > option_item_save_level_type_id might be needed
 ---@alias OISLT
 ---| `OISLT_CHARACTER`
 ---| `OISLT_CHARACTER_MODE`
----| `OISLT_SYSTEM` TODO: This appears to save it to the system but unable to get again once I restart (C:\ArcheRage\Documents\USER[]\udf\.+.sst)
+---| `OISLT_SYSTEM` @TODO: This appears to save it to the system but unable to get again once I restart (C:\ArcheRage\Documents\USER[]\udf\.+.sst)
 
 ---api/X2Option
 ---Option Item Type

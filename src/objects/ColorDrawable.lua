@@ -1,15 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- objects/ColorDrawable
-AP_BOTTOMLEFT = 2  -- objects/ColorDrawable
-AP_BOTTOMRIGHT = 3 -- objects/ColorDrawable
-AP_CENTER = 4      -- objects/ColorDrawable
-AP_LEFT = 6        -- objects/ColorDrawable
-AP_RIGHT = 7       -- objects/ColorDrawable
-AP_TOP = 5         -- objects/ColorDrawable
-AP_TOPLEFT = 0     -- objects/ColorDrawable
-AP_TOPRIGHT = 1    -- objects/ColorDrawable
-
 ---objects/ColorDrawable
 ---@class ColorDrawable: Drawablebase
 local ColorDrawable = {}

@@ -1,22 +1,8 @@
 ---@meta _
 
-AP_BOTTOM = 8                  -- objects/WorldMap
-AP_BOTTOMLEFT = 2              -- objects/WorldMap
-AP_BOTTOMRIGHT = 3             -- objects/WorldMap
-AP_CENTER = 4                  -- objects/WorldMap
-AP_LEFT = 6                    -- objects/WorldMap
-AP_RIGHT = 7                   -- objects/WorldMap
-AP_TOP = 5                     -- objects/WorldMap
-AP_TOPLEFT = 0                 -- objects/WorldMap
-AP_TOPRIGHT = 1                -- objects/WorldMap
-CT_ABILITY = 2                 -- objects/WorldMap
-CT_EXPEDITION_NAME = 3         -- objects/WorldMap
-CT_NAME = 1                    -- objects/WorldMap
-DC_ALWAYS = 0                  -- objects/WorldMap DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1          -- objects/WorldMap DRAG_CONDITION
 MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/WorldMap
 
----@TODO: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
+---@FIXME: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
 
 ---objects/WorldMap
 ---@class WorldMap: Widget, Map
@@ -54,8 +40,7 @@ function WorldMap:GetCursorSextants() end
 ---```lua
 ---local iconDrawable = widget:GetIconDrawable(3, 1)
 ---```
----@see WORLD_MAP_ZOOM
----@see ZONE_ID
+---@see WORLD_M---@see ZONE_ID
 ---@see ImageDrawable
 function WorldMap:GetIconDrawable(level, id) end
 
@@ -70,8 +55,7 @@ function WorldMap:GetIconDrawable(level, id) end
 ---```lua
 ---local routeDrawable, created = widget:GetRouteDrawable(3, 17)
 ---```
----@see WORLD_MAP_ZOOM
----@see ImageDrawable
+---@see WORLD_M---@see ImageDrawable
 function WorldMap:GetRouteDrawable(level, id) end
 
 ---Hides all icon drawables on the world map.
@@ -85,11 +69,11 @@ function WorldMap:HideAllIconDrawable() end
 ---called before showing the widget to ensure proper rendering.
 ---@param width number The width of the map.
 ---@param height number The height of the map.
----@param tgaPath "Game/ui/map/image_map.tga"|string The path to the map texture.
+---@param tgaPath "ui/map/image_map.tga"|string The path to the map texture.
 ---@param iconPath BUTTON_TEXTURE_PATH The path to the icon texture. (Possibly TEXTURE_PATH)
 ---@usage
 ---```lua
----widget:InitMapData(928, 556, "Game/ui/map/image_map.tga", BUTTON_TEXTURE_PATH.MAP)
+---widget:InitMapData(928, 556, "ui/map/image_map.tga", BUTTON_TEXTURE_PATH.MAP)
 ---```
 ---@see BUTTON_TEXTURE_PATH
 function WorldMap:InitMapData(width, height, tgaPath, iconPath) end
@@ -114,8 +98,7 @@ function WorldMap:RemovePingAll() end
 ---@param drawable EffectDrawable The drawable for the farm icon.
 ---@usage
 ---```lua
----local farmDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
----farmDrawable:SetVisible(false)
+---local farmDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.M---farmDrawable:SetVisible(false)
 ---farmDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
 ---farmDrawable:SetMoveRepeatCount(0)
 ---farmDrawable:SetMoveRotate(false)
@@ -190,6 +173,7 @@ function WorldMap:SetTroubleZoneColor(state, r, g, b, a) end
 ---@param y number The y-coordinate.
 function WorldMap:ShowCommonFarm(farmGroupType, farmType, x, y) end
 
+---@FIXME: Crashes if `SetPortalDrawable` is not called first.
 ---Shows a portal location on the world map at the specified coordinates.
 ---Crashes if `SetPortalDrawable` is not called first.
 ---@param zoneId ZONE_KEY The zone ID.

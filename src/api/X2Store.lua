@@ -33,7 +33,7 @@ X2Store = {}                     -- api/X2Store
 ---| `CURRENCY_LIVING_POINT`
 
 ---api/X2Store
----@TODO: Market Purchase Type?
+---Market Period Time
 ---@alias MPT
 ---| `MPT_ALLWAYS`
 ---| `MPT_DALIY`
@@ -97,6 +97,9 @@ function X2Store:GetSpecialtyRatio() end
 ---@see ZONE_ID
 function X2Store:GetSpecialtyRatioBetween(fromZoneGroup, toZoneGroup) end
 
----@TODO: Probably triggers an event.
----Retrieves the specialty ratio for zones.
+---Retrieves the specialty ratio for zones. Triggers the `SELL_SPECIALTY_CONTENT_INFO` event.
+---@usage
+---```lua
+---X2Store:GetZoneSpecialtyRatio()
+---```
 function X2Store:GetZoneSpecialtyRatio() end

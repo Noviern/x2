@@ -1,19 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8                   -- objects/GameTooltip
-AP_BOTTOMLEFT = 2               -- objects/GameTooltip
-AP_BOTTOMRIGHT = 3              -- objects/GameTooltip
-AP_CENTER = 4                   -- objects/GameTooltip
-AP_LEFT = 6                     -- objects/GameTooltip
-AP_RIGHT = 7                    -- objects/GameTooltip
-AP_TOP = 5                      -- objects/GameTooltip
-AP_TOPLEFT = 0                  -- objects/GameTooltip
-AP_TOPRIGHT = 1                 -- objects/GameTooltip
-CT_ABILITY = 2                  -- objects/GameTooltip
-CT_EXPEDITION_NAME = 3          -- objects/GameTooltip
-CT_NAME = 1                     -- objects/GameTooltip
-DC_ALWAYS = 0                   -- objects/GameTooltip DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1           -- objects/GameTooltip DRAG_CONDITION
 UFT_CUPLABOR = "|p8;"           -- objects/GameTooltip UFT
 UFT_CURHP = "|p2;"              -- objects/GameTooltip UFT
 UFT_CURMP = "|p5;"              -- objects/GameTooltip UFT
@@ -29,7 +15,7 @@ UFT_PVPHONOR = "|p10;"          -- objects/GameTooltip UFT
 UFT_PVPKILL = "|p11;"           -- objects/GameTooltip UFT
 
 ---objects/GameTooltip
----@TODO: ? ? ?
+---Unit Frame Tooltip
 ---@alias UFT
 ---| `UFT_CUPLABOR`
 ---| `UFT_CURHP`
@@ -86,7 +72,7 @@ function GameTooltip:AddAnotherSideLine(index, text, fontPath, fontSize, textAli
 function GameTooltip:AddLine(text, fontPath, fontSize, align, textAlign, indentation) end
 
 ---Attaches a lower space to the specified line in the GameTooltip.
----@param index number The line index to attach the space to.
+---@param index number The line index to attach the space to. (min: `0`)
 ---@param height number The height of the lower space.
 ---@usage
 ---```lua
@@ -110,7 +96,6 @@ function GameTooltip:AttachUpperSpaceLine(index, height) end
 ---```
 function GameTooltip:ClearLines() end
 
----@TODO: Verify if heightIncludeSpace is broken (returns same as heightOnlyLine).
 ---Retrieves the height of the last line in the GameTooltip, with and without
 ---spacing.
 ---@return number heightOnlyLine The height of the last line without spacing.
@@ -179,7 +164,10 @@ function GameTooltip:SetInset(left, top, right, bottom) end
 ---@see TEXTBOX_LINE_SPACE
 function GameTooltip:SetLineSpace(space) end
 
----@TODO: Clarify data usage. (possibly "player", "target", etc.)
 ---Sets the tooltip data for the GameTooltip.
----@param data any The data to set for the tooltip.
+---@param data string The data to set for the tooltip.
+---@usage
+---```lua
+---widget:SetTooltipData("")
+---```
 function GameTooltip:SetTooltipData(data) end

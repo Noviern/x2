@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Listbox
-AP_BOTTOMLEFT = 2      -- objects/Listbox
-AP_BOTTOMRIGHT = 3     -- objects/Listbox
-AP_CENTER = 4          -- objects/Listbox
-AP_LEFT = 6            -- objects/Listbox
-AP_RIGHT = 7           -- objects/Listbox
-AP_TOP = 5             -- objects/Listbox
-AP_TOPLEFT = 0         -- objects/Listbox
-AP_TOPRIGHT = 1        -- objects/Listbox
-CT_ABILITY = 2         -- objects/Listbox
-CT_EXPEDITION_NAME = 3 -- objects/Listbox
-CT_NAME = 1            -- objects/Listbox
-DC_ALWAYS = 0          -- objects/Listbox DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Listbox DRAG_CONDITION
-
 ---objects/Listbox
 ---@class Listbox: Widget
 ---@field itemStyle TextStyle
@@ -592,9 +577,8 @@ function Listbox:TurnoffOverParent() end
 ---@see ItemsInfo
 function Listbox:UpdateItem(datas) end
 
----@TODO: Confirm default state for child style.
 ---Enables or disables child style in the Listbox.
----@param use boolean `true` to enable child style, `false` to disable.
+---@param use boolean `true` to enable child style, `false` to disable. (default: `false`)
 ---@usage
 ---```lua
 ---widget:UseChildStyle(true)

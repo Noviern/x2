@@ -1,36 +1,39 @@
 ---@meta _
 
-AP_BOTTOM = 8                   -- objects/Slot
-AP_BOTTOMLEFT = 2               -- objects/Slot
-AP_BOTTOMRIGHT = 3              -- objects/Slot
-AP_CENTER = 4                   -- objects/Slot
-AP_LEFT = 6                     -- objects/Slot
-AP_RIGHT = 7                    -- objects/Slot
-AP_TOP = 5                      -- objects/Slot
-AP_TOPLEFT = 0                  -- objects/Slot
-AP_TOPRIGHT = 1                 -- objects/Slot
-CT_ABILITY = 2                  -- objects/Slot
-CT_EXPEDITION_NAME = 3          -- objects/Slot
-CT_NAME = 1                     -- objects/Slot
-DC_ALWAYS = 0                   -- objects/Slot DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1           -- objects/Slot DRAG_CONDITION
 ISLOT_ABILITY_VIEW = 243        -- objects/Slot SLOT_TYPE
+---@alias ISLOT_ABILITY_VIEW 243
 ISLOT_ACTION = 254              -- objects/Slot SLOT_TYPE
+---@alias ISLOT_ACTION 254
 ISLOT_BAG = 2                   -- objects/Slot SLOT_TYPE
+---@alias ISLOT_BAG 2
 ISLOT_BANK = 3                  -- objects/Slot SLOT_TYPE
+---@alias ISLOT_BANK 3
 ISLOT_COFFER = 4                -- objects/Slot SLOT_TYPE
+---@alias ISLOT_COFFER 4
 ISLOT_CONSTANT = 249            -- objects/Slot SLOT_TYPE
+---@alias ISLOT_CONSTANT 249
 ISLOT_EQUIPMENT = 1             -- objects/Slot SLOT_TYPE
+---@alias ISLOT_EQUIPMENT 1
 ISLOT_GUILD_BANK = 33           -- objects/Slot SLOT_TYPE
+---@alias ISLOT_GUILD_BANK 33
 ISLOT_HEIR_SKILL_VIEW = 234     -- objects/Slot SLOT_TYPE
+---@alias ISLOT_HEIR_SKILL_VIEW 234
 ISLOT_INSTANT_KILL_STREAK = 244 -- objects/Slot SLOT_TYPE
+---@alias ISLOT_INSTANT_KILL_STREAK 244
 ISLOT_MODE_ACTION = 246         -- objects/Slot SLOT_TYPE
+---@alias ISLOT_MODE_ACTION 246
 ISLOT_ORIGIN_SKILL_VIEW = 233   -- objects/Slot SLOT_TYPE
+---@alias ISLOT_ORIGIN_SKILL_VIEW 233
 ISLOT_PET_BATTLE_ACTION = 239   -- objects/Slot SLOT_TYPE
+---@alias ISLOT_PET_BATTLE_ACTION 239
 ISLOT_PET_RIDE_ACTION = 248     -- objects/Slot SLOT_TYPE
+---@alias ISLOT_PET_RIDE_ACTION 248
 ISLOT_PRELIMINARY_EQUIPMENT = 7 -- objects/Slot SLOT_TYPE
+---@alias ISLOT_PRELIMINARY_EQUIPMENT 7
 ISLOT_SHORTCUT_ACTION = 235     -- objects/Slot SLOT_TYPE
+---@alias ISLOT_SHORTCUT_ACTION 235
 ISLOT_SKILL_ALERT = 232         -- objects/Slot SLOT_TYPE
+---@alias ISLOT_SKILL_ALERT 232
 UI_BUTTON_DISABLED = 3          -- objects/Slot UI_BUTTON_STATE
 UI_BUTTON_HIGHLIGHTED = 1       -- objects/Slot UI_BUTTON_STATE
 UI_BUTTON_MAX = 4               -- objects/Slot
@@ -56,6 +59,9 @@ UI_BUTTON_PUSHED = 2            -- objects/Slot UI_BUTTON_STATE
 ---| `ISLOT_PRELIMINARY_EQUIPMENT`
 ---| `ISLOT_SHORTCUT_ACTION`
 ---| `ISLOT_SKILL_ALERT`
+
+---objects/Slot
+---@alias PES `ES_MAINHAND`|`ES_OFFHAND`
 
 ---objects/Slot
 ---@class Slot: Button
@@ -110,11 +116,10 @@ function Slot:EstablishSkill(skillType) end
 ---@see SKILL_ALERT_STATUS_BUFF_TAG
 function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 
----@TODO: Confirm if slotIdx is skillType when slotType is ISLOT_ACTION. also ISLOT_ORIGIN_SKILL_VIEW
----@TODO: Should this only accept skill based SLOT_TYPE?
+---@TODO: What slotTypes are supported?
 ---Establishes a skill slot for the Slot.
 ---@param slotType SLOT_TYPE The type of the slot.
----@param slotIdx number The index of the slot (possibly skillType for `ISLOT_ACTION`).
+---@param slotIdx number The index of the slot.
 ---@usage
 ---```lua
 ---widget:EstablishSkillSlot(ISLOT_ORIGIN_SKILL_VIEW, 36468)
@@ -122,57 +127,100 @@ function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 ---@see SLOT_TYPE
 function Slot:EstablishSkillSlot(slotType, slotIdx) end
 
----```
----widget:EstablishSlot(ISLOT_ABILITY_VIEW, ATTACK_SKILL + 1)
----@widget:EstablishSlot(ISLOT_ACTION, 1)
----widget:EstablishSlot(ISLOT_BAG, 1)
----widget:EstablishSlot(ISLOT_BANK, 1)
----widget:EstablishSlot(ISLOT_COFFER, 1)
----@widget:EstablishSlot(ISLOT_CONSTANT,
----widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Dont forget to subtract 1!
----@widget:EstablishSlot(ISLOT_GUILD_BANK, 1)
----widget:EstablishSlot(ISLOT_HEIR_SKILL_VIEW, 1)
----@widget:EstablishSlot(ISLOT_INSTANT_KILL_STREAK,
----widget:EstablishSlot(ISLOT_MODE_ACTION, 1)
----widget:EstablishSlot(ISLOT_ORIGIN_SKILL_VIEW, 1)
----widget:EstablishSlot(ISLOT_PET_BATTLE_ACTION, 1)
----widget:EstablishSlot(ISLOT_PET_RIDE_ACTION, 1)
----widget:EstablishSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1) -- Dont forget to subtract 1!
----@widget:EstablishSlot(ISLOT_SHORTCUT_ACTION,
----@widget:EstablishSlot(ISLOT_SKILL_ALERT,
----```
-
----@TODO: Create overloads for each ISLOT?
----Establishes a slot with the specified type and index. Triggers the event `OnContentUpdated`.
+---Establishes a slot with the specified type and index. Triggers the event
+---`OnContentUpdated`.
 ---@param slotType SLOT_TYPE The type of the slot.
 ---@param slotIdx number The slot index.
 ---@usage
 ---```lua
----widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Dont forget to subtract 1!
+---widget:EstablishSlot(ISLOT_ABILITY_VIEW, ATTACK_SKILL + 1)
+---widget:EstablishSlot(ISLOT_ACTION, 1) -- Shortcut bar slots. (min: `1`, max: `72`)
+---widget:EstablishSlot(ISLOT_BAG, 0) -- (min: `0`, max: `149`)
+---widget:EstablishSlot(ISLOT_BANK, 0) -- (min: `0`, max: `149`)
+---widget:EstablishSlot(ISLOT_COFFER, 0) -- (min: `0`, max: `149`)
+---widget:EstablishSlot(ISLOT_CONSTANT, 0)
+---widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_EQUIPMENT`.
+---widget:EstablishSlot(ISLOT_GUILD_BANK, 0) -- The currently open guild bank cell. (min: `0`, max: `149`)
+---widget:EstablishSlot(ISLOT_HEIR_SKILL_VIEW, 1) -- The current ancestral skill being changed. (min: `1`, max: `8`)
+---widget:EstablishSlot(ISLOT_INSTANT_KILL_STREAK, @TODO:)
+---widget:EstablishSlot(ISLOT_MODE_ACTION, 1) -- Dynamic shortcut slots. (min: `1`, max: `20`)
+---widget:EstablishSlot(ISLOT_ORIGIN_SKILL_VIEW, 1) -- The current ancestral tree being changed.
+---widget:EstablishSlot(ISLOT_PET_BATTLE_ACTION, 1) -- Currently summoned battlepet. (min: `1`, max: `6`)
+---widget:EstablishSlot(ISLOT_PET_RIDE_ACTION, 1) -- Currently summoned mount. (min: `1`, max: `6`)
+---widget:EstablishSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_PRELIMINARY_EQUIPMENT`.
+---widget:EstablishSlot(ISLOT_SHORTCUT_ACTION, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
+---widget:EstablishSlot(ISLOT_SKILL_ALERT, @TODO:)
 ---```
----@see SLOT_TYPE
----@overload fun(self: self, slotType: 1, slotIdx: ES, virtualSlotIdx: number) ---@TODO: ISLOT_EQUIPMENT currently does not display but left click shows the weapon
----@overload fun(self: self, slotType: 7, slotIdx: PES, virtualSlotIdx: number) ---@TODO: ISLOT_PRELIMINARY_EQUIPMENT currently does not display but left click shows the weapon
----@overload fun(self: self, slotType: 234, slotIdx: HEIR_SKILL_TYPE, virtualSlotIdx: number) ---@TODO: ISLOT_HEIR_SKILL_VIEW
----@overload fun(self: self, slotType: 243, slotIdx: SKILL, virtualSlotIdx: number) ---@TODO: ISLOT_ABILITY_VIEW
+---@see SKILL
+---@see ES
+---@see HEIR_SKILL_TYPE
+---@see PES
+---@overload fun(self: self, slotType: ISLOT_ABILITY_VIEW, slotIdx: SKILL)
+---@overload fun(self: self, slotType: ISLOT_ACTION, slotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_BANK, slotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_COFFER, slotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_CONSTANT, slotIdx: 0)
+---@overload fun(self: self, slotType: ISLOT_EQUIPMENT, slotIdx: ES)
+---@overload fun(self: self, slotType: ISLOT_GUILD_BANK, slotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_HEIR_SKILL_VIEW, slotIdx: HEIR_SKILL_TYPE)
+---@overload fun(self: self, slotType: ISLOT_INSTANT_KILL_STREAK, slotIdx: number) @FIXME: Crash.
+---@overload fun(self: self, slotType: ISLOT_MODE_ACTION, slotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_ORIGIN_SKILL_VIEW, slotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_PET_BATTLE_ACTION, slotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_PET_RIDE_ACTION, slotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_PRELIMINARY_EQUIPMENT, slotIdx: PES) @FIXME: Preliminary Equipment does not render.
+---@overload fun(self: self, slotType: ISLOT_SHORTCUT_ACTION, slotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_SKILL_ALERT, slotIdx: number) @TODO:
 function Slot:EstablishSlot(slotType, slotIdx) end
 
----@TODO: should i make every variable a alias?
----@alias ISLOT_ABILITY_VIEW 243
-
----@alias PES `ES_MAINHAND`|`ES_OFFHAND`
-
----@TODO: Clarify purpose of virtualSlotIdx.
----Establishes a virtual slot for the Slot. Triggers the event `OnContentUpdated`.
+---@FIXME: virtualSlotIdx is used in `X2Bag:SlotByIdx`, `X2Bank:SlotByIdx`, `X2Coffer:SlotByIdx`, and `X2GuildBank:SlotByIdx`.
+---Establishes a virtual slot for the Slot. Triggers the event
+---`OnContentUpdated`.
 ---@param slotType SLOT_TYPE The type of the slot.
 ---@param slotIdx number The slot index.
 ---@param virtualSlotIdx number The virtual slot index.
 ---@usage
 ---```lua
----widget:EstablishVirtualSlot(ISLOT_ACTION, 1, 1)
+---widget:EstablishVirtualSlot(ISLOT_ABILITY_VIEW, ATTACK_SKILL + 1, 1)
+---widget:EstablishVirtualSlot(ISLOT_ACTION, 1, 1) -- Shortcut bar slots. (min: `1`, max: `72`)
+---widget:EstablishVirtualSlot(ISLOT_BAG, 0, 1) -- (min: `0`, max: `149`)
+---widget:EstablishVirtualSlot(ISLOT_BANK, 0, 1) -- (min: `0`, max: `149`)
+---widget:EstablishVirtualSlot(ISLOT_COFFER, 0, 1) -- (min: `0`, max: `149`)
+---widget:EstablishVirtualSlot(ISLOT_CONSTANT, 0, 1)
+---widget:EstablishVirtualSlot(ISLOT_EQUIPMENT, ES_HEAD - 1, 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_EQUIPMENT`.
+---widget:EstablishVirtualSlot(ISLOT_GUILD_BANK, 0, 1) -- The currently open guild bank cell. (min: `0`, max: `149`)
+---widget:EstablishVirtualSlot(ISLOT_HEIR_SKILL_VIEW, 1, 1) -- The current ancestral skill being changed. (min: `1`, max: `8`)
+---widget:EstablishVirtualSlot(ISLOT_INSTANT_KILL_STREAK, @TODO:, 1)
+---widget:EstablishVirtualSlot(ISLOT_MODE_ACTION, 1, 1) -- Dynamic shortcut slots. (min: `1`, max: `20`)
+---widget:EstablishVirtualSlot(ISLOT_ORIGIN_SKILL_VIEW, 1, 1) -- The current ancestral tree being changed.
+---widget:EstablishVirtualSlot(ISLOT_PET_BATTLE_ACTION, 1, 1) -- Currently summoned battlepet. (min: `1`, max: `6`)
+---widget:EstablishVirtualSlot(ISLOT_PET_RIDE_ACTION, 1, 1) -- Currently summoned mount. (min: `1`, max: `6`)
+---widget:EstablishVirtualSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1, 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_PRELIMINARY_EQUIPMENT`.
+---widget:EstablishVirtualSlot(ISLOT_SHORTCUT_ACTION, 1, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
+---widget:EstablishVirtualSlot(ISLOT_SKILL_ALERT, @TODO:, 1)
 ---```
----@see SLOT_TYPE
----@overload fun(self: self, slotType: `ISLOT_PRELIMINARY_EQUIPMENT`, slotIdx: PES, virtualSlotIdx: number) ---@TODO: currently does not display but left click shows the weapon
+---@see SKILL
+---@see ES
+---@see HEIR_SKILL_TYPE
+---@see PES
+---@overload fun(self: self, slotType: ISLOT_ABILITY_VIEW, slotIdx: SKILL, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_ACTION, slotIdx: number, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_BANK, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_COFFER, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_CONSTANT, slotIdx: 0, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_EQUIPMENT, slotIdx: ES, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_GUILD_BANK, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_HEIR_SKILL_VIEW, slotIdx: HEIR_SKILL_TYPE, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_INSTANT_KILL_STREAK, slotIdx: number, virtualSlotIdx: number) @FIXME: Crash.
+---@overload fun(self: self, slotType: ISLOT_MODE_ACTION, slotIdx: number, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_ORIGIN_SKILL_VIEW, slotIdx: number, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_PET_BATTLE_ACTION, slotIdx: number, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_PET_RIDE_ACTION, slotIdx: number, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_PRELIMINARY_EQUIPMENT, slotIdx: PES, virtualSlotIdx: number) @FIXME: Preliminary Equipment does not render.
+---@overload fun(self: self, slotType: ISLOT_SHORTCUT_ACTION, slotIdx: number, virtualSlotIdx: number)
+---@overload fun(self: self, slotType: ISLOT_SKILL_ALERT, slotIdx: number, virtualSlotIdx: number) @TODO:
 function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 
 ---Retrieves the binded type of the Slot.
@@ -185,9 +233,16 @@ function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 ---@see BIND_TYPE
 function Slot:GetBindedType() end
 
----@TODO: Clarify structure, I believe it returns different tables for different slotTypes.
+-- item_impl
+-- lookChanged?
+-- needsUnpack
+-- securityState
+-- sideEffect
+-- useAsSkin?
+
+---@TODO: Clarify what ItemInfo is sent.
 ---Retrieves extra information for the Slot.
----@return ItemInfo|table|nil extraInfo The extra information, or `nil` if none exists.
+---@return ItemInfo|SkillInfo|nil extraInfo The extra information, or `nil` if none exists.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -232,7 +287,9 @@ function Slot:GetPassiveBuffType() end
 ---```
 function Slot:GetSkillType() end
 
----Retrieves the tooltip for the Slot. Returns `SkillTooltip` if a skill is established, `self` for other established types, or `nil` if nothing is established.
+---Retrieves the tooltip for the Slot. Returns `SkillTooltip` if a skill is
+---established, `self` for other established types, or `nil` if nothing is
+---established.
 ---@return SkillTooltip|self|nil tooltip The tooltip, `self`, or `nil`.
 ---@nodiscard
 ---@usage

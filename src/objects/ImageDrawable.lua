@@ -1,14 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8        -- objects/ImageDrawable
-AP_BOTTOMLEFT = 2    -- objects/ImageDrawable
-AP_BOTTOMRIGHT = 3   -- objects/ImageDrawable
-AP_CENTER = 4        -- objects/ImageDrawable
-AP_LEFT = 6          -- objects/ImageDrawable
-AP_RIGHT = 7         -- objects/ImageDrawable
-AP_TOP = 5           -- objects/ImageDrawable
-AP_TOPLEFT = 0       -- objects/ImageDrawable
-AP_TOPRIGHT = 1      -- objects/ImageDrawable
 DAT_LINEAR_ALPHA = 4 -- objects/ImageDrawable DAT
 DAT_LINEAR_SCALE = 2 -- objects/ImageDrawable DAT
 DAT_MOVE = 1         -- objects/ImageDrawable DAT
@@ -73,28 +64,33 @@ function ImageDrawable:IsWhiteTexture() end
 ---@see FrameInfo
 function ImageDrawable:SetAnimFrameInfo(frameInfo) end
 
----@TODO: Clarify the purpose and behavior of snap.
----Enables or disables snapping for the ImageDrawable.
----@param snap boolean `true` to enable snapping, `false` to disable.
+---Enables or disables pixel snapping for the ImageDrawable.
+---@param snap boolean `true` to enable snapping, `false` to disable. (default: `true`)
+---@usage
+---```
+---widget:SetSnap(false)
+---```
 function ImageDrawable:SetSnap(snap) end
 
----@TODO: Verify the usage and format of filename. test Game/ui/map/image_map.tga
+---@TODO: Verify the usage and format of filename. this didnt not work Game/ui/map/image_map.tga
 ---Sets a TGA texture for the ImageDrawable.
 ---@param filename string The path to the TGA texture file.
+---@return boolean success
+---@nodiscard
 function ImageDrawable:SetTgaTexture(filename) end
 
 ---@TODO: Clarify tiling behavior.
 ---Enables or disables tiling for the ImageDrawable.
----@param tiling boolean `true` to enable tiling, `false` to disable.
+---@param tiling boolean `true` to enable tiling, `false` to disable. (default: `false`)
 function ImageDrawable:SetTiling(tiling) end
 
----@TODO: Clarify complexId and isBack usage.
+---@TODO: Clarify complexId.
 ---Sets a UCC texture for the ImageDrawable by UCC ID.
 ---@param complexId string The UCC ID for the texture.
 ---@param isBack boolean `true` for background, `false` for foreground.
 function ImageDrawable:SetUccTextureByUccId(complexId, isBack) end
 
----@TODO: Clarify doodadId and isBack usage.
+---@TODO: Clarify doodadId.
 ---Sets a UCC texture for the ImageDrawable within a doodad.
 ---@param doodadId string The doodad ID for the texture.
 ---@param isBack boolean `true` for background, `false` for foreground.

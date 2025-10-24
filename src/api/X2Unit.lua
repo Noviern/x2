@@ -54,6 +54,7 @@ X2Unit = {}                   -- api/X2Unit
 
 ---api/X2Unit
 ---@alias DUEL_TYPE
+---| `DUEL_TYPE_INVALID`
 ---| `DUEL_TYPE_PARTY`
 ---| `DUEL_TYPE_SOLO`
 
@@ -95,8 +96,7 @@ X2Unit = {}                   -- api/X2Unit
 ---@see ZONE_ID
 function X2Unit:GetCurrentZoneGroup() end
 
----Retrieves a list of up to three target ability templates for the specified
----target if in render range.
+---Retrieves a list of up to three target ability templates for the specified target if in render range.
 ---@param target UNIT The target unit.
 ---@return TargetAbility[]|nil targetAbilityTemplates A table of ability templates, or `nil` if not in range.
 ---@nodiscard
@@ -129,7 +129,7 @@ function X2Unit:GetTargetUnitId() end
 function X2Unit:GetUnitId(unit) end
 
 ---Retrieves unit information for the specified unit ID if in render range.
----@param unitId string The unit ID .
+---@param unitId string The unit ID.
 ---@return UnitInfo|nil unitInfo The unit information, or `nil` if not in range.
 ---@nodiscard
 ---@usage
@@ -151,8 +151,7 @@ function X2Unit:GetUnitInfoById(unitId) end
 ---```
 function X2Unit:GetUnitNameById(unitId) end
 
----Retrieves the screen position (x, y, z) of the specified unit if in render
----range.
+---Retrieves the screen position (x, y, z) of the specified unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@return number|nil x The x-coordinate, or `nil` if not in range.
 ---@return number|nil y The y-coordinate, or `nil` if not in range.
@@ -165,14 +164,13 @@ function X2Unit:GetUnitNameById(unitId) end
 ---@see UNIT
 function X2Unit:GetUnitScreenPosition(unit) end
 
----Retrieves the world position (x, y, z) and angle of the specified unit if in
----render range.
+---Retrieves the world position (x, y, z) and angle of the specified unit if in render range.
 ---@param unit UNIT The unit to query.
----@param isLocal boolean Whether to use local coordinates.
+---@param isLocal boolean `true` to use local coordinates, `false` otherwise.
 ---@return number|nil x The x-coordinate, or `nil` if not in range.
 ---@return number|nil y The y-coordinate, or `nil` if not in range.
 ---@return number|nil z The z-coordinate, or `nil` if not in range.
----@return number|nil angle The unit's angle.
+---@return number|nil angle The unit's angle, or `nil` if not in range.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -181,8 +179,7 @@ function X2Unit:GetUnitScreenPosition(unit) end
 ---@see UNIT
 function X2Unit:GetUnitWorldPositionByTarget(unit, isLocal) end
 
----Retrieves buff information for the specified buff index of the unit if in
----render range.
+---Retrieves buff information for the specified buff index of the unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The buff index. (min: `1`)
 ---@return BuffInfo unitBuffInfo The buff information, or an empty table if not in range.
@@ -206,8 +203,7 @@ function X2Unit:UnitBuff(unit, buffIndex) end
 ---@see UNIT
 function X2Unit:UnitBuffCount(unit) end
 
----Retrieves the buff tooltip for the specified buff index of the unit if in
----render range.
+---Retrieves the buff tooltip for the specified buff index of the unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The buff index. (min: `1`)
 ---@param neededInfo? BIK Optional additional information for the buff.
@@ -233,8 +229,7 @@ function X2Unit:UnitBuffTooltip(unit, buffIndex, neededInfo) end
 ---@see CastingInfo
 function X2Unit:UnitCastingInfo(unit) end
 
----Retrieves debuff information for the specified buff index of the unit if in
----render range.
+---Retrieves debuff information for the specified buff index of the unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
 ---@return BuffInfo unitDebuffInfo The debuff information, or an empty table if not in range.
@@ -258,8 +253,7 @@ function X2Unit:UnitDeBuff(unit, deBuffIndex) end
 ---@see UNIT
 function X2Unit:UnitDeBuffCount(unit) end
 
----Retrieves the debuff tooltip for the specified buff index of the unit if in
----render range.
+---Retrieves the debuff tooltip for the specified buff index of the unit if in render range.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
 ---@param neededInfo? BIK Optional additional information for the buff.
@@ -273,8 +267,7 @@ function X2Unit:UnitDeBuffCount(unit) end
 ---@see BuffTooltip
 function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex, neededInfo) end
 
----Retrieves the distance between the player and the specified unit's boundary
----box if in render range.
+---Retrieves the distance between the player and the specified unit's boundary box if in render range.
 ---@param unit UNIT The unit to query.
 ---@return UnitDistance|nil unitDistance The distance information, or `nil` if not in range.
 ---@nodiscard
@@ -286,10 +279,9 @@ function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex, neededInfo) end
 ---@see UnitDistance
 function X2Unit:UnitDistance(unit) end
 
----Retrieves the gear score of the specified unit or a boolean indicating if the
----unit exists.
+---Retrieves the gear score of the specified unit or a boolean indicating if the unit exists.
 ---@param unit UNIT The unit to query.
----@param comma boolean Whether to include a comma (does not appear to work).
+---@param comma boolean `true` to include a comma, `false` otherwise. `UIParent:SetUseInsertComma` may be required depending on the user's language.
 ---@return string|boolean result The gear score as a string, or `false` if the unit does not exist.
 ---@nodiscard
 ---@usage
@@ -310,8 +302,7 @@ function X2Unit:UnitGearScore(unit, comma) end
 ---@see UNIT
 function X2Unit:UnitHealth(unit) end
 
----Retrieves the current health, maximum health, and health percentage of the
----specified unit.
+---Retrieves the current health, maximum health, and health percentage of the specified unit.
 ---@param unit UNIT The unit to query.
 ---@return string unitCurrentHealth The current health, or "0" if not found.
 ---@return string unitMaxHealth The maximum health, or "0" if not found.
@@ -324,8 +315,7 @@ function X2Unit:UnitHealth(unit) end
 ---@see UNIT
 function X2Unit:UnitHealthInfo(unit) end
 
----Retrieves hidden buff information for the specified buff index of the unit if
----it exists.
+---Retrieves hidden buff information for the specified buff index of the unit if it exists.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The hidden buff index. (min: `1`)
 ---@return BuffInfo unitHiddenBuffInfo The hidden buff information, or an empty table if not found.
@@ -344,13 +334,12 @@ function X2Unit:UnitHiddenBuff(unit, buffIndex) end
 ---@nodiscard
 ---@usage
 ---```lua
----local unitHiddenBuffCount = X2Unit:UnitHiddenBuff("player", 1)
+---local unitHiddenBuffCount = X2Unit:UnitHiddenBuffCount("player")
 ---```
 ---@see UNIT
 function X2Unit:UnitHiddenBuffCount(unit) end
 
----Retrieves the hidden buff tooltip for the specified buff index of the unit if
----it exists.
+---Retrieves the hidden buff tooltip for the specified buff index of the unit if it exists.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The hidden buff index. (min: `1`)
 ---@param neededInfo? BIK Optional additional information for the buff.
@@ -366,7 +355,7 @@ function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex, neededInfo) end
 
 ---Retrieves the level of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
----@return ABILITY_ACTIVATION_LEVEL|number|nil unitLevel The unit's level 1 to 55, or `nil` if not found.
+---@return ABILITY_ACTIVATION_LEVEL|number|nil unitLevel The unit's level (1 to 55), or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -386,8 +375,7 @@ function X2Unit:UnitLevel(unit) end
 ---@see UNIT
 function X2Unit:UnitMana(unit) end
 
----Retrieves the current mana, maximum mana, and mana percentage of the
----specified unit.
+---Retrieves the current mana, maximum mana, and mana percentage of the specified unit.
 ---@param unit UNIT The unit to query.
 ---@return string unitCurrentMana The current mana, or "0" if not found.
 ---@return string unitMaxMana The maximum mana, or "0" if not found.
@@ -444,12 +432,10 @@ function X2Unit:UnitName(unit) end
 ---@see UNIT
 function X2Unit:UnitNameWithWorld(unit) end
 
----@TODO: Needs testing, unsure of removable debuffs.
----Retrieves the removable debuff for the specified buff index of the unit if it
----exists.
+---Retrieves the removable debuff for the specified buff index of the unit if it exists.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
----@return nil removableDebuff The removable debuff tooltip (currently unimplemented).
+---@return BuffInfo|nil removableDebuff The removable debuff information, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -458,10 +444,9 @@ function X2Unit:UnitNameWithWorld(unit) end
 ---@see UNIT
 function X2Unit:UnitRemovableDebuff(unit, deBuffIndex) end
 
----Retrieves the number of removable debuffs on the specified unit if in render
----range.
+---Retrieves the number of removable debuffs on the specified unit if in render range.
 ---@param unit UNIT The unit to query.
----@return number|nil removableDebuffCount The number of removable debuffs, or `nil` if not in range.
+---@return number|nil removableDebuffCount The number of removable debuffs, or `nil` if none exist.
 ---@nodiscard
 ---@usage
 ---```lua
@@ -470,13 +455,11 @@ function X2Unit:UnitRemovableDebuff(unit, deBuffIndex) end
 ---@see UNIT
 function X2Unit:UnitRemovableDebuffCount(unit) end
 
----@TODO: Needs testing, unsure of removable debuffs. check if neededInfo exists.
----Retrieves the removable debuff tooltip for the specified buff index of the
----unit if it exists.
+---Retrieves the removable debuff tooltip for the specified buff index of the unit if it exists.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
 ---@param neededInfo? BIK Optional additional information for the buff.
----@return nil removableDebuffTooltip The removable debuff tooltip (currently unimplemented).
+---@return BuffInfo|nil removableDebuffTooltip The removable debuff tooltip info, or `nil` if not found.
 ---@nodiscard
 ---@usage
 ---```lua

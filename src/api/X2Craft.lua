@@ -57,7 +57,7 @@ X2Craft = {}                        -- api/X2Craft
 ---@see CraftBaseInfo
 function X2Craft:GetCraftBaseInfo(craftType, doodadId) end
 
----@TODO: Crash EXCEPTION_ACCESS_VIOLATION. Need to set doodadId type. No usage
+---@FIXME: Crash EXCEPTION_ACCESS_VIOLATION. Need to set doodadId type. No usage
 ---Retrieves the material information for the specified craft type.
 ---@param craftType number The type of craft to query.
 ---@param doodadId? number The doodad ID (type TBD, causes crash).

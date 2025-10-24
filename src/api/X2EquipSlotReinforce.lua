@@ -9,6 +9,7 @@ X2EquipSlotReinforce = {} -- api/X2EquipSlotReinforce
 
 ---api/X2EquipSlotReinforce
 ---Equip Slot Reinforce Attribute
+---@alias ESRA
 ---| `ESRA_DEFENCE`
 ---| `ESRA_OFFENCE`
 ---| `ESRA_SUPPORT`

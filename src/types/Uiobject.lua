@@ -12,7 +12,7 @@ local Uiobject = {}
 ---```
 function Uiobject:GetId() end
 
----@TODO: May be broken, currently returns nothing.
+---@FIXME: May be broken, currently returns nothing.
 ---Retrieves the name of the UI object.
 ---@return string name
 ---@nodiscard
@@ -32,7 +32,6 @@ function Uiobject:GetName() end
 ---@see OBJECT_NAME
 function Uiobject:GetObjectType() end
 
----@TODO: In what condition would this ever return false?
 ---Checks if the UI object is valid.
 ---@return boolean validUiobject `true` if the UI object is valid, `false` otherwise.
 ---@nodiscard

@@ -1,19 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8                   -- objects/UnitframeTooltip
-AP_BOTTOMLEFT = 2               -- objects/UnitframeTooltip
-AP_BOTTOMRIGHT = 3              -- objects/UnitframeTooltip
-AP_CENTER = 4                   -- objects/UnitframeTooltip
-AP_LEFT = 6                     -- objects/UnitframeTooltip
-AP_RIGHT = 7                    -- objects/UnitframeTooltip
-AP_TOP = 5                      -- objects/UnitframeTooltip
-AP_TOPLEFT = 0                  -- objects/UnitframeTooltip
-AP_TOPRIGHT = 1                 -- objects/UnitframeTooltip
-CT_ABILITY = 2                  -- objects/UnitframeTooltip
-CT_EXPEDITION_NAME = 3          -- objects/UnitframeTooltip
-CT_NAME = 1                     -- objects/UnitframeTooltip
-DC_ALWAYS = 0                   -- objects/UnitframeTooltip DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1           -- objects/UnitframeTooltip DRAG_CONDITION
 UFT_CUPLABOR = "|p8;"           -- objects/UnitframeTooltip UFT
 UFT_CURHP = "|p2;"              -- objects/UnitframeTooltip UFT
 UFT_CURMP = "|p5;"              -- objects/UnitframeTooltip UFT

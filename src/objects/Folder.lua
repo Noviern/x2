@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Folder
-AP_BOTTOMLEFT = 2      -- objects/Folder
-AP_BOTTOMRIGHT = 3     -- objects/Folder
-AP_CENTER = 4          -- objects/Folder
-AP_LEFT = 6            -- objects/Folder
-AP_RIGHT = 7           -- objects/Folder
-AP_TOP = 5             -- objects/Folder
-AP_TOPLEFT = 0         -- objects/Folder
-AP_TOPRIGHT = 1        -- objects/Folder
-CT_ABILITY = 2         -- objects/Folder
-CT_EXPEDITION_NAME = 3 -- objects/Folder
-CT_NAME = 1            -- objects/Folder
-DC_ALWAYS = 0          -- objects/Folder DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Folder DRAG_CONDITION
-
 ---objects/Folder
 ---@class Folder: Widget
 ---@field style TextStyle
@@ -28,7 +13,6 @@ local Folder = {}
 ---```
 function Folder:CloseFolder() end
 
----@TODO: Clarify purpose and behavior.
 ---Performs a fixed close operation on the Folder.
 ---@usage
 ---```lua
@@ -72,7 +56,7 @@ function Folder:GetTitleText() end
 function Folder:OpenFolder() end
 
 ---Sets the animation step height for the Folder.
----@param speed number The speed for the animation step.
+---@param speed number The speed for the animation step. (default: `.5`)
 ---@usage
 ---```lua
 ---widget:SetAnimateStep(3)
@@ -83,7 +67,7 @@ function Folder:SetAnimateStep(speed) end
 ---@param childTable Widget The table containing child widgets.
 ---@usage
 ---```lua
----local details = widget:CreateChildWidget("textbox", "details", 3, true)
+---local details = widget:CreateChildWidget("textbox", "details", 0, true)
 ---details.style:SetAlign(ALIGN_TOP_LEFT)
 ---details:SetText("The first ArcheAge Private Server")
 ---
@@ -96,7 +80,7 @@ function Folder:SetChildWidget(childTable) end
 ---@param closeTable Button The button for the `"close"` state.
 ---@usage
 ---```lua
----local openBtn = widget:CreateChildWidget("button", "openBtn", 1, true)
+---local openBtn = widget:CreateChildWidget("button", "openBtn", 0, true)
 ---openBtn:AddAnchor("TOPLEFT", widget, 0, 5)
 ---openBtn:SetStyle("grid_folder_right_arrow")
 ---
@@ -151,7 +135,7 @@ function Folder:SetOpenStateButton(openTable) end
 ---@param titleTable Button The button widget for the title.
 ---@usage
 ---```lua
----local titleBtn = widget:CreateChildWidget("button", "titleBtn", 2, true)
+---local titleBtn = widget:CreateChildWidget("button", "titleBtn", 0, true)
 ---titleBtn:SetText("ArcheRage.to")
 ---
 ---function titleBtn:OnClick()

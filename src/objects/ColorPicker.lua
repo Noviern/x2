@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/ColorPicker
-AP_BOTTOMLEFT = 2      -- objects/ColorPicker
-AP_BOTTOMRIGHT = 3     -- objects/ColorPicker
-AP_CENTER = 4          -- objects/ColorPicker
-AP_LEFT = 6            -- objects/ColorPicker
-AP_RIGHT = 7           -- objects/ColorPicker
-AP_TOP = 5             -- objects/ColorPicker
-AP_TOPLEFT = 0         -- objects/ColorPicker
-AP_TOPRIGHT = 1        -- objects/ColorPicker
-CT_ABILITY = 2         -- objects/ColorPicker
-CT_EXPEDITION_NAME = 3 -- objects/ColorPicker
-CT_NAME = 1            -- objects/ColorPicker
-DC_ALWAYS = 0          -- objects/ColorPicker DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/ColorPicker DRAG_CONDITION
-
 ---objects/ColorPicker
 ---@class ColorPicker: Widget
 local ColorPicker = {}
@@ -47,7 +32,7 @@ function ColorPicker:GetColor(xPos, yPos) end
 function ColorPicker:GetPoint(colorR, colorG, colorB) end
 
 ---Sets the palette image for the ColorPicker.
----@param imageName string The path to the palette image. This can be `"ui/..."` or `"Addon/MyAddon/image.png"`
+---@param imageName string The path to the palette image. This can be `"ui/..."` or `"addon/myaddon/image.png"`
 ---@usage
 ---```lua
 ---widget:SetPaletteImage("ui/common/hud.dds")

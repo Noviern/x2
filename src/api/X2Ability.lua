@@ -78,7 +78,7 @@ X2Ability = {}                       -- api/X2Ability
 ---| `BIK_RUNTIME_TIMELEFT`
 
 ---api/X2Ability
----@TODO: ? Ability Category
+---Recommend Ability Category
 ---@alias RAC
 ---| `RAC_FIRST`
 ---| `RAC_INVALID`
@@ -137,7 +137,8 @@ function X2Ability:GetActiveAbility() end
 ---@see ActabilityInfo
 function X2Ability:GetAllMyActabilityInfos() end
 
----@TODO: Find a buff where itemLevel actually matters. Only BIK_DESCRIPTION appears to work.
+---@TODO: Find a buff where itemLevel actually matters.
+---@FIXME: Only BIK_DESCRIPTION appears to work.
 ---Retrieves information for the buff tooltip based on the buff type and item
 ---level.
 ---@param buffType number The type of buff.
@@ -157,7 +158,7 @@ function X2Ability:GetBuffTooltip(buffType, itemLevel, neededInfo) end
 ---@param actabilityGroupType ACTABILITY_ID The actability group type to query.
 ---@return ActabilityGroupTypeInfo|nil myActabilityInfo The actability information, or `nil` if not found.
 ---@usage
----```
+---```lua
 ---local myActabilityInfo = X2Ability:GetMyActabilityInfo(1)
 ---```
 ---@see ACTABILITY_ID
@@ -168,7 +169,7 @@ function X2Ability:GetMyActabilityInfo(actabilityGroupType) end
 ---@return boolean activeAbility `true` if the ability is active, `false` otherwise.
 ---@nodiscard
 ---@usage
----```
+---```lua
 ---local activeAbility = X2Ability:IsActiveAbility(1)
 ---```
 ---@see ABILITY_TYPE

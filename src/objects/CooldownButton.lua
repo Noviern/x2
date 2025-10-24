@@ -1,32 +1,17 @@
 ---@meta _
 
-AP_BOTTOM = 8             -- objects/CooldownButton
-AP_BOTTOMLEFT = 2         -- objects/CooldownButton
-AP_BOTTOMRIGHT = 3        -- objects/CooldownButton
-AP_CENTER = 4             -- objects/CooldownButton
-AP_LEFT = 6               -- objects/CooldownButton
-AP_RIGHT = 7              -- objects/CooldownButton
-AP_TOP = 5                -- objects/CooldownButton
-AP_TOPLEFT = 0            -- objects/CooldownButton
-AP_TOPRIGHT = 1           -- objects/CooldownButton
-CT_ABILITY = 2            -- objects/CooldownButton
-CT_EXPEDITION_NAME = 3    -- objects/CooldownButton
-CT_NAME = 1               -- objects/CooldownButton
-DC_ALWAYS = 0             -- objects/CooldownButton DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownButton DRAG_CONDITION
-UI_BUTTON_DISABLED = 3    -- objects/CooldownButton
-UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownButton
+UI_BUTTON_DISABLED = 3    -- objects/CooldownButton UI_BUTTON_STATE
+UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownButton UI_BUTTON_STATE
 UI_BUTTON_MAX = 4         -- objects/CooldownButton
-UI_BUTTON_NORMAL = 0      -- objects/CooldownButton
-UI_BUTTON_PUSHED = 2      -- objects/CooldownButton
-
+UI_BUTTON_NORMAL = 0      -- objects/CooldownButton UI_BUTTON_STATE
+UI_BUTTON_PUSHED = 2      -- objects/CooldownButton UI_BUTTON_STATE
 
 ---objects/CooldownButton
 ---@class CooldownButton: Button
 local CooldownButton = {}
 ---@class cooldownbutton: CooldownButton
 
----@TODO: I never got this to work. Broken?
+---@FIXME: Broken?
 ---Sets the cooldown for the CooldownButton.
 ---@param remainTime number The remaining cooldown time.
 ---@param totalTime number The total cooldown duration.

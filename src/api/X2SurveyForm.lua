@@ -13,6 +13,7 @@ X2SurveyForm = {} -- api/X2SurveyForm
 
 -- api/X2SurveyForm
 ---Enum Survey Form Period
+---@alias ESFP
 ---| `ESFP_DONE`
 ---| `ESFP_EXPIERED`
 ---| `ESFP_INVALID`

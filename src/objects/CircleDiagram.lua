@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/CircleDiagram
-AP_BOTTOMLEFT = 2      -- objects/CircleDiagram
-AP_BOTTOMRIGHT = 3     -- objects/CircleDiagram
-AP_CENTER = 4          -- objects/CircleDiagram
-AP_LEFT = 6            -- objects/CircleDiagram
-AP_RIGHT = 7           -- objects/CircleDiagram
-AP_TOP = 5             -- objects/CircleDiagram
-AP_TOPLEFT = 0         -- objects/CircleDiagram
-AP_TOPRIGHT = 1        -- objects/CircleDiagram
-CT_ABILITY = 2         -- objects/CircleDiagram
-CT_EXPEDITION_NAME = 3 -- objects/CircleDiagram
-CT_NAME = 1            -- objects/CircleDiagram
-DC_ALWAYS = 0          -- objects/CircleDiagram DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/CircleDiagram DRAG_CONDITION
-
 ---objects/CircleDiagram
 ---@class CircleDiagram: Widget
 local CircleDiagram = {}
@@ -29,9 +14,12 @@ local CircleDiagram = {}
 ---```
 function CircleDiagram:AddPoint(offX, offY) end
 
----@TODO: Clarify if pointNum is in degrees or radians.
 ---Adds a point by angle for the CircleDiagram.
----@param pointNum number The angle value for the point.
+---@param pointNum number The angle value (in radians) for the point.
+---@usage
+---```lua
+---
+---```
 function CircleDiagram:AddPointsByAngle(pointNum) end
 
 ---Clears all points from the CircleDiagram.

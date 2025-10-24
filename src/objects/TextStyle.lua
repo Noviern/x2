@@ -10,7 +10,9 @@ ALIGN_TOP = 1          -- objects/TextStyle TEXT_ALIGN
 ALIGN_TOP_LEFT = 0     -- objects/TextStyle TEXT_ALIGN
 ALIGN_TOP_RIGHT = 2    -- objects/TextStyle TEXT_ALIGN
 FTK_GENERAL = 0        -- objects/TextStyle FONT_KIND
+---@alias FTK_GENERAL 0
 FTK_IMAGETEXT = 2      -- objects/TextStyle FONT_KIND
+---@alias FTK_IMAGETEXT 2
 
 ---objects/TextStyle
 ---@alias TEXT_ALIGN
@@ -88,11 +90,15 @@ function TextStyle:SetColorByKey(key) end
 ---```
 function TextStyle:SetEllipsis(ellipsis) end
 
----@TODO: IMG_ have fixed size and kind
----Sets the font path, size, and optional type for the TextStyle.
+---Sets the font path, size, and optional type for the TextStyle. When using
+---`FONT_PATH.IMG_` variants (e.g., `IMG_NPC_HPBAR`, `IMG_ACTION_BAR`,
+---`IMG_COMBAT`), the `fontSize` and `fontType` must match the fixed values:
+---`IMG_NPC_HPBAR` requires `fontSize` of 19 and `fontType` of `FTK_IMAGETEXT`;
+---`IMG_ACTION_BAR` requires `fontSize` of 13 and `fontType` of `FTK_IMAGETEXT`;
+---`IMG_COMBAT` requires `fontSize` of 60 and `fontType` of `FTK_IMAGETEXT`.
 ---@param fontPath FONT_PATH The path to the font.
----@param fontSize FONT_SIZE|number The size of the font.
----@param fontType? FONT_KIND The font type (optional). (default: `FTK_GENERAL`)
+---@param fontSize FONT_SIZE|number The size of the font. Must be 19 for `FONT_PATH.IMG_NPC_HPBAR`, 13 for `FONT_PATH.IMG_ACTION_BAR`, or 60 for `FONT_PATH.IMG_COMBAT`.
+---@param fontType? FONT_KIND The font type (optional). Must be `FTK_IMAGETEXT` for `FONT_PATH.IMG_` variants, otherwise defaults to `FTK_GENERAL`.
 ---@usage
 ---```lua
 ---style:SetFont(FONT_PATH.COMBAT, FONT_SIZE.XXLARGE)
@@ -103,6 +109,9 @@ function TextStyle:SetEllipsis(ellipsis) end
 ---widget.style:SetFont(FONT_PATH.IMG_ACTION_BAR, 13, FTK_IMAGETEXT)
 ---widget.style:SetFont(FONT_PATH.IMG_COMBAT, 60, FTK_IMAGETEXT)
 ---```
+---@overload fun(self: self, fontPath: FONT_PATH.IMG_NPC_HPBAR, fontSize: 19, fontType: FTK_IMAGETEXT)
+---@overload fun(self: self, fontPath: FONT_PATH.IMG_ACTION_BAR, fontSize: 13, fontType: FTK_IMAGETEXT)
+---@overload fun(self: self, fontPath: FONT_PATH.IMG_COMBAT, fontSize: 60, fontType: FTK_IMAGETEXT)
 function TextStyle:SetFont(fontPath, fontSize, fontType) end
 
 ---Sets the font size for the TextStyle.

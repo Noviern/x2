@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Pageable
-AP_BOTTOMLEFT = 2      -- objects/Pageable
-AP_BOTTOMRIGHT = 3     -- objects/Pageable
-AP_CENTER = 4          -- objects/Pageable
-AP_LEFT = 6            -- objects/Pageable
-AP_RIGHT = 7           -- objects/Pageable
-AP_TOP = 5             -- objects/Pageable
-AP_TOPLEFT = 0         -- objects/Pageable
-AP_TOPRIGHT = 1        -- objects/Pageable
-CT_ABILITY = 2         -- objects/Pageable
-CT_EXPEDITION_NAME = 3 -- objects/Pageable
-CT_NAME = 1            -- objects/Pageable
-DC_ALWAYS = 0          -- objects/Pageable DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Pageable DRAG_CONDITION
-
 ---objects/Pageable
 ---@class Pageable: Widget
 local Pageable = {}

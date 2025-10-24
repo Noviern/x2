@@ -2,20 +2,6 @@
 
 ---@TODO: Drawablebase may not be correct, it may be DrawableDDS.
 
-AP_BOTTOM = 8             -- objects/Button
-AP_BOTTOMLEFT = 2         -- objects/Button
-AP_BOTTOMRIGHT = 3        -- objects/Button
-AP_CENTER = 4             -- objects/Button
-AP_LEFT = 6               -- objects/Button
-AP_RIGHT = 7              -- objects/Button
-AP_TOP = 5                -- objects/Button
-AP_TOPLEFT = 0            -- objects/Button
-AP_TOPRIGHT = 1           -- objects/Button
-CT_ABILITY = 2            -- objects/Button
-CT_EXPEDITION_NAME = 3    -- objects/Button
-CT_NAME = 1               -- objects/Button
-DC_ALWAYS = 0             -- objects/Button DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1     -- objects/Button DRAG_CONDITION
 UI_BUTTON_DISABLED = 3    -- objects/Button UI_BUTTON_STATE
 UI_BUTTON_HIGHLIGHTED = 1 -- objects/Button UI_BUTTON_STATE
 UI_BUTTON_MAX = 4         -- objects/Button
@@ -79,8 +65,8 @@ function Button:DeregisterForClicks(mouseButton) end
 ---@see UI_BUTTON_STATE_TEXT
 function Button:GetButtonState() end
 
----@TODO: @cast
----Retrieves the drawable for the disabled state of the button, if it exists.
+---Retrieves the drawable for the disabled state of the button, if it exists. 
+---Casting may be neccessary.
 ---@return Drawablebase|nil disabledTable The disabled state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
@@ -101,6 +87,7 @@ function Button:GetDisabledBackground() end
 function Button:GetDisabledColor() end
 
 ---Retrieves the drawable for the highlighted state of the button, if it exists.
+---Casting may be neccessary.
 ---@return Drawablebase|nil highlightTable The highlighted state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
@@ -121,6 +108,7 @@ function Button:GetHighlightBackground() end
 function Button:GetHighlightColor() end
 
 ---Retrieves the drawable for the normal state of the button, if it exists.
+---Casting may be neccessary.
 ---@return Drawablebase|nil normalTable The normal state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
@@ -141,6 +129,7 @@ function Button:GetNormalBackground() end
 function Button:GetNormalColor() end
 
 ---Retrieves the drawable for the pushed state of the button, if it exists.
+---Casting may be neccessary.
 ---@return Drawablebase|nil pushedTable The pushed state drawable, or `nil` if not set.
 ---@nodiscard
 ---@usage
@@ -187,7 +176,7 @@ function Button:SetAutoClipChar(resize) end
 ---```
 function Button:SetAutoResize(resize) end
 
----@TODO: There is something very wrong with this. Almost none of the states match their actual state.
+---@FIXME: There is something very wrong with this. Almost none of the states match their actual state.
 ---FAKE STATE > REAL STATE
 ---NORMAL = HIGHLIGHTED
 ---HIGHLIGHTED = DISABLED

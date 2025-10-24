@@ -1,19 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8             -- objects/CooldownConstantButton
-AP_BOTTOMLEFT = 2         -- objects/CooldownConstantButton
-AP_BOTTOMRIGHT = 3        -- objects/CooldownConstantButton
-AP_CENTER = 4             -- objects/CooldownConstantButton
-AP_LEFT = 6               -- objects/CooldownConstantButton
-AP_RIGHT = 7              -- objects/CooldownConstantButton
-AP_TOP = 5                -- objects/CooldownConstantButton
-AP_TOPLEFT = 0            -- objects/CooldownConstantButton
-AP_TOPRIGHT = 1           -- objects/CooldownConstantButton
-CT_ABILITY = 2            -- objects/CooldownConstantButton
-CT_EXPEDITION_NAME = 3    -- objects/CooldownConstantButton
-CT_NAME = 1               -- objects/CooldownConstantButton
-DC_ALWAYS = 0             -- objects/CooldownConstantButton DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1     -- objects/CooldownConstantButton DRAG_CONDITION
 UI_BUTTON_DISABLED = 3    -- objects/CooldownConstantButton UI_BUTTON_STATE
 UI_BUTTON_HIGHLIGHTED = 1 -- objects/CooldownConstantButton UI_BUTTON_STATE
 UI_BUTTON_MAX = 4         -- objects/CooldownConstantButton

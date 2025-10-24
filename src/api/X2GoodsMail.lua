@@ -83,6 +83,6 @@ X2GoodsMail = {}                        -- api/X2GoodsMail
 ---| `MLK_OUTBOX`
 
 ---api/X2GoodsMail
----@TODO: Schedule Item Mail Type?
+---Schedule Item Mail Type?
 ---| `SIMT_SCHEDULE_ITEM_CUSTOM_MAIL`
 ---| `SIMT_SCHEDULE_ITEM_NORMAL_MAIL`

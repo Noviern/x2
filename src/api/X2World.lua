@@ -55,7 +55,7 @@ X2World = {}                       -- api/X2World
 ---| `WAT_ENABLE`
 
 ---api/X2World
----@TODO: World ? Type
+---World Entry Type
 ---@alias WET
 ---| `WET_ACCEPTED`
 ---| `WET_REJECTED`

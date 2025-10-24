@@ -22,6 +22,7 @@ function Editboxbase:SetMaxTextLength(length) end
 ---```
 function Editboxbase:ClearTextOnEnter(clear) end
 
+---@TODO: returns nil for editbox
 ---Retrieves the maximum text length for the Editboxbase.
 ---@return number maxTextLength The maximum text length.
 ---@nodiscard

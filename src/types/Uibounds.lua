@@ -1,12 +1,22 @@
 ---@meta _
 
+AP_BOTTOM = 8      -- types/Uibounds
+AP_BOTTOMLEFT = 2  -- types/Uibounds
+AP_BOTTOMRIGHT = 3 -- types/Uibounds
+AP_CENTER = 4      -- types/Uibounds
+AP_LEFT = 6        -- types/Uibounds
+AP_RIGHT = 7       -- types/Uibounds
+AP_TOP = 5         -- types/Uibounds
+AP_TOPLEFT = 0     -- types/Uibounds
+AP_TOPRIGHT = 1    -- types/Uibounds
+
 ---@class Uibounds
 local Uibounds = {}
 
 ---Aligns the UI bounds to the specified anchor point at the given coordinates.
----@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin.
----@param x number The x-coordinate offset.
----@param y number The y-coordinate offset.
+---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin. (default: `"TOPLEFT"`)
+---@param x number The x-coordinate offset. (default: `0`)
+---@param y number The y-coordinate offset. (default: `0`)
 ---@usage
 ---```lua
 ---widget:AddAnchor("TOPLEFT", 0, 0)
@@ -15,10 +25,10 @@ local Uibounds = {}
 function Uibounds:AddAnchor(anchor, x, y) end
 
 ---Aligns the UI bounds to the specified anchor point at the given coordinates.
----@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin.
+---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin. (default: `"TOPLEFT"`)
 ---@param parentId "UIParent"|Widget The parent widget or UIParent.
----@param x number The x-coordinate offset.
----@param y number The y-coordinate offset.
+---@param x number The x-coordinate offset. (default: `0`)
+---@param y number The y-coordinate offset. (default: `0`)
 ---@usage
 ---```lua
 ---widget:AddAnchor("TOPLEFT", "UIParent", 0, 0)
@@ -28,11 +38,11 @@ function Uibounds:AddAnchor(anchor, parentId, x, y) end
 
 ---Aligns the UI bounds' anchor point to the specified parent and origin at the
 ---given coordinates.
----@param anchorPoint ANCHOR_POINT The anchor point of the UI bounds.
+---@param anchorPoint ANCHOR_POINT The anchor point of the UI bounds. (default: `"TOPLEFT"`)
 ---@param parentId "UIParent"|Widget The parent widget or UIParent.
----@param anchorOrigin ANCHOR_POINT The anchor origin on the parent.
----@param x number The x-coordinate offset.
----@param y number The y-coordinate offset.
+---@param anchorOrigin ANCHOR_POINT The anchor origin on the parent. (default: `"TOPLEFT"`)
+---@param x number The x-coordinate offset. (default: `0`)
+---@param y number The y-coordinate offset. (default: `0`)
 ---@usage
 ---```lua
 ---widget:AddAnchor("TOPLEFT", "UIParent", "TOP", 0, 0)

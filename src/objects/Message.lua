@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Message
-AP_BOTTOMLEFT = 2      -- objects/Message
-AP_BOTTOMRIGHT = 3     -- objects/Message
-AP_CENTER = 4          -- objects/Message
-AP_LEFT = 6            -- objects/Message
-AP_RIGHT = 7           -- objects/Message
-AP_TOP = 5             -- objects/Message
-AP_TOPLEFT = 0         -- objects/Message
-AP_TOPRIGHT = 1        -- objects/Message
-CT_ABILITY = 2         -- objects/Message
-CT_EXPEDITION_NAME = 3 -- objects/Message
-CT_NAME = 1            -- objects/Message
-DC_ALWAYS = 0          -- objects/Message DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Message DRAG_CONDITION
-
 ---objects/Message
 ---@class Message: Widget
 ---@field style TextStyle
@@ -39,14 +24,12 @@ function Message:AddMessage(message) end
 ---```
 function Message:AddMessageEx(message, visibleTime) end
 
----@TODO: What does this do?
 ---Adds a message with a specified visibility duration and refreshes the
 ---Message.
 ---@param message string The message text to add.
 ---@param visibleTime number The visibility duration in milliseconds.
 function Message:AddMessageExRefresh(message, visibleTime) end
 
----@TODO: What does this do?
 ---Adds a message and refreshes the Message.
 ---@param message string The message text to add.
 function Message:AddMessageRefresh(message) end
@@ -149,7 +132,7 @@ function Message:GetLinkInfoOnCursor() end
 ---```
 function Message:GetMaxLines() end
 
----@TODO:
+---@TODO: havent found a way to get a messageTimeStamp to test this, this could also have a param named chatType
 ---Retrieves the message text for a given timestamp in the Message.
 ---@param messageTimeStamp number The timestamp of the message.
 ---@return string message The message text.

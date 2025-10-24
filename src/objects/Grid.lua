@@ -1,20 +1,5 @@
 ---@meta _
 
-AP_BOTTOM = 8          -- objects/Grid
-AP_BOTTOMLEFT = 2      -- objects/Grid
-AP_BOTTOMRIGHT = 3     -- objects/Grid
-AP_CENTER = 4          -- objects/Grid
-AP_LEFT = 6            -- objects/Grid
-AP_RIGHT = 7           -- objects/Grid
-AP_TOP = 5             -- objects/Grid
-AP_TOPLEFT = 0         -- objects/Grid
-AP_TOPRIGHT = 1        -- objects/Grid
-CT_ABILITY = 2         -- objects/Grid
-CT_EXPEDITION_NAME = 3 -- objects/Grid
-CT_NAME = 1            -- objects/Grid
-DC_ALWAYS = 0          -- objects/Grid DRAG_CONDITION
-DC_SHIFT_KEY_DOWN = 1  -- objects/Grid DRAG_CONDITION
-
 ---objects/Grid
 ---@class Grid: Widget
 local Grid = {}
@@ -189,7 +174,7 @@ function Grid:SetColCount(count) end
 ---```
 function Grid:SetColTexCoord(x, y, w, h) end
 
----@TODO: Broken? SetRowTexture does this?
+---@FIXME: Broken? SetRowTexture does this?
 ---Sets the texture for a column in the Grid.
 ---@param texture TEXTURE_PATH The texture path.
 ---@see TEXTURE_PATH
@@ -243,7 +228,7 @@ function Grid:SetCurrentTexCoord(x, y, w, h) end
 function Grid:SetCurrentTexture(texture) end
 
 ---Sets the default column width for the Grid. Should be called before
----`Grid:SetItem`.
+---`Grid:SetItem` and `Grid:SetColCount`.
 ---@param width number The default column width.
 ---@usage
 ---```lua
@@ -252,7 +237,7 @@ function Grid:SetCurrentTexture(texture) end
 function Grid:SetDefaultColWidth(width) end
 
 ---Sets the default row height for the Grid. Should be called before
----`Grid:SetItem`.
+---`Grid:SetItem` and `Grid:SetRowCount`.
 ---@param height number The default row height.
 ---@usage
 ---```lua
@@ -312,12 +297,11 @@ function Grid:SetInsetForOutLine(left, top, right, bottom) end
 ---```
 function Grid:SetInsetForRow(left, top, right, bottom) end
 
----@TODO: What does makeIfNotExist do?
 ---Sets an item in the Grid at the specified row and column.
 ---@param table Widget The widget to set as the item.
 ---@param row number The row index. (min: `1`)
 ---@param col number The column index. (min: `1`)
----@param makeIfNotExist boolean `true` to create the item if it doesn't exist.
+---@param makeIfNotExist boolean `true` to create row/column if absent, `false` otherwise. (If `false` and row doesn't exist, it crashes.)
 ---@param value number The value associated with the item.
 ---@param withoutExtent boolean `true` to ignore extent, `false` to use it.
 ---@usage

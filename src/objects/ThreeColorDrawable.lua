@@ -1,53 +1,43 @@
 ---@meta _
 
-AP_BOTTOM = 8      -- objects/ThreeColorDrawable
-AP_BOTTOMLEFT = 2  -- objects/ThreeColorDrawable
-AP_BOTTOMRIGHT = 3 -- objects/ThreeColorDrawable
-AP_CENTER = 4      -- objects/ThreeColorDrawable
-AP_LEFT = 6        -- objects/ThreeColorDrawable
-AP_RIGHT = 7       -- objects/ThreeColorDrawable
-AP_TOP = 5         -- objects/ThreeColorDrawable
-AP_TOPLEFT = 0     -- objects/ThreeColorDrawable
-AP_TOPRIGHT = 1    -- objects/ThreeColorDrawable
-
 ---objects/ThreeColorDrawable
 ---@class ThreeColorDrawable: Drawablebase
 local ThreeColorDrawable = {}
 
----@TODO: Clarify color range and usage for Color1.
+---@TODO: Clarify usage for Color1. ChangeImageFile might be needed first.
 ---Sets the first color for the ThreeColorDrawable.
----@param r number The red color component.
----@param g number The green color component.
----@param b number The blue color component.
+---@param r number The red color component. (min: `0`, max: `1`)
+---@param g number The green color component. (min: `0`, max: `1`)
+---@param b number The blue color component. (min: `0`, max: `1`)
 ---@usage
 ---```lua
 ---drawable:ChangeColor1(1, 0, 0)
 ---```
 function ThreeColorDrawable:ChangeColor1(r, g, b) end
 
----@TODO: Clarify color range and usage for Color2.
+---@TODO: Clarify usage for Color2. ChangeImageFile might be needed first.
 ---Sets the second color for the ThreeColorDrawable.
----@param r number The red color component.
----@param g number The green color component.
----@param b number The blue color component.
+---@param r number The red color component. (min: `0`, max: `1`)
+---@param g number The green color component. (min: `0`, max: `1`)
+---@param b number The blue color component. (min: `0`, max: `1`)
 ---@usage
 ---```lua
 ---drawable:ChangeColor2(0, 1, 0)
 ---```
 function ThreeColorDrawable:ChangeColor2(r, g, b) end
 
----@TODO: Clarify color range and usage for Color3.
+---@TODO: Clarify usage for Color3. ChangeImageFile might be needed first.
 ---Sets the third color for the ThreeColorDrawable.
----@param r number The red color component.
----@param g number The green color component.
----@param b number The blue color component.
+---@param r number The red color component. (min: `0`, max: `1`)
+---@param g number The green color component. (min: `0`, max: `1`)
+---@param b number The blue color component. (min: `0`, max: `1`)
 ---@usage
 ---```lua
 ---drawable:ChangeColor3(0, 0, 1)
 ---```
 function ThreeColorDrawable:ChangeColor3(r, g, b) end
 
----@TODO: Verify typeNumber values and their effect. usage.
+---@TODO: usage. db ucc_emblems > emblem_id is design not pattern, it crashes the game "Device removed! please restart the game."
 ---Changes the image file for the ThreeColorDrawable based on type.
 ---@param typeNumber number The type number for the image file.
 function ThreeColorDrawable:ChangeImageFile(typeNumber) end
