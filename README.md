@@ -2,9 +2,7 @@
 
 Provides documentation, definitions, and IntelliSense for ArcheAge Addons.
 
-![Shows method documentation](doc/img/documentation.png)
-
-![Shows method IntelliSense](doc/img/intellisense.png)
+<video src="https://github.com/user-attachments/assets/e1f04bc0-8f06-4404-951d-a28e77cd287f" width="80%" controls></video>
 
 ## How To Use IntelliSense ([VSCode](https://code.visualstudio.com/))
 1. Clone or [download this repo](https://github.com/Noviern/AAAD/archive/refs/heads/master.zip).
