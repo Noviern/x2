@@ -554,8 +554,9 @@
 ---@TODO:
 ---@alias DOMINION_GUARD_TOWER_UPDATE_TOOLTIP_HANDLER fun(unitId)
 
----@TODO:
----@alias DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED_HANDLER fun()
+---@TODO: i feel like this should trigger every time the count changes but it doesnt.
+---Event triggers when the player joins a siege raid.
+---@alias DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED_HANDLER fun(count: number)
 
 ---Event triggers when the siege period changes.
 ---@alias DOMINION_SIEGE_PERIOD_CHANGED_HANDLER fun(siegeInfo: SiegeInfo)
@@ -1371,7 +1372,7 @@ local result = {
 ---@alias MINE_AMOUNT_HANDLER fun()
 
 ---@TODO:
----@alias MINI_SCOREBOARD_CHANGED_HANDLER fun(status: "update"|"remove"|"inactive", info?)
+---@alias MINI_SCOREBOARD_CHANGED_HANDLER fun(status: "update"|"remove"|"inactive", info?: MiniScoreBoardInfo[])
 
 ---Event triggers when the players dynamic shortcut is updated.
 ---@alias MODE_ACTIONS_UPDATE_HANDLER fun()

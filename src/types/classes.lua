@@ -1248,3 +1248,18 @@ local Vslider = {}
 ---@field [1] boolean reentry
 ---@field [2] number timeLeft in milliseconds
 ---@field [3]? string instanceName
+
+---@class MiniScoreBoardRowInfo
+---@field curHp number
+---@field maxHp number
+---@field moduleType number
+---@field name string
+---@field type number
+---@field visibleOrder number
+
+---@class MiniScoreBoardInfo
+---@field footer string
+---@field footerGuide string
+---@field rows MiniScoreBoardRowInfo[]
+---@field type number
+---@field visibleOrder number

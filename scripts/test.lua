@@ -221,21 +221,27 @@
 
 --------------------------------------------------------------------------------
 
-ADDON:ImportObject(OBJECT.Slot)
-ADDON:ImportAPI(API.X2Equipment)
-ADDON:ImportAPI(API.X2Ability)
-local slot = UIParent:CreateWidget("slot", "slot", "UIParent")
-slot:SetExtent(100, 100)
-slot:AddAnchor("TOPLEFT", 0, 0)
+-- ADDON:ImportObject(OBJECT.Slot)
+-- ADDON:ImportAPI(API.X2Equipment)
+-- ADDON:ImportAPI(API.X2Ability)
+-- local slot = UIParent:CreateWidget("slot", "slot", "UIParent")
+-- slot:SetExtent(100, 100)
+-- slot:AddAnchor("TOPLEFT", 0, 0)
 
-slot:EstablishItem(7992, 2)
-slot:EstablishSkillAlert(11, 2000, 2000)
+-- slot:EstablishItem(7992, 2)
+-- slot:EstablishSkillAlert(11, 2000, 2000)
 -- slot:EstablishSkillSlot(ISLOT_ORIGIN_SKILL_VIEW, 36468)
 -- slot:EstablishSkillSlot(ISLOT_ACTION, 36468)
--- slot:EstablishSlot(ISLOT_SKILL_ALERT, 243)
+-- slot:EstablishSlot(ISLOT_SKILL_ALERT, 242)
 
+-- slot:EstablishVirtualSlot(ISLOT_BAG, 1, 1)
+-- slot:RegisterForClicks("RightButton")
+-- slot:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   slot:EstablishVirtualSlot(ISLOT_BAG, 1, 1)
+--   ADDON:ChatLog("test")
+-- end)
 
-slot:Show(true)
+-- slot:Show(true)
 -- ADDON:ChatLog("GetBindedType " .. slot:GetBindedType())
 -- ADDON:ChatLogTable({ slot:GetExtraInfo() })
 -- local a = slot:GetItemLevelRequirment()

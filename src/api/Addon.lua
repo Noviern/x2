@@ -778,7 +778,7 @@ function ADDON:GetContentMainScriptPosVis(uiCategory) end
 ---```
 function ADDON:GetName() end
 
----Imports the API type for the addon. Call once per API.
+---Imports the API type for the addon. Call once per `API`.
 ---@param apiType API The API to import.
 ---@usage
 ---```lua
@@ -787,7 +787,7 @@ function ADDON:GetName() end
 ---@see API
 function ADDON:ImportAPI(apiType) end
 
----Imports the object id for the addon. Call only once per OBJECT.
+---Imports the object id for the addon. Call only once per `OBJECT`.
 ---@param objectId OBJECT The object ID to import.
 ---@usage
 ---```lua
@@ -928,7 +928,7 @@ function UIParent:ClearUIBound(key) end
 ---@see Widget
 ---@see WIDGET_TYPES
 ---@overload fun(self: self, widgetName: OBJECT_NAME, id: string, parentId: string|Widget)
-function UIParent:CreateWidget(widgetName, id, parentId, category) end
+function UIParent:CreateWidget(widgetName, id, parentId) end
 
 ---@FIXME: currently unusable without SetAccountUITimeStamp
 ---Retrieves the account UI timestamp for the specified key.
