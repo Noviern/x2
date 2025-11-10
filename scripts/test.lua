@@ -2116,7 +2116,7 @@ ADDON:ImportAPI(API.X2Option)
 -- text:SetText("|j0;") -- PRICE_TYPE_AA_CASH
 -- text:SetText("|l0;") -- CURRENCY_LIVING_POINT Vocation Badge
 -- text:SetText("|m0;") -- 1 00 00 CURRENCY_GOLD CURRENCY_GOLD_WITH_AA_POINT PRICE_TYPE_GOLD
--- text:SetText("|p0;") -- 1 00 00 CURRENCY_AA_POINT PRICE_TYPE_AA_POINT
+-- text:SetText("|p0;") -- 1 00 00 CURRENCY_AA_POINT PRICE_TYPE_AA_POINT @TODO: test |p8; etc
 -- text:SetText("|sa0; |sa;") -- ISMI_ARCHE_PASS_COIN
 -- text:SetText("|sd0; |sd;") -- LeadershipPoint Leadership
 -- text:SetText("|se0; |se;") -- ISMI_DELPI Gilda
@@ -2519,7 +2519,11 @@ end)
 -- textbox:SetText("Archerage.to")
 -- grid:SetItem(textbox, 3, 1, true, 10, false)
 
+--------------------------------------------------------------------------------
 
+ADDON:ImportAPI(API.X2Map)
+
+X2Map:ShowWorldmapLocation(181, 0, 0, 0)
 
 --------------------------------------------------------------------------------
 

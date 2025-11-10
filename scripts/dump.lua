@@ -16,6 +16,8 @@ local ctx_default = {
   indent_type = " "
 }
 
+local func_user = {}
+
 ---Dumps a table.
 ---@param tbl table
 ---@param ctx? ctx
@@ -95,9 +97,17 @@ function dump(tbl, ctx)
       value = string.format('"%s"', v:gsub("\r", "\\r"):gsub("\n", "\\n"))
     else
       --@TODO: i need to find a way to keep track of functions/user and their memory addresses to compare
-      -- v = tostring(v):match("^(.-):")
-      -- value = '"<' .. v .. '>"'
-      value = string.format('"<%s>"', tostring(v))
+
+      -- v = tostring(v):match(": ([0-9A-Za-z]+)")
+      -- if not func_user[v] then
+      --   func_user[v] = ctx.path .. "." .. k
+      -- end
+      
+      -- value = '"<function ' .. func_user[v] .. '>"'
+      
+      v = tostring(v):match("^(.-):")
+      value = '"<' .. v .. '>"'
+      -- value = string.format('"<%s>"', tostring(v))
     end
 
     line = string.format("%s%s = %s", indent, k, value)

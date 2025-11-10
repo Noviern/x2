@@ -18,9 +18,9 @@ SHOP_OPEN_LIVINGPOINT = 1
 SHOP_OPEN_NORMAL = 0
 SHOP_OPEN_RANDOM_SHOP = 5
 X2Store = {
-  GetProductionZoneGroups = "<function: 00000001C7E99704>",
-  GetSellableZoneGroups = "<function: 00000001C7E99744>",
-  GetSpecialtyRatio = "<function: 00000001C7E99504>",
-  GetSpecialtyRatioBetween = "<function: 00000001C7E99584>",
-  GetZoneSpecialtyRatio = "<function: 00000001C7E995C4>",
+  GetProductionZoneGroups = "<function>",
+  GetSellableZoneGroups = "<function>",
+  GetSpecialtyRatio = "<function>",
+  GetSpecialtyRatioBetween = "<function>",
+  GetZoneSpecialtyRatio = "<function>",
 }

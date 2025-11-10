@@ -61,6 +61,6 @@ ES_UNDERPANTS = 15
 ES_UNDERSHIRT = 14
 ES_WAIST = 4
 X2Equipment = {
-  GetEquippedItemTooltipInfo = "<function: 00000001C7E88CC4>",
-  GetEquippedItemType = "<function: 00000001C7E82FC4>",
+  GetEquippedItemTooltipInfo = "<function>",
+  GetEquippedItemType = "<function>",
 }

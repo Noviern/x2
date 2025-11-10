@@ -164,7 +164,7 @@ function Widget:CreateDrawable(texturePath, textureKey, nameLayer) end
 ---Creates an effect drawable for the specified texture and layer.
 ---@param texturePath string The texture name.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
----@return EffectDrawable drawable The created effect drawable, or an empty table if the object `EffectDrawable` hasn't been imported.
+---@return EffectDrawable|nil drawable The created effect drawable, an empty table if the object `EffectDrawable` hasn't been imported, or `nil` if the texture doesn't exist.
 ---@nodiscard
 ---@see DRAWABLE_NAME_LAYER
 ---@see EffectDrawable
@@ -198,7 +198,7 @@ function Widget:CreateIconDrawable(nameLayer) end
 ---can be used `Addon/{addonname}/example.dds`
 ---@param texturePath string The texture path.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
----@return ImageDrawable drawable The created image drawable, or an empty table if the object `ImageDrawable` hasn't been imported.
+---@return ImageDrawable|nil drawable The created image drawable, an empty table if the object `ImageDrawable` hasn't been imported, or `nil` if the texture doesn't exist.
 ---@nodiscard
 ---@see DRAWABLE_NAME_LAYER
 ---@see ImageDrawable
