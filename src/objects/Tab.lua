@@ -27,88 +27,48 @@ function Tab:AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget, wi
 ---`widget.selectedButton[i]`, `widget.unselectedButton[i]`, and
 ---`widget.window[i]`. Handles all events necessary for tab switching.
 ---@param tabName string The name of the tab.
----@usage
----```lua
----widget:AddSimpleTab("Tab 1")
----```
 function Tab:AddSimpleTab(tabName) end
 
 ---@TODO: Verify purpose and behavior.
 ---Aligns the tab buttons in the Tab. Should be called after all tabs have been
 ---created.
----@usage
----```lua
----widget:AlignTabButtons()
----```
 function Tab:AlignTabButtons() end
 
 ---Retrieves the number of active tabs in the Tab.
 ---@return number activateTabCount The number of active tabs.
 ---@nodiscard
----@usage
----```lua
----local activateTabCount = widget:GetActivateTabCount()
----```
 function Tab:GetActivateTabCount() end
 
 ---Retrieves the total number of tabs in the Tab.
 ---@return number tabCount The total number of tabs.
 ---@nodiscard
----@usage
----```lua
----local tabCount = widget:GetTabCount()
----```
 function Tab:GetTabCount() end
 
 ---Hides the tab at the specified index in the Tab.
 ---@param idx number The index of the tab to hide.
----@usage
----```lua
----widget:HideTab(2)
----```
 function Tab:HideTab(idx) end
 
 ---Checks if the tab at the specified index is hidden.
 ---@param index number The index of the tab to check.
 ---@return boolean hideTab `true` if the tab is hidden, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local hideTab = widget:IsHideTab(2)
----```
 function Tab:IsHideTab(index) end
 
 ---Sets the number of active tabs in the Tab.
 ---@param activateTabCount number The number of active tabs (default: `0`, max: `Tab:GetTabCount()`).
----@usage
----```lua
----widget:SetActivateTabCount(1)
----```
 function Tab:SetActivateTabCount(activateTabCount) end
 
 ---Sets the corner where tabs are placed in the Tab. Should be called before
 ---`Tab:AlignTabButtons()`.
 ---@param corner TAB_CORNER The corner to place the tabs. (default: `"TOPLEFT"`)
----@usage
----```lua
----widget:SetCorner("TOPRIGHT")
----```
 ---@see TAB_CORNER
 function Tab:SetCorner(corner) end
 
 ---Sets the orientation of the tabs in the Tab. Should be called before
 ---`Tab:AlignTabButtons()`.
 ---@param vertical boolean `true` for vertical orientation, `false` for horizontal. (default: `false`)
----@usage
----```lua
----widget:SetVertical(true)
----```
 function Tab:SetVertical(vertical) end
 
 ---Shows the tab at the specified index in the Tab.
 ---@param idx number The index of the tab to show.
----@usage
----```lua
----widget:ShowTab(2)
----```
 function Tab:ShowTab(idx) end

@@ -94,6 +94,9 @@ function dump(tbl, ctx)
     elseif vt == "string" then
       value = string.format('"%s"', v:gsub("\r", "\\r"):gsub("\n", "\\n"))
     else
+      --@TODO: i need to find a way to keep track of functions/user and their memory addresses to compare
+      -- v = tostring(v):match("^(.-):")
+      -- value = '"<' .. v .. '>"'
       value = string.format('"<%s>"', tostring(v))
     end
 

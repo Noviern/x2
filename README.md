@@ -6,7 +6,7 @@ Provides documentation, definitions, and IntelliSense for ArcheAge Addons.
 
 ## How To Use IntelliSense ([VSCode](https://code.visualstudio.com/))
 1. Clone or download this repo.
-2. Extract and place in `C:\ArcheRage\Documents\Addon`.
+2. Extract and place in `C:/ArcheRage/Documents/Addon`.
 3. Install VSCode Extension [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua).
 
 ![Shows Lua extension install page](doc/img/install.png)
@@ -17,7 +17,7 @@ Lua.workspace.library
 ```
 
 5. Determine if you want definitions for all addons (User) or just one specific addon (Workspace).
-6. Click **Add Item** and provide the location of this folder.
+6. Click **Add Item** and provide the location of this folder (`C:/ArcheRage/Documents/Addon/AAAD/src`).
 
 ![Shows lua.workspace.library settings](doc/img/settings.png)
 
@@ -30,7 +30,7 @@ Lua.workspace.library
 ## How To Use Globals
 In your addon's toc.g add at the top
 ```
-..\AAAD\src\globals.lua
+../AAAD/src/globals.lua
 ```
 
 ## Extra

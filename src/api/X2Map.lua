@@ -324,10 +324,6 @@ X2Map = {}                                -- api/X2Map
 ---@param zoneId ZONE_ID The ID of the zone to query.
 ---@return ZoneStateInfo|nil zoneStateInfo The zone state information, or `nil` if not found.
 ---@nodiscard
----@usage
----```lua
----local zoneStateInfo = X2Map:GetZoneStateInfoByZoneId(1)
----```
 ---@see ZONE_ID
 ---@see ZoneStateInfo
 function X2Map:GetZoneStateInfoByZoneId(zoneId) end

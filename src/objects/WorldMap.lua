@@ -13,10 +13,6 @@ local WorldMap = {}
 ---@param zoneId ZONE_ID The ID of the zone.
 ---@return ZONE_CLIMATE[] climateInfo The climate information for the zone.
 ---@nodiscard
----@usage
----```lua
----local climateInfo = widget:GetClimateInfo(34)
----```
 ---@see ZONE_ID
 ---@see ZONE_CLIMATE
 function WorldMap:GetClimateInfo(zoneId) end
@@ -24,45 +20,31 @@ function WorldMap:GetClimateInfo(zoneId) end
 ---Retrieves the sextant location of the cursor on the world map.
 ---@return SEXTANT|nil The cursor's sextant data, or `nil` if not available.
 ---@nodiscard
----@usage
----```lua
----widget:GetCursorSextants()
----```
 ---@see SEXTANT
 function WorldMap:GetCursorSextants() end
 
 ---Retrieves the icon drawable for a specific zoom level and zone ID.
----@param level WORLD_MAP_ZOOM The zoom level. (WORLD_MAP_STATE may be more accurate)
+---@param level WORLD_MAP_ZOOM The zoom level.
 ---@param id ZONE_ID The zone ID.
----@return ImageDrawable|EmptyTable|nil iconDrawable The icon drawable, or `nil` if not found.
+---@return ImageDrawable iconDrawable The icon drawable, empty table if the object `ImageDrawable` hasn't been imported, or `nil` if not found.
 ---@nodiscard
----@usage
----```lua
----local iconDrawable = widget:GetIconDrawable(3, 1)
----```
----@see WORLD_M---@see ZONE_ID
+---@see WORLD_MAP_ZOOM
+---@see ZONE_ID
 ---@see ImageDrawable
 function WorldMap:GetIconDrawable(level, id) end
 
 ---Retrieves or creates a route drawable for a specific zoom level and ID.
 ---Crashes if an invalid level is provided.
----@param level WORLD_MAP_ZOOM The zoom level. (WORLD_MAP_STATE may be more accurate)
+---@param level WORLD_MAP_ZOOM The zoom level.
 ---@param id number The route ID.
----@return ImageDrawable|EmptyTable|nil routeDrawable The route drawable, or `nil` if not found.
+---@return ImageDrawable routeDrawable The route drawable, empty table if the object `ImageDrawable` hasn't been imported, or `nil` if not found.
 ---@return boolean created `true` if the drawable was created, `false` if it already existed.
 ---@nodiscard
----@usage
----```lua
----local routeDrawable, created = widget:GetRouteDrawable(3, 17)
----```
----@see WORLD_M---@see ImageDrawable
+---@see WORLD_MAP_ZOOM
+---@see ImageDrawable
 function WorldMap:GetRouteDrawable(level, id) end
 
 ---Hides all icon drawables on the world map.
----@usage
----```lua
----widget:HideAllIconDrawable()
----```
 function WorldMap:HideAllIconDrawable() end
 
 ---Initializes map data with specified dimensions and texture paths. Must be
@@ -70,35 +52,23 @@ function WorldMap:HideAllIconDrawable() end
 ---@param width number The width of the map.
 ---@param height number The height of the map.
 ---@param tgaPath "ui/map/image_map.tga"|string The path to the map texture.
----@param iconPath BUTTON_TEXTURE_PATH The path to the icon texture. (Possibly TEXTURE_PATH)
----@usage
----```lua
----widget:InitMapData(928, 556, "ui/map/image_map.tga", BUTTON_TEXTURE_PATH.MAP)
----```
----@see BUTTON_TEXTURE_PATH
+---@param iconPath "ui/map/frame_map.dds"|string The path to the icon texture.
 function WorldMap:InitMapData(width, height, tgaPath, iconPath) end
 
 ---Removes a ping from the world map by its type.
 ---@param pingType PING_TYPE The type of ping to remove.
----@usage
----```lua
----widget:RemovePing(1)
----```
 ---@see PING_TYPE
 function WorldMap:RemovePing(pingType) end
 
 ---Removes all pings from the world map.
----@usage
----```lua
----widget:RemovePingAll()
----```
 function WorldMap:RemovePingAll() end
 
 ---Sets the drawable for common farm icons on the world map.
 ---@param drawable EffectDrawable The drawable for the farm icon.
 ---@usage
 ---```lua
----local farmDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.M---farmDrawable:SetVisible(false)
+---local farmDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
+---farmDrawable:SetVisible(false)
 ---farmDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
 ---farmDrawable:SetMoveRepeatCount(0)
 ---farmDrawable:SetMoveRotate(false)
@@ -116,10 +86,6 @@ function WorldMap:SetCommonFarmDrawable(drawable) end
 ---@param g number The green color component. (min: `0`, max: `1`)
 ---@param b number The blue color component. (min: `0`, max: `1`)
 ---@param a number The alpha component. (min: `0`, max: `1`)
----@usage
----```lua
----widget:SetFestivalZoneColor(1, 1, 0, 1)
----```
 function WorldMap:SetFestivalZoneColor(r, g, b, a) end
 
 ---Sets the drawable for portal icons on the world map. May accept any drawable
@@ -159,10 +125,6 @@ function WorldMap:SetTempNotifyCoord(isMain, coord) end
 ---@param g number The green color component. (min: `0`, max: `1`)
 ---@param b number The blue color component. (min: `0`, max: `1`)
 ---@param a number The alpha component. (min: `0`, max: `1`)
----@usage
----```lua
----widget:SetTroubleZoneColor(HPWS_TROUBLE_0, 1, 0, 1, .5)
----```
 ---@see ZONE_STATE
 function WorldMap:SetTroubleZoneColor(state, r, g, b, a) end
 
@@ -180,10 +142,6 @@ function WorldMap:ShowCommonFarm(farmGroupType, farmType, x, y) end
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@param z number The z-coordinate.
----@usage
----```lua
----widget:ShowPortal(307, 1277.77, 1394.11, 191.662)
----```
 ---@see ZONE_KEY
 function WorldMap:ShowPortal(zoneId, x, y, z) end
 
@@ -194,10 +152,6 @@ function WorldMap:ShowPortal(zoneId, x, y, z) end
 function WorldMap:ShowQuest(qType, decalIndex, hasDecal) end
 
 ---Updates the event map data on the world map.
----@usage
----```lua
----widget:UpdateEventMap()
----```
 function WorldMap:UpdateEventMap() end
 
 ---Updates the route map with the specified drawable.
@@ -211,8 +165,4 @@ function WorldMap:UpdateEventMap() end
 function WorldMap:UpdateRouteMap(routeDrawable) end
 
 ---Updates the zone state drawables on the world map.
----@usage
----```lua
----widget:UpdateZoneStateDrawable()
----```
 function WorldMap:UpdateZoneStateDrawable() end

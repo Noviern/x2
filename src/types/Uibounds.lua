@@ -19,7 +19,12 @@ local Uibounds = {}
 ---@param y number The y-coordinate offset. (default: `0`)
 ---@usage
 ---```lua
----widget:AddAnchor("TOPLEFT", 0, 0)
+----- ○ = Anchor Point
+----- ● = Anchor Origin (X,Y) ──► +X (right)
+----- │      ●──────┐
+----- ▼ +Y   │ obj1 │  Aligns obj1 TOPLEFT to the parent obj TOPLEFT at the offset of (0,0).
+----- (down) └──────┘
+---obj1:AddAnchor("TOPLEFT", 0, 0)
 ---```
 ---@see ANCHOR_POINT
 function Uibounds:AddAnchor(anchor, x, y) end
@@ -31,9 +36,15 @@ function Uibounds:AddAnchor(anchor, x, y) end
 ---@param y number The y-coordinate offset. (default: `0`)
 ---@usage
 ---```lua
----widget:AddAnchor("TOPLEFT", "UIParent", 0, 0)
+----- ○ = Anchor Point
+----- ● = Anchor Origin (X,Y) ──► +X (right)
+----- │      ●──────┐
+----- ▼ +Y   │ obj2 │  Aligns obj2 TOPLEFT to obj1 TOPLEFT at the offset of (0,0).
+----- (down) └──────┘
+---obj2:AddAnchor("TOPLEFT", obj1, 0, 0)
 ---```
 ---@see ANCHOR_POINT
+---@see Widget
 function Uibounds:AddAnchor(anchor, parentId, x, y) end
 
 ---Aligns the UI bounds' anchor point to the specified parent and origin at the
@@ -45,12 +56,20 @@ function Uibounds:AddAnchor(anchor, parentId, x, y) end
 ---@param y number The y-coordinate offset. (default: `0`)
 ---@usage
 ---```lua
----widget:AddAnchor("TOPLEFT", "UIParent", "TOP", 0, 0)
+----- ○ = Anchor Point
+----- ● = Anchor Origin (X,Y) ──► +X (right)
+----- │      ┌──────┐
+----- ▼ +Y   │ obj1 │ Aligns obj2 TOPLEFT to obj1 BOTTOMRIGHT at the offset of (0,0).
+----- (down) └──────●○──────┐
+-----                │ obj2 │
+-----                └──────┘
+---obj2:AddAnchor("TOPLEFT", obj1, "BOTTOMRIGHT", 0, 0)
 ---```
 ---@see ANCHOR_POINT
+---@see Widget
 function Uibounds:AddAnchor(anchorPoint, parentId, anchorOrigin, x, y) end
 
----@TODO: Clarify functionality.
+---@TODO: This doesnt appear to restrict the widgets min/max width so im unsure what it does. It does set the widgets width.
 ---Binds the width of the UI bounds.
 ---@param width number The width to bind.
 function Uibounds:BindWidth(width) end
@@ -58,21 +77,14 @@ function Uibounds:BindWidth(width) end
 ---Checks if the UI bounds is outside the screen.
 ---@return boolean outsideOfScreen `true` if the UI bounds is outside the screen, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local outsideOfScreen = widget:CheckOutOfScreen()
----```
 function Uibounds:CheckOutOfScreen() end
 
+---@TODO: this also starts scaling x and y on AddAnchor when they are applied
 ---Retrieves the offset coordinates of the UI bounds, constrained by screen
 ---dimensions.
----@return number offX The x-offset (0 to screen width - effective width).
----@return number offY The y-offset (0 to screen height - effective height).
+---@return number offX The x-offset (min: `0`, max: `screen width - effective width`).
+---@return number offY The y-offset (min: `0`, max: `screen height - effective height`).
 ---@nodiscard
----@usage
----```lua
----local offX, offY = widget:CorrectOffsetByScreen()
----```
 function Uibounds:CorrectOffsetByScreen() end
 
 ---Retrieves the effective width and height of the UI bounds, scaled if
@@ -80,89 +92,50 @@ function Uibounds:CorrectOffsetByScreen() end
 ---@return number effectiveWidth The effective width.
 ---@return number effectiveHeight The effective height.
 ---@nodiscard
----@usage
----```lua
----local effectiveWidth, effectiveHeight = widget:GetEffectiveExtent()
----```
 function Uibounds:GetEffectiveExtent() end
 
 ---Retrieves the effective offset (left, top) of the UI bounds.
 ---@return number effectiveOffX The effective x-offset.
 ---@return number effectiveOffY The effective y-offset.
 ---@nodiscard
----@usage
----```lua
----local effectiveOffX, effectiveOffY = widget:GetEffectiveOffset()
----```
 function Uibounds:GetEffectiveOffset() end
 
 ---Retrieves the unscaled width and height of the UI bounds.
 ---@return number width The unscaled width.
 ---@return number height The unscaled height.
 ---@nodiscard
----@usage
----```lua
----local width, height = widget:GetExtent()
----```
 function Uibounds:GetExtent() end
 
 ---Retrieves the unscaled height of the UI bounds.
 ---@return number height The unscaled height.
 ---@nodiscard
----@usage
----```lua
----local height = widget:GetHeight()
----```
 function Uibounds:GetHeight() end
 
----Retrieves the offset (right, center) of the UI bounds.
----@return number offX The x-offset.
----@return number offY The y-offset.
+---@TODO: this is scaled sometimes, its only scaled if the widget has been dragged and ApplyUIScale true. it appears dragging a widget makes addanchor start to scale x and y when applied
+---Retrieves the UI scaled offset (right, center) of the UI bounds.
+---@return number offX The x-offset, scaled up by 1 / UI scale.
+---@return number offY The y-offset, scaled up by 1 / UI scale.
 ---@nodiscard
----@usage
----```lua
----local offX, offY = widget:GetOffset()
----```
 function Uibounds:GetOffset() end
 
 ---Retrieves the unscaled width of the UI bounds.
 ---@return number width The unscaled width.
 ---@nodiscard
----@usage
----```lua
----local width = widget:GetWidth()
----```
 function Uibounds:GetWidth() end
 
 ---@TODO: Broken?
 ---Removes all anchors from the UI bounds, excluding anchor origin.
----@usage
----```lua
----widget:RemoveAllAnchors()
----```
 function Uibounds:RemoveAllAnchors() end
 
 ---Sets the width and height of the UI bounds.
 ---@param width number The width to set.
 ---@param height number The height to set.
----@usage
----```lua
----widget:SetExtent(100, 100)
----```
 function Uibounds:SetExtent(width, height) end
 
 ---Sets the height of the UI bounds.
 ---@param height number The height to set.
----@usage
----```lua
----widget:SetHeight(100)
----```
 function Uibounds:SetHeight(height) end
 
 ---Sets the width of the UI bounds.
 ---@param width number The width to set.
----@usage
----```lua
----widget:SetWidth(100)
----```
 function Uibounds:SetWidth(width) end

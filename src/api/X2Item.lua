@@ -96,14 +96,10 @@ X2Item = {}                             -- api/X2Item
 ---| `ITEM_TASK_TRADE`
 
 ---Retrieves item information from the specified link text.
----@param linkText string The link text to query.
+---@param linkText string The link text to query. (e.g., `"|i{itemType},{grade},{kind},{data}"`)
 ---@param kind? LINKKIND Optional kind of link.
 ---@return ItemInfo itemInfo The item information.
 ---@nodiscard
----@usage
----```lua
----local itemInfo = X2Item:InfoFromLink("|i48379,12,0,00000000003xl00030400040000000000QjRYG1M0008d0000000000000000000hAu00Aok002ihW00hAu00Aok002ihW00hAu00Aok002ihW005G010DCD000v3000aWm0094C00000000000000000000000000G0000000000000000000000000000000000000003ilCLc00000000000000000G000000000000000000000000000000xBp5PW00000;")
----```
 ---@see LINKKIND
 ---@see ItemInfo
 function X2Item:InfoFromLink(linkText, kind) end

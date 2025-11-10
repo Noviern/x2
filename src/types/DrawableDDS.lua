@@ -1,6 +1,7 @@
 ---@meta _
 
 ---object/EffectDrawable
+---object/IconDrawable
 ---object/ImageDrawable
 ---object/NinePartDrawable
 ---object/ThreePartDrawable
@@ -11,10 +12,6 @@ local DrawableDDS = {}
 ---@return number width The texture width.
 ---@return number height The texture height.
 ---@nodiscard
----@usage
----```lua
----local width, height = drawable:GetTextureSize()
----```
 function DrawableDDS:GetTextureSize() end
 
 ---Sets the coordinates and dimensions of the texture for the DrawableDDS.
@@ -22,10 +19,6 @@ function DrawableDDS:GetTextureSize() end
 ---@param y number The y-coordinate of the texture.
 ---@param width number The width of the texture.
 ---@param height number The height of the texture.
----@usage
----```lua
----drawable:SetCoords(0, 0, 100, 100)
----```
 function DrawableDDS:SetCoords(x, y, width, height) end
 
 ---Sets the inset for the DrawableDDS.
@@ -33,10 +26,6 @@ function DrawableDDS:SetCoords(x, y, width, height) end
 ---@param top number The top inset.
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
----@usage
----```lua
----drawable:SetInset(10, 10, 10, 10)
----```
 function DrawableDDS:SetInset(left, top, right, bottom) end
 
 ---Sets the texture file for the DrawableDDS.

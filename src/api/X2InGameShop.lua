@@ -105,7 +105,7 @@ X2InGameShop = {}                     -- api/X2InGameShop
 ---| `CU_NONE`
 
 ---api/X2InGameShop
----@TODO: ? ? ? Goods Received Way
+---Ingame Cart Show Goods Received Way
 ---@alias ICS
 ---| `ICS_GRW_CHARGED_MAIL`
 ---| `ICS_GRW_EXPRESSS_MAIL`
@@ -113,7 +113,7 @@ X2InGameShop = {}                     -- api/X2InGameShop
 ---| `ICS_GRW_INVENTORY`
 
 ---api/X2InGameShop
----@TODO: ? ? Money Item
+---Ingame Shop Money Item
 ---@alias ISMI
 ---| `ISMI_ARCHE_PASS_COIN`
 ---| `ISMI_DELPI`

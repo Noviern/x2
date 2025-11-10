@@ -8,18 +8,10 @@ X2Time = {} -- api/X2Time
 ---@return number hour The hour of the game time.
 ---@return number minute The minute of the game time.
 ---@nodiscard
----@usage
----```lua
----local am, hour, minute = X2Time:GetGameTime()
----```
 function X2Time:GetGameTime() end
 
 ---Retrieves the current server time.
 ---@return Time serverTime The server time.
 ---@nodiscard
----@usage
----```lua
----local serverTime = X2Time:GetServerTime()
----```
 ---@see Time
 function X2Time:GetServerTime() end

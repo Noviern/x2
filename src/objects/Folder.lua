@@ -7,60 +7,32 @@ local Folder = {}
 ---@class folder: Folder
 
 ---Closes the Folder.
----@usage
----```lua
----widget:CloseFolder()
----```
 function Folder:CloseFolder() end
 
 ---Performs a fixed close operation on the Folder.
----@usage
----```lua
----widget:FixedCloseFolder()
----```
 function Folder:FixedCloseFolder() end
 
 ---Retrieves the extend length of the Folder.
 ---@return number extendLength The extend length (default: `200`).
 ---@nodiscard
----@usage
----```lua
----local extendLength = widget:GetExtendLength()
----```
 function Folder:GetExtendLength() end
 
 ---Retrieves the current state of the Folder.
 ---@return FOLDER_STATE state The state of the Folder. (default: `"close"`)
 ---@nodiscard
----@usage
----```lua
----widget:GetState()
----```
 ---@see FOLDER_STATE
 function Folder:GetState() end
 
 ---Retrieves the title text of the Folder.
 ---@return string titleText The title text.
 ---@nodiscard
----@usage
----```lua
----local titleText = widget:GetTitleText()
----```
 function Folder:GetTitleText() end
 
 ---Opens the Folder.
----@usage
----```lua
----widget:OpenFolder()
----```
 function Folder:OpenFolder() end
 
 ---Sets the animation step height for the Folder.
 ---@param speed number The speed for the animation step. (default: `.5`)
----@usage
----```lua
----widget:SetAnimateStep(3)
----```
 function Folder:SetAnimateStep(speed) end
 
 ---Sets the child widget table for the Folder.
@@ -96,10 +68,6 @@ function Folder:SetCloseStateButton(closeTable) end
 
 ---Sets the extend length height for the Folder.
 ---@param height number The height to set for the extend length.
----@usage
----```lua
----widget:SetExtendLength(300)
----```
 function Folder:SetExtendLength(height) end
 
 ---Sets the inset for the Folder.
@@ -107,10 +75,6 @@ function Folder:SetExtendLength(height) end
 ---@param top number The top inset.
 ---@param right number The right inset.
 ---@param bottom number The bottom inset.
----@usage
----```lua
----widget:SetInset(10, 10, 10, 10)
----```
 function Folder:SetInset(left, top, right, bottom) end
 
 ---Sets the button to show in the `"open"` state, requiring an OnClick event to
@@ -150,31 +114,15 @@ function Folder:SetTitleButtonWidget(titleTable) end
 
 ---Sets the title height for the Folder.
 ---@param height number The height of the title.
----@usage
----```lua
----widget:SetTitleHeight(15)
----```
 function Folder:SetTitleHeight(height) end
 
 ---Sets the title text for the Folder.
 ---@param text string The title text to set.
----@usage
----```lua
----widget:SetTitleText("ArcheRage.to")
----```
 function Folder:SetTitleText(text) end
 
 ---Toggles the state of the Folder between `"open"` and `"close"`.
----@usage
----```lua
----widget:ToggleState()
----```
 function Folder:ToggleState() end
 
 ---Enables or disables animation for the Folder.
 ---@param useAnimation boolean `true` to enable animation, `false` to disable. (default: `false`)
----@usage
----```lua
----widget:UseAnimation(true)
----```
 function Folder:UseAnimation(useAnimation) end

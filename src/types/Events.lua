@@ -4,7 +4,7 @@
 ---@alias HOTKEY_ACTION_HANDLER fun(actionName: string, keyUp: boolean)
 
 ---Event triggers when one of the players ability is changed.
----@alias ABILITY_CHANGED_HANDLER fun(newAbility: ABILITY_TYPE2, oldAbility: ABILITY_TYPE2)
+---@alias ABILITY_CHANGED_HANDLER fun(newAbility: ABILITY_TYPE_NAME, oldAbility: ABILITY_TYPE_NAME)
 
 ---@TODO:
 ---@alias ABILITY_EXP_CHANGED_HANDLER fun(expStr: string)
@@ -300,8 +300,8 @@
 ---Event triggers when a player does a chat emotion.
 ---@alias CHAT_EMOTION_HANDLER fun(message: string)
 
----@TODO:
----@alias CHAT_FAILED_HANDLER fun(message: string, channelName)
+---Event triggers when the player fails to send a chat message.
+---@alias CHAT_FAILED_HANDLER fun(message: string, channelName: string)
 
 ---Event triggers when the player joins a channel.
 ---@alias CHAT_JOINED_CHANNEL_HANDLER fun(channel: CHAT_MESSAGE_CHANNEL, name: string)
@@ -445,7 +445,9 @@
 -- }
 
 ---Event triggers when there is a collision.
----@alias COMBAT_TEXT_COLLISION_HANDLER fun(targetUnitId: string, combatEvent: string, source: string, target: string, ...)
+---@alias COMBAT_TEXT_COLLISION_HANDLER fun(targetUnitId: string, combatEvent: string, source: string, target: string,
+---  collisionSource: COLLISION_SOURCE, subType: COLLISION_PART, mySlave: boolean, damage: number,
+---  powerType: POWER_TYPE)
 
 ---@TODO: What is the difference between a combo effect and combo? discord>ceaseless is a combo effect not a combo
 ---Event triggers when a skill has a combo **effect**.
@@ -502,9 +504,6 @@
 
 ---Event triggers when the player opens the crafting window.
 ---@alias CRAFTING_START_HANDLER fun(doodadId, count)
-
----@CREATE_CHARACTER_FAILED
----@alias CREATE_CHARACTER_FAILED_HANDLER fun(key)
 
 ---@TODO:
 ---@alias CREATE_ORIGIN_UCC_ITEM_HANDLER fun()
@@ -609,7 +608,7 @@
 ---@TODO:
 ---@alias ENCHANT_SAY_ABILITY_HANDLER fun()
 
----@TODO:
+---Event triggers when the hero election period has ended.
 ---@alias END_HERO_ELECTION_PERIOD_HANDLER fun()
 
 ---Event triggers when the player talks to a npc with a quest chat bubble.
@@ -650,6 +649,9 @@
 ---@TODO:
 ---@alias EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT_HANDLER fun()
 
+---Event triggers when the player expands their Ipnysh Artifacts pages.
+---@alias EQUIP_SLOT_REINFORCE_EXPAND_PAGE_HANDLER fun()
+
 ---Event triggers when the players ipnysh equipment slot effect levels up.
 ---@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER fun(equipSlot: ES, level: number)
 
@@ -658,6 +660,9 @@
 
 ---Event triggers when the players ipnysh equipment slot levels up.
 ---@alias EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_HANDLER fun(equipSlotAttribute: number, level: number)
+
+---Event triggers when the player changes their Ipnysh Artifacts page.
+---@alias EQUIP_SLOT_REINFORCE_SELECT_PAGE_HANDLER fun()
 
 ---Event triggers when the player increases the ipnysh level of an equipment
 ---slot.
@@ -875,7 +880,7 @@
 ---@alias FRIENDLIST_HANDLER fun(msg: string)
 
 ---Event triggers when the player opens their friend list.
----@alias FRIENDLIST_INFO_HANDLER fun(totalCount: number, memberInfos: FriendInfo[]|EmptyTable)
+---@alias FRIENDLIST_INFO_HANDLER fun(totalCount: number, memberInfos: FriendInfo[])
 
 ---Event triggers when the players friend list updates.
 ---@alias FRIENDLIST_UPDATE_HANDLER fun(updateType: FRIEND_LIST_UPDATE_TYPE, dataField: FriendInfo|string)
@@ -1005,8 +1010,8 @@
 ---@TODO:
 ---@alias HERO_ELECTION_DAY_ALERT_HANDLER fun(title, desc)
 
----@TODO:
----@alias HERO_ELECTION_RESULT_HANDLER fun(title, desc)
+---Event triggers when the hero election has results.
+---@alias HERO_ELECTION_RESULT_HANDLER fun(title?, desc?)
 
 ---Event triggers when the player casts their vote in a hero election,
 ---@alias HERO_ELECTION_VOTED_HANDLER fun()
@@ -1023,10 +1028,10 @@
 ---Event triggers when the players leadership increases.
 ---@alias HERO_SCORE_UPDATED_HANDLER fun()
 
----@TODO:
+---Event triggers when a hero season is over.
 ---@alias HERO_SEASON_OFF_HANDLER fun()
 
----@TODO:
+---Event triggers when a new hero season has begun.
 ---@alias HERO_SEASON_UPDATED_HANDLER fun()
 
 ---Event triggers when the roadmap tooltip is hidden.
@@ -1467,13 +1472,6 @@ local result = {
 ---Event triggers when the player ends a interaction with a npc.
 ---@alias NPC_INTERACTION_END_HANDLER fun()
 
--- -@enum NPC_INTERACTION_ADDED_VALUE
-local NPC_INTERACTION_ADDED_VALUE = {
-  COMPLETE = "complete",
-  START    = "start",
-  TALK     = "talk",
-}
-
 ---Event triggers when the player starts a interaction with a npc.
 ---@alias NPC_INTERACTION_START_HANDLER fun(value: "quest", addedValue: NPC_INTERACTION_ADDED_VALUE, npcId: string)
 
@@ -1687,7 +1685,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 
 ---@TODO: test this more.
 ---Event triggers when the raid hud changes.
----@alias RAID_RECRUIT_HUD_HANDLER fun(infos: EmptyTable)
+---@alias RAID_RECRUIT_HUD_HANDLER fun(infos: table)
 
 ---@TODO: This has other triggers
 ---Event triggers when the player views the raid recruit window.
@@ -1699,7 +1697,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---@TODO:
 ---@alias RANDOM_SHOP_OPEN_HOT_KEY_HANDLER fun() -- Crash
 
----@TODO:
+---Event triggers when the manastorm shop updates.
 ---@alias RANDOM_SHOP_UPDATE_HANDLER fun()
 
 ---@TODO: What does rank stand for? triggered for "The Mirage Isle Fish-Fest begins soon!"
@@ -1945,7 +1943,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---@alias SHOW_RENAME_EXPEIDITON_HANDLER fun(byItem, triedName, ownerWnd)
 
 ---Event triggers when a tooltip is shown on the roadmap.
----@alias SHOW_ROADMAP_TOOLTIP_HANDLER fun(tooltipInfo: TooltipInfo, tooltipCount: number)
+---@alias SHOW_ROADMAP_TOOLTIP_HANDLER fun(tooltipInfo: TooltipInfo[], tooltipCount: number)
 
 ---@TODO:
 ---@alias SHOW_SERVER_SELECT_WINDOW_HANDLER fun(visible)
@@ -1963,7 +1961,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---@alias SHOW_WORLDMAP_LOCATION_HANDLER fun(zoneId: ZONE_KEY, x: number, y: number, z: number)
 
 ---Event triggers when a tooltip is shown on the worldmap.
----@alias SHOW_WORLDMAP_TOOLTIP_HANDLER fun(tooltipInfo, tooltipCount: number)
+---@alias SHOW_WORLDMAP_TOOLTIP_HANDLER fun(tooltipInfo: TooltipInfo[], tooltipCount: number)
 
 ---@TODO:
 ---@alias SIEGE_APPOINT_RESULT_HANDLER fun(isDefender, faction)
@@ -1972,7 +1970,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---@alias SIEGE_RAID_REGISTER_LIST_HANDLER fun(zoneGroupType?, bRegistState?, bListUpdate?)
 
 ---@TODO:
----@alias SIEGE_RAID_TEAM_INFO_HANDLER fun(info: SiegeRaidZoneInfo)
+---@alias SIEGE_RAID_TEAM_INFO_HANDLER fun(info: SiegeRaidInfo)
 
 ---@TODO:
 ---@alias SIEGE_WAR_ENDED_HANDLER fun()
@@ -1994,7 +1992,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---@alias SKILL_ALERT_REMOVE_HANDLER fun(statusBuffType: SKILL_ALERT_STATUS_BUFF_TAG)
 
 ---Event triggers when the players skill level changes.
----@alias SKILL_CHANGED_HANDLER fun(text: string, level: number, ability: ABILITY_TYPE2)
+---@alias SKILL_CHANGED_HANDLER fun(text: string, level: number, ability: ABILITY_TYPE_NAME)
 
 ---Event triggers when the player learns a skill.
 ---@alias SKILL_LEARNED_HANDLER fun(text: string, skillType: SKILL_TYPE)
@@ -2020,7 +2018,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---@alias SKILL_UPGRADED_HANDLER fun(skillType: number, level: number, arg: number)
 
 ---Event triggers when the player resets a skill tree.
----@alias SKILLS_RESET_HANDLER fun(ability: ABILITY_TYPE2)
+---@alias SKILLS_RESET_HANDLER fun(ability: ABILITY_TYPE_NAME)
 
 ---@TODO:
 ---@alias SLAVE_SHIP_BOARDING_HANDLER fun()
@@ -2068,8 +2066,8 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---Event triggers when the player interacts with a npc that gives a quest with context,
 ---@alias START_QUEST_CONTEXT_NPC_HANDLER fun(qtype: number, useDirectingMode: boolean, npcId: string)
 
----@TODO:
----@alias START_QUEST_CONTEXT_SPHERE_HANDLER fun(qtype, stype)
+---Event triggers when the player enters a quest sphere and a quest starts.
+---@alias START_QUEST_CONTEXT_SPHERE_HANDLER fun(qtype: number, stype: number)
 
 ---@TODO:
 ---@alias START_SENSITIVE_OPERATION_HANDLER fun(remainTime)
@@ -2109,7 +2107,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 
 ---Event triggers when the player accesses a merchant or when the merchants sold
 ---list updates.
----@alias STORE_SOLD_LIST_HANDLER fun(soldItems: ItemInfo[]|EmptyTable)
+---@alias STORE_SOLD_LIST_HANDLER fun(soldItems: ItemInfo[])
 
 ---@TODO: Unsure the difference between STORE_FULL and STORE_TRADE_FAILED as different items give different events when the players bag is full.
 ---Event triggers when the player attempts to purchase an item from a store and their bag is full.
@@ -2131,7 +2129,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---@alias SYSMSG_HANDLER fun(msg: string)
 
 ---Event triggers when the player targets a new unit.
----@alias TARGET_CHANGED_HANDLER fun(stringId: string, targetType: UNIT_TYPE)
+---@alias TARGET_CHANGED_HANDLER fun(stringId: string, targetType?: UNIT_TYPE)
 
 ---@TODO:
 ---@alias TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO_HANDLER fun(curHp, maxHp)
@@ -2449,7 +2447,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 ---Event triggers when the players given quest information updates.
 ---@alias UPDATE_GIVEN_QUEST_STATIC_INFO_HANDLER fun()
 
----@TODO:
+---Event triggers when the hero election condition has updated.
 ---@alias UPDATE_HERO_ELECTION_CONDITION_HANDLER fun()
 
 ---@TODO:
@@ -2633,6 +2631,7 @@ local NPC_INTERACTION_ADDED_VALUE = {
 -- @alias BUY_RESULT_AA_POINT_HANDLER fun(result, moneyString)
 -- @alias CHANGE_PAY_INFO_HANDLER fun(oldPayMethod, newPayMethod, oldPayLocation, newPayLocation)
 -- @alias CONSOLE_WRITE_HANDLER fun()
+-- @alias CREATE_CHARACTER_FAILED_HANDLER fun(key)
 -- @alias DISCONNECT_FROM_AUTH_HANDLER fun()
 -- @alias ENTER_WORLD_CANCELLED_HANDLER fun()
 -- @alias ENTERED_LOGIN_HANDLER fun()

@@ -7,39 +7,23 @@ MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/Roadmap
 local RoadMap = {}
 ---@class roadmap: RoadMap
 
----@TODO: Document this
+---Initializes map data. Requires `Map:ReloadAllInfo`.
 function RoadMap:InitMapData() end
 
 ---Checks if the RoadMap is in ping mode.
----@return boolean pingMode `true` if ping mode is active, `false` otherwise.
+---@return boolean pingMode `true` if ping mode is active, `false` otherwise. (default: `false`)
 ---@nodiscard
----@usage
----```lua
----local pingMod = widget:IsPingMode()
----```
 function RoadMap:IsPingMode() end
 
 ---Sets the size of the RoadMap.
 ---@param radioValue number The size value for the map.
----@usage
----```lua
----widget:SetMapSize(300)
----```
 function RoadMap:SetMapSize(radioValue) end
 
 ---Shows or hides NPCs on the RoadMap.
 ---@param isShow boolean `true` to show NPCs, `false` to hide. (default: `false`)
----@usage
----```lua
----widget:SetRoadMapNpc(true)
----```
 function RoadMap:SetRoadMapNpc(isShow) end
 
----@TODO: Confirm default value for leader ping visibility.
+---@FIXME: Broken?
 ---Shows or hides the leader ping on the RoadMap.
 ---@param isShow boolean `true` to show the leader ping, `false` to hide.
----@usage
----```lua
----widget:ShowLeaderPing(true)
----```
 function RoadMap:ShowLeaderPing(isShow) end

@@ -71,19 +71,11 @@ ZP_RESERVED = 4                          -- api/X2Player ZPW
 ---@param appellationNameType number The appellation name type.
 ---@param appellationEffectType number The appellation effect type.
 ---@return boolean successful `true` if the change was successful, even if types are invalid.
----@usage
----```lua
----X2Player:ChangeAppellation(0, 0)
----```
 function X2Player:ChangeAppellation(appellationNameType, appellationEffectType) end
 
 ---Retrieves a list of appellation buff information for each appellation level.
 ---@return AppellationBuffInfo[] appellationBuffInfo A table of appellation buff information.
 ---@nodiscard
----@usage
----```lua
----local appellationBuffInfo = X2Player:GetAppellationBuffInfoByLevels()
----```
 ---@see AppellationBuffInfo
 function X2Player:GetAppellationBuffInfoByLevels() end
 
@@ -91,39 +83,23 @@ function X2Player:GetAppellationBuffInfoByLevels() end
 ---required).
 ---@return AppellationChangeItemInfo appellationChangeItemInfo The item requirements for changing an appellation.
 ---@nodiscard
----@usage
----```lua
----local appellationChangeItemInfo = X2Player:GetAppellationChangeItemInfo()
----```
 ---@see AppellationChangeItemInfo
 function X2Player:GetAppellationChangeItemInfo() end
 
 ---Retrieves the count of the player's unlocked appellations.
 ---@return number appellationCount The number of unlocked appellations.
 ---@nodiscard
----@usage
----```lua
----local appellationCount = X2Player:GetAppellationCount()
----```
 function X2Player:GetAppellationCount() end
 
 ---Retrieves the player's appellation level information.
 ---@return AppellationMyLevelInfo appellationMyLevelInfo The appellation level information.
 ---@nodiscard
----@usage
----```lua
----local appellationMyLevelInfo = X2Player:GetAppellationMyLevelInfo()
----```
 ---@see AppellationMyLevelInfo
 function X2Player:GetAppellationMyLevelInfo() end
 
 ---Retrieves current stamp information.
 ---@return AppellationMyStamp appellationMyStamp The current stamp information.
 ---@nodiscard
----@usage
----```lua
----local appellationMyStamp = X2Player:GetAppellationMyStamp()
----```
 ---@see AppellationMyStamp
 function X2Player:GetAppellationMyStamp() end
 
@@ -131,20 +107,12 @@ function X2Player:GetAppellationMyStamp() end
 ---@param appellationType number The appellation ID.
 ---@return AppellationRouteInfo appellationRouteInfo The appellation route information.
 ---@nodiscard
----@usage
----```lua
----local appellationRouteInfo = X2Player:GetAppellationRouteInfo(9000080)
----```
 ---@see AppellationRouteInfo
 function X2Player:GetAppellationRouteInfo(appellationType) end
 
 ---Retrieves a list of stamp information.
 ---@return StampInfo[] appellationStampInfo A table of stamp information.
 ---@nodiscard
----@usage
----```lua
----local appellationStampInfo = X2Player:GetAppellationStampInfo()
----```
 ---@see StampInfo
 function X2Player:GetAppellationStampInfo() end
 
@@ -153,10 +121,6 @@ function X2Player:GetAppellationStampInfo() end
 ---@param appellationPageIndex number The page index for the appellation list.
 ---@return Appellation[] appellations A table of appellation instances.
 ---@nodiscard
----@usage
----```lua
----local appellations = X2Player:GetAppellations(APPELATION_ROUTE_TYPE_MAX, 1)
----```
 ---@see APPELATION_ROUTE_TYPE
 ---@see Appellation
 function X2Player:GetAppellations(appellationRouteFilter, appellationPageIndex) end
@@ -165,10 +129,6 @@ function X2Player:GetAppellations(appellationRouteFilter, appellationPageIndex) 
 ---@param appellationRouteFilter APPELATION_ROUTE_TYPE The route type filter.
 ---@return number appellationsCount The total number of appellations.
 ---@nodiscard
----@usage
----```lua
----local appellationsCount = X2Player:GetAppellationsCount(APPELATION_ROUTE_TYPE_ACHIEVEMENTS)
----```
 ---@see APPELATION_ROUTE_TYPE
 function X2Player:GetAppellationsCount(appellationRouteFilter) end
 
@@ -197,19 +157,11 @@ function X2Player:GetShowingAppellation() end
 ---Retrieves item requirements for changing a stamp.
 ---@return StampChangeItemInfo stampChangeItemInfo The item requirements for changing a stamp.
 ---@nodiscard
----@usage
----```lua
----local stampChangeItemInfo = X2Player:GetStampChangeItemInfo()
----```
 ---@see StampChangeItemInfo
 function X2Player:GetStampChangeItemInfo() end
 
 ---Retrieves a list of key-value pairs representing appellation route types.
 ---@return UnitAppellationRoute[] unitAppellationRoute A table of appellation route types.
 ---@nodiscard
----@usage
----```lua
----local unitAppellationRoute = X2Player:GetUnitAppellationRouteList()
----```
 ---@see UnitAppellationRoute
 function X2Player:GetUnitAppellationRouteList() end

@@ -45,15 +45,12 @@ X2Craft = {}                        -- api/X2Craft
 ---| `MFCR_FAIL_WAIT`
 ---| `MFCR_SUCCESS`
 
----Retrieves the base craft information for the specified craft type, excluding material information.
+---Retrieves the base craft information for the specified craft type, excluding
+---material information.
 ---@param craftType number The type of craft to query.
 ---@param doodadId? number Optional doodad ID.
 ---@return CraftBaseInfo|nil craftBaseInfo The base craft information, or `nil` if not found.
 ---@nodiscard
----@usage
----```lua
----local craftBaseInfo = X2Craft:GetCraftBaseInfo(85)
----```
 ---@see CraftBaseInfo
 function X2Craft:GetCraftBaseInfo(craftType, doodadId) end
 
@@ -67,9 +64,5 @@ function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end
 ---@param craftType number The type of craft to query.
 ---@return CraftProductInfo[]|nil craftProductInfo A table of craft product info, or `nil` if not found.
 ---@nodiscard
----@usage
----```lua
----local craftProductInfo = X2Craft:GetCraftProductInfo(85)
----```
 ---@see CraftProductInfo
 function X2Craft:GetCraftProductInfo(craftType) end

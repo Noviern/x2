@@ -13,12 +13,13 @@ local Vslider = {}
 ---@field check Checkbutton
 
 ---objects/ListCtrl
----@class ListCtrlItem: Window
----@field subItems Label[]
+---@class ListCtrlItem --: Window
+---@field subItems Button|Window|Textbox|table --@TODO: table is LCCIT_STRING but is a table with just a style field and nothing else
+---@field eventWindow Window
 
 ---api/Addon
 ---@class EscMenuButtonData
----@field path string
+---@field path string Addon/{addonname}/example.dds
 ---@field x? number
 ---@field y? number
 ---@field w number 25
@@ -30,7 +31,7 @@ local Vslider = {}
 ---@field enabled boolean
 
 ---api/Addon
----@class RGBAColor : number[]
+---@class RGBAColor
 ---@field [1] number Red (min: `0`, max: `1`)
 ---@field [2] number Green (min: `0`, max: `1`)
 ---@field [3] number Blue (min: `0`, max: `1`)
@@ -592,31 +593,36 @@ local Vslider = {}
 ---@field endX number
 ---@field endY number
 
+---@TODO: this may not be accurate, child doesnt appear to work
+---@class ItemData: ItemTree
+---@field indexing number[] { parentIndex[, childIndex...] } (min: `0`)
+---@field text? string
+---@field value? number
+
 ---@class ItemsInfo
----@field childCount number
----@field indexing number[]
+---@field indexing number[] { parentIndex[, childIndex...] } (min: `0`)
 ---@field opened boolean
 ---@field text string
 ---@field value number
 
----@TODO: this may not be complete
 ---@class ItemTree
----@field enable? boolean
+---@field enable? boolean `true` to enable, `false` to disable. (default: `true`)
 ---@field text string
----@field value? number
+---@field value number
 ---@field subtext? string
 ---@field subColor? RGBAColor
 ---@field defaultColor? RGBAColor Requires `useColor = true`.
 ---@field selectColor? RGBAColor Requires `useColor = true`.
 ---@field overColor? RGBAColor Requires `useColor = true`.
----@field disableColor? RGBAColor @TODO: Unsure if this exists. Couldnt get it to work but its in the scriptsbin.
----@field color? RGBAColor @TODO: Unsure if this exists. Couldnt get it to work but its in the scriptsbin.
----@field useColor? boolean
----@field iconPath? TEXTURE_PATH
+---@field disableColor? RGBAColor Requires `useColor = true`.
+---@field color? RGBAColor Requires `useColor = true`.
+---@field useColor? boolean if `true` defaultColor, selectColor, overColor, disableColor, and color need to all be set or they will be invisible.
+---@field iconPath? string
 ---@field infoKey? string
----@field child? ItemTree
----@field tailIconPath? TEXTURE_PATH
+---@field child? ItemTree[]
+---@field tailIconPath? string
 ---@field tailIconCoord? string
+---@field opened? boolean (default: `false`)
 
 ---objects/Listbox
 ---@class ItemTreeValue
@@ -634,42 +640,42 @@ local Vslider = {}
 ---@field isOtherWorld boolean
 ---@field messageTimeStamp number
 
----@class CharacterLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class CharacterLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "character"
 
----@class CraftLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class CraftLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "craft"
 ---@field craftType number
 
----@class InvalidLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class InvalidLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "invalid"
 
----@class ItemLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class ItemLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "item"
 ---@field itemGrade ITEM_GRADE_TYPE
 ---@field itemLinkText string
----@field linkKind number LINKKIND but as a number not a string
+---@field linkKind LINKKIND_NUM
 
----@class NoneLinkInfo : BaseLinkInfo
+---@class NoneLinkInfo: BaseLinkInfo
 ---@field linkType "none"
 
----@class QuestLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class QuestLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "quest"
 ---@field questType number
 
----@class RaidLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class RaidLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "raid"
 ---@field createTime string
 ---@field ownerId string
 
----@class SquadLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class SquadLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "squad"
 ---@field battleFieldType number
 ---@field joinKey string
 ---@field squadId number
 ---@field zoneGroupType number
 
----@class UrlLinkInfo : BaseLinkInfo, CommonLinkFields
+---@class UrlLinkInfo: BaseLinkInfo, CommonLinkFields
 ---@field linkType "url"
 ---@field addr string
 ---@field text string
@@ -752,7 +758,6 @@ local Vslider = {}
 ---@field volume number
 ---@field weeklyAvg string
 
----@TODO: Not sure if all 14 always show.
 ---@class DiagonalASRInfo
 ---@field [1] DiagonalASRDailyInfo
 ---@field [2] DiagonalASRDailyInfo
@@ -792,11 +797,15 @@ local Vslider = {}
 ---@field iconKey ESC_MENU_ICON_KEY
 ---@field name string
 
----@TODO: Enum for faction. ABILITY_TYPE2 needs its own UnitClass enum to names instead of ids
+---@class UnitClassNames
+---@field [1] ABILITY_TYPE_NAME
+---@field [2] ABILITY_TYPE_NAME
+---@field [3] ABILITY_TYPE_NAME
+
 ---@class MemberInfo
 ---@field [1] string Name
 ---@field [2] number Basic Level
----@field [3] ABILITY_TYPE2[] Class
+---@field [3] UnitClassNames Class
 ---@field [4] number Guild Role
 ---@field [5] EmptyTable Connection Status (empty)
 ---@field [6] string Memo
@@ -827,7 +836,7 @@ local Vslider = {}
 ---@field pull boolean Full
 ---@field remainTime number
 
----@TODO: Enum for faction. this provides a different faction id?
+---@TODO: Enum for faction. this provides a different faction id? nuia returns 104 X2Unit:GetTopLevelFactionNameById
 ---@class FriendInfo
 ---@field [1] string Name
 ---@field [2] number Basic Level
@@ -856,7 +865,7 @@ local Vslider = {}
 ---@field victimCorpsDeath number
 
 ---@class QuestItem
----@field order number @TODO: QUEST_MARK_ORDER?
+---@field order QUEST_MARK_ORDER
 ---@field qtype number
 
 ---@class QuestSelectList
@@ -933,21 +942,42 @@ local Vslider = {}
 ---@field limitGearScore number
 ---@field limitLevel number
 ---@field maxMemberCount number
----@field nameCacheQueryId string
+---@field nameCacheQueryId? string
 ---@field openType number
 ---@field ownerLevel number
 ---@field squadId number
 ---@field worldName string
----@field zoneGroupType number @TODO: ZONE_ID?
+---@field zoneGroupType ZONE_ID
 
 ---@class SelectSquadList
 ---@field curPage number
 ---@field listInfo SquadInfo[]|EmptyTable
 ---@field maxCount number
 
+---@class CommonFarmItem
+---@field growthDone boolean
+---@field name string
+
 ---@class TooltipInfo
+---@field buff? boolean
+---@field count? number
+---@field enemy? boolean
+---@field expedition? string
+---@field factionId? FACTION_TYPE
+---@field factionName? string
+---@field factions? FACTION_TYPE[]
+---@field hp? string|number
+---@field id? number
+---@field list? CommonFarmItem[]
+---@field kind? TOOLTIP_KIND
+---@field maxHp? string|number
+---@field name? string
+---@field owner? string
+---@field possible? boolean `true` if the player can use the ezi light
 ---@field text string
----@field tooltipType string @TODO: Only found normal
+---@field territoryName? string
+---@field tooltipType TOOLTIP_TYPE
+---@field zoneId? ZONE_ID
 
 ---@class SiegeRaidMemberInfo
 ---@field ability ABILITY_TYPE[]
@@ -1042,7 +1072,7 @@ local Vslider = {}
 
 ---@class CraftOrderInfo
 ---@field craftCount number
----@field craftGrade number @TODO: Is this ITEM_GRADE_TYPE?
+---@field craftGrade ITEM_GRADE_TYPE
 ---@field craftType number
 
 ---@class WorldMessageInfo
@@ -1160,16 +1190,16 @@ local Vslider = {}
 ---@class CombatSpellPrefix
 ---@field spellId number
 ---@field spellName string
----@field spellSchool string
+---@field spellSchool string PHYSICAL|HOLY
 
 ---@class CombatEnvironmentalPrefix
----@field source string
----@field subType number
+---@field source COLLISION_SOURCE
+---@field subType COLLISION_PART
 ---@field mySlave? any @TODO:
 
 ---@class CombatDamageSuffix
 ---@field damage number
----@field powerType "HEALTH"|"MANA"
+---@field powerType POWER_TYPE
 ---@field hitType "HIT"|"CRITICAL" @TODO: COMBAT_HIT_TYPE?
 ---@field reduced number
 ---@field elementDamage number
@@ -1198,6 +1228,14 @@ local Vslider = {}
 ---@class CombatCastFailedSuffix
 ---@field failType any @TODO:
 
+---@class CombatEnergizeSuffix
+---@field amount any
+---@field powerType POWER_TYPE
+
+---@class CombatDrainSuffix: CombatEnergizeSuffix
+
+---@class CombatLeechSuffix: CombatEnergizeSuffix
+
 ---@class CombatEnvironmentalDamage: CombatEnvironmentalPrefix, CombatDamageSuffix
 
 ---@class CombatMeleeDamage: CombatDamageSuffix
@@ -1223,6 +1261,45 @@ local Vslider = {}
 ---@class CombatSpellHealed: CombatSpellPrefix, CombatHealedSuffix
 
 ---@class CombatSpellMissed: CombatSpellPrefix, CombatMissSuffix
+
+---@TODO: 
+---X <- I dont know if it exists.
+---X CombatEnvironmentalAuraApplied: CombatEnvironmentalPrefix, CombatAuraSuffix
+---X CombatEnvironmentalAuraRemoved: CombatEnvironmentalPrefix, CombatAuraSuffix
+---X CombatEnvironmentalCastFailed: CombatEnvironmentalPrefix, CombatCastFailedSuffix
+---X CombatEnvironmentalCastStart: CombatEnvironmentalPrefix
+---X CombatEnvironmentalCastSuccess: CombatEnvironmentalPrefix
+---CombatEnvironmentalDamage: CombatEnvironmentalPrefix, CombatDamageSuffix
+---X CombatEnvironmentalDotDamage: CombatEnvironmentalPrefix, CombatDamageSuffix
+---CombatEnvironmentalDrain: CombatEnvironmentalPrefix, CombatDrainSuffix
+---CombatEnvironmentalEnergize: CombatEnvironmentalPrefix, CombatEnergizeSuffix
+---CombatEnvironmentalHealed: CombatEnvironmentalPrefix, CombatHealedSuffix
+---CombatEnvironmentalLeech: CombatEnvironmentalPrefix, CombatLeechSuffix
+---X CombatEnvironmentalMissed: CombatEnvironmentalPrefix,CombatMissSuffix
+---X CombatMeleeAuraApplied: CombatAuraSuffix
+---X CombatMeleeAuraRemoved: CombatAuraSuffix
+---X CombatMeleeCastFailed: CombatCastFailedSuffix
+---X CombatMeleeCastStart:
+---X CombatMeleeCastSuccess:
+---CombatMeleeDamage: CombatDamageSuffix
+---X CombatMeleeDotDamage: CombatDamageSuffix
+---X CombatMeleeDrain: CombatDrainSuffix
+---X CombatMeleeEnergize: CombatEnergizeSuffix
+---X CombatMeleeHealed: CombatHealedSuffix
+---X CombatMeleeLeech: CombatLeechSuffix
+---CombatMeleeMissed: CombatMissSuffix
+---CombatSpellAuraApplied: CombatSpellPrefix, CombatAuraSuffix
+---CombatSpellAuraRemoved: CombatSpellPrefix, CombatAuraSuffix
+---CombatSpellCastFailed: CombatSpellPrefix, CombatCastFailedSuffix
+---CombatSpellCastStart: CombatSpellPrefix
+---CombatSpellCastSuccess: CombatSpellPrefix
+---CombatSpellDamage: CombatSpellPrefix, CombatDamageSuffix
+---CombatSpellDotDamage: CombatSpellPrefix,CombatDamageSuffix
+---CombatSpellDrain: CombatSpellPrefix, CombatDrainSuffix
+---CombatSpellEnergize: CombatSpellPrefix, CombatEnergizeSuffix
+---CombatSpellHealed: CombatSpellPrefix, CombatHealedSuffix
+---CombatSpellLeech: CombatSpellPrefix, CombatLeechSuffix
+---CombatSpellMissed: CombatSpellPrefix, CombatMissSuffix
 
 ----
 

@@ -33,10 +33,6 @@ local DamageDisplay = {}
 
 ---Enables or disables animation for the DamageDisplay.
 ---@param anim boolean `true` to enable animation, `false` to disable. (default: `false`)
----@usage
----```lua
----widget:Animation(true)
----```
 function DamageDisplay:Animation(anim) end
 
 ---@TODO: Clarify what actual drawn values represent.
@@ -46,10 +42,6 @@ function DamageDisplay:Animation(anim) end
 ---@return number right The right inset. (default: `0`)
 ---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
----@usage
----```lua
----local left, top, right, bottom = widget:GetActualDrawn()
----```
 function DamageDisplay:GetActualDrawn() end
 
 ---Retrieves the inset of the DamageDisplay.
@@ -58,10 +50,6 @@ function DamageDisplay:GetActualDrawn() end
 ---@return number right The right inset. (default: `0`)
 ---@return number bottom The bottom inset. (default: `0`)
 ---@nodiscard
----@usage
----```lua
----local left, top, right, bottom = widget:GetInset()
----```
 function DamageDisplay:GetInset() end
 
 ---Sets the animation frame information for the DamageDisplay.
@@ -99,10 +87,6 @@ function DamageDisplay:SetAnimFrameInfo(frameInfo) end
 ---Sets the initial position of the DamageDisplay.
 ---@param x number The x-coordinate of the initial position. (default: `0`)
 ---@param y number The y-coordinate of the initial position. (default: `0`)
----@usage
----```lua
----widget:SetInitPos(0, 0)
----```
 function DamageDisplay:SetInitPos(x, y) end
 
 ---Sets the inset of the DamageDisplay.
@@ -110,26 +94,14 @@ function DamageDisplay:SetInitPos(x, y) end
 ---@param top number The top inset. (default: `0`)
 ---@param right number The right inset. (default: `0`)
 ---@param bottom number The bottom inset. (default: `0`)
----@usage
----```lua
----widget:SetInset(10, 10, 10, 10)
----```
 function DamageDisplay:SetInset(left, top, right, bottom) end
 
 ---Sets the position calculation type for the DamageDisplay.
 ---@param positionCalculationType PCT The position calculation type. (default: `PCT_DEFAULT`)
----@usage
----```lua
----widget:SetPositionCalculationType(PCT_SHIP_COLLISION)
----```
 ---@see PCT
 function DamageDisplay:SetPositionCalculationType(positionCalculationType) end
 
 ---Sets the source and target unit IDs for the DamageDisplay.
 ---@param sourceId string The source unit ID.
 ---@param targetId string The target unit ID.
----@usage
----```lua
----widget:SetUnitId(X2Unit:GetUnitId("player"), X2Unit:GetUnitId("target"))
----```
 function DamageDisplay:SetUnitId(sourceId, targetId) end

@@ -36,10 +36,6 @@ X2Resident = {}                              -- api/X2Resident
 ---@param filterindex HOUSING_LIST_FILTER The filter to apply.
 ---@param searchWord string The search term.
 ---@return boolean unknown
----@usage
----```lua
----X2Resident:FilterHousingTradeList(HOUSING_LIST_FILTER_SMALL, "")
----```
 ---@see HOUSING_LIST_FILTER
 function X2Resident:FilterHousingTradeList(filterindex, searchWord) end
 
@@ -48,10 +44,6 @@ function X2Resident:FilterHousingTradeList(filterindex, searchWord) end
 ---@param boardType RESIDENT_BOARD_TYPE The type of resident board.
 ---@return ResidentBoardContent residentBoardContent The board content, or an empty table if not found.
 ---@nodiscard
----@usage
----```lua
----local residentBoardContent = X2Resident:GetResidentBoardContent(1)
----```
 ---@see RESIDENT_BOARD_TYPE
 ---@see ResidentBoardContent
 function X2Resident:GetResidentBoardContent(boardType) end
@@ -61,10 +53,6 @@ function X2Resident:GetResidentBoardContent(boardType) end
 ---@param zoneGroupType ZONE_ID The zone ID to search.
 ---@param filterindex HOUSING_LIST_FILTER The filter to apply.
 ---@param searchWord string The search term.
----@usage
----```lua
----X2Resident:RequestHousingTradeList(1, HOUSING_LIST_FILTER_SMALL, "")
----```
 ---@see ZONE_ID
 ---@see HOUSING_LIST_FILTER
 function X2Resident:RequestHousingTradeList(zoneGroupType, filterindex, searchWord) end

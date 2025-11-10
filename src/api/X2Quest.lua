@@ -57,40 +57,24 @@ X2Quest = {}                          -- api/X2Quest
 ---Retrieves the count of all active quests, including completed ones.
 ---@return number activeQuestListCount The number of active quests.
 ---@nodiscard
----@usage
----```lua
----local activeQuestListCount = X2Quest:GetActiveQuestListCount()
----```
 function X2Quest:GetActiveQuestListCount() end
 
 ---Retrieves the quest ID for the specified active quest index.
 ---@param idx number The active quest index (not the quest ID).
 ---@return number activeQuestType The quest ID.
 ---@nodiscard
----@usage
----```lua
----local activeQuestType = X2Quest:GetActiveQuestType(1)
----```
 function X2Quest:GetActiveQuestType(idx) end
 
 ---Retrieves the main title for the specified quest.
 ---@param questType number The quest ID.
 ---@return string questContextMainTitle The quest's main title.
 ---@nodiscard
----@usage
----```lua
----local questContextMainTitle = X2Quest:GetQuestContextMainTitle(990)
----```
 function X2Quest:GetQuestContextMainTitle(questType) end
 
 ---Checks if the specified quest is completed.
 ---@param questType number The quest ID.
 ---@return boolean completed `true` if the quest is completed, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local completed = X2Quest:IsCompleted(990)
----```
 function X2Quest:IsCompleted(questType) end
 
 ---@FIXME: Broken? Tried both active quest index and quest ID.

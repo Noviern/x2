@@ -51,14 +51,14 @@ X2PremiumService = {}            -- api/X2PremiumService
 ---| `PSBFR_NORMAL`
 
 ---api/X2PremiumService
----@TODO: Premium Service Buy Money/Message Type
+---Premium Service Buy Message Type
 ---@alias PSBMT
 ---| `PSBMT_CUSTOM`
 ---| `PSBMT_PECENT`
 ---| `PSBMT_VALUE`
 
 ---api/X2PremiumService
----@TODO: Premium Service Buy Message
+---Premium Service Buy Message
 ---@alias PSBM
 ---| `PSBM_ADD_MAX_LABOR_POWER`
 ---| `PSBM_AUCTION_POST_AUTHORITY`

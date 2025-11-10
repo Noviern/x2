@@ -17,10 +17,6 @@ X2Skill = {}        -- api/X2Skill
 ---@return number|nil remainTime The remaining cooldown time in milliseconds, or `nil` if the skillId doesn't exist. (default: `0`)
 ---@return number|nil totalTime The total cooldown time in milliseconds, or `nil` if the skillId doesn't exist. (default: `0`)
 ---@nodiscard
----@usage
----```lua
----local remainTime, totalTime = X2Skill:GetCooldown(44202, false)
----```
 function X2Skill:GetCooldown(skillId, ignoreGlobalCooldown) end
 
 ---Retrieves the cooldown information for a specified skill for the mate.
@@ -29,24 +25,16 @@ function X2Skill:GetCooldown(skillId, ignoreGlobalCooldown) end
 ---@param mateType MATE_TYPE The type of mate to query.
 ---@return number|nil remainTime The remaining cooldown time in milliseconds, or `nil` if the skillId doesn't exist.
 ---@nodiscard
----@usage
----```lua
----local remainTime = X2Skill:GetMateCooldown(9000168, false, MATE_TYPE_RIDE)
----```
 ---@see MATE_TYPE
 function X2Skill:GetMateCooldown(skillId, ignoreGlobalCooldown, mateType) end
 
----@TODO: Not sure how the itemType works with skillId
+---@TODO: Not sure how the itemType works with skillId, maybe one should be 0 and set the other?
 ---Returns tooltip information for a skill, filtered by an optional scope.
 ---@param skillId number The ID of the skill.
 ---@param itemType number The item type associated with the skill.
 ---@param filter? SIK Optional filter to reduce the scope of the returned tooltip.
----@return SkillTooltip|EmptyTable skillTooltip The skill tooltip information, or an empty table if no data is available.
+---@return SkillTooltip skillTooltip The skill tooltip information, or an empty table if no data is available.
 ---@nodiscard
----@usage
----```lua
----local skillTooltip = X2Skill:GetSkillTooltip(44202, 0, SIK_DESCRIPTION)
----```
 ---@see SIK
 ---@see SkillTooltip
 function X2Skill:GetSkillTooltip(skillId, itemType, filter) end
@@ -55,9 +43,5 @@ function X2Skill:GetSkillTooltip(skillId, itemType, filter) end
 ---@param skillId number The ID of the skill.
 ---@return SkillInfo|nil skillInfo The skill information, or `nil` if the skillId doesn't exist.
 ---@nodiscard
----@usage
----```lua
----local skillInfo = X2Skill:Info(44202)
----```
 ---@see SkillInfo
 function X2Skill:Info(skillId) end

@@ -296,7 +296,7 @@ X2Chat = {}                              -- api/X2Chat
 ---| `LOCALE_ZH_TW` 4
 
 ---api/X2Chat
----@TODO: Quest ? Status/State?
+---Quest Management State
 ---@alias QMS
 ---| `QMS_CHECKPOINT`
 ---| `QMS_GIVE_MAIN`

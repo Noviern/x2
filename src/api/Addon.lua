@@ -332,31 +332,72 @@ UM_ZONE_NAME = 5                                  -- api/Addon UM
 UNIT_FRAME_TEXT = 38                              -- api/Addon UI_TEXT_CATEGORY_ID
 UNIT_GRADE_TEXT = 37                              -- api/Addon UI_TEXT_CATEGORY_ID
 UNIT_KIND_TEXT = 36                               -- api/Addon UI_TEXT_CATEGORY_ID
-UOT_EDITBOX = 3                                   -- api/Addon UOT
-UOT_EDITBOX_MULTILINE = 4                         -- api/Addon UOT
-UOT_EMPTY_WIDGET = 46                             -- api/Addon UOT
-UOT_IMAGE_DRAWABLE = 10                           -- api/Addon UOT UOT_DRAWABLE
+---@alias UOT_AVI 52
+---@alias UOT_BUTTON 2
+---@alias UOT_CHAT_WINDOW 38
+---@alias UOT_CHECK_BUTTON 23
+---@alias UOT_CIRCLE_DIAGRAM 31
+---@alias UOT_COLOR_DRAWABLE 7
+---@alias UOT_COLOR_PICKER 32
+---@alias UOT_COMBO_BOX 40
+---@alias UOT_COOLDOWN_BUTTON 20
+---@alias UOT_COOLDOWN_CONSTANT_BUTTON 22
+---@alias UOT_COOLDOWN_INVENTORY_BUTTON 21
+---@alias UOT_DAMAGE_DISPLAY 35
+---@alias UOT_DYNAMIC_LIST 54
+UOT_EDITBOX = 3           -- api/Addon UOT
+---@alias UOT_EDITBOX 3
+UOT_EDITBOX_MULTILINE = 4 -- api/Addon UOT
+---@alias UOT_EDITBOX_MULTILINE 4
+UOT_EMPTY_WIDGET = 46     -- api/Addon UOT
+---@alias UOT_EMPTY_WIDGET 46
+---@alias UOT_FOLDER 34
+---@alias UOT_GAME_TOOLTIP 18
+---@alias UOT_GRID 28
+UOT_IMAGE_DRAWABLE = 10 -- api/Addon UOT UOT_DRAWABLE
 ---@alias UOT_IMAGE_DRAWABLE 10
-UOT_LABEL = 1                                     -- api/Addon UOT
-UOT_LISTBOX = 5                                   -- api/Addon UOT
-UOT_LIST_CTRL = 45                                -- api/Addon UOT
-UOT_NINE_PART_DRAWABLE = 8                        -- api/Addon UOT UOT_DRAWABLE
+UOT_LABEL = 1           -- api/Addon UOT
+---@alias UOT_LABEL 1
+---@alias UOT_LINE 48
+UOT_LISTBOX = 5    -- api/Addon UOT
+---@alias UOT_LISTBOX 5
+UOT_LIST_CTRL = 45 -- api/Addon UOT
+---@alias UOT_LIST_CTRL 45
+---@alias UOT_MEGAPHONE_CHATEDIT 44
+---@alias UOT_MESSAGE 16
+---@alias UOT_MODELVIEW 29
+UOT_NINE_PART_DRAWABLE = 8 -- api/Addon UOT UOT_DRAWABLE
 ---@alias UOT_NINE_PART_DRAWABLE 8
-UOT_SLIDER = 24                                   -- api/Addon UOT
-UOT_TEXT_STYLE = 13                               -- api/Addon UOT
-UOT_X2_EDITBOX = 53                               -- api/Addon UOT
-UR_FRIENDLY = 3                                   -- api/Addon UR
-UR_HOSTILE = 1                                    -- api/Addon UR
-UR_NEUTRAL = 2                                    -- api/Addon UR
-UTIL_TEXT = 31                                    -- api/Addon UI_TEXT_CATEGORY_ID
-WEB_TEXT = 112                                    -- api/Addon UI_TEXT_CATEGORY_ID
-WINDOW_TITLE_TEXT = 134                           -- api/Addon UI_TEXT_CATEGORY_ID
-X2 = ADDON                                        -- api/Addon ADDON
-ZST_CONQUEST_WAR = 1                              -- api/Addon ZST
-ZST_INVALID = 0                                   -- api/Addon ZST
+---@alias UOT_PAGEABLE 25
+---@alias UOT_PAINT_COLOR_PICKER 33
+---@alias UOT_RADIO_GROUP 55
+---@alias UOT_ROADMAP 27
+UOT_SLIDER = 24 -- api/Addon UOT
+---@alias UOT_SLIDER 24
+---@alias UOT_SLOT 47
+---@alias UOT_STATUSBAR 17
+---@alias UOT_TAB 36
+UOT_TEXT_STYLE = 13 -- api/Addon UOT
+---@alias UOT_TEXTBOX 39
+---@alias UOT_THREE_PART_DRAWABLE 9
+---@alias UOT_UNITFRAME_TOOLTIP 19
+---@alias UOT_WEBBROWSER 30
+---@alias UOT_WINDOW 0
+---@alias UOT_WORLDMAP 26
+UOT_X2_EDITBOX = 53     -- api/Addon UOT
+---@alias UOT_X2_EDITBOX 53
+UR_FRIENDLY = 3         -- api/Addon UR
+UR_HOSTILE = 1          -- api/Addon UR
+UR_NEUTRAL = 2          -- api/Addon UR
+UTIL_TEXT = 31          -- api/Addon UI_TEXT_CATEGORY_ID
+WEB_TEXT = 112          -- api/Addon UI_TEXT_CATEGORY_ID
+WINDOW_TITLE_TEXT = 134 -- api/Addon UI_TEXT_CATEGORY_ID
+X2 = ADDON              -- api/Addon ADDON
+ZST_CONQUEST_WAR = 1    -- api/Addon ZST
+ZST_INVALID = 0         -- api/Addon ZST
 
 ---api/Addon
----@alias ContentTriggerFunc fun(show: boolean, data?: table)
+---@alias ContentTriggerFunc fun(show: boolean|nil, data: table|nil)
 
 ---api/Addon
 ---@alias FACTION_TYPE
@@ -619,7 +660,7 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 ---| `UIC_WORLDMAP`
 
 ---api/Addon
----@TODO: ? ?
+---Ui Macro
 ---@alias UM
 ---| `UM_ACHIEVEMENT_NAME`
 ---| `UM_AREA_SPHERE`
@@ -646,7 +687,6 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 ---| `UM_YEAR`
 ---| `UM_ZONE_NAME`
 
----@TODO: should this have OBJECT values?
 ---api/Addon
 ---Ui Object Type
 ---@alias UOT
@@ -664,10 +704,10 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 
 ---api/Addon
 ---@alias UOT_DRAWABLE
----| `7` UOT_COLOR_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
+---| `7`  # UOT_COLOR_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
 ---| `UOT_IMAGE_DRAWABLE`
 ---| `UOT_NINE_PART_DRAWABLE`
----| `9` UOT_THREE_PART_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
+---| `9` # UOT_THREE_PART_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
 
 ---api/Addon
 ---Unit Relation
@@ -682,6 +722,7 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 ---| `ZST_CONQUEST_WAR`
 ---| `ZST_INVALID`
 
+---@FIXME: when a addon is reloaded this doesnt get removed.
 ---Adds a button to the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID The category ID for the menu.
 ---@param uiCategory UIC The UI category ID. Use an ID above 1000 for custom UICs to avoid conflicts with default categories or other addons.
@@ -691,7 +732,7 @@ ZST_INVALID = 0                                   -- api/Addon ZST
 ---@usage
 ---```lua
 ---ADDON:AddEscMenuButton(5, 1300, "", "example", {
----  path = "Addon/[addonname]/example.dds",  w = 25, h = 25
+---  path = "Addon/{addonname}/example.dds",  w = 25, h = 25
 ---})
 ---```
 ---@see ESC_MENU_CATEGORY_ID
@@ -702,35 +743,19 @@ function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data) end
 
 ---Logs a message to the chat under `CMF_SYSTEM`.
 ---@param logMessage string The message to log.
----@usage
----```lua
----ADDON:ChatLog("Archerage.to - the first ArcheAge Private Server")
----```
 function ADDON:ChatLog(logMessage) end
 
----Clears data associated with the specified key.
+---Clears data associated with the specified `key`.
 ---@param key string The key for the data to clear.
----@usage
----```lua
----ADDON:ClearData("data")
----```
 function ADDON:ClearData(key) end
 
----Triggers the `UI_ADDON` event for the specified addon.
+---Triggers the `UI_ADDON` event for the specified addon `name`.
 ---@param name string The name of the addon to trigger.
----@usage
----```lua
----ADDON:FireAddon(ADDON:GetName())
----```
 function ADDON:FireAddon(name) end
 
 ---Retrieves a list of information for all currently installed addons.
 ---@return AddonInfo[] addonInfo Array of addon information.
 ---@nodiscard
----@usage
----```lua
----local addonInfo = ADDON:GetAddonInfos()
----```
 ---@see AddonInfo
 function ADDON:GetAddonInfos() end
 
@@ -754,56 +779,37 @@ function ADDON:GetAddonInfos() end
 function ADDON:GetContent(uiCategory) end
 
 ---Retrieves the position, unscaled size, and visibility of the specified
----UI category. Does not retrieve custom registered UI categories.
+---UI category. Does not retrieve custom registered UI categories and some UI
+---categoryies will not return anything.
 ---@param uiCategory UIC The UI component to query.
 ---@return number|nil x The x-coordinate of the component, or `nil` if the UI category doesn't exist.
 ---@return number|nil y The y-coordinate of the component, or `nil` if the UI category doesn't exist.
 ---@return number|nil width The unscaled width of the component, or `nil` if the UI category doesn't exist.
 ---@return number|nil height The unscaled height of the component, or `nil` if the UI category doesn't exist.
----@return boolean isVisible `true` if the component is visible, `false` otherwise.
+---@return boolean|nil isVisible `true` if the component is visible, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local x, y, width, height, isVisible = ADDON:GetContentMainScriptPosVis(UIC_PLAYER_UNITFRAME)
----```
 ---@see UIC
 function ADDON:GetContentMainScriptPosVis(uiCategory) end
 
 ---Retrieves the name of the addon.
 ---@return string name The name of the addon.
 ---@nodiscard
----@usage
----```lua
----local name = ADDON:GetName()
----```
 function ADDON:GetName() end
 
 ---Imports the API type for the addon. Call once per `API`.
 ---@param apiType API The API to import.
----@usage
----```lua
----ADDON:ImportAPI(API.X2Console)
----```
 ---@see API
 function ADDON:ImportAPI(apiType) end
 
----Imports the object id for the addon. Call only once per `OBJECT`.
+---Imports the `objectId` for the addon. Call only once per `OBJECT`.
 ---@param objectId OBJECT The object ID to import.
----@usage
----```lua
----ADDON:ImportObject(OBJECT.Window)
----```
 ---@see OBJECT
 function ADDON:ImportObject(objectId) end
 
----Retrieves the saved data for the specified key in the addon.
+---Retrieves the saved data for the specified `key` in the addon.
 ---@param key string The key to retrieve data for.
----@return table savedData The data associated with the key.
+---@return table|nil savedData The data associated with the key.
 ---@nodiscard
----@usage
----```lua
----local addonData = ADDON:LoadData("data")
----```
 function ADDON:LoadData(key) end
 
 ---Registers a trigger function to a UI category and returns whether it
@@ -811,12 +817,6 @@ function ADDON:LoadData(key) end
 ---@param uiCategory UIC The UI category to register the function to.
 ---@param triggerFunc ContentTriggerFunc The function to register as a trigger.
 ---@return boolean success `true` if registration was successful, `false` otherwise.
----@usage
----```lua
----function ToggleWidget(show, data) end
----
----ADDON:RegisterContentTriggerFunc(UIC_MY_CUSTOM_WIDGET, ToggleWidget)
----```
 ---@see UIC
 function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 
@@ -827,12 +827,6 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---@param widget Widget The widget to register.
 ---@param triggerFunc? ContentTriggerFunc The optional trigger function for the widget.
 ---@return Widget|nil widget The registered widget, or `nil` if registration failed.
----@usage
----```lua
----function ToggleWidget(show, data) end
----
----ADDON:RegisterContentWidget(UIC_MY_CUSTOM_WIDGET, widget, ToggleWidget)
----```
 ---@see UIC
 ---@see Widget
 function ADDON:RegisterContentWidget(uiCategory, widget, triggerFunc) end
@@ -840,51 +834,27 @@ function ADDON:RegisterContentWidget(uiCategory, widget, triggerFunc) end
 ---Reloads the addon with the specified name. Avoid reloading the current addon
 ---to prevent game crashes.
 ---@param name string The name of the addon to reload.
----@usage
----```lua
----ADDON:ReloadAddon("example")
----```
 function ADDON:ReloadAddon(name) end
 
 ---Saves the addon's information. Should be called after `ADDON:SetAddonEnable`.
----@usage
----```lua
----ADDON:SetAddonEnable("example", true)
----ADDON:SaveAddonInfos()
----```
 function ADDON:SaveAddonInfos() end
 
 ---Saves data to the specified key for the addon.
 ---@param key string The key to associate with the data.
 ---@param data table The data to save.
----@usage
----```lua
----ADDON:SaveData("data", { hello = "world" })
----```
 function ADDON:SaveData(key, data) end
 
 ---Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos`
 ---afterward and a reload (or character select).
 ---@param name string The name of the addon to enable or disable.
 ---@param enable boolean `true` to enable, `false` to disable the addon.
----@usage
----```lua
----ADDON:SetAddonEnable("example", true)
----ADDON:SaveAddonInfos()
----```
 function ADDON:SetAddonEnable(name, enable) end
 
 ---Shows or hides the UI category and returns whether the operation succeeded.
 ---@param uiCategory UIC The UI category to show or hide.
 ---@param show boolean `true` to show, `false` to hide the component.
----@param data? table Optional data (currently only usable for custom UI categories).
+---@param data? table Optional data passed to the `uiCategory` `triggerFunc` defined with `ADDON:RegisterContentTriggerFunc` or `ADDON:RegisterContentWidget` (currently only usable for custom UI categories).
 ---@return boolean success `true` if the operation succeeded, `false` otherwise.
----@usage
----```lua
----local data = { hello = "world" }
----
----ADDON:ShowContent(UIC_MY_CUSTOM_WIDGET, true, data)
----```
 ---@see UIC
 function ADDON:ShowContent(uiCategory, show, data) end
 
@@ -895,39 +865,26 @@ function ADDON:ShowContent(uiCategory, show, data) end
 ---@return boolean success `true` if the toggle succeeded, `false` otherwise.
 ---@usage
 ---```lua
----local data = { hello = "world" }
----
----ADDON:ToggleContent(UIC_MY_CUSTOM_WIDGET, data)
+---ADDON:ToggleContent(UIC_MY_CUSTOM_WIDGET, { hello = "world" })
 ---```
 ---@see UIC
 function ADDON:ToggleContent(uiCategory, data) end
 
 ---Clears the UI bound associated with the specified UI key. Reload
 ---(or character select) required to update the UI.
----@param key UIBOUND_KEY The key whose UIBound data should be cleared.
----@usage
----```lua
----UIParent:ClearUIBound("ui_bound_playerFrame")
----```
+---@param key UIBOUND_KEY|string The key whose UIBound data should be cleared.
 ---@see UIBOUND_KEY
 function UIParent:ClearUIBound(key) end
 
 ---Creates a widget of the specified type with the given ID and parent.
 ---@generic T
----@param widgetName `T` The type of widget to create.
+---@param widgetName `T`|OBJECT_NAME The type of widget to create.
 ---@param id string The unique identifier for the widget. If the name already exists it will cause a UI Logic Error.
----@param parentId "UIParent"|string|Widget The parent `Widget` or "UIParent" for the widget.
----@return T|EmptyTable|nil
+---@param parentId "UIParent"|Widget|string The parent `"UIParent"`, `Widget`, or `Widget` id for the widget.
+---@return T widget The created widget, empty table if the widget hasn't been imported, or `nil` if failed.
 ---@nodiscard
----@usage
----```lua
----local window = UIParent:CreateWidget("window", "exampleWindow", "UIParent")
----local button = UIParent:CreateWidget("button", "exampleButton", window)
----```
 ---@see OBJECT_NAME
 ---@see Widget
----@see WIDGET_TYPES
----@overload fun(self: self, widgetName: OBJECT_NAME, id: string, parentId: string|Widget)
 function UIParent:CreateWidget(widgetName, id, parentId) end
 
 ---@FIXME: currently unusable without SetAccountUITimeStamp
@@ -937,70 +894,43 @@ function UIParent:CreateWidget(widgetName, id, parentId) end
 ---@nodiscard
 function UIParent:GetAccountUITimeStamp(key) end
 
----Retrieves the date the character was last active based on when it last receives 20 leadership in a day.
+---Retrieves the date the character was last active based on when it last
+---receives 20 leadership in a day.
 ---@return string characterTodayPlayedTimeStamp The timestamp in `YYYY-M-D` format.
 ---@nodiscard
----@usage
----```lua
----local characterTodayPlayedTimeStamp = UIParent:GetCharacterTodayPlayedTimeStamp()
----```
 function UIParent:GetCharacterTodayPlayedTimeStamp() end
 
 ---Retrieves the current display point value.
 ---@return number currentDP The current display point value.
 ---@nodiscard
----@usage
----```lua
----local currentDP = UIParent:GetCurrentDP()
----```
 function UIParent:GetCurrentDP() end
 
 ---Retrieves the current polygon count.
 ---@return number currentPolyCount The current polygon count.
 ---@nodiscard
----@usage
----```lua
----local currentPolyCount = UIParent:GetCurrentPolyCount()
----```
 function UIParent:GetCurrentPolyCount() end
 
 ---Retrieves the current timestamp.
 ---@return string currentTimeStamp The current timestamp in `YYYY-M-D` format.
 ---@nodiscard
----@usage
----```lua
----local currentTimeStamp = UIParent:GetCurrentTimeStamp()
----```
 function UIParent:GetCurrentTimeStamp() end
 
 ---Retrieves the entity name if it exists within render range.
 ---@param sEntityName string The name of the entity to check.
----@return string? sEntityName The entity name if found, or `nil` if not in range.
+---@return string|nil sEntityName The entity name if found, or `nil` if not in range.
 ---@nodiscard
----@usage
----```lua
----local sEntityName = UIParent:GetEntityByName("Beginner Training Scarecrow")
----```
 function UIParent:GetEntityByName(sEntityName) end
 
 ---Retrieves the value for the specified key.
 ---@param key "inventory_guide_line_space" The key to retrieve the value for.
 ---@return number etcValue The value associated with the key.
 ---@nodiscard
----@usage
----```lua
----local lineSpace = UIParent:GetEtcValue("inventory_guide_line_space")
----```
 function UIParent:GetEtcValue(key) end
 
 ---Retrieves the font color for the specified key.
 ---@param key FONT_COLOR_KEY The key to retrieve the font color for.
 ---@return RGBAColor fontColor The font color associated with the key.
 ---@nodiscard
----@usage
----```lua
----local fontColor = UIParent:GetFontColor("default")
----```
 ---@see FONT_COLOR_KEY
 ---@see RGBAColor
 function UIParent:GetFontColor(key) end
@@ -1008,103 +938,60 @@ function UIParent:GetFontColor(key) end
 ---Retrieves the current frame rate.
 ---@return number frameRate The current frame rate.
 ---@nodiscard
----@usage
----```lua
----local frameRate = UIParent:GetFrameRate()
----```
 function UIParent:GetFrameRate() end
 
 ---Retrieves the frame time.
 ---@return number frameTime The frame time in seconds.
 ---@nodiscard
----@usage
----```lua
----local frameTime = UIParent:GetFrameTime()
----```
 function UIParent:GetFrameTime() end
 
 ---Retrieves the ID of the UI element.
 ---@return string id The UI element's ID.
 ---@nodiscard
----@usage
----```lua
----local id = UIParent:GetId()
----```
 function UIParent:GetId() end
 
 ---Retrieves the permission state for the specified UI category.
 ---@param uiCategory UIC The UI category to check.
 ---@return boolean permission `true` if permission is granted, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local permission = UIParent:GetPermission(UIC_MAIL)
----```
 ---@see UIC
 function UIParent:GetPermission(uiCategory) end
 
 ---Retrieves the screen height.
 ---@return number screenHeight The screen height in pixels.
 ---@nodiscard
----@usage
----```lua
----local screenHeight = UIParent:GetScreenHeight()
----```
 function UIParent:GetScreenHeight() end
 
 ---Retrieves the screen width.
 ---@return number screenWidth The screen width in pixels.
 ---@nodiscard
----@usage
----```lua
----local screenWidth = UIParent:GetScreenWidth()
----```
 function UIParent:GetScreenWidth() end
 
 ---Retrieves the server time table.
 ---@return Time serverTime The server time table.
 ---@nodiscard
----@usage
----```lua
----local serverTime = UIParent:GetServerTimeTable()
----```
 ---@see Time
 function UIParent:GetServerTimeTable() end
 
----@TODO: Add other textures like BUTTON_TEXTURE_PATH
 ---Retrieves texture data for the specified file and key.
----@param filename TEXTURE_PATH|string The texture file path.
+---@param filename string The texture file path.
 ---@param infoKey string The key for texture data, obtainable via `UIParent:GetTextureKeyData(filename).keys` or by the associated `filename` `.g` file.
 ---@return TextureData textureData The texture data for the specified key.
 ---@nodiscard
----@usage
----```lua
----local textureData = UIParent:GetTextureData(TEXTURE_PATH.ACHIEVEMENT, "achievement_bg_blue")
----```
----@see TEXTURE_PATH
 ---@see TextureData
 function UIParent:GetTextureData(filename, infoKey) end
 
 ---Retrieves texture key data for the specified file.
----@param filename TEXTURE_PATH The texture file path.
+---@param filename string The texture file path.
 ---@return TextureKeyData textureKeyData The texture key data.
 ---@nodiscard
----@usage
----```lua
----local textureKeyData = UIParent:GetTextureKeyData(TEXTURE_PATH.ACHIEVEMENT)
----```
----@see TEXTURE_PATH
 ---@see TextureKeyData
 function UIParent:GetTextureKeyData(filename) end
 
 ---Retrieves the UI bound for the specified key, if it exists.
----@param key UIBOUND_KEY The key to retrieve the UI bound for.
+---@param key UIBOUND_KEY|string The key to retrieve the UI bound for.
 ---@return UIBound|nil uiBound The UI bound if the key has been moved, nil otherwise.
 ---@nodiscard
----@usage
----```lua
----local uiBound = UIParent:GetUIBound("ui_bound_playerFrame")
----```
 ---@see UIBOUND_KEY
 ---@see UIBound
 function UIParent:GetUIBound(key) end
@@ -1112,10 +999,6 @@ function UIParent:GetUIBound(key) end
 ---Retrieves the UI scale.
 ---@return number uiScale The current UI scale. (min: `0.7`, max: `2.4`)
 ---@nodiscard
----@usage
----```lua
----local uiScale = UIParent:GetUIScale()
----```
 function UIParent:GetUIScale() end
 
 ---Retrieves the UI stamp for the specified key. This is currently unusable
@@ -1123,78 +1006,46 @@ function UIParent:GetUIScale() end
 ---@param key string The key to retrieve the UI stamp for.
 ---@return string uiStamp The UI stamp associated with the key.
 ---@nodiscard
----@usage
----```lua
----local stamp = UIParent:GetUIStamp("example")
----```
 function UIParent:GetUIStamp(key) end
 
 ---Retrieves the camera's angles in degrees.
 ---@return Vec3 viewCameraAngles The camera angles as a Vec3.
 ---@nodiscard
----@usage
----```lua
----local viewCameraAngles = UIParent:GetViewCameraAngles()
----```
 ---@see Vec3
 function UIParent:GetViewCameraAngles() end
 
 ---Retrieves the camera's direction in radians.
 ---@return Vec3 viewCameraDir The camera direction as a Vec3.
 ---@nodiscard
----@usage
----```lua
----local viewCameraDir = UIParent:GetViewCameraDir()
----```
 ---@see Vec3
 function UIParent:GetViewCameraDir() end
 
 ---Retrieves the camera's field of view in radians.
 ---@return number viewCameraFov The camera's field of view.
 ---@nodiscard
----@usage
----```lua
----local viewCameraFov = UIParent:GetViewCameraFov()
----```
 function UIParent:GetViewCameraFov() end
 
 ---Retrieves the camera's position.
 ---@return Vec3 viewCameraPos The camera position as a Vec3.
 ---@nodiscard
----@usage
----```lua
----local viewCameraPos = UIParent:GetViewCameraPos()
----```
 ---@see Vec3
 function UIParent:GetViewCameraPos() end
 
 ---Retrieves the virtual memory statistics.
 ---@return VirtualMemoryStats virtualMemoryStats The virtual memory statistics.
 ---@nodiscard
----@usage
----```lua
----local virtualMemoryStats = UIParent:GetVirtualMemoryStats()
----```
 ---@see VirtualMemoryStats
 function UIParent:GetVirtualMemoryStats() end
 
 ---Retrieves the font size list.
 ---@return FontSizeList fontSizeList The font size list.
 ---@nodiscard
----@usage
----```lua
----local fontSizeList = UIParent:InitFontSize()
----```
 ---@see FontSizeList
 function UIParent:InitFontSize() end
 
 ---Checks if DirectX 11 is supported.
 ---@return boolean dx11Supported `true` if DirectX 11 is supported, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local dx11Supported = UIParent:IsDX11Supported()
----```
 function UIParent:IsDX11Supported() end
 
 ---Checks if the specified point is visible.
@@ -1212,33 +1063,18 @@ function UIParent:IsPointVisible(point) end
 ---Checks if multithreaded rendering is supported.
 ---@return boolean renderThreadSupported `true` if multithreaded rendering is supported, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local renderThreadSupported = UIParent:IsRenderThreadSupported()
----```
 function UIParent:IsRenderThreadSupported() end
 
 ---Releases an event handler for the specified UI event.
 ---@param eventName UIEVENT_TYPE The UI event to release the handler for.
 ---@param handler function The handler function to release.
----@usage
----```lua
----UIParent:ReleaseEventHandler("UI_ADDON", ToggleAddonSettings)
----```
 ---@see UIEVENT_TYPE
 function UIParent:ReleaseEventHandler(eventName, handler) end
 
----@TODO: I dont like this many overloads, ive tried generics but they dont work on alias functions.
 ---Sets an event handler for the specified UI event (more than 255 events will
 ---crash the game).
 ---@param eventName UIEVENT_TYPE The UI event to set the handler for.
 ---@param handler function The handler function to set.
----@usage
----```lua
----function ToggleAddonSettings() end
----
----UIParent:SetEventHandler("UI_ADDON", ToggleAddonSettings)
----```
 ---@see UIEVENT_TYPE
 ---@overload fun(self: self, eventName: "ABILITY_CHANGED", handler: ABILITY_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "ABILITY_EXP_CHANGED", handler: ABILITY_EXP_CHANGED_HANDLER)
@@ -1388,7 +1224,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "CRAFT_TRAINED", handler: CRAFT_TRAINED_HANDLER)
 ---@overload fun(self: self, eventName: "CRAFTING_END", handler: CRAFTING_END_HANDLER)
 ---@overload fun(self: self, eventName: "CRAFTING_START", handler: CRAFTING_START_HANDLER)
----@overload fun(self: self, eventName: "CREATE_CHARACTER_FAILED", handler: CREATE_CHARACTER_FAILED_HANDLER)
 ---@overload fun(self: self, eventName: "CREATE_ORIGIN_UCC_ITEM", handler: CREATE_ORIGIN_UCC_ITEM_HANDLER)
 ---@overload fun(self: self, eventName: "CRIME_REPORTED", handler: CRIME_REPORTED_HANDLER)
 ---@overload fun(self: self, eventName: "DEBUFF_UPDATE", handler: DEBUFF_UPDATE_HANDLER)
@@ -1435,9 +1270,11 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ENTERED_SUBZONE", handler: ENTERED_SUBZONE_HANDLER)
 ---@overload fun(self: self, eventName: "ENTERED_WORLD", handler: ENTERED_WORLD_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT", handler: EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT_HANDLER)
+---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_EXPAND_PAGE", handler: EQUIP_SLOT_REINFORCE_EXPAND_PAGE_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT", handler: EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP", handler: EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT", handler: EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_HANDLER)
+---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_SELECT_PAGE", handler: EQUIP_SLOT_REINFORCE_SELECT_PAGE_HANDLER)
 ---@overload fun(self: self, eventName: "EQUIP_SLOT_REINFORCE_UPDATE", handler: EQUIP_SLOT_REINFORCE_UPDATE_HANDLER)
 ---@overload fun(self: self, eventName: "ESC_MENU_ADD_BUTTON", handler: ESC_MENU_ADD_BUTTON_HANDLER)
 ---@overload fun(self: self, eventName: "ESCAPE_END", handler: ESCAPE_END_HANDLER)
@@ -2063,8 +1900,9 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ZONE_SCORE_UPDATED", handler: ZONE_SCORE_UPDATED_HANDLER)
 function UIParent:SetEventHandler(eventName, handler) end
 
----Saves the UI bound for the specified key.
----@param key UIBOUND_KEY The key to set the UI bound for.
+---Saves the UI bound for the specified key. This saves per character and can be
+---accessed by other addons.
+---@param key UIBOUND_KEY|string The key to set the UI bound for.
 ---@param uiBound UIBound The UI bound to set.
 ---@usage
 ---```lua
@@ -2090,19 +1928,10 @@ function UIParent:SetUIBound(key, uiBound) end
 ---Sets the UI scale.
 ---@param scale number The UI scale value. (min: `0.7`, max: `2.4`)
 ---@param immediatelyApply boolean `true` to apply the scale immediately, `false` otherwise.
----@usage
----```lua
----UIParent:SetUIScale(0.9, true)
----```
 function UIParent:SetUIScale(scale, immediatelyApply) end
 
 ---Sets whether to allow comma usage in number formatting.
 ---@param use boolean Whether to enable comma usage. The default is set by the game region.
----@usage
----```lua
----UIParent:SetUseInsertComma(true)
----ADDON:ChatLog(tostring(X2Unit:UnitGearScore("player", true)))
----```
 function UIParent:SetUseInsertComma(use) end
 
 ---@FIXME: Broken?

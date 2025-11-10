@@ -11,8 +11,4 @@ local EmptyWidget = {}
 ---@param g number The green color component (min: `0`, max: `1`).
 ---@param b number The blue color component (min: `0`, max: `1`).
 ---@param a number The alpha (opacity) component (min: `0`, max: `1`).
----@usage
----```lua
----widget:SetDrawBorder(true, 1, 0, 0, 1)
----```
 function EmptyWidget:SetDrawBorder(draw, r, g, b, a) end

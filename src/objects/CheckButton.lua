@@ -13,41 +13,21 @@ local Checkbutton = {}
 ---@class checkbutton: Checkbutton
 
 ---Returns a boolean indicating the state of the Checkbutton.
----@return boolean checked `true` if the Checkbutton is checked, `false` otherwise.
+---@return boolean checked `true` if the Checkbutton is checked, `false` otherwise. (default: `false`)
 ---@nodiscard
----@usage
----```lua
----local checked = checkbutton:GetChecked()
----```
 function Checkbutton:GetChecked() end
 
 ---Sets the state of the Checkbutton.
----@param state boolean `true` to check the Checkbutton, `false` to uncheck.
----@usage
----```lua
----checkbutton:SetChecked(true)
----```
+---@param state boolean `true` to check the Checkbutton, `false` to uncheck. (default: `false`)
 function Checkbutton:SetChecked(state) end
 
 ---Sets the background for the checked state of the Checkbutton.
 ---@param checkedTable DrawableDDS The table defining the checked state background.
----@usage
----```lua
----local checkedTable = widget:CreateDrawable(TEXTURE_PATH.BOOKMARK, "bookmark_sel", "overlay")
----checkedTable:AddAnchor("CENTER", widget, 0, 0)
----widget:SetCheckedBackground(checkedTable)
----```
 ---@see DrawableDDS
 function Checkbutton:SetCheckedBackground(checkedTable) end
 
----@TODO: Not sure how to see the disabled state as SetButtonState doesnt work assuming that would change it to a disabledchecked state.
----Sets the background for the disabled checked state of the Checkbutton.
+---Sets the background for the disabled (`Widget:Enable(false)`) checked state
+---of the Checkbutton.
 ---@param disabledCheckedTable DrawableDDS The table defining the disabled checked state background.
----@usage
----```lua
----local disabledCheckedTable = widget:CreateDrawable(TEXTURE_PATH.BOOKMARK, "bookmark_dis", "overlay")
----disabledCheckedTable:AddAnchor("CENTER", widget, 0, 0)
----widget:SetDisabledCheckedBackground(disabledCheckedTable)
----```
 ---@see DrawableDDS
 function Checkbutton:SetDisabledCheckedBackground(disabledCheckedTable) end

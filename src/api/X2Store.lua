@@ -54,10 +54,6 @@ X2Store = {}                     -- api/X2Store
 ---crafted.
 ---@return ZoneInfo[] productionZoneGroups A table of zone information for the production zone groups.
 ---@nodiscard
----@usage
----```lua
----local productionZoneGroups = X2Store:GetProductionZoneGroups()
----```
 ---@see ZoneInfo
 function X2Store:GetProductionZoneGroups() end
 
@@ -66,10 +62,6 @@ function X2Store:GetProductionZoneGroups() end
 ---@param fromZoneGroup ZONE_ID The source zone ID.
 ---@return ZoneInfo[] sellableZoneGroups A table of zone information for the sellable zone groups.
 ---@nodiscard
----@usage
----```lua
----local sellableZoneGroups = X2Store:GetSellableZoneGroups(1)
----```
 ---@see ZONE_ID
 ---@see ZoneInfo
 function X2Store:GetSellableZoneGroups(fromZoneGroup) end
@@ -77,10 +69,6 @@ function X2Store:GetSellableZoneGroups(fromZoneGroup) end
 ---Retrieves the specialty ratio.
 ---@return number specialtyRatio The specialty ratio.
 ---@nodiscard
----@usage
----```lua
----local specialtyRatio = X2Store:GetSpecialtyRatio()
----```
 function X2Store:GetSpecialtyRatio() end
 
 ---Retrieves the cooldown time and triggers the `SPECIALTY_RATIO_BETWEEN_INFO`
@@ -97,9 +85,6 @@ function X2Store:GetSpecialtyRatio() end
 ---@see ZONE_ID
 function X2Store:GetSpecialtyRatioBetween(fromZoneGroup, toZoneGroup) end
 
----Retrieves the specialty ratio for zones. Triggers the `SELL_SPECIALTY_CONTENT_INFO` event.
----@usage
----```lua
----X2Store:GetZoneSpecialtyRatio()
----```
+---Retrieves the specialty ratio for zones. Triggers the
+---`SELL_SPECIALTY_CONTENT_INFO` event.
 function X2Store:GetZoneSpecialtyRatio() end

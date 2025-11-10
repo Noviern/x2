@@ -21,57 +21,29 @@ function Pageable:AddWidgetToPage(widget, pageIndex) end
 
 ---Changes the current page of the Pageable to the specified index.
 ---@param index number The page index to switch to.
----@usage
----```lua
----widget:ChangePage(2)
----```
 function Pageable:ChangePage(index) end
 
 ---Retrieves the current page index of the Pageable.
 ---@return number currentPageIndex The current page index. (default: `1`, max: `widget:GetTotalPage()`)
 ---@nodiscard
----@usage
----```lua
----local currentPageIndex = widget:GetCurrentPageIndex()
----```
 function Pageable:GetCurrentPageIndex() end
 
 ---Retrieves the total number of pages in the Pageable.
 ---@return number totalPage The total number of pages.
 ---@nodiscard
----@usage
----```lua
----local totalPage = widget:GetTotalPage()
----```
 function Pageable:GetTotalPage() end
 
 ---Navigates to the next page of the Pageable.
----@usage
----```lua
----widget:NextPage()
----```
 function Pageable:NextPage() end
 
 ---Navigates to the previous page of the Pageable.
----@usage
----```lua
----widget:PrevPage()
----```
 function Pageable:PrevPage() end
 
 ---Sets the current page index of the Pageable.
 ---@param num number The page index to set.
----@usage
----```lua
----widget:SetCurrentPageIndex(2)
----```
 function Pageable:SetCurrentPageIndex(num) end
 
 ---Sets the total number of pages for the Pageable. This must be set before
 ---`Pageable:AddWidgetToPage`.
 ---@param num number The number of pages to set.
----@usage
----```lua
----widget:SetPageCount(2)
----```
 function Pageable:SetPageCount(num) end

@@ -9,9 +9,9 @@ indent_size = 2
 # if indent_style is tab, this is valid
 tab_width = 4
 # none/single/double
-quote_style = none
+quote_style = double
 
-continuation_indent = 4
+continuation_indent = 2
 ## extend option
 # continuation_indent.before_block = 4
 # continuation_indent.in_expr = 4

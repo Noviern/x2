@@ -93,7 +93,7 @@ X2Ability = {}                       -- api/X2Ability
 ---| `SAT_NONE`
 
 ---api/X2Ability
----@TODO: ? ? ?
+---@TODO: Speech Bubble Category?
 ---@alias SBC
 ---| `SBC_ATTACK`
 ---| `SBC_EMOTION`
@@ -120,25 +120,17 @@ X2Ability = {}                       -- api/X2Ability
 ---Retrieves a list of the player's active ability information.
 ---@return ActiveAbilities activeAbilities The list of active abilities.
 ---@nodiscard
----@usage
----```lua
----local activeAbilities = X2Ability:GetActiveAbility()
----```
 ---@see ActiveAbilities
 function X2Ability:GetActiveAbility() end
 
 ---Retrieves a list of all the player's actability information.
 ---@return ActabilityInfo[] allMyActabilityInfos A table of actability information.
 ---@nodiscard
----@usage
----```lua
----local allMyActabilityInfos = X2Ability:GetAllMyActabilityInfos()
----```
 ---@see ActabilityInfo
 function X2Ability:GetAllMyActabilityInfos() end
 
----@TODO: Find a buff where itemLevel actually matters.
 ---@FIXME: Only BIK_DESCRIPTION appears to work.
+---@TODO: Find a buff where itemLevel actually matters.
 ---Retrieves information for the buff tooltip based on the buff type and item
 ---level.
 ---@param buffType number The type of buff.
@@ -146,10 +138,6 @@ function X2Ability:GetAllMyActabilityInfos() end
 ---@param neededInfo? BIK Optional additional information for the buff.
 ---@return AppellationBuffInfo buffTooltip The buff tooltip information.
 ---@nodiscard
----@usage
----```lua
----local buffTooltipDesc = X2Ability:GetBuffTooltip(5700, 1, BIK_DESCRIPTION)
----```
 ---@see BIK 
 ---@see AppellationBuffInfo
 function X2Ability:GetBuffTooltip(buffType, itemLevel, neededInfo) end
@@ -157,10 +145,6 @@ function X2Ability:GetBuffTooltip(buffType, itemLevel, neededInfo) end
 ---Returns actability information for the player.
 ---@param actabilityGroupType ACTABILITY_ID The actability group type to query.
 ---@return ActabilityGroupTypeInfo|nil myActabilityInfo The actability information, or `nil` if not found.
----@usage
----```lua
----local myActabilityInfo = X2Ability:GetMyActabilityInfo(1)
----```
 ---@see ACTABILITY_ID
 function X2Ability:GetMyActabilityInfo(actabilityGroupType) end
 
@@ -168,9 +152,5 @@ function X2Ability:GetMyActabilityInfo(actabilityGroupType) end
 ---@param index ABILITY_TYPE The ability type to check.
 ---@return boolean activeAbility `true` if the ability is active, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local activeAbility = X2Ability:IsActiveAbility(1)
----```
 ---@see ABILITY_TYPE
 function X2Ability:IsActiveAbility(index) end

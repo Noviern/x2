@@ -6,10 +6,6 @@ local Line = {}
 ---@class line: Line
 
 ---Clears all points from the Line.
----@usage
----```lua
----widget:ClearPoints()
----```
 function Line:ClearPoints() end
 
 ---Sets the color for the Line.
@@ -17,27 +13,15 @@ function Line:ClearPoints() end
 ---@param g number The green color component. (min: `0`, max: `1`, default: `0`)
 ---@param b number The blue color component. (min: `0`, max: `1`, default: `0`)
 ---@param a number The alpha (opacity) component. (min: `0`, max: `1`, default: `1`)
----@usage
----```lua
----widget:SetLineColor(1, 0, 0, 1)
----```
 function Line:SetLineColor(r, g, b, a) end
 
 ---Sets the line color using a color key for the Line.
 ---@param colorKey ETC_COLOR The color key to apply.
----@usage
----```lua
----widget:SetLineColorByKey("market_price_line_weekly")
----```
 ---@see ETC_COLOR
 function Line:SetLineColorByKey(colorKey) end
 
 ---Sets the thickness for the Line.
 ---@param thickness number The thickness of the line.
----@usage
----```lua
----widget:SetLineThickness(5)
----```
 function Line:SetLineThickness(thickness) end
 
 ---Sets the points for the Line. Starts at bottom left of the widget.

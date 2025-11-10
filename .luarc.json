@@ -1,7 +1,0 @@
-{
-  "diagnostics.neededFileStatus": {
-    "codestyle-check": "Any"
-  },
-  // "typeCheckingMode": "strict", // what does this do?
-  "hover.expandAlias": false
-}
