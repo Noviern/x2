@@ -329,9 +329,9 @@ X2Map = {}                                -- api/X2Map
 function X2Map:GetZoneStateInfoByZoneId(zoneId) end
 
 ---Opens the world map and highlights the specified location.
----@param zoneId ZONE_KEY The ID of the zone to show.
----@param x number The X coordinate in the zone.
----@param y number The Y coordinate in the zone.
----@param z number The Z coordinate in the zone.
----@see ZONE_KEY
+---@param zoneId ZONE_ID The ID of the zone to show.
+---@param x number The X coordinate in the world.
+---@param y number The Y coordinate in the world.
+---@param z number The Z coordinate in the world.
+---@see ZONE_ID
 function X2Map:ShowWorldmapLocation(zoneId, x, y, z) end
