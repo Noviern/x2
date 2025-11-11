@@ -21,9 +21,9 @@ QUEST_MARK_ORDER_NORMAL = 7
 QUEST_MARK_ORDER_SAGA = 2
 QUEST_MARK_ORDER_WEEKLY = 4
 X2Quest = {
-  GetActiveQuestListCount = "<function>",
-  GetActiveQuestType = "<function>",
-  GetQuestContextMainTitle = "<function>",
-  IsCompleted = "<function>",
-  SetTrackingActiveQuest = "<function>",
+  GetActiveQuestListCount = "<function X2Quest>",
+  GetActiveQuestType = "<function X2Quest>",
+  GetQuestContextMainTitle = "<function X2Quest>",
+  IsCompleted = "<function X2Quest>",
+  SetTrackingActiveQuest = "<function X2Quest>",
 }

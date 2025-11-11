@@ -1,4 +1,4 @@
 X2Bag = {
-  EquipBagItem = "<function>",
-  GetBagItemInfo = "<function>",
+  EquipBagItem = "<function X2Bag>",
+  GetBagItemInfo = "<function X2Bag>",
 }

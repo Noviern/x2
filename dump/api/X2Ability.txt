@@ -38,9 +38,9 @@ SPECIAL_ABILITY_MUTATION_SKILL = 150
 SPECIAL_ACTIVE_SKILL = 170
 SPECIAL_PASSIVE_SKILL = 190
 X2Ability = {
-  GetActiveAbility = "<function>",
-  GetAllMyActabilityInfos = "<function>",
-  GetBuffTooltip = "<function>",
-  GetMyActabilityInfo = "<function>",
-  IsActiveAbility = "<function>",
+  GetActiveAbility = "<function X2Ability>",
+  GetAllMyActabilityInfos = "<function X2Ability>",
+  GetBuffTooltip = "<function X2Ability>",
+  GetMyActabilityInfo = "<function X2Ability>",
+  IsActiveAbility = "<function X2Ability>",
 }

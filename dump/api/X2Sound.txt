@@ -1,7 +1,7 @@
 X2Sound = {
-  IsPlaying = "<function>",
-  PlayMusic = "<function>",
-  PlayUISound = "<function>",
-  StopMusic = "<function>",
-  StopSound = "<function>",
+  IsPlaying = "<function X2Sound>",
+  PlayMusic = "<function X2Sound>",
+  PlayUISound = "<function X2Sound>",
+  StopMusic = "<function X2Sound>",
+  StopSound = "<function X2Sound>",
 }

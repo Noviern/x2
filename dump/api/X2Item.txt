@@ -35,5 +35,5 @@ MONEY_ITEM_TYPE = 500
 NORMAL_ITEM_GRADE = 0
 POOR_ITEM_GRADE = 1
 X2Item = {
-  InfoFromLink = "<function>",
+  InfoFromLink = "<function X2Item>",
 }

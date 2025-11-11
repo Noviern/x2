@@ -2066,7 +2066,7 @@ ADDON:ImportAPI(API.X2Option)
 -- local text = UIParent:CreateWidget("textbox", "test", "UIParent")
 -- text:AddAnchor("CENTER", 0, 0)
 -- text:SetExtent(400, 400)
--- -- text:Show(true)
+-- text:Show(true)
 
 -- local edit = UIParent:CreateWidget("editbox", "asd", "UIParent")
 -- -- edit:SetStyle("text_default")
@@ -2116,7 +2116,7 @@ ADDON:ImportAPI(API.X2Option)
 -- text:SetText("|j0;") -- PRICE_TYPE_AA_CASH
 -- text:SetText("|l0;") -- CURRENCY_LIVING_POINT Vocation Badge
 -- text:SetText("|m0;") -- 1 00 00 CURRENCY_GOLD CURRENCY_GOLD_WITH_AA_POINT PRICE_TYPE_GOLD
--- text:SetText("|p0;") -- 1 00 00 CURRENCY_AA_POINT PRICE_TYPE_AA_POINT @TODO: test |p8; etc
+-- text:SetText("|p0;") -- 1 00 00 CURRENCY_AA_POINT PRICE_TYPE_AA_POINT
 -- text:SetText("|sa0; |sa;") -- ISMI_ARCHE_PASS_COIN
 -- text:SetText("|sd0; |sd;") -- LeadershipPoint Leadership
 -- text:SetText("|se0; |se;") -- ISMI_DELPI Gilda
@@ -2227,226 +2227,226 @@ ADDON:ImportAPI(API.X2Option)
 
 --------------------------------------------------------------------------------
 
-ADDON:ImportObject(OBJECT.Window)
-ADDON:ImportObject(OBJECT.RoadMap)
-ADDON:ImportObject(OBJECT.ColorDrawable)
-ADDON:ImportObject(OBJECT.ImageDrawable)
+-- ADDON:ImportObject(OBJECT.Window)
+-- ADDON:ImportObject(OBJECT.RoadMap)
+-- ADDON:ImportObject(OBJECT.ColorDrawable)
+-- ADDON:ImportObject(OBJECT.ImageDrawable)
 
-roadmapWindow = UIParent:CreateWidget("window", "roadmapWindow", "UIParent")
-roadmapWindow:SetExtent(928, 556)
--- roadmapWindow:AddAnchor("TOPLEFT", frame, "TOPLEFT", 0, 0)
-roadmapWindow:AddAnchor("TOPRIGHT", 0, 0)
-roadmapWindow:SetUILayer("game")
-roadmapWindow:SetUILayer("game")
--- roadmapWindow:EnableScroll(true)
--- roadmapWindow:EnablePick(false, true)
+-- roadmapWindow = UIParent:CreateWidget("window", "roadmapWindow", "UIParent")
+-- roadmapWindow:SetExtent(928, 556)
+-- -- roadmapWindow:AddAnchor("TOPLEFT", frame, "TOPLEFT", 0, 0)
+-- roadmapWindow:AddAnchor("TOPRIGHT", 0, 0)
+-- roadmapWindow:SetUILayer("game")
+-- roadmapWindow:SetUILayer("game")
+-- -- roadmapWindow:EnableScroll(true)
+-- -- roadmapWindow:EnablePick(false, true)
 
--- roadmapWindow:Show(true)
+-- -- roadmapWindow:Show(true)
 
--- local bg = roadmapWindow:CreateColorDrawable(1, 0, 0, .1, "background")
--- bg:AddAnchor("TOPLEFT", roadmapWindow, 0, 0)
--- bg:AddAnchor("BOTTOMRIGHT", roadmapWindow, 0, 0)
+-- -- local bg = roadmapWindow:CreateColorDrawable(1, 0, 0, .1, "background")
+-- -- bg:AddAnchor("TOPLEFT", roadmapWindow, 0, 0)
+-- -- bg:AddAnchor("BOTTOMRIGHT", roadmapWindow, 0, 0)
 
-roadmap = roadmapWindow:CreateChildWidget("roadmap", "roadmap", 0, true)
-roadmap:SetMapSize(300)
-roadmap:SetExpandRatio(.6)
-local playerDrawable = roadmap:CreateDrawable("ui/map/icon/player_cursor.dds", "player_cursor", "overlay")
-roadmap:SetPlayerDrawable(playerDrawable)
--- roadmap:EnableScroll(true)
--- roadmap:EnableDrag(true)
--- roadmap:EnablePick(true, true)
-roadmapWindow.player = playerDrawable
-roadmap:AddAnchor("TOPLEFT", roadmapWindow, 5, 5)
-roadmap:AddAnchor("BOTTOMRIGHT", roadmapWindow, -5, -5)
--- roadmap:SetExtent(928-20, 556-20)
--- roadmap:SetTooltipColor(F_COLOR.GetColor("soft_yellow", true), F_COLOR.GetColor("soft_yellow", true))
-roadmap:InitMapData()
--- roadmap:SetRoadMapNpc(true)
-roadmap:ReloadAllInfo()
+-- roadmap = roadmapWindow:CreateChildWidget("roadmap", "roadmap", 0, true)
+-- roadmap:SetMapSize(300)
+-- roadmap:SetExpandRatio(.6)
+-- local playerDrawable = roadmap:CreateDrawable("ui/map/icon/player_cursor.dds", "player_cursor", "overlay")
+-- roadmap:SetPlayerDrawable(playerDrawable)
+-- -- roadmap:EnableScroll(true)
+-- -- roadmap:EnableDrag(true)
+-- -- roadmap:EnablePick(true, true)
+-- roadmapWindow.player = playerDrawable
+-- roadmap:AddAnchor("TOPLEFT", roadmapWindow, 5, 5)
+-- roadmap:AddAnchor("BOTTOMRIGHT", roadmapWindow, -5, -5)
+-- -- roadmap:SetExtent(928-20, 556-20)
+-- -- roadmap:SetTooltipColor(F_COLOR.GetColor("soft_yellow", true), F_COLOR.GetColor("soft_yellow", true))
+-- roadmap:InitMapData()
+-- -- roadmap:SetRoadMapNpc(true)
+-- roadmap:ReloadAllInfo()
 
-roadmap:ShowLeaderPing(false)
+-- roadmap:ShowLeaderPing(false)
 
-roadmapWindow:SetResizingBorderSize(
-  10, 10, 10, 10
-)
-roadmapWindow:SetMinResizingExtent(928 / 2, 556 / 2)
-roadmapWindow:SetMaxResizingExtent(928, 556)
-roadmapWindow:UseResizing(true)
+-- roadmapWindow:SetResizingBorderSize(
+--   10, 10, 10, 10
+-- )
+-- roadmapWindow:SetMinResizingExtent(928 / 2, 556 / 2)
+-- roadmapWindow:SetMaxResizingExtent(928, 556)
+-- roadmapWindow:UseResizing(true)
 
-local roadMapEvents = {
-  TOGGLE_ROADMAP = function ()
-    -- roadmapFrame.resizeBtn:OnClick()
-    -- RunIndicatorStackRule()
-  end,
-  SHOW_ROADMAP_TOOLTIP = function (tooltipInfo, tooltipCount)
-    -- ShowMapTooltip(tooltipInfo, tooltipCount, tooltipController, M_TOOLTIP_OFFSET_X, M_TOOLTIP_OFFSET_Y,
-    -- M_TOOLTIP_OFFSET_REVERSE_X, M_TOOLTIP_OFFSET_REVERSE_Y)
-  end,
-  HIDE_ROADMAP_TOOLTIP = function (text)
-    -- HideMapTooltip()
-  end,
-  UPDATE_ZONE_INFO = function ()
-    roadmap:UpdateZoneInfo()
-    -- RoadmapStatusUpdate()
-    -- SetPlayerToCenterForRoadMap()
-  end,
-  UPDATE_NPC_INFO = function ()
-    roadmap:UpdateNpcInfo()
-  end,
-  UPDATE_DOODAD_INFO = function ()
-    roadmap:UpdateDoodadInfo(true)
-  end,
-  UPDATE_GIVEN_QUEST_STATIC_INFO = function ()
-    roadmap:UpdateGivenQuestStaticInfo()
-  end,
-  UPDATE_HOUSING_INFO = function ()
-    roadmap:UpdateHousingInfo()
-  end,
-  UPDATE_SHIP_TELESCOPE_INFO = function ()
-    roadmap:UpdateShipTelescopeInfo()
-  end,
-  UPDATE_TRANSFER_TELESCOPE_INFO = function ()
-    roadmap:UpdateTransferTelescopeInfo()
-  end,
-  UPDATE_BOSS_TELESCOPE_INFO = function ()
-    roadmap:UpdateBossTelescopeInfo()
-  end,
-  UPDATE_CARRYING_BACKPACK_SLAVE_INFO = function ()
-    roadmap:UpdateCarryingBackpackSlaveInfo()
-  end,
-  UPDATE_FISH_SCHOOL_INFO = function ()
-    roadmap:UpdateFishSchoolInfo()
-  end,
-  UPDATE_CORPSE_INFO = function ()
-    roadmap:UpdateCorpseInfo()
-  end,
-  UPDATE_MY_SLAVE_POS_INFO = function ()
-    roadmap:UpdateMySlaveInfo()
-  end,
-  CLEAR_NPC_INFO = function ()
-    roadmap:ClearNpcInfo()
-  end,
-  CLEAR_DOODAD_INFO = function ()
-    roadmap:ClearDoodadInfo()
-  end,
-  CLEAR_GIVEN_QUEST_STATIC_INFO = function ()
-    roadmap:ClearGivenQuestStaticInfo()
-  end,
-  CLEAR_HOUSING_INFO = function ()
-    roadmap:ClearHousingInfo()
-  end,
-  CLEAR_SHIP_TELESCOPE_INFO = function ()
-    roadmap:ClearShipTelescopeInfo()
-  end,
-  CLEAR_TRANSFER_TELESCOPE_INFO = function ()
-    roadmap:ClearTransferTelescopeInfo()
-  end,
-  CLEAR_BOSS_TELESCOPE_INFO = function ()
-    roadmap:ClearBossTelescopeInfo()
-  end,
-  CLEAR_CARRYING_BACKPACK_SLAVE_INFO = function ()
-    roadmap:ClearCarryingBackpackSlaveInfo()
-  end,
-  CLEAR_FISH_SCHOOL_INFO = function ()
-    roadmap:ClearFishSchoolInfo()
-  end,
-  CLEAR_CORPSE_INFO = function ()
-    roadmap:ClearCorpseInfo()
-  end,
-  CLEAR_MY_SLAVE_POS_INFO = function ()
-    roadmap:ClearMySlaveInfo()
-  end,
-  UPDATE_PING_INFO = function ()
-    roadmap:UpdatePingInfo()
-    -- EnablePingBtn()
-  end,
-  ADD_GIVEN_QUEST_INFO = function (arg1, arg2)
-    roadmap:AddGivenQuestInfo(arg1, arg2)
-  end,
-  REMOVE_GIVEN_QUEST_INFO = function (arg1, arg2)
-    roadmap:RemoveGivenQuestInfo(arg1, arg2)
-  end,
-  UPDATE_COMPLETED_QUEST_INFO = function ()
-    roadmap:UpdateCompletedQuestInfo()
-  end,
-  CLEAR_COMPLETED_QUEST_INFO = function ()
-    roadmap:ClearCompletedQuestInfo()
-  end,
-  ADD_NOTIFY_QUEST_INFO = function (arg)
-    roadmap:AddNotifyQuestInfo(arg)
-  end,
-  REMOVE_NOTIFY_QUEST_INFO = function (arg)
-    roadmap:RemoveNotifyQuestInfo(arg)
-  end,
-  CLEAR_NOTIFY_QUEST_INFO = function ()
-    roadmap:ClearNotifyQuestInfo()
-  end,
-  UPDATE_DOMINION_INFO = function ()
-    roadmap:UpdateDominionInfo()
-  end,
-  UI_RELOADED = function ()
-    roadmap:ReloadAllInfo()
-    -- roadmapSliderOnSliderChanged()
-    -- RoadmapStatusUpdate()
-    -- SetPlayerToCenterForRoadMap()
-  end,
-  LEFT_LOADING = function ()
-    roadmap:ReloadAllInfo()
-    -- roadmapSliderOnSliderChanged()
-    -- RoadmapStatusUpdate()
-    -- SetPlayerToCenterForRoadMap()
-  end,
-  ENTERED_WORLD = function ()
-    roadmap:ReloadAllInfo()
-    -- roadmapSliderOnSliderChanged()
-    -- RoadmapStatusUpdate()
-  end,
-  ENTERED_LOADING = function ()
-    roadmap:ClearAllInfo()
-  end,
-  UPDATE_ROADMAP_ANCHOR = function (file)
-    -- UpdateRoadmapAnchor(file)
-  end,
-  SET_ROADMAP_PICKABLE = function (pick)
-    roadmapWindow:EnablePick(pick, true)
-  end,
-  UPDATE_TELESCOPE_AREA = function ()
-    roadmap:UpdateTelescopeArea()
-  end,
-  UPDATE_TRANSFER_TELESCOPE_AREA = function ()
-    roadmap:UpdateTransferTelescopeArea()
-  end,
-  UPDATE_BOSS_TELESCOPE_AREA = function ()
-    roadmap:UpdateBossTelescopeArea()
-  end,
-  UPDATE_FISH_SCHOOL_AREA = function ()
-    roadmap:UpdateFishSchoolArea()
-  end,
-  REMOVE_SHIP_TELESCOPE_INFO = function (arg)
-    roadmap:RemoveShipTelescopeInfo(arg)
-  end,
-  REMOVE_TRANSFER_TELESCOPE_INFO = function (arg)
-    roadmap:RemoveTransferTelescopeInfo(arg)
-  end,
-  REMOVE_BOSS_TELESCOPE_INFO = function (arg)
-    roadmap:RemoveBossTelescopeInfo(arg)
-  end,
-  REMOVE_CARRYING_BACKPACK_SLAVE_INFO = function (arg)
-    roadmap:RemoveCarryingBackpackSlaveInfo(arg)
-  end,
-  REMOVE_FISH_SCHOOL_INFO = function (arg)
-    roadmap:RemoveFishSchoolInfo(arg)
-  end,
-  UPDATE_MONITOR_NPC = function ()
-    roadmap:UpdateMonitorNpcInfo()
-  end,
-  UPDATE_FACTION_REZ_DISTRICT = function ()
-    roadmap:UpdateFactionRezDistrictInfo()
-  end
-}
-roadmap:SetHandler("OnEvent", function (this, event, ...)
-  roadMapEvents[event](...)
-end)
+-- local roadMapEvents = {
+--   TOGGLE_ROADMAP = function ()
+--     -- roadmapFrame.resizeBtn:OnClick()
+--     -- RunIndicatorStackRule()
+--   end,
+--   SHOW_ROADMAP_TOOLTIP = function (tooltipInfo, tooltipCount)
+--     -- ShowMapTooltip(tooltipInfo, tooltipCount, tooltipController, M_TOOLTIP_OFFSET_X, M_TOOLTIP_OFFSET_Y,
+--     -- M_TOOLTIP_OFFSET_REVERSE_X, M_TOOLTIP_OFFSET_REVERSE_Y)
+--   end,
+--   HIDE_ROADMAP_TOOLTIP = function (text)
+--     -- HideMapTooltip()
+--   end,
+--   UPDATE_ZONE_INFO = function ()
+--     roadmap:UpdateZoneInfo()
+--     -- RoadmapStatusUpdate()
+--     -- SetPlayerToCenterForRoadMap()
+--   end,
+--   UPDATE_NPC_INFO = function ()
+--     roadmap:UpdateNpcInfo()
+--   end,
+--   UPDATE_DOODAD_INFO = function ()
+--     roadmap:UpdateDoodadInfo(true)
+--   end,
+--   UPDATE_GIVEN_QUEST_STATIC_INFO = function ()
+--     roadmap:UpdateGivenQuestStaticInfo()
+--   end,
+--   UPDATE_HOUSING_INFO = function ()
+--     roadmap:UpdateHousingInfo()
+--   end,
+--   UPDATE_SHIP_TELESCOPE_INFO = function ()
+--     roadmap:UpdateShipTelescopeInfo()
+--   end,
+--   UPDATE_TRANSFER_TELESCOPE_INFO = function ()
+--     roadmap:UpdateTransferTelescopeInfo()
+--   end,
+--   UPDATE_BOSS_TELESCOPE_INFO = function ()
+--     roadmap:UpdateBossTelescopeInfo()
+--   end,
+--   UPDATE_CARRYING_BACKPACK_SLAVE_INFO = function ()
+--     roadmap:UpdateCarryingBackpackSlaveInfo()
+--   end,
+--   UPDATE_FISH_SCHOOL_INFO = function ()
+--     roadmap:UpdateFishSchoolInfo()
+--   end,
+--   UPDATE_CORPSE_INFO = function ()
+--     roadmap:UpdateCorpseInfo()
+--   end,
+--   UPDATE_MY_SLAVE_POS_INFO = function ()
+--     roadmap:UpdateMySlaveInfo()
+--   end,
+--   CLEAR_NPC_INFO = function ()
+--     roadmap:ClearNpcInfo()
+--   end,
+--   CLEAR_DOODAD_INFO = function ()
+--     roadmap:ClearDoodadInfo()
+--   end,
+--   CLEAR_GIVEN_QUEST_STATIC_INFO = function ()
+--     roadmap:ClearGivenQuestStaticInfo()
+--   end,
+--   CLEAR_HOUSING_INFO = function ()
+--     roadmap:ClearHousingInfo()
+--   end,
+--   CLEAR_SHIP_TELESCOPE_INFO = function ()
+--     roadmap:ClearShipTelescopeInfo()
+--   end,
+--   CLEAR_TRANSFER_TELESCOPE_INFO = function ()
+--     roadmap:ClearTransferTelescopeInfo()
+--   end,
+--   CLEAR_BOSS_TELESCOPE_INFO = function ()
+--     roadmap:ClearBossTelescopeInfo()
+--   end,
+--   CLEAR_CARRYING_BACKPACK_SLAVE_INFO = function ()
+--     roadmap:ClearCarryingBackpackSlaveInfo()
+--   end,
+--   CLEAR_FISH_SCHOOL_INFO = function ()
+--     roadmap:ClearFishSchoolInfo()
+--   end,
+--   CLEAR_CORPSE_INFO = function ()
+--     roadmap:ClearCorpseInfo()
+--   end,
+--   CLEAR_MY_SLAVE_POS_INFO = function ()
+--     roadmap:ClearMySlaveInfo()
+--   end,
+--   UPDATE_PING_INFO = function ()
+--     roadmap:UpdatePingInfo()
+--     -- EnablePingBtn()
+--   end,
+--   ADD_GIVEN_QUEST_INFO = function (arg1, arg2)
+--     roadmap:AddGivenQuestInfo(arg1, arg2)
+--   end,
+--   REMOVE_GIVEN_QUEST_INFO = function (arg1, arg2)
+--     roadmap:RemoveGivenQuestInfo(arg1, arg2)
+--   end,
+--   UPDATE_COMPLETED_QUEST_INFO = function ()
+--     roadmap:UpdateCompletedQuestInfo()
+--   end,
+--   CLEAR_COMPLETED_QUEST_INFO = function ()
+--     roadmap:ClearCompletedQuestInfo()
+--   end,
+--   ADD_NOTIFY_QUEST_INFO = function (arg)
+--     roadmap:AddNotifyQuestInfo(arg)
+--   end,
+--   REMOVE_NOTIFY_QUEST_INFO = function (arg)
+--     roadmap:RemoveNotifyQuestInfo(arg)
+--   end,
+--   CLEAR_NOTIFY_QUEST_INFO = function ()
+--     roadmap:ClearNotifyQuestInfo()
+--   end,
+--   UPDATE_DOMINION_INFO = function ()
+--     roadmap:UpdateDominionInfo()
+--   end,
+--   UI_RELOADED = function ()
+--     roadmap:ReloadAllInfo()
+--     -- roadmapSliderOnSliderChanged()
+--     -- RoadmapStatusUpdate()
+--     -- SetPlayerToCenterForRoadMap()
+--   end,
+--   LEFT_LOADING = function ()
+--     roadmap:ReloadAllInfo()
+--     -- roadmapSliderOnSliderChanged()
+--     -- RoadmapStatusUpdate()
+--     -- SetPlayerToCenterForRoadMap()
+--   end,
+--   ENTERED_WORLD = function ()
+--     roadmap:ReloadAllInfo()
+--     -- roadmapSliderOnSliderChanged()
+--     -- RoadmapStatusUpdate()
+--   end,
+--   ENTERED_LOADING = function ()
+--     roadmap:ClearAllInfo()
+--   end,
+--   UPDATE_ROADMAP_ANCHOR = function (file)
+--     -- UpdateRoadmapAnchor(file)
+--   end,
+--   SET_ROADMAP_PICKABLE = function (pick)
+--     roadmapWindow:EnablePick(pick, true)
+--   end,
+--   UPDATE_TELESCOPE_AREA = function ()
+--     roadmap:UpdateTelescopeArea()
+--   end,
+--   UPDATE_TRANSFER_TELESCOPE_AREA = function ()
+--     roadmap:UpdateTransferTelescopeArea()
+--   end,
+--   UPDATE_BOSS_TELESCOPE_AREA = function ()
+--     roadmap:UpdateBossTelescopeArea()
+--   end,
+--   UPDATE_FISH_SCHOOL_AREA = function ()
+--     roadmap:UpdateFishSchoolArea()
+--   end,
+--   REMOVE_SHIP_TELESCOPE_INFO = function (arg)
+--     roadmap:RemoveShipTelescopeInfo(arg)
+--   end,
+--   REMOVE_TRANSFER_TELESCOPE_INFO = function (arg)
+--     roadmap:RemoveTransferTelescopeInfo(arg)
+--   end,
+--   REMOVE_BOSS_TELESCOPE_INFO = function (arg)
+--     roadmap:RemoveBossTelescopeInfo(arg)
+--   end,
+--   REMOVE_CARRYING_BACKPACK_SLAVE_INFO = function (arg)
+--     roadmap:RemoveCarryingBackpackSlaveInfo(arg)
+--   end,
+--   REMOVE_FISH_SCHOOL_INFO = function (arg)
+--     roadmap:RemoveFishSchoolInfo(arg)
+--   end,
+--   UPDATE_MONITOR_NPC = function ()
+--     roadmap:UpdateMonitorNpcInfo()
+--   end,
+--   UPDATE_FACTION_REZ_DISTRICT = function ()
+--     roadmap:UpdateFactionRezDistrictInfo()
+--   end
+-- }
+-- roadmap:SetHandler("OnEvent", function (this, event, ...)
+--   roadMapEvents[event](...)
+-- end)
 
 
 
@@ -2521,9 +2521,13 @@ end)
 
 --------------------------------------------------------------------------------
 
-ADDON:ImportAPI(API.X2Map)
+-- ADDON:ImportAPI(API.X2Map)
 
-X2Map:ShowWorldmapLocation(181, 0, 0, 0)
+-- X2Map:ShowWorldmapLocation(181, 0, 0, 0)
+
+--------------------------------------------------------------------------------
+
+
 
 --------------------------------------------------------------------------------
 

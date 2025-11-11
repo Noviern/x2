@@ -3,7 +3,7 @@ CRU_DOUBLE_GAUGE_2 = 4
 CRU_GAUGE = 1
 CRU_OVERLAP = 2
 X2CombatResource = {
-  CheckCombatResourceMaxPointByGroupType = "<function>",
-  GetCombatResourceInfo = "<function>",
-  GetCombatResourceInfoByGroupType = "<function>",
+  CheckCombatResourceMaxPointByGroupType = "<function X2CombatResource>",
+  GetCombatResourceInfo = "<function X2CombatResource>",
+  GetCombatResourceInfoByGroupType = "<function X2CombatResource>",
 }

@@ -2,7 +2,7 @@
 
 ---objects/RadioGroup
 ---@class RadioGroup: Widget
----@field frame? RadioItem[]
+---@field frame? RadioItem[] @TODO: what creates this
 local RadioGroup = {}
 ---@class radiogroup: RadioGroup
 

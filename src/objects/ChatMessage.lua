@@ -1,6 +1,7 @@
 ---@meta _
 
 ---@FIXME: scriptsbin\x2ui\chat\chat_window.lua uses these methods but unsure what widget type it is as its never explicitly stated.
+---I suspect ChatMessage inherits Message
 
 ---objects/ChatMessage
 ---@class ChatMessage

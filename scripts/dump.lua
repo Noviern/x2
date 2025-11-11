@@ -1,22 +1,22 @@
 ---@class ctx
----@field max_depth? number|nil
+---@field maxDepth? number|nil
 ---@field depth? number
 ---@field seen? table
 ---@field path? string
----@field indent_size? number
----@field indent_type? string
+---@field indentSize? number
+---@field indentType? string
 
 ---@type ctx
-local ctx_default = {
-  max_depth   = nil,
-  depth       = 0,
-  seen        = {},
-  path        = "",
-  indent_size = 2,
-  indent_type = " "
+local ctxDefault = {
+  maxDepth   = nil,
+  depth      = 0,
+  seen       = {},
+  path       = "",
+  indentSize = 2,
+  indentType = " "
 }
 
-local func_user = {}
+local funcUser = {}
 
 ---Dumps a table.
 ---@param tbl table
@@ -33,19 +33,19 @@ function dump(tbl, ctx)
   end
 
   if ctx == nil then
-    ctx = ctx_default
+    ctx = ctxDefault
   else
-    ctx.max_depth   = ctx.max_depth or ctx_default.max_depth
-    ctx.depth       = ctx.depth or ctx_default.depth
-    ctx.seen        = ctx.seen or ctx_default.seen
-    ctx.path        = ctx.path or ctx_default.path
-    ctx.indent_size = ctx.indent_size or ctx_default.indent_size
-    ctx.indent_type = ctx.indent_type or ctx_default.indent_type
+    ctx.maxDepth   = ctx.maxDepth or ctxDefault.maxDepth
+    ctx.depth      = ctx.depth or ctxDefault.depth
+    ctx.seen       = ctx.seen or ctxDefault.seen
+    ctx.path       = ctx.path or ctxDefault.path
+    ctx.indentSize = ctx.indentSize or ctxDefault.indentSize
+    ctx.indentType = ctx.indentType or ctxDefault.indentType
   end
 
-  local tbl_ref = tostring(tbl)
-  local lines   = {}
-  local indent  = string.rep(ctx.indent_type, ctx.indent_size * ctx.depth)
+  local tblRef = tostring(tbl)
+  local lines  = {}
+  local indent = string.rep(ctx.indentType, ctx.indentSize * ctx.depth)
 
   -- populate tbl with its metatable functions
   if tbl.__index ~= nil then
@@ -59,65 +59,60 @@ function dump(tbl, ctx)
   end
 
   -- save the current table and its path
-  ctx.seen[tbl_ref] = ctx.path
+  ctx.seen[tblRef] = ctx.path
 
   for k, v in pairs(tbl) do
-    local vt = type(v)
-    local line = ""
-    local value = ""
+    if k ~= "__this" then
+      local vt = type(v)
+      local line = ""
+      local value = ""
 
-    if vt == "table" then
-      if ctx.depth == ctx.max_depth then
-        value = '"<maximum depth>"'
-      elseif next(v) ~= nil then
-        local v_ref = tostring(v)
-        if ctx.seen[v_ref] then
-          value = string.format('"<circular %s %s>"', v_ref, ctx.seen[v_ref])
+      if vt == "table" then
+        if ctx.depth == ctx.maxDepth then
+          value = '"<maximum depth>"'
+        elseif next(v) ~= nil then
+          local vRef = tostring(v)
+          if ctx.seen[vRef] then
+            value = string.format('"<circular %s %s>"', vRef, ctx.seen[vRef])
+          else
+            -- save current depth and path
+            local depth = ctx.depth
+            local path  = ctx.path
+
+            -- update current depth and path
+            ctx.depth   = depth + 1
+            ctx.path    = path == "" and k or path .. "." .. k
+
+            value       = string.format("{\n%s\n%s}", dump(v, ctx), indent)
+
+            -- restore current depth and path
+            ctx.depth   = depth
+            ctx.path    = path
+          end
         else
-          -- save current depth and path
-          local depth = ctx.depth
-          local path  = ctx.path
-
-          -- update current depth and path
-          ctx.depth   = depth + 1
-          ctx.path    = path == "" and k or path .. "." .. k
-
-          value       = string.format("{\n%s\n%s}", dump(v, ctx), indent)
-
-          -- restore current depth and path
-          ctx.depth   = depth
-          ctx.path    = path
+          value = "{}"
         end
+      elseif vt == "boolean" or vt == "number" then
+        value = tostring(v)
+      elseif vt == "string" then
+        value = string.format('"%s"', v:gsub("\r", "\\r"):gsub("\n", "\\n"))
       else
-        value = "{}"
+        if not funcUser[v] then
+          funcUser[v] = ctx.path
+        end
+
+        value = '"<' .. tostring(v):match("([a-z]+): ") .. " " .. funcUser[v] .. '>"'
       end
-    elseif vt == "boolean" or vt == "number" then
-      value = tostring(v)
-    elseif vt == "string" then
-      value = string.format('"%s"', v:gsub("\r", "\\r"):gsub("\n", "\\n"))
-    else
-      --@TODO: i need to find a way to keep track of functions/user and their memory addresses to compare
 
-      -- v = tostring(v):match(": ([0-9A-Za-z]+)")
-      -- if not func_user[v] then
-      --   func_user[v] = ctx.path .. "." .. k
-      -- end
-      
-      -- value = '"<function ' .. func_user[v] .. '>"'
-      
-      v = tostring(v):match("^(.-):")
-      value = '"<' .. v .. '>"'
-      -- value = string.format('"<%s>"', tostring(v))
+      line = string.format("%s%s = %s", indent, k, value)
+
+      table.insert(lines, line)
     end
-
-    line = string.format("%s%s = %s", indent, k, value)
-
-    table.insert(lines, line)
   end
 
   -- remove the current table and its path
   -- if ctx.depth == 0 then
-  ctx.seen[tbl_ref] = nil
+  ctx.seen[tblRef] = nil
   -- end
 
   table.sort(lines)

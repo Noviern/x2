@@ -1,4 +1,4 @@
 X2Time = {
-  GetGameTime = "<function>",
-  GetServerTime = "<function>",
+  GetGameTime = "<function X2Time>",
+  GetServerTime = "<function X2Time>",
 }

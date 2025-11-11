@@ -1,7 +1,7 @@
 SIK_DESCRIPTION = 1
 X2Skill = {
-  GetCooldown = "<function>",
-  GetMateCooldown = "<function>",
-  GetSkillTooltip = "<function>",
-  Info = "<function>",
+  GetCooldown = "<function X2Skill>",
+  GetMateCooldown = "<function X2Skill>",
+  GetSkillTooltip = "<function X2Skill>",
+  Info = "<function X2Skill>",
 }

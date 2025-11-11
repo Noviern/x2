@@ -1,10 +1,10 @@
 X2Locale = {
-  GetKeyboardLayout = "<function>",
-  GetLocale = "<function>",
-  GetLocaleIndex = "<function>",
-  HasLocalizeUiText = "<function>",
-  LocalizeFormatUiText = "<function>",
-  LocalizeNonUiText = "<function>",
-  LocalizeUiText = "<function>",
-  TextFormating = "<function>",
+  GetKeyboardLayout = "<function X2Locale>",
+  GetLocale = "<function X2Locale>",
+  GetLocaleIndex = "<function X2Locale>",
+  HasLocalizeUiText = "<function X2Locale>",
+  LocalizeFormatUiText = "<function X2Locale>",
+  LocalizeNonUiText = "<function X2Locale>",
+  LocalizeUiText = "<function X2Locale>",
+  TextFormating = "<function X2Locale>",
 }
