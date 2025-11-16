@@ -1,4 +1,4 @@
-# ArcheAge Addon Definitions
+# X2
 
 Provides documentation, definitions, and IntelliSense for ArcheAge Addons.
 
