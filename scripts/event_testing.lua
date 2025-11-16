@@ -1,4 +1,4 @@
-local file = open("temp/eventdump.txt", "w")
+local file = assert(open("temp/eventdump.txt", "w"))
 local eventCount = 0
 
 local function event(name, ...)
@@ -125,7 +125,6 @@ SetEventHandler("CHANGE_ACTABILITY_DECO_NUM") -- this might be housing deco incr
 SetEventHandler("CHANGED_AUTO_USE_AAPOINT")
 SetEventHandler("CHAT_MSG_DOODAD")
 SetEventHandler("CHECK_TEXTURE")
-SetEventHandler("CLOSE_CRAFT_ORDER")
 SetEventHandler("COFFER_INTERACTION_START")
 SetEventHandler("COFFER_REAL_INDEX_SHOW")
 SetEventHandler("CRAFT_FAILED")

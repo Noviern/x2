@@ -13,8 +13,8 @@ local Vslider = {}
 ---@field check Checkbutton
 
 ---objects/ListCtrl
----@class ListCtrlItem --: Window
----@field subItems Button|Window|Textbox|table --@TODO: table is LCCIT_STRING but is a table with just a style field and nothing else
+---@class ListCtrlItem: Window
+---@field subItems Button[]|Window[]|Textbox[]|table[] --@TODO: table is LCCIT_STRING but is a table with just a style field and nothing else
 ---@field eventWindow Window
 
 ---api/Addon
@@ -28,7 +28,7 @@ local Vslider = {}
 ---api/Addon
 ---@class AddonInfo
 ---@field name string
----@field enabled boolean
+---@field enable boolean
 
 ---api/Addon
 ---@class RGBAColor
@@ -407,12 +407,12 @@ local Vslider = {}
 
 ---api/X2Player
 ---@class Appellation
----@field [1] number APPELLATION_INFO.TYPE
----@field [2]? string APPELLATION_INFO.NAME
----@field [3] number APPELLATION_INFO.GRADE
----@field [4] number APPELLATION_INFO.ISHAVE
----@field [5] number APPELLATION_INFO.ORDER
----@field [6]? AppellationBuffInfo APPELLATION_INFO.BUFF_INFO
+---@field [1] number TYPE
+---@field [2]? string NAME
+---@field [3] number GRADE
+---@field [4] number ISHAVE
+---@field [5] number ORDER
+---@field [6]? AppellationBuffInfo BUFFINFO
 
 ---api/X2Player
 ---@class StampChangeItemInfo
@@ -807,7 +807,7 @@ local Vslider = {}
 ---@field [2] number Basic Level
 ---@field [3] UnitClassNames Class
 ---@field [4] number Guild Role
----@field [5] EmptyTable Connection Status (empty)
+---@field [5] table Connection Status (empty)
 ---@field [6] string Memo
 ---@field [7] boolean Online
 ---@field [8] boolean Party
@@ -951,7 +951,7 @@ local Vslider = {}
 
 ---@class SelectSquadList
 ---@field curPage number
----@field listInfo SquadInfo[]|EmptyTable
+---@field listInfo SquadInfo[]
 ---@field maxCount number
 
 ---@class CommonFarmItem

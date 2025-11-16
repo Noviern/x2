@@ -57,12 +57,13 @@ function TextStyle:SetAlign(align) end
 ---@param a number The alpha (opacity) component (min: `0`, max: `1`).
 function TextStyle:SetColor(r, g, b, a) end
 
----Sets the color for the TextStyle using a color key.
+---Sets the color for the TextStyle using a color key. Must be applied before
+---text.
 ---@param key FONT_COLOR_KEY The color key to apply.
 function TextStyle:SetColorByKey(key) end
 
 ---Enables or disables ellipsis for the TextStyle when text overflows its
----extent.
+---extent. Should be used before `Widget:SetText`.
 ---@param ellipsis boolean `true` to enable ellipsis, `false` to disable. (default: `false`)
 function TextStyle:SetEllipsis(ellipsis) end
 

@@ -100,65 +100,6 @@ API = {
   X2SurveyForm         = 86,
 }
 
--- * = It exists in the codebase but not in the addon space.
--- UOT_MISSING             = 52 -- Avi
--- UOT_MISSING             = 2  -- Button
--- UOT_MISSING             = 43 -- ChatEdit
--- UOT_MISSING             = 42 -- ChatMessage
--- UOT_MISSING             = 38 -- ChatTab
--- UOT_MISSING             = 23 -- CheckButton
--- UOT_MISSING             = 31 -- CircleDiagram
--- *UOT_COLOR_DRAWABLE      = 7  -- ColorDrawable
--- UOT_MISSING             = 32 -- ColorPicker
--- UOT_MISSING             = 40 -- Combobox
--- UOT_MISSING             = 41 -- ComboListButton
--- UOT_MISSING             = 20 -- CooldownButton
--- UOT_MISSING             = 22 -- CooldownConstantButton
--- UOT_MISSING             = 21 -- CooldownInventoryButton
--- UOT_MISSING             = 35 -- DamageDisplay
--- UOT_MISSING             = 6  -- Drawable
--- UOT_MISSING             = 54 -- DynamicList
--- UOT_EDITBOX             = 3  -- Editbox
--- UOT_EDITBOX_MULTILINE   = 4  -- EditboxMultiline
--- UOT_MISSING             = 15 -- EffectDrawable
--- UOT_EMPTY_WIDGET        = 46 -- EmptyWidget
--- UOT_MISSING             = 34 -- Folder
--- UOT_MISSING             = 18 -- GameTooltip
--- UOT_MISSING             = 28 -- Grid
--- UOT_MISSING             = 11 -- IconDrawable
--- UOT_IMAGE_DRAWABLE      = 10 -- ImageDrawable
--- UOT_MISSING             = 1  -- Label
--- UOT_MISSING             = 48 -- Line
--- UOT_LISTBOX             = 5  -- Listbox
--- UOT_LIST_CTRL           = 45 -- ListCtrl
--- UOT_MISSING             = 44 -- MegaphoneChatEdit
--- UOT_MISSING             = 16 -- Message
--- UOT_MISSING             = 29 -- ModelView
--- UOT_NINE_PART_DRAWABLE  = 8  -- NinePartDrawable
--- UOT_MISSING             = 25 -- Pageable
--- UOT_MISSING             = 33 -- PaintColorPicker
--- UOT_MISSING             = 55 -- RadioGroup
--- UOT_MISSING             = 27 -- RoadMap
--- UOT_MISSING             = 49 -- Root
--- UOT_SLIDER              = 24 -- Slider
--- UOT_MISSING             = 37 -- SliderTab
--- UOT_MISSING             = 47 -- Slot
--- UOT_MISSING             = 17 -- StatusBar
--- UOT_MISSING             = 36 -- Tab
--- UOT_MISSING             = 39 -- Textbox
--- UOT_MISSING             = 12 -- TextDrawable
--- UOT_TEXT_STYLE          = 13 -- TextStyle
--- UOT_MISSING             = 50 -- TextureDrawable
--- UOT_MISSING             = 14 -- ThreeColorDrawable
--- *UOT_THREE_PART_DRAWABLE = 9  -- ThreePartDrawable
--- UOT_MISSING             = 19 -- UnitframeTooltip
--- UOT_MISSING             = 30 -- Webbrowser
--- UOT_MISSING             = 51 -- Webview
--- UOT_MISSING             = 0  -- Window
--- UOT_MISSING             = 26 -- WorldMap
--- UOT_X2_EDITBOX          = 53 -- X2Editbox
-
----@TODO: if we had every UOT this wouldn't be neccessary
 ---@enum OBJECT
 OBJECT = {
   Window                  = 0,
@@ -199,8 +140,7 @@ OBJECT = {
   DamageDisplay           = 35,
   Tab                     = 36,
   SliderTab               = 37,
-  -- ChatTab                 = 38,
-  ChatWindow                 = 38,
+  ChatWindow              = 38,
   Textbox                 = 39,
   Combobox                = 40,
   ComboListButton         = 41,
@@ -240,33 +180,9 @@ function ADDON:ChatLog(logMessage)
   ChatLog(ADDON, tostring(logMessage))
 end
 
--- ---@generic T
--- ---@param value T|EmptyTable|nil
--- ---@return T
--- function widgetassert(value)
---   assert(value ~= nil, "Not set.")
-
---   local notEmpty = next(value) ~= nil
---   local hasMetatable = getmetatable(value) ~= nil
---   assert(notEmpty and hasMetatable, "Did you forget to import the object?")
-
---   return value
--- end
-
 --------------------------------------------------------------------------------
 ---Below are globals that exist within the scriptsbin workspace.
 --------------------------------------------------------------------------------
-
---- game\scriptsbin\x2ui\assignment\appellation\appellation_view.lua
----@enum APPELLATION_INFO
-APPELLATION_INFO = {
-  TYPE      = 1,
-  NAME      = 2,
-  GRADE     = 3,
-  ISHAVE    = 4,
-  ORDER     = 5,
-  BUFF_INFO = 6,
-}
 
 --- game\scriptsbin\x2ui\baselib\texture_path.lua
 --- This doesnt contain every texture path
@@ -560,9 +476,6 @@ FONT_PATH = {
   DEFAULT        = "font_main",
   SUB            = "font_sub",
   COMBAT         = "font_combat",
-  -- IMG_COMBAT     = "img_font_combat",
-  -- IMG_ACTION_BAR = "img_font_action_bar",
-  -- IMG_NPC_HPBAR  = "img_font_npc_hpbar"
 }
 
 ---scriptsbin\commonui\baselib\variable.lua

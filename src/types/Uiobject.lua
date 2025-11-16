@@ -21,8 +21,9 @@ function Uiobject:GetName() end
 ---@see OBJECT_NAME
 function Uiobject:GetObjectType() end
 
----@TODO: what would make a UI object invalid?
----Checks if the UI object is valid.
+---Checks if the UI object is still valid. A UI object can become invalid if it
+---has been removed from the games Widget Pool through
+---`Widget:EnableHidingIsRemove(true)`
 ---@return boolean validUiobject `true` if the UI object is valid, `false` otherwise.
 ---@nodiscard
 function Uiobject:IsValidUIObject() end

@@ -725,7 +725,7 @@ ZST_INVALID = 0         -- api/Addon ZST
 ---@FIXME: when a addon is reloaded this doesnt get removed.
 ---Adds a button to the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID The category ID for the menu.
----@param uiCategory UIC The UI category ID. Use an ID above 1000 for custom UICs to avoid conflicts with default categories or other addons.
+---@param uiCategory UIC The UI category ID. Use an ID above 1000 for custom UICs to avoid conflicts with default categories or other addons. (max: `16777216`)
 ---@param iconKey ESC_MENU_ICON_KEY The icon key for the button.
 ---@param name string The name of the button.
 ---@param data? EscMenuButtonData Optional data for the button. If this is set it will override the `iconKey`.
@@ -814,7 +814,7 @@ function ADDON:LoadData(key) end
 
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
----@param uiCategory UIC The UI category to register the function to.
+---@param uiCategory UIC The UI category to register the function to. (max: `16777216`)
 ---@param triggerFunc ContentTriggerFunc The function to register as a trigger.
 ---@return boolean success `true` if registration was successful, `false` otherwise.
 ---@see UIC
@@ -823,7 +823,7 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---Registers a widget and its optional trigger function to a UI category and
 ---returns the widget if successful. This can override the trigger function for
 ---existing UI categories.
----@param uiCategory UIC The UI component to register the widget to.
+---@param uiCategory UIC The UI component to register the widget to. (max: `16777216`)
 ---@param widget Widget The widget to register.
 ---@param triggerFunc? ContentTriggerFunc The optional trigger function for the widget.
 ---@return Widget|nil widget The registered widget, or `nil` if registration failed.
@@ -844,7 +844,8 @@ function ADDON:SaveAddonInfos() end
 ---@param data table The data to save.
 function ADDON:SaveData(key, data) end
 
----Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos`
+---Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos` to save
+---the change and `ADDON:ReloadAddon` to reload the state of the addon.
 ---afterward and a reload (or character select).
 ---@param name string The name of the addon to enable or disable.
 ---@param enable boolean `true` to enable, `false` to disable the addon.

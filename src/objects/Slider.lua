@@ -1,5 +1,7 @@
 ---@meta _
 
+---@FIXME: If Slider:SetThumbButtonWidget is not set and you attempt to mouse over the slider the game crashes.
+
 ---objects/Slider
 ---@class Slider: Widget
 local Slider = {}
@@ -73,15 +75,6 @@ function Slider:SetPageStep(pageStep) end
 
 ---Sets the thumb button widget for the Slider.
 ---@param buttonWidget Button The button widget to use as the thumb.
----@usage
----```lua
----local thumb = widget:CreateChildWidget("button", "thumb", 0, true)
----thumb.bg = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
----thumb.bg:SetTextureInfo("thumb_df")
----thumb.bg:AddAnchor("TOPLEFT", thumb, 0, 0)
----thumb.bg:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
----widget:SetThumbButtonWidget(thumb)
----```
 ---@see Button
 function Slider:SetThumbButtonWidget(buttonWidget) end
 
@@ -91,7 +84,7 @@ function Slider:SetThumbButtonWidget(buttonWidget) end
 function Slider:SetValue(value, triggerEvent) end
 
 ---Sets the step value for dragging the Slider.
----@param value number The step value for dragging.
+---@param value number The step value for dragging. (default: `1`)
 function Slider:SetValueStep(value) end
 
 ---Moves the slider up for vertical orientation or left for horizontal

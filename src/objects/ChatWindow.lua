@@ -17,7 +17,7 @@ local ChatWindow = {}
 ---@see Widget
 function ChatWindow:AddTab(tabName, widget) end
 
----@TODO: Verify if this function is broken.
+---@FIXME: This doesn't disable tab switching if false.
 ---Enables or disables tab switching in the ChatWindow.
 ---@param allow boolean `true` to allow tab switching, `false` to disable.
 function ChatWindow:AllowTabSwitch(allow) end
@@ -107,7 +107,7 @@ function ChatWindow:SetLeftLineOffset(offset) end
 ---@param time number The maximum notification time in milliseconds.
 function ChatWindow:SetMaxNotifyTime(time) end
 
----@TODO: Verify if this function is broken.
+---@FIXME: Doesn't always set the minimum width.
 ---Sets the minimum tab width for the ChatWindow.
 ---@param width number The minimum tab width.
 function ChatWindow:SetMinTabWidth(width) end

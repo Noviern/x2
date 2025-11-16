@@ -138,7 +138,7 @@ function X2Player:GetAppellationsCount(appellationRouteFilter) end
 ---@usage
 ---```lua
 ---local showingEffectAppellation = X2Player:GetEffectAppellation()
----local effectDescription = showingEffectAppellation[APPELLATION_INFO.BUFF_INFO].description
+---local effectDescription = showingEffectAppellation[6].description
 ---```
 ---@see Appellation
 function X2Player:GetEffectAppellation() end
@@ -149,7 +149,7 @@ function X2Player:GetEffectAppellation() end
 ---@usage
 ---```lua
 ---local showingAppellation = X2Player:GetShowingAppellation()
----local appellationName = showingAppellation[APPELLATION_INFO.NAME]
+---local appellationName = showingAppellation[2]
 ---```
 ---@see Appellation
 function X2Player:GetShowingAppellation() end

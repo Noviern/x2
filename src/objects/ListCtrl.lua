@@ -39,11 +39,11 @@ function ListCtrl:CreateSelectedImage() end
 function ListCtrl:DeleteAllDatas() end
 
 ---Deletes data associated with the specified key from the ListCtrl.
----@param key number The key of the data to delete. (the row index, starting at `1`)
+---@param key number The key (row index) of the data to delete. (min: `1`)
 function ListCtrl:DeleteData(key) end
 
 ---Deletes data at the specified index from the ListCtrl.
----@param index number The index of the data to delete. (the row index, starting at `0`)
+---@param index number The row index of the data to delete. (min: `0`)
 function ListCtrl:DeleteDataByIndex(index) end
 
 ---Deletes all rows from the ListCtrl, excluding the column header.
@@ -67,8 +67,8 @@ function ListCtrl:InsertColumn(width, itemType) end
 ---Inserts data into the ListCtrl at the specified column index.
 ---- **Must be set after `ListCtrl:InsertColumn`**
 ---- **Must be set after `ListCtrl:InsertRows`.**
----@param key number The key for the data. (the row index, starting at `0` for header)
----@param colIdx number The column index. (starting at `1`)
+---@param key number The key (row index) for the data. (min: `0` for header)
+---@param colIdx number The column index. (min: `1`)
 ---@param subItemData string The data to insert.
 function ListCtrl:InsertData(key, colIdx, subItemData) end
 
@@ -81,12 +81,12 @@ function ListCtrl:InsertData(key, colIdx, subItemData) end
 function ListCtrl:InsertRows(count, withEventWindow) end
 
 ---Selects the item at the specified index in the ListCtrl.
----@param itemIdx number The index of the item to select. (the row index, starting at `0`)
+---@param itemIdx number The row index of the item to select. (min: `0`)
 function ListCtrl:Select(itemIdx) end
 
 ---Sets the width of the column at the specified index. Index must be at least
 ---`1` to avoid crashing.
----@param idx number The column index. (starting at `1`)
+---@param idx number The column index. (min: `1`)
 ---@param width number The width to set for the column.
 function ListCtrl:SetColumnWidth(idx, width) end
 

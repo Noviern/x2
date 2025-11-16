@@ -2604,6 +2604,8 @@
 ---| "specialtyTradeSlot"
 ---| "tractor"
 
+---@TODO: This will need to be updated, current button_style.g doesn't match the last button_style.g from live.
+---Some of these may not exist yet.
 ---game/ui/setting/button_style.g
 ---@alias BUTTON_STYLE
 ---| "accept_v"
@@ -9733,7 +9735,7 @@
 ---@alias UI_LAYER
 ---| "background"     # Layer 0 (invisible)
 ---| "game"           # Layer 1
----| "normal"         # Layer 2
+---|>"normal"         # Layer 2 (default)
 ---| "hud"            # Layer 3
 ---| "questdirecting" # Layer 4
 ---| "dialog"         # Layer 5

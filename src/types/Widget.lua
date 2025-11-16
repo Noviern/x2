@@ -267,7 +267,7 @@ function Widget:DisableDrawables(nameLayer) end
 function Widget:DisableDrawablesWithChildren(nameLayer) end
 
 ---@TODO: Make a list of events that can be activated/deactivated by this. This also sets the state to disabled (actually highlighted because state is bugged atm)
----Enables or disables the Widget handler actions `"OnClick"`.
+---Enables or disables the Widget and its handler actions `"OnClick"`.
 ---@param enable boolean `true` to enable, `false` to disable. (default: `true`)
 function Widget:Enable(enable) end
 
@@ -290,8 +290,8 @@ function Widget:EnableDrawablesWithChildren(nameLayer) end
 ---@param enable boolean `true` to enable focus, `false` to disable.
 function Widget:EnableFocus(enable) end
 
----@TODO: this didnt make it nil?
----Enables or disables removing the Widget when hidden.
+---Enables or disables `Widget:SetDeletedHandler` and when the widget is hidden
+---fires that event and then removes the Widget from the Widget Pool but doesn't remove all references.
 ---@param enable boolean `true` to enable removal on hide, `false` to disable. (default: `false`)
 function Widget:EnableHidingIsRemove(enable) end
 
@@ -305,7 +305,8 @@ function Widget:EnableKeyboard(enable) end
 function Widget:EnablePick(enable) end
 
 ---@TODO: Make a list of events that can be activated/deactivated by this.
----Enables or disables scrolling for the Widget.
+---Enables or disables scrolling for the Widget. Children widgets outside of the
+---parent widget will not render.
 ---@param enable boolean `true` to enable scrolling, `false` to disable.
 function Widget:EnableScroll(enable) end
 
@@ -467,7 +468,8 @@ function Widget:SetCharacterCacheDataHandler(handler) end
 ---@see DelegatorHandler
 function Widget:SetDelegator(action, delegator, handler) end
 
----Sets a handler for the Widget deletion event.
+---Sets a handler for the Widget deletion event. This should be used to set any
+---variable that referenced the widget as `nil`.
 ---@param handler function The handler function.
 function Widget:SetDeletedHandler(handler) end
 

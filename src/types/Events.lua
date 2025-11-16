@@ -377,7 +377,7 @@
 ---Event triggers when the player stops using a telescope.
 ---@alias CLEAR_TRANSFER_TELESCOPE_INFO_HANDLER fun()
 
----@TODO:
+---Event triggers when the player creates a craft order.
 ---@alias CLOSE_CRAFT_ORDER_HANDLER fun()
 
 ---Event triggers when the player attempts to use sheet music.
