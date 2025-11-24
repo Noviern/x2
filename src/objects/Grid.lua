@@ -152,7 +152,6 @@ function Grid:SetDrawStartNumber(number) end
 
 ---Sets the header type for the Grid.
 ---@param type HEADER_TYPE The header type.
----@see HEADER_TYPE
 function Grid:SetHeaderType(type) end
 
 ---Sets the inset for columns in the Grid.

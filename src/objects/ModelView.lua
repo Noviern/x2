@@ -41,7 +41,6 @@ function ModelView:ClearModel() end
 ---@param r number (min: `0`, max: `255`)
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
----@see ITEM_GRADE_TYPE
 function ModelView:EquipCostume(itemType, itemGrade, r, g, b) end
 
 ---Equips the `itemType` on to the model for the ModelView. stops any playing
@@ -149,7 +148,6 @@ function ModelView:GetCustomPreviewCloth() end
 ---@param range PR
 ---@return number|nil index
 ---@nodiscard
----@see PR
 function ModelView:GetCustomPupil(range) end
 
 ---Retrieves the custom pupil color for a specified eye.
@@ -158,7 +156,6 @@ function ModelView:GetCustomPupil(range) end
 ---@return number green (min: `0`, max: `255`, default: `0`)
 ---@return number blue (min: `0`, max: `255`, default: `0`)
 ---@nodiscard
----@see PR
 function ModelView:GetCustomPupilColor(range) end
 
 ---Retrieves the custom scar index.
@@ -234,7 +231,6 @@ function ModelView:HasDiffWithClientUnit() end
 ---@param unit UNIT
 ---@param createModel boolean
 ---@return boolean unknown
----@see UNIT
 function ModelView:Init(unit, createModel) end
 
 ---Initializes beauty shop mode.
@@ -247,8 +243,6 @@ function ModelView:InitBeautyShop() end
 ---@param race RACE
 ---@param gender GENDER
 ---@param butlerMode boolean
----@see RACE
----@see GENDER
 function ModelView:InitByModelRef(modelRef, race, gender, butlerMode) end
 
 ---@FIXME: this may not work without X2Customizer
@@ -276,7 +270,6 @@ function ModelView:PlayAnimation(name, loop) end
 
 ---Removes an item from the specified equipment slot.
 ---@param index ES
----@see ES
 function ModelView:RemoveEquipSlot(index) end
 
 ---Resets the beauty shop settings.
@@ -412,7 +405,6 @@ function ModelView:SetCustomizingPreviewCloth(index) end
 ---Sets the custom pupil index for a specified range.
 ---@param index number
 ---@param range PR
----@see PR
 function ModelView:SetCustomizingPupil(index, range) end
 
 ---Sets the custom pupil color for a specified range.
@@ -420,7 +412,6 @@ function ModelView:SetCustomizingPupil(index, range) end
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
 ---@param range PR
----@see PR
 function ModelView:SetCustomizingPupilColor(r, g, b, range) end
 
 ---Sets the custom scar parameters.
@@ -452,7 +443,6 @@ function ModelView:SetDisableColorGrading(disable) end
 
 ---Sets the equipment from a character slot to the current model.
 ---@param index ES
----@see ES
 function ModelView:SetEquipSlotFromCharacter(index) end
 
 ---Sets the fov `angle` for the ModelView.
@@ -474,7 +464,7 @@ function ModelView:SetIngameShopMode(ingameShop) end
 ---@param key? string
 ---@usage
 ---```lua
----widget:SetModelViewBackground(TEXTURE_PATH.INGAME_SHOP, "character_bg")
+---widget:SetModelViewBackground("ui/itemshop.dds", "character_bg")
 ---widget:SetDisableColorGrading(true)
 ---```
 function ModelView:SetModelViewBackground(path, key) end
@@ -520,7 +510,6 @@ function ModelView:ToggleCosplayEquipped(equipped) end
 
 ---Unequips an item from the specified slot. `ModelView:ApplyModel` after is required.
 ---@param itemSlot ES
----@see ES
 function ModelView:UnequipItemSlot(itemSlot) end
 
 ---Updates the dye color for dyeable cosplay items.
@@ -547,5 +536,4 @@ function ModelView:ZoomInOut(yAmt) end
 ---  self:ZoomInOutBeautyShop(1) -- Set how much to change.
 ---end)
 ---```
----@see BEAUTY_SHOP_ZOOM
 function ModelView:ZoomInOutBeautyShop(amount) end

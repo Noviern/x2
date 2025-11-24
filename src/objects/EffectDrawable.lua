@@ -46,7 +46,6 @@ function EffectDrawable:SetEffectInterval(phase, interval) end
 ---@param priority EFFECT_PRIORITY The priority of the effect.
 ---@param velocityTime number The velocity duration in seconds.
 ---@param accelerationTime number The acceleration duration in seconds.
----@see EFFECT_PRIORITY
 function EffectDrawable:SetEffectPriority(phase, priority, velocityTime, accelerationTime) end
 
 ---Sets the rotation effect for the specified phase.
@@ -102,7 +101,6 @@ function EffectDrawable:SetMoveEffectInterval(phase, interval) end
 ---@param verticalRadius number The vertical radius of the effect.
 ---@param velocityTime number The velocity duration in seconds.
 ---@param accelerationTime number The acceleration duration in seconds.
----@see MOVE_TYPE
 function EffectDrawable:SetMoveEffectType(phase, moveType, horizontalRadius, verticalRadius, velocityTime,
   accelerationTime)
 end

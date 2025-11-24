@@ -13,17 +13,15 @@ local StatusBar = {}
 ---@param y? number The optional y-offset.
 ---@usage
 ---```lua
----local shadowDeco = widget:CreateDrawable(TEXTURE_PATH.DEFAULT, "gage_shadow", "artwork")
+---local shadowDeco = widget:CreateDrawable("ui/common/default.dds", "gage_shadow", "artwork")
 ---widget:AddAnchorChildToBar(shadowDeco, "TOPLEFT", "TOPRIGHT", 0, -1)
 ---```
 ---@see DrawableDDS
----@see ANCHOR_POINT
 function StatusBar:AddAnchorChildToBar(anchorChild, childAnchorPoint, anchorOigin, x, y) end
 
 ---Retrieves the color of the StatusBar.
 ---@return RGBA barColor The color of the StatusBar.
 ---@nodiscard
----@see RGBA
 function StatusBar:GetBarColor() end
 
 ---Retrieves the left width for the specified value of the StatusBar.
@@ -41,7 +39,6 @@ function StatusBar:GetMinMaxValues() end
 ---Retrieves the orientation of the StatusBar.
 ---@return ORIENTATION orientation The orientation of the StatusBar. (default: `"HORIZONTAL"`)
 ---@nodiscard
----@see ORIENTATION
 function StatusBar:GetOrientation() end
 
 ---Retrieves the current value of the StatusBar.
@@ -71,7 +68,6 @@ function StatusBar:SetBarColorByKey(colorKey) end
 ---Sets the texture for the StatusBar.
 ---@param nameTex string The texture path.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the texture to.
----@see DRAWABLE_NAME_LAYER
 function StatusBar:SetBarTexture(nameTex, nameLayer) end
 
 ---Sets the texture using a key for the StatusBar.
@@ -98,7 +94,6 @@ function StatusBar:SetMinMaxValuesForString(min, max) end
 
 ---Sets the orientation of the StatusBar.
 ---@param orientation ORIENTATION The orientation to set. (default: `"HORIZONTAL"`)
----@see ORIENTATION
 function StatusBar:SetOrientation(orientation) end
 
 ---Sets the value for the StatusBar with optional animation. Texture for the

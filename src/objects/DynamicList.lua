@@ -22,7 +22,6 @@ function DynamicList:ClearData() end
 ---@param layerStr DRAWABLE_NAME_LAYER The layer string for the overed image.
 ---@return NinePartDrawable overedImage The created overed image.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see NinePartDrawable
 function DynamicList:CreateOveredImage(layerStr) end
 
@@ -74,7 +73,6 @@ function DynamicList:GetSelectedItemInfo() end
 ---@TODO: Verify bgDrawType.
 ---Initializes the background draw type for the DynamicList.
 ---@param bgDrawType UOT_DRAWABLE The background draw type.
----@see UOT_DRAWABLE
 function DynamicList:InitBgType(bgDrawType) end
 
 ---@TODO: Confirm purpose and behavior. this creates the main on dl.content.anchor.main

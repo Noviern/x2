@@ -7,7 +7,6 @@ local TextDrawable = {}
 
 ---Sets the text alignment of the TextDrawable.
 ---@param align TEXT_ALIGN The text alignment type. (default: `ALIGN_LEFT`)
----@see TEXT_ALIGN
 function TextDrawable:SetAlign(align) end
 
 ---Sets localized text for the TextDrawable with multiple optional parameters.

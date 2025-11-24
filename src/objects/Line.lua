@@ -17,7 +17,6 @@ function Line:SetLineColor(r, g, b, a) end
 
 ---Sets the line color using a color key for the Line.
 ---@param colorKey ETC_COLOR The color key to apply.
----@see ETC_COLOR
 function Line:SetLineColorByKey(colorKey) end
 
 ---Sets the thickness for the Line.

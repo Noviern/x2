@@ -138,19 +138,16 @@ function X2Ability:GetAllMyActabilityInfos() end
 ---@param neededInfo? BIK Optional additional information for the buff.
 ---@return AppellationBuffInfo buffTooltip The buff tooltip information.
 ---@nodiscard
----@see BIK 
 ---@see AppellationBuffInfo
 function X2Ability:GetBuffTooltip(buffType, itemLevel, neededInfo) end
 
 ---Returns actability information for the player.
 ---@param actabilityGroupType ACTABILITY_ID The actability group type to query.
 ---@return ActabilityGroupTypeInfo|nil myActabilityInfo The actability information, or `nil` if not found.
----@see ACTABILITY_ID
 function X2Ability:GetMyActabilityInfo(actabilityGroupType) end
 
 ---Returns if the ability is active.
 ---@param index ABILITY_TYPE The ability type to check.
 ---@return boolean activeAbility `true` if the ability is active, `false` otherwise.
 ---@nodiscard
----@see ABILITY_TYPE
 function X2Ability:IsActiveAbility(index) end

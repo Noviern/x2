@@ -26,9 +26,6 @@ local Button = {}
 ---@param layer? DRAWABLE_NAME_LAYER The optional layer to apply the drawable to. (default: `"background"`)
 ---@return DrawableDDS stateDrawable The created drawable, empty table if the object hasn't been imported, or `nil` if creation fails.
 ---@nodiscard
----@see UI_BUTTON_STATE
----@see UOT_DRAWABLE
----@see DRAWABLE_NAME_LAYER
 ---@see DrawableDDS
 ---@see ColorDrawable
 ---@see NinePartDrawable
@@ -42,16 +39,14 @@ function Button:CreateStateDrawable(state, drawableType, path, layer) end
 
 ---Disables clicking for the specified mouse button.
 ---@param mouseButton MOUSE_BUTTON The mouse button to disable.
----@see MOUSE_BUTTON
 function Button:DeregisterForClicks(mouseButton) end
 
 ---Retrieves the current state of the button.
 ---@return UI_BUTTON_STATE_TEXT state The current button state. (default: `DISABLED`)
 ---@nodiscard
----@see UI_BUTTON_STATE_TEXT
 function Button:GetButtonState() end
 
----Retrieves the drawable for the disabled state of the button, if it exists. 
+---Retrieves the drawable for the disabled state of the button, if it exists.
 ---Casting may be neccessary.
 ---@return DrawableDDS|nil disabledTable The disabled state drawable, or `nil` if not set.
 ---@nodiscard
@@ -61,7 +56,6 @@ function Button:GetDisabledBackground() end
 ---Retrieves the color of the disabled state for the button.
 ---@return RGBA disabledColor The disabled state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
----@see RGBA
 function Button:GetDisabledColor() end
 
 ---Retrieves the drawable for the highlighted state of the button, if it exists.
@@ -74,7 +68,6 @@ function Button:GetHighlightBackground() end
 ---Retrieves the color of the highlighted state for the button.
 ---@return RGBA highlightColor The highlighted state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
----@see RGBA
 function Button:GetHighlightColor() end
 
 ---Retrieves the drawable for the normal state of the button, if it exists.
@@ -87,7 +80,6 @@ function Button:GetNormalBackground() end
 ---Retrieves the color of the normal state for the button.
 ---@return RGBA normalColor The normal state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
----@see RGBA
 function Button:GetNormalColor() end
 
 ---Retrieves the drawable for the pushed state of the button, if it exists.
@@ -100,13 +92,11 @@ function Button:GetPushedBackground() end
 ---Retrieves the color of the pushed state for the button.
 ---@return RGBA pushedColor The pushed state color. (default: `{ r = 0, g = 0, b = 0, a = 1 }`)
 ---@nodiscard
----@see RGBA
 function Button:GetPushedColor() end
 
 ---Enables or disables clicking for the specified mouse button.
 ---@param mouseButton MOUSE_BUTTON The mouse button to enable/disable. (default: `"LeftButton"`)
 ---@param enable? boolean The optional enable state, `true` to enable clicking, `false` to disable. (default: `true`)
----@see MOUSE_BUTTON
 function Button:RegisterForClicks(mouseButton, enable) end
 
 ---Enables or disables automatic character clipping for the button. This resets
@@ -127,7 +117,6 @@ function Button:SetAutoResize(resize) end
 
 ---Sets the state of the button.
 ---@param state UI_BUTTON_STATE_TEXT The state to set. (default: `DISABLED`)
----@see UI_BUTTON_STATE_TEXT
 function Button:SetButtonState(state) end
 
 ---Sets the drawable for the disabled state of the button.
@@ -211,7 +200,6 @@ function Button:SetPushedTextColor(r, g, b, a) end
 
 ---Sets the style for the button. Should be applied before setting the extent.
 ---@param style BUTTON_STYLE The style to apply.
----@see BUTTON_STYLE
 function Button:SetStyle(style) end
 
 ---Sets the text color for the button.

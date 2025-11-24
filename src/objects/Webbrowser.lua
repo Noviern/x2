@@ -20,7 +20,6 @@ function Webbrowser:LoadBlankPage() end
 ---@FIXME: RightButton doesnt appear to work.
 ---Simulates a mouse down event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
----@see MOUSE_BUTTON
 function Webbrowser:MouseDown(button) end
 
 ---Simulates a mouse move event on the Webbrowser  and triggers the
@@ -30,7 +29,6 @@ function Webbrowser:MouseMove() end
 ---@FIXME: RightButton doesnt appear to work.
 ---Simulates a mouse up event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
----@see MOUSE_BUTTON
 function Webbrowser:MouseUp(button) end
 
 ---@FIXME: Broken?

@@ -61,7 +61,6 @@ function Tab:SetActivateTabCount(activateTabCount) end
 ---Sets the corner where tabs are placed in the Tab. Should be called before
 ---`Tab:AlignTabButtons()`.
 ---@param corner TAB_CORNER The corner to place the tabs. (default: `"TOPLEFT"`)
----@see TAB_CORNER
 function Tab:SetCorner(corner) end
 
 ---Sets the orientation of the tabs in the Tab. Should be called before

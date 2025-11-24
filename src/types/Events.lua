@@ -31,7 +31,6 @@
 ---Event triggers when an acquaintance (guild member) logs in.
 ---@alias ACQUAINTANCE_LOGIN_HANDLER fun(cmf: CMF, charName: string)
 
----@TODO: Is diff a string?
 ---Event triggers when the players proficiency changes.
 ---@alias ACTABILITY_EXPERT_CHANGED_HANDLER fun(actabilityId: number, name: string, diff: number|string, final: number|string)
 
@@ -113,7 +112,6 @@
 ---in the auction house and they are too low of a level.
 ---@alias AUCTION_CHARACTER_LEVEL_TOO_LOW_HANDLER fun(msg: string)
 
----@TODO: true item is attached to ah false no item is attached.
 ---Event triggers when a player is listing an item on the auction house.
 ---@alias AUCTION_ITEM_ATTACHMENT_STATE_CHANGED_HANDLER fun(attached: boolean)
 
@@ -383,7 +381,6 @@
 ---Event triggers when the player attempts to use sheet music.
 ---@alias CLOSE_MUSIC_SHEET_HANDLER fun()
 
----@TODO: Test this more.
 ---Event triggers when the player interacts with something other than the coffer.
 ---@alias COFFER_INTERACTION_END_HANDLER fun()
 
@@ -399,9 +396,8 @@
 ---Event triggers when the player deletes a tab from the coffer.
 ---@alias COFFER_TAB_REMOVED_HANDLER fun()
 
----@TODO: arg may be the bagid?
 ---Event triggers when the player sorts the coffer.
----@alias COFFER_TAB_SORTED_HANDLER fun(arg: number)
+---@alias COFFER_TAB_SORTED_HANDLER fun(bagId: number)
 
 ---@TODO:
 ---@alias COFFER_TAB_SWITCHED_HANDLER fun(tabId: number)
@@ -409,7 +405,6 @@
 ---Event triggers when the players coffer updates.
 ---@alias COFFER_UPDATE_HANDLER fun(bagId: number, slotId: number)
 
----@TODO:
 ---Event triggers when a combat message occurs.
 ---@alias COMBAT_MSG_HANDLER fun(targetUnitId: string, combatEvent: COMBAT_EVENT, source: string, target: string, ...)
 
@@ -430,19 +425,6 @@
 
 ---@TODO: all players depending on players Damage/Heal Info: Target in settings>game info
 ---@alias COMBAT_TEXT_HANDLER fun(sourceUnitId: string, targetUnitId: string, amount: number, a: number, b: string, hitType: COMBAT_HIT_TYPE, d: number, e: boolean, f: number, g: boolean, distance: number)
-
----@TODO: see commonui/logic/chat.lua for args
--- COMBAT_TEXT_COLLISION = {
---   1 = "f2f0",                  targetUnitId
---   2 = "ENVIRONMENTAL_DAMAGE",  combatEvent
---   3 = "Lutesong Junk",         source
---   4 = "Lutesong Junk",         target
---   5 = "COLLISION",             source
---   6 = 3,                       subType
---   7 = true,                    mySlave
---   8 = 4919,                    damage
---   9 = "HEALTH",                powerType?
--- }
 
 ---Event triggers when there is a collision.
 ---@alias COMBAT_TEXT_COLLISION_HANDLER fun(targetUnitId: string, combatEvent: string, source: string, target: string,
@@ -553,7 +535,6 @@
 ---@TODO:
 ---@alias DOMINION_GUARD_TOWER_UPDATE_TOOLTIP_HANDLER fun(unitId)
 
----@TODO: i feel like this should trigger every time the count changes but it doesnt.
 ---Event triggers when the player joins a siege raid.
 ---@alias DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED_HANDLER fun(count: number)
 
@@ -563,7 +544,6 @@
 ---@TODO:
 ---@alias DOMINION_SIEGE_SYSTEM_NOTICE_HANDLER fun()
 
----@TODO: when a hero is able to start applying for position
 ---Event triggers every 500ms while a siege update is occuring.
 ---@alias DOMINION_SIEGE_UPDATE_TIMER_HANDLER fun(secondHalf: boolean)
 
@@ -692,9 +672,8 @@
 ---@TODO:
 ---@alias EXPEDITION_APPLICANT_REJECT_HANDLER fun(expeditionName)
 
----@TODO: This needs to be looked into further.
 ---Event triggers when a guilds buff changes.
----@alias EXPEDITION_BUFF_CHANGE_HANDLER fun(expedition: number, buff, before, after)
+---@alias EXPEDITION_BUFF_CHANGE_HANDLER fun(expedition: number)
 
 ---@TODO: Does this trigger when other players in the guild increase the guilds exp?
 ---Event triggers when the players guilds experience changes.
@@ -725,7 +704,7 @@
 ---@TODO:
 ---@alias EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED_HANDLER fun()
 
----@TODO:
+---Event triggers when a member of the players guild changes their name.
 ---@alias EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED_HANDLER fun()
 
 ---@TODO: are there other triggers?
@@ -1116,7 +1095,6 @@
 ---Event triggers when the state of a zone changes.
 ---@alias HPW_ZONE_STATE_CHANGE_HANDLER fun(zoneId: ZONE_ID)
 
----@TODO: I think points is honor points?
 ---Event triggers when a zones war state ends.
 ---@alias HPW_ZONE_STATE_WAR_END_HANDLER fun(zoneId: ZONE_ID, points: number)
 
@@ -1683,11 +1661,16 @@ local result = {
 ---Event triggers when the player views the details of a raid recruit.
 ---@alias RAID_RECRUIT_DETAIL_HANDLER fun(data: RaidRecruitDetailInfo)
 
+---@class RaidRecruitInfo
+---@field hour number
+---@field isRecruiter boolean
+---@field minute number
+---@field subTypeName string
+
 ---@TODO: test this more.
 ---Event triggers when the raid hud changes.
----@alias RAID_RECRUIT_HUD_HANDLER fun(infos: table)
+---@alias RAID_RECRUIT_HUD_HANDLER fun(infos: RaidRecruitInfo)
 
----@TODO: This has other triggers
 ---Event triggers when the player views the raid recruit window.
 ---@alias RAID_RECRUIT_LIST_HANDLER fun(data: RaidRecruitListInfo)
 
@@ -1781,9 +1764,8 @@ local result = {
 ---Event triggers when a transfer vehicle is no longer on the telescope.
 ---@alias REMOVE_TRANSFER_TELESCOPE_INFO_HANDLER fun(index: number)
 
----@TODO: removeState can only be destroy?
 ---Event triggers when an item has been deleted/removed from the players inventory.
----@alias REMOVED_ITEM_HANDLER fun(itemLinkText: string, itemCount: number, removeState: "destroy", itemTaskType: number, tradeOtherName: string)
+---@alias REMOVED_ITEM_HANDLER fun(itemLinkText: string, itemCount: number, removeState: "destroy"|"consume"|"conversion", itemTaskType: number, tradeOtherName: string)
 
 ---Event triggers when the player renames a portal.
 ---@alias RENAME_PORTAL_HANDLER fun()
@@ -1895,8 +1877,7 @@ local result = {
 ---@TODO:
 ---@alias SET_LOGIN_BROWSER_URL_HANDLER fun()
 
----@TODO: What if a mark is removed?
----Event triggers when a player has a mark set on them.
+---Event triggers when a player has a mark set or remove on them.
 ---@alias SET_OVERHEAD_MARK_HANDLER fun(unitId: string, index: number, visible: boolean)
 
 ---Event triggers when the player enables/disables ping mode.
@@ -1909,14 +1890,12 @@ local result = {
 ---Event triggers when the player enables/disables ping mode.
 ---@alias SET_ROADMAP_PICKABLE_HANDLER fun(pick: boolean)
 
----@TODO: Does this trigger if the player dies?
 ---Event triggers when the players honor points change during war due to combat.
 ---@alias SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW_HANDLER fun(zoneName: string, accumulatePoint: number, state?)
 
 ---@TODO:
 ---@alias SHOW_ADD_TAB_WINDOW_HANDLER fun()
 
----@TODO: Does this trigger for all received items or just mail?
 ---Event triggers when the player receives an item.
 ---@alias SHOW_ADDED_ITEM_HANDLER fun(item: ItemInfo, count: number, taskType: number)
 
@@ -1984,9 +1963,8 @@ local result = {
 ---@TODO: cancel placing a diary pen
 ---@alias SIM_DOODAD_MSG_HANDLER fun(code?)
 
----@TODO: name alias/enum
 ---Event triggers when the player receives a status debuff.
----@alias SKILL_ALERT_ADD_HANDLER fun(statusBuffType: SKILL_ALERT_STATUS_BUFF_TAG, buffId: number, remainTime: number, name: string)
+---@alias SKILL_ALERT_ADD_HANDLER fun(statusBuffType: SKILL_ALERT_STATUS_BUFF_TAG, buffId: number, remainTime: number, name: SKILL_ALERT_STATUS_BUFF_NAME)
 
 ---Event triggers when the players status debuff is gone.
 ---@alias SKILL_ALERT_REMOVE_HANDLER fun(statusBuffType: SKILL_ALERT_STATUS_BUFF_TAG)
@@ -2041,9 +2019,8 @@ local result = {
 ---Event triggers when the player checks the specialty ratio between two zones.
 ---@alias SPECIALTY_RATIO_BETWEEN_INFO_HANDLER fun(specialtyRatioTable: SpecialtyRatioInfo[])
 
----@TODO: caster seems to be a subset of UNIT, player, target, targettarget, watchtarget
 ---Event triggers when a unit starts casting a spell.
----@alias SPELLCAST_START_HANDLER fun(spellName: string, castingTime: number, caster: string, castingUseable: boolean)
+---@alias SPELLCAST_START_HANDLER fun(spellName: string, castingTime: number, caster: UNIT_LOCAL, castingUseable: boolean)
 
 ---Event triggers when a unit stops casting a spell.
 ---@alias SPELLCAST_STOP_HANDLER fun(caster: string)
@@ -2210,7 +2187,7 @@ local result = {
 ---Event triggers when the first raid frame is shown or hidden.
 ---@alias TOGGLE_RAID_FRAME_HANDLER fun(show: boolean)
 
----@TODO: Does this trigger for raid2?
+---@FIXME: Both raids parties get shown or hidden regardless of which raid party your trying to change.
 ---Event triggers when a party in the raid is shown or hidden.
 ---@alias TOGGLE_RAID_FRAME_PARTY_HANDLER fun(party: number, visible: boolean)
 
@@ -2359,10 +2336,10 @@ local result = {
 ---Event triggers when the player applies updates to their hotkey bindings.
 ---@alias UPDATE_BINDINGS_HANDLER fun()
 
----@TODO:
+---Event triggers when the player starts and stops using a boss telescope.
 ---@alias UPDATE_BOSS_TELESCOPE_AREA_HANDLER fun()
 
----@TODO:
+---Event triggers every 500ms while the player is using a boss telescope.
 ---@alias UPDATE_BOSS_TELESCOPE_INFO_HANDLER fun()
 
 ---@TODO:
@@ -2465,9 +2442,8 @@ local result = {
 ---Event triggers when the in game shop receives an event.
 ---@alias UPDATE_INGAME_SHOP_HANDLER fun(updateType: INGAME_SHOP_TYPE, page?: number, totalItems?: number, arg4?)
 
----@TODO:: What types of mode exists? Ive seen 1 and 2.
 ---Event triggers when the in game shops view changes.
----@alias UPDATE_INGAME_SHOP_VIEW_HANDLER fun(viewType: INGAME_SHOP_VIEW_TYPE, mode: number)
+---@alias UPDATE_INGAME_SHOP_VIEW_HANDLER fun(viewType: INGAME_SHOP_VIEW_TYPE, mode: INGAME_SHOP_VIEW_MODE)
 
 ---Event triggers when a instance invitation goes out and each time a player joins.
 ---@alias UPDATE_INSTANT_GAME_INVITATION_COUNT_HANDLER fun(accept: number, totalSize: number)

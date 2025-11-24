@@ -14,6 +14,5 @@ function X2Bag:EquipBagItem(slot, isAuxEquip) end
 ---@param neededInfo? IIK Optional additional information for the item. Requires importing the X2Item API. IIK types can be added together to increase the filter range.
 ---@return ItemInfo|nil bagItemInfo The item information, or `nil` if the slot is empty or doesn't exist.
 ---@nodiscard
----@see IIK
 ---@see ItemInfo
 function X2Bag:GetBagItemInfo(bagId, slot, neededInfo) end

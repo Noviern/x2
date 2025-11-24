@@ -67,33 +67,25 @@ function TextStyle:SetColorByKey(key) end
 ---@param ellipsis boolean `true` to enable ellipsis, `false` to disable. (default: `false`)
 function TextStyle:SetEllipsis(ellipsis) end
 
----Sets the font path, size, and optional type for the TextStyle. When using
----`FONT_PATH.IMG_` variants (e.g., `IMG_NPC_HPBAR`, `IMG_ACTION_BAR`,
----`IMG_COMBAT`), the `fontSize` and `fontType` must match the fixed values:
----`IMG_NPC_HPBAR` requires `fontSize` of 19 and `fontType` of `FTK_IMAGETEXT`;
----`IMG_ACTION_BAR` requires `fontSize` of 13 and `fontType` of `FTK_IMAGETEXT`;
----`IMG_COMBAT` requires `fontSize` of 60 and `fontType` of `FTK_IMAGETEXT`.
+---Sets the font path, size, and optional type for the TextStyle.
 ---@param fontPath string The path to the font.
----@param fontSize number The size of the font. Must be 19 for `FONT_PATH.IMG_NPC_HPBAR`, 13 for `FONT_PATH.IMG_ACTION_BAR`, or 60 for `FONT_PATH.IMG_COMBAT`.
----@param fontType? FONT_KIND The optional font type. Must be `FTK_IMAGETEXT` for `FONT_PATH.IMG_` variants, otherwise defaults to `FTK_GENERAL`.
+---@param fontSize number The size of the font.
+---@param fontType? FONT_KIND The optional font type. Must be `FTK_IMAGETEXT` for `"img_font"` variants. (default: `FTK_GENERAL`)
 ---@usage
 ---```lua
----style:SetFont(FONT_PATH.COMBAT, FONT_SIZE.XXLARGE)
----
-------or
----
----widget.style:SetFont(FONT_PATH.IMG_NPC_HPBAR, 19, FTK_IMAGETEXT)
----widget.style:SetFont(FONT_PATH.IMG_ACTION_BAR, 13, FTK_IMAGETEXT)
----widget.style:SetFont(FONT_PATH.IMG_COMBAT, 60, FTK_IMAGETEXT)
+----- Each img_font only supports one size.
+---widget.style:SetFont("img_font_npc_hpbar", 19, FTK_IMAGETEXT)
+---widget.style:SetFont("img_font_action_bar", 13, FTK_IMAGETEXT)
+---widget.style:SetFont("img_font_combat", 60, FTK_IMAGETEXT)
 ---```
+---@overload fun(self: self, fontPath: FONT_PATH, fontSize: number, fontType: FTK_IMAGETEXT)
 ---@overload fun(self: self, fontPath: "img_font_npc_hpbar", fontSize: 19, fontType: FTK_IMAGETEXT)
 ---@overload fun(self: self, fontPath: "img_font_action_bar", fontSize: 13, fontType: FTK_IMAGETEXT)
 ---@overload fun(self: self, fontPath: "img_font_combat", fontSize: 60, fontType: FTK_IMAGETEXT)
----@overload fun(self: self, fontPath: FONT_PATH, fontSize: FONT_SIZE, fontType: FTK_IMAGETEXT)
 function TextStyle:SetFont(fontPath, fontSize, fontType) end
 
 ---Sets the font size for the TextStyle.
----@param size FONT_SIZE The font size to set.
+---@param size number The font size to set.
 function TextStyle:SetFontSize(size) end
 
 ---Enables or disables the outline for the TextStyle.

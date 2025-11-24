@@ -13,14 +13,11 @@ local WorldMap = {}
 ---@param zoneId ZONE_ID The ID of the zone.
 ---@return ZONE_CLIMATE[] climateInfo The climate information for the zone.
 ---@nodiscard
----@see ZONE_ID
----@see ZONE_CLIMATE
 function WorldMap:GetClimateInfo(zoneId) end
 
 ---Retrieves the sextant location of the cursor on the world map.
 ---@return SEXTANT|nil The cursor's sextant data, or `nil` if not available.
 ---@nodiscard
----@see SEXTANT
 function WorldMap:GetCursorSextants() end
 
 ---Retrieves the icon drawable for a specific zoom level and zone ID.
@@ -28,8 +25,6 @@ function WorldMap:GetCursorSextants() end
 ---@param id ZONE_ID The zone ID.
 ---@return ImageDrawable iconDrawable The icon drawable, empty table if the object `ImageDrawable` hasn't been imported, or `nil` if not found.
 ---@nodiscard
----@see WORLD_MAP_ZOOM
----@see ZONE_ID
 ---@see ImageDrawable
 function WorldMap:GetIconDrawable(level, id) end
 
@@ -40,7 +35,6 @@ function WorldMap:GetIconDrawable(level, id) end
 ---@return ImageDrawable routeDrawable The route drawable, empty table if the object `ImageDrawable` hasn't been imported, or `nil` if not found.
 ---@return boolean created `true` if the drawable was created, `false` if it already existed.
 ---@nodiscard
----@see WORLD_MAP_ZOOM
 ---@see ImageDrawable
 function WorldMap:GetRouteDrawable(level, id) end
 
@@ -57,7 +51,6 @@ function WorldMap:InitMapData(width, height, tgaPath, iconPath) end
 
 ---Removes a ping from the world map by its type.
 ---@param pingType PING_TYPE The type of ping to remove.
----@see PING_TYPE
 function WorldMap:RemovePing(pingType) end
 
 ---Removes all pings from the world map.
@@ -67,7 +60,7 @@ function WorldMap:RemovePingAll() end
 ---@param drawable EffectDrawable The drawable for the farm icon.
 ---@usage
 ---```lua
----local farmDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
+---local farmDrawable = widget:CreateEffectDrawableByKey("ui/map/icon/npc_icon.dds", "portal", "overlay")
 ---farmDrawable:SetVisible(false)
 ---farmDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
 ---farmDrawable:SetMoveRepeatCount(0)
@@ -93,7 +86,7 @@ function WorldMap:SetFestivalZoneColor(r, g, b, a) end
 ---@param drawable EffectDrawable The drawable for the portal icon.
 ---@usage
 ---```lua
----local portalDrawable = widget:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
+---local portalDrawable = widget:CreateEffectDrawableByKey("ui/map/icon/npc_icon.dds", "portal", "overlay")
 ---portalDrawable:SetVisible(false)
 ---portalDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
 ---portalDrawable:SetMoveRepeatCount(0)
@@ -125,7 +118,6 @@ function WorldMap:SetTempNotifyCoord(isMain, coord) end
 ---@param g number The green color component. (min: `0`, max: `1`)
 ---@param b number The blue color component. (min: `0`, max: `1`)
 ---@param a number The alpha component. (min: `0`, max: `1`)
----@see ZONE_STATE
 function WorldMap:SetTroubleZoneColor(state, r, g, b, a) end
 
 ---Shows a common farm icon on the world map at the specified coordinates.
@@ -142,7 +134,6 @@ function WorldMap:ShowCommonFarm(farmGroupType, farmType, x, y) end
 ---@param x number The x-coordinate.
 ---@param y number The y-coordinate.
 ---@param z number The z-coordinate.
----@see ZONE_KEY
 function WorldMap:ShowPortal(zoneId, x, y, z) end
 
 ---Shows a quest indicator on the world map.

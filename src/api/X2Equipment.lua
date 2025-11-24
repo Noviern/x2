@@ -140,7 +140,6 @@ X2Equipment = {}     -- api/X2Equipment
 ---@param targetEquippedItem boolean `true` to see the targets equipped item, `false` for the players equipped item.
 ---@return ItemInfo|nil equippedItemTooltipInfo The tooltip information, or `nil` if not found.
 ---@nodiscard
----@see ES
 ---@see ItemInfo
 function X2Equipment:GetEquippedItemTooltipInfo(equipSlot, targetEquippedItem) end
 
@@ -148,5 +147,4 @@ function X2Equipment:GetEquippedItemTooltipInfo(equipSlot, targetEquippedItem) e
 ---@param equipSlot ES The equipment slot to query.
 ---@return number|nil equippedItemType The equipped item type, or `nil` if none.
 ---@nodiscard
----@see ES
 function X2Equipment:GetEquippedItemType(equipSlot) end

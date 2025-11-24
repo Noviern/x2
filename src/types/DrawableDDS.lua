@@ -36,7 +36,7 @@ function DrawableDDS:SetTexture(filename) end
 ---@param colorKey string The color key to apply from the texture path `*.g` file.
 ---@usage
 ---```lua
----local ninePartDrawable = widget:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
+---local ninePartDrawable = widget:CreateNinePartDrawable("ui/common/default.dds", "background")
 ---ninePartDrawable:SetTextureInfo("type_05")
 ---ninePartDrawable:SetTextureColor("hud_bg")
 ---```
@@ -47,7 +47,7 @@ function DrawableDDS:SetTextureColor(colorKey) end
 ---@param colorKey? string The color key to apply from the texture path `*.g` file.
 ---@usage
 ---```lua
----local ninePartDrawable = widget:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
+---local ninePartDrawable = widget:CreateNinePartDrawable("ui/common/default.dds", "background")
 ---ninePartDrawable:SetTextureInfo("main_bg")
 ---```
 function DrawableDDS:SetTextureInfo(infoKey, colorKey) end

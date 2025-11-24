@@ -68,7 +68,7 @@ function Textbox:SetLineColor(r, g, b, a) end
 function Textbox:SetLineHeight(height) end
 
 ---Sets the line spacing for the Textbox.
----@param space TEXTBOX_LINE_SPACE|number The line spacing value. (default: `1`)
+---@param space number The line spacing value. (default: `1`)
 function Textbox:SetLineSpace(space) end
 
 ---Enables or disables strikethrough visibility for the Textbox.

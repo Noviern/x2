@@ -1,12 +1,15 @@
 { // See https://luals.github.io/wiki/settings/
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
   "runtime.version": "Lua 5.1",
   "hover.expandAlias": false,
   "diagnostics": {
     "disable": [
       // "assign-type-mismatch",
       // "inject-field",
-      "lowercase-global"
-      // "need-check-nil"
+      "lowercase-global",
+      // "need-check-nil",
+      // "param-type-mismatch",
+      // "missing-parameter"
     ],
     "neededFileStatus": {
       "ambiguity-1": "Any",

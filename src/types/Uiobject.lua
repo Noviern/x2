@@ -18,7 +18,6 @@ function Uiobject:GetName() end
 ---Retrieves the object type of the UI object.
 ---@return OBJECT_NAME objectType The UI object's type.
 ---@nodiscard
----@see OBJECT_NAME
 function Uiobject:GetObjectType() end
 
 ---Checks if the UI object is still valid. A UI object can become invalid if it

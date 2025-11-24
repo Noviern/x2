@@ -62,7 +62,6 @@ function X2Store:GetProductionZoneGroups() end
 ---@param fromZoneGroup ZONE_ID The source zone ID.
 ---@return ZoneInfo[] sellableZoneGroups A table of zone information for the sellable zone groups.
 ---@nodiscard
----@see ZONE_ID
 ---@see ZoneInfo
 function X2Store:GetSellableZoneGroups(fromZoneGroup) end
 
@@ -82,7 +81,6 @@ function X2Store:GetSpecialtyRatio() end
 ---local sellableZoneGroups = X2Store:GetSellableZoneGroups(1)
 ---local cooldownTime = X2Store:GetSpecialtyRatioBetween(1, sellableZoneGroups[1].id)
 ---```
----@see ZONE_ID
 function X2Store:GetSpecialtyRatioBetween(fromZoneGroup, toZoneGroup) end
 
 ---Retrieves the specialty ratio for zones. Triggers the

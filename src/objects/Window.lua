@@ -25,7 +25,6 @@ function Window:SetTitleText(title) end
 ---Sets the UI layer for the Window. If the window is a child then the layer is
 ---relative to the parents layer.
 ---@param layerName UI_LAYER The name of the UI layer. (default: `"normal"`)
----@see UI_LAYER
 function Window:SetUILayer(layerName) end
 
 ---Enables or disables modal behavior for the Window.

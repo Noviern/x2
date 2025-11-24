@@ -1,3 +1,413 @@
+local addon_path = "C:/ArcheRage/Documents/Addon/" .. ADDON:GetName() .. "/"
+
+package.path     = package.path .. ";" .. addon_path .. "?.lua;"
+package.cpath    = package.cpath .. ";" .. addon_path .. "?.dll;"
+
+---comment
+---@param filename string
+---@param mode openmode
+---@return file*?
+function open(filename, mode)
+  return io.open(addon_path .. filename, mode)
+end
+
+TEXTURE_PATH = {
+  ACHIEVEMENT                                 = "ui/achievement/achievement.dds",
+  ACHIEVEMENT_ALARM                           = "ui/hud/achievement.dds",
+  ACHIEVEMENT_GAUGE                           = "ui/achievement/achievement_gauge.dds",
+  ACHIEVEMENT_LIGHT                           = "ui/achievement/light.dds",
+  ACHIEVEMENT_MAIN_PAGE                       = "ui/achievement/main_page.dds",
+  ACHIEVEMENT_RANK                            = "ui/achievement/rank.dds",
+  ACHIEVEMENT_TEXT_1                          = "ui/hud/achievement_text_01.dds",
+  ACHIEVEMENT_TEXT_2                          = "ui/hud/achievement_text_02.dds",
+  ACHIEVEMENT_TEXT_3                          = "ui/hud/achievement_text_03.dds",
+  ADDITIONAL_MAIN_MENU                        = "ui/common/additional_main_menu.dds",
+  ALARM_BG                                    = "ui/hud/alarm_bg.dds",
+  ALARM_DECO                                  = "ui/hud/deco_alarm.dds",
+  ALARM_TOWER_DEFENSE                         = "ui/hud/tower_defense.dds",
+  APPELLATION_STAMP_APPLIED                   = "ui/title/icon_selected.dds",
+  APPELLATION_STAMP_SELECT                    = "ui/title/icon_selected_yellow.dds",
+  AUCTION                                     = "ui/auction.dds",
+  AWAKEN_ENCHANT                              = "ui/inventory/socket_enchant03.dds",
+  BANNER_GOLDEN_PLAINS                        = "ui/hud/banner/instance_golden_plains.dds",
+  BATTLEFIELD_ALARM_IN_PROGRESS               = "ui/battlefield/in_progress.dds",
+  BATTLEFIELD_ALARM_READY                     = "ui/battlefield/ready_end.dds",
+  BATTLEFIELD_BEST_RATING                     = "ui/hud/best_score.dds",
+  BATTLEFIELD_BUTTON_DUNGEON                  = "ui/battlefield/list_button/button_dungeon.dds",
+  BATTLEFIELD_BUTTON_INFLUENCE                = "ui/battlefield/list_button/button_influence.dds",
+  BATTLEFIELD_BUTTON_RAID                     = "ui/battlefield/list_button/button_raid.dds",
+  BATTLEFIELD_COMMON_LIST_BUTTON              = "ui/battlefield/list_button/common.dds",
+  BATTLEFIELD_LIST_BUTTON                     = "ui/battlefield/list_button/button_battle_field.dds",
+  BATTLEFIELD_PREVIEW_PREFIX                  = "ui/battlefield/preview",
+  BATTLEFIELD_RESULT_FACTION                  = "ui/battlefield/result_golden_plains.dds",
+  BATTLEFIELD_ROUND                           = "ui/battlefield/round.dds",
+  BATTLEFIELD_ROUND_DRAW                      = "ui/battlefield/round_draw.dds",
+  BATTLEFIELD_ROUND_LOSE                      = "ui/battlefield/round_lose.dds",
+  BATTLEFIELD_ROUND_WIN                       = "ui/battlefield/round_win.dds",
+  BATTLEFIELD_SCOREBOARD                      = "ui/battlefield/scoreboard.dds",
+  BATTLEFIELD_STATUS                          = "ui/battlefield/status.dds",
+  BATTLEFIELD_TERRITORY_GAUGE                 = "ui/battlefield/icon_sea_of_chos.dds",
+  BATTLEFIELD_TIME                            = "ui/battlefield/time.dds",
+  BOOKMARK                                    = "ui/button/bookmark.dds",
+  CHARACTER_INFO                              = "ui/character/character_info.dds",
+  CHARACTER_INFO_SUB_TAB                      = "ui/character/character_tab.dds",
+  CHARACTER_SELECT                            = "ui/login_stage/04_character.dds",
+  CHAT                                        = "ui/hud/tab_chat.dds",
+  CHECK_BTN                                   = "ui/button/check_button.dds",
+  CHECK_EYE_SHAPE                             = "ui/button/eye_button.dds",
+  CHRONICLE                                   = "ui/chronicle.dds",
+  CLIENT_DRIVEN_CNT_MSG                       = "ui/clientdrivenindun/message.dds",
+  CLIENT_DRIVEN_GUIDE                         = "ui/clientdrivenindun/guide.dds",
+  COMMON_ENCHANT                              = "ui/inventory/socket_enchant01.dds",
+  COMMON_GAUGE                                = "ui/common_gauge.dds",
+  COMMUNITY_BUTTON                            = "ui/community/community_btn.dds",
+  COMMUNITY_COMMON                            = "ui/community/community_name_bg.dds",
+  COMMUNITY_ICON_FIGHT                        = "ui/community/icon_fighting.dds",
+  COMPOSITION                                 = "ui/composition.dds",
+  COSPLAY_ENCHANT                             = "ui/inventory/cosplay_enchant.dds",
+  COUNT_DOWN                                  = "ui/hud/count_down.dds",
+  CRAFT                                       = "ui/craft.dds",
+  CRAFT_2ND_CATEGORY                          = "ui/craft/2nd_category.dds",
+  CRAFT_DEFAULT_A_CATEGORY                    = "ui/craft/1st_category.dds",
+  CRAFT_EQUIPMENT_A_CATEGORY                  = "ui/craft/big_button.dds",
+  CRAFT_EQUIPMENT_B_CATEGORY                  = "ui/craft/small_button.dds",
+  CRAFT_POSITION_BUTTON                       = "ui/craft/position_button.dds",
+  CRAFT_TEXT_BOX                              = "ui/craft/text_box.dds",
+  CREDIT                                      = "ui/login_stage/html/credit_bg.dds",
+  CUSTOMIZING                                 = "ui/login_stage/03_customizing.dds",
+  DEATH                                       = "ui/death.dds",
+  DEFAULT                                     = "ui/common/default.dds",
+  DEFAULT_NEW                                 = "ui/common_new/default.dds",
+  DIALOG_GENDER_TRANSFER                      = "ui/dialog/gender_transfer.dds",
+  ENCHANT_TAB                                 = "ui/inventory/tab_enchant.dds",
+  ENCHANT_TARGET                              = "ui/inventory/socket_item.dds",
+  EQUIP_SLOT_REINFORCE                        = "ui/character/slot_enchant.dds",
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_ICON  = "ui/character/slot_enchant_special.dds",
+  EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_TEXT  = "ui/character/slot_enchant_special_text.dds",
+  EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_ICON    = "ui/character/slot_enchant_set.dds",
+  EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_TEXT    = "ui/character/slot_enchant_set_text.dds",
+  EQUIP_SLOT_REINFORCE_MSG_SLOT_LEVEL_UP_ICON = "ui/character/slot_enchant_levelup.dds",
+  EQUIP_SLOT_REINFORCE_MSG_SLOT_LEVEL_UP_TEXT = "ui/character/slot_enchant_levelup_text.dds",
+  EVENT_CENTER_ATTENDANCE                     = "ui/eventcenter/attendance_event.dds",
+  EVENT_CENTER_ATTENDANCE_REWARD              = "ui/eventcenter/reward.dds",
+  EVENT_CENTER_COMMON                         = "ui/eventcenter/star_common.dds",
+  EVENT_CENTER_INFO_ICON                      = "ui/eventcenter/icon_event.dds",
+  EVENT_CENTER_SCHEDULE                       = "ui/eventcenter/schedule.dds",
+  EVENT_CENTER_TODAY                          = "ui/eventcenter/star_content.dds",
+  EVENT_ICON                                  = "ui/common/icon_event.dds",
+  EXPEDITION                                  = "ui/button/expedition.dds",
+  EXPEDITION_ACCEPT                           = "ui/expedition/approve.dds",
+  EXPEDITION_AUTHORITY                        = "ui/expedition/authority.dds",
+  EXPEDITION_LEVEL_UP                         = "ui/expedition/level_up.dds",
+  EXPEDITION_MISSION                          = "ui/expedition/mission_bg.dds",
+  EXPEDITION_REJECT                           = "ui/expedition/refusal.dds",
+  EXPEDITION_WAR_DRAW_TEXT                    = "ui/expedition/draw_text.dds",
+  EXPEDITION_WAR_LOST_ICON                    = "ui/expedition/lose_flag.dds",
+  EXPEDITION_WAR_LOST_TEXT                    = "ui/expedition/battle_lose_text.dds",
+  EXPEDITION_WAR_ON_GOING_TEXT                = "ui/expedition/battle_ing_text.dds",
+  EXPEDITION_WAR_RESULT_ICON                  = "ui/expedition/result_icon.dds",
+  EXPEDITION_WAR_RESULT_TEXT                  = "ui/expedition/battle_result_text.dds",
+  EXPEDITION_WAR_START_ICON                   = "ui/expedition/battle_start.dds",
+  EXPEDITION_WAR_START_TEXT                   = "ui/expedition/battle_start_text.dds",
+  EXPEDITION_WAR_WIN_ICON                     = "ui/expedition/win_bugle.dds",
+  EXPEDITION_WAR_WIN_TEXT                     = "ui/expedition/battle_win_text.dds",
+  FAIRY                                       = "ui/fairy.dds",
+  FAMILY                                      = "ui/family/myfamily.dds",
+  FAMILY_HAPPY_LIFE                           = "ui/family/familybg.dds",
+  FAMILY_LEVEL_UP                             = "ui/family/family_level_up.dds",
+  GEM_ENCHANT                                 = "ui/inventory/socket_enchant02.dds",
+  GRADE_ENCHANT                               = "ui/inventory/grade_enchant.dds",
+  GRADE_ENCHANT_ALARM                         = "ui/hud/enchant.dds",
+  GRADE_ENCHANT_BROADCAST_ALARM               = "ui/hud/enchant_broadcast.dds",
+  HEIR_LEVEL_UP                               = "ui/effect/successor_level_up.dds",
+  HEIR_SKILL                                  = "ui/skill/successor.dds",
+  HERO_CANDIDATE_ALERT_MSG                    = "ui/hero/hero_candidate.dds",
+  HERO_CONDITION_EFFECT                       = "ui/hero/hero_effect.dds",
+  HERO_CURRENT_STATUS                         = "ui/common/hero_condition.dds",
+  HERO_CURRENT_STATUS_TEXT                    = "ui/hero/main_text.dds",
+  HERO_ELECTION_ALERT                         = "ui/hud/icon_vote.dds",
+  HERO_ELECTION_ALERT_MSG                     = "ui/hero/hero_election.dds",
+  HERO_ELECTION_DAY_ALERT_MSG                 = "ui/hero/vote.dds",
+  HERO_ELECTION_MAIL                          = "ui/hero/trophy.dds",
+  HERO_ELECTION_RESULT_ICON                   = "ui/hero/birth.dds",
+  HERO_ELECTION_RULE                          = "ui/hero/graph.dds",
+  HERO_LEADERSHIP_RANKING_END_MSG             = "ui/hero/hero_leadership.dds",
+  HERO_QUEST_IMAGE                            = "ui/hero/hero_img.dds",
+  HERO_SHORTCUT                               = "ui/hero/ani_standby.dds",
+  HUD                                         = "ui/common/hud.dds",
+  HUD_EXPEDITION_WAR_ALARM                    = "ui/hud/expedition.dds",
+  HUD_GAUGE                                   = "ui/common/hud_gauge.dds",
+  HUD_TEXT                                    = "ui/common/hud_text.dds",
+  HUD_VOTE                                    = "ui/hud/btn_vote.dds",
+  ICON_WAITING                                = "ui/common/icon_waiting.dds",
+  INDUN_CHANNEL_SELECT                        = "ui/indun_channel.dds",
+  INGAME_SHOP                                 = "ui/itemshop.dds",
+  INGAME_SHOP_TEXT                            = "ui/itemshop_text.dds",
+  INVENTORY_DEFAULT                           = "ui/inventory/default.dds",
+  INVENTORY_GRADE                             = "ui/inventory/grade_info.dds",
+  ITEM_DIAGONAL_LINE                          = "ui/hud/item_diagonal_line.dds",
+  ITEM_GRADE                                  = "ui/grade.dds",
+  ITEM_GUIDE                                  = "ui/equipment.dds",
+  ITEM_SID_EEFFECT                            = "ui/inventory/icon_effect.dds",
+  KEY_123                                     = "ui/clientdrivenindun/key_123.dds",
+  KEY_F                                       = "ui/clientdrivenindun/key_f.dds",
+  KEY_MOUSE                                   = "ui/clientdrivenindun/mouse.dds",
+  KEY_R                                       = "ui/clientdrivenindun/key_r.dds",
+  KEY_T                                       = "ui/clientdrivenindun/key_t.dds",
+  KEY_U                                       = "ui/clientdrivenindun/key_u.dds",
+  KEY_W                                       = "ui/clientdrivenindun/key_w.dds",
+  KEY_WASD                                    = "ui/clientdrivenindun/key_wasd.dds",
+  KEY_Y                                       = "ui/clientdrivenindun/key_y.dds",
+  KILL_EFFECT_BG                              = "ui/hud/kill_effect/bg.dds",
+  KILL_EFFECT_FIFTH_BELOW_DECO                = "ui/hud/kill_effect/fifth_below_deco.dds",
+  KILL_EFFECT_FIFTH_KILL                      = "ui/hud/kill_effect/fifth_kill.dds",
+  KILL_EFFECT_FIRST_KILL                      = "ui/hud/kill_effect/first_kill.dds",
+  KILL_EFFECT_FROM_SECOND_TO_FOURTH_KILL      = "ui/hud/kill_effect/from_second_to_fourth_kill.dds",
+  KILL_EFFECT_WAR_OF_GOD                      = "ui/hud/kill_effect/war_of_god.dds",
+  LEARN_ABILITY                               = "ui/hud/skill.dds",
+  LEVLE_UP                                    = "ui/effect/level_up.dds",
+  LIFE_ALERT                                  = "ui/hud/die.dds",
+  LOGIN_STAGE_ANIMATION                       = "ui/login_stage/light.dds",
+  LOOK_CHANGED                                = "ui/look_change.dds",
+  LOOT_GACHA                                  = "ui/inventory/gacha.dds",
+  MAIL                                        = "ui/mailbox/mailbox.dds",
+  MAP_ICON                                    = "ui/map/icon/npc_icon.dds",
+  MEGAPHONE_CHAT                              = "ui/common/chat.dds",
+  MISSION_TEXT                                = "ui/hud/mission_text.dds",
+  MONEY_WINDOW                                = "ui/common/money_window.dds",
+  NATION_MAP_BG                               = "ui/nation/map_bg.dds",
+  NATION_MAP_COLOR                            = "ui/nation/map_color.dds",
+  OPTION                                      = "ui/button/option.dds",
+  OVERHEAD_MARK                               = "ui/hud/overhead_mark.dds",
+  PAPER_DECO                                  = "ui/paper_deco.dds",
+  PEOPLE                                      = "ui/common/people.dds",
+  PERIOD                                      = "ui/ranking/period.dds",
+  PET                                         = "ui/pet.dds",
+  PET_SLOT                                    = "ui/pet_slot.dds",
+  PREMIUM_CHAR_SELECT_REPRESENT_CHAR_ICON     = "ui/login_stage/img_text.dds",
+  PREMIUM_SERVICE_GRADE_ARROW                 = "ui/premium_arrow.dds",
+  PREMIUM_SERVICE_GRADE_PROGRESS_BAR          = "ui/premium.dds",
+  PREMIUM_SERVICE_ICON                        = "ui/login_stage/premium.dds",
+  PREMIUM_SERVICE_LOGIN_STAGE_GRADE           = "ui/login_stage/background/premium.dds",
+  QUEST_INFO                                  = "ui/common/quest_info.dds",
+  QUEST_LEVEL                                 = "ui/common/quest_level.dds",
+  QUEST_LIST                                  = "ui/quest_list.dds",
+  QUEST_NOTIFIER                              = "ui/quest/quest_notifier.dds",
+  RAID                                        = "ui/raid.dds",
+  RAID_RECRUIT                                = "ui/classification_icon.dds",
+  RAID_RECRUIT_BOARD                          = "ui/raid/board.dds",
+  RAID_ROLE                                   = "ui/raid_role.dds",
+  RAID_TAB                                    = "ui/hud/raid_tab.dds",
+  RAID_TYPE_ICON                              = "ui/raid_type_icon.dds",
+  RANDOMBOX                                   = "ui/inventory/randombox_bg.dds",
+  RANKING_FISHING_ALARM                       = "ui/ranking/fishing.dds",
+  RANKING_GRADE                               = "ui/grade.dds",
+  RANKING_TAB                                 = "ui/ranking/tab_ranking.dds",
+  REPAIR                                      = "ui/repair.dds",
+  REPORTER                                    = "ui/hud/nametag/reporter.dds",
+  REPUTATION                                  = "ui/hero/appraisal_btn.dds",
+  REPUTATION_STATUS                           = "ui/hero/appraisal.dds",
+  RESIDENT_BG                                 = "ui/resident_bg.dds",
+  REWARD                                      = "ui/button/reward.dds",
+  RISK_ALARM                                  = "ui/hud/risk_alarm.dds",
+  SCALE_ENCHANT                               = "ui/inventory/socket_enchant03.dds",
+  SCROLL                                      = "ui/button/scroll_button.dds",
+  SECURITY                                    = "ui/security/security.dds",
+  SERVER_SELECT                               = "ui/login_stage/00_server.dds",
+  SIEGE_ATTACK_ICON                           = "ui/siege/attack.dds",
+  SIEGE_COMMANDER                             = "ui/siege/commander.dds",
+  SIEGE_DECLARE                               = "ui/siege/declare_siege.dds",
+  SIEGE_DECLARE_CANCEL                        = "ui/siege/declare_siege_cancel.dds",
+  SIEGE_DECLARE_TERRITORY                     = "ui/siege/declare_territory.dds",
+  SIEGE_DEFENSE_ICON                          = "ui/siege/defense.dds",
+  SIEGE_ENGRAVING_START                       = "ui/siege/engraving_start.dds",
+  SIEGE_GUARD_TOWER_ATTACK                    = "ui/siege/guard_tower_attack.dds",
+  SIEGE_HP_BAR                                = "ui/hud/siege_gauge.dds",
+  SIEGE_ICON                                  = "ui/siege/siege_icon.dds",
+  SIEGE_PERIOD                                = "ui/siege/period_siege.dds",
+  SIEGE_RAID                                  = "ui/icon_commander.dds",
+  SIEGE_RAID_RECRUIT_BOARD                    = "ui/raid/war_flag.dds",
+  SIEGE_READY_TO_SIEGE                        = "ui/siege/period_warmup.dds",
+  SIEGE_REINFORCEMENT                         = "ui/siege/reinforcement.dds",
+  SIEGE_RESULT_ICON                           = "ui/siege/result_icon.dds",
+  SIEGE_RESULT_TEXT                           = "ui/siege/result_text.dds",
+  SIEGE_RESULT_WATCH                          = "ui/siege/result_watch.dds",
+  SKILL                                       = "ui/skill/skill.dds",
+  SKILL_ABILITY                               = "ui/skill/ability.dds",
+  SKILL_SYNERGY                               = "ui/skill/skill_series.dds",
+  SLAVE_ETC                                   = "ui/slave/slave_etc.dds",
+  SLAVE_SHIP_1                                = "ui/slave/ship_1.dds",
+  SLAVE_SHIP_2                                = "ui/slave/ship_2.dds",
+  SLAVE_SHIP_3                                = "ui/slave/ship_3.dds",
+  SLAVE_SLOT                                  = "ui/slave/slot.dds",
+  SMELTING_ENCHANT                            = "ui/inventory/socket_enchant04.dds",
+  SOCKET_ENCHANT                              = "ui/inventory/socket_enchant.dds",
+  SPECIAL_SKILL                               = "ui/skill/unique_skill.dds",
+  STEP_ARROW                                  = "ui/common/step_arrow.dds",
+  SUBZONE_SYSTEM                              = "ui/hud/system_subzone.dds",
+  TAB_LIST                                    = "ui/common/tab_list.dds",
+  TEAM_ICON                                   = "ui/common/team_icon.dds",
+  TGOS_TITLE                                  = "ui/tgos.dds",
+  TIMER                                       = "ui/hud/timer.dds",
+  TOOLTIP                                     = "ui/common/tooltip.dds",
+  TOWER_DEFENSE_ICON                          = "ui/tower_defense/%s.dds",
+  TRADE_GREEN                                 = "ui/trade/trade_green.dds",
+  TRADE_YELLOW                                = "ui/trade/trade_yellow.dds",
+  TUTORIAL                                    = "ui/tutorials/tutorial.dds",
+  UCC                                         = "ui/ucc/ucc_ui.dds",
+  ULC_IMAGE_PREFIX                            = "ui/ulc",
+  ULC_ULCOCK_EFFECT_BLAST                     = "ui/ulc/eff_blast.dds",
+  ULC_ULCOCK_EFFECT_LOCK                      = "ui/ulc/eff_lock.dds",
+  UNITFRAME_GRADE                             = "ui/hud/unitframe_grade.dds",
+  USER_TRIAL_STATUS                           = "ui/user_trial/status.dds",
+  USER_TRIAL_VERDICT                          = "ui/user_trial/verdict.dds",
+  VIRTUAL_KEYBOARD                            = "ui/virtual_keyboard.dds",
+  ZONE_PERMISSION_OUT                         = "ui/hud/compulsion_movement.dds",
+}
+
+CURSOR_PATH = {
+  MOVE = "ui/cursor/interface_move_cursor.dds"
+}
+
+BUTTON_TEXTURE_PATH = {
+  CINEMA              = "ui/cinema.dds",
+  COMMON_BACK         = "ui/button/back_btn.dds",
+  COMMON_REMOVE       = "ui/button/common/remove.dds",
+  COMMON_RESET        = "ui/button/common/reset.dds",
+  CUTSCENE_PLAY       = "ui/cutscene_play.dds",
+  DAY_EVENT           = "ui/button/day_event.dds",
+  HOUSING             = "ui/housing/button.dds",
+  MAILBOX             = "ui/button/mailbox_btn.dds",
+  MAP                 = "ui/map/frame_map.dds",
+  PAGE                = "ui/button/page_button.dds",
+  READ_MAIL           = "ui/button/mailbox.dds",
+  UTHSTIN_PAGE_EXPAND = "ui/common/tab_list.dds"
+}
+
+LOGIN_STAGE_TEXTURE_PATH = {
+  COLOR_PALETTE = "ui/login_stage/color_palette.dds",
+  GAME_GRADE_BG = "ui/login_stage/background/game_grade.dds",
+  HEALTH_NOTICE = "ui/login_stage/background/game_information.dds",
+  SAVE_LOAD     = "ui/beautyshop/save_load.dds",
+}
+
+---scriptsbin\commonui\baselib\variable.lua
+FONT_PATH = {
+  DEFAULT = "font_main",
+  SUB     = "font_sub",
+  COMBAT  = "font_combat",
+}
+
+
+---scriptsbin\commonui\baselib\variable.lua
+FONT_SIZE = {
+  DEFAULT = 13,
+  SMALL   = 11,
+  MIDDLE  = 13,
+  LARGE   = 15,
+  CINEMA  = 26,
+  XLARGE  = 18,
+  XXLARGE = 22,
+}
+
+---scriptsbin\x2ui\baselib\locale\en_us.lua
+TEXTBOX_LINE_SPACE = {
+  SMALL      = 0,
+  MIDDLE     = 1,
+  LARGE      = 5,
+  TOOLTIP    = 0,
+  QUESTGUIDE = 3
+}
+
+---@TODO: rewrite this so that result can be cast into the correct combat class and returned.
+---@param combatEvent COMBAT_EVENT
+---@param ... any
+---@return table
+function ParseCombatMessage(combatEvent, ...)
+  local pos = combatEvent:find("_")
+  local arg = { ... }
+  local prefix = combatEvent:sub(1, pos - 1)
+  local suffix = combatEvent:sub(pos + 1)
+  local result = {}
+  local index = 0
+  local function GetNextIndex()
+    index = index + 1
+    return index
+  end
+  if prefix == "MELEE" then
+  elseif prefix == "SPELL" then
+    result.spellId     = arg[GetNextIndex()]
+    result.spellName   = arg[GetNextIndex()]
+    result.spellSchool = arg[GetNextIndex()]
+  elseif prefix == "ENVIRONMENTAL" then
+    result.source  = arg[GetNextIndex()]
+    result.subType = arg[GetNextIndex()]
+    if result.subType ~= nil and result.subType ~= -1 then
+      result.mySlave = arg[GetNextIndex()]
+    end
+  end
+  if suffix == "DAMAGE" or suffix == "DOT_DAMAGE" then
+    result.damage = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+    result.hitType = arg[GetNextIndex()]
+    result.reduced = arg[GetNextIndex()]
+    result.elementDamage = arg[GetNextIndex()]
+    result.showElementEffect = arg[GetNextIndex()]
+    result.elementType = arg[GetNextIndex()]
+    result.synergy = arg[GetNextIndex()]
+  elseif suffix == "MISSED" then
+    result.missType = arg[GetNextIndex()]
+    result.damage = arg[GetNextIndex()]
+    result.reduced = arg[GetNextIndex()]
+    result.elementDamage = arg[GetNextIndex()]
+    result.showElementEffect = arg[GetNextIndex()]
+    result.elementType = arg[GetNextIndex()]
+  elseif suffix == "HEALED" then
+    result.heal = arg[GetNextIndex()]
+    result.hitType = arg[GetNextIndex()]
+    result.showElementEffect = arg[GetNextIndex()]
+    result.elementType = arg[GetNextIndex()]
+  elseif suffix == "ENERGIZE" then
+    result.amount = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+  elseif suffix == "DRAIN" then
+    result.amount = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+  elseif suffix == "LEECH" then
+    result.amount = arg[GetNextIndex()]
+    result.powerType = arg[GetNextIndex()]
+  elseif suffix == "CAST_FAILED" then
+    result.failType = arg[GetNextIndex()]
+  elseif suffix == "AURA_APPLIED" or suffix == "AURA_REMOVED" then
+    result.auraType = arg[GetNextIndex()]
+    result.combatText = arg[GetNextIndex()]
+  end
+  return result
+end
+
+---@TODO: this only works if dump is in the toc.g
+---Dumps a table line by line to the chat.
+---@param var table
+---@param ctx? ctx
+function ADDON:ChatLogTable(var, ctx)
+  local output = dump(var, ctx)
+  for line in output:gmatch("([^\n]*)\n?") do
+    ADDON:ChatLog(line)
+  end
+end
+
+local ChatLog = ADDON.ChatLog
+
+---Logs a message to the chat under `CMF_SYSTEM`.
+---@param logMessage any The message to log.
+---@diagnostic disable-next-line: duplicate-set-field
+function ADDON:ChatLog(logMessage)
+  ChatLog(ADDON, tostring(logMessage))
+end
+
+
+--------------------------------------------------------------------------------
+
 ---Checkbutton
 -- ADDON:ImportObject(OBJECT.Button)
 -- ADDON:ImportObject(OBJECT.CheckButton)
@@ -103,31 +513,6 @@
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.RoadMap)
-
--- local r = widgetassert(UIParent:CreateWidget("roadmap", "r", "UIParent"))
--- r:SetMapSize(300)
--- r:SetExtent(928, 556)
--- r:AddAnchor("CENTER", 0, 0)
--- r:InitMapData()
--- r:Show(true)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.TextDrawable)
-
--- local w = widgetassert(UIParent:CreateWidget("window", "w", "UIParent"))
--- w:SetExtent(100, 100)
--- w:Show(true)
-
--- local t = w:CreateTextDrawable(FONT_PATH.DEFAULT, FONT_SIZE.DEFAULT, "background")
-
--- t:SetText("100")
--- t:AddAnchor("CENTER", 0, 0)
--- t:SetSnap(true)
-
---------------------------------------------------------------------------------
-
 -- ADDON:ImportAPI(API.X2Option)
 
 -- ADDON:ChatLogTable(X2Option:GetOptionInfo(1))
@@ -143,27 +528,6 @@
 -- ADDON:ChatLog(tostring(X2Option:GetOptionItemValue(OIT_OPTION_CHARACTER_PRIVACY_STATUS)))
 -- X2Option:SetItemFloatValue(OIT_OPTION_CHARACTER_PRIVACY_STATUS, 1)
 -- ADDON:ChatLog(tostring(X2Option:GetOptionItemValue(OIT_OPTION_CHARACTER_PRIVACY_STATUS)))
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportAPI(API.X2Store)
-
--- local btn = UIParent:CreateWidget("button", "btn", "UIParent")
--- btn:SetStyle("text_default")
--- btn:AddAnchor("CENTER", 0, 0)
--- btn:SetText("test")
--- btn:Show(true)
-
--- btn:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---   ADDON:ChatLog("click")
---   X2Store:GetZoneSpecialtyRatio()
--- end)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportAPI(API.X2Resident)
--- ADDON:ChatLog(tostring(X2Resident:FilterHousingTradeList(HOUSING_LIST_FILTER_SMALL, "")))
 
 --------------------------------------------------------------------------------
 
@@ -193,19 +557,6 @@
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.Textbox)
--- local tb = UIParent:CreateWidget("textbox", "tb", "UIParent")
--- -- tb:ApplyUIScale(false)
--- tb:SetExtent(100, 100)
--- tb:AddAnchor("CENTER", 0, 0)
--- tb:SetLineSpace(TEXTBOX_LINE_SPACE.SMALL)
--- tb:SetText("asfasd asdfasdf asd dfasdfasdf asdfasdfas dfasdf asdfasdf \n asdfasdf test teasdf asdfasdf asd asdfasdf asdfas as asdfasdf asdf")
--- tb:Show(true)
-
--- ADDON:ChatLog("GetTextLength " .. tostring(tb:GetTextLength()))
-
---------------------------------------------------------------------------------
-
 -- ADDON:ImportObject(OBJECT.Tab)
 -- local tab = UIParent:CreateWidget("tab", "tab", "UIParent")
 -- tab:SetExtent(100, 100)
@@ -215,7 +566,7 @@
 -- tab:SetGap(10)
 -- tab:SetOffset(10)
 -- tab:AddSimpleTab("b")
--- -- tab:AlignTabButtons()
+-- tab:AlignTabButtons()
 -- tab:AddAnchor("CENTER", 0, 0)
 -- tab:Show(true)
 
@@ -380,33 +731,33 @@
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.ChatTab)
+-- ADDON:ImportObject(OBJECT.Tab)
+-- ADDON:ImportObject(OBJECT.Button)
+-- ADDON:ImportObject(OBJECT.ChatWindow)
 -- ADDON:ImportObject(OBJECT.Textbox)
 -- local chat = UIParent:CreateWidget("chatwindow", "chat", "UIParent")
 -- chat:SetExtent(500, 500)
 -- chat:AddAnchor("CENTER", 0, 0)
 -- chat:Show(true)
--- chat:SetResizingBorderSize(11, 11, 12, 12)
--- chat:SetInjectable(true)
--- chat:AllowTabSwitch(false)
--- chat:UseAddTabButton(true)
 
 -- -- chat:SetTabAreaInset(1, 1, 1, 1)
 -- -- chat:SetTabAreaHeight(100)
--- chat:SetNotifyBlinkingFreq(50)
--- chat:SetMinTabWidth(250)
--- chat:UseAutoResizingTabButtonMode(true)
--- chat:SetMinResizingExtent(345, 160)
--- chat:SetMaxResizingExtent(650, 620)
--- chat:UseResizing(true)
+-- -- chat:SetNotifyBlinkingFreq(50)
+-- -- chat:SetMinResizingExtent(345, 160)
+-- -- chat:SetMaxResizingExtent(650, 620)
+-- -- chat:UseResizing(true)
 -- -- chat:SetContentOffset(100, 100, 100, 100)
--- chat:SetSlideTimeInDragging(1500)
+-- -- chat:SetSlideTimeInDragging(1500)
 
 -- chat:SetChatWindowId(1)
--- chat:UseSlidingButton(false)
+-- chat:SetMinTabWidth(200)
+-- -- chat:UseSlidingButton(false)
 -- chat:SetTabButtonAlpha(.5, .2)
--- chat:SetCaretOffset(0, 100)
--- chat:SetLeftLineOffset(100)
+-- -- chat:SetCaretOffset(0, 100)
+-- chat:SetLeftLineOffset(200)
+-- chat:SetRightLineOffset(200)
+-- chat:SetMaxNotifyTime(3000)
+-- chat:SetNotifyBlinkingFreq(100)
 
 -- ADDON:ChatLog(chat:GetUrlButton():GetObjectType())
 -- ADDON:ChatLog(chat:GetImeToggleButton():GetObjectType())
@@ -1016,42 +1367,43 @@
 --   RESET_UI_TEXT = "Example Addon UIBounds Reset!"
 -- }
 
--- -- LOCALE                 = {
--- --   ADDON_NAME    = "Пример аддона",
--- --   TITLE         = "Привет, ArcheRage!",
--- --   BODY          =
--- --     "Это пример аддона, который можно переключать из меню игры. Когда окно скрыто, "
--- --     .. "оно уничтожается, а когда отображается — пересоздаётся. Перетаскивая края, "
--- --     .. "окно можно масштабировать, а перетаскивая заголовок — перемещать. Положение "
--- --     .. "и размеры окна можно сохранить, нажав кнопку \"Сохранить границы UI\", "
--- --     .. "и сбросить, нажав кнопку |cFFFF0000\"Сбросить границы UI\"|r.\n",
--- --   ENABLE_MODAL  = "Включить модальность окна",
--- --   SAVE_UI       = "Сохранить границы UI",
--- --   SAVE_UI_TEXT  = "Границы UI примера аддона сохранены!",
--- --   RESET_UI      = "Сбросить границы UI",
--- --   RESET_UI_TEXT = "Границы UI примера аддона сброшены!"
--- -- }
+-- LOCALE                 = {
+--   ADDON_NAME    = "Пример аддона",
+--   TITLE         = "Привет, ArcheRage!",
+--   BODY          =
+--     "Это пример аддона, который можно переключать из меню игры. Когда окно скрыто, "
+--     .. "оно уничтожается, а когда отображается — пересоздаётся. Перетаскивая края, "
+--     .. "окно можно масштабировать, а перетаскивая заголовок — перемещать. Положение "
+--     .. "и размеры окна можно сохранить, нажав кнопку \"Сохранить границы UI\", "
+--     .. "и сбросить, нажав кнопку |cFFFF0000\"Сбросить границы UI\"|r.\n",
+--   ENABLE_MODAL  = "Включить модальность окна",
+--   SAVE_UI       = "Сохранить границы UI",
+--   SAVE_UI_TEXT  = "Границы UI примера аддона сохранены!",
+--   RESET_UI      = "Сбросить границы UI",
+--   RESET_UI_TEXT = "Границы UI примера аддона сброшены!"
+-- }
 
--- -- LOCALE = {
--- --   ADDON_NAME    = "Exemple d'Addon",
--- --   TITLE         = "Bonjour, ArcheRage !",
--- --   BODY          =
--- --     "Ceci est un exemple d'addon qui peut être activé depuis le menu du jeu. Lorsque la "
--- --     .. "fenêtre est masquée, elle est détruite et lorsqu'elle est affichée, elle est recréée. "
--- --     .. "En faisant glisser les bords, la fenêtre peut être redimensionnée et en faisant glisser "
--- --     .. "la barre de titre, la fenêtre peut être déplacée. La position et les dimensions de la "
--- --     .. "fenêtre peuvent être sauvegardées en cliquant sur le bouton \"Sauvegarder les limites UI\" "
--- --     .. "et réinitialisées en cliquant sur le bouton |cFFFF0000\"Réinitialiser les limites UI\"|r.\n",
--- --   ENABLE_MODAL  = "Activer le mode modal de la fenêtre",
--- --   SAVE_UI       = "Sauvegarder les limites UI",
--- --   SAVE_UI_TEXT  = "Limites UI de l'exemple d'addon sauvegardées !",
--- --   RESET_UI      = "Réinitialiser les limites UI",
--- --   RESET_UI_TEXT = "Limites UI de l'exemple d'addon réinitialisées !"
--- -- }
+-- LOCALE = {
+--   ADDON_NAME    = "Exemple d'Addon",
+--   TITLE         = "Bonjour, ArcheRage !",
+--   BODY          =
+--     "Ceci est un exemple d'addon qui peut être activé depuis le menu du jeu. Lorsque la "
+--     .. "fenêtre est masquée, elle est détruite et lorsqu'elle est affichée, elle est recréée. "
+--     .. "En faisant glisser les bords, la fenêtre peut être redimensionnée et en faisant glisser "
+--     .. "la barre de titre, la fenêtre peut être déplacée. La position et les dimensions de la "
+--     .. "fenêtre peuvent être sauvegardées en cliquant sur le bouton \"Sauvegarder les limites UI\" "
+--     .. "et réinitialisées en cliquant sur le bouton |cFFFF0000\"Réinitialiser les limites UI\"|r.\n",
+--   ENABLE_MODAL  = "Activer le mode modal de la fenêtre",
+--   SAVE_UI       = "Sauvegarder les limites UI",
+--   SAVE_UI_TEXT  = "Limites UI de l'exemple d'addon sauvegardées !",
+--   RESET_UI      = "Réinitialiser les limites UI",
+--   RESET_UI_TEXT = "Limites UI de l'exemple d'addon réinitialisées !"
+-- }
 
--- --------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
--- local UIC_EXAMPLEADDON = 011803080518010705
+-- local UIC_EXAMPLEADDON = 0118030805180107
+-- local UIC_EXAMPLEADDON = 16777215
 -- local WINDOW           = {
 --   WIDTH              = 660,
 --   HEIGHT             = 250,
@@ -1142,12 +1494,10 @@
 
 --   -- Create a background.
 --   local background = exampleAddonWindow:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
---   ADDON:ChatLog(tostring(background:IsValidUIObject())) -- TODO:
 --   background:AddAnchor("TOPLEFT", exampleAddonWindow, -5, -5)
 --   background:AddAnchor("BOTTOMRIGHT", exampleAddonWindow, 5, 5)
 --   background:SetTextureInfo("main_bg")
 --   exampleAddonWindow.background = background
---   ADDON:ChatLog(tostring(background:IsValidUIObject())) -- TODO:
 
 --   -- Create a title decoration.
 --   local decoration = exampleAddonWindow:CreateDrawable(TEXTURE_PATH.DEFAULT, "main_bg_deco", "background")
@@ -1187,6 +1537,7 @@
 
 --   -- Create a body textbox.
 --   local bodyTextbox = exampleAddonWindow:CreateChildWidget("textbox", "bodytextbox", 0, true)
+--   bodyTextbox:SetHeight(100)
 --   bodyTextbox:AddAnchor("TOPLEFT", titleBar, "BOTTOMLEFT", 15, WINDOW.MARGIN / 2)
 --   bodyTextbox:AddAnchor("TOPRIGHT", titleBar, "BOTTOMRIGHT", -15, WINDOW.MARGIN / 2)
 --   bodyTextbox.style:SetFontSize(FONT_SIZE.LARGE)
@@ -2236,12 +2587,11 @@ ADDON:ImportAPI(API.X2Option)
 -- roadmapWindow:SetExtent(928, 556)
 -- -- roadmapWindow:AddAnchor("TOPLEFT", frame, "TOPLEFT", 0, 0)
 -- roadmapWindow:AddAnchor("TOPRIGHT", 0, 0)
--- roadmapWindow:SetUILayer("game")
--- roadmapWindow:SetUILayer("game")
+-- roadmapWindow:SetUILayer("tooltip")
 -- -- roadmapWindow:EnableScroll(true)
 -- -- roadmapWindow:EnablePick(false, true)
 
--- -- roadmapWindow:Show(true)
+-- roadmapWindow:Show(true)
 
 -- -- local bg = roadmapWindow:CreateColorDrawable(1, 0, 0, .1, "background")
 -- -- bg:AddAnchor("TOPLEFT", roadmapWindow, 0, 0)
@@ -2521,13 +2871,671 @@ ADDON:ImportAPI(API.X2Option)
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportAPI(API.X2Map)
+-- -- ADDON:ImportObject(OBJECT.Textbox)
+-- ADDON:ImportObject(OBJECT.EmptyWidget)
+-- ADDON:ImportObject(OBJECT.Window)
+-- ADDON:ImportObject(OBJECT.NinePartDrawable)
+-- ADDON:ImportObject(OBJECT.Button)
+-- ADDON:ImportObject(OBJECT.Slider)
+-- ADDON:ImportObject(OBJECT.ColorDrawable)
+-- ADDON:ImportObject(OBJECT.Grid)
+-- -- ADDON:ImportObject(OBJECT.TextStyle)
 
--- X2Map:ShowWorldmapLocation(181, 0, 0, 0)
+-- local window = UIParent:CreateWidget("window", "test", "UIParent")
+-- window:SetExtent(430, 620)
+-- window:AddAnchor("TOPLEFT", 0, 0)
+-- window:Show(true)
+
+-- local background = window:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
+-- background:AddAnchor("TOPLEFT", window, -5, -5)
+-- background:AddAnchor("BOTTOMRIGHT", window, 5, 5)
+-- background:SetTextureInfo("main_bg")
+-- window.background = background
+
+-- local content = window:CreateChildWidget("emptywidget", "content", 0, true)
+-- content:AddAnchor("TOPLEFT", 20, 40)
+-- content:Show(true)
+-- content:EnableScroll(true)
+
+-- -- local content = window:CreateChildWidget("grid", "addons", 0, true)
+-- -- content:AddAnchor("TOPLEFT", 20, 40)
+-- -- content:Show(true)
+-- -- -- content:EnableScroll(true)
+
+-- -- content:SetColCount(4)
+-- -- content:SetColWidth(1, 20)
+-- -- content:SetColWidth(2, 20)
+-- -- content:SetColWidth(3, 20)
+-- -- content:SetColWidth(4, 20)
+-- -- content:SetDefaultRowHeight(100)
+-- -- content:SetRowCount(5)
+-- -- content:SetRowHeight(1, 300)
+-- -- content:SetHeaderType("top")
+-- -- ADDON:ImportObject(OBJECT.Label)
+-- -- content:SetTopHeaderHeight(100)
+-- -- -- local title = content:CreateChildWidget("label", "testbtn", 0, true)
+-- -- -- title:SetText("Archerage.to")
+-- -- -- title.style:SetColorByKey("default")
+-- -- -- title:SetExtent(50, 50)
+-- -- -- content:SetItem(title, 0, 1, true, 10, false)
+-- -- local label = content:CreateChildWidget("label", "testbtn", 0, true)
+-- -- label:SetText("Archerage.to")
+-- -- label.style:SetColorByKey("default")
+-- -- label:SetExtent(50, 50)
+-- -- content:SetItem(label, 1, 1, true, 10, false)
+
+-- -- local lbg = label:CreateColorDrawable(1, 0, 0, .1, "background")
+-- -- lbg:AddAnchor("TOPLEFT", label, 0, 0)
+-- -- lbg:AddAnchor("BOTTOMRIGHT", label, 0, 0)
+-- -- local label2 = content:CreateChildWidget("label", "asdf", 0, true)
+-- -- label2:SetText("asdf.to")
+-- -- label2.style:SetColorByKey("default")
+-- -- label2:SetExtent(50, 50)
+-- -- local lbg = label2:CreateColorDrawable(1, 0, 0, .1, "background")
+-- -- lbg:AddAnchor("TOPLEFT", label2, 0, 0)
+-- -- lbg:AddAnchor("BOTTOMRIGHT", label2, 0, 0)
+-- -- content:SetItem(label2, 2, 1, true, 11, false)
+-- -- local label3 = content:CreateChildWidget("label", "asdf", 0, true)
+-- -- label3:SetText("asdf.to")
+-- -- label3.style:SetColorByKey("default")
+-- -- label3:SetExtent(50, 50)
+-- -- content:SetItem(label3, 3, 1, true, 11, false)
+
+-- local scrollbar = window:CreateChildWidget("emptywidget", "content", 0, true)
+-- scrollbar:SetWidth(20)
+-- scrollbar:AddAnchor("TOPRIGHT", -20, 40)
+-- scrollbar:AddAnchor("BOTTOMRIGHT", 0, -20)
+-- content:AddAnchor("BOTTOMRIGHT", scrollbar, "BOTTOMLEFT", 0, 0)
+
+-- local upButton = scrollbar:CreateChildWidget("button", "upbutton", 0, true)
+-- -- upButton:SetStyle("slider_scroll_button_up") -- This doesn't exist yet.
+-- local normalBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- normalBackground:SetTextureInfo("scroll_button_up", "normal")
+-- normalBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
+-- normalBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
+-- upButton:SetNormalBackground(normalBackground)
+
+-- local highlightBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- highlightBackground:SetTextureInfo("scroll_button_up", "over")
+-- highlightBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
+-- highlightBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
+-- upButton:SetHighlightBackground(highlightBackground)
+
+-- local pushedBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- pushedBackground:SetTextureInfo("scroll_button_up", "click")
+-- pushedBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
+-- pushedBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
+-- upButton:SetPushedBackground(pushedBackground)
+
+-- local disabledBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- disabledBackground:SetTextureInfo("scroll_button_up", "disable")
+-- disabledBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
+-- disabledBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
+-- upButton:SetDisabledBackground(disabledBackground)
+
+-- upButton:AddAnchor("TOPRIGHT", scrollbar, 0, 0)
+-- upButton:SetExtent(20, 12)
+
+-- local downButton = scrollbar:CreateChildWidget("button", "upbutton", 0, true)
+-- -- upButton:SetStyle("slider_scroll_button_down") -- This doesn't exist yet.
+-- local normalBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- normalBackground:SetTextureInfo("scroll_button_down", "normal")
+-- normalBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
+-- normalBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
+-- downButton:SetNormalBackground(normalBackground)
+
+-- local highlightBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- highlightBackground:SetTextureInfo("scroll_button_down", "over")
+-- highlightBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
+-- highlightBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
+-- downButton:SetHighlightBackground(highlightBackground)
+
+-- local pushedBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- pushedBackground:SetTextureInfo("scroll_button_down", "click")
+-- pushedBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
+-- pushedBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
+-- downButton:SetPushedBackground(pushedBackground)
+
+-- local disabledBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
+-- disabledBackground:SetTextureInfo("scroll_button_down", "disable")
+-- disabledBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
+-- disabledBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
+-- downButton:SetDisabledBackground(disabledBackground)
+
+-- downButton:AddAnchor("BOTTOMRIGHT", scrollbar, 0, 0)
+-- downButton:SetExtent(20, 12)
+
+-- local slider = scrollbar:CreateChildWidget("slider", "asdf", 0, true)
+-- slider:AddAnchor("TOPLEFT", upButton, "BOTTOMLEFT", 0, 0)
+-- slider:AddAnchor("BOTTOMRIGHT", downButton, "TOPRIGHT", 0, 0)
+
+-- local bg = scrollbar:CreateDrawable(TEXTURE_PATH.SCROLL, "scroll_frame_bg", "background")
+-- bg:SetTextureColor("default")
+-- bg:AddAnchor("TOPLEFT", slider, 3, -9)
+-- bg:AddAnchor("BOTTOMRIGHT", slider, -3, 9)
+
+-- local thumb = slider:CreateChildWidget("button", "thumb", 0, true)
+-- thumb:EnableDrag(true)
+-- thumb:SetExtent(20, 40)
+
+-- local normalBackground = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
+-- normalBackground:SetTextureInfo("thumb_df")
+-- normalBackground:AddAnchor("TOPLEFT", thumb, 0, 0)
+-- normalBackground:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
+-- thumb:SetNormalBackground(normalBackground)
+
+-- local highlightBackground = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
+-- highlightBackground:SetTextureInfo("thumb_ov")
+-- highlightBackground:AddAnchor("TOPLEFT", thumb, 0, 0)
+-- highlightBackground:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
+-- thumb:SetHighlightBackground(highlightBackground)
+
+-- local pushedBackground = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
+-- pushedBackground:SetTextureInfo("thumb_on")
+-- pushedBackground:AddAnchor("TOPLEFT", thumb, 0, 0)
+-- pushedBackground:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
+-- thumb:SetPushedBackground(pushedBackground)
+
+-- slider:SetThumbButtonWidget(thumb)
+-- slider:SetMinThumbLength(40)
+
+
+-- function upButton:OnClick()
+--   slider:Up(40)
+-- end
+
+-- upButton:SetHandler("OnClick", upButton.OnClick)
+-- function downButton:OnClick()
+--   slider:Down(40)
+-- end
+
+-- downButton:SetHandler("OnClick", downButton.OnClick)
+
+-- slider:SetHandler("OnSliderChanged", function (self, value)
+--   content:ChangeChildAnchorByScrollValue("vert", value)
+-- end)
+
+-- slider:SetPageStep(40)
+-- slider:SetValueStep(40)
+-- slider:SetFixedThumb(true)
+
+-- -- content:SetDrawStartNumber(2)
+
+-- content:SetHandler("OnWheelUp", function (self, delta)
+--   slider:Up(40)
+-- end)
+
+-- content:SetHandler("OnWheelDown", function (self, delta)
+--   slider:Down(40)
+-- end)
+
+-- ADDON:ImportObject(OBJECT.ListCtrl)
+-- local addonInfo = ADDON:GetAddonInfos()
+
+-- table.sort(addonInfo, function (a, b)
+--   return a.name < b.name
+-- end)
+
+-- local addons = {}
+
+-- for _, addon in ipairs(addonInfo) do
+--   if addon.name ~= ADDON:GetName() then
+--     table.insert(addons, addon)
+--   end
+-- end
+
+-- local list = content:CreateChildWidget("listctrl", "addons", 0, true)
+-- list:AddAnchor("TOPLEFT", 0, 0)
+-- list:SetWidth(content:GetWidth())
+-- list:SetHeight(40 * #addons)
+-- list:InsertColumn(40, LCCIT_BUTTON)
+-- list:InsertColumn(list:GetWidth() - 120, LCCIT_TEXTBOX)
+-- list:InsertColumn(40, LCCIT_BUTTON)
+-- list:InsertColumn(40, LCCIT_BUTTON)
+-- list:InsertRows(#addons, false)
+-- list:SetHeaderColumnHeight(0)
+
+-- -- local outline = list:CreateColorDrawable(1, 0, 0, .1, "background")
+-- -- outline:AddAnchor("TOPLEFT", list, 0, 0)
+-- -- outline:AddAnchor("BOTTOMRIGHT", list, 0, 0)
+
+-- -- local overedImage = list:CreateOveredImage("overlay")
+-- -- overedImage:SetTexture(TEXTURE_PATH.DEFAULT)
+-- -- overedImage:SetTextureInfo("slot_ov")
+
+-- ADDON:ChatLog(#list.items)
+-- ADDON:ImportObject(OBJECT.CheckButton)
+
+-- for row, addon in pairs(addons) do
+--   local checkButton, titleTextbox, settingsButton, refreshButton = unpack(
+--     list.items[row].subItems
+--   )
+
+--   local checkButtonBackground = checkButton:CreateDrawable(TEXTURE_PATH.CHECK_BTN, "btn_df", "background")
+--   checkButtonBackground:AddAnchor("CENTER", checkButton, 0, 0)
+--   checkButtonBackground:SetExtent(20, 20)
+
+--   local checkButtonCheckedBackground = checkButton:CreateDrawable(TEXTURE_PATH.CHECK_BTN, "btn_chk_df", "background")
+--   checkButtonCheckedBackground:AddAnchor("CENTER", checkButton, 0, 0)
+--   checkButtonCheckedBackground:SetVisible(addon.enable)
+--   checkButtonCheckedBackground:SetExtent(20, 20)
+
+--   checkButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--     addon.enable = not addon.enable
+--     ADDON:SetAddonEnable(addon.name, addon.enable)
+--     ADDON:SaveAddonInfos()
+--     ADDON:ReloadAddon(addon.name)
+
+--     checkButtonCheckedBackground:SetVisible(addon.enable)
+--     settingsButton:Enable(addon.enable)
+--     refreshButton:Enable(addon.enable)
+--   end)
+
+--   titleTextbox.style:SetColorByKey("default")
+--   titleTextbox.style:SetAlign(ALIGN_LEFT)
+--   titleTextbox.style:SetEllipsis(true)
+--   titleTextbox.style:SetFontSize(FONT_SIZE.LARGE)
+
+--   titleTextbox:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--     addon.enable = not addon.enable
+--     ADDON:SetAddonEnable(addon.name, addon.enable)
+--     ADDON:SaveAddonInfos()
+--     ADDON:ReloadAddon(addon.name)
+
+--     checkButtonCheckedBackground:SetVisible(addon.enable)
+--     settingsButton:Enable(addon.enable)
+--     refreshButton:Enable(addon.enable)
+--   end)
+
+--   settingsButton:SetStyle("button_common_option")
+--   settingsButton:Enable(addon.enable)
+
+--   settingsButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--     ADDON:FireAddon(addon.name)
+--   end)
+
+--   refreshButton:SetExtent(20, 20)
+--   local normalBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
+--   normalBackground:SetTextureInfo("reset_df")
+--   normalBackground:SetExtent(20, 20)
+--   normalBackground:AddAnchor("CENTER", refreshButton, 0, 0)
+--   refreshButton:SetNormalBackground(normalBackground)
+--   local highlightBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
+--   highlightBackground:SetTextureInfo("reset_ov")
+--   highlightBackground:SetExtent(20, 20)
+--   highlightBackground:AddAnchor("CENTER", refreshButton, 0, 0)
+--   refreshButton:SetHighlightBackground(highlightBackground)
+--   local pushedBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
+--   pushedBackground:SetTextureInfo("reset_on")
+--   pushedBackground:SetExtent(20, 20)
+--   pushedBackground:AddAnchor("CENTER", refreshButton, 0, 0)
+--   refreshButton:SetPushedBackground(pushedBackground)
+--   local disabledBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
+--   disabledBackground:SetTextureInfo("reset_dis")
+--   disabledBackground:SetExtent(20, 20)
+--   disabledBackground:AddAnchor("CENTER", refreshButton, 0, 0)
+--   refreshButton:SetDisabledBackground(disabledBackground)
+--   refreshButton:Enable(addon.enable)
+
+--   refreshButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--     ADDON:ReloadAddon(addon.name)
+--   end)
+
+--   list:InsertData(row, 2, addon.name)
+-- end
+
+
+-- UIParent:SetEventHandler("UI_ADDON", function ()
+--   ADDON:ChatLog("UI_ADDON")
+-- end)
+
+-- -- local min, max = content:GetMaxTop()
+-- local min = 0
+-- local max = math.max(0, list:GetHeight() - content:GetHeight())
+
+-- ADDON:ChatLog(list:GetHeight())
+-- ADDON:ChatLog(content:GetHeight())
+
+-- slider:SetMinMaxValues(min, max)
+
+-- if max == 0 then
+--   upButton:Enable(false)
+--   -- slider:Enable(false)
+--   thumb:Enable(false)
+--   downButton:Enable(false)
+--   bg:SetTextureColor("disable")
+-- end
+
+-- local file = open("temp/example.txt", "w")
+-- file:write(dump({ list }))
+-- file:close()
+
+-- emptywidget:ChangeChildAnchorByScrollValue("vert", 100)
+
+-- ADDON:SetAddonEnable("consoleeditor", false)
+-- -- ADDON:SaveAddonInfos()
+-- ADDON:ChatLogTable(ADDON:GetAddonInfos())
+-- ADDON:ReloadAddon("consoleeditor")
 
 --------------------------------------------------------------------------------
 
+-- local test = UIParent:CreateWidget("button", "testing", "UIParent")
+-- test:SetStyle("text_default")
+-- test:AddAnchor("CENTER", 0, 0)
+-- test:Show(true)
+-- local test2 = UIParent:CreateWidget("button", "testing", "UIParent")
+-- test2:SetStyle("text_default")
+-- test2:AddAnchor("CENTER", -100, 0)
+-- test2:Show(true)
 
+
+-- test2:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   local file = open("temp/example.txt", "w")
+--   file:write(dump({ test }))
+--   file:close()
+
+
+--   ADDON:ChatLog("is valid " .. tostring(test.test:IsValidUIObject()))
+--   -- test.test:Show(true)
+--   -- test.test:SetText("hello")
+-- end)
+
+
+-- test:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+
+--   ADDON:ChatLog("before " .. tostring(test.test))
+--   local del = test:CreateChildWidget("button", "test", 0, true)
+--   ADDON:ChatLog("name " .. del:GetName())
+--   del:SetStyle("text_default")
+--   del:AddAnchor("CENTER", 100, 0)
+--   del:EnableHidingIsRemove(true)
+--   del:SetDeletedHandler(function ()
+--     ADDON:ChatLog("del")
+--     ADDON:ChatLog(tostring(del:IsValidUIObject()))
+--     -- del = nil
+--     -- test.test = nil
+--   end)
+--   del:Show(true)
+--   del:Show(false)
+
+--   ADDON:ChatLog(tostring(test.test))
+-- end)
+
+--------------------------------------------------------------------------------
+
+-- ADDON:ImportObject(OBJECT.Textbox)
+
+-- local textbox = UIParent:CreateWidget("textbox", "test", "UIParent")
+-- textbox:AddAnchor("CENTER", 0, 0)
+-- textbox:SetExtent(100, 20)
+-- textbox:SetAutoWordwrap(false)
+-- textbox.style:SetColorByKey("default")
+-- textbox.style:SetAlign(ALIGN_LEFT)
+-- textbox.style:SetFontSize(FONT_SIZE.LARGE)
+-- textbox.style:SetEllipsis(true)
+
+-- textbox:SetText("Helloworldasdfasdfasdf a b c d e asdfasfd afasdfsf")
+-- -- textbox:SetTextAutoWidth(100, "Helloworldasdfasdfasdf", 0)
+-- textbox:Show(true)
+
+
+--------------------------------------------------------------------------------
+
+-- ADDON:ImportObject(OBJECT.EmptyWidget)
+-- ADDON:ImportAPI(API.X2Unit)
+-- ADDON:ImportObject(OBJECT.IconDrawable)
+
+-- local widget = UIParent:CreateWidget("emptywidget", "widget", "UIParent")
+-- widget:Show(true)
+
+-- local UnitHiddenBuffCount = X2Unit:UnitHiddenBuffCount("player")
+-- for i = 1, UnitHiddenBuffCount do
+--   local UnitHiddenBuff = X2Unit:UnitHiddenBuff("player", i)
+--   local UnitHiddenBuffTooltip = X2Unit:UnitHiddenBuffTooltip("player", i)
+--   local icon = widget:CreateIconDrawable("background")
+--   icon:SetExtent(48, 48)
+--   icon:AddAnchor("TOPLEFT", i * 48 - 48, 0)
+--   icon:AddTexture(UnitHiddenBuff.path)
+--   -- ADDON:ChatLogTable(UnitHiddenBuff)
+--   ADDON:ChatLog("UnitHiddenBuffTooltip " .. i)
+--   ADDON:ChatLogTable(UnitHiddenBuffTooltip)
+--   ADDON:ChatLog("----------------")
+-- end
+
+--------------------------------------------------------------------------------
+
+-- local UI = UIParent
+-- local test = {
+--   x = 4351.84,
+--   y = 4437.83,
+--   z = 187.125,
+-- }
+-- local uiScale = UI:GetUIScale()
+
+-- -- Main function -- NOW fetches FRESH camera data EVERY CALL (critical fix!)
+-- local function WorldToScreen(worldPos)
+--   -- FRESH every frame!
+--   local screenW = UI:GetScreenWidth()
+--   local screenH = UI:GetScreenHeight()
+--   local camPos = UI:GetViewCameraPos()
+--   local camDir = UI:GetViewCameraDir() -- normalized forward
+--   local camFov = UI:GetViewCameraFov() -- vertical FOV radians
+
+--   -- Build basis (horizontal right)
+--   local function buildViewBasis(forward)
+--     local right = {
+--       x = forward.z,
+--       y = 0,
+--       z = -forward.x
+--     }
+--     local len = math.sqrt(right.x * right.x + right.z * right.z)
+--     right.x = right.x / len
+--     right.z = right.z / len
+
+--     local up = {
+--       x = forward.y * right.z - forward.z * right.y,
+--       y = forward.z * right.x - forward.x * right.z,
+--       z = forward.x * right.y - forward.y * right.x
+--     }
+--     -- Explicit normalize (float safety)
+--     local up_len = math.sqrt(up.x * up.x + up.y * up.y + up.z * up.z)
+--     up.x = up.x / up_len
+--     up.y = up.y / up_len
+--     up.z = up.z / up_len
+
+--     return right, up
+--   end
+
+--   local camRight, camUp = buildViewBasis(camDir)
+
+--   -- Vector from camera to point
+--   local toPoint = {
+--     x = worldPos.x - camPos.x,
+--     y = worldPos.y - camPos.y,
+--     z = worldPos.z - camPos.z
+--   }
+
+--   local depth = toPoint.x * camDir.x + toPoint.y * camDir.y + toPoint.z * camDir.z
+--   if depth <= 0.01 then
+--     return nil, nil, false
+--   end
+
+--   local projX = toPoint.x * camRight.x + toPoint.y * camRight.y + toPoint.z * camRight.z
+--   local projY = toPoint.x * camUp.x + toPoint.y * camUp.y + toPoint.z * camUp.z
+
+--   local halfTanFov = math.tan(camFov * 0.5)
+--   local scale = screenH * 0.5 -- Correct aspect handling!
+--   local screenX = (projX / (depth * halfTanFov)) * scale + screenW * 0.5
+--   local screenY = (-projY / (depth * halfTanFov)) * scale + screenH * 0.5
+
+--   local onScreen = screenX >= 0 and screenX <= screenW and screenY >= 0 and screenY <= screenH
+--   local depth01 = depth / 10000
+
+--   local file = open("temp/example.txt", "w")
+--   file:write(dump({
+--     screenW = screenW,
+--     screenH = screenH,
+--     camPos = camPos,
+--     camDir = camDir,
+--     camFov = camFov,
+--     test = test,
+--     WorldToScreen = { screenX = screenX, screenY = screenY, onScreen = onScreen, depth01 = depth01 },
+--     player = { X2Unit:GetUnitWorldPositionByTarget("player", true) },
+--     uiScale = uiScale
+--   }))
+--   file:close()
+
+--   return screenX, screenY, onScreen, depth01
+-- end
+
+-- -- Widget setup
+-- ADDON:ImportAPI(API.X2Unit)
+-- ADDON:ImportObject(OBJECT.EmptyWidget)
+-- ADDON:ImportObject(OBJECT.ColorDrawable)
+
+-- local widget = UIParent:CreateWidget("emptywidget", "test", "UIParent")
+-- widget:SetExtent(100, 100)
+-- widget:Show(true)
+
+-- local color = widget:CreateColorDrawable(1, 0, 0, 0.3, "background")
+-- color:AddAnchor("TOPLEFT", widget, 0, 0)
+-- color:AddAnchor("BOTTOMRIGHT", widget, 0, 0)
+
+-- -- PERFECT TRACKING OnUpdate
+-- widget:SetHandler("OnUpdate", function (self, frameTime)
+--   widget:RemoveAllAnchors()
+
+--   local x, y, z = X2Unit:GetUnitWorldPositionByTarget("player", true) -- angle unused
+--   -- local sx, sy, visible = WorldToScreen(test)
+--   local sx, sy, visible = WorldToScreen({ x = x, y = y, z = z })
+
+--   if visible then
+--     -- CENTER widget on player: offset by half size!
+--     -- once RemoveAllAnchors is used any value passed is then scaled by uiScale
+--     -- so if sx = 1000 and uiscale is .9 then when its passed in as 1000 itll render
+--     -- as 900
+--     widget:AddAnchor("TOPLEFT", sx / uiScale - 50, sy / uiScale - 50)
+--   else
+--     -- widget:Hide(true)
+--   end
+-- end)
+
+--------------------------------------------------------------------------------
+
+-- INVALID_ICON_PATH = X2Util:GetConstIconPath("represent_invalid")
+-- NORMAL_GRADE_ICON_PATH = X2Item:GetItemGradeIconPath(0)
+
+-- ADDON:ChatLog("test")
+
+--------------------------------------------------------------------------------
+
+-- ADDON:ImportAPI(API.X2Auction)
+
+-- X2Auction:SearchAuctionArticle(1, 1, 1, 1, 0, false, "Lumber", "", "")
+
+--------------------------------------------------------------------------------
+
+-- ADDON:ImportAPI(API.X2Unit)
+-- ADDON:ImportObject(OBJECT.Textbox)
+-- ADDON:ImportObject(OBJECT.ColorDrawable)
+
+-- local window = UIParent:CreateWidget("textbox", "test", "UIParent")
+-- window:SetExtent(300, 20)
+-- -- window:SetAutoResize(true)
+-- -- window:SetAutoWordwrap(false)
+-- window:AddAnchor("TOP", 0, 0)
+-- window:Show(true)
+
+-- local bg = window:CreateColorDrawable(0, 0, 0, .5, "background")
+-- bg:AddAnchor("TOPLEFT", window, 0, 0)
+-- bg:AddAnchor("BOTTOMRIGHT", window, 0, 0)
+
+-- window:SetHandler("OnUpdate", function (self, frameTime)
+--   local x, y, z, angle = X2Unit:GetUnitWorldPositionByTarget("player", false)
+--   window:SetText(string.format("x: %d, y: %d, z: %d, a: %f", x, y, z, math.deg(angle)))
+-- end)
+
+--------------------------------------------------------------------------------
+
+-- ADDON:ImportAPI(API.X2Skill)
+-- ADDON:ImportAPI(API.X2Mate)
+-- ADDON:ImportObject(OBJECT.Textbox)
+-- ADDON:ImportObject(OBJECT.IconDrawable)
+-- ADDON:ChatLog(X2Skill:GetCooldown(45192, true))
+-- ADDON:ChatLog(X2Skill:GetMateCooldown(45191, true, MATE_TYPE_RIDE))
+
+-- local window = UIParent:CreateWidget("textbox", "test", "UIParent")
+-- window:SetExtent(300, 20)
+-- window:AddAnchor("TOP", 0, 0)
+-- window:Show(true)
+
+-- local skill = X2Skill:GetSkillTooltip(17663, 0)
+
+-- local icon = window:CreateIconDrawable("background")
+-- icon:SetExtent(48, 48)
+-- icon:AddTexture(skill.path)
+
+-- window:SetHandler("OnUpdate", function (self, frameTime)
+--   -- 17663 ezi
+--   -- 45192 kirin
+--   local skillCooldown = X2Skill:GetCooldown(17663, true)
+
+--   if skillCooldown then
+--     window:SetText(tostring(skillCooldown))
+--   end
+-- end)
+
+-- ADDON:ImportAPI(API.X2Unit)
+-- ADDON:ImportAPI(API.X2Skill)
+-- local playerName = X2Unit:UnitName("player")
+-- UIParent:SetEventHandler("COMBAT_MSG", function (targetUnitId, combatEvent, source, target, skillId, skillName)
+--   ADDON:ChatLog(skillId .. " " .. skillName)
+--   if combatEvent == "SPELL_CAST_SUCCESS" and (source == playerName or target == playerName) then
+--     ADDON:ChatLog(skillId .. " " .. skillName)
+--     local skillTooltip = X2Skill:GetSkillTooltip(skillId, 0)
+--     ADDON:ChatLog("cooldown: " .. skillTooltip.cooldown)
+--     ADDON:ChatLog("----")
+--   end
+-- end)
+
+-- ADDON:ChatLog(os.clock())
+
+--------------------------------------------------------------------------------
+
+-- ADDON:ImportObject(OBJECT.Window)
+-- ADDON:ImportObject(OBJECT.ColorDrawable)
+
+-- local window = UIParent:CreateWidget("window", "test", "UIParent")
+-- window:Show(true)
+-- window:AddAnchor("TOP", 0, 0)
+
+-- local test = window:CreateChildWidget("window", "test", 0, true)
+-- ADDON:ChatLog("test " .. tostring(test:GetName()))
+
+-- -- for i = 1, 10 do
+-- --   local test = window:CreateChildWidget("window", "test", i, true)
+-- -- end
+
+-- local one = window:CreateColorDrawable(1, 0, 0, 1, "background")
+-- one:SetExtent(25, 25)
+-- one:AddAnchor("TOPLEFT", window, 0, 0)
+
+-- local two = window:CreateColorDrawable(1, 0, 0, 1, "background")
+-- two:SetExtent(25, 25)
+-- two:AddAnchor("LEFT", one, "RIGHT", 0, 0)
+
+-- -- one:AddAnchor("CENTER", 0, 0)
+
+-- window:SetExtent(50, 25)
+
+--------------------------------------------------------------------------------
+
+-- UIParent:SetEventHandler("WATCH_TARGET_CHANGED", function (stringId)
+--   ADDON:ChatLog("WATCH_TARGET_CHANGED " .. tostring(stringId))
+-- end)
+-- UIParent:SetEventHandler("LEFT_LOADING", function ()
+--   ADDON:ChatLog("LEFT_LOADING")
+-- end)
 
 --------------------------------------------------------------------------------
 

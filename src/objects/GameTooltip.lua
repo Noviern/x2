@@ -41,26 +41,19 @@ local GameTooltip = {}
 ---@param index number The line index to add the text to. (Starts at `0`)
 ---@param text string The text to add.
 ---@param fontPath FONT_PATH The font path for the text.
----@param fontSize FONT_SIZE The font size for the text.
+---@param fontSize number The font size for the text.
 ---@param textAlign TEXT_ALIGN The text alignment.
 ---@param indentation number The indentation for the text.
----@see FONT_PATH
----@see FONT_SIZE
----@see TEXT_ALIGN
 function GameTooltip:AddAnotherSideLine(index, text, fontPath, fontSize, textAlign, indentation) end
 
 ---Adds a new line to the GameTooltip and returns its index.
 ---@param text string The text to add.
 ---@param fontPath FONT_PATH The font path for the text.
----@param fontSize FONT_SIZE The font size for the text.
+---@param fontSize number The font size for the text.
 ---@param align LINE_ALIGN The alignment type.
 ---@param textAlign TEXT_ALIGN The text alignment for the line.
 ---@param indentation number The indentation for the text.
 ---@return number index The index of the added line. (Starts at `0`)
----@see FONT_PATH
----@see FONT_SIZE
----@see LINE_ALIGN
----@see TEXT_ALIGN
 function GameTooltip:AddLine(text, fontPath, fontSize, align, textAlign, indentation) end
 
 ---Attaches a lower space to the specified line in the GameTooltip.
@@ -112,8 +105,7 @@ function GameTooltip:SetInset(left, top, right, bottom) end
 
 ---Sets the line spacing for the GameTooltip (must be set before
 ---`GameTooltip:AddLine`).
----@param space TEXTBOX_LINE_SPACE|number The line spacing value. (default: `0`)
----@see TEXTBOX_LINE_SPACE
+---@param space number The line spacing value. (default: `0`)
 function GameTooltip:SetLineSpace(space) end
 
 ---Sets the tooltip data for the GameTooltip.

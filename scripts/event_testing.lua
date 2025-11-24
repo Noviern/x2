@@ -13,7 +13,7 @@ local function event(name, ...)
 end
 
 ---@param name UIEVENT_TYPE
-function SetEventHandler(name)
+local function SetEventHandler(name)
   if eventCount < 240 then UI:SetEventHandler(name, event(name)) end
   eventCount = eventCount + 1
   if eventCount == 240 then
@@ -21,12 +21,51 @@ function SetEventHandler(name)
   end
 end
 
+-- for api_name, api_id in pairs(API) do
+--   ADDON:ImportAPI(api_id)
+-- end
+
+--------------------------------------------------------------------------------
+-- These events needed further testing.
+--------------------------------------------------------------------------------
+SetEventHandler("ACHIEVEMENT_UPDATE")
+SetEventHandler("ADD_GIVEN_QUEST_INFO")
+SetEventHandler("ADD_NOTIFY_QUEST_INFO")
+SetEventHandler("BAG_ITEM_CONFIRMED")
+SetEventHandler("BLESS_UTHSTIN_UPDATE_STATS")
+-- SetEventHandler("CHAT_MSG_QUEST")
+-- SetEventHandler("COMBAT_TEXT_SYNERGY")
+-- SetEventHandler("COMBAT_TEXT")
+-- SetEventHandler("COMBAT_MSG")
+SetEventHandler("COMPLETE_QUEST_CONTEXT_DOODAD")
+SetEventHandler("DOODAD_PHASE_UI_MSG")
+SetEventHandler("EXPEDITION_EXP")
+SetEventHandler("EXPEDITION_MANAGEMENT_APPLICANTS")
+-- SetEventHandler("EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED")
+SetEventHandler("FACTION_COMPETITION_INFO")
+SetEventHandler("FACTION_COMPETITION_RESULT")
+SetEventHandler("FACTION_COMPETITION_UPDATE_POINT")
+SetEventHandler("INIT_CHRONICLE_INFO")
+SetEventHandler("ITEM_ACQUISITION_BY_LOOT")
+SetEventHandler("LEAVED_INSTANT_GAME_ZONE")
+SetEventHandler("MATE_STATE_UPDATE")
+-- SetEventHandler("RAID_RECRUIT_HUD")
+SetEventHandler("RANK_ALARM_MSG")
+-- SetEventHandler("SET_EFFECT_ICON_VISIBLE")
+-- SetEventHandler("SHOW_CHAT_TAB_CONTEXT")
+SetEventHandler("SKILL_ALERT_ADD")
+SetEventHandler("SKILL_UPGRADED")
+SetEventHandler("STORE_TRADE_FAILED")
+SetEventHandler("STORE_FULL")
+SetEventHandler("UPDATE_DURABILITY_STATUS")
+SetEventHandler("ZONE_SCORE_CONTENT_STATE")
+
 --------------------------------------------------------------------------------
 -- These events werent found in scriptsbin
 --------------------------------------------------------------------------------
--- SetEventHandler("FAMILY_MEMBER_ONLINE")
--- SetEventHandler("FAMILY_MGR")
--- SetEventHandler("FAMILY_REFRESH")
+SetEventHandler("FAMILY_MEMBER_ONLINE")
+SetEventHandler("FAMILY_MGR")
+SetEventHandler("FAMILY_REFRESH")
 -- SetEventHandler("MIA_MAIL_INBOX_ITEM_TAKEN")
 -- SetEventHandler("MIA_MAIL_INBOX_MONEY_TAKEN")
 -- SetEventHandler("MIA_MAIL_INBOX_TAX_PAID")
@@ -129,7 +168,6 @@ SetEventHandler("COFFER_INTERACTION_START")
 SetEventHandler("COFFER_REAL_INDEX_SHOW")
 SetEventHandler("CRAFT_FAILED")
 SetEventHandler("DOMINION_GUARD_TOWER_UPDATE_TOOLTIP")
-SetEventHandler("DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED")
 SetEventHandler("ENDED_DUEL")
 SetEventHandler("EVENT_SCHEDULE_START")
 SetEventHandler("EVENT_SCHEDULE_STOP")
@@ -180,8 +218,6 @@ SetEventHandler("EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT")
 SetEventHandler("EXPEDITION_MANAGEMENT_APPLICANT_ADD")
 SetEventHandler("EXPEDITION_MANAGEMENT_APPLICANT_DEL")
 SetEventHandler("EXPEDITION_MANAGEMENT_APPLICANT_REJECT")
-SetEventHandler("EXPEDITION_MANAGEMENT_APPLICANTS")
-SetEventHandler("EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED")
 SetEventHandler("EXPEDITION_MANAGEMENT_POLICY_CHANGED")
 SetEventHandler("EXPEDITION_MANAGEMENT_RECRUITMENT_ADD")
 SetEventHandler("EXPEDITION_MANAGEMENT_RECRUITMENT_DEL")
@@ -240,8 +276,6 @@ SetEventHandler("UPDATE_INSTANT_GAME_KILLSTREAK")
 SetEventHandler("UPDATE_DEFENCE_INFO") -- guild dungeon?
 SetEventHandler("UPDATE_RETURN_ACCOUNT_STATUS") -- for a player that returns to the game
 SetEventHandler("UPDATE_CARRYING_BACKPACK_SLAVE_INFO")
-SetEventHandler("UPDATE_BOSS_TELESCOPE_AREA")
-SetEventHandler("UPDATE_BOSS_TELESCOPE_INFO")
 SetEventHandler("UPDATE_BOT_CHECK_INFO")
 SetEventHandler("UCC_IMPRINT_SUCCEEDED")
 SetEventHandler("UNFINISHED_BUILD_HOUSE") -- this might trigger if you try to place another house if you already own one that hasnt be built.
@@ -273,10 +307,9 @@ SetEventHandler("DIAGONAL_LINE")
 SetEventHandler("CREATE_ORIGIN_UCC_ITEM")
 SetEventHandler("AGGRO_METER_UPDATED")
 SetEventHandler("WEB_BROWSER_ESC_EVENT")
-SetEventHandler("ADD_GIVEN_QUEST_INFO")
 
 ---testing
--- SetEventHandler("COMBAT_MSG")
+SetEventHandler("APPELLATION_STAMP_UPDATED")
 -- SetEventHandler("SHOW_WORLDMAP_TOOLTIP")
 ---testing
 

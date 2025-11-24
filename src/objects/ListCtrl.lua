@@ -61,7 +61,6 @@ function ListCtrl:GetSelectedIdx() end
 ---@param width number The width of the column.
 ---@param itemType LCCIT The item type for the column.
 ---@return number index The index of the created column. (min: `0`)
----@see LCCIT
 function ListCtrl:InsertColumn(width, itemType) end
 
 ---Inserts data into the ListCtrl at the specified column index.

@@ -28,7 +28,6 @@ X2Auction = {}       -- api/X2Auction
 ---@param itemType number The type of item.
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
 ---@param askMarketPriceUi boolean `true` to open the market price UI, `false` otherwise. Buggy: only opens if UI was opened previously.
----@see ITEM_GRADE_TYPE
 function X2Auction:AskMarketPrice(itemType, itemGrade, askMarketPriceUi) end
 
 ---@FIXME: this is broken and doesnt always return a value, needs more testing
@@ -37,7 +36,6 @@ function X2Auction:AskMarketPrice(itemType, itemGrade, askMarketPriceUi) end
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
 ---@return string|nil lowestPrice The lowest price as a string, or `nil` if not available.
 ---@nodiscard
----@see ITEM_GRADE_TYPE
 function X2Auction:GetLowestPrice(itemType, itemGrade) end
 
 ---Retrieves the number of searched items displayed in the auction house.
@@ -65,17 +63,15 @@ function X2Auction:GetSearchedItemTotalCount() end
 
 ---Searches the auction house with the specified parameters. Only works when
 ---the auction house is open.
----@param page number The page to search (1 to 50, see `X2Auction:GetSearchedItemTotalCount()`).
----@param minLevel number The minimum level (0 to 125, base 0-55 + ancestral 1-70).
----@param maxLevel number The maximum level (0 to 125, base 0-55 + ancestral 1-70).
+---@param page number The page to search (min: `1`, max: `50`, see `X2Auction:GetSearchedItemTotalCount()`).
+---@param minLevel number The minimum level (min: `0`, max: `125`, base 0-55 + ancestral 1-70).
+---@param maxLevel number The maximum level (min: `0`, max: `125`, base 0-55 + ancestral 1-70).
 ---@param grade AUCTION_GRADE_FILTER The item grade filter.
 ---@param category AUCTION_CATEGORY The item category.
 ---@param exactMatch boolean Whether to use exact keyword matching.
 ---@param keywords string The search keywords.
 ---@param minDirectPriceStr string The minimum direct price in copper as a string.
 ---@param maxDirectPriceStr string The maximum direct price in copper as a string.
----@see AUCTION_GRADE_FILTER
----@see AUCTION_CATEGORY
 function X2Auction:SearchAuctionArticle(page, minLevel, maxLevel, grade, category, exactMatch, keywords,
   minDirectPriceStr, maxDirectPriceStr)
 end

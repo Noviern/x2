@@ -28,8 +28,6 @@ function X2Hotkey:EnableHotkey(enable) end
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
 ---@return string key The key bound to the action.
 ---@nodiscard
----@see HOTKEY_ACTION
----@see HOTKEY_MANAGER
 function X2Hotkey:GetBindingUiEvent(actionName, index) end
 
 ---Returns the key bound to the action option button for a specified hotkey
@@ -40,8 +38,6 @@ function X2Hotkey:GetBindingUiEvent(actionName, index) end
 ---@param arg number Additional argument for the binding.
 ---@return string optionBinding The option binding string.
 ---@nodiscard
----@see HOTKEY_ACTION
----@see HOTKEY_MANAGER
 function X2Hotkey:GetOptionBinding(action, index, option, arg) end
 
 ---Returns the key bound to the action option button for a specified hotkey
@@ -50,8 +46,6 @@ function X2Hotkey:GetOptionBinding(action, index, option, arg) end
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
 ---@return string key The button binding string.
 ---@nodiscard
----@see HOTKEY_ACTION
----@see HOTKEY_MANAGER
 function X2Hotkey:GetOptionBindingButton(action, index) end
 
 ---Returns the key bound to the action option button.
@@ -59,22 +53,18 @@ function X2Hotkey:GetOptionBindingButton(action, index) end
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
 ---@return string key The key bound to the action option button.
 ---@nodiscard
----@see HOTKEY_ACTION
----@see HOTKEY_MANAGER
 function X2Hotkey:GetOptionBindingUiEvent(actionName, index) end
 
 ---Checks if a hotkey action is overridable.
 ---@param action HOTKEY_ACTION The hotkey action to check.
 ---@return boolean overridableAction `true` if the action is overridable, `false` otherwise.
 ---@nodiscard
----@see HOTKEY_ACTION
 function X2Hotkey:IsOverridableAction(action) end
 
 ---Checks if a hotkey action is valid.
 ---@param action HOTKEY_ACTION The hotkey action to validate.
 ---@return boolean validActionName `true` if the action name is valid, `false` otherwise.
 ---@nodiscard
----@see HOTKEY_ACTION
 function X2Hotkey:IsValidActionName(action) end
 
 ---Sets current option bindings and allows them to be used but does not save
@@ -105,7 +95,6 @@ function X2Hotkey:SaveHotKey() end
 ---used immediately.
 ---@param actionName string The custom action name to bind.
 ---@param key HOTKEY_NAME|string The key to bind to the action.
----@see HOTKEY_NAME
 function X2Hotkey:SetBindingUiEvent(actionName, key) end
 
 ---Binds a key to a action in the specified index and registers the key to fire
@@ -114,8 +103,6 @@ function X2Hotkey:SetBindingUiEvent(actionName, key) end
 ---@param actionName string The custom action name to bind.
 ---@param key HOTKEY_NAME|string The key to bind to the action.
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
----@see HOTKEY_NAME
----@see HOTKEY_MANAGER
 function X2Hotkey:SetBindingUiEventWithIndex(actionName, key, index) end
 
 ---Binds a key to a action option button in the specified index. Can't be saved
@@ -123,9 +110,6 @@ function X2Hotkey:SetBindingUiEventWithIndex(actionName, key, index) end
 ---@param action HOTKEY_ACTION The hotkey action to bind.
 ---@param key HOTKEY_NAME|string The key to bind.
 ---@param keyType HOTKEY_MANAGER The key type for the binding.
----@see HOTKEY_ACTION
----@see HOTKEY_NAME
----@see HOTKEY_MANAGER
 function X2Hotkey:SetOptionBindingButtonWithIndex(action, key, keyType) end
 
 ---Binds a key to a action option button and once saved registers the key to
@@ -138,7 +122,6 @@ function X2Hotkey:SetOptionBindingButtonWithIndex(action, key, keyType) end
 ---X2Hotkey:SetOptionBindingUiEvent("my_custom_action_name", "CTRL-`")
 ---X2Hotkey:SaveHotKey()
 ---```
----@see HOTKEY_NAME
 function X2Hotkey:SetOptionBindingUiEvent(actionName, key) end
 
 ---Binds a key to a custom action option button in the specified index and once
@@ -153,9 +136,6 @@ function X2Hotkey:SetOptionBindingUiEvent(actionName, key) end
 ---X2Hotkey:SetOptionBindingUiEventWithIndex("my_custom_action_name", "SHIFT-`", 1)
 ---X2Hotkey:SaveHotKey()
 ---```
----@see HOTKEY_ACTION
----@see HOTKEY_NAME
----@see HOTKEY_MANAGER
 function X2Hotkey:SetOptionBindingUiEventWithIndex(actionName, key, index) end
 
 ---Binds a key to a action option button in the specified index with additional
@@ -171,7 +151,4 @@ function X2Hotkey:SetOptionBindingUiEventWithIndex(actionName, key, index) end
 ---X2Hotkey:SetOptionBindingWithIndex("front_camera", "`", 1, 0)
 ---X2Hotkey:SaveHotKey()
 ---```
----@see HOTKEY_ACTION
----@see HOTKEY_NAME
----@see HOTKEY_MANAGER
 function X2Hotkey:SetOptionBindingWithIndex(action, key, index, arg) end

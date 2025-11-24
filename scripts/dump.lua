@@ -118,7 +118,7 @@ function dump(tbl, ctx)
   table.sort(lines)
   local output
 
-  if ctx.depth > 0 then
+  if ctx.depth > 0 and #lines > 0 then
     output = table.concat(lines, ",\n") .. ","
   else
     output = table.concat(lines, "\n")

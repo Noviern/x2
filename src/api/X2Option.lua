@@ -322,8 +322,6 @@ X2Option = {}                                    -- api/X2Option
 ---@param value number The float value to set.
 ---@param saveLevel OISLT The save level for the option.
 ---@return number saveLevel The save level used.
----@see CONSOLE_VAR
----@see OISLT
 function X2Option:CreateOptionItemFloat(name, value, saveLevel) end
 
 ---@FIXME: never got this to save
@@ -333,8 +331,6 @@ function X2Option:CreateOptionItemFloat(name, value, saveLevel) end
 ---@param value string The string value to set.
 ---@param saveLevel OISLT The save level for the option.
 ---@return number saveLevel The save level used.
----@see CONSOLE_VAR
----@see OISLT
 function X2Option:CreateOptionItemString(name, value, saveLevel) end
 
 ---Retrieves a list of available anti-aliasing formats.
@@ -352,7 +348,6 @@ function X2Option:GetBasicCursorShape() end
 ---@param name CONSOLE_VAR The console variable name.
 ---@return string|nil consoleVariable The console variable value, or `nil` if not found.
 ---@nodiscard
----@see CONSOLE_VAR
 function X2Option:GetConsoleVariable(name) end
 
 ---Retrieves a list of cursor size IDs.
@@ -375,21 +370,18 @@ function X2Option:GetNextSysSpecFullValue() end
 ---@param optionId OIT The option ID.
 ---@return OptionInfo|nil optionInfo The option information if it exists.
 ---@nodiscard
----@see OIT
 function X2Option:GetOptionInfo(optionId) end
 
 ---Retrieves the value for the specified option type.
 ---@param optionType OIT The option type.
 ---@return number optionItemValue The option value.
 ---@nodiscard
----@see OIT
 function X2Option:GetOptionItemValue(optionType) end
 
 ---Retrieves the value for the specified console variable.
 ---@param name CONSOLE_VAR|string The console variable name.
 ---@return number optionItemValue The console variable value.
 ---@nodiscard
----@see CONSOLE_VAR
 function X2Option:GetOptionItemValueByName(name) end
 
 ---Retrieves the width, height, and bits per pixel for the specified resolution
@@ -440,43 +432,36 @@ function X2Option:Save() end
 ---Sets the value for the specified console variable.
 ---@param name CONSOLE_VAR|string The console variable name.
 ---@param value string The value to set.
----@see CONSOLE_VAR
 function X2Option:SetConsoleVariable(name, value) end
 
 ---Sets the default float value for the specified option type.
 ---@param optionType OIT The option type.
 ---@param value number The default float value.
----@see OIT
 function X2Option:SetItemDefaultFloatValue(optionType, value) end
 
 ---Sets the default float value for the specified console variable.
 ---@param name CONSOLE_VAR|string The console variable name.
 ---@param value number The default float value.
----@see CONSOLE_VAR
 function X2Option:SetItemDefaultFloatValueByName(name, value) end
 
 ---Sets the default string value for the specified option type.
 ---@param optionType OIT The option type.
 ---@param value string The default string value.
----@see OIT
 function X2Option:SetItemDefaultStringValue(optionType, value) end
 
 ---Sets the default string value for the specified console variable.
 ---@param name CONSOLE_VAR|string The console variable name.
 ---@param value string The default string value.
----@see CONSOLE_VAR
 function X2Option:SetItemDefaultStringValueByName(name, value) end
 
 ---Sets the float value for the specified option type.
 ---@param optionType OIT The option type.
 ---@param value number The float value to set.
----@see OIT
 function X2Option:SetItemFloatValue(optionType, value) end
 
 ---Sets the float value for the specified console variable.
 ---@param name CONSOLE_VAR|string The console variable name.
 ---@param value number The float value to set.
----@see CONSOLE_VAR
 function X2Option:SetItemFloatValueByName(name, value) end
 
 ---@TODO: What option would this actually work on?
@@ -484,17 +469,14 @@ function X2Option:SetItemFloatValueByName(name, value) end
 ---settings.
 ---@param optionType OIT The option type.
 ---@param value number The float value to set.
----@see OIT
 function X2Option:SetItemFloatValueWithoutModify(optionType, value) end
 
 ---Sets the string value for the specified option type.
 ---@param optionType OIT The option type.
 ---@param value string The string value to set.
----@see OIT
 function X2Option:SetItemStringValue(optionType, value) end
 
 ---Sets the string value for the specified console variable.
 ---@param name CONSOLE_VAR|string The console variable name.
 ---@param value string The string value to set.
----@see CONSOLE_VAR
 function X2Option:SetItemStringValueByName(name, value) end

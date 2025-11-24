@@ -53,5 +53,4 @@ function X2Team:GetRole(teamIndex, memberIndex) end
 
 ---Sets the player's role in a raid.
 ---@param role TEAM_ROLE The role to set for the player.
----@see TEAM_ROLE
 function X2Team:SetRole(role) end

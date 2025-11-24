@@ -35,7 +35,6 @@ function Editboxbase:SetCursorColor(r, g, b, a) end
 
 ---Sets the cursor color using a color key for the Editboxbase.
 ---@param colorKey ETC_COLOR The color key for the cursor.
----@see ETC_COLOR
 function Editboxbase:SetCursorColorByColorKey(colorKey) end
 
 ---Enables or disables read-only mode for the Editboxbase.

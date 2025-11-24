@@ -6,19 +6,16 @@ X2Locale = {} -- api/X2Locale
 ---Retrieves the current keyboard layout.
 ---@return KEYBOARD_LAYOUT keyboardLayout The current keyboard layout.
 ---@nodiscard
----@see KEYBOARD_LAYOUT
 function X2Locale:GetKeyboardLayout() end
 
 ---Retrieves the current locale.
 ---@return LOCALE_STR locale The current locale.
 ---@nodiscard
----@see LOCALE_STR
 function X2Locale:GetLocale() end
 
 ---Retrieves the locale index.
 ---@return LOCALE_INDEX localeIndex The locale index.
 ---@nodiscard
----@see LOCALE_INDEX
 function X2Locale:GetLocaleIndex() end
 
 ---Checks if the specified localization category and key exist.
@@ -26,7 +23,6 @@ function X2Locale:GetLocaleIndex() end
 ---@param key string The key from the database ui_texts table.
 ---@return boolean localizeUiText `true` if the localization exists, `false` otherwise.
 ---@nodiscard
----@see UI_TEXT_CATEGORY_ID
 function X2Locale:HasLocalizeUiText(categoryId, key) end
 
 ---@TODO: Clarify if this triggers an event and how this works.
@@ -51,12 +47,10 @@ function X2Locale:LocalizeNonUiText(text, ...) end
 ---@param ... string Arguments to replace placeholders (must match number of $).
 ---@return string localizedUiText The localized UI text.
 ---@nodiscard
----@see UI_TEXT_CATEGORY_ID
 function X2Locale:LocalizeUiText(category, key, ...) end
 
 ---Formats the specified text.
 ---@param text FORMAT_MACRO|string The text to format.
 ---@return string textFormatted The formatted text.
 ---@nodiscard
----@see FORMAT_MACRO
 function X2Locale:TextFormating(text) end

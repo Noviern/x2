@@ -20,8 +20,8 @@ local Vslider = {}
 ---api/Addon
 ---@class EscMenuButtonData
 ---@field path string Addon/{addonname}/example.dds
----@field x? number
----@field y? number
+---@field x number|nil
+---@field y number|nil
 ---@field w number 25
 ---@field h number 25
 
@@ -108,14 +108,17 @@ local Vslider = {}
 ---@field screenResolution ScreenResolution
 ---@field bound Bound
 
+---@TODO: search for this and replace with Vec3Array if neccessary
 ---api/Addon
 ---@class Vec3
----@field x? number
----@field y? number
----@field z? number
----@field [1]? number x
----@field [2]? number y
----@field [3]? number z
+---@field x number|nil
+---@field y number|nil
+---@field z number|nil
+
+---@class Vec3Array
+---@field [1] number|nil x
+---@field [2] number|nil y
+---@field [3] number|nil z
 
 ---api/Addon
 ---@class VirtualMemoryStats
@@ -151,11 +154,11 @@ local Vslider = {}
 
 ---api/X2Chat
 ---@class ChatMessageOption
----@field isOtherWorldMessage? boolean
+---@field isOtherWorldMessage boolean|nil
 ---@field isUserChat boolean
----@field messageLocale? LOCALE
----@field npcBubbleChat? boolean
----@field specifyName? string
+---@field messageLocale LOCALE|nil
+---@field npcBubbleChat boolean|nil
+---@field specifyName string|nil
 
 ---api/X2Achievement
 ---@class RewardItemInfo
@@ -178,24 +181,24 @@ local Vslider = {}
 ---@field canProgress boolean
 ---@field categoryName string
 ---@field complete boolean
----@field completeDate? Time This is set if complete == true
+---@field completeDate Time|nil This is set if complete == true
 ---@field completeNum number
----@field completeSubCount? number @TODO: I think this is only set if highRank == true
+---@field completeSubCount number|nil @TODO: I think this is only set if highRank == true
 ---@field current number
 ---@field desc string
 ---@field grade number
 ---@field highRank boolean
----@field highRankAchievementType? number mainType @TODO: I think this is only set if highRank == false
+---@field highRankAchievementType number|nil mainType @TODO: I think this is only set if highRank == false
 ---@field iconPath string
 ---@field isHidden boolean
----@field isParentComplete? boolean @TODO: I think this is only set if highRank == false
+---@field isParentComplete boolean|nil @TODO: I think this is only set if highRank == false
 ---@field name string
----@field objective? number[] @TODO: I think this is only set if highRank == true
----@field reward? RewardInfo @TODO: I think this is only set if highRank == true
+---@field objective number|nil[] @TODO: I think this is only set if highRank == true
+---@field reward RewardInfo|nil @TODO: I think this is only set if highRank == true
 ---@field subCategoryName string
 ---@field subCategoryType number
 ---@field summary string
----@field totalSubCount? number @TODO: I think this is only set if highRank == true
+---@field totalSubCount number|nil @TODO: I think this is only set if highRank == true
 ---@field tracing boolean
 ---@field type number
 
@@ -238,8 +241,8 @@ local Vslider = {}
 ---@field levelMin number
 ---@field questType number
 ---@field realStep number
----@field requireItem? number
----@field requireItemCount? number
+---@field requireItem number|nil
+---@field requireItemCount number|nil
 ---@field requireLevel number
 ---@field satisfy boolean
 ---@field sort number
@@ -270,9 +273,9 @@ local Vslider = {}
 ---@field resource1ColorKey string
 ---@field resource1Current number
 ---@field resource1Max number
----@field resource2ColorKey? string
----@field resource2Current? number
----@field resource2Max? number
+---@field resource2ColorKey string|nil
+---@field resource2Current number|nil
+---@field resource2Max number|nil
 ---@field uiType CRU
 
 ---api/X2CombatResource
@@ -318,9 +321,9 @@ local Vslider = {}
 ---api/X2Map
 ---@class ZoneStateInfo
 ---@field conflictState ZONE_STATE
----@field dropRate? number
----@field goldRate? number
----@field festivalName? string
+---@field dropRate number|nil
+---@field goldRate number|nil
+---@field festivalName string|nil
 ---@field isConflictZone boolean
 ---@field isCurrentZone boolean
 ---@field isFestivalZone boolean
@@ -330,12 +333,12 @@ local Vslider = {}
 ---@field isNuiaProtectedZone boolean
 ---@field isPeaceZone boolean
 ---@field isSiegeZone boolean
----@field localDevelopmentName? string
----@field localDevelopmentStep? number
----@field lockTime? number
+---@field localDevelopmentName string|nil
+---@field localDevelopmentStep number|nil
+---@field lockTime number|nil
 ---@field nonPeaceState boolean
----@field nonRate? boolean
----@field remainTime? number
+---@field nonRate boolean|nil
+---@field remainTime number|nil
 ---@field warChaos boolean
 ---@field zoneName string
 
@@ -408,11 +411,11 @@ local Vslider = {}
 ---api/X2Player
 ---@class Appellation
 ---@field [1] number TYPE
----@field [2]? string NAME
+---@field [2] string|nil NAME
 ---@field [3] number GRADE
 ---@field [4] number ISHAVE
 ---@field [5] number ORDER
----@field [6]? AppellationBuffInfo BUFFINFO
+---@field [6] AppellationBuffInfo|nil BUFFINFO
 
 ---api/X2Player
 ---@class StampChangeItemInfo
@@ -428,10 +431,10 @@ local Vslider = {}
 
 ---api/X2Resident
 ---@class ResidentBoardContent
----@field [1] string?
----@field [2] string?
----@field [3] string?
----@field [4] string?
+---@field [1] string|nil
+---@field [2] string|nil
+---@field [3] string|nil
+---@field [4] string|nil
 ---@field contents ResidentBoardContent
 ---@field faction string
 ---@field title string
@@ -468,7 +471,7 @@ local Vslider = {}
 ---@field resultbuffkind boolean
 ---@field resulticon string
 
----api/X2Skill
+---api/X2Skill [SkillTooltip](lua://SkillTooltip)
 ---@class SkillTooltip
 ---@field ability string
 ---@field abilityLevel number
@@ -484,17 +487,17 @@ local Vslider = {}
 ---@field levelStep number
 ---@field mana number
 ---@field maxCombatResource number
----@field maxRange? number
----@field meleeDpsMultiplier? number
+---@field maxRange number|nil
+---@field meleeDpsMultiplier number|nil
 ---@field minCombatResource number
----@field minRange? number
+---@field minRange number|nil
 ---@field name string
 ---@field path string
 ---@field show boolean
 ---@field skillLevel number
 ---@field skillPoints number
----@field synergyIconInfo? SynergyIconInfo[]
----@field targetAreaRadius? number
+---@field synergyIconInfo SynergyIconInfo[]|nil
+---@field targetAreaRadius number|nil
 ---@field tipType string
 ---@field type number
 
@@ -540,17 +543,17 @@ local Vslider = {}
 ---@field buff_id number
 ---@field path string
 ---@field stack number
----@field timeLeft? number
----@field timeUnit? "msec"|"sec"
+---@field timeLeft number|nil
+---@field timeUnit "msec"|"sec"|nil
 
 ---api/X2Unit
 ---@class BuffTooltip: BuffInfo
 ---@field category "Buff"|"Debuff"
----@field description? string
----@field duration? number
----@field mine? boolean
----@field name? string
----@field tipType? "buff"|"debuff"
+---@field description string|nil
+---@field duration number|nil
+---@field mine boolean|nil
+---@field name string|nil
+---@field tipType "skill"|"mate_skill"|"siege_weapon_skill"|"buff"|"debuff"|"passive"|"appStamp"|"preview"|nil
 
 ---api/X2Unit
 ---@class CastingInfo
@@ -574,18 +577,18 @@ local Vslider = {}
 ---@TODO: each animType has it own fields
 ---May not be accurate.
 ---@class FrameInfo
----@field alpha? number
----@field animTime? number
----@field animType? DAT|LAT This can add multiple LAT
----@field h? number
----@field moveX? number
----@field moveY? number
----@field scale? number
----@field showTime? number
----@field time? number
----@field w? number
----@field x? number
----@field y? number
+---@field alpha number|nil
+---@field animTime number|nil
+---@field animType DAT|LAT|nil This can add multiple LAT
+---@field h number|nil
+---@field moveX number|nil
+---@field moveY number|nil
+---@field scale number|nil
+---@field showTime number|nil
+---@field time number|nil
+---@field w number|nil
+---@field x number|nil
+---@field y number|nil
 
 ---@class Point
 ---@field beginX number
@@ -596,8 +599,8 @@ local Vslider = {}
 ---@TODO: this may not be accurate, child doesnt appear to work
 ---@class ItemData: ItemTree
 ---@field indexing number[] { parentIndex[, childIndex...] } (min: `0`)
----@field text? string
----@field value? number
+---@field text string|nil
+---@field value number|nil
 
 ---@class ItemsInfo
 ---@field indexing number[] { parentIndex[, childIndex...] } (min: `0`)
@@ -606,23 +609,23 @@ local Vslider = {}
 ---@field value number
 
 ---@class ItemTree
----@field enable? boolean `true` to enable, `false` to disable. (default: `true`)
+---@field enable boolean|nil `true` to enable, `false` to disable. (default: `true`)
 ---@field text string
 ---@field value number
----@field subtext? string
----@field subColor? RGBAColor
----@field defaultColor? RGBAColor Requires `useColor = true`.
----@field selectColor? RGBAColor Requires `useColor = true`.
----@field overColor? RGBAColor Requires `useColor = true`.
----@field disableColor? RGBAColor Requires `useColor = true`.
----@field color? RGBAColor Requires `useColor = true`.
----@field useColor? boolean if `true` defaultColor, selectColor, overColor, disableColor, and color need to all be set or they will be invisible.
----@field iconPath? string
----@field infoKey? string
----@field child? ItemTree[]
----@field tailIconPath? string
----@field tailIconCoord? string
----@field opened? boolean (default: `false`)
+---@field subtext string|nil
+---@field subColor RGBAColor|nil
+---@field defaultColor RGBAColor|nil Requires `useColor = true`.
+---@field selectColor RGBAColor|nil Requires `useColor = true`.
+---@field overColor RGBAColor|nil Requires `useColor = true`.
+---@field disableColor RGBAColor|nil Requires `useColor = true`.
+---@field color RGBAColor|nil Requires `useColor = true`.
+---@field useColor boolean|nil if `true` defaultColor, selectColor, overColor, disableColor, and color need to all be set or they will be invisible.
+---@field iconPath string|nil
+---@field infoKey string|nil
+---@field child ItemTree[]|nil
+---@field tailIconPath string|nil
+---@field tailIconCoord string|nil
+---@field opened boolean|nil (default: `false`)
 
 ---objects/Listbox
 ---@class ItemTreeValue
@@ -684,7 +687,7 @@ local Vslider = {}
 ---@field defaultR number Basic Hair Color Red. (min: `0`, max: `255`)
 ---@field defaultG number Basic Hair Color Green. (min: `0`, max: `255`)
 ---@field defaultB number Basic Hair Color Blue. (min: `0`, max: `255`)
----@field index? number Old Hair @TODO: If this is set by default on the model then rgb cant be used and vice versa, needs more testing.
+---@field index number|nil Old Hair @TODO: If this is set by default on the model then rgb cant be used and vice versa, needs more testing.
 
 ---@class CustomizingHairTwoToneColor
 ---@field twoToneR number Highlight Color Red. (min: `0`, max: `255`)
@@ -706,10 +709,10 @@ local Vslider = {}
 ---@field sec_long number
 
 ---@class InsetData: number[]
----@field [1]? number Left
----@field [2]? number Top
----@field [3]? number Bottom
----@field [4]? number Right
+---@field [1] number|nil Left
+---@field [2] number|nil Top
+---@field [3] number|nil Bottom
+---@field [4] number|nil Right
 
 ---@class SiegeRaidTeam
 ---@field defense boolean
@@ -742,14 +745,14 @@ local Vslider = {}
 ---@field totalFee string
 
 ---@class CraftOrderEntries
----@field [1]? CraftOrderEntry
----@field [2]? CraftOrderEntry
----@field [3]? CraftOrderEntry
----@field [4]? CraftOrderEntry
----@field [5]? CraftOrderEntry
----@field [6]? CraftOrderEntry
----@field [7]? CraftOrderEntry
----@field [8]? CraftOrderEntry
+---@field [1] CraftOrderEntry|nil
+---@field [2] CraftOrderEntry|nil
+---@field [3] CraftOrderEntry|nil
+---@field [4] CraftOrderEntry|nil
+---@field [5] CraftOrderEntry|nil
+---@field [6] CraftOrderEntry|nil
+---@field [7] CraftOrderEntry|nil
+---@field [8] CraftOrderEntry|nil
 
 ---@class DiagonalASRDailyInfo
 ---@field dailyAvg string
@@ -814,7 +817,7 @@ local Vslider = {}
 ---@field [9] number Contribution Points
 ---@field [10] number Ancestral Level
 ---@field [11] number Weekly Contribution Points
----@field [12]? any CHK
+---@field [12] any|nil CHK
 
 ---@class GuildInterests
 ---@field [1] number Dungeon
@@ -847,7 +850,7 @@ local Vslider = {}
 ---@field [7] boolean Party
 ---@field [8] number Ancestral Level = 40,
 ---@field [9] number Faction
----@field [10]? number CHK
+---@field [10] number|nil CHK
 
 ---@class InstanceEnterableInfo
 ---@field content string
@@ -923,14 +926,14 @@ local Vslider = {}
 ---@class ResidentInfo
 ---@field huntingCharge number
 ---@field isResident boolean
----@field localCharge? string
+---@field localCharge string|nil
 ---@field localEffect string
 ---@field localFaction string
 ---@field localFactionIcon string
----@field memberCount? number
+---@field memberCount number|nil
 ---@field name string
----@field refreshRemain? number
----@field servicePoint? number
+---@field refreshRemain number|nil
+---@field servicePoint number|nil
 
 ---@class SquadInfo
 ---@field buttonEnable boolean
@@ -942,7 +945,7 @@ local Vslider = {}
 ---@field limitGearScore number
 ---@field limitLevel number
 ---@field maxMemberCount number
----@field nameCacheQueryId? string
+---@field nameCacheQueryId string|nil
 ---@field openType number
 ---@field ownerLevel number
 ---@field squadId number
@@ -959,25 +962,25 @@ local Vslider = {}
 ---@field name string
 
 ---@class TooltipInfo
----@field buff? boolean
----@field count? number
----@field enemy? boolean
----@field expedition? string
----@field factionId? FACTION_TYPE
----@field factionName? string
----@field factions? FACTION_TYPE[]
----@field hp? string|number
----@field id? number
----@field list? CommonFarmItem[]
----@field kind? TOOLTIP_KIND
----@field maxHp? string|number
----@field name? string
----@field owner? string
----@field possible? boolean `true` if the player can use the ezi light
+---@field buff boolean|nil
+---@field count number|nil
+---@field enemy boolean|nil
+---@field expedition string|nil
+---@field factionId FACTION_TYPE|nil
+---@field factionName string|nil
+---@field factions FACTION_TYPE[]|nil
+---@field hp string|number|nil
+---@field id number|nil
+---@field list CommonFarmItem[]|nil
+---@field kind TOOLTIP_KIND|nil
+---@field maxHp string|number|nil
+---@field name string|nil
+---@field owner string|nil
+---@field possible boolean|nil `true` if the player can use the ezi light
 ---@field text string
----@field territoryName? string
+---@field territoryName string|nil
 ---@field tooltipType TOOLTIP_TYPE
----@field zoneId? ZONE_ID
+---@field zoneId ZONE_ID|nil
 
 ---@class SiegeRaidMemberInfo
 ---@field ability ABILITY_TYPE[]
@@ -1098,8 +1101,8 @@ local Vslider = {}
 
 ---@class ActiveAbilities
 ---@field [1] ActiveAbility
----@field [2]? ActiveAbility
----@field [3]? ActiveAbility
+---@field [2] ActiveAbility|nil
+---@field [3] ActiveAbility|nil
 
 ---@class ChangeVisualRace
 ---@field itemId number
@@ -1195,7 +1198,7 @@ local Vslider = {}
 ---@class CombatEnvironmentalPrefix
 ---@field source COLLISION_SOURCE
 ---@field subType COLLISION_PART
----@field mySlave? any @TODO:
+---@field mySlave any|nil @TODO:
 
 ---@class CombatDamageSuffix
 ---@field damage number
@@ -1324,7 +1327,7 @@ local Vslider = {}
 ---@class ReentryParam
 ---@field [1] boolean reentry
 ---@field [2] number timeLeft in milliseconds
----@field [3]? string instanceName
+---@field [3] string|nil instanceName
 
 ---@class MiniScoreBoardRowInfo
 ---@field curHp number
@@ -1340,3 +1343,153 @@ local Vslider = {}
 ---@field rows MiniScoreBoardRowInfo[]
 ---@field type number
 ---@field visibleOrder number
+
+---@class GearScoreItemInfo
+---@field total number
+---@field equipSlotReinforce number
+---@field bare number
+
+---@class SocketInfo
+---@field maxSocket number
+---@field socketItem number[]
+
+---@class EvolvingInfoModifier
+---@field value number
+---@field type number
+---@field gsNum number
+
+---@class EvolvingInfo
+---@field minExp number
+---@field evolveChance number
+---@field minSectionExp number
+---@field percent number
+---@field modifier EvolvingInfoModifier[]
+
+---@class ModifireTable
+---@field value number
+---@field type number
+---@field name string
+
+---@class BonusesInfo
+---@field bufDesc string
+---@field satisfied boolean
+---@field numPieces number
+
+---@class EquipSetInfo
+---@field equipSetItemInfoDesc string
+---@field bonuses BonusesInfo[]
+
+---@class SetItemsInfo
+---@field item_name string
+---@field equipped boolean
+---@field item_type number
+
+---@class RechargeBuffInfo
+---@field chargeLifetime Time
+---@field remainTime Time
+
+---@class RequiredConditionInfo
+---@field equipSlotTypes string[]
+
+---@TODO: This may not be complete. Should probably add ? to each field. Maybe convert this into a ItemBase and then make different classes?
+---@class ItemInfo
+---@field armor number
+---@field armorType string
+---@field attackDelay number
+---@field auction_only boolean
+---@field backpackType number
+---@field baseEquipment boolean
+---@field buffType number
+---@field canEvolve boolean
+---@field category string
+---@field checkUnitReq boolean
+---@field contributionPointPrice number
+---@field convertibleItem boolean
+---@field cost number
+---@field craftedWorldName string
+---@field crafter string
+---@field craftType number
+---@field dead boolean
+---@field description string
+---@field DPS number
+---@field durability number
+---@field element string
+---@field elementName string
+---@field equiped boolean
+---@field equippedSetItemCount number
+---@field equipSetInfo EquipSetInfo
+---@field evolvingCategory boolean
+---@field evolvingInfo EvolvingInfo
+---@field extraArmor number
+---@field extraDPS number
+---@field gearScore GearScoreItemInfo
+---@field gemInfo number
+---@field gemModifireTable ModifireTable[]
+---@field gender string
+---@field grade string
+---@field gradeColor string
+---@field gradeEnchantable boolean
+---@field gradeIcon string
+---@field healDps number
+---@field honorPrice number
+---@field icon string
+---@field indestructible boolean
+---@field isEnchantDisable boolean
+---@field isMaterial boolean
+---@field isMyWorld boolean
+---@field isPetOnly boolean
+---@field isStackable boolean
+---@field isUnderWaterCreature boolean
+---@field item_flag_cannot_equip boolean
+---@field item_impl "accessory"|"armor"|"butler_armor"|"enchanting_gem"|"itemGrade"|"itemInfo"|"learn_lock"|"local"|"mate_armor"|"open_paper"|"slave_equipment"|"socket"|"summon_mate"|"summon_slave"|"weapon"|nil
+---@field itemGrade number
+---@field itemType number
+---@field itemUsage string
+---@field level number
+---@field level_limit number
+---@field level_requirement number
+---@field lifeSpan number
+---@field lifeSpanDayOfWeek boolean
+---@field lifeSpanType string
+---@field livingPointPrice number
+---@field location_world_name string
+---@field location_zone_name string
+---@field locked boolean
+---@field lookChanged boolean
+---@field lookType number
+---@field magicDps number
+---@field magicResistance number
+---@field maxDamage number
+---@field maxDurability number
+---@field maxSetItemCount number
+---@field maxStack number
+---@field minDamage number
+---@field modifier ModifireTable[]
+---@field moveSpeed number
+---@field name string
+---@field needsUnpack boolean
+---@field overIcon string
+---@field processedState string
+---@field rechargeBuff RechargeBuffInfo
+---@field refund number
+---@field repairable number
+---@field requiredCondition RequiredConditionInfo
+---@field scalable boolean
+---@field securityState ITEM_SECURITY
+---@field sellable boolean
+---@field setItems SetItemsInfo[]
+---@field sideEffect boolean
+---@field skillType number
+---@field slotType string
+---@field slotTypeNum number
+---@field socketInfo SocketInfo
+---@field soul_bind string
+---@field soul_bind_type number
+---@field soul_bound number
+---@field stack number
+---@field uccTooltip string
+---@field useAsSkin boolean
+---@field useAsStat boolean
+---@field useConsumeItem boolean
+---@field wear boolean
+---@field linkKind LINKKIND_STR|nil

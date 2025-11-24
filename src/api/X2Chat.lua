@@ -319,8 +319,6 @@ X2Chat = {}                              -- api/X2Chat
 ---X2Chat:DispatchChatMessage(CMF_SYSTEM, "Hello, ArcheRage!")
 ---X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = true })
 ---```
----@see CMF
----@see CMF_SPECIAL
 ---@see ChatMessageOption
 ---@overload fun(self: self, filter: CMF_SPECIAL, message: "|o; TEXT HERE - option is required for this.", option: ChatMessageOption)
 function X2Chat:DispatchChatMessage(filter, message, option) end

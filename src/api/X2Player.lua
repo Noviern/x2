@@ -121,7 +121,6 @@ function X2Player:GetAppellationStampInfo() end
 ---@param appellationPageIndex number The page index for the appellation list.
 ---@return Appellation[] appellations A table of appellation instances.
 ---@nodiscard
----@see APPELATION_ROUTE_TYPE
 ---@see Appellation
 function X2Player:GetAppellations(appellationRouteFilter, appellationPageIndex) end
 
@@ -129,7 +128,6 @@ function X2Player:GetAppellations(appellationRouteFilter, appellationPageIndex) 
 ---@param appellationRouteFilter APPELATION_ROUTE_TYPE The route type filter.
 ---@return number appellationsCount The total number of appellations.
 ---@nodiscard
----@see APPELATION_ROUTE_TYPE
 function X2Player:GetAppellationsCount(appellationRouteFilter) end
 
 ---Retrieves information on the currently active appellation buff.

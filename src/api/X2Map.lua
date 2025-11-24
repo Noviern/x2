@@ -324,7 +324,6 @@ X2Map = {}                                -- api/X2Map
 ---@param zoneId ZONE_ID The ID of the zone to query.
 ---@return ZoneStateInfo|nil zoneStateInfo The zone state information, or `nil` if not found.
 ---@nodiscard
----@see ZONE_ID
 ---@see ZoneStateInfo
 function X2Map:GetZoneStateInfoByZoneId(zoneId) end
 
@@ -333,5 +332,4 @@ function X2Map:GetZoneStateInfoByZoneId(zoneId) end
 ---@param x number The X coordinate in the world.
 ---@param y number The Y coordinate in the world.
 ---@param z number The Z coordinate in the world.
----@see ZONE_ID
 function X2Map:ShowWorldmapLocation(zoneId, x, y, z) end

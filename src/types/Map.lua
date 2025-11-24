@@ -58,7 +58,6 @@ function Map:ClearTransferTelescopeInfo() end
 ---Retrieves the player's sextant location on the map.
 ---@return SEXTANT playerSextant The player's sextant data.
 ---@nodiscard
----@see SEXTANT
 function Map:GetPlayerSextants() end
 
 ---Retrieves the player's view position on the map.
@@ -123,7 +122,6 @@ function Map:SetExpandRatio(ratio) end
 ---Sets the ping button state and type for the map.
 ---@param clicked boolean `true` if the ping button is clicked, `false` otherwise.
 ---@param pingType PING_TYPE The type of ping.
----@see PING_TYPE
 function Map:SetPingBtn(clicked, pingType) end
 
 ---Sets the ping widget and drawable for the specified ping type on the map.
@@ -136,7 +134,7 @@ function Map:SetPingBtn(clicked, pingType) end
 ---frame:SetExtent(24, 24)
 ---frame:Show(false)
 ---
----local bg = widget:CreateDrawable(TEXTURE_PATH.MAP_ICON, "my_ping", "overlay")
+---local bg = widget:CreateDrawable("ui/map/icon/npc_icon.dds", "my_ping", "overlay")
 ---bg:AddAnchor("CENTER", frame, 0, 0)
 ---frame.bg = bg
 ---bg:SetVisible(false)
@@ -156,7 +154,6 @@ function Map:SetPingBtn(clicked, pingType) end
 ---```
 ---@see Widget
 ---@see DrawableDDS
----@see PING_TYPE
 function Map:SetPingWidget(widget, drawable, pingType) end
 
 ---Sets the player's icon drawable on the map.

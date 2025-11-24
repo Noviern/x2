@@ -26,12 +26,11 @@ local Uibounds = {}
 ----- (down) └──────┘
 ---obj1:AddAnchor("TOPLEFT", 0, 0)
 ---```
----@see ANCHOR_POINT
 function Uibounds:AddAnchor(anchor, x, y) end
 
 ---Aligns the UI bounds to the specified anchor point at the given coordinates.
 ---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin. (default: `"TOPLEFT"`)
----@param parentId "UIParent"|Widget The parent widget or UIParent.
+---@param parentId "UIParent"|Widget|Drawablebase The parent widget or UIParent.
 ---@param x number The x-coordinate offset. (default: `0`)
 ---@param y number The y-coordinate offset. (default: `0`)
 ---@usage
@@ -43,14 +42,14 @@ function Uibounds:AddAnchor(anchor, x, y) end
 ----- (down) └──────┘
 ---obj2:AddAnchor("TOPLEFT", obj1, 0, 0)
 ---```
----@see ANCHOR_POINT
 ---@see Widget
+---@see Drawablebase
 function Uibounds:AddAnchor(anchor, parentId, x, y) end
 
 ---Aligns the UI bounds' anchor point to the specified parent and origin at the
 ---given coordinates.
 ---@param anchorPoint ANCHOR_POINT The anchor point of the UI bounds. (default: `"TOPLEFT"`)
----@param parentId "UIParent"|Widget The parent widget or UIParent.
+---@param parentId "UIParent"|Widget|Drawablebase The parent widget or UIParent.
 ---@param anchorOrigin ANCHOR_POINT The anchor origin on the parent. (default: `"TOPLEFT"`)
 ---@param x number The x-coordinate offset. (default: `0`)
 ---@param y number The y-coordinate offset. (default: `0`)
@@ -65,8 +64,8 @@ function Uibounds:AddAnchor(anchor, parentId, x, y) end
 -----                └──────┘
 ---obj2:AddAnchor("TOPLEFT", obj1, "BOTTOMRIGHT", 0, 0)
 ---```
----@see ANCHOR_POINT
 ---@see Widget
+---@see Drawablebase
 function Uibounds:AddAnchor(anchorPoint, parentId, anchorOrigin, x, y) end
 
 ---@TODO: This doesnt appear to restrict the widgets min/max width so im unsure what it does. It does set the widgets width.

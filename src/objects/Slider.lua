@@ -21,7 +21,6 @@ function Slider:GetMinMaxValues() end
 ---Retrieves the orientation of the Slider.
 ---@return SLIDER_SCROLL_TYPE orientation The orientation of the Slider (default: `0`).
 ---@nodiscard
----@see SLIDER_SCROLL_TYPE
 function Slider:GetOrientation() end
 
 ---Retrieves the thumb button widget of the Slider.
@@ -66,7 +65,6 @@ function Slider:SetMinThumbLength(length) end
 
 ---Sets the orientation of the Slider.
 ---@param scrollType SLIDER_SCROLL_TYPE The orientation type (default: `0`).
----@see SLIDER_SCROLL_TYPE
 function Slider:SetOrientation(scrollType) end
 
 ---Sets the step value for clicking within the Slider.

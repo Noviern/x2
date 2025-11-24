@@ -62,7 +62,6 @@ function Widget:Clickable(clickable) end
 ---local button = widget:CreateChildWidget("button", "exampleButton", 0, true)
 ------widget.exampleButton This is automatically set by this method.
 ---```
----@see OBJECT_NAME
 ---@see Widget
 function Widget:CreateChildWidget(objectTypeStr, name, index, reflectToScriptTable) end
 
@@ -78,7 +77,6 @@ function Widget:CreateChildWidget(objectTypeStr, name, index, reflectToScriptTab
 ---local button = widget:CreateChildWidgetByType(OBJECT.Button, "exampleButton", 0, true)
 ------widget.exampleButton This is automatically set by this method.
 ---```
----@see OBJECT
 ---@see Widget
 ---@overload fun(self: self, objectType: UOT_AVI, name: string, index: number, reflectToScriptTable: boolean): Avi
 ---@overload fun(self: self, objectType: UOT_BUTTON, name: string, index: number, reflectToScriptTable: boolean): Button
@@ -131,7 +129,6 @@ function Widget:CreateChildWidgetByType(objectType, name, index, reflectToScript
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return ColorDrawable drawable The created color drawable, or an empty table if the object `ColorDrawable` hasn't been imported.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see ColorDrawable
 function Widget:CreateColorDrawable(r, g, b, a, nameLayer) end
 
@@ -142,8 +139,6 @@ function Widget:CreateColorDrawable(r, g, b, a, nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return ColorDrawable drawable The created color drawable, or an empty table if the object `ColorDrawable` hasn't been imported.
 ---@nodiscard
----@see DRAWABLE_COLOR_KEY
----@see DRAWABLE_NAME_LAYER
 ---@see ColorDrawable
 function Widget:CreateColorDrawableByKey(colorKey, nameLayer) end
 
@@ -166,7 +161,6 @@ function Widget:CreateDrawable(texturePath, textureKey, nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return EffectDrawable|nil drawable The created effect drawable, an empty table if the object `EffectDrawable` hasn't been imported, or `nil` if the texture doesn't exist.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see EffectDrawable
 function Widget:CreateEffectDrawable(texturePath, nameLayer) end
 
@@ -178,7 +172,6 @@ function Widget:CreateEffectDrawable(texturePath, nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return EffectDrawable drawable The created effect drawable, or an empty table if the object `EffectDrawable` hasn't been imported.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see EffectDrawable
 function Widget:CreateEffectDrawableByKey(texturePath, textureKey, nameLayer) end
 
@@ -188,7 +181,6 @@ function Widget:CreateEffectDrawableByKey(texturePath, textureKey, nameLayer) en
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return IconDrawable drawable The created icon drawable, or an empty table if the object `IconDrawable` hasn't been imported.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see IconDrawable
 function Widget:CreateIconDrawable(nameLayer) end
 
@@ -200,7 +192,6 @@ function Widget:CreateIconDrawable(nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return ImageDrawable|nil drawable The created image drawable, an empty table if the object `ImageDrawable` hasn't been imported, or `nil` if the texture doesn't exist.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see ImageDrawable
 function Widget:CreateImageDrawable(texturePath, nameLayer) end
 
@@ -211,7 +202,6 @@ function Widget:CreateImageDrawable(texturePath, nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return NinePartDrawable drawable The created nine-part drawable, or an empty table if the object `NinePartDrawable` hasn't been imported.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see NinePartDrawable
 function Widget:CreateNinePartDrawable(texturePath, nameLayer) end
 
@@ -219,13 +209,10 @@ function Widget:CreateNinePartDrawable(texturePath, nameLayer) end
 ---
 ---Creates a text drawable for the specified font and size.
 ---@param fontPath FONT_PATH The font path.
----@param fontSize FONT_SIZE The font size.
+---@param fontSize number The font size.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return TextDrawable drawable The created text drawable, or an empty table if the object `TextDrawable` hasn't been imported.
 ---@nodiscard
----@see FONT_PATH
----@see FONT_SIZE
----@see DRAWABLE_NAME_LAYER
 ---@see TextDrawable
 function Widget:CreateTextDrawable(fontPath, fontSize, nameLayer) end
 
@@ -247,7 +234,6 @@ function Widget:CreateThreeColorDrawable(width, height, nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return ThreePartDrawable drawable The created three-part drawable, or an empty table if the object `ThreePartDrawable` hasn't been imported.
 ---@nodiscard
----@see DRAWABLE_NAME_LAYER
 ---@see ThreePartDrawable
 function Widget:CreateThreePartDrawable(texturePath, nameLayer) end
 
@@ -257,13 +243,11 @@ function Widget:DetachWidget() end
 ---@FIXME: Broken?
 ---Disables drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
----@see DRAWABLE_NAME_LAYER
 function Widget:DisableDrawables(nameLayer) end
 
 ---@FIXME: Broken?
 ---Disables drawables for the specified layer and its children.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
----@see DRAWABLE_NAME_LAYER
 function Widget:DisableDrawablesWithChildren(nameLayer) end
 
 ---@TODO: Make a list of events that can be activated/deactivated by this. This also sets the state to disabled (actually highlighted because state is bugged atm)
@@ -277,12 +261,10 @@ function Widget:EnableDrag(enable) end
 
 ---Enables drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to enable.
----@see DRAWABLE_NAME_LAYER
 function Widget:EnableDrawables(nameLayer) end
 
 ---Enables drawables for the specified layer and its children.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to enable.
----@see DRAWABLE_NAME_LAYER
 function Widget:EnableDrawablesWithChildren(nameLayer) end
 
 ---@TODO: Make a list of events that can be activated/deactivated by this. default value.
@@ -342,7 +324,6 @@ function Widget:GetText() end
 ---Retrieves the UI layer of the Widget.
 ---@return UI_LAYER uiLayer The UI layer. (default: `"normal"`)
 ---@nodiscard
----@see UI_LAYER
 function Widget:GetUILayer() end
 
 ---@TODO: Clarify typeStr purpose.
@@ -359,7 +340,6 @@ function Widget:GetValue(typeStr) end
 ---@param actionName WIDGET_EVENT_TYPE The action name to check.
 ---@return boolean handlerExists `true` if a handler exists, `false` otherwise.
 ---@nodiscard
----@see WIDGET_EVENT_TYPE
 function Widget:HasHandler(actionName) end
 
 ---Inherits animation data from the specified widget.
@@ -411,7 +391,6 @@ function Widget:Raise() end
 ---Registers an event for the Widget to be accessible by the OnEvent handler
 ---action.
 ---@param eventName UIEVENT_TYPE The event to register.
----@see UIEVENT_TYPE
 function Widget:RegisterEvent(eventName) end
 
 ---Releases the deleted handler for the Widget.
@@ -419,12 +398,10 @@ function Widget:ReleaseDeletedHandler() end
 
 ---Releases a handler for the specified action.
 ---@param actionName WIDGET_EVENT_TYPE The action name to release.
----@see WIDGET_EVENT_TYPE
 function Widget:ReleaseHandler(actionName) end
 
 ---Removes all drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to clear.
----@see DRAWABLE_NAME_LAYER
 function Widget:RemoveAllDrawables(nameLayer) end
 
 ---Removes a specific drawable table from the widget.
@@ -464,7 +441,6 @@ function Widget:SetCharacterCacheDataHandler(handler) end
 ---@param action WIDGET_EVENT_TYPE The action name.
 ---@param delegator Widget The delegator widget.
 ---@param handler DelegatorHandler The handler function.
----@see WIDGET_EVENT_TYPE
 ---@see DelegatorHandler
 function Widget:SetDelegator(action, delegator, handler) end
 
@@ -476,13 +452,11 @@ function Widget:SetDeletedHandler(handler) end
 ---Sets the drag condition for the Widget. This restricts when the events
 ---`OnDragReceive`, `OnDragStart`, and `OnDragStop` are fired.
 ---@param dragCondition DRAG_CONDITION The drag condition. (default: `DC_ALWAYS`)
----@see DRAG_CONDITION
 function Widget:SetDragCondition(dragCondition) end
 
 ---Sets the alpha for a specific drawable layer.
 ---@param alpha number Alpha value (min: `0`, max: `1`). (default: `1`)
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the alpha to.
----@see DRAWABLE_NAME_LAYER
 function Widget:SetDrawableLayerAlpha(alpha, nameLayer) end
 
 ---Sets the draw priority for the Widget relative to its sibling Widgets.
@@ -560,7 +534,6 @@ function Widget:SetLText(category, key, ...) end
 ---@param b number Blue value (min: `0`, max: `1`).
 ---@param a number Alpha value (min: `0`, max: `1`).
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the color to.
----@see DRAWABLE_NAME_LAYER
 function Widget:SetLayerColor(r, g, b, a, nameLayer) end
 
 ---Sets the maximum resizing extent for the Widget.
@@ -610,7 +583,6 @@ function Widget:SetScale(scale) end
 ---@param velocityTime number Duration in seconds for velocity.
 ---@param accelerationTime number Duration in seconds for acceleration.
 ---@param scaleAnchor ANCHOR_POINT The anchor point for scaling.
----@see ANCHOR_POINT
 function Widget:SetScaleAnimation(initialScale, finalScale, velocityTime, accelerationTime, scaleAnchor) end
 
 ---@TODO: Make a list of widgets and their interactions that invoke sound.
@@ -618,7 +590,6 @@ function Widget:SetScaleAnimation(initialScale, finalScale, velocityTime, accele
 ---type of widget, for instance a button will play its sound when clicked, and
 ---a window will play its sound when shown/hidden.
 ---@param name WIDGET_SOUND The sound name.
----@see WIDGET_SOUND
 function Widget:SetSounds(name) end
 
 ---Enables or disables start animations for alpha and scale.
@@ -651,7 +622,6 @@ function Widget:StartMoving() end
 
 ---Starts resizing the Widget from the specified anchor point.
 ---@param anchorPoint ANCHOR_POINT The anchor point for resizing.
----@see ANCHOR_POINT
 function Widget:StartSizing(anchorPoint) end
 
 ---Stops moving or resizing the Widget.
@@ -676,7 +646,6 @@ function Widget:UseDynamicContentState(use) end
 ---Enables or disables dynamic drawable state for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to modify.
 ---@param use boolean `true` to enable, `false` to disable.
----@see DRAWABLE_NAME_LAYER
 function Widget:UseDynamicDrawableState(nameLayer, use) end
 
 ---Enables or disables resizing for the Widget.

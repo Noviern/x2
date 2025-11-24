@@ -2271,6 +2271,93 @@
 ---| "wyvern_ba_relaxed_idle"
 ---| "wyvern_mo_normal_run_f"
 
+---@alias API
+---| `2`  # X2Console
+---| `3`  # X2Ability
+---| `4`  # X2Action
+---| `5`  # X2Bag
+---| `6`  # X2BattleField
+---| `7`  # X2Camera
+---| `8`  # X2Chat
+---| `9`  # X2Craft
+---| `10` # X2Cursor
+---| `11` # X2Debug
+---| `12` # X2Decal
+---| `13` # X2Equipment
+---| `14` # X2Faction
+---| `15` # X2Friend
+---| `16` # X2Dominion
+---| `17` # X2Family
+---| `18` # X2Trial
+---| `19` # X2Hotkey
+---| `20` # X2House
+---| `21` # X2Input
+---| `22` # X2Interaction
+---| `23` # X2Item
+---| `24` # X2Locale
+---| `25` # X2LoginCharacter
+---| `26` # X2CustomizingUnit
+---| `27` # X2Loot
+---| `28` # X2Mail
+---| `29` # X2GoodsMail
+---| `30` # X2NameTag
+---| `31` # X2Option
+---| `32` # X2Player
+---| `33` # X2Quest
+---| `34` # X2SiegeWeapon
+---| `35` # X2Skill
+---| `36` # X2Sound
+---| `37` # X2Store
+---| `38` # X2Team
+---| `39` # X2Time
+---| `40` # X2Trade
+---| `41` # X2Tutorial
+---| `42` # X2Unit
+---| `43` # X2Util
+---| `44` # X2Warp
+---| `45` # X2World
+---| `46` # X2Ucc
+---| `47` # X2Bank
+---| `48` # X2Coffer
+---| `49` # X2GuildBank
+---| `50` # X2RenewItem
+---| `51` # X2Auction
+---| `52` # X2Mate
+---| `53` # X2BuffSkill
+---| `54` # X2Map
+---| `55` # X2DialogManager
+---| `56` # X2InGameShop
+---| `57` # X2UserMusic
+---| `58` # X2Book
+---| `59` # X2Nation
+---| `60` # X2Customizer
+---| `61` # X2Security
+---| `62` # X2ItemLookConverter
+---| `63` # X2Rank
+---| `64` # X2Helper
+---| `65` # X2PremiumService
+---| `66` # X2ItemEnchant
+---| `67` # X2Achievement
+---| `68` # X2Hero
+---| `69` # X2EventCenter
+---| `70` # X2ItemGacha
+---| `71` # X2ItemGuide
+---| `72` # X2BlessUthstin
+---| `73` # X2Resident
+---| `74` # X2HeirSkill
+---| `75` # X2EquipSlotReinforce
+---| `76` # X2OneAndOneChat
+---| `77` # X2Squad
+---| `78` # X2Dyeing
+---| `79` # X2SkillAlert
+---| `80` # X2Indun
+---| `81` # X2ArchePass
+---| `82` # X2Butler
+---| `83` # X2CombatResource
+---| `84` # X2Roster
+---| `85` # X2MiniScoreboard
+---| `86` # X2SurveyForm
+
 ---@alias AUCTION_CATEGORY
 ---| `0`  # ALL
 ---| `1`  # DAGGER
@@ -6348,6 +6435,14 @@
 ---| "zone_peace_blue"
 ---| "zone_war_red"
 
+---@alias FONT_PATH
+---| "font_main"
+---| "font_sub"
+---| "font_combat"
+-- -| "img_font_npc_hpbar"
+-- -| "img_font_action_bar"
+-- -| "img_font_combat"
+
 ---@TODO: can this be used in other places?
 ---Example: @PC_NAME(0) is a @PC_GENDER(0) @PC_RACE(0) -> Noviern is a Male Dwarf.
 ---@alias FORMAT_MACRO
@@ -6741,6 +6836,64 @@
 ---| "start"
 ---| "talk"
 
+---@alias OBJECT
+---| `0`  # Window
+---| `1`  # Label
+---| `2`  # Button
+---| `3`  # Editbox
+---| `4`  # EditboxMultiline
+---| `5`  # Listbox
+---| `6`  # Drawable
+---| `7`  # ColorDrawable
+---| `8`  # NinePartDrawable
+---| `9`  # ThreePartDrawable
+---| `10` # ImageDrawable
+---| `11` # IconDrawable
+---| `12` # TextDrawable
+---| `13` # TextStyle
+---| `14` # ThreeColorDrawable
+---| `15` # EffectDrawable
+---| `16` # Message
+---| `17` # StatusBar
+---| `18` # GameTooltip
+---| `19` # UnitframeTooltip
+---| `20` # CooldownButton
+---| `21` # CooldownInventoryButton
+---| `22` # CooldownConstantButton
+---| `23` # CheckButton
+---| `24` # Slider
+---| `25` # Pageable
+---| `26` # WorldMap
+---| `27` # RoadMap
+---| `28` # Grid
+---| `29` # ModelView
+---| `30` # Webbrowser
+---| `31` # CircleDiagram
+---| `32` # ColorPicker
+---| `33` # PaintColorPicker
+---| `34` # Folder
+---| `35` # DamageDisplay
+---| `36` # Tab
+---| `37` # SliderTab
+---| `38` # ChatWindow
+---| `39` # Textbox
+---| `40` # Combobox
+---| `41` # ComboListButton
+---| `42` # ChatMessage
+---| `43` # ChatEdit
+---| `44` # MegaphoneChatEdit
+---| `45` # ListCtrl
+---| `46` # EmptyWidget
+---| `47` # Slot
+---| `48` # Line
+---| `49` # Root
+---| `50` # TextureDrawable
+---| `51` # Webview
+---| `52` # Avi
+---| `53` # X2Editbox
+---| `54` # DynamicList
+---| `55` # RadioGroup
+
 ---@alias OBJECT_NAME
 ---| "avi"
 ---| "button"
@@ -6903,6 +7056,29 @@
 ---| `19` # CHARMED -- @TODO: Confirm this.
 ---| `20` # BUBBLE -- @TODO: Confirm this.
 ---| `21` # PETRIFIED -- @TODO: Confirm this.
+
+---@alias SKILL_ALERT_STATUS_BUFF_NAME
+---| `"Stun"`
+---| `"Impaled"`
+---| `"Stagger"`
+---| `"Tripped"`
+---| `"Fear"`
+---| `"Sleep"`
+---| `"Snare"`
+---| `"SLOW"` -- @TODO: Confirm this.
+---| `"Silence"`
+---| `"Shackle"`
+---| `"Imprison"`
+---| `"LAUNCHED"` -- @TODO: Confirm this.
+---| `"FROZEN"` -- @TODO: Confirm this.
+---| `"DEEP_FREEZE"` -- @TODO: Confirm this.
+---| `"POISON"` -- @TODO: Confirm this.
+---| `"BLEED"` -- @TODO: Confirm this.
+---| `"SHAKEN"` -- @TODO: Confirm this.
+---| `"ENERVATED"` -- @TODO: Confirm this.
+---| `"CHARMED"` -- @TODO: Confirm this.
+---| `"BUBBLE"` -- @TODO: Confirm this.
+---| `"PETRIFIED"` -- @TODO: Confirm this.
 
 ---@alias SKILL_TYPE
 ---| "buff"
@@ -10805,6 +10981,12 @@
 ---| "team_2_48"
 ---| "team_2_49"
 ---| "team_2_50"
+
+---@alias UNIT_LOCAL
+---| "player"
+---| "target"
+---| "targettarget"
+---| "watchtarget"
 
 ---@alias UNIT_TYPE
 ---| "housing"

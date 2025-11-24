@@ -25,7 +25,6 @@ function X2Skill:GetCooldown(skillId, ignoreGlobalCooldown) end
 ---@param mateType MATE_TYPE The type of mate to query.
 ---@return number|nil remainTime The remaining cooldown time in milliseconds, or `nil` if the skillId doesn't exist.
 ---@nodiscard
----@see MATE_TYPE
 function X2Skill:GetMateCooldown(skillId, ignoreGlobalCooldown, mateType) end
 
 ---@TODO: Not sure how the itemType works with skillId, maybe one should be 0 and set the other?
@@ -35,7 +34,6 @@ function X2Skill:GetMateCooldown(skillId, ignoreGlobalCooldown, mateType) end
 ---@param filter? SIK Optional filter to reduce the scope of the returned tooltip.
 ---@return SkillTooltip skillTooltip The skill tooltip information, or an empty table if no data is available.
 ---@nodiscard
----@see SIK
 ---@see SkillTooltip
 function X2Skill:GetSkillTooltip(skillId, itemType, filter) end
 

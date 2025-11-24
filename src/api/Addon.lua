@@ -735,9 +735,6 @@ ZST_INVALID = 0         -- api/Addon ZST
 ---  path = "Addon/{addonname}/example.dds",  w = 25, h = 25
 ---})
 ---```
----@see ESC_MENU_CATEGORY_ID
----@see UIC
----@see ESC_MENU_ICON_KEY
 ---@see EscMenuButtonData
 function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data) end
 
@@ -788,7 +785,6 @@ function ADDON:GetContent(uiCategory) end
 ---@return number|nil height The unscaled height of the component, or `nil` if the UI category doesn't exist.
 ---@return boolean|nil isVisible `true` if the component is visible, `false` otherwise.
 ---@nodiscard
----@see UIC
 function ADDON:GetContentMainScriptPosVis(uiCategory) end
 
 ---Retrieves the name of the addon.
@@ -798,12 +794,10 @@ function ADDON:GetName() end
 
 ---Imports the API type for the addon. Call once per `API`.
 ---@param apiType API The API to import.
----@see API
 function ADDON:ImportAPI(apiType) end
 
 ---Imports the `objectId` for the addon. Call only once per `OBJECT`.
 ---@param objectId OBJECT The object ID to import.
----@see OBJECT
 function ADDON:ImportObject(objectId) end
 
 ---Retrieves the saved data for the specified `key` in the addon.
@@ -817,7 +811,6 @@ function ADDON:LoadData(key) end
 ---@param uiCategory UIC The UI category to register the function to. (max: `16777216`)
 ---@param triggerFunc ContentTriggerFunc The function to register as a trigger.
 ---@return boolean success `true` if registration was successful, `false` otherwise.
----@see UIC
 function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 
 ---Registers a widget and its optional trigger function to a UI category and
@@ -827,10 +820,10 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---@param widget Widget The widget to register.
 ---@param triggerFunc? ContentTriggerFunc The optional trigger function for the widget.
 ---@return Widget|nil widget The registered widget, or `nil` if registration failed.
----@see UIC
 ---@see Widget
 function ADDON:RegisterContentWidget(uiCategory, widget, triggerFunc) end
 
+---@FIXME: Reloading the current addon crashes the game.
 ---Reloads the addon with the specified name. Avoid reloading the current addon
 ---to prevent game crashes.
 ---@param name string The name of the addon to reload.
@@ -856,7 +849,6 @@ function ADDON:SetAddonEnable(name, enable) end
 ---@param show boolean `true` to show, `false` to hide the component.
 ---@param data? table Optional data passed to the `uiCategory` `triggerFunc` defined with `ADDON:RegisterContentTriggerFunc` or `ADDON:RegisterContentWidget` (currently only usable for custom UI categories).
 ---@return boolean success `true` if the operation succeeded, `false` otherwise.
----@see UIC
 function ADDON:ShowContent(uiCategory, show, data) end
 
 ---Toggles the visibility of the UI category and returns whether the operation
@@ -868,13 +860,11 @@ function ADDON:ShowContent(uiCategory, show, data) end
 ---```lua
 ---ADDON:ToggleContent(UIC_MY_CUSTOM_WIDGET, { hello = "world" })
 ---```
----@see UIC
 function ADDON:ToggleContent(uiCategory, data) end
 
 ---Clears the UI bound associated with the specified UI key. Reload
 ---(or character select) required to update the UI.
 ---@param key UIBOUND_KEY|string The key whose UIBound data should be cleared.
----@see UIBOUND_KEY
 function UIParent:ClearUIBound(key) end
 
 ---Creates a widget of the specified type with the given ID and parent.
@@ -884,7 +874,6 @@ function UIParent:ClearUIBound(key) end
 ---@param parentId "UIParent"|Widget|string The parent `"UIParent"`, `Widget`, or `Widget` id for the widget.
 ---@return T widget The created widget, empty table if the widget hasn't been imported, or `nil` if failed.
 ---@nodiscard
----@see OBJECT_NAME
 ---@see Widget
 function UIParent:CreateWidget(widgetName, id, parentId) end
 
@@ -932,7 +921,6 @@ function UIParent:GetEtcValue(key) end
 ---@param key FONT_COLOR_KEY The key to retrieve the font color for.
 ---@return RGBAColor fontColor The font color associated with the key.
 ---@nodiscard
----@see FONT_COLOR_KEY
 ---@see RGBAColor
 function UIParent:GetFontColor(key) end
 
@@ -955,7 +943,6 @@ function UIParent:GetId() end
 ---@param uiCategory UIC The UI category to check.
 ---@return boolean permission `true` if permission is granted, `false` otherwise.
 ---@nodiscard
----@see UIC
 function UIParent:GetPermission(uiCategory) end
 
 ---Retrieves the screen height.
@@ -993,7 +980,6 @@ function UIParent:GetTextureKeyData(filename) end
 ---@param key UIBOUND_KEY|string The key to retrieve the UI bound for.
 ---@return UIBound|nil uiBound The UI bound if the key has been moved, nil otherwise.
 ---@nodiscard
----@see UIBOUND_KEY
 ---@see UIBound
 function UIParent:GetUIBound(key) end
 
@@ -1069,14 +1055,13 @@ function UIParent:IsRenderThreadSupported() end
 ---Releases an event handler for the specified UI event.
 ---@param eventName UIEVENT_TYPE The UI event to release the handler for.
 ---@param handler function The handler function to release.
----@see UIEVENT_TYPE
 function UIParent:ReleaseEventHandler(eventName, handler) end
 
+---@FIXME: More than 255 events will crash the game
 ---Sets an event handler for the specified UI event (more than 255 events will
 ---crash the game).
 ---@param eventName UIEVENT_TYPE The UI event to set the handler for.
 ---@param handler function The handler function to set.
----@see UIEVENT_TYPE
 ---@overload fun(self: self, eventName: "ABILITY_CHANGED", handler: ABILITY_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "ABILITY_EXP_CHANGED", handler: ABILITY_EXP_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "ABILITY_SET_CHANGED", handler: ABILITY_SET_CHANGED_HANDLER)
@@ -1922,7 +1907,6 @@ function UIParent:SetEventHandler(eventName, handler) end
 ---
 ---UIParent:SetUIBound("ui_bound_custom", info)
 ---```
----@see UIBOUND_KEY
 ---@see UIBound
 function UIParent:SetUIBound(key, uiBound) end
 

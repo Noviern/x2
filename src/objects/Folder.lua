@@ -20,7 +20,6 @@ function Folder:GetExtendLength() end
 ---Retrieves the current state of the Folder.
 ---@return FOLDER_STATE state The state of the Folder. (default: `"close"`)
 ---@nodiscard
----@see FOLDER_STATE
 function Folder:GetState() end
 
 ---Retrieves the title text of the Folder.

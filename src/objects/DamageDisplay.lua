@@ -98,7 +98,6 @@ function DamageDisplay:SetInset(left, top, right, bottom) end
 
 ---Sets the position calculation type for the DamageDisplay.
 ---@param positionCalculationType PCT The position calculation type. (default: `PCT_DEFAULT`)
----@see PCT
 function DamageDisplay:SetPositionCalculationType(positionCalculationType) end
 
 ---Sets the source and target unit IDs for the DamageDisplay.

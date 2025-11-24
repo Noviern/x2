@@ -73,7 +73,6 @@ local Slot = {}
 
 ---Changes the icon layer for the Slot.
 ---@param nameLayer DRAWABLE_NAME_LAYER The name of the layer to set.
----@see DRAWABLE_NAME_LAYER
 function Slot:ChangeIconLayer(nameLayer) end
 
 ---Disables the default clicking behavior of the Slot.
@@ -82,7 +81,6 @@ function Slot:DisableDefaultClick() end
 ---Establishes an item for the Slot with the specified type and grade.
 ---@param itemType number The type of the item.
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
----@see ITEM_GRADE_TYPE
 function Slot:EstablishItem(itemType, itemGrade) end
 
 ---Establishes a skill for the Slot.
@@ -93,14 +91,12 @@ function Slot:EstablishSkill(skillType) end
 ---@param statusBuffTag SKILL_ALERT_STATUS_BUFF_TAG The status buff tag.
 ---@param remain number The remaining time for the alert in milliseconds.
 ---@param duration number The total duration of the alert in milliseconds.
----@see SKILL_ALERT_STATUS_BUFF_TAG
 function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 
 ---@TODO: What slotTypes are supported?
 ---Establishes a skill slot for the Slot.
 ---@param slotType SLOT_TYPE The type of the slot.
 ---@param slotIdx number The index of the slot.
----@see SLOT_TYPE
 function Slot:EstablishSkillSlot(slotType, slotIdx) end
 
 ---Establishes a slot with the specified type and index. Triggers the event
@@ -127,10 +123,6 @@ function Slot:EstablishSkillSlot(slotType, slotIdx) end
 ---widget:EstablishSlot(ISLOT_SHORTCUT_ACTION, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
 ---widget:EstablishSlot(ISLOT_SKILL_ALERT, @TODO:)
 ---```
----@see SKILL
----@see ES
----@see HEIR_SKILL_TYPE
----@see PES
 ---@overload fun(self: self, slotType: ISLOT_ABILITY_VIEW, slotIdx: SKILL)
 ---@overload fun(self: self, slotType: ISLOT_ACTION, slotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number) @FIXME: Only grade of the item renders.
@@ -176,10 +168,6 @@ function Slot:EstablishSlot(slotType, slotIdx) end
 ---widget:EstablishVirtualSlot(ISLOT_SHORTCUT_ACTION, 1, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
 ---widget:EstablishVirtualSlot(ISLOT_SKILL_ALERT, @TODO:, 1)
 ---```
----@see SKILL
----@see ES
----@see HEIR_SKILL_TYPE
----@see PES
 ---@overload fun(self: self, slotType: ISLOT_ABILITY_VIEW, slotIdx: SKILL, virtualSlotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_ACTION, slotIdx: number, virtualSlotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
@@ -202,7 +190,6 @@ function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 ---Retrieves the binded type of the Slot.
 ---@return BIND_TYPE bindedType The binded type.
 ---@nodiscard
----@see BIND_TYPE
 function Slot:GetBindedType() end
 
 -- item_impl

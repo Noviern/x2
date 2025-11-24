@@ -43,7 +43,7 @@ ISMI_PALOS = 45508                    -- api/X2InGameShop ISMI
 ISMI_SEASON_GARNET = 52137            -- api/X2InGameShop ISMI
 ISMI_STAR = 36007                     -- api/X2InGameShop ISMI
 MAX_INGAME_SHOP_UPDATE = 10           -- api/X2InGameShop
-MODE_SEARCH = 2                       -- api/X2InGameShop
+MODE_SEARCH = 2                       -- api/X2InGameShop INGAME_SHOP_VIEW_MODE
 PRICE_TYPE_AA_BONUS_CASH = 5          -- api/X2InGameShop PRICE_TYPE
 PRICE_TYPE_AA_CASH = 0                -- api/X2InGameShop PRICE_TYPE
 PRICE_TYPE_AA_CASH_AND_BONUS_CASH = 6 -- api/X2InGameShop PRICE_TYPE
@@ -125,6 +125,11 @@ X2InGameShop = {}                     -- api/X2InGameShop
 ---| `ISMI_PALOS`
 ---| `ISMI_SEASON_GARNET`
 ---| `ISMI_STAR`
+
+---api/X2InGameShop
+---@alias INGAME_SHOP_VIEW_MODE
+---| `1`
+---| `MODE_SEARCH`
 
 ---api/X2InGameShop
 ---@alias PRICE_TYPE

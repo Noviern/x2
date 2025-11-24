@@ -53,7 +53,6 @@ X2Achievement = {}          -- api/X2Achievement
 ---@param achievementType number The achievement type (id) to add.
 ---@return boolean success `true` if the achievement was added successfully, `false` otherwise.
 ---@nodiscard
----@see ACHIEVEMENT_KIND
 function X2Achievement:AddTracingAchievement(achievementKind, achievementType) end
 
 ---Retrieves achievement information if the specified type exists.
@@ -70,8 +69,6 @@ function X2Achievement:GetAchievementInfo(achievementType) end
 ---@param achievementFilter ACHIEVEMENT_FILTER The filter to apply.
 ---@return number[] achievementMainList A table of achievement types, or empty if none exist.
 ---@nodiscard
----@see ACHIEVEMENT_KIND
----@see ACHIEVEMENT_FILTER
 function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType, achievementFilter) end
 
 ---Retrieves the name of the specified achievement type.
@@ -86,7 +83,6 @@ function X2Achievement:GetAchievementName(achievementType) end
 ---@param achievementFilter ACHIEVEMENT_FILTER The filter to apply.
 ---@return AchievementSubList[] achievementSubList A table of achievement sublists, or empty if none exist.
 ---@nodiscard
----@see ACHIEVEMENT_FILTER
 ---@see AchievementSubList
 function X2Achievement:GetAchievementSubList(mainType, achievementFilter) end
 
@@ -94,7 +90,6 @@ function X2Achievement:GetAchievementSubList(mainType, achievementFilter) end
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
 ---@return number[] achievementTracingList A table of traced main achievement types, or empty if none exist.
 ---@nodiscard
----@see ACHIEVEMENT_KIND
 function X2Achievement:GetAchievementTracingList(achievementKind) end
 
 ---Retrieves categories for the specified kind, returning level subcategories
@@ -102,7 +97,6 @@ function X2Achievement:GetAchievementTracingList(achievementKind) end
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
 ---@return AchievementCategory[]|AchievementLevelSubCategory[] categories A table of categories or level subcategories for `EAK_RACIAL_MISSION`, or empty if kind is invalid.
 ---@nodiscard
----@see ACHIEVEMENT_KIND
 ---@see AchievementCategory
 ---@see AchievementLevelSubCategory
 function X2Achievement:GetCategories(achievementKind) end
@@ -116,8 +110,6 @@ function X2Achievement:GetCategories(achievementKind) end
 ---@return number complete The number of completed achievements.
 ---@return number total The total number of achievements.
 ---@nodiscard
----@see ACHIEVEMENT_KIND
----@see ACHIEVEMENT_FILTER
 function X2Achievement:GetCategoryCount(achievementKind, categoryType, subCategoryType, achievementFilter) end
 
 ---Retrieves subcategory information if the specified subcategory exists.
@@ -132,7 +124,6 @@ function X2Achievement:GetSubcategoryInfo(subCategory) end
 ---@param todayType TODAY_TYPE The type of today’s assignments.
 ---@return number todayAssignmentCount The number of assignments for the day.
 ---@nodiscard
----@see TODAY_TYPE
 function X2Achievement:GetTodayAssignmentCount(todayType) end
 
 ---Retrieves a table with daily contract completion rewards.
@@ -145,7 +136,6 @@ function X2Achievement:GetTodayAssignmentGoal() end
 ---@param index number The index of the assignment.
 ---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or `nil` if not found.
 ---@nodiscard
----@see TODAY_TYPE
 ---@see TodayAssignmentInfo
 function X2Achievement:GetTodayAssignmentInfo(todayType, index) end
 
@@ -154,7 +144,6 @@ function X2Achievement:GetTodayAssignmentInfo(todayType, index) end
 ---@param index number The index of the assignment.
 ---@return TodayAssignmentInfo|nil todayAssignmentInfo The assignment information, or `nil` if not found.
 ---@nodiscard
----@see TODAY_TYPE
 ---@see TodayAssignmentInfo
 function X2Achievement:GetTodayAssignmentInfoForChange(todayType, index) end
 
@@ -164,7 +153,6 @@ function X2Achievement:GetTodayAssignmentInfoForChange(todayType, index) end
 ---@return number resetCount The current reset count.
 ---@return number maxCount The maximum reset count.
 ---@nodiscard
----@see TODAY_TYPE
 function X2Achievement:GetTodayAssignmentResetCount(todayType) end
 
 ---Retrieves the completion status of today’s assignments.
@@ -179,7 +167,6 @@ function X2Achievement:GetTodayAssignmentStatus() end
 ---@param questType number The quest type (id) to check.
 ---@return boolean todayAssignmentQuest `true` if the quest is in the list and not complete, `false` otherwise.
 ---@nodiscard
----@see TODAY_TYPE
 function X2Achievement:IsTodayAssignmentQuest(todayType, questType) end
 
 ---Checks if the specified achievement type in the given kind is being traced.
@@ -187,11 +174,9 @@ function X2Achievement:IsTodayAssignmentQuest(todayType, questType) end
 ---@param achievementType number The achievement type (id) to check.
 ---@return boolean tracingAchievement `true` if the achievement is being traced, `false` otherwise.
 ---@nodiscard
----@see ACHIEVEMENT_KIND
 function X2Achievement:IsTracingAchievement(achievementKind, achievementType) end
 
 ---Removes the specified achievement type in the given kind from tracing.
 ---@param achievementKind ACHIEVEMENT_KIND The achievement kind.
 ---@param achievementType number The achievement type (id) to remove.
----@see ACHIEVEMENT_KIND
 function X2Achievement:RemoveTracingAchievement(achievementKind, achievementType) end

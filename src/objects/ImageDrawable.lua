@@ -38,7 +38,7 @@ function ImageDrawable:IsWhiteTexture() end
 ---@param frameInfo FrameInfo The frame information for the animation.
 ---@usage
 ---```lua
----local imageDrawable = widget:CreateImageDrawable(TEXTURE_PATH.TIMER, "background")
+---local imageDrawable = widget:CreateImageDrawable("ui/hud/timer.dds", "background")
 ---imageDrawable:SetAnimFrameInfo({
 ---  { x = 0,   y = 0,  w = 61, h = 61, time = 100 },
 ---  { x = 61,  y = 0,  w = 61, h = 61, time = 100 },

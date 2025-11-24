@@ -100,6 +100,5 @@ X2Item = {}                             -- api/X2Item
 ---@param kind? LINKKIND Optional kind of link.
 ---@return ItemInfo itemInfo The item information.
 ---@nodiscard
----@see LINKKIND
 ---@see ItemInfo
 function X2Item:InfoFromLink(linkText, kind) end
