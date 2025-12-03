@@ -148,3 +148,16 @@ function X2Equipment:GetEquippedItemTooltipInfo(equipSlot, targetEquippedItem) e
 ---@return number|nil equippedItemType The equipped item type, or `nil` if none.
 ---@nodiscard
 function X2Equipment:GetEquippedItemType(equipSlot) end
+
+---Picks up the equipped item from a mate's slot. The item is placed in the
+---cursor for manual placement.
+---@param targetName UNIT_PET The mate's unit identifier.
+---@param slotNo ES The equipment slot to pick up from.
+function X2Equipment:PickupMateEquippedItem(targetName, slotNo) end
+
+---Attempts to unequip an item from a mate and move it to the player's
+---inventory.
+---@param targetName UNIT_PET The mate's unit identifier.
+---@param slotNo ES The equipment slot to query.
+---@return boolean success `true` if the item was successfully moved, `false` otherwise (e.g., inventory full).
+function X2Equipment:MateUnequipItem(targetName, slotNo) end

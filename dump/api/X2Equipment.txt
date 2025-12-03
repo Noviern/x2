@@ -63,4 +63,6 @@ ES_WAIST = 4
 X2Equipment = {
   GetEquippedItemTooltipInfo = "<function X2Equipment>",
   GetEquippedItemType = "<function X2Equipment>",
+  MateUnequipItem = "<function X2Equipment>",
+  PickupMateEquippedItem = "<function X2Equipment>",
 }
