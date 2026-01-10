@@ -28,7 +28,7 @@ function Drawablebase:SetColor(r, g, b, a) end
 ---@param angle number The rotation angle in degrees.
 function Drawablebase:SetRotation(angle) end
 
----@TODO: Unsure what is the default, id imagine its false.
+---@TODO: Unsure what is the default, id imagine its false. r_UseSRGB = 1
 ---Enables or disables sRGB for the Drawablebase.
 ---@param srgb boolean `true` to enable sRGB, `false` to disable.
 function Drawablebase:SetSRGB(srgb) end

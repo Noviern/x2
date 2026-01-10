@@ -5,6 +5,8 @@
 ---@field luminanceWidget EmptyWidget
 ---@field spectrumWidget EmptyWidget
 local PaintColorPicker = {}
+
+---objects/PaintColorPicker
 ---@class paintcolorpicker: PaintColorPicker
 
 ---Retrieves the HSL color values of the PaintColorPicker.

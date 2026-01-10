@@ -1,45 +1,41 @@
 ---@meta _
 
-COPT_INSTANT = 2                    -- api/X2Craft COPT
-COPT_INVALID = 0                    -- api/X2Craft COPT
-COPT_PC = 1                         -- api/X2Craft COPT
-COSK_ACTABILITY_GROUP = 1           -- api/X2Craft COSK
-COSK_DEFAULT = 0                    -- api/X2Craft COSK
-COSK_FEE = 2                        -- api/X2Craft COSK
-COSO_ASC = 0                        -- api/X2Craft COSO
-COSO_DESC = 1                       -- api/X2Craft COSO
+COPT_INSTANT = 2                    -- api/X2Craft CRAFT_ORDER_PROCESS_TYPE
+COPT_INVALID = 0                    -- api/X2Craft CRAFT_ORDER_PROCESS_TYPE
+COPT_PC = 1                         -- api/X2Craft CRAFT_ORDER_PROCESS_TYPE
+COSK_ACTABILITY_GROUP = 1           -- api/X2Craft CRAFT_ORDER_SORT_KIND
+COSK_DEFAULT = 0                    -- api/X2Craft CRAFT_ORDER_SORT_KIND
+COSK_FEE = 2                        -- api/X2Craft CRAFT_ORDER_SORT_KIND
+COSO_ASC = 0                        -- api/X2Craft CRAFT_ORDER_SORT_ORDER
+COSO_DESC = 1                       -- api/X2Craft CRAFT_ORDER_SORT_ORDER
 CRAFT_ORDER_ENTRY_PER_CHARACTER = 5 -- api/X2Craft
 CRAFT_ORDER_ENTRY_PER_SEARCH = 8    -- api/X2Craft
-MFCR_FAIL = 3                       -- api/X2Craft MFCR
-MFCR_FAIL_LIMIT = 1                 -- api/X2Craft MFCR
-MFCR_FAIL_WAIT = 2                  -- api/X2Craft MFCR
-MFCR_SUCCESS = 0                    -- api/X2Craft MFCR
+MFCR_FAIL = 3                       -- api/X2Craft MODIFY_FAVORITE_CRAFT_RESULT
+MFCR_FAIL_LIMIT = 1                 -- api/X2Craft MODIFY_FAVORITE_CRAFT_RESULT
+MFCR_FAIL_WAIT = 2                  -- api/X2Craft MODIFY_FAVORITE_CRAFT_RESULT
+MFCR_SUCCESS = 0                    -- api/X2Craft MODIFY_FAVORITE_CRAFT_RESULT
 ---@class X2Craft
 X2Craft = {}                        -- api/X2Craft
 
 ---api/X2Craft
----Craft Order Process Type
----@alias COPT
+---@alias CRAFT_ORDER_PROCESS_TYPE
 ---| `COPT_INSTANT`
 ---| `COPT_INVALID`
 ---| `COPT_PC`
 
 ---api/X2Craft
----Craft Order Sort Kind
----@alias COSK
+---@alias CRAFT_ORDER_SORT_KIND
 ---| `COSK_ACTABILITY_GROUP`
 ---| `COSK_DEFAULT`
 ---| `COSK_FEE`
 
 ---api/X2Craft
----Craft Order Sort Order
----@alias COSO
+---@alias CRAFT_ORDER_SORT_ORDER
 ---| `COSO_ASC`
 ---| `COSO_DESC`
 
 ---api/X2Craft
----Modify Favorite Craft Recipe
----@alias MFCR
+---@alias MODIFY_FAVORITE_CRAFT_RESULT
 ---| `MFCR_FAIL`
 ---| `MFCR_FAIL_LIMIT`
 ---| `MFCR_FAIL_WAIT`

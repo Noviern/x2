@@ -48,7 +48,7 @@ function X2Resident:GetResidentBoardContent(boardType) end
 
 ---Searches for housing trade listings in the specified zone with the given
 ---filter and search word, triggering the `RESIDENT_HOUSING_TRADE_LIST` event.
----@param zoneGroupType ZONE_ID The zone ID to search.
+---@param zoneGroupType ZONE_GROUP_ID The zone ID to search.
 ---@param filterindex HOUSING_LIST_FILTER The filter to apply.
 ---@param searchWord string The search term.
 function X2Resident:RequestHousingTradeList(zoneGroupType, filterindex, searchWord) end

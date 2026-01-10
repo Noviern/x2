@@ -4,6 +4,8 @@
 ---@class Textbox: Widget
 ---@field style TextStyle
 local Textbox = {}
+
+---objects/Textbox
 ---@class textbox: Textbox
 
 ---Retrieves the inset of the Textbox.

@@ -9,6 +9,8 @@ UI_BUTTON_PUSHED = 2      -- objects/CooldownInventoryButton UI_BUTTON_STATE
 ---objects/CooldownInventoryButton
 ---@class CooldownInventoryButton: CooldownButton
 local CooldownInventoryButton = {}
+
+---objects/CooldownInventoryButton
 ---@class cooldowninventorybutton: CooldownInventoryButton
 
 ---@FIXME: Broken?

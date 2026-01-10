@@ -1,12 +1,11 @@
 ---@meta _
 
-DAT_LINEAR_ALPHA = 4 -- objects/ImageDrawable DAT
-DAT_LINEAR_SCALE = 2 -- objects/ImageDrawable DAT
-DAT_MOVE = 1         -- objects/ImageDrawable DAT
+DAT_LINEAR_ALPHA = 4 -- objects/ImageDrawable DRAWABLE_ANIMATION_TYPE
+DAT_LINEAR_SCALE = 2 -- objects/ImageDrawable DRAWABLE_ANIMATION_TYPE
+DAT_MOVE = 1         -- objects/ImageDrawable DRAWABLE_ANIMATION_TYPE
 
 ---objects/ImageDrawable
----Drawable Animation Type
----@alias DAT
+---@alias DRAWABLE_ANIMATION_TYPE
 ---| `DAT_LINEAR_ALPHA`
 ---| `DAT_LINEAR_SCALE`
 ---| `DAT_MOVE`

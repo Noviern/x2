@@ -3,6 +3,8 @@
 ---objects/Line
 ---@class Line: Widget
 local Line = {}
+
+---objects/Line
 ---@class line: Line
 
 ---Clears all points from the Line.

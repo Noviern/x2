@@ -3,6 +3,8 @@
 ---objects/Pageable
 ---@class Pageable: Widget
 local Pageable = {}
+
+---objects/Pageable
 ---@class pageable: Pageable
 
 ---Adds a widget to the specified page of the Pageable.

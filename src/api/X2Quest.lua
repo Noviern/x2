@@ -1,16 +1,16 @@
 ---@meta _
 
-CBK_NORMAL = 1                        -- api/X2Quest CBK
-CBK_SYSTEM = 3                        -- api/X2Quest CBK
-CBK_THINK = 2                         -- api/X2Quest CBK
-DOW_FRIDAY = 6                        -- api/X2Quest DOW
-DOW_INVALID = 8                       -- api/X2Quest DOW
-DOW_MONDAY = 2                        -- api/X2Quest DOW
-DOW_SATURDAY = 7                      -- api/X2Quest DOW
-DOW_SUNDAY = 1                        -- api/X2Quest DOW
-DOW_THURSDAY = 5                      -- api/X2Quest DOW
-DOW_TUESDAY = 3                       -- api/X2Quest DOW
-DOW_WEDNESDAY = 4                     -- api/X2Quest DOW
+CBK_NORMAL = 1                        -- api/X2Quest CHAT_BUBBLE_KIND
+CBK_SYSTEM = 3                        -- api/X2Quest CHAT_BUBBLE_KIND
+CBK_THINK = 2                         -- api/X2Quest CHAT_BUBBLE_KIND
+DOW_FRIDAY = 6                        -- api/X2Quest DAY_OF_WEEK
+DOW_INVALID = 8                       -- api/X2Quest DAY_OF_WEEK
+DOW_MONDAY = 2                        -- api/X2Quest DAY_OF_WEEK
+DOW_SATURDAY = 7                      -- api/X2Quest DAY_OF_WEEK
+DOW_SUNDAY = 1                        -- api/X2Quest DAY_OF_WEEK
+DOW_THURSDAY = 5                      -- api/X2Quest DAY_OF_WEEK
+DOW_TUESDAY = 3                       -- api/X2Quest DAY_OF_WEEK
+DOW_WEDNESDAY = 4                     -- api/X2Quest DAY_OF_WEEK
 MAX_CHRONICLE_INFO_ACTIVE_COUNT = 5   -- api/X2Quest
 MAX_QUEST_OBJECTIVE = 10              -- api/X2Quest
 QCS_COMPLETED = 5                     -- api/X2Quest
@@ -26,15 +26,13 @@ QUEST_MARK_ORDER_WEEKLY = 4           -- api/X2Quest QUEST_MARK_ODER
 X2Quest = {}                          -- api/X2Quest
 
 ---api/X2Quest
----Chat Bubble Kind
----@alias CBK
+---@alias CHAT_BUBBLE_KIND
 ---| `CBK_NORMAL`
 ---| `CBK_SYSTEM`
 ---| `CBK_THINK`
 
 ---api/X2Quest
----Day Of the Week
----@alias DOW
+---@alias DAY_OF_WEEK
 ---| `DOW_FRIDAY`
 ---| `DOW_INVALID`
 ---| `DOW_MONDAY`

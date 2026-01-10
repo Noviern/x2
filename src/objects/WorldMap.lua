@@ -7,10 +7,12 @@ MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/WorldMap
 ---objects/WorldMap
 ---@class WorldMap: Widget, Map
 local WorldMap = {}
+
+---objects/WorldMap
 ---@class worldmap: WorldMap
 
 ---Retrieves climate information for a specific zone.
----@param zoneId ZONE_ID The ID of the zone.
+---@param zoneId ZONE_GROUP_ID The ID of the zone.
 ---@return ZONE_CLIMATE[] climateInfo The climate information for the zone.
 ---@nodiscard
 function WorldMap:GetClimateInfo(zoneId) end
@@ -22,7 +24,7 @@ function WorldMap:GetCursorSextants() end
 
 ---Retrieves the icon drawable for a specific zoom level and zone ID.
 ---@param level WORLD_MAP_ZOOM The zoom level.
----@param id ZONE_ID The zone ID.
+---@param id ZONE_GROUP_ID The zone ID.
 ---@return ImageDrawable iconDrawable The icon drawable, empty table if the object `ImageDrawable` hasn't been imported, or `nil` if not found.
 ---@nodiscard
 ---@see ImageDrawable
@@ -113,7 +115,7 @@ function WorldMap:SetTempNotifyColor(color) end
 function WorldMap:SetTempNotifyCoord(isMain, coord) end
 
 ---Sets the color for trouble zones on the world map based on their state.
----@param state ZONE_STATE The state of the trouble zone.
+---@param state HP_WORLD_STATE The state of the trouble zone.
 ---@param r number The red color component. (min: `0`, max: `1`)
 ---@param g number The green color component. (min: `0`, max: `1`)
 ---@param b number The blue color component. (min: `0`, max: `1`)

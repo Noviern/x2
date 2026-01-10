@@ -1,7 +1,10 @@
 ---@meta _
 
+---objects/EmptyWidget
 ---@class EmptyWidget: Widget
 local EmptyWidget = {}
+
+---objects/EmptyWidget
 ---@class emptywidget: EmptyWidget
 
 ---@FIXME: Not sure if this works.

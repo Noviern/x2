@@ -7,6 +7,8 @@
 ---@field selectorBtn Button
 ---@field toggle Button
 local Combobox = {}
+
+---objects/Combobox
 ---@class combobox: Combobox
 
 ---Inserts data into the Combobox dropdown if `Combobox:SetEditable(false)`.
@@ -33,6 +35,7 @@ function Combobox:SetAutocomplete(type, filter) end
 ---@param limit number The maximum number of visible items (min: `0`, max: `10`). (default: `10`)
 function Combobox:SetDropdownVisibleLimit(limit) end
 
----Enables or disables editability of the Combobox.
+---Enables or disables editability of the Combobox. If set to `false` any guide
+---text set to `Combobox.selector` will not render.
 ---@param editable boolean `true` to allow editing, `false` to disable. (default: `false`)
 function Combobox:SetEditable(editable) end

@@ -1,22 +1,21 @@
 ---@meta _
 
-UFT_CUPLABOR = "|p8;"           -- objects/GameTooltip UFT
-UFT_CURHP = "|p2;"              -- objects/GameTooltip UFT
-UFT_CURMP = "|p5;"              -- objects/GameTooltip UFT
-UFT_GEARSCORE = "|p12;"         -- objects/GameTooltip UFT
-UFT_MAXHP = "|p3;"              -- objects/GameTooltip UFT
-UFT_MAXLABOR = "|p9;"           -- objects/GameTooltip UFT
-UFT_MAXMP = "|p6;"              -- objects/GameTooltip UFT
-UFT_NAME = "|p1;"               -- objects/GameTooltip UFT
-UFT_PERHP = "|p4;"              -- objects/GameTooltip UFT
-UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/GameTooltip UFT
-UFT_PERMP = "|p7;"              -- objects/GameTooltip UFT
-UFT_PVPHONOR = "|p10;"          -- objects/GameTooltip UFT
-UFT_PVPKILL = "|p11;"           -- objects/GameTooltip UFT
+UFT_CUPLABOR = "|p8;"           -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_CURHP = "|p2;"              -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_CURMP = "|p5;"              -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_GEARSCORE = "|p12;"         -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_MAXHP = "|p3;"              -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_MAXLABOR = "|p9;"           -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_MAXMP = "|p6;"              -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_NAME = "|p1;"               -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_PERHP = "|p4;"              -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_PERIOD_LEADERSHIP = "|p13;" -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_PERMP = "|p7;"              -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_PVPHONOR = "|p10;"          -- objects/GameTooltip UNIT_FRAME_TOOLTIP
+UFT_PVPKILL = "|p11;"           -- objects/GameTooltip UNIT_FRAME_TOOLTIP
 
 ---objects/GameTooltip
----Unit Frame Tooltip
----@alias UFT
+---@alias UNIT_FRAME_TOOLTIP
 ---| `UFT_CUPLABOR`
 ---| `UFT_CURHP`
 ---| `UFT_CURMP`
@@ -35,6 +34,8 @@ UFT_PVPKILL = "|p11;"           -- objects/GameTooltip UFT
 ---@class GameTooltip: Widget
 ---@field style TextStyle
 local GameTooltip = {}
+
+---objects/GameTooltip
 ---@class gametooltip: GameTooltip
 
 ---Adds text to an existing line in the GameTooltip on the opposite side.

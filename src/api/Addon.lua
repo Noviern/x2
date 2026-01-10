@@ -180,155 +180,155 @@ TUTORIAL_TEXT = 15                                -- api/Addon UI_TEXT_CATEGORY_
 UCC_TEXT = 73                                     -- api/Addon UI_TEXT_CATEGORY_ID
 UCST_UNIT = 42                                    -- api/Addon
 UI = UIParent                                     -- api/Addon UIParent
-UIC_ABILITY_CHANGE = 57                           -- api/Addon UIC
-UIC_ACHIEVEMENT = 25                              -- api/Addon UIC
-UIC_ACTABILITY = 91                               -- api/Addon UIC
-UIC_ADDON = 80                                    -- api/Addon UIC
-UIC_APPELLATION = 65                              -- api/Addon UIC
-UIC_AUCTION = 58                                  -- api/Addon UIC
-UIC_AUTH_MSG_WND = 20                             -- api/Addon UIC
-UIC_BAG = 22                                      -- api/Addon UIC
-UIC_BANK = 59                                     -- api/Addon UIC
-UIC_BEAUTY_SHOP = 74                              -- api/Addon UIC
-UIC_BLESS_UTHSTIN = 66                            -- api/Addon UIC
-UIC_BUTLER_INFO = 115                             -- api/Addon UIC
-UIC_CHALLENGE = 81                                -- api/Addon UIC
-UIC_CHANGE_VISUAL_RACE = 118                      -- api/Addon UIC
-UIC_CHARACTER_INFO = 21                           -- api/Addon UIC
-UIC_CHARACTER_INFO_VISUAL_RACE = 117              -- api/Addon UIC
-UIC_CHECK_BOT_WND = 47                            -- api/Addon UIC
-UIC_CHECK_SECOND_PASSWORD = 99                    -- api/Addon UIC
-UIC_CHRONICLE_BOOK_WND = 114                      -- api/Addon UIC
-UIC_CLEAR_SECOND_PASSWORD = 98                    -- api/Addon UIC
-UIC_CLIENT_DIRVEN_CONTENTS = 10                   -- api/Addon UIC
-UIC_CLIENT_DIRVEN_TITLE = 9                       -- api/Addon UIC
-UIC_CLIENT_DRIVEN_EXIT_BTN = 11                   -- api/Addon UIC
-UIC_COFFER = 106                                  -- api/Addon UIC
-UIC_COMMERCIAL_MAIL = 78                          -- api/Addon UIC
-UIC_COMMUNITY = 120                               -- api/Addon UIC
-UIC_CRAFT_BOOK = 28                               -- api/Addon UIC
-UIC_CRAFT_ORDER = 29                              -- api/Addon UIC
-UIC_CREATE_EXPEDITION = 53                        -- api/Addon UIC
-UIC_DEATH_AND_RESURRECTION_WND = 18               -- api/Addon UIC
-UIC_DEV_WINDOW = 52                               -- api/Addon UIC
-UIC_DROPDOWN_LIST = 44                            -- api/Addon UIC
-UIC_DYNAMIC_ACTIONBAR = 6                         -- api/Addon UIC
-UIC_ENCHANT = 68                                  -- api/Addon UIC
-UIC_ENTER_SECOND_PASSWORD = 122                   -- api/Addon UIC
-UIC_EQUIP_SLOT_REINFORCE = 102                    -- api/Addon UIC
-UIC_EQUIP_SLOT_REINFORCE_TAB = 203                -- api/Addon UIC
-UIC_EVENT_CENTER = 50                             -- api/Addon UIC
-UIC_EXIT_GAME = 89                                -- api/Addon UIC
-UIC_EXPAND_INVENTORY = 72                         -- api/Addon UIC
-UIC_EXPAND_JOB = 87                               -- api/Addon UIC
-UIC_EXPEDITION = 32                               -- api/Addon UIC
-UIC_EXPEDITION_GUILD_FUNCTION_CHANGE_BUFF = 202   -- api/Addon UIC
-UIC_FAMILY = 85                                   -- api/Addon UIC
-UIC_FOLLOW = 92                                   -- api/Addon UIC
-UIC_FORCE_ATTACK = 113                            -- api/Addon UIC
-UIC_FRIEND = 35                                   -- api/Addon UIC
-UIC_GAME_EXIT_FRAME = 14                          -- api/Addon UIC
-UIC_GAME_TOOLTIP_WND = 19                         -- api/Addon UIC
-UIC_GUILD_BANK = 201                              -- api/Addon UIC
-UIC_HERO = 48                                     -- api/Addon UIC
-UIC_HERO_ELECTION = 108                           -- api/Addon UIC
-UIC_HIDDEN_QUEST = 109                            -- api/Addon UIC
-UIC_INGAME_SHOP = 73                              -- api/Addon UIC
-UIC_INTERACT_SECOND_PASSWORD = 97                 -- api/Addon UIC
-UIC_ITEM_GUIDE = 51                               -- api/Addon UIC
-UIC_ITEM_LOCK = 71                                -- api/Addon UIC
-UIC_ITEM_REPAIR = 70                              -- api/Addon UIC
-UIC_LOCAL_DEVELOPMENT_BOARD = 107                 -- api/Addon UIC
-UIC_LOOK_CONVERT = 69                             -- api/Addon UIC
-UIC_LOOT_GACHA = 67                               -- api/Addon UIC
-UIC_MAIL = 79                                     -- api/Addon UIC
-UIC_MAIN_ACTION_BAR = 17                          -- api/Addon UIC
-UIC_MAKE_CRAFT_ORDER = 30                         -- api/Addon UIC
-UIC_MARKET_PRICE = 94                             -- api/Addon UIC
-UIC_MEGAPHONE = 103                               -- api/Addon UIC
-UIC_MODE_ACTIONBAR = 7                            -- api/Addon UIC
-UIC_MY_FARM_INFO = 31                             -- api/Addon UIC
-UIC_NATION = 36                                   -- api/Addon UIC
-UIC_NOTIFY_ACTABILITY = 100                       -- api/Addon UIC
-UIC_NOTIFY_SKILL = 101                            -- api/Addon UIC
-UIC_OPTIMIZATION = 121                            -- api/Addon UIC
-UIC_OPTION_FRAME = 12                             -- api/Addon UIC
-UIC_PARTY = 84                                    -- api/Addon UIC
-UIC_PLAYER_EQUIPMENT = 90                         -- api/Addon UIC
-UIC_PLAYER_UNITFRAME = 1                          -- api/Addon UIC
-UIC_PREMIUM = 75                                  -- api/Addon UIC
-UIC_QUEST_CINEMA_FADE_WND = 16                    -- api/Addon UIC
-UIC_QUEST_CINEMA_WND = 15                         -- api/Addon UIC
-UIC_QUEST_LIST = 23                               -- api/Addon UIC
-UIC_QUEST_NOTIFIER = 24                           -- api/Addon UIC
-UIC_RAID = 86                                     -- api/Addon UIC
-UIC_RAID_RECRUIT = 34                             -- api/Addon UIC
-UIC_RAID_TEAM_MANAGER = 33                        -- api/Addon UIC
-UIC_RANK = 4                                      -- api/Addon UIC
-UIC_RANK_LOCAL_VIEW = 5                           -- api/Addon UIC
-UIC_RECOVER_EXP = 55                              -- api/Addon UIC
-UIC_RENAME_EXPEDITION = 54                        -- api/Addon UIC
-UIC_REPORT_BAD_USER = 93                          -- api/Addon UIC
-UIC_REQUEST_BATTLEFIELD = 77                      -- api/Addon UIC
-UIC_RESIDENT_TOWNHALL = 61                        -- api/Addon UIC
-UIC_RETURN_ACCOUNT_REWARD_WND = 112               -- api/Addon UIC
-UIC_ROSTER_MANAGER_WND = 116                      -- api/Addon UIC
-UIC_SCHEDULE_ITEM = 76                            -- api/Addon UIC
-UIC_SELECT_CHARACTER = 88                         -- api/Addon UIC
-UIC_SET_SECOND_PASSWORD = 96                      -- api/Addon UIC
-UIC_SHORTCUT_ACTIONBAR = 8                        -- api/Addon UIC
-UIC_SIEGE_RAID_REGISTER_WND = 110                 -- api/Addon UIC
-UIC_SIEGE_RAID_TEAM_MEMBER_LIST_WND = 111         -- api/Addon UIC
-UIC_SKILL = 26                                    -- api/Addon UIC
-UIC_SLAVE_EQUIPMENT = 45                          -- api/Addon UIC
-UIC_SPECIALTY_BUY = 62                            -- api/Addon UIC
-UIC_SPECIALTY_INFO = 41                           -- api/Addon UIC
-UIC_SPECIALTY_SELL = 63                           -- api/Addon UIC
-UIC_SQUAD = 104                                   -- api/Addon UIC
-UIC_SQUAD_MINIVIEW = 105                          -- api/Addon UIC
-UIC_STABLER = 119                                 -- api/Addon UIC
-UIC_STORE = 60                                    -- api/Addon UIC
-UIC_SYSTEM_CONFIG_FRAME = 13                      -- api/Addon UIC
-UIC_TARGET_EQUIPMENT = 46                         -- api/Addon UIC
-UIC_TARGET_UNITFRAME = 2                          -- api/Addon UIC
-UIC_TGOS = 42                                     -- api/Addon UIC
-UIC_TRADE = 82                                    -- api/Addon UIC
-UIC_TRADER = 56                                   -- api/Addon UIC
-UIC_TRADE_GOOD_PRICE_INFORMATION = 64             -- api/Addon UIC
-UIC_UI_AVI = 49                                   -- api/Addon UIC
-UIC_WEB_HELP = 40                                 -- api/Addon UIC
-UIC_WEB_MESSENGER = 37                            -- api/Addon UIC
-UIC_WEB_PLAY_DIARY = 38                           -- api/Addon UIC
-UIC_WEB_PLAY_DIARY_INSTANCE = 95                  -- api/Addon UIC
-UIC_WEB_WIKI = 39                                 -- api/Addon UIC
-UIC_WHISPER = 83                                  -- api/Addon UIC
-UIC_WORLDMAP = 27                                 -- api/Addon UIC
+UIC_ABILITY_CHANGE = 57                           -- api/Addon UI_CATEGORY
+UIC_ACHIEVEMENT = 25                              -- api/Addon UI_CATEGORY
+UIC_ACTABILITY = 91                               -- api/Addon UI_CATEGORY
+UIC_ADDON = 80                                    -- api/Addon UI_CATEGORY
+UIC_APPELLATION = 65                              -- api/Addon UI_CATEGORY
+UIC_AUCTION = 58                                  -- api/Addon UI_CATEGORY
+UIC_AUTH_MSG_WND = 20                             -- api/Addon UI_CATEGORY
+UIC_BAG = 22                                      -- api/Addon UI_CATEGORY
+UIC_BANK = 59                                     -- api/Addon UI_CATEGORY
+UIC_BEAUTY_SHOP = 74                              -- api/Addon UI_CATEGORY
+UIC_BLESS_UTHSTIN = 66                            -- api/Addon UI_CATEGORY
+UIC_BUTLER_INFO = 115                             -- api/Addon UI_CATEGORY
+UIC_CHALLENGE = 81                                -- api/Addon UI_CATEGORY
+UIC_CHANGE_VISUAL_RACE = 118                      -- api/Addon UI_CATEGORY
+UIC_CHARACTER_INFO = 21                           -- api/Addon UI_CATEGORY
+UIC_CHARACTER_INFO_VISUAL_RACE = 117              -- api/Addon UI_CATEGORY
+UIC_CHECK_BOT_WND = 47                            -- api/Addon UI_CATEGORY
+UIC_CHECK_SECOND_PASSWORD = 99                    -- api/Addon UI_CATEGORY
+UIC_CHRONICLE_BOOK_WND = 114                      -- api/Addon UI_CATEGORY
+UIC_CLEAR_SECOND_PASSWORD = 98                    -- api/Addon UI_CATEGORY
+UIC_CLIENT_DIRVEN_CONTENTS = 10                   -- api/Addon UI_CATEGORY
+UIC_CLIENT_DIRVEN_TITLE = 9                       -- api/Addon UI_CATEGORY
+UIC_CLIENT_DRIVEN_EXIT_BTN = 11                   -- api/Addon UI_CATEGORY
+UIC_COFFER = 106                                  -- api/Addon UI_CATEGORY
+UIC_COMMERCIAL_MAIL = 78                          -- api/Addon UI_CATEGORY
+UIC_COMMUNITY = 120                               -- api/Addon UI_CATEGORY
+UIC_CRAFT_BOOK = 28                               -- api/Addon UI_CATEGORY
+UIC_CRAFT_ORDER = 29                              -- api/Addon UI_CATEGORY
+UIC_CREATE_EXPEDITION = 53                        -- api/Addon UI_CATEGORY
+UIC_DEATH_AND_RESURRECTION_WND = 18               -- api/Addon UI_CATEGORY
+UIC_DEV_WINDOW = 52                               -- api/Addon UI_CATEGORY
+UIC_DROPDOWN_LIST = 44                            -- api/Addon UI_CATEGORY
+UIC_DYNAMIC_ACTIONBAR = 6                         -- api/Addon UI_CATEGORY
+UIC_ENCHANT = 68                                  -- api/Addon UI_CATEGORY
+UIC_ENTER_SECOND_PASSWORD = 122                   -- api/Addon UI_CATEGORY
+UIC_EQUIP_SLOT_REINFORCE = 102                    -- api/Addon UI_CATEGORY
+UIC_EQUIP_SLOT_REINFORCE_TAB = 203                -- api/Addon UI_CATEGORY
+UIC_EVENT_CENTER = 50                             -- api/Addon UI_CATEGORY
+UIC_EXIT_GAME = 89                                -- api/Addon UI_CATEGORY
+UIC_EXPAND_INVENTORY = 72                         -- api/Addon UI_CATEGORY
+UIC_EXPAND_JOB = 87                               -- api/Addon UI_CATEGORY
+UIC_EXPEDITION = 32                               -- api/Addon UI_CATEGORY
+UIC_EXPEDITION_GUILD_FUNCTION_CHANGE_BUFF = 202   -- api/Addon UI_CATEGORY
+UIC_FAMILY = 85                                   -- api/Addon UI_CATEGORY
+UIC_FOLLOW = 92                                   -- api/Addon UI_CATEGORY
+UIC_FORCE_ATTACK = 113                            -- api/Addon UI_CATEGORY
+UIC_FRIEND = 35                                   -- api/Addon UI_CATEGORY
+UIC_GAME_EXIT_FRAME = 14                          -- api/Addon UI_CATEGORY
+UIC_GAME_TOOLTIP_WND = 19                         -- api/Addon UI_CATEGORY
+UIC_GUILD_BANK = 201                              -- api/Addon UI_CATEGORY
+UIC_HERO = 48                                     -- api/Addon UI_CATEGORY
+UIC_HERO_ELECTION = 108                           -- api/Addon UI_CATEGORY
+UIC_HIDDEN_QUEST = 109                            -- api/Addon UI_CATEGORY
+UIC_INGAME_SHOP = 73                              -- api/Addon UI_CATEGORY
+UIC_INTERACT_SECOND_PASSWORD = 97                 -- api/Addon UI_CATEGORY
+UIC_ITEM_GUIDE = 51                               -- api/Addon UI_CATEGORY
+UIC_ITEM_LOCK = 71                                -- api/Addon UI_CATEGORY
+UIC_ITEM_REPAIR = 70                              -- api/Addon UI_CATEGORY
+UIC_LOCAL_DEVELOPMENT_BOARD = 107                 -- api/Addon UI_CATEGORY
+UIC_LOOK_CONVERT = 69                             -- api/Addon UI_CATEGORY
+UIC_LOOT_GACHA = 67                               -- api/Addon UI_CATEGORY
+UIC_MAIL = 79                                     -- api/Addon UI_CATEGORY
+UIC_MAIN_ACTION_BAR = 17                          -- api/Addon UI_CATEGORY
+UIC_MAKE_CRAFT_ORDER = 30                         -- api/Addon UI_CATEGORY
+UIC_MARKET_PRICE = 94                             -- api/Addon UI_CATEGORY
+UIC_MEGAPHONE = 103                               -- api/Addon UI_CATEGORY
+UIC_MODE_ACTIONBAR = 7                            -- api/Addon UI_CATEGORY
+UIC_MY_FARM_INFO = 31                             -- api/Addon UI_CATEGORY
+UIC_NATION = 36                                   -- api/Addon UI_CATEGORY
+UIC_NOTIFY_ACTABILITY = 100                       -- api/Addon UI_CATEGORY
+UIC_NOTIFY_SKILL = 101                            -- api/Addon UI_CATEGORY
+UIC_OPTIMIZATION = 121                            -- api/Addon UI_CATEGORY
+UIC_OPTION_FRAME = 12                             -- api/Addon UI_CATEGORY
+UIC_PARTY = 84                                    -- api/Addon UI_CATEGORY
+UIC_PLAYER_EQUIPMENT = 90                         -- api/Addon UI_CATEGORY
+UIC_PLAYER_UNITFRAME = 1                          -- api/Addon UI_CATEGORY
+UIC_PREMIUM = 75                                  -- api/Addon UI_CATEGORY
+UIC_QUEST_CINEMA_FADE_WND = 16                    -- api/Addon UI_CATEGORY
+UIC_QUEST_CINEMA_WND = 15                         -- api/Addon UI_CATEGORY
+UIC_QUEST_LIST = 23                               -- api/Addon UI_CATEGORY
+UIC_QUEST_NOTIFIER = 24                           -- api/Addon UI_CATEGORY
+UIC_RAID = 86                                     -- api/Addon UI_CATEGORY
+UIC_RAID_RECRUIT = 34                             -- api/Addon UI_CATEGORY
+UIC_RAID_TEAM_MANAGER = 33                        -- api/Addon UI_CATEGORY
+UIC_RANK = 4                                      -- api/Addon UI_CATEGORY
+UIC_RANK_LOCAL_VIEW = 5                           -- api/Addon UI_CATEGORY
+UIC_RECOVER_EXP = 55                              -- api/Addon UI_CATEGORY
+UIC_RENAME_EXPEDITION = 54                        -- api/Addon UI_CATEGORY
+UIC_REPORT_BAD_USER = 93                          -- api/Addon UI_CATEGORY
+UIC_REQUEST_BATTLEFIELD = 77                      -- api/Addon UI_CATEGORY
+UIC_RESIDENT_TOWNHALL = 61                        -- api/Addon UI_CATEGORY
+UIC_RETURN_ACCOUNT_REWARD_WND = 112               -- api/Addon UI_CATEGORY
+UIC_ROSTER_MANAGER_WND = 116                      -- api/Addon UI_CATEGORY
+UIC_SCHEDULE_ITEM = 76                            -- api/Addon UI_CATEGORY
+UIC_SELECT_CHARACTER = 88                         -- api/Addon UI_CATEGORY
+UIC_SET_SECOND_PASSWORD = 96                      -- api/Addon UI_CATEGORY
+UIC_SHORTCUT_ACTIONBAR = 8                        -- api/Addon UI_CATEGORY
+UIC_SIEGE_RAID_REGISTER_WND = 110                 -- api/Addon UI_CATEGORY
+UIC_SIEGE_RAID_TEAM_MEMBER_LIST_WND = 111         -- api/Addon UI_CATEGORY
+UIC_SKILL = 26                                    -- api/Addon UI_CATEGORY
+UIC_SLAVE_EQUIPMENT = 45                          -- api/Addon UI_CATEGORY
+UIC_SPECIALTY_BUY = 62                            -- api/Addon UI_CATEGORY
+UIC_SPECIALTY_INFO = 41                           -- api/Addon UI_CATEGORY
+UIC_SPECIALTY_SELL = 63                           -- api/Addon UI_CATEGORY
+UIC_SQUAD = 104                                   -- api/Addon UI_CATEGORY
+UIC_SQUAD_MINIVIEW = 105                          -- api/Addon UI_CATEGORY
+UIC_STABLER = 119                                 -- api/Addon UI_CATEGORY
+UIC_STORE = 60                                    -- api/Addon UI_CATEGORY
+UIC_SYSTEM_CONFIG_FRAME = 13                      -- api/Addon UI_CATEGORY
+UIC_TARGET_EQUIPMENT = 46                         -- api/Addon UI_CATEGORY
+UIC_TARGET_UNITFRAME = 2                          -- api/Addon UI_CATEGORY
+UIC_TGOS = 42                                     -- api/Addon UI_CATEGORY
+UIC_TRADE = 82                                    -- api/Addon UI_CATEGORY
+UIC_TRADER = 56                                   -- api/Addon UI_CATEGORY
+UIC_TRADE_GOOD_PRICE_INFORMATION = 64             -- api/Addon UI_CATEGORY
+UIC_UI_AVI = 49                                   -- api/Addon UI_CATEGORY
+UIC_WEB_HELP = 40                                 -- api/Addon UI_CATEGORY
+UIC_WEB_MESSENGER = 37                            -- api/Addon UI_CATEGORY
+UIC_WEB_PLAY_DIARY = 38                           -- api/Addon UI_CATEGORY
+UIC_WEB_PLAY_DIARY_INSTANCE = 95                  -- api/Addon UI_CATEGORY
+UIC_WEB_WIKI = 39                                 -- api/Addon UI_CATEGORY
+UIC_WHISPER = 83                                  -- api/Addon UI_CATEGORY
+UIC_WORLDMAP = 27                                 -- api/Addon UI_CATEGORY
 ---@class UIParent
 UIParent = {}                                     -- api/Addon UIParent
-UM_ACHIEVEMENT_NAME = 26                          -- api/Addon UM
-UM_AREA_SPHERE = 7                                -- api/Addon UM
-UM_DAY = 20                                       -- api/Addon UM
-UM_DOODAD_NAME = 10                               -- api/Addon UM
-UM_EXPEDITION_LEADER_NAME_BY_ZONEGROUP = 17       -- api/Addon UM
-UM_EXPEDITION_NAME_BY_ZONEGROUP = 16              -- api/Addon UM
-UM_HOUR = 21                                      -- api/Addon UM
-UM_ITEM_NAME = 11                                 -- api/Addon UM
-UM_MINUTE = 22                                    -- api/Addon UM
-UM_MONTH = 19                                     -- api/Addon UM
-UM_NPC_GROUP_NAME = 9                             -- api/Addon UM
-UM_NPC_NAME = 8                                   -- api/Addon UM
-UM_PC_CLASS = 4                                   -- api/Addon UM
-UM_PC_GENDER = 3                                  -- api/Addon UM
-UM_PC_NAME = 1                                    -- api/Addon UM
-UM_PC_RACE = 2                                    -- api/Addon UM
-UM_QUEST_NAME = 15                                -- api/Addon UM
-UM_SECOND = 23                                    -- api/Addon UM
-UM_SOURCE_NAME = 12                               -- api/Addon UM
-UM_SPECIFY_TARGET_NAME = 14                       -- api/Addon UM
-UM_SUB_ZONE_NAME = 6                              -- api/Addon UM
-UM_TARGET_NAME = 13                               -- api/Addon UM
-UM_YEAR = 18                                      -- api/Addon UM
-UM_ZONE_NAME = 5                                  -- api/Addon UM
+UM_ACHIEVEMENT_NAME = 26                          -- api/Addon UI_MACRO
+UM_AREA_SPHERE = 7                                -- api/Addon UI_MACRO
+UM_DAY = 20                                       -- api/Addon UI_MACRO
+UM_DOODAD_NAME = 10                               -- api/Addon UI_MACRO
+UM_EXPEDITION_LEADER_NAME_BY_ZONEGROUP = 17       -- api/Addon UI_MACRO
+UM_EXPEDITION_NAME_BY_ZONEGROUP = 16              -- api/Addon UI_MACRO
+UM_HOUR = 21                                      -- api/Addon UI_MACRO
+UM_ITEM_NAME = 11                                 -- api/Addon UI_MACRO
+UM_MINUTE = 22                                    -- api/Addon UI_MACRO
+UM_MONTH = 19                                     -- api/Addon UI_MACRO
+UM_NPC_GROUP_NAME = 9                             -- api/Addon UI_MACRO
+UM_NPC_NAME = 8                                   -- api/Addon UI_MACRO
+UM_PC_CLASS = 4                                   -- api/Addon UI_MACRO
+UM_PC_GENDER = 3                                  -- api/Addon UI_MACRO
+UM_PC_NAME = 1                                    -- api/Addon UI_MACRO
+UM_PC_RACE = 2                                    -- api/Addon UI_MACRO
+UM_QUEST_NAME = 15                                -- api/Addon UI_MACRO
+UM_SECOND = 23                                    -- api/Addon UI_MACRO
+UM_SOURCE_NAME = 12                               -- api/Addon UI_MACRO
+UM_SPECIFY_TARGET_NAME = 14                       -- api/Addon UI_MACRO
+UM_SUB_ZONE_NAME = 6                              -- api/Addon UI_MACRO
+UM_TARGET_NAME = 13                               -- api/Addon UI_MACRO
+UM_YEAR = 18                                      -- api/Addon UI_MACRO
+UM_ZONE_NAME = 5                                  -- api/Addon UI_MACRO
 UNIT_FRAME_TEXT = 38                              -- api/Addon UI_TEXT_CATEGORY_ID
 UNIT_GRADE_TEXT = 37                              -- api/Addon UI_TEXT_CATEGORY_ID
 UNIT_KIND_TEXT = 36                               -- api/Addon UI_TEXT_CATEGORY_ID
@@ -354,7 +354,7 @@ UOT_EMPTY_WIDGET = 46     -- api/Addon UOT
 ---@alias UOT_FOLDER 34
 ---@alias UOT_GAME_TOOLTIP 18
 ---@alias UOT_GRID 28
-UOT_IMAGE_DRAWABLE = 10 -- api/Addon UOT UOT_DRAWABLE
+UOT_IMAGE_DRAWABLE = 10 -- api/Addon UOT UI_OBJECT_TYPE_DRAWABLE
 ---@alias UOT_IMAGE_DRAWABLE 10
 UOT_LABEL = 1           -- api/Addon UOT
 ---@alias UOT_LABEL 1
@@ -366,7 +366,7 @@ UOT_LIST_CTRL = 45 -- api/Addon UOT
 ---@alias UOT_MEGAPHONE_CHATEDIT 44
 ---@alias UOT_MESSAGE 16
 ---@alias UOT_MODELVIEW 29
-UOT_NINE_PART_DRAWABLE = 8 -- api/Addon UOT UOT_DRAWABLE
+UOT_NINE_PART_DRAWABLE = 8 -- api/Addon UOT UI_OBJECT_TYPE_DRAWABLE
 ---@alias UOT_NINE_PART_DRAWABLE 8
 ---@alias UOT_PAGEABLE 25
 ---@alias UOT_PAINT_COLOR_PICKER 33
@@ -386,15 +386,15 @@ UOT_TEXT_STYLE = 13 -- api/Addon UOT
 ---@alias UOT_WORLDMAP 26
 UOT_X2_EDITBOX = 53     -- api/Addon UOT
 ---@alias UOT_X2_EDITBOX 53
-UR_FRIENDLY = 3         -- api/Addon UR
-UR_HOSTILE = 1          -- api/Addon UR
-UR_NEUTRAL = 2          -- api/Addon UR
+UR_FRIENDLY = 3         -- api/Addon UNIT_RELATION
+UR_HOSTILE = 1          -- api/Addon UNIT_RELATION
+UR_NEUTRAL = 2          -- api/Addon UNIT_RELATION
 UTIL_TEXT = 31          -- api/Addon UI_TEXT_CATEGORY_ID
 WEB_TEXT = 112          -- api/Addon UI_TEXT_CATEGORY_ID
 WINDOW_TITLE_TEXT = 134 -- api/Addon UI_TEXT_CATEGORY_ID
 X2 = ADDON              -- api/Addon ADDON
-ZST_CONQUEST_WAR = 1    -- api/Addon ZST
-ZST_INVALID = 0         -- api/Addon ZST
+ZST_CONQUEST_WAR = 1    -- api/Addon ZONE_STATE_TYPE
+ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 
 ---api/Addon
 ---@alias ContentTriggerFunc fun(show: boolean|nil, data: table|nil)
@@ -533,8 +533,7 @@ ZST_INVALID = 0         -- api/Addon ZST
 ---| `WINDOW_TITLE_TEXT`
 
 ---api/Addon
----UICategory
----@alias UIC
+---@alias UI_CATEGORY
 ---| `UIC_ABILITY_CHANGE`
 ---| `UIC_ACHIEVEMENT`
 ---| `UIC_ACTABILITY`
@@ -660,8 +659,7 @@ ZST_INVALID = 0         -- api/Addon ZST
 ---| `UIC_WORLDMAP`
 
 ---api/Addon
----Ui Macro
----@alias UM
+---@alias UI_MACRO
 ---| `UM_ACHIEVEMENT_NAME`
 ---| `UM_AREA_SPHERE`
 ---| `UM_DAY`
@@ -688,8 +686,7 @@ ZST_INVALID = 0         -- api/Addon ZST
 ---| `UM_ZONE_NAME`
 
 ---api/Addon
----Ui Object Type
----@alias UOT
+---@alias UI_OBJECT_TYPE
 ---| `UOT_EDITBOX`
 ---| `UOT_EDITBOX_MULTILINE`
 ---| `UOT_EMPTY_WIDGET`
@@ -703,29 +700,27 @@ ZST_INVALID = 0         -- api/Addon ZST
 ---| `UOT_X2_EDITBOX`
 
 ---api/Addon
----@alias UOT_DRAWABLE
+---@alias UI_OBJECT_TYPE_DRAWABLE
 ---| `7`  # UOT_COLOR_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
 ---| `UOT_IMAGE_DRAWABLE`
 ---| `UOT_NINE_PART_DRAWABLE`
 ---| `9` # UOT_THREE_PART_DRAWABLE We dont have access to this global yet but it does exist in the codebase.
 
 ---api/Addon
----Unit Relation
----@alias UR
+---@alias UNIT_RELATION
 ---| `UR_FRIENDLY`
 ---| `UR_HOSTILE`
 ---| `UR_NEUTRAL`
 
 ---api/Addon
----Zone State Type
----@alias ZST
+---@alias ZONE_STATE_TYPE
 ---| `ZST_CONQUEST_WAR`
 ---| `ZST_INVALID`
 
 ---@FIXME: when a addon is reloaded this doesnt get removed.
 ---Adds a button to the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID The category ID for the menu.
----@param uiCategory UIC The UI category ID. Use an ID above 1000 for custom UICs to avoid conflicts with default categories or other addons. (max: `16777216`)
+---@param uiCategory UI_CATEGORY The UI category ID. Use an ID above 1000 for custom UI_CATEGORYs to avoid conflicts with default categories or other addons. (max: `16777216`)
 ---@param iconKey ESC_MENU_ICON_KEY The icon key for the button.
 ---@param name string The name of the button.
 ---@param data? EscMenuButtonData Optional data for the button. If this is set it will override the `iconKey`.
@@ -742,7 +737,8 @@ function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data) end
 ---@param logMessage string The message to log.
 function ADDON:ChatLog(logMessage) end
 
----Clears data associated with the specified `key`.
+---Clears data associated with the specified `key` for the addon under the
+---current character.
 ---@param key string The key for the data to clear.
 function ADDON:ClearData(key) end
 
@@ -778,7 +774,7 @@ function ADDON:GetContent(uiCategory) end
 ---Retrieves the position, unscaled size, and visibility of the specified
 ---UI category. Does not retrieve custom registered UI categories and some UI
 ---categoryies will not return anything.
----@param uiCategory UIC The UI component to query.
+---@param uiCategory UI_CATEGORY The UI component to query.
 ---@return number|nil x The x-coordinate of the component, or `nil` if the UI category doesn't exist.
 ---@return number|nil y The y-coordinate of the component, or `nil` if the UI category doesn't exist.
 ---@return number|nil width The unscaled width of the component, or `nil` if the UI category doesn't exist.
@@ -800,7 +796,8 @@ function ADDON:ImportAPI(apiType) end
 ---@param objectId OBJECT The object ID to import.
 function ADDON:ImportObject(objectId) end
 
----Retrieves the saved data for the specified `key` in the addon.
+---Retrieves the saved data for the specified `key` in the addon under the
+---current character.
 ---@param key string The key to retrieve data for.
 ---@return table|nil savedData The data associated with the key.
 ---@nodiscard
@@ -808,7 +805,7 @@ function ADDON:LoadData(key) end
 
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
----@param uiCategory UIC The UI category to register the function to. (max: `16777216`)
+---@param uiCategory UI_CATEGORY The UI category to register the function to. (max: `16777216`)
 ---@param triggerFunc ContentTriggerFunc The function to register as a trigger.
 ---@return boolean success `true` if registration was successful, `false` otherwise.
 function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
@@ -816,7 +813,7 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---Registers a widget and its optional trigger function to a UI category and
 ---returns the widget if successful. This can override the trigger function for
 ---existing UI categories.
----@param uiCategory UIC The UI component to register the widget to. (max: `16777216`)
+---@param uiCategory UI_CATEGORY The UI component to register the widget to. (max: `16777216`)
 ---@param widget Widget The widget to register.
 ---@param triggerFunc? ContentTriggerFunc The optional trigger function for the widget.
 ---@return Widget|nil widget The registered widget, or `nil` if registration failed.
@@ -832,11 +829,12 @@ function ADDON:ReloadAddon(name) end
 ---Saves the addon's information. Should be called after `ADDON:SetAddonEnable`.
 function ADDON:SaveAddonInfos() end
 
----Saves data to the specified key for the addon.
+---Saves data to the specified key for the addon under the current character.
 ---@param key string The key to associate with the data.
 ---@param data table The data to save.
 function ADDON:SaveData(key, data) end
 
+---@TODO: fix this description
 ---Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos` to save
 ---the change and `ADDON:ReloadAddon` to reload the state of the addon.
 ---afterward and a reload (or character select).
@@ -845,7 +843,7 @@ function ADDON:SaveData(key, data) end
 function ADDON:SetAddonEnable(name, enable) end
 
 ---Shows or hides the UI category and returns whether the operation succeeded.
----@param uiCategory UIC The UI category to show or hide.
+---@param uiCategory UI_CATEGORY The UI category to show or hide.
 ---@param show boolean `true` to show, `false` to hide the component.
 ---@param data? table Optional data passed to the `uiCategory` `triggerFunc` defined with `ADDON:RegisterContentTriggerFunc` or `ADDON:RegisterContentWidget` (currently only usable for custom UI categories).
 ---@return boolean success `true` if the operation succeeded, `false` otherwise.
@@ -853,7 +851,7 @@ function ADDON:ShowContent(uiCategory, show, data) end
 
 ---Toggles the visibility of the UI category and returns whether the operation
 ---succeeded.
----@param uiCategory UIC The UI category to toggle.
+---@param uiCategory UI_CATEGORY The UI category to toggle.
 ---@param data? table Optional data (currently only usable for custom UI categories).
 ---@return boolean success `true` if the toggle succeeded, `false` otherwise.
 ---@usage
@@ -878,7 +876,8 @@ function UIParent:ClearUIBound(key) end
 function UIParent:CreateWidget(widgetName, id, parentId) end
 
 ---@FIXME: currently unusable without SetAccountUITimeStamp
----Retrieves the account UI timestamp for the specified key.
+---Retrieves the account UI timestamp for the specified key. This is currently
+---unusable without its counterpart method `UIParent:SetAccountUITimeStamp`.
 ---@param key string The key to retrieve the timestamp for.
 ---@return string accountUITimeStamp The timestamp associated with the key.
 ---@nodiscard
@@ -911,7 +910,7 @@ function UIParent:GetCurrentTimeStamp() end
 ---@nodiscard
 function UIParent:GetEntityByName(sEntityName) end
 
----Retrieves the value for the specified key.
+---Retrieves the value for the specified key from `ui/setting/etc_value.g`.
 ---@param key "inventory_guide_line_space" The key to retrieve the value for.
 ---@return number etcValue The value associated with the key.
 ---@nodiscard
@@ -940,7 +939,7 @@ function UIParent:GetFrameTime() end
 function UIParent:GetId() end
 
 ---Retrieves the permission state for the specified UI category.
----@param uiCategory UIC The UI category to check.
+---@param uiCategory UI_CATEGORY The UI category to check.
 ---@return boolean permission `true` if permission is granted, `false` otherwise.
 ---@nodiscard
 function UIParent:GetPermission(uiCategory) end
@@ -988,6 +987,7 @@ function UIParent:GetUIBound(key) end
 ---@nodiscard
 function UIParent:GetUIScale() end
 
+---@FIXME: currently unusable without `UIParent:SetUIStamp`
 ---Retrieves the UI stamp for the specified key. This is currently unusable
 ---without its counterpart method `UIParent:SetUIStamp`.
 ---@param key string The key to retrieve the UI stamp for.
@@ -1039,11 +1039,6 @@ function UIParent:IsDX11Supported() end
 ---@param point Vec3 The point to check visibility for.
 ---@return boolean pointVisible `true` if the point is visible, `false` otherwise.
 ---@nodiscard
----@usage
----```lua
----local point = { X2Unit:GetUnitWorldPositionByTarget("player", true) }
----local pointVisible = UIParent:IsPointVisible(point)
----```
 ---@see Vec3
 function UIParent:IsPointVisible(point) end
 
@@ -1057,9 +1052,9 @@ function UIParent:IsRenderThreadSupported() end
 ---@param handler function The handler function to release.
 function UIParent:ReleaseEventHandler(eventName, handler) end
 
----@FIXME: More than 255 events will crash the game
+---@FIXME: More than 255 events will crash the game. multiple handlers to the same event can also crash the game upon addon reload
 ---Sets an event handler for the specified UI event (more than 255 events will
----crash the game).
+---crash the game, multiple handlers to the same event can also crash the game).
 ---@param eventName UIEVENT_TYPE The UI event to set the handler for.
 ---@param handler function The handler function to set.
 ---@overload fun(self: self, eventName: "ABILITY_CHANGED", handler: ABILITY_CHANGED_HANDLER)
@@ -1673,7 +1668,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "SHOW_RAID_FRAME_SETTINGS", handler: SHOW_RAID_FRAME_SETTINGS_HANDLER)
 ---@overload fun(self: self, eventName: "SHOW_RENAME_EXPEIDITON", handler: SHOW_RENAME_EXPEIDITON_HANDLER)
 ---@overload fun(self: self, eventName: "SHOW_ROADMAP_TOOLTIP", handler: SHOW_ROADMAP_TOOLTIP_HANDLER)
----@overload fun(self: self, eventName: "SHOW_SERVER_SELECT_WINDOW", handler: SHOW_SERVER_SELECT_WINDOW_HANDLER)
 ---@overload fun(self: self, eventName: "SHOW_SEXTANT_POS", handler: SHOW_SEXTANT_POS_HANDLER)
 ---@overload fun(self: self, eventName: "SHOW_SLAVE_INFO", handler: SHOW_SLAVE_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "SHOW_VERDICTS", handler: SHOW_VERDICTS_HANDLER)
@@ -1890,23 +1884,6 @@ function UIParent:SetEventHandler(eventName, handler) end
 ---accessed by other addons.
 ---@param key UIBOUND_KEY|string The key to set the UI bound for.
 ---@param uiBound UIBound The UI bound to set.
----@usage
----```lua
----local bound = {}
----bound.x, bound.y = widget:GetEffectiveOffset()
----bound.width, bound.height = widget:GetExtent()
----
----local screenRes = {}
----screenRes.x = UIParent:GetScreenWidth()
----screenRes.y = UIParent:GetScreenHeight()
----screenRes.scale = UIParent:GetUIScale()
----
----local info = {}
----info.bound = bound
----info.screenResolution = screenRes
----
----UIParent:SetUIBound("ui_bound_custom", info)
----```
 ---@see UIBound
 function UIParent:SetUIBound(key, uiBound) end
 

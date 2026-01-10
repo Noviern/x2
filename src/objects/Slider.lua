@@ -5,6 +5,8 @@
 ---objects/Slider
 ---@class Slider: Widget
 local Slider = {}
+
+---objects/Slider
 ---@class slider: Slider
 
 ---Moves the slider down for vertical orientation or right for horizontal
@@ -60,7 +62,7 @@ function Slider:SetInset(inset) end
 function Slider:SetMinMaxValues(min, max) end
 
 ---Sets the minimum length of the thumb for the Slider.
----@param length number The minimum thumb length.
+---@param length number The minimum thumb length. (default: `40`)
 function Slider:SetMinThumbLength(length) end
 
 ---Sets the orientation of the Slider.
@@ -76,9 +78,10 @@ function Slider:SetPageStep(pageStep) end
 ---@see Button
 function Slider:SetThumbButtonWidget(buttonWidget) end
 
----Sets the value of the Slider with optional event triggering.
----@param value number The value to set.
----@param triggerEvent boolean `true` to trigger them `"OnSliderChanged"` event, `false` otherwise.
+---Sets the value of the Slider with optional event triggering. Should be used
+---after `Slider:SetMinMaxValues`.
+---@param value number The value to set. (default: `0`)
+---@param triggerEvent boolean `true` to trigger them `"OnSliderChanged"` event, `false` otherwise. (default: `false`)
 function Slider:SetValue(value, triggerEvent) end
 
 ---Sets the step value for dragging the Slider.

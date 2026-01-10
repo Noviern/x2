@@ -1,7 +1,7 @@
 ---@meta _
 
 ---objects/IconDrawable
----@class IconDrawable: DrawableDDS
+---@class IconDrawable: Drawablebase
 local IconDrawable = {}
 
 ---Adds a texture to the IconDrawable.

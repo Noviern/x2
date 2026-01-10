@@ -3,10 +3,11 @@
 ---@FIXME: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
 
 ---objects/Editbox
-
 ---@class Editbox: Widget, Editboxbase
 ---@field prefixStyle TextStyle
 local Editbox = {}
+
+---objects/Editbox
 ---@class editbox: Editbox
 
 ---Adds a text entry to the Editbox history.
@@ -14,7 +15,7 @@ local Editbox = {}
 function Editbox:AddHistoryLine(text) end
 
 ---Checks the name policy for the Editbox.
----@param nameType NRT The name type to check against (e.g., NRT_CHARACTER).
+---@param nameType NAME_RENAME_TYPE The name type to check against (e.g., NAME_RENAME_TYPE_CHARACTER).
 function Editbox:CheckNamePolicy(nameType) end
 
 ---Clears focus from the Editbox.
@@ -43,7 +44,7 @@ function Editbox:IsPassword() end
 function Editbox:SetDigit(digit) end
 
 ---Sets whether the Editbox allows empty digit input.
----@param empty boolean `true` to allow empty input, `false` to disallow.
+---@param empty boolean `true` to allow empty input, `false` to disallow. (default: `false`)
 function Editbox:SetDigitEmpty(empty) end
 
 ---Sets the maximum value for digit input in the Editbox.
@@ -98,5 +99,5 @@ function Editbox:SetPrefixText(prefixText) end
 function Editbox:SetReClickable(click) end
 
 ---Enables or disables selecting all text when the Editbox gains focus.
----@param use boolean `true` to select all text on focus, `false` to disable. (default: `false`)
+---@param use boolean `true` to select all text on focus, `false` to disable. (default: `true`)
 function Editbox:UseSelectAllWhenFocused(use) end

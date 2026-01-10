@@ -4,6 +4,8 @@
 ---@class Folder: Widget
 ---@field style TextStyle
 local Folder = {}
+
+---objects/Folder
 ---@class folder: Folder
 
 ---Closes the Folder.

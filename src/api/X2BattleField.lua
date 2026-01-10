@@ -1,7 +1,7 @@
 ---@meta _
 
-NIBC_BUFF_LEFT_TIME = 2 -- api/X2BattleField NIBC
-NIBC_BUFF_STACK = 1     -- api/X2BattleField NIBC
+NIBC_BUFF_LEFT_TIME = 2 -- api/X2BattleField NPC_INFORMATION_BROAD_CAST
+NIBC_BUFF_STACK = 1     -- api/X2BattleField NPC_INFORMATION_BROAD_CAST
 VS_DRAW = 2             -- api/X2BattleField VS
 VS_LOSE = 1             -- api/X2BattleField VS
 VS_WIN = 3              -- api/X2BattleField VS
@@ -9,8 +9,7 @@ VS_WIN = 3              -- api/X2BattleField VS
 X2BattleField = {}      -- api/X2BattleField
 
 ---api/X2BattleField
----Npc Information BroadCast
----@alias NIBC
+---@alias NPC_INFORMATION_BROAD_CAST
 ---| `NIBC_BUFF_LEFT_TIME`
 ---| `NIBC_BUFF_STACK`
 

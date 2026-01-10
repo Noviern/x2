@@ -1,25 +1,23 @@
 ---@meta _
 
-ASK_ACCOUNT_BUFF = 3 -- api/X2Auction ASK
-ASK_NORMAL = 0       -- api/X2Auction ASK
-ASK_PCBANG = 1       -- api/X2Auction ASK
-ASK_PREMIUM = 2      -- api/X2Auction ASK
-PT_BID = 0           -- api/X2Auction PT
-PT_PARTITION = 1     -- api/X2Auction PT
+ASK_ACCOUNT_BUFF = 3 -- api/X2Auction AUCTION_SERVICE_KIND
+ASK_NORMAL = 0       -- api/X2Auction AUCTION_SERVICE_KIND
+ASK_PCBANG = 1       -- api/X2Auction AUCTION_SERVICE_KIND
+ASK_PREMIUM = 2      -- api/X2Auction AUCTION_SERVICE_KIND
+PT_BID = 0           -- api/X2Auction POST_TYPE
+PT_PARTITION = 1     -- api/X2Auction POST_TYPE
 ---@class X2Auction
 X2Auction = {}       -- api/X2Auction
 
 ---api/X2Auction
----Auction Service Kind
----@alias ASK
+---@alias AUCTION_SERVICE_KIND
 ---| `ASK_ACCOUNT_BUFF`
 ---| `ASK_NORMAL`
 ---| `ASK_PCBANG`
 ---| `ASK_PREMIUM`
 
 ---api/X2Auction
----Post Type
----@alias PT
+---@alias POST_TYPE
 ---| `PT_BID`
 ---| `PT_PARTITION`
 

@@ -8,16 +8,17 @@ local ComboboxDropDown = {}
 ---@field thumb Button
 local Vslider = {}
 
----objects/RadioGroup
 ---@class RadioItem: EmptyWidget
 ---@field check Checkbutton
 
----objects/ListCtrl
----@class ListCtrlItem: Window
----@field subItems Button[]|Window[]|Textbox[]|table[] --@TODO: table is LCCIT_STRING but is a table with just a style field and nothing else
----@field eventWindow Window
+---@alias ListCtrlItemSubItem Button|Window|Textbox|table
 
----api/Addon
+---@class ListCtrlItem: Window
+---@field subItems ListCtrlItemSubItem[]
+---@field eventWindow Window ---@TODO: unsure what this is for.
+
+-- @field subItems Button[]|Window[]|Textbox[]|table[] --@TODO: table is LIST_CTRL_COLUMN_ITEM_TYPE_STRING but is a table with just a style field and nothing else
+
 ---@class EscMenuButtonData
 ---@field path string Addon/{addonname}/example.dds
 ---@field x number|nil
@@ -25,19 +26,16 @@ local Vslider = {}
 ---@field w number 25
 ---@field h number 25
 
----api/Addon
 ---@class AddonInfo
 ---@field name string
 ---@field enable boolean
 
----api/Addon
 ---@class RGBAColor
 ---@field [1] number Red (min: `0`, max: `1`)
 ---@field [2] number Green (min: `0`, max: `1`)
 ---@field [3] number Blue (min: `0`, max: `1`)
 ---@field [4] number Alpha (min: `0`, max: `1`)
 
----api/Addon
 ---@class Time
 ---@field year number
 ---@field month number
@@ -46,86 +44,73 @@ local Vslider = {}
 ---@field minute number
 ---@field second number
 
----api/Addon
 ---@class TextureColors
 ---@field [string] RGBAColor
 
----api/Addon
 ---@class TextureColorKey
 ---@field [1] number Red (min: `0`, max: `1`)
 ---@field [2] number Green (min: `0`, max: `1`)
 ---@field [3] number Blue (min: `0`, max: `1`)
 
----api/Addon
 ---@class TextureCoords
 ---@field [1] number x
 ---@field [2] number y
 ---@field [3] number width
 ---@field [4] number height
 
----api/Addon
 ---@class TextureInset
 ---@field [1] number leftPadding
 ---@field [2] number topPadding
 ---@field [3] number rightPadding
 ---@field [4] number bottomPadding
 
----api/Addon
 ---@class TextureDimensions
 ---@field [1] number resized width
 ---@field [2] number resized height
 
----api/Addon
 ---@class TextureData
 ---@field offset number[]
----@field colors TextureColors
+---@field colors TextureColors @TODO: could be nil?
 ---@field colorKey TextureColorKey
 ---@field coords TextureCoords
 ---@field inset TextureInset
 ---@field extent TextureDimensions
 
----api/Addon
 ---@class TextureKeyData
 ---@field width number
 ---@field height number
 ---@field keys string[]
 
----api/Addon
 ---@class ScreenResolution
 ---@field x number width of screen
 ---@field y number height of screen
 ---@field scale number
 
----api/Addon
 ---@class Bound
----@field x number
----@field y number
+---@field x number scaled x
+---@field y number scaled y
 ---@field width number unscaled width
 ---@field height number unscaled height
 
----api/Addon
 ---@class UIBound
 ---@field screenResolution ScreenResolution
 ---@field bound Bound
 
----@TODO: search for this and replace with Vec3Array if neccessary
----api/Addon
 ---@class Vec3
 ---@field x number|nil
 ---@field y number|nil
 ---@field z number|nil
 
+---@TODO: is this used?
 ---@class Vec3Array
 ---@field [1] number|nil x
 ---@field [2] number|nil y
 ---@field [3] number|nil z
 
----api/Addon
 ---@class VirtualMemoryStats
 ---@field workingSet number
 ---@field usage number
 
----api/Addon
 ---@class FontSizeList
 ---@field default number
 ---@field small number
@@ -135,7 +120,6 @@ local Vslider = {}
 ---@field xlarge number
 ---@field xxlarge number
 
----api/Addon
 ---@class AppellationBuffInfo
 ---@field buff_id number
 ---@field category string
@@ -144,7 +128,6 @@ local Vslider = {}
 ---@field path string
 ---@field tipType string
 
----api/X2Ability
 ---@class ActabilityInfo
 ---@field name string
 ---@field type number
@@ -152,7 +135,6 @@ local Vslider = {}
 ---@field modifyPoint number
 ---@field grade number
 
----api/X2Chat
 ---@class ChatMessageOption
 ---@field isOtherWorldMessage boolean|nil
 ---@field isUserChat boolean
@@ -160,22 +142,18 @@ local Vslider = {}
 ---@field npcBubbleChat boolean|nil
 ---@field specifyName string|nil
 
----api/X2Achievement
 ---@class RewardItemInfo
 ---@field count number
 ---@field itemType number
 
----api/X2Achievement
 ---@class RewardInfo
 ---@field appellation AppellationInfo
 ---@field item RewardItemInfo
 
----api/X2Achievement
 ---@class AppellationInfo
 ---@field iconPath string
 ---@field name string
 
----api/X2Achievement
 ---@class AchievementInfo
 ---@field achievementKind number
 ---@field canProgress boolean
@@ -202,22 +180,18 @@ local Vslider = {}
 ---@field tracing boolean
 ---@field type number
 
----api/X2Achievement
 ---@class AchievementSubCategory
 ---@field name string
 ---@field subCategoryType number
 
----api/X2Achievement
 ---@class AchievementLevelSubCategory: AchievementSubCategory
 ---@field isHeirLevelCategory boolean
 
----api/X2Achievement
 ---@class AchievementCategory
 ---@field categoryType number
 ---@field name string
 ---@field subCategories AchievementSubCategory[]
 
----api/X2Achievement
 ---@class SubcategoryInfo
 ---@field completedCount number
 ---@field desc string
@@ -226,13 +200,11 @@ local Vslider = {}
 ---@field rewardAchievementType number
 ---@field totalCount number
 
----api/X2Achievement
 ---@class TodayAssignmentGoal
 ---@field goal number
 ---@field itemCount number
 ---@field itemType number
 
----api/X2Achievement
 ---@class TodayAssignmentInfo
 ---@field desc string
 ---@field iconPath string
@@ -249,11 +221,9 @@ local Vslider = {}
 ---@field status number
 ---@field title string
 
----api/X2Achievement
 ---@class AchievementSubList
 ---@field key number
 
----api/X2Chat
 ---@class CHAT_MESSAGE_INFO
 ---@field charId string
 ---@field displayLocale number
@@ -265,7 +235,6 @@ local Vslider = {}
 ---@field trialPosition string
 ---@field unitId string
 
----api/X2CombatResource
 ---@class CombatResource
 ---@field ability number
 ---@field isDefaultResource boolean
@@ -276,9 +245,8 @@ local Vslider = {}
 ---@field resource2ColorKey string|nil
 ---@field resource2Current number|nil
 ---@field resource2Max number|nil
----@field uiType CRU
+---@field uiType COMBAT_RESOURCE_UITYPE
 
----api/X2CombatResource
 ---@class CombatResourceInfo: CombatResource
 ---@field groupType number
 ---@field iconPath string
@@ -289,7 +257,6 @@ local Vslider = {}
 ---@field [2] CombatResourceInfo
 ---@field [3] CombatResourceInfo
 
----api/X2Craft
 ---@class CraftBaseInfo
 ---@field actability_satisfied boolean
 ---@field consume_lp number
@@ -309,7 +276,6 @@ local Vslider = {}
 ---@field title string
 ---@field use_only_actability boolean
 
----api/X2Craft
 ---@class CraftProductInfo
 ---@field amount number
 ---@field item_name string
@@ -318,9 +284,8 @@ local Vslider = {}
 ---@field success_rate number
 ---@field useGrade boolean
 
----api/X2Map
 ---@class ZoneStateInfo
----@field conflictState ZONE_STATE
+---@field conflictState HP_WORLD_STATE
 ---@field dropRate number|nil
 ---@field goldRate number|nil
 ---@field festivalName string|nil
@@ -340,9 +305,8 @@ local Vslider = {}
 ---@field nonRate boolean|nil
 ---@field remainTime number|nil
 ---@field warChaos boolean
----@field zoneName string
+---@field zoneName ZONE_NAME
 
----api/X2Option
 ---@class AAFormat
 ---@field desc string
 ---@field quality number
@@ -362,25 +326,21 @@ local Vslider = {}
 ---@field [2] number
 ---@field [3] number
 
----api/X2Option
 ---@class OptionInfo
 ---@field restart boolean
 ---@field title string
 ---@field tooltip string
 
----api/X2Option
 ---@class SubOptionItem
 ---@field optionId number
 ---@field value number
 
----api/X2Player
 ---@class AppellationChangeItemInfo
 ---@field enough boolean
 ---@field has number
 ---@field itemType number
 ---@field need number
 
----api/X2Player
 ---@class AppellationMyLevelInfo
 ---@field exp number
 ---@field level number
@@ -388,12 +348,10 @@ local Vslider = {}
 ---@field maxlevel number
 ---@field minExp number
 
----api/X2Player
 ---@class AppellationMyStamp
 ---@field id number
 ---@field path string
 
----api/X2Player
 ---@class StampInfo: AppellationMyStamp
 ---@field canEquip number
 ---@field effectDescription string
@@ -401,14 +359,12 @@ local Vslider = {}
 ---@field name string
 ---@field reqLevel number
 
----api/X2Player
 ---@class AppellationRouteInfo
 ---@field kind number
 ---@field routeDesc string
 ---@field routePopup number
 ---@field type number
 
----api/X2Player
 ---@class Appellation
 ---@field [1] number TYPE
 ---@field [2] string|nil NAME
@@ -417,19 +373,16 @@ local Vslider = {}
 ---@field [5] number ORDER
 ---@field [6] AppellationBuffInfo|nil BUFFINFO
 
----api/X2Player
 ---@class StampChangeItemInfo
 ---@field enough boolean
 ---@field has number
 ---@field itemType number
 ---@field need number
 
----api/X2Player
 ---@class UnitAppellationRoute
 ---@field key number
 ---@field value string
 
----api/X2Resident
 ---@class ResidentBoardContent
 ---@field [1] string|nil
 ---@field [2] string|nil
@@ -440,7 +393,6 @@ local Vslider = {}
 ---@field title string
 
 ---@TODO: Slot:GetExtraInfo() returns only skillPoints
----api/X2Skill
 ---@class SkillInfo
 ---@field abilityName string
 ---@field castingTime number
@@ -463,7 +415,6 @@ local Vslider = {}
 ---@field skillPoints number
 ---@field upgradeCost number
 
----api/X2Skill
 ---@class SynergyIconInfo
 ---@field conditionbuffkind boolean
 ---@field conditionicon string
@@ -471,7 +422,6 @@ local Vslider = {}
 ---@field resultbuffkind boolean
 ---@field resulticon string
 
----api/X2Skill [SkillTooltip](lua://SkillTooltip)
 ---@class SkillTooltip
 ---@field ability string
 ---@field abilityLevel number
@@ -501,31 +451,26 @@ local Vslider = {}
 ---@field tipType string
 ---@field type number
 
----api/X2Store
 ---@class ZoneInfo
 ---@field continentName string
 ---@field id number
 ---@field zoneGroupName string
 
----api/X2Unit
 ---@class TargetAbilityTemplate
 ---@field index number
 ---@field level number
 ---@field name string
 
----api/X2Unit
 ---@class TargetAbility
 ---@field [1] TargetAbilityTemplate
 ---@field [2] TargetAbilityTemplate
 ---@field [3] TargetAbilityTemplate
 
----api/X2Unit
 ---@class UnitClass
 ---@field [1] ABILITY_TYPE
 ---@field [2] ABILITY_TYPE
 ---@field [3] ABILITY_TYPE
 
----api/X2Unit
 ---@class UnitInfo
 ---@field class UnitClass
 ---@field expeditionName string
@@ -538,7 +483,6 @@ local Vslider = {}
 ---@field name string
 ---@field type string
 
----api/X2Unit
 ---@class BuffInfo
 ---@field buff_id number
 ---@field path string
@@ -546,7 +490,6 @@ local Vslider = {}
 ---@field timeLeft number|nil
 ---@field timeUnit "msec"|"sec"|nil
 
----api/X2Unit
 ---@class BuffTooltip: BuffInfo
 ---@field category "Buff"|"Debuff"
 ---@field description string|nil
@@ -555,7 +498,6 @@ local Vslider = {}
 ---@field name string|nil
 ---@field tipType "skill"|"mate_skill"|"siege_weapon_skill"|"buff"|"debuff"|"passive"|"appStamp"|"preview"|nil
 
----api/X2Unit
 ---@class CastingInfo
 ---@field castingTime number
 ---@field castingUseable boolean
@@ -563,7 +505,6 @@ local Vslider = {}
 ---@field showTargetCastingTime boolean
 ---@field spellName string
 
----api/X2Unit
 ---@class UnitDistance
 ---@field distance number
 ---@field over_distance boolean
@@ -575,11 +516,10 @@ local Vslider = {}
 ---@field a number
 
 ---@TODO: each animType has it own fields
----May not be accurate.
 ---@class FrameInfo
 ---@field alpha number|nil
 ---@field animTime number|nil
----@field animType DAT|LAT|nil This can add multiple LAT
+---@field animType DRAWABLE_ANIMATION_TYPE|LINEAR_ANIMATION_TYPE|nil This can add multiple LINEAR_ANIMATION_TYPE
 ---@field h number|nil
 ---@field moveX number|nil
 ---@field moveY number|nil
@@ -627,11 +567,9 @@ local Vslider = {}
 ---@field tailIconCoord string|nil
 ---@field opened boolean|nil (default: `false`)
 
----objects/Listbox
 ---@class ItemTreeValue
 ---@field value number
 
----objects/Listbox
 ---@class ItemTreeInfos
 ---@field itemInfos ItemTreeValue[]
 
@@ -699,14 +637,14 @@ local Vslider = {}
 ---@class CustomHairColor: CustomizingHairDefaultColor, CustomizingHairTwoToneColor
 
 ---@class SEXTANT
----@field deg_lat number
+---@field longitude "W"|"E"
 ---@field deg_long number
----@field latitude "W"|"N"|"E"|"S"
----@field longitude "W"|"N"|"E"|"S"
----@field min_lat number
 ---@field min_long number
----@field sec_lat number
 ---@field sec_long number
+---@field latitude "N"|"S"
+---@field deg_lat number
+---@field min_lat number
+---@field sec_lat number
 
 ---@class InsetData: number[]
 ---@field [1] number|nil Left
@@ -720,7 +658,7 @@ local Vslider = {}
 ---@field isWaitWar boolean
 ---@field membetCount number xlgames misspelt this
 ---@field ownerName string
----@field period string 
+---@field period string
 ---@field ranking number
 
 ---@class SiegeRaidTeamInfos
@@ -777,6 +715,36 @@ local Vslider = {}
 ---@field [13] DiagonalASRDailyInfo
 ---@field [14] DiagonalASRDailyInfo
 
+---@class DoodadProgress
+---@field curCount any @TODO:
+---@field maxCount any @TODO:
+
+---@class DoodadTooltipInfo
+---@field alignLeft boolean|nil
+---@field catched Time|nil
+---@field chillingPercent any|nil @TODO:
+---@field chillingRate any|nil @TODO:
+---@field chillRemainTime Time|nil
+---@field crafterName string|nil
+---@field displayTime number|nil
+---@field dtype any|nil @TODO:
+---@field expeditionOwn boolean|nil
+---@field explain string|nil
+---@field freshnessRemainTime Time|nil
+---@field freshnessTooltip string|nil
+---@field goodsValue number|nil
+---@field id any|nil @TODO:
+---@field isFree boolean|nil
+---@field length number|nil
+---@field loadedItemName string|nil
+---@field name string|nil
+---@field owner string|nil
+---@field permission DOODAD_PERMISSION|nil
+---@field progress DoodadProgress|nil
+---@field ptype any|nil @TODO:
+---@field timeLabel string|nil
+---@field weight number|nil
+
 ---@class SiegeInfo
 ---@field action SIEGE_ACTION
 ---@field defenseName string
@@ -785,7 +753,7 @@ local Vslider = {}
 ---@field periodName SIEGE_PERIOD_NAME
 ---@field team string
 ---@field zoneGroupName ZONE_NAME
----@field zoneGroupType ZONE_ID
+---@field zoneGroupType ZONE_GROUP_ID
 
 ---@class PhaseMsgInfo
 ---@field color string
@@ -796,7 +764,7 @@ local Vslider = {}
 
 ---@class EscMenuAddButtonInfo
 ---@field categoryId ESC_MENU_CATEGORY_ID
----@field uiContentType UIC
+---@field uiContentType UI_CATEGORY
 ---@field iconKey ESC_MENU_ICON_KEY
 ---@field name string
 
@@ -910,7 +878,7 @@ local Vslider = {}
 ---@field posz number
 ---@field price number
 ---@field sellername string
----@field zoneId ZONE_ID
+---@field zoneId ZONE_GROUP_ID
 
 ---@class ResidentMember
 ---@field [1] string Name
@@ -950,7 +918,7 @@ local Vslider = {}
 ---@field ownerLevel number
 ---@field squadId number
 ---@field worldName string
----@field zoneGroupType ZONE_ID
+---@field zoneGroupType ZONE_GROUP_ID
 
 ---@class SelectSquadList
 ---@field curPage number
@@ -980,7 +948,7 @@ local Vslider = {}
 ---@field text string
 ---@field territoryName string|nil
 ---@field tooltipType TOOLTIP_TYPE
----@field zoneId ZONE_ID|nil
+---@field zoneId ZONE_GROUP_ID|nil
 
 ---@class SiegeRaidMemberInfo
 ---@field ability ABILITY_TYPE[]
@@ -1053,7 +1021,7 @@ local Vslider = {}
 ---@field msg string
 ---@field step string
 ---@field titleMsg string
----@field zoneGroup ZONE_ID @TODO: Might not be ZONE_ID
+---@field zoneGroup ZONE_GROUP_ID @TODO: Might not be ZONE_GROUP_ID
 
 ---@class KillStreakInfo
 ---@field gameType number
@@ -1160,7 +1128,7 @@ local Vslider = {}
 ---@class SpecialtyInfo: SpecialtyBaseInfo
 ---@field count number
 ---@field delay number
----@field specialtyZone ZONE_ID
+---@field specialtyZone ZONE_GROUP_ID
 
 ---@class SpecialtyContentInfo: SpecialtyBaseInfo
 ---@field stock number
@@ -1175,7 +1143,7 @@ local Vslider = {}
 ---@field refundItemCount number
 ---@field refundItemType number
 ---@field sellerRatio number
----@field specialtyZone ZONE_ID
+---@field specialtyZone ZONE_GROUP_ID
 ---@field supply SpecialtySupplyInfo
 
 ---@class ChronicleInfo
@@ -1265,7 +1233,7 @@ local Vslider = {}
 
 ---@class CombatSpellMissed: CombatSpellPrefix, CombatMissSuffix
 
----@TODO: 
+---@TODO:
 ---X <- I dont know if it exists.
 ---X CombatEnvironmentalAuraApplied: CombatEnvironmentalPrefix, CombatAuraSuffix
 ---X CombatEnvironmentalAuraRemoved: CombatEnvironmentalPrefix, CombatAuraSuffix
@@ -1318,7 +1286,7 @@ local Vslider = {}
 ---@field ratio number
 
 ---@class NpcBroadcastingInfo
----@field broadcastingType NIBC
+---@field broadcastingType NPC_INFORMATION_BROAD_CAST
 ---@field buffName string
 ---@field buffType number
 ---@field iconPath string

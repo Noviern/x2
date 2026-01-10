@@ -1,13 +1,12 @@
 ---@meta _
 
-LCCIT_BUTTON = 1  -- objects/ListCtrl LCCIT
-LCCIT_STRING = 0  -- objects/ListCtrl LCCIT
-LCCIT_TEXTBOX = 3 -- objects/ListCtrl LCCIT
-LCCIT_WINDOW = 2  -- objects/ListCtrl LCCIT
+LCCIT_BUTTON = 1  -- objects/ListCtrl LIST_CTRL_COLUMN_ITEM_TYPE
+LCCIT_STRING = 0  -- objects/ListCtrl LIST_CTRL_COLUMN_ITEM_TYPE
+LCCIT_TEXTBOX = 3 -- objects/ListCtrl LIST_CTRL_COLUMN_ITEM_TYPE
+LCCIT_WINDOW = 2  -- objects/ListCtrl LIST_CTRL_COLUMN_ITEM_TYPE
 
 ---objects/ListCtrl
----ListCtrl Column Item Type
----@alias LCCIT
+---@alias LIST_CTRL_COLUMN_ITEM_TYPE
 ---| `LCCIT_BUTTON`
 ---| `LCCIT_STRING`
 ---| `LCCIT_TEXTBOX`
@@ -15,21 +14,25 @@ LCCIT_WINDOW = 2  -- objects/ListCtrl LCCIT
 
 ---objects/ListCtrl
 ---@class ListCtrl: Widget
----@field column? Button[]
----@field items? ListCtrlItem[]
+---@field column Button[]|nil
+---@field items ListCtrlItem[]|nil
 local ListCtrl = {}
+
+---objects/ListCtrl
 ---@class listctrl: ListCtrl
 
 ---Clears the current selection in the ListCtrl.
 function ListCtrl:ClearSelection() end
 
----Creates the overed image for the ListCtrl.
+---Creates the overed image for the ListCtrl. Only works on rows where data has
+---been inserted with `ListCtrl:InsertData`.
 ---@return NinePartDrawable overedImage The overed image drawable.
 ---@nodiscard
 ---@see NinePartDrawable
 function ListCtrl:CreateOveredImage() end
 
----Creates the selected image for the ListCtrl.
+---Creates the selected image for the ListCtrl. Only works on rows where data
+---has been inserted with `ListCtrl:InsertData`.
 ---@return NinePartDrawable selectedImage The selected image drawable.
 ---@nodiscard
 ---@see NinePartDrawable
@@ -59,11 +62,11 @@ function ListCtrl:GetSelectedIdx() end
 ---- **Must be set before `ListCtrl:InsertRows`**
 ---- **Must be set before `ListCtrl:InsertData`.**
 ---@param width number The width of the column.
----@param itemType LCCIT The item type for the column.
+---@param itemType LIST_CTRL_COLUMN_ITEM_TYPE The item type for the column.
 ---@return number index The index of the created column. (min: `0`)
 function ListCtrl:InsertColumn(width, itemType) end
 
----Inserts data into the ListCtrl at the specified column index.
+---Inserts data into the ListCtrl at the specified row anbd column index.
 ---- **Must be set after `ListCtrl:InsertColumn`**
 ---- **Must be set after `ListCtrl:InsertRows`.**
 ---@param key number The key (row index) for the data. (min: `0` for header)
@@ -76,7 +79,7 @@ function ListCtrl:InsertData(key, colIdx, subItemData) end
 ---- **Must be set after `ListCtrl:InsertColumn`**
 ---- **Must be set before `ListCtrl:InsertData`.**
 ---@param count number The number of rows to create.
----@param withEventWindow boolean `true` to include an event window, `false` otherwise.
+---@param withEventWindow boolean `true` to create `ListCtrl.items[rowCount].eventWindow`, `false` otherwise.
 function ListCtrl:InsertRows(count, withEventWindow) end
 
 ---Selects the item at the specified index in the ListCtrl.

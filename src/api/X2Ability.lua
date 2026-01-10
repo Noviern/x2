@@ -10,12 +10,12 @@ ACTIVE_SKILL_1 = 10                  -- api/X2Ability SKILL
 ACTIVE_SKILL_2 = 30                  -- api/X2Ability SKILL
 ACTIVE_SKILL_3 = 50                  -- api/X2Ability SKILL
 ATTACK_SKILL = 100                   -- api/X2Ability SKILL
-BIK_DESCRIPTION = 1                  -- api/X2Ability BIK
-BIK_RUNTIME_ALL = 30                 -- api/X2Ability BIK
-BIK_RUNTIME_DURATION = 4             -- api/X2Ability BIK
-BIK_RUNTIME_MINE = 2                 -- api/X2Ability BIK
-BIK_RUNTIME_STACK = 16               -- api/X2Ability BIK
-BIK_RUNTIME_TIMELEFT = 8             -- api/X2Ability BIK
+BIK_DESCRIPTION = 1                  -- api/X2Ability BUFF_INFO_KIND
+BIK_RUNTIME_ALL = 30                 -- api/X2Ability BUFF_INFO_KIND
+BIK_RUNTIME_DURATION = 4             -- api/X2Ability BUFF_INFO_KIND
+BIK_RUNTIME_MINE = 2                 -- api/X2Ability BUFF_INFO_KIND
+BIK_RUNTIME_STACK = 16               -- api/X2Ability BUFF_INFO_KIND
+BIK_RUNTIME_TIMELEFT = 8             -- api/X2Ability BUFF_INFO_KIND
 EMOTION_SKILL = 270                  -- api/X2Ability SKILL
 GENERAL_SKILL = 120                  -- api/X2Ability SKILL
 INVALID_ABILITY_KIND = 0             -- api/X2Ability
@@ -24,13 +24,13 @@ MAX_ABILITY_SET_SLOTS = 6            -- api/X2Ability
 PASSIVE_SKILL_1 = 70                 -- api/X2Ability SKILL
 PASSIVE_SKILL_2 = 80                 -- api/X2Ability SKILL
 PASSIVE_SKILL_3 = 90                 -- api/X2Ability SKILL
-RAC_FIRST = 1                        -- api/X2Ability RAC
-RAC_INVALID = 0                      -- api/X2Ability RAC
-RAC_SECOND = 2                       -- api/X2Ability RAC
-SAT_ACTIVE = 1                       -- api/X2Ability SAT
-SAT_HIDE = 3                         -- api/X2Ability SAT
-SAT_NONACTIVE = 2                    -- api/X2Ability SAT
-SAT_NONE = 0                         -- api/X2Ability SAT
+RAC_FIRST = 1                        -- api/X2Ability RECOMMENDED_ABILITY_CATEGORY
+RAC_INVALID = 0                      -- api/X2Ability RECOMMENDED_ABILITY_CATEGORY
+RAC_SECOND = 2                       -- api/X2Ability RECOMMENDED_ABILITY_CATEGORY
+SAT_ACTIVE = 1                       -- api/X2Ability SLOT_ACTIVE_TYPE
+SAT_HIDE = 3                         -- api/X2Ability SLOT_ACTIVE_TYPE
+SAT_NONACTIVE = 2                    -- api/X2Ability SLOT_ACTIVE_TYPE
+SAT_NONE = 0                         -- api/X2Ability SLOT_ACTIVE_TYPE
 SBC_ATTACK = 2                       -- api/X2Ability SBC
 SBC_EMOTION = 5                      -- api/X2Ability SBC
 SBC_GENERAL = 3                      -- api/X2Ability SBC
@@ -67,9 +67,8 @@ X2Ability = {}                       -- api/X2Ability
 ---| `ABILITY_MADNESS` GUNSLINGER (MADNESS)
 
 ---api/X2Ability
----Buff Info Kind
----Values can be added together to get more information.
----@alias BIK
+---Values can be added together to get more information. (e.g, `BIK_DESCRIPTION + BIK_RUNTIME_DURATION`)
+---@alias BUFF_INFO_KIND
 ---| `BIK_DESCRIPTION`
 ---| `BIK_RUNTIME_ALL`
 ---| `BIK_RUNTIME_DURATION`
@@ -78,15 +77,13 @@ X2Ability = {}                       -- api/X2Ability
 ---| `BIK_RUNTIME_TIMELEFT`
 
 ---api/X2Ability
----Recommend Ability Category
----@alias RAC
+---@alias RECOMMENDED_ABILITY_CATEGORY
 ---| `RAC_FIRST`
 ---| `RAC_INVALID`
 ---| `RAC_SECOND`
 
 ---api/X2Ability
----Slot Active Type
----@alias SAT
+---@alias SLOT_ACTIVE_TYPE
 ---| `SAT_ACTIVE`
 ---| `SAT_HIDE`
 ---| `SAT_NONACTIVE`
@@ -135,7 +132,7 @@ function X2Ability:GetAllMyActabilityInfos() end
 ---level.
 ---@param buffType number The type of buff.
 ---@param itemLevel number The item level for the buff.
----@param neededInfo? BIK Optional additional information for the buff.
+---@param neededInfo? BUFF_INFO_KIND Optional additional information for the buff.
 ---@return AppellationBuffInfo buffTooltip The buff tooltip information.
 ---@nodiscard
 ---@see AppellationBuffInfo

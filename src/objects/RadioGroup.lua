@@ -2,8 +2,10 @@
 
 ---objects/RadioGroup
 ---@class RadioGroup: Widget
----@field frame? RadioItem[] @TODO: what creates this
+---@field frame RadioItem[]|nil @TODO: what creates this
 local RadioGroup = {}
+
+---objects/RadioGroup
 ---@class radiogroup: RadioGroup
 
 ---Checks the radio item at the specified index in the RadioGroup.

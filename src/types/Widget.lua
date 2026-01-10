@@ -250,7 +250,7 @@ function Widget:DisableDrawables(nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 function Widget:DisableDrawablesWithChildren(nameLayer) end
 
----@TODO: Make a list of events that can be activated/deactivated by this. This also sets the state to disabled (actually highlighted because state is bugged atm)
+---@TODO: Make a list of events that can be activated/deactivated by this. This also sets the state to disabled (actually highlighted because state is bugged atm) This may haver another param
 ---Enables or disables the Widget and its handler actions `"OnClick"`.
 ---@param enable boolean `true` to enable, `false` to disable. (default: `true`)
 function Widget:Enable(enable) end
@@ -463,6 +463,7 @@ function Widget:SetDrawableLayerAlpha(alpha, nameLayer) end
 ---@param drawPriority number The draw priority (z-index) value.
 function Widget:SetDrawPriority(drawPriority) end
 
+---@TODO: not all widgets may have all actionName, maybe give each widget its own SetHandler?
 ---Sets a handler for the specified action.
 ---@param actionName string The action name.
 ---@param handler function The handler function.
@@ -601,7 +602,8 @@ function Widget:SetStartAnimation(alpha, scale) end
 ---@param text string The text to set.
 function Widget:SetText(text) end
 
----Shows or hides the Widget.
+---@TODO: this may disable all actions
+---Shows or hides the widget and enables/disables its `"OnUpdate"` handler.
 ---@param show boolean `true` to show, `false` to hide. (default: `false`)
 ---@param fadeTime? number The optional fade duration in milliseconds.
 function Widget:Show(show, fadeTime) end
@@ -638,7 +640,7 @@ function Widget:StopMovingOrSizing() end
 ---@param on boolean `true` to start the animation, `false` to stop.
 function Widget:TriggerMoveAnimation(on) end
 
----@TODO:
+---@TODO: What is this?
 ---Enables or disables dynamic content state for the widget.
 ---@param use boolean `true` to enable, `false` to disable.
 function Widget:UseDynamicContentState(use) end

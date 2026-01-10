@@ -10,6 +10,8 @@ UI_BUTTON_PUSHED = 2      -- objects/CheckButton UI_BUTTON_STATE
 ---@class Checkbutton: Button
 ---@field style TextStyle
 local Checkbutton = {}
+
+---objects/CheckButton
 ---@class checkbutton: Checkbutton
 
 ---Returns a boolean indicating the state of the Checkbutton.

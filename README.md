@@ -15,6 +15,8 @@ Provides documentation, definitions, and IntelliSense for ArcheAge Addons throug
   "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
   "runtime.version": "Lua 5.1",
   "hover.expandAlias": false,
-  "workspace.library": ["C:/ArcheRage/Documents/Addon/x2/src"]
+  "workspace.library": [
+    "C:/ArcheRage/Documents/Addon/x2/src"
+  ]
 }
 ```

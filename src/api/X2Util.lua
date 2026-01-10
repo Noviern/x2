@@ -3,17 +3,17 @@
 GAMEON = 2            -- api/X2Util GAME_PROVIDER
 KAKAONA = 3           -- api/X2Util GAME_PROVIDER
 MAILRU = 4            -- api/X2Util GAME_PROVIDER
-NRT_CHARACTER = 1     -- api/X2Util NRT
-NRT_CHAT_TAB = 5      -- api/X2Util NRT
-NRT_CUSTOM = 8        -- api/X2Util NRT
-NRT_FACTION = 3       -- api/X2Util NRT
-NRT_FACTION_ROLE = 9  -- api/X2Util NRT
-NRT_FAMILY = 7        -- api/X2Util NRT
-NRT_FAMILY_TITLE = 4  -- api/X2Util NRT
-NRT_MAX = 11          -- api/X2Util NRT
-NRT_PORTAL = 6        -- api/X2Util NRT
-NRT_ROSTER_TITLE = 10 -- api/X2Util NRT
-NRT_SUMMONS = 2       -- api/X2Util NRT
+NRT_CHARACTER = 1     -- api/X2Util NAME_RENAME_TYPE
+NRT_CHAT_TAB = 5      -- api/X2Util NAME_RENAME_TYPE
+NRT_CUSTOM = 8        -- api/X2Util NAME_RENAME_TYPE
+NRT_FACTION = 3       -- api/X2Util NAME_RENAME_TYPE
+NRT_FACTION_ROLE = 9  -- api/X2Util NAME_RENAME_TYPE
+NRT_FAMILY = 7        -- api/X2Util NAME_RENAME_TYPE
+NRT_FAMILY_TITLE = 4  -- api/X2Util NAME_RENAME_TYPE
+NRT_MAX = 11          -- api/X2Util NAME_RENAME_TYPE
+NRT_PORTAL = 6        -- api/X2Util NAME_RENAME_TYPE
+NRT_ROSTER_TITLE = 10 -- api/X2Util NAME_RENAME_TYPE
+NRT_SUMMONS = 2       -- api/X2Util NAME_RENAME_TYPE
 PLAYWITH = 5          -- api/X2Util GAME_PROVIDER
 TENCENT = 1           -- api/X2Util GAME_PROVIDER
 ---@class X2Util
@@ -31,8 +31,7 @@ XLGAMES_TH = 6        -- api/X2Util GAME_PROVIDER
 ---| `XLGAMES_TH`
 
 -- api/X2Util
----Name Rename Type
----@alias NRT
+---@alias NAME_RENAME_TYPE
 ---| `NRT_CHARACTER`
 ---| `NRT_CHAT_TAB`
 ---| `NRT_CUSTOM`

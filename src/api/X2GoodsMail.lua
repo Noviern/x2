@@ -32,9 +32,9 @@ MAIL_SYS_EXPRESS = 18                   -- api/X2GoodsMail MAIL_TYPE
 MAIL_SYS_SELL_BACKPACK = 19             -- api/X2GoodsMail MAIL_TYPE
 MAIL_TAXRATE_CHANGED = 8                -- api/X2GoodsMail MAIL_TYPE
 MAIL_TAX_IN_KIND_RECEIPT = 34           -- api/X2GoodsMail MAIL_TYPE
-MLK_COMMERCIAL = 3                      -- api/X2GoodsMail MLK
-MLK_INBOX = 1                           -- api/X2GoodsMail MLK
-MLK_OUTBOX = 2                          -- api/X2GoodsMail MLK
+MLK_COMMERCIAL = 3                      -- api/X2GoodsMail MAIL_LIST_KIND
+MLK_INBOX = 1                           -- api/X2GoodsMail MAIL_LIST_KIND
+MLK_OUTBOX = 2                          -- api/X2GoodsMail MAIL_LIST_KIND
 SIMT_SCHEDULE_ITEM_CUSTOM_MAIL = 2      -- api/X2GoodsMail SIMT
 SIMT_SCHEDULE_ITEM_NORMAL_MAIL = 1      -- api/X2GoodsMail SIMT
 ---@class X2GoodsMail
@@ -76,13 +76,13 @@ X2GoodsMail = {}                        -- api/X2GoodsMail
 ---| `MAIL_TAX_IN_KIND_RECEIPT`
 
 ---api/X2GoodsMail
----Mail List Kind
----@alias MLK
+---@alias MAIL_LIST_KIND
 ---| `MLK_COMMERCIAL`
 ---| `MLK_INBOX`
 ---| `MLK_OUTBOX`
 
+---@TODO: Schedule Item Mail Type?
 ---api/X2GoodsMail
----Schedule Item Mail Type?
+---@alias SIMT
 ---| `SIMT_SCHEDULE_ITEM_CUSTOM_MAIL`
 ---| `SIMT_SCHEDULE_ITEM_NORMAL_MAIL`

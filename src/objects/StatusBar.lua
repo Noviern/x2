@@ -3,6 +3,8 @@
 ---objects/StatusBar
 ---@class StatusBar: Widget
 local StatusBar = {}
+
+---objects/StatusBar
 ---@class statusbar: StatusBar
 
 ---Adds a child widget to the StatusBar with specified anchoring.

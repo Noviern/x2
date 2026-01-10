@@ -1,7 +1,6 @@
 ---@meta _
 
 ---object/EffectDrawable
----object/IconDrawable
 ---object/ImageDrawable
 ---object/NinePartDrawable
 ---object/ThreePartDrawable
@@ -34,20 +33,9 @@ function DrawableDDS:SetTexture(filename) end
 
 ---Sets the texture color using a color key for the DrawableDDS.
 ---@param colorKey string The color key to apply from the texture path `*.g` file.
----@usage
----```lua
----local ninePartDrawable = widget:CreateNinePartDrawable("ui/common/default.dds", "background")
----ninePartDrawable:SetTextureInfo("type_05")
----ninePartDrawable:SetTextureColor("hud_bg")
----```
 function DrawableDDS:SetTextureColor(colorKey) end
 
 ---Sets the texture information using an info key for the DrawableDDS.
 ---@param infoKey string The info key taken from the texture path `*.g` file.
 ---@param colorKey? string The color key to apply from the texture path `*.g` file.
----@usage
----```lua
----local ninePartDrawable = widget:CreateNinePartDrawable("ui/common/default.dds", "background")
----ninePartDrawable:SetTextureInfo("main_bg")
----```
 function DrawableDDS:SetTextureInfo(infoKey, colorKey) end

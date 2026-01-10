@@ -3,6 +3,8 @@
 ---objects/ModelView
 ---@class ModelView: Widget
 local ModelView = {}
+
+---objects/ModelView
 ---@class modelview: ModelView
 
 ---Adds rotation `angle` to the ModelView. positive is left negative is right.
@@ -145,13 +147,13 @@ function ModelView:GetCustomPreviewCloth() end
 
 ---@TODO: never got this to work
 ---Retrieves the custom pupil index for a given range.
----@param range PR
+---@param range PUPIL_RANGE
 ---@return number|nil index
 ---@nodiscard
 function ModelView:GetCustomPupil(range) end
 
 ---Retrieves the custom pupil color for a specified eye.
----@param range PR
+---@param range PUPIL_RANGE
 ---@return number red (min: `0`, max: `255`, default: `0`)
 ---@return number green (min: `0`, max: `255`, default: `0`)
 ---@return number blue (min: `0`, max: `255`, default: `0`)
@@ -269,7 +271,7 @@ function ModelView:PayBeautyShop() end
 function ModelView:PlayAnimation(name, loop) end
 
 ---Removes an item from the specified equipment slot.
----@param index ES
+---@param index EQUIPMENT_SLOT
 function ModelView:RemoveEquipSlot(index) end
 
 ---Resets the beauty shop settings.
@@ -404,14 +406,14 @@ function ModelView:SetCustomizingPreviewCloth(index) end
 
 ---Sets the custom pupil index for a specified range.
 ---@param index number
----@param range PR
+---@param range PUPIL_RANGE
 function ModelView:SetCustomizingPupil(index, range) end
 
 ---Sets the custom pupil color for a specified range.
 ---@param r number (min: `0`, max: `255`)
 ---@param g number (min: `0`, max: `255`)
 ---@param b number (min: `0`, max: `255`)
----@param range PR
+---@param range PUPIL_RANGE
 function ModelView:SetCustomizingPupilColor(r, g, b, range) end
 
 ---Sets the custom scar parameters.
@@ -442,7 +444,7 @@ function ModelView:SetCustomizingTattoo(index, weight) end
 function ModelView:SetDisableColorGrading(disable) end
 
 ---Sets the equipment from a character slot to the current model.
----@param index ES
+---@param index EQUIPMENT_SLOT
 function ModelView:SetEquipSlotFromCharacter(index) end
 
 ---Sets the fov `angle` for the ModelView.
@@ -509,7 +511,7 @@ function ModelView:StopAnimation() end
 function ModelView:ToggleCosplayEquipped(equipped) end
 
 ---Unequips an item from the specified slot. `ModelView:ApplyModel` after is required.
----@param itemSlot ES
+---@param itemSlot EQUIPMENT_SLOT
 function ModelView:UnequipItemSlot(itemSlot) end
 
 ---Updates the dye color for dyeable cosplay items.

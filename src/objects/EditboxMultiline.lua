@@ -3,6 +3,8 @@
 ---objects/EditboxMultiline
 ---@class EditboxMultiline: Widget, Editboxbase
 local EditboxMultiline = {}
+
+---objects/EditboxMultiline
 ---@class editboxmultiline: EditboxMultiline
 
 ---Clears all text in the EditboxMultiline.

@@ -11,20 +11,20 @@ MIDDLE_CONGESTION = 1              -- api/X2World CONGESTION_TYPE
 TERMS_TYPE_PRIVACY_POLICY = 1      -- api/X2World TERMS_TYPE
 TERMS_TYPE_PROVIDE_INFORMATION = 2 -- api/X2World TERMS_TYPE
 TERMS_TYPE_USE = 0                 -- api/X2World TERMS_TYPE
-WAT_DISABLE = 0                    -- api/X2World WAT
-WAT_ENABLE = 1                     -- api/X2World WAT
-WET_ACCEPTED = 1                   -- api/X2World WET
-WET_REJECTED = 0                   -- api/X2World WET
-WT_CHAR_NAME_PRESELECT = 16        -- api/X2World WT
-WT_COMBAT = 4                      -- api/X2World WT
-WT_INDEPENDENCE = 32               -- api/X2World WT
-WT_INTEGRATION = 2                 -- api/X2World WT
-WT_LEGACY = 0                      -- api/X2World WT
-WT_NEW = 1                         -- api/X2World WT
-WT_PREPARE_FOR_LAUNCH = 8          -- api/X2World WT
-WT_RECOMMEND = 128                 -- api/X2World WT
-WT_REMASTER = 64                   -- api/X2World WT
-WT_RESTRICT_AGE = 256              -- api/X2World WT
+WAT_DISABLE = 0                    -- api/X2World WORLD_AVAILABLE_TYPE
+WAT_ENABLE = 1                     -- api/X2World WORLD_AVAILABLE_TYPE
+WORLD_ENTRY_TYPE_ACCEPTED = 1      -- api/X2World WORLD_ENTRY_TYPE
+WORLD_ENTRY_TYPE_REJECTED = 0      -- api/X2World WORLD_ENTRY_TYPE
+WT_CHAR_NAME_PRESELECT = 16        -- api/X2World WORLD_TYPE
+WT_COMBAT = 4                      -- api/X2World WORLD_TYPE
+WT_INDEPENDENCE = 32               -- api/X2World WORLD_TYPE
+WT_INTEGRATION = 2                 -- api/X2World WORLD_TYPE
+WT_LEGACY = 0                      -- api/X2World WORLD_TYPE
+WT_NEW = 1                         -- api/X2World WORLD_TYPE
+WT_PREPARE_FOR_LAUNCH = 8          -- api/X2World WORLD_TYPE
+WT_RECOMMEND = 128                 -- api/X2World WORLD_TYPE
+WT_REMASTER = 64                   -- api/X2World WORLD_TYPE
+WT_RESTRICT_AGE = 256              -- api/X2World WORLD_TYPE
 ---@class X2World
 X2World = {}                       -- api/X2World
 
@@ -49,20 +49,17 @@ X2World = {}                       -- api/X2World
 ---| `TERMS_TYPE_USE`
 
 ---api/X2World
----World Available Type
----@alias WAT
+---@alias WORLD_AVAILABLE_TYPE
 ---| `WAT_DISABLE`
 ---| `WAT_ENABLE`
 
 ---api/X2World
----World Entry Type
----@alias WET
----| `WET_ACCEPTED`
----| `WET_REJECTED`
+---@alias WORLD_ENTRY_TYPE
+---| `WORLD_ENTRY_TYPE_ACCEPTED`
+---| `WORLD_ENTRY_TYPE_REJECTED`
 
 ---api/X2World
----World Type
----@alias WT
+---@alias WORLD_TYPE
 ---| `WT_CHAR_NAME_PRESELECT`
 ---| `WT_COMBAT`
 ---| `WT_INDEPENDENCE`

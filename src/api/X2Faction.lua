@@ -1,25 +1,25 @@
 ---@meta _
 
-EGFT_BANK = 0                      -- api/X2Faction EGFT
-EGFT_BUFF = 1                      -- api/X2Faction EGFT
-EGFT_QUEST = 3                     -- api/X2Faction EGFT
-EGFT_SHOP = 2                      -- api/X2Faction EGFT
-EHP_INSTANCE = 4                   -- api/X2Faction EHP
-EHP_MANAGEMENT = 1                 -- api/X2Faction EHP
-EHP_STORE = 2                      -- api/X2Faction EHP
-EHP_WAR = 3                        -- api/X2Faction EHP
-EIMS_END = 1                       -- api/X2Faction EIMS
-EIMS_START = 0                     -- api/X2Faction EIMS
-EMSK_CONTRIBUTION_POINT = 4        -- api/X2Faction EMSK
-EMSK_JOB = 3                       -- api/X2Faction EMSK
-EMSK_LEVEL = 2                     -- api/X2Faction EMSK
-EMSK_NAME = 0                      -- api/X2Faction EMSK
-EMSK_ONLINE = 6                    -- api/X2Faction EMSK
-EMSK_ROLE = 1                      -- api/X2Faction EMSK
-EMSK_WEEKLY_CONTRIBUTION_POINT = 5 -- api/X2Faction EMSK
-EMT_BUFF = 1                       -- api/X2Faction EMT
-EMT_QUEST = 2                      -- api/X2Faction EMT
-EMT_RANK_REWARD = 3                -- api/X2Faction EMT
+EGFT_BANK = 0                      -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TYPE
+EGFT_BUFF = 1                      -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TYPE
+EGFT_QUEST = 3                     -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TYPE
+EGFT_SHOP = 2                      -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TYPE
+EHP_INSTANCE = 4                   -- api/X2Faction EXPEDITION_HISTORY_PAGE
+EHP_MANAGEMENT = 1                 -- api/X2Faction EXPEDITION_HISTORY_PAGE
+EHP_STORE = 2                      -- api/X2Faction EXPEDITION_HISTORY_PAGE
+EHP_WAR = 3                        -- api/X2Faction EXPEDITION_HISTORY_PAGE
+EIMS_END = 1                       -- api/X2Faction EXPEDITION_INSTANCE_MEMBER_STATUS
+EIMS_START = 0                     -- api/X2Faction EXPEDITION_INSTANCE_MEMBER_STATUS
+EMSK_CONTRIBUTION_POINT = 4        -- api/X2Faction EXPEDITION_MEMBER_SORT_KIND
+EMSK_JOB = 3                       -- api/X2Faction EXPEDITION_MEMBER_SORT_KIND
+EMSK_LEVEL = 2                     -- api/X2Faction EXPEDITION_MEMBER_SORT_KIND
+EMSK_NAME = 0                      -- api/X2Faction EXPEDITION_MEMBER_SORT_KIND
+EMSK_ONLINE = 6                    -- api/X2Faction EXPEDITION_MEMBER_SORT_KIND
+EMSK_ROLE = 1                      -- api/X2Faction EXPEDITION_MEMBER_SORT_KIND
+EMSK_WEEKLY_CONTRIBUTION_POINT = 5 -- api/X2Faction EXPEDITION_MEMBER_SORT_KIND
+EMT_BUFF = 1                       -- api/X2Faction EXPEDITION_MANAGEMENT_TYPE
+EMT_QUEST = 2                      -- api/X2Faction EXPEDITION_MANAGEMENT_TYPE
+EMT_RANK_REWARD = 3                -- api/X2Faction EXPEDITION_MANAGEMENT_TYPE
 EXPEDITION_CREATE_COST = 10000     -- api/X2Faction
 MAX_EXPEDITION_APPLY_COUNT = 5     -- api/X2Faction
 MAX_GUILD_FUNCTION_BUFF_TYPE = 6   -- api/X2Faction
@@ -31,30 +31,26 @@ VS_WIN = 3                         -- api/X2Faction VS
 X2Faction = {}                     -- api/X2Faction
 
 ---api/X2Faction
----Expedition Guild Function Type
----@alias EGFT
+---@alias EXPEDITION_GUILD_FUNCTION_TYPE
 ---| `EGFT_BANK`
 ---| `EGFT_BUFF`
 ---| `EGFT_QUEST`
 ---| `EGFT_SHOP`
 
 ---api/X2Faction
----Expedition History Page
----@alias EHP
+---@alias EXPEDITION_HISTORY_PAGE
 ---| `EHP_INSTANCE`
 ---| `EHP_MANAGEMENT`
 ---| `EHP_STORE`
 ---| `EHP_WAR`
 
 ---api/X2Faction
----Expedition Instance Member Status
----@alias EIMS
+---@alias EXPEDITION_INSTANCE_MEMBER_STATUS
 ---| `EIMS_END`
 ---| `EIMS_START`
 
 ---api/X2Faction
----Expedition Member Sort Kind
----@alias EMSK
+---@alias EXPEDITION_MEMBER_SORT_KIND
 ---| `EMSK_CONTRIBUTION_POINT`
 ---| `EMSK_JOB`
 ---| `EMSK_LEVEL`
@@ -64,8 +60,7 @@ X2Faction = {}                     -- api/X2Faction
 ---| `EMSK_WEEKLY_CONTRIBUTION_POINT`
 
 ---api/X2Faction
----Expedition Management Type
----@alias EMT
+---@alias EXPEDITION_MANAGEMENT_TYPE
 ---| `EMT_BUFF`
 ---| `EMT_QUEST`
 ---| `EMT_RANK_REWARD`

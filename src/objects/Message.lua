@@ -4,6 +4,8 @@
 ---@class Message: Widget
 ---@field style TextStyle
 local Message = {}
+
+---objects/Message
 ---@class message: Message
 
 ---Adds a message to the Message. Must be used after defining the widgets

@@ -4,11 +4,11 @@ BANVOTE_TYPE_CHECK_ENABLE = 0 -- api/X2Unit BANVOTE_TYPE
 BANVOTE_TYPE_START_VOTE = 1   -- api/X2Unit BANVOTE_TYPE
 BANVOTE_TYPE_VOTE_AGREE = 2   -- api/X2Unit BANVOTE_TYPE
 BANVOTE_TYPE_VOTE_CLEAR = 3   -- api/X2Unit BANVOTE_TYPE
-BRT_CHEATING = 3              -- api/X2Unit BRT
-BRT_CHILLING_EFFECT = 4       -- api/X2Unit BRT
-BRT_NON_PARTICIPATE = 1       -- api/X2Unit BRT
-BRT_NO_MANNER_CHAT = 2        -- api/X2Unit BRT
-BRT_NO_REASON = 0             -- api/X2Unit BRT
+BRT_CHEATING = 3              -- api/X2Unit BAN_REASON_TYPE
+BRT_CHILLING_EFFECT = 4       -- api/X2Unit BAN_REASON_TYPE
+BRT_NON_PARTICIPATE = 1       -- api/X2Unit BAN_REASON_TYPE
+BRT_NO_MANNER_CHAT = 2        -- api/X2Unit BAN_REASON_TYPE
+BRT_NO_REASON = 0             -- api/X2Unit BAN_REASON_TYPE
 DUEL_TYPE_INVALID = 0         -- api/X2Unit DUEL_TYPE
 DUEL_TYPE_PARTY = 2           -- api/X2Unit DUEL_TYPE
 DUEL_TYPE_SOLO = 1            -- api/X2Unit DUEL_TYPE
@@ -44,8 +44,7 @@ X2Unit = {}                   -- api/X2Unit
 ---| `BANVOTE_TYPE_VOTE_CLEAR`
 
 ---api/X2Unit
----Banvote Reason Type
----@alias BRT
+---@alias BAN_REASON_TYPE
 ---| `BRT_CHEATING`
 ---| `BRT_CHILLING_EFFECT`
 ---| `BRT_NON_PARTICIPATE`
@@ -87,7 +86,7 @@ X2Unit = {}                   -- api/X2Unit
 ---| `RACE_WARBORN`   # 8
 
 ---Retrieves the current zone group ID.
----@return ZONE_ID currentZoneGroup The current zone group ID.
+---@return ZONE_GROUP_ID currentZoneGroup The current zone group ID.
 ---@nodiscard
 function X2Unit:GetCurrentZoneGroup() end
 
@@ -126,9 +125,9 @@ function X2Unit:GetUnitNameById(unitId) end
 ---Retrieves the screen position (x, y, z) of the specified unit if in render
 ---range.
 ---@param unit UNIT The unit to query.
----@return number|nil x The x-coordinate, or `nil` if not in range.
----@return number|nil y The y-coordinate, or `nil` if not in range.
----@return number|nil z The z-coordinate, or `nil` if not in range.
+---@return number|nil x The UI scaled x-coordinate, or `nil` if not in range.
+---@return number|nil y The UI scaled y-coordinate, or `nil` if not in range.
+---@return number|nil z The UI scaled z-coordinate, or `nil` if not in range.
 ---@nodiscard
 function X2Unit:GetUnitScreenPosition(unit) end
 
@@ -162,7 +161,7 @@ function X2Unit:UnitBuffCount(unit) end
 ---render range.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The buff index. (min: `1`)
----@param neededInfo? BIK Optional additional information for the buff.
+---@param neededInfo? BUFF_INFO_KIND Optional additional information for the buff.
 ---@return BuffTooltip|nil unitBuffTooltip The buff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@see BuffTooltip
@@ -194,7 +193,7 @@ function X2Unit:UnitDeBuffCount(unit) end
 ---render range.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
----@param neededInfo? BIK Optional additional information for the buff.
+---@param neededInfo? BUFF_INFO_KIND Optional additional information for the buff.
 ---@return BuffTooltip|nil unitDebuffTooltip The debuff tooltip, or `nil` if not in range.
 ---@nodiscard
 ---@see BuffTooltip
@@ -251,7 +250,7 @@ function X2Unit:UnitHiddenBuffCount(unit) end
 ---it exists.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The hidden buff index. (min: `1`)
----@param neededInfo? BIK Optional additional information for the buff.
+---@param neededInfo? BUFF_INFO_KIND Optional additional information for the buff.
 ---@return BuffTooltip|nil unitHiddenBuffTooltip The hidden buff tooltip, or `nil` if not found.
 ---@nodiscard
 ---@see BuffTooltip
@@ -321,7 +320,7 @@ function X2Unit:UnitRemovableDebuffCount(unit) end
 ---unit if it exists.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
----@param neededInfo? BIK Optional additional information for the buff.
+---@param neededInfo? BUFF_INFO_KIND Optional additional information for the buff.
 ---@return BuffInfo|nil removableDebuffTooltip The removable debuff tooltip info, or `nil` if not found.
 ---@nodiscard
 function X2Unit:UnitRemovableDebuffTooltip(unit, deBuffIndex, neededInfo) end

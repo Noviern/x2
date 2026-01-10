@@ -1,13 +1,12 @@
 ---@meta _
 
-SIK_DESCRIPTION = 1 -- api/X2Skill SIK
+SIK_DESCRIPTION = 1 -- api/X2Skill SKILL_INFORMATION_KIND
 ---@class X2Skill
 X2Skill = {}        -- api/X2Skill
 
 ---api/X2Skill
----Skill Information Kind
 ---Values can be added together to get more information.
----@alias SIK
+---@alias SKILL_INFORMATION_KIND
 ---| `SIK_DESCRIPTION`
 ---| `4` Not defined but can be used to get almost everything thats not the description.
 
@@ -31,7 +30,7 @@ function X2Skill:GetMateCooldown(skillId, ignoreGlobalCooldown, mateType) end
 ---Returns tooltip information for a skill, filtered by an optional scope.
 ---@param skillId number The ID of the skill.
 ---@param itemType number The item type associated with the skill.
----@param filter? SIK Optional filter to reduce the scope of the returned tooltip.
+---@param filter? SKILL_INFORMATION_KIND Optional filter to reduce the scope of the returned tooltip.
 ---@return SkillTooltip skillTooltip The skill tooltip information, or an empty table if no data is available.
 ---@nodiscard
 ---@see SkillTooltip

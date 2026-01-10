@@ -2,10 +2,12 @@
 
 ---objects/Tab
 ---@class Tab: Widget, Tabbase
----@field selectedButton? Button[]
----@field unselectedButton? Button[]
----@field window? Window[]
+---@field selectedButton Button[]|nil
+---@field unselectedButton Button[]|nil
+---@field window Window[]|nil
 local Tab = {}
+
+---objects/Tab
 ---@class tab: Tab
 
 ---Adds a new tab to the Tab with specified button and window widgets.
@@ -29,9 +31,8 @@ function Tab:AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget, wi
 ---@param tabName string The name of the tab.
 function Tab:AddSimpleTab(tabName) end
 
----@TODO: Verify purpose and behavior.
 ---Aligns the tab buttons in the Tab. Should be called after all tabs have been
----created.
+---created and their extents set.
 function Tab:AlignTabButtons() end
 
 ---Retrieves the number of active tabs in the Tab.

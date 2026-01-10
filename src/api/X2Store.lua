@@ -59,7 +59,7 @@ function X2Store:GetProductionZoneGroups() end
 
 ---Retrieves a list of zone information for all zones where a pack crafted in
 ---the specified zone can be turned in.
----@param fromZoneGroup ZONE_ID The source zone ID.
+---@param fromZoneGroup ZONE_GROUP_ID The source zone ID.
 ---@return ZoneInfo[] sellableZoneGroups A table of zone information for the sellable zone groups.
 ---@nodiscard
 ---@see ZoneInfo
@@ -72,8 +72,8 @@ function X2Store:GetSpecialtyRatio() end
 
 ---Retrieves the cooldown time and triggers the `SPECIALTY_RATIO_BETWEEN_INFO`
 ---event.
----@param fromZoneGroup ZONE_ID The source zone ID.
----@param toZoneGroup ZONE_ID The destination zone ID.
+---@param fromZoneGroup ZONE_GROUP_ID The source zone ID.
+---@param toZoneGroup ZONE_GROUP_ID The destination zone ID.
 ---@return number cooldownTime The cooldown time in milliseconds.
 ---@nodiscard
 ---@usage

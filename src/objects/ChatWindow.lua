@@ -3,6 +3,8 @@
 ---objects/ChatTab
 ---@class ChatWindow: Widget, Tabbase
 local ChatWindow = {}
+
+---objects/ChatTab
 ---@class chatwindow: ChatWindow
 
 ---Adds a new tab to the ChatWindow with the specified name and optional widget.

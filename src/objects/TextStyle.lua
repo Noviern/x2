@@ -26,6 +26,7 @@ FTK_IMAGETEXT = 2      -- objects/TextStyle FONT_KIND
 ---| `ALIGN_TOP_LEFT`
 ---| `ALIGN_TOP_RIGHT`
 
+---objects/TextStyle
 ---@alias FONT_KIND
 ---| `FTK_GENERAL`
 ---| `FTK_IMAGETEXT`
@@ -33,6 +34,8 @@ FTK_IMAGETEXT = 2      -- objects/TextStyle FONT_KIND
 ---objects/TextStyle
 ---@class TextStyle: Uiobject
 local TextStyle = {}
+
+---objects/TextStyle
 ---@class textstyle: TextStyle
 
 ---Retrieves the line height of the TextStyle.
@@ -46,8 +49,9 @@ function TextStyle:GetLineHeight() end
 ---@nodiscard
 function TextStyle:GetTextWidth(text) end
 
+---@TODO: center for label, what abnout other widgets?
 ---Sets the text alignment for the TextStyle.
----@param align TEXT_ALIGN The text alignment type.
+---@param align TEXT_ALIGN The text alignment type. (default: `"ALIGN_CENTER"`)
 function TextStyle:SetAlign(align) end
 
 ---Sets the color for the TextStyle.

@@ -13,6 +13,8 @@
 ---@class DynamicList: Widget
 ---@field content DynamicListContent
 local DynamicList = {}
+
+---objects/DynamicList
 ---@class dynamiclist: DynamicList
 
 ---Clears all data from the DynamicList.
@@ -72,7 +74,7 @@ function DynamicList:GetSelectedItemInfo() end
 
 ---@TODO: Verify bgDrawType.
 ---Initializes the background draw type for the DynamicList.
----@param bgDrawType UOT_DRAWABLE The background draw type.
+---@param bgDrawType UI_OBJECT_TYPE_DRAWABLE The background draw type.
 function DynamicList:InitBgType(bgDrawType) end
 
 ---@TODO: Confirm purpose and behavior. this creates the main on dl.content.anchor.main

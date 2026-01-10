@@ -4,6 +4,8 @@
 ---@class Label: Widget
 ---@field style TextStyle
 local Label = {}
+
+---objects/Label
 ---@class label: Label
 
 ---Retrieves the inset of the Label.

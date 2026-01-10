@@ -27,7 +27,7 @@ CHAT_USER = 20                           -- api/X2Chat CHAT_MESSAGE_CHANNEL
 CHAT_WHISPER = -3                        -- api/X2Chat CHAT_MESSAGE_CHANNEL
 CHAT_WHISPERED = -4                      -- api/X2Chat CHAT_MESSAGE_CHANNEL
 CHAT_ZONE = 1                            -- api/X2Chat CHAT_MESSAGE_CHANNEL
-CIK_DEFAULT = 1                          -- api/X2Chat CIK
+CIK_DEFAULT = 1                          -- api/X2Chat CHAT_ICON_KIND
 CMF_ACQ_CONSUME_GROUP = 36               -- api/X2Chat CHAT_MESSAGE_CHANNEL
 CMF_ADDED_ITEM_GROUP = 33                -- api/X2Chat CHAT_MESSAGE_CHANNEL
 CMF_ADDED_ITEM_SELF = 34                 -- api/X2Chat CHAT_MESSAGE_CHANNEL
@@ -128,17 +128,17 @@ LOCALE_RU = 5                            -- api/X2Chat LOCALE
 LOCALE_TH = 8                            -- api/X2Chat LOCALE
 LOCALE_ZH_CN = 1                         -- api/X2Chat LOCALE
 LOCALE_ZH_TW = 4                         -- api/X2Chat LOCALE
-QMS_CHECKPOINT = 5                       -- api/X2Chat QMS
-QMS_GIVE_MAIN = 1                        -- api/X2Chat QMS
-QMS_GIVE_NORMAL = 3                      -- api/X2Chat QMS
-QMS_GIVE_REPEAT = 4                      -- api/X2Chat QMS
-QMS_GIVE_SAGA = 2                        -- api/X2Chat QMS
-QMS_LET_IT_DONE = 11                     -- api/X2Chat QMS
-QMS_OVER_DONE = 10                       -- api/X2Chat QMS
-QMS_PROGRESS = 6                         -- api/X2Chat QMS
-QMS_READY_MAIN = 7                       -- api/X2Chat QMS
-QMS_READY_NORMAL = 9                     -- api/X2Chat QMS
-QMS_READY_SAGA = 8                       -- api/X2Chat QMS
+QMS_CHECKPOINT = 5                       -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_GIVE_MAIN = 1                        -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_GIVE_NORMAL = 3                      -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_GIVE_REPEAT = 4                      -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_GIVE_SAGA = 2                        -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_LET_IT_DONE = 11                     -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_OVER_DONE = 10                       -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_PROGRESS = 6                         -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_READY_MAIN = 7                       -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_READY_NORMAL = 9                     -- api/X2Chat QUEST_MANAGEMENT_STATE
+QMS_READY_SAGA = 8                       -- api/X2Chat QUEST_MANAGEMENT_STATE
 ---@class X2Chat
 X2Chat = {}                              -- api/X2Chat
 
@@ -173,13 +173,11 @@ X2Chat = {}                              -- api/X2Chat
 ---| `CHAT_ZONE`
 
 ---api/X2Chat
----Chat Icon Kind
----@alias CIK
+---@alias CHAT_ICON_KIND
 ---| `CIK_DEFAULT`
 
 ---api/X2Chat
----Channel Message Filter
----@alias CMF
+---@alias CHANNEL_MESSAGE_FILTER
 ---| `CMF_ACQ_CONSUME_GROUP`
 ---| `CMF_ADDED_ITEM_GROUP`
 ---| `CMF_ADDED_ITEM_SELF`
@@ -247,8 +245,7 @@ X2Chat = {}                              -- api/X2Chat
 ---| `CMF_ZH_TW`
 
 ---api/X2Chat
----Channel Message Filter Special
----@alias CMF_SPECIAL
+---@alias CHANNEL_MESSAGE_FILTER_SPECIAL
 ---| `CMF_BEGIN_USE`
 ---| `CMF_BIG_MEGAPHONE`
 ---| `CMF_COMBAT_DST_OTHER`
@@ -282,22 +279,21 @@ X2Chat = {}                              -- api/X2Chat
 
 ---api/X2Chat
 ---@alias LOCALE
----| `LOCALE_DE` 6
----| `LOCALE_EN_SG` 10
----| `LOCALE_EN_US` 2
----| `LOCALE_FR` 7
----| `LOCALE_IND` 9
----| `LOCALE_INVALID` -1
----| `LOCALE_JA` 3
----| `LOCALE_KO` 0
----| `LOCALE_RU` 5
----| `LOCALE_TH` 8
----| `LOCALE_ZH_CN` 1
----| `LOCALE_ZH_TW` 4
+---| `LOCALE_DE`
+---| `LOCALE_EN_SG`
+---| `LOCALE_EN_US`
+---| `LOCALE_FR`
+---| `LOCALE_IND`
+---| `LOCALE_INVALID`
+---| `LOCALE_JA`
+---| `LOCALE_KO`
+---| `LOCALE_RU`
+---| `LOCALE_TH`
+---| `LOCALE_ZH_CN`
+---| `LOCALE_ZH_TW`
 
 ---api/X2Chat
----Quest Management State
----@alias QMS
+---@alias QUEST_MANAGEMENT_STATE
 ---| `QMS_CHECKPOINT`
 ---| `QMS_GIVE_MAIN`
 ---| `QMS_GIVE_NORMAL`
@@ -311,14 +307,14 @@ X2Chat = {}                              -- api/X2Chat
 ---| `QMS_READY_SAGA`
 
 ---Sends a message to the specified chat channel.
----@param filter CMF|CMF_SPECIAL The chat Channel Message Filter.
+---@param filter CHANNEL_MESSAGE_FILTER|CHANNEL_MESSAGE_FILTER_SPECIAL The chat Channel Message Filter.
 ---@param message string The message to send.
----@param option? ChatMessageOption Optional chat message settings. (Required for all `CMF_SPECIAL`)
+---@param option? ChatMessageOption Optional chat message settings. (Required for all `CHANNEL_MESSAGE_FILTER_SPECIAL`)
 ---@usage
 ---```lua
 ---X2Chat:DispatchChatMessage(CMF_SYSTEM, "Hello, ArcheRage!")
 ---X2Chat:DispatchChatMessage(CMF_SAY, "|o; Hello, ArcheRage!", { isUserChat = true })
 ---```
 ---@see ChatMessageOption
----@overload fun(self: self, filter: CMF_SPECIAL, message: "|o; TEXT HERE - option is required for this.", option: ChatMessageOption)
+---@overload fun(self: self, filter: CHANNEL_MESSAGE_FILTER_SPECIAL, message: "|o; TEXT HERE - option is required for this.", option: ChatMessageOption)
 function X2Chat:DispatchChatMessage(filter, message, option) end

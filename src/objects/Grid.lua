@@ -3,6 +3,8 @@
 ---objects/Grid
 ---@class Grid: Widget
 local Grid = {}
+
+---objects/Grid
 ---@class grid: Grid
 
 ---Clears the item from the Grid.

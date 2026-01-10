@@ -32,9 +32,9 @@ MAIL_SYS_EXPRESS = 18                   -- api/X2Mail MAIL_TYPE
 MAIL_SYS_SELL_BACKPACK = 19             -- api/X2Mail MAIL_TYPE
 MAIL_TAXRATE_CHANGED = 8                -- api/X2Mail MAIL_TYPE
 MAIL_TAX_IN_KIND_RECEIPT = 34           -- api/X2Mail MAIL_TYPE
-MLK_COMMERCIAL = 3                      -- api/X2Mail MLK
-MLK_INBOX = 1                           -- api/X2Mail MLK
-MLK_OUTBOX = 2                          -- api/X2Mail MLK
+MLK_COMMERCIAL = 3                      -- api/X2Mail MAIL_LIST_KIND
+MLK_INBOX = 1                           -- api/X2Mail MAIL_LIST_KIND
+MLK_OUTBOX = 2                          -- api/X2Mail MAIL_LIST_KIND
 SIMT_SCHEDULE_ITEM_CUSTOM_MAIL = 2      -- api/X2Mail SIMT
 SIMT_SCHEDULE_ITEM_NORMAL_MAIL = 1      -- api/X2Mail SIMT
 ---@class X2Mail

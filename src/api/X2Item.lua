@@ -1,23 +1,23 @@
 ---@meta _
 
-BM_MILEAGE_ITEM_TYPE = 28586            -- api/X2Item BM_MILEAGE
-BM_MILEAGE_USABLE_ONE_ITEM_TYPE = 29911 -- api/X2Item BM_MILEAGE
+BM_MILEAGE_ITEM_TYPE = 28586            -- api/X2Item BUY_MODE_MILEAGE
+BM_MILEAGE_USABLE_ONE_ITEM_TYPE = 29911 -- api/X2Item BUY_MODE_MILEAGE
 BPT_GOODS = 3                           -- api/X2Item BPT
 BPT_TRADEGOODS = 8                      -- api/X2Item BPT
-IIK_CATEGORY = 128                      -- api/X2Item IIK
-IIK_CONSUME_ITEM = 256                  -- api/X2Item IIK
-IIK_GRADE = 4                           -- api/X2Item IIK
-IIK_GRADE_STR = 8                       -- api/X2Item IIK
-IIK_IMPL = 16                           -- api/X2Item IIK
-IIK_NAME = 2                            -- api/X2Item IIK
-IIK_SELL = 32                           -- api/X2Item IIK
-IIK_SOCKET_MODIFIER = 512               -- api/X2Item IIK
-IIK_STACK = 64                          -- api/X2Item IIK
-IIK_TYPE = 1                            -- api/X2Item IIK
+IIK_CATEGORY = 128                      -- api/X2Item ITEM_INFORMATION_KIND
+IIK_CONSUME_ITEM = 256                  -- api/X2Item ITEM_INFORMATION_KIND
+IIK_GRADE = 4                           -- api/X2Item ITEM_INFORMATION_KIND
+IIK_GRADE_STR = 8                       -- api/X2Item ITEM_INFORMATION_KIND
+IIK_IMPL = 16                           -- api/X2Item ITEM_INFORMATION_KIND
+IIK_NAME = 2                            -- api/X2Item ITEM_INFORMATION_KIND
+IIK_SELL = 32                           -- api/X2Item ITEM_INFORMATION_KIND
+IIK_SOCKET_MODIFIER = 512               -- api/X2Item ITEM_INFORMATION_KIND
+IIK_STACK = 64                          -- api/X2Item ITEM_INFORMATION_KIND
+IIK_TYPE = 1                            -- api/X2Item ITEM_INFORMATION_KIND
 ISLOT_EQUIPMENT = 1                     -- api/X2Item SLOT_TYPE
-ISUS_MAX_UPGRADE = 2                    -- api/X2Item ISUS
-ISUS_MISS_MATCH = 3                     -- api/X2Item ISUS
-ISUS_UPGRADE = 1                        -- api/X2Item ISUS
+ISUS_MAX_UPGRADE = 2                    -- api/X2Item ITEM_SOCKET_UPGRADE_STATE
+ISUS_MISS_MATCH = 3                     -- api/X2Item ITEM_SOCKET_UPGRADE_STATE
+ISUS_UPGRADE = 1                        -- api/X2Item ITEM_SOCKET_UPGRADE_STATE
 ITEM_MATE_NOT_EQUIP = 2                 -- api/X2Item ITEM_MATE
 ITEM_MATE_UNSUMMON = 1                  -- api/X2Item ITEM_MATE
 ITEM_SECURITY_INVALID = 0               -- api/X2Item ITEM_SECURITY
@@ -40,8 +40,7 @@ POOR_ITEM_GRADE = 1                     -- api/X2Item
 X2Item = {}                             -- api/X2Item
 
 ---api/X2Item
----Buy Mode Mileage
----@alias BM_MILEAGE
+---@alias BUY_MODE_MILEAGE
 ---| `BM_MILEAGE_ITEM_TYPE`
 ---| `BM_MILEAGE_USABLE_ONE_ITEM_TYPE`
 
@@ -52,9 +51,8 @@ X2Item = {}                             -- api/X2Item
 ---| `BPT_TRADEGOODS`
 
 ---api/X2Item
----Item Information Kind
 ---Values can be added together to get more information.
----@alias IIK
+---@alias ITEM_INFORMATION_KIND
 ---| `IIK_CATEGORY`
 ---| `IIK_CONSUME_ITEM`
 ---| `IIK_GRADE`
@@ -67,8 +65,7 @@ X2Item = {}                             -- api/X2Item
 ---| `IIK_TYPE`
 
 ---api/X2Item
----Item Socket Upgrade State
----@alias ISUS
+---@alias ITEM_SOCKET_UPGRADE_STATE
 ---| `ISUS_MAX_UPGRADE`
 ---| `ISUS_MISS_MATCH`
 ---| `ISUS_UPGRADE`

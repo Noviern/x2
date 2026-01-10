@@ -5,6 +5,8 @@ MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/Roadmap
 ---objects/RoadMap
 ---@class RoadMap: Widget, Map
 local RoadMap = {}
+
+---objects/RoadMap
 ---@class roadmap: RoadMap
 
 ---Initializes map data. Requires `Map:ReloadAllInfo`.

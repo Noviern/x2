@@ -15,13 +15,15 @@ UI_BUTTON_PUSHED = 2      -- objects/Button UI_BUTTON_STATE
 
 ---objects/Button
 ---@class Button: Widget
----@field style TextStyle
+---@field style TextStyle TextStyle
 local Button = {}
+
+---objects/Button
 ---@class button: Button
 
 ---Creates a drawable for the specified button state and type.
 ---@param state UI_BUTTON_STATE The button state (e.g., normal, pushed, disabled).
----@param drawableType UOT_DRAWABLE The type of drawable to create.
+---@param drawableType UI_OBJECT_TYPE_DRAWABLE The type of drawable to create.
 ---@param path string The path to the drawable resource.
 ---@param layer? DRAWABLE_NAME_LAYER The optional layer to apply the drawable to. (default: `"background"`)
 ---@return DrawableDDS stateDrawable The created drawable, empty table if the object hasn't been imported, or `nil` if creation fails.
@@ -202,7 +204,7 @@ function Button:SetPushedTextColor(r, g, b, a) end
 ---@param style BUTTON_STYLE The style to apply.
 function Button:SetStyle(style) end
 
----Sets the text color for the button.
+---Sets the text color for the normal state of the button.
 ---@param r number Red value (min: `0`, max: `1`).
 ---@param g number Green value (min: `0`, max: `1`).
 ---@param b number Blue value (min: `0`, max: `1`).

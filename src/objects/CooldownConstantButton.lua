@@ -9,6 +9,8 @@ UI_BUTTON_PUSHED = 2      -- objects/CooldownConstantButton UI_BUTTON_STATE
 ---objects/CooldownConstantButton
 ---@class CooldownConstantButton: CooldownButton
 local CooldownConstantButton = {}
+
+---objects/CooldownConstantButton
 ---@class cooldownconstantbutton: CooldownConstantButton
 
 ---@FIXME: Broken?

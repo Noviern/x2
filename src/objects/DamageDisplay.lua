@@ -1,16 +1,16 @@
 ---@meta _
 
-LAT_AFTERIMAGE = 4      -- objects/DamageDisplay LAT
-LAT_COUNT = 2           -- objects/DamageDisplay LAT
-LAT_LINEAR_DISPLAY = 16 -- objects/DamageDisplay LAT
-LAT_MOVE = 1            -- objects/DamageDisplay LAT
-LAT_NONE = 0            -- objects/DamageDisplay LAT
-LAT_SHAKE = 8           -- objects/DamageDisplay LAT
-PCT_DEFAULT = 0         -- objects/DamageDisplay PCT
-PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay PCT
+LAT_AFTERIMAGE = 4      -- objects/DamageDisplay LINEAR_ANIMATION_TYPE
+LAT_COUNT = 2           -- objects/DamageDisplay LINEAR_ANIMATION_TYPE
+LAT_LINEAR_DISPLAY = 16 -- objects/DamageDisplay LINEAR_ANIMATION_TYPE
+LAT_MOVE = 1            -- objects/DamageDisplay LINEAR_ANIMATION_TYPE
+LAT_NONE = 0            -- objects/DamageDisplay LINEAR_ANIMATION_TYPE
+LAT_SHAKE = 8           -- objects/DamageDisplay LINEAR_ANIMATION_TYPE
+PCT_DEFAULT = 0         -- objects/DamageDisplay POSITION_CALCULATION_TYPE
+PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay POSITION_CALCULATION_TYPE
 
----Linear Animation Type
----@alias LAT
+---objects/DamageDisplay
+---@alias LINEAR_ANIMATION_TYPE
 ---| `LAT_AFTERIMAGE`
 ---| `LAT_COUNT`
 ---| `LAT_LINEAR_DISPLAY`
@@ -18,9 +18,9 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay PCT
 ---| `LAT_NONE`
 ---| `LAT_SHAKE`
 
+
 ---objects/DamageDisplay
----Position Calculation Type
----@alias PCT
+---@alias POSITION_CALCULATION_TYPE
 ---| `PCT_DEFAULT`
 ---| `PCT_SHIP_COLLISION`
 
@@ -29,6 +29,8 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay PCT
 ---@field extraStyle TextStyle
 ---@field style TextStyle
 local DamageDisplay = {}
+
+---objects/DamageDisplay
 ---@class damagedisplay: DamageDisplay
 
 ---Enables or disables animation for the DamageDisplay.
@@ -97,7 +99,7 @@ function DamageDisplay:SetInitPos(x, y) end
 function DamageDisplay:SetInset(left, top, right, bottom) end
 
 ---Sets the position calculation type for the DamageDisplay.
----@param positionCalculationType PCT The position calculation type. (default: `PCT_DEFAULT`)
+---@param positionCalculationType POSITION_CALCULATION_TYPE The position calculation type. (default: `PCT_DEFAULT`)
 function DamageDisplay:SetPositionCalculationType(positionCalculationType) end
 
 ---Sets the source and target unit IDs for the DamageDisplay.

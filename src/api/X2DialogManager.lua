@@ -1,8 +1,8 @@
 ---@meta _
 
-DBT_NONE = 2                                      -- api/X2DialogManager DBT
-DBT_OK = 1                                        -- api/X2DialogManager DBT
-DBT_OK_CANCEL = 0                                 -- api/X2DialogManager DBT
+DBT_NONE = 2                                      -- api/X2DialogManager DIALOG_BUTTON_TYPE
+DBT_OK = 1                                        -- api/X2DialogManager DIALOG_BUTTON_TYPE
+DBT_OK_CANCEL = 0                                 -- api/X2DialogManager DIALOG_BUTTON_TYPE
 DLG_CHARACTER_CREATE_FAILED = 36                  -- api/X2DialogManager DLG_EVENT
 DLG_NOTICE_EXPIRE_INSTANCE_TICKET = 39            -- api/X2DialogManager DLG_EVENT
 DLG_TASK_ACTABILITY_FULL_NOTICE = 85              -- api/X2DialogManager DLG_EVENT
@@ -117,8 +117,7 @@ RK_SPECIAL = 2                                    -- api/X2DialogManager RK
 X2DialogManager = {}                              -- api/X2DialogManager
 
 ---api/X2DialogManager
----Dialog Button Type
----@alias DBT
+---@alias DIALOG_BUTTON_TYPE
 ---| `DBT_NONE`
 ---| `DBT_OK`
 ---| `DBT_OK_CANCEL`

@@ -5,6 +5,8 @@
 ---@field modalBackgroundWindow EmptyWidget
 ---@field titleStyle TextStyle
 local Window = {}
+
+---objects/Window
 ---@class window: Window
 
 ---Enables or disables closing the Window when the Escape key is pressed.

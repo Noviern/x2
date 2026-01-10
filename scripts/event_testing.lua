@@ -14,9 +14,9 @@ end
 
 ---@param name UIEVENT_TYPE
 local function SetEventHandler(name)
-  if eventCount < 240 then UI:SetEventHandler(name, event(name)) end
+  if eventCount < 230 then UI:SetEventHandler(name, event(name)) end
   eventCount = eventCount + 1
-  if eventCount == 240 then
+  if eventCount == 230 then
     ADDON:ChatLog("last " .. name)
   end
 end
@@ -28,9 +28,10 @@ end
 --------------------------------------------------------------------------------
 -- These events needed further testing.
 --------------------------------------------------------------------------------
+-- SetEventHandler("DRAW_DOODAD_TOOLTIP")
+-- SetEventHandler("DRAW_DOODAD_SIGN_TAG")
 SetEventHandler("ACHIEVEMENT_UPDATE")
 SetEventHandler("ADD_GIVEN_QUEST_INFO")
-SetEventHandler("ADD_NOTIFY_QUEST_INFO")
 SetEventHandler("BAG_ITEM_CONFIRMED")
 SetEventHandler("BLESS_UTHSTIN_UPDATE_STATS")
 -- SetEventHandler("CHAT_MSG_QUEST")
@@ -38,15 +39,10 @@ SetEventHandler("BLESS_UTHSTIN_UPDATE_STATS")
 -- SetEventHandler("COMBAT_TEXT")
 -- SetEventHandler("COMBAT_MSG")
 SetEventHandler("COMPLETE_QUEST_CONTEXT_DOODAD")
-SetEventHandler("DOODAD_PHASE_UI_MSG")
 SetEventHandler("EXPEDITION_EXP")
 SetEventHandler("EXPEDITION_MANAGEMENT_APPLICANTS")
 -- SetEventHandler("EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED")
-SetEventHandler("FACTION_COMPETITION_INFO")
-SetEventHandler("FACTION_COMPETITION_RESULT")
-SetEventHandler("FACTION_COMPETITION_UPDATE_POINT")
-SetEventHandler("INIT_CHRONICLE_INFO")
-SetEventHandler("ITEM_ACQUISITION_BY_LOOT")
+-- SetEventHandler("INIT_CHRONICLE_INFO")
 SetEventHandler("LEAVED_INSTANT_GAME_ZONE")
 SetEventHandler("MATE_STATE_UPDATE")
 -- SetEventHandler("RAID_RECRUIT_HUD")
@@ -58,7 +54,8 @@ SetEventHandler("SKILL_UPGRADED")
 SetEventHandler("STORE_TRADE_FAILED")
 SetEventHandler("STORE_FULL")
 SetEventHandler("UPDATE_DURABILITY_STATUS")
-SetEventHandler("ZONE_SCORE_CONTENT_STATE")
+-- SetEventHandler("ZONE_SCORE_CONTENT_STATE")
+SetEventHandler("HEIR_SKILL_ACTIVE_TYPE_MSG")
 
 --------------------------------------------------------------------------------
 -- These events werent found in scriptsbin
@@ -147,7 +144,6 @@ SetEventHandler("ENCHANT_RESULT")
 -- Need documented
 --------------------------------------------------------------------------------
 SetEventHandler("ABILITY_EXP_CHANGED")
-SetEventHandler("ACCOUNT_RESTRICT_NOTICE") -- player is banned?
 SetEventHandler("ACTABILITY_REFRESH_ALL")
 SetEventHandler("ASK_BUY_LABOR_POWER_POTION")
 SetEventHandler("AUCTION_BIDDEN")
@@ -178,7 +174,6 @@ SetEventHandler("GAME_SCHEDULE") -- this triggered when opening beautyshop
 SetEventHandler("GUILD_BANK_MONEY_UPDATE")
 SetEventHandler("HEIR_SKILL_ACTIVE_TYPE_MSG")
 SetEventHandler("HERO_NOTI") -- this doesnt fire for hero calls, maybe its when heros have been selected?
-SetEventHandler("HOUSE_BUY_SUCCESS")
 SetEventHandler("HOUSE_CANCEL_SELL_FAIL")
 SetEventHandler("HOUSE_CANCEL_SELL_SUCCESS")
 SetEventHandler("HOUSE_DECO_UPDATED") -- this might be housing deco increase?
@@ -205,7 +200,7 @@ SetEventHandler("UPDATE_ROUTE_MAP")
 -- SetEventHandler("UPDATE_SHORTCUT_SKILLS")
 SetEventHandler("VIEW_CASH_BUY_WINDOW")
 SetEventHandler("ZONE_SCORE_UPDATED")
-SetEventHandler("UPDATE_CONTENT_ROSTER_WINDOW") --  i think this is for saving/deleting a raid roster
+-- SetEventHandler("UPDATE_CONTENT_ROSTER_WINDOW") --  i think this is for saving/deleting a raid roster
 SetEventHandler("UPDATE_HOUSING_TOOLTIP")
 SetEventHandler("UPDATE_EXPEDITION_PORTAL")
 SetEventHandler("HERO_CANDIDATE_NOTI")
@@ -255,7 +250,6 @@ SetEventHandler("REMOVE_CARRYING_BACKPACK_SLAVE_INFO")
 SetEventHandler("REQUIRE_DELAY_TO_CHAT")
 SetEventHandler("REQUIRE_ITEM_TO_CHAT")
 SetEventHandler("RESET_INGAME_SHOP_MODELVIEW")
-SetEventHandler("RESIDENT_SERVICE_POINT_CHANGED")
 SetEventHandler("SELECTED_INSTANCE_DIFFICULT")
 SetEventHandler("SIM_DOODAD_MSG")
 SetEventHandler("SKILL_SELECTIVE_ITEM_NOT_AVAILABLE")
@@ -289,7 +283,6 @@ SetEventHandler("SHOW_RENAME_EXPEIDITON")
 SetEventHandler("START_HERO_ELECTION_PERIOD")
 SetEventHandler("NUONS_ARROW_SHOW")
 SetEventHandler("NUONS_ARROW_UI_MSG")
-SetEventHandler("NUONS_ARROW_UPDATE")
 SetEventHandler("ONE_AND_ONE_CHAT_END")
 SetEventHandler("ONE_AND_ONE_CHAT_ADD_MESSAGE")
 SetEventHandler("ONE_AND_ONE_CHAT_START")
@@ -349,6 +342,3 @@ SetEventHandler("FAMILY_REMOVED")
 -- SetEventHandler("SHOW_DEFENDANT_WAIT_TRIAL") --crash?
 -- SetEventHandler("UPDATE_BUBBLE") -- crash
 -- SetEventHandler("NPC_UNIT_EQUIPMENT_CHANGED") -- crash
-
-ADDON:ChatLog(tostring(eventCount))
-ADDON:ChatLog(string.rep("=", 16))

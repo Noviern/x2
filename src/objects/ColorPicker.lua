@@ -3,6 +3,8 @@
 ---objects/ColorPicker
 ---@class ColorPicker: Widget
 local ColorPicker = {}
+
+---objects/ColorPicker
 ---@class colorpicker: ColorPicker
 
 ---Retrieves the color at the specified point on the ColorPicker.

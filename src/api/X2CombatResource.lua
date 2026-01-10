@@ -1,15 +1,14 @@
 ---@meta _
 
-CRU_DOUBLE_GAUGE = 3   -- api/X2CombatResource CRU
-CRU_DOUBLE_GAUGE_2 = 4 -- api/X2CombatResource CRU
-CRU_GAUGE = 1          -- api/X2CombatResource CRU
-CRU_OVERLAP = 2        -- api/X2CombatResource CRU
+CRU_DOUBLE_GAUGE = 3   -- api/X2CombatResource COMBAT_RESOURCE_UITYPE
+CRU_DOUBLE_GAUGE_2 = 4 -- api/X2CombatResource COMBAT_RESOURCE_UITYPE
+CRU_GAUGE = 1          -- api/X2CombatResource COMBAT_RESOURCE_UITYPE
+CRU_OVERLAP = 2        -- api/X2CombatResource COMBAT_RESOURCE_UITYPE
 ---@class X2CombatResource
 X2CombatResource = {}  -- api/X2CombatResource
 
 ---api/X2CombatResource
----Combat Resource Uitype
----@alias CRU
+---@alias COMBAT_RESOURCE_UITYPE
 ---| `CRU_DOUBLE_GAUGE`
 ---| `CRU_DOUBLE_GAUGE_2`
 ---| `CRU_GAUGE`

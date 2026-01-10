@@ -17,7 +17,7 @@ function X2Sound:PlayMusic(soundPackItemName) end
 ---Plays a UI sound and returns its sound instance ID.
 ---@param soundName SOUND_NAME The name of the sound to play.
 ---@param duplicable? boolean If true, allows the sound to play multiple times concurrently; defaults to false.
----@return number soundId The ID of the sound instance.
+---@return number soundId The ID of the sound instance. @TODO: 0 if already playing and not duplicable
 function X2Sound:PlayUISound(soundName, duplicable) end
 
 ---Stops the currently playing music.

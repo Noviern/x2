@@ -7,6 +7,8 @@
 ---@field itemStyle TextStyle
 ---@field itemStyleSub TextStyle
 local Listbox = {}
+
+---objects/Listbox
 ---@class listbox: Listbox
 
 ---Appends an item to the Listbox with the specified key, value, and optional

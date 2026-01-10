@@ -3,6 +3,8 @@
 ---objects/Avi
 ---@class Avi: Widget
 local Avi = {}
+
+---objects/Avi
 ---@class avi: Avi
 
 ---Sets the AVI file to be used by the widget.

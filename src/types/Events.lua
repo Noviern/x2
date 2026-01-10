@@ -1,6 +1,7 @@
 ---@TODO: @alias EVENT_WIDGET_HANDLER fun(self: Widget, ...)
 
----Event triggers when the player uses a hotkey that an addon has registered.
+---Event triggers for the key down and key up when the player uses a hotkey that
+---an addon has registered.
 ---@alias HOTKEY_ACTION_HANDLER fun(actionName: string, keyUp: boolean)
 
 ---Event triggers when one of the players ability is changed.
@@ -21,7 +22,7 @@
 ---Event triggers when dailies reset.
 ---@alias ACCOUNT_ATTENDANCE_LOADED_HANDLER fun()
 
----@TODO:
+---Event triggers when the players account gets restricted.
 ---@alias ACCOUNT_RESTRICT_NOTICE_HANDLER fun()
 
 ---@TODO: can status be anything other than "update"
@@ -29,7 +30,7 @@
 ---@alias ACHIEVEMENT_UPDATE_HANDLER fun(status: string, newAchievementType: number)
 
 ---Event triggers when an acquaintance (guild member) logs in.
----@alias ACQUAINTANCE_LOGIN_HANDLER fun(cmf: CMF, charName: string)
+---@alias ACQUAINTANCE_LOGIN_HANDLER fun(cmf: CHANNEL_MESSAGE_FILTER, charName: string)
 
 ---Event triggers when the players proficiency changes.
 ---@alias ACTABILITY_EXPERT_CHANGED_HANDLER fun(actabilityId: number, name: string, diff: number|string, final: number|string)
@@ -57,16 +58,15 @@
 
 ---@TODO: Make a enum for type
 ---Event triggers when a new event has appeared with in the players range.
----@alias ADD_GIVEN_QUEST_INFO_HANDLER fun(type, questType)
+---@alias ADD_GIVEN_QUEST_INFO_HANDLER fun(type: `0`|`1`, questType: number)
 
----@TODO: This may not be accurate.
 ---Event triggers when the player has a quest notification info.
 ---@alias ADD_NOTIFY_QUEST_INFO_HANDLER fun(qType: number)
 
 ---Event triggers when an item has been added to the players inventory.
 ---@alias ADDED_ITEM_HANDLER fun(itemLinkText: string, itemCount: number, itemTaskType: number, tradeOtherName: string)
 
----Event triggers when the addon has loaded.
+---Event triggers when the addon has fully loaded.
 ---@alias ADDON_LOADED_HANDLER fun()
 
 ---Event triggers when the players aggro meter has been cleared.
@@ -308,7 +308,7 @@
 ---@alias CHAT_LEAVED_CHANNEL_HANDLER fun(channel: CHAT_MESSAGE_CHANNEL, name: string)
 
 ---Event triggers when a chat message occurs.
----@alias CHAT_MESSAGE_HANDLER fun(channel: CHAT_MESSAGE_CHANNEL, relation: UR, name: string, message: string, info: CHAT_MESSAGE_INFO)
+---@alias CHAT_MESSAGE_HANDLER fun(channel: CHAT_MESSAGE_CHANNEL, relation: UNIT_RELATION, name: string, message: string, info: CHAT_MESSAGE_INFO)
 
 ---Event triggers when a chat message alarm occurs.
 ---@alias CHAT_MSG_ALARM_HANDLER fun(text: string)
@@ -553,16 +553,16 @@
 ---Event triggers when a doodad phase message occurs. (ex: Strength of the Faction message)
 ---@alias DOODAD_PHASE_MSG_HANDLER fun(text: string)
 
----@TODO: Clearify this more.
 ---Event triggers when a title UI message appears.
 ---@alias DOODAD_PHASE_UI_MSG_HANDLER fun(phaseMsgInfo: PhaseMsgInfo)
 
+---@TODO: tooltip?
 ---Event triggers when the player hovers over a doodad and the tooltip appears
 ---in the bottom right of the screen.
----@alias DRAW_DOODAD_SIGN_TAG_HANDLER fun(tooltip?)
+---@alias DRAW_DOODAD_SIGN_TAG_HANDLER fun(tooltip: nil)
 
----@TODO:
----@alias DRAW_DOODAD_TOOLTIP_HANDLER fun(info)
+---Event triggers every frame the players mouse hovers a doodad.
+---@alias DRAW_DOODAD_TOOLTIP_HANDLER fun(info: DoodadTooltipInfo)
 
 ---Event triggers when the player ends dying an item.
 ---@alias DYEING_END_HANDLER fun()
@@ -598,10 +598,9 @@
 ---@alias ENDED_DUEL_HANDLER fun()
 
 ---Event triggers when the player enters another zone group.
----@alias ENTER_ANOTHER_ZONEGROUP_HANDLER fun(zoneId: ZONE_ID)
+---@alias ENTER_ANOTHER_ZONEGROUP_HANDLER fun(zoneId: ZONE_GROUP_ID)
 
 ---@TODO: Needs more testing.
----@TODO:
 ---@alias ENTER_ENCHANT_ITEM_MODE_HANDLER fun(mode: ENCHANT_ITEM_MODE)
 
 ---Event triggers when the player opens the open chest (gold/silver/copper crate) window.
@@ -633,10 +632,10 @@
 ---@alias EQUIP_SLOT_REINFORCE_EXPAND_PAGE_HANDLER fun()
 
 ---Event triggers when the players ipnysh equipment slot effect levels up.
----@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER fun(equipSlot: ES, level: number)
+---@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER fun(equipSlot: EQUIPMENT_SLOT, level: number)
 
 ---Event triggers when the players ipnysh equipment slot levels up.
----@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP_HANDLER fun(equipSlot: ES, level: number)
+---@alias EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP_HANDLER fun(equipSlot: EQUIPMENT_SLOT, level: number)
 
 ---Event triggers when the players ipnysh equipment slot levels up.
 ---@alias EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_HANDLER fun(equipSlotAttribute: number, level: number)
@@ -759,23 +758,21 @@
 ---@TODO:
 ---@alias FACTION_CHANGED_HANDLER fun()
 
----@TODO: get a full competition list
----Event triggers when the player enters a zone with a competition. (e.g. Akasch Invasion/Mysthrane Gorge/Cinder+YNY war)
+---Event triggers when the player enters a zone with a competition. (e.g. Akasch Invasion/Mysthrane Gorge/Reedwind/Great Prairie/Cinderstone+Ynystere war)
 ---@alias FACTION_COMPETITION_INFO_HANDLER fun(info: FactionCompetitionInfo)
 
----@TODO: get a full competition list
----Event triggers when a faction competition is over.
+---Event triggers when a faction competition is over. (e.g. Akasch Invasion/Mysthrane Gorge/Reedwind/Great Prairie/Cinderstone+Ynystere war)
 ---@alias FACTION_COMPETITION_RESULT_HANDLER fun(infos: FactionCompetitionResultInfos)
 
----@TODO: get a full competition list
----Event triggers when a factions competition points (akasch invasion) update.
+---Event triggers when a factions competition points (e.g. Akasch Invasion/Mysthrane Gorge/Reedwind/Great Prairie/Cinderstone+Ynystere war) update.
 ---@alias FACTION_COMPETITION_UPDATE_POINT_HANDLER fun(infos: FactionCompetitionPointInfo)
 
 ---@TODO:
 ---@alias FACTION_RELATION_ACCEPTED_HANDLER fun(name, factionName)
 
----@TODO:
----@alias FACTION_RELATION_CHANGED_HANDLER fun(isHostile, f1Name, f2Name)
+---@TODO: i think the only happens when a relation starts
+---Event triggers when a faction relation changes.
+---@alias FACTION_RELATION_CHANGED_HANDLER fun(isHostile: boolean, f1Name: string, f2Name: string)
 
 ---@TODO:
 ---@alias FACTION_RELATION_COUNT_HANDLER fun()
@@ -789,8 +786,9 @@
 ---@TODO:
 ---@alias FACTION_RELATION_REQUESTED_HANDLER fun(name, factionName)
 
----@TODO:
----@alias FACTION_RELATION_WILL_CHANGE_HANDLER fun(f1Name, f2Name)
+---@TODO: i think the only happens when a relation ends
+---Event triggers when a faction relation will change.
+---@alias FACTION_RELATION_WILL_CHANGE_HANDLER fun(f1Name: string, f2Name: string)
 
 ---Event triggers if a nation or guild is renamed.
 ---@alias FACTION_RENAMED_HANDLER fun(isExpedition: boolean, oldName: string, newName: string)
@@ -959,7 +957,7 @@
 ---@alias HEIR_LEVEL_UP_HANDLER fun(myUnit: boolean, unitId: string)
 
 ---@TODO:
----@alias HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER fun(activeType, ability, text, pos)
+---@alias HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER fun(activeType: number, ability: number, text: string, pos: HEIR_SKILL_TYPE)
 
 ---Event triggers when the player changes an ancestral skill.
 ---@alias HEIR_SKILL_LEARN_HANDLER fun(text: string, pos: HEIR_SKILL_TYPE)
@@ -1028,8 +1026,8 @@
 ---@TODO:
 ---@alias HOUSE_BUY_FAIL_HANDLER fun()
 
----@TODO:
----@alias HOUSE_BUY_SUCCESS_HANDLER fun(houseName)
+---Event triggers when the player buys a house.
+---@alias HOUSE_BUY_SUCCESS_HANDLER fun(houseName: string)
 
 ---@TODO:
 ---@alias HOUSE_CANCEL_SELL_FAIL_HANDLER fun()
@@ -1093,10 +1091,10 @@
 ---@alias HOUSING_UCC_UPDATED_HANDLER fun()
 
 ---Event triggers when the state of a zone changes.
----@alias HPW_ZONE_STATE_CHANGE_HANDLER fun(zoneId: ZONE_ID)
+---@alias HPW_ZONE_STATE_CHANGE_HANDLER fun(zoneId: ZONE_GROUP_ID)
 
 ---Event triggers when a zones war state ends.
----@alias HPW_ZONE_STATE_WAR_END_HANDLER fun(zoneId: ZONE_ID, points: number)
+---@alias HPW_ZONE_STATE_WAR_END_HANDLER fun(zoneId: ZONE_GROUP_ID, points: number)
 
 ---Event triggers when the players ime status changes.
 ---@alias IME_STATUS_CHANGED_HANDLER fun()
@@ -1180,8 +1178,7 @@
 ---Event triggers when the player starts to split items in their inventory.
 ---@alias INVEN_SLOT_SPLIT_HANDLER fun(invenType: string, slot: number, amount: number)
 
----@TODO: Dont think this fires if the player acquires loot.
----Event triggers when a player acquires tool
+---Event triggers when a player acquires loot.
 ---@alias ITEM_ACQUISITION_BY_LOOT_HANDLER fun(charName: string, itemLinkText: string, itemCount: number)
 
 ---Event triggers when the player attempts to awaken a item.
@@ -1403,7 +1400,7 @@ local result = {
 ---@alias NAME_TAG_MODE_CHANGED_MSG_HANDLER fun(changedNameTagMode: NAME_TAG_MODE_OFFSET)
 
 ---Event triggers when the player is selecting a territory from the Faction > Auroria Territories window.
----@alias NATION_DOMINION_HANDLER fun(zoneGroupType: ZONE_ID, force: boolean)
+---@alias NATION_DOMINION_HANDLER fun(zoneGroupType: ZONE_GROUP_ID, force: boolean)
 
 ---@TODO:
 ---@alias NAVI_MARK_POS_TO_MAP_HANDLER fun()
@@ -1462,8 +1459,14 @@ local result = {
 ---@TODO:
 ---@alias NUONS_ARROW_UI_MSG_HANDLER fun(nuonsMsgInfo)
 
----@TODO:
----@alias NUONS_ARROW_UPDATE_HANDLER fun(data)
+---@class NuonsArrowUpdate
+---@field charge string
+---@field name ZONE_NAME
+---@field step string
+---@field zoneGroup ZONE_GROUP_ID
+
+---Event triggers when a continent has regional community center development update.
+---@alias NUONS_ARROW_UPDATE_HANDLER fun(data: NuonsArrowUpdate[])
 
 ---@TODO:
 ---@alias ONE_AND_ONE_CHAT_ADD_MESSAGE_HANDLER fun(channelId, speakerName, message, isSpeakerGm)
@@ -1604,7 +1607,7 @@ local result = {
 ---@alias PREMIUM_SERVICE_LIST_UPDATED_HANDLER fun()
 
 ---Event triggers when the player processes a crafting order.
----@alias PROCESS_CRAFT_ORDER_HANDLER fun(result: boolean, processType: COPT)
+---@alias PROCESS_CRAFT_ORDER_HANDLER fun(result: boolean, processType: CRAFT_ORDER_PROCESS_TYPE)
 
 ---Event triggers when the player talks to a npc that is required to progress a quest.
 ---@alias PROGRESS_TALK_QUEST_CONTEXT_HANDLER fun(qtype: number, useDirectingMode: boolean, npcId: string, doodadId?: string)
@@ -1800,8 +1803,8 @@ local result = {
 ---Event triggers when the player views the housing residents tab of a zone.
 ---@alias RESIDENT_MEMBER_LIST_HANDLER fun(total: number, start: number, refresh: number, members: ResidentMember[])
 
----@TODO:
----@alias RESIDENT_SERVICE_POINT_CHANGED_HANDLER fun(zoneGroupName, amount, total)
+---Event triggers when the players residental contribution points change.
+---@alias RESIDENT_SERVICE_POINT_CHANGED_HANDLER fun(zoneGroupName: ZONE_NAME, amount: number, total: number)
 
 ---Event triggers when the player accesses the task board at resident townhall
 ---of the zone.
@@ -1826,7 +1829,8 @@ local result = {
 ---Event triggers when the player saves a screenshot.
 ---@alias SAVE_SCREEN_SHOT_HANDLER fun(path: string)
 
----Event triggers when a player increases the temper of their equipment.
+---@TODO: result code was 0 when it was successful, what about great success?
+---Event triggers when a player increases the temper of their equipment and it is broadcasted to the server.
 ---@alias SCALE_ENCHANT_BROADCAST_HANDLER fun(characterName: string, resultCode: number, itemLink: string, oldScale: string, newScale: string)
 
 ---Event triggers when the player clicks on an scheduled item (loyalty token) to
@@ -1924,9 +1928,6 @@ local result = {
 ---Event triggers when a tooltip is shown on the roadmap.
 ---@alias SHOW_ROADMAP_TOOLTIP_HANDLER fun(tooltipInfo: TooltipInfo[], tooltipCount: number)
 
----@TODO:
----@alias SHOW_SERVER_SELECT_WINDOW_HANDLER fun(visible)
-
 ---Event triggers when the player uses a sextant.
 ---@alias SHOW_SEXTANT_POS_HANDLER fun(sextantPos: SEXTANT)
 
@@ -2019,14 +2020,14 @@ local result = {
 ---Event triggers when the player checks the specialty ratio between two zones.
 ---@alias SPECIALTY_RATIO_BETWEEN_INFO_HANDLER fun(specialtyRatioTable: SpecialtyRatioInfo[])
 
----Event triggers when a unit starts casting a spell.
+---Event triggers when a local unit starts casting a spell.
 ---@alias SPELLCAST_START_HANDLER fun(spellName: string, castingTime: number, caster: UNIT_LOCAL, castingUseable: boolean)
 
----Event triggers when a unit stops casting a spell.
----@alias SPELLCAST_STOP_HANDLER fun(caster: string)
+---Event triggers when a local unit stops casting a spell.
+---@alias SPELLCAST_STOP_HANDLER fun(caster: UNIT_LOCAL)
 
----Event triggers when a unit successfully casts a spell.
----@alias SPELLCAST_SUCCEEDED_HANDLER fun(caster: string)
+---Event triggers when a local unit successfully casts a spell.
+---@alias SPELLCAST_SUCCEEDED_HANDLER fun(caster: UNIT_LOCAL)
 
 ---Event triggers when the player interacts with a npc that starts a chat bubble.
 ---@alias START_CHAT_BUBBLE_HANDLER fun(arg: string)
@@ -2106,7 +2107,7 @@ local result = {
 ---@alias SYSMSG_HANDLER fun(msg: string)
 
 ---Event triggers when the player targets a new unit.
----@alias TARGET_CHANGED_HANDLER fun(stringId: string, targetType?: UNIT_TYPE)
+---@alias TARGET_CHANGED_HANDLER fun(stringId: string|nil, targetType: UNIT_TYPE|nil)
 
 ---@TODO:
 ---@alias TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO_HANDLER fun(curHp, maxHp)
@@ -2266,8 +2267,9 @@ local result = {
 ---Event triggers when a trial is over.
 ---@alias TRIAL_CLOSED_HANDLER fun()
 
----@TODO:
----@alias TRIAL_MESSAGE_HANDLER fun(text)
+---@TODO: are there other triggers?
+---Event triggers when the player attempts to join a trial that has already begun.
+---@alias TRIAL_MESSAGE_HANDLER fun(text: string)
 
 ---Event triggers when the trial changes state,
 ---@alias TRIAL_STATUS_HANDLER fun(state: TRIAL_STATE, juryCount: number, remainTime: number, arg: number)
@@ -2313,7 +2315,7 @@ local result = {
 ---@alias UNIT_ENTERED_SIGHT_HANDLER fun(unitId: number, unitType: UNIT_TYPE, curHp: string, maxHp: string)
 
 ---Event triggers when the player changes their gear.
----@alias UNIT_EQUIPMENT_CHANGED_HANDLER fun(equipSlot: ES)
+---@alias UNIT_EQUIPMENT_CHANGED_HANDLER fun(equipSlot: EQUIPMENT_SLOT)
 
 ---Event triggers when a player is on a kill streak.
 ---@alias UNIT_KILL_STREAK_HANDLER fun(killStreakInfo: KillStreakInfo)
@@ -2325,7 +2327,7 @@ local result = {
 ---@alias UNIT_NAME_CHANGED_HANDLER fun(unitId: string)
 
 ---Event triggers when the players pet equipment changes.
----@alias UNIT_NPC_EQUIPMENT_CHANGED_HANDLER fun(arg: ES)
+---@alias UNIT_NPC_EQUIPMENT_CHANGED_HANDLER fun(arg: EQUIPMENT_SLOT)
 
 ---Event triggers when a player changes their class.
 ---@alias UNITFRAME_ABILITY_UPDATE_HANDLER fun(unitId: string)
@@ -2547,7 +2549,7 @@ local result = {
 ---@alias UPDATE_ZONE_INFO_HANDLER fun()
 
 ---Event triggers when the world map zone zoom level changes.
----@alias UPDATE_ZONE_LEVEL_INFO_HANDLER fun(level: ZONE_LEVEL, id: ZONE_ID)
+---@alias UPDATE_ZONE_LEVEL_INFO_HANDLER fun(level: ZONE_LEVEL, id: ZONE_GROUP_ID)
 
 ---Event triggers when the player enters a zone with permissions. (Ipyna Ridge Akasch Invasion)
 ---@alias UPDATE_ZONE_PERMISSION_HANDLER fun()
@@ -2647,3 +2649,4 @@ local result = {
 -- @alias TOGGLE_MEGAPHONE_CHAT_HANDLER fun()
 -- @alias ULC_ACTIVATE_HANDLER fun(ulcType)
 -- @alias ULC_SKILL_MSG_HANDLER fun(resultCode, param)
+-- @alias SHOW_SERVER_SELECT_WINDOW_HANDLER fun(visible)

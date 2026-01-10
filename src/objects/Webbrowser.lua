@@ -3,6 +3,8 @@
 ---objects/Webbrowser
 ---@class Webbrowser: Widget
 local Webbrowser = {}
+
+---objects/Webbrowser
 ---@class webbrowser: Webbrowser
 
 ---Clears focus from the Webbrowser.

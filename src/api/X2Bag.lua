@@ -11,7 +11,7 @@ function X2Bag:EquipBagItem(slot, isAuxEquip) end
 ---Retrieves item information for the specified slot if it exists.
 ---@param bagId 1 The bag ID.
 ---@param slot number The slot to query. (min:  `1`)
----@param neededInfo? IIK Optional additional information for the item. Requires importing the X2Item API. IIK types can be added together to increase the filter range.
+---@param neededInfo? ITEM_INFORMATION_KIND Optional additional information for the item. Requires importing the X2Item API. ITEM_INFORMATION_KIND types can be added together to increase the filter range.
 ---@return ItemInfo|nil bagItemInfo The item information, or `nil` if the slot is empty or doesn't exist.
 ---@nodiscard
 ---@see ItemInfo

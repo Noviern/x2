@@ -13,8 +13,8 @@ HPWS_WAR = 6       -- api/X2Dominion HPWS
 X2Dominion = {}    -- api/X2Dominion
 
 ---api/X2Dominion
----HP World State
----@alias ZONE_STATE
+---@alias HP_WORLD_STATE
+---| `-1`
 ---| `HPWS_BATTLE`
 ---| `HPWS_PEACE`
 ---| `HPWS_TROUBLE_0`

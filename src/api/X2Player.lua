@@ -25,11 +25,11 @@ SCREEN_WORLD = 6                         -- api/X2Player SCREEN_STATE
 SCREEN_WORLD_SELECT = 2                  -- api/X2Player SCREEN_STATE
 ---@class X2Player
 X2Player = {}                            -- api/X2Player
-ZPW_ENTER = 0                            -- api/X2Player ZPW
-ZPW_EXPEL = 3                            -- api/X2Player ZPW
-ZPW_OUT = 2                              -- api/X2Player ZPW
-ZPW_WAIT = 1                             -- api/X2Player ZPW
-ZP_RESERVED = 4                          -- api/X2Player ZPW
+ZPW_ENTER = 0                            -- api/X2Player ZONE_PERMISSION_WINDOW
+ZPW_EXPEL = 3                            -- api/X2Player ZONE_PERMISSION_WINDOW
+ZPW_OUT = 2                              -- api/X2Player ZONE_PERMISSION_WINDOW
+ZPW_WAIT = 1                             -- api/X2Player ZONE_PERMISSION_WINDOW
+ZP_RESERVED = 4                          -- api/X2Player ZONE_PERMISSION_WINDOW
 
 ---api/X2Player
 ---@alias ACCOUNT_RESTRICT_CODE
@@ -59,8 +59,7 @@ ZP_RESERVED = 4                          -- api/X2Player ZPW
 ---| `APPELATION_ROUTE_TYPE_QUEST_CONTEXTS`
 
 ---api/X2Player
----Zone Permission Window
----@alias ZPW
+---@alias ZONE_PERMISSION_WINDOW
 ---| `ZPW_ENTER`
 ---| `ZPW_EXPEL`
 ---| `ZPW_OUT`

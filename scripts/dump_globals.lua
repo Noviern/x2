@@ -228,7 +228,7 @@ local function dumpGlobals(name)
   local output = dump(addonGlobalVars)
   local outputSize = #output
 
-  local filePath = "../Documents/Addon/aaad/" .. name .. ".txt"
+  local filePath = "../Documents/Addon/x2/" .. name .. ".txt"
   local file = io.open(filePath, "rb")
   local currentFileSize = 0
 
@@ -268,7 +268,7 @@ end
 -- style field, so it'll need to be dumped separately.
 ADDON:ImportObject(OBJECT.TextStyle)
 local textStyleGlobalVars = filter(_G)
-local filePath            = "../Documents/Addon/aaad/dump/objects/TextStyle.txt"
+local filePath            = "../Documents/Addon/x2/dump/objects/TextStyle.txt"
 local file                = assert(io.open(filePath, "w"))
 local output              = dump(textStyleGlobalVars)
 clearGlobals()

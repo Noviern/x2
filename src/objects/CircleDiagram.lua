@@ -3,6 +3,8 @@
 ---objects/CircleDiagram
 ---@class CircleDiagram: Widget
 local CircleDiagram = {}
+
+---objects/CircleDiagram
 ---@class circlediagram: CircleDiagram
 
 ---Adds a point at the specified offset coordinates for the CircleDiagram.
