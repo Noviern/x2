@@ -21,7 +21,8 @@ function Checkbutton:GetChecked() end
 
 ---Sets the state of the Checkbutton.
 ---@param state boolean `true` to check the Checkbutton, `false` to uncheck. (default: `false`)
-function Checkbutton:SetChecked(state) end
+---@param trigger boolean|nil `true` to send the `"OnCheckChanged"` event (the event must be set before), `false` to do nothing. (default: `false`)
+function Checkbutton:SetChecked(state, trigger) end
 
 ---Sets the background for the checked state of the Checkbutton.
 ---@param checkedTable DrawableDDS The table defining the checked state background.

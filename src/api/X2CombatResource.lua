@@ -25,7 +25,7 @@ function X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType) end
 ---types.
 ---@return CombatResources combatResourceInfo A table of combat resource information.
 ---@nodiscard
----@see CombatResourceInfo
+---@see CombatResources
 function X2CombatResource:GetCombatResourceInfo() end
 
 ---Retrieves combat resource information for the specified group type if the

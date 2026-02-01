@@ -96,21 +96,8 @@ function Folder:SetInset(left, top, right, bottom) end
 function Folder:SetOpenStateButton(openTable) end
 
 ---Sets the title button widget for the Folder. This will override
----`Folder:SetTitleText`.
+---`Folder:SetTitleText` and you will need to create your own `"OnClick"` event.
 ---@param titleTable Button The button widget for the title.
----@usage
----```lua
----local titleBtn = widget:CreateChildWidget("button", "titleBtn", 0, true)
----titleBtn:SetText("ArcheRage.to")
----
----function titleBtn:OnClick()
----  self:GetParent():ToggleState()
----end
----
----titleBtn:SetHandler("OnClick", titleBtn.OnClick)
----
----widget:SetTitleButtonWidget(titleBtn)
----```
 function Folder:SetTitleButtonWidget(titleTable) end
 
 ---Sets the title height for the Folder.

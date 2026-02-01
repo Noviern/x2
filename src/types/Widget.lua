@@ -444,8 +444,10 @@ function Widget:SetCharacterCacheDataHandler(handler) end
 ---@see DelegatorHandler
 function Widget:SetDelegator(action, delegator, handler) end
 
----Sets a handler for the Widget deletion event. This should be used to set any
----variable that referenced the widget as `nil`.
+---Sets a handler for the Widget deletion event. This executes right before the
+---widget is deleted from the widget pool and should be used to set any variable
+---that referenced the widget as `nil`, otherwise the widget will become an
+---invalid object.
 ---@param handler function The handler function.
 function Widget:SetDeletedHandler(handler) end
 
@@ -603,7 +605,7 @@ function Widget:SetStartAnimation(alpha, scale) end
 function Widget:SetText(text) end
 
 ---@TODO: this may disable all actions
----Shows or hides the widget and enables/disables its `"OnUpdate"` handler.
+---Shows or hides the widget and enables/disables its `"OnUpdate"` handler. Showing before the extents and anchors are set can cause issues.
 ---@param show boolean `true` to show, `false` to hide. (default: `false`)
 ---@param fadeTime? number The optional fade duration in milliseconds.
 function Widget:Show(show, fadeTime) end

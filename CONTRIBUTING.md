@@ -1,2 +1,0 @@
-- [ArcheAge Game Dump](https://github.com/Noviern/aagamedump)
-- [ArcheRage Game Dump](https://github.com/Noviern/argamedump)

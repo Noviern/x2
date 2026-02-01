@@ -77,6 +77,10 @@ function Textbox:SetLineSpace(space) end
 ---@param visible boolean `true` to show strikethrough, `false` to hide. (default: `false`)
 function Textbox:SetStrikeThrough(visible) end
 
+---Sets the text for the Textbox.
+---@param text FORMAT_MACRO|string The text to set.
+function Textbox:SetText(text) end
+
 ---Sets the initial width, text, and offset for the Textbox.
 ---@param initWidth number The initial width.
 ---@param text string The text to set.

@@ -27,7 +27,7 @@
 
 ---@TODO: can status be anything other than "update"
 ---Event triggers when the player updates an achievement.
----@alias ACHIEVEMENT_UPDATE_HANDLER fun(status: string, newAchievementType: number)
+---@alias ACHIEVEMENT_UPDATE_HANDLER fun(status: "update"|string, newAchievementType: number)
 
 ---Event triggers when an acquaintance (guild member) logs in.
 ---@alias ACQUAINTANCE_LOGIN_HANDLER fun(cmf: CHANNEL_MESSAGE_FILTER, charName: string)
@@ -44,7 +44,8 @@
 ---Event triggers when the players proficiency modifiers are updated.
 ---@alias ACTABILITY_MODIFIER_UPDATE_HANDLER fun()
 
----@TODO:
+---@TODO: I haven't actually seen this happen nor do I know what would cause this to be neccessary.
+---Event triggers when the players proficiencies need to be refreshed.
 ---@alias ACTABILITY_REFRESH_ALL_HANDLER fun()
 
 ---Event triggers when the players shortcut bar has a skill auto registered. (e.g. When the player is leveling and learns a skill and it auto registers to the players shortcut bar.)
@@ -69,12 +70,6 @@
 ---Event triggers when the addon has fully loaded.
 ---@alias ADDON_LOADED_HANDLER fun()
 
----Event triggers when the players aggro meter has been cleared.
----@alias AGGRO_METER_CLEARED_HANDLER fun()
-
----@TODO:
----@alias AGGRO_METER_UPDATED_HANDLER fun()
-
 ---Event triggers when the player views the Siege Info tab when a siege period has started.
 ---@alias ALL_SIEGE_RAID_TEAM_INFOS_HANDLER fun(teamInfos: SiegeRaidTeamInfos)
 
@@ -87,7 +82,8 @@
 ---Event triggers when the players stamp (name icon) changes.
 ---@alias APPELLATION_STAMP_SET_HANDLER fun()
 
----@TODO:
+---@TODO: I haven't seen this yet. I suspect its disable on ArcheRage.
+---Event triggers when the players labor is low and the game recommends they buy a labor potion from the market place.
 ---@alias ASK_BUY_LABOR_POWER_POTION_HANDLER fun()
 
 ---Event triggers when the player attempts to turn on bloodlust.
@@ -96,7 +92,7 @@
 ---Event triggers when the player bids on an item on the auction house.
 ---@alias AUCTION_BIDDED_HANDLER fun(itemName: string, moneyStr: string)
 
----@TODO:
+---Event triggers when the player receives a bid on an item on the auction house.
 ---@alias AUCTION_BIDDEN_HANDLER fun(itemName: string, moneyStr: string)
 
 ---Event triggers when the player buys seomthing on the auction house.
@@ -130,16 +126,13 @@
 ---Event triggers when a player has started crafting and after each craft end.
 ---@alias AUCTION_PERMISSION_BY_CRAFT_HANDLER fun(icraftType: number)
 
----@TODO:
----@alias AUCTION_TOGGLE_HANDLER fun()
-
 ---Event triggers when a player joins the jury audience.
 ---@alias AUDIENCE_JOINED_HANDLER fun(audienceName: string)
 
 ---Event triggers when a player leaves the jury audience.
 ---@alias AUDIENCE_LEFT_HANDLER fun(audienceName: string)
 
----@TODO:
+---Event triggers when the list of people who reported a suspicious user is updated.
 ---@alias BAD_USER_LIST_UPDATE_HANDLER fun()
 
 ---Event triggers when the player attempts to report a player for inappropriate language.
@@ -152,7 +145,7 @@
 ---Event triggers when the player receives an item to their bag.
 ---@alias BAG_ITEM_CONFIRMED_HANDLER fun()
 
----@TODO:
+---@TODO: This would  trigger when the real id should be shown on top of the slot, unsure how I can trigger this. Maybe a console variable?
 ---@alias BAG_REAL_INDEX_SHOW_HANDLER fun(isRealSlotShow: boolean)
 
 ---Event triggers when the player creates a tab in their bag.
@@ -203,11 +196,10 @@
 ---Event triggers when the player sets a item in the stat migration slot.
 ---@alias BLESS_UTHSTIN_ITEM_SLOT_SET_HANDLER fun(msgapplycountlimit?)
 
----Event triggers when the players stat migration emmits a message.
+---Event triggers when the players stat migration or ipnysh artifacts emmits a message.
 ---@alias BLESS_UTHSTIN_MESSAGE_HANDLER fun(messageType: number)
 
----@TODO: does this trigger when a stat changes?
----Event triggers when the player changes their stat migration.
+---Event triggers when the player changes their stat migration or activates a different stat migration.
 ---@alias BLESS_UTHSTIN_UPDATE_STATS_HANDLER fun()
 
 ---Event triggers when the player applies the stat migration item in the slot.
@@ -226,7 +218,7 @@
 ---@alias BOT_SUSPECT_REPORTED_HANDLER fun(sourceName: string, targetName: string)
 
 ---@TODO:
----@alias BUFF_SKILL_CHANGED_HANDLER fun(onePetBar: table)
+---@alias BUFF_SKILL_CHANGED_HANDLER fun()
 
 ---Event triggers when a buff is created or destroyed for a unit.
 ---@alias BUFF_UPDATE_HANDLER fun(action: BUFF_ACTION, target: BUFF_TARGET)
@@ -287,9 +279,6 @@
 ---@alias CHANGE_VISUAL_RACE_ENDED_HANDLER fun()
 
 ---@TODO:
----@alias CHANGED_AUTO_USE_AAPOINT_HANDLER fun()
-
----@TODO:
 ---@alias CHANGED_MSG_HANDLER fun()
 
 ---Event triggers when a player uses /roll.
@@ -313,28 +302,14 @@
 ---Event triggers when a chat message alarm occurs.
 ---@alias CHAT_MSG_ALARM_HANDLER fun(text: string)
 
----@TODO:
----@alias CHAT_MSG_DOODAD_HANDLER fun(message, author, speakerId, tailType, showTime, fadeTime, hasNext, qtype, forceFinished)
+---Event triggers when the player receives a chat message from a doodad/npc.
+---@alias CHAT_MSG_DOODAD_HANDLER fun(message: string, author: string, authorId: string, isSelf: boolean, tailType: CHAT_BUBBLE_KIND, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)
 
--- CHAT_MSG_QUEST = {
---   a 1 = "Hello, @PC_NAME(0)! May the Goddess’s blessing be with you.",
---   b 2 = "Temple Priestess",
---   c 3 = "b379",
---   d 4 = false,
---   e 5 = 1,
---   f 6 = 5310,
---   g 7 = 323,
---   h 8 = 9000005,
---   i 9 = 9000003,
---   j 10 = false,
--- }
-
----@TODO: Identify args
 ---Event triggers when the player interacts with a npc that has a quest message.
----@alias CHAT_MSG_QUEST_HANDLER fun(message: string, author: string, authorId: string, d: boolean, e: number, f: number, g: number, h: number, i: number, j: boolean)
+---@alias CHAT_MSG_QUEST_HANDLER fun(message: string, author: string, authorId: string, isSelf: boolean, tailType: CHAT_BUBBLE_KIND, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)
 
 ---@TODO:
----@alias CHECK_TEXTURE_HANDLER fun(texturePath)
+---@alias CHECK_TEXTURE_HANDLER fun(texturePath: string)
 
 ---Event triggers when the boss telescope information needs to be cleared from the map.
 ---@alias CLEAR_BOSS_TELESCOPE_INFO_HANDLER fun()
@@ -445,10 +420,9 @@
 ---@alias COMPLETE_ACHIEVEMENT_HANDLER fun(newAchievementType: number)
 
 ---Event triggers when the players craft order has been completed.
----@alias COMPLETE_CRAFT_ORDER_HANDLER fun(info)
+---@alias COMPLETE_CRAFT_ORDER_HANDLER fun(info: CraftOrderInfo)
 
----@TODO: completes the quest or part of the quest?
----Event triggers when the player completes part of a quest.
+---Event triggers when the player completes part of a quest doodad.
 ---@alias COMPLETE_QUEST_CONTEXT_DOODAD_HANDLER fun(qtype: number, useDirectingMode: boolean, doodadId: string)
 
 ---Event triggers when the player completes a npc context quest.
@@ -466,8 +440,8 @@
 ---Event triggers when an item has been crafted.
 ---@alias CRAFT_ENDED_HANDLER fun(leftCount)
 
----@TODO:
----@alias CRAFT_FAILED_HANDLER fun(itemLinkText)
+---Event triggers when the player fails to craft an item.
+---@alias CRAFT_FAILED_HANDLER fun(itemLinkText: string)
 
 ---Event triggers when crafting order entries are requested.
 ---@alias CRAFT_ORDER_ENTRY_SEARCHED_HANDLER fun(infos: CraftOrderEntries, totalCount: number, page: number)
@@ -665,24 +639,23 @@
 ---Event triggers when the player receives experience.
 ---@alias EXP_CHANGED_HANDLER fun(stringId: string, expNum: number, expStr: string)
 
----@TODO:
----@alias EXPEDITION_APPLICANT_ACCEPT_HANDLER fun(expeditionName)
+---Event triggers when the players application to a guild is accepted.
+---@alias EXPEDITION_APPLICANT_ACCEPT_HANDLER fun(expeditionName: string)
 
----@TODO:
----@alias EXPEDITION_APPLICANT_REJECT_HANDLER fun(expeditionName)
+---Event triggers when the players application to a guild is rejected.
+---@alias EXPEDITION_APPLICANT_REJECT_HANDLER fun(expeditionName: string)
 
 ---Event triggers when a guilds buff changes.
 ---@alias EXPEDITION_BUFF_CHANGE_HANDLER fun(expedition: number)
 
----@TODO: Does this trigger when other players in the guild increase the guilds exp?
----Event triggers when the players guilds experience changes.
+---Event triggers when the player changes the guilds experience.
 ---@alias EXPEDITION_EXP_HANDLER fun(amount: number, amountStr: string)
 
 ---Event triggers when the player accesses their guild history.
 ---@alias EXPEDITION_HISTORY_HANDLER fun(tabId: number)
 
 ---@TODO:
----@alias EXPEDITION_LEVEL_UP_HANDLER fun(title, desc)
+---@alias EXPEDITION_LEVEL_UP_HANDLER fun(level)
 
 ---@TODO:
 ---@alias EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT_HANDLER fun(charId)
@@ -696,9 +669,8 @@
 ---@TODO:
 ---@alias EXPEDITION_MANAGEMENT_APPLICANT_REJECT_HANDLER fun(charId)
 
----@TODO: When tested my guild didnt have applicants so unsure infos structure.
 ---Event triggers when a guild member (who has permissions) opens the manage applicants window.
----@alias EXPEDITION_MANAGEMENT_APPLICANTS_HANDLER fun(infos)
+---@alias EXPEDITION_MANAGEMENT_APPLICANTS_HANDLER fun(infos: ExpeditionApplicant[])
 
 ---@TODO:
 ---@alias EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED_HANDLER fun()
@@ -793,9 +765,6 @@
 ---Event triggers if a nation or guild is renamed.
 ---@alias FACTION_RENAMED_HANDLER fun(isExpedition: boolean, oldName: string, newName: string)
 
----@TODO:
----@alias FAIL_WEB_PLAY_DIARY_INSTANT_HANDLER fun()
-
 ---Event triggers when the player failed to set a pet auto skill. (e.g. Mount skill auto use/Battlepet not in defensive mode skill auto use)
 ---@alias FAILED_TO_SET_PET_AUTO_SKILL_HANDLER fun(mateType: MATE_TYPE)
 
@@ -841,11 +810,11 @@
 ---@TODO:
 ---@alias FAMILY_REMOVED_HANDLER fun()
 
----@TODO:
----@alias FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL_HANDLER fun(cooltime)
+---Event triggers when the player (as a hero) tries to activate a respawn location that is not available yet due to a cooltime.
+---@alias FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL_HANDLER fun(cooltime: number)
 
----@TODO:
----@alias FIND_FACTION_REZ_DISTRICT_DURATION_FAIL_HANDLER fun(remain)
+---Event triggers when the player (as a hero) tries to activate a respawn location that is already in use.
+---@alias FIND_FACTION_REZ_DISTRICT_DURATION_FAIL_HANDLER fun(remain: number)
 
 ---Event triggers when the player changes the state of a folder.
 ---@alias FOLDER_STATE_CHANGED_HANDLER fun(arg: string)
@@ -877,7 +846,7 @@
 ---Event triggers when the player opens the daily schedule window after loading into the world.
 ---@alias GAME_EVENT_INFO_REQUESTED_HANDLER fun()
 
----@TODO:
+---@TODO: triggered when opening beauty shop and triggers when you open the full kit demo window and then "randomly" when while the window is open
 ---@alias GAME_SCHEDULE_HANDLER fun()
 
 ---Event triggers when the player changes their characters gender.
@@ -911,11 +880,11 @@
 ---@TODO:
 ---@alias GOODS_MAIL_WRITE_ITEM_UPDATE_HANDLER fun()
 
----Event triggers when a player successfully regrades an item.
----@alias GRADE_ENCHANT_BROADCAST_HANDLER fun(characterName: string, resultCode: number, itemLink: string, oldGrade: ITEM_GRADE_TYPE, newGrade: ITEM_GRADE_TYPE)
+---Event triggers when a player successfully enchants an item to a new grade.
+---@alias GRADE_ENCHANT_BROADCAST_HANDLER fun(characterName: string, resultCode: ITEM_ENCHANT_BROAD_CAST_TYPE, itemLink: string, oldGrade: ITEM_GRADE_TYPE, newGrade: ITEM_GRADE_TYPE)
 
 ---Event triggers when the player regrades an item.
----@alias GRADE_ENCHANT_RESULT_HANDLER fun(resultCode: number, itemLink: string, oldGrade: ITEM_GRADE_TYPE, newGrade: ITEM_GRADE_TYPE, breakRewardItemType: number, breakRewardItemCount: number, breakRewardByMail: boolean)
+---@alias GRADE_ENCHANT_RESULT_HANDLER fun(resultCode: ITEM_GRADE_ENCHANT_RESULT, itemLink: string, oldGrade: ITEM_GRADE_TYPE, newGrade: ITEM_GRADE_TYPE, breakRewardItemType: number, breakRewardItemCount: number, breakRewardByMail: boolean)
 
 ---Event triggers when a guard tower health changes.
 ---@alias GUARDTOWER_HEALTH_CHANGED_HANDLER fun(arg1: string, arg2: string, arg3: string)
@@ -979,7 +948,7 @@
 ---@alias HERO_CANDIDATE_NOTI_HANDLER fun()
 
 ---@TODO:
----@alias HERO_CANDIDATES_ANNOUNCED_HANDLER fun(title, desc)
+---@alias HERO_CANDIDATES_ANNOUNCED_HANDLER fun()
 
 ---Event triggers when the player opens the hero election list to cast a vote.
 ---@alias HERO_ELECTION_HANDLER fun()
@@ -988,7 +957,7 @@
 ---@alias HERO_ELECTION_DAY_ALERT_HANDLER fun(title, desc)
 
 ---Event triggers when the hero election has results.
----@alias HERO_ELECTION_RESULT_HANDLER fun(title?, desc?)
+---@alias HERO_ELECTION_RESULT_HANDLER fun()
 
 ---Event triggers when the player casts their vote in a hero election,
 ---@alias HERO_ELECTION_VOTED_HANDLER fun()
@@ -1020,8 +989,8 @@
 ---Event triggers when the worldmap tooltip is hidden.
 ---@alias HIDE_WORLDMAP_TOOLTIP_HANDLER fun()
 
----@TODO:
----@alias HOUSE_BUILD_INFO_HANDLER fun(hType, bTax, hTax, heavyTaxHouseCount, normalTaxHouseCount, isHeavyTaxHouse, hostileTaxRate, depositString, taxType, completion)
+---Event triggers when the player attempts to place a building and the start construction window is shown/hidden.
+---@alias HOUSE_BUILD_INFO_HANDLER fun(hType: HOUSE_TYPE, baseTax: string, hTax: string, heavyTaxHouseCount: number, normalTaxHouseCount: number, isHeavyTaxHouse: boolean, hostileTaxRate: number, monopolyTaxRate: number, depositString: string, taxType: HOUSING_TAX, completion: boolean)
 
 ---@TODO:
 ---@alias HOUSE_BUY_FAIL_HANDLER fun()
@@ -1029,11 +998,11 @@
 ---Event triggers when the player buys a house.
 ---@alias HOUSE_BUY_SUCCESS_HANDLER fun(houseName: string)
 
----@TODO:
+---Event triggers when the player fails to cancel selling their house.
 ---@alias HOUSE_CANCEL_SELL_FAIL_HANDLER fun()
 
----@TODO:
----@alias HOUSE_CANCEL_SELL_SUCCESS_HANDLER fun(houseName)
+---Event triggers when the player successfully cancels selling their house.
+---@alias HOUSE_CANCEL_SELL_SUCCESS_HANDLER fun(houseName: string)
 
 ---@TODO:
 ---@alias HOUSE_DECO_UPDATED_HANDLER fun()
@@ -1059,14 +1028,14 @@
 ---@TODO:
 ---@alias HOUSE_ROTATE_CONFIRM_HANDLER fun()
 
----@TODO:
----@alias HOUSE_SALE_SUCCESS_HANDLER fun(houseName)
+---Event triggers when the player successfully sells a house.
+---@alias HOUSE_SALE_SUCCESS_HANDLER fun(houseName: string)
 
----@TODO:
+---Event triggers when the player fails to set the house to sell.
 ---@alias HOUSE_SET_SELL_FAIL_HANDLER fun()
 
----@TODO:
----@alias HOUSE_SET_SELL_SUCCESS_HANDLER fun(houseName)
+---Event triggers when the player successfully set the house to sell.
+---@alias HOUSE_SET_SELL_SUCCESS_HANDLER fun(houseName: string)
 
 ---Event triggers when a house is being built within range of the player.
 ---@alias HOUSE_STEP_INFO_UPDATED_HANDLER fun(structureType: HOUSE_STRUCTURE_TYPE)
@@ -1155,7 +1124,7 @@
 ---@alias INSTANT_GAME_START_HANDLER fun()
 
 ---@TODO:
----@alias INSTANT_GAME_START_POINT_RETURN_MSG_HANDLER fun(remainSec)
+---@alias INSTANT_GAME_START_POINT_RETURN_MSG_HANDLER fun(remainSec: number)
 
 ---@TODO:
 ---@alias INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME_HANDLER fun(remainTime)
@@ -1182,16 +1151,10 @@
 ---@alias ITEM_ACQUISITION_BY_LOOT_HANDLER fun(charName: string, itemLinkText: string, itemCount: number)
 
 ---Event triggers when the player attempts to awaken a item.
----@alias ITEM_CHANGE_MAPPING_RESULT_HANDLER fun(result: number, oldGrade: ITEM_GRADE_TYPE, oldGearScore: number, itemLink: string, bonusRate: number)
-
----@TODO:
-local result = {
-  SUCCESS = 1,
-  GREAT_SUCCESS = 2,
-}
+---@alias ITEM_CHANGE_MAPPING_RESULT_HANDLER fun(result: ITEM_CHANGE_MESSAGE_RESULT, oldGrade: ITEM_GRADE_TYPE, oldGearScore: number, itemLink: string, bonusRate: number)
 
 ---Event triggers when the player enchants an item with a lunastone.
----@alias ITEM_ENCHANT_MAGICAL_RESULT_HANDLER fun(resultCode: number, itemLink: string, gemItemType: number)
+---@alias ITEM_ENCHANT_MAGICAL_RESULT_HANDLER fun(resultCode: `1`|number, itemLink: string, gemItemType: number)
 
 ---Event triggers when the player attempt to equip an item to a mate/slave and it fails.
 ---@alias ITEM_EQUIP_RESULT_HANDLER fun(ItemEquipResult: ITEM_MATE)
@@ -1203,7 +1166,7 @@ local result = {
 ---@alias ITEM_LOOK_CONVERTED_EFFECT_HANDLER fun(itemInfo: ItemInfo)
 
 ---Event triggers when the player attempts to temper an item.
----@alias ITEM_REFURBISHMENT_RESULT_HANDLER fun(result: number, itemLink: string, beforeScale: string, afterScale: string)
+---@alias ITEM_REFURBISHMENT_RESULT_HANDLER fun(resultCode: ITEM_GRADE_ENCHANT_RESULT, itemLink: string, beforeScale: string, afterScale: string)
 
 ---@TODO:
 ---@alias ITEM_SMELTING_RESULT_HANDLER fun(resultCode, itemLink, smeltingItemType)
@@ -1212,7 +1175,7 @@ local result = {
 ---@alias ITEM_SOCKET_UPGRADE_HANDLER fun(socketItemType: number)
 
 ---Event triggers when the player sockets a lunagem into an item.
----@alias ITEM_SOCKETING_RESULT_HANDLER fun(resultCode: number, itemLink: string, socketItemType: number, install: boolean)
+---@alias ITEM_SOCKETING_RESULT_HANDLER fun(resultCode: ITEM_SOCKETING_RESULT_CODE, itemLink: string, socketItemType: number, install: boolean)
 
 ---Event triggers when the jury count changes.
 ---@alias JURY_OK_COUNT_HANDLER fun(count: number, total: number)
@@ -1317,8 +1280,8 @@ local result = {
 ---Event triggers when the players mount or battlepet learns a new skill.
 ---@alias MATE_SKILL_LEARNED_HANDLER fun(mateType: MATE_TYPE, text: string)
 
----@TODO: Ive only been able to get this to fire when the player goes afk and the battlepet switches to passive.
----Event triggers when the players mount of battlepet state changes.
+---Event triggers when the players mount of battlepet state changes without the
+---player changing it.
 ---@alias MATE_STATE_UPDATE_HANDLER fun(mateType: MATE_TYPE, stateIndex: MATE_STATE)
 
 ---@TODO:
@@ -1351,8 +1314,8 @@ local result = {
 ---@TODO:
 ---@alias MINE_AMOUNT_HANDLER fun()
 
----@TODO:
----@alias MINI_SCOREBOARD_CHANGED_HANDLER fun(status: "update"|"remove"|"inactive", info?: MiniScoreBoardInfo[])
+---Event triggers when the mini scoreboard changes.
+---@alias MINI_SCOREBOARD_CHANGED_HANDLER fun(status: MINI_SCOREBOARD_CHANGED_STATUS, info: MiniScoreBoardInfo[]|nil)
 
 ---Event triggers when the players dynamic shortcut is updated.
 ---@alias MODE_ACTIONS_UPDATE_HANDLER fun()
@@ -1417,7 +1380,8 @@ local result = {
 ---Event triggers when the next siege information is required.
 ---@alias NEXT_SIEGE_INFO_HANDLER fun(siegeInfo: NextSiegeInfo)
 
----Event triggers when a notice message occurs.
+---@TODO:  noticeType 1 = send to chat otherwise send to centerMessage, name could be nil?
+---Event triggers when a gm notice message occurs.
 ---@alias NOTICE_MESSAGE_HANDLER fun(noticeType: number, color: string, visibleTime: number, message: string, name: string)
 
 ---@TODO:
@@ -1458,12 +1422,6 @@ local result = {
 
 ---@TODO:
 ---@alias NUONS_ARROW_UI_MSG_HANDLER fun(nuonsMsgInfo)
-
----@class NuonsArrowUpdate
----@field charge string
----@field name ZONE_NAME
----@field step string
----@field zoneGroup ZONE_GROUP_ID
 
 ---Event triggers when a continent has regional community center development update.
 ---@alias NUONS_ARROW_UPDATE_HANDLER fun(data: NuonsArrowUpdate[])
@@ -1509,9 +1467,6 @@ local result = {
 
 ---@TODO:
 ---@alias OPEN_PROMOTION_EVENT_URL_HANDLER fun(url)
-
----@TODO:
----@alias OPTIMIZATION_BUTTON_MESSAGE_HANDLER fun() -- Crash
 
 ---Event triggers when the player enables/disables optimization.
 ---@alias OPTIMIZATION_RESULT_MESSAGE_HANDLER fun(activated: boolean)
@@ -1631,7 +1586,7 @@ local result = {
 ---@alias QUEST_DIRECTING_MODE_END_HANDLER fun()
 
 ---Event triggers when the player uses a hot key to advance the quest dialog.
----@alias QUEST_DIRECTING_MODE_HOT_KEY_HANDLER fun(arg: number)
+---@alias QUEST_DIRECTING_MODE_HOT_KEY_HANDLER fun(key: QUEST_DIRECTING_MODE_HOT_KEY_TYPE)
 
 ---Event triggers when the players quest has an error.
 ---@alias QUEST_ERROR_INFO_HANDLER fun(errNum: QUEST_ERROR, qtype: number, questDetail?: string, isCommon?: boolean)
@@ -1645,8 +1600,8 @@ local result = {
 ---Event triggers when the players quest updates.
 ---@alias QUEST_LEFT_TIME_UPDATED_HANDLER fun(qtype: number, leftTime: number)
 
----@TODO:
----@alias QUEST_MSG_HANDLER fun(arg1, arg2)
+---@TODO: arg2 is for msg_quest > The quest "$1" must be in-progess.
+---@alias QUEST_MSG_HANDLER fun(arg1: string, arg2: string)
 
 ---Event triggers when the player loads into the world and the quest notifier needs to be initialized or refreshed.
 ---@alias QUEST_NOTIFIER_START_HANDLER fun()
@@ -1654,8 +1609,8 @@ local result = {
 ---Event triggers when a quests window is closed to show a video.
 ---@alias QUEST_QUICK_CLOSE_EVENT_HANDLER fun(qtype: number)
 
----@TODO:
----@alias RAID_APPLICANT_LIST_HANDLER fun(data)
+---Event triggers when the player checks their raid applicant list.
+---@alias RAID_APPLICANT_LIST_HANDLER fun(data: RaidApplicantData)
 
 ---Event triggers when the player checks the status display of the raid and
 ---changing raid window zoom setting.
@@ -1664,15 +1619,8 @@ local result = {
 ---Event triggers when the player views the details of a raid recruit.
 ---@alias RAID_RECRUIT_DETAIL_HANDLER fun(data: RaidRecruitDetailInfo)
 
----@class RaidRecruitInfo
----@field hour number
----@field isRecruiter boolean
----@field minute number
----@field subTypeName string
-
----@TODO: test this more.
 ---Event triggers when the raid hud changes.
----@alias RAID_RECRUIT_HUD_HANDLER fun(infos: RaidRecruitInfo)
+---@alias RAID_RECRUIT_HUD_HANDLER fun(infos: RaidRecruitInfo[])
 
 ---Event triggers when the player views the raid recruit window.
 ---@alias RAID_RECRUIT_LIST_HANDLER fun(data: RaidRecruitListInfo)
@@ -1686,9 +1634,8 @@ local result = {
 ---Event triggers when the manastorm shop updates.
 ---@alias RANDOM_SHOP_UPDATE_HANDLER fun()
 
----@TODO: What does rank stand for? triggered for "The Mirage Isle Fish-Fest begins soon!"
----Event triggers when a rank alarm occurs.
----@alias RANK_ALARM_MSG_HANDLER fun(rankType: number, msg: string)
+---Event triggers when a ranking information alarm occurs.
+---@alias RANK_ALARM_MSG_HANDLER fun(rankType: RANK_KIND, msg: string)
 
 ---@TODO:
 ---@alias RANK_DATA_RECEIVED_HANDLER fun()
@@ -1814,8 +1761,9 @@ local result = {
 ---sales tab of the resident townhall for the zone.
 ---@alias RESIDENT_ZONE_STATE_CHANGE_HANDLER fun()
 
----@TODO:
----@alias ROLLBACK_FAVORITE_CRAFTS_HANDLER fun(datas)
+---@TODO: I haven't seen this.
+---Event triggers when the players  favorite crafts are rolledback.
+---@alias ROLLBACK_FAVORITE_CRAFTS_HANDLER fun(datas: Craft[])
 
 ---Event triggers when a jury ruling is has come to an end.
 ---@alias RULING_CLOSED_HANDLER fun()
@@ -1829,9 +1777,8 @@ local result = {
 ---Event triggers when the player saves a screenshot.
 ---@alias SAVE_SCREEN_SHOT_HANDLER fun(path: string)
 
----@TODO: result code was 0 when it was successful, what about great success?
 ---Event triggers when a player increases the temper of their equipment and it is broadcasted to the server.
----@alias SCALE_ENCHANT_BROADCAST_HANDLER fun(characterName: string, resultCode: number, itemLink: string, oldScale: string, newScale: string)
+---@alias SCALE_ENCHANT_BROADCAST_HANDLER fun(characterName: string, resultCode: ITEM_ENCHANT_BROAD_CAST_TYPE, itemLink: string, oldScale: string, newScale: string)
 
 ---Event triggers when the player clicks on an scheduled item (loyalty token) to
 ---collect it.
@@ -1839,24 +1786,6 @@ local result = {
 
 ---Event triggers every minute to update the schedule.
 ---@alias SCHEDULE_ITEM_UPDATED_HANDLER fun()
-
----@TODO:
----@alias SECOND_PASSWORD_ACCOUNT_LOCKED_HANDLER fun()
-
----@TODO:
----@alias SECOND_PASSWORD_CHANGE_COMPLETED_HANDLER fun(result)
-
----@TODO:
----@alias SECOND_PASSWORD_CHECK_COMPLETED_HANDLER fun(success)
-
----@TODO:
----@alias SECOND_PASSWORD_CHECK_OVER_FAILED_HANDLER fun()
-
----@TODO:
----@alias SECOND_PASSWORD_CLEAR_COMPLETED_HANDLER fun(success)
-
----@TODO:
----@alias SECOND_PASSWORD_CREATION_COMPLETED_HANDLER fun(success)
 
 ---Event triggers when the player view the Recruit/Search page for instances.
 ---@alias SELECT_SQUAD_LIST_HANDLER fun(data: SelectSquadList)
@@ -1877,9 +1806,6 @@ local result = {
 ---@TODO: the widget it returns has extra properties but unable to get them.
 ---Event triggers when a effect icon should be visible on the map.
 ---@alias SET_EFFECT_ICON_VISIBLE_HANDLER fun(isShow: boolean, arg: Widget)
-
----@TODO:
----@alias SET_LOGIN_BROWSER_URL_HANDLER fun()
 
 ---Event triggers when a player has a mark set or remove on them.
 ---@alias SET_OVERHEAD_MARK_HANDLER fun(unitId: string, index: number, visible: boolean)
@@ -1922,7 +1848,7 @@ local result = {
 ---Event triggers when the player views the raid frame settings.
 ---@alias SHOW_RAID_FRAME_SETTINGS_HANDLER fun()
 
----@TODO:
+---@TODO: Does not appear to work.
 ---@alias SHOW_RENAME_EXPEIDITON_HANDLER fun(byItem, triedName, ownerWnd)
 
 ---Event triggers when a tooltip is shown on the roadmap.
@@ -1980,7 +1906,7 @@ local result = {
 ---@alias SKILL_MAP_EFFECT_HANDLER fun(info: SkillMapEffectInfo)
 
 ---Event triggers when the player uses as skill has a message.
----@alias SKILL_MSG_HANDLER fun(resultCode: string, param: string, skillType: number)
+---@alias SKILL_MSG_HANDLER fun(resultCode: SKILL_MSG_RESULT_CODE, param: string, skillType: number)
 
 ---Event triggers when the player is trying tos select an item from a supply
 ---kit.
@@ -2116,10 +2042,10 @@ local result = {
 ---@alias TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION_HANDLER fun(target, curHp, maxHp)
 
 ---Event triggers when the players mouse is over a target.
----@alias TARGET_OVER_HANDLER fun(targetType: TARGET_TYPE, target: string|number)
+---@alias TARGET_OVER_HANDLER fun(targetType: TARGET_TYPE, unitId: string|number)
 
 ---Event triggers when the players target changes their target.
----@alias TARGET_TO_TARGET_CHANGED_HANDLER fun(stringId?: string, targetType?: TARGET_TYPE)
+---@alias TARGET_TO_TARGET_CHANGED_HANDLER fun(stringId: string|nil, targetType: TARGET_TYPE|nil)
 
 ---@TODO:
 ---@alias TEAM_JOINT_BREAK_HANDLER fun(requester, enable)
@@ -2299,8 +2225,8 @@ local result = {
 ---Event triggers when the players UI reloads. (Toggling Vertical Sync will cause a UI reload)
 ---@alias UI_RELOADED_HANDLER fun()
 
----@TODO:
----@alias UNFINISHED_BUILD_HOUSE_HANDLER fun(message)
+---Event triggers when the player attempts to place land while they already have land that is unbuilt.
+---@alias UNFINISHED_BUILD_HOUSE_HANDLER fun(message: string)
 
 ---Event triggers when the combat state of a unit changes.
 ---@alias UNIT_COMBAT_STATE_CHANGED_HANDLER fun(combat: boolean, unitId: string)
@@ -2344,8 +2270,8 @@ local result = {
 ---Event triggers every 500ms while the player is using a boss telescope.
 ---@alias UPDATE_BOSS_TELESCOPE_INFO_HANDLER fun()
 
----@TODO:
----@alias UPDATE_BOT_CHECK_INFO_HANDLER fun(totalTime, remainTime, count, question)
+---Event triggers when the bot check window info for the player updates.
+---@alias UPDATE_BOT_CHECK_INFO_HANDLER fun(totalTime: number, remainTime: number, count: number, question: string)
 
 ---@TODO:
 ---@alias UPDATE_BUBBLE_HANDLER fun()
@@ -2435,7 +2361,7 @@ local result = {
 ---Event triggers when the housing information for the map updates.
 ---@alias UPDATE_HOUSING_INFO_HANDLER fun()
 
----@TODO:
+---Event triggers when a housing tooltip updates.
 ---@alias UPDATE_HOUSING_TOOLTIP_HANDLER fun(unitId: string)
 
 ---Event triggers when the players ability to use the beautyshop changes.
@@ -2494,10 +2420,10 @@ local result = {
 ---@alias UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL_HANDLER fun(infos: ItemInfo)
 
 ---Event triggers when the player is attempting to revert a crafting order.
----@alias UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT_HANDLER fun(info?: CraftOrderInfo)
+---@alias UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT_HANDLER fun(info: CraftOrderInfo|nil)
 
----@TODO:
----@alias UPDATE_RETURN_ACCOUNT_STATUS_HANDLER fun(status)
+---Event triggers when the player returns to the game after a month. https://na.archerage.to/forums/threads/returning-player-pack.10482/
+---@alias UPDATE_RETURN_ACCOUNT_STATUS_HANDLER fun(status: `1`|`2`|`3`)
 
 ---@TODO:
 ---Event triggers when the player changes zones.
@@ -2650,3 +2576,16 @@ local result = {
 -- @alias ULC_ACTIVATE_HANDLER fun(ulcType)
 -- @alias ULC_SKILL_MSG_HANDLER fun(resultCode, param)
 -- @alias SHOW_SERVER_SELECT_WINDOW_HANDLER fun(visible)
+-- @alias FAIL_WEB_PLAY_DIARY_INSTANT_HANDLER fun()
+-- @alias SET_LOGIN_BROWSER_URL_HANDLER fun()
+-- @alias SECOND_PASSWORD_ACCOUNT_LOCKED_HANDLER fun()
+-- @alias SECOND_PASSWORD_CHANGE_COMPLETED_HANDLER fun(result)
+-- @alias SECOND_PASSWORD_CHECK_COMPLETED_HANDLER fun(success)
+-- @alias SECOND_PASSWORD_CHECK_OVER_FAILED_HANDLER fun()
+-- @alias SECOND_PASSWORD_CLEAR_COMPLETED_HANDLER fun(success)
+-- @alias SECOND_PASSWORD_CREATION_COMPLETED_HANDLER fun(success)
+---Event triggers when the players aggro meter has been cleared.
+-- @alias AGGRO_METER_CLEARED_HANDLER fun()
+-- @alias AGGRO_METER_UPDATED_HANDLER fun()
+-- @alias AUCTION_TOGGLE_HANDLER fun()
+-- @alias CHANGED_AUTO_USE_AAPOINT_HANDLER fun()

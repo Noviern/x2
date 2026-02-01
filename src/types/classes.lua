@@ -1,13 +1,3 @@
----@class ComboboxDropDown: Listbox
----@field downBtn Button
----@field upBtn Button
----@field vslider Vslider
-local ComboboxDropDown = {}
-
----@class Vslider: Slider
----@field thumb Button
-local Vslider = {}
-
 ---@class RadioItem: EmptyWidget
 ---@field check Checkbutton
 
@@ -137,7 +127,7 @@ local Vslider = {}
 
 ---@class ChatMessageOption
 ---@field isOtherWorldMessage boolean|nil
----@field isUserChat boolean
+---@field isUserChat boolean Creates a time stamp
 ---@field messageLocale LOCALE|nil
 ---@field npcBubbleChat boolean|nil
 ---@field specifyName string|nil
@@ -225,15 +215,15 @@ local Vslider = {}
 ---@field key number
 
 ---@class CHAT_MESSAGE_INFO
----@field charId string
----@field displayLocale number
+---@field charId string # the unqiue id associated with the character when it was created
+---@field displayLocale LOCALE
 ---@field factionName string
 ---@field isUserChat boolean
 ---@field npcBubbleChat boolean
 ---@field speakerInChatBound boolean
----@field specifyName string
----@field trialPosition string
----@field unitId string
+---@field specifyName string # specifyName or empty
+---@field trialPosition string # trial position or empty
+---@field unitId string # the units id or "0" if unknown
 
 ---@class CombatResource
 ---@field ability number
@@ -473,7 +463,7 @@ local Vslider = {}
 
 ---@class UnitInfo
 ---@field class UnitClass
----@field expeditionName string
+---@field expeditionName string|nil
 ---@field faction string
 ---@field family_name string
 ---@field heirLevel number
@@ -481,7 +471,7 @@ local Vslider = {}
 ---@field level number
 ---@field maxHp string
 ---@field name string
----@field type string
+---@field type UNIT_INFO_TYPE
 
 ---@class BuffInfo
 ---@field buff_id number
@@ -1047,12 +1037,12 @@ local Vslider = {}
 ---@field craftType number
 
 ---@class WorldMessageInfo
----@field factionName string
----@field motherFactionName string
+---@field factionName FACTION_NAME
+---@field motherFactionName FACTION_NAME
 ---@field name string
 ---@field sextant SEXTANT
----@field trgFactionName string
----@field trgMotherFactionName string
+---@field trgFactionName FACTION_NAME
+---@field trgMotherFactionName FACTION_NAME
 ---@field trgName string
 ---@field zoneGroupName ZONE_NAME
 
@@ -1461,3 +1451,42 @@ local Vslider = {}
 ---@field useConsumeItem boolean
 ---@field wear boolean
 ---@field linkKind LINKKIND_STR|nil
+
+---@class NuonsArrowUpdate
+---@field charge string
+---@field name ZONE_NAME
+---@field step string
+---@field zoneGroup ZONE_GROUP_ID
+
+---@class Craft
+---@field craftType number
+---@field value number
+
+---@class RaidRecruitInfo
+---@field hour number
+---@field isRecruiter boolean
+---@field minute number
+---@field subTypeName string
+
+---@class RaidApplicant
+---@field name string
+---@field level number
+---@field role TEAM_ROLE
+---@field gearPoint number
+---@field abilities UnitClass
+
+---@class RaidApplicantData
+---@field applicantList RaidApplicant[]
+---@field autoJoin boolean
+---@field createTime string
+---@field headcount number
+---@field memberCount number
+
+---@class ExpeditionApplicant
+---@field name string
+---@field level number
+---@field heirLevel number
+---@field memo string
+---@field year number
+---@field month number
+---@field day number

@@ -13,7 +13,15 @@ AP_TOPRIGHT = 1    -- types/Uibounds
 ---@class Uibounds
 local Uibounds = {}
 
+---@TODO: add @warning for other functions in this codebase
+
 ---Aligns the UI bounds to the specified anchor point at the given coordinates.
+---
+---@warning
+---**Although this variant implicitly uses the parent of the current object,
+---`AddAnchor(anchor, parentId, x, y)` is usually recommended** because it makes
+---the anchor relationship explicit and much easier for future readers to
+---understand which object this UI element is actually anchored to.
 ---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin. (default: `"TOPLEFT"`)
 ---@param x number The x-coordinate offset. (default: `0`)
 ---@param y number The y-coordinate offset. (default: `0`)

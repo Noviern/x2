@@ -5779,6 +5779,134 @@
 ---| "uthtin"
 ---| "wiki"
 
+---Obtained from db system_factions.name
+---@alias FACTION_NAME
+---| "Friendly"
+---| "Neutral"
+---| "Hostile"
+---| "Crescent Throne"
+---| "Eznan Royals"
+---| "Dreamwaker Exiles"
+---| "Andelph"
+---| "Wyrdwinds"
+---| "Triestes"
+---| "Noryettes"
+---| "East Ishvara"
+---| "West Ishvara"
+---| "South Ishvara"
+---| "North Ishvara"
+---| "Reminisci Castle"
+---| "Wandering Winds"
+---| "Pirate"
+---| "Horror"
+---| "Animal"
+---| "27499 DO NOT TRANSLATE"
+---| "27500 DO NOT TRANSLATE"
+---| "27501 DO NOT TRANSLATE"
+---| "27502 DO NOT TRANSLATE"
+---| "27503 DO NOT TRANSLATE"
+---| "27504 DO NOT TRANSLATE"
+---| "27505 DO NOT TRANSLATE"
+---| "27506 DO NOT TRANSLATE"
+---| "27507 DO NOT TRANSLATE"
+---| "27508 DO NOT TRANSLATE"
+---| "27509 DO NOT TRANSLATE"
+---| "27510 DO NOT TRANSLATE"
+---| "27511 DO NOT TRANSLATE"
+---| "27512 DO NOT TRANSLATE"
+---| "Friendly to all factions except monsters."
+---| "27514 DO NOT TRANSLATE"
+---| "Bloodhand Infiltrators"
+---| "Team Sallium"
+---| "Team Illion"
+---| "Bloodhand Infiltrator Trackers"
+---| "Bloodhands"
+---| "27520 DO NOT TRANSLATE"
+---| "27521 DO NOT TRANSLATE"
+---| "27522 DO NOT TRANSLATE"
+---| "27523 DO NOT TRANSLATE"
+---| "Antiquary Society"
+---| "3rd Corps"
+---| "Eznan Guard"
+---| "27527 DO NOT TRANSLATE"
+---| "27528 DO NOT TRANSLATE"
+---| "The Crimson Watch"
+---| "Nuia Alliance"
+---| "Haranya Alliance"
+---| "27532 DO NOT TRANSLATE"
+---| "27533 DO NOT TRANSLATE"
+---| "27534 DO NOT TRANSLATE"
+---| "27535 DO NOT TRANSLATE"
+---| "27536 DO NOT TRANSLATE"
+---| "27537 DO NOT TRANSLATE"
+---| "27538 DO NOT TRANSLATE"
+---| "27539 DO NOT TRANSLATE"
+---| "27540 DO NOT TRANSLATE"
+---| "Red Team"
+---| "Blue Team"
+---| "Pirate"
+---| "Neutral Guard"
+---| "Harani Bloodhand Infiltrators"
+---| "Pirate Hunters"
+---| "170906 DO NOT TRANSLATE"
+---| "Independents"
+---| "Nuian Guard"
+---| "Harani Guard"
+---| "184394 DO NOT TRANSLATE"
+---| "Scarecrows"
+---| "Nuian Front Watch"
+---| "Fish"
+---| "Haranya Front Watch"
+---| "Pirate Front Watch"
+---| "Nuia"
+---| "Haranya"
+---| "Player Nation Friendship (Nuia/Haranya/Pirate Hostility)"
+---| "Panophtes"
+---| "Argoth"
+---| "343643 DO NOT TRANSLATE"
+---| "343644 DO NOT TRANSLATE"
+---| "Unused"
+---| "Player Nations"
+---| "Nuian Faction Alliance"
+---| "Haranyan Faction Alliance"
+---| "Arena Participant"
+---| "Repentant Shadows"
+---| "Friend"
+---| "Ynystere Royal Family"
+---| "Family Monster"
+---| "Team Morpheus"
+---| "Team Rangora"
+---| "Team Pavitra"
+---| "Team Illion"
+---| "Ipnya"
+---| "Raid"
+---| "Noryette Challenger"
+---| "Party"
+---| "Haranya Alliance"
+---| "Nuia Alliance"
+---| "Anthalon"
+---| "Last Survivor"
+---| "Unclaimed"
+---| "Garden Explorer"
+---| "Garden Pioneer"
+---| "Garden Researcher"
+---| "No Owner"
+---| "Skillset Doodad"
+---| "Warden"
+---| "Infiltrator"
+---| "Game Participant"
+---| "Kurt"
+---| "Isan"
+---| "Machine Rift Defense Faction"
+---| "Sporty Day Participant"
+---| "test_fairy"
+---| "test_fairy Nuia"
+---| "test_fairy Haranya"
+---| "Event Participant"
+---| "Team Yata"
+---| "Team Greenman"
+
+
 ---@alias FOLDER_STATE
 ---| "close"
 ---| "open"
@@ -6102,36 +6230,78 @@
 -- -| "img_font_action_bar"
 -- -| "img_font_combat"
 
----@TODO: can this be used in other places?
+---@TODO: document this better
 ---Example: @PC_NAME(0) is a @PC_GENDER(0) @PC_RACE(0) -> Noviern is a Male Dwarf.
 ---@alias FORMAT_MACRO
 ---| "@ACHIEVEMENT_NAME(achievementId)"         # achievements.id
 ---| "@AREA_SPHERE(sphereId)"                   # spheres.id
 ---| "@CONTENT_CONFIG(configId)"                # content_configs.id
 ---| "@DOODAD_NAME(doodadId)"                   # doodad_almighties.id
----| "@ENCHANT_CONSUME_LP(x)"                   # @TODO: Haven't found a working example.
----| "@EXPEDITION_LEADER_NAME_BY_ZONEGROUP(x)"  # @TODO: Haven't found a working example.
----| "@EXPEDITION_NAME_BY_ZONEGROUP(x)"         # @TODO: Haven't found a working example.
 ---| "@ITEM_NAME(itemId)"                       # items.id
 ---| "@NPC_GROUP_NAME(npcGroupId)"              # quest_monster_groups.id
 ---| "@NPC_NAME(npcId)"                         # npcs.id
----| "@PC_CLASS(0)"                             #
----| "@PC_GENDER(0)"                            #
----| "@PC_NAME(0)"                              #
----| "@PC_RACE(0)"                              #
+---| "@PC_CLASS(unitId)"                        # X2Unit:GetUnitId or 0 for the player
+---| "@PC_GENDER(unitId)"                       # X2Unit:GetUnitId or 0 for the player
+---| "@PC_NAME(unitId)"                         # X2Unit:GetUnitId or 0 for the player
+---| "@PC_RACE(unitId)"                         # X2Unit:GetUnitId or 0 for the player
 ---| "@QUEST_NAME(questId)"                     # quest_contexts.id
 ---| "@SOURCE_NAME(0)"                          #
----| "@SPECIFY_TARGET_NAME(0)"                  # @TODO: Haven't found a working example.
 ---| "@TARGET_NAME(0)"                          #
----| "@TARGET_SLAVE_REPAIR_COST(x)"             # @TODO: Haven't found a working example.
+---| "@TARGET_SLAVE_REPAIR_COST(id?)"           # slaves.id or nothing for the current targets repair cost.
 ---| "@SUB_ZONE_NAME(subZoneId)"                # sub_zones.id
 ---| "@ZONE_NAME(zoneId)"                       # zones.id
----| "@YEAR(years)"                             # @TODO: Haven't found a working example.
 ---| "@MONTH(months)"                           #
 ---| "@DAY(days)"                               #
 ---| "@HOUR(hours)"                             #
 ---| "@MINUTE(minutes)"                         #
 ---| "@SECOND(seconds)"                         #
+---| "|nb; Dark Blue |r"
+---| "|nc; Orange |r"
+---| "|nd; Light Blue |r"
+---| "|nf; Red |r"
+---| "|ng; Green |r"
+---| "|nh; test |r"
+---| "|ni; test |r"
+---| "|nj; test |r"
+---| "|nn; Dark Orange |r"
+---| "|nr; test |r"
+---| "|ns; test |r"
+---| "|nt; test |r"
+---| "|nu; test |r"
+---| "|ny; test |r"
+---| "|cFF000000{string}|r"              #
+---| "|bu{bulletCharacter};{string}|br;" #
+---| "|q{questId};"
+---| "|i{itemType},{grade},{kind},{data}"
+---| "|if{craftId};"
+---| "|iu{data}" # link
+---| "|a{data}" # raid
+---| "|A{data}" # dungeon
+---| "|ic{iconId}"                       # db > icons.id
+---| "|m{moneyAmount};"                  # ui/common/money_window.g > money_gold money_silver money_copper
+---| "|h{honor};"                        # ui/common/money_window.g > money_honor
+---| "|d{amount};"                       # ui/common/money_window.g > money_dishonor
+---| "|j{creditAmount};"                 # ui/common/money_window.g > icon_aacash
+---| "|l{vocationAmount};"               # ui/common/money_window.g > point
+---| "|bm{amount};"                      # ui/common/money_window.g > money_bmpoint
+---| "|se{gildaAmount};"                 # ui/common/money_window.g > icon_depi
+---| "|ss{meritbadgeAmount?};"           # ui/common/money_window.g > icon_star
+---| "|sc{amount};"                      # ui/common/money_window.g > icon_key
+---| "|sf{amount};"                      # ui/common/money_window.g > icon_netcafe
+---| "|p{pointAmount};"                  # ui/common/money_window.g > aa_point_gold aa_point_silver aa_point_copper
+---| "|x{taxAmount};"                    # ui/common/money_window.g > tax
+---| "|u{amount};"                       # ui/common/money_window.g > pouch
+---| "|w{contributionAmount};"           # ui/common/money_window.g > contributiveness
+---| "|e{level?};"                       # ui/common/money_window.g > successor_small
+---| "|E{level?};"                       # ui/common/money_window.g > successor_small_gray
+---| "|sd{leadershipAmount};"            # ui/common/money_window.g > icon_leadership
+---| "|sa{amount};"                      # ui/common/money_window.g > pass_coin icon_key
+---| "|sp{manastormAmount?};"            # ui/common/money_window.g > icon_palos
+---| "|sg{amount};"                      # ui/common/money_window.g > icon_garnet
+---| "|v{level?};"                       # ui/common/money_window.g > icon_equip_slot_star_small
+---| "|V{level?};"                       # ui/common/money_window.g > icon_equip_slot_star
+---"|A{hexstring}" # instance
+---"|a{hexstring}" # raid
 
 ---@alias FRIEND_LIST_UPDATE_TYPE
 ---| "delete"
@@ -6369,6 +6539,846 @@
 ---| "housing"
 ---| "shipyard"
 
+---Obtain from db housings
+---@alias HOUSE_TYPE
+---| `1`   # 159459 DO NOT TRANSLATE
+---| `2`   # 159460 DO NOT TRANSLATE
+---| `3`   # 159461 DO NOT TRANSLATE
+---| `4`   # 159462 DO NOT TRANSLATE
+---| `5`   # 159463 DO NOT TRANSLATE
+---| `6`   # 159464 DO NOT TRANSLATE
+---| `7`   # 159465 DO NOT TRANSLATE
+---| `8`   # 159466 DO NOT TRANSLATE
+---| `9`   # 159467 DO NOT TRANSLATE
+---| `10`  # 159468 DO NOT TRANSLATE
+---| `11`  # 159469 DO NOT TRANSLATE
+---| `12`  # 159470 DO NOT TRANSLATE
+---| `13`  # 159471 DO NOT TRANSLATE
+---| `14`  # 159472 DO NOT TRANSLATE
+---| `15`  # 159473 DO NOT TRANSLATE
+---| `16`  # 159474 DO NOT TRANSLATE
+---| `17`  # 159475 DO NOT TRANSLATE
+---| `18`  # 159476 DO NOT TRANSLATE
+---| `19`  # 159477 DO NOT TRANSLATE
+---| `20`  # 159478 DO NOT TRANSLATE
+---| `21`  # 159479 DO NOT TRANSLATE
+---| `22`  # 159480 DO NOT TRANSLATE
+---| `23`  # 159481 DO NOT TRANSLATE
+---| `24`  # 159482 DO NOT TRANSLATE
+---| `25`  # 159483 DO NOT TRANSLATE
+---| `26`  # Wooden Rampart Stairs
+---| `27`  # 159485 DO NOT TRANSLATE
+---| `28`  # 159486 DO NOT TRANSLATE
+---| `29`  # 159487 DO NOT TRANSLATE
+---| `30`  # 159488 DO NOT TRANSLATE
+---| `31`  # 159489 DO NOT TRANSLATE
+---| `32`  # 159490 DO NOT TRANSLATE
+---| `33`  # 159491 DO NOT TRANSLATE
+---| `34`  # 159492 DO NOT TRANSLATE
+---| `35`  # 159493 DO NOT TRANSLATE
+---| `36`  # 159494 DO NOT TRANSLATE
+---| `37`  # 159495 DO NOT TRANSLATE
+---| `38`  # 159496 DO NOT TRANSLATE
+---| `39`  # 159497 DO NOT TRANSLATE
+---| `40`  # 159498 DO NOT TRANSLATE
+---| `41`  # Private Masonry Table
+---| `42`  # Private Loom
+---| `43`  # Private Sawmill
+---| `44`  # 159502 DO NOT TRANSLATE
+---| `45`  # 159503 DO NOT TRANSLATE
+---| `46`  # 159504 DO NOT TRANSLATE
+---| `47`  # 159505 DO NOT TRANSLATE
+---| `48`  # 159506 DO NOT TRANSLATE
+---| `49`  # 159507 DO NOT TRANSLATE
+---| `50`  # 159508 DO NOT TRANSLATE
+---| `51`  # 159509 DO NOT TRANSLATE
+---| `52`  # 159510 DO NOT TRANSLATE
+---| `53`  # 159511 DO NOT TRANSLATE
+---| `54`  # 159512 DO NOT TRANSLATE
+---| `55`  # 159513 DO NOT TRANSLATE
+---| `56`  # 159514 DO NOT TRANSLATE
+---| `57`  # 159515 DO NOT TRANSLATE
+---| `58`  # 159516 DO NOT TRANSLATE
+---| `59`  # 159517 DO NOT TRANSLATE
+---| `60`  # 159518 DO NOT TRANSLATE
+---| `61`  # 159519 DO NOT TRANSLATE
+---| `62`  # 159520 DO NOT TRANSLATE
+---| `63`  # 159521 DO NOT TRANSLATE
+---| `64`  # 159522 DO NOT TRANSLATE
+---| `65`  # 159523 DO NOT TRANSLATE
+---| `66`  # 159524 DO NOT TRANSLATE
+---| `67`  # 159525 DO NOT TRANSLATE
+---| `76`  # 159526 DO NOT TRANSLATE
+---| `77`  # 159527 DO NOT TRANSLATE
+---| `78`  # 159528 DO NOT TRANSLATE
+---| `79`  # Spring Villa
+---| `80`  # Rose Villa
+---| `83`  # Spring Chalet
+---| `84`  # Rose Chalet
+---| `86`  # Barracks
+---| `87`  # Slate Villa
+---| `88`  # Slate Chalet
+---| `89`  # Scarecrow Farm
+---| `90`  # Private Smelter
+---| `92`  # Private Leatherwork Table
+---| `93`  # Ezna Tower
+---| `94`  # Ezna Wall
+---| `95`  # Ezna Wall
+---| `96`  # 159542 DO NOT TRANSLATE
+---| `97`  # Garrison
+---| `98`  # Quartermaster's Office
+---| `99`  # 159545 DO NOT TRANSLATE 159545 DO NOT TRANSLATE
+---| `100` # 159546 DO NOT TRANSLATE 159546 DO NOT TRANSLATE
+---| `101` # 159547 DO NOT TRANSLATE 159547 DO NOT TRANSLATE
+---| `102` # 159548 DO NOT TRANSLATE 159548 DO NOT TRANSLATE
+---| `103` # 159549 DO NOT TRANSLATE 159549 DO NOT TRANSLATE
+---| `104` # 159550 DO NOT TRANSLATE 159550 DO NOT TRANSLATE
+---| `105` # 159551 DO NOT TRANSLATE 159551 DO NOT TRANSLATE
+---| `106` # 159552 DO NOT TRANSLATE 159552 DO NOT TRANSLATE
+---| `107` # 159553 DO NOT TRANSLATE
+---| `108` # 159554 DO NOT TRANSLATE
+---| `109` # 159555 DO NOT TRANSLATE 159555 DO NOT TRANSLATE
+---| `110` # 159556 DO NOT TRANSLATE
+---| `111` # 159557 DO NOT TRANSLATE
+---| `112` # 159558 DO NOT TRANSLATE
+---| `113` # 159559 DO NOT TRANSLATE
+---| `114` # 159560 DO NOT TRANSLATE
+---| `115` # 159561 DO NOT TRANSLATE
+---| `116` # 159562 DO NOT TRANSLATE
+---| `117` # 159563 DO NOT TRANSLATE
+---| `118` # 159564 DO NOT TRANSLATE
+---| `119` # Defense Tower
+---| `120` # Tower
+---| `121` # Wall
+---| `122` # Wall
+---| `123` # Wall
+---| `124` # Wall
+---| `125` # Wall
+---| `126` # Wall
+---| `127` # Wall
+---| `128` # Wall
+---| `129` # Wall
+---| `130` # Wall
+---| `131` # 159577 DO NOT TRANSLATE
+---| `132` # 159578 DO NOT TRANSLATE
+---| `133` # 159579 DO NOT TRANSLATE
+---| `134` # Nuian Training Rampart
+---| `135` # Gate
+---| `136` # Stone Spring Mansion
+---| `137` # Stone Slate Mansion
+---| `138` # Stone Rose Mansion
+---| `139` # Archeum Lodestone
+---| `140` # 159586 DO NOT TRANSLATE
+---| `141` # 159587 DO NOT TRANSLATE
+---| `142` # 159588 DO NOT TRANSLATE
+---| `143` # 159589 DO NOT TRANSLATE
+---| `144` # 159590 DO NOT TRANSLATE
+---| `145` # 159591 DO NOT TRANSLATE
+---| `146` # 159592 DO NOT TRANSLATE
+---| `147` # 159593 DO NOT TRANSLATE
+---| `148` # 159594 DO NOT TRANSLATE
+---| `149` # 159595 DO NOT TRANSLATE
+---| `150` # 159596 DO NOT TRANSLATE
+---| `151` # 159597 DO NOT TRANSLATE 159597 DO NOT TRANSLATE
+---| `152` # 159598 DO NOT TRANSLATE 159598 DO NOT TRANSLATE
+---| `153` # 159599 DO NOT TRANSLATE 159599 DO NOT TRANSLATE
+---| `155` # 159600 DO NOT TRANSLATE
+---| `156` # Wooden Rampart Stairs
+---| `157` # Aquafarm
+---| `158` # Harani Wall
+---| `159` # Harani Wall
+---| `160` # Harani Wall
+---| `161` # Harani Wall
+---| `162` # Harani Wall
+---| `163` # Harani Wall
+---| `164` # Harani Wall
+---| `165` # Harani Wall
+---| `166` # Harani Wall
+---| `167` # Harani Wall
+---| `168` # Harani Tower
+---| `169` # Harani Defense Tower
+---| `170` # Harani Gatehouse
+---| `171` # Thatched Farmhouse
+---| `172` # Tudor Slate Cottage
+---| `173` # Stone Slate Cottage
+---| `174` # Rustic Slate Cottage
+---| `175` # Stone Spring Cottage
+---| `176` # Tudor Spring Cottage
+---| `177` # Rustic Spring Cottage
+---| `178` # Rustic Rose Cottage
+---| `179` # Tudor Rose Cottage
+---| `180` # Stone Rose Cottage
+---| `181` # Swept-Roof Cottage
+---| `182` # Swept-Roof Manor
+---| `183` # Raised Swept-Roof Chalet
+---| `184` # Archeum Lodestone
+---| `185` # Archeum Lodestone
+---| `186` # Archeum Lodestone
+---| `187` # Archeum Lodestone
+---| `188` # Archeum Lodestone
+---| `189` # Archeum Lodestone
+---| `190` # Archeum Lodestone
+---| `191` # Archeum Lodestone
+---| `192` # Archeum Lodestone
+---| `193` # Tudor Slate Manor
+---| `194` # Stone Slate Manor
+---| `195` # Rustic Slate Manor
+---| `196` # Stone Spring Manor
+---| `197` # Rustic Spring Manor
+---| `198` # Tudor Spring Manor
+---| `199` # Rustic Rose Manor
+---| `200` # Tudor Rose Manor
+---| `201` # Stone Rose Manor
+---| `202` # Tudor Slate Townhouse
+---| `203` # Stone Slate Townhouse
+---| `204` # Rustic Slate Townhouse
+---| `205` # Stone Spring Townhouse
+---| `206` # Rustic Spring Townhouse
+---| `207` # Tudor Spring Townhouse
+---| `208` # Rustic Rose Townhouse
+---| `209` # Tudor Rose Townhouse
+---| `210` # Stone Rose Townhouse
+---| `211` # Tudor Slate Villa
+---| `212` # Stone Slate Villa
+---| `213` # Rustic Slate Villa
+---| `214` # Stone Spring Villa
+---| `215` # Tudor Spring Villa
+---| `216` # Rustic Spring Villa
+---| `217` # Rustic Rose Villa
+---| `218` # Vintage Tudor Rose Villa Design
+---| `219` # Stone Rose Villa
+---| `220` # Tudor Slate Villa (Veranda)
+---| `221` # Rustic Slate Villa (Veranda)
+---| `222` # Stone Slate Villa (Veranda)
+---| `223` # Stone Spring Villa (Veranda)
+---| `224` # Rustic Spring Villa (Veranda)
+---| `225` # Tudor Spring Villa (Veranda)
+---| `226` # Rustic Rose Villa (Veranda)
+---| `227` # Stone Rose Villa (Veranda)
+---| `228` # Tudor Rose Villa (Veranda)
+---| `229` # Tudor Slate Villa (Porch)
+---| `230` # Rustic Slate Villa (Porch)
+---| `231` # Stone Slate Villa (Porch)
+---| `232` # Stone Spring Villa (Porch)
+---| `233` # Rustic Spring Villa (Porch)
+---| `234` # Tudor Spring Villa (Porch)
+---| `235` # Rustic Rose Villa (Porch)
+---| `236` # Stone Rose Villa (Porch)
+---| `237` # Tudor Rose Villa (Porch)
+---| `238` # Tudor Slate Villa (Sunroom)
+---| `239` # Tudor Slate Villa (Sunroom)
+---| `240` # Rustic Slate Villa (Sunroom)
+---| `241` # Stone Spring Villa (Sunroom)
+---| `242` # Rustic Spring Villa (Sunroom)
+---| `243` # Tudor Spring Villa (Sunroom)
+---| `244` # Rustic Rose Villa (Sunroom)
+---| `245` # Tudor Rose Villa (Sunroom)
+---| `246` # Stone Rose Villa (Sunroom)
+---| `247` # Tudor Slate Chalet
+---| `248` # Rustic Slate Chalet
+---| `249` # Stone Spring Chalet
+---| `250` # Tudor Spring Chalet
+---| `251` # Rustic Rose Chalet
+---| `252` # Tudor Rose Chalet
+---| `253` # Tudor Slate Chalet (Balcony)
+---| `254` # Stone Slate Chalet (Balcony)
+---| `255` # Rustic Slate Chalet (Balcony)
+---| `256` # Stone Spring Chalet (Balcony)
+---| `257` # Tudor Spring Chalet (Balcony)
+---| `258` # Rustic Rose Chalet (Balcony)
+---| `259` # Tudor Rose Chalet (Balcony)
+---| `260` # Tudor Slate Chalet (Terrace)
+---| `261` # Stone Slate Chalet (Terrace)
+---| `262` # Stone Spring Chalet (Terrace)
+---| `263` # Rustic Spring Chalet (Terrace)
+---| `264` # Rustic Rose Chalet (Terrace)
+---| `265` # Tudor Rose Chalet (Terrace)
+---| `266` # 176786 DO NOT TRANSLATE
+---| `267` # Scarecrow Garden
+---| `268` # 203416 DO NOT TRANSLATE
+---| `269` # Cannon Turret
+---| `270` # Breezy Bungalow
+---| `271` # Archeum Lodestone
+---| `272` # Archeum Lodestone
+---| `273` # 241766 DO NOT TRANSLATE
+---| `274` # 258088 DO NOT TRANSLATE
+---| `275` # Solar Scarecrow Farm
+---| `276` # Lunar Scarecrow Farm
+---| `277` # Stellar Scarecrow Farm
+---| `278` # Fellowship Plaza
+---| `279` # 285105 DO NOT TRANSLATE
+---| `280` # Sunglow Cottage
+---| `281` # 302723 DO NOT TRANSLATE
+---| `282` # Gazebo Farm
+---| `283` # Improved Scarecrow Farm
+---| `284` # Tidal Bungalow
+---| `285` # Spired Chateau
+---| `286` # Stone Spring Mansion
+---| `287` # Stone Slate Mansion
+---| `288` # Stone Rose Mansion
+---| `289` # Private Leatherwork Table
+---| `290` # Lunar Scarecrow Farm
+---| `291` # Fellowship Plaza
+---| `292` # Private Sawmill
+---| `293` # Scarecrow Garden
+---| `294` # Stellar Scarecrow Farm
+---| `295` # Private Masonry Table
+---| `296` # Tudor Slate Townhouse
+---| `297` # Stone Slate Townhouse
+---| `298` # Rustic Slate Townhouse
+---| `299` # Stone Spring Townhouse
+---| `300` # Rustic Spring Townhouse
+---| `301` # Tudor Spring Townhouse
+---| `302` # Rustic Rose Townhouse
+---| `303` # Tudor Rose Townhouse
+---| `304` # Stone Rose Townhouse
+---| `305` # Tudor Slate Manor
+---| `306` # Stone Slate Manor
+---| `307` # Rustic Slate Manor
+---| `308` # Stone Spring Manor
+---| `309` # Rustic Spring Manor
+---| `310` # Tudor Spring Manor
+---| `311` # Rustic Rose Manor
+---| `312` # Tudor Rose Manor
+---| `313` # Stone Rose Manor
+---| `314` # Breezy Bungalow
+---| `315` # Swept-Roof Cottage
+---| `316` # Tudor Slate Cottage
+---| `317` # Stone Slate Cottage
+---| `318` # Rustic Slate Cottage
+---| `319` # Stone Spring Cottage
+---| `320` # Tudor Spring Cottage
+---| `321` # Rustic Spring Cottage
+---| `322` # Rustic Rose Cottage
+---| `323` # Tudor Rose Cottage
+---| `324` # Stone Rose Cottage
+---| `325` # Aquafarm
+---| `326` # Private Loom
+---| `327` # Swept-Roof Manor
+---| `328` # Raised Swept-Roof Chalet
+---| `329` # Private Smelter
+---| `330` # Thatched Farmhouse
+---| `331` # Solar Scarecrow Farm
+---| `332` # Gazebo Farm
+---| `333` # Scarecrow Farm
+---| `334` # Tudor Slate Chalet
+---| `335` # Rustic Slate Chalet
+---| `336` # Stone Spring Chalet
+---| `337` # Tudor Spring Chalet
+---| `338` # Rustic Rose Chalet
+---| `339` # Tudor Rose Chalet
+---| `340` # Tudor Slate Chalet (Balcony)
+---| `341` # Stone Slate Chalet (Balcony)
+---| `342` # Rustic Slate Chalet (Balcony)
+---| `343` # Stone Spring Chalet (Balcony)
+---| `344` # Tudor Spring Chalet (Balcony)
+---| `345` # Rustic Rose Chalet (Balcony)
+---| `346` # Tudor Rose Chalet (Balcony)
+---| `347` # Tudor Slate Chalet (Terrace)
+---| `348` # Stone Slate Chalet (Terrace)
+---| `349` # Stone Spring Chalet (Terrace)
+---| `350` # Rustic Spring Chalet (Terrace)
+---| `351` # Rustic Rose Chalet (Terrace)
+---| `352` # Tudor Rose Chalet (Terrace)
+---| `353` # Tudor Slate Villa
+---| `354` # Stone Slate Villa
+---| `355` # Rustic Slate Villa
+---| `356` # Stone Spring Villa
+---| `357` # Tudor Spring Villa
+---| `358` # Rustic Spring Villa
+---| `359` # Rustic Rose Villa
+---| `360` # Vintage Tudor Rose Villa Design
+---| `361` # Stone Rose Villa
+---| `362` # Tudor Slate Villa (Veranda)
+---| `363` # Rustic Slate Villa (Veranda)
+---| `364` # Stone Slate Villa (Veranda)
+---| `365` # Stone Spring Villa (Veranda)
+---| `366` # Rustic Spring Villa (Veranda)
+---| `367` # Tudor Spring Villa (Veranda)
+---| `368` # Rustic Rose Villa (Veranda)
+---| `369` # Stone Rose Villa (Veranda)
+---| `370` # Tudor Rose Villa (Veranda)
+---| `371` # Tudor Slate Villa (Porch)
+---| `372` # Rustic Slate Villa (Porch)
+---| `373` # Stone Slate Villa (Porch)
+---| `374` # Stone Spring Villa (Porch)
+---| `375` # Rustic Spring Villa (Porch)
+---| `376` # Tudor Spring Villa (Porch)
+---| `377` # Rustic Rose Villa (Porch)
+---| `378` # Stone Rose Villa (Porch)
+---| `379` # Tudor Rose Villa (Porch)
+---| `380` # Tudor Slate Villa (Sunroom)
+---| `381` # Tudor Slate Villa (Sunroom)
+---| `382` # Rustic Slate Villa (Sunroom)
+---| `383` # Stone Spring Villa (Sunroom)
+---| `384` # Rustic Spring Villa (Sunroom)
+---| `385` # Tudor Spring Villa (Sunroom)
+---| `386` # Rustic Rose Villa (Sunroom)
+---| `387` # Tudor Rose Villa (Sunroom)
+---| `388` # Stone Rose Villa (Sunroom)
+---| `389` # Solar Pavilion Farm Kit
+---| `390` # Lunar Pavilion Farm Kit
+---| `391` # Stellar Pavilion Farm Kit
+---| `392` # Tidal Bungalow
+---| `393` # Spired Chateau
+---| `394` # Improved Scarecrow Farm
+---| `395` # Improved Solar Pavilion Farm Kit
+---| `396` # Improved Lunar Pavilion Farm Kit
+---| `397` # Improved Stellar Pavilion Farm Kit
+---| `398` # 342797 DO NOT TRANSLATE
+---| `399` # 342807 DO NOT TRANSLATE
+---| `400` # 342832 DO NOT TRANSLATE
+---| `401` # 342924 DO NOT TRANSLATE
+---| `402` # Harvester's Farmhouse
+---| `403` # Rancher's Farmhouse
+---| `404` # Miner's Farmhouse
+---| `405` # Armorer's Manor
+---| `406` # Apothecary's Manor
+---| `407` # Tradesman's Manor
+---| `408` # Armorer's Townhouse
+---| `409` # Apothecary's Townhouse
+---| `410` # Tradesman's Townhouse
+---| `411` # Armorer's Villa
+---| `412` # Apothecary's Villa
+---| `413` # Tradesman's Villa
+---| `414` # Armorer's Chalet
+---| `415` # Apothecary's Chalet
+---| `416` # Tradesman's Chalet
+---| `417` # Harvester's Farmhouse
+---| `418` # Rancher's Farmhouse
+---| `419` # Miner's Farmhouse
+---| `420` # Armorer's Manor
+---| `421` # Apothecary's Manor
+---| `422` # Tradesman's Manor
+---| `423` # Armorer's Townhouse
+---| `424` # Apothecary's Townhouse
+---| `425` # Tradesman's Townhouse
+---| `426` # Armorer's Villa
+---| `427` # Apothecary's Villa
+---| `428` # Tradesman's Villa
+---| `429` # Armorer's Chalet
+---| `430` # Apothecary's Chalet
+---| `431` # Tradesman's Chalet
+---| `432` # Harvester's Farmhouse
+---| `433` # Rancher's Farmhouse
+---| `434` # Miner's Farmhouse
+---| `435` # Armorer's Manor
+---| `436` # Apothecary's Manor
+---| `437` # Tradesman's Manor
+---| `438` # Armorer's Townhouse
+---| `439` # Apothecary's Townhouse
+---| `440` # Tradesman's Townhouse
+---| `441` # Armorer's Villa
+---| `442` # Apothecary's Villa
+---| `443` # Tradesman's Villa
+---| `444` # Armorer's Chalet
+---| `445` # Apothecary's Chalet
+---| `446` # Tradesman's Chalet
+---| `447` # Armorer's Villa (Porch)
+---| `448` # Apothecary's Villa (Porch)
+---| `449` # Tradesman's Villa (Porch)
+---| `450` # Armorer's Chalet (Balcony)
+---| `451` # Apothecary's Chalet (Balcony)
+---| `452` # Tradesman's Chalet (Balcony)
+---| `453` # Armorer's Villa (Porch)
+---| `454` # Apothecary's Villa (Porch)
+---| `455` # Tradesman's Villa (Porch)
+---| `456` # Armorer's Chalet (Balcony)
+---| `457` # Apothecary's Chalet (Balcony)
+---| `458` # Tradesman's Chalet (Balcony)
+---| `459` # Armorer's Villa (Porch)
+---| `460` # Apothecary's Villa (Porch)
+---| `461` # Tradesman's Villa (Porch)
+---| `462` # Armorer's Chalet (Balcony)
+---| `463` # Apothecary's Chalet (Balcony)
+---| `464` # Tradesman's Chalet (Balcony)
+---| `465` # Armorer's Villa (Sunroom)
+---| `466` # Apothecary's Villa (Sunroom)
+---| `467` # Tradesman's Villa (Sunroom)
+---| `468` # Armorer's Chalet (Terrace)
+---| `469` # Apothecary's Chalet (Terrace)
+---| `470` # Tradesman's Chalet (Terrace)
+---| `471` # Armorer's Villa (Sunroom)
+---| `472` # Apothecary's Villa (Sunroom)
+---| `473` # Tradesman's Villa (Sunroom)
+---| `474` # Armorer's Chalet (Terrace)
+---| `475` # Apothecary's Chalet (Terrace)
+---| `476` # Tradesman's Chalet (Terrace)
+---| `477` # Armorer's Villa (Sunroom)
+---| `478` # Apothecary's Villa (Sunroom)
+---| `479` # Tradesman's Villa (Sunroom)
+---| `480` # Armorer's Chalet (Terrace)
+---| `481` # Apothecary's Chalet (Terrace)
+---| `482` # Tradesman's Chalet (Terrace)
+---| `483` # Sapphire Solarium
+---| `484` # Sapphire Solarium
+---| `485` # Armorer's Villa (Veranda)
+---| `486` # Apothecary's Villa (Veranda)
+---| `487` # Tradesman's Villa (Veranda)
+---| `488` # Armorer's Villa (Veranda)
+---| `489` # Apothecary's Villa (Veranda)
+---| `490` # Tradesman's Villa (Veranda)
+---| `491` # Armorer's Villa (Veranda)
+---| `492` # Apothecary's Villa (Veranda)
+---| `493` # Tradesman's Villa (Veranda)
+---| `494` # Stone Spring Mansion
+---| `495` # Stone Slate Mansion
+---| `496` # Stone Rose Mansion
+---| `497` # Tudor Slate Townhouse
+---| `498` # Stone Slate Townhouse
+---| `499` # Rustic Slate Townhouse
+---| `500` # Tudor Slate Manor
+---| `501` # Stone Slate Manor
+---| `502` # Rustic Slate Manor
+---| `503` # Stone Spring Townhouse
+---| `504` # Rustic Spring Townhouse
+---| `505` # Tudor Spring Townhouse
+---| `506` # Stone Spring Manor
+---| `507` # Rustic Spring Manor
+---| `508` # Tudor Spring Manor
+---| `509` # Rustic Rose Townhouse
+---| `510` # Tudor Rose Townhouse
+---| `511` # Stone Rose Townhouse
+---| `512` # Rustic Rose Manor
+---| `513` # Tudor Rose Manor
+---| `514` # Stone Rose Manor
+---| `515` # Swept-Roof Cottage
+---| `516` # Tudor Slate Cottage
+---| `517` # Stone Slate Cottage
+---| `518` # Rustic Slate Cottage
+---| `519` # Stone Spring Cottage
+---| `520` # Tudor Spring Cottage
+---| `521` # Rustic Spring Cottage
+---| `522` # Rustic Rose Cottage
+---| `523` # Tudor Rose Cottage
+---| `524` # Stone Rose Cottage
+---| `525` # Swept-Roof Manor
+---| `526` # Raised Swept-Roof Chalet
+---| `527` # Spired Chateau
+---| `528` # Tudor Slate Chalet
+---| `529` # Rustic Slate Chalet
+---| `530` # Tudor Slate Chalet (Balcony)
+---| `531` # Stone Slate Chalet (Balcony)
+---| `532` # Rustic Slate Chalet (Balcony)
+---| `533` # Tudor Slate Chalet (Terrace)
+---| `534` # Stone Slate Chalet (Terrace)
+---| `535` # Tudor Slate Villa (Sunroom)
+---| `536` # Tudor Slate Villa (Sunroom)
+---| `537` # Rustic Slate Villa (Sunroom)
+---| `538` # Tudor Slate Villa
+---| `539` # Stone Slate Villa
+---| `540` # Rustic Slate Villa
+---| `541` # Tudor Slate Villa (Veranda)
+---| `542` # Rustic Slate Villa (Veranda)
+---| `543` # Stone Slate Villa (Veranda)
+---| `544` # Tudor Slate Villa (Porch)
+---| `545` # Rustic Slate Villa (Porch)
+---| `546` # Stone Slate Villa (Porch)
+---| `547` # Stone Spring Chalet
+---| `548` # Tudor Spring Chalet
+---| `549` # Stone Spring Chalet (Balcony)
+---| `550` # Tudor Spring Chalet (Balcony)
+---| `551` # Stone Spring Chalet (Terrace)
+---| `552` # Rustic Spring Chalet (Terrace)
+---| `553` # Stone Spring Villa (Sunroom)
+---| `554` # Rustic Spring Villa (Sunroom)
+---| `555` # Tudor Spring Villa (Sunroom)
+---| `556` # Stone Spring Villa
+---| `557` # Tudor Spring Villa
+---| `558` # Rustic Spring Villa
+---| `559` # Stone Spring Villa (Veranda)
+---| `560` # Rustic Spring Villa (Veranda)
+---| `561` # Tudor Spring Villa (Veranda)
+---| `562` # Stone Spring Villa (Porch)
+---| `563` # Rustic Spring Villa (Porch)
+---| `564` # Tudor Spring Villa (Porch)
+---| `565` # Rustic Rose Chalet
+---| `566` # Tudor Rose Chalet
+---| `567` # Rustic Rose Chalet (Balcony)
+---| `568` # Tudor Rose Chalet (Balcony)
+---| `569` # Rustic Rose Chalet (Terrace)
+---| `570` # Tudor Rose Chalet (Terrace)
+---| `571` # Rustic Rose Villa (Sunroom)
+---| `572` # Tudor Rose Villa (Sunroom)
+---| `573` # Stone Rose Villa (Sunroom)
+---| `574` # Rustic Rose Villa
+---| `575` # Tudor Rose Villa
+---| `576` # Stone Rose Villa
+---| `577` # Rustic Rose Villa (Veranda)
+---| `578` # Stone Rose Villa (Veranda)
+---| `579` # Tudor Rose Villa (Veranda)
+---| `580` # Rustic Rose Villa (Porch)
+---| `581` # Stone Rose Villa (Porch)
+---| `582` # Tudor Rose Villa (Porch)
+---| `583` # Rose Quartz Solarium
+---| `584` # Rose Quartz Solarium
+---| `585` # 375438 DO NOT TRANSLATE
+---| `586` # 375441 DO NOT TRANSLATE
+---| `587` # 375444 DO NOT TRANSLATE
+---| `588` # 395170 DO NOT TRANSLATE
+---| `589` # 395171 DO NOT TRANSLATE
+---| `590` # 395172 DO NOT TRANSLATE
+---| `591` # 438710 DO NOT TRANSLATE
+---| `592` # Tudor Rose Villa
+---| `593` # Tudor Rose Villa
+---| `594` # Ruby Solarium
+---| `595` # Ruby Solarium
+---| `596` # Amethyst Solarium
+---| `597` # Amethyst Solarium
+---| `598` # Recovering Oak Treehouse
+---| `599` # Oak Treehouse
+---| `600` # Recovering Cherry Treehouse
+---| `601` # Recovering Cherry Treehouse
+---| `602` # Recovering Aspen Treehouse
+---| `603` # Aspen Treehouse
+---| `604` # Advanced Fellowship Plaza
+---| `605` # Advanced Fellowship Plaza
+---| `606` # Haranyan Private Smelter
+---| `607` # Haranyan Private Loom
+---| `608` # Haranyan Private Masonry Table
+---| `609` # Haranyan Private Sawmill
+---| `610` # Haranyan Private Leatherwork Table
+---| `611` # Haranyan Private Masonry Table
+---| `612` # Haranyan Private Loom
+---| `613` # Haranyan Private Sawmill
+---| `614` # Haranyan Private Smelter
+---| `615` # Haranyan Private Leatherwork Table
+---| `616` # Spring Swept-Roof Mansion
+---| `617` # Spring Swept-Roof Mansion
+---| `618` # Advanced Fellowship Plaza
+---| `619` # Haranyan Private Smelter
+---| `620` # Haranyan Private Loom
+---| `621` # Haranyan Private Masonry Table
+---| `622` # Haranyan Private Sawmill
+---| `623` # Haranyan Private Leatherwork Table
+---| `624` # Private Smelter
+---| `625` # Private Loom
+---| `626` # Private Masonry Table
+---| `627` # Private Sawmill
+---| `628` # Private Leatherwork Table
+---| `629` # Recovering Oak Treehouse
+---| `630` # Recovering Cherry Treehouse
+---| `631` # Recovering Aspen Treehouse
+---| `632` # Spring Swept-Roof Mansion
+---| `633` # Usable
+---| `634` # Usable
+---| `635` # Usable
+---| `636` # Black Swept-Roof Mansion
+---| `637` # Black Swept-Roof Mansion
+---| `638` # Black Swept-Roof Mansion
+---| `639` # Storage Silo
+---| `640` # Storage Silo
+---| `641` # Territory Fortress
+---| `642` # Territory Castle
+---| `643` # Territory Palace
+---| `644` # Territory Farm
+---| `645` # Territory Market
+---| `646` # Territory Warehouse
+---| `647` # Sovereign's Vault
+---| `648` # Territory Workshop
+---| `649` # Military Headquarters
+---| `650` # Diplomacy Headquarters
+---| `651` # Transportation Hub
+---| `652` # Advanced Territory Farm
+---| `653` # Prime Territory Farm
+---| `654` # Territory Fortress
+---| `655` # Territory Castle
+---| `656` # Territory Palace
+---| `657` # 467873 DO NOT TRANSLATE
+---| `658` # 468155 DO NOT TRANSLATE
+---| `661` # Birch Treehouse
+---| `662` # Birch Treehouse
+---| `663` # Storage Silo
+---| `664` # Solar Scarecrow Garden
+---| `665` # Lunar Scarecrow Garden
+---| `666` # Stellar Scarecrow Garden
+---| `667` # Desserted Cottage
+---| `668` # Desserted Cottage
+---| `669` # Raised Swept-Roof Cottage
+---| `670` # Raised Swept-Roof Cottage
+---| `671` # Raised Slate Cottage
+---| `672` # Raised Spring Cottage
+---| `673` # Raised Rose Cottage
+---| `674` # Raised Slate Cottage
+---| `675` # Raised Spring Cottage
+---| `676` # Raised Rose Cottage
+---| `677` # Raised Swept-Roof Cottage
+---| `678` # Raised Slate Cottage
+---| `679` # Raised Spring Cottage
+---| `680` # Raised Rose Cottage
+---| `681` # Stone Slate Mansion (Terrace)
+---| `682` # Stone Slate Mansion (Terrace)
+---| `683` # Nuian Defense Tower
+---| `684` # Nuian Tower
+---| `685` # Harani Tower
+---| `686` # Harani Defense Tower
+---| `687` # Nuian Wall
+---| `688` # Harani Wall
+---| `689` # Wooden Rampart Stairs
+---| `690` # Nuian Gatehouse
+---| `691` # Harani Gatehouse
+---| `692` # Territory Farm
+---| `693` # Territory Market
+---| `694` # Territory Warehouse
+---| `695` # Sovereign's Vault
+---| `696` # Territory Workshop
+---| `697` # Military Headquarters
+---| `698` # Diplomacy Headquarters
+---| `699` # Transportation Hub
+---| `700` # Advanced Territory Farm
+---| `701` # Prime Territory Farm
+---| `702` # Territory Fortress
+---| `703` # Territory Castle
+---| `704` # Territory Palace
+---| `705` # Nuian Defense Tower
+---| `706` # Nuian Tower
+---| `707` # Harani Tower
+---| `708` # Harani Defense Tower
+---| `709` # Nuian Wall
+---| `710` # Harani Wall
+---| `711` # Wooden Rampart Stairs
+---| `712` # Nuian Gatehouse
+---| `713` # Harani Gatehouse
+---| `714` # Territory Farm
+---| `715` # Territory Market
+---| `716` # Territory Warehouse
+---| `717` # Sovereign's Vault
+---| `718` # Territory Workshop
+---| `719` # Military Headquarters
+---| `720` # Diplomacy Headquarters
+---| `721` # Transportation Hub
+---| `722` # Advanced Territory Farm
+---| `723` # Prime Territory Farm
+---| `724` # Territory Fortress
+---| `725` # Territory Castle
+---| `726` # Territory Palace
+---| `727` # Stone Slate Mansion (Terrace)
+---| `728` # Enchanted Beanstalk TEST
+---| `729` # Flaming Scarecrow Farm
+---| `730` # Flaming Scarecrow Farm
+---| `731` # Forest Mushroom House
+---| `732` # Forest Mushroom House
+---| `733` # 553971 DO NOT TRANSLATE
+---| `734` # Pearl Aquafarm
+---| `735` # Fenced Scarecrow Farm Design
+---| `736` # Fenced Scarecrow Farm Design
+---| `737` # Spired Chateau
+---| `738` # Pearl Aquafarm
+---| `741` # Beanstalk House
+---| `742` # Beanstalk House
+---| `744` # Territory Farm
+---| `745` # Territory Supplies: Stage 2
+---| `746` # Territory Supplies: Stage 3
+---| `747` # Territory Workshop
+---| `748` # Territory Warehouse
+---| `749` # Territory Outpost
+---| `756` # Guardian Altar
+---| `759` # Raised Mushroom House
+---| `760` # Raised Mushroom House
+---| `761` # Raised Mushroom House
+---| `762` # 590129 DO NOT TRANSLATE - Unused
+---| `763` # Memory Gazebo Farm
+---| `764` # Memory Scarecrow Farm
+---| `765` # Solar Memory Scarecrow Farm
+---| `766` # Stellar Memory Scarecrow Farm
+---| `767` # Lunar Memory Scarecrow Farm
+---| `768` # Solar Memory Pavilion Farm Kit
+---| `769` # Lunar Memory Pavilion Farm Kit
+---| `770` # Stellar Memory Pavilion Farm Kit
+---| `771` # Improved Solar Memory Pavilion Farm Kit
+---| `772` # Improved Lunar Memory Pavilion Farm Kit
+---| `773` # Improved Stellar Memory Pavilion Farm Kit
+---| `774` # Memory Gazebo Farm
+---| `775` # Memory Scarecrow Farm
+---| `776` # Solar Memory Scarecrow Farm
+---| `777` # Stellar Memory Scarecrow Farm
+---| `778` # Lunar Memory Scarecrow Farm
+---| `779` # Solar Memory Pavilion Farm Kit
+---| `780` # Lunar Memory Pavilion Farm Kit
+---| `781` # Stellar Memory Pavilion Farm Kit
+---| `782` # Improved Solar Memory Pavilion Farm Kit
+---| `783` # Improved Lunar Memory Pavilion Farm Kit
+---| `784` # Improved Stellar Memory Pavilion Farm Kit
+---| `785` # Memory Gazebo Farm
+---| `786` # Memory Scarecrow Farm
+---| `787` # Solar Memory Scarecrow Farm
+---| `788` # Stellar Memory Scarecrow Farm
+---| `789` # Lunar Memory Scarecrow Farm
+---| `790` # Solar Memory Pavilion Farm
+---| `791` # Lunar Memory Pavilion Farm
+---| `792` # Stellar Memory Pavilion Farm
+---| `793` # Improved Solar Memory Pavilion Farm
+---| `794` # Improved Lunar Memory Pavilion Farm
+---| `795` # Improved Stellar Memory Pavilion Farm
+---| `796` # Memory Gazebo Farm
+---| `797` # Memory Scarecrow Farm
+---| `798` # Advanced Territory Farm
+---| `799` # Advanced Territory Workshop
+---| `800` # Advanced Territory Outpost
+---| `801` # Winter Maiden Cottage
+---| `802` # Winter Maiden Cottage
+---| `803` # Spooky Improved Scarecrow Farm
+---| `804` # Spooky Improved Scarecrow Farm
+---| `805` # Spooky Improved Scarecrow Farm
+---| `806` # Test Tent A
+---| `807` # Test Tent B
+---| `808` # Test Tent A
+---| `809` # Test Tent B
+---| `810` # Solar Nomadic Dome Tent
+---| `811` # Solar Nomadic Dome Tent
+---| `812` # Solar Nomadic Dome Tent
+---| `813` # Lunar Nomadic Dome Tent
+---| `814` # Lunar Nomadic Dome Tent
+---| `815` # Lunar Nomadic Dome Tent
+---| `816` # Stellar Nomadic Dome Tent
+---| `817` # Stellar Nomadic Dome Tent
+---| `818` # Stellar Nomadic Dome Tent
+---| `819` # Solar Nomadic Cone Tent
+---| `820` # Solar Nomadic Cone Tent
+---| `821` # Solar Nomadic Cone Tent
+---| `822` # Lunar Nomadic Cone Tent
+---| `823` # Lunar Nomadic Cone Tent
+---| `824` # Lunar Nomadic Cone Tent
+---| `825` # Stellar Nomadic Cone Tent
+---| `826` # Stellar Nomadic Cone Tent
+---| `827` # Stellar Nomadic Cone Tent
+---| `828` # Little Witch's House
+---| `829` # Little Witch's House
+---| `830` # High-Spirited Green Flag House
+---| `831` # High-Spirited Red Flag House
+---| `832` # High-Spirited Blue Flag House
+---| `833` # Manastorm Desserted Cottage
+---| `834` # Manastorm Desserted Cottage
+---| `835` # Manastorm Sapphire Solarium
+---| `836` # Manastorm Sapphire Solarium
+---| `837` # Manastorm Sapphire Solarium
+---| `838` # Manastorm Rose Quartz Solarium
+---| `839` # Manastorm Rose Quartz Solarium
+---| `840` # Manastorm Rose Quartz Solarium
+---| `841` # Manastorm Ruby Solarium
+---| `842` # Manastorm Ruby Solarium
+---| `843` # Manastorm Ruby Solarium
+---| `844` # Manastorm Amethyst Solarium
+---| `845` # Manastorm Amethyst Solarium
+---| `846` # Manastorm Amethyst Solarium
+---| `848` # Test
+---| `849` # Little Witch Pinnacled House
+---| `850` # Little Witch Pinnacled House
+---| `851` # Little Witch Pinnacled House
+---| `852` #
+---| `853` # Amethyst Solarium
+---| `854` # Ruby Solarium
+---| `855` # Winter Maiden`s Cozy House
+---| `856` # Winter Maiden`s Cozy House
+---| `857` # Elegant Pure White Marble Mansion
+---| `858` # Elegant Pure White Marble Mansion
+---| `859` # Cottage on the Bridge
+---| `860` # Cottage on the Bridge
+---| `861` # Freezing Cold Icehouse
+---| `862` # Freezing Cold Icehouse
+---| `863` # Icehouse (Temporary Name)
+---| `864` #
+
 ---@alias INGAME_SHOP_TYPE
 ---| "cart"
 ---| "checkTime"
@@ -6397,6 +7407,9 @@
 ---| `10` # LEGENDARY
 ---| `11` # MYTHIC
 ---| `12` # ETERNAL
+
+---@alias ITEM_SOCKETING_RESULT_CODE
+---| `1` # Success
 
 ---@alias KEY_MODIFIER
 ---| `0`  # None
@@ -6472,6 +7485,11 @@
 ---| `2` # Protective
 ---| `3` # Passive
 ---| `4` # Stand
+
+---@alias MINI_SCOREBOARD_CHANGED_STATUS
+---| "update"
+---| "remove"
+---| "inactive"
 
 ---@alias MOUSE_BUTTON
 ---| "LeftButton"
@@ -6611,6 +7629,11 @@
 ---| "HEALTH"
 ---| "MANA"
 
+---@alias QUEST_DIRECTING_MODE_HOT_KEY_TYPE
+---| `1` # Previous
+---| `2` # Next
+---| `3` # Confirm/Skip
+
 ---@alias QUEST_ERROR
 ---| `1`  # ALREADY_HAVE
 ---| `2`  # INVALID_QUEST
@@ -6693,6 +7716,7 @@
 ---| "siege_period_hero_volunteer"
 ---| "siege_period_peace"
 
+---Obtained from db unit_status_buff_tags
 ---@alias SKILL_ALERT_STATUS_BUFF_TAG
 ---| `1`  # Stun
 ---| `2`  # Impaled
@@ -6701,43 +7725,255 @@
 ---| `5`  # Fear
 ---| `6`  # Sleep
 ---| `7`  # Snare
----| `8`  # SLOW -- @TODO: Confirm this.
+---| `8`  # Slowed
 ---| `9`  # Silence
 ---| `10` # Shackle
 ---| `11` # Imprison
----| `12` # LAUNCHED -- @TODO: Confirm this.
----| `13` # FROZEN -- @TODO: Confirm this.
----| `14` # DEEP_FREEZE -- @TODO: Confirm this.
----| `15` # POISON -- @TODO: Confirm this.
----| `16` # BLEED -- @TODO: Confirm this.
----| `17` # SHAKEN -- @TODO: Confirm this.
----| `18` # ENERVATED -- @TODO: Confirm this.
----| `19` # CHARMED -- @TODO: Confirm this.
----| `20` # BUBBLE -- @TODO: Confirm this.
----| `21` # PETRIFIED -- @TODO: Confirm this.
+---| `12` # Launched
+---| `13` # Ice Damage
+---| `14` # Deep Freeze
+---| `15` # Poisonous
+---| `16` # Bleed (All)
+---| `17` # Shaken
+---| `18` # Enervate
+---| `19` # Charmed
+---| `20` # Bubble Trap
+---| `21` # Petrification
 
+---@TODO: this may produce different results based on locale
 ---@alias SKILL_ALERT_STATUS_BUFF_NAME
----| `"Stun"`
----| `"Impaled"`
----| `"Stagger"`
----| `"Tripped"`
----| `"Fear"`
----| `"Sleep"`
----| `"Snare"`
----| `"SLOW"` -- @TODO: Confirm this.
----| `"Silence"`
----| `"Shackle"`
----| `"Imprison"`
----| `"LAUNCHED"` -- @TODO: Confirm this.
----| `"FROZEN"` -- @TODO: Confirm this.
----| `"DEEP_FREEZE"` -- @TODO: Confirm this.
----| `"POISON"` -- @TODO: Confirm this.
----| `"BLEED"` -- @TODO: Confirm this.
----| `"SHAKEN"` -- @TODO: Confirm this.
----| `"ENERVATED"` -- @TODO: Confirm this.
----| `"CHARMED"` -- @TODO: Confirm this.
----| `"BUBBLE"` -- @TODO: Confirm this.
----| `"PETRIFIED"` -- @TODO: Confirm this.
+---| "Stun"
+---| "Impaled"
+---| "Stagger"
+---| "Tripped"
+---| "Fear"
+---| "Sleep"
+---| "Snare"
+---| "Slowed"
+---| "Silence"
+---| "Shackle"
+---| "Imprison"
+---| "Launched"
+---| "Ice Damage"
+---| "Deep Freeze"
+---| "Poisonous"
+---| "Bleed (All)"
+---| "Shaken"
+---| "Enervate"
+---| "Charmed"
+---| "Bubble Trap"
+---| "Petrification"
+
+---@TODO: this may not be 100% accurate.
+---Obtained from db ui_texts key = /^skill_/
+---@alias SKILL_MSG_RESULT_CODE
+---| "ALERT_OPTION_POPUP_DESC"
+---| "ALERT_OPTION_POSITION_1_TEXT"
+---| "ALERT_OPTION_POSITION_2_TEXT"
+---| "ALERT_OPTION_POSITION_BASIC_TEXT"
+---| "ALERT_OPTION_POSITION_OFF_TEXT"
+---| "ALERT_OPTION"
+---| "ALERT_TEXT"
+---| "ALREADY_OTHER_PLAYER_BOUND"
+---| "BACKPACK_OCCUPIED"
+---| "BAG_FULL"
+---| "BLANK_MINDED"
+---| "CANNOT_CAST_IN_CHANNELING"
+---| "CANNOT_CAST_IN_COMBAT"
+---| "CANNOT_CAST_IN_PRISON"
+---| "CANNOT_CAST_IN_STUN"
+---| "CANNOT_CAST_IN_SWIMMING"
+---| "CANNOT_CAST_WHILE_MOVING"
+---| "CANNOT_CAST_WHILE_WALKING"
+---| "CANNOT_SPAWN_DOODAD_IN_HOUSE"
+---| "CANNOT_UNSUMMON_UNDER_STUN_SLEEP_ROOT"
+---| "CANNOT_USE_FOR_SELF"
+---| "CHANGED"
+---| "COOLDOWN_TIME"
+---| "CRIPPLED"
+---| "EFFECT_OCCUR"
+---| "FAILURE"
+---| "FESTIVAL_ZONE"
+---| "HIGHER_BUFF"
+---| "HOUSE_OWNER"
+---| "INACTIVE_ABILITY"
+---| "INFO_TITLE"
+---| "INIT_MSG_2"
+---| "INIT_MSG_4"
+---| "INVALID_ACCOUNT_ATTRIBUTE"
+---| "INVALID_GRADE_ENCHANT_SUPPORT_ITEM"
+---| "INVALID_LOCATION"
+---| "INVALID_SKILL"
+---| "INVALID_SOURCE"
+---| "INVALID_TARGET"
+---| "ITEM_LOCKED"
+---| "LACK_ACTABILITY"
+---| "LACK_COMBAT_RESOURCE"
+---| "LACK_HEALTH"
+---| "LACK_MANA"
+---| "LACK_SOURCE_ITEM_SET"
+---| "LEVEL"
+---| "LIST"
+---| "NEED_LABOR_POWER"
+---| "NEED_MONEY"
+---| "NEED_NOCOMBAT_TARGET"
+---| "NEED_REAGENT"
+---| "NEED_STEALTH"
+---| "NO_PERM"
+---| "NO_TARGET"
+---| "NOT_CHECKED_SECOND_PASS"
+---| "NOT_ENOUGH_ABILITY_LEVEL"
+---| "NOT_MY_NPC"
+---| "NOT_NOW"
+---| "NOT_PREOCCUPIED"
+---| "NOT_PVP_AREA"
+---| "NOTIFY_TITLE"
+---| "OBSTACLE_FOR_SPAWN_DOODAD"
+---| "OBSTACLE"
+---| "ON_CASTING"
+---| "ONLY_DURING_SWIMMING"
+---| "OUTOF_ANGLE"
+---| "OUTOF_HEIGHT"
+---| "PROTECTED_FACTION"
+---| "PROTECTED_LEVEL"
+---| "RETURNER_TARGET"
+---| "SILENCE"
+---| "SKILL_REQ_FAIL"
+---| "SOURCE_ALIVE"
+---| "SOURCE_CANNOT_USE_WHILE_JUMPING"
+---| "SOURCE_CANNOT_USE_WHILE_LEVITATING"
+---| "SOURCE_DIED"
+---| "SOURCE_IS_HANGING"
+---| "SOURCE_IS_RIDING"
+---| "SUCCESS"
+---| "TARGET_ALIVE"
+---| "TARGET_DESTROYED"
+---| "TARGET_DIED"
+---| "TARGET_IMMUNE"
+---| "TOO_CLOSE_RANGE"
+---| "TOO_FAR_RANGE"
+---| "TRAIN"
+---| "ULC_ALREADY_ACTIVATED"
+---| "UNIT_REQS_OR_FAIL"
+---| "URK_ABILITY"
+---| "URK_ACHIEVEMENT_COMPLETE"
+---| "URK_ACTABILITY_POINT"
+---| "URK_ADD_ARCHE_PASS_POINT"
+---| "URK_AREA_SPHERE"
+---| "URK_BUFF_TAG"
+---| "URK_BUFF"
+---| "URK_CAN_LEARN_CRAFT"
+---| "URK_CANNOT_USE_BUILDING_HOUSE"
+---| "URK_CANNOT_USE_BY_ULC_ACTIVATE"
+---| "URK_CANNOT_USE_WITH_NON_COMBAT_INSTUMENT"
+---| "URK_COMBAT_RESOURCE"
+---| "URK_COMBAT"
+---| "URK_COMPLETE_QUEST_CONTEXT"
+---| "URK_COMPLETE_QUEST"
+---| "URK_CONFLICT_ZONE_STATE"
+---| "URK_CORPSE_RANGE"
+---| "URK_CRAFT_RANK"
+---| "URK_DECO_LIMIT_EXPANDED"
+---| "URK_DOMINION_COUNT_LESS"
+---| "URK_DOMINION_COUNT_MORE"
+---| "URK_DOMINION_MEMBER_AT_POS_NOT"
+---| "URK_DOMINION_MEMBER_AT_POS"
+---| "URK_DOMINION_MEMBER_NOT"
+---| "URK_DOMINION_MEMBER"
+---| "URK_DOODAD_RANGE"
+---| "URK_DOODAD_TARGET_FRIENDLY"
+---| "URK_DOODAD_TARGET_HOSTILE"
+---| "URK_DUAL"
+---| "URK_ENABLE_ARCHE_PASS_WITH_TYPE"
+---| "URK_ENABLE_ARCHE_PASS"
+---| "URK_EQUIP_APPELLATION"
+---| "URK_EQUIP_INSTRUMENT"
+---| "URK_EQUIP_ITEM"
+---| "URK_EQUIP_RANGED"
+---| "URK_EQUIP_SHIELD"
+---| "URK_EQUIP_SHOT_GUN"
+---| "URK_EQUIP_SLOT"
+---| "URK_EQUIP_WEAPON_TYPE"
+---| "URK_EXCEPT_COMPLETE_QUEST_CONTEXT"
+---| "URK_EXCEPT_PROGRESS_QUEST_CONTEXT"
+---| "URK_EXCEPT_READY_QUEST_CONTEXT"
+---| "URK_EXPEDITION_BATTLE"
+---| "URK_FACTION_MATCH_ONLY_NOT"
+---| "URK_FACTION_MATCH_ONLY"
+---| "URK_FACTION_MATCH"
+---| "URK_FULL_RECHARGED_LABOR_POWER"
+---| "URK_GEAR_SCORE_OVER"
+---| "URK_GEAR_SCORE_UNDER"
+---| "URK_GEAR_SCORE"
+---| "URK_GENDER"
+---| "URK_HEALTH_MARGIN"
+---| "URK_HEALTH"
+---| "URK_HEIR_LEVEL"
+---| "URK_HONOR_POINT"
+---| "URK_HOUSE_ONLY"
+---| "URK_HOUSE"
+---| "URK_HOUSING"
+---| "URK_IN_PROGRESS_QUEST"
+---| "URK_IN_ZONE_GROUP"
+---| "URK_IN_ZONE"
+---| "URK_ITEM_ELEMENT_EVOLVING_EXP"
+---| "URK_ITEM_LOOK_CHANGE_MAPPING"
+---| "URK_LABOR_POWER_MARGIN_LOCAL"
+---| "URK_LABOR_POWER_MARGIN"
+---| "URK_LESS_ACTABILITY_POINT"
+---| "URK_LEVEL"
+---| "URK_LIVING_POINT"
+---| "URK_MANA_MARGIN"
+---| "URK_MAX_LEVEL"
+---| "URK_MOTHER_FACTION_ONLY_NOT"
+---| "URK_MOTHER_FACTION_ONLY"
+---| "URK_MOTHER_FACTION"
+---| "URK_NATION_MEMBER_NOT"
+---| "URK_NATION_MEMBER"
+---| "URK_NEED_ULC_ACTIVATE"
+---| "URK_NO_BUFF_TAG"
+---| "URK_NO_DUAL"
+---| "URK_NO_EXPEDITION_BATTLE"
+---| "URK_NO_TARGET_ITEM_TAG"
+---| "URK_NOBUFF"
+---| "URK_NOT_EXPANDABLE"
+---| "URK_NOT_HERO"
+---| "URK_NOT_IN_HOUSING_AREA"
+---| "URK_NOT_UNDER_WATER"
+---| "URK_OUT_ZONE"
+---| "URK_OWN_APPELLATION"
+---| "URK_OWN_ITEM_COUNT"
+---| "URK_OWN_ITEM_NOT"
+---| "URK_OWN_ITEM"
+---| "URK_OWN_QUEST_ITEM_GROUP"
+---| "URK_PRECOMPLETE_QUEST_CONTEXT"
+---| "URK_PREMIUM_ARCHE_PASS"
+---| "URK_PROGRESS_QUEST_CONTEXT"
+---| "URK_RACE"
+---| "URK_READY_QUEST_CONTEXT"
+---| "URK_READY_QUEST"
+---| "URK_SOURCE_HEALTH_LESS_THAN"
+---| "URK_SOURCE_HEALTH_MORE_THAN"
+---| "URK_STEALTH"
+---| "URK_TARGET_BUFF_TAG"
+---| "URK_TARGET_BUFF"
+---| "URK_TARGET_COMBAT"
+---| "URK_TARGET_DOODAD"
+---| "URK_TARGET_HEALTH_LESS_THAN"
+---| "URK_TARGET_HEALTH_MORE_THAN"
+---| "URK_TARGET_ITEM_TAG"
+---| "URK_TARGET_MANA_LESS_THAN"
+---| "URK_TARGET_MANA_MORE_THAN"
+---| "URK_TARGET_NOBUFF_TAG_NO_TARGET"
+---| "URK_TARGET_NOBUFF_TAG"
+---| "URK_TARGET_NPC_GROUP"
+---| "URK_TARGET_NPC"
+---| "URK_TARGET_OWNER_TYPE"
+---| "URK_TOD"
+---| "URK_TRAINED_SKILL"
+---| "URK_UNDER_WATER"
+---| "URK_UNKNOWN"
+---| "URK_VERDICT_ONLY"
 
 ---@alias SKILL_TYPE
 ---| "buff"
@@ -9557,8 +10793,8 @@
 ---| "shipyard" @TODO: Havent seen yet.
 ---| "slave"
 ---| "territory" @TODO: Havent seen yet.
----| "towerDef" @TODO: Havent seen yet.
 ---| "zoneState"
+
 
 ---@alias UI_BUTTON_STATE_TEXT
 ---| "DISABLED"
@@ -10562,7 +11798,7 @@
 ---| "team47"
 ---| "team48"
 ---| "team49"
----| "team50" @TODO: does team51 exist?
+---| "team50"
 ---| "team_1_1"
 ---| "team_1_2"
 ---| "team_1_3"
@@ -10663,6 +11899,16 @@
 ---| "team_2_48"
 ---| "team_2_49"
 ---| "team_2_50"
+
+---@alias UNIT_INFO_TYPE
+---| "character"
+---| "npc"
+---| "npc"
+---| "slave"
+---| "housing"
+---| "transfer"
+---| "mate"
+---| "shipyard"
 
 ---@alias UNIT_LOCAL
 ---| "player"

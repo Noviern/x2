@@ -32,16 +32,16 @@ ICS_GRW_CHARGED_MAIL = 1              -- api/X2InGameShop INGAME_CART_SHOW_GOODS
 ICS_GRW_EXPRESSS_MAIL = 2             -- api/X2InGameShop INGAME_CART_SHOW_GOODS_RECEIVED_WAY
 ICS_GRW_INVALID = 0                   -- api/X2InGameShop INGAME_CART_SHOW_GOODS_RECEIVED_WAY
 ICS_GRW_INVENTORY = 3                 -- api/X2InGameShop INGAME_CART_SHOW_GOODS_RECEIVED_WAY
-ISMI_ARCHE_PASS_COIN = 48064          -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_DELPI = 23633                    -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_GARNET = 51120                   -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_KEY = 31893                      -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_LORDCOIN = 26880                 -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_LUCKYCOIN = 9001554              -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_NETCAFE = 36554                  -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_PALOS = 45508                    -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_SEASON_GARNET = 52137            -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
-ISMI_STAR = 36007                     -- api/X2InGameShop INGAME_SHOP_MONEY_ITEM
+ISMI_ARCHE_PASS_COIN = 48064          -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_DELPI = 23633                    -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_GARNET = 51120                   -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_KEY = 31893                      -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_LORDCOIN = 26880                 -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_LUCKYCOIN = 9001554              -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_NETCAFE = 36554                  -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_PALOS = 45508                    -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_SEASON_GARNET = 52137            -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
+ISMI_STAR = 36007                     -- api/X2InGameShop INGAME_SHOP_MONEY_ICON
 MAX_INGAME_SHOP_UPDATE = 10           -- api/X2InGameShop
 MODE_SEARCH = 2                       -- api/X2InGameShop INGAME_SHOP_VIEW_MODE
 PRICE_TYPE_AA_BONUS_CASH = 5          -- api/X2InGameShop PRICE_TYPE
@@ -108,7 +108,7 @@ X2InGameShop = {}                     -- api/X2InGameShop
 ---| `ICS_GRW_INVENTORY`
 
 ---api/X2InGameShop
----@alias INGAME_SHOP_MONEY_ITEM
+---@alias INGAME_SHOP_MONEY_ICON
 ---| `ISMI_ARCHE_PASS_COIN`
 ---| `ISMI_DELPI`
 ---| `ISMI_GARNET`

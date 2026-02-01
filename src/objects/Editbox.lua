@@ -15,7 +15,7 @@ local Editbox = {}
 function Editbox:AddHistoryLine(text) end
 
 ---Checks the name policy for the Editbox.
----@param nameType NAME_RENAME_TYPE The name type to check against (e.g., NAME_RENAME_TYPE_CHARACTER).
+---@param nameType NAME_RENAME_TYPE The name type to check against.
 function Editbox:CheckNamePolicy(nameType) end
 
 ---Clears focus from the Editbox.

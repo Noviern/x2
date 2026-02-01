@@ -3,7 +3,7 @@
 ---@class Map
 local Map = {}
 
----@TODO: only saw type 0 1
+---@TODO: only saw type 0 1, id is not the quest id but maybe the id used to keep track of the quest icon on the map
 ---Adds quest information to the map with the specified type and ID.
 ---@param type number The quest type.
 ---@param id number The quest ID.

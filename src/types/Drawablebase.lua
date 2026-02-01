@@ -43,6 +43,6 @@ function Drawablebase:SetVisible(visible) end
 ---@param value string The value to check (`value > minValue and value < maxValue`).
 function Drawablebase:SetVisibleForString(minValue, maxValue, value) end
 
----Shows or hides the Drawablebase.
+---Shows or hides the Drawablebase. Showing before the extents and anchors are set can cause issues.
 ---@param show boolean `true` to show, `false` to hide. (default: `true`)
 function Drawablebase:Show(show) end

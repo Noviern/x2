@@ -987,11 +987,10 @@ function UIParent:GetUIBound(key) end
 ---@nodiscard
 function UIParent:GetUIScale() end
 
----@FIXME: currently unusable without `UIParent:SetUIStamp`
----Retrieves the UI stamp for the specified key. This is currently unusable
----without its counterpart method `UIParent:SetUIStamp`.
+---@FIXME: `UIParent:SetUIStamp`
+---Retrieves the UI stamp for the specified key.
 ---@param key string The key to retrieve the UI stamp for.
----@return string uiStamp The UI stamp associated with the key.
+---@return string|nil uiStamp The UI stamp associated with the key.
 ---@nodiscard
 function UIParent:GetUIStamp(key) end
 

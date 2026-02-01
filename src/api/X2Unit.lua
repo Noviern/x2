@@ -207,8 +207,8 @@ function X2Unit:UnitDeBuffTooltip(unit, deBuffIndex, neededInfo) end
 ---@see UnitDistance
 function X2Unit:UnitDistance(unit) end
 
----Retrieves the gear score of the specified unit or a boolean indicating if the
----unit exists.
+---Retrieves the gear score of the specified unit within visual range or a
+---boolean indicating if the unit exists.
 ---@param unit UNIT The unit to query.
 ---@param comma boolean `true` to include a comma, `false` otherwise. `UIParent:SetUseInsertComma` may be required depending on the user's language.
 ---@return string|boolean result The gear score as a string, or `false` if the unit does not exist.

@@ -27,13 +27,7 @@ function Label:SetAutoResize(resize) end
 ---@param bottom number The bottom inset.
 function Label:SetInset(left, top, right, bottom) end
 
----Enables or disables number formatting for the Label's text (must be set
----before `Label:SetText`).
+---Enables or disables number formatting for the Label's text. Must be set
+---before `Label:SetText`.
 ---@param only boolean `true` to restrict to numbers only, `false` to allow any text. (default: `false`)
----@usage
----```lua
----widget:SetNumberOnly(true)
----widget:SetText("Hello123")
-------He,llo,123
----```
 function Label:SetNumberOnly(only) end
