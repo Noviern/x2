@@ -24,10 +24,10 @@ X2Achievement = {}          -- api/X2Achievement
 ---Achievement Filter
 ---@alias ACHIEVEMENT_FILTER
 ---| `AF_ALL`
----| `AF_COMPLETE` Doesnt work. Produces the same result as AF_ALL.
----| `AF_INVALID` Doesnt work. Produces the same result as AF_ALL.
+---| `AF_COMPLETE` # Doesnt work. Produces the same result as AF_ALL.
+---| `AF_INVALID` # Doesnt work. Produces the same result as AF_ALL.
 ---| `AF_TRACING`
----| `AF_UNCOMPLETE` Doesnt work. Produces the same result as AF_ALL.
+---| `AF_UNCOMPLETE` # Doesnt work. Produces the same result as AF_ALL.
 
 ---@TODO: ENUM?
 ---api/X2Achievement

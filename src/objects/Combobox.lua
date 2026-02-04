@@ -1,6 +1,24 @@
 ---@meta _
 
----objects/Combobox
+---@class ComboboxDropDown: Listbox
+---@field downBtn Button
+---@field upBtn Button
+---@field vslider Vslider
+local ComboboxDropDown = {}
+
+---@class Vslider: Slider
+---@field thumb Button
+local Vslider = {}
+
+---@TODO: document other widget dependencies
+---**OBJECT**: [Combobox](lua://Combobox)
+---
+---**Dependencies**:
+--- * [Button](lua://Button)
+--- * [Listbox](lua://Listbox)
+--- * [Slider](lua://Slider)
+--- * [TextStyle](lua://TextStyle) (optional)
+--- * [X2EditBox](lua://X2EditBox)
 ---@class Combobox: Widget
 ---@field dropdown ComboboxDropDown
 ---@field selector X2EditBox
@@ -8,7 +26,14 @@
 ---@field toggle Button
 local Combobox = {}
 
----objects/Combobox
+---**OBJECT**: [Combobox](lua://Combobox)
+---
+---**Dependencies**:
+--- * [Button](lua://Button)
+--- * [Listbox](lua://Listbox)
+--- * [Slider](lua://Slider)
+--- * [TextStyle](lua://TextStyle) (optional)
+--- * [X2EditBox](lua://X2EditBox)
 ---@class combobox: Combobox
 
 ---Inserts data into the Combobox dropdown if `Combobox:SetEditable(false)`.

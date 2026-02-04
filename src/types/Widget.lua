@@ -18,10 +18,6 @@ DC_SHIFT_KEY_DOWN = 1  -- types/Widget DRAG_CONDITION
 ---| `DC_ALWAYS`
 ---| `DC_SHIFT_KEY_DOWN`
 
----@class CacheData
----@field cacheType CT
----@field name string
-
 ---@alias CharacterCacheDataHandler fun(self: self, data: CacheData)
 
 ---@alias DelegatorHandler fun(delegator: Widget, callbacker: Widget, mbt: MOUSE_BUTTON)

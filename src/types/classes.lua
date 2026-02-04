@@ -1490,3 +1490,7 @@
 ---@field year number
 ---@field month number
 ---@field day number
+
+---@class CacheData
+---@field cacheType CT
+---@field name string

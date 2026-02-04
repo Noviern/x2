@@ -1453,8 +1453,8 @@
 ---Event triggers when the player opens the crest printer window.
 ---@alias OPEN_EMBLEM_UPLOAD_UI_HANDLER fun(doodad: number)
 
----@TODO:
----@alias OPEN_EXPEDITION_PORTAL_LIST_HANDLER fun(addPortal, interactionDoodad, expeditionOwner)
+---Event triggers when the player interacts with their guild portal.
+---@alias OPEN_EXPEDITION_PORTAL_LIST_HANDLER fun(addPortal: boolean, interactionDoodad: boolean, expeditionOwner: boolean)
 
 ---Event triggers when the player opens a music sheet to begin composing music.
 ---@alias OPEN_MUSIC_SHEET_HANDLER fun(isShow: boolean, itemIdString: string, isWide: number)
@@ -2329,7 +2329,7 @@
 ---Event triggers when an item is about to be enchanted and when at the start of the item being enchanted.
 ---@alias UPDATE_ENCHANT_ITEM_MODE_HANDLER fun(isExcutable: boolean, isLock: boolean)
 
----@TODO:
+---Event triggers when the players guild house portal list changes.
 ---@alias UPDATE_EXPEDITION_PORTAL_HANDLER fun()
 
 ---Event triggers when the players guild assignments reset.

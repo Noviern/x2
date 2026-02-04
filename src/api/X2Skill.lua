@@ -8,7 +8,7 @@ X2Skill = {}        -- api/X2Skill
 ---Values can be added together to get more information.
 ---@alias SKILL_INFORMATION_KIND
 ---| `SIK_DESCRIPTION`
----| `4` Not defined but can be used to get almost everything thats not the description.
+---| `4` # Not defined but can be used to get almost everything thats not the description.
 
 ---Retrieves the cooldown information for a specified skill.
 ---@param skillId number The ID of the skill.
