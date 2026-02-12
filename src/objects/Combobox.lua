@@ -10,31 +10,24 @@ local ComboboxDropDown = {}
 ---@field thumb Button
 local Vslider = {}
 
----@TODO: document other widget dependencies
----**OBJECT**: [Combobox](lua://Combobox)
+---[Combobox](lua://Combobox)
+---
+---A `Combobox` widget is a dropdown selection control that can be editable
+---with autocomplete filters or read-only with predefined dropdown list. Usually
+---consists of a editbox (or selector button) + toggle button + dropdown list.
 ---
 ---**Dependencies**:
---- * [Button](lua://Button)
---- * [Listbox](lua://Listbox)
---- * [Slider](lua://Slider)
---- * [TextStyle](lua://TextStyle) (optional)
---- * [X2EditBox](lua://X2EditBox)
+--- - [Button](lua://Button) used for the dropdown `downBtn`, `selectorBtn`, and `toggle` fields.
+--- - [Listbox](lua://Listbox) used for the `dropdown` field.
+--- - [Slider](lua://Slider) used for the dropdown `vslider` field.
+--- - [X2Editbox](lua://X2Editbox) used for the selector field.
+---
 ---@class Combobox: Widget
----@field dropdown ComboboxDropDown
----@field selector X2EditBox
----@field selectorBtn Button
----@field toggle Button
+---@field dropdown ComboboxDropDown The dropdown for the Combobox.
+---@field selector X2Editbox The input exitbox if the Combobox is editable.
+---@field selectorBtn Button The input button if the Combobox is not editable.
+---@field toggle Button Dropdown open/close button
 local Combobox = {}
-
----**OBJECT**: [Combobox](lua://Combobox)
----
----**Dependencies**:
---- * [Button](lua://Button)
---- * [Listbox](lua://Listbox)
---- * [Slider](lua://Slider)
---- * [TextStyle](lua://TextStyle) (optional)
---- * [X2EditBox](lua://X2EditBox)
----@class combobox: Combobox
 
 ---Inserts data into the Combobox dropdown if `Combobox:SetEditable(false)`.
 ---@param datas ItemTree[] The data to insert for autocomplete.

@@ -8,6 +8,12 @@
 ------@field SetEffectPhaseProperties fun(self: self, phase, properties)
 ------@field SetMoveEffectPhaseProperties fun(self: self, phase, properties)
 
+---[Drawablebase](lua://Drawablebase)
+---
+---A `Drawablebase` is the most basic type of drawable. It supports visibility,
+---color, rotation, and sRGB settings. Many other drawables like
+---`DrawableDDS` and `ColorDrawable` inherit from this base class.
+---
 ---@class Drawablebase: Uibounds, Uiobject
 local Drawablebase = {}
 
@@ -43,6 +49,6 @@ function Drawablebase:SetVisible(visible) end
 ---@param value string The value to check (`value > minValue and value < maxValue`).
 function Drawablebase:SetVisibleForString(minValue, maxValue, value) end
 
----Shows or hides the Drawablebase. Showing before the extents and anchors are set can cause issues.
+---Shows or hides the Drawablebase. Showing before the all extents and anchors are set can cause issues.
 ---@param show boolean `true` to show, `false` to hide. (default: `true`)
 function Drawablebase:Show(show) end

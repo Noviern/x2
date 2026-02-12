@@ -1,11 +1,12 @@
 ---@meta _
 
----objects/Line
+---[Line](lua://Line)
+---
+---A `Line` widget is drawable and can display one or multiple connected
+---segments with configurable color, thickness, and points.
+---
 ---@class Line: Widget
 local Line = {}
-
----objects/Line
----@class line: Line
 
 ---Clears all points from the Line.
 function Line:ClearPoints() end

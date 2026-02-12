@@ -1,11 +1,14 @@
 ---@meta _
 
----objects/ColorPicker
+---[ColorPicker](lua://ColorPicker)
+---
+---A `ColorPicker` widget allows users to select colors from a palette image.
+---Provides conversion between palette coordinates and RGB color values,
+---enabling precise color picking and reverse lookup of color positions.
+---Supports custom palette images for flexible color layouts.
+---
 ---@class ColorPicker: Widget
 local ColorPicker = {}
-
----objects/ColorPicker
----@class colorpicker: ColorPicker
 
 ---Retrieves the color at the specified point on the ColorPicker.
 ---@param xPos number The x-coordinate of the point.

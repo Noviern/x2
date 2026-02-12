@@ -1,11 +1,13 @@
 ---@meta _
 
----objects/EditboxMultiline
+---[EditboxMultiline](lua://EditboxMultiline)
+---
+---A `EditboxMultiline` widget is for entering and displaying multiple lines of
+---text. Provides cursor position queries, line and text metrics, configurable
+---insets, and adjustable line spacing. Intended for longer text.
+---
 ---@class EditboxMultiline: Widget, Editboxbase
 local EditboxMultiline = {}
-
----objects/EditboxMultiline
----@class editboxmultiline: EditboxMultiline
 
 ---Clears all text in the EditboxMultiline.
 function EditboxMultiline:Clear() end

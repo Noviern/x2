@@ -6,7 +6,7 @@
 local Editboxbase = {}
 
 ---Sets the maximum text length for the Editboxbase.
----@param length number The maximum text length.
+---@param length number The maximum text length. (`256` for `X2Editbox`, `9215` for `EditboxMultiline`, `256` for `MegaphoneChatEdit`)
 function Editboxbase:SetMaxTextLength(length) end
 
 ---Enables or disables clearing text when the Enter key is pressed.
@@ -14,7 +14,7 @@ function Editboxbase:SetMaxTextLength(length) end
 function Editboxbase:ClearTextOnEnter(clear) end
 
 ---Retrieves the maximum text length for the Editboxbase.
----@return number maxTextLength The maximum text length.
+---@return number maxTextLength The maximum text length. (default: `64` for `X2Editbox`, default:`256` for `EditboxMultiline`, default: `45` for `MegaphoneChatEdit`)
 ---@nodiscard
 function Editboxbase:MaxTextLength() end
 

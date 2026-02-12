@@ -6,13 +6,20 @@ UI_BUTTON_MAX = 4         -- objects/CheckButton
 UI_BUTTON_NORMAL = 0      -- objects/CheckButton UI_BUTTON_STATE
 UI_BUTTON_PUSHED = 2      -- objects/CheckButton UI_BUTTON_STATE
 
----objects/CheckButton
+---[Checkbutton](lua://Checkbutton)
+---
+---A `Checkbutton` widget is a small clickable widget that represents a binary
+---on/off or true/false setting or option. It inherits from Button and supports
+---the same four visual states: normal, highlighted (hover), pushed (pressed),
+---and disabled. Adds checked/unchecked state management with separate
+---background drawables for checked and disabled-checked states. Can trigger
+---the widget `"OnCheckChanged"` action.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field.
+---
 ---@class Checkbutton: Button
----@field style TextStyle
 local Checkbutton = {}
-
----objects/CheckButton
----@class checkbutton: Checkbutton
 
 ---Returns a boolean indicating the state of the Checkbutton.
 ---@return boolean checked `true` if the Checkbutton is checked, `false` otherwise. (default: `false`)
@@ -21,7 +28,7 @@ function Checkbutton:GetChecked() end
 
 ---Sets the state of the Checkbutton.
 ---@param state boolean `true` to check the Checkbutton, `false` to uncheck. (default: `false`)
----@param trigger boolean|nil `true` to send the `"OnCheckChanged"` event (the event must be set before), `false` to do nothing. (default: `false`)
+---@param trigger boolean|nil `true` to trigger the `"OnCheckChanged"` action, `false` to do nothing. (default: `false`)
 function Checkbutton:SetChecked(state, trigger) end
 
 ---Sets the background for the checked state of the Checkbutton.
@@ -29,8 +36,7 @@ function Checkbutton:SetChecked(state, trigger) end
 ---@see DrawableDDS
 function Checkbutton:SetCheckedBackground(checkedTable) end
 
----Sets the background for the disabled (`Widget:Enable(false)`) checked state
----of the Checkbutton.
+---Sets the background for the disabled checked state of the Checkbutton.
 ---@param disabledCheckedTable DrawableDDS The table defining the disabled checked state background.
 ---@see DrawableDDS
 function Checkbutton:SetDisabledCheckedBackground(disabledCheckedTable) end

@@ -1,11 +1,13 @@
 ---@meta _
 
----objects/Avi
+---[Avi](lua://Avi)
+---
+---A `Avi` widget plays AVI (Audio Video Interleave) video files, commonly used
+---for cutscenes, tutorial sequences, animated intros, or other in-game video
+---content.
+---
 ---@class Avi: Widget
 local Avi = {}
-
----objects/Avi
----@class avi: Avi
 
 ---Sets the AVI file to be used by the widget.
 ---@param fileName AVI_PATH The path to the AVI file.

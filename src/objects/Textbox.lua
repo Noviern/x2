@@ -1,12 +1,18 @@
 ---@meta _
 
----objects/Textbox
+---[Textbox](lua://Textbox)
+---
+---A `Textbox` widget displays text with support for automatic resizing, word
+---wrapping, strikethrough, underline, line spacing, and inset customization.
+---It can also measure text width and height for individual lines or the entire
+---content.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field.
+---
 ---@class Textbox: Widget
----@field style TextStyle
+---@field style TextStyle The text style applied to the widget's text.
 local Textbox = {}
-
----objects/Textbox
----@class textbox: Textbox
 
 ---Retrieves the inset of the Textbox.
 ---@return number left The left inset. (default: `0`)

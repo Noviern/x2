@@ -14,8 +14,12 @@ UFT_PERMP = "|p7;"              -- objects/UnitframeTooltip UNIT_FRAME_TOOLTIP
 UFT_PVPHONOR = "|p10;"          -- objects/UnitframeTooltip UNIT_FRAME_TOOLTIP
 UFT_PVPKILL = "|p11;"           -- objects/UnitframeTooltip UNIT_FRAME_TOOLTIP
 
----objects/UnitframeTooltip
+---[UnitframeTooltip](lua://UnitframeTooltip)
+---
+---A `UnitframeTooltip` widget is a specialized `GameTooltip` used to display
+---unit-specific information in the UI, such as health, mana, labor, gear
+---score, PvP statistics, and other dynamic stats. It supports placeholders for
+---various unit attributes that can be inserted into tooltip text.
+---
 ---@class UnitframeTooltip: GameTooltip
-
----objects/UnitframeTooltip
----@class unitframetooltip: UnitframeTooltip
+local UnitframeTooltip = {}

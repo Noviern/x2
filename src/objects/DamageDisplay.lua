@@ -24,25 +24,32 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay POSITION_CALCULATION_TYPE
 ---| `PCT_DEFAULT`
 ---| `PCT_SHIP_COLLISION`
 
----objects/DamageDisplay
+---[DamageDisplay](lua://DamageDisplay)
+---
+---A `DamageDisplay` widget displays animated damage or combat-related text.
+---Supports configurable animation sequences, positional calculation modes, and
+---dynamic placement relative to source and target units. Provides control over
+---insets, initial positioning, and animation behavior, enabling effects such
+---as movement, shaking, scaling, fading, and afterimages commonly used in
+---combat feedback and hit indicators.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle)  used for the `style` and `extraStyle` fields.
+---
 ---@class DamageDisplay: Widget
----@field extraStyle TextStyle
----@field style TextStyle
+---@field extraStyle TextStyle @TODO: what is extraStyle used for?
+---@field style TextStyle The text style applied to the widget's text.
 local DamageDisplay = {}
-
----objects/DamageDisplay
----@class damagedisplay: DamageDisplay
 
 ---Enables or disables animation for the DamageDisplay.
 ---@param anim boolean `true` to enable animation, `false` to disable. (default: `false`)
 function DamageDisplay:Animation(anim) end
 
----@TODO: Clarify what actual drawn values represent.
----Retrieves the actual drawn inset of the DamageDisplay.
----@return number left The left inset. (default: `0`)
----@return number top The top inset. (default: `0`)
----@return number right The right inset. (default: `0`)
----@return number bottom The bottom inset. (default: `0`)
+---Retrieves the actual drawn coordinates of the DamageDisplay text when animating.
+---@return number x1 The left coordinate. (default: `0`)
+---@return number y1 The top coordinate. (default: `0`)
+---@return number x2 The right coordinate. (default: `0`)
+---@return number y2 The bottom coordinate. (default: `0`)
 ---@nodiscard
 function DamageDisplay:GetActualDrawn() end
 
@@ -56,33 +63,6 @@ function DamageDisplay:GetInset() end
 
 ---Sets the animation frame information for the DamageDisplay.
 ---@param frameInfo FrameInfo[] An array of frame information for the animation.
----@usage
----```lua
----widget:SetAnimFrameInfo({
----  {
----    scale = 1.5,
----    timeToNextFrame = 70,
----    alpha = 0.2,
----  },
----  {
----    scale = .5,
----    timeToNextFrame = 30,
----  },
----  {
----    scale = .62,
----    timeToNextFrame = 30,
----  },
----  {
----    scale = .55,
----    showTime = 400,
----    timeToNextFrame = 120,
----  },
----  {
----    alpha = 1,
----    scale = .55,
----  },
----})
----```
 ---@see FrameInfo
 function DamageDisplay:SetAnimFrameInfo(frameInfo) end
 

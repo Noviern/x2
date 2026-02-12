@@ -170,6 +170,7 @@
 ---| "BOTTOM"
 ---| "BOTTOMRIGHT"
 
+---@TODO: this is missing animations, example "fist_ac_stage_idle"
 ---@alias ANIMATION
 ---| "additive_all_co_combat_miss"
 ---| "additive_all_re_combat_confuse"
@@ -10862,6 +10863,7 @@
 ---| "ui_bound_targettotarget"
 ---| "ui_bound_watchtarget"
 
+---@TODO: this needs updated.
 ---@alias UIEVENT_TYPE
 ---| "ABILITY_CHANGED"
 ---| "ABILITY_EXP_CHANGED"

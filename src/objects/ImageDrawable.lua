@@ -10,7 +10,12 @@ DAT_MOVE = 1         -- objects/ImageDrawable DRAWABLE_ANIMATION_TYPE
 ---| `DAT_LINEAR_SCALE`
 ---| `DAT_MOVE`
 
----objects/ImageDrawable
+---[ImageDrawable](lua://ImageDrawable)
+---
+---A `ImageDrawable` is a drawable that displays a texture with optional
+---animation. Supports frame-based animation, TGA or UCC textures, tiling,
+---pixel snapping, and color checks.
+---
 ---@class ImageDrawable: DrawableDDS
 local ImageDrawable = {}
 

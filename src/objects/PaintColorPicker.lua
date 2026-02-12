@@ -1,13 +1,20 @@
 ---@meta _
 
----objects/PaintColorPicker
----@class PaintColorPicker: Widget
----@field luminanceWidget EmptyWidget
----@field spectrumWidget EmptyWidget
-local PaintColorPicker = {}
+---@FIXME: X2Input:GetMousePos() would be nice to have for this.
 
----objects/PaintColorPicker
----@class paintcolorpicker: PaintColorPicker
+---[PaintColorPicker](lua://PaintColorPicker)
+---
+---A `PaintColorPicker` widget selects colors using HSL (Hue, Saturation,
+---Luminance) or RGB. Provides a spectrum and luminance widget for visual color
+---selection, along with functions to get and set colors programmatically.
+---
+---**Dependencies**:
+--- - [EmptyWidget](lua://EmptyWidget) used for the `luminanceWidget` and `spectrumWidget` fields.
+---
+---@class PaintColorPicker: Widget
+---@field luminanceWidget EmptyWidget The widget controlling luminance.
+---@field spectrumWidget EmptyWidget The widget displaying the color spectrum.
+local PaintColorPicker = {}
 
 ---Retrieves the HSL color values of the PaintColorPicker.
 ---@return number hue The hue component. (min: `0`, max: `1`)

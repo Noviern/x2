@@ -1,13 +1,15 @@
 ---@class RadioItem: EmptyWidget
 ---@field check Checkbutton
 
----@alias ListCtrlItemSubItem Button|Window|Textbox|table
+---@TODO: this will cause lua warnings because its not a widget
+---@class SubItemString
+---@field style TextStyle
+
+---@alias ListCtrlItemSubItem Button|Window|Textbox|SubItemString
 
 ---@class ListCtrlItem: Window
 ---@field subItems ListCtrlItemSubItem[]
 ---@field eventWindow Window ---@TODO: unsure what this is for.
-
--- @field subItems Button[]|Window[]|Textbox[]|table[] --@TODO: table is LIST_CTRL_COLUMN_ITEM_TYPE_STRING but is a table with just a style field and nothing else
 
 ---@class EscMenuButtonData
 ---@field path string Addon/{addonname}/example.dds
@@ -60,11 +62,12 @@
 
 ---@class TextureData
 ---@field offset number[]
----@field colors TextureColors @TODO: could be nil?
+---@field colors TextureColors|nil @TODO: could be nil?
 ---@field colorKey TextureColorKey
 ---@field coords TextureCoords
 ---@field inset TextureInset
 ---@field extent TextureDimensions
+-- @field type string @FIXME: this doesn't exist but really should
 
 ---@class TextureKeyData
 ---@field width number
@@ -542,7 +545,7 @@
 ---@field enable boolean|nil `true` to enable, `false` to disable. (default: `true`)
 ---@field text string
 ---@field value number
----@field subtext string|nil
+---@field subtext string|nil Only renders if subColor is defined.
 ---@field subColor RGBAColor|nil
 ---@field defaultColor RGBAColor|nil Requires `useColor = true`.
 ---@field selectColor RGBAColor|nil Requires `useColor = true`.

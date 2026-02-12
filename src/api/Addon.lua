@@ -867,12 +867,51 @@ function UIParent:ClearUIBound(key) end
 
 ---Creates a widget of the specified type with the given ID and parent.
 ---@generic T
----@param widgetName `T`|OBJECT_NAME The type of widget to create.
+---@param widgetName OBJECT_NAME The type of widget to create.
 ---@param id string The unique identifier for the widget. If the name already exists it will cause a UI Logic Error.
 ---@param parentId "UIParent"|Widget|string The parent `"UIParent"`, `Widget`, or `Widget` id for the widget.
----@return T widget The created widget, empty table if the widget hasn't been imported, or `nil` if failed.
+---@return Widget widget The created widget, empty table if the widget hasn't been imported, or `nil` if failed.
 ---@nodiscard
 ---@see Widget
+---@overload fun(self: self, widgetName: "avi", id: string, parentId: "UIParent"|Widget|string): Avi
+---@overload fun(self: self, widgetName: "button", id: string, parentId: "UIParent"|Widget|string): Button
+---@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: "UIParent"|Widget|string): ChatWindow
+---@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: "UIParent"|Widget|string): Checkbutton
+---@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: "UIParent"|Widget|string): CircleDiagram
+---@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: "UIParent"|Widget|string): ColorPicker
+---@overload fun(self: self, widgetName: "combobox", id: string, parentId: "UIParent"|Widget|string): Combobox
+---@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: "UIParent"|Widget|string): CooldownButton
+---@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: "UIParent"|Widget|string): CooldownConstantButton
+---@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: "UIParent"|Widget|string): CooldownInventoryButton
+---@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: "UIParent"|Widget|string): DamageDisplay
+---@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: "UIParent"|Widget|string): DynamicList
+---@overload fun(self: self, widgetName: "editbox", id: string, parentId: "UIParent"|Widget|string): Editbox
+---@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: "UIParent"|Widget|string): EditboxMultiline
+---@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: "UIParent"|Widget|string): EmptyWidget
+---@overload fun(self: self, widgetName: "folder", id: string, parentId: "UIParent"|Widget|string): Folder
+---@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: "UIParent"|Widget|string): GameTooltip
+---@overload fun(self: self, widgetName: "grid", id: string, parentId: "UIParent"|Widget|string): Grid
+---@overload fun(self: self, widgetName: "label", id: string, parentId: "UIParent"|Widget|string): Label
+---@overload fun(self: self, widgetName: "line", id: string, parentId: "UIParent"|Widget|string): Line
+---@overload fun(self: self, widgetName: "listbox", id: string, parentId: "UIParent"|Widget|string): Listbox
+---@overload fun(self: self, widgetName: "listctrl", id: string, parentId: "UIParent"|Widget|string): ListCtrl
+---@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: "UIParent"|Widget|string): MegaphoneChatEdit
+---@overload fun(self: self, widgetName: "message", id: string, parentId: "UIParent"|Widget|string): Message
+---@overload fun(self: self, widgetName: "modelview", id: string, parentId: "UIParent"|Widget|string): ModelView
+---@overload fun(self: self, widgetName: "pageable", id: string, parentId: "UIParent"|Widget|string): Pageable
+---@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: "UIParent"|Widget|string): PaintColorPicker
+---@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: "UIParent"|Widget|string): RadioGroup
+---@overload fun(self: self, widgetName: "roadmap", id: string, parentId: "UIParent"|Widget|string): RoadMap
+---@overload fun(self: self, widgetName: "slider", id: string, parentId: "UIParent"|Widget|string): Slider
+---@overload fun(self: self, widgetName: "slot", id: string, parentId: "UIParent"|Widget|string): Slot
+---@overload fun(self: self, widgetName: "statusbar", id: string, parentId: "UIParent"|Widget|string): StatusBar
+---@overload fun(self: self, widgetName: "tab", id: string, parentId: "UIParent"|Widget|string): Tab
+---@overload fun(self: self, widgetName: "textbox", id: string, parentId: "UIParent"|Widget|string): Textbox
+---@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: "UIParent"|Widget|string): UnitframeTooltip
+---@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: "UIParent"|Widget|string): Webbrowser
+---@overload fun(self: self, widgetName: "window", id: string, parentId: "UIParent"|Widget|string): Window
+---@overload fun(self: self, widgetName: "worldmap", id: string, parentId: "UIParent"|Widget|string): WorldMap
+---@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: "UIParent"|Widget|string): X2Editbox
 function UIParent:CreateWidget(widgetName, id, parentId) end
 
 ---@FIXME: currently unusable without SetAccountUITimeStamp
@@ -944,12 +983,12 @@ function UIParent:GetId() end
 ---@nodiscard
 function UIParent:GetPermission(uiCategory) end
 
----Retrieves the screen height.
+---Retrieves the screen window height.
 ---@return number screenHeight The screen height in pixels.
 ---@nodiscard
 function UIParent:GetScreenHeight() end
 
----Retrieves the screen width.
+---Retrieves the screen window width.
 ---@return number screenWidth The screen width in pixels.
 ---@nodiscard
 function UIParent:GetScreenWidth() end
@@ -1077,8 +1116,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "ADD_NOTIFY_QUEST_INFO", handler: ADD_NOTIFY_QUEST_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "ADDED_ITEM", handler: ADDED_ITEM_HANDLER)
 ---@overload fun(self: self, eventName: "ADDON_LOADED", handler: ADDON_LOADED_HANDLER)
----@overload fun(self: self, eventName: "AGGRO_METER_CLEARED", handler: AGGRO_METER_CLEARED_HANDLER)
----@overload fun(self: self, eventName: "AGGRO_METER_UPDATED", handler: AGGRO_METER_UPDATED_HANDLER)
 ---@overload fun(self: self, eventName: "ALL_SIEGE_RAID_TEAM_INFOS", handler: ALL_SIEGE_RAID_TEAM_INFOS_HANDLER)
 ---@overload fun(self: self, eventName: "APPELLATION_CHANGED", handler: APPELLATION_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "APPELLATION_GAINED", handler: APPELLATION_GAINED_HANDLER)
@@ -1097,7 +1134,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "AUCTION_ITEM_SEARCHED", handler: AUCTION_ITEM_SEARCHED_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_LOWEST_PRICE", handler: AUCTION_LOWEST_PRICE_HANDLER)
 ---@overload fun(self: self, eventName: "AUCTION_PERMISSION_BY_CRAFT", handler: AUCTION_PERMISSION_BY_CRAFT_HANDLER)
----@overload fun(self: self, eventName: "AUCTION_TOGGLE", handler: AUCTION_TOGGLE_HANDLER)
 ---@overload fun(self: self, eventName: "AUDIENCE_JOINED", handler: AUDIENCE_JOINED_HANDLER)
 ---@overload fun(self: self, eventName: "AUDIENCE_LEFT", handler: AUDIENCE_LEFT_HANDLER)
 ---@overload fun(self: self, eventName: "BAD_USER_LIST_UPDATE", handler: BAD_USER_LIST_UPDATE_HANDLER)
@@ -1148,7 +1184,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "CHANGE_MY_LANGUAGE", handler: CHANGE_MY_LANGUAGE_HANDLER)
 ---@overload fun(self: self, eventName: "CHANGE_OPTION", handler: CHANGE_OPTION_HANDLER)
 ---@overload fun(self: self, eventName: "CHANGE_VISUAL_RACE_ENDED", handler: CHANGE_VISUAL_RACE_ENDED_HANDLER)
----@overload fun(self: self, eventName: "CHANGED_AUTO_USE_AAPOINT", handler: CHANGED_AUTO_USE_AAPOINT_HANDLER)
 ---@overload fun(self: self, eventName: "CHANGED_MSG", handler: CHANGED_MSG_HANDLER)
 ---@overload fun(self: self, eventName: "CHAT_DICE_VALUE", handler: CHAT_DICE_VALUE_HANDLER)
 ---@overload fun(self: self, eventName: "CHAT_EMOTION", handler: CHAT_EMOTION_HANDLER)
@@ -1303,7 +1338,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "FACTION_RELATION_REQUESTED", handler: FACTION_RELATION_REQUESTED_HANDLER)
 ---@overload fun(self: self, eventName: "FACTION_RELATION_WILL_CHANGE", handler: FACTION_RELATION_WILL_CHANGE_HANDLER)
 ---@overload fun(self: self, eventName: "FACTION_RENAMED", handler: FACTION_RENAMED_HANDLER)
----@overload fun(self: self, eventName: "FAIL_WEB_PLAY_DIARY_INSTANT", handler: FAIL_WEB_PLAY_DIARY_INSTANT_HANDLER)
 ---@overload fun(self: self, eventName: "FAILED_TO_SET_PET_AUTO_SKILL", handler: FAILED_TO_SET_PET_AUTO_SKILL_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_ERROR", handler: FAMILY_ERROR_HANDLER)
 ---@overload fun(self: self, eventName: "FAMILY_EXP_ADD", handler: FAMILY_EXP_ADD_HANDLER)
@@ -1639,19 +1673,12 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "SCALE_ENCHANT_BROADCAST", handler: SCALE_ENCHANT_BROADCAST_HANDLER)
 ---@overload fun(self: self, eventName: "SCHEDULE_ITEM_SENT", handler: SCHEDULE_ITEM_SENT_HANDLER)
 ---@overload fun(self: self, eventName: "SCHEDULE_ITEM_UPDATED", handler: SCHEDULE_ITEM_UPDATED_HANDLER)
----@overload fun(self: self, eventName: "SECOND_PASSWORD_ACCOUNT_LOCKED", handler: SECOND_PASSWORD_ACCOUNT_LOCKED_HANDLER)
----@overload fun(self: self, eventName: "SECOND_PASSWORD_CHANGE_COMPLETED", handler: SECOND_PASSWORD_CHANGE_COMPLETED_HANDLER)
----@overload fun(self: self, eventName: "SECOND_PASSWORD_CHECK_COMPLETED", handler: SECOND_PASSWORD_CHECK_COMPLETED_HANDLER)
----@overload fun(self: self, eventName: "SECOND_PASSWORD_CHECK_OVER_FAILED", handler: SECOND_PASSWORD_CHECK_OVER_FAILED_HANDLER)
----@overload fun(self: self, eventName: "SECOND_PASSWORD_CLEAR_COMPLETED", handler: SECOND_PASSWORD_CLEAR_COMPLETED_HANDLER)
----@overload fun(self: self, eventName: "SECOND_PASSWORD_CREATION_COMPLETED", handler: SECOND_PASSWORD_CREATION_COMPLETED_HANDLER)
 ---@overload fun(self: self, eventName: "SELECT_SQUAD_LIST", handler: SELECT_SQUAD_LIST_HANDLER)
 ---@overload fun(self: self, eventName: "SELECTED_INSTANCE_DIFFICULT", handler: SELECTED_INSTANCE_DIFFICULT_HANDLER)
 ---@overload fun(self: self, eventName: "SELL_SPECIALTY_CONTENT_INFO", handler: SELL_SPECIALTY_CONTENT_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "SELL_SPECIALTY", handler: SELL_SPECIALTY_HANDLER)
 ---@overload fun(self: self, eventName: "SET_DEFAULT_EXPAND_RATIO", handler: SET_DEFAULT_EXPAND_RATIO_HANDLER)
 ---@overload fun(self: self, eventName: "SET_EFFECT_ICON_VISIBLE", handler: SET_EFFECT_ICON_VISIBLE_HANDLER)
----@overload fun(self: self, eventName: "SET_LOGIN_BROWSER_URL", handler: SET_LOGIN_BROWSER_URL_HANDLER)
 ---@overload fun(self: self, eventName: "SET_OVERHEAD_MARK", handler: SET_OVERHEAD_MARK_HANDLER)
 ---@overload fun(self: self, eventName: "SET_PING_MODE", handler: SET_PING_MODE_HANDLER)
 ---@overload fun(self: self, eventName: "SET_REBUILD_HOUSE_CAMERA_MODE", handler: SET_REBUILD_HOUSE_CAMERA_MODE_HANDLER)

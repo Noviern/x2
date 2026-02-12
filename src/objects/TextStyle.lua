@@ -31,12 +31,15 @@ FTK_IMAGETEXT = 2      -- objects/TextStyle FONT_KIND
 ---| `FTK_GENERAL`
 ---| `FTK_IMAGETEXT`
 
----objects/TextStyle
+---[TextStyle](lua://TextStyle)
+---
+---A `TextStyle` defines the visual appearance of text within a widget,
+---including font, size, color, alignment, outline, shadow, ellipsis,
+---and snapping behavior. It can measure text width and line height, and
+---supports special font types for image-based text rendering.
+---
 ---@class TextStyle: Uiobject
 local TextStyle = {}
-
----objects/TextStyle
----@class textstyle: TextStyle
 
 ---Retrieves the line height of the TextStyle.
 ---@return number lineHeight The height of a text line.

@@ -2,13 +2,13 @@
 
 MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/Roadmap
 
----objects/RoadMap
+---[RoadMap](lua://RoadMap)
+---
+---A `RoadMap` widget represents a minimap, capable of showing NPCs, pings, and
+---other map-related elements.
+---
 ---@class RoadMap: Widget, Map
 local RoadMap = {}
-
----objects/RoadMap
----@class roadmap: RoadMap
-
 ---Initializes map data. Requires `Map:ReloadAllInfo`.
 function RoadMap:InitMapData() end
 

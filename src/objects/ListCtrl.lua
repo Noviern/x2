@@ -12,14 +12,22 @@ LCCIT_WINDOW = 2  -- objects/ListCtrl LIST_CTRL_COLUMN_ITEM_TYPE
 ---| `LCCIT_TEXTBOX`
 ---| `LCCIT_WINDOW`
 
----objects/ListCtrl
+---[ListCtrl](lua://ListCtrl)
+---
+---A `ListCtrl` widget is table-like that supports multiple columns and rows.
+---Each column can have different item types (button, string, textbox, window),
+---overed/selected images, and optional event windows. Supports selection,
+---double-click handling, and dynamic resizing of columns and rows.
+---
+---**Dependencies**:
+--- - [Button](lua://Button) used for the `column` and `items` field.
+--- - [Window](lua://Window) used for the `items` field.
+--- - [Textbox](lua://Textbox) used for the `items` field.
+---
 ---@class ListCtrl: Widget
----@field column Button[]|nil
----@field items ListCtrlItem[]|nil
+---@field column Button[]|nil An array of buttons representing columns. Automatically populated by `ListCtrl:InsertColumn`.
+---@field items ListCtrlItem[]|nil An array of row data. Each row can contain sub-items and optional event windows. Populated by `ListCtrl:InsertRows`.
 local ListCtrl = {}
-
----objects/ListCtrl
----@class listctrl: ListCtrl
 
 ---Clears the current selection in the ListCtrl.
 function ListCtrl:ClearSelection() end

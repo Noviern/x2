@@ -6,12 +6,19 @@ UI_BUTTON_MAX = 4         -- objects/CooldownConstantButton
 UI_BUTTON_NORMAL = 0      -- objects/CooldownConstantButton UI_BUTTON_STATE
 UI_BUTTON_PUSHED = 2      -- objects/CooldownConstantButton UI_BUTTON_STATE
 
----objects/CooldownConstantButton
+---[CooldownConstantButton](lua://CooldownConstantButton)
+---
+---@FIXME:
+---**Warning:** Most methods for this class are broken.
+---
+---A `CooldownConstantButton` widget is specialized and binds its cooldown
+---state to a fixed game entity such as an item or skill. Extends
+---CooldownButton by associating cooldown timing with predefined item types,
+---inventory slots, or skill identifiers, allowing the button to automatically
+---reflect the cooldown of the bound entity.
+---
 ---@class CooldownConstantButton: CooldownButton
 local CooldownConstantButton = {}
-
----objects/CooldownConstantButton
----@class cooldownconstantbutton: CooldownConstantButton
 
 ---@FIXME: Broken?
 ---Sets the item type for the `CooldownConstantButton`.

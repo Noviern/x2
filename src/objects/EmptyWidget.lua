@@ -1,11 +1,16 @@
 ---@meta _
 
----objects/EmptyWidget
+---[EmptyWidget](lua://EmptyWidget)
+---
+---**Warning:** `SetDrawBorder` is currently broken.
+---
+---A `EmptyWidget` widget is generic and minimal, primarily used as a container
+---or placeholder. Supports optional border drawing with configurable color
+---and opacity. Intended for layouts, anchors, or as a base for other composite
+---widgets.
+---
 ---@class EmptyWidget: Widget
 local EmptyWidget = {}
-
----objects/EmptyWidget
----@class emptywidget: EmptyWidget
 
 ---@FIXME: Not sure if this works.
 ---Sets whether to draw the border for the EmptyWidget and specifies its color.

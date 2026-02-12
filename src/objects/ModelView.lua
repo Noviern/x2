@@ -1,11 +1,16 @@
 ---@meta _
 
----objects/ModelView
+---[ModelView](lua://ModelView)
+---
+---A `ModelView` widget is a 3D model viewer that allows displaying,
+---customizing, and interacting with unit or character models. Supports
+---rotating, zooming, camera adjustments, equipping items, beauty shop
+---customization, facial parameters, animations, and color adjustments.
+---Customization features include hair, eyes, eyebrows, lips, scars, tattoos,
+---horns, tail, and clothing, with support for two-tone hair and item dyeing.
+---
 ---@class ModelView: Widget
 local ModelView = {}
-
----objects/ModelView
----@class modelview: ModelView
 
 ---Adds rotation `angle` to the ModelView. positive is left negative is right.
 ---@param angle number in degrees.

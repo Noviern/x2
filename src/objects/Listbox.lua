@@ -1,15 +1,22 @@
 ---@meta _
 
----objects/Listbox
+---[Listbox](lua://Listbox)
+---
+---A `Listbox` widget is scrollable and can display items with optional
+---hierarchical structure (tree items), support for selection, folding, and
+---custom styles. Items can have custom colors, text, and textures, and the
+---list supports scrolling, insets, and tooltips.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `itemStyle`, `itemStyleSub`, `childStyle`, and `childStyleSub` fields.
+--- - [ImageDrawable](lua://ImageDrawable) used for the methods `CreateClosedImageDrawable`, `CreateOpenedImageDrawable`, and `CreateSeparatorImageDrawable`.
+---
 ---@class Listbox: Widget
----@field childStyle TextStyle created by Listbox:UseChildStyle(true)
----@field childStyleSub TextStyle created by Listbox:UseChildStyle(true)
----@field itemStyle TextStyle
----@field itemStyleSub TextStyle
+---@field childStyle TextStyle Style applied to child items when `Listbox:UseChildStyle(true)` is enabled.
+---@field childStyleSub TextStyle Secondary style for child items when `Listbox:UseChildStyle(true)` is enabled.
+---@field itemStyle TextStyle Default style applied to items in the list.
+---@field itemStyleSub TextStyle Secondary style applied to items in the list (for alternate states or sub-items).
 local Listbox = {}
-
----objects/Listbox
----@class listbox: Listbox
 
 ---Appends an item to the Listbox with the specified key, value, and optional
 ---color.

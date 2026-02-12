@@ -1,13 +1,19 @@
 ---@meta _
 
----objects/Window
+---[Window](lua://Window)
+---
+---A `Window` widget represents a UI window with optional modal behavior, title
+---text and styling, and layer management. It supports closing via the Escape
+---key, custom title insets, and modal backgrounds.
+---
+---**Dependencies**:
+--- - [EmptyWidget](lua://EmptyWidget) used for the `modalBackgroundWindow` field.
+--- - [TextStyle](lua://TextStyle) used for the `titleStyle` field.
+---
 ---@class Window: Widget
----@field modalBackgroundWindow EmptyWidget
----@field titleStyle TextStyle
+---@field modalBackgroundWindow EmptyWidget Not needed for the method `SetWindowModal`.
+---@field titleStyle TextStyle The text style applied to the window's title.
 local Window = {}
-
----objects/Window
----@class window: Window
 
 ---Enables or disables closing the Window when the Escape key is pressed.
 ---@param escape boolean `true` to enable close on Escape, `false` to disable. (default: `false`)

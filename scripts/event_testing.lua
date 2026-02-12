@@ -32,7 +32,6 @@ end
 -- SetEventHandler("SHOW_ROADMAP_TOOLTIP")
 -- SetEventHandler("DRAW_DOODAD_TOOLTIP")
 -- SetEventHandler("DRAW_DOODAD_SIGN_TAG")
-SetEventHandler("ACHIEVEMENT_UPDATE")
 SetEventHandler("ADD_GIVEN_QUEST_INFO")
 SetEventHandler("BAG_ITEM_CONFIRMED")
 -- SetEventHandler("COMBAT_TEXT_SYNERGY")

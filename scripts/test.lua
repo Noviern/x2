@@ -400,35 +400,11 @@ local ChatLog = ADDON.ChatLog
 
 ---Logs a message to the chat under `CMF_SYSTEM`.
 ---@param logMessage any The message to log.
+---@param ... any
 ---@diagnostic disable-next-line: duplicate-set-field
-function ADDON:ChatLog(logMessage)
-  ChatLog(ADDON, tostring(logMessage))
+function ADDON:ChatLog(logMessage, ...)
+  ChatLog(ADDON, tostring(logMessage):format(...))
 end
-
-
---------------------------------------------------------------------------------
-
----Checkbutton
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportObject(OBJECT.CheckButton)
--- ADDON:ImportObject(OBJECT.ImageDrawable)
-
--- local btn = UIParent:CreateWidget("checkbutton", "btn", "UIParent")
--- btn:SetText("test")
--- btn:SetExtent(100, 100)
--- btn:Show(true)
-
--- local checkedTable = btn:CreateDrawable(TEXTURE_PATH.BOOKMARK, "bookmark_sel", "overlay")
--- checkedTable:AddAnchor("CENTER", btn, 0, 0)
--- btn:SetCheckedBackground(checkedTable)
-
--- btn:SetChecked(true)
-
--- local disabledCheckedTable = btn:CreateDrawable(TEXTURE_PATH.BOOKMARK, "bookmark_dis", "overlay")
--- disabledCheckedTable:AddAnchor("CENTER", btn, 0, 0)
--- btn:SetDisabledCheckedBackground(disabledCheckedTable)
-
--- ADDON:ChatLog(btn:GetButtonState())
 
 --------------------------------------------------------------------------------
 
@@ -466,35 +442,6 @@ end
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.ImageDrawable)
-
--- local w = widgetassert(UIParent:CreateWidget("window", "w", "UIParent"))
--- w:AddAnchor("CENTER", 0, 0)
--- w:SetExtent(100, 100)
--- w:Show(true)
-
--- -- local stateIcon = w:CreateDrawable(BUTTON_TEXTURE_PATH.MAP, "icon_resident", "artwork")
--- local stateIcon = w:CreateImageDrawable("game/ui/icon/system_factions/icon_crescent_throne.dds", "overlay")
--- -- local stateIcon = w:CreateImageDrawable("game/ui/icon/system_factions/icon_crescent_throne.dds", "background")
--- ---@cast stateIcon ImageDrawable
--- stateIcon:AddAnchor("CENTER", w, 0, 0)
--- stateIcon:SetExtent(100, 100)
--- stateIcon:SetSnap(false)
--- stateIcon:SetVisible(false)
--- stateIcon:SetSRGB(true)
--- local a = stateIcon:SetTgaTexture("game/ui/map/image_map.tga")
--- ADDON:ChatLog(tostring(a))
--- stateIcon:SetVisible(true)
--- -- stateIcon:SetSnap(true)
--- ADDON:ChatLogTable({ stateIcon:GetEffectiveOffset() })
--- ADDON:ChatLogTable({ stateIcon:GetOffset() })
--- ADDON:ChatLogTable({ stateIcon:GetEffectiveExtent() })
--- ADDON:ChatLogTable({ stateIcon:GetExtent() })
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.ThreeColorDrawable)
-
 -- local w = widgetassert(UIParent:CreateWidget("window", "w", "UIParent"))
 -- w:AddAnchor("CENTER", 0, 0)
 -- w:SetExtent(100, 100)
@@ -513,31 +460,10 @@ end
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportAPI(API.X2Option)
-
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(1))
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(16))
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(36))
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(37))
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(38))
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(70))
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(105))
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(114))
-
--- ADDON:ChatLogTable(X2Option:GetOptionInfo(OIT_OPTION_CHARACTER_PRIVACY_STATUS))
--- ADDON:ChatLog(tostring(X2Option:GetOptionItemValue(OIT_OPTION_CHARACTER_PRIVACY_STATUS)))
--- X2Option:SetItemFloatValue(OIT_OPTION_CHARACTER_PRIVACY_STATUS, 1)
--- ADDON:ChatLog(tostring(X2Option:GetOptionItemValue(OIT_OPTION_CHARACTER_PRIVACY_STATUS)))
+-- ADDON:ChatLogTable(X2Craft:GetCraftMaterialInfo(85, 8469))
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportAPI(API.X2Craft)
--- ADDON:ChatLogTable(X2Craft:GetCraftMaterialInfo(85))
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportAPI(API.X2CombatResource)
--- ADDON:ImportAPI(API.X2Ability)
 -- ADDON:ChatLog(tostring(X2CombatResource:CheckCombatResourceMaxPointByGroupType(ABILITY_GENERAL)))
 -- ADDON:ChatLog(tostring(X2CombatResource:CheckCombatResourceMaxPointByGroupType(1)))
 -- ADDON:ChatLog(tostring(X2CombatResource:CheckCombatResourceMaxPointByGroupType(2)))
@@ -555,546 +481,23 @@ end
 -- ADDON:ChatLog(tostring(X2CombatResource:CheckCombatResourceMaxPointByGroupType(14)))
 -- ADDON:ChatLogTable(X2CombatResource:GetCombatResourceInfo())
 
---------------------------------------------------------------------------------
+-- local test = UIParent:CreateWidget("emptywidget", "testingCheckCombatResourceMaxPointByGroupType", "UIParent")
+-- test:Show(true)
 
--- ADDON:ImportObject(OBJECT.Tab)
--- local tab = UIParent:CreateWidget("tab", "tab", "UIParent")
--- tab:SetExtent(100, 100)
--- tab:AddSimpleTab("test")
--- tab:AddSimpleTab("a")
--- tab:AddSimpleTab("b")
--- tab:SetGap(10)
--- tab:SetOffset(10)
--- tab:AddSimpleTab("b")
--- tab:AlignTabButtons()
--- tab:AddAnchor("CENTER", 0, 0)
--- tab:Show(true)
+-- local groupType = X2CombatResource:GetCombatResourceInfo()
 
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Slot)
--- ADDON:ImportAPI(API.X2Equipment)
--- ADDON:ImportAPI(API.X2Ability)
--- local slot = UIParent:CreateWidget("slot", "slot", "UIParent")
--- slot:SetExtent(100, 100)
--- slot:AddAnchor("TOPLEFT", 0, 0)
-
--- slot:EstablishItem(7992, 2)
--- slot:EstablishSkillAlert(21, 2000, 2000)
--- slot:EstablishSkillSlot(ISLOT_ORIGIN_SKILL_VIEW, 36468)
--- slot:EstablishSkillSlot(ISLOT_ACTION, 36468)
--- slot:EstablishSlot(ISLOT_SKILL_ALERT, 242)
-
--- slot:EstablishVirtualSlot(ISLOT_BAG, 1, 1)
--- slot:RegisterForClicks("RightButton")
--- slot:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---   slot:EstablishVirtualSlot(ISLOT_BAG, 1, 1)
---   ADDON:ChatLog("test")
--- end)
-
-
--- slot:Show(true)
--- slot:Show(false, 3000)
--- ADDON:ChatLog("GetBindedType " .. slot:GetBindedType())
--- ADDON:ChatLogTable({ slot:GetExtraInfo() })
--- local a = slot:GetItemLevelRequirment()
-
--- if a then
---   ADDON:ChatLog(tostring(a))
--- end
-
--- ADDON:ChatLog(slot:GetHotKey(ISLOT_ACTION, 3))
-
--- ADDON:ImportAPI(API.X2Player)
--- -- ADDON:ChatLogTable(X2Player:GetAppellations(APPELATION_ROUTE_TYPE_ACHIEVEMENTS, "ever", 1))
--- -- ADDON:ChatLogTable(X2Player:GetAppellationStampInfo(99))
-
--- ADDON:ImportObject(OBJECT.Window)
--- ADDON:ImportObject(OBJECT.Button)
-
--- local window = UIParent:CreateWidget("window", "w", "UIParent")
--- local btn = UIParent:CreateWidget("button", "b", "UIParent")
--- -- btn:SetStyle("text_default")
--- btn:SetExtent(100, 100)
--- btn:SetText("asdf")
--- btn:SetSounds("quest_directing_mode")
--- btn:AddAnchor("LEFT", "UIParent", 0, 0)
--- btn:SetMoveAnimation("top", 100, .5, 2)
--- btn:Show(true)
--- -- btn:TriggerMoveAnimation(true)
-
--- btn:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---   window:Show(not window:IsVisible())
---   btn:SetText(tostring(window:IsVisible()))
--- end)
-
--- btn:CreateChildWidget("button", "test", 0, true)
-
--- slot:SetHandler("OnUpdate", function (self, frameTime)
---   btn:SetText(tostring(frameTime))
---   slot:TriggerMoveAnimation(true)
--- end)
-
--- window:SetSounds("ability_change")
--- window:SetSounds("achievement")
--- window:SetSounds("auction")
--- window:SetSounds("auction_put_up")
--- window:SetSounds("bag")
--- window:SetSounds("bank")
--- window:SetSounds("battlefield_entrance")
--- window:SetSounds("character_info")
--- window:SetSounds("coffer")
--- window:SetSounds("common_farm_info")
--- window:SetSounds("community")
--- window:SetSounds("composition_score")
--- window:SetSounds("config")
--- window:SetSounds("cosmetic_details")
--- window:SetSounds("craft")
--- window:SetSounds("crime_records")
--- window:SetSounds("default_r") -- i dont think this has a sound?
--- window:SetSounds("dialog_common")
--- window:SetSounds("dialog_enter_beautyshop")
--- window:SetSounds("dialog_gender_transfer")
--- window:SetSounds("dyeing")
--- window:SetSounds("edit_box")
--- window:SetSounds("item_enchant")
--- window:SetSounds("loot")
--- window:SetSounds("mail")
--- window:SetSounds("mail_read")
--- window:SetSounds("mail_write")
--- window:SetSounds("my_farm_info")
--- window:SetSounds("option")
--- window:SetSounds("pet_info")
--- window:SetSounds("portal")
--- window:SetSounds("prelim_equipment")
--- window:SetSounds("quest_context_list")
--- window:SetSounds("quest_directing_mode")
--- window:SetSounds("raid_team")
--- window:SetSounds("ranking")
--- window:SetSounds("ranking_reward")
--- window:SetSounds("skill_book")
--- window:SetSounds("store")
--- window:SetSounds("store_drain")
--- window:SetSounds("submenu")
--- window:SetSounds("trade")
--- window:SetSounds("tutorial")
--- window:SetSounds("ucc")
--- window:SetSounds("wash")
--- window:SetSounds("web_messenger")
--- window:SetSounds("web_note")
--- window:SetSounds("web_play_diary")
--- window:SetSounds("web_wiki")
--- window:SetSounds("world_map")
--- window:Show(true)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Avi)
--- local avi = UIParent:CreateWidget("avi", "test", "UIParent")
--- avi:SetExtent(640, 360)
--- avi:AddAnchor("CENTER", 0, 0)
--- avi:Show(true)
--- avi:SetAviNum(7)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Webbrowser)
--- local wb = UIParent:CreateWidget("webbrowser", "wb", "UIParent")
--- wb:SetExtent(1000, 1000)
--- wb:AddAnchor("CENTER", 0, 0)
--- wb:Show(true)
-
--- wb:SetHandler("OnEvent", function (self, event, ...)
---   ADDON:ChatLog("a " .. event)
---   wb:SetZoomLevel(2)
--- end)
-
--- wb:RegisterEvent("MOUSE_DOWN")
--- wb:RegisterEvent("MOUSE_CLICK")
--- wb:RegisterEvent("MOUSE_UP")
-
--- wb:MouseUp("LeftButton")
--- wb:MouseDown("LeftButton")
-
--- wb:LoadBlankPage()
--- wb:SetZoomLevel(2)
--- wb:RequestExternalPage("https://wiki.archerage.to/")
--- wb:SetFocus()
-
--- wb:SetHandler("OnMouseDown", function (self, mouseButton)
---   ADDON:ChatLog("down")
--- end)
-
--- wb:SetHandler("OnMouseUp", function (self, mouseButton)
---   ADDON:ChatLog("up")
+-- test:SetHandler("OnUpdate", function (self, frameTime)
+--   for i = 1, 3 do
+--     if groupType[i] ~= nil then
+--       local isUpdate = X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType[i].groupType)
+--       if isUpdate == true then
+--         ADDON:ChatLog("max")
+--       end
+--     end
+--   end
 -- end)
 
 --------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Tab)
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportObject(OBJECT.ChatWindow)
--- ADDON:ImportObject(OBJECT.Textbox)
--- local chat = UIParent:CreateWidget("chatwindow", "chat", "UIParent")
--- chat:SetExtent(500, 500)
--- chat:AddAnchor("CENTER", 0, 0)
--- chat:Show(true)
-
--- -- chat:SetTabAreaInset(1, 1, 1, 1)
--- -- chat:SetTabAreaHeight(100)
--- -- chat:SetNotifyBlinkingFreq(50)
--- -- chat:SetMinResizingExtent(345, 160)
--- -- chat:SetMaxResizingExtent(650, 620)
--- -- chat:UseResizing(true)
--- -- chat:SetContentOffset(100, 100, 100, 100)
--- -- chat:SetSlideTimeInDragging(1500)
-
--- chat:SetChatWindowId(1)
--- chat:SetMinTabWidth(200)
--- -- chat:UseSlidingButton(false)
--- chat:SetTabButtonAlpha(.5, .2)
--- -- chat:SetCaretOffset(0, 100)
--- chat:SetLeftLineOffset(200)
--- chat:SetRightLineOffset(200)
--- chat:SetMaxNotifyTime(3000)
--- chat:SetNotifyBlinkingFreq(100)
-
--- ADDON:ChatLog(chat:GetUrlButton():GetObjectType())
--- ADDON:ChatLog(chat:GetImeToggleButton():GetObjectType())
--- ADDON:ChatLog(chat:GetAddButton():GetObjectType())
-
--- local textbox = UIParent:CreateWidget("textbox", "exampleTextbox", "UIParent")
--- textbox:SetText("Test")
--- chat:AddTab("Test", textbox)
-
--- local textbox = UIParent:CreateWidget("textbox", "exampleTextbox", "UIParent")
--- textbox:SetText("Test 2")
--- chat:AddTab("Test 2", textbox)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Combobox)
--- ADDON:ImportObject(OBJECT.Listbox)
--- ADDON:ImportObject(OBJECT.TextStyle)
-
--- local box = UIParent:CreateWidget("combobox", "box", "UIParent")
--- box:SetExtent(100, 30)
--- box:AddAnchor("CENTER", 0, 0)
--- box:Show(true)
--- box:SetEditable(true)
-
--- box.dropdown:SetHandler("OnTooltip", function (self, ...)
---   ADDON:ChatLog("asdf")
---   ADDON:ChatLog(tostring(#{ ... }))
--- end)
-
--- box:SetAutocomplete("item", "auctionable")
-
--- box:Insert({
---   {
---     text  = "test",
---     value = 5
---   }
--- })
-
--- local list = UIParent:CreateWidget("listbox", "list", "UIParent")
--- list:SetExtent(100, 100)
--- list:AddAnchor("CENTER", 0, 0)
--- list:Show(true)
--- -- list:SetEditable(true)
-
--- list:AppendItem("Item", 1, 1, 0, 0, 1)
--- list:AppendItem("Item", 1, 1, 0, 0, 1)
--- list:AppendItem("Item", 1, 1, 0, 0, 1)
--- list:AppendItem("Item", 1, 1, 0, 0, 1)
-
--- list:SetHandler("OnTooltip", function (self, ...)
---   ADDON:ChatLog("asdf")
---   ADDON:ChatLog(tostring(#{ ... }))
--- end)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.EmptyWidget)
--- ADDON:ImportObject(OBJECT.ImageDrawable)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
--- ADDON:ImportObject(OBJECT.TextDrawable)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
--- ADDON:ImportObject(OBJECT.ThreePartDrawable)
--- ADDON:ImportObject(OBJECT.IconDrawable)
--- local window = UIParent:CreateWidget("emptywidget", "a", "UIParent")
--- window:Show(true)
-
--- local img = window:CreateImageDrawable(TEXTURE_PATH.ACHIEVEMENT, "artwork")
--- local img = window:CreateImageDrawable("game/ui/icon/charge_hero02.dds", "artwork")
--- local img = window:CreateImageDrawable(TEXTURE_PATH.TIMER, "artwork")
--- img:SetExtent(1000, 1000)
--- img:AddAnchor("CENTER", 0, 0)
--- img:Show(false)
--- img:SetVisible(true)
--- -- img:SetRotation(45)
--- img:SetVisibleForString("1", "100", "50")
--- img:SetTiling(true)
-
--- local clr = window:CreateColorDrawable(1, 0, 0, 1, "artwork")
--- clr:SetExtent(100, 100)
--- clr:AddAnchor("CENTER", 0, 0)
--- clr:SetRotation(45)
--- clr:SetVisibleForString("1", "100", "50")
-
--- local txt = window:CreateTextDrawable(FONT_PATH.DEFAULT, FONT_SIZE.DEFAULT, "artwork")
--- txt:SetText("test")
--- txt:SetExtent(100, 100)
--- txt:AddAnchor("CENTER", 0, 0)
--- txt:SetRotation(45)
--- txt:SetVisibleForString("1", "100", "50")
-
--- local npd = window:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
--- npd:SetTextureInfo("action_slot_default_bg", "dimmed")
--- npd:SetExtent(100, 100)
--- npd:AddAnchor("CENTER", 0, 0)
--- npd:SetRotation(45)
--- npd:SetVisibleForString("1", "100", "50")
-
--- local tpd = window:CreateThreePartDrawable(TEXTURE_PATH.HUD, "background")
--- tpd:SetTextureInfo("hp_bar_deco", "default")
--- tpd:SetExtent(100, 100)
--- tpd:AddAnchor("CENTER", 0, 0)
--- tpd:SetRotation(45)
--- tpd:SetVisibleForString("1", "100", "50")
-
--- local tpd = window:CreateIconDrawable("background")
--- -- tpd:AddTexture("game/ui/icon/charge_hero02.dds")
--- tpd:AddTexture("Addon/AAAD/temp/randombox_bg.dds")
--- tpd:SetExtent(100, 100)
--- tpd:AddAnchor("CENTER", 0, 0)
--- tpd:SetRotation(45)
--- tpd:SetVisibleForString("1", "100", "50")
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.GameTooltip)
--- ADDON:ImportObject(OBJECT.TextStyle)
--- ADDON:ImportAPI(API.X2Unit)
--- local gtt = UIParent:CreateWidget("gametooltip", "g", "UIParent")
--- gtt:SetExtent(100, 100)
--- gtt:AddAnchor("CENTER", 0, 0)
--- gtt:Show(true)
-
--- -- gtt:SetTooltipData("player")
--- gtt:SetTooltipData(X2Unit:GetUnitId("target"))
--- gtt:ClearLines()
--- gtt:AddLine("test\test", FONT_PATH.DEFAULT, FONT_SIZE.DEFAULT, "left", ALIGN_BOTTOM, 0)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Grid)
--- ADDON:ImportObject(OBJECT.Label)
--- local grid = UIParent:CreateWidget("grid", "g", "UIParent")
--- grid:SetExtent(200, 300)
--- grid:AddAnchor("CENTER", 0, 0)
--- grid:Show(true)
-
--- grid:SetCurrentLine(true)
--- grid:SetCurrentColor(1, 0, 0, .5)
--- grid:SetDefaultColWidth(10)
--- grid:SetDefaultRowHeight(20)
--- grid:SetRowCount(10)
--- grid:SetColCount(10)
--- grid:SetColWidth(20, 1)
--- grid:SetLineColor(1, 1, 0, 1)
--- -- grid:SetDrawLineType("dotted")
--- grid:SetSelectedLine(true)
--- grid:SetLineBackGround(true)
--- -- grid:SetColTexture(TEXTURE_PATH.ACHIEVEMENT)
--- grid:SetRowTexture(TEXTURE_PATH.ACHIEVEMENT_RANK)
--- grid:SetDrawStartNumber(5)
-
--- local label = grid:CreateChildWidget("label", "testbtn", 0, true)
--- label:SetText("Archerage.to")
--- label:SetExtent(50, 50)
--- local label2 = grid:CreateChildWidget("label", "testbtan", 0, true)
--- label2:SetText("as.to")
--- label2:SetExtent(50, 50)
--- grid:SetItem(label, 2, 11, true, 10, false)
--- grid:SetItem(label2, 11, 1, true, 10, false)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Slider)
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
-
--- local slider = UIParent:CreateWidget("slider", "s", "UIParent")
--- slider:SetExtent(100, 20)
--- slider:AddAnchor("TOPLEFT", 0, 0)
--- slider:Show(true)
-
--- local thumb = slider:CreateChildWidget("button", "thumb", 0, true)
--- thumb.bg = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
--- thumb.bg:SetTextureInfo("thumb_df")
--- thumb.bg:AddAnchor("TOPLEFT", thumb, 0, 0)
--- thumb.bg:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
--- slider:SetThumbButtonWidget(thumb)
-
--- ADDON:ChatLog(tostring(slider:GetThumbButtonWidget()))
--- ADDON:ChatLog(tostring(slider:GetThumbDrawable()))
-
--- ADDON:ChatLog(tostring(slider.thumb.bg))
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Folder)
--- ADDON:ImportObject(OBJECT.Textbox)
--- ADDON:ImportObject(OBJECT.TextStyle)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
-
--- local folder = UIParent:CreateWidget("folder", "f", "UIParent")
--- -- folder:SetExtent(400, 400)
--- folder:SetWidth(400)
--- folder:SetExtendLength(300)
--- folder:FixedCloseFolder()
--- -- folder:CloseFolder()
--- folder:AddAnchor("CENTER", 0, 0)
--- folder:Show(true)
-
--- folder:SetTitleText("ArcheRage.to")
--- folder:SetInset(0, 0, 0, 0)
--- folder:SetTitleHeight(100)
-
--- local details = folder:CreateChildWidget("textbox", "details", 0, true)
--- details.style:SetAlign(ALIGN_TOP_LEFT)
--- -- details:SetExtent(100, 100)
--- details:SetText("The first ArcheAge Private Server")
-
--- folder:SetChildWidget(details)
--- -- folder:SetAnimateStep(3)
--- -- folder:UseAnimation(true)
-
--- local bg = folder:CreateColorDrawable(1, 0, 0, .5, "background")
--- bg:AddAnchor("TOPLEFT", folder, 0, 0)
--- bg:AddAnchor("BOTTOMRIGHT", folder, 0, 0)
-
--- local bg2 = details:CreateColorDrawable(0, 0, 1, 1, "background")
--- bg2:AddAnchor("TOPLEFT", details, 0, 0)
--- bg2:AddAnchor("BOTTOMRIGHT", details, 0, 0)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.EmptyWidget)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
-
--- local emptywidget = UIParent:CreateWidget("emptywidget", "a", "UIParent")
--- emptywidget:SetExtent(100, 100)
--- emptywidget:AddAnchor("CENTER", 0, 0)
--- emptywidget:Show(true)
-
--- local npd = emptywidget:CreateDrawable(TEXTURE_PATH.DEFAULT, "btn_normal", "background")
--- npd:AddAnchor("TOPLEFT", emptywidget, 0, 0)
--- npd:AddAnchor("BOTTOMRIGHT", emptywidget, 0, 0)
-
--- emptywidget.drawable = npd
-
--- ADDON:ChatLog(tostring(emptywidget))
--- emptywidget:SetHandler("OnEnter", function (self)
---   emptywidget:SetDrawBorder(true, 1, 0, 1, 1)
---   ADDON:ChatLog(tostring(emptywidget))
--- end)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.CooldownInventoryButton)
--- ADDON:ImportObject(OBJECT.Slot)
-
--- local btn = UIParent:CreateWidget("cooldowninventorybutton", "c", "UIParent")
--- btn:SetExtent(100, 100)
--- btn:AddAnchor("CENTER", 0, 0)
--- btn:SetText("Test")
--- btn:Show(true)
-
--- -- btn:SetItem(7992)
--- -- btn:SetSkill(14495)
--- -- btn:SetItemSlot(1, ISLOT_BAG)
--- btn:SetBagItemSlot(0)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Button)
-
--- local btn = UIParent:CreateWidget("button", "b", "UIParent")
--- btn:SetExtent(100, 100)
--- btn:SetText("asdf")
--- btn:SetStyle("text_default")
--- btn:Show(true)
-
--- btn:UseDynamicContentState(false)
--- btn:UseDynamicDrawableState("background", false)
--- btn:RemoveAllDrawables("background")
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.WorldMap)
--- ADDON:ImportObject(OBJECT.EffectDrawable)
--- ADDON:ImportAPI(API.X2Map)
-
--- local map = UIParent:CreateWidget("worldmap", "wm", "UIParent")
--- map:SetExtent(928, 556)
--- map:AddAnchor("TOPRIGHT", 0, 0)
--- map:InitMapData(928, 556, "ui/map/image_map.tga", BUTTON_TEXTURE_PATH.MAP)
--- map:Show(true)
-
--- local portalDrawable = map:CreateEffectDrawableByKey(TEXTURE_PATH.MAP_ICON, "portal", "overlay")
--- portalDrawable:SetVisible(false)
--- portalDrawable:SetEffectPriority(1, "alpha", 0.5, 0.4)
--- portalDrawable:SetMoveRepeatCount(0)
--- portalDrawable:SetMoveRotate(false)
--- portalDrawable:SetMoveEffectType(1, "right", 0, 0, 0.4, 0.4)
--- portalDrawable:SetMoveEffectEdge(1, 0.3, 0.5)
--- portalDrawable:SetMoveEffectType(2, "right", 0, 0, 0.4, 0.4)
--- portalDrawable:SetMoveEffectEdge(2, 0.5, 0.3)
--- map:SetPortalDrawable(portalDrawable)
-
--- map:ShowPortal(133, 1000, 1000, 0)
-
--- -- ADDON:ChatLogTable(map:GetClimateInfo(107))
-
--- -- 0 is current zone
--- -- ADDON:ChatLogTable(X2Map:GetZoneStateInfoByZoneId(0))
-
--- local tempMainQuestReadyCoord = {
---   216,
---   24,
---   24,
---   24
--- }
--- map:SetTempNotifyCoord(true, tempMainQuestReadyCoord)
--- local tempNotifyColor = {
---   255,
---   255,
---   255,
---   .5
--- }
--- map:SetTempNotifyColor(tempNotifyColor)
--- ADDON:ImportObject(OBJECT.Button)
-
--- local btn = UIParent:CreateWidget("button", "b", "UIParent")
--- local num = -1
--- btn:SetStyle("text_default")
--- btn:Show(true)
--- btn:SetText(tostring(num))
-
--- btn:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---   num = num + 1
---   btn:SetText(tostring(num))
---   ADDON:ChatLog(tostring(num) .. " " .. X2Map:GetZoneStateInfoByZoneId(num).zoneName)
--- end)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.EmptyWidget)
--- ADDON:ImportObject(OBJECT.DynamicList)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
 
 -- local dl = UIParent:CreateWidget("dynamiclist", "d", "UIParent")
 
@@ -1102,8 +505,15 @@ end
 --   ADDON:ChatLog("OnDynamicListUpdatedView")
 -- end)
 
+-- dl:AddAnchor("CENTER", 0, 0)
 -- dl:SetExtent(500, 500)
--- -- dl:Show(true)
+-- dl:Show(true)
+
+-- local overedImage = dl:CreateOveredImage("overlay")
+-- overedImage:SetTexture(TEXTURE_PATH.DEFAULT)
+-- overedImage:SetTextureInfo("slot_ov")
+
+-- dl:EnableChildTouch(true)
 
 -- local bg = dl:CreateColorDrawable(1, 0, 0, .5, "background")
 -- bg:AddAnchor("TOPLEFT", dl, 0, 0)
@@ -1126,13 +536,31 @@ end
 -- local function mainLayoutFunc(subItem, index)
 --   ADDON:ChatLog("mainLayoutFunc " .. index)
 
---   local bg = subItem:CreateColorDrawable(1, 0, 0, .5, "background")
---   bg:AddAnchor("TOPLEFT", subItem, 0, 0)
---   bg:AddAnchor("BOTTOMRIGHT", subItem, 0, 0)
+--   local bg = subItem:CreateColorDrawable(0, 1, 0, .5, "background")
+--   bg:SetExtent(100, 100)
+--   -- bg:AddAnchor("TOPLEFT", subItem, 0, 0)
+--   -- bg:AddAnchor("BOTTOMRIGHT", subItem, 0, 0)
+--   -- bg:AddAnchor()
+--   -- subItem:AddAnchor("CENTER", "UIParent", 0, 0)
+--   -- subItem:AddAnchor("TOP", "UIParent", 0, 0)
+
+--   ADDON:ChatLogTable({ subItem:GetExtent() })
+--   ADDON:ChatLog(subItem:IsVisible())
+--   ADDON:ChatLogTable({subItem:GetOffset()})
 
 --   subItem:SetHandler("OnEnter", function (self)
 --     ADDON:ChatLog("enter")
 --   end)
+
+--   local title = subItem:CreateChildWidget("label", "title", 0, true)
+--   title.style:SetEllipsis(true)
+--   title:SetExtent(50, FONT_SIZE.LARGE)
+--   title.style:SetAlign(ALIGN_LEFT)
+--   title.style:SetFontSize(FONT_SIZE.LARGE)
+--   title:AddAnchor("TOPLEFT", 0, 0)
+--   title:AddAnchor("BOTTOMRIGHT", 0, 0)
+--   title.style:SetColorByKey("middle_title")
+--   subItem.title = title
 -- end
 
 -- ---comment
@@ -1149,6 +577,7 @@ end
 --   bg:AddAnchor("BOTTOMRIGHT", subItem, 0, 0)
 --   frameBg:SetTexture(TEXTURE_PATH.ACHIEVEMENT)
 --   frameBg:SetTextureInfo("achievement_bg_blue")
+--   subItem.title:SetText("teasdfa")
 -- end
 
 -- ---comment
@@ -1156,7 +585,12 @@ end
 -- ---@param index number
 -- local function subLayoutFunc(subItem, index)
 --   ADDON:ChatLog("subLayoutFunc " .. index)
---   local bg = subItem:CreateColorDrawable(1, 0, 0, .5, "background")
+--   subItem:AddAnchor("TOP", "UIParent", 0, 0)
+
+--   ADDON:ChatLogTable({ subItem:GetExtent() })
+--   ADDON:ChatLog(subItem:IsVisible())
+--   ADDON:ChatLogTable({ subItem:GetOffset() })
+--   local bg = subItem:CreateColorDrawable(0, 0, 1, .5, "background")
 --   bg:AddAnchor("TOPLEFT", subItem, 0, 0)
 --   bg:AddAnchor("BOTTOMRIGHT", subItem, 0, 0)
 -- end
@@ -1170,14 +604,13 @@ end
 -- dl:InitBgType(UOT_NINE_PART_DRAWABLE)
 -- dl:InitHeight(viewHeight, mainItemHeight, subItemHeight)
 -- dl:InitCreateWidgetPool() -- this creates the main on dl.content.anchor.main
--- -- dl:SetGaps(5, 5)
--- local overedImage = dl:CreateOveredImage("overlay")
--- overedImage:SetTexture(TEXTURE_PATH.DEFAULT)
--- overedImage:SetTextureInfo("slot_ov")
+-- dl:SetGaps(5, 5)
 
--- dl:InsertData(1, 1, { { key = 1, text = "asd", value = 3 } })
--- dl:InsertData(2, 5, { { key = 2, text = "asd", value = 4 } })
--- dl:InsertData(3, 4, { { key = 3, text = "asd", value = 4 } })
+
+
+-- dl:InsertData(1, 123456, { { key = 1, text = "asd", value = 3 } })
+-- -- dl:InsertData(2, 5, { { key = 2, text = "asd", value = 4 } })
+-- -- dl:InsertData(3, 4, { { key = 3, text = "asd", value = 4 } })
 
 -- -- dl:Toggle(1)
 -- -- dl:ToggleByMainKey(5)
@@ -1189,12 +622,12 @@ end
 -- -- ADDON:ChatLogTable({ dl:GetSelectedItemInfo() })
 -- -- ADDON:ChatLog(dl:GetMainIndex(1))
 -- -- dl:EraseData(2)
--- ADDON:ChatLogTable(dl:GetMainList())
+-- -- ADDON:ChatLogTable(dl:GetMainList())
 -- -- ADDON:ChatLog(dl:MoveHeight(100))
--- ADDON:ChatLog(tostring(dl:GetCurrentHeight()))
--- ADDON:ChatLog(tostring(dl:GetScrollMaxValue()))
+-- -- ADDON:ChatLog(tostring(dl:GetCurrentHeight()))
+-- -- ADDON:ChatLog(tostring(dl:GetScrollMaxValue()))
 
--- -- dl:UpdateView() -- triggers mainDataFun
+-- dl:UpdateView() -- triggers mainDataFun if InsertData
 
 -- -- dl:LoadItemList()
 -- -- dl:MoveIndex(1, 0, true)
@@ -1203,542 +636,37 @@ end
 -- file:write(dump(dl))
 -- file:close()
 
--- ADDON:ImportAPI(API.X2Achievement)
--- ADDON:ChatLogTable(X2Achievement:GetAchievementSubList(3951, AF_COMPLETE))
-
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.X2Editbox)
--- ADDON:ImportAPI(API.X2Util)
-
--- local edit = UIParent:CreateWidget("x2editbox", "d", "UIParent")
--- edit:SetExtent(100, 50)
--- edit:Show(true)
-
--- edit:SetDigit(true)
--- edit:SetInitVal(1000)
--- edit:SetDigitMax(1200)
--- -- edit:SetDigitEmpty(true)
--- -- edit:SetReClickable(false)
-
--- edit:SetHandler("OnTextChanged", function (self)
---   edit:CheckNamePolicy(NRT_CHARACTER)
---   ADDON:ChatLog(edit:GetText()) -- this isnt returning anything?
---   -- edit:CheckNamePolicy(NRT_CHAT_TAB)
--- end)
-
--- edit:SetText("1", true)
-
--- -- edit:SetMaxTextLength(1000000)
--- edit:SetCursorColor(1, 0, 0, 1)
--- ADDON:ChatLog(tostring(edit:MaxTextLength()))
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.DamageDisplay)
--- ADDON:ImportAPI(API.X2Unit)
-
--- local d = UIParent:CreateWidget("damagedisplay", "d", "UIParent")
--- -- d:SetExtent(100, 100)
--- -- d:AddAnchor("CENTER", 0, 0)
--- d:Show(true)
-
--- d:SetText("test")
-
--- d:SetAnimFrameInfo({
---   {
---     w = 1000,
---     h = 1000,
---     x = 100,
---     y = 100,
---     scale = 1.5,
---     timeToNextFrame = 70,
---     alpha = 0.2,
---   },
---   {
---     scale = .5,
---     timeToNextFrame = 30,
---   },
---   {
---     scale = .62,
---     timeToNextFrame = 30,
---   },
---   {
---     scale = .55,
---     showTime = 400,
---     timeToNextFrame = 120,
---   },
---   {
---     w = 10,
---     h = 10,
---     x = 1,
---     y = 1,
---     alpha = 1,
---     scale = .55,
---   },
--- })
-
--- -- d:Animation(true)
-
--- -- d:SetPositionCalculationType(PCT_SHIP_COLLISION)
--- d:SetInset(10, 10, 10, 10)
--- d:SetUnitId(X2Unit:GetUnitId("player"), X2Unit:GetUnitId("target"))
-
--- ADDON:ChatLogTable({ d:GetActualDrawn() })
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
--- local btn = widgetassert(UIParent:CreateWidget("button", "b", "UIParent"))
--- btn:Show(true)
-
--- local btn2 = btn:CreateChildWidget("button", "as", 0, false)
-
--- local bg = btn:CreateColorDrawable(1, 0, 0, 1, "background")
--- btn:BindWidth(50)
--- -- bg:SetExtent(100, 100)
--- bg:SetWidth(100)
--- bg:BindWidth(50)
--- bg:BindWidth(150)
--- bg:SetHeight(100)
-
--- btn:SetExtent(100, 100)
--- btn:AddAnchor("CENTER", "UIParent", 0, 0)
--- -- btn:RemoveAllAnchors()
--- -- btn:AddAnchor("TOPLEFT", "UIParent", 0, 0)
-
--- -- btn:AddAnchor("TOPLEFT", 0, 0)
--- -- btn:AddAnchor("BOTTOMRIGHT", 0, 0)
--- -- bg:SetExtent(100, 100)
--- bg:AddAnchor("TOPRIGHT", btn, "BOTTOMLEFT", 0, 0)
--- -- bg:AddAnchor("TOPLEFT", btn, 0, 0)
--- -- bg:AddAnchor("CENTER", btn, "TOP", 0, 0)
--- -- bg:RemoveAllAnchors()
--- -- bg:AddAnchor("BOTTOM", "UIParent", 0, 0)
--- -- btn:AddAnchor("BOTTOMRIGHT", 0, 0)
--- btn:SetText("fasdf")
-
-
--- local b = btn:CreateChildWidget("button", "asdf", 0, true)
-
--- -- local c = UIParent:CreateWidget("avi", "asfd", btn)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Window)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
--- ADDON:ImportObject(OBJECT.ImageDrawable)
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportObject(OBJECT.TextStyle)
--- ADDON:ImportObject(OBJECT.EmptyWidget)
--- ADDON:ImportObject(OBJECT.CheckButton)
--- ADDON:ImportObject(OBJECT.Textbox)
-
--- -- LOCALE                 = {
--- --   ADDON_NAME    = "示例插件",
--- --   TITLE         = "你好，ArcheRage！",
--- --   BODY          =
--- --     "这是一个示例插件，可以从游戏菜单中切换。当窗口隐藏时，它会被销毁；"
--- --     .. "当窗口显示时，它会被重新创建。通过拖拽边缘可以缩放窗口，"
--- --     .. "通过拖拽标题栏可以移动窗口。窗口的位置和尺寸可以通过点击"
--- --     .. "“保存UI边界”按钮来保存，通过点击|cFFFF0000“重置UI边界”|r按钮来重置。\n",
--- --   ENABLE_MODAL  = "启用窗口模态",
--- --   SAVE_UI       = "保存UI边界",
--- --   SAVE_UI_TEXT  = "示例插件UI边界已保存！",
--- --   RESET_UI      = "重置UI边界",
--- --   RESET_UI_TEXT = "示例插件UI边界已重置！"
--- -- }
-
--- LOCALE                 = {
---   ADDON_NAME    = "Example Addon",
---   TITLE         = "Hello, ArcheRage!",
---   BODY          =
---     "This is an example addon that can be toggled from the game menu. When the "
---     .. "window is hidden it is destroyed and when it is shown it is recreated. "
---     .. "By dragging on the edges the window can be scaled and by dragging on "
---     .. "title bar the window can be moved. The windows position and dimensions "
---     .. "can be saved by clicking the \"Save UIBounds\" button and reset by "
---     .. "clicking the |cFFFF0000\"Reset UIBounds\"|r button.\n",
---   ENABLE_MODAL  = "Enable Window Modal",
---   SAVE_UI       = "Save UIBounds",
---   SAVE_UI_TEXT  = "Example Addon UIBounds Saved!",
---   RESET_UI      = "Reset UIBounds",
---   RESET_UI_TEXT = "Example Addon UIBounds Reset!"
--- }
-
--- LOCALE                 = {
---   ADDON_NAME    = "Пример аддона",
---   TITLE         = "Привет, ArcheRage!",
---   BODY          =
---     "Это пример аддона, который можно переключать из меню игры. Когда окно скрыто, "
---     .. "оно уничтожается, а когда отображается — пересоздаётся. Перетаскивая края, "
---     .. "окно можно масштабировать, а перетаскивая заголовок — перемещать. Положение "
---     .. "и размеры окна можно сохранить, нажав кнопку \"Сохранить границы UI\", "
---     .. "и сбросить, нажав кнопку |cFFFF0000\"Сбросить границы UI\"|r.\n",
---   ENABLE_MODAL  = "Включить модальность окна",
---   SAVE_UI       = "Сохранить границы UI",
---   SAVE_UI_TEXT  = "Границы UI примера аддона сохранены!",
---   RESET_UI      = "Сбросить границы UI",
---   RESET_UI_TEXT = "Границы UI примера аддона сброшены!"
--- }
-
--- LOCALE = {
---   ADDON_NAME    = "Exemple d'Addon",
---   TITLE         = "Bonjour, ArcheRage !",
---   BODY          =
---     "Ceci est un exemple d'addon qui peut être activé depuis le menu du jeu. Lorsque la "
---     .. "fenêtre est masquée, elle est détruite et lorsqu'elle est affichée, elle est recréée. "
---     .. "En faisant glisser les bords, la fenêtre peut être redimensionnée et en faisant glisser "
---     .. "la barre de titre, la fenêtre peut être déplacée. La position et les dimensions de la "
---     .. "fenêtre peuvent être sauvegardées en cliquant sur le bouton \"Sauvegarder les limites UI\" "
---     .. "et réinitialisées en cliquant sur le bouton |cFFFF0000\"Réinitialiser les limites UI\"|r.\n",
---   ENABLE_MODAL  = "Activer le mode modal de la fenêtre",
---   SAVE_UI       = "Sauvegarder les limites UI",
---   SAVE_UI_TEXT  = "Limites UI de l'exemple d'addon sauvegardées !",
---   RESET_UI      = "Réinitialiser les limites UI",
---   RESET_UI_TEXT = "Limites UI de l'exemple d'addon réinitialisées !"
--- }
-
---------------------------------------------------------------------------------
-
--- local UIC_EXAMPLEADDON = 0118030805180107
--- local UIC_EXAMPLEADDON = 16777215
--- local WINDOW           = {
---   WIDTH              = 660,
---   HEIGHT             = 250,
---   MIN_WIDTH          = 660,
---   MIN_HEIGHT         = 250,
---   MAX_WIDTH          = 1000,
---   MAX_HEIGHT         = 1000,
---   RESIZE_BORDER_SIZE = { LEFT = 10, TOP = 10, RIGHT = 10, BOTTOM = 10 },
---   MARGIN             = 20,
---   UIBOUND_NAME       = "ui_bound_exampleaddon",
--- }
-
--- function SaveUIBound(widget, key)
---   local bound               = {}
---   bound.x, bound.y          = widget:CorrectOffsetByScreen()
---   bound.width, bound.height = widget:GetExtent()
-
---   local uiBound             = {
---     bound            = bound,
---     screenResolution = {
---       x     = UIParent:GetScreenWidth(),
---       y     = UIParent:GetScreenHeight(),
---       scale = UIParent:GetUIScale(),
---     },
---   }
-
---   UIParent:SetUIBound(key, uiBound)
--- end
-
--- function CorrectWidgetScreenPos(widget)
---   if widget:CheckOutOfScreen() then
---     widget:RemoveAllAnchors()
---     local x, y = widget:CorrectOffsetByScreen()
---     widget:AddAnchor("TOPLEFT", "UIParent", x / UIParent:GetUIScale(), y / UIParent:GetUIScale())
---   end
--- end
-
--- -- Create the example addon window.
--- local function CreateExampleAddonWindow()
---   exampleAddonWindow = UIParent:CreateWidget("window", "exampleWindow", "UIParent")
---   exampleAddonWindow.modalEnabled = false
---   -- exampleAddonWindow:ApplyUIScale(true)
---   -- exampleAddonWindow:EnableHidingIsRemove(true)
-
---   local function SetDefaultUIBound()
---     exampleAddonWindow:RemoveAllAnchors()
---     exampleAddonWindow:AddAnchor("CENTER", "UIParent", 0, 0)
---     exampleAddonWindow:SetExtent(WINDOW.WIDTH, WINDOW.HEIGHT)
---     SaveUIBound(exampleAddonWindow, WINDOW.UIBOUND_NAME)
---     return UIParent:GetUIBound(WINDOW.UIBOUND_NAME)
---   end
-
---   local function ApplyUIBound(uiBound)
---     exampleAddonWindow:AddAnchor("TOPLEFT", "UIParent", uiBound.bound.x, uiBound.bound.y)
---     exampleAddonWindow:SetExtent(uiBound.bound.width, uiBound.bound.height)
---   end
-
---   local savedUIBound = UIParent:GetUIBound(WINDOW.UIBOUND_NAME)
-
---   if not savedUIBound then
---     savedUIBound = SetDefaultUIBound()
---   else
---     ApplyUIBound(savedUIBound)
---   end
-
---   exampleAddonWindow:SetSounds("bag")
---   exampleAddonWindow:SetCloseOnEscape(true)
---   exampleAddonWindow:SetAlphaAnimation(0, 1, .1, .1)
---   exampleAddonWindow:SetStartAnimation(true, true)
---   exampleAddonWindow:SetUILayer("normal")
---   exampleAddonWindow:SetResizingBorderSize(
---     WINDOW.RESIZE_BORDER_SIZE.LEFT,
---     WINDOW.RESIZE_BORDER_SIZE.TOP,
---     WINDOW.RESIZE_BORDER_SIZE.RIGHT,
---     WINDOW.RESIZE_BORDER_SIZE.BOTTOM
---   )
---   exampleAddonWindow:SetMinResizingExtent(WINDOW.MIN_WIDTH, WINDOW.MIN_HEIGHT)
---   exampleAddonWindow:SetMaxResizingExtent(WINDOW.MAX_WIDTH, WINDOW.MAX_HEIGHT)
---   exampleAddonWindow:UseResizing(true)
-
---   exampleAddonWindow:SetHandler("OnEndFadeOut", function ()
---     exampleAddonWindow = nil
---   end)
-
---   exampleAddonWindow:SetHandler("OnScale", function (self)
---     CorrectWidgetScreenPos(exampleAddonWindow)
---   end)
-
---   -- Create a background.
---   local background = exampleAddonWindow:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
---   background:AddAnchor("TOPLEFT", exampleAddonWindow, -5, -5)
---   background:AddAnchor("BOTTOMRIGHT", exampleAddonWindow, 5, 5)
---   background:SetTextureInfo("main_bg")
---   exampleAddonWindow.background = background
-
---   -- Create a title decoration.
---   local decoration = exampleAddonWindow:CreateDrawable(TEXTURE_PATH.DEFAULT, "main_bg_deco", "background")
---   decoration:AddAnchor("TOPLEFT", exampleAddonWindow, 0, -5)
---   decoration:AddAnchor("TOPRIGHT", exampleAddonWindow, 0, -5)
---   exampleAddonWindow.decoration = decoration
-
---   -- Create a title bar.
---   local titleBar = exampleAddonWindow:CreateChildWidget("window", "title", 0, true)
---   titleBar:AddAnchor("TOPLEFT", exampleAddonWindow, WINDOW.MARGIN / 2, WINDOW.MARGIN / 2)
---   titleBar:AddAnchor("TOPRIGHT", exampleAddonWindow, -WINDOW.MARGIN / 2, WINDOW.MARGIN / 2)
---   titleBar.titleStyle:SetAlign(ALIGN_CENTER)
---   titleBar.titleStyle:SetSnap(true)
---   titleBar.titleStyle:SetFont(FONT_PATH.SUB, FONT_SIZE.XLARGE)
---   titleBar.titleStyle:SetColorByKey("title")
---   titleBar:SetTitleText(LOCALE.TITLE)
---   titleBar:EnableDrag(true)
-
---   titleBar:SetHandler("OnDragStart", function ()
---     exampleAddonWindow:StartMoving()
---   end)
-
---   titleBar:SetHandler("OnDragStop", function ()
---     exampleAddonWindow:StopMovingOrSizing()
---     CorrectWidgetScreenPos(exampleAddonWindow)
---   end)
-
---   -- Create a close button.
---   local closeButton = titleBar:CreateChildWidget("button", "closebutton", 0, true)
---   titleBar:SetHeight(45)
---   closeButton:AddAnchor("TOPRIGHT", titleBar, 0, 0)
---   closeButton:SetStyle("btn_close_default")
-
---   closeButton:SetHandler("OnClick", function ()
---     exampleAddonWindow:Show(false)
---   end)
-
---   -- Create a body textbox.
---   local bodyTextbox = exampleAddonWindow:CreateChildWidget("textbox", "bodytextbox", 0, true)
---   bodyTextbox:SetHeight(100)
---   bodyTextbox:AddAnchor("TOPLEFT", titleBar, "BOTTOMLEFT", 15, WINDOW.MARGIN / 2)
---   bodyTextbox:AddAnchor("TOPRIGHT", titleBar, "BOTTOMRIGHT", -15, WINDOW.MARGIN / 2)
---   bodyTextbox.style:SetFontSize(FONT_SIZE.LARGE)
---   bodyTextbox.style:SetAlign(ALIGN_TOP_LEFT)
---   bodyTextbox.style:SetColorByKey("default")
---   bodyTextbox.style:SetSnap(true)
---   bodyTextbox:SetLineSpace(TEXTBOX_LINE_SPACE.LARGE)
---   bodyTextbox:SetText(LOCALE.BODY)
-
---   --@TODO: havent found a way to limit the height of the textbox
---   -- bodyTextbox:SetExtent(100, 100)
---   -- bodyTextbox:SetAutoResize(true)
---   bodyTextbox:SetAutoResize(false)
---   bodyTextbox:SetHeight(100)
-
---   -- this works but i dont like it.
---   exampleAddonWindow:SetHandler("OnUpdate", function (self)
---     bodyTextbox:SetAutoResize(true)
---   end)
-
---   -- Create a example check button.
---   local checkButton = exampleAddonWindow:CreateChildWidget("checkbutton", "checkbutton", 0, true)
---   checkButton:AddAnchor("BOTTOMLEFT", exampleAddonWindow, WINDOW.MARGIN, -WINDOW.MARGIN)
---   checkButton:SetExtent(16, 16)
-
---   local checkButtonBackground = checkButton:CreateDrawable(TEXTURE_PATH.CHECK_BTN, "btn_df", "background")
---   checkButtonBackground:AddAnchor("CENTER", checkButton, 0, 0)
-
---   local checkButtonCheckedBackground = checkButton:CreateDrawable(TEXTURE_PATH.CHECK_BTN, "btn_chk_df", "background")
---   checkButtonCheckedBackground:AddAnchor("CENTER", checkButton, 0, 0)
---   checkButton:SetCheckedBackground(checkButtonCheckedBackground)
-
---   -- Create a textbox for the check button.
---   local textbox = checkButton:CreateChildWidget("textbox", "textbox", 0, true)
---   textbox:AddAnchor("LEFT", checkButton, "RIGHT", WINDOW.MARGIN / 2, 0)
---   textbox.style:SetColorByKey("default")
---   textbox:SetAutoResize(true)
---   textbox:SetAutoWordwrap(false)
---   textbox:SetText(LOCALE.ENABLE_MODAL)
-
---   checkButton:SetHandler("OnClick", function ()
---     exampleAddonWindow.modalEnabled = not exampleAddonWindow.modalEnabled
---     exampleAddonWindow:SetWindowModal(exampleAddonWindow.modalEnabled)
---   end)
-
---   -- Create a reset button.
---   local resetUIButton = exampleAddonWindow:CreateChildWidget("button", "resetuibutton", 0, true)
---   resetUIButton:SetStyle("text_default")
---   resetUIButton:SetNormalColor(.8, .4, .4, 1)
---   resetUIButton:SetTextColor(1, 1, 1, 1)
---   resetUIButton:SetHighlightColor(.8, .5, .5, 1)
---   resetUIButton:SetHighlightTextColor(1, 1, 1, 1)
---   resetUIButton:SetPushedColor(.8, .3, .3, 1)
---   resetUIButton:SetPushedTextColor(1, 1, 1, 1)
---   resetUIButton:SetText(LOCALE.RESET_UI)
-
---   resetUIButton:SetHandler("OnClick", function ()
---     SetDefaultUIBound()
---     ADDON:ChatLog(LOCALE.RESET_UI_TEXT)
---   end)
-
---   -- Create a save button.
---   local saveUIButton = exampleAddonWindow:CreateChildWidget("button", "saveuibutton", 0, true)
---   saveUIButton:AddAnchor("BOTTOMRIGHT", exampleAddonWindow, -WINDOW.MARGIN, -WINDOW.MARGIN)
---   saveUIButton:SetStyle("text_default")
---   saveUIButton:SetText(LOCALE.SAVE_UI)
-
---   resetUIButton:AddAnchor("RIGHT", saveUIButton, "LEFT", -WINDOW.MARGIN / 2, 0)
---   resetUIButton:SetDrawPriority(0)
---   saveUIButton:SetDrawPriority(0)
-
---   saveUIButton:SetHandler("OnClick", function ()
---     CorrectWidgetScreenPos(exampleAddonWindow)
---     SaveUIBound(exampleAddonWindow, WINDOW.UIBOUND_NAME)
---     ADDON:ChatLog(LOCALE.SAVE_UI_TEXT)
---   end)
--- end
-
--- local function ToggleExampleAddonWindow(show)
---   -- If the window should be shown.
---   if show == nil then
---     show = exampleAddonWindow == nil or not exampleAddonWindow:IsVisible()
---   end
-
---   -- If the window should be shown and doesn't exist, create it.
---   if show and exampleAddonWindow == nil then
---     CreateExampleAddonWindow()
---   end
-
---   -- If the window exists, Show or Hide it.
---   if exampleAddonWindow then
---     exampleAddonWindow:Show(show)
---   end
--- end
-
--- ADDON:RegisterContentTriggerFunc(UIC_EXAMPLEADDON, ToggleExampleAddonWindow)
--- ADDON:AddEscMenuButton(5, UIC_EXAMPLEADDON, "optimizer", LOCALE.ADDON_NAME)
-
--- ToggleExampleAddonWindow(true)
-
--- exampleAddonWindow:SetMoveAnimation("top", 100, 3, 1)
--- exampleAddonWindow:SetHandler("OnUpdate", function (self, frameTime)
---   exampleAddonWindow:TriggerMoveAnimation(true)
--- end)
-
--- ADDON:ChatLog(tostring(exampleAddonWindow:IsValidUIObject()))
+-- SHOP_OPEN_BATTLEFIELD
+-- SHOP_OPEN_CONTRIBUTION
+-- SHOP_OPEN_DIRECT_RANDOM_SHOP
+-- SHOP_OPEN_HONORPOINT
+-- SHOP_OPEN_LIVINGPOINT
+-- SHOP_OPEN_NORMAL
+-- SHOP_OPEN_RANDOM_SHOP
 
 -- ADDON:ShowContent(UIC_STORE, true)
+-- This doesnt work
+-- ADDON:ShowContent(UIC_STORE, true, {
+--   openType = SHOP_OPEN_LIVINGPOINT,
+--   direct = false
+-- })
+-- ADDON:ToggleContent(UIC_STORE, {
+--   openType = SHOP_OPEN_LIVINGPOINT,
+--   direct = true
+-- })
+-- ADDON:ToggleContent(UIC_STORE)
 
---------------------------------------------------------------------------------
+-- function ToggleStore(show, data)
 
--- local file = open("temp/example.txt", "w")
--- file:write(dump({ exampleAddonWindow }))
--- file:close()
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Window)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
-
--- local offset = 0
-
--- local windowOne = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowOne:SetExtent(100, 100)
--- windowOne:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowOne.background = windowOne:CreateColorDrawable(1, 0, 0, 1, "background")
--- windowOne.background:AddAnchor("TOPLEFT", windowOne, 0, 0)
--- windowOne.background:AddAnchor("BOTTOMRIGHT", windowOne, 0, 0)
--- windowOne:SetUILayer("background")
--- windowOne:Show(true)
--- offset = offset + 50
-
--- local windowTwo = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowTwo:SetExtent(100, 100)
--- windowTwo:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowTwo.background = windowTwo:CreateColorDrawable(0, 1, 0, 1, "background")
--- windowTwo.background:AddAnchor("TOPLEFT", windowTwo, 0, 0)
--- windowTwo.background:AddAnchor("BOTTOMRIGHT", windowTwo, 0, 0)
--- windowTwo:SetUILayer("game")
--- windowTwo:Show(true)
--- offset = offset + 50
-
--- local windowThree = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowThree:SetExtent(100, 100)
--- windowThree:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowThree.background = windowThree:CreateColorDrawable(0, 0, 1, 1, "background")
--- windowThree.background:AddAnchor("TOPLEFT", windowThree, 0, 0)
--- windowThree.background:AddAnchor("BOTTOMRIGHT", windowThree, 0, 0)
--- windowThree:SetUILayer("normal")
--- windowThree:Show(true)
--- offset = offset + 50
-
--- local windowFour = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowFour:SetExtent(100, 100)
--- windowFour:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowFour.background = windowFour:CreateColorDrawable(1, 1, 0, 1, "background")
--- windowFour.background:AddAnchor("TOPLEFT", windowFour, 0, 0)
--- windowFour.background:AddAnchor("BOTTOMRIGHT", windowFour, 0, 0)
--- windowFour:SetUILayer("hud")
--- windowFour:Show(true)
--- offset = offset + 50
-
--- local windowFive = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowFive:SetExtent(100, 100)
--- windowFive:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowFive.background = windowFive:CreateColorDrawable(0, 1, 1, 1, "background")
--- windowFive.background:AddAnchor("TOPLEFT", windowFive, 0, 0)
--- windowFive.background:AddAnchor("BOTTOMRIGHT", windowFive, 0, 0)
--- windowFive:SetUILayer("questdirecting")
--- windowFive:Show(true)
--- offset = offset + 50
-
--- local windowSix = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowSix:SetExtent(100, 100)
--- windowSix:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowSix.background = windowSix:CreateColorDrawable(1, 0, 1, 1, "background")
--- windowSix.background:AddAnchor("TOPLEFT", windowSix, 0, 0)
--- windowSix.background:AddAnchor("BOTTOMRIGHT", windowSix, 0, 0)
--- windowSix:SetUILayer("dialog")
--- windowSix:Show(true)
--- offset = offset + 50
-
--- local windowSeven = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowSeven:SetExtent(100, 100)
--- windowSeven:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowSeven.background = windowSeven:CreateColorDrawable(1, .65, 0, 1, "background")
--- windowSeven.background:AddAnchor("TOPLEFT", windowSeven, 0, 0)
--- windowSeven.background:AddAnchor("BOTTOMRIGHT", windowSeven, 0, 0)
--- windowSeven:SetUILayer("tooltip")
--- windowSeven:Show(true)
--- offset = offset + 50
-
--- local windowEight = widgetassert(UIParent:CreateWidget("window", "windowOne", "UIParent"))
--- windowEight:SetExtent(100, 100)
--- windowEight:AddAnchor("TOPLEFT", "UIParent", offset, 100)
--- windowEight.background = windowEight:CreateColorDrawable(.5, 0, .5, 1, "background")
--- windowEight.background:AddAnchor("TOPLEFT", windowEight, 0, 0)
--- windowEight.background:AddAnchor("BOTTOMRIGHT", windowEight, 0, 0)
--- windowEight:SetUILayer("system")
--- windowEight:Show(true)
--- offset = offset + 50
+--   ADDON:ChatLog("ToggleStore")
+--   ADDON:ChatLog(show)
+--   if data then
+--     ADDON:ChatLogTable(data)
+--   end
+-- end
+-- ADDON:RegisterContentTriggerFunc(UIC_STORE, ToggleStore)
 
 --------------------------------------------------------------------------------
 
@@ -1855,11 +783,6 @@ end
 --   [0] = "male"
 -- }
 
--- ADDON:ImportObject(OBJECT.ModelView)
--- ADDON:ImportAPI(API.X2Equipment)
--- ADDON:ImportAPI(API.X2CustomizingUnit)
--- ADDON:ImportAPI(API.X2Customizer)
-
 -- local modelView = UIParent:CreateWidget("modelview", "model", "UIParent")
 -- -- modelView:AddAnchor("CENTER", "UIParent", 0, 0)
 -- modelView:SetExtent(512, 512)
@@ -1950,8 +873,6 @@ end
 -- }))
 -- file:close()
 
--- ADDON:ImportObject(OBJECT.Button)
-
 -- local hornColor = -1
 -- local btn = UIParent:CreateWidget("button", "asfd", "UIParent")
 -- btn:AddAnchor("BOTTOMLEFT", modelView, 0, 0)
@@ -1970,1478 +891,69 @@ end
 --   ADDON:ChatLog(tostring(modelView:HasDiffWithClientUnit()))
 -- end)
 
--- ADDON:ImportAPI(API.X2Locale)
--- ADDON:ChatLog("------")
---- @ACHIEVEMENT_NAME
---- @AREA_SPHERE
---- @CONTENT_CONFIG
---- @DAY
---- @DOODAD_NAME
---- @ENCHANT_CONSUME_LP
---- @EXPEDITION_LEADER_NAME_BY_ZONEGROUP
---- @EXPEDITION_NAME_BY_ZONEGROUP
---- @HOUR
---- @ITEM_NAME
---- @MINUTE
---- @MONTH
---- @NPC_GROUP_NAME
---- @NPC_NAME
---- @PC_CLASS
---- @PC_GENDER
---- @PC_NAME
---- @PC_RACE
---- @QUEST_NAME
---- @SECOND
---- @SOURCE_NAME
---- @SPECIFY_TARGET_NAME
---- @SUB_ZONE_NAME
---- @TARGET_NAME
---- @TARGET_SLAVE_REPAIR_COST
---- @YEAR
---- @ZONE_NAME
--- ADDON:ChatLog(X2Locale:TextFormating(" ITEM_NAME @ITEM_NAME(4052) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" ZONE_NAME @ZONE_NAME(311) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" SUB_ZONE_NAME @SUB_ZONE_NAME(220), ZONE_NAME @ZONE_NAME(34) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" TARGET_NAME @TARGET_NAME(0) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" TARGET_NAME @TARGET_NAME(1090f) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" |nn;@SPECIFY_TARGET_NAME(0)|r "))
--- ADDON:ChatLog(X2Locale:TextFormating(" @PC_NAME(ID) is a @PC_RACE(0) @PC_GENDER(0)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@DAY(10)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@ENCHANT_CONSUME_LP(1000)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@EXPEDITION_NAME_BY_ZONEGROUP(1000)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@HOUR(10)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@MINUTE(10)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@MONTH(10)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@SECOND(10)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@YEAR(2014)"))
--- ADDON:ChatLog(X2Locale:TextFormating("@YEAR @MONTH @DAY"))
--- ADDON:ChatLog(X2Locale:TextFormating("@TARGET_SLAVE_REPAIR_COST(10) |w1;"))
--- ADDON:ChatLog(X2Locale:TextFormating(" SPECIFY_TARGET_NAME @SPECIFY_TARGET_NAME(1090f) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" SOURCE_NAME @SOURCE_NAME(0) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" SOURCE_NAME @SOURCE_NAME(1090f) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" QUEST_NAME @QUEST_NAME(5442) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" PC_RACE @PC_RACE(0) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" PC_RACE @PC_RACE(1090f) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" PC_NAME @PC_NAME(0) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" PC_NAME @PC_NAME(1090f) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" NPC_NAME @NPC_NAME(3362) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" PC_CLASS @PC_CLASS(0) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" PC_CLASS @PC_CLASS(1090f) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" NPC_GROUP_NAME @NPC_GROUP_NAME(265) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" ITEM_NAME @ITEM_NAME(18865) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" EXPEDITION_LEADER_NAME_BY_ZONEGROUP @EXPEDITION_LEADER_NAME_BY_ZONEGROUP(33) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" DOODAD_NAME @DOODAD_NAME(6049) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" CONTENT_CONFIG @CONTENT_CONFIG(87) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" AREA_SPHERE @AREA_SPHERE(1335) "))
--- ADDON:ChatLog(X2Locale:TextFormating(" ACHIEVEMENT_NAME @ACHIEVEMENT_NAME(1816) "))
--- ADDON:ChatLog("------")
-
--- ADDON:ImportAPI(API.X2Unit)
--- ADDON:ChatLog(X2Unit:GetUnitId("target"))
--- ADDON:ImportAPI(API.X2Resident)
--- ADDON:ChatLog(tostring(X2Resident:FilterHousingTradeList(HOUSING_LIST_FILTER_ALL, "")))
-
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.IconDrawable)
-
--- ADDON:ImportObject(OBJECT.CooldownInventoryButton)
--- local ccb = UIParent:CreateWidget("cooldowninventorybutton", "asdf", "UIParent")
--- -- ADDON:ImportObject(OBJECT.CooldownButton)
--- -- local ccb = UIParent:CreateWidget("cooldownbutton", "asdf", "UIParent")
--- ccb:SetExtent(100, 100)
-
--- local drawable = ccb:CreateIconDrawable("background")
--- drawable:SetExtent(28, 28)
--- drawable:AddAnchor("CENTER", ccb, 0, 0)
--- ccb:SetNormalBackground(drawable)
--- ccb:SetDisabledBackground(drawable)
--- ccb:SetHighlightBackground(drawable)
--- ccb:SetPushedBackground(drawable)
-
--- -- drawable:AddTexture("ui/icon/charge_hero01.dds")
-
--- -- ccb:SetBagItemSlot(1)
--- -- ccb:SetBankItemSlot(1)
--- -- ccb:SetCofferItemSlot(1)
--- -- ccb:SetGuildBankItemSlot(1)
-
--- ccb:SetCoolDownMask("ui/cooldown/cooldown_mask.dds", "mask", "black")
--- ccb:Show(true)
--- ccb:Enable(true)
--- -- ccb:SetCoolDown(50, 100)
-
--- local file = open("temp/example.txt", "w")
--- file:write(dump({ ccb }))
--- file:close()
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportAPI(API.X2Hotkey)
--- ADDON:ImportObject(OBJECT.Button)
-
--- local btn = UIParent:CreateWidget("button", "test", "UIParent")
--- btn:AddAnchor("CENTER", "UIParent", 0, 0)
--- btn:SetStyle("text_default")
--- btn:SetText("Save")
--- btn:Show(true)
-
--- btn:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---   X2Hotkey:BindingToOption()
---   X2Hotkey:SetOptionBindingWithIndex("front_camera", "{", 1, 0)
---   X2Hotkey:OptionToBinding()
--- end)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.ChatWindow)
--- ADDON:ImportObject(OBJECT.Textbox)
--- ADDON:ImportObject(OBJECT.Drawable)
--- ADDON:ImportObject(OBJECT.ImageDrawable)
--- ADDON:ImportObject(OBJECT.IconDrawable)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
--- ADDON:ImportObject(OBJECT.ThreePartDrawable)
--- ADDON:ImportObject(OBJECT.ThreeColorDrawable)
-
--- local chat = UIParent:CreateWidget("chatwindow", "test", "UIParent")
--- chat:SetExtent(500, 500)
--- chat:Show(true)
--- chat:SetChatWindowId(1)
--- chat:AllowTabSwitch(false)
--- chat:UseAutoResizingTabButtonMode(false)
--- chat:SetTabButtonAlpha(.1, .1)
--- local textbox = UIParent:CreateWidget("textbox", "exampleTextbox", "UIParent")
--- textbox:SetText("Test")
--- chat:AddTab("Test", textbox)
--- local textbox = UIParent:CreateWidget("textbox", "exampleTextbox", "UIParent")
--- textbox:SetText("Test")
--- chat:AddTab("Testasdf", textbox)
--- chat:UseAddTabButton(true)
--- chat:UseSlidingButton(false)
-
--- local file = open("temp/example.txt", "w")
--- file:write(dump({ chat }))
--- file:close()
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Window)
--- ADDON:ImportObject(OBJECT.Textbox)
--- ADDON:ImportObject(OBJECT.Listbox)
--- ADDON:ImportObject(OBJECT.ImageDrawable)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
--- ADDON:ImportObject(OBJECT.IconDrawable)
--- ADDON:ImportObject(OBJECT.Drawable)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportObject(OBJECT.GameTooltip)
--- ADDON:ImportObject(OBJECT.UnitframeTooltip)
-
--- local list = UIParent:CreateWidget("listbox", "test", "UIParent")
--- list:SetExtent(500, 100)
--- local bg = list:CreateColorDrawable(1, 0, 1, .1, "background")
--- bg:AddAnchor("TOPLEFT", list, 0, 0)
--- bg:AddAnchor("BOTTOMRIGHT", list, 0, 0)
--- local line = list:CreateSeparatorImageDrawable(TEXTURE_PATH.DEFAULT, "background")
--- line:SetTextureInfo("line_01", "default")
--- line:SetWidth(list:GetWidth() - 20)
--- list:DisableDrawables("background")
--- list:DisableDrawablesWithChildren("background")
--- local opened = list:CreateOpenedImageDrawable("ui/button/grid.dds")
--- opened:SetTextureInfo("opened_normal")
--- local closed = list:CreateClosedImageDrawable("ui/button/grid.dds")
--- closed:SetTextureInfo("closed_normal")
--- list:SetSelectedItemTextColor(1, 0, 0, 1)
--- list:SetDisableItemTextColor(1, 0, 0, 1)
--- list:SetDefaultItemTextColor(1, 0, 0, 1)
--- list:SetSelectedItemTextColor(1, 0, 0, 1)
-
--- list:EnableScroll(true)
--- list:SetTreeTypeIndent(true, 20, 0)
-
--- local a = list:SetItemTrees({
---   {
---     text = "Hello",
---     value = 30,
---     color = UIParent:GetFontColor("blue"),
---     defaultColor = UIParent:GetFontColor("blue"),
---     selectColor = UIParent:GetFontColor("blue"),
---     overColor = UIParent:GetFontColor("blue"),
---     disableColor = UIParent:GetFontColor("blue"),
---     useColor = true,
---     child = {
---       {
---         text = "abc",
---         value = 4123,
---         subtext = "Hello, world",
---         subColor = UIParent:GetFontColor("blue"),
---         child = {
---           {
---             text = "abc",
---             value = 4123,
---             subtext = "Hello, world",
---             subColor = UIParent:GetFontColor("blue"),
---           },
---         }
---       },
---       {
---         text = "def",
---         value = 41,
---       },
---     },
---     subtext = "Hello, world",
---     subColor = UIParent:GetFontColor("blue"),
---     iconPath = TEXTURE_PATH.MONEY_WINDOW,
---     infoKey = "successor_16",
---     tailIconPath = "ui/nation/icon_peace.dds",
---     tailIconCoord = "icon_blue",
---     enable = true,
---     opened = true
---   },
---   {
---     text = "test",
---     -- useColor = true,
---     value = 20,
---   }
--- })
-
--- list:Show(true)
--- list:UseChildStyle(true)
--- list.itemStyle:SetFontSize(FONT_SIZE.XXLARGE)
--- list.itemStyleSub:SetFontSize(FONT_SIZE.XXLARGE)
--- list.childStyle:SetFontSize(FONT_SIZE.XXLARGE)
--- list.childStyleSub:SetFontSize(FONT_SIZE.XXLARGE)
-
-
-
--- list:SetListItemStateTexture(TEXTURE_PATH.DEFAULT)
--- list:SetListItemStateTextureInset(-15, -2, -10, -1)
--- list:SetDefaultItemCoord(0, 0, 0, 0)
--- list:SetItemOveredTextureInfo("label_bg", "listbox")
--- list:SetItemSelectedTextureInfo("label_bg", "listbox")
-
--- list:ShowTooltip(true)
-
--- list:SetHandler("OnSelChanged", function (self, selectedIndex, doubleClick)
---   ADDON:ChatLog("OnSelChanged " .. tostring(selectedIndex) .. " " .. tostring(doubleClick))
---   ADDON:ChatLogTable(list:GetViewItemsInfo(), { indent_type = "_" })
--- end)
-
--- list:SetHandler("OnTooltip", function (self, ...)
---   -- ADDON:ChatLog("OnTooltip")
---   -- ADDON:ChatLogTable({ ... })
--- end)
-
--- list:SetHandler("OnListboxToggled", function (self)
---   ADDON:ChatLog("OnListboxToggled")
--- end)
-
--- local file = open("temp/example.txt", "w")
--- file:write(dump({ list }))
--- file:close()
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.ListCtrl)
-
--- local list = UIParent:CreateWidget("listctrl", "test", "UIParent")
--- list:SetExtent(500, 500)
--- list:InsertColumn(100, LCCIT_TEXTBOX)
--- list:InsertColumn(100, LCCIT_BUTTON)
--- list:InsertColumn(100, LCCIT_WINDOW)
--- list:InsertColumn(100, LCCIT_STRING)
--- list:InsertRows(3, true)
--- -- list:InsertData(0, 1, "head")
--- list:InsertData(1, 1, "a")
--- list:InsertData(1, 2, "b")
--- list:InsertData(1, 3, "c")
--- list:InsertData(1, 4, "d")
--- list:InsertData(2, 1, "a")
--- list:InsertData(2, 2, "b")
--- list:InsertData(2, 3, "c")
--- list:InsertData(2, 4, "d")
--- list:SetHeaderColumnHeight(200)
--- list:Show(true)
-
--- list.items[2].subItems[2]:SetStyle("text_default")
-
--- ADDON:ChatLog(list.items[1].subItems[1]:GetObjectType())
--- ADDON:ChatLog(list.items[1].subItems[2]:GetObjectType())
--- ADDON:ChatLog(list.items[1].subItems[3]:GetObjectType())
--- ADDON:ChatLog(type(list.items[1].subItems[4]))
-
--- ADDON:ChatLog(list.column[1]:GetObjectType())
--- ADDON:ChatLog(list.column[2]:GetObjectType())
--- ADDON:ChatLog(list.column[3]:GetObjectType())
--- ADDON:ChatLog(list.column[4]:GetObjectType())
-
--- local file = open("temp/example.txt", "w")
--- file:write(dump({ list }))
--- file:close()
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.DamageDisplay)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportAPI(API.X2Unit)
-
--- local display = UIParent:CreateWidget("damagedisplay", "test", "UIParent")
--- display:SetText(" ")
--- display:AddAnchor("BOTTOMRIGHT", "UIParent", "TOPLEFT", 0, 0)
--- display:SetExtent(50, 50)
--- display:Show(true)
-
--- local bg = display:CreateColorDrawable(1, 0, 0, .3, "background")
--- bg:AddAnchor("TOPLEFT", display, 0, 0)
--- bg:AddAnchor("BOTTOMRIGHT", display, 0, 0)
--- display:SetPositionCalculationType(PCT_DEFAULT)
-
--- -- display:SetInset(5, 10, 15, 20)
--- -- display:SetInitPos(0, 0)
--- -- display:SetInitPos(UIParent:GetScreenWidth() / 2, UIParent:GetScreenHeight() / 2)
-
--- display:SetAnimFrameInfo({
---   {
---     scale = 1.5,
---     timeToNextFrame = 70,
---     alpha = 0.2,
---   },
---   {
---     scale = .5,
---     timeToNextFrame = 30,
---   },
---   {
---     scale = .62,
---     timeToNextFrame = 30,
---   },
---   {
---     scale = .55,
---     showTime = 400,
---     timeToNextFrame = 120,
---   },
---   {
---     alpha = 1,
---     scale = .55,
---   },
--- })
-
--- -- display:Animation(true)
-
+-- local count = 0
 
 -- UIParent:SetEventHandler("TARGET_CHANGED", function (stringId, targetType)
 --   if targetType then
+--     local display = UIParent:CreateWidget("damagedisplay", "test" .. stringId, "UIParent")
+--     display.style:SetFont("font_combat", 50)
+--     display.style:SetAlign(ALIGN_BOTTOM_LEFT)
+--     display.style:SetColorByKey("combat_text")
+--     display.extraStyle:SetAlign(ALIGN_BOTTOM_LEFT)
+--     display.extraStyle:SetColorByKey("combat_text")
+--     display:SetText(tostring(count))
+--     display:SetExtent(200, 200)
+--     display:Show(true)
+--     display:SetInitPos(-25, -50)
+--     ADDON:ChatLog("test" .. stringId .. " " .. count)
+--     count = count + 1
+
 --     display:SetUnitId(X2Unit:GetUnitId("player"), X2Unit:GetUnitId("target"))
 --   end
 -- end)
 
--- -- local btn = UIParent:CreateWidget("button", "asdf", "UIParent")
--- -- btn:SetStyle("text_default")
--- -- btn:Show(true)
+--------------------------------------------------------------------------------
 
--- -- btn:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
--- --   ADDON:ChatLogTable({ display:GetActualDrawn() })
--- -- end)
--- -- ADDON:ChatLogTable({ display:GetInset() })
-
--- --------------------------------------------------------------------------------
-
--- ADDON:ImportAPI(API.X2Locale)
-
--- local greeting = X2Locale:TextFormating("Hello, %s! You have {2} new messages.", "Alice", 5)
--- -- Result: "Hello, Alice! You have 5 new messages."
--- ADDON:ChatLog(greeting)
-
--- ADDON:ChatLog(X2Locale:TextFormating("Hello, %s!"))              -- string.format style
--- ADDON:ChatLog(X2Locale:TextFormating("Hello, %d!"))              -- number
--- ADDON:ChatLog(X2Locale:TextFormating("Hello, $1!"))              -- $1 style
--- ADDON:ChatLog(X2Locale:TextFormating("Hello, |cffff0000{1}|r!")) -- rich text + {1}
--- ADDON:ChatLog(X2Locale:TextFormating("Hello, [player]!"))        -- [tag] style
--- ADDON:ChatLog(X2Locale:TextFormating("Hello, <name>!"))          -- <tag> style
--- ADDON:ChatLog(X2Locale:TextFormating("Hello, @1!"))              -- @1 style
-
-ADDON:ImportAPI(API.X2Option)
-
--- /get cam_target
-
--- X2Option:CreateOptionItemString("option_use_shadow", "0")
+-- X2Option:SetItemFloatValueByName("MyCustomOption", 3434)
 -- ADDON:ChatLog(tostring(X2Option:CreateOptionItemFloat("MyCustomOptionCharacter", 1, OISLT_CHARACTER)))
 -- ADDON:ChatLog(tostring(X2Option:CreateOptionItemFloat("MyCustomOptionCharacterMode", 2, OISLT_CHARACTER_MODE)))
 -- ADDON:ChatLog(tostring(X2Option:CreateOptionItemFloat("MyCustomOptionSystem", 3, OISLT_SYSTEM)))
--- X2Option:SetItemFloatValueByName("MyCustomOption", 3434)
 -- X2Option:Save()
--- X2Option:SetItemFloatValueByName("ShowMyCosplay", 0)
--- ADDON:ChatLog(tostring(X2Option:GetOptionItemValueByName("ShowMyCosplay")))
--- ADDON:ChatLog(tostring(X2Option:GetOptionItemValueByName("option_use_shadow")))
-
 
 -- ADDON:ChatLog("MyCustomOption start")
--- local test = X2Option:GetOptionItemValueByName("MyCustomOption")
+-- local MyCustomOption = X2Option:GetOptionItemValueByName("MyCustomOption")
 
--- if test ~= nil then
---   ADDON:ChatLog(tostring(test))
+-- if MyCustomOption ~= nil then
+--   ADDON:ChatLog(tostring(MyCustomOption))
 -- end
 
--- local test = X2Option:GetOptionItemValueByName("MyCustomOptionCharacter")
+-- local MyCustomOptionCharacter = X2Option:GetOptionItemValueByName("MyCustomOptionCharacter")
 
--- if test ~= nil then
---   ADDON:ChatLog(tostring(test))
+-- if MyCustomOptionCharacter ~= nil then
+--   ADDON:ChatLog(tostring(MyCustomOptionCharacter))
 -- end
 
--- local test = X2Option:GetOptionItemValueByName("MyCustomOptionCharacterMode")
+-- local MyCustomOptionCharacterMode = X2Option:GetOptionItemValueByName("MyCustomOptionCharacterMode")
 
--- if test ~= nil then
---   ADDON:ChatLog(tostring(test))
+-- if MyCustomOptionCharacterMode ~= nil then
+--   ADDON:ChatLog(tostring(MyCustomOptionCharacterMode))
 -- end
 
--- local test = X2Option:GetOptionItemValueByName("MyCustomOptionSystem")
+-- local MyCustomOptionSystem = X2Option:GetOptionItemValueByName("MyCustomOptionSystem")
 
--- if test ~= nil then
---   ADDON:ChatLog(tostring(test))
--- end
-
--- local test = X2Option:GetOptionItemValueByName("ShowMyBackPackWithCosplay")
-
--- if test ~= nil then
---   ADDON:ChatLog(tostring(test))
+-- if MyCustomOptionSystem ~= nil then
+--   ADDON:ChatLog(tostring(MyCustomOptionSystem))
 -- end
 
 -- ADDON:ChatLog("MyCustomOption end")
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.Textbox)
--- ADDON:ImportObject(OBJECT.Editbox)
--- ADDON:ImportObject(OBJECT.TextStyle)
-
--- local text = UIParent:CreateWidget("textbox", "test", "UIParent")
--- text:AddAnchor("CENTER", 0, 0)
--- text:SetExtent(400, 400)
--- text:Show(true)
-
--- local edit = UIParent:CreateWidget("editbox", "asd", "UIParent")
--- -- edit:SetStyle("text_default")
--- edit:SetExtent(100, 100)
--- edit:Show(true)
-
--- |nb; test |r
--- |nc; test |r
--- |nd; test |r
--- |nf; test |r
--- |ng; test |r
--- |nh; test |r
--- |ni; test |r
--- |nj; test |r
--- |nn; test |r
--- |nr; test |r
--- |ns; test |r
--- |nt; test |r
--- |nu; test |r
--- |ny; test |r
--- |o;
-
--- text:SetText("Used a @ITEM_NAME(52298)|1.")
--- text:SetText("|nn;@SPECIFY_TARGET_NAME(0)|r")
--- text:SetText("|nc;+5%|r")
--- text:SetText("|ni;Regrade Charms|r")
--- text:SetText("|nd;Gweonid Forest|r ")
--- text:SetText("|nr;Haranyan Continent Only|r ")
--- text:SetText("|nn;$1 Faction Competition|r ")
--- text:SetText(" |ng;Fairy Request|r")
--- text:SetText(" |nb;$1|r")
--- text:SetText(" |ny;The probabilities for this box is adjusted whenever you reopen it.|r")
--- text:SetText(" |v;")
--- text:SetText(" |nh;test|r")
--- text:SetText(" |nf;test|r")
--- text:SetText(" |w1;")
--- text.style:SetAlign(ALIGN_TOP_LEFT)
--- text:SetText(" |bu-;test|r|bu-;test|r- test")
--- text:SetText(" |bu◆;test|r|bu◆;test|r◆test")
-
--- text:SetText("|bm0;") -- PRICE_TYPE_BM_MILEAGE Loyalty
--- text:SetText("|d0;") -- DisHonorPoint crime
--- text:SetText("|cFFFF0000test|r")
--- text:SetText("|e0; |e;") -- heir_icon
--- text:SetText("|E0; |E;") -- disable_heir_icon
--- text:SetText("|h0;") -- CURRENCY_HONOR_POINT HonorPoint
--- text:SetText("|j0;") -- PRICE_TYPE_AA_CASH
--- text:SetText("|l0;") -- CURRENCY_LIVING_POINT Vocation Badge
--- text:SetText("|m0;") -- 1 00 00 CURRENCY_GOLD CURRENCY_GOLD_WITH_AA_POINT PRICE_TYPE_GOLD
--- text:SetText("|p0;") -- 1 00 00 CURRENCY_AA_POINT PRICE_TYPE_AA_POINT
--- text:SetText("|sa0; |sa;") -- ISMI_ARCHE_PASS_COIN
--- text:SetText("|sd0; |sd;") -- LeadershipPoint Leadership
--- text:SetText("|se0; |se;") -- ISMI_DELPI Gilda
--- text:SetText("|sf0; |sf;") -- ISMI_NETCAFE
--- text:SetText("|sg0; |sg;") -- ISMI_GARNET ISMI_SEASON_GARNET
--- text:SetText("|sp0; |sp;") -- ISMI_PALOS manastorm
--- text:SetText("|ss0; |ss;") -- ISMI_STAR Merit Badge
--- text:SetText("|u0;") -- Coin Bag
--- text:SetText("|v0; |v;") -- Artifact
--- text:SetText("|V0; |V;") -- Artifact
--- text:SetText("|w0;") -- CURRENCY_CONTRIBUTION_POINT Prestige
--- text:SetText("|x0;") -- Tax
--- text:SetText("|sc1;") -- ISMI_LUCKYCOIN Lucky Coin
--- edit:SetText(" and obtain @ITEM_NAME(19038)|s in Hermit''s Valley") -- ISMI_LUCKYCOIN Lucky Coin
-
--- text:SetText(
---    "a0 - |na;na|r\n"
--- "|o; test"
--- "|g100; test"
--- .. "b0 - |nb;nb|r \n"
--- .. "c0 - |nc;nc|r \n"
--- .. "d0 - |nd;nd|r \n"
--- .. "e0 - |ne;ne|r \n"
--- .. "f0 - |nf;nf|r \n"
--- .. "g0 - |ng;ng|r \n"
--- .. "h0 - |nh;nh|r \n"
--- .. "i0 - |ni;ni|r \n"
--- .. "j0 - |nj;nj|r \n"
--- .. "k0 - |nk;nk|r \n"
--- .. "l0 - |nl;nl|r \n"
--- .. "m0 - |nm;nm|r \n"
--- .. "n0 - |nn;nn|r \n"
--- .. "o0 - |no;no|r \n"
--- .. "p0 - |np;np|r \n"
--- .. "q0 - |nq;nq|r \n"
--- .. "r0 - |nr;nr|r \n"
--- .. "s0 - |ns;ns|r \n"
--- .. "t0 - |nt;nt|r \n"
--- .. "u0 - |nu;nu|r \n"
--- .. "v0 - |nv;nv|r \n"
--- .. "w0 - |nw;nw|r \n"
--- .. "x0 - |nx;nx|r \n"
--- .. "y0 - |ny;ny|r \n"
--- .. "z0 - |nz;nz|r \n"
--- .. "A0 - |A0; \n"
--- .. "B0 - |B0; \n"
--- .. "D0 - |D0; \n"
--- .. "E0 - |E0; \n"
--- .. "F0 - |F0; \n"
--- .. "G0 - |G0; \n"
--- .. "H0 - |H0; \n"
--- .. "I0 - |I0; \n"
--- .. "J0 - |J0; \n"
--- .. "K0 - |K0; \n"
--- .. "L0 - |L0; \n"
--- .. "M0 - |M0; \n"
--- .. "N0 - |N0; \n"
--- .. "O0 - |O0; \n"
--- .. "P0 - |P0; \n"
--- .. "Q0 - |Q0; \n"
--- .. "R0 - |R0; \n"
--- .. "S0 - |S0; \n"
--- .. "T0 - |T0; \n"
--- .. "U0 - |U0; \n"
--- .. "V0 - |V0; \n"
--- .. "W0 - |W0; \n"
--- .. "X0 - |X0; \n"
--- .. "Y0 - |Y0; \n"
--- .. "Z0 - |Z0; \n"
--- )
-
--- text:SetText("|s100;") -- Lord coin but doesnt work
--- text:SetText("|zi1110; |zi111;") -- PRICE_TYPE_AA_BONUS_CASH but doesnt work
--- text:SetText("|zl0; |zl;") -- PRICE_TYPE_AA_CASH_AND_BONUS_CASH but doesnt work
-
--- |e{level?};
-
--- |bu◆;
--- |buㆍ;
--- |br');
--- |bu●;
--- |bu▶;
-
-
--- Used a @ITEM_NAME(52298)|1.
-
--- |nn;@SPECIFY_TARGET_NAME(0)|r
-
--- text:SetText(
---   .. "|ahD8500G00016L8a0000003nxXMW00000; test \n"
---   .. "|AZ0a0000000020000CG0007W000000000oFLaOm00000; test \n"
---   ..
---   "|i28482,4,1,000000000012Rm0010000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G00000000000000000000000000000000000000000; for sale 135gold each \n"
---   ..
---   "|i28482,4,1; for sale 135gold each \n"
---   ..
---   "abc |i39396,3,0,00000000003acG000m00004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003goOHe00000000000000000G000000000000000000000000000000wic4Q000000; asdf \n"
---   ..
---   " a WTB |i8001000,0,1,00000000003e5Ne000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000G00000000000000000000000000000000000000000; 950G EA%H \n"
---   .. "test"
--- )
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportAPI(API.X2Skill)
-
--- ADDON:ChatLogTable(X2Skill:GetSkillTooltip(49332, 0))
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Window)
--- ADDON:ImportObject(OBJECT.RoadMap)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
--- ADDON:ImportObject(OBJECT.ImageDrawable)
-
--- roadmapWindow = UIParent:CreateWidget("window", "roadmapWindow", "UIParent")
--- roadmapWindow:SetExtent(928, 556)
--- -- roadmapWindow:AddAnchor("TOPLEFT", frame, "TOPLEFT", 0, 0)
--- roadmapWindow:AddAnchor("TOPRIGHT", 0, 0)
--- roadmapWindow:SetUILayer("tooltip")
--- -- roadmapWindow:EnableScroll(true)
--- -- roadmapWindow:EnablePick(false, true)
-
--- roadmapWindow:Show(true)
-
--- -- local bg = roadmapWindow:CreateColorDrawable(1, 0, 0, .1, "background")
--- -- bg:AddAnchor("TOPLEFT", roadmapWindow, 0, 0)
--- -- bg:AddAnchor("BOTTOMRIGHT", roadmapWindow, 0, 0)
-
--- roadmap = roadmapWindow:CreateChildWidget("roadmap", "roadmap", 0, true)
--- roadmap:SetMapSize(300)
--- roadmap:SetExpandRatio(.6)
--- local playerDrawable = roadmap:CreateDrawable("ui/map/icon/player_cursor.dds", "player_cursor", "overlay")
--- roadmap:SetPlayerDrawable(playerDrawable)
--- -- roadmap:EnableScroll(true)
--- -- roadmap:EnableDrag(true)
--- -- roadmap:EnablePick(true, true)
--- roadmapWindow.player = playerDrawable
--- roadmap:AddAnchor("TOPLEFT", roadmapWindow, 5, 5)
--- roadmap:AddAnchor("BOTTOMRIGHT", roadmapWindow, -5, -5)
--- -- roadmap:SetExtent(928-20, 556-20)
--- -- roadmap:SetTooltipColor(F_COLOR.GetColor("soft_yellow", true), F_COLOR.GetColor("soft_yellow", true))
--- roadmap:InitMapData()
--- -- roadmap:SetRoadMapNpc(true)
--- roadmap:ReloadAllInfo()
-
--- roadmap:ShowLeaderPing(false)
-
--- roadmapWindow:SetResizingBorderSize(
---   10, 10, 10, 10
--- )
--- roadmapWindow:SetMinResizingExtent(928 / 2, 556 / 2)
--- roadmapWindow:SetMaxResizingExtent(928, 556)
--- roadmapWindow:UseResizing(true)
-
--- local roadMapEvents = {
---   TOGGLE_ROADMAP = function ()
---     -- roadmapFrame.resizeBtn:OnClick()
---     -- RunIndicatorStackRule()
---   end,
---   SHOW_ROADMAP_TOOLTIP = function (tooltipInfo, tooltipCount)
---     -- ShowMapTooltip(tooltipInfo, tooltipCount, tooltipController, M_TOOLTIP_OFFSET_X, M_TOOLTIP_OFFSET_Y,
---     -- M_TOOLTIP_OFFSET_REVERSE_X, M_TOOLTIP_OFFSET_REVERSE_Y)
---   end,
---   HIDE_ROADMAP_TOOLTIP = function (text)
---     -- HideMapTooltip()
---   end,
---   UPDATE_ZONE_INFO = function ()
---     roadmap:UpdateZoneInfo()
---     -- RoadmapStatusUpdate()
---     -- SetPlayerToCenterForRoadMap()
---   end,
---   UPDATE_NPC_INFO = function ()
---     roadmap:UpdateNpcInfo()
---   end,
---   UPDATE_DOODAD_INFO = function ()
---     roadmap:UpdateDoodadInfo(true)
---   end,
---   UPDATE_GIVEN_QUEST_STATIC_INFO = function ()
---     roadmap:UpdateGivenQuestStaticInfo()
---   end,
---   UPDATE_HOUSING_INFO = function ()
---     roadmap:UpdateHousingInfo()
---   end,
---   UPDATE_SHIP_TELESCOPE_INFO = function ()
---     roadmap:UpdateShipTelescopeInfo()
---   end,
---   UPDATE_TRANSFER_TELESCOPE_INFO = function ()
---     roadmap:UpdateTransferTelescopeInfo()
---   end,
---   UPDATE_BOSS_TELESCOPE_INFO = function ()
---     roadmap:UpdateBossTelescopeInfo()
---   end,
---   UPDATE_CARRYING_BACKPACK_SLAVE_INFO = function ()
---     roadmap:UpdateCarryingBackpackSlaveInfo()
---   end,
---   UPDATE_FISH_SCHOOL_INFO = function ()
---     roadmap:UpdateFishSchoolInfo()
---   end,
---   UPDATE_CORPSE_INFO = function ()
---     roadmap:UpdateCorpseInfo()
---   end,
---   UPDATE_MY_SLAVE_POS_INFO = function ()
---     roadmap:UpdateMySlaveInfo()
---   end,
---   CLEAR_NPC_INFO = function ()
---     roadmap:ClearNpcInfo()
---   end,
---   CLEAR_DOODAD_INFO = function ()
---     roadmap:ClearDoodadInfo()
---   end,
---   CLEAR_GIVEN_QUEST_STATIC_INFO = function ()
---     roadmap:ClearGivenQuestStaticInfo()
---   end,
---   CLEAR_HOUSING_INFO = function ()
---     roadmap:ClearHousingInfo()
---   end,
---   CLEAR_SHIP_TELESCOPE_INFO = function ()
---     roadmap:ClearShipTelescopeInfo()
---   end,
---   CLEAR_TRANSFER_TELESCOPE_INFO = function ()
---     roadmap:ClearTransferTelescopeInfo()
---   end,
---   CLEAR_BOSS_TELESCOPE_INFO = function ()
---     roadmap:ClearBossTelescopeInfo()
---   end,
---   CLEAR_CARRYING_BACKPACK_SLAVE_INFO = function ()
---     roadmap:ClearCarryingBackpackSlaveInfo()
---   end,
---   CLEAR_FISH_SCHOOL_INFO = function ()
---     roadmap:ClearFishSchoolInfo()
---   end,
---   CLEAR_CORPSE_INFO = function ()
---     roadmap:ClearCorpseInfo()
---   end,
---   CLEAR_MY_SLAVE_POS_INFO = function ()
---     roadmap:ClearMySlaveInfo()
---   end,
---   UPDATE_PING_INFO = function ()
---     roadmap:UpdatePingInfo()
---     -- EnablePingBtn()
---   end,
---   ADD_GIVEN_QUEST_INFO = function (arg1, arg2)
---     roadmap:AddGivenQuestInfo(arg1, arg2)
---   end,
---   REMOVE_GIVEN_QUEST_INFO = function (arg1, arg2)
---     roadmap:RemoveGivenQuestInfo(arg1, arg2)
---   end,
---   UPDATE_COMPLETED_QUEST_INFO = function ()
---     roadmap:UpdateCompletedQuestInfo()
---   end,
---   CLEAR_COMPLETED_QUEST_INFO = function ()
---     roadmap:ClearCompletedQuestInfo()
---   end,
---   ADD_NOTIFY_QUEST_INFO = function (arg)
---     roadmap:AddNotifyQuestInfo(arg)
---   end,
---   REMOVE_NOTIFY_QUEST_INFO = function (arg)
---     roadmap:RemoveNotifyQuestInfo(arg)
---   end,
---   CLEAR_NOTIFY_QUEST_INFO = function ()
---     roadmap:ClearNotifyQuestInfo()
---   end,
---   UPDATE_DOMINION_INFO = function ()
---     roadmap:UpdateDominionInfo()
---   end,
---   UI_RELOADED = function ()
---     roadmap:ReloadAllInfo()
---     -- roadmapSliderOnSliderChanged()
---     -- RoadmapStatusUpdate()
---     -- SetPlayerToCenterForRoadMap()
---   end,
---   LEFT_LOADING = function ()
---     roadmap:ReloadAllInfo()
---     -- roadmapSliderOnSliderChanged()
---     -- RoadmapStatusUpdate()
---     -- SetPlayerToCenterForRoadMap()
---   end,
---   ENTERED_WORLD = function ()
---     roadmap:ReloadAllInfo()
---     -- roadmapSliderOnSliderChanged()
---     -- RoadmapStatusUpdate()
---   end,
---   ENTERED_LOADING = function ()
---     roadmap:ClearAllInfo()
---   end,
---   UPDATE_ROADMAP_ANCHOR = function (file)
---     -- UpdateRoadmapAnchor(file)
---   end,
---   SET_ROADMAP_PICKABLE = function (pick)
---     roadmapWindow:EnablePick(pick, true)
---   end,
---   UPDATE_TELESCOPE_AREA = function ()
---     roadmap:UpdateTelescopeArea()
---   end,
---   UPDATE_TRANSFER_TELESCOPE_AREA = function ()
---     roadmap:UpdateTransferTelescopeArea()
---   end,
---   UPDATE_BOSS_TELESCOPE_AREA = function ()
---     roadmap:UpdateBossTelescopeArea()
---   end,
---   UPDATE_FISH_SCHOOL_AREA = function ()
---     roadmap:UpdateFishSchoolArea()
---   end,
---   REMOVE_SHIP_TELESCOPE_INFO = function (arg)
---     roadmap:RemoveShipTelescopeInfo(arg)
---   end,
---   REMOVE_TRANSFER_TELESCOPE_INFO = function (arg)
---     roadmap:RemoveTransferTelescopeInfo(arg)
---   end,
---   REMOVE_BOSS_TELESCOPE_INFO = function (arg)
---     roadmap:RemoveBossTelescopeInfo(arg)
---   end,
---   REMOVE_CARRYING_BACKPACK_SLAVE_INFO = function (arg)
---     roadmap:RemoveCarryingBackpackSlaveInfo(arg)
---   end,
---   REMOVE_FISH_SCHOOL_INFO = function (arg)
---     roadmap:RemoveFishSchoolInfo(arg)
---   end,
---   UPDATE_MONITOR_NPC = function ()
---     roadmap:UpdateMonitorNpcInfo()
---   end,
---   UPDATE_FACTION_REZ_DISTRICT = function ()
---     roadmap:UpdateFactionRezDistrictInfo()
---   end
--- }
--- roadmap:SetHandler("OnEvent", function (this, event, ...)
---   roadMapEvents[event](...)
--- end)
-
-
-
--- local tempMainQuestReadyCoord = {
---   216,
---   24,
---   24,
---   24
--- }
--- local tempNormalQuestReadyCoord = {
---   216,
---   72,
---   24,
---   24
--- }
--- local tempNotifyColor = {
---   255,
---   255,
---   255,
---   0.5
--- }
--- worldmap:SetTempNotifyCoord(true, tempMainQuestReadyCoord)
--- worldmap:SetTempNotifyCoord(false, tempNormalQuestReadyCoord)
--- worldmap:SetTempNotifyColor(tempNotifyColor)
-
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Webbrowser)
-
--- local web = UIParent:CreateWidget("webbrowser", "test", "UIParent")
--- web:SetExtent(100, 100)
--- web:RequestExternalPage("https://google.com")
-
--- web:Show(true)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Grid)
--- ADDON:ImportObject(OBJECT.Textbox)
-
--- local grid = UIParent:CreateWidget("grid", "test", "UIParent")
--- grid:SetExtent(500, 500)
--- grid:Show(true)
--- grid:SetDefaultColWidth(100)
--- grid:SetDefaultRowHeight(100)
--- grid:SetRowCount(5)
--- grid:SetColCount(5)
--- grid:SetLineBackGround(true)
--- grid:SetLineColor(1, 0, 0, 1)
--- grid:SetCurrentLine(true)
--- grid:SetCurrentColor(1, 0, 0, 1)
-
--- grid:SetRowCliping(true)
--- grid:SetDrawLineType("dotted")
--- grid:SetDrawStartNumber(2)
-
-
--- local textbox = grid:CreateChildWidget("textbox", "testbtn", 0, true)
--- textbox:SetExtent(100, 100)
--- textbox:SetText("Archerage.to")
--- grid:SetItem(textbox, 1, 1, true, 10, false)
--- local textbox = grid:CreateChildWidget("textbox", "testbtn", 0, true)
--- textbox:SetText(
---   "Archerage.to asdfas\nas\ndfas\n das\ndf a\nsdf asdfas\ndf\n asdfasderage.to asdfas\nas\ndfas\n das\ndf a\nsdf asdfas\ndf\n asdfasderage.to asdfas\nas\ndfas\n das\ndf a\nsdf asdfas\ndf\n asdfasderage.to asdfas\nas\ndfas\n das\ndf a\nsdf asdfas\ndf\n asdfasd")
--- textbox:SetExtent(100, 100)
--- grid:SetItem(textbox, 2, 1, true, 10, false)
--- local textbox = grid:CreateChildWidget("textbox", "testbtn", 0, true)
--- textbox:SetExtent(100, 100)
--- textbox:SetText("Archerage.to")
--- grid:SetItem(textbox, 3, 1, true, 10, false)
-
---------------------------------------------------------------------------------
-
--- -- ADDON:ImportObject(OBJECT.Textbox)
--- ADDON:ImportObject(OBJECT.EmptyWidget)
--- ADDON:ImportObject(OBJECT.Window)
--- ADDON:ImportObject(OBJECT.NinePartDrawable)
--- ADDON:ImportObject(OBJECT.Button)
--- ADDON:ImportObject(OBJECT.Slider)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
--- ADDON:ImportObject(OBJECT.Grid)
--- -- ADDON:ImportObject(OBJECT.TextStyle)
-
--- local window = UIParent:CreateWidget("window", "test", "UIParent")
--- window:SetExtent(430, 620)
--- window:AddAnchor("TOPLEFT", 0, 0)
--- window:Show(true)
-
--- local background = window:CreateNinePartDrawable(TEXTURE_PATH.DEFAULT, "background")
--- background:AddAnchor("TOPLEFT", window, -5, -5)
--- background:AddAnchor("BOTTOMRIGHT", window, 5, 5)
--- background:SetTextureInfo("main_bg")
--- window.background = background
-
--- local content = window:CreateChildWidget("emptywidget", "content", 0, true)
--- content:AddAnchor("TOPLEFT", 20, 40)
--- content:Show(true)
--- content:EnableScroll(true)
-
--- -- local content = window:CreateChildWidget("grid", "addons", 0, true)
--- -- content:AddAnchor("TOPLEFT", 20, 40)
--- -- content:Show(true)
--- -- -- content:EnableScroll(true)
-
--- -- content:SetColCount(4)
--- -- content:SetColWidth(1, 20)
--- -- content:SetColWidth(2, 20)
--- -- content:SetColWidth(3, 20)
--- -- content:SetColWidth(4, 20)
--- -- content:SetDefaultRowHeight(100)
--- -- content:SetRowCount(5)
--- -- content:SetRowHeight(1, 300)
--- -- content:SetHeaderType("top")
--- -- ADDON:ImportObject(OBJECT.Label)
--- -- content:SetTopHeaderHeight(100)
--- -- -- local title = content:CreateChildWidget("label", "testbtn", 0, true)
--- -- -- title:SetText("Archerage.to")
--- -- -- title.style:SetColorByKey("default")
--- -- -- title:SetExtent(50, 50)
--- -- -- content:SetItem(title, 0, 1, true, 10, false)
--- -- local label = content:CreateChildWidget("label", "testbtn", 0, true)
--- -- label:SetText("Archerage.to")
--- -- label.style:SetColorByKey("default")
--- -- label:SetExtent(50, 50)
--- -- content:SetItem(label, 1, 1, true, 10, false)
-
--- -- local lbg = label:CreateColorDrawable(1, 0, 0, .1, "background")
--- -- lbg:AddAnchor("TOPLEFT", label, 0, 0)
--- -- lbg:AddAnchor("BOTTOMRIGHT", label, 0, 0)
--- -- local label2 = content:CreateChildWidget("label", "asdf", 0, true)
--- -- label2:SetText("asdf.to")
--- -- label2.style:SetColorByKey("default")
--- -- label2:SetExtent(50, 50)
--- -- local lbg = label2:CreateColorDrawable(1, 0, 0, .1, "background")
--- -- lbg:AddAnchor("TOPLEFT", label2, 0, 0)
--- -- lbg:AddAnchor("BOTTOMRIGHT", label2, 0, 0)
--- -- content:SetItem(label2, 2, 1, true, 11, false)
--- -- local label3 = content:CreateChildWidget("label", "asdf", 0, true)
--- -- label3:SetText("asdf.to")
--- -- label3.style:SetColorByKey("default")
--- -- label3:SetExtent(50, 50)
--- -- content:SetItem(label3, 3, 1, true, 11, false)
-
--- local scrollbar = window:CreateChildWidget("emptywidget", "content", 0, true)
--- scrollbar:SetWidth(20)
--- scrollbar:AddAnchor("TOPRIGHT", -20, 40)
--- scrollbar:AddAnchor("BOTTOMRIGHT", 0, -20)
--- content:AddAnchor("BOTTOMRIGHT", scrollbar, "BOTTOMLEFT", 0, 0)
-
--- local upButton = scrollbar:CreateChildWidget("button", "upbutton", 0, true)
--- -- upButton:SetStyle("slider_scroll_button_up") -- This doesn't exist yet.
--- local normalBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- normalBackground:SetTextureInfo("scroll_button_up", "normal")
--- normalBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
--- normalBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
--- upButton:SetNormalBackground(normalBackground)
-
--- local highlightBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- highlightBackground:SetTextureInfo("scroll_button_up", "over")
--- highlightBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
--- highlightBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
--- upButton:SetHighlightBackground(highlightBackground)
-
--- local pushedBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- pushedBackground:SetTextureInfo("scroll_button_up", "click")
--- pushedBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
--- pushedBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
--- upButton:SetPushedBackground(pushedBackground)
-
--- local disabledBackground = upButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- disabledBackground:SetTextureInfo("scroll_button_up", "disable")
--- disabledBackground:AddAnchor("TOPLEFT", upButton, 0, 0)
--- disabledBackground:AddAnchor("BOTTOMRIGHT", upButton, 0, 0)
--- upButton:SetDisabledBackground(disabledBackground)
-
--- upButton:AddAnchor("TOPRIGHT", scrollbar, 0, 0)
--- upButton:SetExtent(20, 12)
-
--- local downButton = scrollbar:CreateChildWidget("button", "upbutton", 0, true)
--- -- upButton:SetStyle("slider_scroll_button_down") -- This doesn't exist yet.
--- local normalBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- normalBackground:SetTextureInfo("scroll_button_down", "normal")
--- normalBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
--- normalBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
--- downButton:SetNormalBackground(normalBackground)
-
--- local highlightBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- highlightBackground:SetTextureInfo("scroll_button_down", "over")
--- highlightBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
--- highlightBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
--- downButton:SetHighlightBackground(highlightBackground)
-
--- local pushedBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- pushedBackground:SetTextureInfo("scroll_button_down", "click")
--- pushedBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
--- pushedBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
--- downButton:SetPushedBackground(pushedBackground)
-
--- local disabledBackground = downButton:CreateImageDrawable(TEXTURE_PATH.SCROLL, "background")
--- disabledBackground:SetTextureInfo("scroll_button_down", "disable")
--- disabledBackground:AddAnchor("TOPLEFT", downButton, 0, 0)
--- disabledBackground:AddAnchor("BOTTOMRIGHT", downButton, 0, 0)
--- downButton:SetDisabledBackground(disabledBackground)
-
--- downButton:AddAnchor("BOTTOMRIGHT", scrollbar, 0, 0)
--- downButton:SetExtent(20, 12)
-
--- local slider = scrollbar:CreateChildWidget("slider", "asdf", 0, true)
--- slider:AddAnchor("TOPLEFT", upButton, "BOTTOMLEFT", 0, 0)
--- slider:AddAnchor("BOTTOMRIGHT", downButton, "TOPRIGHT", 0, 0)
-
--- local bg = scrollbar:CreateDrawable(TEXTURE_PATH.SCROLL, "scroll_frame_bg", "background")
--- bg:SetTextureColor("default")
--- bg:AddAnchor("TOPLEFT", slider, 3, -9)
--- bg:AddAnchor("BOTTOMRIGHT", slider, -3, 9)
-
--- local thumb = slider:CreateChildWidget("button", "thumb", 0, true)
--- thumb:EnableDrag(true)
--- thumb:SetExtent(20, 40)
-
--- local normalBackground = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
--- normalBackground:SetTextureInfo("thumb_df")
--- normalBackground:AddAnchor("TOPLEFT", thumb, 0, 0)
--- normalBackground:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
--- thumb:SetNormalBackground(normalBackground)
-
--- local highlightBackground = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
--- highlightBackground:SetTextureInfo("thumb_ov")
--- highlightBackground:AddAnchor("TOPLEFT", thumb, 0, 0)
--- highlightBackground:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
--- thumb:SetHighlightBackground(highlightBackground)
-
--- local pushedBackground = thumb:CreateNinePartDrawable(TEXTURE_PATH.SCROLL, "background")
--- pushedBackground:SetTextureInfo("thumb_on")
--- pushedBackground:AddAnchor("TOPLEFT", thumb, 0, 0)
--- pushedBackground:AddAnchor("BOTTOMRIGHT", thumb, 0, 0)
--- thumb:SetPushedBackground(pushedBackground)
-
--- slider:SetThumbButtonWidget(thumb)
--- slider:SetMinThumbLength(40)
-
-
--- function upButton:OnClick()
---   slider:Up(40)
--- end
-
--- upButton:SetHandler("OnClick", upButton.OnClick)
--- function downButton:OnClick()
---   slider:Down(40)
--- end
-
--- downButton:SetHandler("OnClick", downButton.OnClick)
-
--- slider:SetHandler("OnSliderChanged", function (self, value)
---   content:ChangeChildAnchorByScrollValue("vert", value)
--- end)
-
--- slider:SetPageStep(40)
--- slider:SetValueStep(40)
--- slider:SetFixedThumb(true)
-
--- -- content:SetDrawStartNumber(2)
-
--- content:SetHandler("OnWheelUp", function (self, delta)
---   slider:Up(40)
--- end)
-
--- content:SetHandler("OnWheelDown", function (self, delta)
---   slider:Down(40)
--- end)
-
--- ADDON:ImportObject(OBJECT.ListCtrl)
--- local addonInfo = ADDON:GetAddonInfos()
-
--- table.sort(addonInfo, function (a, b)
---   return a.name < b.name
--- end)
-
--- local addons = {}
-
--- for _, addon in ipairs(addonInfo) do
---   if addon.name ~= ADDON:GetName() then
---     table.insert(addons, addon)
---   end
--- end
-
--- local list = content:CreateChildWidget("listctrl", "addons", 0, true)
--- list:AddAnchor("TOPLEFT", 0, 0)
--- list:SetWidth(content:GetWidth())
--- list:SetHeight(40 * #addons)
--- list:InsertColumn(40, LCCIT_BUTTON)
--- list:InsertColumn(list:GetWidth() - 120, LCCIT_TEXTBOX)
--- list:InsertColumn(40, LCCIT_BUTTON)
--- list:InsertColumn(40, LCCIT_BUTTON)
--- list:InsertRows(#addons, false)
--- list:SetHeaderColumnHeight(0)
-
--- -- local outline = list:CreateColorDrawable(1, 0, 0, .1, "background")
--- -- outline:AddAnchor("TOPLEFT", list, 0, 0)
--- -- outline:AddAnchor("BOTTOMRIGHT", list, 0, 0)
-
--- -- local overedImage = list:CreateOveredImage("overlay")
--- -- overedImage:SetTexture(TEXTURE_PATH.DEFAULT)
--- -- overedImage:SetTextureInfo("slot_ov")
-
--- ADDON:ChatLog(#list.items)
--- ADDON:ImportObject(OBJECT.CheckButton)
-
--- for row, addon in pairs(addons) do
---   local checkButton, titleTextbox, settingsButton, refreshButton = unpack(
---     list.items[row].subItems
---   )
-
---   local checkButtonBackground = checkButton:CreateDrawable(TEXTURE_PATH.CHECK_BTN, "btn_df", "background")
---   checkButtonBackground:AddAnchor("CENTER", checkButton, 0, 0)
---   checkButtonBackground:SetExtent(20, 20)
-
---   local checkButtonCheckedBackground = checkButton:CreateDrawable(TEXTURE_PATH.CHECK_BTN, "btn_chk_df", "background")
---   checkButtonCheckedBackground:AddAnchor("CENTER", checkButton, 0, 0)
---   checkButtonCheckedBackground:SetVisible(addon.enable)
---   checkButtonCheckedBackground:SetExtent(20, 20)
-
---   checkButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---     addon.enable = not addon.enable
---     ADDON:SetAddonEnable(addon.name, addon.enable)
---     ADDON:SaveAddonInfos()
---     ADDON:ReloadAddon(addon.name)
-
---     checkButtonCheckedBackground:SetVisible(addon.enable)
---     settingsButton:Enable(addon.enable)
---     refreshButton:Enable(addon.enable)
---   end)
-
---   titleTextbox.style:SetColorByKey("default")
---   titleTextbox.style:SetAlign(ALIGN_LEFT)
---   titleTextbox.style:SetEllipsis(true)
---   titleTextbox.style:SetFontSize(FONT_SIZE.LARGE)
-
---   titleTextbox:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---     addon.enable = not addon.enable
---     ADDON:SetAddonEnable(addon.name, addon.enable)
---     ADDON:SaveAddonInfos()
---     ADDON:ReloadAddon(addon.name)
-
---     checkButtonCheckedBackground:SetVisible(addon.enable)
---     settingsButton:Enable(addon.enable)
---     refreshButton:Enable(addon.enable)
---   end)
-
---   settingsButton:SetStyle("button_common_option")
---   settingsButton:Enable(addon.enable)
-
---   settingsButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---     ADDON:FireAddon(addon.name)
---   end)
-
---   refreshButton:SetExtent(20, 20)
---   local normalBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
---   normalBackground:SetTextureInfo("reset_df")
---   normalBackground:SetExtent(20, 20)
---   normalBackground:AddAnchor("CENTER", refreshButton, 0, 0)
---   refreshButton:SetNormalBackground(normalBackground)
---   local highlightBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
---   highlightBackground:SetTextureInfo("reset_ov")
---   highlightBackground:SetExtent(20, 20)
---   highlightBackground:AddAnchor("CENTER", refreshButton, 0, 0)
---   refreshButton:SetHighlightBackground(highlightBackground)
---   local pushedBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
---   pushedBackground:SetTextureInfo("reset_on")
---   pushedBackground:SetExtent(20, 20)
---   pushedBackground:AddAnchor("CENTER", refreshButton, 0, 0)
---   refreshButton:SetPushedBackground(pushedBackground)
---   local disabledBackground = refreshButton:CreateImageDrawable(BUTTON_TEXTURE_PATH.COMMON_RESET, "background")
---   disabledBackground:SetTextureInfo("reset_dis")
---   disabledBackground:SetExtent(20, 20)
---   disabledBackground:AddAnchor("CENTER", refreshButton, 0, 0)
---   refreshButton:SetDisabledBackground(disabledBackground)
---   refreshButton:Enable(addon.enable)
-
---   refreshButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---     ADDON:ReloadAddon(addon.name)
---   end)
-
---   list:InsertData(row, 2, addon.name)
--- end
-
-
--- UIParent:SetEventHandler("UI_ADDON", function ()
---   ADDON:ChatLog("UI_ADDON")
--- end)
-
--- -- local min, max = content:GetMaxTop()
--- local min = 0
--- local max = math.max(0, list:GetHeight() - content:GetHeight())
-
--- ADDON:ChatLog(list:GetHeight())
--- ADDON:ChatLog(content:GetHeight())
-
--- slider:SetMinMaxValues(min, max)
-
--- if max == 0 then
---   upButton:Enable(false)
---   -- slider:Enable(false)
---   thumb:Enable(false)
---   downButton:Enable(false)
---   bg:SetTextureColor("disable")
--- end
-
--- local file = open("temp/example.txt", "w")
--- file:write(dump({ list }))
--- file:close()
-
--- emptywidget:ChangeChildAnchorByScrollValue("vert", 100)
-
--- ADDON:SetAddonEnable("consoleeditor", false)
--- -- ADDON:SaveAddonInfos()
--- ADDON:ChatLogTable(ADDON:GetAddonInfos())
--- ADDON:ReloadAddon("consoleeditor")
-
---------------------------------------------------------------------------------
-
--- local test = UIParent:CreateWidget("button", "testing", "UIParent")
--- test:SetStyle("text_default")
--- test:AddAnchor("CENTER", 0, 0)
--- test:Show(true)
--- local test2 = UIParent:CreateWidget("button", "testing", "UIParent")
--- test2:SetStyle("text_default")
--- test2:AddAnchor("CENTER", -100, 0)
--- test2:Show(true)
-
-
--- test2:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
---   local file = open("temp/example.txt", "w")
---   file:write(dump({ test }))
---   file:close()
-
-
---   ADDON:ChatLog("is valid " .. tostring(test.test:IsValidUIObject()))
---   -- test.test:Show(true)
---   -- test.test:SetText("hello")
--- end)
-
-
--- test:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
-
---   ADDON:ChatLog("before " .. tostring(test.test))
---   local del = test:CreateChildWidget("button", "test", 0, true)
---   ADDON:ChatLog("name " .. del:GetName())
---   del:SetStyle("text_default")
---   del:AddAnchor("CENTER", 100, 0)
---   del:EnableHidingIsRemove(true)
---   del:SetDeletedHandler(function ()
---     ADDON:ChatLog("del")
---     ADDON:ChatLog(tostring(del:IsValidUIObject()))
---     -- del = nil
---     -- test.test = nil
---   end)
---   del:Show(true)
---   del:Show(false)
-
---   ADDON:ChatLog(tostring(test.test))
--- end)
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.Textbox)
-
--- local textbox = UIParent:CreateWidget("textbox", "test", "UIParent")
--- textbox:AddAnchor("CENTER", 0, 0)
--- textbox:SetExtent(100, 20)
--- textbox:SetAutoWordwrap(false)
--- textbox.style:SetColorByKey("default")
--- textbox.style:SetAlign(ALIGN_LEFT)
--- textbox.style:SetFontSize(FONT_SIZE.LARGE)
--- textbox.style:SetEllipsis(true)
-
--- textbox:SetText("Helloworldasdfasdfasdf a b c d e asdfasfd afasdfsf")
--- -- textbox:SetTextAutoWidth(100, "Helloworldasdfasdfasdf", 0)
--- textbox:Show(true)
-
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportObject(OBJECT.EmptyWidget)
--- ADDON:ImportAPI(API.X2Unit)
--- ADDON:ImportObject(OBJECT.IconDrawable)
-
--- local widget = UIParent:CreateWidget("emptywidget", "widget", "UIParent")
--- widget:Show(true)
-
--- local UnitHiddenBuffCount = X2Unit:UnitHiddenBuffCount("player")
--- for i = 1, UnitHiddenBuffCount do
---   local UnitHiddenBuff = X2Unit:UnitHiddenBuff("player", i)
---   local UnitHiddenBuffTooltip = X2Unit:UnitHiddenBuffTooltip("player", i)
---   local icon = widget:CreateIconDrawable("background")
---   icon:SetExtent(48, 48)
---   icon:AddAnchor("TOPLEFT", i * 48 - 48, 0)
---   icon:AddTexture(UnitHiddenBuff.path)
---   -- ADDON:ChatLogTable(UnitHiddenBuff)
---   ADDON:ChatLog("UnitHiddenBuffTooltip " .. i)
---   ADDON:ChatLogTable(UnitHiddenBuffTooltip)
---   ADDON:ChatLog("----------------")
--- end
-
---------------------------------------------------------------------------------
-
--- local UI = UIParent
--- local test = {
---   x = 4351.84,
---   y = 4437.83,
---   z = 187.125,
--- }
--- local uiScale = UI:GetUIScale()
-
--- -- Main function -- NOW fetches FRESH camera data EVERY CALL (critical fix!)
--- local function WorldToScreen(worldPos)
---   -- FRESH every frame!
---   local screenW = UI:GetScreenWidth()
---   local screenH = UI:GetScreenHeight()
---   local camPos = UI:GetViewCameraPos()
---   local camDir = UI:GetViewCameraDir() -- normalized forward
---   local camFov = UI:GetViewCameraFov() -- vertical FOV radians
-
---   -- Build basis (horizontal right)
---   local function buildViewBasis(forward)
---     local right = {
---       x = forward.z,
---       y = 0,
---       z = -forward.x
---     }
---     local len = math.sqrt(right.x * right.x + right.z * right.z)
---     right.x = right.x / len
---     right.z = right.z / len
-
---     local up = {
---       x = forward.y * right.z - forward.z * right.y,
---       y = forward.z * right.x - forward.x * right.z,
---       z = forward.x * right.y - forward.y * right.x
---     }
---     -- Explicit normalize (float safety)
---     local up_len = math.sqrt(up.x * up.x + up.y * up.y + up.z * up.z)
---     up.x = up.x / up_len
---     up.y = up.y / up_len
---     up.z = up.z / up_len
-
---     return right, up
---   end
-
---   local camRight, camUp = buildViewBasis(camDir)
-
---   -- Vector from camera to point
---   local toPoint = {
---     x = worldPos.x - camPos.x,
---     y = worldPos.y - camPos.y,
---     z = worldPos.z - camPos.z
---   }
-
---   local depth = toPoint.x * camDir.x + toPoint.y * camDir.y + toPoint.z * camDir.z
---   if depth <= 0.01 then
---     return nil, nil, false
---   end
-
---   local projX = toPoint.x * camRight.x + toPoint.y * camRight.y + toPoint.z * camRight.z
---   local projY = toPoint.x * camUp.x + toPoint.y * camUp.y + toPoint.z * camUp.z
-
---   local halfTanFov = math.tan(camFov * 0.5)
---   local scale = screenH * 0.5 -- Correct aspect handling!
---   local screenX = (projX / (depth * halfTanFov)) * scale + screenW * 0.5
---   local screenY = (-projY / (depth * halfTanFov)) * scale + screenH * 0.5
-
---   local onScreen = screenX >= 0 and screenX <= screenW and screenY >= 0 and screenY <= screenH
---   local depth01 = depth / 10000
-
---   local file = open("temp/example.txt", "w")
---   file:write(dump({
---     screenW = screenW,
---     screenH = screenH,
---     camPos = camPos,
---     camDir = camDir,
---     camFov = camFov,
---     test = test,
---     WorldToScreen = { screenX = screenX, screenY = screenY, onScreen = onScreen, depth01 = depth01 },
---     player = { X2Unit:GetUnitWorldPositionByTarget("player", true) },
---     uiScale = uiScale
---   }))
---   file:close()
-
---   return screenX, screenY, onScreen, depth01
--- end
-
--- -- Widget setup
--- ADDON:ImportAPI(API.X2Unit)
--- ADDON:ImportObject(OBJECT.EmptyWidget)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
-
--- local widget = UIParent:CreateWidget("emptywidget", "test", "UIParent")
--- widget:SetExtent(100, 100)
--- widget:Show(true)
-
--- local color = widget:CreateColorDrawable(1, 0, 0, 0.3, "background")
--- color:AddAnchor("TOPLEFT", widget, 0, 0)
--- color:AddAnchor("BOTTOMRIGHT", widget, 0, 0)
-
--- -- PERFECT TRACKING OnUpdate
--- widget:SetHandler("OnUpdate", function (self, frameTime)
---   widget:RemoveAllAnchors()
-
---   local x, y, z = X2Unit:GetUnitWorldPositionByTarget("player", true) -- angle unused
---   -- local sx, sy, visible = WorldToScreen(test)
---   local sx, sy, visible = WorldToScreen({ x = x, y = y, z = z })
-
---   if visible then
---     -- CENTER widget on player: offset by half size!
---     -- once RemoveAllAnchors is used any value passed is then scaled by uiScale
---     -- so if sx = 1000 and uiscale is .9 then when its passed in as 1000 itll render
---     -- as 900
---     widget:AddAnchor("TOPLEFT", sx / uiScale - 50, sy / uiScale - 50)
---   else
---     -- widget:Hide(true)
---   end
--- end)
-
---------------------------------------------------------------------------------
-
--- INVALID_ICON_PATH = X2Util:GetConstIconPath("represent_invalid")
--- NORMAL_GRADE_ICON_PATH = X2Item:GetItemGradeIconPath(0)
-
--- ADDON:ChatLog("test")
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportAPI(API.X2Auction)
-
--- X2Auction:SearchAuctionArticle(1, 1, 1, 1, 0, false, "Lumber", "", "")
-
---------------------------------------------------------------------------------
-
--- ADDON:ImportAPI(API.X2Unit)
--- ADDON:ImportObject(OBJECT.Textbox)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
-
 -- local window = UIParent:CreateWidget("textbox", "test", "UIParent")
--- window:SetExtent(300, 20)
--- -- window:SetAutoResize(true)
+-- window:SetExtent(420, 100)
+-- window:SetAutoResize(true)
 -- -- window:SetAutoWordwrap(false)
 -- window:AddAnchor("TOP", 0, 0)
 -- window:Show(true)
@@ -3450,93 +962,1579 @@ ADDON:ImportAPI(API.X2Option)
 -- bg:AddAnchor("TOPLEFT", window, 0, 0)
 -- bg:AddAnchor("BOTTOMRIGHT", window, 0, 0)
 
+-- local OFFSET_X         = 21504
+-- local OFFSET_Y         = 28672
+-- local UNITS_PER_DEGREE = 1024
+-- local UNITS_PER_MIN    = 60
+-- local UNITS_PER_SEC    = 60
+
+-- ---comment
+-- ---@param x number
+-- ---@param coord "long"|"lat"
+-- ---@return string dir
+-- ---@return integer deg
+-- ---@return integer min
+-- ---@return number sec
+-- local function convertWorldToDMS(x, coord)
+--   local dir
+
+--   if coord == "long" then
+--     x = x - OFFSET_X
+--     dir = x < 0 and "W" or "E"
+--   elseif coord == "lat" then
+--     x = x - OFFSET_Y
+--     dir = x < 0 and "S" or "N"
+--   end
+
+--   local deg, deg_remainder = math.modf(math.abs(x) / UNITS_PER_DEGREE)
+--   local min, min_remainder = math.modf(deg_remainder * UNITS_PER_MIN)
+--   local sec = min_remainder * UNITS_PER_SEC
+
+--   return dir, deg, min, sec
+-- end
+
+-- window:SetMoveAnimation("top", 10 + 1 * 3, 0.4, 2)
+
+-- -- local x1, y1, z1 =
 -- window:SetHandler("OnUpdate", function (self, frameTime)
 --   local x, y, z, angle = X2Unit:GetUnitWorldPositionByTarget("player", false)
---   window:SetText(string.format("x: %d, y: %d, z: %d, a: %f", x, y, z, math.deg(angle)))
+
+--   -- local real_x = x - 21504
+--   -- local deg_long, deg_long_remainder = math.modf(math.abs(real_x) / 1024)
+--   -- local min_long, min_long_remainder = math.modf(deg_long_remainder * 60)
+--   -- local sec_long = min_long_remainder * 60
+
+--   local dir_long, deg_long, min_long, sec_long = convertWorldToDMS(x, "long")
+--   local dir_lat, deg_lat, min_lat, sec_lat = convertWorldToDMS(y, "lat")
+
+
+--   X2Option:SetConsoleVariable("camera_max_dist", tostring(2001.5 - z)) -- limits to 2k
+
+--   local viewCameraPos = UIParent:GetViewCameraPos()
+--   local viewCameraDir = UIParent:GetViewCameraDir()
+
+
+--   -- window:SetText(string.format(
+--   --   "GLOBAL PLAYER POS x: %.2f, y: %.2f, z: %.2f, a: %.2f\n" ..
+--   --   "LOCAL CAM POS x: %.2f, y: %.2f, z: %.2f\n" ..
+--   --   "CAM DIR x: %.2f, y: %.2f, z: %.2f\n" ..
+--   --   "a: %.2f, z: %.2f, z: %.2f\n" ..
+--   --   "%s %d° %d' %d\" %s %d° %d' %d\"\n",
+--   --   x, y, z, math.deg(angle),
+--   --   viewCameraPos.x, viewCameraPos.y, viewCameraPos.z,
+--   --   viewCameraDir.x, viewCameraDir.y, viewCameraDir.z,
+--   --   math.deg(angle), viewCameraDir.z, viewCameraPos.z,
+--   --   dir_long, deg_long, min_long, sec_long, dir_lat, deg_lat, min_lat, sec_lat
+--   -- ))
+--   window:SetText(string.format(
+--     "GLOBAL PLAYER POS x: %.2f, y: %.2f, z: %.2f, a: %.2f\n" ..
+--     "LOCAL CAM POS x: %.2f, y: %.2f, z: %.2f\n" ..
+--     "CAM DIR x: %.2f, y: %.2f, z: %.2f\n" ..
+--     "a: %.2f, z: %.2f, z: %.2f\n",
+--     x, y, z, math.deg(angle),
+--     viewCameraPos.x, viewCameraPos.y, viewCameraPos.z,
+--     viewCameraDir.x, viewCameraDir.y, viewCameraDir.z,
+--     math.deg(angle), viewCameraDir.z, viewCameraPos.z
+--   ))
+--   window:SetAutoResize(true)
+--   window:TriggerMoveAnimation(true)
 -- end)
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportAPI(API.X2Skill)
--- ADDON:ImportAPI(API.X2Mate)
--- ADDON:ImportObject(OBJECT.Textbox)
--- ADDON:ImportObject(OBJECT.IconDrawable)
--- ADDON:ChatLog(X2Skill:GetCooldown(45192, true))
--- ADDON:ChatLog(X2Skill:GetMateCooldown(45191, true, MATE_TYPE_RIDE))
+-- local function Toggle(show)
+--   ADDON:ToggleContent(UIC_TRADE_GOOD_PRICE_INFORMATION)
+-- end
 
--- local window = UIParent:CreateWidget("textbox", "test", "UIParent")
--- window:SetExtent(300, 20)
--- window:AddAnchor("TOP", 0, 0)
--- window:Show(true)
-
--- local skill = X2Skill:GetSkillTooltip(17663, 0)
-
--- local icon = window:CreateIconDrawable("background")
--- icon:SetExtent(48, 48)
--- icon:AddTexture(skill.path)
-
--- window:SetHandler("OnUpdate", function (self, frameTime)
---   -- 17663 ezi
---   -- 45192 kirin
---   local skillCooldown = X2Skill:GetCooldown(17663, true)
-
---   if skillCooldown then
---     window:SetText(tostring(skillCooldown))
---   end
--- end)
-
--- ADDON:ImportAPI(API.X2Unit)
--- ADDON:ImportAPI(API.X2Skill)
--- local playerName = X2Unit:UnitName("player")
--- UIParent:SetEventHandler("COMBAT_MSG", function (targetUnitId, combatEvent, source, target, skillId, skillName)
---   ADDON:ChatLog(skillId .. " " .. skillName)
---   if combatEvent == "SPELL_CAST_SUCCESS" and (source == playerName or target == playerName) then
---     ADDON:ChatLog(skillId .. " " .. skillName)
---     local skillTooltip = X2Skill:GetSkillTooltip(skillId, 0)
---     ADDON:ChatLog("cooldown: " .. skillTooltip.cooldown)
---     ADDON:ChatLog("----")
---   end
--- end)
-
--- ADDON:ChatLog(os.clock())
+-- ADDON:RegisterContentTriggerFunc(UIC_SPECIALTY_INFO, Toggle)
 
 --------------------------------------------------------------------------------
 
--- ADDON:ImportObject(OBJECT.Window)
--- ADDON:ImportObject(OBJECT.ColorDrawable)
+--- https://archeage.fandom.com/wiki/Community_Center maybe incorporate all high
+--- rank perks and allow to turn on/off each?
+--- resident_nuons_step Development Rank under Vocation
+--- make a window for each zone that can have a perk
 
--- local window = UIParent:CreateWidget("window", "test", "UIParent")
--- window:Show(true)
--- window:AddAnchor("TOP", 0, 0)
+-- local developmentZones = {
+--   auroria = {
+--     mistmerrow = X2Map:GetZoneStateInfoByZoneId(78), -- Grand Improved Workbench appears at rank 3
+--   },
+--   haranya = {
+--     arcumIris           = X2Map:GetZoneStateInfoByZoneId(7),
+--     falcorthPlains      = X2Map:GetZoneStateInfoByZoneId(11), -- Grand Improved Workbench appears at rank 3
+--     hasla               = X2Map:GetZoneStateInfoByZoneId(23),
+--     mahadevi            = X2Map:GetZoneStateInfoByZoneId(9),
+--     perinoorRuins       = X2Map:GetZoneStateInfoByZoneId(15),
+--     rokhalaMountains    = X2Map:GetZoneStateInfoByZoneId(99),
+--     rookborneBasin      = X2Map:GetZoneStateInfoByZoneId(16), -- Grand Improved Workbench appears at rank 3
+--     silentForest        = X2Map:GetZoneStateInfoByZoneId(25),
+--     solisHeadlands      = X2Map:GetZoneStateInfoByZoneId(4),
+--     sunbiteWilds        = X2Map:GetZoneStateInfoByZoneId(13),
+--     tigerspineMountains = X2Map:GetZoneStateInfoByZoneId(24),
+--     villanelle          = X2Map:GetZoneStateInfoByZoneId(12),
+--     windscourSavannah   = X2Map:GetZoneStateInfoByZoneId(14), -- Grand Improved Workbench appears at rank 3
+--     ynystere            = X2Map:GetZoneStateInfoByZoneId(17),
+--   },
+--   nuia = {
+--     ahnimar            = X2Map:GetZoneStateInfoByZoneId(93),
+--     airainRock         = X2Map:GetZoneStateInfoByZoneId(10),
+--     aubreCradle        = X2Map:GetZoneStateInfoByZoneId(21),
+--     cinderstoneMoor    = X2Map:GetZoneStateInfoByZoneId(20),
+--     dewstonePlains     = X2Map:GetZoneStateInfoByZoneId(3),
+--     gweonidForest      = X2Map:GetZoneStateInfoByZoneId(1),
+--     halycona           = X2Map:GetZoneStateInfoByZoneId(22), -- Grand Improved Workbench appears at rank 3
+--     hellswamp          = X2Map:GetZoneStateInfoByZoneId(26), -- Grand Improved Workbench appears at rank 3
+--     karkasseRidgelands = X2Map:GetZoneStateInfoByZoneId(19),
+--     lilyutHills        = X2Map:GetZoneStateInfoByZoneId(6),
+--     marianople         = X2Map:GetZoneStateInfoByZoneId(2),  -- Grand Improved Workbench appears at rank 3
+--     sanddeep           = X2Map:GetZoneStateInfoByZoneId(27), -- Grand Improved Workbench appears at rank 3
+--     solzreedPeninsula  = X2Map:GetZoneStateInfoByZoneId(5),
+--     twoCrowns          = X2Map:GetZoneStateInfoByZoneId(8),
+--     whiteArden         = X2Map:GetZoneStateInfoByZoneId(18),
+--   },
+-- }
 
--- local test = window:CreateChildWidget("window", "test", 0, true)
--- ADDON:ChatLog("test " .. tostring(test:GetName()))
 
--- -- for i = 1, 10 do
--- --   local test = window:CreateChildWidget("window", "test", i, true)
+-- for _, data in pairs(grandImprovedWorkbenchZones) do
+--   -- if data.localDevelopmentStep == 2 or data.localDevelopmentStep == 3 then
+--   ADDON:ChatLog("|cFF0B9C23" .. data.zoneName .. " - " .. data.localDevelopmentName .. "|r")
+--   -- end
+-- end
+
+-- local file = open("temp/example.txt", "w")
+-- file:write(dump(developmentZones))
+-- file:close()
+
+--------------------------------------------------------------------------------
+
+-- -- Could make this track any arc that is being casted on me
+
+-- -- Its possible the boss doesnt return the id so i may have to use names and if
+-- -- thats the case then ill have to have names of each locale
+-- local tracker = {
+--   [45391] = "battlefield_1_secound", -- T2 Jola - Time For Fun 80m
+--   [45633] = "battlefield_1_secound", -- T2 Jola - Time For Fun 80m
+--   [43506] = "battlefield_1_secound", -- Charybdis - Sea of Death
+--   [39774] = "battlefield_1_secound", -- Black Dragon - Black Dragon Scale
+--   [39837] = "battlefield_1_secound", -- Black Dragon - Black Dragon Scale
+--   [39619] = "battlefield_1_secound", -- Black Dragon -Smash Earth
+--   [27192] = "battlefield_1_secound", -- Kraken - Kraken's Slam
+--   [49483] = "battlefield_1_secound", -- Abyssal Kraken - Slam
+--   [15918] = "battlefield_1_secound", -- test
+--   [11216] = "battlefield_1_secound", -- test
+-- }
+-- local name
+-- local time
+-- local id
+
+-- local label = UIParent:CreateWidget("label", "test", "UIParent")
+-- label:AddAnchor("CENTER", 0, -300)
+-- -- label:Show(true)
+-- -- label.style:SetFont("img_font_combat", 60, FTK_IMAGETEXT)
+-- -- label.style:SetFont("font_combat", 60)
+-- label.style:SetFont("font_sub", 60)
+-- -- label.style:SetFont("font_main", 60)
+-- label.style:SetColorByKey("red")
+-- label.style:SetShadow(true)
+
+-- -- function test(self, frameTime)
+-- --   if name and time > 0 then
+-- --     label:SetText(string.format("%s %.1fs", name, time / 1000))
+-- --     label:SetWidth(500)
+-- --     time = time - frameTime
+-- --   else
+-- --     -- label:Show(false, 250)
+-- --   end
 -- -- end
 
--- local one = window:CreateColorDrawable(1, 0, 0, 1, "background")
--- one:SetExtent(25, 25)
--- one:AddAnchor("TOPLEFT", window, 0, 0)
+-- -- label:SetHandler("OnUpdate", test)
 
--- local two = window:CreateColorDrawable(1, 0, 0, 1, "background")
--- two:SetExtent(25, 25)
--- two:AddAnchor("LEFT", one, "RIGHT", 0, 0)
+-- function combat(targetUnitId, combatEvent, source, target, spellId, spellName, spellSchool)
+--   if combatEvent == "SPELL_CAST_START" and spellId then
+--     -- ADDON:ChatLog(spellId .. " " .. spellName)
+--     spellSound = tracker[spellId]
 
--- -- one:AddAnchor("CENTER", 0, 0)
+--     if spellSound then
+--       -- ADDON:ChatLog(">>>>>>>>>>>>>>>> playing sound " .. spellSound .. " for " .. spellName)
+--       local test = X2Skill:GetSkillTooltip(spellId, 0)
+--       label:SetText(spellName)
+--       name = spellName
+--       time = test.casting
+--       id = spellId
 
--- window:SetExtent(50, 25)
+--       label:Show(true)
+
+--       -- ADDON:ChatLog("soundid " .. X2Sound:PlayUISound(spellSound, true))
+--     end
+--   end
+
+--   if combatEvent == "SPELL_CAST_SUCCESS" and spellId == id then
+--     label:Show(false, 250)
+--   end
+-- end
+
+-- -- UIParent:SetEventHandler("COMBAT_MSG", combat)
+
+-- local CASTER
+-- local tracker2 = {
+--   ["Time For Fun"] = "battlefield_1_secound",
+--   ["Sea of Death"] = "battlefield_1_secound",
+--   ["Black Dragon Scale"] = "battlefield_1_secound",
+--   ["Smash Earth"] = "battlefield_1_secound",
+--   ["Kraken's Slam"] = "battlefield_1_secound",
+--   ["Slam"] = "battlefield_1_secound",
+--   ["Strong Strike"] = "battlefield_1_secound",
+--   ["Recall"] = "battlefield_1_secound",
+--   ["Opening Worldgate…"] = "battlefield_1_secound",
+-- }
+
+-- local totalTime = 500
+-- label:SetHandler("OnUpdate", function (self, frameTime)
+--   local unitCastingInfo = X2Unit:UnitCastingInfo(CASTER)
+
+--   if unitCastingInfo then
+--     label:SetText(string.format("%s %.1f", unitCastingInfo.spellName,
+--       (unitCastingInfo.castingTime - unitCastingInfo.currCastingTime) / 1000))
+
+--     totalTime = totalTime + frameTime
+--     if totalTime > 500 then
+--       totalTime = 0
+--       X2Sound:PlayUISound(spellSound, true)
+--     end
+--   else
+--     label:Show(false)
+--   end
+-- end)
+
+-- UIParent:SetEventHandler("SPELLCAST_START", function (spellName, castingTime, caster, castingUseable)
+--   ADDON:ChatLog(spellName)
+--   CASTER = caster
+--   local spellSound2 = tracker2[spellName]
+
+--   if spellSound2 then
+--     spellSound = spellSound2
+--     label:Show(true)
+--     -- X2Sound:PlayUISound(spellSound, true)
+--   end
+-- end)
+
+-- UIParent:SetEventHandler("TARGET_CHANGED", function (stringId, targetType)
+--   local unitCastingInfo = X2Unit:UnitCastingInfo("target")
+
+--   if unitCastingInfo then
+--     local spellSound2 = tracker2[unitCastingInfo.spellName]
+
+--     if spellSound2 then
+--       spellSound = spellSound2
+--       CASTER = "target"
+--       label:Show(true)
+--       -- X2Sound:PlayUISound(spellSound, true)
+--     end
+--   end
+-- end)
+
+-- UIParent:SetEventHandler("SPELLCAST_STOP", function (caster)
+--   label:Show(false, 250)
+-- end)
+
+-- UIParent:SetEventHandler("SPELLCAST_SUCCEEDED", function (caster)
+--   label:Show(false, 250)
+-- end)
 
 --------------------------------------------------------------------------------
 
--- UIParent:SetEventHandler("WATCH_TARGET_CHANGED", function (stringId)
---   ADDON:ChatLog("WATCH_TARGET_CHANGED " .. tostring(stringId))
+-- local sounds = {
+--   "battlefield_1_secound",
+--   "battlefield_2_secound",
+--   "battlefield_3_secound",
+--   "battlefield_4_secound",
+--   "battlefield_5_secound",
+--   "battlefield_already_start",
+--   "battlefield_defeat",
+--   "battlefield_draw",
+--   "battlefield_end",
+--   "battlefield_kill_amazing_spirit", -- might not exist
+--   "battlefield_kill_destruction_god", -- might not exist
+--   "battlefield_kill_eyes_on_fire",    -- might not exist
+--   "battlefield_kill_fifth",
+--   "battlefield_kill_first",
+--   "battlefield_kill_fourth",
+--   "battlefield_kill_more_than_sixth",
+--   "battlefield_kill_second",
+--   "battlefield_kill_third",
+--   "battlefield_start",
+--   "battlefield_win",
+--   "cdi_scene_artillery_contents2",
+--   "cdi_scene_artillery_quest_accept_title",
+--   "cdi_scene_artillery_title",
+--   "cdi_scene_combat_contents2",
+--   "cdi_scene_combat_contents3",
+--   "cdi_scene_combat_title",
+--   "cdi_scene_complete_quest_title",
+--   "cdi_scene_find_captain_title",
+--   "cdi_scene_glider_quest_accept_title",
+--   "cdi_scene_go_to_oldman_title",
+--   "cdi_scene_guardtower_title",
+--   "cdi_scene_ladder_contents1",
+--   "cdi_scene_ladder_title",
+--   "cdi_scene_quest_accept_title",
+--   "cdi_scene_siege_contents2",
+--   "cdi_scene_siege_quest_accept_title",
+--   "cdi_scene_siege_title",
+--   "cdi_scene_start_contents2",
+--   "cdi_scene_tribe_quest_accept_title",
+--   "edit_box_text_added",
+--   "edit_box_text_deleted",
+--   "event_actability_expert_changed",
+--   "event_auction_item_putdown",
+--   "event_auction_item_putup",
+--   "event_commercial_mail_alarm",
+--   "event_current_mail_delete",
+--   "event_explored_region",
+--   "event_item_added",
+--   "event_item_ancient_added",
+--   "event_item_artifact_added",
+--   "event_item_epic_added",
+--   "event_item_heroic_added",
+--   "event_item_legendary_added",
+--   "event_item_mythic_added",
+--   "event_item_rare_added",
+--   "event_item_socketing_result_fail",
+--   "event_item_socketing_result_success",
+--   "event_item_uncommon_added",
+--   "event_item_unique_added",
+--   "event_item_wonder_added",
+--   "event_mail_alarm",
+--   "event_mail_delete",
+--   "event_mail_read_changed",
+--   "event_mail_send",
+--   "event_message_box_ability_change_onok",
+--   "event_message_box_aution_bid_onok",
+--   "event_message_box_aution_direct_onok",
+--   "event_message_box_default_onok",
+--   "event_message_box_item_destroy_onok",
+--   "event_nation_independence",
+--   "event_quest_completed_daily",
+--   "event_quest_completed_daily_hunt",
+--   "event_quest_completed_group",
+--   "event_quest_completed_hidden",
+--   "event_quest_completed_livelihood",
+--   "event_quest_completed_main",
+--   "event_quest_completed_normal",
+--   "event_quest_completed_saga",
+--   "event_quest_completed_task",
+--   "event_quest_completed_tutorial",
+--   "event_quest_completed_weekly",
+--   "event_quest_directing_mode", -- might not exist
+--   "event_quest_dropped_daily",
+--   "event_quest_dropped_daily_hunt",
+--   "event_quest_dropped_group",
+--   "event_quest_dropped_hidden",
+--   "event_quest_dropped_livelihood",
+--   "event_quest_dropped_main",
+--   "event_quest_dropped_normal",
+--   "event_quest_dropped_saga",
+--   "event_quest_dropped_task",
+--   "event_quest_dropped_tutorial",
+--   "event_quest_dropped_weekly",
+--   "event_quest_failed_daily",
+--   "event_quest_failed_daily_hunt",
+--   "event_quest_failed_group",
+--   "event_quest_failed_hidden",
+--   "event_quest_failed_livelihood",
+--   "event_quest_failed_main",
+--   "event_quest_failed_normal",
+--   "event_quest_failed_saga",
+--   "event_quest_failed_task",
+--   "event_quest_failed_tutorial",
+--   "event_quest_failed_weekly",
+--   "event_quest_list_changed",
+--   "event_quest_started_daily",
+--   "event_quest_started_daily_hunt",
+--   "event_quest_started_group",
+--   "event_quest_started_hidden",
+--   "event_quest_started_livelihood",
+--   "event_quest_started_main",
+--   "event_quest_started_normal",
+--   "event_quest_started_saga",
+--   "event_quest_started_task",
+--   "event_quest_started_tutorial",
+--   "event_quest_started_weekly",
+--   "event_siege_defeat",
+--   "event_siege_ready_to_siege",
+--   "event_siege_victory",
+--   "event_trade_can_not_putup",
+--   "event_trade_item_and_money_recv",
+--   "event_trade_item_putup",
+--   "event_trade_item_recv",
+--   "event_trade_item_tookdown",
+--   "event_trade_lock",
+--   "event_trade_money_recv",
+--   "event_trade_unlock",
+--   "event_ulc_activate",
+--   "event_web_messenger_alarm",
+--   "gender_transfer",
+--   "high_rank_achievement",
+--   "item_synthesis_result",
+--   "listbox_item_selected",
+--   "listbox_item_toggled",
+--   "listbox_over",
+--   "login_stage_music_before_login",
+--   "login_stage_music_character_stage",
+--   "login_stage_music_creator",
+--   "login_stage_music_world_select",
+--   "login_stage_ready_to_connect_world",
+--   "login_stage_start_game",
+--   "login_stage_try_login",
+--   "login_stage_world_select",
+--   "low_rank_achievement",
+--   "makeup_done",
+--   "successor_skill_change",
+--   "successor_skill_select",
+--   "tutorial_contents_2584_2_1",
+--   "tutorial_contents_2584_2_2",
+--   "tutorial_contents_2585_2_1",
+--   "tutorial_contents_2585_2_2",
+--   "tutorial_contents_2586_2_1",
+--   "tutorial_contents_2586_2_2",
+--   "tutorial_contents_2587_1_1",
+--   "tutorial_contents_2588_1_1",
+--   "tutorial_contents_2589_2_1",
+--   "tutorial_contents_2589_2_2",
+--   "tutorial_contents_2590_2_1",
+--   "tutorial_contents_2590_2_2",
+--   "tutorial_contents_2591_1_1",
+--   "tutorial_contents_2592_1_1",
+--   "tutorial_contents_2593_1_1",
+--   "tutorial_contents_2594_2_1",
+--   "tutorial_contents_2594_2_2",
+--   "tutorial_contents_2595_1_1",
+--   "tutorial_contents_2596_2_1",
+--   "tutorial_contents_2596_2_2",
+--   "tutorial_contents_2597_1_1",
+--   "tutorial_contents_2598_2_1",
+--   "tutorial_contents_2598_2_2",
+--   "tutorial_contents_2599_1_1",
+--   "tutorial_contents_2600_1_1",
+--   "tutorial_contents_2601_1_1",
+--   "tutorial_contents_2602_1_1",
+--   "tutorial_contents_2603_1_1",
+--   "tutorial_contents_2604_1_1",
+--   "tutorial_contents_2605_1_1",
+--   "tutorial_contents_2606_1_1",
+--   "tutorial_contents_2607_1_1",
+--   "tutorial_contents_2608_1_1",
+--   "tutorial_contents_2609_2_1",
+--   "tutorial_contents_2609_2_2",
+--   "tutorial_contents_2610_1_1",
+--   "tutorial_contents_2611_1_1",
+--   "tutorial_contents_2612_1_1",
+--   "tutorial_contents_2613_1_1",
+--   "tutorial_contents_2614_1_1",
+--   "tutorial_contents_2615_1_1",
+--   "tutorial_contents_2616_1_1",
+--   "tutorial_contents_2617_1_1",
+--   "tutorial_contents_2618_1_1",
+--   "tutorial_contents_2619_1_1",
+--   "tutorial_contents_2620_1_1",
+--   "tutorial_contents_2621_1_1",
+--   "tutorial_contents_2622_1_1",
+--   "tutorial_contents_2623_1_1",
+--   "tutorial_contents_2624_1_1",
+--   "tutorial_contents_2625_1_1",
+--   "tutorial_contents_2626_1_1",
+--   "tutorial_contents_2627_1_1",
+--   "tutorial_contents_2628_1_1",
+--   "tutorial_contents_2629_1_1",
+--   "tutorial_contents_2630_1_1",
+--   "tutorial_contents_2631_1_1",
+--   "tutorial_contents_2632_1_1",
+--   "tutorial_contents_2633_1_1",
+--   "tutorial_contents_2634_1_1",
+--   "tutorial_contents_2635_1_1",
+--   "tutorial_contents_2636_1_1",
+--   "tutorial_contents_2639_1_1",
+--   "tutorial_contents_2640_1_1",
+--   "tutorial_contents_2641_1_1",
+--   "tutorial_contents_2642_1_1",
+--   "tutorial_contents_2643_1_1",
+--   "tutorial_contents_2644_1_1",
+--   "tutorial_contents_2645_1_1",
+--   "tutorial_contents_2646_1_1",
+--   "tutorial_contents_2647_1_1",
+--   "tutorial_contents_2648_1_1",
+--   "tutorial_contents_2649_1_1",
+--   "tutorial_contents_2650_1_1",
+--   "tutorial_contents_2651_1_1",
+--   "tutorial_contents_2652_1_1",
+--   "tutorial_contents_2653_1_1",
+-- }
+
+-- local currentSound = 1
+
+-- local backButton = UIParent:CreateWidget("button", "back", "UIParent")
+-- backButton:SetStyle("text_default")
+-- backButton:SetText("<")
+-- backButton:Show(true)
+-- backButton:SetWidth(50)
+
+-- local playButton = UIParent:CreateWidget("button", "back", "UIParent")
+-- playButton:SetStyle("text_default")
+-- playButton:SetText(sounds[currentSound] .. " " .. currentSound .. "/" .. #sounds)
+-- playButton:Show(true)
+-- playButton:SetWidth(300)
+
+-- local forwardButton = UIParent:CreateWidget("button", "back", "UIParent")
+-- forwardButton:SetStyle("text_default")
+-- forwardButton:SetText(">")
+-- forwardButton:Show(true)
+-- forwardButton:SetWidth(50)
+
+-- playButton:AddAnchor("CENTER", 0, 0)
+-- backButton:AddAnchor("RIGHT", playButton, "LEFT", -10, 0)
+-- forwardButton:AddAnchor("LEFT", playButton, "RIGHT", 10, 0)
+
+-- backButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   if currentSound > 1 then
+--     currentSound = currentSound - 1
+--     playButton:SetText(sounds[currentSound] .. " " .. currentSound .. "/" .. #sounds)
+--     playButton:SetWidth(300)
+--   end
 -- end)
--- UIParent:SetEventHandler("LEFT_LOADING", function ()
---   ADDON:ChatLog("LEFT_LOADING")
+
+-- playButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   ADDON:ChatLog(X2Sound:PlayUISound(sounds[currentSound], true))
+-- end)
+
+-- forwardButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   if currentSound < #sounds then
+--     currentSound = currentSound + 1
+--     playButton:SetText(sounds[currentSound] .. " " .. currentSound .. "/" .. #sounds)
+--     playButton:SetWidth(300)
+--   end
 -- end)
 
 --------------------------------------------------------------------------------
 
-ADDON:ChatLog("reload")
+---@TODO: I need to test secondary password but I dont want to accidently lock my account
+-- ADDON:ShowContent(UIC_ENTER_SECOND_PASSWORD, true)
+-- ADDON:ShowContent(UIC_INTERACT_SECOND_PASSWORD, true)
+-- ADDON:ShowContent(UIC_SET_SECOND_PASSWORD, true)
+
+--------------------------------------------------------------------------------
+
+--- label showing current targets id to determine if bd id changes which is why he detrack targets
+
+-- local userIdLabel = UIParent:CreateWidget("label", "unitId", "UIParent")
+-- userIdLabel:Show(true)
+-- userIdLabel:SetHeight(20)
+-- userIdLabel:SetAutoResize(true)
+-- userIdLabel.style:SetAlign(ALIGN_LEFT)
+-- userIdLabel:AddAnchor("TOPLEFT", 20, 0)
+-- -- userIdLabel:SetText(X2Unit:GetTargetUnitId())
+
+-- local userBG = userIdLabel:CreateColorDrawable(0, 0, 0, .3, "background")
+-- userBG:AddAnchor("TOPLEFT", userIdLabel, 0, 0)
+-- userBG:AddAnchor("BOTTOMRIGHT", userIdLabel, 0, 0)
+
+-- userIdLabel:RegisterEvent("TARGET_CHANGED")
+-- userIdLabel:SetHandler("OnEvent", function (self, event, ...)
+--   if event == "TARGET_CHANGED" then
+--     local stringId, targetType = ...
+--     if stringId then
+--       userIdLabel:SetText(stringId)
+--     else
+--       userIdLabel:SetText("")
+--     end
+--   end
+-- end)
+
+
+-- UIParent:SetEventHandler("TARGET_CHANGED", function (stringId, targetType)
+--   --stringId [0-9a-f]{3?, 8?}
+--   if stringId then
+--     userIdLabel:SetText(stringId)
+--   else
+--     userIdLabel:SetText("")
+--   end
+-- end)
+
+--------------------------------------------------------------------------------
+
+--- characterInfo
+--- make it so that you can show any item equiped costume->glider
+--- 10 on one side 10 on another
+
+local weaponWidget = UIParent:CreateWidget("emptywidget", "weapon", "UIParent")
+weaponWidget:Show(true)
+icon_size = 34
+weaponWidget:SetExtent(icon_size, icon_size * 4)
+
+local timeCheck = 0
+weaponWidget:SetHandler("OnUpdate", function (self, frameTime)
+  timeCheck = timeCheck + frameTime
+  if timeCheck < 100 then
+    return
+  end
+  timeCheck = frameTime
+  --- check if uibounds exists
+  local uiBounds = UIParent:GetUIBound("ui_bound_playerFrame")
+  if uiBounds then
+    -- weaponWidget:AddAnchor("TOPLEFT", uiBounds.bound.x / uiBounds.screenResolution.scale - (icon_size + 2), uiBounds.bound.y / uiBounds.screenResolution.scale - 3)
+    weaponWidget:AddAnchor("TOPLEFT", uiBounds.bound.x / uiBounds.screenResolution.scale - (icon_size + 2),
+      uiBounds.bound.y / uiBounds.screenResolution.scale)
+  end
+end)
+
+
+local uiBounds = UIParent:GetUIBound("ui_bound_playerFrame")
+
+if uiBounds then
+  weaponWidget:AddAnchor("TOPLEFT", uiBounds.bound.x / uiBounds.screenResolution.scale - (icon_size + 2),
+    uiBounds.bound.y / uiBounds.screenResolution.scale)
+end
+
+
+local mainHandBg = weaponWidget:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
+mainHandBg:SetTextureInfo("action_slot_default_bg", "dimmed")
+mainHandBg:SetExtent(icon_size, icon_size)
+mainHandBg:AddAnchor("TOP", weaponWidget, 0, -1)
+
+local mainHand = weaponWidget:CreateChildWidget("slot", "mainhand", 0, true)
+mainHand:SetExtent(icon_size, icon_size)
+mainHand:EstablishSlot(ISLOT_EQUIPMENT, ES_MAINHAND - 1)
+mainHand:AddAnchor("TOP", weaponWidget, 0, -1)
+
+local offHandBg = weaponWidget:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
+offHandBg:SetTextureInfo("action_slot_default_bg", "dimmed")
+offHandBg:SetExtent(icon_size, icon_size)
+offHandBg:AddAnchor("TOP", mainHandBg, "BOTTOM", 0, -1)
+
+local offHand = weaponWidget:CreateChildWidget("slot", "offhand", 0, true)
+offHand:SetExtent(icon_size, icon_size)
+offHand:EstablishSlot(ISLOT_EQUIPMENT, ES_OFFHAND - 1)
+offHand:AddAnchor("TOP", mainHand, "BOTTOM", 0, -1)
+
+local rangeBg = weaponWidget:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
+rangeBg:SetTextureInfo("action_slot_default_bg", "dimmed")
+rangeBg:SetExtent(icon_size, icon_size)
+rangeBg:AddAnchor("TOP", offHandBg, "BOTTOM", 0, -1)
+
+local range = weaponWidget:CreateChildWidget("slot", "range", 0, true)
+range:SetExtent(icon_size, icon_size)
+range:EstablishSlot(ISLOT_EQUIPMENT, ES_RANGED - 1)
+range:AddAnchor("TOP", offHand, "BOTTOM", 0, -1)
+
+local backpackBg = weaponWidget:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
+backpackBg:SetTextureInfo("action_slot_default_bg", "dimmed")
+backpackBg:SetExtent(icon_size, icon_size)
+backpackBg:AddAnchor("TOP", rangeBg, "BOTTOM", 0, -1)
+
+local backpack = weaponWidget:CreateChildWidget("slot", "backpack", 0, true)
+backpack:SetExtent(icon_size, icon_size)
+backpack:EstablishSlot(ISLOT_EQUIPMENT, ES_BACKPACK - 1)
+backpack:AddAnchor("TOP", range, "BOTTOM", 0, -1)
+
+
+
+-- local powerstones = {
+--   ["Bloody Soulshard"] = 1,
+--   ["Solar Soulshard"] = 1,
+-- }
+
+-- ADDON:ImportAPI(API.X2Bag)
+-- for i = 1, 150 do
+--   local bagItemInfo = X2Bag:GetBagItemInfo(0, i)
+
+--   if powerstones[bagItemInfo.name] then
+--     -- create slot
+--   end
+-- end
+
+-- local red= weaponWidget:CreateColorDrawable(1, 0, 0, 1, "overoverlay")
+-- red:AddAnchor("TOPLEFT", mainHandBg, 0, 0)
+-- red:AddAnchor("BOTTOMRIGHT", backpackBg, 0, 0)
+
+-- gutter 2 4px off mpBar
+-- height 21*.93+17*.93+22*.93 (60), width 304
+
+--------------------------------------------------------------------------------
+
+X2Hotkey:SetBindingUiEvent("ui_draw_level_5", "F7")
+X2Hotkey:SetBindingUiEvent("ui_draw_level_6", "F8")
+X2Hotkey:SetBindingUiEvent("reload", "F11")
+
+UIParent:SetEventHandler("HOTKEY_ACTION", function (actionName, keyUp)
+  if actionName == "ui_draw_level_5" and keyUp then
+    local value = X2Option:GetConsoleVariable("ui_draw_level") or "1"
+
+    if value == "5" then
+      value = "1"
+    else
+      value = "5"
+    end
+
+    X2Option:SetConsoleVariable("ui_draw_level", value)
+  elseif actionName == "ui_draw_level_6" and keyUp then
+    local value = X2Option:GetConsoleVariable("ui_draw_level") or "1"
+
+    if value == "6" then
+      value = "1"
+    else
+      value = "6"
+    end
+
+    X2Option:SetConsoleVariable("ui_draw_level", value)
+  elseif actionName == "reload" and keyUp then
+    ADDON:ChatLog("reloading")
+    ADDON:ReloadAddon("manager")
+  end
+end)
+
+--------------------------------------------------------------------------------
+
+-- local button_styles = {
+--   "accept_v",
+--   "actionbar_lock",
+--   "actionbar_rotate",
+--   "actionbar_unlock",
+--   "auction_post_bind",
+--   "auction_successor",
+--   "auction_successor_grey",
+--   "banner_close",
+--   "btn_close_default",
+--   "btn_close_mini",
+--   "btn_raid_recruit",
+--   "butler_change_look",
+--   "button_common_book",
+--   "button_common_option",
+--   "button_complete",
+--   "button_request",
+--   "button_search",
+--   "cancel_mini",
+--   "cancel_search_in_inventory",
+--   "char_select_page_represent_char",
+--   "character",
+--   "character_equip_close",
+--   "character_equip_open",
+--   "character_info_bless_uthstin",
+--   "character_info_btn_shop",
+--   "character_info_change",
+--   "character_info_detail_btn",
+--   "character_lock_off",
+--   "character_lock_on",
+--   "character_search",
+--   "character_slot_created",
+--   "character_slot_created_red",
+--   "character_slot_created_red_selected",
+--   "character_slot_created_selected",
+--   "character_slot_enchant",
+--   "character_slot_equipment",
+--   "character_slot_impossible",
+--   "character_slot_possible",
+--   "character_swap",
+--   "character_swap_on",
+--   "chat_tab_selected",
+--   "chat_tab_unselected",
+--   "combat_resource_close",
+--   "combat_resource_open",
+--   "common_back",
+--   "common_hud",
+--   "config",
+--   "customizing_freeze",
+--   "customizing_load",
+--   "customizing_save",
+--   "deposit_withdrawal",
+--   "down_arrow",
+--   "equipment_map",
+--   "esc",
+--   "exit",
+--   "expansion",
+--   "expansion_small",
+--   "expedition_war_alarm",
+--   "first_page",
+--   "grid_folder_down_arrow",
+--   "grid_folder_right_arrow",
+--   "grid_folder_up_arrow",
+--   "housing_demolish",
+--   "housing_remove",
+--   "housing_rotation",
+--   "housing_sale",
+--   "housing_ucc",
+--   "hud_btn_archelife_off",
+--   "hud_btn_chat_add_tab",
+--   "hud_btn_chat_scroll_down_bottom",
+--   "hud_btn_convenience",
+--   "hud_btn_eventcenter",
+--   "hud_btn_hero_reputation",
+--   "hud_btn_ime_english",
+--   "hud_btn_ime_korea",
+--   "hud_btn_ingameshop",
+--   "hud_btn_instance",
+--   "hud_btn_merchant",
+--   "hud_btn_url_link",
+--   "hud_instance",
+--   "ingameshop_beautyshop",
+--   "ingameshop_buy",
+--   "ingameshop_cart",
+--   "ingameshop_charge_cash",
+--   "ingameshop_gender_transfer",
+--   "ingameshop_present",
+--   "instance_out",
+--   "instance_reentry",
+--   "inventory_sort",
+--   "item_enchant",
+--   "item_guide",
+--   "item_lock_in_bag",
+--   "last_page",
+--   "left_arrow",
+--   "list",
+--   "location",
+--   "lock_equip_item",
+--   "lock_item",
+--   "login_stage_character_create",
+--   "login_stage_enter_world",
+--   "login_stage_exit_game",
+--   "login_stage_game_start",
+--   "login_stage_model_change",
+--   "login_stage_option_game",
+--   "login_stage_staff",
+--   "login_stage_text_default",
+--   "login_stage_text_small",
+--   "login_stage_user_ui",
+--   "look_convert",
+--   "loot_gacha",
+--   "mail_all_mail_delete",
+--   "mail_read_mail_delete",
+--   "mail_receive_all_item",
+--   "mail_receive_money",
+--   "mail_selected_delete",
+--   "mail_take",
+--   "map_alpha",
+--   "map_alpha_select",
+--   "map_eraser",
+--   "map_position",
+--   "menu",
+--   "minimap_off",
+--   "minimap_on",
+--   "minimap_ping",
+--   "minimap_playercenter",
+--   "minimap_resize",
+--   "minimap_suboption",
+--   "minimap_zoomin",
+--   "minimap_zoomout",
+--   "minus",
+--   "modelview_rotate_left",
+--   "modelview_rotate_right",
+--   "next_page",
+--   "next_page_action_bar",
+--   "next_page_tutorial",
+--   "open_battlefield",
+--   "play",
+--   "plus",
+--   "portal_rename",
+--   "portal_spawn",
+--   "premium_buy_in_char_sel_page",
+--   "prev_page",
+--   "prev_page_action_bar",
+--   "prev_page_back",
+--   "prev_page_tutorial",
+--   "price",
+--   "quest_close",
+--   "quest_cutscene_close",
+--   "quest_open",
+--   "question_mark",
+--   "raid_recall",
+--   "raid_recruit_alarm",
+--   "ready_to_siege_alarm",
+--   "reject_x",
+--   "repair",
+--   "report",
+--   "right_arrow",
+--   "roster_setting",
+--   "save",
+--   "search_mini",
+--   "search_mini_green",
+--   "siege_war_alarm",
+--   "squad_mini_view_close",
+--   "squad_mini_view_open",
+--   "survey_form_alarm",
+--   "text_default",
+--   "text_default_small",
+--   "trade_check_green",
+--   "trade_check_yellow",
+--   "unlock_equip_item",
+--   "unlock_item",
+--   "up_arrow",
+--   "uthstin_stat_max_expand",
+--   "wastebasket_shape",
+--   "wastebasket_shape_small",
+--   "write",
+--   "zone_permission_out",
+--   "zone_permission_wait",
+-- }
+
+-- local currentStyle = 1
+
+-- local backButton = UIParent:CreateWidget("button", "backButton", "UIParent")
+-- backButton:SetStyle("text_default")
+-- backButton:SetText("<")
+-- backButton:Show(true)
+-- backButton:SetWidth(50)
+
+-- local showcaseButton = UIParent:CreateWidget("button", "showcaseButton", "UIParent")
+-- showcaseButton:SetStyle(button_styles[currentStyle])
+-- showcaseButton:Show(true)
+-- -- playButton:SetWidth(300)
+
+-- local forwardButton = UIParent:CreateWidget("button", "forwardButton", "UIParent")
+-- forwardButton:SetStyle("text_default")
+-- forwardButton:SetText(">")
+-- forwardButton:Show(true)
+-- forwardButton:SetWidth(50)
+
+-- local textbox = UIParent:CreateWidget("textbox", "testate", "UIParent")
+-- textbox:Show(true)
+-- textbox:SetHeight(20)
+-- textbox:SetText(button_styles[currentStyle] .. " " .. currentStyle .. "/" .. #button_styles)
+
+-- showcaseButton:AddAnchor("CENTER", 0, 0)
+-- backButton:AddAnchor("RIGHT", showcaseButton, "LEFT", -10, 0)
+-- forwardButton:AddAnchor("LEFT", showcaseButton, "RIGHT", 10, 0)
+-- textbox:AddAnchor("TOPLEFT", backButton, "BOTTOMLEFT", 0, 0)
+-- textbox:AddAnchor("TOPRIGHT", forwardButton, "BOTTOMRIGHT", 0, 0)
+
+-- backButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   if currentStyle > 1 then
+--     currentStyle = currentStyle - 1
+--     showcaseButton:SetStyle(button_styles[currentStyle])
+--     textbox:SetText(button_styles[currentStyle] .. " " .. currentStyle .. "/" .. #button_styles)
+--   end
+-- end)
+
+-- forwardButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   if currentStyle < #button_styles then
+--     currentStyle = currentStyle + 1
+--     showcaseButton:SetStyle(button_styles[currentStyle])
+--     textbox:SetText(button_styles[currentStyle] .. " " .. currentStyle .. "/" .. #button_styles)
+--   end
+-- end)
+
+--------------------------------------------------------------------------------
+
+-- local UIC = {
+--   UIC_ABILITY_CHANGE = UIC_ABILITY_CHANGE,
+--   UIC_ACHIEVEMENT = UIC_ACHIEVEMENT,
+--   UIC_ACTABILITY = UIC_ACTABILITY,
+--   UIC_ADDON = UIC_ADDON,
+--   UIC_APPELLATION = UIC_APPELLATION,
+--   UIC_AUCTION = UIC_AUCTION,
+--   UIC_AUTH_MSG_WND = UIC_AUTH_MSG_WND,
+--   UIC_BAG = UIC_BAG,
+--   UIC_BANK = UIC_BANK,
+--   UIC_BEAUTY_SHOP = UIC_BEAUTY_SHOP,
+--   UIC_BLESS_UTHSTIN = UIC_BLESS_UTHSTIN,
+--   UIC_BUTLER_INFO = UIC_BUTLER_INFO,
+--   UIC_CHALLENGE = UIC_CHALLENGE,
+--   UIC_CHANGE_VISUAL_RACE = UIC_CHANGE_VISUAL_RACE,
+--   UIC_CHARACTER_INFO = UIC_CHARACTER_INFO,
+--   UIC_CHARACTER_INFO_VISUAL_RACE = UIC_CHARACTER_INFO_VISUAL_RACE,
+--   UIC_CHECK_BOT_WND = UIC_CHECK_BOT_WND,
+--   UIC_CHECK_SECOND_PASSWORD = UIC_CHECK_SECOND_PASSWORD,
+--   UIC_CHRONICLE_BOOK_WND = UIC_CHRONICLE_BOOK_WND,
+--   UIC_CLEAR_SECOND_PASSWORD = UIC_CLEAR_SECOND_PASSWORD,
+--   UIC_CLIENT_DIRVEN_CONTENTS = UIC_CLIENT_DIRVEN_CONTENTS,
+--   UIC_CLIENT_DIRVEN_TITLE = UIC_CLIENT_DIRVEN_TITLE,
+--   UIC_CLIENT_DRIVEN_EXIT_BTN = UIC_CLIENT_DRIVEN_EXIT_BTN,
+--   UIC_COFFER = UIC_COFFER,
+--   UIC_COMMERCIAL_MAIL = UIC_COMMERCIAL_MAIL,
+--   UIC_COMMUNITY = UIC_COMMUNITY,
+--   UIC_CRAFT_BOOK = UIC_CRAFT_BOOK,
+--   UIC_CRAFT_ORDER = UIC_CRAFT_ORDER,
+--   UIC_CREATE_EXPEDITION = UIC_CREATE_EXPEDITION,
+--   UIC_DEATH_AND_RESURRECTION_WND = UIC_DEATH_AND_RESURRECTION_WND,
+--   UIC_DEV_WINDOW = UIC_DEV_WINDOW,
+--   UIC_DROPDOWN_LIST = UIC_DROPDOWN_LIST,
+--   UIC_DYNAMIC_ACTIONBAR = UIC_DYNAMIC_ACTIONBAR,
+--   UIC_ENCHANT = UIC_ENCHANT,
+--   UIC_ENTER_SECOND_PASSWORD = UIC_ENTER_SECOND_PASSWORD,
+--   UIC_EQUIP_SLOT_REINFORCE = UIC_EQUIP_SLOT_REINFORCE,
+--   UIC_EQUIP_SLOT_REINFORCE_TAB = UIC_EQUIP_SLOT_REINFORCE_TAB,
+--   UIC_EVENT_CENTER = UIC_EVENT_CENTER,
+--   UIC_EXIT_GAME = UIC_EXIT_GAME,
+--   UIC_EXPAND_INVENTORY = UIC_EXPAND_INVENTORY,
+--   UIC_EXPAND_JOB = UIC_EXPAND_JOB,
+--   UIC_EXPEDITION = UIC_EXPEDITION,
+--   UIC_EXPEDITION_GUILD_FUNCTION_CHANGE_BUFF = UIC_EXPEDITION_GUILD_FUNCTION_CHANGE_BUFF,
+--   UIC_FAMILY = UIC_FAMILY,
+--   UIC_FOLLOW = UIC_FOLLOW,
+--   UIC_FORCE_ATTACK = UIC_FORCE_ATTACK,
+--   UIC_FRIEND = UIC_FRIEND,
+--   UIC_GAME_EXIT_FRAME = UIC_GAME_EXIT_FRAME,
+--   UIC_GAME_TOOLTIP_WND = UIC_GAME_TOOLTIP_WND,
+--   UIC_GUILD_BANK = UIC_GUILD_BANK,
+--   UIC_HERO = UIC_HERO,
+--   UIC_HERO_ELECTION = UIC_HERO_ELECTION,
+--   UIC_HIDDEN_QUEST = UIC_HIDDEN_QUEST,
+--   UIC_INGAME_SHOP = UIC_INGAME_SHOP,
+--   UIC_INTERACT_SECOND_PASSWORD = UIC_INTERACT_SECOND_PASSWORD,
+--   UIC_ITEM_GUIDE = UIC_ITEM_GUIDE,
+--   UIC_ITEM_LOCK = UIC_ITEM_LOCK,
+--   UIC_ITEM_REPAIR = UIC_ITEM_REPAIR,
+--   UIC_LOCAL_DEVELOPMENT_BOARD = UIC_LOCAL_DEVELOPMENT_BOARD,
+--   UIC_LOOK_CONVERT = UIC_LOOK_CONVERT,
+--   UIC_LOOT_GACHA = UIC_LOOT_GACHA,
+--   UIC_MAIL = UIC_MAIL,
+--   UIC_MAIN_ACTION_BAR = UIC_MAIN_ACTION_BAR,
+--   UIC_MAKE_CRAFT_ORDER = UIC_MAKE_CRAFT_ORDER,
+--   UIC_MARKET_PRICE = UIC_MARKET_PRICE,
+--   UIC_MEGAPHONE = UIC_MEGAPHONE,
+--   UIC_MODE_ACTIONBAR = UIC_MODE_ACTIONBAR,
+--   UIC_MY_FARM_INFO = UIC_MY_FARM_INFO,
+--   UIC_NATION = UIC_NATION,
+--   UIC_NOTIFY_ACTABILITY = UIC_NOTIFY_ACTABILITY,
+--   UIC_NOTIFY_SKILL = UIC_NOTIFY_SKILL,
+--   UIC_OPTIMIZATION = UIC_OPTIMIZATION,
+--   UIC_OPTION_FRAME = UIC_OPTION_FRAME,
+--   UIC_PARTY = UIC_PARTY,
+--   UIC_PLAYER_EQUIPMENT = UIC_PLAYER_EQUIPMENT,
+--   UIC_PLAYER_UNITFRAME = UIC_PLAYER_UNITFRAME,
+--   UIC_PREMIUM = UIC_PREMIUM,
+--   UIC_QUEST_CINEMA_FADE_WND = UIC_QUEST_CINEMA_FADE_WND,
+--   UIC_QUEST_CINEMA_WND = UIC_QUEST_CINEMA_WND,
+--   UIC_QUEST_LIST = UIC_QUEST_LIST,
+--   UIC_QUEST_NOTIFIER = UIC_QUEST_NOTIFIER,
+--   UIC_RAID = UIC_RAID,
+--   UIC_RAID_RECRUIT = UIC_RAID_RECRUIT,
+--   UIC_RAID_TEAM_MANAGER = UIC_RAID_TEAM_MANAGER,
+--   UIC_RANK = UIC_RANK,
+--   UIC_RANK_LOCAL_VIEW = UIC_RANK_LOCAL_VIEW,
+--   UIC_RECOVER_EXP = UIC_RECOVER_EXP,
+--   UIC_RENAME_EXPEDITION = UIC_RENAME_EXPEDITION,
+--   UIC_REPORT_BAD_USER = UIC_REPORT_BAD_USER,
+--   UIC_REQUEST_BATTLEFIELD = UIC_REQUEST_BATTLEFIELD,
+--   UIC_RESIDENT_TOWNHALL = UIC_RESIDENT_TOWNHALL,
+--   UIC_RETURN_ACCOUNT_REWARD_WND = UIC_RETURN_ACCOUNT_REWARD_WND,
+--   UIC_ROSTER_MANAGER_WND = UIC_ROSTER_MANAGER_WND,
+--   UIC_SCHEDULE_ITEM = UIC_SCHEDULE_ITEM,
+--   UIC_SELECT_CHARACTER = UIC_SELECT_CHARACTER,
+--   UIC_SET_SECOND_PASSWORD = UIC_SET_SECOND_PASSWORD,
+--   UIC_SHORTCUT_ACTIONBAR = UIC_SHORTCUT_ACTIONBAR,
+--   UIC_SIEGE_RAID_REGISTER_WND = UIC_SIEGE_RAID_REGISTER_WND,
+--   UIC_SIEGE_RAID_TEAM_MEMBER_LIST_WND = UIC_SIEGE_RAID_TEAM_MEMBER_LIST_WND,
+--   UIC_SKILL = UIC_SKILL,
+--   UIC_SLAVE_EQUIPMENT = UIC_SLAVE_EQUIPMENT,
+--   UIC_SPECIALTY_BUY = UIC_SPECIALTY_BUY,
+--   UIC_SPECIALTY_INFO = UIC_SPECIALTY_INFO,
+--   UIC_SPECIALTY_SELL = UIC_SPECIALTY_SELL,
+--   UIC_SQUAD = UIC_SQUAD,
+--   UIC_SQUAD_MINIVIEW = UIC_SQUAD_MINIVIEW,
+--   UIC_STABLER = UIC_STABLER,
+--   UIC_STORE = UIC_STORE,
+--   UIC_SYSTEM_CONFIG_FRAME = UIC_SYSTEM_CONFIG_FRAME,
+--   UIC_TARGET_EQUIPMENT = UIC_TARGET_EQUIPMENT,
+--   UIC_TARGET_UNITFRAME = UIC_TARGET_UNITFRAME,
+--   UIC_TGOS = UIC_TGOS,
+--   UIC_TRADE = UIC_TRADE,
+--   UIC_TRADER = UIC_TRADER,
+--   UIC_TRADE_GOOD_PRICE_INFORMATION = UIC_TRADE_GOOD_PRICE_INFORMATION,
+--   UIC_UI_AVI = UIC_UI_AVI,
+--   UIC_WEB_HELP = UIC_WEB_HELP,
+--   UIC_WEB_MESSENGER = UIC_WEB_MESSENGER,
+--   UIC_WEB_PLAY_DIARY = UIC_WEB_PLAY_DIARY,
+--   UIC_WEB_PLAY_DIARY_INSTANCE = UIC_WEB_PLAY_DIARY_INSTANCE,
+--   UIC_WEB_WIKI = UIC_WEB_WIKI,
+--   UIC_WHISPER = UIC_WHISPER,
+--   UIC_WORLDMAP = UIC_WORLDMAP,
+-- }
+
+-- local file = open("temp/example.txt", "w")
+
+-- for k, v in pairs(UIC) do
+--   local content = { ADDON:GetContentMainScriptPosVis(v) }
+--   -- local content = ADDON:GetContent(v)
+
+--   if content ~= nil and #content > 0 then
+--     file:write(k, "\n", dump(content), "\n")
+--   end
+-- end
+
+-- file:close()
+
+--------------------------------------------------------------------------------
+
+-- local units = {
+--   "team_1_1",
+--   "team_1_2",
+--   "team_1_3",
+--   "team_1_4",
+--   "team_1_5",
+--   "team_1_6",
+--   "team_1_7",
+--   "team_1_8",
+--   "team_1_9",
+--   "team_1_10",
+--   "team_1_11",
+--   "team_1_12",
+--   "team_1_13",
+--   "team_1_14",
+--   "team_1_15",
+--   "team_1_16",
+--   "team_1_17",
+--   "team_1_18",
+--   "team_1_19",
+--   "team_1_20",
+--   "team_1_21",
+--   "team_1_22",
+--   "team_1_23",
+--   "team_1_24",
+--   "team_1_25",
+--   "team_1_26",
+--   "team_1_27",
+--   "team_1_28",
+--   "team_1_29",
+--   "team_1_30",
+--   "team_1_31",
+--   "team_1_32",
+--   "team_1_33",
+--   "team_1_34",
+--   "team_1_35",
+--   "team_1_36",
+--   "team_1_37",
+--   "team_1_38",
+--   "team_1_39",
+--   "team_1_40",
+--   "team_1_41",
+--   "team_1_42",
+--   "team_1_43",
+--   "team_1_44",
+--   "team_1_45",
+--   "team_1_46",
+--   "team_1_47",
+--   "team_1_48",
+--   "team_1_49",
+--   "team_1_50",
+--   "team_2_1",
+--   "team_2_2",
+--   "team_2_3",
+--   "team_2_4",
+--   "team_2_5",
+--   "team_2_6",
+--   "team_2_7",
+--   "team_2_8",
+--   "team_2_9",
+--   "team_2_10",
+--   "team_2_11",
+--   "team_2_12",
+--   "team_2_13",
+--   "team_2_14",
+--   "team_2_15",
+--   "team_2_16",
+--   "team_2_17",
+--   "team_2_18",
+--   "team_2_19",
+--   "team_2_20",
+--   "team_2_21",
+--   "team_2_22",
+--   "team_2_23",
+--   "team_2_24",
+--   "team_2_25",
+--   "team_2_26",
+--   "team_2_27",
+--   "team_2_28",
+--   "team_2_29",
+--   "team_2_30",
+--   "team_2_31",
+--   "team_2_32",
+--   "team_2_33",
+--   "team_2_34",
+--   "team_2_35",
+--   "team_2_36",
+--   "team_2_37",
+--   "team_2_38",
+--   "team_2_39",
+--   "team_2_40",
+--   "team_2_41",
+--   "team_2_42",
+--   "team_2_43",
+--   "team_2_44",
+--   "team_2_45",
+--   "team_2_46",
+--   "team_2_47",
+--   "team_2_48",
+--   "team_2_49",
+--   "team_2_50",
+-- }
+-- local sum = 0
+-- local count = 0
+
+-- for key, unit in pairs(units) do
+--   local result = X2Unit:UnitGearScore(unit, true)
+
+--   for i = 1, X2Unit:UnitBuffCount(unit) do
+--     local buff = X2Unit:UnitBuff(unit, i)
+--     local unitId = X2Unit:GetUnitId(unit)
+--     local unitName = X2Unit:GetUnitNameById(unitId)
+
+--     if buff.buff_id == 2385 then
+--       ADDON:ChatLog(unitName .. " " .. buff.timeLeft)
+--     end
+--   end
+
+--   if result then
+--     sum = sum + result
+--     count = count + 1
+--   end
+-- end
+
+-- local average = count == 0 and 0 or (sum / count)
+
+-- ADDON:ChatLog("Average Gear Score: %d (%d)", average, count)
+
+--------------------------------------------------------------------------------
+
+-- local tab = UIParent:CreateWidget("tab", "testingtab", "UIParent")
+-- tab:SetExtent(1000, 500)
+-- tab:AddAnchor("CENTER", 0, 0)
+-- tab:Show(true)
+-- tab:AddSimpleTab("Login Tracker")
+-- tab:AddSimpleTab("Daily Contracts")
+-- tab:AddSimpleTab("Details")
+-- tab:AddSimpleTab("Events")
+-- tab:AddSimpleTab("Auroria")
+-- tab:AddSimpleTab("Nuia")
+-- tab:AddSimpleTab("Haranya")
+-- tab:SetCorner("BOTTOMLEFT")
+
+-- local maxWidth = 0
+-- for i = 1, #tab.window do
+--   -- local selectedButton = tab.selectedButton[i]:SetStyle("chat_tab_selected")
+--   local selectedButton = tab.selectedButton[i]
+--   selectedButton:SetInset(15, 0, 15, 0)
+--   selectedButton:SetExtent(95, 29)
+--   selectedButton.style:SetFontSize(FONT_SIZE.LARGE)
+--   selectedButton:SetAutoResize(true)
+--   local color = UIParent:GetFontColor("middle_title")
+--   selectedButton:SetDisabledTextColor(color[1], color[2], color[3], color[4])
+--   selectedButton:SetHighlightTextColor(color[1], color[2], color[3], color[4])
+--   selectedButton:SetPushedTextColor(color[1], color[2], color[3], color[4])
+--   selectedButton:SetTextColor(color[1], color[2], color[3], color[4])
+
+--   local width = selectedButton:GetWidth()
+--   if width > maxWidth then
+--     maxWidth = width
+--   end
+
+--   local selectedButtonhNormalBackground = assert(selectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   selectedButtonhNormalBackground:SetTextureInfo("tab_selected_df")
+--   selectedButtonhNormalBackground:AddAnchor("TOPLEFT", selectedButton, 0, 0)
+--   selectedButtonhNormalBackground:AddAnchor("BOTTOMRIGHT", selectedButton, 0, 0)
+--   selectedButton:SetNormalBackground(selectedButtonhNormalBackground)
+
+--   local selectedButtonhHighlightBackground = assert(selectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   selectedButtonhHighlightBackground:SetTextureInfo("tab_selected_ov")
+--   selectedButtonhHighlightBackground:AddAnchor("TOPLEFT", selectedButton, 0, 0)
+--   selectedButtonhHighlightBackground:AddAnchor("BOTTOMRIGHT", selectedButton, 0, 0)
+--   selectedButton:SetHighlightBackground(selectedButtonhHighlightBackground)
+
+--   local selectedButtonPushedBackground = assert(selectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   selectedButtonPushedBackground:SetTextureInfo("tab_selected_on")
+--   selectedButtonPushedBackground:AddAnchor("TOPLEFT", selectedButton, 0, 0)
+--   selectedButtonPushedBackground:AddAnchor("BOTTOMRIGHT", selectedButton, 0, 0)
+--   selectedButton:SetPushedBackground(selectedButtonPushedBackground)
+
+--   local selectedButtonDisabledBackground = assert(selectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   selectedButtonDisabledBackground:SetTextureInfo("tab_selected_dis")
+--   selectedButtonDisabledBackground:AddAnchor("TOPLEFT", selectedButton, 0, 0)
+--   selectedButtonDisabledBackground:AddAnchor("BOTTOMRIGHT", selectedButton, 0, 0)
+--   selectedButton:SetDisabledBackground(selectedButtonDisabledBackground)
+
+--   local unselectedButton = tab.unselectedButton[i]
+--   unselectedButton:SetInset(15, 0, 15, 0)
+--   unselectedButton:SetExtent(95, 25)
+--   unselectedButton.style:SetFontSize(FONT_SIZE.LARGE)
+--   unselectedButton:SetAutoResize(true)
+--   unselectedButton:SetDisabledTextColor(color[1], color[2], color[3], color[4])
+--   unselectedButton:SetHighlightTextColor(color[1], color[2], color[3], color[4])
+--   unselectedButton:SetPushedTextColor(color[1], color[2], color[3], color[4])
+--   unselectedButton:SetTextColor(color[1], color[2], color[3], color[4])
+
+--   local unselectedButtonhNormalBackground = assert(unselectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   unselectedButtonhNormalBackground:SetTextureInfo("tab_unselected_df")
+--   unselectedButtonhNormalBackground:AddAnchor("TOPLEFT", unselectedButton, 0, 0)
+--   unselectedButtonhNormalBackground:AddAnchor("BOTTOMRIGHT", unselectedButton, 0, 0)
+--   unselectedButton:SetNormalBackground(unselectedButtonhNormalBackground)
+
+--   local unselectedButtonhHighlightBackground = assert(unselectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   unselectedButtonhHighlightBackground:SetTextureInfo("tab_unselected_ov")
+--   unselectedButtonhHighlightBackground:AddAnchor("TOPLEFT", unselectedButton, 0, 0)
+--   unselectedButtonhHighlightBackground:AddAnchor("BOTTOMRIGHT", unselectedButton, 0, 0)
+--   unselectedButton:SetHighlightBackground(unselectedButtonhHighlightBackground)
+
+--   local unselectedButtonPushedBackground = assert(unselectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   unselectedButtonPushedBackground:SetTextureInfo("tab_unselected_on")
+--   unselectedButtonPushedBackground:AddAnchor("TOPLEFT", unselectedButton, 0, 0)
+--   unselectedButtonPushedBackground:AddAnchor("BOTTOMRIGHT", unselectedButton, 0, 0)
+--   unselectedButton:SetPushedBackground(unselectedButtonPushedBackground)
+
+--   local unselectedButtonDisabledBackground = assert(unselectedButton:CreateThreePartDrawable(TEXTURE_PATH.TAB_LIST,
+--     "background"))
+--   unselectedButtonDisabledBackground:SetTextureInfo("tab_unselected_dis")
+--   unselectedButtonDisabledBackground:AddAnchor("TOPLEFT", unselectedButton, 0, 0)
+--   unselectedButtonDisabledBackground:AddAnchor("BOTTOMRIGHT", unselectedButton, 0, 0)
+--   unselectedButton:SetDisabledBackground(unselectedButtonDisabledBackground)
+-- end
+
+-- for i = 1, #tab.window do
+--   local selectedButton = tab.selectedButton[i]
+--   selectedButton:SetWidth(maxWidth)
+--   local unselectedButton = tab.unselectedButton[i]
+--   unselectedButton:SetWidth(maxWidth)
+-- end
+
+
+-- tab:SetGap(100)
+-- tab:AlignTabButtons()
+
+-- local button = tab.window[1]:CreateChildWidget("button", "test", 0, true)
+-- button:SetStyle("text_default")
+-- button:SetText("hello, world!")
+-- button:AddAnchor("TOPLEFT", 0, 0)
+
+-- local file = open("temp/example.txt", "w")
+-- file:write(dump(tab))
+-- file:close()
+
+--------------------------------------------------------------------------------
+
+-- I can create a new character binding and a slot that I can drag an item/skill
+-- into and use that character binding to activate the slot but I dont have a
+-- way to save the slot item.
+
+-- X2Hotkey:BindingToOption()
+-- X2Hotkey:SetOptionBindingWithIndex("action_bar_button", "b", 1, 73)
+-- X2Hotkey:SaveHotKey()
+
+-- local slot = UIParent:CreateWidget("slot", "slottesting", "UIParent")
+-- slot:SetExtent(40, 40)
+-- slot:EstablishSlot(ISLOT_ACTION, 73)
+-- -- slot:EstablishSlot(ISLOT_BAG, 2)
+-- slot:Show(true)
+
+-- local file = open("temp/example.txt", "w")
+
+-- function slot:OnContentUpdated(...)
+--   ADDON:ChatLogTable({ ... })
+--   -- ADDON:ChatLogTable(slot:GetExtraInfo())
+--   -- ADDON:ChatLog(slot:GetBindedType())
+--   -- ADDON:ChatLog(slot:GetItemLevelRequirment())
+--   -- ADDON:ChatLog(slot:GetPassiveBuffType())
+--   -- ADDON:ChatLog(slot:GetSkillType())
+--   ADDON:ChatLog("name " .. slot.icon:GetName())
+--   ADDON:ChatLog("id " .. slot.icon:GetId())
+--   -- ADDON:ChatLogTable(slot:GetTooltip())
+--   file:write(dump(slot), "\n\n")
+--   file:flush()
+--   ADDON:ChatLog("---")
+-- end
+
+-- slot:SetHandler("OnContentUpdated", slot.OnContentUpdated)
+-- ADDON:ChatLog(slot:GetHotKey())
+
+--------------------------------------------------------------------------------
+
+-- local zone_group_origin = {
+--   { id = 1,   display_text = "Gweonid Forest",                     origin_x = 10880.0,       origin_y = 15389.5, },
+--   { id = 2,   display_text = "Marianople",                         origin_x = 11264.5614035, origin_y = 11862.45614, },
+--   { id = 3,   display_text = "Dewstone Plains",                    origin_x = 12527.5428565, origin_y = 13716.1142855, },
+--   { id = 4,   display_text = "Solis Headlands",                    origin_x = 16500.2105265, origin_y = 8373.894737, },
+--   { id = 5,   display_text = "Solzreed Peninsula",                 origin_x = 14330.1223145, origin_y = 14707.0, },
+--   { id = 6,   display_text = "Lilyut Hills",                       origin_x = 12970.181818,  origin_y = 15845.0909095, },
+--   { id = 7,   display_text = "Arcum Iris",                         origin_x = 21183.1794865, origin_y = 7342.769231, },
+--   { id = 8,   display_text = "Two Crowns",                         origin_x = 12890.302246,  origin_y = 11104.0, },
+--   { id = 9,   display_text = "Mahadevi",                           origin_x = 19335.384619,  origin_y = 8770.4615385, },
+--   { id = 10,  display_text = "Airain Rock",                        origin_x = 6678.395752,   origin_y = 13278.0, },
+--   { id = 11,  display_text = "Falcorth Plains",                    origin_x = 23954.1333335, origin_y = 9193.6, },
+--   { id = 12,  display_text = "Villanelle",                         origin_x = 21688.7272755, origin_y = 10435.6363635, },
+--   { id = 13,  display_text = "Sunbite Wilds",                      origin_x = 20988.1726075, origin_y = 5627.5, },
+--   { id = 14,  display_text = "Windscour Savannah",                 origin_x = 25092.0,       origin_y = 7134.0, },
+--   { id = 15,  display_text = "Perinoor Ruins",                     origin_x = 28023.0,       origin_y = 7164.0, },
+--   { id = 16,  display_text = "Rookborne Basin",                    origin_x = 25546.7697755, origin_y = 9891.5, },
+--   { id = 17,  display_text = "Ynystere",                           origin_x = 20677.953493,  origin_y = 12520.1860465, },
+--   { id = 18,  display_text = "White Arden",                        origin_x = 9840.913574,   origin_y = 13099.5, },
+--   { id = 19,  display_text = "Karkasse Ridgelands",                origin_x = 10396.0,       origin_y = 17003.5, },
+--   { id = 20,  display_text = "Cinderstone Moor",                   origin_x = 14707.8095235, origin_y = 11886.4761905, },
+--   { id = 21,  display_text = "Aubre Cradle",                       origin_x = 7630.402832,   origin_y = 12716.0, },
+--   { id = 22,  display_text = "Halcyona",                           origin_x = 9828.3243245,  origin_y = 10692.3243245, },
+--   { id = 23,  display_text = "Hasla",                              origin_x = 29266.956787,  origin_y = 8242.5, },
+--   { id = 24,  display_text = "Tigerspine Mountains",               origin_x = 21884.9230745, origin_y = 8529.2307695, },
+--   { id = 25,  display_text = "Silent Forest",                      origin_x = 23558.9565185, origin_y = 11722.4347825, },
+--   { id = 26,  display_text = "Hellswamp",                          origin_x = 7748.413793,   origin_y = 9126.6206895, },
+--   { id = 27,  display_text = "Sanddeep",                           origin_x = 9644.5,        origin_y = 9192.0, },
+--   { id = 30,  display_text = "Castaway Strait",                    origin_x = 17039.943062,  origin_y = 11264.0, },
+--   { id = 31,  display_text = "Drill Camp",                         origin_x = 1176.0620155,  origin_y = 482.60465115, },
+--   { id = 33,  display_text = "Heedmar",                            origin_x = 20081.77778,   origin_y = 24079.5555545, },
+--   { id = 34,  display_text = "Nuimari",                            origin_x = 21776.4210545, origin_y = 24098.947373, },
+--   { id = 36,  display_text = "Arcadian Sea",                       origin_x = 19266.953845,  origin_y = 19968.0, },
+--   { id = 39,  display_text = "Halcyona Gulf",                      origin_x = 12765.2625375, origin_y = 7680.0, },
+--   { id = 40,  display_text = "Feuille Sound",                      origin_x = 14336.0,       origin_y = 13151.315264, },
+--   { id = 43,  display_text = "Marcala",                            origin_x = 20003.2653065, origin_y = 25067.7551035, },
+--   { id = 44,  display_text = "Calmlands",                          origin_x = 21507.8554185, origin_y = 25161.253015, },
+--   { id = 45,  display_text = "Burnt Castle Armory",                origin_x = 226.0,         origin_y = 238.0, },
+--   { id = 46,  display_text = "Hadir Farm",                         origin_x = 732.5,         origin_y = 627.5, },
+--   { id = 47,  display_text = "Palace Cellar",                      origin_x = 570.6690675,   origin_y = 351.0, },
+--   { id = 49,  display_text = "Mirage Isle",                        origin_x = 4244.5,        origin_y = 4147.0, },
+--   { id = 50,  display_text = "Sharpwind Mines",                    origin_x = 598.482025,    origin_y = 480.5, },
+--   { id = 51,  display_text = "Howling Abyss",                      origin_x = 513.6546935,   origin_y = 590.5, },
+--   { id = 52,  display_text = "Kroloal Cradle",                     origin_x = 487.848938,    origin_y = 645.0, },
+--   { id = 54,  display_text = "Exeloch",                            origin_x = 23205.661865,  origin_y = 25152.0, },
+--   { id = 56,  display_text = "Sungold Fields",                     origin_x = 22105.5827635, origin_y = 26429.0, },
+--   { id = 57,  display_text = "Golden Ruins",                       origin_x = 17556.755371,  origin_y = 27367.0, },
+--   { id = 58,  display_text = "Greater Howling Abyss",              origin_x = 513.6546935,   origin_y = 590.5, },
+--   { id = 59,  display_text = "Sunspeck Sea",                       origin_x = 21030.050293,  origin_y = 17992.0, },
+--   { id = 60,  display_text = "Stormraw Sound",                     origin_x = 15199.0720215, origin_y = 23042.0, },
+--   { id = 61,  display_text = "Diamond Shores",                     origin_x = 19514.8129885, origin_y = 27128.5, },
+--   { id = 62,  display_text = "Sea of Drowned Love",                origin_x = 1695.8345335,  origin_y = 1314.0, },
+--   { id = 63,  display_text = "Reedwind",                           origin_x = 19477.4748535, origin_y = 28690.5, },
+--   { id = 64,  display_text = "Lesser Sea of Drowned Love",         origin_x = 1695.8345335,  origin_y = 1314.0, },
+--   { id = 78,  display_text = "Mistmerrow",                         origin_x = 23418.7337645, origin_y = 27710.0, },
+--   { id = 79,  display_text = "Miroir Tundra",                      origin_x = 7739.093506,   origin_y = 20480.0, },
+--   { id = 80,  display_text = "Shattered Sea",                      origin_x = 6712.705078,   origin_y = 18507.5, },
+--   { id = 83,  display_text = "Greater Hadir Farm",                 origin_x = 732.5,         origin_y = 627.5, },
+--   { id = 84,  display_text = "Greater Burnt Castle Armory",        origin_x = 226.0,         origin_y = 238.0, },
+--   { id = 86,  display_text = "Greater Palace Cellar",              origin_x = 570.6690675,   origin_y = 351.0, },
+--   { id = 87,  display_text = "Greater Sharpwind Mines",            origin_x = 598.482025,    origin_y = 480.5, },
+--   { id = 88,  display_text = "Greater Kroloal Cradle",             origin_x = 487.848938,    origin_y = 645.0, },
+--   { id = 89,  display_text = "Mistsong Summit",                    origin_x = 1030.9352415,  origin_y = 1006.5, },
+--   { id = 92,  display_text = "Free-For-All Arena",                 origin_x = 562.7769775,   origin_y = 566.0, },
+--   { id = 93,  display_text = "Ahnimar",                            origin_x = 5772.5,        origin_y = 9506.5, },
+--   { id = 94,  display_text = "Ancient Ezna",                       origin_x = 1177.402893,   origin_y = 1471.0, },
+--   { id = 95,  display_text = "Boiling Sea",                        origin_x = 19446.0,       origin_y = 5632.0, },
+--   { id = 98,  display_text = "Queen's Chamber",                    origin_x = 2371.5755465,  origin_y = 32020.0, },
+--   { id = 99,  display_text = "Rokhala Mountains",                  origin_x = 27983.6259765, origin_y = 10621.0, },
+--   { id = 100, display_text = "Queen's Chamber",                    origin_x = 3395.5755465,  origin_y = 32020.0 },
+--   { id = 102, display_text = "Aegis Island",                       origin_x = 14322.3813475, origin_y = 26753.0, },
+--   { id = 103, display_text = "Whalesong Harbor",                   origin_x = 16901.9783935, origin_y = 28630.5, },
+--   { id = 104, display_text = "Whaleswell Straits",                 origin_x = 15398.553955,  origin_y = 27146.0, },
+--   { id = 105, display_text = "Ipnysh Sanctuary",                   origin_x = 572.251831,    origin_y = 575.5, },
+--   { id = 107, display_text = "Western Hiram Mountains",            origin_x = 19397.690674,  origin_y = 30725.5, },
+--   { id = 108, display_text = "Golden Plains Battle",               origin_x = 9238.1870115,  origin_y = 5134.5, },
+--   { id = 110, display_text = "Eastern Hiram Mountains",            origin_x = 21753.2373045, origin_y = 30707.5, },
+--   { id = 121, display_text = "Red Dragon's Keep",                  origin_x = 3038.2230225,  origin_y = 5144.0, },
+--   { id = 122, display_text = "The Fall of Hiram City",             origin_x = 2291.6834715,  origin_y = 2300.0, },
+--   { id = 125, display_text = "Noryette Challenge",                 origin_x = 426.3309325,   origin_y = 435.5, },
+--   { id = 129, display_text = "Stillwater Gulf",                    origin_x = 10265.7768555, origin_y = 10085.5, },
+--   { id = 130, display_text = "Hereafter Rebellion",                origin_x = 1447.266205,   origin_y = 1597.0, },
+--   { id = 131, display_text = "Battle of Mistmerrow",               origin_x = 1915.1654665,  origin_y = 2103.0, },
+--   { id = 132, display_text = "Kadum",                              origin_x = 891.1654665,   origin_y = 1079.0, },
+--   { id = 133, display_text = "Garden of the Gods",                 origin_x = 32599.194336,  origin_y = 35741.5, },
+--   { id = 134, display_text = "Gatekeeper Hall",                    origin_x = 503.014389,    origin_y = 38407.5, },
+--   { id = 135, display_text = "Dairy Cow Dreamland",                origin_x = 1676.6762695,  origin_y = 2338.5, },
+--   { id = 136, display_text = "Circle of Authority",                origin_x = 2305.3740845,  origin_y = 1699.0, },
+--   { id = 137, display_text = "Delphinad Mirage",                   origin_x = 1688.0719605,  origin_y = 1991.0, },
+--   { id = 139, display_text = "Mysthrane Gorge",                    origin_x = 17366.805786,  origin_y = 30663.0, },
+--   { id = 140, display_text = "Ipnya Ridge",                        origin_x = 14444.7626955, origin_y = 30700.5, },
+--   { id = 141, display_text = "Skyfin War",                         origin_x = 2847.043152,   origin_y = 737.0, },
+--   { id = 142, display_text = "Queen's Altar",                      origin_x = 6874.014389,   origin_y = 6917.5, },
+--   { id = 147, display_text = "Great Prairie of the West",          origin_x = 23801.942505,  origin_y = 29342.5, },
+--   -- { id = 28,  display_text = "The Wastes",                         origin_x = 5120.0,        origin_y = 5120.0, },
+--   -- { id = 29,  display_text = "Libertia Sea",                       origin_x = 5120.0,        origin_y = 5120.0, },
+--   -- { id = 32,  display_text = "Dreadnought",                        origin_x = 5120.0,        origin_y = 5120.0, },
+--   -- { id = 41,  display_text = "Forbidden Sea",                      origin_x = 5120.0,        origin_y = 5120.0, },
+--   -- { id = 42,  display_text = "Forbidden Shore",                    origin_x = 5120.0,        origin_y = 5120.0, },
+--   -- { id = 65,  display_text = "Verdant Skychamber",                 origin_x = 2537.007202,   origin_y = 28189.0, },
+--   -- { id = 67,  display_text = "Introspect Path",                    origin_x = 2538.007202,   origin_y = 30238.0, },
+--   -- { id = 69,  display_text = "Evening Botanica",                   origin_x = 2537.007202,   origin_y = 26141.0, },
+--   -- { id = 70,  display_text = "Encyclopedia Room",                  origin_x = 512.949707,    origin_y = 576.0, },
+--   -- { id = 71,  display_text = "Libris Garden",                      origin_x = 512.949707,    origin_y = 2624.0, },
+--   -- { id = 72,  display_text = "Screaming Archives",                 origin_x = 513.949707,    origin_y = 4672.0, },
+--   -- { id = 77,  display_text = "Gladiator Arena",                    origin_x = 572.2086335,   origin_y = 506.0, },
+--   -- { id = 97,  display_text = "Bloodsalt Bay",                      origin_x = 2078.741028,   origin_y = 2305.0, },
+--   -- { id = 116, display_text = "Unused",                             origin_x = 2487.507202,   origin_y = 30238.0, },
+--   -- { id = 117, display_text = "Verdant Skychamber (Disabled)",      origin_x = 2537.007202,   origin_y = 28189.0, },
+--   -- { id = 118, display_text = "Evening Botanica (Disabled)",        origin_x = 2537.007202,   origin_y = 26141.0, },
+--   -- { id = 119, display_text = "Constellation Breakroom (Disabled)", origin_x = 2537.007202,   origin_y = 26141.0, },
+--   -- { id = 126, display_text = "Mistsong Banquet",                   origin_x = 562.5,         origin_y = 566.0, },
+--   -- { id = 150, display_text = "Dimensional Boundary Defense Raid",  origin_x = 472.5827635,   origin_y = 1619.5, },
+--   -- { id = 154, display_text = "Nightmare Burnt Castle Armory",      origin_x = 226.0,         origin_y = 238.0, },
+--   -- { id = 155, display_text = "Crossroads Arena",                   origin_x = 1504.1223145,  origin_y = 1820.0, },
+--   -- { id = 156, display_text = "Noryette Arena",                     origin_x = 426.3309325,   origin_y = 435.5, },
+--   -- { id = 158, display_text = "Island of Abundance",                origin_x = 1345.7194215,  origin_y = 1216.0, },
+--   -- { id = 159, display_text = "Golden Plains Battle",               origin_x = 9238.1870115,  origin_y = 5134.5, },
+-- }
+
+-- local currentGroup = 0
+
+
+-- local backButton = UIParent:CreateWidget("button", "back", "UIParent")
+-- backButton:SetStyle("text_default")
+-- backButton:SetText("<")
+-- backButton:Show(true)
+-- backButton:SetWidth(50)
+
+-- local forwardButton = UIParent:CreateWidget("button", "back", "UIParent")
+-- forwardButton:SetStyle("text_default")
+-- forwardButton:SetText(">")
+-- forwardButton:Show(true)
+-- forwardButton:SetWidth(50)
+
+-- backButton:AddAnchor("LEFT", 0, 0)
+-- forwardButton:AddAnchor("LEFT", backButton, "RIGHT", 0, 0)
+
+-- backButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   if currentGroup > 1 then
+--     currentGroup = currentGroup - 1
+--     local zone_origin = zone_group_origin[currentGroup]
+--     X2Map:ShowWorldmapLocation(zone_origin.id, zone_origin.origin_x, zone_origin.origin_y, 0)
+--     ADDON:ChatLog(zone_origin.display_text)
+--   end
+-- end)
+
+-- forwardButton:SetHandler("OnClick", function (self, mouseButton, doubleClick, keyModifier)
+--   if currentGroup < #zone_group_origin then
+--     currentGroup = currentGroup + 1
+--     local zone_origin = zone_group_origin[currentGroup]
+--     X2Map:ShowWorldmapLocation(zone_origin.id, zone_origin.origin_x, zone_origin.origin_y, 0)
+--     ADDON:ChatLog(zone_origin.display_text)
+--   end
+-- end)
+
+--------------------------------------------------------------------------------
+
+-- r_width min 640 max monitor width
+-- r_height 480 max monitor height
+
+-- X2Option:SetConsoleVariable("r_width", "1400")
+-- X2Option:SetConsoleVariable("r_height", "1100")
+-- X2Option:Save()
+
+-- r_width = 2560
+-- r_height = 1440
+
+-- r_desireWidth = 1400
+-- r_desireHeight = 1100
+
+--------------------------------------------------------------------------------
+
+-- local file = open("temp/example.txt", "w")
+
+-- for k, v in pairs(UIC) do
+--   local content = { ADDON:GetContentMainScriptPosVis(v) }
+--   -- local content = ADDON:GetContent(v)
+
+--   if content ~= nil and #content > 0 then
+--     file:write(k, "\n", dump(content), "\n")
+--   end
+-- end
+
+-- UIParent:SetEventHandler("CHAT_MESSAGE", function (...)
+--   file:write(dump({ ... }), "\n")
+--   file:flush()
+-- end)

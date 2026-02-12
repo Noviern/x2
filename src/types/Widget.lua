@@ -47,31 +47,69 @@ function Widget:Clickable(clickable) end
 
 ---Creates and returns a child widget, attaching it as a property to the Widget,
 ---and gives the widget a draw priority z-index.
----@generic T
----@param objectTypeStr `T`|OBJECT_NAME The type of widget to create.
+---@param objectTypeStr OBJECT_NAME The type of widget to create.
 ---@param name string The name of the widget.
 ---@param index number The index of the widget, `0` sets `widget.name` whereas any number above `0` sets `widget.name[index]`.
 ---@param reflectToScriptTable boolean Whether to attach the widget to the script table under its `name`.
----@return T widget The created child widget, empty table if the widget hasn't been imported, or `nil` if creation fails.
+---@return Widget widget The created child widget, empty table if the widget hasn't been imported, or `nil` if creation fails.
 ---@usage
 ---```lua
 ---local button = widget:CreateChildWidget("button", "exampleButton", 0, true)
-------widget.exampleButton This is automatically set by this method.
+----- widget.exampleButton This is automatically set by this method.
 ---```
 ---@see Widget
+---@overload fun(self: self, objectTypeStr: "avi", name: string, index: number, reflectToScriptTable: boolean): Avi
+---@overload fun(self: self, objectTypeStr: "button", name: string, index: number, reflectToScriptTable: boolean): Button
+---@overload fun(self: self, objectTypeStr: "chatwindow", name: string, index: number, reflectToScriptTable: boolean): ChatWindow
+---@overload fun(self: self, objectTypeStr: "checkbutton", name: string, index: number, reflectToScriptTable: boolean): Checkbutton
+---@overload fun(self: self, objectTypeStr: "circlediagram", name: string, index: number, reflectToScriptTable: boolean): CircleDiagram
+---@overload fun(self: self, objectTypeStr: "colorpicker", name: string, index: number, reflectToScriptTable: boolean): ColorPicker
+---@overload fun(self: self, objectTypeStr: "combobox", name: string, index: number, reflectToScriptTable: boolean): Combobox
+---@overload fun(self: self, objectTypeStr: "cooldownbutton", name: string, index: number, reflectToScriptTable: boolean): CooldownButton
+---@overload fun(self: self, objectTypeStr: "cooldownconstantbutton", name: string, index: number, reflectToScriptTable: boolean): CooldownConstantButton
+---@overload fun(self: self, objectTypeStr: "cooldowninventorybutton", name: string, index: number, reflectToScriptTable: boolean): CooldownInventoryButton
+---@overload fun(self: self, objectTypeStr: "damagedisplay", name: string, index: number, reflectToScriptTable: boolean): DamageDisplay
+---@overload fun(self: self, objectTypeStr: "dynamiclist", name: string, index: number, reflectToScriptTable: boolean): DynamicList
+---@overload fun(self: self, objectTypeStr: "editbox", name: string, index: number, reflectToScriptTable: boolean): Editbox
+---@overload fun(self: self, objectTypeStr: "editboxmultiline", name: string, index: number, reflectToScriptTable: boolean): EditboxMultiline
+---@overload fun(self: self, objectTypeStr: "emptywidget", name: string, index: number, reflectToScriptTable: boolean): EmptyWidget
+---@overload fun(self: self, objectTypeStr: "folder", name: string, index: number, reflectToScriptTable: boolean): Folder
+---@overload fun(self: self, objectTypeStr: "gametooltip", name: string, index: number, reflectToScriptTable: boolean): GameTooltip
+---@overload fun(self: self, objectTypeStr: "grid", name: string, index: number, reflectToScriptTable: boolean): Grid
+---@overload fun(self: self, objectTypeStr: "label", name: string, index: number, reflectToScriptTable: boolean): Label
+---@overload fun(self: self, objectTypeStr: "line", name: string, index: number, reflectToScriptTable: boolean): Line
+---@overload fun(self: self, objectTypeStr: "listbox", name: string, index: number, reflectToScriptTable: boolean): Listbox
+---@overload fun(self: self, objectTypeStr: "listctrl", name: string, index: number, reflectToScriptTable: boolean): ListCtrl
+---@overload fun(self: self, objectTypeStr: "megaphonechatedit", name: string, index: number, reflectToScriptTable: boolean): MegaphoneChatEdit
+---@overload fun(self: self, objectTypeStr: "message", name: string, index: number, reflectToScriptTable: boolean): Message
+---@overload fun(self: self, objectTypeStr: "modelview", name: string, index: number, reflectToScriptTable: boolean): ModelView
+---@overload fun(self: self, objectTypeStr: "pageable", name: string, index: number, reflectToScriptTable: boolean): Pageable
+---@overload fun(self: self, objectTypeStr: "paintcolorpicker", name: string, index: number, reflectToScriptTable: boolean): PaintColorPicker
+---@overload fun(self: self, objectTypeStr: "radiogroup", name: string, index: number, reflectToScriptTable: boolean): RadioGroup
+---@overload fun(self: self, objectTypeStr: "roadmap", name: string, index: number, reflectToScriptTable: boolean): RoadMap
+---@overload fun(self: self, objectTypeStr: "slider", name: string, index: number, reflectToScriptTable: boolean): Slider
+---@overload fun(self: self, objectTypeStr: "slot", name: string, index: number, reflectToScriptTable: boolean): Slot
+---@overload fun(self: self, objectTypeStr: "statusbar", name: string, index: number, reflectToScriptTable: boolean): StatusBar
+---@overload fun(self: self, objectTypeStr: "tab", name: string, index: number, reflectToScriptTable: boolean): Tab
+---@overload fun(self: self, objectTypeStr: "textbox", name: string, index: number, reflectToScriptTable: boolean): Textbox
+---@overload fun(self: self, objectTypeStr: "unitframetooltip", name: string, index: number, reflectToScriptTable: boolean): UnitframeTooltip
+---@overload fun(self: self, objectTypeStr: "webbrowser", name: string, index: number, reflectToScriptTable: boolean): Webbrowser
+---@overload fun(self: self, objectTypeStr: "window", name: string, index: number, reflectToScriptTable: boolean): Window
+---@overload fun(self: self, objectTypeStr: "worldmap", name: string, index: number, reflectToScriptTable: boolean): WorldMap
+---@overload fun(self: self, objectTypeStr: "x2editbox", name: string, index: number, reflectToScriptTable: boolean): X2Editbox
 function Widget:CreateChildWidget(objectTypeStr, name, index, reflectToScriptTable) end
 
 ---@FIXME: objectType should be UOT_WIDGET if we had all UOTs
 ---Creates and returns a child widget by type and gives the widget a draw priority z-index.
 ---@param objectType OBJECT The type of widget to create.
 ---@param name string The name of the widget.
----@param index number The index of the widget.
+---@param index number The index of the widget, `0` sets `widget.name` whereas any number above `0` sets `widget.name[index]`.
 ---@param reflectToScriptTable boolean Whether to attach the widget to the script table.
 ---@return Widget widget The created child widget, empty table if the widget hasn't been imported, or `nil` if creation fails.
 ---@usage
 ---```lua
 ---local button = widget:CreateChildWidgetByType(OBJECT.Button, "exampleButton", 0, true)
-------widget.exampleButton This is automatically set by this method.
+----- widget.exampleButton This is automatically set by this method.
 ---```
 ---@see Widget
 ---@overload fun(self: self, objectType: UOT_AVI, name: string, index: number, reflectToScriptTable: boolean): Avi
@@ -112,10 +150,10 @@ function Widget:CreateChildWidget(objectTypeStr, name, index, reflectToScriptTab
 ---@overload fun(self: self, objectType: UOT_WEBBROWSER, name: string, index: number, reflectToScriptTable: boolean): Webbrowser
 ---@overload fun(self: self, objectType: UOT_WINDOW, name: string, index: number, reflectToScriptTable: boolean): Window
 ---@overload fun(self: self, objectType: UOT_WORLDMAP, name: string, index: number, reflectToScriptTable: boolean): WorldMap
----@overload fun(self: self, objectType: UOT_X2_EDITBOX, name: string, index: number, reflectToScriptTable: boolean): X2EditBox
+---@overload fun(self: self, objectType: UOT_X2_EDITBOX, name: string, index: number, reflectToScriptTable: boolean): X2Editbox
 function Widget:CreateChildWidgetByType(objectType, name, index, reflectToScriptTable) end
 
----**Requires `ADDON:ImportObject(OBJECT.ColorDrawable)`**
+---**Requires importing the `ColorDrawable` Object.**
 ---
 ---Creates a color drawable for the specified layer.
 ---@param r number Red value (min: `0`, max: `1`).
@@ -128,7 +166,7 @@ function Widget:CreateChildWidgetByType(objectType, name, index, reflectToScript
 ---@see ColorDrawable
 function Widget:CreateColorDrawable(r, g, b, a, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.ColorDrawable)`**
+---**Requires importing the `ColorDrawable` Object.**
 ---
 ---Creates a color drawable using a color key for the specified layer.
 ---@param colorKey DRAWABLE_COLOR_KEY The color key to use.
@@ -138,7 +176,7 @@ function Widget:CreateColorDrawable(r, g, b, a, nameLayer) end
 ---@see ColorDrawable
 function Widget:CreateColorDrawableByKey(colorKey, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.{drawableType})`**
+---**Requires importing the correct `Drawable` Object type for the `textureKey`.**
 ---
 ---Creates a drawable from the specified texture path and key. The key's `type`
 ---will define what `drawableType` object needs to be imported. Casting the
@@ -150,7 +188,7 @@ function Widget:CreateColorDrawableByKey(colorKey, nameLayer) end
 ---@nodiscard
 function Widget:CreateDrawable(texturePath, textureKey, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.EffectDrawable)`**
+---**Requires importing the `EffectDrawable` Object.**
 ---
 ---Creates an effect drawable for the specified texture and layer.
 ---@param texturePath string The texture name.
@@ -160,7 +198,7 @@ function Widget:CreateDrawable(texturePath, textureKey, nameLayer) end
 ---@see EffectDrawable
 function Widget:CreateEffectDrawable(texturePath, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.EffectDrawable)`**
+---**Requires importing the `EffectDrawable` Object.**
 ---
 ---Creates an effect drawable using a key for the specified texture and layer.
 ---@param texturePath string The texture name.
@@ -171,7 +209,7 @@ function Widget:CreateEffectDrawable(texturePath, nameLayer) end
 ---@see EffectDrawable
 function Widget:CreateEffectDrawableByKey(texturePath, textureKey, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.IconDrawable)`**
+---**Requires importing the `IconDrawable` Object.**
 ---
 ---Creates an icon drawable for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
@@ -180,7 +218,7 @@ function Widget:CreateEffectDrawableByKey(texturePath, textureKey, nameLayer) en
 ---@see IconDrawable
 function Widget:CreateIconDrawable(nameLayer) end
 
----***Requires `ADDON:ImportObject(OBJECT.ImageDrawable)`**
+---**Requires importing the `ImageDrawable` Object.**
 ---
 ---Creates an image drawable for the specified texture and layer. Addon images
 ---can be used `Addon/{addonname}/example.dds`
@@ -191,7 +229,7 @@ function Widget:CreateIconDrawable(nameLayer) end
 ---@see ImageDrawable
 function Widget:CreateImageDrawable(texturePath, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.NinePartDrawable)`**
+---**Requires importing the `NinePartDrawable` Object.**
 ---
 ---Creates a nine-part drawable for the specified texture and layer.
 ---@param texturePath string The texture path.
@@ -201,7 +239,7 @@ function Widget:CreateImageDrawable(texturePath, nameLayer) end
 ---@see NinePartDrawable
 function Widget:CreateNinePartDrawable(texturePath, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.TextDrawable)`**
+---**Requires importing the `TextDrawable` Object.**
 ---
 ---Creates a text drawable for the specified font and size.
 ---@param fontPath FONT_PATH The font path.
@@ -212,7 +250,7 @@ function Widget:CreateNinePartDrawable(texturePath, nameLayer) end
 ---@see TextDrawable
 function Widget:CreateTextDrawable(fontPath, fontSize, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.ThreeColorDrawable)`**
+---**Requires importing the `ThreeColorDrawable` Object.**
 ---
 ---Creates a three-color drawable for the specified dimensions and layer.
 ---@param width number The width of the drawable.
@@ -223,7 +261,7 @@ function Widget:CreateTextDrawable(fontPath, fontSize, nameLayer) end
 ---@see ThreeColorDrawable
 function Widget:CreateThreeColorDrawable(width, height, nameLayer) end
 
----**Requires `ADDON:ImportObject(OBJECT.ThreePartDrawable)`**
+---**Requires importing the `ThreePartDrawable` Object.**
 ---
 ---Creates a three-part drawable for the specified texture and layer.
 ---@param texturePath string The texture path.
@@ -246,7 +284,7 @@ function Widget:DisableDrawables(nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 function Widget:DisableDrawablesWithChildren(nameLayer) end
 
----@TODO: Make a list of events that can be activated/deactivated by this. This also sets the state to disabled (actually highlighted because state is bugged atm) This may haver another param
+---@TODO: Make a list of events that can be activated/deactivated by this. This also sets the state to disabled (actually highlighted because state is bugged atm) This may haver another param. can change the state of a widget if the widget has state
 ---Enables or disables the Widget and its handler actions `"OnClick"`.
 ---@param enable boolean `true` to enable, `false` to disable. (default: `true`)
 function Widget:Enable(enable) end
@@ -269,7 +307,7 @@ function Widget:EnableDrawablesWithChildren(nameLayer) end
 function Widget:EnableFocus(enable) end
 
 ---Enables or disables `Widget:SetDeletedHandler` and when the widget is hidden
----fires that event and then removes the Widget from the Widget Pool but doesn't remove all references.
+---fires that event and then removes the Widget from the Object Pool but doesn't remove all references.
 ---@param enable boolean `true` to enable removal on hide, `false` to disable. (default: `false`)
 function Widget:EnableHidingIsRemove(enable) end
 
@@ -441,7 +479,7 @@ function Widget:SetCharacterCacheDataHandler(handler) end
 function Widget:SetDelegator(action, delegator, handler) end
 
 ---Sets a handler for the Widget deletion event. This executes right before the
----widget is deleted from the widget pool and should be used to set any variable
+---widget is deleted from the Object pool and should be used to set any variable
 ---that referenced the widget as `nil`, otherwise the widget will become an
 ---invalid object.
 ---@param handler function The handler function.

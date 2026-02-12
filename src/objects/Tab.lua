@@ -1,14 +1,21 @@
 ---@meta _
 
----objects/Tab
+---[Tab](lua://Tab)
+---
+---A `Tab` widget organizes multiple pages or windows under clickable tab
+---buttons. Each tab can have a selected and unselected button state, an
+---associated window, and supports automatic tab creation, alignment,
+---visibility toggling, and orientation settings.
+---
+---**Dependencies**:
+--- - [Button](lua://Button) used for the `selectedButton` and `unselectedButton` fields.
+--- - [Window](lua://Window) used for the `window` field.
+---
 ---@class Tab: Widget, Tabbase
----@field selectedButton Button[]|nil
----@field unselectedButton Button[]|nil
----@field window Window[]|nil
+---@field selectedButton Button[]|nil List of button widgets for the selected state of each tab.
+---@field unselectedButton Button[]|nil List of button widgets for the unselected state of each tab.
+---@field window Window[]|nil List of window widgets associated with each tab.
 local Tab = {}
-
----objects/Tab
----@class tab: Tab
 
 ---Adds a new tab to the Tab with specified button and window widgets.
 ---@param tabName string The name of the tab.

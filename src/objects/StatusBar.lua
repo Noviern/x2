@@ -1,11 +1,13 @@
 ---@meta _
 
----objects/StatusBar
+---[StatusBar](lua://StatusBar)
+---
+---A `StatusBar` widget visually represents a value with a colored bar. It
+---supports numeric or string values, optional animation, customizable
+---textures, orientation settings, and can have child widgets anchored to it.
+---
 ---@class StatusBar: Widget
 local StatusBar = {}
-
----objects/StatusBar
----@class statusbar: StatusBar
 
 ---Adds a child widget to the StatusBar with specified anchoring.
 ---@param anchorChild DrawableDDS The child widget to anchor.
@@ -77,10 +79,10 @@ function StatusBar:SetBarTexture(nameTex, nameLayer) end
 function StatusBar:SetBarTextureByKey(key) end
 
 ---Sets the texture coordinates for the StatusBar.
----@param coordX any The x-coordinate of the texture.
----@param coordY any The y-coordinate of the texture.
----@param coordW any The width of the texture.
----@param coordH any The height of the texture.
+---@param coordX number The x-coordinate of the texture.
+---@param coordY number The y-coordinate of the texture.
+---@param coordW number The width of the texture.
+---@param coordH number The height of the texture.
 function StatusBar:SetBarTextureCoords(coordX, coordY, coordW, coordH) end
 
 ---Sets the minimum and maximum values for the StatusBar (must be called before

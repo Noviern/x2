@@ -1,12 +1,19 @@
 ---@meta _
 
----objects/RadioGroup
+---[RadioGroup](lua://RadioGroup)
+---
+---A `RadioGroup` widget manages a group of radio items, allowing a single
+---selection from multiple options. Each radio item can store a custom data
+---value, and the group provides functions to query, update, and manage these
+---items.
+---
+---**Dependencies**:
+--- - [EmptyWidget](lua://EmptyWidget) used for the `frame` field.
+--- - [Checkbutton](lua://Checkbutton) used for the `frame.check` field.
+---
 ---@class RadioGroup: Widget
----@field frame RadioItem[]|nil @TODO: what creates this
+---@field frame RadioItem[]|nil The internal list of radio items. Typically populated when radio items are created with `RadioGroup:CreateRadioItem`.
 local RadioGroup = {}
-
----objects/RadioGroup
----@class radiogroup: RadioGroup
 
 ---Checks the radio item at the specified index in the RadioGroup.
 ---@param index number The index of the radio item to check.

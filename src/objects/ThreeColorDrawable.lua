@@ -1,6 +1,12 @@
 ---@meta _
 
----objects/ThreeColorDrawable
+---[ThreeColorDrawable](lua://ThreeColorDrawable)
+---
+---A `ThreeColorDrawable` is a drawable that supports three separate colors
+---applied to its texture, with optional user-defined or predefined images.
+---Colors can be changed individually, and the drawable's position and size
+---can be adjusted.
+---
 ---@class ThreeColorDrawable: Drawablebase
 local ThreeColorDrawable = {}
 

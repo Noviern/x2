@@ -1,11 +1,24 @@
 ---@meta _
 
----objects/Grid
+---@FIXME: Grid will always only show one less column than it should.
+
+---[Grid](lua://Grid)
+---
+---**Warning:** Grid will always only show one less column than it should.
+---```lua
+---grid:SetWidth(400)
+---grid:SetDefaultColWidth(100)
+---grid:SetColCount(8)
+----- 400 grid width / 100 column width = should show 4 columns but instead shows 3 
+---```
+---
+---A `Grid` widget is table-like for displaying items in rows and columns.
+---Supports row and column selection, item insertion, row/column height and
+---width configuration, insets, textures, top/left headers, and colors. Provides
+---scrolling, clipping, and line background customization.
+---
 ---@class Grid: Widget
 local Grid = {}
-
----objects/Grid
----@class grid: Grid
 
 ---Clears the item from the Grid.
 function Grid:ClearItem() end
@@ -183,7 +196,7 @@ function Grid:SetInsetForRow(left, top, right, bottom) end
 ---@param col number The column index. (min: `1`)
 ---@param makeIfNotExist boolean `true` to create row/column if absent, `false` otherwise. (If `false` and row doesn't exist, it crashes.)
 ---@param value number The value associated with the item.
----@param withoutExtent boolean `true` to ignore extent, `false` to use it.
+---@param withoutExtent boolean `true` to ignore auto extent, `false` to use auto extent.
 ---@usage
 ---```lua
 ---local label = widget:CreateChildWidget("label", "testbtn", 0, true)
@@ -225,6 +238,7 @@ function Grid:SetLineBackGround(line) end
 ---@param a number The alpha component. (min: `0`, max: `1`)
 function Grid:SetLineColor(r, g, b, a) end
 
+---@TODO: need an example of this working
 ---Enables or disables row clipping in the Grid.
 ---@param use boolean `true` to enable row clipping, `false` to disable.
 function Grid:SetRowCliping(use) end
@@ -251,12 +265,13 @@ function Grid:SetRowTexCoord(x, y, w, h) end
 ---@param texture string The texture path.
 function Grid:SetRowTexture(texture) end
 
+---@TODO: default is wrong
 ---Sets the color for the selected item in the Grid. Requires
 ---`Grid:SetSelectedLine(true)`.
----@param r number The red color component. (min: `0`, max: `1`, default: `129`)
----@param g number The green color component. (min: `0`, max: `1`, default: `129`)
----@param b number The blue color component. (min: `0`, max: `1`, default: `129`)
----@param a number The alpha component. (min: `0`, max: `1`, default: `129`)
+---@param r number The red color component. (min: `0`, max: `1`, default: `0.78`)
+---@param g number The green color component. (min: `0`, max: `1`, default: `0.78`)
+---@param b number The blue color component. (min: `0`, max: `1`, default: `0.78`)
+---@param a number The alpha component. (min: `0`, max: `1`, default: `1`)
 function Grid:SetSelectedColor(r, g, b, a) end
 
 ---Enables or disables line selection in the Grid.

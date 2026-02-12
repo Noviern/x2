@@ -1,6 +1,10 @@
 ---@meta _
 
----objects/ColorDrawable
+---[ColorDrawable](lua://ColorDrawable)
+---
+---A `ColorDrawable` is a drawable that displays a solid color. It can be queried
+---for its current color and have its texture color set via a color key.
+---
 ---@class ColorDrawable: Drawablebase
 local ColorDrawable = {}
 

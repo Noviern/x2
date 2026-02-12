@@ -1,6 +1,11 @@
 ---@meta _
 
----objects/EffectDrawable
+---[EffectDrawable](lua://EffectDrawable)
+---
+---A `EffectDrawable` is a drawable that supports visual effects and animations.
+---It allows configuring effect phases, color, rotation, scale, move effects,
+---intervals, and priority, and can be started or stopped.
+---
 ---@class EffectDrawable: DrawableDDS
 local EffectDrawable = {}
 

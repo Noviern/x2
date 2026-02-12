@@ -1,8 +1,16 @@
 ---@meta _
 
----objects/TextDrawable
+---[TextDrawable](lua://TextDrawable)
+---
+---A `TextDrawable` is a drawable that displays text with customizable style,
+---alignment, outline, and shadow. It supports localized text and pixel
+---snapping.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field.
+---
 ---@class TextDrawable: Drawablebase
----@field style TextStyle
+---@field style TextStyle The optional text style applied to this drawable.
 local TextDrawable = {}
 
 ---Sets the text alignment of the TextDrawable.

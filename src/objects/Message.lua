@@ -1,12 +1,17 @@
 ---@meta _
 
----objects/Message
+---[Message](lua://Message)
+---
+---A `Message` widget displays messages, similar to a chat log or notification
+---feed. Supports adding messages with optional visibility duration,
+---scrolling, styling, and item link detection.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field.
+---
 ---@class Message: Widget
----@field style TextStyle
+---@field style TextStyle The default text style used for messages.
 local Message = {}
-
----objects/Message
----@class message: Message
 
 ---Adds a message to the Message. Must be used after defining the widgets
 ---dimensions.

@@ -1,6 +1,10 @@
 ---@meta _
 
----objects/IconDrawable
+---[IconDrawable](lua://IconDrawable)
+---
+---A `IconDrawable` is a drawable that can display one or multiple textures.
+---Textures can be added, assigned a key, or cleared entirely.
+---
 ---@class IconDrawable: Drawablebase
 local IconDrawable = {}
 

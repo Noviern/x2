@@ -1,8 +1,10 @@
 ---@meta _
 
----objects/X2Editbox
----@class X2EditBox: Editbox
-local X2EditBox = {}
-
----objects/X2Editbox
----@class x2editbox: X2EditBox
+---[X2Editbox](lua://X2Editbox)
+---
+---A `X2Editbox` widget is an **working** extension of the `Editbox` widget,
+---providing a text input field for user interaction. It inherits all
+---functionality from `Editbox`.
+---
+---@class X2Editbox: Editbox
+local X2Editbox = {}

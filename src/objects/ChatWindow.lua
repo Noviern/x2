@@ -1,11 +1,26 @@
 ---@meta _
 
----objects/ChatTab
+---[ChatWindow](lua://ChatWindow)
+---
+---@FIXME:
+---**Warning:** Most methods for this class are broken.
+---
+---A `ChatWindow` widget is a multi-tabbed chat display and input system - the
+---main UI component for viewing, organizing, and sending chat messages in the
+---game. It inherits tab-management from Tabbase and provides multiple tabs,
+---input edit box, channel/method selector, add-tab button, URL opener, IME
+---toggle, caret visuals, notification indicators, blinking, locking, sliding
+---tab drag support, and customizable tab area sizing/insets/alpha.
+---
+---**Dependencies**:
+--- - [ImageDrawable](lua://ImageDrawable) used for the `GetCaretDrawable` method.
+--- - [ThreePartDrawable](lua://ThreePartDrawable) used for the `GetLeftLineDrawable` method.
+---
 ---@class ChatWindow: Widget, Tabbase
 local ChatWindow = {}
 
----objects/ChatTab
----@class chatwindow: ChatWindow
+---@TODO: check if i need these
+---Editbox button (via GetChatEdit, GetAddButton, etc.)?
 
 ---Adds a new tab to the ChatWindow with the specified name and optional widget.
 ---@param tabName string The name of the tab.
@@ -26,7 +41,7 @@ function ChatWindow:AllowTabSwitch(allow) end
 
 ---@FIXME: returns self.
 ---Retrieves the add button for the ChatWindow.
----@return table addButton The add button.
+---@return ChatWindow addButton The add button.
 ---@nodiscard
 function ChatWindow:GetAddButton() end
 
@@ -37,19 +52,19 @@ function ChatWindow:GetCaretDrawable() end
 
 ---@FIXME: returns self.
 ---Retrieves the chat edit widget for the ChatWindow.
----@return table chatEdit The chat edit widget.
+---@return ChatWindow chatEdit The chat edit widget.
 ---@nodiscard
 function ChatWindow:GetChatEdit() end
 
 ---@FIXME: returns self.
 ---Retrieves the chat method selector for the ChatWindow.
----@return table chatMethodSelector The chat method selector.
+---@return ChatWindow chatMethodSelector The chat method selector.
 ---@nodiscard
 function ChatWindow:GetChatMethodSelector() end
 
 ---@FIXME: returns self.
 ---Retrieves the IME toggle button for the ChatWindow.
----@return table imeToggleButton The IME toggle button.
+---@return ChatWindow imeToggleButton The IME toggle button.
 ---@nodiscard
 function ChatWindow:GetImeToggleButton() end
 
@@ -73,7 +88,7 @@ function ChatWindow:GetRightLineDrawable() end
 
 ---@FIXME: returns self.
 ---Retrieves the URL button for the ChatWindow.
----@return table urlButton The URL button.
+---@return ChatWindow urlButton The URL button.
 ---@nodiscard
 function ChatWindow:GetUrlButton() end
 
@@ -84,7 +99,7 @@ function ChatWindow:GetUrlButton() end
 function ChatWindow:SetCaretOffset(x, y) end
 
 ---Sets the ID for the ChatWindow.
----@param id number The chat window ID.
+---@param id number The chat window ID. (min: `0`)
 function ChatWindow:SetChatWindowId(id) end
 
 ---Sets the content offset for the ChatWindow.

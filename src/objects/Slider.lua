@@ -2,12 +2,20 @@
 
 ---@FIXME: If Slider:SetThumbButtonWidget is not set and you attempt to mouse over the slider the game crashes.
 
----objects/Slider
+---[Slider](lua://Slider)
+---
+---**Warning**: If `Slider:SetThumbButtonWidget` is not set, attempting to
+---mouse over the slider may crash the game.
+---
+---A `Slider` widget selects a numeric value within a specified range. Supports
+---horizontal and vertical orientations, configurable min/max values, value
+---steps, and a thumb button widget.
+---
+---**Dependencies**:
+--- - [Button](lua://Button) used for the methods `SetThumbButtonWidget`, `GetThumbButtonWidget`, and `GetThumbDrawable`.
+---
 ---@class Slider: Widget
 local Slider = {}
-
----objects/Slider
----@class slider: Slider
 
 ---Moves the slider down for vertical orientation or right for horizontal
 ---orientation.

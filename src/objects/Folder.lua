@@ -1,14 +1,20 @@
 ---@meta _
 
----objects/Folder
+---[Folder](lua://Folder)
+---
+---A `Folder` widget is a collapsible container that can expand or hide its
+---child widget. It supports a configurable title (text or button), dedicated
+---open/close buttons, adjustable extension length, animation settings, and
+---custom insets.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field.
+---
 ---@class Folder: Widget
----@field style TextStyle
+---@field style TextStyle The text style applied to the folder's title text.
 local Folder = {}
 
----objects/Folder
----@class folder: Folder
-
----Closes the Folder.
+---Closes the Folder towards the anchor point.
 function Folder:CloseFolder() end
 
 ---Performs a fixed close operation on the Folder.
@@ -29,7 +35,7 @@ function Folder:GetState() end
 ---@nodiscard
 function Folder:GetTitleText() end
 
----Opens the Folder.
+---Opens the Folder away from the anchor point.
 function Folder:OpenFolder() end
 
 ---Sets the animation step height for the Folder.
@@ -100,7 +106,7 @@ function Folder:SetOpenStateButton(openTable) end
 ---@param titleTable Button The button widget for the title.
 function Folder:SetTitleButtonWidget(titleTable) end
 
----Sets the title height for the Folder.
+---Sets the title height for the Folder and overrides the height of the widget.
 ---@param height number The height of the title.
 function Folder:SetTitleHeight(height) end
 

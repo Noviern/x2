@@ -1,11 +1,11 @@
 ---@meta _
 
----objects/CircleDiagram
+---[CircleDiagram](lua://CircleDiagram)
+---
+---A `CircleDiagram` widget displays circular diagrams.
+---
 ---@class CircleDiagram: Widget
 local CircleDiagram = {}
-
----objects/CircleDiagram
----@class circlediagram: CircleDiagram
 
 ---Adds a point at the specified offset coordinates for the CircleDiagram.
 ---@param offX number The x-coordinate offset.

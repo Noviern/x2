@@ -1,9 +1,12 @@
 ---@meta _
 
----object/EffectDrawable
----object/ImageDrawable
----object/NinePartDrawable
----object/ThreePartDrawable
+---[DrawableDDS](lua://DrawableDDS)
+---
+---A `DrawableDDS` is a drawable with a DDS texture. It supports setting
+---coordinates, insets, texture files, and applying colors or info keys.
+---It is the base for `EffectDrawable`, `ImageDrawable`, `NinePartDrawable`,
+---and `ThreePartDrawable`.
+---
 ---@class DrawableDDS: Drawablebase
 local DrawableDDS = {}
 

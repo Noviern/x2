@@ -30,13 +30,19 @@ UFT_PVPKILL = "|p11;"           -- objects/GameTooltip UNIT_FRAME_TOOLTIP
 ---| `UFT_PVPHONOR`
 ---| `UFT_PVPKILL`
 
----objects/GameTooltip
+---[GameTooltip](lua://GameTooltip)
+---
+---A `GameTooltip` widget displays formatted tooltip text with multiple lines.
+---Supports line insertion, spacing, indentation, and word wrapping, Allows
+---adding text on either side of a line, attaching upper or lower spacing, and
+---managing tooltip content programmatically.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field and `textAlign` param of both methods `AddAnotherSideLine` and `AddLine`.
+---
 ---@class GameTooltip: Widget
----@field style TextStyle
+---@field style TextStyle The text style applied to all tooltip lines.
 local GameTooltip = {}
-
----objects/GameTooltip
----@class gametooltip: GameTooltip
 
 ---Adds text to an existing line in the GameTooltip on the opposite side.
 ---@param index number The line index to add the text to. (Starts at `0`)
@@ -109,6 +115,7 @@ function GameTooltip:SetInset(left, top, right, bottom) end
 ---@param space number The line spacing value. (default: `0`)
 function GameTooltip:SetLineSpace(space) end
 
+---@TODO: unsure what this does exactly.
 ---Sets the tooltip data for the GameTooltip.
 ---@param data string The data to set for the tooltip.
 function GameTooltip:SetTooltipData(data) end

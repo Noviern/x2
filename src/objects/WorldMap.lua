@@ -4,12 +4,22 @@ MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/WorldMap
 
 ---@FIXME: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
 
----objects/WorldMap
+---[WorldMap](lua://WorldMap)
+---
+---**Warning:** Worldmap is highly tied to the actual world map and one can have
+---an effect on the other.
+---
+---A `WorldMap` widget represents the in-game world map. It manages zones,
+---climate data, icons, routes, portals, farm locations, quest indicators, and
+---temporary notifications. Many functions directly affect the real world map,
+---so changes in the widget may impact actual map data.
+---
+---**Dependencies**:
+--- - [ImageDrawable](lua://ImageDrawable) used for settings drawables.
+--- - [EffectDrawable](lua://EffectDrawable) used for setting effect drawables.
+---
 ---@class WorldMap: Widget, Map
 local WorldMap = {}
-
----objects/WorldMap
----@class worldmap: WorldMap
 
 ---Retrieves climate information for a specific zone.
 ---@param zoneId ZONE_GROUP_ID The ID of the zone.

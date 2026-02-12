@@ -60,21 +60,26 @@ UI_BUTTON_PUSHED = 2            -- objects/Slot UI_BUTTON_STATE
 ---| `ISLOT_SHORTCUT_ACTION`
 ---| `ISLOT_SKILL_ALERT`
 
-
 ---objects/Slot
 ---@alias PRELIMINARY_EQUIPMENT_SLOT
 ---| `ES_MAINHAND`
 ---| `ES_OFFHAND`
 
----objects/Slot
+---[Slot](lua://Slot)
+---
+---A `Slot` widget represents an inventory, equipment, or skill slot in the UI.
+---It can hold items, skills, skill alerts, or equipment. Supports hotkeys,
+---tooltips, extra info, and virtual slot mappings.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` and `cooltime_style` fields.
+--- - [IconDrawable](lua://IconDrawable) used for the `icon` field.
+---
 ---@class Slot: Button
----@field cooltime_style TextStyle
----@field icon IconDrawable
----@field style TextStyle
+---@field cooltime_style TextStyle The style used for cooldown text.
+---@field icon IconDrawable The icon displayed in the slot.
+---@field style TextStyle The general style for the slot.
 local Slot = {}
-
----objects/Slot
----@class slot: Slot
 
 ---Changes the icon layer for the Slot.
 ---@param nameLayer DRAWABLE_NAME_LAYER The name of the layer to set.

@@ -1,11 +1,22 @@
 ---@meta _
 
----objects/Webbrowser
+---@TODO: webbrowser may inherit Webview
+
+---[Webbrowser](lua://Webbrowser)
+---
+---**Warning:** Most methods for this class are broken.
+---
+---A `Webbrowser` widget embeds a web page viewer within the UI. It allows
+---loading and navigating URLs, simulating mouse events, scrolling, setting
+---zoom levels, and managing focus and drawables for loading or default states.
+---Many predefined requests exist for game-specific pages, although some are
+---broken or not fully functional.
+---
+---**Dependencies**:
+--- - [Drawablebase](lua://Drawablebase)
+---
 ---@class Webbrowser: Widget
 local Webbrowser = {}
-
----objects/Webbrowser
----@class webbrowser: Webbrowser
 
 ---Clears focus from the Webbrowser.
 function Webbrowser:ClearFocus() end
@@ -97,14 +108,6 @@ function Webbrowser:RequestWiki() end
 
 ---Sets the default drawable for the Webbrowser.
 ---@param drawable Drawablebase The default drawable to set.
----@usage
----```lua
----local defaultDrawable = widget:CreateColorDrawable(0, 0, 1, 1, "background")
----defaultDrawable:AddAnchor("TOPLEFT", widget, 0, 0)
----defaultDrawable:AddAnchor("BOTTOMRIGHT", widget, 0, 0)
----defaultDrawable:SetVisible(false)
----widget:SetDefaultDrawable(defaultDrawable)
----```
 function Webbrowser:SetDefaultDrawable(drawable) end
 
 ---Enables or disables the `WEB_BROWSER_ESC_EVENT` event registration for the
@@ -117,14 +120,6 @@ function Webbrowser:SetFocus() end
 
 ---Sets the loading drawable for the Webbrowser.
 ---@param drawable Drawablebase The drawable to display during loading.
----@usage
----```lua
----local loadingDrawable = widget:CreateColorDrawable(1, 0, 0, 1, "background")
----loadingDrawable:AddAnchor("TOPLEFT", widget, 0, 0)
----loadingDrawable:AddAnchor("BOTTOMRIGHT", widget, 0, 0)
----loadingDrawable:SetVisible(false)
----widget:SetLoadingDrawable(loadingDrawable)
----```
 function Webbrowser:SetLoadingDrawable(drawable) end
 
 ---@TODO: Clarify toParent behavior and purpose.

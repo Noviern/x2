@@ -13,13 +13,23 @@ UI_BUTTON_PUSHED = 2      -- objects/Button UI_BUTTON_STATE
 ---| `UI_BUTTON_PUSHED`
 ---| `UI_BUTTON_DISABLED`
 
----objects/Button
+---[Button](lua://Button)
+---
+---A `Button` widget is clickable and responds to mouse interaction with four
+---visual states: normal, highlighted (hover), pushed (pressed), and disabled.
+---Supports per-state custom backgrounds, tint colors, text coloring,
+---auto-resize, content insets, and per-mouse-button click registration.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field.
+--- - [EffectDrawable](lua://EffectDrawable) used for getting the background state drawable.
+--- - [ImageDrawable](lua://ImageDrawable) used for getting the background state drawable.
+--- - [NinePartDrawable](lua://NinePartDrawable) used for getting the background state drawable.
+--- - [ThreePartDrawable](lua://ThreePartDrawable) used for getting the background state drawable.
+---
 ---@class Button: Widget
----@field style TextStyle TextStyle
+---@field style TextStyle The text style applied to the button's text.
 local Button = {}
-
----objects/Button
----@class button: Button
 
 ---Creates a drawable for the specified button state and type.
 ---@param state UI_BUTTON_STATE The button state (e.g., normal, pushed, disabled).
@@ -44,13 +54,13 @@ function Button:CreateStateDrawable(state, drawableType, path, layer) end
 function Button:DeregisterForClicks(mouseButton) end
 
 ---Retrieves the current state of the button.
----@return UI_BUTTON_STATE_TEXT state The current button state. (default: `DISABLED`)
+---@return UI_BUTTON_STATE_TEXT state The current button state. (default: `"DISABLED"`)
 ---@nodiscard
 function Button:GetButtonState() end
 
 ---Retrieves the drawable for the disabled state of the button, if it exists.
 ---Casting may be neccessary.
----@return DrawableDDS|nil disabledTable The disabled state drawable, or `nil` if not set.
+---@return DrawableDDS|nil disabledTable The disabled state drawable, an empty table if the correct drawable hasn't been imported, or `nil` if not set.
 ---@nodiscard
 ---@see DrawableDDS
 function Button:GetDisabledBackground() end
@@ -62,7 +72,7 @@ function Button:GetDisabledColor() end
 
 ---Retrieves the drawable for the highlighted state of the button, if it exists.
 ---Casting may be neccessary.
----@return DrawableDDS|nil highlightTable The highlighted state drawable, or `nil` if not set.
+---@return DrawableDDS|nil highlightTable The highlighted state drawable, an empty table if the correct drawable hasn't been imported, or `nil` if not set.
 ---@nodiscard
 ---@see DrawableDDS
 function Button:GetHighlightBackground() end
@@ -74,7 +84,7 @@ function Button:GetHighlightColor() end
 
 ---Retrieves the drawable for the normal state of the button, if it exists.
 ---Casting may be neccessary.
----@return DrawableDDS|nil normalTable The normal state drawable, or `nil` if not set.
+---@return DrawableDDS|nil normalTable The normal state drawable, an empty table if the correct drawable hasn't been imported, or `nil` if not set.
 ---@nodiscard
 ---@see DrawableDDS
 function Button:GetNormalBackground() end
@@ -86,7 +96,7 @@ function Button:GetNormalColor() end
 
 ---Retrieves the drawable for the pushed state of the button, if it exists.
 ---Casting may be neccessary.
----@return DrawableDDS|nil pushedTable The pushed state drawable, or `nil` if not set.
+---@return DrawableDDS|nil pushedTable The pushed state drawable, an empty table if the correct drawable hasn't been imported, or `nil` if not set.
 ---@nodiscard
 ---@see DrawableDDS
 function Button:GetPushedBackground() end
@@ -200,8 +210,12 @@ function Button:SetPushedColor(r, g, b, a) end
 ---@param a number Alpha value (min: `0`, max: `1`).
 function Button:SetPushedTextColor(r, g, b, a) end
 
----Sets the style for the button. Should be applied before setting the extent.
----@param style BUTTON_STYLE The style to apply.
+---Sets the style for the button, including extent, state backgrounds, and other
+---visual properties.
+---
+---This function applies the specified style even if the required Drawables and
+---TextStyle are not imported.
+---@param style BUTTON_STYLE The style configuration to apply.
 function Button:SetStyle(style) end
 
 ---Sets the text color for the normal state of the button.

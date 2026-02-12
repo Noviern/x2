@@ -1,11 +1,13 @@
 ---@meta _
 
----objects/Pageable
+---[Pageable](lua://Pageable)
+---
+---A `Pageable` widget organizes child widgets across multiple pages. Supports
+---adding widgets to specific pages, navigating between pages, and querying the
+---current and total number of pages.
+---
 ---@class Pageable: Widget
 local Pageable = {}
-
----objects/Pageable
----@class pageable: Pageable
 
 ---Adds a widget to the specified page of the Pageable.
 ---@param widget Widget The widget to add.

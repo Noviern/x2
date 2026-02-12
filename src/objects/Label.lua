@@ -1,12 +1,16 @@
 ---@meta _
 
----objects/Label
+---[Label](lua://Label)
+---
+---A `Label` widget displays a string with configurable style, insets,
+---auto-resizing, and optional number-only formatting.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `style` field.
+---
 ---@class Label: Widget
----@field style TextStyle
+---@field style TextStyle The text style applied to the label's text.
 local Label = {}
-
----objects/Label
----@class label: Label
 
 ---Retrieves the inset of the Label.
 ---@return number left The left inset. (default: `0`)
@@ -29,5 +33,5 @@ function Label:SetInset(left, top, right, bottom) end
 
 ---Enables or disables number formatting for the Label's text. Must be set
 ---before `Label:SetText`.
----@param only boolean `true` to restrict to numbers only, `false` to allow any text. (default: `false`)
+---@param only boolean `true` to format text as if it were numbers only, `false` to allow any text. (default: `false`)
 function Label:SetNumberOnly(only) end

@@ -9,13 +9,22 @@
 ---@class DynamicListContent: EmptyWidget
 ---@field anchor DynamicListAnchor
 
----objects/DynamicList
+---@TODO: get a working example of this widget.
+---[DynamicList](lua://DynamicList)
+---
+---A `DynamicList` widget displays and manages hierarchical, expandable list
+---data. Supports main items with nested sub-items, dynamic insertion and
+---removal, selection tracking, scrolling, and view updates. Provides a widget
+---pooling system for efficient reuse, customizable layout and data callbacks
+---for main and sub items, and utilities for toggling, opening, and navigating
+---list entries programmatically.
+---
+---**Dependencies**:
+--- - [EmptyWidget](lua://EmptyWidget) used for the `content` field.
+---
 ---@class DynamicList: Widget
----@field content DynamicListContent
+---@field content DynamicListContent Container holding anchors and list widgets.
 local DynamicList = {}
-
----objects/DynamicList
----@class dynamiclist: DynamicList
 
 ---Clears all data from the DynamicList.
 function DynamicList:ClearData() end

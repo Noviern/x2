@@ -6,9 +6,6 @@
 ---@class ChatEdit
 local ChatEdit = {}
 
----objects/ChatEdit
----@class chatedit: ChatEdit
-
 ---@TODO: Document
 ---comment
 ---@param chatType number

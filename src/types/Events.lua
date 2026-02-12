@@ -25,7 +25,6 @@
 ---Event triggers when the players account gets restricted.
 ---@alias ACCOUNT_RESTRICT_NOTICE_HANDLER fun()
 
----@TODO: can status be anything other than "update"
 ---Event triggers when the player updates an achievement.
 ---@alias ACHIEVEMENT_UPDATE_HANDLER fun(status: "update"|string, newAchievementType: number)
 
@@ -1195,7 +1194,7 @@
 ---Event triggers when the player closes the item infusion window.
 ---@alias LEAVE_ITEM_LOOK_CONVERT_MODE_HANDLER fun()
 
----@TODO: does this trigger for all instances? tried halc war
+---@TODO: does this trigger for all instances? tried halc war and sodl
 ---Event triggers when the player leaves the instance.
 ---@alias LEAVED_INSTANT_GAME_ZONE_HANDLER fun()
 

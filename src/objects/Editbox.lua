@@ -2,13 +2,22 @@
 
 ---@FIXME: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
 
----objects/Editbox
+---[Editbox](lua://Editbox)
+---
+---**Warning:** All methods for this class are broken. Use [X2Editbox](lua://X2Editbox).
+---
+---A `Editbox` widget allows users to enter and edit string or numeric values.
+---Supports focus management, history tracking, digit-only and password modes,
+---input validation policies, prefix text rendering, and configurable insets.
+---Provides utilities for controlling composition state behavior, selection
+---handling on focus, and various input constraints.
+---
+---**Dependencies**:
+--- - [TextStyle](lua://TextStyle) used for the `prefixStyle` field.
+---
 ---@class Editbox: Widget, Editboxbase
----@field prefixStyle TextStyle
+---@field prefixStyle TextStyle The text style applied to the optional prefix text.
 local Editbox = {}
-
----objects/Editbox
----@class editbox: Editbox
 
 ---Adds a text entry to the Editbox history.
 ---@param text string The text to add to the history.
