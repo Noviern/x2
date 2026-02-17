@@ -13,5 +13,7 @@ HOUSING_LIST_FILTER_WORKTABLE = 4
 X2Resident = {
   FilterHousingTradeList = "<function X2Resident>",
   GetResidentBoardContent = "<function X2Resident>",
+  GetResidentMembers = "<function X2Resident>",
+  RefreshResidentMembers = "<function X2Resident>",
   RequestHousingTradeList = "<function X2Resident>",
 }

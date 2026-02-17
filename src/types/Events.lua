@@ -1128,9 +1128,6 @@
 ---@TODO:
 ---@alias INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME_HANDLER fun(remainTime)
 
----@TODO:
----@alias INSTANT_GAME_VISIT_COUNT_RESET_HANDLER fun()
-
 ---Event triggers when the instance game is waiting.
 ---@alias INSTANT_GAME_WAIT_HANDLER fun()
 
@@ -1627,9 +1624,6 @@
 ---Event triggers when the manastorm shop updates.
 ---@alias RANDOM_SHOP_INFO_HANDLER fun(isHide: boolean, isdailyReset: boolean)
 
----@TODO:
----@alias RANDOM_SHOP_OPEN_HOT_KEY_HANDLER fun() -- Crash
-
 ---Event triggers when the manastorm shop updates.
 ---@alias RANDOM_SHOP_UPDATE_HANDLER fun()
 
@@ -1985,9 +1979,6 @@
 ---@alias STARTED_DUEL_HANDLER fun()
 
 ---@TODO:
----@alias STARTING_QUEST_COMPLETED_HANDLER fun()
-
----@TODO:
 ---@alias STICKED_MSG_HANDLER fun()
 
 ---@TODO:
@@ -2036,9 +2027,6 @@
 
 ---@TODO:
 ---@alias TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO_HANDLER fun(curHp, maxHp)
-
----@TODO:
----@alias TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION_HANDLER fun(target, curHp, maxHp)
 
 ---Event triggers when the players mouse is over a target.
 ---@alias TARGET_OVER_HANDLER fun(targetType: TARGET_TYPE, unitId: string|number)
@@ -2354,9 +2342,6 @@
 ---Event triggers when the hero election condition has updated.
 ---@alias UPDATE_HERO_ELECTION_CONDITION_HANDLER fun()
 
----@TODO:
----@alias UPDATE_HIDE_OPTIMIZATION_BUTTON_HANDLER fun()
-
 ---Event triggers when the housing information for the map updates.
 ---@alias UPDATE_HOUSING_INFO_HANDLER fun()
 
@@ -2393,9 +2378,6 @@
 ---Event triggers when the player opens/closes the item infusion window.
 ---@alias UPDATE_ITEM_LOOK_CONVERT_MODE_HANDLER fun()
 
----@TODO:
----@alias UPDATE_MAIN_MENU_EXPEDITION_HANDLER fun() -- Crash
-
 ---Event triggers when a montiored npc updates for the map.
 ---@alias UPDATE_MONITOR_NPC_HANDLER fun()
 
@@ -2405,6 +2387,7 @@
 ---Event triggers when npc information for the map has changed.
 ---@alias UPDATE_NPC_INFO_HANDLER fun()
 
+---@TODO: rename to UPDATE_INDUN_PLAYING_INFO_BROADCASTING
 ---Event triggers every second while the npc info is broadcasting for the player. (e.g. Hereafter Rebellion Win Condition/Progress)
 ---@alias UPDATE_NPC_INFO_BROADCASTING_HANDLER fun(info: NpcBroadcastingInfo[])
 

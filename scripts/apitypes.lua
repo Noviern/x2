@@ -84,6 +84,7 @@ API = {
   X2Roster             = 84,
   X2MiniScoreboard     = 85,
   X2SurveyForm         = 86,
+  X2Instance           = 86,
 }
 
 OBJECT = {

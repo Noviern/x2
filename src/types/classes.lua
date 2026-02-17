@@ -1,5 +1,5 @@
 ---@class RadioItem: EmptyWidget
----@field check Checkbutton
+---@field check CheckButton
 
 ---@TODO: this will cause lua warnings because its not a widget
 ---@class SubItemString
@@ -347,10 +347,12 @@
 
 ---@class StampInfo: AppellationMyStamp
 ---@field canEquip number
+---@field description string
 ---@field effectDescription string
 ---@field modifier table
 ---@field name string
 ---@field reqLevel number
+---@field tipType string ---@TODO: appStamp can there be others?
 
 ---@class AppellationRouteInfo
 ---@field kind number
@@ -1497,3 +1499,11 @@
 ---@class CacheData
 ---@field cacheType CT
 ---@field name string
+
+---@class HotKeyInfo
+---@field featureSet string
+---@field featureSetCondition boolean
+---@field hotkeyActionName string
+---@field restart boolean
+---@field title string
+---@field tooltip string

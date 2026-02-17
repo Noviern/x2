@@ -7,6 +7,7 @@ CURRENCY_GOLD_WITH_AA_POINT = 4  -- api/X2Store CURRENCY
 CURRENCY_HONOR_POINT = 1         -- api/X2Store CURRENCY
 CURRENCY_ITEM_POINT = 6          -- api/X2Store CURRENCY
 CURRENCY_LIVING_POINT = 2        -- api/X2Store CURRENCY
+GAMEPOINT_LEADERSHIP = 2         -- api/Store
 MPT_ALLWAYS = 1                  -- api/X2Store MPT
 MPT_DALIY = 2                    -- api/X2Store MPT
 MPT_MONTHLY = 4                  -- api/X2Store MPT

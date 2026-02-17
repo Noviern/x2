@@ -36,9 +36,8 @@ function DynamicList:ClearData() end
 ---@see NinePartDrawable
 function DynamicList:CreateOveredImage(layerStr) end
 
----@TODO: Confirm behavior of child touch enabling. `false` may be the default.
 ---Enables or disables touch interaction for child elements in the DynamicList.
----@param isEnable boolean `true` to enable child touch, `false` to disable.
+---@param isEnable boolean `true` to enable child touch, `false` to disable. (default: `false`)
 function DynamicList:EnableChildTouch(isEnable) end
 
 ---Erases data at the specified index from the DynamicList.
@@ -63,8 +62,7 @@ function DynamicList:GetCurrentHeight() end
 ---@return number|nil index The index of the main key identifier.
 function DynamicList:GetMainIndex(mainKey) end
 
----@TODO: Verify return table structure.
----Retrieves the main list of the DynamicList.
+---Retrieves the main list of the DynamicList from the highest to lowest index.
 ---@return table list The main list data.
 ---@nodiscard
 function DynamicList:GetMainList() end
@@ -81,20 +79,24 @@ function DynamicList:GetScrollMaxValue() end
 ---@nodiscard
 function DynamicList:GetSelectedItemInfo() end
 
----@TODO: Verify bgDrawType.
----Initializes the background draw type for the DynamicList.
+---Initializes the background draw type for the `frameBg` of the `mainData` function for the `InitFunc` in the DynamicList.
 ---@param bgDrawType UI_OBJECT_TYPE_DRAWABLE The background draw type.
 function DynamicList:InitBgType(bgDrawType) end
 
----@TODO: Confirm purpose and behavior. this creates the main on dl.content.anchor.main
----Initializes the widget pool for the DynamicList.
+---Initializes the widget pool for the DynamicList creating the main and sub fields.
 function DynamicList:InitCreateWidgetPool() end
 
----@TODO: Clarify function parameters and their roles. Create function aliases.
+---@alias MainLayoutFunc fun(subItem: EmptyWidget, index: number)
+---@alias MainDataFunc fun(subItem: EmptyWidget, mainKey: number, isOpen: boolean, frameBg: Drawablebase, subListSize: number, isClicked: boolean)
+---@alias SubLayoutFunc fun(subItem: EmptyWidget, index: number)
+
+---@TODO: subItemInfo
+---@alias SubDataFunc fun(subItem: EmptyWidget, subItemInfo: table, isClicked: boolean)
+
 ---Initializes functions for main and sub layouts and data in the DynamicList.
----@param mainLayout function The main layout function.
----@param mainData function The main data function.
----@param subLayout function The sub-layout function.
+---@param mainLayout MainLayoutFunc The main layout function.
+---@param mainData MainDataFunc The main data function.
+---@param subLayout SubLayoutFunc The sub-layout function.
 ---@param subData function The sub-data function.
 ---@usage
 ---```lua
@@ -121,7 +123,7 @@ function DynamicList:InitFunc(mainLayout, mainData, subLayout, subData) end
 ---```
 function DynamicList:InitHeight(viewHeight, mainHeight, subHeight) end
 
----@TODO: Clarify subDatas structure.
+---@TODO: Clarify subDatas structure. I think its just { { key = 1 }, ... }
 ---Inserts data into the DynamicList at the specified index.
 ---@param index number The index to insert data. (min: `1`)
 ---@param mainKey number The main key identifier.
@@ -153,7 +155,7 @@ function DynamicList:LoadItemList() end
 ---@param height number The height to move the view.
 function DynamicList:MoveHeight(height) end
 
----@TODO: Verify index, anchorHeight, and open parameters.
+---@FIXME: setting open to true results in a error, [Lua Error] attempt to call a boolean value
 ---Moves to the specified index in the DynamicList with anchor height.
 ---@param index number The index to move to.
 ---@param anchorHeight number The anchor height for positioning.
@@ -188,11 +190,12 @@ function DynamicList:SetGaps(mainGap, subListGap) end
 ---@param depth number The depth of the item to select.
 function DynamicList:SetSelectedItemInfo(key, depth) end
 
----@TODO: index - 1, min 0
+---@FIXME: causes the game to hang
 ---Toggles the state of the item at the specified index in the DynamicList.
 ---@param index number The index of the item to toggle.
 function DynamicList:Toggle(index) end
 
+---@FIXME: causes the game to hang
 ---Toggles the state of the item with the specified main key in the DynamicList.
 ---@param mainKey number The main key identifier.
 function DynamicList:ToggleByMainKey(mainKey) end

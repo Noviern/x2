@@ -178,7 +178,7 @@ TRADE_TEXT = 16                                   -- api/Addon UI_TEXT_CATEGORY_
 TRIAL_TEXT = 113                                  -- api/Addon UI_TEXT_CATEGORY_ID
 TUTORIAL_TEXT = 15                                -- api/Addon UI_TEXT_CATEGORY_ID
 UCC_TEXT = 73                                     -- api/Addon UI_TEXT_CATEGORY_ID
-UCST_UNIT = 42                                    -- api/Addon
+UCST_UNIT = 41                                    -- api/Addon
 UI = UIParent                                     -- api/Addon UIParent
 UIC_ABILITY_CHANGE = 57                           -- api/Addon UI_CATEGORY
 UIC_ACHIEVEMENT = 25                              -- api/Addon UI_CATEGORY
@@ -237,7 +237,9 @@ UIC_INGAME_SHOP = 73                              -- api/Addon UI_CATEGORY
 UIC_INTERACT_SECOND_PASSWORD = 97                 -- api/Addon UI_CATEGORY
 UIC_ITEM_GUIDE = 51                               -- api/Addon UI_CATEGORY
 UIC_ITEM_LOCK = 71                                -- api/Addon UI_CATEGORY
+UIC_ITEM_PIN = 125                                -- api/Addon UI_CATEGORY
 UIC_ITEM_REPAIR = 70                              -- api/Addon UI_CATEGORY
+UIC_LABOR_POWER_BAR = 123                         -- api/Addon UI_CATEGORY
 UIC_LOCAL_DEVELOPMENT_BOARD = 107                 -- api/Addon UI_CATEGORY
 UIC_LOOK_CONVERT = 69                             -- api/Addon UI_CATEGORY
 UIC_LOOT_GACHA = 67                               -- api/Addon UI_CATEGORY
@@ -268,6 +270,7 @@ UIC_RANK = 4                                      -- api/Addon UI_CATEGORY
 UIC_RANK_LOCAL_VIEW = 5                           -- api/Addon UI_CATEGORY
 UIC_RECOVER_EXP = 55                              -- api/Addon UI_CATEGORY
 UIC_RENAME_EXPEDITION = 54                        -- api/Addon UI_CATEGORY
+UIC_REOPEN_RANDOM_BOX = 124                       -- api/Addon UI_CATEGORY
 UIC_REPORT_BAD_USER = 93                          -- api/Addon UI_CATEGORY
 UIC_REQUEST_BATTLEFIELD = 77                      -- api/Addon UI_CATEGORY
 UIC_RESIDENT_TOWNHALL = 61                        -- api/Addon UI_CATEGORY
@@ -591,7 +594,9 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---| `UIC_INTERACT_SECOND_PASSWORD`
 ---| `UIC_ITEM_GUIDE`
 ---| `UIC_ITEM_LOCK`
+---| `UIC_ITEM_PIN`
 ---| `UIC_ITEM_REPAIR`
+---| `UIC_LABOR_POWER_BAR`
 ---| `UIC_LOCAL_DEVELOPMENT_BOARD`
 ---| `UIC_LOOK_CONVERT`
 ---| `UIC_LOOT_GACHA`
@@ -622,6 +627,7 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---| `UIC_RANK_LOCAL_VIEW`
 ---| `UIC_RECOVER_EXP`
 ---| `UIC_RENAME_EXPEDITION`
+---| `UIC_REOPEN_RANDOM_BOX`
 ---| `UIC_REPORT_BAD_USER`
 ---| `UIC_REQUEST_BATTLEFIELD`
 ---| `UIC_RESIDENT_TOWNHALL`
@@ -803,6 +809,7 @@ function ADDON:ImportObject(objectId) end
 ---@nodiscard
 function ADDON:LoadData(key) end
 
+---@TODO: should i @see alias functions?
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
 ---@param uiCategory UI_CATEGORY The UI category to register the function to. (max: `16777216`)
@@ -876,7 +883,7 @@ function UIParent:ClearUIBound(key) end
 ---@overload fun(self: self, widgetName: "avi", id: string, parentId: "UIParent"|Widget|string): Avi
 ---@overload fun(self: self, widgetName: "button", id: string, parentId: "UIParent"|Widget|string): Button
 ---@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: "UIParent"|Widget|string): ChatWindow
----@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: "UIParent"|Widget|string): Checkbutton
+---@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: "UIParent"|Widget|string): CheckButton
 ---@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: "UIParent"|Widget|string): CircleDiagram
 ---@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: "UIParent"|Widget|string): ColorPicker
 ---@overload fun(self: self, widgetName: "combobox", id: string, parentId: "UIParent"|Widget|string): Combobox
@@ -1002,7 +1009,7 @@ function UIParent:GetServerTimeTable() end
 ---Retrieves texture data for the specified file and key.
 ---@param filename string The texture file path.
 ---@param infoKey string The key for texture data, obtainable via `UIParent:GetTextureKeyData(filename).keys` or by the associated `filename` `.g` file.
----@return TextureData textureData The texture data for the specified key.
+---@return TextureData|nil textureData The texture data for the specified key.
 ---@nodiscard
 ---@see TextureData
 function UIParent:GetTextureData(filename, infoKey) end
@@ -1025,6 +1032,13 @@ function UIParent:GetUIBound(key) end
 ---@return number uiScale The current UI scale. (min: `0.7`, max: `2.4`)
 ---@nodiscard
 function UIParent:GetUIScale() end
+
+---Retrieves the allowed range and step for UI scale values.
+---@return number minimum The minimum allowed UI scale. (e.g., `0.7`)
+---@return number maximum The maximum allowed UI scale. (e.g., `2.4`)
+---@return number step The increment/decrement step size. (e.g., `10`)
+---@nodiscard
+function UIParent:GetUIScaleRange() end
 
 ---@FIXME: `UIParent:SetUIStamp`
 ---Retrieves the UI stamp for the specified key.
@@ -1458,7 +1472,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "INSTANT_GAME_START_POINT_RETURN_MSG", handler: INSTANT_GAME_START_POINT_RETURN_MSG_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_START", handler: INSTANT_GAME_START_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME", handler: INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME_HANDLER)
----@overload fun(self: self, eventName: "INSTANT_GAME_VISIT_COUNT_RESET", handler: INSTANT_GAME_VISIT_COUNT_RESET_HANDLER)
 ---@overload fun(self: self, eventName: "INSTANT_GAME_WAIT", handler: INSTANT_GAME_WAIT_HANDLER)
 ---@overload fun(self: self, eventName: "INTERACTION_END", handler: INTERACTION_END_HANDLER)
 ---@overload fun(self: self, eventName: "INTERACTION_START", handler: INTERACTION_START_HANDLER)
@@ -1737,7 +1750,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "START_TALK_QUEST_CONTEXT", handler: START_TALK_QUEST_CONTEXT_HANDLER)
 ---@overload fun(self: self, eventName: "START_TODAY_ASSIGNMENT", handler: START_TODAY_ASSIGNMENT_HANDLER)
 ---@overload fun(self: self, eventName: "STARTED_DUEL", handler: STARTED_DUEL_HANDLER)
----@overload fun(self: self, eventName: "STARTING_QUEST_COMPLETED", handler: STARTING_QUEST_COMPLETED_HANDLER)
 ---@overload fun(self: self, eventName: "STICKED_MSG", handler: STICKED_MSG_HANDLER)
 ---@overload fun(self: self, eventName: "STILL_LOADING", handler: STILL_LOADING_HANDLER)
 ---@overload fun(self: self, eventName: "STORE_ADD_BUY_ITEM", handler: STORE_ADD_BUY_ITEM_HANDLER)
@@ -1754,7 +1766,6 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "SYSMSG", handler: SYSMSG_HANDLER)
 ---@overload fun(self: self, eventName: "TARGET_CHANGED", handler: TARGET_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO", handler: TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO_HANDLER)
----@overload fun(self: self, eventName: "TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION", handler: TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION_HANDLER)
 ---@overload fun(self: self, eventName: "TARGET_OVER", handler: TARGET_OVER_HANDLER)
 ---@overload fun(self: self, eventName: "TARGET_TO_TARGET_CHANGED", handler: TARGET_TO_TARGET_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "TEAM_JOINT_BREAK", handler: TEAM_JOINT_BREAK_HANDLER)

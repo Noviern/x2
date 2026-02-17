@@ -6256,20 +6256,20 @@
 ---| "@HOUR(hours)"                             #
 ---| "@MINUTE(minutes)"                         #
 ---| "@SECOND(seconds)"                         #
----| "|nb; Dark Blue |r"
----| "|nc; Orange |r"
----| "|nd; Light Blue |r"
----| "|nf; Red |r"
----| "|ng; Green |r"
----| "|nh; test |r"
----| "|ni; test |r"
----| "|nj; test |r"
----| "|nn; Dark Orange |r"
----| "|nr; test |r"
----| "|ns; test |r"
----| "|nt; test |r"
----| "|nu; test |r"
----| "|ny; test |r"
+---| "|nb; Steelblue |r" # rgb(23, 119, 174)
+---| "|nc; Orange |r" # rgb(255, 157, 40)
+---| "|nd; Lightskyblue |r" # rgb(152, 214, 250)
+---| "|nf; Red |r" # rgb(255, 0, 0)
+---| "|ng; Lime |r" # rgb(0, 255, 70)
+---| "|nh; Steelblue |r" # rgb(45, 101, 137)
+---| "|ni; khaki |r" # rgb(246, 204, 102)
+---| "|nj; Royalblue |r" # rgb(14, 97, 189)
+---| "|nn; Dark Orange |r" # rgb(228, 113, 1)
+---| "|nr; Tomato |r" # rgb(238, 74, 47)
+---| "|ns; Gainsboro |r" # gb(221, 221, 221)
+---| "|nt; Gray |r" # rgb(129, 129, 129)
+---| "|nu; Dimgray |r" # rgb(106, 106, 106)
+---| "|ny; Lemonchiffon |r" rgb(255, 249, 200)
 ---| "|cFF000000{string}|r"              #
 ---| "|bu{bulletCharacter};{string}|br;" #
 ---| "|q{questId};"
@@ -11257,7 +11257,6 @@
 ---| "INSTANT_GAME_START"
 ---| "INSTANT_GAME_START_POINT_RETURN_MSG"
 ---| "INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME"
----| "INSTANT_GAME_VISIT_COUNT_RESET"
 ---| "INSTANT_GAME_WAIT"
 ---| "INTERACTION_END"
 ---| "INTERACTION_START"
@@ -11574,7 +11573,6 @@
 ---| "START_TALK_QUEST_CONTEXT"
 ---| "START_TODAY_ASSIGNMENT"
 ---| "STARTED_DUEL"
----| "STARTING_QUEST_COMPLETED"
 ---| "STICKED_MSG"
 ---| "STILL_LOADING"
 ---| "STORE_ADD_BUY_ITEM"
@@ -11591,7 +11589,6 @@
 ---| "SYSMSG"
 ---| "TARGET_CHANGED"
 ---| "TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO"
----| "TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION"
 ---| "TARGET_OVER"
 ---| "TARGET_TO_TARGET_CHANGED"
 ---| "TEAM_JOINT_BREAK"

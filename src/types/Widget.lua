@@ -61,7 +61,7 @@ function Widget:Clickable(clickable) end
 ---@overload fun(self: self, objectTypeStr: "avi", name: string, index: number, reflectToScriptTable: boolean): Avi
 ---@overload fun(self: self, objectTypeStr: "button", name: string, index: number, reflectToScriptTable: boolean): Button
 ---@overload fun(self: self, objectTypeStr: "chatwindow", name: string, index: number, reflectToScriptTable: boolean): ChatWindow
----@overload fun(self: self, objectTypeStr: "checkbutton", name: string, index: number, reflectToScriptTable: boolean): Checkbutton
+---@overload fun(self: self, objectTypeStr: "checkbutton", name: string, index: number, reflectToScriptTable: boolean): CheckButton
 ---@overload fun(self: self, objectTypeStr: "circlediagram", name: string, index: number, reflectToScriptTable: boolean): CircleDiagram
 ---@overload fun(self: self, objectTypeStr: "colorpicker", name: string, index: number, reflectToScriptTable: boolean): ColorPicker
 ---@overload fun(self: self, objectTypeStr: "combobox", name: string, index: number, reflectToScriptTable: boolean): Combobox
@@ -115,7 +115,7 @@ function Widget:CreateChildWidget(objectTypeStr, name, index, reflectToScriptTab
 ---@overload fun(self: self, objectType: UOT_AVI, name: string, index: number, reflectToScriptTable: boolean): Avi
 ---@overload fun(self: self, objectType: UOT_BUTTON, name: string, index: number, reflectToScriptTable: boolean): Button
 ---@overload fun(self: self, objectType: UOT_CHAT_WINDOW, name: string, index: number, reflectToScriptTable: boolean): ChatWindow
----@overload fun(self: self, objectType: UOT_CHECK_BUTTON, name: string, index: number, reflectToScriptTable: boolean): Checkbutton
+---@overload fun(self: self, objectType: UOT_CHECK_BUTTON, name: string, index: number, reflectToScriptTable: boolean): CheckButton
 ---@overload fun(self: self, objectType: UOT_CIRCLE_DIAGRAM, name: string, index: number, reflectToScriptTable: boolean): CircleDiagram
 ---@overload fun(self: self, objectType: UOT_COLOR_PICKER, name: string, index: number, reflectToScriptTable: boolean): ColorPicker
 ---@overload fun(self: self, objectType: UOT_COMBO_BOX, name: string, index: number, reflectToScriptTable: boolean): Combobox

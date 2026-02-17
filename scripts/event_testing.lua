@@ -26,6 +26,22 @@ end
 -- end
 
 --------------------------------------------------------------------------------
+---These were added in 10.0
+--------------------------------------------------------------------------------
+-- UPDATE_INSTANCE_VISIT_COUNT
+-- UPDATE_INSTANT_GAME_TARGET_NPC_INFO
+-- SetEventHandler("APPELLATION_STAMP_UPDATED") -- this exists in a future patch @TODO:
+-- EXPEDITION_INFO_CLEAR
+---UPDATE_SKILL_POINT
+---LOCKUP_AND_IMPRISON_NOTICE
+---CHANGE_EMPTY_BAG_SLOT_COUNTER_DISPLAY
+---REOPEN_RANDOM_BOX_INFO
+---REOPEN_RANDOM_BOX_REFRESH
+---REOPEN_RANDOM_BOX_REMOVE
+---REOPEN_RANDOM_BOX_LIFETIME_UPDATE
+---REOPEN_RANDOM_BOX_ALARM_FAVORITE
+
+--------------------------------------------------------------------------------
 -- These events needed further testing.
 --------------------------------------------------------------------------------
 -- SetEventHandler("SHOW_WORLDMAP_TOOLTIP")
@@ -126,7 +142,7 @@ SetEventHandler("INSTANT_GAME_RETIRE")
 SetEventHandler("INSTANT_GAME_ROUND_RESULT")
 SetEventHandler("INSTANT_GAME_START_POINT_RETURN_MSG")
 SetEventHandler("INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME")
-SetEventHandler("INSTANT_GAME_VISIT_COUNT_RESET")
+-- SetEventHandler("INSTANT_GAME_VISIT_COUNT_RESET") -- ??
 SetEventHandler("INVALID_NAME_POLICY")
 SetEventHandler("MAIL_RETURNED")
 SetEventHandler("MEGAPHONE_MESSAGE")
@@ -188,7 +204,6 @@ SetEventHandler("DIAGONAL_LINE")
 SetEventHandler("CREATE_ORIGIN_UCC_ITEM")
 SetEventHandler("WEB_BROWSER_ESC_EVENT")
 
-SetEventHandler("APPELLATION_STAMP_UPDATED") -- this exists in a future patch @TODO:
 
 SetEventHandler("COMMUNITY_ERROR")
 
@@ -290,7 +305,6 @@ SetEventHandler("ENCHANT_RESULT")
 -- These events cause crashes
 --------------------------------------------------------------------------------
 -- SetEventHandler("START_SENSITIVE_OPERATION")
--- SetEventHandler("STARTING_QUEST_COMPLETED") -- crash
 -- SetEventHandler("TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO") -- crash?
 -- SetEventHandler("TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION") -- crash?
 -- SetEventHandler("EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT") -- crash

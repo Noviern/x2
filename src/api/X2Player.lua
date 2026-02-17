@@ -109,11 +109,18 @@ function X2Player:GetAppellationMyStamp() end
 ---@see AppellationRouteInfo
 function X2Player:GetAppellationRouteInfo(appellationType) end
 
+---Retrieves stamp information.
+---@param id number The id of the stamp.
+---@return StampInfo appellationStampInfo The stamp information.
+---@nodiscard
+---@see StampInfo
+function X2Player:GetAppellationStampInfo(id) end
+
 ---Retrieves a list of stamp information.
 ---@return StampInfo[] appellationStampInfo A table of stamp information.
 ---@nodiscard
 ---@see StampInfo
-function X2Player:GetAppellationStampInfo() end
+function X2Player:GetAppellationStampInfos() end
 
 ---Retrieves a list of up to 50 appellation instances.
 ---@param appellationRouteFilter APPELATION_ROUTE_TYPE The route type filter.

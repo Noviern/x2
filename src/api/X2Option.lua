@@ -1,5 +1,74 @@
 ---@meta _
 
+HA_ACTION_BAR_PAGE_NEXT = 87                     -- api/X2Option HOTKEY_ACTION_TYPE
+HA_ACTION_BAR_PAGE_PREV = 86                     -- api/X2Option HOTKEY_ACTION_TYPE
+HA_ACTIVATE_WEAPON = 29                          -- api/X2Option HOTKEY_ACTION_TYPE
+HA_AUTORUN = 21                                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_BACK_CAMERA = 52                              -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CHANGE_ROADMAP_SIZE = 111                     -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_CAMERA_CLOCKWISE = 70                   -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_CAMERA_COUNTER_CLOCKWISE = 71           -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_FRIENDLY_BACKWARD = 25                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_FRIENDLY_FORWARD = 24                   -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_HOSTILE_BACKWARD = 23                   -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_HOSTILE_FORWARD = 22                    -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_HOSTILE_HEAD_MARKER_BACKWARD = 117      -- api/X2Option HOTKEY_ACTION_TYPE
+HA_CYCLE_HOSTILE_HEAD_MARKER_FORWARD = 116       -- api/X2Option HOTKEY_ACTION_TYPE
+HA_DOWN = 7                                      -- api/X2Option HOTKEY_ACTION_TYPE
+HA_DO_INTERACTION_1 = 31                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_DO_INTERACTION_2 = 32                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_DO_INTERACTION_3 = 33                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_DO_INTERACTION_4 = 34                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_FRONT_CAMERA = 49                             -- api/X2Option HOTKEY_ACTION_TYPE
+HA_JUMP = 6                                      -- api/X2Option HOTKEY_ACTION_TYPE
+HA_LEFT_CAMERA = 50                              -- api/X2Option HOTKEY_ACTION_TYPE
+HA_MOVEBACK = 1                                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_MOVEFORWARD = 0                               -- api/X2Option HOTKEY_ACTION_TYPE
+HA_MOVELEFT = 2                                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_MOVERIGHT = 3                                 -- api/X2Option HOTKEY_ACTION_TYPE
+HA_OPEN_CHAT = 12                                -- api/X2Option HOTKEY_ACTION_TYPE
+HA_OPEN_CONFIG = 13                              -- api/X2Option HOTKEY_ACTION_TYPE
+HA_OPEN_TARGET_EQUIPMENT = 109                   -- api/X2Option HOTKEY_ACTION_TYPE
+HA_REPLY_LAST_WHISPER = 78                       -- api/X2Option HOTKEY_ACTION_TYPE
+HA_REPLY_LAST_WHISPERED = 79                     -- api/X2Option HOTKEY_ACTION_TYPE
+HA_RIGHT_CAMERA = 51                             -- api/X2Option HOTKEY_ACTION_TYPE
+HA_ROUND_TARGET = 41                             -- api/X2Option HOTKEY_ACTION_TYPE
+HA_SET_WATCH_TARGET = 89                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_SWAP_PRELIMINARY_EQUIPMENT = 124              -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_ACHIEVEMENT = 101                      -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_AUCTION = 106                          -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_BAG = 14                               -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_BATTLE_FIELD = 108                     -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_BUTLER_INFO = 119                      -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_CHARACTER = 16                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_CHRONICLE_BOOK = 118                   -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_COMMON_FARM_INFO = 20                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_COMMUNITY = 77                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_COMMUNITY_EXPEDITION_TAB = 121         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_COMMUNITY_FACTION_TAB = 123            -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_COMMUNITY_FAMILY_TAB = 122             -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_CRAFT_BOOK = 18                        -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_HERO = 112                             -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_INGAMESHOP = 98                        -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_MAIL = 107                             -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_NAMETAG = 28                           -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_RAID_FRAME = 74                        -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_RAID_TEAM_MANAGER = 75                 -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_RANDOM_SHOP = 120                      -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_RANKING = 100                          -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_SHOW_GUIDE_DECAL = 80                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_SPECIALTY_INFO = 110                   -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_SPELLBOOK = 15                         -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_WALK = 37                              -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_WEB_MESSENGER = 45                     -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_WEB_PLAY_DIARY = 47                    -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_WEB_PLAY_DIARY_INSTANT = 48            -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_WEB_WIKI = 46                          -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TOGGLE_WORLDMAP = 30                          -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TURNLEFT = 4                                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_TURNRIGHT = 5                                 -- api/X2Option HOTKEY_ACTION_TYPE
+HA_ZOOM_IN = 10                                  -- api/X2Option HOTKEY_ACTION_TYPE
+HA_ZOOM_OUT = 11                                 -- api/X2Option HOTKEY_ACTION_TYPE
 MAX_ACTION_BAR_COUNT = 6                         -- api/X2Option
 OISLT_CHARACTER = 1                              -- api/X2Option OPTION_ITEM_SAVE_LEVEL_TYPE
 OISLT_CHARACTER_MODE = 3                         -- api/X2Option OPTION_ITEM_SAVE_LEVEL_TYPE
@@ -132,6 +201,7 @@ OIT_SHOWSERVERTIME = 314                         -- api/X2Option OPTION_ITEM_TYP
 OIT_SHOWTARGETCASTINGBAR = 126                   -- api/X2Option OPTION_ITEM_TYPE
 OIT_SHOWTARGETTOTARGETCASTINGBAR = 127           -- api/X2Option OPTION_ITEM_TYPE
 OIT_SHOW_GUIDEDECAL = 69                         -- api/X2Option OPTION_ITEM_TYPE
+OIT_SHOW_RAID_COMMAND_MESSAGE = 141              -- api/X2Option OPTION_ITEM_TYPE
 OIT_SKILL_DETAIL_DAMAGE_SHOW_TOOLTIP = 91        -- api/X2Option OPTION_ITEM_TYPE
 OIT_SKILL_SYNERGY_INFO_SHOW_TOOLTIP = 90         -- api/X2Option OPTION_ITEM_TYPE
 OIT_SLOT_COOLDOWN_VISIBLE = 106                  -- api/X2Option OPTION_ITEM_TYPE
@@ -154,6 +224,78 @@ OIT_USE_CELERITY_WITH_DOUBLE_FORWARD = 65        -- api/X2Option OPTION_ITEM_TYP
 OIT_VISIBLEMYEQUIPINFO = 128                     -- api/X2Option OPTION_ITEM_TYPE
 ---@class X2Option
 X2Option = {}                                    -- api/X2Option
+
+---api/X2Option
+---@alias HOTKEY_ACTION_TYPE
+---| `HA_ACTION_BAR_PAGE_NEXT`
+---| `HA_ACTION_BAR_PAGE_PREV`
+---| `HA_ACTIVATE_WEAPON`
+---| `HA_AUTORUN`
+---| `HA_BACK_CAMERA`
+---| `HA_CHANGE_ROADMAP_SIZE`
+---| `HA_CYCLE_CAMERA_CLOCKWISE`
+---| `HA_CYCLE_CAMERA_COUNTER_CLOCKWISE`
+---| `HA_CYCLE_FRIENDLY_BACKWARD`
+---| `HA_CYCLE_FRIENDLY_FORWARD`
+---| `HA_CYCLE_HOSTILE_BACKWARD`
+---| `HA_CYCLE_HOSTILE_FORWARD`
+---| `HA_CYCLE_HOSTILE_HEAD_MARKER_BACKWARD`
+---| `HA_CYCLE_HOSTILE_HEAD_MARKER_FORWARD`
+---| `HA_DOWN`
+---| `HA_DO_INTERACTION_1`
+---| `HA_DO_INTERACTION_2`
+---| `HA_DO_INTERACTION_3`
+---| `HA_DO_INTERACTION_4`
+---| `HA_FRONT_CAMERA`
+---| `HA_JUMP`
+---| `HA_LEFT_CAMERA`
+---| `HA_MOVEBACK`
+---| `HA_MOVEFORWARD`
+---| `HA_MOVELEFT`
+---| `HA_MOVERIGHT`
+---| `HA_OPEN_CHAT`
+---| `HA_OPEN_CONFIG`
+---| `HA_OPEN_TARGET_EQUIPMENT`
+---| `HA_REPLY_LAST_WHISPER`
+---| `HA_REPLY_LAST_WHISPERED`
+---| `HA_RIGHT_CAMERA`
+---| `HA_ROUND_TARGET`
+---| `HA_SET_WATCH_TARGET`
+---| `HA_SWAP_PRELIMINARY_EQUIPMENT`
+---| `HA_TOGGLE_ACHIEVEMENT`
+---| `HA_TOGGLE_AUCTION`
+---| `HA_TOGGLE_BAG`
+---| `HA_TOGGLE_BATTLE_FIELD`
+---| `HA_TOGGLE_BUTLER_INFO`
+---| `HA_TOGGLE_CHARACTER`
+---| `HA_TOGGLE_CHRONICLE_BOOK`
+---| `HA_TOGGLE_COMMON_FARM_INFO`
+---| `HA_TOGGLE_COMMUNITY`
+---| `HA_TOGGLE_COMMUNITY_EXPEDITION_TAB`
+---| `HA_TOGGLE_COMMUNITY_FACTION_TAB`
+---| `HA_TOGGLE_COMMUNITY_FAMILY_TAB`
+---| `HA_TOGGLE_CRAFT_BOOK`
+---| `HA_TOGGLE_HERO`
+---| `HA_TOGGLE_INGAMESHOP`
+---| `HA_TOGGLE_MAIL`
+---| `HA_TOGGLE_NAMETAG`
+---| `HA_TOGGLE_RAID_FRAME`
+---| `HA_TOGGLE_RAID_TEAM_MANAGER`
+---| `HA_TOGGLE_RANDOM_SHOP`
+---| `HA_TOGGLE_RANKING`
+---| `HA_TOGGLE_SHOW_GUIDE_DECAL`
+---| `HA_TOGGLE_SPECIALTY_INFO`
+---| `HA_TOGGLE_SPELLBOOK`
+---| `HA_TOGGLE_WALK`
+---| `HA_TOGGLE_WEB_MESSENGER`
+---| `HA_TOGGLE_WEB_PLAY_DIARY`
+---| `HA_TOGGLE_WEB_PLAY_DIARY_INSTANT`
+---| `HA_TOGGLE_WEB_WIKI`
+---| `HA_TOGGLE_WORLDMAP`
+---| `HA_TURNLEFT`
+---| `HA_TURNRIGHT`
+---| `HA_ZOOM_IN`
+---| `HA_ZOOM_OUT`
 
 ---@TODO: db options > option_item_save_level_type_id might be needed. OISLT_SYSTEM appears to save it to the system but unable to get again once I restart (C:\ArcheRage\Documents\USER[]\udf\.+.sst)
 ---api/X2Option
@@ -292,6 +434,7 @@ X2Option = {}                                    -- api/X2Option
 ---| `OIT_SHOWTARGETCASTINGBAR`
 ---| `OIT_SHOWTARGETTOTARGETCASTINGBAR`
 ---| `OIT_SHOW_GUIDEDECAL`
+---| `OIT_SHOW_RAID_COMMAND_MESSAGE`
 ---| `OIT_SKILL_DETAIL_DAMAGE_SHOW_TOOLTIP`
 ---| `OIT_SKILL_SYNERGY_INFO_SHOW_TOOLTIP`
 ---| `OIT_SLOT_COOLDOWN_VISIBLE`
@@ -352,6 +495,12 @@ function X2Option:GetConsoleVariable(name) end
 ---@return CursorSize cursorSize A table of cursor size IDs.
 ---@nodiscard
 function X2Option:GetCursorSize() end
+
+---Retrieves hotkey information for the specified action type.
+---@param hotkeyActionType HOTKEY_ACTION_TYPE The type of hotkey action to query.
+---@return HotKeyInfo[]|nil infos A table of hotkey information entries (only one entry).
+---@nodiscard
+function X2Option:GetHotkeyInfo(hotkeyActionType) end
 
 ---Retrieves the minimum and maximum mouse sensitivity values.
 ---@return number minMouseSensitivity The minimum mouse sensitivity.

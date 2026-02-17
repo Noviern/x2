@@ -9,7 +9,7 @@
 ---
 ---**Dependencies**:
 --- - [EmptyWidget](lua://EmptyWidget) used for the `frame` field.
---- - [Checkbutton](lua://Checkbutton) used for the `frame.check` field.
+--- - [CheckButton](lua://CheckButton) used for the `frame.check` field.
 ---
 ---@class RadioGroup: Widget
 ---@field frame RadioItem[]|nil The internal list of radio items. Typically populated when radio items are created with `RadioGroup:CreateRadioItem`.

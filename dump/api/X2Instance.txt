@@ -1,0 +1,3 @@
+IVT_PERMIT = 4
+IVT_RESET = 3
+X2Instance = {}

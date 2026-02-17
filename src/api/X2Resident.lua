@@ -46,6 +46,20 @@ function X2Resident:FilterHousingTradeList(filterindex, searchWord) end
 ---@see ResidentBoardContent
 function X2Resident:GetResidentBoardContent(boardType) end
 
+---Gets a list of resident members and displays them on the resident board.
+---The resident board must be open for the list to appear.
+---@param zoneGroupType ZONE_GROUP_ID The zone group ID of the residence.
+---@param offline boolean `true` to include offline characters, `false` to show online only.
+---@param startIndex number The starting index of the list. (min: `1`)
+function X2Resident:GetResidentMembers(zoneGroupType, offline, startIndex) end
+
+---Refreshes the list of members shown on the resident board.
+---The resident board must be open for the refresh to take effect.
+---@param zoneGroupType ZONE_GROUP_ID The zone group ID of the residence.
+---@param offline boolean `true` to include offline characters, `false` to show online only.
+---@param startIndex number The starting index of the list. (min: `1`)
+function X2Resident:RefreshResidentMembers(zoneGroupType, offline, startIndex) end
+
 ---Searches for housing trade listings in the specified zone with the given
 ---filter and search word, triggering the `RESIDENT_HOUSING_TRADE_LIST` event.
 ---@param zoneGroupType ZONE_GROUP_ID The zone ID to search.

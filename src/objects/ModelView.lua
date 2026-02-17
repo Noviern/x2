@@ -12,9 +12,18 @@
 ---@class ModelView: Widget
 local ModelView = {}
 
+---@TODO: document
+function ModelView:AddModelPosX() end
+
+---@TODO: document
+function ModelView:AddModelPosZ() end
+
 ---Adds rotation `angle` to the ModelView. positive is left negative is right.
 ---@param angle number in degrees.
 function ModelView:AddRotation(angle) end
+
+---@TODO: document
+function ModelView:AddRotationX() end
 
 ---Adjusts the cameras position for the ModelView.
 ---@param offsetX number center
@@ -33,6 +42,9 @@ function ModelView:ApplyCustomizerParamToUnit() end
 
 ---Applies the model to the ModelView.
 function ModelView:ApplyModel() end
+
+---@TODO: document
+function ModelView:ApplyModelByDyeingItem() end
 
 ---Applies a preset parameter to a specific part of the model.
 ---@param part number
@@ -209,6 +221,9 @@ function ModelView:GetRace() end
 ---@nodiscard
 function ModelView:GetRotation() end
 
+---@TODO: document
+function ModelView:GetRotationX() end
+
 ---@TODO: never got this to work
 ---Retrieves the scar status of the model.
 ---@return table|nil info
@@ -284,6 +299,12 @@ function ModelView:ResetBeautyShop() end
 
 ---Resets changes to the model's equipment.
 function ModelView:ResetEquips() end
+
+---@TODO: document
+function ModelView:ResetModelPos() end
+
+---@TODO: document
+function ModelView:ResetZoom() end
 
 ---Sets the background color for the ModelView.
 ---@param r number
@@ -460,10 +481,10 @@ function ModelView:SetFov(angle) end
 ---@param isStop boolean
 function ModelView:SetFreeze(isStop) end
 
----@TODO: not sure what this does
+---@TODO: not sure what this does, name has been updated to SetIngameShopCamMode
 ---Sets the in-game shop mode for the ModelView.
 ---@param ingameShop boolean
-function ModelView:SetIngameShopMode(ingameShop) end
+function ModelView:SetIngameShopCamMode(ingameShop) end
 
 ---Sets the background of the ModelView. `ModelView:SetDisableColorGrading`
 ---required to prevent flashing.
@@ -491,6 +512,9 @@ function ModelView:SetModelViewExtent(width, height) end
 ---Sets the rotation `angle` for the ModelView.
 ---@param angle number in degrees. (default: `0`)
 function ModelView:SetRotation(angle) end
+
+---@TODO: document
+function ModelView:SetRotationX() end
 
 ---Enables/Disables smiling for the ModelView.
 ---@param smile boolean (default: `false`)

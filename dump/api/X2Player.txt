@@ -31,6 +31,7 @@ X2Player = {
   GetAppellationMyStamp = "<function X2Player>",
   GetAppellationRouteInfo = "<function X2Player>",
   GetAppellationStampInfo = "<function X2Player>",
+  GetAppellationStampInfos = "<function X2Player>",
   GetAppellations = "<function X2Player>",
   GetAppellationsCount = "<function X2Player>",
   GetEffectAppellation = "<function X2Player>",

@@ -84,6 +84,7 @@ local API             = {
   [84] = "X2Roster",
   [85] = "X2MiniScoreboard",
   [86] = "X2SurveyForm",
+  [87] = "X2Instance",
 }
 
 local OBJECT          = {

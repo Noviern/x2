@@ -13,7 +13,6 @@ DLG_TASK_ASK_USE_AA_POINT = 41                    -- api/X2DialogManager DLG_EVE
 DLG_TASK_AUTH_LOGIN_DENIED = 47                   -- api/X2DialogManager DLG_EVENT
 DLG_TASK_BAN_VOTE_ANNOUNCE = 99                   -- api/X2DialogManager DLG_EVENT
 DLG_TASK_BAN_VOTE_PARTICIPATE = 100               -- api/X2DialogManager DLG_EVENT
-DLG_TASK_BATTLE_FIELD_RESET_VISIT_COUNT = 53      -- api/X2DialogManager DLG_EVENT
 DLG_TASK_BIND_BUTLER = 91                         -- api/X2DialogManager DLG_EVENT
 DLG_TASK_BIND_SPECIAL_REZ_DISTIRCT = 98           -- api/X2DialogManager DLG_EVENT
 DLG_TASK_BUILD_INTERACTION = 34                   -- api/X2DialogManager DLG_EVENT
@@ -100,6 +99,7 @@ DLG_TASK_SKIP_FINAL_STATEMENT = 11                -- api/X2DialogManager DLG_EVE
 DLG_TASK_SOUL_BIND_ITEM = 20                      -- api/X2DialogManager DLG_EVENT
 DLG_TASK_TEAM_SUMMON_SUGGEST = 94                 -- api/X2DialogManager DLG_EVENT
 DLG_TASK_UNLOCK_LEARN_SKILL = 104                 -- api/X2DialogManager DLG_EVENT
+DLG_TASK_UPDATE_INSTANCE_VISIT_COUNT = 53         -- api/X2DialogManager DLG_EVENT
 DLG_TASK_WARN_CRAFT_ITEM = 43                     -- api/X2DialogManager DLG_EVENT
 DLG_TASK_WARN_EXECUTE = 35                        -- api/X2DialogManager DLG_EVENT
 DLG_TASK_ZONE_PERMISSION = 56                     -- api/X2DialogManager DLG_EVENT
@@ -134,7 +134,6 @@ X2DialogManager = {}                              -- api/X2DialogManager
 ---| `DLG_TASK_AUTH_LOGIN_DENIED`
 ---| `DLG_TASK_BAN_VOTE_ANNOUNCE`
 ---| `DLG_TASK_BAN_VOTE_PARTICIPATE`
----| `DLG_TASK_BATTLE_FIELD_RESET_VISIT_COUNT`
 ---| `DLG_TASK_BIND_BUTLER`
 ---| `DLG_TASK_BIND_SPECIAL_REZ_DISTIRCT`
 ---| `DLG_TASK_BUILD_INTERACTION`
@@ -221,6 +220,7 @@ X2DialogManager = {}                              -- api/X2DialogManager
 ---| `DLG_TASK_SOUL_BIND_ITEM`
 ---| `DLG_TASK_TEAM_SUMMON_SUGGEST`
 ---| `DLG_TASK_UNLOCK_LEARN_SKILL`
+---| `DLG_TASK_UPDATE_INSTANCE_VISIT_COUNT`
 ---| `DLG_TASK_WARN_CRAFT_ITEM`
 ---| `DLG_TASK_WARN_EXECUTE`
 ---| `DLG_TASK_ZONE_PERMISSION`
