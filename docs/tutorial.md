@@ -30,7 +30,7 @@ myBtn:SetText("Click Me")
 myBtn:Show(true)
 ```
 
-![Example of a Button Widget](../img/button_example.png)
+![Example of a Button Widget](https://i.imgur.com/4VLmX1h.png)
 
 > If you have [apitypes.lua](https://github.com/Noviern/x2/blob/master/scripts/apitypes.lua) from the X2 repository in both your workspace and toc.g you can use the `OBJECT` and `API` globals.
 > ```lua
