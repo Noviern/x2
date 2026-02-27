@@ -5918,6 +5918,7 @@
 ---| "aggro_meter"
 ---| "all_in_item_grade_combobox"
 ---| "assassin"
+---| "attacker_range"
 ---| "battlefield_blue"
 ---| "battlefield_orange"
 ---| "battlefield_red"
@@ -5933,10 +5934,10 @@
 ---| "bright_purple"
 ---| "bright_yellow"
 ---| "brown"
----| "btn_df"
----| "btn_dis"
----| "btn_on"
----| "btn_ov"
+---| "btn_disabled"
+---| "btn_highlighted"
+---| "btn_normal"
+---| "btn_pushed"
 ---| "bubble_chat_etc"
 ---| "bubble_chat_say"
 ---| "bubble_chat_say_hostile"
@@ -5946,21 +5947,39 @@
 ---| "bubble_name_hostile"
 ---| "candidate_list_selected"
 ---| "cash_brown"
----| "character_slot_df"
----| "character_slot_dis"
----| "character_slot_on"
----| "character_slot_ov"
+---| "character_slot_created_disabled"
+---| "character_slot_created_highlighted"
+---| "character_slot_created_normal"
+---| "character_slot_created_pushed"
+---| "character_slot_created_red_disabled"
+---| "character_slot_created_red_highlighted"
+---| "character_slot_created_red_normal"
+---| "character_slot_created_red_pushed"
+---| "character_slot_created_selected_disabled"
+---| "character_slot_created_selected_highlighted"
+---| "character_slot_created_selected_normal"
+---| "character_slot_created_selected_pushed"
+---| "character_slot_impossible_disabled"
+---| "character_slot_impossible_highlighted"
+---| "character_slot_impossible_normal"
+---| "character_slot_impossible_pushed"
+---| "character_slot_possible_disabled"
+---| "character_slot_possible_highlighted"
+---| "character_slot_possible_normal"
+---| "character_slot_possible_pushed"
 ---| "character_slot_successor_df"
----| "character_slot_successor_dis"
----| "character_slot_successor_on"
 ---| "character_slot_successor_ov"
 ---| "chat_folio"
----| "chat_tab_unselected_df"
----| "chat_tab_unselected_dis"
----| "chat_tab_unselected_ov"
+---| "chat_tab_selected_disabled"
+---| "chat_tab_selected_highlighted"
+---| "chat_tab_selected_normal"
+---| "chat_tab_selected_pushed"
+---| "chat_tab_unselected_disabled"
+---| "chat_tab_unselected_highlighted"
+---| "chat_tab_unselected_normal"
+---| "chat_tab_unselected_pushed"
+---| "chat_timestamp"
 ---| "check_btn_df"
----| "check_btn_dis"
----| "check_btn_on"
 ---| "check_btn_ov"
 ---| "check_button_light"
 ---| "check_texture_tooltip"
@@ -6014,7 +6033,6 @@
 ---| "evolving_3"
 ---| "evolving_4"
 ---| "evolving_gray"
----| "exp_orange"
 ---| "expedition_war_declarer"
 ---| "faction_friendly_npc"
 ---| "faction_friendly_pc"
@@ -6033,6 +6051,7 @@
 ---| "hatred_02"
 ---| "high_title"
 ---| "hostile_forces"
+---| "http"
 ---| "illusion"
 ---| "ingameshop_submenu_seperator"
 ---| "inquire_notify"
@@ -6041,7 +6060,8 @@
 ---| "labor_power_account"
 ---| "labor_power_local"
 ---| "lemon"
----| "level_character"
+---| "level_normal"
+---| "level_successor"
 ---| "level_up_blue"
 ---| "light_blue"
 ---| "light_gray"
@@ -6052,12 +6072,15 @@
 ---| "loading_content"
 ---| "loading_percent"
 ---| "loading_tip"
+---| "lock_item_or_equip_item"
 ---| "login_stage_blue"
 ---| "login_stage_brown"
+---| "login_stage_btn_disabled"
+---| "login_stage_btn_highlighted"
+---| "login_stage_btn_normal"
+---| "login_stage_btn_pushed"
 ---| "login_stage_button_on"
 ---| "login_stage_button_ov"
----| "login_stage_character_slot_impossible"
----| "login_stage_character_slot_possible"
 ---| "loot_gacha_cosume_item_name"
 ---| "love_01"
 ---| "love_02"
@@ -6102,9 +6125,9 @@
 ---| "nation_map_native"
 ---| "nation_map_none_owner"
 ---| "nation_map_war"
----| "new_button_on"
 ---| "notice_orange"
 ---| "notify_message"
+---| "ocean_blue"
 ---| "off_gray"
 ---| "option_key_list_button_ov"
 ---| "option_list_button_dis"
@@ -6161,9 +6184,6 @@
 ---| "sub_menu_in_main_menu_on"
 ---| "sub_menu_in_main_menu_ov"
 ---| "subzone_state_alarm"
----| "successor"
----| "successor_deep"
----| "successor_exp"
 ---| "target_frame_name_friendly"
 ---| "target_frame_name_hostile"
 ---| "target_frame_name_neutral"
@@ -6174,10 +6194,6 @@
 ---| "team_hud_btn_text_on"
 ---| "team_hud_btn_text_ov"
 ---| "team_violet"
----| "text_btn_df"
----| "text_btn_dis"
----| "text_btn_on"
----| "text_btn_ov"
 ---| "title"
 ---| "title_button_dis"
 ---| "tooltip_default"
@@ -6198,6 +6214,7 @@
 ---| "unit_grade_boss_s"
 ---| "unit_grade_strong"
 ---| "unit_grade_weak"
+---| "unlock_item_or_equip_item"
 ---| "user_tral_red"
 ---| "version_info"
 ---| "violet"
@@ -6270,7 +6287,7 @@
 ---| "|nu; Dimgray |r" # rgb(106, 106, 106)
 ---| "|ny; Lemonchiffon |r" rgb(255, 249, 200)
 ---| "|cFF000000{string}|r"              #
----| "|bu{bulletCharacter};{string}|br;" #
+---| "|bu{bulletCharacter};{string}|br" #
 ---| "|q{questId};"
 ---| "|i{itemType},{grade},{kind},{data}"
 ---| "|if{craftId};"
@@ -6294,14 +6311,12 @@
 ---| "|w{contributionAmount};"           # ui/common/money_window.g > contributiveness
 ---| "|e{level?};"                       # ui/common/money_window.g > successor_small
 ---| "|E{level?};"                       # ui/common/money_window.g > successor_small_gray
----| "|sd{leadershipAmount};"            # ui/common/money_window.g > icon_leadership
 ---| "|sa{amount};"                      # ui/common/money_window.g > pass_coin icon_key
 ---| "|sp{manastormAmount?};"            # ui/common/money_window.g > icon_palos
 ---| "|sg{amount};"                      # ui/common/money_window.g > icon_garnet
 ---| "|v{level?};"                       # ui/common/money_window.g > icon_equip_slot_star_small
 ---| "|V{level?};"                       # ui/common/money_window.g > icon_equip_slot_star
----"|A{hexstring}" # instance
----"|a{hexstring}" # raid
+---| "|g{gearScore};"                    # ui/common/money_window.g > equipment_point
 
 ---@alias FRIEND_LIST_UPDATE_TYPE
 ---| "delete"
@@ -11744,8 +11759,8 @@
 ---| "ZONE_SCORE_UPDATED"
 
 ---@alias UNIT
----| UNIT_PET
 ---| UNIT_LOCAL
+---| UNIT_PET
 ---| "slave"
 ---| "team1" # team = the current raid/can be co raid
 ---| "team2"
@@ -11900,7 +11915,6 @@
 
 ---@alias UNIT_INFO_TYPE
 ---| "character"
----| "npc"
 ---| "npc"
 ---| "slave"
 ---| "housing"

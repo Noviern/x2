@@ -1,0 +1,66 @@
+# X2NameTag
+## Globals
+**NAME_TAG_FACTION_EXPEDITION**
+
+`integer`
+
+**NAME_TAG_FACTION_FACTION**
+
+`integer`
+
+**NAME_TAG_FACTION_FAMILY**
+
+`integer`
+
+**NAME_TAG_MODE_BATTLE**
+
+`integer`
+
+**NAME_TAG_MODE_BOX**
+
+`integer`
+
+**NAME_TAG_MODE_DEFAULT**
+
+`integer`
+
+**NAME_TAG_MODE_LIFE**
+
+`integer`
+
+**NAME_TAG_MODE_MAX**
+
+`integer`
+
+**X2NameTag**
+
+`X2NameTag`
+
+## Aliases
+**NAME_TAG_FACTION**
+
+`NAME_TAG_FACTION_EXPEDITION`|`NAME_TAG_FACTION_FACTION`|`NAME_TAG_FACTION_FAMILY`
+
+```lua
+-- api/X2NameTag
+NAME_TAG_FACTION:
+    | `NAME_TAG_FACTION_EXPEDITION`
+    | `NAME_TAG_FACTION_FACTION`
+    | `NAME_TAG_FACTION_FAMILY`
+```
+
+**NAME_TAG_MODE**
+
+`NAME_TAG_MODE_BATTLE`|`NAME_TAG_MODE_BOX`|`NAME_TAG_MODE_DEFAULT`|`NAME_TAG_MODE_LIFE`
+
+```lua
+-- api/X2NameTag
+NAME_TAG_MODE:
+    | `NAME_TAG_MODE_BATTLE`
+    | `NAME_TAG_MODE_BOX`
+    | `NAME_TAG_MODE_DEFAULT`
+    | `NAME_TAG_MODE_LIFE`
+```
+
+## Classes
+### Class: X2NameTag

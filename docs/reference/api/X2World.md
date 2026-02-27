@@ -1,0 +1,188 @@
+# X2World
+## Globals
+**EXIT_CLIENT**
+
+`integer`
+
+**EXIT_CLIENT_NONE_ACTION**
+
+`integer`
+
+**EXIT_TO_CHARACTER_LIST**
+
+`integer`
+
+**EXIT_TO_WORLD_LIST**
+
+`integer`
+
+**FULL_CONGESTION**
+
+`integer`
+
+**HIGH_CONGESTION**
+
+`integer`
+
+**LOW_CONGESTION**
+
+`integer`
+
+**MIDDLE_CONGESTION**
+
+`integer`
+
+**TERMS_TYPE_PRIVACY_POLICY**
+
+`integer`
+
+**TERMS_TYPE_PROVIDE_INFORMATION**
+
+`integer`
+
+**TERMS_TYPE_USE**
+
+`integer`
+
+**WAT_DISABLE**
+
+`integer`
+
+**WAT_ENABLE**
+
+`integer`
+
+**WORLD_ENTRY_TYPE_ACCEPTED**
+
+`integer`
+
+**WORLD_ENTRY_TYPE_REJECTED**
+
+`integer`
+
+**WT_CHAR_NAME_PRESELECT**
+
+`integer`
+
+**WT_COMBAT**
+
+`integer`
+
+**WT_INDEPENDENCE**
+
+`integer`
+
+**WT_INTEGRATION**
+
+`integer`
+
+**WT_LEGACY**
+
+`integer`
+
+**WT_NEW**
+
+`integer`
+
+**WT_PREPARE_FOR_LAUNCH**
+
+`integer`
+
+**WT_RECOMMEND**
+
+`integer`
+
+**WT_REMASTER**
+
+`integer`
+
+**WT_RESTRICT_AGE**
+
+`integer`
+
+**X2World**
+
+`X2World`
+
+## Aliases
+**CONGESTION_TYPE**
+
+`FULL_CONGESTION`|`HIGH_CONGESTION`|`LOW_CONGESTION`|`MIDDLE_CONGESTION`
+
+```lua
+-- api/X2World
+CONGESTION_TYPE:
+    | `FULL_CONGESTION`
+    | `HIGH_CONGESTION`
+    | `LOW_CONGESTION`
+    | `MIDDLE_CONGESTION`
+```
+
+**EXIT_TARGET**
+
+`EXIT_CLIENT_NONE_ACTION`|`EXIT_CLIENT`|`EXIT_TO_CHARACTER_LIST`|`EXIT_TO_WORLD_LIST`
+
+```lua
+-- api/X2World
+EXIT_TARGET:
+    | `EXIT_CLIENT`
+    | `EXIT_CLIENT_NONE_ACTION`
+    | `EXIT_TO_CHARACTER_LIST`
+    | `EXIT_TO_WORLD_LIST`
+```
+
+**TERMS_TYPE**
+
+`TERMS_TYPE_PRIVACY_POLICY`|`TERMS_TYPE_PROVIDE_INFORMATION`|`TERMS_TYPE_USE`
+
+```lua
+-- api/X2World
+TERMS_TYPE:
+    | `TERMS_TYPE_PRIVACY_POLICY`
+    | `TERMS_TYPE_PROVIDE_INFORMATION`
+    | `TERMS_TYPE_USE`
+```
+
+**WORLD_AVAILABLE_TYPE**
+
+`WAT_DISABLE`|`WAT_ENABLE`
+
+```lua
+-- api/X2World
+WORLD_AVAILABLE_TYPE:
+    | `WAT_DISABLE`
+    | `WAT_ENABLE`
+```
+
+**WORLD_ENTRY_TYPE**
+
+`WORLD_ENTRY_TYPE_ACCEPTED`|`WORLD_ENTRY_TYPE_REJECTED`
+
+```lua
+-- api/X2World
+WORLD_ENTRY_TYPE:
+    | `WORLD_ENTRY_TYPE_ACCEPTED`
+    | `WORLD_ENTRY_TYPE_REJECTED`
+```
+
+**WORLD_TYPE**
+
+`WT_CHAR_NAME_PRESELECT`|`WT_COMBAT`|`WT_INDEPENDENCE`|`WT_INTEGRATION`|`WT_LEGACY`...(+5)
+
+```lua
+-- api/X2World
+WORLD_TYPE:
+    | `WT_CHAR_NAME_PRESELECT`
+    | `WT_COMBAT`
+    | `WT_INDEPENDENCE`
+    | `WT_INTEGRATION`
+    | `WT_LEGACY`
+    | `WT_NEW`
+    | `WT_PREPARE_FOR_LAUNCH`
+    | `WT_RECOMMEND`
+    | `WT_REMASTER`
+    | `WT_RESTRICT_AGE`
+```
+
+## Classes
+### Class: X2World

@@ -326,7 +326,6 @@ X2Map = {}                                -- api/X2Map
 ---@see ZoneStateInfo
 function X2Map:GetZoneStateInfoByZoneId(zoneId) end
 
----@TODO: x,y,z local or global?
 ---Opens the world map and highlights the specified location.
 ---@param zoneId ZONE_GROUP_ID The ID of the zone to show.
 ---@param x number The X coordinate in the world.

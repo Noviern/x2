@@ -13,17 +13,20 @@
 local ModelView = {}
 
 ---@TODO: document
-function ModelView:AddModelPosX() end
+---@param offset number
+function ModelView:AddModelPosX(offset) end
 
 ---@TODO: document
-function ModelView:AddModelPosZ() end
+---@param offset number
+function ModelView:AddModelPosZ(offset) end
 
 ---Adds rotation `angle` to the ModelView. positive is left negative is right.
 ---@param angle number in degrees.
 function ModelView:AddRotation(angle) end
 
 ---@TODO: document
-function ModelView:AddRotationX() end
+---@param angle number in degrees.
+function ModelView:AddRotationX(angle) end
 
 ---Adjusts the cameras position for the ModelView.
 ---@param offsetX number center
@@ -44,7 +47,8 @@ function ModelView:ApplyCustomizerParamToUnit() end
 function ModelView:ApplyModel() end
 
 ---@TODO: document
-function ModelView:ApplyModelByDyeingItem() end
+---@param itemType number
+function ModelView:ApplyModelByDyeingItem(itemType) end
 
 ---Applies a preset parameter to a specific part of the model.
 ---@param part number
@@ -222,6 +226,7 @@ function ModelView:GetRace() end
 function ModelView:GetRotation() end
 
 ---@TODO: document
+---@return number angle
 function ModelView:GetRotationX() end
 
 ---@TODO: never got this to work
@@ -514,7 +519,8 @@ function ModelView:SetModelViewExtent(width, height) end
 function ModelView:SetRotation(angle) end
 
 ---@TODO: document
-function ModelView:SetRotationX() end
+---@param angle number in degrees. (default: `0`)
+function ModelView:SetRotationX(angle) end
 
 ---Enables/Disables smiling for the ModelView.
 ---@param smile boolean (default: `false`)
@@ -525,7 +531,7 @@ function ModelView:SetSmile(smile) end
 ---@param height number
 function ModelView:SetTextureSize(width, height) end
 
----Shows an item on the model.
+---Shows an item on the model. Some items can overwrite the model.
 ---@param itemType number
 ---@return boolean success
 ---@return boolean initModel do i need to init the model true or false

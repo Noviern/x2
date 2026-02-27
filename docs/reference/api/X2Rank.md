@@ -1,0 +1,78 @@
+# X2Rank
+## Globals
+**RK_CHARACTER_GEAR_SCORE**
+
+`integer`
+
+**RK_EXPEDITION_BATTLE_RECORD**
+
+`integer`
+
+**RK_EXPEDITION_GEAR_SCORE**
+
+`integer`
+
+**RK_EXPEDITION_INSTANCE_RATING**
+
+`integer`
+
+**RK_FISHING_SUM**
+
+`integer`
+
+**RK_FISHING_TOP**
+
+`integer`
+
+**RK_GAME_POINTS**
+
+`integer`
+
+**RK_GOODS_VALUE**
+
+`integer`
+
+**RK_HEIR_LEVEL**
+
+`integer`
+
+**RK_INSTANCE_RATING**
+
+`integer`
+
+**RK_ITEM_SCORE**
+
+`integer`
+
+**RK_ZONE_SCORE_SUM_BY_QUEST_COMPLETE**
+
+`integer`
+
+**X2Rank**
+
+`X2Rank`
+
+## Aliases
+**RANK_KIND**
+
+`RK_CHARACTER_GEAR_SCORE`|`RK_EXPEDITION_BATTLE_RECORD`|`RK_EXPEDITION_GEAR_SCORE`|`RK_EXPEDITION_INSTANCE_RATING`|`RK_FISHING_SUM`...(+7)
+
+```lua
+-- api/X2Rank
+RANK_KIND:
+    | `RK_CHARACTER_GEAR_SCORE`
+    | `RK_EXPEDITION_BATTLE_RECORD`
+    | `RK_EXPEDITION_GEAR_SCORE`
+    | `RK_EXPEDITION_INSTANCE_RATING`
+    | `RK_FISHING_SUM`
+    | `RK_FISHING_TOP`
+    | `RK_GAME_POINTS`
+    | `RK_GOODS_VALUE`
+    | `RK_HEIR_LEVEL`
+    | `RK_INSTANCE_RATING`
+    | `RK_ITEM_SCORE`
+    | `RK_ZONE_SCORE_SUM_BY_QUEST_COMPLETE`
+```
+
+## Classes
+### Class: X2Rank

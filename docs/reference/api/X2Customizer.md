@@ -1,0 +1,97 @@
+# X2Customizer
+## Globals
+**BSS_GENDER_TRANSFERED**
+
+`integer`
+
+**BSS_INVALID_PLACE**
+
+`integer`
+
+**BSS_POSSIBLE**
+
+`integer`
+
+**CDR_DELETE_SUCCESS**
+
+`integer`
+
+**CDR_ERROR_AS_INVALID_DATA**
+
+`integer`
+
+**CDR_ERROR_AS_NOT_SELECT**
+
+`integer`
+
+**CDR_ERROR_AS_NO_FILE**
+
+`integer`
+
+**CDR_ERROR_AS_NO_FILE_NAME**
+
+`integer`
+
+**CDR_ERROR_AS_NO_PATH**
+
+`integer`
+
+**CDR_ERROR_AS_SAME_FILE**
+
+`integer`
+
+**CDR_ERROR_UNSERVICEABILITY_WORD**
+
+`integer`
+
+**CDR_INVALID_RESULT**
+
+`integer`
+
+**CDR_LOAD_SUCCESS**
+
+`integer`
+
+**CDR_SAVE_SUCCESS**
+
+`integer`
+
+**X2Customizer**
+
+`X2Customizer`
+
+## Aliases
+**BEAUTY_SHOP_STATUS**
+
+`BSS_GENDER_TRANSFERED`|`BSS_INVALID_PLACE`|`BSS_POSSIBLE`
+
+```lua
+-- api/X2Customizer
+BEAUTY_SHOP_STATUS:
+    | `BSS_GENDER_TRANSFERED`
+    | `BSS_INVALID_PLACE`
+    | `BSS_POSSIBLE`
+```
+
+**CUSTOMIZER_DATA_RESULT**
+
+`CDR_DELETE_SUCCESS`|`CDR_ERROR_AS_INVALID_DATA`|`CDR_ERROR_AS_NOT_SELECT`|`CDR_ERROR_AS_NO_FILE_NAME`|`CDR_ERROR_AS_NO_FILE`...(+6)
+
+```lua
+-- api/X2Customizer
+CUSTOMIZER_DATA_RESULT:
+    | `CDR_DELETE_SUCCESS`
+    | `CDR_ERROR_AS_INVALID_DATA`
+    | `CDR_ERROR_AS_NOT_SELECT`
+    | `CDR_ERROR_AS_NO_FILE`
+    | `CDR_ERROR_AS_NO_FILE_NAME`
+    | `CDR_ERROR_AS_NO_PATH`
+    | `CDR_ERROR_AS_SAME_FILE`
+    | `CDR_ERROR_UNSERVICEABILITY_WORD`
+    | `CDR_INVALID_RESULT`
+    | `CDR_LOAD_SUCCESS`
+    | `CDR_SAVE_SUCCESS`
+```
+
+## Classes
+### Class: X2Customizer

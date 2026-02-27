@@ -46,7 +46,7 @@ local TextStyle = {}
 ---@nodiscard
 function TextStyle:GetLineHeight() end
 
----Retrieves the width of the specified text using the TextStyle.
+---Retrieves the unscaled width of the specified text using the TextStyle.
 ---@param text string The text to measure.
 ---@return number textWidth The width of the text.
 ---@nodiscard

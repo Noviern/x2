@@ -1,0 +1,76 @@
+# X2Mate
+## Globals
+**MATE_COMMAND_ATTACK**
+
+`integer`
+
+**MATE_COMMAND_EQUIP**
+
+`integer`
+
+**MATE_COMMAND_MAX**
+
+`integer`
+
+**MATE_COMMAND_PASSENGER_GET_OFF**
+
+`integer`
+
+**MATE_COMMAND_RELEASE**
+
+`integer`
+
+**MATE_COMMAND_TOGGLE_MOUNT**
+
+`integer`
+
+**MATE_TYPE_BATTLE**
+
+`integer`
+
+**MATE_TYPE_NONE**
+
+`integer`
+
+**MATE_TYPE_RIDE**
+
+`integer`
+
+**MAX_MATE_SKILL**
+
+`integer`
+
+**X2Mate**
+
+`X2Mate`
+
+## Aliases
+**MATE_COMMAND**
+
+`MATE_COMMAND_ATTACK`|`MATE_COMMAND_EQUIP`|`MATE_COMMAND_MAX`|`MATE_COMMAND_PASSENGER_GET_OFF`|`MATE_COMMAND_RELEASE`...(+1)
+
+```lua
+-- api/X2Mate
+MATE_COMMAND:
+    | `MATE_COMMAND_ATTACK`
+    | `MATE_COMMAND_EQUIP`
+    | `MATE_COMMAND_MAX`
+    | `MATE_COMMAND_PASSENGER_GET_OFF`
+    | `MATE_COMMAND_RELEASE`
+    | `MATE_COMMAND_TOGGLE_MOUNT`
+```
+
+**MATE_TYPE**
+
+`MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`
+
+```lua
+-- api/X2Mate
+MATE_TYPE:
+    | `MATE_TYPE_BATTLE`
+    | `MATE_TYPE_NONE`
+    | `MATE_TYPE_RIDE`
+```
+
+## Classes
+### Class: X2Mate

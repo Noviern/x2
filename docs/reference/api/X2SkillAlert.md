@@ -1,0 +1,43 @@
+# X2SkillAlert
+## Globals
+**SKILL_ALERT_POS_BASIC**
+
+`integer`
+
+**SKILL_ALERT_POS_FIRST**
+
+`integer`
+
+**SKILL_ALERT_POS_INVALID**
+
+`integer`
+
+**SKILL_ALERT_POS_OFF**
+
+`integer`
+
+**SKILL_ALERT_POS_SECOND**
+
+`integer`
+
+**X2SkillAlert**
+
+`X2SkillAlert`
+
+## Aliases
+**SKILL_ALERT_POS**
+
+`SKILL_ALERT_POS_BASIC`|`SKILL_ALERT_POS_FIRST`|`SKILL_ALERT_POS_INVALID`|`SKILL_ALERT_POS_OFF`|`SKILL_ALERT_POS_SECOND`
+
+```lua
+-- api/X2SkillAlert
+SKILL_ALERT_POS:
+    | `SKILL_ALERT_POS_BASIC`
+    | `SKILL_ALERT_POS_FIRST`
+    | `SKILL_ALERT_POS_INVALID`
+    | `SKILL_ALERT_POS_OFF`
+    | `SKILL_ALERT_POS_SECOND`
+```
+
+## Classes
+### Class: X2SkillAlert

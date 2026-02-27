@@ -365,9 +365,6 @@ function Widget:GetUILayer() end
 ---@param typeStr string The type to query.
 ---@return number value The value associated with the type.
 ---@nodiscard
----```lua
----local value = widget:GetValue("state")
----```
 function Widget:GetValue(typeStr) end
 
 ---Checks if the Widget has a handler for the specified action.
@@ -681,6 +678,7 @@ function Widget:TriggerMoveAnimation(on) end
 ---@param use boolean `true` to enable, `false` to disable.
 function Widget:UseDynamicContentState(use) end
 
+---@TODO: What is this?
 ---Enables or disables dynamic drawable state for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to modify.
 ---@param use boolean `true` to enable, `false` to disable.

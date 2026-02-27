@@ -1,0 +1,153 @@
+# X2ItemEnchant
+## Globals
+**AT_CLOTH**
+
+`integer`
+
+**AT_LEATHER**
+
+`integer`
+
+**AT_METAL**
+
+`integer`
+
+**IAAIS_DELETE**
+
+`integer`
+
+**IAAIS_INHERIT**
+
+`integer`
+
+**IAAIS_RANDOM**
+
+`integer`
+
+**ICMR_FAIL**
+
+`integer`
+
+**ICMR_FAIL_DISABLE_ENCHANT**
+
+`integer`
+
+**ICMR_SUCCESS**
+
+`integer`
+
+**IEBCT_ENCHANT_GREATE_SUCCESS**
+
+`integer`
+
+**IEBCT_ENCHANT_SUCCESS**
+
+`integer`
+
+**IEBCT_EVOVING**
+
+`integer`
+
+**IGER_BREAK**
+
+`integer`
+
+**IGER_DISABLE**
+
+`integer`
+
+**IGER_DOWNGRADE**
+
+`integer`
+
+**IGER_FAIL**
+
+`integer`
+
+**IGER_GREAT_SUCCESS**
+
+`integer`
+
+**IGER_RESTORE_DISABLE**
+
+`integer`
+
+**IGER_SUCCESS**
+
+`integer`
+
+**MAX_ITEM_EVOLVE_MATERIAL_SLOT**
+
+`integer`
+
+**X2ItemEnchant**
+
+`X2ItemEnchant`
+
+## Aliases
+**ARMOR_TYPE**
+
+`AT_CLOTH`|`AT_LEATHER`|`AT_METAL`
+
+```lua
+-- api/X2ItemEnchant
+ARMOR_TYPE:
+    | `AT_CLOTH`
+    | `AT_LEATHER`
+    | `AT_METAL`
+```
+
+**ITEM_AWAKEN_ATTRIBUTE_INFO_STATE**
+
+`IAAIS_DELETE`|`IAAIS_INHERIT`|`IAAIS_RANDOM`
+
+```lua
+-- api/X2ItemEnchant
+ITEM_AWAKEN_ATTRIBUTE_INFO_STATE:
+    | `IAAIS_DELETE`
+    | `IAAIS_INHERIT`
+    | `IAAIS_RANDOM`
+```
+
+**ITEM_CHANGE_MESSAGE_RESULT**
+
+`ICMR_FAIL_DISABLE_ENCHANT`|`ICMR_FAIL`|`ICMR_SUCCESS`
+
+```lua
+-- api/X2ItemEnchant
+ITEM_CHANGE_MESSAGE_RESULT:
+    | `ICMR_FAIL`
+    | `ICMR_FAIL_DISABLE_ENCHANT`
+    | `ICMR_SUCCESS`
+```
+
+**ITEM_ENCHANT_BROAD_CAST_TYPE**
+
+`IEBCT_ENCHANT_GREATE_SUCCESS`|`IEBCT_ENCHANT_SUCCESS`|`IEBCT_EVOVING`
+
+```lua
+-- api/X2ItemEnchant
+ITEM_ENCHANT_BROAD_CAST_TYPE:
+    | `IEBCT_ENCHANT_GREATE_SUCCESS`
+    | `IEBCT_ENCHANT_SUCCESS`
+    | `IEBCT_EVOVING`
+```
+
+**ITEM_GRADE_ENCHANT_RESULT**
+
+`IGER_BREAK`|`IGER_DISABLE`|`IGER_DOWNGRADE`|`IGER_FAIL`|`IGER_GREAT_SUCCESS`...(+2)
+
+```lua
+-- api/X2ItemEnchant
+ITEM_GRADE_ENCHANT_RESULT:
+    | `IGER_BREAK`
+    | `IGER_DISABLE`
+    | `IGER_DOWNGRADE`
+    | `IGER_FAIL`
+    | `IGER_GREAT_SUCCESS`
+    | `IGER_RESTORE_DISABLE`
+    | `IGER_SUCCESS`
+```
+
+## Classes
+### Class: X2ItemEnchant

@@ -16,5 +16,10 @@ TMROLE_RANGED_DEALER = 4
 TMROLE_TANKER = 1
 X2Team = {
   GetRole = "<function X2Team>",
+  GetTeamRoleType = "<function X2Team>",
+  KickTeamMember = "<function X2Team>",
+  KickTeamMemberByName = "<function X2Team>",
+  MoveTeamMember = "<function X2Team>",
+  MoveTeamMemberToParty = "<function X2Team>",
   SetRole = "<function X2Team>",
 }

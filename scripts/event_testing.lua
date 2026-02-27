@@ -21,25 +21,21 @@ local function SetEventHandler(name)
   end
 end
 
--- for api_name, api_id in pairs(API) do
---   ADDON:ImportAPI(api_id)
--- end
-
 --------------------------------------------------------------------------------
 ---These were added in 10.0
 --------------------------------------------------------------------------------
--- UPDATE_INSTANCE_VISIT_COUNT
--- UPDATE_INSTANT_GAME_TARGET_NPC_INFO
--- SetEventHandler("APPELLATION_STAMP_UPDATED") -- this exists in a future patch @TODO:
--- EXPEDITION_INFO_CLEAR
----UPDATE_SKILL_POINT
----LOCKUP_AND_IMPRISON_NOTICE
----CHANGE_EMPTY_BAG_SLOT_COUNTER_DISPLAY
----REOPEN_RANDOM_BOX_INFO
----REOPEN_RANDOM_BOX_REFRESH
----REOPEN_RANDOM_BOX_REMOVE
----REOPEN_RANDOM_BOX_LIFETIME_UPDATE
----REOPEN_RANDOM_BOX_ALARM_FAVORITE
+SetEventHandler("UPDATE_INSTANCE_VISIT_COUNT")
+SetEventHandler("UPDATE_INSTANT_GAME_TARGET_NPC_INFO")
+SetEventHandler("APPELLATION_STAMP_UPDATED")
+SetEventHandler("EXPEDITION_INFO_CLEAR")
+SetEventHandler("UPDATE_SKILL_POINT")
+SetEventHandler("LOCKUP_AND_IMPRISON_NOTICE")
+SetEventHandler("CHANGE_EMPTY_BAG_SLOT_COUNTER_DISPLAY")
+SetEventHandler("REOPEN_RANDOM_BOX_INFO")
+SetEventHandler("REOPEN_RANDOM_BOX_REFRESH")
+SetEventHandler("REOPEN_RANDOM_BOX_REMOVE")
+SetEventHandler("REOPEN_RANDOM_BOX_LIFETIME_UPDATE")
+SetEventHandler("REOPEN_RANDOM_BOX_ALARM_FAVORITE")
 
 --------------------------------------------------------------------------------
 -- These events needed further testing.
@@ -175,7 +171,7 @@ SetEventHandler("TRADE_UNLOCKED")
 SetEventHandler("ROLLBACK_FAVORITE_CRAFTS")
 SetEventHandler("UPDATE_INSTANT_GAME_KILLSTREAK")
 SetEventHandler("UPDATE_DEFENCE_INFO") -- guild dungeon?
-      SetEventHandler("UPDATE_RETURN_ACCOUNT_STATUS") -- for a player that returns to the game
+SetEventHandler("UPDATE_RETURN_ACCOUNT_STATUS") -- for a player that returns to the game
 SetEventHandler("UPDATE_CARRYING_BACKPACK_SLAVE_INFO")
 SetEventHandler("UCC_IMPRINT_SUCCEEDED")
 SetEventHandler("SURVEY_FORM_UPDATE")

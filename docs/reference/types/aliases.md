@@ -1,0 +1,13548 @@
+# aliases
+## Aliases
+**ABILITY_TYPE_NAME**
+
+"adamant"|"assassin"|"death"|"fight"|"hatred"...(+9)
+
+```lua
+ABILITY_TYPE_NAME:
+    | "adamant" -- Defense
+    | "assassin" -- Swiftblade
+    | "death" -- Occultism
+    | "fight" -- Battlerage
+    | "hatred" -- Malediction
+    | "illusion" -- Witchcraft
+    | "love" -- Vitalism
+    | "madness" -- Gunslinger
+    | "magic" -- Sorcery
+    | "pleasure" -- Spelldance
+    | "romance" -- Songcraft
+    | "vocation" -- Shadowplay
+    | "wild" -- Archery
+    | "will" -- Auramancy
+```
+
+**ACTABILITY_GRADE**
+
+"Adept"|"Amateur"|"Authority"|"Celebrity"|"Champion"...(+7)
+
+```lua
+-- db expert_limits
+ACTABILITY_GRADE:
+    | "Amateur"
+    | "Novice"
+    | "Veteran"
+    | "Expert"
+    | "Master"
+    | "Authority"
+    | "Champion"
+    | "Adept"
+    | "Herald"
+    | "Virtuoso"
+    | "Celebrity"
+    | "Famed"
+```
+
+**ACTABILITY_ID**
+
+`10`|`11`|`12`|`13`|`14`...(+32)
+
+```lua
+-- db actability_groups
+ACTABILITY_ID:
+    | `1` -- Alchemy
+    | `2` -- Construction
+    | `3` -- Cooking
+    | `4` -- Handicrafts
+    | `5` -- Husbandry
+    | `6` -- Farming
+    | `7` -- Fishing
+    | `8` -- Logging
+    | `9` -- Gathering
+    | `10` -- Machining
+    | `11` -- Metalwork
+    | `12` -- Printing
+    | `13` -- Mining
+    | `14` -- Masonry
+    | `15` -- Tailoring
+    | `16` -- Leatherwork
+    | `17` -- Weaponry
+    | `18` -- Carpentry
+    | `19` -- Quest
+    | `20` -- Larceny
+    | `21` -- Nuian Language
+    | `22` -- Elven Language
+    | `23` -- Dwarven Language
+    | `24` -- Faerie Language
+    | `25` -- Harani Language
+    | `26` -- Firran Language
+    | `27` -- Warborn Language
+    | `28` -- Returned Language
+    | `29` -- Nuia Continent Dialect
+    | `30` -- Haranya Continent Dialect
+    | `31` -- Commerce
+    | `32` -- Mirage Isle
+    | `33` -- Artistry
+    | `34` -- Exploration
+    | `36` -- Zones
+    | `37` -- Dungeons
+    | `38` -- Other
+```
+
+**ACTABILITY_NAME**
+
+"Alchemy"|"Artistry"|"Carpentry"|"Commerce"|"Construction"...(+32)
+
+```lua
+-- db actability_groups
+ACTABILITY_NAME:
+    | "Alchemy"
+    | "Artistry"
+    | "Carpentry"
+    | "Commerce"
+    | "Construction"
+    | "Cooking"
+    | "Dungeons"
+    | "Dwarven Language"
+    | "Elven Language"
+    | "Exploration"
+    | "Faerie Language"
+    | "Farming"
+    | "Firran Language"
+    | "Fishing"
+    | "Gathering"
+    | "Handicrafts"
+    | "Harani Language"
+    | "Haranya Continent Dialect"
+    | "Husbandry"
+    | "Larceny"
+    | "Leatherwork"
+    | "Logging"
+    | "Machining"
+    | "Masonry"
+    | "Metalwork"
+    | "Mining"
+    | "Mirage Isle"
+    | "Nuia Continent Dialect"
+    | "Nuian Language"
+    | "Other"
+    | "Printing"
+    | "Quest"
+    | "Returned Language"
+    | "Tailoring"
+    | "Warborn Language"
+    | "Weaponry"
+    | "Zones"
+```
+
+**ANCHOR_POINT**
+
+"BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4)
+
+```lua
+ANCHOR_POINT:
+    | "TOPLEFT"
+    | "TOP"
+    | "TOPRIGHT"
+    | "LEFT"
+    | "CENTER"
+    | "RIGHT"
+    | "BOTTOMLEFT"
+    | "BOTTOM"
+    | "BOTTOMRIGHT"
+```
+
+**ANIMATION**
+
+"additive_all_co_combat_miss"|"additive_all_re_combat_confuse"|"additive_all_re_combat_hit_b"|"additive_all_re_combat_hit_f"|"additive_all_re_combat_hit_l"...(+2091)
+
+```lua
+ANIMATION:
+    | "additive_all_co_combat_miss"
+    | "additive_all_re_combat_confuse"
+    | "additive_all_re_combat_hit_b"
+    | "additive_all_re_combat_hit_f"
+    | "additive_all_re_combat_hit_l"
+    | "additive_all_re_combat_hit_r"
+    | "additive_all_re_combat_miss"
+    | "additive_all_re_relaxed_hit"
+    | "additive_all_re_relaxed_hit_b"
+    | "additive_all_re_relaxed_hit_f"
+    | "additive_all_re_relaxed_hit_l"
+    | "additive_all_re_relaxed_hit_r"
+    | "additive_dragon_plasma_ba_relaxed_idle"
+    | "additive_fist_ac_board_f"
+    | "additive_fist_ac_board_idle"
+    | "additive_fist_ac_gliding"
+    | "additive_fist_ac_gliding_2"
+    | "additive_fist_ac_gliding_3"
+    | "additive_fist_ba_turnhead_d"
+    | "additive_fist_ba_turnhead_l"
+    | "additive_fist_ba_turnhead_r"
+    | "additive_fist_mo_normal_run_f_2"
+    | "additive_fist_mo_normal_run_f_3"
+    | "additive_fist_mo_normal_run_f_4"
+    | "additive_fist_mo_normal_run_f_5"
+    | "additive_fist_mo_normal_run_f_6"
+    | "additive_fist_mo_normal_run_f_7"
+    | "additive_horse_ba_relaxed_idle_foldlegs"
+    | "additive_lion_ba_relaxed_idle"
+    | "additive_pangolin_ba_relaxed_idle"
+    | "additive_seabug_ba_relaxed_idle"
+    | "all_co_sk_arrest_cast"
+    | "all_co_sk_arrest_cast_start"
+    | "all_co_sk_arrest_launch_end"
+    | "all_co_sk_arrest_launch_loop"
+    | "all_co_sk_arrest_launch_start"
+    | "all_co_sk_backstep"
+    | "all_co_sk_backstep_diff"
+    | "all_co_sk_buff_cast_defense"
+    | "all_co_sk_buff_cast_mental"
+    | "all_co_sk_buff_cast_resist"
+    | "all_co_sk_buff_channel_force"
+    | "all_co_sk_buff_channel_special"
+    | "all_co_sk_buff_launch_alterego_l"
+    | "all_co_sk_buff_launch_alterego_l_mub"
+    | "all_co_sk_buff_launch_alterego_r"
+    | "all_co_sk_buff_launch_alterego_r_mub"
+    | "all_co_sk_buff_launch_berserk"
+    | "all_co_sk_buff_launch_defense"
+    | "all_co_sk_buff_launch_defense_mub"
+    | "all_co_sk_buff_launch_dragon"
+    | "all_co_sk_buff_launch_force"
+    | "all_co_sk_buff_launch_force_mub"
+    | "all_co_sk_buff_launch_mana"
+    | "all_co_sk_buff_launch_mana_mub"
+    | "all_co_sk_buff_launch_mental"
+    | "all_co_sk_buff_launch_mental_mub"
+    | "all_co_sk_buff_launch_resist"
+    | "all_co_sk_buff_launch_resist_mub"
+    | "all_co_sk_buff_launch_special"
+    | "all_co_sk_buff_launch_special_mub"
+    | "all_co_sk_buff_launch_teleport_mub"
+    | "all_co_sk_buff_launch_unslow"
+    | "all_co_sk_dashattack"
+    | "all_co_sk_dashattack_2"
+    | "all_co_sk_dashattack_2_mub"
+    | "all_co_sk_dashattack_2_ub"
+    | "all_co_sk_dashattack_mub"
+    | "all_co_sk_dashattack_ub"
+    | "all_co_sk_flyingkick"
+    | "all_co_sk_holdthrow_cast"
+    | "all_co_sk_holdthrow_launch"
+    | "all_co_sk_hovering"
+    | "all_co_sk_hovering_2"
+    | "all_co_sk_leapattack"
+    | "all_co_sk_leapattack_2"
+    | "all_co_sk_leapattack_diff"
+    | "all_co_sk_leapattack_diff2"
+    | "all_co_sk_lowkick"
+    | "all_co_sk_pull_cast"
+    | "all_co_sk_shout"
+    | "all_co_sk_shout_2"
+    | "all_co_sk_shout_mub"
+    | "all_co_sk_spell_cast_angersnake"
+    | "all_co_sk_spell_cast_bless"
+    | "all_co_sk_spell_cast_cold"
+    | "all_co_sk_spell_cast_combatrevival"
+    | "all_co_sk_spell_cast_crosslight"
+    | "all_co_sk_spell_cast_crosslight_mub"
+    | "all_co_sk_spell_cast_cure"
+    | "all_co_sk_spell_cast_d"
+    | "all_co_sk_spell_cast_dead"
+    | "all_co_sk_spell_cast_destroysword"
+    | "all_co_sk_spell_cast_energyshot"
+    | "all_co_sk_spell_cast_fireball"
+    | "all_co_sk_spell_cast_flash"
+    | "all_co_sk_spell_cast_love"
+    | "all_co_sk_spell_cast_meteor"
+    | "all_co_sk_spell_cast_meteor_dragon"
+    | "all_co_sk_spell_cast_missile"
+    | "all_co_sk_spell_cast_poisonsword"
+    | "all_co_sk_spell_cast_rescue"
+    | "all_co_sk_spell_cast_rescue2"
+    | "all_co_sk_spell_cast_shield"
+    | "all_co_sk_spell_cast_spear"
+    | "all_co_sk_spell_cast_spread"
+    | "all_co_sk_spell_cast_summon"
+    | "all_co_sk_spell_cast_swich"
+    | "all_co_sk_spell_cast_thunderbolt"
+    | "all_co_sk_spell_cast_thunderbolt_mub"
+    | "all_co_sk_spell_cast_tug"
+    | "all_co_sk_spell_cast_union"
+    | "all_co_sk_spell_channel_cure"
+    | "all_co_sk_spell_channel_dragon"
+    | "all_co_sk_spell_channel_medusa"
+    | "all_co_sk_spell_channel_meteor"
+    | "all_co_sk_spell_channel_meteor_end"
+    | "all_co_sk_spell_channel_meteor_start"
+    | "all_co_sk_spell_channel_pray"
+    | "all_co_sk_spell_channel_sorb"
+    | "all_co_sk_spell_channel_tug"
+    | "all_co_sk_spell_channel_zero"
+    | "all_co_sk_spell_launch_all"
+    | "all_co_sk_spell_launch_all_mub"
+    | "all_co_sk_spell_launch_angersnake"
+    | "all_co_sk_spell_launch_angersnake_mub"
+    | "all_co_sk_spell_launch_bless"
+    | "all_co_sk_spell_launch_bless_mub"
+    | "all_co_sk_spell_launch_cold"
+    | "all_co_sk_spell_launch_cold_mub"
+    | "all_co_sk_spell_launch_combatrevival"
+    | "all_co_sk_spell_launch_combatrevival_mub"
+    | "all_co_sk_spell_launch_crosslight"
+    | "all_co_sk_spell_launch_crosslight_mub"
+    | "all_co_sk_spell_launch_dead"
+    | "all_co_sk_spell_launch_dead_mub"
+    | "all_co_sk_spell_launch_destroysword"
+    | "all_co_sk_spell_launch_devilsword"
+    | "all_co_sk_spell_launch_dragonwind"
+    | "all_co_sk_spell_launch_d_mub"
+    | "all_co_sk_spell_launch_energyshot"
+    | "all_co_sk_spell_launch_energyshot_2"
+    | "all_co_sk_spell_launch_energyshot_2_mub"
+    | "all_co_sk_spell_launch_energyshot_3"
+    | "all_co_sk_spell_launch_energyshot_3_mub"
+    | "all_co_sk_spell_launch_energyshot_mub"
+    | "all_co_sk_spell_launch_fastmove"
+    | "all_co_sk_spell_launch_fepee"
+    | "all_co_sk_spell_launch_fepee_mub"
+    | "all_co_sk_spell_launch_field"
+    | "all_co_sk_spell_launch_field_mub"
+    | "all_co_sk_spell_launch_fireball"
+    | "all_co_sk_spell_launch_fireball2_mub"
+    | "all_co_sk_spell_launch_fireball_2"
+    | "all_co_sk_spell_launch_fireball_2_mub"
+    | "all_co_sk_spell_launch_fireball_3"
+    | "all_co_sk_spell_launch_fireball_3_mub"
+    | "all_co_sk_spell_launch_fireball_mub"
+    | "all_co_sk_spell_launch_flash"
+    | "all_co_sk_spell_launch_flash_mub"
+    | "all_co_sk_spell_launch_flow"
+    | "all_co_sk_spell_launch_ground_mub"
+    | "all_co_sk_spell_launch_inhalation"
+    | "all_co_sk_spell_launch_love"
+    | "all_co_sk_spell_launch_love_mub"
+    | "all_co_sk_spell_launch_l_diff"
+    | "all_co_sk_spell_launch_l_diff_mub"
+    | "all_co_sk_spell_launch_l_mub"
+    | "all_co_sk_spell_launch_meteor"
+    | "all_co_sk_spell_launch_meteor_dragon_mub"
+    | "all_co_sk_spell_launch_meteor_mub"
+    | "all_co_sk_spell_launch_missile"
+    | "all_co_sk_spell_launch_missile_mub"
+    | "all_co_sk_spell_launch_nd"
+    | "all_co_sk_spell_launch_nd_mub"
+    | "all_co_sk_spell_launch_poisonsword"
+    | "all_co_sk_spell_launch_pthrow"
+    | "all_co_sk_spell_launch_rescue"
+    | "all_co_sk_spell_launch_rescue2"
+    | "all_co_sk_spell_launch_rescue2_mub"
+    | "all_co_sk_spell_launch_rescue_mub"
+    | "all_co_sk_spell_launch_r_diff"
+    | "all_co_sk_spell_launch_r_diff_mub"
+    | "all_co_sk_spell_launch_r_mub"
+    | "all_co_sk_spell_launch_shield"
+    | "all_co_sk_spell_launch_site"
+    | "all_co_sk_spell_launch_site_mub"
+    | "all_co_sk_spell_launch_smoke"
+    | "all_co_sk_spell_launch_spear"
+    | "all_co_sk_spell_launch_spear_diff"
+    | "all_co_sk_spell_launch_spear_diff2"
+    | "all_co_sk_spell_launch_spear_diff2_mub"
+    | "all_co_sk_spell_launch_spear_diff_mub"
+    | "all_co_sk_spell_launch_spear_mub"
+    | "all_co_sk_spell_launch_spread"
+    | "all_co_sk_spell_launch_spread_mub"
+    | "all_co_sk_spell_launch_summon"
+    | "all_co_sk_spell_launch_summon_mub"
+    | "all_co_sk_spell_launch_swich"
+    | "all_co_sk_spell_launch_swich2"
+    | "all_co_sk_spell_launch_swich2_mub"
+    | "all_co_sk_spell_launch_swich_mub"
+    | "all_co_sk_spell_launch_thunderbolt"
+    | "all_co_sk_spell_launch_thunderbolt2"
+    | "all_co_sk_spell_launch_thunderbolt_2_mub"
+    | "all_co_sk_spell_launch_thunderbolt_3_mub"
+    | "all_co_sk_spell_launch_thunderbolt_4_mub"
+    | "all_co_sk_spell_launch_thunderbolt_mub"
+    | "all_co_sk_spell_launch_union"
+    | "all_co_sk_spell_launch_vitality"
+    | "all_co_sk_spell_launch_whip"
+    | "all_co_sk_spell_launch_whip_mub"
+    | "all_co_sk_swim_backstep"
+    | "all_co_sk_swim_buff_cast_defense"
+    | "all_co_sk_swim_buff_cast_mana"
+    | "all_co_sk_swim_buff_cast_mental"
+    | "all_co_sk_swim_buff_channel_force"
+    | "all_co_sk_swim_buff_channel_special"
+    | "all_co_sk_swim_buff_launch_alterego_l"
+    | "all_co_sk_swim_buff_launch_alterego_r"
+    | "all_co_sk_swim_buff_launch_defense"
+    | "all_co_sk_swim_buff_launch_dragon"
+    | "all_co_sk_swim_buff_launch_force"
+    | "all_co_sk_swim_buff_launch_mana"
+    | "all_co_sk_swim_buff_launch_mental"
+    | "all_co_sk_swim_buff_launch_special"
+    | "all_co_sk_swim_buff_launch_teleport"
+    | "all_co_sk_swim_dashattack_2_ub"
+    | "all_co_sk_swim_dashattack_ub"
+    | "all_co_sk_swim_flyingkick_ub"
+    | "all_co_sk_swim_holdthrow_cast"
+    | "all_co_sk_swim_holdthrow_launch_ub"
+    | "all_co_sk_swim_leapattack"
+    | "all_co_sk_swim_leapattack_2"
+    | "all_co_sk_swim_pull_cast"
+    | "all_co_sk_swim_shout"
+    | "all_co_sk_swim_spell_cast_angersnake"
+    | "all_co_sk_swim_spell_cast_bless"
+    | "all_co_sk_swim_spell_cast_cold"
+    | "all_co_sk_swim_spell_cast_combatrevival"
+    | "all_co_sk_swim_spell_cast_d"
+    | "all_co_sk_swim_spell_cast_dead"
+    | "all_co_sk_swim_spell_cast_destroysword"
+    | "all_co_sk_swim_spell_cast_energyshot"
+    | "all_co_sk_swim_spell_cast_fireball"
+    | "all_co_sk_swim_spell_cast_flash"
+    | "all_co_sk_swim_spell_cast_love"
+    | "all_co_sk_swim_spell_cast_medusa"
+    | "all_co_sk_swim_spell_cast_meteor"
+    | "all_co_sk_swim_spell_cast_meteor_dragon"
+    | "all_co_sk_swim_spell_cast_missile"
+    | "all_co_sk_swim_spell_cast_poisonsword"
+    | "all_co_sk_swim_spell_cast_rescue"
+    | "all_co_sk_swim_spell_cast_rescue2"
+    | "all_co_sk_swim_spell_cast_shield"
+    | "all_co_sk_swim_spell_cast_spear"
+    | "all_co_sk_swim_spell_cast_spread"
+    | "all_co_sk_swim_spell_cast_summon"
+    | "all_co_sk_swim_spell_cast_swich"
+    | "all_co_sk_swim_spell_cast_tug"
+    | "all_co_sk_swim_spell_cast_vitality"
+    | "all_co_sk_swim_spell_channel_cure"
+    | "all_co_sk_swim_spell_channel_dragon"
+    | "all_co_sk_swim_spell_channel_medusa"
+    | "all_co_sk_swim_spell_channel_pray"
+    | "all_co_sk_swim_spell_channel_sorb"
+    | "all_co_sk_swim_spell_channel_tug"
+    | "all_co_sk_swim_spell_channel_zero"
+    | "all_co_sk_swim_spell_launch_all"
+    | "all_co_sk_swim_spell_launch_bless"
+    | "all_co_sk_swim_spell_launch_cold"
+    | "all_co_sk_swim_spell_launch_combatrevival"
+    | "all_co_sk_swim_spell_launch_d"
+    | "all_co_sk_swim_spell_launch_dead"
+    | "all_co_sk_swim_spell_launch_devilsword"
+    | "all_co_sk_swim_spell_launch_energyshot"
+    | "all_co_sk_swim_spell_launch_energyshot_2"
+    | "all_co_sk_swim_spell_launch_energyshot_3"
+    | "all_co_sk_swim_spell_launch_fepee"
+    | "all_co_sk_swim_spell_launch_field"
+    | "all_co_sk_swim_spell_launch_fireball"
+    | "all_co_sk_swim_spell_launch_fireball_2"
+    | "all_co_sk_swim_spell_launch_fireball_3"
+    | "all_co_sk_swim_spell_launch_ground"
+    | "all_co_sk_swim_spell_launch_l"
+    | "all_co_sk_swim_spell_launch_meteor"
+    | "all_co_sk_swim_spell_launch_meteor_dragon"
+    | "all_co_sk_swim_spell_launch_missile"
+    | "all_co_sk_swim_spell_launch_nd"
+    | "all_co_sk_swim_spell_launch_r"
+    | "all_co_sk_swim_spell_launch_rescue"
+    | "all_co_sk_swim_spell_launch_shield"
+    | "all_co_sk_swim_spell_launch_site"
+    | "all_co_sk_swim_spell_launch_spear"
+    | "all_co_sk_swim_spell_launch_summon"
+    | "all_co_sk_swim_spell_launch_thunderbolt"
+    | "all_co_sk_swim_spell_launch_thunderbolt_2"
+    | "all_co_sk_swim_spell_launch_thunderbolt_3"
+    | "all_co_sk_swim_spell_launch_thunderbolt_4"
+    | "all_co_sk_swim_spell_launch_thunderbolt_5"
+    | "all_co_sk_swim_spell_launch_union"
+    | "all_co_sk_swim_spell_launch_vitality"
+    | "all_co_sk_swim_spell_launch_whip"
+    | "all_co_sk_swim_transformation"
+    | "all_co_sk_swim_whirlwind_cast"
+    | "all_co_sk_swim_whirlwind_launch_ub"
+    | "all_co_sk_underthrow"
+    | "all_co_sk_underthrow_mub"
+    | "all_co_sk_whirlwind_launch"
+    | "all_re_combat_airtied"
+    | "all_re_combat_crash"
+    | "all_re_combat_crash_end"
+    | "all_re_combat_crash_start"
+    | "all_re_combat_critical"
+    | "all_re_combat_critical_mub"
+    | "all_re_combat_crow"
+    | "all_re_combat_dead_end"
+    | "all_re_combat_dead_start"
+    | "all_re_combat_dodge"
+    | "all_re_combat_dodge_mub"
+    | "all_re_combat_fall"
+    | "all_re_combat_hit"
+    | "all_re_combat_hit_l"
+    | "all_re_combat_hit_l_mub"
+    | "all_re_combat_hit_mub"
+    | "all_re_combat_hit_r"
+    | "all_re_combat_hit_r_mub"
+    | "all_re_combat_knockback"
+    | "all_re_combat_knockback_b_start"
+    | "all_re_combat_knockback_start"
+    | "all_re_combat_pull"
+    | "all_re_combat_struggle"
+    | "all_re_combat_struggle_2"
+    | "all_re_combat_stun"
+    | "all_re_combat_stun_2"
+    | "all_re_combat_swim_stun"
+    | "all_re_combat_swim_stun_start"
+    | "all_re_combat_tied"
+    | "all_re_relaxed_hit"
+    | "all_re_relaxed_hit_mub"
+    | "bear_spell_launch_d"
+    | "bear_spell_launch_d_2"
+    | "bear_spell_launch_nd"
+    | "bow_co_attack"
+    | "bow_co_attack_mub"
+    | "bow_co_sk_cast"
+    | "bow_co_sk_cast_2"
+    | "bow_co_sk_cast_2_ub"
+    | "bow_co_sk_cast_3"
+    | "bow_co_sk_cast_3_ub"
+    | "bow_co_sk_cast_4"
+    | "bow_co_sk_cast_4_ub"
+    | "bow_co_sk_cast_5"
+    | "bow_co_sk_cast_5_ub"
+    | "bow_co_sk_cast_6"
+    | "bow_co_sk_cast_start"
+    | "bow_co_sk_cast_start_2"
+    | "bow_co_sk_cast_start_2_diff"
+    | "bow_co_sk_cast_start_2_ub"
+    | "bow_co_sk_cast_start_3"
+    | "bow_co_sk_cast_start_4"
+    | "bow_co_sk_cast_start_4_ub"
+    | "bow_co_sk_cast_start_5"
+    | "bow_co_sk_cast_start_5_ub"
+    | "bow_co_sk_cast_start_6"
+    | "bow_co_sk_cast_start_ub"
+    | "bow_co_sk_cast_ub"
+    | "bow_co_sk_high_cast"
+    | "bow_co_sk_high_cast_start"
+    | "bow_co_sk_high_cast_start_ub"
+    | "bow_co_sk_high_cast_ub"
+    | "bow_co_sk_high_launch"
+    | "bow_co_sk_high_launch_mub"
+    | "bow_co_sk_high_launch_ub"
+    | "bow_co_sk_launch"
+    | "bow_co_sk_launch_2"
+    | "bow_co_sk_launch_2_diff"
+    | "bow_co_sk_launch_2_diff_start"
+    | "bow_co_sk_launch_2_mub"
+    | "bow_co_sk_launch_3"
+    | "bow_co_sk_launch_3_mub"
+    | "bow_co_sk_launch_4"
+    | "bow_co_sk_launch_4_mub"
+    | "bow_co_sk_launch_5"
+    | "bow_co_sk_launch_5_mub"
+    | "bow_co_sk_launch_6"
+    | "bow_co_sk_launch_beastrush"
+    | "bow_co_sk_launch_beastrush_mub"
+    | "bow_co_sk_launch_differ_mub"
+    | "bow_co_sk_launch_flame_loop"
+    | "bow_co_sk_launch_mub"
+    | "bow_co_sk_launch_skill_cast"
+    | "bow_co_sk_launch_skill_launch"
+    | "bow_co_sk_launch_skill_loop"
+    | "bow_co_sk_launch_snakeeye"
+    | "bow_co_sk_launch_snakeeye_2"
+    | "bow_co_sk_launch_snakeeye_2_mub"
+    | "bow_co_sk_launch_snakeeye_3"
+    | "bow_co_sk_launch_snakeeye_3_mub"
+    | "bow_co_sk_launch_snakeeye_mub"
+    | "bow_co_sk_swim_cast"
+    | "bow_co_sk_swim_cast_2"
+    | "bow_co_sk_swim_cast_3"
+    | "bow_co_sk_swim_cast_4"
+    | "bow_co_sk_swim_cast_5"
+    | "bow_co_sk_swim_cast_5_ub"
+    | "bow_co_sk_swim_cast_6"
+    | "bow_co_sk_swim_cast_start"
+    | "bow_co_sk_swim_cast_start_2"
+    | "bow_co_sk_swim_cast_start_3"
+    | "bow_co_sk_swim_cast_start_4"
+    | "bow_co_sk_swim_cast_start_5"
+    | "bow_co_sk_swim_cast_start_6"
+    | "bow_co_sk_swim_high_cast"
+    | "bow_co_sk_swim_high_cast_start"
+    | "bow_co_sk_swim_launch_2_ub"
+    | "bow_co_sk_swim_launch_4_ub"
+    | "bow_co_sk_swim_launch_5_ub"
+    | "bow_co_sk_swim_launch_beastrush"
+    | "bow_co_sk_swim_launch_snakeeye"
+    | "bow_co_sk_swim_launch_ub"
+    | "bow_co_swim_attack_mub"
+    | "bow_shotgun_co_sk_cast_approach"
+    | "bow_shotgun_co_sk_cast_lightning"
+    | "bow_shotgun_co_sk_launch_approach"
+    | "bow_shotgun_co_sk_launch_corrode"
+    | "bow_shotgun_co_sk_launch_extensive"
+    | "bow_shotgun_co_sk_launch_finish"
+    | "bow_shotgun_co_sk_launch_infection"
+    | "bow_shotgun_co_sk_launch_notice"
+    | "bow_shotgun_co_sk_launch_revenge"
+    | "bow_shotgun_co_sk_launch_revenge_ub"
+    | "bow_shotgun_co_sk_launch_shoot_1"
+    | "bow_shotgun_co_sk_launch_shoot_2"
+    | "bow_shotgun_co_sk_swim_cast_lightning_ub"
+    | "bow_shotgun_co_sk_swim_launch_approach_ub"
+    | "bow_shotgun_co_sk_swim_launch_extensive_ub"
+    | "bow_shotgun_co_sk_swim_launch_infection_ub"
+    | "bow_shotgun_co_sk_swim_launch_revenge_ub"
+    | "dancer_co_sk_cast_naima"
+    | "dancer_co_sk_channel_empty"
+    | "dancer_co_sk_channel_naima"
+    | "dancer_co_sk_channel_phantom"
+    | "dancer_co_sk_channel_recovery"
+    | "dancer_co_sk_channel_weakness"
+    | "dancer_co_sk_launch_blessing"
+    | "dancer_co_sk_launch_commune"
+    | "dancer_co_sk_launch_maximize"
+    | "dancer_co_sk_launch_oneheart"
+    | "dancer_co_sk_launch_touch_1"
+    | "dancer_co_sk_launch_touch_1_ub"
+    | "dancer_co_sk_launch_touch_2"
+    | "dancer_co_sk_launch_whistle"
+    | "dancer_co_sk_swim_cast_naima_ub"
+    | "dancer_co_sk_swim_channel_empty_ub"
+    | "dancer_co_sk_swim_channel_naima_ub"
+    | "dancer_co_sk_swim_channel_phantom_ub"
+    | "dancer_co_sk_swim_channel_recovery_ub"
+    | "dancer_co_sk_swim_channel_weakness_ub"
+    | "dancer_co_sk_swim_launch_blessing_ub"
+    | "dancer_co_sk_swim_launch_commune_ub"
+    | "dancer_co_sk_swim_launch_maximize_ub"
+    | "dancer_co_sk_swim_launch_oneheart_ub"
+    | "dancer_co_sk_swim_launch_shock_ub"
+    | "dancer_co_sk_swim_launch_touch_1_ub"
+    | "dancer_co_sk_swim_launch_touch_2_ub"
+    | "dancer_co_sk_swim_launch_whistle_ub"
+    | "dragdor_ba_relaxed_idle_rand_1"
+    | "elephant_ba_passenger_idle"
+    | "elephant_mo_relaxed_idletorun_f"
+    | "fist_ac_anchor_steer_l_mub"
+    | "fist_ac_anchor_steer_r_mub"
+    | "fist_ac_ballista_fire"
+    | "fist_ac_ballista_idle"
+    | "fist_ac_ballista_release"
+    | "fist_ac_ballista_winding"
+    | "fist_ac_bathtub_loop"
+    | "fist_ac_bathtub_mermaid_loop"
+    | "fist_ac_bathtub_start"
+    | "fist_ac_bear_b_geton"
+    | "fist_ac_bear_f_geton"
+    | "fist_ac_bear_r_geton"
+    | "fist_ac_beggar_01_end"
+    | "fist_ac_beggar_01_loop"
+    | "fist_ac_beggar_01_start"
+    | "fist_ac_bicycle_idle"
+    | "fist_ac_bicycle_steering"
+    | "fist_ac_boarding"
+    | "fist_ac_boarding_backward"
+    | "fist_ac_board_b"
+    | "fist_ac_board_flip"
+    | "fist_ac_board_idle"
+    | "fist_ac_board_jump"
+    | "fist_ac_board_launch"
+    | "fist_ac_burden"
+    | "fist_ac_cannon_fire"
+    | "fist_ac_cannon_idle"
+    | "fist_ac_cannon_standby"
+    | "fist_ac_captain_transform"
+    | "fist_ac_captain_transform_2"
+    | "fist_ac_capture_cast"
+    | "fist_ac_capture_launch"
+    | "fist_ac_carbed_end"
+    | "fist_ac_carbed_loop"
+    | "fist_ac_carbed_start"
+    | "fist_ac_catapult_a_fire"
+    | "fist_ac_choice"
+    | "fist_ac_clear_end"
+    | "fist_ac_clear_loop"
+    | "fist_ac_clear_start"
+    | "fist_ac_cooking_end"
+    | "fist_ac_cooking_loop"
+    | "fist_ac_cooking_start"
+    | "fist_ac_cough"
+    | "fist_ac_cough_mub"
+    | "fist_ac_coupleduckship_b"
+    | "fist_ac_coupleduckship_f"
+    | "fist_ac_coupleduckship_idle"
+    | "fist_ac_doll_end"
+    | "fist_ac_doll_loop"
+    | "fist_ac_doll_start"
+    | "fist_ac_drink"
+    | "fist_ac_drink_mub"
+    | "fist_ac_eat"
+    | "fist_ac_eatherb"
+    | "fist_ac_eatherb_mub"
+    | "fist_ac_eatsuop"
+    | "fist_ac_eatsuop_loop"
+    | "fist_ac_eatsuop_mub"
+    | "fist_ac_eat_mub"
+    | "fist_ac_elephant_b_geton"
+    | "fist_ac_elephant_f_geton"
+    | "fist_ac_elephant_r_geton"
+    | "fist_ac_ent_b_geton"
+    | "fist_ac_ent_f_geton"
+    | "fist_ac_ent_r_geton"
+    | "fist_ac_excavate_brushing"
+    | "fist_ac_excavate_brushing_end"
+    | "fist_ac_excavate_brushing_start"
+    | "fist_ac_falldownfull"
+    | "fist_ac_falldown_end"
+    | "fist_ac_falldown_loop"
+    | "fist_ac_falldown_start"
+    | "fist_ac_feedingfull"
+    | "fist_ac_feeding_end"
+    | "fist_ac_feeding_loop"
+    | "fist_ac_feeding_start"
+    | "fist_ac_felly_end"
+    | "fist_ac_fepeedance"
+    | "fist_ac_fepeedance02"
+    | "fist_ac_fepeedance03"
+    | "fist_ac_fepeeflag_end"
+    | "fist_ac_fepeeflag_loop"
+    | "fist_ac_fepeeflag_start"
+    | "fist_ac_furcuting_end"
+    | "fist_ac_furcuting_start"
+    | "fist_ac_get_fruit_end"
+    | "fist_ac_get_fruit_loop"
+    | "fist_ac_get_fruit_start"
+    | "fist_ac_give"
+    | "fist_ac_give_mub"
+    | "fist_ac_gliding_back"
+    | "fist_ac_gliding_backflip"
+    | "fist_ac_gliding_bl"
+    | "fist_ac_gliding_board_back"
+    | "fist_ac_gliding_board_bl"
+    | "fist_ac_gliding_board_boost"
+    | "fist_ac_gliding_board_br"
+    | "fist_ac_gliding_board_end"
+    | "fist_ac_gliding_board_fl"
+    | "fist_ac_gliding_board_fr"
+    | "fist_ac_gliding_board_grounding"
+    | "fist_ac_gliding_board_left"
+    | "fist_ac_gliding_board_right"
+    | "fist_ac_gliding_board_sliding"
+    | "fist_ac_gliding_board_start"
+    | "fist_ac_gliding_board_turbulence_back"
+    | "fist_ac_gliding_board_turbulence_l"
+    | "fist_ac_gliding_board_turbulence_r"
+    | "fist_ac_gliding_board_turbulence_up"
+    | "fist_ac_gliding_br"
+    | "fist_ac_gliding_broom_back"
+    | "fist_ac_gliding_broom_bl"
+    | "fist_ac_gliding_broom_br"
+    | "fist_ac_gliding_broom_end"
+    | "fist_ac_gliding_broom_fl"
+    | "fist_ac_gliding_broom_fr"
+    | "fist_ac_gliding_broom_front"
+    | "fist_ac_gliding_broom_left"
+    | "fist_ac_gliding_broom_right"
+    | "fist_ac_gliding_broom_sliding"
+    | "fist_ac_gliding_broom_sliding_end"
+    | "fist_ac_gliding_broom_telpo_end"
+    | "fist_ac_gliding_broom_turbulence_back"
+    | "fist_ac_gliding_broom_turbulence_l"
+    | "fist_ac_gliding_broom_turbulence_r"
+    | "fist_ac_gliding_broom_turbulence_up"
+    | "fist_ac_gliding_carpet_bl"
+    | "fist_ac_gliding_carpet_boost"
+    | "fist_ac_gliding_carpet_boost2"
+    | "fist_ac_gliding_carpet_br"
+    | "fist_ac_gliding_carpet_fl"
+    | "fist_ac_gliding_carpet_fr"
+    | "fist_ac_gliding_carpet_front"
+    | "fist_ac_gliding_carpet_grounding"
+    | "fist_ac_gliding_carpet_idle"
+    | "fist_ac_gliding_carpet_left"
+    | "fist_ac_gliding_carpet_right"
+    | "fist_ac_gliding_carpet_sliding"
+    | "fist_ac_gliding_carpet_start"
+    | "fist_ac_gliding_carpet_telpo"
+    | "fist_ac_gliding_carpet_turbulence_back"
+    | "fist_ac_gliding_eagle_boost"
+    | "fist_ac_gliding_eagle_end"
+    | "fist_ac_gliding_eagle_fl"
+    | "fist_ac_gliding_eagle_fr"
+    | "fist_ac_gliding_eagle_front"
+    | "fist_ac_gliding_eagle_grounding"
+    | "fist_ac_gliding_eagle_idle"
+    | "fist_ac_gliding_eagle_left"
+    | "fist_ac_gliding_eagle_right"
+    | "fist_ac_gliding_eagle_sliding"
+    | "fist_ac_gliding_eagle_start"
+    | "fist_ac_gliding_fl"
+    | "fist_ac_gliding_fr"
+    | "fist_ac_gliding_hot_air_balloon_back"
+    | "fist_ac_gliding_hot_air_balloon_bl"
+    | "fist_ac_gliding_hot_air_balloon_boost"
+    | "fist_ac_gliding_hot_air_balloon_br"
+    | "fist_ac_gliding_hot_air_balloon_end"
+    | "fist_ac_gliding_hot_air_balloon_fl"
+    | "fist_ac_gliding_hot_air_balloon_fr"
+    | "fist_ac_gliding_hot_air_balloon_front"
+    | "fist_ac_gliding_hot_air_balloon_idle"
+    | "fist_ac_gliding_hot_air_balloon_left"
+    | "fist_ac_gliding_hot_air_balloon_right"
+    | "fist_ac_gliding_hot_air_balloon_sliding"
+    | "fist_ac_gliding_hot_air_balloon_start"
+    | "fist_ac_gliding_hot_air_balloon_turbulence_l"
+    | "fist_ac_gliding_hot_air_balloon_turbulence_r"
+    | "fist_ac_gliding_hot_air_balloon_turbulence_up"
+    | "fist_ac_gliding_idle"
+    | "fist_ac_gliding_left"
+    | "fist_ac_gliding_panda_back"
+    | "fist_ac_gliding_panda_bomb"
+    | "fist_ac_gliding_panda_boost"
+    | "fist_ac_gliding_panda_end"
+    | "fist_ac_gliding_panda_fl"
+    | "fist_ac_gliding_panda_fr"
+    | "fist_ac_gliding_panda_front"
+    | "fist_ac_gliding_panda_idle"
+    | "fist_ac_gliding_panda_launch"
+    | "fist_ac_gliding_panda_left"
+    | "fist_ac_gliding_panda_right"
+    | "fist_ac_gliding_panda_spin"
+    | "fist_ac_gliding_panda_spin2"
+    | "fist_ac_gliding_panda_start"
+    | "fist_ac_gliding_panda_tumbling_back"
+    | "fist_ac_gliding_panda_tumbling_front"
+    | "fist_ac_gliding_phonix_cast"
+    | "fist_ac_gliding_phonix_launch"
+    | "fist_ac_gliding_right"
+    | "fist_ac_gliding_rocket_back"
+    | "fist_ac_gliding_rocket_backtumbling"
+    | "fist_ac_gliding_rocket_bl"
+    | "fist_ac_gliding_rocket_boost"
+    | "fist_ac_gliding_rocket_br"
+    | "fist_ac_gliding_rocket_end"
+    | "fist_ac_gliding_rocket_fl"
+    | "fist_ac_gliding_rocket_fr"
+    | "fist_ac_gliding_rocket_front"
+    | "fist_ac_gliding_rocket_grounding"
+    | "fist_ac_gliding_rocket_grounding_end"
+    | "fist_ac_gliding_rocket_idle"
+    | "fist_ac_gliding_rocket_left"
+    | "fist_ac_gliding_rocket_right"
+    | "fist_ac_gliding_rocket_sliding"
+    | "fist_ac_gliding_rocket_start"
+    | "fist_ac_gliding_rocket_turbulence_back"
+    | "fist_ac_gliding_rocket_turbulence_l"
+    | "fist_ac_gliding_rocket_turbulence_r"
+    | "fist_ac_gliding_rocket_turbulence_up"
+    | "fist_ac_gliding_sliding"
+    | "fist_ac_gliding_spin"
+    | "fist_ac_gliding_spin2"
+    | "fist_ac_gliding_start"
+    | "fist_ac_gliding_tumbling_front"
+    | "fist_ac_gliding_turnleft"
+    | "fist_ac_gliding_turnright"
+    | "fist_ac_gliding_umbrella_back"
+    | "fist_ac_gliding_umbrella_bl"
+    | "fist_ac_gliding_umbrella_boost"
+    | "fist_ac_gliding_umbrella_br"
+    | "fist_ac_gliding_umbrella_fl"
+    | "fist_ac_gliding_umbrella_fr"
+    | "fist_ac_gliding_umbrella_front_start"
+    | "fist_ac_gliding_umbrella_idle"
+    | "fist_ac_gliding_umbrella_leapattack_launch"
+    | "fist_ac_gliding_umbrella_leapattack_launch_end"
+    | "fist_ac_gliding_umbrella_left"
+    | "fist_ac_gliding_umbrella_right"
+    | "fist_ac_gliding_umbrella_sliding"
+    | "fist_ac_gliding_umbrella_start"
+    | "fist_ac_gliding_umbrella_turbulence_back"
+    | "fist_ac_gliding_umbrella_turbulence_l"
+    | "fist_ac_gliding_umbrella_turbulence_up"
+    | "fist_ac_gliding_wing_attack_launch_01"
+    | "fist_ac_gliding_wing_attack_launch_02"
+    | "fist_ac_gliding_wing_back"
+    | "fist_ac_gliding_wing_bl"
+    | "fist_ac_gliding_wing_boost"
+    | "fist_ac_gliding_wing_bow_attack"
+    | "fist_ac_gliding_wing_bow_launch"
+    | "fist_ac_gliding_wing_br"
+    | "fist_ac_gliding_wing_end"
+    | "fist_ac_gliding_wing_fl"
+    | "fist_ac_gliding_wing_fr"
+    | "fist_ac_gliding_wing_front"
+    | "fist_ac_gliding_wing_grounding"
+    | "fist_ac_gliding_wing_grounding_end"
+    | "fist_ac_gliding_wing_idle"
+    | "fist_ac_gliding_wing_leapattack_dash"
+    | "fist_ac_gliding_wing_leapattack_launch"
+    | "fist_ac_gliding_wing_right"
+    | "fist_ac_gliding_wing_sliding"
+    | "fist_ac_gliding_wing_spell_attack"
+    | "fist_ac_gliding_wing_spell_launch_02"
+    | "fist_ac_gliding_wing_start"
+    | "fist_ac_gliding_wing_telpo_l"
+    | "fist_ac_gliding_wing_telpo_r"
+    | "fist_ac_gliding_wing_turbulence_back"
+    | "fist_ac_gliding_wing_turbulence_l"
+    | "fist_ac_gliding_wing_turbulence_r"
+    | "fist_ac_gliding_wing_turbulence_up"
+    | "fist_ac_gubuksun_oar_l_idle_a"
+    | "fist_ac_gubuksun_oar_l_idle_b"
+    | "fist_ac_gubuksun_oar_l_run_a"
+    | "fist_ac_gubuksun_oar_l_run_b"
+    | "fist_ac_gubuksun_oar_r_idle_a"
+    | "fist_ac_gubuksun_oar_r_idle_b"
+    | "fist_ac_gubuksun_oar_r_run_a"
+    | "fist_ac_gubuksun_oar_r_run_b"
+    | "fist_ac_hammer_end"
+    | "fist_ac_hammer_end_2"
+    | "fist_ac_hammer_ladder_end"
+    | "fist_ac_hammer_ladder_loop"
+    | "fist_ac_hammer_ladder_start"
+    | "fist_ac_hammer_loop"
+    | "fist_ac_hammer_loop_2"
+    | "fist_ac_hammer_sit_end"
+    | "fist_ac_hammer_sit_loop"
+    | "fist_ac_hammer_start"
+    | "fist_ac_hammer_start_2"
+    | "fist_ac_hammock_loop"
+    | "fist_ac_horse_b_geton"
+    | "fist_ac_horse_f_geton"
+    | "fist_ac_horse_l_getoff"
+    | "fist_ac_horse_l_getoff_end"
+    | "fist_ac_horse_l_getoff_loop"
+    | "fist_ac_horse_l_getoff_start"
+    | "fist_ac_horse_l_geton"
+    | "fist_ac_horse_r_geton"
+    | "fist_ac_hurray_mub"
+    | "fist_ac_ignition_end"
+    | "fist_ac_ignition_loop"
+    | "fist_ac_ignition_start"
+    | "fist_ac_kneelfull"
+    | "fist_ac_kneel_end"
+    | "fist_ac_kneel_loop"
+    | "fist_ac_kneel_start"
+    | "fist_ac_lavacar_idle"
+    | "fist_ac_lavacar_launch"
+    | "fist_ac_lavacar_launch_special"
+    | "fist_ac_lavacar_steering"
+    | "fist_ac_lavacar_steering_backward"
+    | "fist_ac_lion_b_geton"
+    | "fist_ac_lion_f_geton"
+    | "fist_ac_lion_l_getoff"
+    | "fist_ac_lion_l_geton"
+    | "fist_ac_lion_r_geton"
+    | "fist_ac_lowbed_a_loop"
+    | "fist_ac_lowbed_b_loop"
+    | "fist_ac_lowbed_c_loop"
+    | "fist_ac_makepotion_end"
+    | "fist_ac_makepotion_loop"
+    | "fist_ac_makepotion_start"
+    | "fist_ac_meditationfull"
+    | "fist_ac_meditation_end"
+    | "fist_ac_meditation_loop"
+    | "fist_ac_meditation_start"
+    | "fist_ac_middleship_oar_idle"
+    | "fist_ac_middleship_oar_run"
+    | "fist_ac_milkcowdance01"
+    | "fist_ac_milkcowdance02"
+    | "fist_ac_milkcowdance03"
+    | "fist_ac_milking_end"
+    | "fist_ac_milking_loop"
+    | "fist_ac_milking_start"
+    | "fist_ac_mine_end"
+    | "fist_ac_mine_loop"
+    | "fist_ac_mooflag_end"
+    | "fist_ac_mooflag_start"
+    | "fist_ac_nailing_end"
+    | "fist_ac_nailing_loop"
+    | "fist_ac_nailing_start"
+    | "fist_ac_newspeedboat_l"
+    | "fist_ac_newspeedboat_r"
+    | "fist_ac_operate_loop"
+    | "fist_ac_operate_start"
+    | "fist_ac_painter"
+    | "fist_ac_petwash_end"
+    | "fist_ac_petwash_start"
+    | "fist_ac_photo_01_end"
+    | "fist_ac_photo_01_loop"
+    | "fist_ac_photo_01_start"
+    | "fist_ac_pickupstand"
+    | "fist_ac_pickup_end"
+    | "fist_ac_pickup_loop"
+    | "fist_ac_pickup_start"
+    | "fist_ac_plank_down"
+    | "fist_ac_plank_up"
+    | "fist_ac_poledance_loop"
+    | "fist_ac_poundinggrain_loop"
+    | "fist_ac_poundinggrain_start"
+    | "fist_ac_prostrate"
+    | "fist_ac_prostrate_start"
+    | "fist_ac_pulling_end"
+    | "fist_ac_pulling_loop"
+    | "fist_ac_pulling_start"
+    | "fist_ac_punishment_critical"
+    | "fist_ac_punishment_end"
+    | "fist_ac_punishment_hit"
+    | "fist_ac_punishment_loop"
+    | "fist_ac_punishment_sit_critical"
+    | "fist_ac_punishment_sit_end"
+    | "fist_ac_punishment_sit_hit"
+    | "fist_ac_punishment_sit_loop"
+    | "fist_ac_punishment_sit_start"
+    | "fist_ac_punishment_start"
+    | "fist_ac_push_b"
+    | "fist_ac_push_f"
+    | "fist_ac_putdown"
+    | "fist_ac_reading_end"
+    | "fist_ac_reading_independent_end"
+    | "fist_ac_reading_independent_loop"
+    | "fist_ac_reading_independent_start"
+    | "fist_ac_reading_loop"
+    | "fist_ac_reading_start"
+    | "fist_ac_receive"
+    | "fist_ac_receive_mub"
+    | "fist_ac_resurrect_end"
+    | "fist_ac_resurrect_loop"
+    | "fist_ac_robot_b_geton"
+    | "fist_ac_robot_f_geton"
+    | "fist_ac_robot_l_getoff_start"
+    | "fist_ac_robot_l_geton"
+    | "fist_ac_robot_r_geton"
+    | "fist_ac_sail_steer_l"
+    | "fist_ac_sail_steer_l_mub"
+    | "fist_ac_sail_steer_r"
+    | "fist_ac_sail_steer_r_mub"
+    | "fist_ac_salute"
+    | "fist_ac_sawingwidth_end"
+    | "fist_ac_sawingwidth_loop"
+    | "fist_ac_sawing_end"
+    | "fist_ac_sawing_loop"
+    | "fist_ac_sawing_start"
+    | "fist_ac_sdance"
+    | "fist_ac_sewing_end"
+    | "fist_ac_shoveling_end"
+    | "fist_ac_shoveling_loop"
+    | "fist_ac_shoveling_start"
+    | "fist_ac_sitgroundfull"
+    | "fist_ac_sitground_doze"
+    | "fist_ac_sitground_doze_mub"
+    | "fist_ac_sitground_doze_ub"
+    | "fist_ac_sitground_end"
+    | "fist_ac_sitground_loop"
+    | "fist_ac_sitground_start"
+    | "fist_ac_sit_down_2_loop"
+    | "fist_ac_sit_down_2_start"
+    | "fist_ac_sit_down_launch"
+    | "fist_ac_sit_down_launch_2"
+    | "fist_ac_sit_down_loop"
+    | "fist_ac_sit_down_start"
+    | "fist_ac_sit_up"
+    | "fist_ac_sit_up_2"
+    | "fist_ac_slaughter"
+    | "fist_ac_smallhammer_end"
+    | "fist_ac_smallhammer_loop"
+    | "fist_ac_smallhammer_start"
+    | "fist_ac_springwater"
+    | "fist_ac_sprinklewater_end"
+    | "fist_ac_sprinklewater_loop"
+    | "fist_ac_sprinklewater_start"
+    | "fist_ac_stage_rand_1"
+    | "fist_ac_standcoffin"
+    | "fist_ac_standcoffin_start"
+    | "fist_ac_standsled_steering"
+    | "fist_ac_steercar_b"
+    | "fist_ac_steercar_idle"
+    | "fist_ac_steercar_launch"
+    | "fist_ac_steercar_launch_special"
+    | "fist_ac_steering"
+    | "fist_ac_steering_backward"
+    | "fist_ac_steer_idle"
+    | "fist_ac_steer_l"
+    | "fist_ac_steer_r"
+    | "fist_ac_steer_steering"
+    | "fist_ac_stumble"
+    | "fist_ac_stumble_knockback"
+    | "fist_ac_summon_cast"
+    | "fist_ac_summon_cast_start"
+    | "fist_ac_summon_launch_mub"
+    | "fist_ac_sunbed_b_loop"
+    | "fist_ac_synchronize01"
+    | "fist_ac_talk_11"
+    | "fist_ac_talk_12"
+    | "fist_ac_talk_13"
+    | "fist_ac_talk_14"
+    | "fist_ac_talk_15"
+    | "fist_ac_talk_21"
+    | "fist_ac_talk_22"
+    | "fist_ac_talk_23"
+    | "fist_ac_talk_24"
+    | "fist_ac_talk_25"
+    | "fist_ac_talk_31"
+    | "fist_ac_talk_32"
+    | "fist_ac_talk_33"
+    | "fist_ac_talk_34"
+    | "fist_ac_talk_35"
+    | "fist_ac_talk_41"
+    | "fist_ac_talk_42"
+    | "fist_ac_talk_43"
+    | "fist_ac_talk_44"
+    | "fist_ac_talk_45"
+    | "fist_ac_talk_51"
+    | "fist_ac_talk_52"
+    | "fist_ac_talk_53"
+    | "fist_ac_talk_54"
+    | "fist_ac_talk_55"
+    | "fist_ac_telescope_end"
+    | "fist_ac_telescope_loop"
+    | "fist_ac_telescope_start"
+    | "fist_ac_temptation"
+    | "fist_ac_throw"
+    | "fist_ac_throwwater"
+    | "fist_ac_thumbsup"
+    | "fist_ac_trailer_idle"
+    | "fist_ac_trailer_sit_idle"
+    | "fist_ac_trailer_steering"
+    | "fist_ac_whipping"
+    | "fist_ac_whipping_2"
+    | "fist_ac_whistle"
+    | "fist_ac_worship"
+    | "fist_ac_wyvern_b_geton"
+    | "fist_ac_wyvern_b_geton_2"
+    | "fist_ac_wyvern_f_geton"
+    | "fist_ac_wyvern_f_geton_2"
+    | "fist_ac_wyvern_l_geton"
+    | "fist_ac_wyvern_r_geton"
+    | "fist_ac_wyvern_r_geton_2"
+    | "fist_ac_yatadance02"
+    | "fist_ac_yatadance03"
+    | "fist_ac_yataflag_end"
+    | "fist_ac_yataflag_loop"
+    | "fist_ac_yataflag_start"
+    | "fist_ba_crawl_idle"
+    | "fist_ba_dance2_idle"
+    | "fist_ba_dance3_idle"
+    | "fist_ba_dance_idle"
+    | "fist_ba_idle_swim"
+    | "fist_ba_relaxed_idle"
+    | "fist_ba_relaxed_idle_rand_1"
+    | "fist_ba_relaxed_idle_rand_2"
+    | "fist_ba_relaxed_idle_rand_3"
+    | "fist_ba_relaxed_idle_rand_4"
+    | "fist_ba_relaxed_idle_rand_5"
+    | "fist_ba_relaxed_idle_rand_6"
+    | "fist_ba_relaxed_idle_start"
+    | "fist_ba_relaxed_idle_stop"
+    | "fist_ba_relaxed_rand_idle"
+    | "fist_ba_siegeweapon_idle"
+    | "fist_co_attack_r"
+    | "fist_co_attack_r_mub"
+    | "fist_co_sk_fistattack"
+    | "fist_co_sk_fistattack_mub"
+    | "fist_co_sk_pierce"
+    | "fist_co_sk_pierce_mub"
+    | "fist_co_sk_swim_pierce"
+    | "fist_co_sk_tackle"
+    | "fist_co_sk_uppercut"
+    | "fist_co_sk_uppercut_mub"
+    | "fist_co_swim_attack_r"
+    | "fist_em_amaze"
+    | "fist_em_amaze_mub"
+    | "fist_em_angry"
+    | "fist_em_angry_mub"
+    | "fist_em_anguish"
+    | "fist_em_anguish_mub"
+    | "fist_em_backpain"
+    | "fist_em_backpain_mub"
+    | "fist_em_badsmell"
+    | "fist_em_badsmell_mub"
+    | "fist_em_bashful"
+    | "fist_em_bashful_mub"
+    | "fist_em_beg"
+    | "fist_em_beg_mub"
+    | "fist_em_bored"
+    | "fist_em_bored_mub"
+    | "fist_em_bow"
+    | "fist_em_bow_mub"
+    | "fist_em_bye"
+    | "fist_em_bye_mub"
+    | "fist_em_celebrate"
+    | "fist_em_celebrate_mub"
+    | "fist_em_clap"
+    | "fist_em_clap_mub"
+    | "fist_em_cry"
+    | "fist_em_cry_mub"
+    | "fist_em_dogeza"
+    | "fist_em_fan_end"
+    | "fist_em_fan_start"
+    | "fist_em_fear"
+    | "fist_em_fear_mub"
+    | "fist_em_fight"
+    | "fist_em_fight_mub"
+    | "fist_em_find"
+    | "fist_em_find_mub"
+    | "fist_em_forward"
+    | "fist_em_forward_mub"
+    | "fist_em_gang"
+    | "fist_em_gang_mub"
+    | "fist_em_general_end"
+    | "fist_em_general_loop"
+    | "fist_em_general_start"
+    | "fist_em_greet"
+    | "fist_em_handx"
+    | "fist_em_handx_mub"
+    | "fist_em_happy"
+    | "fist_em_heart"
+    | "fist_em_heart_mub"
+    | "fist_em_knight_vow_end"
+    | "fist_em_knight_vow_loop"
+    | "fist_em_knight_vow_start"
+    | "fist_em_laugh"
+    | "fist_em_laugh_mub"
+    | "fist_em_lonely_mub"
+    | "fist_em_loud_mub"
+    | "fist_em_no"
+    | "fist_em_no_mub"
+    | "fist_em_paper"
+    | "fist_em_paper_mub"
+    | "fist_em_pointback"
+    | "fist_em_pointback_mub"
+    | "fist_em_pointdown"
+    | "fist_em_pointdown_mub"
+    | "fist_em_pointup"
+    | "fist_em_pointup_mub"
+    | "fist_em_point_mub"
+    | "fist_em_question"
+    | "fist_em_question_mub"
+    | "fist_em_rock"
+    | "fist_em_rock_mub"
+    | "fist_em_scissors"
+    | "fist_em_scissors_mub"
+    | "fist_em_shakehead"
+    | "fist_em_shakehead_mub"
+    | "fist_em_shouting"
+    | "fist_em_shouting_mub"
+    | "fist_em_shy"
+    | "fist_em_sigh"
+    | "fist_em_sigh_mub"
+    | "fist_em_silenttribute"
+    | "fist_em_silenttribute_mub"
+    | "fist_em_sleep_2_loop"
+    | "fist_em_sleep_2_start"
+    | "fist_em_sleep_3_loop"
+    | "fist_em_sleep_3_start"
+    | "fist_em_sleep_end"
+    | "fist_em_sleep_loop"
+    | "fist_em_stretch"
+    | "fist_em_sweat"
+    | "fist_em_sweat_mub"
+    | "fist_em_sword_salute_end"
+    | "fist_em_tapchest"
+    | "fist_em_umbrella_end"
+    | "fist_em_umbrella_start"
+    | "fist_em_vomit"
+    | "fist_em_vomit_mub"
+    | "fist_em_whist"
+    | "fist_em_whist_mub"
+    | "fist_em_yawn_mub"
+    | "fist_em_yes"
+    | "fist_em_yes_mub"
+    | "fist_fishing_action"
+    | "fist_fishing_action_l"
+    | "fist_fishing_action_r"
+    | "fist_fishing_action_reelin"
+    | "fist_fishing_action_reelout"
+    | "fist_fishing_action_up"
+    | "fist_fishing_casting"
+    | "fist_fishing_hooking"
+    | "fist_fishing_ice_casting"
+    | "fist_fishing_ice_idle"
+    | "fist_fishing_ice_landing"
+    | "fist_fishing_idle"
+    | "fist_fishing_landing"
+    | "fist_mo_barrel_idle"
+    | "fist_mo_barrel_jump"
+    | "fist_mo_climb_idle"
+    | "fist_mo_climb_right"
+    | "fist_mo_climb_up"
+    | "fist_mo_crawl_run_bl"
+    | "fist_mo_crawl_run_br"
+    | "fist_mo_crawl_run_fl"
+    | "fist_mo_crawl_run_fr"
+    | "fist_mo_dance2_run_b"
+    | "fist_mo_dance2_run_bl"
+    | "fist_mo_dance2_run_br"
+    | "fist_mo_dance2_run_f"
+    | "fist_mo_dance2_run_fl"
+    | "fist_mo_dance2_run_fr"
+    | "fist_mo_dance2_run_l"
+    | "fist_mo_dance2_run_r"
+    | "fist_mo_dance3_run_b"
+    | "fist_mo_dance3_run_bl"
+    | "fist_mo_dance3_run_br"
+    | "fist_mo_dance3_run_f"
+    | "fist_mo_dance3_run_fl"
+    | "fist_mo_dance3_run_fr"
+    | "fist_mo_dance3_run_l"
+    | "fist_mo_dance3_run_r"
+    | "fist_mo_dance4_run_b"
+    | "fist_mo_dance4_run_bl"
+    | "fist_mo_dance4_run_br"
+    | "fist_mo_dance4_run_f"
+    | "fist_mo_dance4_run_fl"
+    | "fist_mo_dance4_run_fr"
+    | "fist_mo_dance4_run_l"
+    | "fist_mo_dance4_run_r"
+    | "fist_mo_dance_run_b"
+    | "fist_mo_dance_run_bl"
+    | "fist_mo_dance_run_br"
+    | "fist_mo_dance_run_f"
+    | "fist_mo_dance_run_fl"
+    | "fist_mo_dance_run_fr"
+    | "fist_mo_dance_run_l"
+    | "fist_mo_dance_run_r"
+    | "fist_mo_gondola_rowing_b"
+    | "fist_mo_gondola_rowing_bl"
+    | "fist_mo_gondola_rowing_br"
+    | "fist_mo_gondola_rowing_f"
+    | "fist_mo_gondola_rowing_fl"
+    | "fist_mo_gondola_rowing_fr"
+    | "fist_mo_gondola_rowing_idle"
+    | "fist_mo_jump_b_land"
+    | "fist_mo_jump_b_loop"
+    | "fist_mo_jump_b_start"
+    | "fist_mo_jump_dance2_b_land"
+    | "fist_mo_jump_dance2_f_land"
+    | "fist_mo_jump_dance2_f_start"
+    | "fist_mo_jump_dance2_l_land"
+    | "fist_mo_jump_dance2_r_land"
+    | "fist_mo_jump_dance2_s_end"
+    | "fist_mo_jump_dance3_b_land"
+    | "fist_mo_jump_dance3_f_land"
+    | "fist_mo_jump_dance3_f_loop"
+    | "fist_mo_jump_dance3_f_start"
+    | "fist_mo_jump_dance3_l_land"
+    | "fist_mo_jump_dance3_r_land"
+    | "fist_mo_jump_dance3_s_end"
+    | "fist_mo_jump_dance4_b_land"
+    | "fist_mo_jump_dance4_f_land"
+    | "fist_mo_jump_dance4_f_loop"
+    | "fist_mo_jump_dance4_f_start"
+    | "fist_mo_jump_dance4_l_land"
+    | "fist_mo_jump_dance4_l_loop"
+    | "fist_mo_jump_dance4_l_start"
+    | "fist_mo_jump_dance4_r_land"
+    | "fist_mo_jump_dance4_r_start"
+    | "fist_mo_jump_dance_b_land"
+    | "fist_mo_jump_dance_f_land"
+    | "fist_mo_jump_dance_f_loop"
+    | "fist_mo_jump_dance_l_land"
+    | "fist_mo_jump_dance_l_loop"
+    | "fist_mo_jump_dance_l_start"
+    | "fist_mo_jump_dance_r_land"
+    | "fist_mo_jump_dance_r_loop"
+    | "fist_mo_jump_dance_s_end"
+    | "fist_mo_jump_dance_s_loop"
+    | "fist_mo_jump_dance_s_start"
+    | "fist_mo_jump_f_land"
+    | "fist_mo_jump_f_loop"
+    | "fist_mo_jump_f_start"
+    | "fist_mo_jump_l_land"
+    | "fist_mo_jump_l_loop"
+    | "fist_mo_jump_l_start"
+    | "fist_mo_jump_r_loop"
+    | "fist_mo_jump_r_start"
+    | "fist_mo_jump_sprint_f_land"
+    | "fist_mo_jump_sprint_f_loop"
+    | "fist_mo_jump_sprint_f_start"
+    | "fist_mo_jump_sprint_l_land"
+    | "fist_mo_jump_sprint_r_land"
+    | "fist_mo_jump_sprint_r_loop"
+    | "fist_mo_jump_sprint_r_start"
+    | "fist_mo_jump_s_end"
+    | "fist_mo_jump_s_land"
+    | "fist_mo_jump_s_loop"
+    | "fist_mo_jump_s_start"
+    | "fist_mo_jump_walk_b_land"
+    | "fist_mo_jump_walk_f_land"
+    | "fist_mo_jump_walk_l_land"
+    | "fist_mo_jump_walk_r_land"
+    | "fist_mo_ladder_down"
+    | "fist_mo_ladder_down_left"
+    | "fist_mo_ladder_down_right"
+    | "fist_mo_ladder_end"
+    | "fist_mo_ladder_end_80"
+    | "fist_mo_ladder_idle"
+    | "fist_mo_ladder_left"
+    | "fist_mo_ladder_right"
+    | "fist_mo_ladder_up"
+    | "fist_mo_ladder_up_left"
+    | "fist_mo_ladder_up_right"
+    | "fist_mo_mast_down"
+    | "fist_mo_mast_down_left"
+    | "fist_mo_mast_down_right"
+    | "fist_mo_mast_idle"
+    | "fist_mo_mast_left"
+    | "fist_mo_mast_right"
+    | "fist_mo_mast_up"
+    | "fist_mo_mast_up_left"
+    | "fist_mo_mast_up_right"
+    | "fist_mo_normal_runuphill_f"
+    | "fist_mo_normal_run_b"
+    | "fist_mo_normal_run_bl"
+    | "fist_mo_normal_run_br"
+    | "fist_mo_normal_run_f"
+    | "fist_mo_normal_run_fl"
+    | "fist_mo_normal_run_fr"
+    | "fist_mo_normal_run_l"
+    | "fist_mo_normal_run_r"
+    | "fist_mo_normal_walk_b"
+    | "fist_mo_normal_walk_bl"
+    | "fist_mo_normal_walk_br"
+    | "fist_mo_normal_walk_f"
+    | "fist_mo_normal_walk_fl"
+    | "fist_mo_normal_walk_fr"
+    | "fist_mo_normal_walk_l"
+    | "fist_mo_normal_walk_r"
+    | "fist_mo_prope_backward_idle"
+    | "fist_mo_prope_frontward_idle"
+    | "fist_mo_prope_idle"
+    | "fist_mo_prope_leap"
+    | "fist_mo_prope_rand_ub"
+    | "fist_mo_prope_up"
+    | "fist_mo_relaxed_runtoidle_b"
+    | "fist_mo_relaxed_runtoidle_f_step_r"
+    | "fist_mo_relaxed_walktoidle_b"
+    | "fist_mo_relaxed_walktoidle_f_step_l"
+    | "fist_mo_relaxed_walktoidle_f_step_r"
+    | "fist_mo_relaxed_walktoidle_l"
+    | "fist_mo_relaxed_walktoidle_r"
+    | "fist_mo_rope_back_clip"
+    | "fist_mo_rope_clip_idle"
+    | "fist_mo_rope_end"
+    | "fist_mo_rope_front_clip"
+    | "fist_mo_rowing_b"
+    | "fist_mo_rowing_bl"
+    | "fist_mo_rowing_br"
+    | "fist_mo_rowing_f"
+    | "fist_mo_rowing_fl"
+    | "fist_mo_rowing_fr"
+    | "fist_mo_rowing_idle"
+    | "fist_mo_sprint_run_f"
+    | "fist_mo_sprint_run_fl"
+    | "fist_mo_sprint_run_fr"
+    | "fist_mo_sprint_run_l"
+    | "fist_mo_sprint_run_r"
+    | "fist_mo_stealth_run_b"
+    | "fist_mo_stealth_run_bl"
+    | "fist_mo_stealth_run_br"
+    | "fist_mo_stealth_run_f"
+    | "fist_mo_stealth_run_fl"
+    | "fist_mo_stealth_run_fr"
+    | "fist_mo_stealth_run_l"
+    | "fist_mo_stealth_run_r"
+    | "fist_mo_swim_b"
+    | "fist_mo_swim_bl"
+    | "fist_mo_swim_bl_deep"
+    | "fist_mo_swim_br"
+    | "fist_mo_swim_b_deep"
+    | "fist_mo_swim_down"
+    | "fist_mo_swim_f"
+    | "fist_mo_swim_fl"
+    | "fist_mo_swim_fl_deep"
+    | "fist_mo_swim_fr"
+    | "fist_mo_swim_f_deep"
+    | "fist_mo_swim_l_deep"
+    | "fist_mo_swim_r_deep"
+    | "fist_mo_swim_up"
+    | "fist_pos_combat_idle"
+    | "fist_pos_combat_idle_rand_1"
+    | "fist_pos_combat_idle_rand_2"
+    | "fist_pos_gnd_corpse_lastwill_idle"
+    | "fist_pos_gnd_corpse_lastwill_talk"
+    | "fist_pos_gnd_sidesleep_idle"
+    | "fist_pos_hang_criminal_idle"
+    | "fist_pos_hang_criminal_idle_rand_1"
+    | "fist_pos_priest_pray_idle"
+    | "fist_pos_priest_pray_idle_rand_1"
+    | "fist_pos_priest_pray_talk"
+    | "fist_pos_priest_silent_idle"
+    | "fist_pos_priest_silent_idle_rand_1"
+    | "fist_pos_priest_silent_idle_rand_2"
+    | "fist_pos_priest_silent_idle_rand_3"
+    | "fist_pos_priest_silent_idle_rand_4"
+    | "fist_pos_priest_silent_idle_rand_5"
+    | "fist_pos_priest_silent_talk"
+    | "fist_pos_record_idle"
+    | "fist_pos_record_idle_rand_1"
+    | "fist_pos_record_idle_rand_2"
+    | "fist_pos_record_idle_rand_3"
+    | "fist_pos_record_idle_rand_4"
+    | "fist_pos_record_idle_rand_5"
+    | "fist_pos_record_nd_idle"
+    | "fist_pos_sit_chair_armrest_idle"
+    | "fist_pos_sit_chair_armrest_idle_rand_1"
+    | "fist_pos_sit_chair_armrest_talk"
+    | "fist_pos_sit_chair_crossleg_idle"
+    | "fist_pos_sit_chair_crossleg_talk"
+    | "fist_pos_sit_chair_drink_idle"
+    | "fist_pos_sit_chair_drink_idle_rand_1"
+    | "fist_pos_sit_chair_drink_talk"
+    | "fist_pos_sit_chair_eatsuop_idle"
+    | "fist_pos_sit_chair_eatsuop_talk"
+    | "fist_pos_sit_chair_idle"
+    | "fist_pos_sit_chair_idle_rand_1"
+    | "fist_pos_sit_chair_idle_rand_2"
+    | "fist_pos_sit_chair_idle_rand_3"
+    | "fist_pos_sit_chair_oldman_cane_idle"
+    | "fist_pos_sit_chair_oldman_cane_talk"
+    | "fist_pos_sit_chair_pure_idle"
+    | "fist_pos_sit_chair_pure_idle_rand_1"
+    | "fist_pos_sit_chair_pure_talk"
+    | "fist_pos_sit_chair_readbook_idle"
+    | "fist_pos_sit_chair_readbook_talk"
+    | "fist_pos_sit_chair_rest_idle"
+    | "fist_pos_sit_chair_rest_idle_rand_1"
+    | "fist_pos_sit_chair_rest_idle_rand_2"
+    | "fist_pos_sit_chair_rest_idle_rand_3"
+    | "fist_pos_sit_chair_rest_talk"
+    | "fist_pos_sit_chair_sleep_idle"
+    | "fist_pos_sit_chair_sleep_idle_rand_1"
+    | "fist_pos_sit_chair_sleep_idle_rand_2"
+    | "fist_pos_sit_chair_sleep_idle_rand_3"
+    | "fist_pos_sit_chair_talk"
+    | "fist_pos_sit_crouch_idle_rand_1"
+    | "fist_pos_sit_crouch_idle_rand_2"
+    | "fist_pos_sit_crouch_idle_rand_3"
+    | "fist_pos_sit_crouch_idle_rand_4"
+    | "fist_pos_sit_crouch_idle_rand_5"
+    | "fist_pos_sit_crouch_livestock_idle"
+    | "fist_pos_sit_crouch_livestock_idle_rand_1"
+    | "fist_pos_sit_crouch_livestock_idle_rand_2"
+    | "fist_pos_sit_crouch_livestock_talk"
+    | "fist_pos_sit_crouch_talk"
+    | "fist_pos_sit_gnd_drunken_idle"
+    | "fist_pos_sit_gnd_drunken_idle_rand_1"
+    | "fist_pos_sit_gnd_drunken_idle_rand_2"
+    | "fist_pos_sit_gnd_drunken_idle_rand_3"
+    | "fist_pos_sit_gnd_drunken_talk"
+    | "fist_pos_sit_gnd_prisoner_idle"
+    | "fist_pos_sit_gnd_prisoner_talk"
+    | "fist_pos_sit_gnd_wounded_idle"
+    | "fist_pos_sit_gnd_wounded_talk"
+    | "fist_pos_sit_lean_idle"
+    | "fist_pos_sit_lean_idle_rand_1"
+    | "fist_pos_sit_lean_idle_rand_2"
+    | "fist_pos_sit_lean_idle_rand_3"
+    | "fist_pos_sit_lean_idle_rand_4"
+    | "fist_pos_sit_lean_idle_rand_5"
+    | "fist_pos_sit_lean_talk"
+    | "fist_pos_soldier_attention_idle"
+    | "fist_pos_soldier_attention_idle_rand_1"
+    | "fist_pos_soldier_attention_talk"
+    | "fist_pos_stn_afraid_idle"
+    | "fist_pos_stn_afraid_idle_rand_1"
+    | "fist_pos_stn_afraid_idle_rand_2"
+    | "fist_pos_stn_afraid_talk"
+    | "fist_pos_stn_angry_idle"
+    | "fist_pos_stn_angry_idle_rand_1"
+    | "fist_pos_stn_angry_idle_rand_2"
+    | "fist_pos_stn_boring_talk"
+    | "fist_pos_stn_calling_idle"
+    | "fist_pos_stn_calling_idle_rand_1"
+    | "fist_pos_stn_calling_talk"
+    | "fist_pos_stn_cleaning_idle"
+    | "fist_pos_stn_cooking_soup_idle"
+    | "fist_pos_stn_cooking_soup_talk"
+    | "fist_pos_stn_crossarm_idle"
+    | "fist_pos_stn_crossarm_idle_rand_1"
+    | "fist_pos_stn_crossarm_idle_rand_2"
+    | "fist_pos_stn_crossarm_idle_rand_3"
+    | "fist_pos_stn_crossarm_idle_rand_4"
+    | "fist_pos_stn_crossarm_idle_rand_5"
+    | "fist_pos_stn_crossarm_talk"
+    | "fist_pos_stn_crying_idle"
+    | "fist_pos_stn_crying_idle_rand_1"
+    | "fist_pos_stn_crying_talk"
+    | "fist_pos_stn_drink_idle"
+    | "fist_pos_stn_drink_idle_rand_1"
+    | "fist_pos_stn_drink_talk"
+    | "fist_pos_stn_eatsuop_talk"
+    | "fist_pos_stn_fishing_idle"
+    | "fist_pos_stn_fishing_idle_rand_1"
+    | "fist_pos_stn_florist_idle"
+    | "fist_pos_stn_florist_idle_rand_1"
+    | "fist_pos_stn_florist_idle_rand_2"
+    | "fist_pos_stn_florist_talk"
+    | "fist_pos_stn_getherhands_idle_rand_1"
+    | "fist_pos_stn_getherhands_talk"
+    | "fist_pos_stn_guitarist_idle"
+    | "fist_pos_stn_guitarist_talk"
+    | "fist_pos_stn_handsback_idle"
+    | "fist_pos_stn_handsback_idle_rand_1"
+    | "fist_pos_stn_handsback_idle_rand_2"
+    | "fist_pos_stn_handsback_idle_rand_3"
+    | "fist_pos_stn_handsback_talk"
+    | "fist_pos_stn_leanshovel_idle"
+    | "fist_pos_stn_leanshovel_talk"
+    | "fist_pos_stn_liabilities_idle"
+    | "fist_pos_stn_liabilities_idle_rand_1"
+    | "fist_pos_stn_liabilities_talk"
+    | "fist_pos_stn_oldman_cane_idle"
+    | "fist_pos_stn_oldman_cane_idle_rand_1"
+    | "fist_pos_stn_oldman_cane_idle_rand_2"
+    | "fist_pos_stn_oldman_cane_talk"
+    | "fist_pos_stn_onehand_relaxed_idle"
+    | "fist_pos_stn_peep_idle"
+    | "fist_pos_stn_peep_talk"
+    | "fist_pos_stn_pharmacist_idle"
+    | "fist_pos_stn_pharmacist_idle_rand_1"
+    | "fist_pos_stn_pharmacist_idle_rand_2"
+    | "fist_pos_stn_relaxed_a_idle_rand_1"
+    | "fist_pos_stn_relaxed_a_idle_rand_2"
+    | "fist_pos_stn_relaxed_b_idle"
+    | "fist_pos_stn_relaxed_b_idle_rand_1"
+    | "fist_pos_stn_relaxed_b_idle_rand_2"
+    | "fist_pos_stn_relaxed_c_idle_rand_2"
+    | "fist_pos_stn_searching_idle"
+    | "fist_pos_stn_searching_idle_rand_1"
+    | "fist_pos_stn_searching_talk"
+    | "fist_pos_stn_sick_searching_idle"
+    | "fist_pos_stn_sick_searching_idle_rand_1"
+    | "fist_pos_stn_sick_searching_idle_rand_2"
+    | "fist_pos_stn_sick_searching_talk"
+    | "fist_pos_stn_singing_idle"
+    | "fist_pos_stn_soldier_archer_idle"
+    | "fist_pos_stn_soldier_archer_idle_rand_1"
+    | "fist_pos_stn_soldier_archer_idle_rand_2"
+    | "fist_pos_stn_soldier_archer_idle_talk"
+    | "fist_pos_stn_soldier_archer_talk"
+    | "fist_pos_stn_soldier_general_idle"
+    | "fist_pos_stn_soldier_general_talk"
+    | "fist_pos_stn_soldier_guard_idle"
+    | "fist_pos_stn_soldier_guard_talk"
+    | "fist_pos_stn_stumble_idle"
+    | "fist_pos_stn_stumble_talk"
+    | "fist_pos_stn_telescope_talk"
+    | "fist_pos_stn_thinking_talk"
+    | "fist_pos_vendor_idle"
+    | "fist_pos_vendor_idle_rand_1"
+    | "fist_pos_vendor_idle_rand_2"
+    | "fist_pos_vendor_idle_rand_3"
+    | "fist_pos_vendor_idle_rand_4"
+    | "fist_pos_vendor_idle_rand_5"
+    | "fist_gs_ariadance_01"
+    | "fist_gs_ariadance_02"
+    | "fist_gs_arms_command_end"
+    | "fist_gs_arms_command_fail"
+    | "fist_gs_arms_command_loop"
+    | "fist_gs_arms_command_start"
+    | "fist_gs_bboy_hip_hop_move"
+    | "fist_gs_breakdance_ready"
+    | "fist_gs_chairdance"
+    | "fist_gs_cheer"
+    | "fist_gs_chicken_dance"
+    | "fist_gs_dwdance"
+    | "fist_gs_fighting_end"
+    | "fist_gs_fighting_loop"
+    | "fist_gs_fighting_start"
+    | "fist_gs_hipshake_end"
+    | "fist_gs_hipshake_loop"
+    | "fist_gs_hipshake_start"
+    | "fist_gs_hiptap_end"
+    | "fist_gs_hiptap_loop"
+    | "fist_gs_hiptap_start"
+    | "fist_gs_hip_hop_dancing"
+    | "fist_gs_hip_hop_dancing_arm_wave"
+    | "fist_gs_hip_hop_dancing_v02"
+    | "fist_gs_housedance"
+    | "fist_gs_indodance"
+    | "fist_gs_kazatsky"
+    | "fist_gs_molangdance"
+    | "fist_gs_moonwalk"
+    | "fist_gs_moonwalk3_end"
+    | "fist_gs_moonwalk3_loop"
+    | "fist_gs_musical_turn_end"
+    | "fist_gs_musical_turn_loop"
+    | "fist_gs_musical_turn_start"
+    | "fist_gs_polka"
+    | "fist_gs_redhood"
+    | "fist_gs_redhood_wolf"
+    | "fist_gs_robothello_end"
+    | "fist_gs_robothello_loop"
+    | "fist_gs_robothello_start"
+    | "fist_gs_sit_nouhaus_chair_loop"
+    | "fist_gs_sit_nouhaus_chair_start"
+    | "fist_gs_sit_nouhaus_sofa_end"
+    | "fist_gs_sit_nouhaus_sofa_loop"
+    | "fist_gs_sit_nouhaus_sofa_start"
+    | "fist_gs_sleep_cage_end"
+    | "fist_gs_sleep_cage_loop"
+    | "fist_gs_sleep_cage_start"
+    | "fist_gs_sleep_doll_start"
+    | "fist_gs_sleep_molang_end"
+    | "fist_gs_sleep_molang_loop"
+    | "fist_gs_sleep_molang_start"
+    | "fist_gs_step_hip_hop_dance"
+    | "fist_gs_tumbling_b_end"
+    | "fist_gs_tumbling_b_loop"
+    | "fist_gs_tumbling_b_start"
+    | "fist_gs_tumbling_s_end"
+    | "fist_gs_tumbling_s_loop"
+    | "fist_gs_tumbling_s_start"
+    | "fist_gs_twist_dancing"
+    | "fist_gs_voila01_end"
+    | "fist_gs_voila01_start"
+    | "fist_gs_voila02_end"
+    | "fist_gs_voila02_loop"
+    | "fist_gs_voila02_start"
+    | "fist_gs_voila03_end"
+    | "fist_gs_voila03_loop"
+    | "fist_gs_voila03_start"
+    | "horse_ac_gliding_idle"
+    | "horse_ac_gliding_left"
+    | "horse_ac_gliding_right"
+    | "horse_ba_carrot"
+    | "horse_ba_relaxed_idle"
+    | "horse_ba_relaxed_idle_stop"
+    | "horse_co_sk_jousting"
+    | "horse_em_jump_in_place"
+    | "horse_mo_jump_f_land"
+    | "horse_mo_jump_l_land"
+    | "horse_mo_jump_l_start"
+    | "horse_mo_jump_r_land"
+    | "horse_mo_jump_r_start"
+    | "horse_mo_normal_rundownhill"
+    | "horse_mo_normal_runuphill"
+    | "horse_mo_normal_run_b"
+    | "horse_mo_normal_run_f"
+    | "horse_mo_normal_run_f_lturn"
+    | "horse_mo_normal_run_f_rturn"
+    | "horse_mo_normal_run_l"
+    | "horse_mo_normal_run_r"
+    | "horse_mo_normal_sprint_f"
+    | "horse_mo_normal_sprint_f_lturn"
+    | "horse_mo_normal_sprint_f_rturn"
+    | "horse_mo_normal_walk_f"
+    | "horse_mo_normal_walk_fl"
+    | "horse_mo_normal_walk_fr"
+    | "horse_mo_normal_walk_l"
+    | "horse_mo_normal_walk_r"
+    | "horse_mo_relaxed_idletorun_f"
+    | "horse_mo_relaxed_runtoidle_f"
+    | "lion_ba_relaxed_idle"
+    | "lion_mo_jump_f_land"
+    | "lion_mo_jump_f_start"
+    | "lion_mo_jump_l_start"
+    | "lion_mo_jump_r_land"
+    | "lion_mo_jump_r_start"
+    | "lion_mo_normal_run_b"
+    | "lion_mo_normal_run_f"
+    | "lion_mo_normal_run_f_lturn"
+    | "lion_mo_normal_run_f_rturn"
+    | "lion_mo_normal_run_l"
+    | "lion_mo_normal_run_r"
+    | "lion_mo_normal_sprint_f"
+    | "lion_mo_normal_sprint_f_rturn"
+    | "lion_mo_normal_walk_b"
+    | "lion_mo_normal_walk_f"
+    | "lion_mo_normal_walk_fr"
+    | "lion_mo_normal_walk_l"
+    | "lion_mo_normal_walk_r"
+    | "lion_mo_relaxed_idletorun_f"
+    | "lion_mo_relaxed_runtoidle_f"
+    | "loginstage_class_abyssal"
+    | "loginstage_class_abyssal_end"
+    | "loginstage_class_abyssal_idle"
+    | "loginstage_class_assassin"
+    | "loginstage_class_assassin_idle"
+    | "loginstage_class_healer"
+    | "loginstage_class_healer_end"
+    | "loginstage_class_healer_idle"
+    | "loginstage_class_madness"
+    | "loginstage_class_madness_end"
+    | "loginstage_class_melee"
+    | "loginstage_class_melee_end"
+    | "loginstage_class_melee_idle"
+    | "loginstage_class_pleasure"
+    | "loginstage_class_pleasure_end"
+    | "loginstage_class_pleasure_idle"
+    | "loginstage_class_ranger"
+    | "loginstage_class_ranger_end"
+    | "loginstage_class_ranger_idle"
+    | "loginstage_class_sorcerer"
+    | "loginstage_class_sorcerer_end"
+    | "loginstage_class_sorcerer_idle"
+    | "loginstage_tribe_select"
+    | "music_ba_combat_idle"
+    | "music_co_sk_contrabass_cast"
+    | "music_co_sk_contrabass_idle"
+    | "music_co_sk_contrabass_start"
+    | "music_co_sk_drum"
+    | "music_co_sk_drum_cast"
+    | "music_co_sk_drum_launch"
+    | "music_co_sk_drum_launch_2"
+    | "music_co_sk_drum_launch_2_mub"
+    | "music_co_sk_drum_s"
+    | "music_co_sk_drum_start"
+    | "music_co_sk_harp_cast_2"
+    | "music_co_sk_harp_idle_2"
+    | "music_co_sk_lute_cast"
+    | "music_co_sk_lute_cast_2"
+    | "music_co_sk_lute_cast_3"
+    | "music_co_sk_lute_cast_4"
+    | "music_co_sk_lute_cast_immortal"
+    | "music_co_sk_lute_cast_mub"
+    | "music_co_sk_lute_launch"
+    | "music_co_sk_lute_launch_2"
+    | "music_co_sk_lute_launch_2_mub"
+    | "music_co_sk_lute_launch_mub"
+    | "music_co_sk_lute_start"
+    | "music_co_sk_oregol_cast"
+    | "music_co_sk_oregol_start"
+    | "music_co_sk_pipe_cast"
+    | "music_co_sk_pipe_cast_2"
+    | "music_co_sk_pipe_cast_3"
+    | "music_co_sk_pipe_cast_3_mub"
+    | "music_co_sk_pipe_cast_4"
+    | "music_co_sk_pipe_cast_immortal"
+    | "music_co_sk_pipe_launch_2"
+    | "music_co_sk_pipe_launch_2_mub"
+    | "music_co_sk_pipe_launch_mub"
+    | "music_co_sk_pipe_start"
+    | "music_co_sk_sitground_lute_cast"
+    | "music_co_sk_sit_down_cello_cast"
+    | "music_co_sk_sit_down_cello_idle"
+    | "music_co_sk_sit_down_cello_start"
+    | "music_co_sk_sit_down_drum_cast"
+    | "music_co_sk_sit_down_drum_start"
+    | "music_co_sk_sit_down_piano_cast"
+    | "music_co_sk_sit_down_piano_start"
+    | "music_co_sk_string_cast"
+    | "music_co_sk_string_idle"
+    | "music_co_sk_violin_cast"
+    | "music_co_sk_violin_start"
+    | "onehand_ac_holster_side_l"
+    | "onehand_ac_holster_side_l_mub"
+    | "onehand_ac_holster_side_l_ub"
+    | "onehand_ba_combat_idle"
+    | "onehand_ba_combat_idle_rand_1"
+    | "onehand_ba_combat_idle_rand_2"
+    | "onehand_ba_combat_idle_rand_3"
+    | "onehand_ba_combat_idle_rand_4"
+    | "onehand_ba_combat_idle_rand_5"
+    | "onehand_ba_idle_swim"
+    | "onehand_ba_stealth_idle"
+    | "onehand_co_attack_l_blunt"
+    | "onehand_co_attack_l_blunt_2"
+    | "onehand_co_attack_l_blunt_2_mub"
+    | "onehand_co_attack_l_blunt_mub"
+    | "onehand_co_attack_l_pierce"
+    | "onehand_co_attack_l_pierce_2"
+    | "onehand_co_attack_l_pierce_2_mub"
+    | "onehand_co_attack_l_pierce_mub"
+    | "onehand_co_attack_l_slash"
+    | "onehand_co_attack_l_slash_2"
+    | "onehand_co_attack_l_slash_2_mub"
+    | "onehand_co_attack_l_slash_mub"
+    | "onehand_co_attack_r_blunt"
+    | "onehand_co_attack_r_blunt_2"
+    | "onehand_co_attack_r_blunt_mub"
+    | "onehand_co_attack_r_pierce"
+    | "onehand_co_attack_r_pierce_2_mub"
+    | "onehand_co_attack_r_pierce_mub"
+    | "onehand_co_attack_r_slash"
+    | "onehand_co_attack_r_slash_mub"
+    | "onehand_co_horse_attack_l_slash"
+    | "onehand_co_horse_attack_r_slash"
+    | "onehand_co_sk_fastattack_1"
+    | "onehand_co_sk_fastattack_1_mub"
+    | "onehand_co_sk_fastattack_2"
+    | "onehand_co_sk_fastattack_3"
+    | "onehand_co_sk_fastattack_3_mub"
+    | "onehand_co_sk_fastattack_4"
+    | "onehand_co_sk_impregnable"
+    | "onehand_co_sk_impregnable_mub"
+    | "onehand_co_sk_shielddefense"
+    | "onehand_co_sk_shieldpush_mub"
+    | "onehand_co_sk_shieldthrow_launch"
+    | "onehand_co_sk_shieldthrow_launch_mub"
+    | "onehand_co_sk_shieldwield_diff"
+    | "onehand_co_sk_shieldwield_diff_mub"
+    | "onehand_co_sk_shieldwield_mub"
+    | "onehand_co_sk_streakattack_1"
+    | "onehand_co_sk_streakattack_1_mub"
+    | "onehand_co_sk_streakattack_2"
+    | "onehand_co_sk_streakattack_2_mub"
+    | "onehand_co_sk_streakattack_3"
+    | "onehand_co_sk_streakattack_3_diff"
+    | "onehand_co_sk_streakattack_3_diff_mub"
+    | "onehand_co_sk_streakattack_3_mub"
+    | "onehand_co_sk_swim_cast"
+    | "onehand_co_sk_swim_fastattack_1_ub"
+    | "onehand_co_sk_swim_fastattack_2_ub"
+    | "onehand_co_sk_swim_fastattack_3_ub"
+    | "onehand_co_sk_swim_fastattack_4_ub"
+    | "onehand_co_sk_swim_impregnable_ub"
+    | "onehand_co_sk_swim_shieldpush_ub"
+    | "onehand_co_sk_swim_shieldthrow_cast"
+    | "onehand_co_sk_swim_shieldthrow_launch"
+    | "onehand_co_sk_swim_shieldwield_ub"
+    | "onehand_co_sk_swim_streakattack_1_ub"
+    | "onehand_co_sk_swim_streakattack_2_ub"
+    | "onehand_co_sk_swim_streakattack_3_ub"
+    | "onehand_co_sk_swim_throwdagger_ub"
+    | "onehand_co_sk_swim_weapon_blunt_3_cast_ub"
+    | "onehand_co_sk_swim_weapon_blunt_3_launch_ub"
+    | "onehand_co_sk_swim_weapon_blunt_ub"
+    | "onehand_co_sk_swim_weapon_pierce_2_ub"
+    | "onehand_co_sk_swim_weapon_pierce_ub"
+    | "onehand_co_sk_swim_weapon_slash_3_ub"
+    | "onehand_co_sk_swim_weapon_slash_ub"
+    | "onehand_co_sk_throw"
+    | "onehand_co_sk_throwdagger_mub"
+    | "onehand_co_sk_weapon_blunt"
+    | "onehand_co_sk_weapon_blunt_2"
+    | "onehand_co_sk_weapon_blunt_2_diff2"
+    | "onehand_co_sk_weapon_blunt_2_diff2_mub"
+    | "onehand_co_sk_weapon_blunt_2_diff_mub"
+    | "onehand_co_sk_weapon_blunt_2_mub"
+    | "onehand_co_sk_weapon_blunt_3_cast"
+    | "onehand_co_sk_weapon_blunt_3_cast_ub"
+    | "onehand_co_sk_weapon_blunt_differ"
+    | "onehand_co_sk_weapon_blunt_differ_mub"
+    | "onehand_co_sk_weapon_blunt_mub"
+    | "onehand_co_sk_weapon_pierce"
+    | "onehand_co_sk_weapon_pierce_2"
+    | "onehand_co_sk_weapon_pierce_mub"
+    | "onehand_co_sk_weapon_slash"
+    | "onehand_co_sk_weapon_slash_2"
+    | "onehand_co_sk_weapon_slash_2_mub"
+    | "onehand_co_sk_weapon_slash_3"
+    | "onehand_co_sk_weapon_slash_3_mub"
+    | "onehand_co_sk_weapon_slash_differ"
+    | "onehand_co_sk_weapon_slash_differ_mub"
+    | "onehand_co_sk_weapon_slash_mub"
+    | "onehand_co_swim_attack_l_blunt_ub"
+    | "onehand_co_swim_attack_l_pierce_ub"
+    | "onehand_co_swim_attack_l_slash_ub"
+    | "onehand_co_swim_attack_r_pierce_ub"
+    | "onehand_co_swim_attack_r_slash_ub"
+    | "onehand_mo_combat_run_b"
+    | "onehand_mo_combat_run_bl"
+    | "onehand_mo_combat_run_br"
+    | "onehand_mo_combat_run_f"
+    | "onehand_mo_combat_run_fl"
+    | "onehand_mo_combat_run_fr"
+    | "onehand_mo_combat_run_l"
+    | "onehand_mo_combat_run_r"
+    | "onehand_mo_combat_sprint_run_b"
+    | "onehand_mo_combat_sprint_run_bl"
+    | "onehand_mo_combat_sprint_run_br"
+    | "onehand_mo_combat_sprint_run_f"
+    | "onehand_mo_combat_sprint_run_fl"
+    | "onehand_mo_combat_sprint_run_fr"
+    | "onehand_mo_combat_sprint_run_l"
+    | "onehand_mo_combat_sprint_run_r"
+    | "onehand_mo_jump_b_land"
+    | "onehand_mo_jump_b_start"
+    | "onehand_mo_jump_f_land"
+    | "onehand_mo_jump_f_start"
+    | "onehand_mo_jump_l_land"
+    | "onehand_mo_jump_l_start"
+    | "onehand_mo_jump_r_land"
+    | "onehand_mo_jump_r_start"
+    | "onehand_mo_swim_b"
+    | "onehand_mo_swim_bl"
+    | "onehand_mo_swim_br"
+    | "onehand_mo_swim_f"
+    | "onehand_mo_swim_fl"
+    | "onehand_mo_swim_fr"
+    | "onehand_mo_swim_l"
+    | "onehand_mo_swim_r"
+    | "onehand_re_combat_parry"
+    | "onehand_re_combat_parry_mub"
+    | "onehand_re_combat_shieldblock"
+    | "onehand_re_combat_shieldblock_mub"
+    | "onehand_re_dance"
+    | "pangolin_mo_normal_rundownhill"
+    | "pangolin_mo_normal_runuphill"
+    | "pangolin_mo_normal_run_f_lturn"
+    | "pangolin_mo_normal_run_f_rturn"
+    | "pangolin_mo_normal_sprint_f"
+    | "pangolin_mo_relaxed_idletorun_f"
+    | "pangolin_mo_relaxed_runtoidle_f"
+    | "propoise_jetski"
+    | "robot_ba_relaxed_idle"
+    | "robot_ba_relaxed_idle_rand_1"
+    | "robot_mo_jump_f_land"
+    | "robot_mo_jump_f_loop"
+    | "robot_mo_jump_f_start"
+    | "robot_mo_normal_run_b"
+    | "robot_mo_normal_run_f"
+    | "robot_mo_normal_run_f_lturn"
+    | "robot_mo_normal_run_l"
+    | "robot_mo_normal_run_r"
+    | "robot_mo_normal_walk_f"
+    | "robot_mo_relaxed_runtoidle_f"
+    | "seabug_mo_jump_f_land"
+    | "seabug_mo_jump_f_start"
+    | "seabug_mo_normal_run_f"
+    | "seabug_mo_normal_sprint_f"
+    | "seabug_mo_relaxed_runtoidle_f"
+    | "shotgun_ba_combat_idle"
+    | "shotgun_ba_idle_swim"
+    | "shotgun_bow_co_sk_cast_2"
+    | "shotgun_bow_co_sk_cast_3"
+    | "shotgun_bow_co_sk_cast_5"
+    | "shotgun_bow_co_sk_cast_6"
+    | "shotgun_bow_co_sk_cast_7"
+    | "shotgun_bow_co_sk_cast_start"
+    | "shotgun_bow_co_sk_cast_start_2"
+    | "shotgun_bow_co_sk_cast_start_3"
+    | "shotgun_bow_co_sk_cast_start_5"
+    | "shotgun_bow_co_sk_cast_start_6"
+    | "shotgun_bow_co_sk_cast_start_7"
+    | "shotgun_bow_co_sk_high_cast"
+    | "shotgun_bow_co_sk_high_cast_start"
+    | "shotgun_bow_co_sk_high_cast_start_ub"
+    | "shotgun_bow_co_sk_high_cast_ub"
+    | "shotgun_bow_co_sk_high_launch_ub"
+    | "shotgun_bow_co_sk_launch"
+    | "shotgun_bow_co_sk_launch_2"
+    | "shotgun_bow_co_sk_launch_3"
+    | "shotgun_bow_co_sk_launch_5"
+    | "shotgun_bow_co_sk_launch_6"
+    | "shotgun_bow_co_sk_launch_7"
+    | "shotgun_bow_co_sk_swim_cast_2_ub"
+    | "shotgun_bow_co_sk_swim_cast_5_ub"
+    | "shotgun_bow_co_sk_swim_cast_start_2_ub"
+    | "shotgun_bow_co_sk_swim_cast_start_5_ub"
+    | "shotgun_bow_co_sk_swim_launch_2_ub"
+    | "shotgun_bow_co_sk_swim_launch_5_ub"
+    | "shotgun_co_attack"
+    | "shotgun_co_sk_cast_approach"
+    | "shotgun_co_sk_cast_lightning"
+    | "shotgun_co_sk_launch_approach"
+    | "shotgun_co_sk_launch_demolish"
+    | "shotgun_co_sk_launch_demolish_ub"
+    | "shotgun_co_sk_launch_dodge_b"
+    | "shotgun_co_sk_launch_dodge_bl"
+    | "shotgun_co_sk_launch_dodge_br"
+    | "shotgun_co_sk_launch_dodge_f"
+    | "shotgun_co_sk_launch_dodge_fl"
+    | "shotgun_co_sk_launch_dodge_fr"
+    | "shotgun_co_sk_launch_dodge_l"
+    | "shotgun_co_sk_launch_dodge_r"
+    | "shotgun_co_sk_launch_earthquake"
+    | "shotgun_co_sk_launch_earthquake_ub"
+    | "shotgun_co_sk_launch_finish"
+    | "shotgun_co_sk_launch_finish_ub"
+    | "shotgun_co_sk_launch_infection"
+    | "shotgun_co_sk_launch_jumpshot"
+    | "shotgun_co_sk_launch_lightning"
+    | "shotgun_co_sk_launch_notice"
+    | "shotgun_co_sk_launch_notice_ub"
+    | "shotgun_co_sk_launch_reload"
+    | "shotgun_co_sk_launch_return"
+    | "shotgun_co_sk_launch_revenge"
+    | "shotgun_co_sk_launch_revenge_ub"
+    | "shotgun_co_sk_launch_shoot_1"
+    | "shotgun_co_sk_launch_shoot_2"
+    | "shotgun_co_sk_launch_shoot_2_ub"
+    | "shotgun_co_sk_launch_shout"
+    | "shotgun_co_sk_swim_cast_approach_ub"
+    | "shotgun_co_sk_swim_launch_approach_ub"
+    | "shotgun_co_sk_swim_launch_dodge_bl"
+    | "shotgun_co_sk_swim_launch_dodge_br"
+    | "shotgun_co_sk_swim_launch_dodge_fl"
+    | "shotgun_co_sk_swim_launch_earthquake_ub"
+    | "shotgun_co_sk_swim_launch_extensive_ub"
+    | "shotgun_co_sk_swim_launch_finish_ub"
+    | "shotgun_co_sk_swim_launch_lightning_ub"
+    | "shotgun_co_sk_swim_launch_revenge_ub"
+    | "shotgun_mo_combat_runtoidle_b"
+    | "shotgun_mo_combat_runtoidle_f"
+    | "shotgun_mo_combat_runtoidle_l"
+    | "shotgun_mo_combat_runtoidle_r"
+    | "shotgun_mo_combat_run_b"
+    | "shotgun_mo_combat_run_bl"
+    | "shotgun_mo_combat_run_br"
+    | "shotgun_mo_combat_run_f"
+    | "shotgun_mo_combat_run_fl"
+    | "shotgun_mo_combat_run_fr"
+    | "shotgun_mo_combat_run_l"
+    | "shotgun_mo_combat_run_r"
+    | "shotgun_mo_jump_b_land"
+    | "shotgun_mo_jump_f_land"
+    | "shotgun_mo_jump_l_land"
+    | "shotgun_mo_jump_s_end"
+    | "shotgun_mo_swim_b"
+    | "shotgun_mo_swim_bl"
+    | "shotgun_mo_swim_br"
+    | "shotgun_mo_swim_f"
+    | "shotgun_mo_swim_fl"
+    | "shotgun_mo_swim_fr"
+    | "shotgun_mo_swim_l"
+    | "shotgun_mo_swim_r"
+    | "sled_ba_relaxed_idle"
+    | "dead_02"
+    | "dead_swim_loop"
+    | "dead_swim_start"
+    | "standup_nw_back"
+    | "standup_nw_stomach"
+    | "staff_ac_holster_staff_l"
+    | "staff_ac_holster_staff_l_ub"
+    | "staff_co_attack_2"
+    | "staff_co_attack_2_mub"
+    | "staff_co_attack_mub"
+    | "twohand_ac_holster_back_r"
+    | "twohand_ac_holster_back_r_mub"
+    | "twohand_ac_holster_back_r_ub"
+    | "twohand_ac_omizutori"
+    | "twohand_ac_watergun"
+    | "twohand_ba_combat_idle"
+    | "twohand_ba_combat_idle_rand_1"
+    | "twohand_ba_combat_idle_rand_2"
+    | "twohand_ba_combat_idle_rand_3"
+    | "twohand_ba_combat_idle_rand_4"
+    | "twohand_ba_combat_idle_rand_5"
+    | "twohand_ba_idle_swim"
+    | "twohand_co_attack"
+    | "twohand_co_attack_2"
+    | "twohand_co_attack_2_mub"
+    | "twohand_co_attack_mub"
+    | "twohand_co_sk_fastattack_1_mub"
+    | "twohand_co_sk_fastattack_3_mub"
+    | "twohand_co_sk_streakattack_1"
+    | "twohand_co_sk_streakattack_1_mub"
+    | "twohand_co_sk_streakattack_2"
+    | "twohand_co_sk_streakattack_2_mub"
+    | "twohand_co_sk_streakattack_3"
+    | "twohand_co_sk_streakattack_3_mub"
+    | "twohand_co_sk_swim_fastattack_2_ub"
+    | "twohand_co_sk_swim_fastattack_3_ub"
+    | "twohand_co_sk_swim_fastattack_4_ub"
+    | "twohand_co_sk_swim_streakattack_1_ub"
+    | "twohand_co_sk_swim_streakattack_2_ub"
+    | "twohand_co_sk_swim_streakattack_3_ub"
+    | "twohand_co_sk_swim_weapon_blunt_2_ub"
+    | "twohand_co_sk_swim_weapon_blunt_3_cast_ub"
+    | "twohand_co_sk_swim_weapon_blunt_3_launch_ub"
+    | "twohand_co_sk_swim_weapon_blunt_ub"
+    | "twohand_co_sk_swim_weapon_pierce_2_ub"
+    | "twohand_co_sk_swim_weapon_pierce_ub"
+    | "twohand_co_sk_swim_weapon_slash_2_ub"
+    | "twohand_co_sk_swim_weapon_slash_3_ub"
+    | "twohand_co_sk_weapon_blunt"
+    | "twohand_co_sk_weapon_blunt_2"
+    | "twohand_co_sk_weapon_blunt_2_diff"
+    | "twohand_co_sk_weapon_blunt_2_diff2"
+    | "twohand_co_sk_weapon_blunt_2_diff2_mub"
+    | "twohand_co_sk_weapon_blunt_2_diff_mub"
+    | "twohand_co_sk_weapon_blunt_2_mub"
+    | "twohand_co_sk_weapon_blunt_3_cast"
+    | "twohand_co_sk_weapon_blunt_3_launch"
+    | "twohand_co_sk_weapon_blunt_differ"
+    | "twohand_co_sk_weapon_blunt_differ_mub"
+    | "twohand_co_sk_weapon_blunt_mub"
+    | "twohand_co_sk_weapon_pierce_2"
+    | "twohand_co_sk_weapon_pierce_2_mub"
+    | "twohand_co_sk_weapon_pierce_mub"
+    | "twohand_co_sk_weapon_slash"
+    | "twohand_co_sk_weapon_slash_2"
+    | "twohand_co_sk_weapon_slash_2_mub"
+    | "twohand_co_sk_weapon_slash_3"
+    | "twohand_co_sk_weapon_slash_3_mub"
+    | "twohand_co_sk_weapon_slash_differ"
+    | "twohand_co_sk_weapon_slash_differ_mub"
+    | "twohand_co_sk_weapon_slash_mub"
+    | "twohand_mo_combat_runtoidle_b"
+    | "twohand_mo_combat_runtoidle_f"
+    | "twohand_mo_combat_runtoidle_l"
+    | "twohand_mo_combat_runtoidle_r"
+    | "twohand_mo_jump_s_end"
+    | "twohand_mo_jump_walk_b_land"
+    | "twohand_mo_jump_walk_l_land"
+    | "twohand_mo_jump_walk_r_land"
+    | "twohand_mo_normal_walk_fl"
+    | "twohand_mo_normal_walk_fr"
+    | "twohand_mo_normal_walk_r"
+    | "twohand_mo_swim_b"
+    | "twohand_mo_swim_f"
+    | "twohand_mo_swim_fr"
+    | "twohand_mo_swim_l"
+    | "twohand_mo_swim_r"
+    | "twohand_re_combat_critical"
+    | "twohand_re_combat_hit"
+    | "twohand_re_combat_hit_l_mub"
+    | "twohand_re_combat_hit_mub"
+    | "twohand_re_combat_hit_r_mub"
+    | "twohand_re_combat_parry"
+    | "onehand_co_sk_swim_streakattack_1_ub"
+    | "onehand_co_sk_swim_streakattack_2_ub"
+    | "onehand_co_sk_swim_streakattack_3_ub"
+    | "twoswords_co_sk_dashpierce"
+    | "twoswords_co_sk_dashslash"
+    | "twoswords_co_sk_fastattack_1"
+    | "twoswords_co_sk_fastattack_1_mub"
+    | "twoswords_co_sk_fastattack_2"
+    | "twoswords_co_sk_fastattack_2_mub"
+    | "twoswords_co_sk_fastattack_3"
+    | "twoswords_co_sk_fastattack_3_mub"
+    | "twoswords_co_sk_fastattack_4"
+    | "twoswords_co_sk_fastattack_4_mub"
+    | "twoswords_co_sk_hackattack_1"
+    | "twoswords_co_sk_hackattack_2"
+    | "twoswords_co_sk_hackattack_3"
+    | "twoswords_co_sk_hackattack_4"
+    | "twoswords_co_sk_jumpattack"
+    | "twoswords_co_sk_jumpattack_2"
+    | "twoswords_co_sk_piece_1"
+    | "twoswords_co_sk_piece_1_mub"
+    | "twoswords_co_sk_piece_2"
+    | "twoswords_co_sk_piece_3"
+    | "twoswords_co_sk_piece_3_mub"
+    | "twoswords_co_sk_streakattack_1"
+    | "twoswords_co_sk_streakattack_1_mub"
+    | "twoswords_co_sk_streakattack_2"
+    | "twoswords_co_sk_streakattack_3"
+    | "twoswords_co_sk_streakattack_3_mub"
+    | "twoswords_co_sk_swim_dashslash_ub"
+    | "twoswords_co_sk_swim_fastattack_1_ub"
+    | "twoswords_co_sk_swim_fastattack_2_ub"
+    | "twoswords_co_sk_swim_fastattack_4"
+    | "twoswords_co_sk_swim_fastattack_4_ub"
+    | "twoswords_co_sk_swim_hackattack_1_ub"
+    | "twoswords_co_sk_swim_hackattack_2_ub"
+    | "twoswords_co_sk_swim_hackattack_3_ub"
+    | "twoswords_co_sk_swim_hackattack_4_ub"
+    | "twoswords_co_sk_swim_jumpattack_2_ub"
+    | "twoswords_co_sk_swim_jumpattack_ub"
+    | "twoswords_co_sk_swim_leapattack_ub"
+    | "twoswords_co_sk_swim_piece_1_ub"
+    | "twoswords_co_sk_swim_piece_2_ub"
+    | "twoswords_co_sk_swim_piece_3_ub"
+    | "twoswords_co_sk_swim_streakattack_1_ub"
+    | "twoswords_co_sk_swim_streakattack_2_ub"
+    | "twoswords_co_sk_swim_throwdagger_ub"
+    | "twoswords_co_sk_swim_weapon_pierce_ub"
+    | "twoswords_co_sk_swim_weapon_slash_3_ub"
+    | "twoswords_co_sk_swim_weapon_slash_ub"
+    | "twoswords_co_sk_throwdagger"
+    | "twoswords_co_sk_throwdagger_mub"
+    | "twoswords_co_sk_turnslash"
+    | "twoswords_co_sk_weapon_blunt"
+    | "twoswords_co_sk_weapon_blunt_differ"
+    | "twoswords_co_sk_weapon_blunt_differ_mub"
+    | "twoswords_co_sk_weapon_blunt_mub"
+    | "twoswords_co_sk_weapon_pierce"
+    | "twoswords_co_sk_weapon_pierce_mub"
+    | "twoswords_co_sk_weapon_slash"
+    | "twoswords_co_sk_weapon_slash_3"
+    | "twoswords_co_sk_weapon_slash_3_mub"
+    | "twoswords_co_sk_weapon_slash_differ_mub"
+    | "twoswords_co_sk_weapon_slash_mub"
+    | "wildboar_mo_normal_run_f"
+    | "wildboar_mo_normal_sprint_f"
+    | "wildboar_mo_relaxed_idletorun_f"
+    | "wildboar_mo_relaxed_runtoidle_f"
+    | "wyvern_ac_coin_launch"
+    | "wyvern_ac_gliding_idle"
+    | "wyvern_ba_relaxed_idle"
+    | "wyvern_mo_normal_run_f"
+```
+
+**API**
+
+`10`|`11`|`12`|`13`|`14`...(+80)
+
+```lua
+API:
+    | `2` -- X2Console
+    | `3` -- X2Ability
+    | `4` -- X2Action
+    | `5` -- X2Bag
+    | `6` -- X2BattleField
+    | `7` -- X2Camera
+    | `8` -- X2Chat
+    | `9` -- X2Craft
+    | `10` -- X2Cursor
+    | `11` -- X2Debug
+    | `12` -- X2Decal
+    | `13` -- X2Equipment
+    | `14` -- X2Faction
+    | `15` -- X2Friend
+    | `16` -- X2Dominion
+    | `17` -- X2Family
+    | `18` -- X2Trial
+    | `19` -- X2Hotkey
+    | `20` -- X2House
+    | `21` -- X2Input
+    | `22` -- X2Interaction
+    | `23` -- X2Item
+    | `24` -- X2Locale
+    | `25` -- X2LoginCharacter
+    | `26` -- X2CustomizingUnit
+    | `27` -- X2Loot
+    | `28` -- X2Mail
+    | `29` -- X2GoodsMail
+    | `30` -- X2NameTag
+    | `31` -- X2Option
+    | `32` -- X2Player
+    | `33` -- X2Quest
+    | `34` -- X2SiegeWeapon
+    | `35` -- X2Skill
+    | `36` -- X2Sound
+    | `37` -- X2Store
+    | `38` -- X2Team
+    | `39` -- X2Time
+    | `40` -- X2Trade
+    | `41` -- X2Tutorial
+    | `42` -- X2Unit
+    | `43` -- X2Util
+    | `44` -- X2Warp
+    | `45` -- X2World
+    | `46` -- X2Ucc
+    | `47` -- X2Bank
+    | `48` -- X2Coffer
+    | `49` -- X2GuildBank
+    | `50` -- X2RenewItem
+    | `51` -- X2Auction
+    | `52` -- X2Mate
+    | `53` -- X2BuffSkill
+    | `54` -- X2Map
+    | `55` -- X2DialogManager
+    | `56` -- X2InGameShop
+    | `57` -- X2UserMusic
+    | `58` -- X2Book
+    | `59` -- X2Nation
+    | `60` -- X2Customizer
+    | `61` -- X2Security
+    | `62` -- X2ItemLookConverter
+    | `63` -- X2Rank
+    | `64` -- X2Helper
+    | `65` -- X2PremiumService
+    | `66` -- X2ItemEnchant
+    | `67` -- X2Achievement
+    | `68` -- X2Hero
+    | `69` -- X2EventCenter
+    | `70` -- X2ItemGacha
+    | `71` -- X2ItemGuide
+    | `72` -- X2BlessUthstin
+    | `73` -- X2Resident
+    | `74` -- X2HeirSkill
+    | `75` -- X2EquipSlotReinforce
+    | `76` -- X2OneAndOneChat
+    | `77` -- X2Squad
+    | `78` -- X2Dyeing
+    | `79` -- X2SkillAlert
+    | `80` -- X2Indun
+    | `81` -- X2ArchePass
+    | `82` -- X2Butler
+    | `83` -- X2CombatResource
+    | `84` -- X2Roster
+    | `85` -- X2MiniScoreboard
+    | `86` -- X2SurveyForm
+```
+
+**AUCTION_CATEGORY**
+
+`0`|`10`|`11`|`12`|`13`...(+76)
+
+```lua
+AUCTION_CATEGORY:
+    | `0` -- ALL
+    | `1` -- DAGGER
+    | `2` -- SWORD
+    | `3` -- BLADE
+    | `4` -- SPEAR
+    | `5` -- AXE
+    | `6` -- MACE
+    | `7` -- STAFF
+    | `8` -- TWOHAND_SWORD
+    | `9` -- TWOHAND_BLADE
+    | `10` -- TWOHAND_SPEAR
+    | `11` -- TWOHAND_AXE
+    | `12` -- TWOHAND_MACE
+    | `13` -- TWOHAND_STAFF
+    | `14` -- BOW
+    | `15` -- LIGHT_ARMOR_HEAD
+    | `16` -- LIGHT_ARMOR_CHEST
+    | `17` -- LIGHT_ARMOR_WAIST
+    | `18` -- LIGHT_ARMOR_ARMS
+    | `19` -- LIGHT_ARMOR_HANDS
+    | `20` -- LIGHT_ARMOR_LEGS
+    | `21` -- LIGHT_ARMOR_FEET
+    | `22` -- NORMAL_ARMOR_HEAD
+    | `23` -- NORMAL_ARMOR_CHEST
+    | `24` -- NORMAL_ARMOR_WAIST
+    | `25` -- NORMAL_ARMOR_ARMS
+    | `26` -- NORMAL_ARMOR_HANDS
+    | `27` -- NORMAL_ARMOR_LEGS
+    | `28` -- NORMAL_ARMOR_FEET
+    | `29` -- HEAVY_ARMOR_HEAD
+    | `30` -- HEAVY_ARMOR_CHEST
+    | `31` -- HEAVY_ARMOR_WAIST
+    | `32` -- HEAVY_ARMOR_ARMS
+    | `33` -- HEAVY_ARMOR_HANDS
+    | `34` -- HEAVY_ARMOR_LEGS
+    | `35` -- HEAVY_ARMOR_FEET
+    | `36` -- ORE
+    | `37` -- RAW_LUMBER
+    | `38` -- ROCK
+    | `39` -- RAWHIDE
+    | `40` -- FIBER
+    | `41` -- PARTS
+    | `42` -- MEAT
+    | `43` -- MARINE_PRODUCT
+    | `44` -- GRAIN
+    | `45` -- VEGETABLES
+    | `46` -- FRUIT
+    | `47` -- SPICE
+    | `48` -- DRUG_MATERIAL
+    | `49` -- FLOWER
+    | `50` -- SOIL
+    | `51` -- JEWEL
+    | `52` -- PAPER
+    | `53` -- METAL
+    | `54` -- WOOD
+    | `55` -- STONE
+    | `56` -- LEATHER
+    | `57` -- CLOTH
+    | `58` -- MACHINE
+    | `59` -- GLASS
+    | `60` -- RUBBER
+    | `61` -- NOBLE_METAL
+    | `62` -- ALCHEMY_MATERIAL
+    | `63` -- CRAFT_MATERIAL
+    | `64` -- ANIMAL
+    | `65` -- YOUNG_PLANT
+    | `66` -- SEED
+    | `67` -- FURNITURE
+    | `68` -- ADVENTURE
+    | `69` -- TOY
+    | `70` -- DYE
+    | `71` -- COOKING_OIL
+    | `72` -- SEASONING
+    | `73` -- MOON_STONE_SCALE_RED
+    | `74` -- MOON_STONE_SCALE_YELLOW
+    | `75` -- MOON_STONE_SCALE_GREEN
+    | `76` -- MOON_STONE_SCALE_BLUE
+    | `77` -- MOON_STONE_SCALE_PURPLE
+    | `78` -- MOON_STONE_SHADOW_CRAFT
+    | `79` -- MOON_STONE_SHADOW_HONOR
+    | `80` -- SHOTGUN
+```
+
+**AUCTION_GRADE_FILTER**
+
+`10`|`11`|`12`|`13`|`1`...(+8)
+
+```lua
+AUCTION_GRADE_FILTER:
+    | `1` -- ALL
+    | `2` -- BASIC
+    | `3` -- GRAND
+    | `4` -- RARE
+    | `5` -- ARCANE
+    | `6` -- HEROIC
+    | `7` -- UNIQUE
+    | `8` -- CELESTIAL
+    | `9` -- DIVINE
+    | `10` -- EPIC
+    | `11` -- LEGENDARY
+    | `12` -- MYTHIC
+    | `13` -- ETERNAL
+```
+
+**AUTOCOMPLETE_FILTER**
+
+""|"auctionable"|"craftMaterial"|"craftProduct"
+
+```lua
+AUTOCOMPLETE_FILTER:
+    | "auctionable"
+    | "craftMaterial"
+    | "craftProduct"
+    | ""
+```
+
+**AUTOCOMPLETE_TYPE**
+
+"appellation"|"ingameShopGoods"|"item"|"itemForDebug"|"itemTypeForDebug"...(+1)
+
+```lua
+AUTOCOMPLETE_TYPE:
+    | "appellation"
+    | "ingameShopGoods"
+    | "item"
+    | "itemForDebug"
+    | "itemTypeForDebug"
+    | "store"
+```
+
+**AVI_PATH**
+
+"objects/machinima/avi/all_01_recruit.avi"|"objects/machinima/avi/all_02_memory.avi"|"objects/machinima/avi/all_04_son.avi"|"objects/machinima/avi/all_15_plateau.avi"|"objects/machinima/avi/all_16_river.avi"...(+178)
+
+```lua
+AVI_PATH:
+    | "objects/machinima/avi/all_01_recruit.avi"
+    | "objects/machinima/avi/all_02_memory.avi"
+    | "objects/machinima/avi/all_04_son.avi"
+    | "objects/machinima/avi/all_15_plateau.avi"
+    | "objects/machinima/avi/all_16_river.avi"
+    | "objects/machinima/avi/all_17_post.avi"
+    | "objects/machinima/avi/all_19_invade.avi"
+    | "objects/machinima/avi/all_20_pollute.avi"
+    | "objects/machinima/avi/all_21_purify_c12.avi"
+    | "objects/machinima/avi/all_21_purify_c43.avi"
+    | "objects/machinima/avi/all_23_sandglass_01.avi"
+    | "objects/machinima/avi/all_23_sandglass_02.avi"
+    | "objects/machinima/avi/all_24_gate.avi"
+    | "objects/machinima/avi/all_29_arrival.avi"
+    | "objects/machinima/avi/all_35_death01.avi"
+    | "objects/machinima/avi/all_41_abbys.avi"
+    | "objects/machinima/avi/all_42_altar.avi"
+    | "objects/machinima/avi/black.avi"
+    | "objects/machinima/avi/ci.avi"
+    | "objects/machinima/avi/dw_03_golem_avi.avi"
+    | "objects/machinima/avi/etc_01_anthalon.avi"
+    | "objects/machinima/avi/etc_02_kraken.avi"
+    | "objects/machinima/avi/etc_03_revi.avi"
+    | "objects/machinima/avi/etc_04_kraken.avi"
+    | "objects/machinima/avi/etc_05_levi.avi"
+    | "objects/machinima/avi/etc_06_library_1.avi"
+    | "objects/machinima/avi/etc_06_library_2.avi"
+    | "objects/machinima/avi/etc_06_library_3.avi"
+    | "objects/machinima/avi/etc_06_library_4.avi"
+    | "objects/machinima/avi/etc_07_feast_00.avi"
+    | "objects/machinima/avi/etc_07_feast_01.avi"
+    | "objects/machinima/avi/etc_07_feast_02.avi"
+    | "objects/machinima/avi/etc_07_feast_03.avi"
+    | "objects/machinima/avi/etc_07_feast_04.avi"
+    | "objects/machinima/avi/etc_09_heir.avi"
+    | "objects/machinima/avi/etc_10_nuia.avi"
+    | "objects/machinima/avi/etc_10_nuia_sound.avi"
+    | "objects/machinima/avi/etc_11_harihara.avi"
+    | "objects/machinima/avi/etc_11_harihara_sound.avi"
+    | "objects/machinima/avi/etc_12_pirate.avi"
+    | "objects/machinima/avi/etc_12_pirate_sound.avi"
+    | "objects/machinima/avi/etc_14_kadum.avi"
+    | "objects/machinima/avi/etc_15_survivor.avi"
+    | "objects/machinima/avi/id_300_01.avi"
+    | "objects/machinima/avi/id_300_06_dw.avi"
+    | "objects/machinima/avi/id_300_06_el.avi"
+    | "objects/machinima/avi/id_300_06_fe.avi"
+    | "objects/machinima/avi/id_300_06_ha.avi"
+    | "objects/machinima/avi/id_300_06_nu.avi"
+    | "objects/machinima/avi/op_el.avi"
+    | "objects/machinima/avi/op_fe.avi"
+    | "objects/machinima/avi/op_ha.avi"
+    | "objects/machinima/avi/op_nu.avi"
+    | "objects/machinima/avi/op_start.avi"
+    | "objects/machinima/avi/sl_all_01.avi"
+    | "objects/machinima/avi/sl_all_02.avi"
+    | "objects/machinima/avi/sl_all_03.avi"
+    | "objects/machinima/avi/sl_all_04.avi"
+    | "objects/machinima/avi/sl_all_05.avi"
+    | "objects/machinima/avi/sl_all_06.avi"
+    | "objects/machinima/avi/sl_all_07.avi"
+    | "objects/machinima/avi/sl_all_07_wa.avi"
+    | "objects/machinima/avi/sl_all_08.avi"
+    | "objects/machinima/avi/sl_all_09.avi"
+    | "objects/machinima/avi/sl_all_10.avi"
+    | "objects/machinima/avi/sl_all_11.avi"
+    | "objects/machinima/avi/sl_all_12.avi"
+    | "objects/machinima/avi/sl_all_13.avi"
+    | "objects/machinima/avi/sl_all_14.avi"
+    | "objects/machinima/avi/sl_all_15.avi"
+    | "objects/machinima/avi/sl_all_16.avi"
+    | "objects/machinima/avi/sl_dw_001.avi"
+    | "objects/machinima/avi/sl_dw_002.avi"
+    | "objects/machinima/avi/sl_dw_003.avi"
+    | "objects/machinima/avi/sl_dw_004.avi"
+    | "objects/machinima/avi/sl_dw_005.avi"
+    | "objects/machinima/avi/sl_dw_006.avi"
+    | "objects/machinima/avi/sl_dw_007.avi"
+    | "objects/machinima/avi/sl_dw_008.avi"
+    | "objects/machinima/avi/sl_el_001.avi"
+    | "objects/machinima/avi/sl_el_002.avi"
+    | "objects/machinima/avi/sl_el_003.avi"
+    | "objects/machinima/avi/sl_el_004.avi"
+    | "objects/machinima/avi/sl_el_005.avi"
+    | "objects/machinima/avi/sl_el_007.avi"
+    | "objects/machinima/avi/sl_el_008.avi"
+    | "objects/machinima/avi/sl_el_009.avi"
+    | "objects/machinima/avi/sl_el_010.avi"
+    | "objects/machinima/avi/sl_el_011.avi"
+    | "objects/machinima/avi/sl_el_012.avi"
+    | "objects/machinima/avi/sl_el_013.avi"
+    | "objects/machinima/avi/sl_el_014.avi"
+    | "objects/machinima/avi/sl_el_015.avi"
+    | "objects/machinima/avi/sl_el_016.avi"
+    | "objects/machinima/avi/sl_el_017.avi"
+    | "objects/machinima/avi/sl_el_018.avi"
+    | "objects/machinima/avi/sl_el_019.avi"
+    | "objects/machinima/avi/sl_el_021.avi"
+    | "objects/machinima/avi/sl_el_022.avi"
+    | "objects/machinima/avi/sl_el_023.avi"
+    | "objects/machinima/avi/sl_el_024.avi"
+    | "objects/machinima/avi/sl_el_028.avi"
+    | "objects/machinima/avi/sl_fe_001.avi"
+    | "objects/machinima/avi/sl_fe_002.avi"
+    | "objects/machinima/avi/sl_fe_003.avi"
+    | "objects/machinima/avi/sl_fe_004.avi"
+    | "objects/machinima/avi/sl_fe_005.avi"
+    | "objects/machinima/avi/sl_fe_006.avi"
+    | "objects/machinima/avi/sl_fe_007.avi"
+    | "objects/machinima/avi/sl_fe_008.avi"
+    | "objects/machinima/avi/sl_fe_009.avi"
+    | "objects/machinima/avi/sl_fe_010.avi"
+    | "objects/machinima/avi/sl_fe_011.avi"
+    | "objects/machinima/avi/sl_fe_012.avi"
+    | "objects/machinima/avi/sl_fe_013.avi"
+    | "objects/machinima/avi/sl_fe_014.avi"
+    | "objects/machinima/avi/sl_fe_015.avi"
+    | "objects/machinima/avi/sl_fe_016.avi"
+    | "objects/machinima/avi/sl_fe_017.avi"
+    | "objects/machinima/avi/sl_fe_018.avi"
+    | "objects/machinima/avi/sl_fe_019.avi"
+    | "objects/machinima/avi/sl_fe_020.avi"
+    | "objects/machinima/avi/sl_fe_021.avi"
+    | "objects/machinima/avi/sl_fe_022.avi"
+    | "objects/machinima/avi/sl_fe_023.avi"
+    | "objects/machinima/avi/sl_fe_024.avi"
+    | "objects/machinima/avi/sl_fe_028.avi"
+    | "objects/machinima/avi/sl_fe_029.avi"
+    | "objects/machinima/avi/sl_ha_001.avi"
+    | "objects/machinima/avi/sl_ha_002.avi"
+    | "objects/machinima/avi/sl_ha_003.avi"
+    | "objects/machinima/avi/sl_ha_004.avi"
+    | "objects/machinima/avi/sl_ha_005.avi"
+    | "objects/machinima/avi/sl_ha_006.avi"
+    | "objects/machinima/avi/sl_ha_007.avi"
+    | "objects/machinima/avi/sl_ha_009.avi"
+    | "objects/machinima/avi/sl_ha_010.avi"
+    | "objects/machinima/avi/sl_ha_011.avi"
+    | "objects/machinima/avi/sl_ha_012.avi"
+    | "objects/machinima/avi/sl_ha_013.avi"
+    | "objects/machinima/avi/sl_ha_014.avi"
+    | "objects/machinima/avi/sl_ha_015.avi"
+    | "objects/machinima/avi/sl_ha_016.avi"
+    | "objects/machinima/avi/sl_ha_017.avi"
+    | "objects/machinima/avi/sl_ha_018.avi"
+    | "objects/machinima/avi/sl_ha_019.avi"
+    | "objects/machinima/avi/sl_ha_020.avi"
+    | "objects/machinima/avi/sl_ha_022.avi"
+    | "objects/machinima/avi/sl_ha_023.avi"
+    | "objects/machinima/avi/sl_ha_024.avi"
+    | "objects/machinima/avi/sl_ha_028.avi"
+    | "objects/machinima/avi/sl_ha_029.avi"
+    | "objects/machinima/avi/sl_nu_001.avi"
+    | "objects/machinima/avi/sl_nu_002.avi"
+    | "objects/machinima/avi/sl_nu_004.avi"
+    | "objects/machinima/avi/sl_nu_005.avi"
+    | "objects/machinima/avi/sl_nu_006.avi"
+    | "objects/machinima/avi/sl_nu_007.avi"
+    | "objects/machinima/avi/sl_nu_008.avi"
+    | "objects/machinima/avi/sl_nu_010.avi"
+    | "objects/machinima/avi/sl_nu_011.avi"
+    | "objects/machinima/avi/sl_nu_012.avi"
+    | "objects/machinima/avi/sl_nu_013.avi"
+    | "objects/machinima/avi/sl_nu_014.avi"
+    | "objects/machinima/avi/sl_nu_015.avi"
+    | "objects/machinima/avi/sl_nu_016.avi"
+    | "objects/machinima/avi/sl_nu_017.avi"
+    | "objects/machinima/avi/sl_nu_018.avi"
+    | "objects/machinima/avi/sl_nu_019.avi"
+    | "objects/machinima/avi/sl_nu_020.avi"
+    | "objects/machinima/avi/sl_nu_021.avi"
+    | "objects/machinima/avi/sl_nu_024.avi"
+    | "objects/machinima/avi/sl_wb_001.avi"
+    | "objects/machinima/avi/sl_wb_002.avi"
+    | "objects/machinima/avi/sl_wb_003.avi"
+    | "objects/machinima/avi/sl_wb_004.avi"
+    | "objects/machinima/avi/sl_wb_005.avi"
+    | "objects/machinima/avi/sl_wb_006.avi"
+    | "objects/machinima/avi/sl_wb_007.avi"
+    | "objects/machinima/avi/sl_wb_008.avi"
+    | "objects/machinima/avi/wb_06_fail.avi"
+    | "objects/machinima/avi/wb_07_dream.avi"
+    | "objects/machinima/avi/wb_08_pray.avi"
+```
+
+**BEAUTY_SHOP_ZOOM**
+
+`-1`|`0`|`1`|`2`
+
+```lua
+BEAUTY_SHOP_ZOOM:
+    | `-1` -- FIRST
+    | `0` -- SECOND
+    | `1` -- THIRD
+    | `2` -- FOURTH
+```
+
+**BIND_TYPE**
+
+"buff"|"function"|"item"|"none"|"pet_skill"...(+2)
+
+```lua
+BIND_TYPE:
+    | "buff"
+    | "function"
+    | "item"
+    | "none"
+    | "pet_skill"
+    | "skill"
+    | "slave_skill"
+```
+
+**BUFF_ACTION**
+
+"create"|"destroy"
+
+```lua
+BUFF_ACTION:
+    | "create"
+    | "destroy"
+```
+
+**BUFF_TARGET**
+
+"character"|"mate"|"slave"
+
+```lua
+BUFF_TARGET:
+    | "character"
+    | "mate"
+    | "slave"
+```
+
+**BUTLER_EVENT**
+
+"equipment"|"garden"|"harvestSlot"|"labowPower"|"productionCost"...(+5)
+
+```lua
+BUTLER_EVENT:
+    | "equipment"
+    | "garden"
+    | "harvestSlot"
+    | "labowPower" -- XLGAMES misspelt this.
+    | "production_cost_free_charged_count"
+    | "productionCost"
+    | "reservedHarvest"
+    | "reservedSlot"
+    | "specialtyTradeSlot"
+    | "tractor"
+```
+
+**BUTTON_STYLE**
+
+"accept_v"|"actionbar_lock"|"actionbar_rotate"|"actionbar_unlock"|"all_repair"...(+183)
+
+```lua
+-- game/ui/setting/button_style.g
+BUTTON_STYLE:
+    | "accept_v"
+    | "actionbar_lock"
+    | "actionbar_rotate"
+    | "actionbar_unlock"
+    | "all_repair"
+    | "auction_post_bind"
+    | "auction_successor"
+    | "auction_successor_grey"
+    | "banner_close"
+    | "btn_close_default"
+    | "btn_close_mini"
+    | "btn_raid_recruit"
+    | "butler_change_look"
+    | "button_common_book"
+    | "button_common_option"
+    | "button_complete"
+    | "button_daru"
+    | "button_request"
+    | "button_search"
+    | "cancel_fix_item"
+    | "cancel_mini"
+    | "cancel_search_in_inventory"
+    | "char_select_page_represent_char"
+    | "character"
+    | "character_equip_close"
+    | "character_equip_open"
+    | "character_info_bless_uthstin"
+    | "character_info_btn_shop"
+    | "character_info_change"
+    | "character_info_detail_btn"
+    | "character_lock_off"
+    | "character_lock_on"
+    | "character_search"
+    | "character_slot_created"
+    | "character_slot_created_red"
+    | "character_slot_created_red_selected"
+    | "character_slot_created_selected"
+    | "character_slot_enchant"
+    | "character_slot_equipment"
+    | "character_slot_impossible"
+    | "character_slot_possible"
+    | "character_swap"
+    | "character_swap_on"
+    | "chat_tab_selected"
+    | "chat_tab_unselected"
+    | "combat_resource_close"
+    | "combat_resource_open"
+    | "common_back"
+    | "common_hud"
+    | "config"
+    | "customizing_freeze"
+    | "customizing_load"
+    | "customizing_save"
+    | "deposit_withdrawal"
+    | "down_arrow"
+    | "equip_scroll_button_down"
+    | "equip_scroll_button_up"
+    | "equipment_map"
+    | "esc"
+    | "exit"
+    | "expansion"
+    | "expansion_small"
+    | "expedition_war_alarm"
+    | "first_page"
+    | "fix"
+    | "fix_item"
+    | "grid_folder_down_arrow"
+    | "grid_folder_right_arrow"
+    | "grid_folder_up_arrow"
+    | "housing_demolish"
+    | "housing_remove"
+    | "housing_rotation"
+    | "housing_sale"
+    | "housing_ucc"
+    | "hud_btn_archelife_off"
+    | "hud_btn_chat_add_tab"
+    | "hud_btn_chat_scroll_down_bottom"
+    | "hud_btn_eventcenter"
+    | "hud_btn_hero_reputation"
+    | "hud_btn_ime_english"
+    | "hud_btn_ime_korea"
+    | "hud_btn_ingameshop"
+    | "hud_btn_instance"
+    | "hud_btn_merchant"
+    | "hud_btn_url_link"
+    | "hud_instance"
+    | "ingameshop_beautyshop"
+    | "ingameshop_buy"
+    | "ingameshop_cart"
+    | "ingameshop_charge_cash"
+    | "ingameshop_gender_transfer"
+    | "ingameshop_present"
+    | "instance_out"
+    | "instance_reentry"
+    | "inventory_sort"
+    | "item_enchant"
+    | "item_guide"
+    | "item_lock_in_bag"
+    | "last_page"
+    | "left_arrow"
+    | "list"
+    | "location"
+    | "lock_equip_item"
+    | "lock_item"
+    | "login_stage_character_create"
+    | "login_stage_enter_world"
+    | "login_stage_exit_game"
+    | "login_stage_game_start"
+    | "login_stage_model_change"
+    | "login_stage_option_game"
+    | "login_stage_staff"
+    | "login_stage_text_default"
+    | "login_stage_text_small"
+    | "login_stage_user_ui"
+    | "look_convert"
+    | "loot_gacha"
+    | "mail_all_mail_delete"
+    | "mail_read_mail_delete"
+    | "mail_receive_all_item"
+    | "mail_receive_money"
+    | "mail_selected_delete"
+    | "mail_take"
+    | "map_alpha"
+    | "map_alpha_select"
+    | "map_eraser"
+    | "map_position"
+    | "menu"
+    | "minimap_off"
+    | "minimap_on"
+    | "minimap_ping"
+    | "minimap_playercenter"
+    | "minimap_resize"
+    | "minimap_suboption"
+    | "minimap_zoomin"
+    | "minimap_zoomout"
+    | "minus"
+    | "modelview_rotate_left"
+    | "modelview_rotate_right"
+    | "next_page"
+    | "next_page_action_bar"
+    | "next_page_tutorial"
+    | "open_battlefield"
+    | "part_repair"
+    | "play"
+    | "plus"
+    | "portal_rename"
+    | "portal_spawn"
+    | "premium_buy_in_char_sel_page"
+    | "prev_page"
+    | "prev_page_action_bar"
+    | "prev_page_back"
+    | "prev_page_tutorial"
+    | "price"
+    | "quest_close"
+    | "quest_cutscene_close"
+    | "quest_open"
+    | "question_mark"
+    | "raid_recall"
+    | "raid_recruit_alarm"
+    | "randombox"
+    | "ready_to_siege_alarm"
+    | "reject_x"
+    | "repair"
+    | "report"
+    | "right_arrow"
+    | "roster_setting"
+    | "save"
+    | "search_mini"
+    | "search_mini_green"
+    | "siege_war_alarm"
+    | "slider_scroll_button_down"
+    | "slider_scroll_button_up"
+    | "squad_mini_view_close"
+    | "squad_mini_view_open"
+    | "survey_form_alarm"
+    | "text_default"
+    | "text_default_small"
+    | "trade_check_green"
+    | "trade_check_yellow"
+    | "unlock_equip_item"
+    | "unlock_item"
+    | "up_arrow"
+    | "uthstin_stat_max_expand"
+    | "wastebasket_shape"
+    | "wastebasket_shape_small"
+    | "write"
+    | "zone_permission_out"
+    | "zone_permission_wait"
+```
+
+**COLLISION_SOURCE**
+
+"COLLISION"|"DROWNING"|"FALLING"
+
+```lua
+COLLISION_SOURCE:
+    | "COLLISION"
+    | "DROWNING"
+    | "FALLING"
+```
+
+**COMBAT_EVENT**
+
+"ENVIRONMENTAL_DAMAGE"|"ENVIRONMENTAL_DRAIN"|"ENVIRONMENTAL_ENERGIZE"|"ENVIRONMENTAL_HEALED"|"ENVIRONMENTAL_LEECH"...(+14)
+
+```lua
+-- game/scriptsbin/globalui/chat/chat_msg_event.lua
+COMBAT_EVENT:
+    | "ENVIRONMENTAL_DAMAGE"
+    | "ENVIRONMENTAL_DRAIN"
+    | "ENVIRONMENTAL_ENERGIZE"
+    | "ENVIRONMENTAL_HEALED"
+    | "ENVIRONMENTAL_LEECH"
+    | "MELEE_DAMAGE"
+    | "MELEE_MISSED"
+    | "SPELL_AURA_APPLIED"
+    | "SPELL_AURA_REMOVED"
+    | "SPELL_CAST_FAILED"
+    | "SPELL_CAST_START"
+    | "SPELL_CAST_SUCCESS"
+    | "SPELL_DAMAGE"
+    | "SPELL_DOT_DAMAGE"
+    | "SPELL_DRAIN"
+    | "SPELL_ENERGIZE"
+    | "SPELL_HEALED"
+    | "SPELL_LEECH"
+    | "SPELL_MISSED"
+```
+
+**COMBAT_HIT_TYPE**
+
+"CRITICAL"|"HIT"|"IMMUNE"
+
+```lua
+COMBAT_HIT_TYPE:
+    | "CRITICAL"
+    | "HIT"
+    | "IMMUNE"
+```
+
+**COMMON_FARM_TYPE**
+
+`1`|`2`|`3`|`4`
+
+```lua
+COMMON_FARM_TYPE:
+    | `1` -- Public Farm
+    | `2` -- Public Spawned Saplings
+    | `3` -- Public Spawned Livestock/Seed
+    | `4` -- Public Stable
+```
+
+**CONSOLE_VAR**
+
+"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"|"MemStats"...(+2624)
+
+```lua
+CONSOLE_VAR:
+    | "aa_maxDist"
+    | "ac_animErrorClamp"
+    | "ac_animErrorMaxAngle"
+    | "ac_animErrorMaxDistance"
+    | "ac_clampTimeAnimation"
+    | "ac_clampTimeEntity"
+    | "ac_ColliderModeAI"
+    | "ac_ColliderModePlayer"
+    | "ac_debugAnimEffects"
+    | "ac_debugAnimError"
+    | "ac_debugAnimTarget"
+    | "ac_debugCarryCorrection"
+    | "ac_debugColliderMode"
+    | "ac_debugEntityParams"
+    | "ac_DebugFilter"
+    | "ac_debugFutureAnimPath"
+    | "ac_debugLocations"
+    | "ac_debugLocationsGraphs"
+    | "ac_debugMotionParams"
+    | "ac_debugMovementControlMethods"
+    | "ac_debugPrediction"
+    | "ac_debugSelection"
+    | "ac_debugSelectionParams"
+    | "ac_debugText"
+    | "ac_debugTweakTrajectoryFit"
+    | "ac_debugXXXValues"
+    | "ac_disableFancyTransitions"
+    | "ac_disableSlidingContactEvents"
+    | "ac_enableExtraSolidCollider"
+    | "ac_enableProceduralLeaning"
+    | "ac_entityAnimClamp"
+    | "ac_forceNoSimpleMovement"
+    | "ac_forceSimpleMovement"
+    | "ac_frametime"
+    | "ac_MCMFilter"
+    | "ac_MCMHor"
+    | "ac_MCMHorLocalPlayer"
+    | "ac_MCMHorNPC"
+    | "ac_MCMHorOtherPlayer"
+    | "ac_MCMVer"
+    | "ac_predictionProbabilityOri"
+    | "ac_predictionProbabilityPos"
+    | "ac_predictionSmoothingOri"
+    | "ac_predictionSmoothingPos"
+    | "ac_targetcorrectiontimescale"
+    | "ac_templateMCMs"
+    | "ac_terrain_foot_align"
+    | "ac_triggercorrectiontimescale"
+    | "action_bar_lock"
+    | "action_bar_page"
+    | "ag_action"
+    | "ag_adjustToCatchUp"
+    | "ag_averageTravelSpeed"
+    | "ag_breakmode"
+    | "ag_breakOnQuery"
+    | "ag_cache_query_results"
+    | "ag_debug"
+    | "ag_debugErrors"
+    | "ag_debugExactPos"
+    | "ag_debugLayer"
+    | "ag_debugMusic"
+    | "ag_drawActorPos"
+    | "ag_ep_correctMovement"
+    | "ag_ep_showPath"
+    | "ag_forceAdjust"
+    | "ag_forceInsideErrorDisc"
+    | "ag_fpAnimPop"
+    | "ag_humanBlending"
+    | "ag_item"
+    | "ag_lockToEntity"
+    | "ag_log"
+    | "ag_log_entity"
+    | "ag_logDrawnActors"
+    | "ag_logeffects"
+    | "ag_logselections"
+    | "ag_logsounds"
+    | "ag_logtransitions"
+    | "ag_measureActualSpeeds"
+    | "ag_path_finding_debug"
+    | "ag_physErrorInnerRadiusFactor"
+    | "ag_physErrorMaxOuterRadius"
+    | "ag_physErrorMinOuterRadius"
+    | "ag_physErrorOuterRadiusFactor"
+    | "ag_queue"
+    | "ag_safeExactPositioning"
+    | "ag_showmovement"
+    | "ag_showPhysSync"
+    | "ag_signal"
+    | "ag_stance"
+    | "ai_AdjustPathsAroundDynamicObstacles"
+    | "ai_AgentStatsDist"
+    | "ai_AllowAccuracyDecrease"
+    | "ai_AllowAccuracyIncrease"
+    | "ai_AllTime"
+    | "ai_AmbientFireQuota"
+    | "ai_AmbientFireUpdateInterval"
+    | "ai_AttemptStraightPath"
+    | "ai_Autobalance"
+    | "ai_BannedNavSoTime"
+    | "ai_BeautifyPath"
+    | "ai_BigBrushCheckLimitSize"
+    | "ai_CloakIncrementMod"
+    | "ai_CloakMaxDist"
+    | "ai_CloakMinDist"
+    | "ai_CrowdControlInPathfind"
+    | "ai_DebugDraw"
+    | "ai_DebugDrawAdaptiveUrgency"
+    | "ai_DebugDrawAmbientFire"
+    | "ai_DebugDrawAStarOpenList"
+    | "ai_DebugDrawBannedNavsos"
+    | "ai_DebugDrawBulletEvents"
+    | "ai_DebugDrawCollisionEvents"
+    | "ai_DebugDrawCrowdControl"
+    | "ai_DebugDrawDamageParts"
+    | "ai_DebugDrawDynamicHideObjectsRange"
+    | "ai_DebugDrawExpensiveAccessoryQuota"
+    | "ai_DebugDrawGrenadeEvents"
+    | "ai_DebugDrawHashSpaceAround"
+    | "ai_DebugDrawHidespotRange"
+    | "ai_DebugDrawLightLevel"
+    | "ai_DebugDrawObstrSpheres"
+    | "ai_DebugDrawPlayerActions"
+    | "ai_DebugDrawReinforcements"
+    | "ai_DebugDrawSoundEvents"
+    | "ai_DebugDrawStanceSize"
+    | "ai_DebugDrawVegetationCollisionDist"
+    | "ai_DebugDrawVolumeVoxels"
+    | "ai_DebugInterestSystem"
+    | "ai_DebugPathfinding"
+    | "ai_DefaultWalkability"
+    | "ai_DirectPathMode"
+    | "ai_doNotLoadNavigationData"
+    | "ai_DrawagentFOV"
+    | "ai_DrawAnchors"
+    | "ai_DrawAreas"
+    | "ai_drawBeautifyPath"
+    | "ai_DrawDirectPathTest"
+    | "ai_DrawDistanceLUT"
+    | "ai_DrawFakeDamageInd"
+    | "ai_DrawFakeHitEffects"
+    | "ai_DrawFakeTracers"
+    | "ai_DrawFormations"
+    | "ai_DrawGetEnclosingFailures"
+    | "ai_DrawGoals"
+    | "ai_DrawGroup"
+    | "ai_DrawGroupTactic"
+    | "ai_DrawHidespots"
+    | "ai_DrawModifiers"
+    | "ai_DrawNavType"
+    | "ai_DrawNode"
+    | "ai_DrawNodeLinkCutoff"
+    | "ai_DrawNodeLinkType"
+    | "ai_DrawOffset"
+    | "ai_DrawPath"
+    | "ai_DrawPathAdjustment"
+    | "ai_DrawPatterns"
+    | "ai_DrawProbableTarget"
+    | "ai_DrawRadar"
+    | "ai_DrawRadarDist"
+    | "ai_DrawReadibilities"
+    | "ai_DrawRefPoints"
+    | "ai_DrawShooting"
+    | "ai_DrawSmartObjects"
+    | "ai_DrawSpawner"
+    | "ai_DrawStats"
+    | "ai_DrawTargets"
+    | "ai_DrawTrajectory"
+    | "ai_DrawType"
+    | "ai_DrawUpdate"
+    | "ai_DrawVisCheckQueue"
+    | "ai_DynamicTriangularUpdateTime"
+    | "ai_DynamicVolumeUpdateTime"
+    | "ai_DynamicWaypointUpdateCount"
+    | "ai_DynamicWaypointUpdateTime"
+    | "ai_EnableAsserts"
+    | "ai_EnableSystemAggroCancel"
+    | "ai_EnableUnbending"
+    | "ai_EnableWarningsErrors"
+    | "ai_event_debug"
+    | "ai_ExtraForbiddenRadiusDuringBeautification"
+    | "ai_ExtraRadiusDuringBeautification"
+    | "ai_ExtraVehicleAvoidanceRadiusBig"
+    | "ai_ExtraVehicleAvoidanceRadiusSmall"
+    | "ai_ForceAllowStrafing"
+    | "ai_ForceLookAimTarget"
+    | "ai_ForceStance"
+    | "ai_genCryOrgWaterGraph"
+    | "ai_IgnorePlayer"
+    | "ai_IgnoreVisibilityChecks"
+    | "ai_IncludeNonColEntitiesInNavigation"
+    | "ai_InterestDetectMovement"
+    | "ai_InterestEnableScan"
+    | "ai_InterestScalingAmbient"
+    | "ai_InterestScalingEyeCatching"
+    | "ai_InterestScalingMovement"
+    | "ai_InterestScalingScan"
+    | "ai_InterestScalingView"
+    | "ai_InterestSwitchBoost"
+    | "ai_InterestSystem"
+    | "ai_LimitNodeGetEnclosing"
+    | "ai_LimitPhysicsRequestPerFrame"
+    | "ai_Locate"
+    | "ai_LogConsoleVerbosity"
+    | "ai_LogFileVerbosity"
+    | "ai_LogSignals"
+    | "ai_MaxSignalDuration"
+    | "ai_MaxVisRaysPerFrame"
+    | "ai_MovementSpeedDarkIllumMod"
+    | "ai_MovementSpeedMediumIllumMod"
+    | "ai_NoUpdate"
+    | "ai_ObstacleSizeThreshold"
+    | "ai_OverlayMessageDuration"
+    | "ai_PathfinderUpdateCount"
+    | "ai_PathfinderUpdateTime"
+    | "ai_PathfindTimeLimit"
+    | "ai_PredictivePathFollowing"
+    | "ai_ProfileGoals"
+    | "ai_ProtoROD"
+    | "ai_ProtoRODAffectMove"
+    | "ai_ProtoRODAliveTime"
+    | "ai_ProtoRODFireRange"
+    | "ai_ProtoRODGrenades"
+    | "ai_ProtoRODHealthGraph"
+    | "ai_ProtoRODLogScale"
+    | "ai_ProtoRODReactionTime"
+    | "ai_ProtoRODRegenTime"
+    | "ai_ProtoRODSilhuette"
+    | "ai_ProtoRODSpeedMod"
+    | "ai_PuppetDirSpeedControl"
+    | "ai_RadiusForAutoForbidden"
+    | "ai_Recorder"
+    | "ai_Recorder_Buffer"
+    | "ai_RecordFilter"
+    | "ai_RecordLog"
+    | "ai_serverDebugStatsTarget"
+    | "ai_serverDebugTarget"
+    | "ai_SightRangeDarkIllumMod"
+    | "ai_SightRangeMediumIllumMod"
+    | "ai_SimpleWayptPassability"
+    | "ai_skill_debug"
+    | "ai_SmartObjectUpdateTime"
+    | "ai_SOMSpeedCombat"
+    | "ai_SOMSpeedRelaxed"
+    | "ai_SoundPerception"
+    | "ai_sprintDistance"
+    | "ai_StatsTarget"
+    | "ai_SteepSlopeAcrossValue"
+    | "ai_SteepSlopeUpValue"
+    | "ai_SystemUpdate"
+    | "ai_ThreadedVolumeNavPreprocess"
+    | "ai_TickCounter"
+    | "ai_TimeToAggroCancelByNoSkill"
+    | "ai_UnbendingThreshold"
+    | "ai_UpdateAllAlways"
+    | "ai_UpdateFromUnitId"
+    | "ai_UpdateInterval"
+    | "ai_UpdateProxy"
+    | "ai_UseAlternativeReadability"
+    | "ai_UseCalculationStopperCounter"
+    | "ai_UseObjectPosWithExactPos"
+    | "ai_WarningPhysicsRequestCount"
+    | "ai_WarningsErrorsLimitInGame"
+    | "ai_WaterOcclusion"
+    | "aim_assistAimEnabled"
+    | "aim_assistAutoCoeff"
+    | "aim_assistCrosshairSize"
+    | "aim_assistMaxDistance"
+    | "aim_assistRestrictionTimeout"
+    | "aim_assistSearchBox"
+    | "aim_assistSingleCoeff"
+    | "aim_assistSnapDistance"
+    | "aim_assistTriggerEnabled"
+    | "aim_assistVerticalScale"
+    | "att_scale_test_drawn"
+    | "att_scale_test_worn"
+    | "auth_serveraddr"
+    | "auth_serverport"
+    | "auth_serversvc"
+    | "auto_disconnect_timer"
+    | "auto_enemy_targeting"
+    | "auto_use_only_my_portal"
+    | "aux_use_breast"
+    | "aux_use_collide"
+    | "aux_use_simple_target"
+    | "aux_use_weapon"
+    | "ban_timeout"
+    | "basic_cursor_shape"
+    | "budget"
+    | "c_shakeMult"
+    | "ca_AllowFP16Characters"
+    | "ca_AllowMultipleEffectsOfSameName"
+    | "ca_AMC"
+    | "ca_AMC_SmoothTurn"
+    | "ca_AMC_TurnLeaning"
+    | "ca_AnimActionDebug"
+    | "ca_AnimWarningLevel"
+    | "ca_ApplyJointVelocitiesMode"
+    | "ca_AttachmentCullingRation"
+    | "ca_AttachmentShadowCullingDist"
+    | "ca_BlendOutTime"
+    | "ca_BodyPartAttachmentCullingRation"
+    | "ca_CachingCDFFiles"
+    | "ca_CachingModelFiles"
+    | "ca_CALthread"
+    | "ca_CharEditModel"
+    | "ca_Cheap"
+    | "ca_ChrBaseLOD"
+    | "ca_cloth_vars_reset"
+    | "ca_DBAUnloadRemoveTime"
+    | "ca_DBAUnloadUnregisterTime"
+    | "ca_dbh_level"
+    | "ca_DeathBlendTime"
+    | "ca_debug_phys_loading"
+    | "ca_DebugADIKTargets"
+    | "ca_DebugAnimationStreaming"
+    | "ca_DebugAnimMemTracking"
+    | "ca_DebugAnimUpdates"
+    | "ca_DebugAnimUsage"
+    | "ca_DebugAnimUsageOnFileAccess"
+    | "ca_DebugCaps"
+    | "ca_DebugCommandBuffer"
+    | "ca_DebugCriticalErrors"
+    | "ca_DebugFacial"
+    | "ca_DebugFacialEyes"
+    | "ca_DebugFootPlants"
+    | "ca_DebugModelCache"
+    | "ca_DebugSkeletonEffects"
+    | "ca_DebugSubstateTransitions"
+    | "ca_DebugText"
+    | "ca_DecalSizeMultiplier"
+    | "ca_DelayTransitionAtLoading"
+    | "ca_disable_thread"
+    | "ca_disableAnimBones"
+    | "ca_disableSkinBones"
+    | "ca_DoAnimTaskPerFrame"
+    | "ca_DoPrecache"
+    | "ca_DoPrecacheAnim"
+    | "ca_DrawAimIKVEGrid"
+    | "ca_DrawAimPoses"
+    | "ca_DrawAttachmentOBB"
+    | "ca_DrawAttachmentRadius"
+    | "ca_DrawAttachments"
+    | "ca_DrawBaseMesh"
+    | "ca_DrawBBox"
+    | "ca_DrawBinormals"
+    | "ca_DrawCC"
+    | "ca_DrawCGA"
+    | "ca_DrawCGAAsSkin"
+    | "ca_DrawCHR"
+    | "ca_DrawDecalsBBoxes"
+    | "ca_DrawEmptyAttachments"
+    | "ca_DrawFaceAttachments"
+    | "ca_DrawFootPlants"
+    | "ca_DrawIdle2MoveDir"
+    | "ca_DrawLinkVertices"
+    | "ca_DrawLocator"
+    | "ca_DrawLookIK"
+    | "ca_DrawNormals"
+    | "ca_DrawPerformanceOption"
+    | "ca_DrawPositionPost"
+    | "ca_DrawPositionPre"
+    | "ca_DrawSkeleton"
+    | "ca_drawSkeletonFilter"
+    | "ca_DrawSkeletonName"
+    | "ca_DrawTangents"
+    | "ca_DrawVEGInfo"
+    | "ca_DrawWireframe"
+    | "ca_DumpUsedAnims"
+    | "ca_EnableAssetStrafing"
+    | "ca_EnableAssetTurning"
+    | "ca_eyes_procedural"
+    | "ca_FaceBaseLOD"
+    | "ca_FacialAnimationFramerate"
+    | "ca_FacialAnimationRadius"
+    | "ca_FacialSequenceMaxCount"
+    | "ca_fallAndPlayStandUpDuration"
+    | "ca_FootAnchoring"
+    | "ca_ForceUpdateSkeletons"
+    | "ca_FPWeaponInCamSpace"
+    | "ca_fullAnimStatistics"
+    | "ca_GameControlledStrafing"
+    | "ca_gc_check_count"
+    | "ca_gc_debug"
+    | "ca_gc_duration"
+    | "ca_gc_max_count"
+    | "ca_get_op_from_key"
+    | "ca_GroundAlignment"
+    | "ca_hideFacialAnimWarning"
+    | "ca_ignoreCutSceneAnim"
+    | "ca_item_offset_debug"
+    | "ca_JointVelocityMax"
+    | "ca_lipsync_debug"
+    | "ca_lipsync_phoneme_crossfade"
+    | "ca_lipsync_phoneme_offset"
+    | "ca_lipsync_phoneme_strength"
+    | "ca_lipsync_vertex_drag"
+    | "ca_LoadDatabase"
+    | "ca_LoadDBH"
+    | "ca_LoadHeaders"
+    | "ca_LoadUncompressedChunks"
+    | "ca_LockFeetWithIK"
+    | "ca_LodClampThreshold"
+    | "ca_LodCount"
+    | "ca_LodCount0"
+    | "ca_LodCountMax"
+    | "ca_LodCountRatio"
+    | "ca_LodDist"
+    | "ca_LodDist0"
+    | "ca_LodDistMax"
+    | "ca_LodDistRatio"
+    | "ca_LodRadiusInflection"
+    | "ca_LodSkipTaskInflectionOfRatio"
+    | "ca_LodSkipTaskRatio"
+    | "ca_log_unknown_bone_list"
+    | "ca_logDrawnActors"
+    | "ca_MaxFaceLOD"
+    | "ca_MemoryUsageLog"
+    | "ca_MergeAttachmentMeshes"
+    | "ca_MergeMaxNumLods"
+    | "ca_MeshMergeMode"
+    | "ca_mirror_test"
+    | "ca_modelViewLog"
+    | "ca_MotionBlurMovementThreshold"
+    | "ca_NoAnim"
+    | "ca_NoDeform"
+    | "ca_ParametricPoolSize"
+    | "ca_physicsProcessImpact"
+    | "ca_PrintDesiredSpeed"
+    | "ca_RandomScaling"
+    | "ca_SameSkeletonEffectsMaxCount"
+    | "ca_SaveAABB"
+    | "ca_SerializeSkeletonAnim"
+    | "ca_ShareMergedMesh"
+    | "ca_SkeletonEffectsMaxCount"
+    | "ca_SkipAnimTask"
+    | "ca_SkipLoadThinFat"
+    | "ca_SmoothStrafe"
+    | "ca_SmoothStrafeWithAngle"
+    | "ca_StoreAnimNamesOnLoad"
+    | "ca_stream_cal"
+    | "ca_stream_cdf"
+    | "ca_stream_chr"
+    | "ca_stream_debug"
+    | "ca_stream_facial"
+    | "ca_Test"
+    | "ca_test_profile_shot"
+    | "ca_thread"
+    | "ca_thread0Affinity"
+    | "ca_travelSpeedScaleMax"
+    | "ca_travelSpeedScaleMin"
+    | "ca_UnloadAnim"
+    | "ca_UnloadAnimationCAF"
+    | "ca_UnloadAnimationDBA"
+    | "ca_UnloadAnimTime"
+    | "ca_UseAimIK"
+    | "ca_UseAimIKRefPose"
+    | "ca_UseAllJoints"
+    | "ca_UseAssetDefinedLod"
+    | "ca_useAttachmentItemEffect"
+    | "ca_useAttEffectRelativeOffset"
+    | "ca_useBoneLOD"
+    | "ca_UseCompiledCalFile"
+    | "ca_UseDBA"
+    | "ca_UseDecals"
+    | "ca_UseFacialAnimation"
+    | "ca_UseFileAfterDBH"
+    | "ca_UseIMG_CAF"
+    | "ca_UseJointMasking"
+    | "ca_UseLinearOP"
+    | "ca_UseLinkVertices"
+    | "ca_UseLookIK"
+    | "ca_UseMorph"
+    | "ca_UsePhysics"
+    | "ca_UsePostKinematic"
+    | "ca_Validate"
+    | "ca_xl13RandomCount"
+    | "cam_target"
+    | "camera_building_something_fadeout_vel"
+    | "camera_dive_angle"
+    | "camera_dive_enable"
+    | "camera_dive_pitch"
+    | "camera_max_dist"
+    | "camera_target_ground_align"
+    | "camera_use_fx_cam_fov"
+    | "camera_use_shake"
+    | "camera_zoom_sensitivity"
+    | "capture_file_format"
+    | "capture_folder"
+    | "capture_frames"
+    | "capture_misc_render_buffers"
+    | "caq_fist_randomidle_interval"
+    | "caq_randomidle_interval"
+    | "cd_cattle_update_distance"
+    | "cd_furniture_update_distance"
+    | "cl_account"
+    | "cl_account_id"
+    | "cl_actorsafemode"
+    | "cl_bandwidth"
+    | "cl_bob"
+    | "cl_cef_use_x2_log"
+    | "cl_check_resurrectable_pos"
+    | "cl_check_teleport_to_unit"
+    | "cl_country_code"
+    | "cl_crouchToggle"
+    | "cl_fov"
+    | "cl_frozenAngleMax"
+    | "cl_frozenAngleMin"
+    | "cl_frozenKeyMult"
+    | "cl_frozenMouseMult"
+    | "cl_frozenSensMax"
+    | "cl_frozenSensMin"
+    | "cl_frozenSoundDelta"
+    | "cl_frozenSteps"
+    | "cl_gs_email"
+    | "cl_gs_nick"
+    | "cl_gs_password"
+    | "cl_headBob"
+    | "cl_headBobLimit"
+    | "cl_hitBlur"
+    | "cl_hitShake"
+    | "cl_immigration_passport_hash"
+    | "cl_invertController"
+    | "cl_invertMouse"
+    | "cl_motionBlur"
+    | "cl_nearPlane"
+    | "cl_packetRate"
+    | "cl_password"
+    | "cl_righthand"
+    | "cl_screeneffects"
+    | "cl_sensitivity"
+    | "cl_sensitivityZeroG"
+    | "cl_serveraddr"
+    | "cl_serverport"
+    | "cl_shadow"
+    | "cl_shallowWaterDepthHi"
+    | "cl_shallowWaterDepthLo"
+    | "cl_shallowWaterSpeedMulAI"
+    | "cl_shallowWaterSpeedMulPlayer"
+    | "cl_ship_mass_update_freq"
+    | "cl_ship_submerge_update_freq"
+    | "cl_sprintBlur"
+    | "cl_sprintShake"
+    | "cl_take_screen_shot"
+    | "cl_tgwindex"
+    | "cl_tpvYaw"
+    | "cl_unit_collide_effect_interval"
+    | "cl_user_key"
+    | "cl_voice_recording"
+    | "cl_voice_volume"
+    | "cl_web_session_enc_key"
+    | "cl_web_session_key"
+    | "cl_web_upload_reserved_screenshot_file_name"
+    | "cl_web_upload_reserved_screenshot_path"
+    | "cl_world_cookie"
+    | "cl_zone_id"
+    | "click_to_move"
+    | "client_default_zone"
+    | "cloth_air_resistance"
+    | "cloth_damping"
+    | "cloth_friction"
+    | "cloth_mass_decay"
+    | "cloth_mass_decay_attached_scale"
+    | "cloth_max_safe_step"
+    | "cloth_max_timestep"
+    | "cloth_stiffness"
+    | "cloth_stiffness_norm"
+    | "cloth_stiffness_tang"
+    | "cloth_thickness"
+    | "combat_autoattack_trigger"
+    | "combat_msg_alpha_visibility"
+    | "combat_msg_display_ship_collision"
+    | "combat_msg_level"
+    | "combat_msg_visibility"
+    | "combat_sync_framehold"
+    | "con_char_scale"
+    | "con_char_size"
+    | "con_debug"
+    | "con_display_last_messages"
+    | "con_line_buffer_size"
+    | "con_restricted"
+    | "con_scroll_max"
+    | "con_showonload"
+    | "cr_invert_x_axis"
+    | "cr_invert_y_axis"
+    | "cr_sensitivity"
+    | "cr_sensitivityMax"
+    | "cr_sensitivityMin"
+    | "cursor_size"
+    | "custom_camera_max_dist"
+    | "custom_fov"
+    | "custom_skill_queue"
+    | "custom_zoom_sensitivity"
+    | "d3d9_AllowSoftware"
+    | "d3d9_debugruntime"
+    | "d3d9_IBPools"
+    | "d3d9_IBPoolSize"
+    | "d3d9_NullRefDevice"
+    | "d3d9_NVPerfHUD"
+    | "d3d9_pip_buff_size"
+    | "d3d9_rb_Tris"
+    | "d3d9_rb_Verts"
+    | "d3d9_ResetDeviceAfterLoading"
+    | "d3d9_TextureFilter"
+    | "d3d9_TripleBuffering"
+    | "d3d9_ui_buffer_size"
+    | "d3d9_VBPools"
+    | "d3d9_VBPoolSize"
+    | "data_mining_file_open"
+    | "data_mining_perf_interval"
+    | "data_mining_report_interval"
+    | "ddcms_time_offset"
+    | "decoration_smart_positioning"
+    | "decoration_smart_positioning_loop_count"
+    | "decoration_smart_positioning_max_dist"
+    | "delay_mul_for_zh_cn_letter"
+    | "departure_server_passport"
+    | "departure_server_passport_pass_high"
+    | "departure_server_passport_pass_low"
+    | "disable_private_message_music"
+    | "doodad_smart_positioning"
+    | "doodad_smart_positioning_loop_count"
+    | "doodad_smart_positioning_max_dist"
+    | "ds_AutoReloadScripts"
+    | "ds_LoadExcelScripts"
+    | "ds_LoadSoundsSync"
+    | "ds_LogLevel"
+    | "ds_PrecacheSounds"
+    | "ds_WarnOnMissingLoc"
+    | "dt_enable"
+    | "dt_meleeTime"
+    | "dt_time"
+    | "dummy"
+    | "dynamic_action_bar_distance"
+    | "e_allow_cvars_serialization"
+    | "e_AllowFP16Terrain"
+    | "e_ambient_boost_no_point_lights_b"
+    | "e_ambient_boost_no_point_lights_g"
+    | "e_ambient_boost_no_point_lights_r"
+    | "e_ambient_multiplier_no_point_lights"
+    | "e_ambient_occlusion"
+    | "e_AutoPrecacheCgf"
+    | "e_AutoPrecacheCgfMaxTasks"
+    | "e_bboxes"
+    | "e_brush_streaming_dist_ratio"
+    | "e_brushes"
+    | "e_CacheNearestCubePicking"
+    | "e_CameraFreeze"
+    | "e_cbuffer"
+    | "e_cbuffer_bias"
+    | "e_cbuffer_clip_planes_num"
+    | "e_cbuffer_debug"
+    | "e_cbuffer_debug_draw_scale"
+    | "e_cbuffer_debug_freeze"
+    | "e_cbuffer_draw_occluders"
+    | "e_cbuffer_hw"
+    | "e_cbuffer_lazy_test"
+    | "e_cbuffer_lc"
+    | "e_cbuffer_lights_debug_side"
+    | "e_cbuffer_max_add_render_mesh_time"
+    | "e_cbuffer_occluders_lod_ratio"
+    | "e_cbuffer_occluders_test_min_tris_num"
+    | "e_cbuffer_occluders_view_dist_ratio"
+    | "e_cbuffer_resolution"
+    | "e_cbuffer_terrain"
+    | "e_cbuffer_terrain_distance"
+    | "e_cbuffer_terrain_distance_near"
+    | "e_cbuffer_terrain_lod_ratio"
+    | "e_cbuffer_terrain_shift"
+    | "e_cbuffer_terrain_shift_near"
+    | "e_cbuffer_terrain_z_offset"
+    | "e_cbuffer_test_mode"
+    | "e_cbuffer_tree_debug"
+    | "e_cbuffer_tree_depth"
+    | "e_cbuffer_version"
+    | "e_cgf_loading_profile"
+    | "e_cgf_verify"
+    | "e_char_debug_draw"
+    | "e_character_back_light"
+    | "e_character_light"
+    | "e_character_light_color_b"
+    | "e_character_light_color_g"
+    | "e_character_light_color_r"
+    | "e_character_light_max_dist"
+    | "e_character_light_min_dist"
+    | "e_character_light_offset_x"
+    | "e_character_light_offset_y"
+    | "e_character_light_offset_z"
+    | "e_character_light_radius"
+    | "e_character_light_specualr_multy"
+    | "e_character_no_merge_render_chunks"
+    | "e_clouds"
+    | "e_CoarseShadowMask"
+    | "e_CoarseShadowMgrDebug"
+    | "e_CoverageBufferAABBExpand"
+    | "e_CoverageBufferAccurateOBBTest"
+    | "e_CoverageBufferCullIndividualBrushesMaxNodeSize"
+    | "e_CoverageBufferRotationSafeCheck"
+    | "e_CoverageBufferTolerance"
+    | "e_CoverCgfDebug"
+    | "e_cull_veg_activation"
+    | "e_custom_build_extramaps_fromshaderquality"
+    | "e_custom_clone_mode"
+    | "e_custom_dressing_time_max"
+    | "e_custom_dynamic_lod"
+    | "e_custom_dynamic_lod_debug"
+    | "e_custom_max_clone_model"
+    | "e_custom_max_clone_model_1"
+    | "e_custom_max_clone_model_2"
+    | "e_custom_max_clone_model_3"
+    | "e_custom_max_clone_model_4"
+    | "e_custom_max_clone_model_5"
+    | "e_custom_max_model"
+    | "e_custom_max_model_high"
+    | "e_custom_max_model_low"
+    | "e_custom_max_model_mid"
+    | "e_custom_texture_lod"
+    | "e_custom_texture_share"
+    | "e_custom_thread_cut_mesh"
+    | "e_debug_draw"
+    | "e_debug_draw_filter"
+    | "e_debug_draw_lod_error_min_reduce_ratio"
+    | "e_debug_draw_lod_error_no_lod_tris"
+    | "e_debug_draw_lod_warning_default_lod_ratio"
+    | "e_debug_draw_objstats_warning_tris"
+    | "e_debug_drawShowOnlyCompound"
+    | "e_debug_drawShowOnlyLod"
+    | "e_debug_lights"
+    | "e_debug_mask"
+    | "e_decals"
+    | "e_decals_allow_game_decals"
+    | "e_decals_clip"
+    | "e_decals_deffered_dynamic"
+    | "e_decals_deffered_dynamic_min_size"
+    | "e_decals_deffered_static"
+    | "e_decals_force_deferred"
+    | "e_decals_hit_cache"
+    | "e_decals_life_time_scale"
+    | "e_decals_max_static_mesh_tris"
+    | "e_decals_merge"
+    | "e_decals_neighbor_max_life_time"
+    | "e_decals_overlapping"
+    | "e_decals_precreate"
+    | "e_decals_scissor"
+    | "e_decals_update_silhouette_scope"
+    | "e_decals_wrap_debug"
+    | "e_DecalsPlacementTestAreaSize"
+    | "e_default_material"
+    | "e_deferred_cell_loader_log"
+    | "e_deferred_loader_stats"
+    | "e_DeferredPhysicsEvents"
+    | "e_deformable_objects"
+    | "e_detail_materials"
+    | "e_detail_materials_debug"
+    | "e_detail_materials_highlight"
+    | "e_detail_materials_view_dist_xy"
+    | "e_detail_materials_view_dist_z"
+    | "e_detail_materials_zpass_normal_draw_dist"
+    | "e_detail_objects"
+    | "e_dissolve"
+    | "e_dissolve_transition_threshold"
+    | "e_dissolve_transition_time"
+    | "e_DissolveDist"
+    | "e_DissolveDistband"
+    | "e_DissolveDistFactor"
+    | "e_DissolveDistMax"
+    | "e_DissolveDistMin"
+    | "e_DissolveTime"
+    | "e_dist_for_wsbbox_update"
+    | "e_dynamic_light"
+    | "e_dynamic_light_consistent_sort_order"
+    | "e_dynamic_light_force_deferred"
+    | "e_dynamic_light_frame_id_vis_test"
+    | "e_dynamic_light_max_count"
+    | "e_dynamic_light_max_shadow_count"
+    | "e_entities"
+    | "e_EntitySuppressionLevel"
+    | "e_face_reset_debug"
+    | "e_flocks"
+    | "e_flocks_hunt"
+    | "e_fog"
+    | "e_fogvolumes"
+    | "e_foliage_branches_damping"
+    | "e_foliage_branches_stiffness"
+    | "e_foliage_branches_timeout"
+    | "e_foliage_broken_branches_damping"
+    | "e_foliage_stiffness"
+    | "e_foliage_wind_activation_dist"
+    | "e_force_detail_level_for_resolution"
+    | "e_GI"
+    | "e_GIAmount"
+    | "e_GIBlendRatio"
+    | "e_GICache"
+    | "e_GICascadesRatio"
+    | "e_GIGlossyReflections"
+    | "e_GIIterations"
+    | "e_GIMaxDistance"
+    | "e_GINumCascades"
+    | "e_GIOffset"
+    | "e_GIPropagationAmp"
+    | "e_GIRSMSize"
+    | "e_GISecondaryOcclusion"
+    | "e_gsm_cache"
+    | "e_gsm_cache_lod_offset"
+    | "e_gsm_combined"
+    | "e_gsm_depth_bounds_debug"
+    | "e_gsm_extra_range_shadow"
+    | "e_gsm_extra_range_shadow_texture_size"
+    | "e_gsm_extra_range_sun_update_ratio"
+    | "e_gsm_extra_range_sun_update_time"
+    | "e_gsm_extra_range_sun_update_type"
+    | "e_gsm_focus_on_unit"
+    | "e_gsm_force_extra_range_include_objects"
+    | "e_gsm_force_terrain_include_objects"
+    | "e_gsm_lods_num"
+    | "e_gsm_range_rate"
+    | "e_gsm_range_start"
+    | "e_gsm_range_step"
+    | "e_gsm_range_step_object"
+    | "e_gsm_range_step_terrain"
+    | "e_gsm_scatter_lod_dist"
+    | "e_gsm_stats"
+    | "e_gsm_terrain_include_objects"
+    | "e_gsm_terrain_sun_update_time"
+    | "e_GsmCastFromTerrain"
+    | "e_GsmExtendLastLodUseAdditiveBlending"
+    | "e_GsmExtendLastLodUseVariance"
+    | "e_GsmViewSpace"
+    | "e_hw_occlusion_culling_objects"
+    | "e_hw_occlusion_culling_water"
+    | "e_HwOcclusionCullingObjects"
+    | "e_joint_strength_scale"
+    | "e_level_auto_precache_terrain_and_proc_veget"
+    | "e_level_auto_precache_textures_and_shaders"
+    | "e_load_only_sub_zone_shape"
+    | "e_lod_max"
+    | "e_lod_min"
+    | "e_lod_min_tris"
+    | "e_lod_ratio"
+    | "e_lod_skin_ratio"
+    | "e_lod_sync_view_dist"
+    | "e_lods"
+    | "e_lowspec_mode"
+    | "e_material_loading_profile"
+    | "e_material_no_load"
+    | "e_material_refcount_check_logging"
+    | "e_material_stats"
+    | "e_materials"
+    | "e_max_entity_lights"
+    | "e_max_view_dst"
+    | "e_max_view_dst_full_dist_cam_height"
+    | "e_max_view_dst_spec_lerp"
+    | "e_mesh_simplify"
+    | "e_mipmap_show"
+    | "e_mixed_normals_report"
+    | "e_model_decals"
+    | "e_modelview_Prefab_cam_dist"
+    | "e_modelview_Prefab_camera_offset_x"
+    | "e_modelview_Prefab_camera_offset_y"
+    | "e_modelview_Prefab_camera_offset_z"
+    | "e_modelview_Prefab_light_color_rgb"
+    | "e_modelview_Prefab_light_number"
+    | "e_modelview_Prefab_light_offset_from_center"
+    | "e_modelview_Prefab_light_offset_x"
+    | "e_modelview_Prefab_light_offset_y"
+    | "e_modelview_Prefab_light_offset_z"
+    | "e_modelview_Prefab_light_radius"
+    | "e_modelview_Prefab_light_specualr_multy"
+    | "e_modelview_Prefab_offset_x"
+    | "e_modelview_Prefab_offset_y"
+    | "e_modelview_Prefab_offset_z"
+    | "e_modelview_Prefab_rot_x"
+    | "e_modelview_Prefab_rot_z"
+    | "e_modelview_Prefab_scale"
+    | "e_MtTest"
+    | "e_no_lod_chr_tris"
+    | "e_obj"
+    | "e_obj_fast_register"
+    | "e_obj_quality"
+    | "e_obj_stats"
+    | "e_obj_tree_max_node_size"
+    | "e_obj_tree_min_node_size"
+    | "e_obj_tree_shadow_debug"
+    | "e_object_streaming_log"
+    | "e_object_streaming_stats"
+    | "e_ObjectLayersActivationPhysics"
+    | "e_ObjectsTreeBBoxes"
+    | "e_occlusion_culling_view_dist_ratio"
+    | "e_occlusion_volumes"
+    | "e_occlusion_volumes_view_dist_ratio"
+    | "e_on_demand_maxsize"
+    | "e_on_demand_physics"
+    | "e_particles"
+    | "e_particles_debug"
+    | "e_particles_decals"
+    | "e_particles_decals_force_deferred"
+    | "e_particles_disable_equipments"
+    | "e_particles_dynamic_particle_count"
+    | "e_particles_dynamic_particle_life"
+    | "e_particles_dynamic_quality"
+    | "e_particles_filter"
+    | "e_particles_gc_period"
+    | "e_particles_high"
+    | "e_particles_landmark"
+    | "e_particles_lean_lifetime_test"
+    | "e_particles_lights"
+    | "e_particles_lights_view_dist_ratio"
+    | "e_particles_lod"
+    | "e_particles_lod_onoff"
+    | "e_particles_low"
+    | "e_particles_low_update_dist"
+    | "e_particles_max_draw_screen"
+    | "e_particles_max_screen_fill"
+    | "e_particles_middle"
+    | "e_particles_min_draw_alpha"
+    | "e_particles_min_draw_pixels"
+    | "e_particles_normal_update_dist"
+    | "e_particles_object_collisions"
+    | "e_particles_preload"
+    | "e_particles_quality"
+    | "e_particles_receive_shadows"
+    | "e_particles_source_filter"
+    | "e_particles_stats"
+    | "e_particles_stream"
+    | "e_particles_thread"
+    | "e_particles_trail_debug"
+    | "e_particles_trail_min_seg_size"
+    | "e_particles_veryhigh"
+    | "e_ParticlesCoarseShadowMask"
+    | "e_ParticlesEmitterPoolSize"
+    | "e_ParticlesPoolSize"
+    | "e_phys_bullet_coll_dist"
+    | "e_phys_foliage"
+    | "e_phys_ocean_cell"
+    | "e_portals"
+    | "e_portals_big_entities_fix"
+    | "e_precache_level"
+    | "e_proc_vegetation"
+    | "e_proc_vegetation_max_view_distance"
+    | "e_proc_vegetation_min_density"
+    | "e_ProcVegetationMaxObjectsInChunk"
+    | "e_ProcVegetationMaxSectorsInCache"
+    | "e_profile_level_loading"
+    | "e_ram_maps"
+    | "e_raycasting_debug"
+    | "e_recursion"
+    | "e_recursion_occlusion_culling"
+    | "e_recursion_view_dist_ratio"
+    | "e_render"
+    | "e_RNTmpDataPoolMaxFrames"
+    | "e_roads"
+    | "e_ropes"
+    | "e_scissor_debug"
+    | "e_screenshot"
+    | "e_screenshot_debug"
+    | "e_screenshot_file_format"
+    | "e_screenshot_height"
+    | "e_screenshot_map_camheight"
+    | "e_screenshot_map_center_x"
+    | "e_screenshot_map_center_y"
+    | "e_screenshot_map_far_plane_offset"
+    | "e_screenshot_map_near_plane_offset"
+    | "e_screenshot_map_size_x"
+    | "e_screenshot_map_size_y"
+    | "e_screenshot_min_slices"
+    | "e_screenshot_quality"
+    | "e_screenshot_save_path"
+    | "e_screenshot_width"
+    | "e_selected_color_b"
+    | "e_selected_color_g"
+    | "e_selected_color_r"
+    | "e_shader_constant_metrics"
+    | "e_shadows"
+    | "e_shadows_adapt_scale"
+    | "e_shadows_arrange_deferred_texture_size"
+    | "e_shadows_cast_view_dist_ratio"
+    | "e_shadows_cast_view_dist_ratio_character"
+    | "e_shadows_cast_view_dist_ratio_lights"
+    | "e_shadows_clouds"
+    | "e_shadows_const_bias"
+    | "e_shadows_cull_terrain_accurately"
+    | "e_shadows_frustums"
+    | "e_shadows_max_texture_size"
+    | "e_shadows_omni_max_texture_size"
+    | "e_shadows_omni_min_texture_size"
+    | "e_shadows_on_alpha_blended"
+    | "e_shadows_on_water"
+    | "e_shadows_optimised_object_culling"
+    | "e_shadows_optimize"
+    | "e_shadows_res_scale"
+    | "e_shadows_slope_bias"
+    | "e_shadows_softer_distant_lods"
+    | "e_shadows_terrain"
+    | "e_shadows_terrain_texture_size"
+    | "e_shadows_unit_cube_clip"
+    | "e_shadows_update_view_dist_ratio"
+    | "e_shadows_water"
+    | "e_ShadowsDebug"
+    | "e_ShadowsLodBiasFixed"
+    | "e_ShadowsLodBiasInvis"
+    | "e_ShadowsOcclusionCullingCaster"
+    | "e_ShadowsTessellateCascades"
+    | "e_ShadowsTessellateDLights"
+    | "e_sketch_mode"
+    | "e_skip_precache"
+    | "e_sky_box"
+    | "e_sky_box_debug"
+    | "e_sky_quality"
+    | "e_sky_type"
+    | "e_sky_update_rate"
+    | "e_sleep"
+    | "e_soft_particles"
+    | "e_stat_obj_merge"
+    | "e_stat_obj_merge_max_tris_per_drawcall"
+    | "e_statobj_log"
+    | "e_statobj_stats"
+    | "e_statobj_use_lod_ready_cache"
+    | "e_statobj_verify"
+    | "e_StatObjBufferRenderTasks"
+    | "e_StatObjTestOBB"
+    | "e_stream_areas"
+    | "e_stream_cgf"
+    | "e_stream_for_physics"
+    | "e_stream_for_visuals"
+    | "e_StreamCgfDebug"
+    | "e_StreamCgfDebugFilter"
+    | "e_StreamCgfDebugHeatMap"
+    | "e_StreamCgfDebugMinObjSize"
+    | "e_StreamCgfFastUpdateMaxDistance"
+    | "e_StreamCgfGridUpdateDistance"
+    | "e_StreamCgfMaxTasksInProgress"
+    | "e_StreamCgfPoolSize"
+    | "e_StreamCgfUpdatePerNodeDistance"
+    | "e_StreamCgfVisObjPriority"
+    | "e_StreamPredictionAhead"
+    | "e_StreamPredictionAheadDebug"
+    | "e_StreamPredictionDistanceFar"
+    | "e_StreamPredictionDistanceNear"
+    | "e_StreamPredictionMaxVisAreaRecursion"
+    | "e_StreamPredictionMinFarZoneDistance"
+    | "e_StreamPredictionMinReportDistance"
+    | "e_StreamPredictionTexelDensity"
+    | "e_StreamPredictionUpdateTimeSlice"
+    | "e_sun"
+    | "e_sun_angle_snap_dot"
+    | "e_sun_angle_snap_sec"
+    | "e_sun_clipplane_range"
+    | "e_target_decals_deffered"
+    | "e_temp_pool_size"
+    | "e_terrain"
+    | "e_terrain_ao"
+    | "e_terrain_bboxes"
+    | "e_terrain_crater_depth"
+    | "e_terrain_crater_depth_max"
+    | "e_terrain_deformations"
+    | "e_terrain_deformations_obstruct_object_size_ratio"
+    | "e_terrain_draw_this_sector_only"
+    | "e_terrain_ib_stats"
+    | "e_terrain_layer_test"
+    | "e_terrain_lm_gen_threshold"
+    | "e_terrain_loading_log"
+    | "e_terrain_lod_ratio"
+    | "e_terrain_log"
+    | "e_terrain_normal_map"
+    | "e_terrain_occlusion_culling"
+    | "e_terrain_occlusion_culling_debug"
+    | "e_terrain_occlusion_culling_max_dist"
+    | "e_terrain_occlusion_culling_max_steps"
+    | "e_terrain_occlusion_culling_precision"
+    | "e_terrain_occlusion_culling_precision_dist_ratio"
+    | "e_terrain_occlusion_culling_step_size"
+    | "e_terrain_occlusion_culling_step_size_delta"
+    | "e_terrain_occlusion_culling_version"
+    | "e_terrain_optimised_ib"
+    | "e_terrain_render_profile"
+    | "e_terrain_texture_buffers"
+    | "e_terrain_texture_debug"
+    | "e_terrain_texture_lod_ratio"
+    | "e_terrain_texture_streaming_debug"
+    | "e_terrain_texture_sync_load"
+    | "e_Tessellation"
+    | "e_TessellationMaxDistance"
+    | "e_time_of_day"
+    | "e_time_of_day_debug"
+    | "e_time_of_day_engine_update"
+    | "e_time_of_day_speed"
+    | "e_time_smoothing"
+    | "e_timedemo_frames"
+    | "e_timer_debug"
+    | "e_under_wear_debug"
+    | "e_use_enhanced_effect"
+    | "e_use_gem_effect"
+    | "e_vegetation"
+    | "e_vegetation_alpha_blend"
+    | "e_vegetation_bending"
+    | "e_vegetation_create_collision_only"
+    | "e_vegetation_cull_test_bound_offset"
+    | "e_vegetation_cull_test_max_dist"
+    | "e_vegetation_disable_bending_distance"
+    | "e_vegetation_disable_distant_bending"
+    | "e_vegetation_mem_sort_test"
+    | "e_vegetation_min_size"
+    | "e_vegetation_node_level"
+    | "e_vegetation_sprite_max_pixel"
+    | "e_vegetation_sprites"
+    | "e_vegetation_sprites_cast_shadow"
+    | "e_vegetation_sprites_distance_custom_ratio_min"
+    | "e_vegetation_sprites_distance_ratio"
+    | "e_vegetation_sprites_min_distance"
+    | "e_vegetation_use_list"
+    | "e_vegetation_use_terrain_color"
+    | "e_vegetation_wind"
+    | "e_VegetationSpritesBatching"
+    | "e_view_dist_custom_ratio"
+    | "e_view_dist_doodad_min"
+    | "e_view_dist_min"
+    | "e_view_dist_ratio"
+    | "e_view_dist_ratio_detail"
+    | "e_view_dist_ratio_light"
+    | "e_view_dist_ratio_vegetation"
+    | "e_ViewDistRatioPortals"
+    | "e_visarea_include_radius"
+    | "e_visarea_test_mode"
+    | "e_VisareaFogFadingTime"
+    | "e_volobj_shadow_strength"
+    | "e_voxel"
+    | "e_voxel_ao_radius"
+    | "e_voxel_ao_scale"
+    | "e_voxel_build"
+    | "e_voxel_debug"
+    | "e_voxel_fill_mode"
+    | "e_voxel_lods_num"
+    | "e_voxel_make_physics"
+    | "e_voxel_make_shadows"
+    | "e_VoxTer"
+    | "e_VoxTerHeightmapEditing"
+    | "e_VoxTerHeightmapEditingCustomLayerInfo"
+    | "e_VoxTerHideIntegrated"
+    | "e_VoxTerMixMask"
+    | "e_VoxTerOnTheFlyIntegration"
+    | "e_VoxTerPlanarProjection"
+    | "e_VoxTerRelaxation"
+    | "e_VoxTerShadows"
+    | "e_VoxTerShapeCheck"
+    | "e_VoxTerTexBuildOnCPU"
+    | "e_VoxTerTexFormat"
+    | "e_VoxTerTexRangeScale"
+    | "e_water_ocean"
+    | "e_water_ocean_bottom"
+    | "e_water_ocean_fft"
+    | "e_water_ocean_simulate_on_zone"
+    | "e_water_ocean_soft_particles"
+    | "e_water_tesselation_amount"
+    | "e_water_tesselation_amountX"
+    | "e_water_tesselation_amountY"
+    | "e_water_tesselation_swath_width"
+    | "e_water_volumes"
+    | "e_water_waves"
+    | "e_water_waves_tesselation_amount"
+    | "e_wind"
+    | "e_wind_areas"
+    | "e_xml_cache_gc"
+    | "e_zoneWeatherEffect"
+    | "editor_serveraddr"
+    | "editor_serverport"
+    | "effect_filter_group"
+    | "effect_filter_loop"
+    | "effect_max_same_item_per_source"
+    | "es_activateEntity"
+    | "es_bboxes"
+    | "es_CharZOffsetSpeed"
+    | "es_deactivateEntity"
+    | "es_DebrisLifetimeScale"
+    | "es_debug"
+    | "es_debug_not_seen_timeout"
+    | "es_DebugEvents"
+    | "es_DebugFindEntity"
+    | "es_DebugTimers"
+    | "es_DisableTriggers"
+    | "es_DrawAreaGrid"
+    | "es_DrawAreas"
+    | "es_DrawRenderBBox"
+    | "es_enable_full_script_save"
+    | "es_FarPhysTimeout"
+    | "es_helpers"
+    | "es_HitCharacters"
+    | "es_HitDeadBodies"
+    | "es_ImpulseScale"
+    | "es_log_collisions"
+    | "es_LogDrawnActors"
+    | "es_MaxImpulseAdjMass"
+    | "es_MaxPhysDist"
+    | "es_MaxPhysDistInvisible"
+    | "es_MinImpulseVel"
+    | "es_not_seen_timeout"
+    | "es_OnDemandPhysics"
+    | "es_profileentities"
+    | "es_removeEntity"
+    | "es_sortupdatesbyclass"
+    | "es_SplashThreshold"
+    | "es_SplashTimeout"
+    | "es_Stream"
+    | "es_StreamDebug"
+    | "es_UpdateAI"
+    | "es_UpdateCollision"
+    | "es_UpdateCollisionScript"
+    | "es_UpdateContainer"
+    | "es_UpdateEntities"
+    | "es_UpdatePhysics"
+    | "es_UpdateScript"
+    | "es_UpdateTimer"
+    | "es_UsePhysVisibilityChecks"
+    | "es_VisCheckForUpdate"
+    | "ExitOnQuit"
+    | "expr_mode"
+    | "fg_abortOnLoadError"
+    | "fg_inspectorLog"
+    | "fg_noDebugText"
+    | "fg_profile"
+    | "fg_SystemEnable"
+    | "fire_action_on_button_down"
+    | "fixed_time_step"
+    | "FixedTooltipPosition"
+    | "fly_stance_enable"
+    | "fr_fspeed_scale"
+    | "fr_fturn_scale"
+    | "fr_speed_scale"
+    | "fr_turn_scale"
+    | "fr_xspeed"
+    | "fr_xturn"
+    | "fr_yspeed"
+    | "fr_yturn"
+    | "fr_zspeed"
+    | "g_actor_stance_use_queue"
+    | "g_actor_use_footstep_effect"
+    | "g_aimdebug"
+    | "g_blood"
+    | "g_breakage_particles_limit"
+    | "g_breakagelog"
+    | "g_breakImpulseScale"
+    | "g_breaktimeoutframes"
+    | "g_buddyMessagesIngame"
+    | "g_custom_texture_mipmap_min_size"
+    | "g_customizer_enable_cutscene"
+    | "g_customizer_stream_cutscene"
+    | "g_detachCamera"
+    | "g_die_anim_Degree"
+    | "g_die_anim_force"
+    | "g_difficultyLevel"
+    | "g_displayIgnoreList"
+    | "g_emp_style"
+    | "g_enableFriendlyFallAndPlay"
+    | "g_enableIdleCheck"
+    | "g_enableitems"
+    | "g_enableloadingscreen"
+    | "g_frostDecay"
+    | "g_godMode"
+    | "g_goForceFastUpdate"
+    | "g_grabLog"
+    | "g_groundeffectsdebug"
+    | "g_hide_tutorial"
+    | "g_ignore_chat_filter"
+    | "g_ignore_duel_invite"
+    | "g_ignore_expedition_invite"
+    | "g_ignore_family_invite"
+    | "g_ignore_jury_invite"
+    | "g_ignore_party_invite"
+    | "g_ignore_raid_invite"
+    | "g_ignore_raid_joint"
+    | "g_ignore_squad_invite"
+    | "g_ignore_trade_invite"
+    | "g_ignore_whisper_invite"
+    | "g_joint_breaking"
+    | "g_localPacketRate"
+    | "g_play_die_anim"
+    | "g_playerInteractorRadius"
+    | "g_preroundtime"
+    | "g_procedural_breaking"
+    | "g_profile"
+    | "g_quickGame_map"
+    | "g_quickGame_min_players"
+    | "g_quickGame_mode"
+    | "g_quickGame_ping1_level"
+    | "g_quickGame_ping2_level"
+    | "g_quickGame_prefer_favorites"
+    | "g_quickGame_prefer_lan"
+    | "g_quickGame_prefer_mycountry"
+    | "g_ragdoll_BlendAnim"
+    | "g_ragdoll_damping_max"
+    | "g_ragdoll_damping_time"
+    | "g_ragdoll_minE_max"
+    | "g_ragdoll_minE_time"
+    | "g_roundlimit"
+    | "g_roundtime"
+    | "g_show_loot_window"
+    | "g_showUpdateState"
+    | "g_spectatorcollisions"
+    | "g_suddendeathtime"
+    | "g_teamlock"
+    | "g_tree_cut_reuse_dist"
+    | "g_unit_collide_bottom_box_height_size_rate"
+    | "g_unit_collide_bottom_box_max_size_gap"
+    | "g_unit_collide_bottom_box_min_height_size_gap"
+    | "g_unit_collide_bottom_box_size_rate"
+    | "g_unit_collide_front_bound_rate"
+    | "g_unit_collide_process_frequency"
+    | "g_unit_collide_rear_bound_rate"
+    | "g_unit_collide_side_bound_rate"
+    | "g_use_chat_time_stamp"
+    | "g_use_physicalize_rigid"
+    | "g_useLastKeyInput"
+    | "g_VisibilityTimeout"
+    | "g_VisibilityTimeoutTime"
+    | "g_walkMultiplier"
+    | "gameoption_finalize_update"
+    | "given_quest_distance_display_mode"
+    | "glider_hide_at_sheath"
+    | "glider_start_with_double_jump"
+    | "gliding_mouse_ad"
+    | "gliding_mouse_ws"
+    | "gm_startup"
+    | "gt_debug"
+    | "gt_show"
+    | "hit_assistMultiplayerEnabled"
+    | "hit_assistSingleplayerEnabled"
+    | "hr_dotAngle"
+    | "hr_fovAmt"
+    | "hr_fovTime"
+    | "hr_rotateFactor"
+    | "hr_rotateTime"
+    | "http_password"
+    | "i_bufferedkeys"
+    | "i_debug"
+    | "i_forcefeedback"
+    | "i_iceeffects"
+    | "i_lighteffects"
+    | "i_mouse_accel"
+    | "i_mouse_accel_max"
+    | "i_mouse_buffered"
+    | "i_mouse_inertia"
+    | "i_mouse_smooth"
+    | "i_offset_front"
+    | "i_offset_right"
+    | "i_offset_up"
+    | "i_particleeffects"
+    | "i_soundeffects"
+    | "i_staticfiresounds"
+    | "i_unlimitedammo"
+    | "i_xinput"
+    | "i_xinput_poll_time"
+    | "input_debug"
+    | "instance_id"
+    | "instance_index"
+    | "item_maker_info_show_tooltip"
+    | "keyboard_rotate_speed"
+    | "locale"
+    | "locale_setting"
+    | "log_AllowDirectLoggingFromAnyThread"
+    | "log_DebuggerVerbosity"
+    | "log_doodad_interaction"
+    | "log_FileKeepOpen"
+    | "log_FileMergeTime"
+    | "log_FileThread"
+    | "log_FileVerbosity"
+    | "log_IncludeMemory"
+    | "log_IncludeTime"
+    | "log_SpamDelay"
+    | "log_tick"
+    | "log_Verbosity"
+    | "log_VerbosityOverridesWriteToFile"
+    | "log_WriteToFile"
+    | "login_fast_start"
+    | "login_first_movie"
+    | "lua_debugger"
+    | "lua_gc_mul"
+    | "lua_gc_pause"
+    | "lua_handle"
+    | "lua_loading_profiler"
+    | "lua_logging_last_callmethod"
+    | "lua_stackonmalloc"
+    | "lua_StopOnError"
+    | "lua_use_binary"
+    | "MasterGrahicQuality"
+    | "max_interaction_doodad_distance"
+    | "max_time_step"
+    | "max_unit_for_test"
+    | "max_unit_in_world"
+    | "MemInfo"
+    | "MemStats"
+    | "MemStatsFilter"
+    | "MemStatsMaxDepth"
+    | "MemStatsThreshold"
+    | "mfx_Debug"
+    | "mfx_DebugFootStep"
+    | "mfx_Enable"
+    | "mfx_EnableFGEffects"
+    | "mfx_MaxFootStepCount"
+    | "mfx_ParticleImpactThresh"
+    | "mfx_pfx_maxDist"
+    | "mfx_pfx_maxScale"
+    | "mfx_pfx_minScale"
+    | "mfx_RaisedSoundImpactThresh"
+    | "mfx_SerializeFGEffects"
+    | "mfx_SoundImpactThresh"
+    | "mfx_Timeout"
+    | "min_time_step"
+    | "mouse_clear_targeting"
+    | "mov_effect"
+    | "mov_loading"
+    | "mov_NoCutscenes"
+    | "name_show_tag_sphere"
+    | "name_tag_appellation_show"
+    | "name_tag_bottom_margin_on_bgmode"
+    | "name_tag_custom_gauge_offset_hpbar"
+    | "name_tag_custom_gauge_offset_normal"
+    | "name_tag_custom_gauge_size_ratio"
+    | "name_tag_down_scale_limit"
+    | "name_tag_expedition_show"
+    | "name_tag_expeditionfamily"
+    | "name_tag_faction_selection"
+    | "name_tag_faction_show"
+    | "name_tag_fade_out_distance"
+    | "name_tag_fade_out_margin"
+    | "name_tag_fading_duration"
+    | "name_tag_fixed_size_mode"
+    | "name_tag_font_size"
+    | "name_tag_font_size_on_bgmode"
+    | "name_tag_friendly_mate_show"
+    | "name_tag_friendly_show"
+    | "name_tag_hostile_mate_show"
+    | "name_tag_hostile_show"
+    | "name_tag_hp_bg_height_offset"
+    | "name_tag_hp_bg_width_offset"
+    | "name_tag_hp_color_multiplier_on_bgmode"
+    | "name_tag_hp_height"
+    | "name_tag_hp_height_offset_on_bgmode"
+    | "name_tag_hp_height_on_bgmode"
+    | "name_tag_hp_offset"
+    | "name_tag_hp_show"
+    | "name_tag_hp_width"
+    | "name_tag_hp_width_offset_on_bgmode"
+    | "name_tag_hp_width_on_bgmode"
+    | "name_tag_icon_gap"
+    | "name_tag_icon_size_ratio"
+    | "name_tag_large_app_stamp_offset_hpbar"
+    | "name_tag_large_app_stamp_offset_normal"
+    | "name_tag_large_app_stamp_size_ratio"
+    | "name_tag_mark_size_ratio"
+    | "name_tag_mode"
+    | "name_tag_my_mate_show"
+    | "name_tag_npc_show"
+    | "name_tag_offset"
+    | "name_tag_outline"
+    | "name_tag_party_show"
+    | "name_tag_perspective_rate"
+    | "name_tag_quest_mark_smooth_margin"
+    | "name_tag_quest_offset"
+    | "name_tag_quest_option"
+    | "name_tag_render_shadow"
+    | "name_tag_render_size"
+    | "name_tag_self_enable"
+    | "name_tag_shadow_alpha"
+    | "name_tag_shadow_delta"
+    | "name_tag_size_scale_on_bgmode"
+    | "name_tag_text_line_offset"
+    | "name_tag_up_scale_limit"
+    | "net_adaptive_fast_ping"
+    | "net_backofftimeout"
+    | "net_bw_aggressiveness"
+    | "net_channelstats"
+    | "net_connectivity_detection_interval"
+    | "net_defaultChannelBitRateDesired"
+    | "net_defaultChannelBitRateToleranceHigh"
+    | "net_defaultChannelBitRateToleranceLow"
+    | "net_defaultChannelIdlePacketRateDesired"
+    | "net_defaultChannelPacketRateDesired"
+    | "net_defaultChannelPacketRateToleranceHigh"
+    | "net_defaultChannelPacketRateToleranceLow"
+    | "net_enable_fast_ping"
+    | "net_enable_tfrc"
+    | "net_enable_voice_chat"
+    | "net_highlatencythreshold"
+    | "net_highlatencytimelimit"
+    | "net_inactivitytimeout"
+    | "net_input_dump"
+    | "net_input_trace"
+    | "net_lan_scanport_first"
+    | "net_lan_scanport_num"
+    | "net_lanbrowser"
+    | "net_log"
+    | "net_phys_debug"
+    | "net_phys_lagsmooth"
+    | "net_phys_pingsmooth"
+    | "net_rtt_convergence_factor"
+    | "net_scheduler_debug"
+    | "net_ship_no_interpolate"
+    | "net_stats_login"
+    | "net_stats_pass"
+    | "net_tcp_nodelay"
+    | "net_voice_averagebitrate"
+    | "net_voice_lead_packets"
+    | "net_voice_proximity"
+    | "net_voice_trail_packets"
+    | "next_option_sound"
+    | "next_r_Driver"
+    | "next_r_MultiThreaded"
+    | "next_sys_spec_full"
+    | "OceanWavesAmount"
+    | "OceanWavesConstantA"
+    | "OceanWavesConstantB"
+    | "OceanWavesSize"
+    | "OceanWavesSpeed"
+    | "OceanWindDirection"
+    | "OceanWindSpeed"
+    | "optimization_mode"
+    | "optimization_skeleton_effect"
+    | "optimization_use_footstep"
+    | "option_animation"
+    | "option_anti_aliasing"
+    | "option_camera_fov_set"
+    | "option_character_lod"
+    | "option_character_privacy_status"
+    | "option_custom_addon_fonts"
+    | "option_custom_addon_ui"
+    | "option_effect"
+    | "option_enable_combat_chat_log"
+    | "option_enable_misc_chat_log"
+    | "option_game_log_life_time"
+    | "option_hide_bloodlust_mode"
+    | "option_hide_enchant_broadcast"
+    | "option_hide_mobilization_order"
+    | "option_item_mount_only_my_pet"
+    | "option_map_given_quest_distance"
+    | "option_name_tag_mode"
+    | "option_optimization_enable"
+    | "option_shader_quality"
+    | "option_shadow_dist"
+    | "option_shadow_view_dist_ratio"
+    | "option_shadow_view_dist_ratio_character"
+    | "option_show_combat_resource_window"
+    | "option_skill_alert_enable"
+    | "option_skill_alert_position"
+    | "option_sound"
+    | "option_terrain_detail"
+    | "option_terrain_lod"
+    | "option_texture_bg"
+    | "option_texture_character"
+    | "option_use_cloud"
+    | "option_use_dof"
+    | "option_use_hdr"
+    | "option_use_kr_fonts"
+    | "option_use_shadow"
+    | "option_use_water_reflection"
+    | "option_view_dist_ratio"
+    | "option_view_dist_ratio_vegetation"
+    | "option_view_distance"
+    | "option_volumetric_effect"
+    | "option_water"
+    | "option_weapon_effect"
+    | "overhead_marker_fixed_size"
+    | "p_accuracy_LCPCG"
+    | "p_accuracy_LCPCG_no_improvement"
+    | "p_accuracy_MC"
+    | "p_approx_caps_len"
+    | "p_break_on_validation"
+    | "p_characterik"
+    | "p_count_objects"
+    | "p_cull_distance"
+    | "p_damping_group_size"
+    | "p_debug_explosions"
+    | "p_debug_joints"
+    | "p_do_step"
+    | "p_draw_helpers"
+    | "p_draw_helpers_num"
+    | "p_drawPrimitives"
+    | "p_enforce_contacts"
+    | "p_event_count_debug"
+    | "p_fixed_timestep"
+    | "p_GEB_max_cells"
+    | "p_group_damping"
+    | "p_joint_dmg_accum"
+    | "p_joint_dmg_accum_thresh"
+    | "p_jump_to_profile_ent"
+    | "p_lattice_max_iters"
+    | "p_limit_simple_solver_energy"
+    | "p_list_active_objects"
+    | "p_list_objects"
+    | "p_log_lattice_tension"
+    | "p_max_approx_caps"
+    | "p_max_contact_gap"
+    | "p_max_contact_gap_player"
+    | "p_max_contact_gap_simple"
+    | "p_max_contacts"
+    | "p_max_debris_mass"
+    | "p_max_entity_cells"
+    | "p_max_LCPCG_contacts"
+    | "p_max_LCPCG_fruitless_iters"
+    | "p_max_LCPCG_iters"
+    | "p_max_LCPCG_microiters"
+    | "p_max_LCPCG_microiters_final"
+    | "p_max_LCPCG_subiters"
+    | "p_max_LCPCG_subiters_final"
+    | "p_max_MC_iters"
+    | "p_max_MC_mass_ratio"
+    | "p_max_MC_vel"
+    | "p_max_object_splashes"
+    | "p_max_plane_contacts"
+    | "p_max_plane_contacts_distress"
+    | "p_max_player_velocity"
+    | "p_max_substeps"
+    | "p_max_substeps_large_group"
+    | "p_max_unproj_vel"
+    | "p_max_velocity"
+    | "p_max_world_step"
+    | "p_min_LCPCG_improvement"
+    | "p_min_separation_speed"
+    | "p_net_angsnapmul"
+    | "p_net_minsnapdist"
+    | "p_net_minsnapdot"
+    | "p_net_smoothtime"
+    | "p_net_velsnapmul"
+    | "p_noGeomLoad"
+    | "p_notify_epsilon_living"
+    | "p_notify_epsilon_rigid"
+    | "p_num_bodies_large_group"
+    | "p_penalty_scale"
+    | "p_players_can_break"
+    | "p_pod_life_time"
+    | "p_profile"
+    | "p_profile_entities"
+    | "p_profile_functions"
+    | "p_prohibit_unprojection"
+    | "p_ray_fadein"
+    | "p_ray_on_grid_max_size"
+    | "p_ray_peak_time"
+    | "p_rwi_queue_debug"
+    | "p_single_step_mode"
+    | "p_skip_redundant_colldet"
+    | "p_splash_dist0"
+    | "p_splash_dist1"
+    | "p_splash_force0"
+    | "p_splash_force1"
+    | "p_splash_vel0"
+    | "p_splash_vel1"
+    | "p_tick_breakable"
+    | "p_time_granularity"
+    | "p_unproj_vel_scale"
+    | "p_use_distance_contacts"
+    | "p_use_unproj_vel"
+    | "p_wireframe_distance"
+    | "party_default_accept"
+    | "pelvis_shake_knockback"
+    | "pelvis_shake_scale"
+    | "pelvis_shake_time"
+    | "pelvis_shake_warp"
+    | "pl_curvingSlowdownSpeedScale"
+    | "pl_fall_start_height"
+    | "pl_fall_start_velocity"
+    | "pl_fallDamage_SpeedBias"
+    | "pl_fallDamage_SpeedFatal"
+    | "pl_fallDamage_SpeedSafe"
+    | "pl_flyingVelocityMultiplier"
+    | "pl_zeroGAimResponsiveness"
+    | "pl_zeroGBaseSpeed"
+    | "pl_zeroGDashEnergyConsumption"
+    | "pl_zeroGEnableGBoots"
+    | "pl_zeroGEnableGyroFade"
+    | "pl_zeroGFloatDuration"
+    | "pl_zeroGGyroFadeAngleInner"
+    | "pl_zeroGGyroFadeAngleOuter"
+    | "pl_zeroGGyroFadeExp"
+    | "pl_zeroGGyroStrength"
+    | "pl_zeroGParticleTrail"
+    | "pl_zeroGSpeedMaxSpeed"
+    | "pl_zeroGSpeedModeEnergyConsumption"
+    | "pl_zeroGSpeedMultNormal"
+    | "pl_zeroGSpeedMultNormalSprint"
+    | "pl_zeroGSpeedMultSpeed"
+    | "pl_zeroGSpeedMultSpeedSprint"
+    | "pl_zeroGSwitchableGyro"
+    | "pl_zeroGThrusterResponsiveness"
+    | "pl_zeroGUpDown"
+    | "prefab_cache_xml"
+    | "prefab_cache_xml_gc"
+    | "prefab_stream_xml"
+    | "prefab_use_mmf"
+    | "profile"
+    | "profile_allthreads"
+    | "profile_disk"
+    | "profile_disk_budget"
+    | "profile_disk_max_draw_items"
+    | "profile_disk_max_items"
+    | "profile_disk_timeframe"
+    | "profile_disk_type_filter"
+    | "profile_event_tolerance"
+    | "profile_filter"
+    | "profile_graph"
+    | "profile_graphScale"
+    | "profile_network"
+    | "profile_pagefaults"
+    | "profile_peak"
+    | "profile_sampler"
+    | "profile_sampler_max_samples"
+    | "profile_smooth"
+    | "profile_weighting"
+    | "q_Renderer"
+    | "q_ShaderFX"
+    | "q_ShaderGeneral"
+    | "q_ShaderGlass"
+    | "q_ShaderHDR"
+    | "q_ShaderIce"
+    | "q_ShaderMetal"
+    | "q_ShaderPostProcess"
+    | "q_ShaderShadow"
+    | "q_ShaderSky"
+    | "q_ShaderTerrain"
+    | "q_ShaderVegetation"
+    | "q_ShaderWater"
+    | "quadruped_idle_align"
+    | "queued_skill_margin"
+    | "r_AllowFP16Meshes"
+    | "r_AllowHardwareSRGBWrite"
+    | "r_ArmourPulseSpeedMultiplier"
+    | "r_auxGeom"
+    | "r_Batching"
+    | "r_Beams"
+    | "r_BeamsDistFactor"
+    | "r_BeamsHelpers"
+    | "r_BeamsMaxSlices"
+    | "r_BeamsSoftClip"
+    | "r_binaryShaderAutoGen"
+    | "r_Brightness"
+    | "r_BufferUpload_Enable"
+    | "r_BufferUpload_WriteMode"
+    | "r_CBStatic"
+    | "r_CBStaticDebug"
+    | "r_Character_NoDeform"
+    | "r_CloudsDebug"
+    | "r_CloudsUpdateAlways"
+    | "r_ColorBits"
+    | "r_ColorGrading"
+    | "r_ColorGradingCharts"
+    | "r_ColorGradingChartsCache"
+    | "r_ColorGradingDof"
+    | "r_ColorGradingFilters"
+    | "r_ColorGradingLevels"
+    | "r_ColorGradingSelectiveColor"
+    | "r_ConditionalRendering"
+    | "r_Contrast"
+    | "r_CoronaColorScale"
+    | "r_CoronaFade"
+    | "r_Coronas"
+    | "r_CoronaSizeScale"
+    | "r_CreateZBufferTexture"
+    | "r_CSTest"
+    | "r_cubemapgenerating"
+    | "r_CullGeometryForLights"
+    | "r_CustomResHeight"
+    | "r_CustomResMaxSize"
+    | "r_CustomResPreview"
+    | "r_CustomResWidth"
+    | "r_CustomVisions"
+    | "r_DebugLights"
+    | "r_DebugLightVolumes"
+    | "r_debugPatchwork"
+    | "r_DebugRefraction"
+    | "r_DebugRenderMode"
+    | "r_DebugScreenEffects"
+    | "r_DeferredDecals"
+    | "r_deferredDecalsDebug"
+    | "r_DeferredDecalsLowSpec"
+    | "r_deferredDecalsMSAA"
+    | "r_DeferredShadingCubeMaps"
+    | "r_DeferredShadingDBTstencil"
+    | "r_DeferredShadingDebug"
+    | "r_DeferredShadingDepthBoundsTest"
+    | "r_DeferredShadingHeightBasedAmbient"
+    | "r_DeferredShadingLightLodRatio"
+    | "r_DeferredShadingLightStencilRatio"
+    | "r_DeferredShadingLightVolumes"
+    | "r_DeferredShadingScissor"
+    | "r_DeferredShadingSortLights"
+    | "r_DeferredShadingStencilPrepass"
+    | "r_DeferredShadingTiled"
+    | "r_DeferredShadingTiledRatio"
+    | "r_DeferredShadingTilesX"
+    | "r_DeferredShadingTilesY"
+    | "r_DepthBits"
+    | "r_DepthOfField"
+    | "r_DepthOfFieldBokeh"
+    | "r_DepthOfFieldBokehQuality"
+    | "r_desireHeight"
+    | "r_desireWidth"
+    | "r_DetailDistance"
+    | "r_DetailNumLayers"
+    | "r_DetailScale"
+    | "r_DetailTextures"
+    | "r_DisplacementFactor"
+    | "r_DisplayInfo"
+    | "r_DisplayInfoGraph"
+    | "r_distant_rain"
+    | "r_dofMinZ"
+    | "r_dofMinZBlendMult"
+    | "r_dofMinZScale"
+    | "r_DrawNearFarPlane"
+    | "r_DrawNearFoV"
+    | "r_DrawNearZRange"
+    | "r_DrawValidation"
+    | "r_Driver"
+    | "r_DualMaterialCullingDist"
+    | "r_DynTexAtlasCloudsMaxSize"
+    | "r_dyntexatlasdyntexsrcsize"
+    | "r_DynTexAtlasSpritesMaxSize"
+    | "r_dyntexatlasvoxterrainsize"
+    | "r_DynTexMaxSize"
+    | "r_enableAuxGeom"
+    | "r_EnableErrorCheck"
+    | "r_EnvCMResolution"
+    | "r_EnvCMupdateInterval"
+    | "r_EnvCMWrite"
+    | "r_EnvLCMupdateInterval"
+    | "r_EnvTexResolution"
+    | "r_EnvTexUpdateInterval"
+    | "r_ErrorString"
+    | "r_ExcludeMesh"
+    | "r_ExcludeShader"
+    | "r_EyeAdaptationBase"
+    | "r_EyeAdaptationFactor"
+    | "r_EyeAdaptationLocal"
+    | "r_EyeAdaptationSpeed"
+    | "r_FastFullScreenQuad"
+    | "r_Flares"
+    | "r_Flush"
+    | "r_FogDensityScale"
+    | "r_FogDepthTest"
+    | "r_FogGlassBackbufferResolveDebug"
+    | "r_FogRampScale"
+    | "r_ForceDiffuseSpecClear"
+    | "r_ForceZClearWithColor"
+    | "r_Fullscreen"
+    | "r_fxaa"
+    | "r_Gamma"
+    | "r_geforce7"
+    | "r_GeneralPassGeometrySorting"
+    | "r_GeomInstancing"
+    | "r_GeominstancingDebug"
+    | "r_GeomInstancingThreshold"
+    | "r_GetScreenShot"
+    | "r_GlitterAmount"
+    | "r_GlitterSize"
+    | "r_GlitterSpecularPow"
+    | "r_GlitterVariation"
+    | "r_Glow"
+    | "r_glowanamorphicflares"
+    | "r_GPUProfiler"
+    | "r_GraphStyle"
+    | "r_HDRBloomMul"
+    | "r_HDRBlueShift"
+    | "r_HDRBrightLevel"
+    | "r_HDRBrightness"
+    | "r_HDRBrightOffset"
+    | "r_HDRBrightThreshold"
+    | "r_HDRDebug"
+    | "r_HDREyeAdaptionCache"
+    | "r_HDRFilmicToe"
+    | "r_HDRGrainAmount"
+    | "r_HDRLevel"
+    | "r_HDROffset"
+    | "r_HDRPresets"
+    | "r_HDRRangeAdaptationSpeed"
+    | "r_HDRRangeAdaptLBufferMax"
+    | "r_HDRRangeAdaptLBufferMaxRange"
+    | "r_HDRRangeAdaptMax"
+    | "r_HDRRangeAdaptMaxRange"
+    | "r_HDRRendering"
+    | "r_HDRSaturation"
+    | "r_HDRSCurveMax"
+    | "r_HDRSCurveMin"
+    | "r_HDRTexFormat"
+    | "r_HDRVignetting"
+    | "r_Height"
+    | "r_ImposterRatio"
+    | "r_ImpostersDraw"
+    | "r_ImpostersUpdatePerFrame"
+    | "r_IrradianceVolumes"
+    | "r_LightBufferOptimized"
+    | "r_LightsSinglePass"
+    | "r_Log"
+    | "r_log_stream_db_failed_file"
+    | "r_LogShaders"
+    | "r_LogTexStreaming"
+    | "r_MaxDualMtlDepth"
+    | "r_MaxSuitPulseSpeedMultiplier"
+    | "r_MeasureOverdraw"
+    | "r_MeasureOverdrawScale"
+    | "r_MergeRenderChunks"
+    | "r_meshHoldMemDuration"
+    | "r_meshlog"
+    | "r_MeshPoolSize"
+    | "r_MeshPrecache"
+    | "r_meshUseSummedArea"
+    | "r_MeshVolatilePoolSize"
+    | "r_moon_reflection_boost"
+    | "r_MotionBlur"
+    | "r_MotionBlurFrameTimeScale"
+    | "r_MotionBlurMaxViewDist"
+    | "r_MotionBlurShutterSpeed"
+    | "r_MSAA"
+    | "r_MSAA_amd_resolvessubresource_workaround"
+    | "r_MSAA_debug"
+    | "r_MSAA_quality"
+    | "r_MSAA_samples"
+    | "r_MultiGPU"
+    | "r_MultiThreaded"
+    | "r_MultiThreadFlush"
+    | "r_NightVision"
+    | "r_NightVisionAmbientMul"
+    | "r_NightVisionBrightLevel"
+    | "r_NightVisionCamMovNoiseAmount"
+    | "r_NightVisionCamMovNoiseBlendSpeed"
+    | "r_NightVisionFinalMul"
+    | "r_NightVisionSonarLifetime"
+    | "r_NightVisionSonarMultiplier"
+    | "r_NightVisionSonarRadius"
+    | "r_NightVisionViewDist"
+    | "r_NoDrawNear"
+    | "r_NoDrawShaders"
+    | "r_NoHWGamma"
+    | "r_NoLoadTextures"
+    | "r_NoPreprocess"
+    | "r_NormalsLength"
+    | "r_NVDOF"
+    | "r_NVDOF_BeforeToneMap"
+    | "r_NVDOF_BokehIntensity"
+    | "r_NVDOF_BokehLuminance"
+    | "r_NVDOF_BokehSize"
+    | "r_NVDOF_FarBlurSize"
+    | "r_NVDOF_InFocusRange"
+    | "r_NVDOF_NearBlurSize"
+    | "r_NVDOF_Test_Mode"
+    | "r_NVSSAO"
+    | "r_NVSSAO_AmbientLightOcclusion_HighQuality"
+    | "r_NVSSAO_AmbientLightOcclusion_LowQuality"
+    | "r_NVSSAO_Bias"
+    | "r_NVSSAO_BlurEnable"
+    | "r_NVSSAO_BlurSharpness"
+    | "r_NVSSAO_CoarseAO"
+    | "r_NVSSAO_DetailAO"
+    | "r_NVSSAO_FogDistance"
+    | "r_NVSSAO_FogEnable"
+    | "r_NVSSAO_OnlyOccludeAmbient"
+    | "r_NVSSAO_PowerExponent"
+    | "r_NVSSAO_Radius"
+    | "r_NVSSAO_SceneScale"
+    | "r_NVSSAO_UseNormals"
+    | "r_OcclusionQueriesMGPU"
+    | "r_OceanHeightScale"
+    | "r_OceanLodDist"
+    | "r_OceanMaxSplashes"
+    | "r_OceanRendType"
+    | "r_OceanSectorSize"
+    | "r_OceanTexUpdate"
+    | "r_OptimisedLightSetup"
+    | "r_ParticleIndHeapSize"
+    | "r_particles_lights_limit"
+    | "r_particles_lights_merge_range"
+    | "r_particles_lights_no_merge_size"
+    | "r_ParticleVertHeapSize"
+    | "r_PixelSync"
+    | "r_pointslightshafts"
+    | "r_PostAA"
+    | "r_PostAAEdgeFilter"
+    | "r_PostAAInEditingMode"
+    | "r_PostAAMode"
+    | "r_PostAAStencilCulling"
+    | "r_PostProcessEffects"
+    | "r_PostProcessEffectsFilters"
+    | "r_PostProcessEffectsGameFx"
+    | "r_PostProcessEffectsParamsBlending"
+    | "r_PostProcessEffectsReset"
+    | "r_PostProcessHUD3D"
+    | "r_PostProcessMinimal"
+    | "r_PostProcessOptimize"
+    | "r_PreloadUserShaderCache"
+    | "r_ProfileChar"
+    | "r_ProfileDIPs"
+    | "r_ProfileShaders"
+    | "r_ProfileShadersSmooth"
+    | "r_profileTerrainDetail"
+    | "r_Rain"
+    | "r_RainAmount"
+    | "r_RainDistMultiplier"
+    | "r_RainDropsEffect"
+    | "r_RainIgnoreNearest"
+    | "r_RainLayersPerFrame"
+    | "r_RainMaxViewDist"
+    | "r_RainMaxViewDist_Deferred"
+    | "r_rainOcclAdditionalSize"
+    | "r_rainOccluderRoofDrawDistance"
+    | "r_RainOccluderSizeTreshold"
+    | "r_rainOcclViewerDist"
+    | "r_RC_AutoInvoke"
+    | "r_ReduceRtChange"
+    | "r_Reflections"
+    | "r_ReflectionsOffset"
+    | "r_ReflectionsQuality"
+    | "r_refraction"
+    | "r_RefractionPartialResolves"
+    | "r_ReloadShaders"
+    | "r_RenderMeshHashGridUnitSize"
+    | "r_RenderMeshLockLog"
+    | "r_ScatteringMaxDist"
+    | "r_Scissor"
+    | "r_Scratches"
+    | "r_ShaderCompilerDontCache"
+    | "r_ShaderCompilerPort"
+    | "r_ShaderCompilerServer"
+    | "r_ShaderEmailTags"
+    | "r_ShadersAddListRT"
+    | "r_ShadersAddListRTAndRT"
+    | "r_ShadersAlwaysUseColors"
+    | "r_ShadersAsyncActivation"
+    | "r_ShadersAsyncCompiling"
+    | "r_ShadersAsyncMaxThreads"
+    | "r_ShadersAsyncReading"
+    | "r_ShadersBlackListGL"
+    | "r_ShadersBlackListRT"
+    | "r_ShadersCacheOptimiseLog"
+    | "r_ShadersDebug"
+    | "r_ShadersDelayFlush"
+    | "r_ShadersDirectory"
+    | "r_shadersdontflush"
+    | "r_ShadersEditing"
+    | "r_ShadersIgnoreIncludesChanging"
+    | "r_ShadersIntCompiler"
+    | "r_ShadersInterfaceVersion"
+    | "r_ShadersLazyUnload"
+    | "r_ShadersLogCacheMisses"
+    | "r_ShadersNoCompile"
+    | "r_ShadersPreactivate"
+    | "r_ShadersPrecacheAllLights"
+    | "r_ShadersRemoteCompiler"
+    | "r_ShadersSaveList"
+    | "r_shadersSaveListRemote"
+    | "r_ShadersSubmitRequestline"
+    | "r_shadersUnLoadBinCaches"
+    | "r_ShadersUseInstanceLookUpTable"
+    | "r_ShadersUseScriptCache"
+    | "r_ShaderUsageDelay"
+    | "r_ShadowBlur"
+    | "r_ShadowBluriness"
+    | "r_ShadowGen"
+    | "r_ShadowGenGS"
+    | "r_ShadowGenMode"
+    | "r_ShadowJittering"
+    | "r_ShadowPass"
+    | "r_ShadowPoolMaxFrames"
+    | "r_ShadowPoolMaxTimeslicedUpdatesPerFrame"
+    | "r_ShadowsAdaptionMin"
+    | "r_ShadowsAdaptionRangeClamp"
+    | "r_ShadowsAdaptionSize"
+    | "r_ShadowsBias"
+    | "r_ShadowsDeferredMode"
+    | "r_ShadowsDepthBoundNV"
+    | "r_ShadowsForwardPass"
+    | "r_ShadowsGridAligned"
+    | "r_ShadowsMaskDownScale"
+    | "r_ShadowsMaskResolution"
+    | "r_ShadowsOrthogonal"
+    | "r_ShadowsParticleAnimJitterAmount"
+    | "r_ShadowsParticleJitterAmount"
+    | "r_ShadowsParticleKernelSize"
+    | "r_ShadowsParticleNormalEffect"
+    | "r_ShadowsPCFiltering"
+    | "r_ShadowsSlopeScaleBias"
+    | "r_ShadowsStencilPrePass"
+    | "r_ShadowsSunMaskBlurriness"
+    | "r_ShadowsUseClipVolume"
+    | "r_ShadowsX2CustomBias"
+    | "r_ShadowTexFormat"
+    | "r_shootingstar"
+    | "r_shootingstar_length"
+    | "r_shootingstar_lifetime"
+    | "r_shootingstar_respawnnow"
+    | "r_shootingstar_respawntime"
+    | "r_shootingstar_width"
+    | "r_ShowDynTextureFilter"
+    | "r_ShowDynTextures"
+    | "r_ShowGammaReference"
+    | "r_ShowLight"
+    | "r_ShowLightBounds"
+    | "r_ShowLines"
+    | "r_ShowNormals"
+    | "r_ShowRenderTarget"
+    | "r_ShowRenderTarget_FullScreen"
+    | "r_ShowTangents"
+    | "r_ShowTexTimeGraph"
+    | "r_ShowTexture"
+    | "r_ShowTimeGraph"
+    | "r_ShowVideoMemoryStats"
+    | "r_silhouetteColorAmount"
+    | "r_silhouetteQuality"
+    | "r_silhouetteSize"
+    | "r_SoftAlphaTest"
+    | "r_solidWireframe"
+    | "r_SonarVision"
+    | "r_SplitScreenActive"
+    | "r_SSAO"
+    | "r_SSAO_amount"
+    | "r_SSAO_amount_multipler"
+    | "r_SSAO_contrast"
+    | "r_SSAO_depth_range"
+    | "r_SSAO_downscale"
+    | "r_SSAO_quality"
+    | "r_SSAO_radius"
+    | "r_SSAO_radius_multipler"
+    | "r_SSAO_Visualise"
+    | "r_SSAODebug"
+    | "r_SSAOTemporalConvergence"
+    | "r_ssdo"
+    | "r_ssdoAmbientAmount"
+    | "r_ssdoAmbientClamp"
+    | "r_ssdoAmbientPow"
+    | "r_ssdoAmount"
+    | "r_SSDOOptimized"
+    | "r_ssdoRadius"
+    | "r_ssdoRadiusMax"
+    | "r_ssdoRadiusMin"
+    | "r_SSGI"
+    | "r_SSGIAmount"
+    | "r_SSGIBlur"
+    | "r_SSGIQuality"
+    | "r_SSGIRadius"
+    | "r_SSReflCutoff"
+    | "r_SSReflections"
+    | "r_SSReflExp"
+    | "r_stars_rotate"
+    | "r_stars_sharpness"
+    | "r_stars_size"
+    | "r_Stats"
+    | "r_StencilBits"
+    | "r_StencilFlushShaderReset"
+    | "r_StereoDevice"
+    | "r_StereoEyeDist"
+    | "r_StereoFlipEyes"
+    | "r_StereoGammaAdjustment"
+    | "r_StereoHudScreenDist"
+    | "r_StereoMode"
+    | "r_StereoNearGeoScale"
+    | "r_StereoOutput"
+    | "r_StereoScreenDist"
+    | "r_StereoStrength"
+    | "r_sunshafts"
+    | "r_Supersampling"
+    | "r_SupersamplingFilter"
+    | "r_TerrainAO"
+    | "r_TerrainAO_FadeDist"
+    | "r_TerrainSpecular_AccurateFresnel"
+    | "r_TerrainSpecular_ColorB"
+    | "r_TerrainSpecular_ColorG"
+    | "r_TerrainSpecular_ColorR"
+    | "r_TerrainSpecular_IndexOfRefraction"
+    | "r_TerrainSpecular_Metallicness"
+    | "r_TerrainSpecular_Model"
+    | "r_TerrainSpecular_Roughness"
+    | "r_TerrainSpecular_Strength"
+    | "r_TessellationDebug"
+    | "r_TessellationTriangleSize"
+    | "r_testSplitScreen"
+    | "r_TexAtlasSize"
+    | "r_TexBindMode"
+    | "r_TexBumpResolution"
+    | "r_TexGrid"
+    | "r_TexHWMipsGeneration"
+    | "r_TexLog"
+    | "r_TexLogNonStream"
+    | "r_TexMaxAnisotropy"
+    | "r_TexMaxSize"
+    | "r_TexMinAnisotropy"
+    | "r_TexMinSize"
+    | "r_TexNoAniso"
+    | "r_TexNoLoad"
+    | "r_TexNormalMapType"
+    | "r_TexPostponeLoading"
+    | "r_TexResolution"
+    | "r_TexResolution_Conditional"
+    | "r_TexSkyQuality"
+    | "r_texStagingGCTime"
+    | "r_texStagingMaxCount"
+    | "r_Texture_Anisotropic_Level"
+    | "r_texture_db_streaming"
+    | "r_texture_db_streaming_check_integrity"
+    | "r_texture_precache_limit"
+    | "r_TextureCompressor"
+    | "r_TextureLodDistanceRatio"
+    | "r_TextureLodMaxLod"
+    | "r_TexturesFilteringQuality"
+    | "r_TexturesStreamAdaptiveMargin"
+    | "r_TexturesStreaming"
+    | "r_TexturesStreamingDebug"
+    | "r_TexturesStreamingDebugDumpIntoLog"
+    | "r_TexturesStreamingDebugfilter"
+    | "r_TexturesStreamingDebugMinMip"
+    | "r_TexturesStreamingDebugMinSize"
+    | "r_TexturesStreamingDontKeepSystemMode"
+    | "r_TexturesStreamingIgnore"
+    | "r_TexturesStreamingMaxRequestedJobs"
+    | "r_TexturesStreamingMaxRequestedMB"
+    | "r_texturesstreamingMinMipmap"
+    | "r_texturesstreamingMinReadSizeKB"
+    | "r_TexturesStreamingMipBias"
+    | "r_TexturesStreamingMipClampDVD"
+    | "r_texturesstreamingmipfading"
+    | "r_TexturesStreamingNoUpload"
+    | "r_TexturesStreamingOnlyVideo"
+    | "r_texturesstreamingPostponeMips"
+    | "r_texturesstreamingPostponeThresholdKB"
+    | "r_texturesstreamingPostponeThresholdMip"
+    | "r_texturesstreamingResidencyEnabled"
+    | "r_texturesstreamingResidencyThrottle"
+    | "r_texturesstreamingResidencyTime"
+    | "r_texturesstreamingResidencyTimeTestLimit"
+    | "r_TexturesStreamingSync"
+    | "r_texturesStreamingUploadPerFrame"
+    | "r_TexturesStreamPoolIdealRatio"
+    | "r_TexturesStreamPoolLimitRatio"
+    | "r_TexturesStreamPoolSize"
+    | "r_TexturesStreamSystemLimitCheckTime"
+    | "r_TexturesStreamSystemPoolSize"
+    | "r_texturesStreamUseMipOffset"
+    | "r_ThermalVision"
+    | "r_ThermalVisionViewCloakFrequencyPrimary"
+    | "r_ThermalVisionViewCloakFrequencySecondary"
+    | "r_TXAA"
+    | "r_TXAA_DebugMode"
+    | "r_UseAlphaBlend"
+    | "r_UseCompactHDRFormat"
+    | "r_UseDualMaterial"
+    | "r_UseEdgeAA"
+    | "r_usefurpass"
+    | "r_UseGSParticles"
+    | "r_UseHWSkinning"
+    | "r_UseMaterialLayers"
+    | "r_UseMergedPosts"
+    | "r_UseParticlesGlow"
+    | "r_UseParticlesHalfRes"
+    | "r_UseParticlesHalfRes_MinCount"
+    | "r_UseParticlesHalfResDebug"
+    | "r_UseParticlesHalfResForce"
+    | "r_UseParticlesMerging"
+    | "r_UseParticlesRefraction"
+    | "r_UsePOM"
+    | "r_UseShadowsPool"
+    | "r_usesilhouette"
+    | "r_UseSoftParticles"
+    | "r_UseSRGB"
+    | "r_UseZPass"
+    | "r_ValidateDraw"
+    | "r_VarianceShadowMapBlurAmount"
+    | "r_VegetationAlphaTestOnly"
+    | "r_VegetationSpritesGenAlways"
+    | "r_VegetationSpritesGenDebug"
+    | "r_VegetationSpritesMaxUpdate"
+    | "r_VegetationSpritesNoBend"
+    | "r_VegetationSpritesNoGen"
+    | "r_VegetationSpritesTexRes"
+    | "r_visareaDebug"
+    | "r_visareavolumeoversize"
+    | "r_VSync"
+    | "r_waitRenderThreadAtDeviceLost"
+    | "r_WaterCaustics"
+    | "r_WaterCausticsDeferred"
+    | "r_WaterCausticsDistance"
+    | "r_WaterGodRays"
+    | "r_WaterReflections"
+    | "r_WaterReflectionsMGPU"
+    | "r_WaterReflectionsMinVisiblePixelsUpdate"
+    | "r_WaterReflectionsMinVisUpdateDistanceMul"
+    | "r_WaterReflectionsMinVisUpdateFactorMul"
+    | "r_WaterReflectionsQuality"
+    | "r_WaterReflectionsUseMinOffset"
+    | "r_WaterRipple"
+    | "r_WaterRippleResolution"
+    | "r_WaterUpdateChange"
+    | "r_WaterUpdateDistance"
+    | "r_WaterUpdateFactor"
+    | "r_WaterUpdateTimeMax"
+    | "r_WaterUpdateTimeMin"
+    | "r_Width"
+    | "r_WindowX"
+    | "r_WindowY"
+    | "r_wireframe"
+    | "r_ZFightingDepthScale"
+    | "r_ZFightingExtrude"
+    | "r_ZPassDepthSorting"
+    | "r_ZPassOnly"
+    | "ragdoll_hit"
+    | "ragdoll_hit_bone"
+    | "raise_exception"
+    | "rope_max_allowed_step"
+    | "s_ADPCMDecoders"
+    | "s_AllowNotCachedAccess"
+    | "s_AudioPreloadsFile"
+    | "s_BlockAlignSize"
+    | "s_CinemaVolume"
+    | "s_CompressedDialog"
+    | "s_Compression"
+    | "s_CullingByCache"
+    | "s_DebugMusic"
+    | "s_DebugSound"
+    | "s_DialogVolume"
+    | "s_Doppler"
+    | "s_DopplerScale"
+    | "s_DrawObstruction"
+    | "s_DrawSounds"
+    | "s_DummySound"
+    | "s_DumpEventStructure"
+    | "s_ErrorSound"
+    | "s_FileAccess"
+    | "s_FileCacheManagerEnable"
+    | "s_FileCacheManagerSize"
+    | "s_FileOpenHandleMax"
+    | "s_FindLostEvents"
+    | "s_FormatResampler"
+    | "s_FormatSampleRate"
+    | "s_FormatType"
+    | "s_GameCinemaVolume"
+    | "s_GameDialogVolume"
+    | "s_GameMasterVolume"
+    | "s_GameMIDIVolume"
+    | "s_GameMusicVolume"
+    | "s_GameReverbManagerPause"
+    | "s_GameSFXVolume"
+    | "s_GameVehicleMusicVolume"
+    | "s_HDR"
+    | "s_HDRDebug"
+    | "s_HDRFade"
+    | "s_HDRFalloff"
+    | "s_HDRLoudnessFalloff"
+    | "s_HDRLoudnessMaxFalloff"
+    | "s_HDRRange"
+    | "s_HRTF_DSP"
+    | "s_HWChannels"
+    | "s_InactiveSoundIterationTimeout"
+    | "s_LanguagesConversion"
+    | "s_LoadNonBlocking"
+    | "s_MaxActiveSounds"
+    | "s_MaxChannels"
+    | "s_MaxEventCount"
+    | "s_MaxMIDIChannels"
+    | "s_MemoryPoolSoundPrimary"
+    | "s_MemoryPoolSoundPrimaryRatio"
+    | "s_MemoryPoolSoundSecondary"
+    | "s_MemoryPoolSoundSecondaryRatio"
+    | "s_MemoryPoolSystem"
+    | "s_MidiFile"
+    | "s_MIDIVolume"
+    | "s_MinRepeatSoundTimeout"
+    | "s_MPEGDecoders"
+    | "s_MusicCategory"
+    | "s_MusicEnable"
+    | "s_MusicFormat"
+    | "s_MusicInfoDebugFilter"
+    | "s_MusicMaxPatterns"
+    | "s_MusicProfiling"
+    | "s_MusicSpeakerBackVolume"
+    | "s_MusicSpeakerCenterVolume"
+    | "s_MusicSpeakerFrontVolume"
+    | "s_MusicSpeakerLFEVolume"
+    | "s_MusicSpeakerSideVolume"
+    | "s_MusicStreaming"
+    | "s_MusicVolume"
+    | "s_NetworkAudition"
+    | "s_NoFocusVolume"
+    | "s_Obstruction"
+    | "s_ObstructionAccuracy"
+    | "s_ObstructionMaxPierecability"
+    | "s_ObstructionMaxRadius"
+    | "s_ObstructionMaxValue"
+    | "s_ObstructionUpdate"
+    | "s_ObstructionVisArea"
+    | "s_OffscreenEnable"
+    | "s_OutputConfig"
+    | "s_PlaybackFilter"
+    | "s_PrecacheData"
+    | "s_PrecacheDuration"
+    | "s_PreloadWeaponProjects"
+    | "s_PriorityThreshold"
+    | "s_Profiling"
+    | "s_RecordConfig"
+    | "s_ReverbDebugDraw"
+    | "s_ReverbDelay"
+    | "s_ReverbDynamic"
+    | "s_ReverbEchoDSP"
+    | "s_ReverbReflectionDelay"
+    | "s_ReverbType"
+    | "s_SFXVolume"
+    | "s_SoftwareChannels"
+    | "s_SoundEnable"
+    | "s_SoundInfo"
+    | "s_SoundInfoLogFile"
+    | "s_SoundMoods"
+    | "s_SoundMoodsDSP"
+    | "s_SpamFilterTimeout"
+    | "s_SpeakerConfig"
+    | "s_StopSoundsImmediately"
+    | "s_StreamBufferSize"
+    | "s_StreamDialogIntoMemory"
+    | "s_StreamProjectFiles"
+    | "s_UnloadData"
+    | "s_UnloadProjects"
+    | "s_UnusedSoundCount"
+    | "s_VariationLimiter"
+    | "s_VehcleMusicVolume"
+    | "s_VisAreasPropagation"
+    | "s_Vol0TurnsVirtual"
+    | "s_VUMeter"
+    | "s_X2CullingByDistance"
+    | "s_X2CullingByMaxChannel"
+    | "s_X2CullingDistance"
+    | "s_X2CullingDistanceRatio"
+    | "s_X2CullingMaxChannelRatio"
+    | "s_XMADecoders"
+    | "show_guidedecal"
+    | "ShowActionBar_1"
+    | "ShowActionBar_2"
+    | "ShowActionBar_3"
+    | "ShowActionBar_4"
+    | "ShowActionBar_5"
+    | "ShowActionBar_6"
+    | "ShowBuffDuration"
+    | "ShowChatBubble"
+    | "ShowEmptyBagSlotCounter"
+    | "ShowFps"
+    | "ShowGameTime"
+    | "ShowHeatlthNumber"
+    | "ShowMagicPointNumber"
+    | "ShowPlayerFrameLifeAlertEffect"
+    | "ShowServerTime"
+    | "ShowTargetCastingBar"
+    | "ShowTargetToTargetCastingBar"
+    | "skill_detail_damage_show_tooltip"
+    | "skill_synergy_info_show_tooltip"
+    | "skillMoving"
+    | "skip_ag_update"
+    | "slot_cooldown_visible"
+    | "smart_ground_targeting"
+    | "sound_mood_combat_enable"
+    | "ss_auto_cell_loading"
+    | "ss_auto_origin_change"
+    | "ss_debug_ui"
+    | "ss_deferred_object_loading"
+    | "ss_max_warp_dist"
+    | "ss_min_loading_dist_ratio"
+    | "ss_use_in_game_loading"
+    | "stirrup_align_rot"
+    | "sv_AISystem"
+    | "sv_bandwidth"
+    | "sv_bind"
+    | "sv_DedicatedCPUPercent"
+    | "sv_DedicatedCPUVariance"
+    | "sv_DedicatedMaxRate"
+    | "sv_gamerules"
+    | "sv_gs_report"
+    | "sv_gs_trackstats"
+    | "sv_input_timeout"
+    | "sv_lanonly"
+    | "sv_levelrotation"
+    | "sv_map"
+    | "sv_maxmemoryusage"
+    | "sv_maxspectators"
+    | "sv_packetRate"
+    | "sv_password"
+    | "sv_port"
+    | "sv_ranked"
+    | "sv_requireinputdevice"
+    | "sv_servername"
+    | "sv_timeout_disconnect"
+    | "sv_voice_enable_groups"
+    | "sv_voicecodec"
+    | "swim_back_speed_mul"
+    | "swim_buoy_speed"
+    | "swim_down_speed_mul"
+    | "swim_jump_end_depth"
+    | "swim_jump_permission_range"
+    | "swim_jump_speed"
+    | "swim_side_speed_mul"
+    | "swim_up_speed_mul"
+    | "sys_affinity"
+    | "sys_affinity_main"
+    | "sys_affinity_physics"
+    | "sys_affinity_render"
+    | "sys_AI"
+    | "sys_background_task_budget"
+    | "sys_budget_dp"
+    | "sys_budget_dp_brush"
+    | "sys_budget_dp_character"
+    | "sys_budget_dp_entity"
+    | "sys_budget_dp_road"
+    | "sys_budget_dp_terrain"
+    | "sys_budget_dp_terrain_detail"
+    | "sys_budget_dp_terrain_detail_3d"
+    | "sys_budget_dp_vegetation"
+    | "sys_budget_frame_time"
+    | "sys_budget_particle"
+    | "sys_budget_particle_entity"
+    | "sys_budget_particle_etc"
+    | "sys_budget_particle_game"
+    | "sys_budget_particle_item"
+    | "sys_budget_particle_mfx"
+    | "sys_budget_sound_channels"
+    | "sys_budget_sound_memory"
+    | "sys_budget_system_memory"
+    | "sys_budget_system_memory_mesh"
+    | "sys_budget_system_memory_texture"
+    | "sys_budget_triangles"
+    | "sys_budget_tris_brush"
+    | "sys_budget_tris_character"
+    | "sys_budget_tris_entity"
+    | "sys_budget_tris_road"
+    | "sys_budget_tris_shadow"
+    | "sys_budget_tris_terrain"
+    | "sys_budget_tris_terrain_detail"
+    | "sys_budget_tris_terrain_detail_3d"
+    | "sys_budget_tris_vegetation"
+    | "sys_budget_video_memory"
+    | "sys_console_draw_always"
+    | "sys_cpu_usage_update_interval"
+    | "sys_crashtest"
+    | "sys_DeactivateConsole"
+    | "sys_dedicated_sleep_test"
+    | "sys_dev_script_folder"
+    | "sys_dll_game"
+    | "sys_entities"
+    | "sys_firstlaunch"
+    | "sys_float_exceptions"
+    | "sys_flush_system_file_cache"
+    | "sys_game_folder"
+    | "sys_logallocations"
+    | "sys_LowSpecPak"
+    | "sys_main_CPU"
+    | "sys_max_fps"
+    | "sys_max_step"
+    | "sys_memory_cleanup"
+    | "sys_memory_debug"
+    | "sys_min_step"
+    | "sys_movie_update_position"
+    | "sys_no_crash_dialog"
+    | "sys_noupdate"
+    | "sys_PakLogMissingFiles"
+    | "sys_physics"
+    | "sys_physics_client"
+    | "sys_physics_CPU"
+    | "sys_physics_cpu_auto"
+    | "sys_preload"
+    | "sys_ProfileLevelLoading"
+    | "sys_root"
+    | "sys_SaveCVars"
+    | "sys_sleep_background"
+    | "sys_sleep_test"
+    | "sys_spec"
+    | "sys_spec_full"
+    | "sys_SSInfo"
+    | "sys_StreamCallbackTimeBudget"
+    | "sys_streaming_sleep"
+    | "sys_TaskThread0_CPU"
+    | "sys_TaskThread1_CPU"
+    | "sys_TaskThread2_CPU"
+    | "sys_TaskThread3_CPU"
+    | "sys_TaskThread4_CPU"
+    | "sys_TaskThread5_CPU"
+    | "sys_trackview"
+    | "sys_use_limit_fps"
+    | "sys_user_folder"
+    | "sys_vtune"
+    | "sys_warnings"
+    | "sys_WER"
+    | "tab_targeting_dir"
+    | "tab_targeting_fan_angle"
+    | "tab_targeting_fan_dist"
+    | "tab_targeting_history_expire_time"
+    | "tab_targeting_history_max"
+    | "tab_targeting_round_dist"
+    | "tab_targeting_z_limit"
+    | "test_world_congestion"
+    | "test_world_queue"
+    | "time_scale"
+    | "tqos_performance_report_period"
+    | "ucc_ver"
+    | "ui_disable_caption"
+    | "ui_double_click_interval"
+    | "ui_draw_level"
+    | "ui_eventProfile"
+    | "ui_localized_text_debug"
+    | "ui_modelview_enable"
+    | "ui_modelview_update_times"
+    | "ui_scale"
+    | "ui_skill_accessor_update_interval"
+    | "ui_stats"
+    | "um_crawl_groundalign_smooth_time"
+    | "use_auto_regist_district"
+    | "use_celerity_with_double_forward"
+    | "use_data_mining_manager"
+    | "UseQuestDirectingCloseUpCamera"
+    | "user_music_disable_others"
+    | "user_music_disable_self"
+    | "v_altitudeLimit"
+    | "v_altitudeLimitLowerOffset"
+    | "v_draw_slip"
+    | "v_draw_suspension"
+    | "v_dumpFriction"
+    | "v_help_tank_steering"
+    | "v_invertPitchControl"
+    | "v_pa_surface"
+    | "v_profileMovement"
+    | "v_rockBoats"
+    | "v_sprintSpeed"
+    | "v_stabilizeVTOL"
+    | "v_wind_minspeed"
+    | "vehicle_controller_GroundAlign_smooth_time"
+    | "VisibleMyEquipInfo"
+    | "vpn_external_ip"
+    | "world_serveraddr"
+    | "world_serverport"
+    | "x_float1"
+    | "x_float2"
+    | "x_float3"
+    | "x_int1"
+    | "x_int2"
+    | "x_int3"
+```
+
+**DICE_BID_TYPE**
+
+`1`|`2`|`3`
+
+```lua
+DICE_BID_TYPE:
+    | `1` -- Confirmation Window
+    | `2` -- Auto Bid
+    | `3` -- Auto Pass
+```
+
+**DOMINION_GUARD_TOWER_STATE_NOTICE_KEY**
+
+`0`|`1`|`2`|`3`|`4`...(+2)
+
+```lua
+DOMINION_GUARD_TOWER_STATE_NOTICE_KEY:
+    | `0` -- SIEGE_ALERT_GUARD_TOWER_1ST_ATTACK
+    | `1` -- SIEGE_ALERT_GUARD_TOWER_BELOW_75
+    | `2` -- SIEGE_ALERT_GUARD_TOWER_BELOW_50
+    | `3` -- SIEGE_ALERT_GUARD_TOWER_ENGRAVABLE
+    | `4` -- SIEGE_ALERT_ENGRAVING_STARTED
+    | `5` -- SIEGE_ALERT_ENGRAVING_STOPPED
+    | `6` -- SIEGE_ALERT_ENGRAVING_SUCCEEDED
+```
+
+**DOODAD_PERMISSION**
+
+`1`|`2`|`3`|`4`|`5`...(+1)
+
+```lua
+DOODAD_PERMISSION:
+    | `1` -- Private
+    | `2` -- Guild
+    | `3` -- Public
+    | `4` -- Family
+    | `5` -- Family and Guild
+    | `6` -- Alliance
+```
+
+**DRAWABLE_COLOR_KEY**
+
+"action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27)
+
+```lua
+-- game/ui/setting/etc_color.g
+DRAWABLE_COLOR_KEY:
+    | "action_slot_state_img_able"
+    | "action_slot_state_img_can_learn"
+    | "action_slot_state_img_cant_or_not_learn"
+    | "action_slot_state_img_disable"
+    | "common_black_bg"
+    | "common_white_bg"
+    | "craft_step_disable"
+    | "craft_step_enable"
+    | "editbox_cursor_default"
+    | "editbox_cursor_light"
+    | "icon_button_overlay_black"
+    | "icon_button_overlay_none"
+    | "icon_button_overlay_red"
+    | "icon_button_overlay_yellow"
+    | "login_stage_black_bg"
+    | "map_hp_bar_bg"
+    | "map_hp_bar"
+    | "market_price_column_over"
+    | "market_price_last_column"
+    | "market_price_line_daily"
+    | "market_price_line_weekly"
+    | "market_price_volume"
+    | "market_prict_cell"
+    | "quest_content_directing_fade_in"
+    | "quest_content_directing_fade_out"
+    | "quest_content_directing_under_panel"
+    | "quick_slot_bg"
+    | "texture_check_window_bg"
+    | "texture_check_window_data_label"
+    | "texture_check_window_rect"
+    | "texture_check_window_tooltip_bg"
+    | "web_browser_background"
+```
+
+**DRAWABLE_NAME_LAYER**
+
+"artwork"|"background"|"overlay"|"overoverlay"
+
+```lua
+-- Drawables with layers of the same level and parent can overlap based on focus.
+DRAWABLE_NAME_LAYER:
+    | "background" -- Layer 1
+    | "artwork" -- Layer 2
+    | "overlay" -- Layer 3
+    | "overoverlay" -- Layer 4
+```
+
+**EFFECT_PRIORITY**
+
+"alpha"|"colorb"|"colorg"|"colorr"|"rotate"...(+2)
+
+```lua
+EFFECT_PRIORITY:
+    | "alpha"
+    | "colorr" -- TODO: test
+    | "colorg" -- TODO: test
+    | "colorb" -- TODO: test
+    | "rotate"
+    | "scalex"
+    | "scaley" -- TODO: test
+```
+
+**ENCHANT_ITEM_MODE**
+
+"awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7)
+
+```lua
+ENCHANT_ITEM_MODE:
+    | "awaken"
+    | "element"
+    | "evolving_re_roll"
+    | "evolving"
+    | "gem"
+    | "grade"
+    | "refurbishment"
+    | "smelting"
+    | "socket_extract"
+    | "socket_insert"
+    | "socket_remove"
+    | "socket_upgrade"
+```
+
+**ENCHANT_MODE**
+
+"awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7)
+
+```lua
+ENCHANT_MODE:
+    | "awaken"
+    | "element"
+    | "evolving_re_roll"
+    | "evolving"
+    | "gem"
+    | "grade"
+    | "refurbishment"
+    | "smelting"
+    | "socket_extract"
+    | "socket_insert"
+    | "socket_remove"
+    | "socket_upgrade"
+```
+
+**ESC_MENU_CATEGORY_ID**
+
+`1`|`2`|`3`|`4`|`5`
+
+```lua
+-- Taken from db ui_esc_menu_categories
+ESC_MENU_CATEGORY_ID:
+    | `1` -- Character
+    | `2` -- Combat
+    | `3` -- Shop
+    | `4` -- Convenience
+    | `5` -- System
+```
+
+**ESC_MENU_ICON_KEY**
+
+""|"achievement"|"auction"|"bag"|"butler"...(+26)
+
+```lua
+-- game/ui/common/esc_menu.g
+ESC_MENU_ICON_KEY:
+    | ""
+    | "achievement"
+    | "auction"
+    | "bag"
+    | "butler"
+    | "chronicle"
+    | "community"
+    | "dairy"
+    | "faq"
+    | "folio"
+    | "guide"
+    | "hero"
+    | "info"
+    | "item_encyclopedia"
+    | "lock"
+    | "mail"
+    | "manager_icon_esc"
+    | "map"
+    | "message"
+    | "optimizer"
+    | "price"
+    | "public_farm"
+    | "purchase"
+    | "quest"
+    | "raid"
+    | "ranking"
+    | "skill"
+    | "tgos"
+    | "trade"
+    | "uthtin"
+    | "wiki"
+```
+
+**ETC_COLOR**
+
+"action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27)
+
+```lua
+-- game/ui/setting/etc_color.g
+ETC_COLOR:
+    | "action_slot_state_img_able"
+    | "action_slot_state_img_can_learn"
+    | "action_slot_state_img_cant_or_not_learn"
+    | "action_slot_state_img_disable"
+    | "common_black_bg"
+    | "common_white_bg"
+    | "craft_step_disable"
+    | "craft_step_enable"
+    | "editbox_cursor_default"
+    | "editbox_cursor_light"
+    | "icon_button_overlay_black"
+    | "icon_button_overlay_none"
+    | "icon_button_overlay_red"
+    | "icon_button_overlay_yellow"
+    | "login_stage_black_bg"
+    | "map_hp_bar_bg"
+    | "map_hp_bar"
+    | "market_price_column_over"
+    | "market_price_last_column"
+    | "market_price_line_daily"
+    | "market_price_line_weekly"
+    | "market_price_volume"
+    | "market_prict_cell"
+    | "quest_content_directing_fade_in"
+    | "quest_content_directing_fade_out"
+    | "quest_content_directing_under_panel"
+    | "quick_slot_bg"
+    | "texture_check_window_bg"
+    | "texture_check_window_data_label"
+    | "texture_check_window_rect"
+    | "texture_check_window_tooltip_bg"
+    | "web_browser_background"
+```
+
+**FACTION_NAME**
+
+"170906 DO NOT TRANSLATE"|"184394 DO NOT TRANSLATE"|"27499 DO NOT TRANSLATE"|"27500 DO NOT TRANSLATE"|"27501 DO NOT TRANSLATE"...(+115)
+
+```lua
+-- Obtained from db system_factions.name
+FACTION_NAME:
+    | "Friendly"
+    | "Neutral"
+    | "Hostile"
+    | "Crescent Throne"
+    | "Eznan Royals"
+    | "Dreamwaker Exiles"
+    | "Andelph"
+    | "Wyrdwinds"
+    | "Triestes"
+    | "Noryettes"
+    | "East Ishvara"
+    | "West Ishvara"
+    | "South Ishvara"
+    | "North Ishvara"
+    | "Reminisci Castle"
+    | "Wandering Winds"
+    | "Pirate"
+    | "Horror"
+    | "Animal"
+    | "27499 DO NOT TRANSLATE"
+    | "27500 DO NOT TRANSLATE"
+    | "27501 DO NOT TRANSLATE"
+    | "27502 DO NOT TRANSLATE"
+    | "27503 DO NOT TRANSLATE"
+    | "27504 DO NOT TRANSLATE"
+    | "27505 DO NOT TRANSLATE"
+    | "27506 DO NOT TRANSLATE"
+    | "27507 DO NOT TRANSLATE"
+    | "27508 DO NOT TRANSLATE"
+    | "27509 DO NOT TRANSLATE"
+    | "27510 DO NOT TRANSLATE"
+    | "27511 DO NOT TRANSLATE"
+    | "27512 DO NOT TRANSLATE"
+    | "Friendly to all factions except monsters."
+    | "27514 DO NOT TRANSLATE"
+    | "Bloodhand Infiltrators"
+    | "Team Sallium"
+    | "Team Illion"
+    | "Bloodhand Infiltrator Trackers"
+    | "Bloodhands"
+    | "27520 DO NOT TRANSLATE"
+    | "27521 DO NOT TRANSLATE"
+    | "27522 DO NOT TRANSLATE"
+    | "27523 DO NOT TRANSLATE"
+    | "Antiquary Society"
+    | "3rd Corps"
+    | "Eznan Guard"
+    | "27527 DO NOT TRANSLATE"
+    | "27528 DO NOT TRANSLATE"
+    | "The Crimson Watch"
+    | "Nuia Alliance"
+    | "Haranya Alliance"
+    | "27532 DO NOT TRANSLATE"
+    | "27533 DO NOT TRANSLATE"
+    | "27534 DO NOT TRANSLATE"
+    | "27535 DO NOT TRANSLATE"
+    | "27536 DO NOT TRANSLATE"
+    | "27537 DO NOT TRANSLATE"
+    | "27538 DO NOT TRANSLATE"
+    | "27539 DO NOT TRANSLATE"
+    | "27540 DO NOT TRANSLATE"
+    | "Red Team"
+    | "Blue Team"
+    | "Pirate"
+    | "Neutral Guard"
+    | "Harani Bloodhand Infiltrators"
+    | "Pirate Hunters"
+    | "170906 DO NOT TRANSLATE"
+    | "Independents"
+    | "Nuian Guard"
+    | "Harani Guard"
+    | "184394 DO NOT TRANSLATE"
+    | "Scarecrows"
+    | "Nuian Front Watch"
+    | "Fish"
+    | "Haranya Front Watch"
+    | "Pirate Front Watch"
+    | "Nuia"
+    | "Haranya"
+    | "Player Nation Friendship (Nuia/Haranya/Pirate Hostility)"
+    | "Panophtes"
+    | "Argoth"
+    | "343643 DO NOT TRANSLATE"
+    | "343644 DO NOT TRANSLATE"
+    | "Unused"
+    | "Player Nations"
+    | "Nuian Faction Alliance"
+    | "Haranyan Faction Alliance"
+    | "Arena Participant"
+    | "Repentant Shadows"
+    | "Friend"
+    | "Ynystere Royal Family"
+    | "Family Monster"
+    | "Team Morpheus"
+    | "Team Rangora"
+    | "Team Pavitra"
+    | "Team Illion"
+    | "Ipnya"
+    | "Raid"
+    | "Noryette Challenger"
+    | "Party"
+    | "Haranya Alliance"
+    | "Nuia Alliance"
+    | "Anthalon"
+    | "Last Survivor"
+    | "Unclaimed"
+    | "Garden Explorer"
+    | "Garden Pioneer"
+    | "Garden Researcher"
+    | "No Owner"
+    | "Skillset Doodad"
+    | "Warden"
+    | "Infiltrator"
+    | "Game Participant"
+    | "Kurt"
+    | "Isan"
+    | "Machine Rift Defense Faction"
+    | "Sporty Day Participant"
+    | "test_fairy"
+    | "test_fairy Nuia"
+    | "test_fairy Haranya"
+    | "Event Participant"
+    | "Team Yata"
+    | "Team Greenman"
+```
+
+**FOLDER_STATE**
+
+"close"|"open"
+
+```lua
+FOLDER_STATE:
+    | "close"
+    | "open"
+```
+
+**FONT_COLOR_KEY**
+
+"action_slot_key_binding"|"adamant"|"aggro_meter"|"all_in_item_grade_combobox"|"assassin"...(+320)
+
+```lua
+-- game/ui/settings/font_color.g
+FONT_COLOR_KEY:
+    | "action_slot_key_binding"
+    | "adamant"
+    | "aggro_meter"
+    | "all_in_item_grade_combobox"
+    | "assassin"
+    | "attacker_range"
+    | "battlefield_blue"
+    | "battlefield_orange"
+    | "battlefield_red"
+    | "battlefield_yellow"
+    | "beige"
+    | "black"
+    | "blue"
+    | "blue_chat"
+    | "blue_green"
+    | "bright_blue"
+    | "bright_gray"
+    | "bright_green"
+    | "bright_purple"
+    | "bright_yellow"
+    | "brown"
+    | "btn_disabled"
+    | "btn_highlighted"
+    | "btn_normal"
+    | "btn_pushed"
+    | "bubble_chat_etc"
+    | "bubble_chat_say"
+    | "bubble_chat_say_hostile"
+    | "bubble_chat_say_npc"
+    | "bubble_name_friendly_char"
+    | "bubble_name_friendly_npc"
+    | "bubble_name_hostile"
+    | "candidate_list_selected"
+    | "cash_brown"
+    | "character_slot_created_disabled"
+    | "character_slot_created_highlighted"
+    | "character_slot_created_normal"
+    | "character_slot_created_pushed"
+    | "character_slot_created_red_disabled"
+    | "character_slot_created_red_highlighted"
+    | "character_slot_created_red_normal"
+    | "character_slot_created_red_pushed"
+    | "character_slot_created_selected_disabled"
+    | "character_slot_created_selected_highlighted"
+    | "character_slot_created_selected_normal"
+    | "character_slot_created_selected_pushed"
+    | "character_slot_impossible_disabled"
+    | "character_slot_impossible_highlighted"
+    | "character_slot_impossible_normal"
+    | "character_slot_impossible_pushed"
+    | "character_slot_possible_disabled"
+    | "character_slot_possible_highlighted"
+    | "character_slot_possible_normal"
+    | "character_slot_possible_pushed"
+    | "character_slot_successor_df"
+    | "character_slot_successor_ov"
+    | "chat_folio"
+    | "chat_tab_selected_disabled"
+    | "chat_tab_selected_highlighted"
+    | "chat_tab_selected_normal"
+    | "chat_tab_selected_pushed"
+    | "chat_tab_unselected_disabled"
+    | "chat_tab_unselected_highlighted"
+    | "chat_tab_unselected_normal"
+    | "chat_tab_unselected_pushed"
+    | "chat_timestamp"
+    | "check_btn_df"
+    | "check_btn_ov"
+    | "check_button_light"
+    | "check_texture_tooltip"
+    | "combat_absorb"
+    | "combat_collision_me"
+    | "combat_collision_other"
+    | "combat_combat_start"
+    | "combat_damaged_spell"
+    | "combat_damaged_swing"
+    | "combat_debuff"
+    | "combat_energize_mp"
+    | "combat_gain_exp"
+    | "combat_gain_honor_point"
+    | "combat_heal"
+    | "combat_skill"
+    | "combat_swing"
+    | "combat_swing_dodge"
+    | "combat_swing_miss"
+    | "combat_synergy"
+    | "combat_text"
+    | "combat_text_default"
+    | "commercial_mail_date"
+    | "congestion_high"
+    | "congestion_low"
+    | "congestion_middle"
+    | "context_menu_df"
+    | "context_menu_dis"
+    | "context_menu_on"
+    | "context_menu_ov"
+    | "customizing_df"
+    | "customizing_dis"
+    | "customizing_on"
+    | "customizing_ov"
+    | "dark_beige"
+    | "dark_gray"
+    | "dark_red"
+    | "dark_sky"
+    | "day_event"
+    | "death_01"
+    | "death_02"
+    | "deep_orange"
+    | "default"
+    | "default_gray"
+    | "default_row_alpha"
+    | "detail_demage"
+    | "doodad"
+    | "emerald_green"
+    | "evolving"
+    | "evolving_1"
+    | "evolving_2"
+    | "evolving_3"
+    | "evolving_4"
+    | "evolving_gray"
+    | "expedition_war_declarer"
+    | "faction_friendly_npc"
+    | "faction_friendly_pc"
+    | "faction_party"
+    | "faction_raid"
+    | "fight"
+    | "gender_female"
+    | "gender_male"
+    | "gray"
+    | "gray_beige"
+    | "gray_pink"
+    | "gray_purple"
+    | "green"
+    | "guide_text_in_editbox"
+    | "hatred_01"
+    | "hatred_02"
+    | "high_title"
+    | "hostile_forces"
+    | "http"
+    | "illusion"
+    | "ingameshop_submenu_seperator"
+    | "inquire_notify"
+    | "item_level"
+    | "labor_energy_offline"
+    | "labor_power_account"
+    | "labor_power_local"
+    | "lemon"
+    | "level_normal"
+    | "level_successor"
+    | "level_up_blue"
+    | "light_blue"
+    | "light_gray"
+    | "light_green"
+    | "light_red"
+    | "light_skyblue"
+    | "lime"
+    | "loading_content"
+    | "loading_percent"
+    | "loading_tip"
+    | "lock_item_or_equip_item"
+    | "login_stage_blue"
+    | "login_stage_brown"
+    | "login_stage_btn_disabled"
+    | "login_stage_btn_highlighted"
+    | "login_stage_btn_normal"
+    | "login_stage_btn_pushed"
+    | "login_stage_button_on"
+    | "login_stage_button_ov"
+    | "loot_gacha_cosume_item_name"
+    | "love_01"
+    | "love_02"
+    | "madness_01"
+    | "madness_02"
+    | "madness_03"
+    | "magic"
+    | "map_title"
+    | "map_zone_color_state_default"
+    | "map_zone_color_state_festival"
+    | "map_zone_color_state_high"
+    | "map_zone_color_state_peace"
+    | "medium_brown"
+    | "medium_brown_row_alpha"
+    | "medium_yellow"
+    | "megaphone"
+    | "melon"
+    | "middle_brown"
+    | "middle_title"
+    | "middle_title_row_alpha"
+    | "mileage"
+    | "mileage_archelife"
+    | "mileage_event"
+    | "mileage_free"
+    | "mileage_pcroom"
+    | "mint_light_blue"
+    | "money_item_delpi"
+    | "money_item_key"
+    | "money_item_netcafe"
+    | "money_item_star"
+    | "msg_zone_color_state_default"
+    | "msg_zone_color_state_festival"
+    | "msg_zone_color_state_high"
+    | "msg_zone_color_state_peace"
+    | "mustard_yellow"
+    | "my_ability_button_df"
+    | "my_ability_button_on"
+    | "nation_green"
+    | "nation_map_friendly"
+    | "nation_map_hostile"
+    | "nation_map_ligeance"
+    | "nation_map_native"
+    | "nation_map_none_owner"
+    | "nation_map_war"
+    | "notice_orange"
+    | "notify_message"
+    | "ocean_blue"
+    | "off_gray"
+    | "option_key_list_button_ov"
+    | "option_list_button_dis"
+    | "orange"
+    | "orange_brown"
+    | "original_dark_orange"
+    | "original_light_gray"
+    | "original_orange"
+    | "overlap_bg_color"
+    | "pleasure_01"
+    | "pleasure_02"
+    | "popup_menu_binding_key"
+    | "pure_black"
+    | "pure_red"
+    | "purple"
+    | "quest_directing_button_on"
+    | "quest_directing_button_ov"
+    | "quest_main"
+    | "quest_message"
+    | "quest_normal"
+    | "quest_task"
+    | "raid_command_message"
+    | "raid_frame_my_name"
+    | "raid_party_blue"
+    | "raid_party_orange"
+    | "red"
+    | "reward"
+    | "role_dealer"
+    | "role_healer"
+    | "role_none"
+    | "role_tanker"
+    | "romance_01"
+    | "romance_02"
+    | "rose_pink"
+    | "round_message_in_instance"
+    | "scarlet_red"
+    | "sea_blue"
+    | "sea_deep_blue"
+    | "sinergy"
+    | "skin_item"
+    | "sky"
+    | "sky_gray"
+    | "skyblue"
+    | "socket"
+    | "soda_blue"
+    | "soft_brown"
+    | "soft_green"
+    | "soft_red"
+    | "soft_yellow"
+    | "start_item"
+    | "stat_item"
+    | "sub_menu_in_main_menu_df"
+    | "sub_menu_in_main_menu_dis"
+    | "sub_menu_in_main_menu_on"
+    | "sub_menu_in_main_menu_ov"
+    | "subzone_state_alarm"
+    | "target_frame_name_friendly"
+    | "target_frame_name_hostile"
+    | "target_frame_name_neutral"
+    | "team_blue"
+    | "team_hud_blue"
+    | "team_hud_btn_text_df"
+    | "team_hud_btn_text_dis"
+    | "team_hud_btn_text_on"
+    | "team_hud_btn_text_ov"
+    | "team_violet"
+    | "title"
+    | "title_button_dis"
+    | "tooltip_default"
+    | "tooltip_zone_color_state_default"
+    | "tooltip_zone_color_state_high"
+    | "tooltip_zone_color_state_peace"
+    | "transparency"
+    | "tribe_btn_df"
+    | "tribe_btn_dis"
+    | "tribe_btn_on"
+    | "tribe_btn_ov"
+    | "tutorial_guide"
+    | "tutorial_screenshot_point"
+    | "tutorial_title"
+    | "unit_grade_boss_a"
+    | "unit_grade_boss_b"
+    | "unit_grade_boss_c"
+    | "unit_grade_boss_s"
+    | "unit_grade_strong"
+    | "unit_grade_weak"
+    | "unlock_item_or_equip_item"
+    | "user_tral_red"
+    | "version_info"
+    | "violet"
+    | "vocation"
+    | "white"
+    | "white_buttton_df"
+    | "white_buttton_dis"
+    | "white_buttton_on"
+    | "wild"
+    | "will"
+    | "world_map_latitude"
+    | "world_map_longitude"
+    | "world_map_longitude_2"
+    | "world_name_0"
+    | "world_name_1"
+    | "yellow"
+    | "yellow_ocher"
+    | "zone_danger_orange"
+    | "zone_dispute_ogange"
+    | "zone_festival_green"
+    | "zone_informer_name"
+    | "zone_peace_blue"
+    | "zone_war_red"
+```
+
+**FONT_PATH**
+
+"font_combat"|"font_main"|"font_sub"
+
+```lua
+FONT_PATH:
+    | "font_main"
+    | "font_sub"
+    | "font_combat"
+```
+
+**FORMAT_MACRO**
+
+"@ACHIEVEMENT_NAME(achievementId)"|"@AREA_SPHERE(sphereId)"|"@CONTENT_CONFIG(configId)"|"@DAY(days)"|"@DOODAD_NAME(doodadId)"...(+62)
+
+```lua
+-- Example: @PC_NAME(0) is a @PC_GENDER(0) @PC_RACE(0) -> Noviern is a Male Dwarf.
+FORMAT_MACRO:
+    | "@ACHIEVEMENT_NAME(achievementId)" -- achievements.id
+    | "@AREA_SPHERE(sphereId)" -- spheres.id
+    | "@CONTENT_CONFIG(configId)" -- content_configs.id
+    | "@DOODAD_NAME(doodadId)" -- doodad_almighties.id
+    | "@ITEM_NAME(itemId)" -- items.id
+    | "@NPC_GROUP_NAME(npcGroupId)" -- quest_monster_groups.id
+    | "@NPC_NAME(npcId)" -- npcs.id
+    | "@PC_CLASS(unitId)" -- X2Unit:GetUnitId or 0 for the player
+    | "@PC_GENDER(unitId)" -- X2Unit:GetUnitId or 0 for the player
+    | "@PC_NAME(unitId)" -- X2Unit:GetUnitId or 0 for the player
+    | "@PC_RACE(unitId)" -- X2Unit:GetUnitId or 0 for the player
+    | "@QUEST_NAME(questId)" -- quest_contexts.id
+    | "@SOURCE_NAME(0)" -- #
+    | "@TARGET_NAME(0)" -- #
+    | "@TARGET_SLAVE_REPAIR_COST(id?)" -- slaves.id or nothing for the current targets repair cost.
+    | "@SUB_ZONE_NAME(subZoneId)" -- sub_zones.id
+    | "@ZONE_NAME(zoneId)" -- zones.id
+    | "@MONTH(months)" -- #
+    | "@DAY(days)" -- #
+    | "@HOUR(hours)" -- #
+    | "@MINUTE(minutes)" -- #
+    | "@SECOND(seconds)" -- #
+    | "|nb; Steelblue |r" -- rgb(23, 119, 174)
+    | "|nc; Orange |r" -- rgb(255, 157, 40)
+    | "|nd; Lightskyblue |r" -- rgb(152, 214, 250)
+    | "|nf; Red |r" -- rgb(255, 0, 0)
+    | "|ng; Lime |r" -- rgb(0, 255, 70)
+    | "|nh; Steelblue |r" -- rgb(45, 101, 137)
+    | "|ni; khaki |r" -- rgb(246, 204, 102)
+    | "|nj; Royalblue |r" -- rgb(14, 97, 189)
+    | "|nn; Dark Orange |r" -- rgb(228, 113, 1)
+    | "|nr; Tomato |r" -- rgb(238, 74, 47)
+    | "|ns; Gainsboro |r" -- gb(221, 221, 221)
+    | "|nt; Gray |r" -- rgb(129, 129, 129)
+    | "|nu; Dimgray |r" -- rgb(106, 106, 106)
+    | "|ny; Lemonchiffon |r" -- rgb(255, 249, 200)
+    | "|cFF000000{string}|r" -- #
+    | "|bu{bulletCharacter};{string}|br" -- #
+    | "|q{questId};"
+    | "|i{itemType},{grade},{kind},{data}"
+    | "|if{craftId};"
+    | "|iu{data}" -- link
+    | "|a{data}" -- raid
+    | "|A{data}" -- dungeon
+    | "|ic{iconId}" -- db > icons.id
+    | "|m{moneyAmount};" -- ui/common/money_window.g > money_gold money_silver money_copper
+    | "|h{honor};" -- ui/common/money_window.g > money_honor
+    | "|d{amount};" -- ui/common/money_window.g > money_dishonor
+    | "|j{creditAmount};" -- ui/common/money_window.g > icon_aacash
+    | "|l{vocationAmount};" -- ui/common/money_window.g > point
+    | "|bm{amount};" -- ui/common/money_window.g > money_bmpoint
+    | "|se{gildaAmount};" -- ui/common/money_window.g > icon_depi
+    | "|ss{meritbadgeAmount?};" -- ui/common/money_window.g > icon_star
+    | "|sc{amount};" -- ui/common/money_window.g > icon_key
+    | "|sf{amount};" -- ui/common/money_window.g > icon_netcafe
+    | "|p{pointAmount};" -- ui/common/money_window.g > aa_point_gold aa_point_silver aa_point_copper
+    | "|x{taxAmount};" -- ui/common/money_window.g > tax
+    | "|u{amount};" -- ui/common/money_window.g > pouch
+    | "|w{contributionAmount};" -- ui/common/money_window.g > contributiveness
+    | "|e{level?};" -- ui/common/money_window.g > successor_small
+    | "|E{level?};" -- ui/common/money_window.g > successor_small_gray
+    | "|sa{amount};" -- ui/common/money_window.g > pass_coin icon_key
+    | "|sp{manastormAmount?};" -- ui/common/money_window.g > icon_palos
+    | "|sg{amount};" -- ui/common/money_window.g > icon_garnet
+    | "|v{level?};" -- ui/common/money_window.g > icon_equip_slot_star_small
+    | "|V{level?};" -- ui/common/money_window.g > icon_equip_slot_star
+    | "|g{gearScore};" -- ui/common/money_window.g > equipment_point
+```
+
+**FRIEND_LIST_UPDATE_TYPE**
+
+"delete"|"insert"
+
+```lua
+FRIEND_LIST_UPDATE_TYPE:
+    | "delete"
+    | "insert"
+```
+
+**GENDER**
+
+"female"|"male"|"none"
+
+```lua
+GENDER:
+    | "none"
+    | "male"
+    | "female"
+```
+
+**HEADER_TYPE**
+
+"left"|"top"
+
+```lua
+HEADER_TYPE:
+    | "left"
+    | "top"
+```
+
+**HEIR_SKILL_TYPE**
+
+`1`|`2`|`3`|`4`|`5`...(+3)
+
+```lua
+HEIR_SKILL_TYPE:
+    | `1` -- Flame
+    | `2` -- Life
+    | `3` -- Quake
+    | `4` -- Stone
+    | `5` -- Wave
+    | `6` -- Mist
+    | `7` -- Gale
+    | `8` -- Lightning
+```
+
+**HOTKEY_ACTION**
+
+"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+89)
+
+```lua
+HOTKEY_ACTION:
+    | "action_bar_button"
+    | "action_bar_page_next"
+    | "action_bar_page_prev"
+    | "action_bar_page"
+    | "activate_weapon"
+    | "autorun"
+    | "back_camera"
+    | "battle_pet_action_bar_button"
+    | "change_roadmap_size"
+    | "cycle_camera_clockwise"
+    | "cycle_camera_counter_clockwise"
+    | "cycle_friendly_backward"
+    | "cycle_friendly_forward"
+    | "cycle_friendly_head_marker_backward"
+    | "cycle_friendly_head_marker_forward"
+    | "cycle_hostile_backward"
+    | "cycle_hostile_forward"
+    | "cycle_hostile_head_marker_backward"
+    | "cycle_hostile_head_marker_forward"
+    | "do_interaction_1"
+    | "do_interaction_2"
+    | "do_interaction_3"
+    | "do_interaction_4"
+    | "dof_add_dist"
+    | "dof_add_range"
+    | "dof_auto_focus"
+    | "dof_sub_dist"
+    | "dof_sub_range"
+    | "dof_toggle"
+    | "down"
+    | "front_camera"
+    | "instant_kill_streak_action_bar_button"
+    | "jump"
+    | "left_camera"
+    | "mode_action_bar_button"
+    | "moveback"
+    | "moveforward"
+    | "moveleft"
+    | "moveright"
+    | "open_chat"
+    | "open_config"
+    | "open_target_equipment"
+    | "over_head_marker_to_target"
+    | "over_head_marker"
+    | "pet_target"
+    | "quest_directing_interaction"
+    | "reply_last_whisper"
+    | "reply_last_whispered"
+    | "ride_pet_action_bar_button"
+    | "right_camera"
+    | "round_target"
+    | "screenshotmode"
+    | "self_target"
+    | "set_watch_target"
+    | "swap_preliminary_equipment"
+    | "targets_target_to_target"
+    | "team_target"
+    | "toggle_achievement"
+    | "toggle_auction"
+    | "toggle_bag"
+    | "toggle_battle_field"
+    | "toggle_butler_info"
+    | "toggle_character"
+    | "toggle_chronicle_book"
+    | "toggle_commercial_mail"
+    | "toggle_common_farm_info"
+    | "toggle_community_expedition_tab"
+    | "toggle_community_faction_tab"
+    | "toggle_community_family_tab"
+    | "toggle_community"
+    | "toggle_craft_book"
+    | "toggle_force_attack"
+    | "toggle_hero"
+    | "toggle_ingameshop"
+    | "toggle_mail"
+    | "toggle_nametag"
+    | "toggle_quest"
+    | "toggle_raid_frame"
+    | "toggle_raid_team_manager"
+    | "toggle_random_shop"
+    | "toggle_ranking"
+    | "toggle_show_guide_decal"
+    | "toggle_specialty_info"
+    | "toggle_spellbook"
+    | "toggle_walk"
+    | "toggle_web_messenger"
+    | "toggle_web_play_diary_instant"
+    | "toggle_web_play_diary"
+    | "toggle_web_wiki"
+    | "toggle_worldmap"
+    | "turnleft"
+    | "turnright"
+    | "watch_targets_target_to_target"
+    | "zoom_in"
+```
+
+**HOTKEY_MANAGER**
+
+`1`|`2`
+
+```lua
+HOTKEY_MANAGER:
+    | `1` -- PRIMARY
+    | `2` -- SECONDARY
+```
+
+**HOTKEY_NAME**
+
+","|"."|"/"|"0"|"1"...(+95)
+
+```lua
+-- Supported modifier keys: CTRL, SHIFT, ALT
+-- You may combine multiple modifiers (e.g., CTRL-SHIFT)
+-- 
+-- Hotkey format
+-- {MODIFIER1}-{MODIFIER2}-{MODIFIER3}-{KEY}
+-- Example: CTRL-A, CTRL-SHIFT-F1, ALT-ESCAPE
+HOTKEY_NAME:
+    | "ESCAPE" -- Keyboard
+    | "F1" -- Keyboard
+    | "F2" -- Keyboard
+    | "F3" -- Keyboard
+    | "F4" -- Keyboard
+    | "F5" -- Keyboard
+    | "F6" -- Keyboard
+    | "F7" -- Keyboard
+    | "F8" -- Keyboard
+    | "F9" -- Keyboard
+    | "F10" -- Keyboard
+    | "F11" -- Keyboard
+    | "F12" -- Keyboard
+    | "PRINT" -- Keyboard
+    | "SCROLLLOCK" -- Keyboard
+    | "PAUSE" -- Keyboard
+    | "APOSTROPHE" -- Keyboard
+    | "1" -- Keyboard
+    | "2" -- Keyboard
+    | "3" -- Keyboard
+    | "4" -- Keyboard
+    | "5" -- Keyboard
+    | "6" -- Keyboard
+    | "7" -- Keyboard
+    | "8" -- Keyboard
+    | "9" -- Keyboard
+    | "0" -- Keyboard
+    | "MINUS" -- Keyboard
+    | "EQUALS" -- Keyboard
+    | "BACKSPACE" -- Keyboard
+    | "TAB" -- Keyboard
+    | "CAPSLOCK" -- Keyboard
+    | "{" -- Keyboard
+    | "}" -- Keyboard
+    | "BACKSLASH" -- Keyboard
+    | "ENTER" -- Keyboard
+    | "," -- Keyboard
+    | "." -- Keyboard
+    | "/" -- Keyboard
+    | "A" -- Keyboard
+    | "B" -- Keyboard
+    | "C" -- Keyboard
+    | "D" -- Keyboard
+    | "E" -- Keyboard
+    | "F" -- Keyboard
+    | "G" -- Keyboard
+    | "H" -- Keyboard
+    | "I" -- Keyboard
+    | "J" -- Keyboard
+    | "K" -- Keyboard
+    | "L" -- Keyboard
+    | "M" -- Keyboard
+    | "N" -- Keyboard
+    | "O" -- Keyboard
+    | "P" -- Keyboard
+    | "Q" -- Keyboard
+    | "R" -- Keyboard
+    | "S" -- Keyboard
+    | "T" -- Keyboard
+    | "U" -- Keyboard
+    | "V" -- Keyboard
+    | "W" -- Keyboard
+    | "X" -- Keyboard
+    | "Y" -- Keyboard
+    | "Z" -- Keyboard
+    | "SPACE" -- Keyboard
+    | "INSERT" -- Keyboard
+    | "HOME" -- Keyboard
+    | "PAGEUP" -- Keyboard
+    | "DELETE" -- Keyboard
+    | "END" -- Keyboard
+    | "PAGEDOWN" -- Keyboard
+    | "UP" -- Keyboard
+    | "LEFT" -- Keyboard
+    | "DOWN" -- Keyboard
+    | "RIGHT" -- Keyboard
+    | "NUMBER-" -- Number Pad
+    | "NUMBER+" -- Number Pad
+    | "NUMBER0" -- Number Pad
+    | "NUMBER1" -- Number Pad
+    | "NUMBER2" -- Number Pad
+    | "NUMBER3" -- Number Pad
+    | "NUMBER4" -- Number Pad
+    | "NUMBER5" -- Number Pad
+    | "NUMBER6" -- Number Pad
+    | "NUMBER7" -- Number Pad
+    | "NUMBER8" -- Number Pad
+    | "NUMBER9" -- Number Pad
+    | "NUMLOCK" -- Number Pad
+    | "MOUSE1" -- Mouse
+    | "MOUSE2" -- Mouse
+    | "MOUSE3" -- Mouse
+    | "MOUSE4" -- Mouse
+    | "MOUSE5" -- Mouse
+    | "MOUSE6" -- Mouse
+    | "MOUSE7" -- Mouse
+    | "MOUSE8" -- Mouse
+    | "MIDDLEBUTTON" -- Mouse
+    | "WHEELDOWN" -- Mouse
+    | "WHEELUP" -- Mouse
+```
+
+**HOUSE_STRUCTURE_TYPE**
+
+"housing"|"shipyard"
+
+```lua
+HOUSE_STRUCTURE_TYPE:
+    | "housing"
+    | "shipyard"
+```
+
+**HOUSE_TYPE**
+
+`100`|`101`|`102`|`103`|`104`...(+832)
+
+```lua
+-- Obtain from db housings
+HOUSE_TYPE:
+    | `1` -- 159459 DO NOT TRANSLATE
+    | `2` -- 159460 DO NOT TRANSLATE
+    | `3` -- 159461 DO NOT TRANSLATE
+    | `4` -- 159462 DO NOT TRANSLATE
+    | `5` -- 159463 DO NOT TRANSLATE
+    | `6` -- 159464 DO NOT TRANSLATE
+    | `7` -- 159465 DO NOT TRANSLATE
+    | `8` -- 159466 DO NOT TRANSLATE
+    | `9` -- 159467 DO NOT TRANSLATE
+    | `10` -- 159468 DO NOT TRANSLATE
+    | `11` -- 159469 DO NOT TRANSLATE
+    | `12` -- 159470 DO NOT TRANSLATE
+    | `13` -- 159471 DO NOT TRANSLATE
+    | `14` -- 159472 DO NOT TRANSLATE
+    | `15` -- 159473 DO NOT TRANSLATE
+    | `16` -- 159474 DO NOT TRANSLATE
+    | `17` -- 159475 DO NOT TRANSLATE
+    | `18` -- 159476 DO NOT TRANSLATE
+    | `19` -- 159477 DO NOT TRANSLATE
+    | `20` -- 159478 DO NOT TRANSLATE
+    | `21` -- 159479 DO NOT TRANSLATE
+    | `22` -- 159480 DO NOT TRANSLATE
+    | `23` -- 159481 DO NOT TRANSLATE
+    | `24` -- 159482 DO NOT TRANSLATE
+    | `25` -- 159483 DO NOT TRANSLATE
+    | `26` -- Wooden Rampart Stairs
+    | `27` -- 159485 DO NOT TRANSLATE
+    | `28` -- 159486 DO NOT TRANSLATE
+    | `29` -- 159487 DO NOT TRANSLATE
+    | `30` -- 159488 DO NOT TRANSLATE
+    | `31` -- 159489 DO NOT TRANSLATE
+    | `32` -- 159490 DO NOT TRANSLATE
+    | `33` -- 159491 DO NOT TRANSLATE
+    | `34` -- 159492 DO NOT TRANSLATE
+    | `35` -- 159493 DO NOT TRANSLATE
+    | `36` -- 159494 DO NOT TRANSLATE
+    | `37` -- 159495 DO NOT TRANSLATE
+    | `38` -- 159496 DO NOT TRANSLATE
+    | `39` -- 159497 DO NOT TRANSLATE
+    | `40` -- 159498 DO NOT TRANSLATE
+    | `41` -- Private Masonry Table
+    | `42` -- Private Loom
+    | `43` -- Private Sawmill
+    | `44` -- 159502 DO NOT TRANSLATE
+    | `45` -- 159503 DO NOT TRANSLATE
+    | `46` -- 159504 DO NOT TRANSLATE
+    | `47` -- 159505 DO NOT TRANSLATE
+    | `48` -- 159506 DO NOT TRANSLATE
+    | `49` -- 159507 DO NOT TRANSLATE
+    | `50` -- 159508 DO NOT TRANSLATE
+    | `51` -- 159509 DO NOT TRANSLATE
+    | `52` -- 159510 DO NOT TRANSLATE
+    | `53` -- 159511 DO NOT TRANSLATE
+    | `54` -- 159512 DO NOT TRANSLATE
+    | `55` -- 159513 DO NOT TRANSLATE
+    | `56` -- 159514 DO NOT TRANSLATE
+    | `57` -- 159515 DO NOT TRANSLATE
+    | `58` -- 159516 DO NOT TRANSLATE
+    | `59` -- 159517 DO NOT TRANSLATE
+    | `60` -- 159518 DO NOT TRANSLATE
+    | `61` -- 159519 DO NOT TRANSLATE
+    | `62` -- 159520 DO NOT TRANSLATE
+    | `63` -- 159521 DO NOT TRANSLATE
+    | `64` -- 159522 DO NOT TRANSLATE
+    | `65` -- 159523 DO NOT TRANSLATE
+    | `66` -- 159524 DO NOT TRANSLATE
+    | `67` -- 159525 DO NOT TRANSLATE
+    | `76` -- 159526 DO NOT TRANSLATE
+    | `77` -- 159527 DO NOT TRANSLATE
+    | `78` -- 159528 DO NOT TRANSLATE
+    | `79` -- Spring Villa
+    | `80` -- Rose Villa
+    | `83` -- Spring Chalet
+    | `84` -- Rose Chalet
+    | `86` -- Barracks
+    | `87` -- Slate Villa
+    | `88` -- Slate Chalet
+    | `89` -- Scarecrow Farm
+    | `90` -- Private Smelter
+    | `92` -- Private Leatherwork Table
+    | `93` -- Ezna Tower
+    | `94` -- Ezna Wall
+    | `95` -- Ezna Wall
+    | `96` -- 159542 DO NOT TRANSLATE
+    | `97` -- Garrison
+    | `98` -- Quartermaster's Office
+    | `99` -- 159545 DO NOT TRANSLATE 159545 DO NOT TRANSLATE
+    | `100` -- 159546 DO NOT TRANSLATE 159546 DO NOT TRANSLATE
+    | `101` -- 159547 DO NOT TRANSLATE 159547 DO NOT TRANSLATE
+    | `102` -- 159548 DO NOT TRANSLATE 159548 DO NOT TRANSLATE
+    | `103` -- 159549 DO NOT TRANSLATE 159549 DO NOT TRANSLATE
+    | `104` -- 159550 DO NOT TRANSLATE 159550 DO NOT TRANSLATE
+    | `105` -- 159551 DO NOT TRANSLATE 159551 DO NOT TRANSLATE
+    | `106` -- 159552 DO NOT TRANSLATE 159552 DO NOT TRANSLATE
+    | `107` -- 159553 DO NOT TRANSLATE
+    | `108` -- 159554 DO NOT TRANSLATE
+    | `109` -- 159555 DO NOT TRANSLATE 159555 DO NOT TRANSLATE
+    | `110` -- 159556 DO NOT TRANSLATE
+    | `111` -- 159557 DO NOT TRANSLATE
+    | `112` -- 159558 DO NOT TRANSLATE
+    | `113` -- 159559 DO NOT TRANSLATE
+    | `114` -- 159560 DO NOT TRANSLATE
+    | `115` -- 159561 DO NOT TRANSLATE
+    | `116` -- 159562 DO NOT TRANSLATE
+    | `117` -- 159563 DO NOT TRANSLATE
+    | `118` -- 159564 DO NOT TRANSLATE
+    | `119` -- Defense Tower
+    | `120` -- Tower
+    | `121` -- Wall
+    | `122` -- Wall
+    | `123` -- Wall
+    | `124` -- Wall
+    | `125` -- Wall
+    | `126` -- Wall
+    | `127` -- Wall
+    | `128` -- Wall
+    | `129` -- Wall
+    | `130` -- Wall
+    | `131` -- 159577 DO NOT TRANSLATE
+    | `132` -- 159578 DO NOT TRANSLATE
+    | `133` -- 159579 DO NOT TRANSLATE
+    | `134` -- Nuian Training Rampart
+    | `135` -- Gate
+    | `136` -- Stone Spring Mansion
+    | `137` -- Stone Slate Mansion
+    | `138` -- Stone Rose Mansion
+    | `139` -- Archeum Lodestone
+    | `140` -- 159586 DO NOT TRANSLATE
+    | `141` -- 159587 DO NOT TRANSLATE
+    | `142` -- 159588 DO NOT TRANSLATE
+    | `143` -- 159589 DO NOT TRANSLATE
+    | `144` -- 159590 DO NOT TRANSLATE
+    | `145` -- 159591 DO NOT TRANSLATE
+    | `146` -- 159592 DO NOT TRANSLATE
+    | `147` -- 159593 DO NOT TRANSLATE
+    | `148` -- 159594 DO NOT TRANSLATE
+    | `149` -- 159595 DO NOT TRANSLATE
+    | `150` -- 159596 DO NOT TRANSLATE
+    | `151` -- 159597 DO NOT TRANSLATE 159597 DO NOT TRANSLATE
+    | `152` -- 159598 DO NOT TRANSLATE 159598 DO NOT TRANSLATE
+    | `153` -- 159599 DO NOT TRANSLATE 159599 DO NOT TRANSLATE
+    | `155` -- 159600 DO NOT TRANSLATE
+    | `156` -- Wooden Rampart Stairs
+    | `157` -- Aquafarm
+    | `158` -- Harani Wall
+    | `159` -- Harani Wall
+    | `160` -- Harani Wall
+    | `161` -- Harani Wall
+    | `162` -- Harani Wall
+    | `163` -- Harani Wall
+    | `164` -- Harani Wall
+    | `165` -- Harani Wall
+    | `166` -- Harani Wall
+    | `167` -- Harani Wall
+    | `168` -- Harani Tower
+    | `169` -- Harani Defense Tower
+    | `170` -- Harani Gatehouse
+    | `171` -- Thatched Farmhouse
+    | `172` -- Tudor Slate Cottage
+    | `173` -- Stone Slate Cottage
+    | `174` -- Rustic Slate Cottage
+    | `175` -- Stone Spring Cottage
+    | `176` -- Tudor Spring Cottage
+    | `177` -- Rustic Spring Cottage
+    | `178` -- Rustic Rose Cottage
+    | `179` -- Tudor Rose Cottage
+    | `180` -- Stone Rose Cottage
+    | `181` -- Swept-Roof Cottage
+    | `182` -- Swept-Roof Manor
+    | `183` -- Raised Swept-Roof Chalet
+    | `184` -- Archeum Lodestone
+    | `185` -- Archeum Lodestone
+    | `186` -- Archeum Lodestone
+    | `187` -- Archeum Lodestone
+    | `188` -- Archeum Lodestone
+    | `189` -- Archeum Lodestone
+    | `190` -- Archeum Lodestone
+    | `191` -- Archeum Lodestone
+    | `192` -- Archeum Lodestone
+    | `193` -- Tudor Slate Manor
+    | `194` -- Stone Slate Manor
+    | `195` -- Rustic Slate Manor
+    | `196` -- Stone Spring Manor
+    | `197` -- Rustic Spring Manor
+    | `198` -- Tudor Spring Manor
+    | `199` -- Rustic Rose Manor
+    | `200` -- Tudor Rose Manor
+    | `201` -- Stone Rose Manor
+    | `202` -- Tudor Slate Townhouse
+    | `203` -- Stone Slate Townhouse
+    | `204` -- Rustic Slate Townhouse
+    | `205` -- Stone Spring Townhouse
+    | `206` -- Rustic Spring Townhouse
+    | `207` -- Tudor Spring Townhouse
+    | `208` -- Rustic Rose Townhouse
+    | `209` -- Tudor Rose Townhouse
+    | `210` -- Stone Rose Townhouse
+    | `211` -- Tudor Slate Villa
+    | `212` -- Stone Slate Villa
+    | `213` -- Rustic Slate Villa
+    | `214` -- Stone Spring Villa
+    | `215` -- Tudor Spring Villa
+    | `216` -- Rustic Spring Villa
+    | `217` -- Rustic Rose Villa
+    | `218` -- Vintage Tudor Rose Villa Design
+    | `219` -- Stone Rose Villa
+    | `220` -- Tudor Slate Villa (Veranda)
+    | `221` -- Rustic Slate Villa (Veranda)
+    | `222` -- Stone Slate Villa (Veranda)
+    | `223` -- Stone Spring Villa (Veranda)
+    | `224` -- Rustic Spring Villa (Veranda)
+    | `225` -- Tudor Spring Villa (Veranda)
+    | `226` -- Rustic Rose Villa (Veranda)
+    | `227` -- Stone Rose Villa (Veranda)
+    | `228` -- Tudor Rose Villa (Veranda)
+    | `229` -- Tudor Slate Villa (Porch)
+    | `230` -- Rustic Slate Villa (Porch)
+    | `231` -- Stone Slate Villa (Porch)
+    | `232` -- Stone Spring Villa (Porch)
+    | `233` -- Rustic Spring Villa (Porch)
+    | `234` -- Tudor Spring Villa (Porch)
+    | `235` -- Rustic Rose Villa (Porch)
+    | `236` -- Stone Rose Villa (Porch)
+    | `237` -- Tudor Rose Villa (Porch)
+    | `238` -- Tudor Slate Villa (Sunroom)
+    | `239` -- Tudor Slate Villa (Sunroom)
+    | `240` -- Rustic Slate Villa (Sunroom)
+    | `241` -- Stone Spring Villa (Sunroom)
+    | `242` -- Rustic Spring Villa (Sunroom)
+    | `243` -- Tudor Spring Villa (Sunroom)
+    | `244` -- Rustic Rose Villa (Sunroom)
+    | `245` -- Tudor Rose Villa (Sunroom)
+    | `246` -- Stone Rose Villa (Sunroom)
+    | `247` -- Tudor Slate Chalet
+    | `248` -- Rustic Slate Chalet
+    | `249` -- Stone Spring Chalet
+    | `250` -- Tudor Spring Chalet
+    | `251` -- Rustic Rose Chalet
+    | `252` -- Tudor Rose Chalet
+    | `253` -- Tudor Slate Chalet (Balcony)
+    | `254` -- Stone Slate Chalet (Balcony)
+    | `255` -- Rustic Slate Chalet (Balcony)
+    | `256` -- Stone Spring Chalet (Balcony)
+    | `257` -- Tudor Spring Chalet (Balcony)
+    | `258` -- Rustic Rose Chalet (Balcony)
+    | `259` -- Tudor Rose Chalet (Balcony)
+    | `260` -- Tudor Slate Chalet (Terrace)
+    | `261` -- Stone Slate Chalet (Terrace)
+    | `262` -- Stone Spring Chalet (Terrace)
+    | `263` -- Rustic Spring Chalet (Terrace)
+    | `264` -- Rustic Rose Chalet (Terrace)
+    | `265` -- Tudor Rose Chalet (Terrace)
+    | `266` -- 176786 DO NOT TRANSLATE
+    | `267` -- Scarecrow Garden
+    | `268` -- 203416 DO NOT TRANSLATE
+    | `269` -- Cannon Turret
+    | `270` -- Breezy Bungalow
+    | `271` -- Archeum Lodestone
+    | `272` -- Archeum Lodestone
+    | `273` -- 241766 DO NOT TRANSLATE
+    | `274` -- 258088 DO NOT TRANSLATE
+    | `275` -- Solar Scarecrow Farm
+    | `276` -- Lunar Scarecrow Farm
+    | `277` -- Stellar Scarecrow Farm
+    | `278` -- Fellowship Plaza
+    | `279` -- 285105 DO NOT TRANSLATE
+    | `280` -- Sunglow Cottage
+    | `281` -- 302723 DO NOT TRANSLATE
+    | `282` -- Gazebo Farm
+    | `283` -- Improved Scarecrow Farm
+    | `284` -- Tidal Bungalow
+    | `285` -- Spired Chateau
+    | `286` -- Stone Spring Mansion
+    | `287` -- Stone Slate Mansion
+    | `288` -- Stone Rose Mansion
+    | `289` -- Private Leatherwork Table
+    | `290` -- Lunar Scarecrow Farm
+    | `291` -- Fellowship Plaza
+    | `292` -- Private Sawmill
+    | `293` -- Scarecrow Garden
+    | `294` -- Stellar Scarecrow Farm
+    | `295` -- Private Masonry Table
+    | `296` -- Tudor Slate Townhouse
+    | `297` -- Stone Slate Townhouse
+    | `298` -- Rustic Slate Townhouse
+    | `299` -- Stone Spring Townhouse
+    | `300` -- Rustic Spring Townhouse
+    | `301` -- Tudor Spring Townhouse
+    | `302` -- Rustic Rose Townhouse
+    | `303` -- Tudor Rose Townhouse
+    | `304` -- Stone Rose Townhouse
+    | `305` -- Tudor Slate Manor
+    | `306` -- Stone Slate Manor
+    | `307` -- Rustic Slate Manor
+    | `308` -- Stone Spring Manor
+    | `309` -- Rustic Spring Manor
+    | `310` -- Tudor Spring Manor
+    | `311` -- Rustic Rose Manor
+    | `312` -- Tudor Rose Manor
+    | `313` -- Stone Rose Manor
+    | `314` -- Breezy Bungalow
+    | `315` -- Swept-Roof Cottage
+    | `316` -- Tudor Slate Cottage
+    | `317` -- Stone Slate Cottage
+    | `318` -- Rustic Slate Cottage
+    | `319` -- Stone Spring Cottage
+    | `320` -- Tudor Spring Cottage
+    | `321` -- Rustic Spring Cottage
+    | `322` -- Rustic Rose Cottage
+    | `323` -- Tudor Rose Cottage
+    | `324` -- Stone Rose Cottage
+    | `325` -- Aquafarm
+    | `326` -- Private Loom
+    | `327` -- Swept-Roof Manor
+    | `328` -- Raised Swept-Roof Chalet
+    | `329` -- Private Smelter
+    | `330` -- Thatched Farmhouse
+    | `331` -- Solar Scarecrow Farm
+    | `332` -- Gazebo Farm
+    | `333` -- Scarecrow Farm
+    | `334` -- Tudor Slate Chalet
+    | `335` -- Rustic Slate Chalet
+    | `336` -- Stone Spring Chalet
+    | `337` -- Tudor Spring Chalet
+    | `338` -- Rustic Rose Chalet
+    | `339` -- Tudor Rose Chalet
+    | `340` -- Tudor Slate Chalet (Balcony)
+    | `341` -- Stone Slate Chalet (Balcony)
+    | `342` -- Rustic Slate Chalet (Balcony)
+    | `343` -- Stone Spring Chalet (Balcony)
+    | `344` -- Tudor Spring Chalet (Balcony)
+    | `345` -- Rustic Rose Chalet (Balcony)
+    | `346` -- Tudor Rose Chalet (Balcony)
+    | `347` -- Tudor Slate Chalet (Terrace)
+    | `348` -- Stone Slate Chalet (Terrace)
+    | `349` -- Stone Spring Chalet (Terrace)
+    | `350` -- Rustic Spring Chalet (Terrace)
+    | `351` -- Rustic Rose Chalet (Terrace)
+    | `352` -- Tudor Rose Chalet (Terrace)
+    | `353` -- Tudor Slate Villa
+    | `354` -- Stone Slate Villa
+    | `355` -- Rustic Slate Villa
+    | `356` -- Stone Spring Villa
+    | `357` -- Tudor Spring Villa
+    | `358` -- Rustic Spring Villa
+    | `359` -- Rustic Rose Villa
+    | `360` -- Vintage Tudor Rose Villa Design
+    | `361` -- Stone Rose Villa
+    | `362` -- Tudor Slate Villa (Veranda)
+    | `363` -- Rustic Slate Villa (Veranda)
+    | `364` -- Stone Slate Villa (Veranda)
+    | `365` -- Stone Spring Villa (Veranda)
+    | `366` -- Rustic Spring Villa (Veranda)
+    | `367` -- Tudor Spring Villa (Veranda)
+    | `368` -- Rustic Rose Villa (Veranda)
+    | `369` -- Stone Rose Villa (Veranda)
+    | `370` -- Tudor Rose Villa (Veranda)
+    | `371` -- Tudor Slate Villa (Porch)
+    | `372` -- Rustic Slate Villa (Porch)
+    | `373` -- Stone Slate Villa (Porch)
+    | `374` -- Stone Spring Villa (Porch)
+    | `375` -- Rustic Spring Villa (Porch)
+    | `376` -- Tudor Spring Villa (Porch)
+    | `377` -- Rustic Rose Villa (Porch)
+    | `378` -- Stone Rose Villa (Porch)
+    | `379` -- Tudor Rose Villa (Porch)
+    | `380` -- Tudor Slate Villa (Sunroom)
+    | `381` -- Tudor Slate Villa (Sunroom)
+    | `382` -- Rustic Slate Villa (Sunroom)
+    | `383` -- Stone Spring Villa (Sunroom)
+    | `384` -- Rustic Spring Villa (Sunroom)
+    | `385` -- Tudor Spring Villa (Sunroom)
+    | `386` -- Rustic Rose Villa (Sunroom)
+    | `387` -- Tudor Rose Villa (Sunroom)
+    | `388` -- Stone Rose Villa (Sunroom)
+    | `389` -- Solar Pavilion Farm Kit
+    | `390` -- Lunar Pavilion Farm Kit
+    | `391` -- Stellar Pavilion Farm Kit
+    | `392` -- Tidal Bungalow
+    | `393` -- Spired Chateau
+    | `394` -- Improved Scarecrow Farm
+    | `395` -- Improved Solar Pavilion Farm Kit
+    | `396` -- Improved Lunar Pavilion Farm Kit
+    | `397` -- Improved Stellar Pavilion Farm Kit
+    | `398` -- 342797 DO NOT TRANSLATE
+    | `399` -- 342807 DO NOT TRANSLATE
+    | `400` -- 342832 DO NOT TRANSLATE
+    | `401` -- 342924 DO NOT TRANSLATE
+    | `402` -- Harvester's Farmhouse
+    | `403` -- Rancher's Farmhouse
+    | `404` -- Miner's Farmhouse
+    | `405` -- Armorer's Manor
+    | `406` -- Apothecary's Manor
+    | `407` -- Tradesman's Manor
+    | `408` -- Armorer's Townhouse
+    | `409` -- Apothecary's Townhouse
+    | `410` -- Tradesman's Townhouse
+    | `411` -- Armorer's Villa
+    | `412` -- Apothecary's Villa
+    | `413` -- Tradesman's Villa
+    | `414` -- Armorer's Chalet
+    | `415` -- Apothecary's Chalet
+    | `416` -- Tradesman's Chalet
+    | `417` -- Harvester's Farmhouse
+    | `418` -- Rancher's Farmhouse
+    | `419` -- Miner's Farmhouse
+    | `420` -- Armorer's Manor
+    | `421` -- Apothecary's Manor
+    | `422` -- Tradesman's Manor
+    | `423` -- Armorer's Townhouse
+    | `424` -- Apothecary's Townhouse
+    | `425` -- Tradesman's Townhouse
+    | `426` -- Armorer's Villa
+    | `427` -- Apothecary's Villa
+    | `428` -- Tradesman's Villa
+    | `429` -- Armorer's Chalet
+    | `430` -- Apothecary's Chalet
+    | `431` -- Tradesman's Chalet
+    | `432` -- Harvester's Farmhouse
+    | `433` -- Rancher's Farmhouse
+    | `434` -- Miner's Farmhouse
+    | `435` -- Armorer's Manor
+    | `436` -- Apothecary's Manor
+    | `437` -- Tradesman's Manor
+    | `438` -- Armorer's Townhouse
+    | `439` -- Apothecary's Townhouse
+    | `440` -- Tradesman's Townhouse
+    | `441` -- Armorer's Villa
+    | `442` -- Apothecary's Villa
+    | `443` -- Tradesman's Villa
+    | `444` -- Armorer's Chalet
+    | `445` -- Apothecary's Chalet
+    | `446` -- Tradesman's Chalet
+    | `447` -- Armorer's Villa (Porch)
+    | `448` -- Apothecary's Villa (Porch)
+    | `449` -- Tradesman's Villa (Porch)
+    | `450` -- Armorer's Chalet (Balcony)
+    | `451` -- Apothecary's Chalet (Balcony)
+    | `452` -- Tradesman's Chalet (Balcony)
+    | `453` -- Armorer's Villa (Porch)
+    | `454` -- Apothecary's Villa (Porch)
+    | `455` -- Tradesman's Villa (Porch)
+    | `456` -- Armorer's Chalet (Balcony)
+    | `457` -- Apothecary's Chalet (Balcony)
+    | `458` -- Tradesman's Chalet (Balcony)
+    | `459` -- Armorer's Villa (Porch)
+    | `460` -- Apothecary's Villa (Porch)
+    | `461` -- Tradesman's Villa (Porch)
+    | `462` -- Armorer's Chalet (Balcony)
+    | `463` -- Apothecary's Chalet (Balcony)
+    | `464` -- Tradesman's Chalet (Balcony)
+    | `465` -- Armorer's Villa (Sunroom)
+    | `466` -- Apothecary's Villa (Sunroom)
+    | `467` -- Tradesman's Villa (Sunroom)
+    | `468` -- Armorer's Chalet (Terrace)
+    | `469` -- Apothecary's Chalet (Terrace)
+    | `470` -- Tradesman's Chalet (Terrace)
+    | `471` -- Armorer's Villa (Sunroom)
+    | `472` -- Apothecary's Villa (Sunroom)
+    | `473` -- Tradesman's Villa (Sunroom)
+    | `474` -- Armorer's Chalet (Terrace)
+    | `475` -- Apothecary's Chalet (Terrace)
+    | `476` -- Tradesman's Chalet (Terrace)
+    | `477` -- Armorer's Villa (Sunroom)
+    | `478` -- Apothecary's Villa (Sunroom)
+    | `479` -- Tradesman's Villa (Sunroom)
+    | `480` -- Armorer's Chalet (Terrace)
+    | `481` -- Apothecary's Chalet (Terrace)
+    | `482` -- Tradesman's Chalet (Terrace)
+    | `483` -- Sapphire Solarium
+    | `484` -- Sapphire Solarium
+    | `485` -- Armorer's Villa (Veranda)
+    | `486` -- Apothecary's Villa (Veranda)
+    | `487` -- Tradesman's Villa (Veranda)
+    | `488` -- Armorer's Villa (Veranda)
+    | `489` -- Apothecary's Villa (Veranda)
+    | `490` -- Tradesman's Villa (Veranda)
+    | `491` -- Armorer's Villa (Veranda)
+    | `492` -- Apothecary's Villa (Veranda)
+    | `493` -- Tradesman's Villa (Veranda)
+    | `494` -- Stone Spring Mansion
+    | `495` -- Stone Slate Mansion
+    | `496` -- Stone Rose Mansion
+    | `497` -- Tudor Slate Townhouse
+    | `498` -- Stone Slate Townhouse
+    | `499` -- Rustic Slate Townhouse
+    | `500` -- Tudor Slate Manor
+    | `501` -- Stone Slate Manor
+    | `502` -- Rustic Slate Manor
+    | `503` -- Stone Spring Townhouse
+    | `504` -- Rustic Spring Townhouse
+    | `505` -- Tudor Spring Townhouse
+    | `506` -- Stone Spring Manor
+    | `507` -- Rustic Spring Manor
+    | `508` -- Tudor Spring Manor
+    | `509` -- Rustic Rose Townhouse
+    | `510` -- Tudor Rose Townhouse
+    | `511` -- Stone Rose Townhouse
+    | `512` -- Rustic Rose Manor
+    | `513` -- Tudor Rose Manor
+    | `514` -- Stone Rose Manor
+    | `515` -- Swept-Roof Cottage
+    | `516` -- Tudor Slate Cottage
+    | `517` -- Stone Slate Cottage
+    | `518` -- Rustic Slate Cottage
+    | `519` -- Stone Spring Cottage
+    | `520` -- Tudor Spring Cottage
+    | `521` -- Rustic Spring Cottage
+    | `522` -- Rustic Rose Cottage
+    | `523` -- Tudor Rose Cottage
+    | `524` -- Stone Rose Cottage
+    | `525` -- Swept-Roof Manor
+    | `526` -- Raised Swept-Roof Chalet
+    | `527` -- Spired Chateau
+    | `528` -- Tudor Slate Chalet
+    | `529` -- Rustic Slate Chalet
+    | `530` -- Tudor Slate Chalet (Balcony)
+    | `531` -- Stone Slate Chalet (Balcony)
+    | `532` -- Rustic Slate Chalet (Balcony)
+    | `533` -- Tudor Slate Chalet (Terrace)
+    | `534` -- Stone Slate Chalet (Terrace)
+    | `535` -- Tudor Slate Villa (Sunroom)
+    | `536` -- Tudor Slate Villa (Sunroom)
+    | `537` -- Rustic Slate Villa (Sunroom)
+    | `538` -- Tudor Slate Villa
+    | `539` -- Stone Slate Villa
+    | `540` -- Rustic Slate Villa
+    | `541` -- Tudor Slate Villa (Veranda)
+    | `542` -- Rustic Slate Villa (Veranda)
+    | `543` -- Stone Slate Villa (Veranda)
+    | `544` -- Tudor Slate Villa (Porch)
+    | `545` -- Rustic Slate Villa (Porch)
+    | `546` -- Stone Slate Villa (Porch)
+    | `547` -- Stone Spring Chalet
+    | `548` -- Tudor Spring Chalet
+    | `549` -- Stone Spring Chalet (Balcony)
+    | `550` -- Tudor Spring Chalet (Balcony)
+    | `551` -- Stone Spring Chalet (Terrace)
+    | `552` -- Rustic Spring Chalet (Terrace)
+    | `553` -- Stone Spring Villa (Sunroom)
+    | `554` -- Rustic Spring Villa (Sunroom)
+    | `555` -- Tudor Spring Villa (Sunroom)
+    | `556` -- Stone Spring Villa
+    | `557` -- Tudor Spring Villa
+    | `558` -- Rustic Spring Villa
+    | `559` -- Stone Spring Villa (Veranda)
+    | `560` -- Rustic Spring Villa (Veranda)
+    | `561` -- Tudor Spring Villa (Veranda)
+    | `562` -- Stone Spring Villa (Porch)
+    | `563` -- Rustic Spring Villa (Porch)
+    | `564` -- Tudor Spring Villa (Porch)
+    | `565` -- Rustic Rose Chalet
+    | `566` -- Tudor Rose Chalet
+    | `567` -- Rustic Rose Chalet (Balcony)
+    | `568` -- Tudor Rose Chalet (Balcony)
+    | `569` -- Rustic Rose Chalet (Terrace)
+    | `570` -- Tudor Rose Chalet (Terrace)
+    | `571` -- Rustic Rose Villa (Sunroom)
+    | `572` -- Tudor Rose Villa (Sunroom)
+    | `573` -- Stone Rose Villa (Sunroom)
+    | `574` -- Rustic Rose Villa
+    | `575` -- Tudor Rose Villa
+    | `576` -- Stone Rose Villa
+    | `577` -- Rustic Rose Villa (Veranda)
+    | `578` -- Stone Rose Villa (Veranda)
+    | `579` -- Tudor Rose Villa (Veranda)
+    | `580` -- Rustic Rose Villa (Porch)
+    | `581` -- Stone Rose Villa (Porch)
+    | `582` -- Tudor Rose Villa (Porch)
+    | `583` -- Rose Quartz Solarium
+    | `584` -- Rose Quartz Solarium
+    | `585` -- 375438 DO NOT TRANSLATE
+    | `586` -- 375441 DO NOT TRANSLATE
+    | `587` -- 375444 DO NOT TRANSLATE
+    | `588` -- 395170 DO NOT TRANSLATE
+    | `589` -- 395171 DO NOT TRANSLATE
+    | `590` -- 395172 DO NOT TRANSLATE
+    | `591` -- 438710 DO NOT TRANSLATE
+    | `592` -- Tudor Rose Villa
+    | `593` -- Tudor Rose Villa
+    | `594` -- Ruby Solarium
+    | `595` -- Ruby Solarium
+    | `596` -- Amethyst Solarium
+    | `597` -- Amethyst Solarium
+    | `598` -- Recovering Oak Treehouse
+    | `599` -- Oak Treehouse
+    | `600` -- Recovering Cherry Treehouse
+    | `601` -- Recovering Cherry Treehouse
+    | `602` -- Recovering Aspen Treehouse
+    | `603` -- Aspen Treehouse
+    | `604` -- Advanced Fellowship Plaza
+    | `605` -- Advanced Fellowship Plaza
+    | `606` -- Haranyan Private Smelter
+    | `607` -- Haranyan Private Loom
+    | `608` -- Haranyan Private Masonry Table
+    | `609` -- Haranyan Private Sawmill
+    | `610` -- Haranyan Private Leatherwork Table
+    | `611` -- Haranyan Private Masonry Table
+    | `612` -- Haranyan Private Loom
+    | `613` -- Haranyan Private Sawmill
+    | `614` -- Haranyan Private Smelter
+    | `615` -- Haranyan Private Leatherwork Table
+    | `616` -- Spring Swept-Roof Mansion
+    | `617` -- Spring Swept-Roof Mansion
+    | `618` -- Advanced Fellowship Plaza
+    | `619` -- Haranyan Private Smelter
+    | `620` -- Haranyan Private Loom
+    | `621` -- Haranyan Private Masonry Table
+    | `622` -- Haranyan Private Sawmill
+    | `623` -- Haranyan Private Leatherwork Table
+    | `624` -- Private Smelter
+    | `625` -- Private Loom
+    | `626` -- Private Masonry Table
+    | `627` -- Private Sawmill
+    | `628` -- Private Leatherwork Table
+    | `629` -- Recovering Oak Treehouse
+    | `630` -- Recovering Cherry Treehouse
+    | `631` -- Recovering Aspen Treehouse
+    | `632` -- Spring Swept-Roof Mansion
+    | `633` -- Usable
+    | `634` -- Usable
+    | `635` -- Usable
+    | `636` -- Black Swept-Roof Mansion
+    | `637` -- Black Swept-Roof Mansion
+    | `638` -- Black Swept-Roof Mansion
+    | `639` -- Storage Silo
+    | `640` -- Storage Silo
+    | `641` -- Territory Fortress
+    | `642` -- Territory Castle
+    | `643` -- Territory Palace
+    | `644` -- Territory Farm
+    | `645` -- Territory Market
+    | `646` -- Territory Warehouse
+    | `647` -- Sovereign's Vault
+    | `648` -- Territory Workshop
+    | `649` -- Military Headquarters
+    | `650` -- Diplomacy Headquarters
+    | `651` -- Transportation Hub
+    | `652` -- Advanced Territory Farm
+    | `653` -- Prime Territory Farm
+    | `654` -- Territory Fortress
+    | `655` -- Territory Castle
+    | `656` -- Territory Palace
+    | `657` -- 467873 DO NOT TRANSLATE
+    | `658` -- 468155 DO NOT TRANSLATE
+    | `661` -- Birch Treehouse
+    | `662` -- Birch Treehouse
+    | `663` -- Storage Silo
+    | `664` -- Solar Scarecrow Garden
+    | `665` -- Lunar Scarecrow Garden
+    | `666` -- Stellar Scarecrow Garden
+    | `667` -- Desserted Cottage
+    | `668` -- Desserted Cottage
+    | `669` -- Raised Swept-Roof Cottage
+    | `670` -- Raised Swept-Roof Cottage
+    | `671` -- Raised Slate Cottage
+    | `672` -- Raised Spring Cottage
+    | `673` -- Raised Rose Cottage
+    | `674` -- Raised Slate Cottage
+    | `675` -- Raised Spring Cottage
+    | `676` -- Raised Rose Cottage
+    | `677` -- Raised Swept-Roof Cottage
+    | `678` -- Raised Slate Cottage
+    | `679` -- Raised Spring Cottage
+    | `680` -- Raised Rose Cottage
+    | `681` -- Stone Slate Mansion (Terrace)
+    | `682` -- Stone Slate Mansion (Terrace)
+    | `683` -- Nuian Defense Tower
+    | `684` -- Nuian Tower
+    | `685` -- Harani Tower
+    | `686` -- Harani Defense Tower
+    | `687` -- Nuian Wall
+    | `688` -- Harani Wall
+    | `689` -- Wooden Rampart Stairs
+    | `690` -- Nuian Gatehouse
+    | `691` -- Harani Gatehouse
+    | `692` -- Territory Farm
+    | `693` -- Territory Market
+    | `694` -- Territory Warehouse
+    | `695` -- Sovereign's Vault
+    | `696` -- Territory Workshop
+    | `697` -- Military Headquarters
+    | `698` -- Diplomacy Headquarters
+    | `699` -- Transportation Hub
+    | `700` -- Advanced Territory Farm
+    | `701` -- Prime Territory Farm
+    | `702` -- Territory Fortress
+    | `703` -- Territory Castle
+    | `704` -- Territory Palace
+    | `705` -- Nuian Defense Tower
+    | `706` -- Nuian Tower
+    | `707` -- Harani Tower
+    | `708` -- Harani Defense Tower
+    | `709` -- Nuian Wall
+    | `710` -- Harani Wall
+    | `711` -- Wooden Rampart Stairs
+    | `712` -- Nuian Gatehouse
+    | `713` -- Harani Gatehouse
+    | `714` -- Territory Farm
+    | `715` -- Territory Market
+    | `716` -- Territory Warehouse
+    | `717` -- Sovereign's Vault
+    | `718` -- Territory Workshop
+    | `719` -- Military Headquarters
+    | `720` -- Diplomacy Headquarters
+    | `721` -- Transportation Hub
+    | `722` -- Advanced Territory Farm
+    | `723` -- Prime Territory Farm
+    | `724` -- Territory Fortress
+    | `725` -- Territory Castle
+    | `726` -- Territory Palace
+    | `727` -- Stone Slate Mansion (Terrace)
+    | `728` -- Enchanted Beanstalk TEST
+    | `729` -- Flaming Scarecrow Farm
+    | `730` -- Flaming Scarecrow Farm
+    | `731` -- Forest Mushroom House
+    | `732` -- Forest Mushroom House
+    | `733` -- 553971 DO NOT TRANSLATE
+    | `734` -- Pearl Aquafarm
+    | `735` -- Fenced Scarecrow Farm Design
+    | `736` -- Fenced Scarecrow Farm Design
+    | `737` -- Spired Chateau
+    | `738` -- Pearl Aquafarm
+    | `741` -- Beanstalk House
+    | `742` -- Beanstalk House
+    | `744` -- Territory Farm
+    | `745` -- Territory Supplies: Stage 2
+    | `746` -- Territory Supplies: Stage 3
+    | `747` -- Territory Workshop
+    | `748` -- Territory Warehouse
+    | `749` -- Territory Outpost
+    | `756` -- Guardian Altar
+    | `759` -- Raised Mushroom House
+    | `760` -- Raised Mushroom House
+    | `761` -- Raised Mushroom House
+    | `762` -- 590129 DO NOT TRANSLATE - Unused
+    | `763` -- Memory Gazebo Farm
+    | `764` -- Memory Scarecrow Farm
+    | `765` -- Solar Memory Scarecrow Farm
+    | `766` -- Stellar Memory Scarecrow Farm
+    | `767` -- Lunar Memory Scarecrow Farm
+    | `768` -- Solar Memory Pavilion Farm Kit
+    | `769` -- Lunar Memory Pavilion Farm Kit
+    | `770` -- Stellar Memory Pavilion Farm Kit
+    | `771` -- Improved Solar Memory Pavilion Farm Kit
+    | `772` -- Improved Lunar Memory Pavilion Farm Kit
+    | `773` -- Improved Stellar Memory Pavilion Farm Kit
+    | `774` -- Memory Gazebo Farm
+    | `775` -- Memory Scarecrow Farm
+    | `776` -- Solar Memory Scarecrow Farm
+    | `777` -- Stellar Memory Scarecrow Farm
+    | `778` -- Lunar Memory Scarecrow Farm
+    | `779` -- Solar Memory Pavilion Farm Kit
+    | `780` -- Lunar Memory Pavilion Farm Kit
+    | `781` -- Stellar Memory Pavilion Farm Kit
+    | `782` -- Improved Solar Memory Pavilion Farm Kit
+    | `783` -- Improved Lunar Memory Pavilion Farm Kit
+    | `784` -- Improved Stellar Memory Pavilion Farm Kit
+    | `785` -- Memory Gazebo Farm
+    | `786` -- Memory Scarecrow Farm
+    | `787` -- Solar Memory Scarecrow Farm
+    | `788` -- Stellar Memory Scarecrow Farm
+    | `789` -- Lunar Memory Scarecrow Farm
+    | `790` -- Solar Memory Pavilion Farm
+    | `791` -- Lunar Memory Pavilion Farm
+    | `792` -- Stellar Memory Pavilion Farm
+    | `793` -- Improved Solar Memory Pavilion Farm
+    | `794` -- Improved Lunar Memory Pavilion Farm
+    | `795` -- Improved Stellar Memory Pavilion Farm
+    | `796` -- Memory Gazebo Farm
+    | `797` -- Memory Scarecrow Farm
+    | `798` -- Advanced Territory Farm
+    | `799` -- Advanced Territory Workshop
+    | `800` -- Advanced Territory Outpost
+    | `801` -- Winter Maiden Cottage
+    | `802` -- Winter Maiden Cottage
+    | `803` -- Spooky Improved Scarecrow Farm
+    | `804` -- Spooky Improved Scarecrow Farm
+    | `805` -- Spooky Improved Scarecrow Farm
+    | `806` -- Test Tent A
+    | `807` -- Test Tent B
+    | `808` -- Test Tent A
+    | `809` -- Test Tent B
+    | `810` -- Solar Nomadic Dome Tent
+    | `811` -- Solar Nomadic Dome Tent
+    | `812` -- Solar Nomadic Dome Tent
+    | `813` -- Lunar Nomadic Dome Tent
+    | `814` -- Lunar Nomadic Dome Tent
+    | `815` -- Lunar Nomadic Dome Tent
+    | `816` -- Stellar Nomadic Dome Tent
+    | `817` -- Stellar Nomadic Dome Tent
+    | `818` -- Stellar Nomadic Dome Tent
+    | `819` -- Solar Nomadic Cone Tent
+    | `820` -- Solar Nomadic Cone Tent
+    | `821` -- Solar Nomadic Cone Tent
+    | `822` -- Lunar Nomadic Cone Tent
+    | `823` -- Lunar Nomadic Cone Tent
+    | `824` -- Lunar Nomadic Cone Tent
+    | `825` -- Stellar Nomadic Cone Tent
+    | `826` -- Stellar Nomadic Cone Tent
+    | `827` -- Stellar Nomadic Cone Tent
+    | `828` -- Little Witch's House
+    | `829` -- Little Witch's House
+    | `830` -- High-Spirited Green Flag House
+    | `831` -- High-Spirited Red Flag House
+    | `832` -- High-Spirited Blue Flag House
+    | `833` -- Manastorm Desserted Cottage
+    | `834` -- Manastorm Desserted Cottage
+    | `835` -- Manastorm Sapphire Solarium
+    | `836` -- Manastorm Sapphire Solarium
+    | `837` -- Manastorm Sapphire Solarium
+    | `838` -- Manastorm Rose Quartz Solarium
+    | `839` -- Manastorm Rose Quartz Solarium
+    | `840` -- Manastorm Rose Quartz Solarium
+    | `841` -- Manastorm Ruby Solarium
+    | `842` -- Manastorm Ruby Solarium
+    | `843` -- Manastorm Ruby Solarium
+    | `844` -- Manastorm Amethyst Solarium
+    | `845` -- Manastorm Amethyst Solarium
+    | `846` -- Manastorm Amethyst Solarium
+    | `848` -- Test
+    | `849` -- Little Witch Pinnacled House
+    | `850` -- Little Witch Pinnacled House
+    | `851` -- Little Witch Pinnacled House
+    | `852` -- #
+    | `853` -- Amethyst Solarium
+    | `854` -- Ruby Solarium
+    | `855` -- Winter Maiden`s Cozy House
+    | `856` -- Winter Maiden`s Cozy House
+    | `857` -- Elegant Pure White Marble Mansion
+    | `858` -- Elegant Pure White Marble Mansion
+    | `859` -- Cottage on the Bridge
+    | `860` -- Cottage on the Bridge
+    | `861` -- Freezing Cold Icehouse
+    | `862` -- Freezing Cold Icehouse
+    | `863` -- Icehouse (Temporary Name)
+    | `864` -- #
+```
+
+**INGAME_SHOP_TYPE**
+
+"cart"|"checkTime"|"exchange_ratio"|"goods"|"maintab"...(+2)
+
+```lua
+INGAME_SHOP_TYPE:
+    | "cart"
+    | "checkTime"
+    | "exchange_ratio"
+    | "goods"
+    | "maintab"
+    | "selected_goods"
+    | "subtab"
+```
+
+**INGAME_SHOP_VIEW_TYPE**
+
+"enter_mode"|"leave_mode"|"leave_sort"
+
+```lua
+INGAME_SHOP_VIEW_TYPE:
+    | "enter_mode"
+    | "leave_mode"
+    | "leave_sort"
+```
+
+**ITEM_GRADE_TYPE**
+
+`0`|`10`|`11`|`12`|`1`...(+8)
+
+```lua
+ITEM_GRADE_TYPE:
+    | `0` -- NONE
+    | `1` -- BASIC
+    | `2` -- GRAND
+    | `3` -- RARE
+    | `4` -- ARCANE
+    | `5` -- HEROIC
+    | `6` -- UNIQUE
+    | `7` -- CELESTIAL
+    | `8` -- DIVNE
+    | `9` -- EPIC
+    | `10` -- LEGENDARY
+    | `11` -- MYTHIC
+    | `12` -- ETERNAL
+```
+
+**ITEM_SOCKETING_RESULT_CODE**
+
+`1`
+
+```lua
+ITEM_SOCKETING_RESULT_CODE:
+    | `1` -- Success
+```
+
+**KEYBOARD_LAYOUT**
+
+""|"JAPANESE"|"KOREAN"
+
+```lua
+KEYBOARD_LAYOUT:
+    | ""
+    | "KOREAN"
+    | "JAPANESE"
+```
+
+**KEY_MODIFIER**
+
+`0`|`17`|`34`|`68`
+
+```lua
+KEY_MODIFIER:
+    | `0` -- None
+    | `34` -- Shift
+    | `17` -- Ctrl
+    | `68` -- Alt
+```
+
+**LINE_ALIGN**
+
+"left"|"right"
+
+```lua
+LINE_ALIGN:
+    | "left"
+    | "right"
+```
+
+**LINKKIND**
+
+"1"|"2"|"3"
+
+```lua
+LINKKIND:
+    | "1" -- Auction
+    | "2" -- Coffer
+    | "3" -- Guildbank
+```
+
+**LINKKIND_NUM**
+
+`1`|`2`|`3`
+
+```lua
+LINKKIND_NUM:
+    | `1` -- Auction
+    | `2` -- Coffer
+    | `3` -- Guildbank
+```
+
+**LINKKIND_STR**
+
+"auciton"|"coffer"|"guildBank"
+
+```lua
+LINKKIND_STR:
+    | "auciton"
+    | "coffer"
+    | "guildBank"
+```
+
+**LINKTYPE**
+
+"character"|"craft"|"invalid"|"item"|"none"...(+4)
+
+```lua
+LINKTYPE:
+    | "character"
+    | "craft"
+    | "invalid"
+    | "item"
+    | "none"
+    | "quest"
+    | "raid"
+    | "squad"
+    | "url"
+```
+
+**LOCALE_INDEX**
+
+`-1`|`0`|`10`|`1`|`2`...(+7)
+
+```lua
+LOCALE_INDEX:
+    | `-1` -- invalid
+    | `0` -- ko    - Korean (South Korea)
+    | `1` -- zh_cn - Chinese (Simplified, China)
+    | `2` -- en_us - English (United States)
+    | `3` -- ja    - Japanese(Japan)
+    | `4` -- zh_tw - Chinese (Traditional, Taiwan)
+    | `5` -- ru    - Russian (Russia)
+    | `6` -- de    - German (Germany)
+    | `7` -- fr    - French (France)
+    | `8` -- th    - Thai (Thailand)
+    | `9` -- ind   - Indonesian (Indonesia)
+    | `10` -- en_sg - English (Singapore)
+```
+
+**LOCALE_STR**
+
+""|"de"|"en_sg"|"en_us"|"fr"...(+7)
+
+```lua
+LOCALE_STR:
+    | "" -- invalid
+    | "de" -- German (Germany)
+    | "en_sg" -- English (Singapore)
+    | "en_us" -- English (United States)
+    | "fr" -- French (France)
+    | "ind" -- Indonesian (Indonesia)
+    | "ja" -- Japanese(Japan)
+    | "ko" -- Korean (South Korea)
+    | "ru" -- Russian (Russia)
+    | "th" -- Thai (Thailand)
+    | "zh_cn" -- Chinese (Simplified, China)
+    | "zh_tw" -- Chinese(Traditional, Taiwan)
+```
+
+**MATE_STATE**
+
+`1`|`2`|`3`|`4`
+
+```lua
+MATE_STATE:
+    | `1` -- Aggressive
+    | `2` -- Protective
+    | `3` -- Passive
+    | `4` -- Stand
+```
+
+**MINI_SCOREBOARD_CHANGED_STATUS**
+
+"inactive"|"remove"|"update"
+
+```lua
+MINI_SCOREBOARD_CHANGED_STATUS:
+    | "update"
+    | "remove"
+    | "inactive"
+```
+
+**MOUSE_BUTTON**
+
+"LeftButton"|"RightButton"
+
+```lua
+MOUSE_BUTTON:
+    | "LeftButton"
+    | "RightButton"
+```
+
+**MOVE_TYPE**
+
+"bottom"|"circle"|"left"|"right"|"top"
+
+```lua
+MOVE_TYPE:
+    | "bottom"
+    | "circle"
+    | "left"
+    | "right"
+    | "top"
+```
+
+**NAME_TAG_MODE_OFFSET**
+
+`1`|`2`|`3`|`4`
+
+```lua
+NAME_TAG_MODE_OFFSET:
+    | `1` -- option_item_nametag_mode_default
+    | `2` -- option_item_nametag_mode_battle
+    | `3` -- option_item_nametag_mode_life
+    | `4` -- option_item_nametag_mode_box
+```
+
+**NPC_INTERACTION_ADDED_VALUE**
+
+"complete"|"start"|"talk"
+
+```lua
+NPC_INTERACTION_ADDED_VALUE:
+    | "complete"
+    | "start"
+    | "talk"
+```
+
+**OBJECT**
+
+`0`|`10`|`11`|`12`|`13`...(+51)
+
+```lua
+OBJECT:
+    | `0` -- Window
+    | `1` -- Label
+    | `2` -- Button
+    | `3` -- Editbox
+    | `4` -- EditboxMultiline
+    | `5` -- Listbox
+    | `6` -- Drawable
+    | `7` -- ColorDrawable
+    | `8` -- NinePartDrawable
+    | `9` -- ThreePartDrawable
+    | `10` -- ImageDrawable
+    | `11` -- IconDrawable
+    | `12` -- TextDrawable
+    | `13` -- TextStyle
+    | `14` -- ThreeColorDrawable
+    | `15` -- EffectDrawable
+    | `16` -- Message
+    | `17` -- StatusBar
+    | `18` -- GameTooltip
+    | `19` -- UnitframeTooltip
+    | `20` -- CooldownButton
+    | `21` -- CooldownInventoryButton
+    | `22` -- CooldownConstantButton
+    | `23` -- CheckButton
+    | `24` -- Slider
+    | `25` -- Pageable
+    | `26` -- WorldMap
+    | `27` -- RoadMap
+    | `28` -- Grid
+    | `29` -- ModelView
+    | `30` -- Webbrowser
+    | `31` -- CircleDiagram
+    | `32` -- ColorPicker
+    | `33` -- PaintColorPicker
+    | `34` -- Folder
+    | `35` -- DamageDisplay
+    | `36` -- Tab
+    | `37` -- SliderTab
+    | `38` -- ChatWindow
+    | `39` -- Textbox
+    | `40` -- Combobox
+    | `41` -- ComboListButton
+    | `42` -- ChatMessage
+    | `43` -- ChatEdit
+    | `44` -- MegaphoneChatEdit
+    | `45` -- ListCtrl
+    | `46` -- EmptyWidget
+    | `47` -- Slot
+    | `48` -- Line
+    | `49` -- Root
+    | `50` -- TextureDrawable
+    | `51` -- Webview
+    | `52` -- Avi
+    | `53` -- X2Editbox
+    | `54` -- DynamicList
+    | `55` -- RadioGroup
+```
+
+**OBJECT_NAME**
+
+"avi"|"button"|"chatwindow"|"checkbutton"|"circlediagram"...(+34)
+
+```lua
+OBJECT_NAME:
+    | "avi"
+    | "button"
+    | "chatwindow"
+    | "checkbutton"
+    | "circlediagram"
+    | "colorpicker"
+    | "combobox"
+    | "cooldownbutton"
+    | "cooldownconstantbutton"
+    | "cooldowninventorybutton"
+    | "damagedisplay"
+    | "dynamiclist"
+    | "editbox"
+    | "editboxmultiline"
+    | "emptywidget"
+    | "folder"
+    | "gametooltip"
+    | "grid"
+    | "label"
+    | "line"
+    | "listbox"
+    | "listctrl"
+    | "megaphonechatedit"
+    | "message"
+    | "modelview"
+    | "pageable"
+    | "paintcolorpicker"
+    | "radiogroup"
+    | "roadmap"
+    | "slider"
+    | "slot"
+    | "statusbar"
+    | "tab"
+    | "textbox"
+    | "unitframetooltip"
+    | "webbrowser"
+    | "window"
+    | "worldmap"
+    | "x2editbox"
+```
+
+**ORIENTATION**
+
+"HORIZONTAL"|"HORIZONTAL_INV"|"VERTICAL"|"normal"
+
+```lua
+ORIENTATION:
+    | "HORIZONTAL"
+    | "HORIZONTAL_INV" -- TODO: test
+    | "normal"
+    | "VERTICAL"
+```
+
+**OnAcceptFocus**
+
+fun(self: Widget)
+
+
+
+**OnAlphaAnimeEnd**
+
+fun(self: Widget)
+
+
+
+**OnBoundChanged**
+
+fun(self: Widget)
+
+
+
+**OnChangedAnchor**
+
+fun(self: Widget)
+
+
+
+**OnCheckChanged**
+
+fun(self: Widget)
+
+
+
+**OnClick**
+
+fun(self: Widget, mouseButton: "LeftButton"|"RightButton", doubleClick: boolean, keyModifier: `0`|`17`|`34`|`68`)
+
+
+
+**OnCloseByEsc**
+
+fun(self: Widget)
+
+
+
+**OnContentUpdated**
+
+fun(self: Widget, action: string, arg2: any, arg3: any)
+
+
+
+**OnCursorMoved**
+
+fun(self: Widget)
+
+
+
+**OnDragReceive**
+
+fun(self: Widget)
+
+
+
+**OnDragStart**
+
+fun(self: Widget)
+
+
+
+**OnDragStop**
+
+fun(self: Widget)
+
+
+
+**OnDynamicListUpdatedView**
+
+fun(self: Widget)
+
+
+
+**OnEffect**
+
+fun(self: Widget)
+
+
+
+**OnEnableChanged**
+
+fun(self: Widget)
+
+
+
+**OnEndFadeIn**
+
+fun(self: Widget)
+
+
+
+**OnEndFadeOut**
+
+fun(self: Widget)
+
+
+
+**OnEnter**
+
+fun(self: Widget)
+
+
+
+**OnEnterPressed**
+
+fun(self: Widget)
+
+
+
+**OnEscapePressed**
+
+fun(self: Widget)
+
+
+
+**OnEvent**
+
+fun(self: Widget, event: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+871), ...any)
+
+
+
+**OnHide**
+
+fun(self: Widget)
+
+
+
+**OnKeyDown**
+
+fun(self: Widget, key: string)
+
+
+
+**OnKeyUp**
+
+fun(self: Widget, key: string)
+
+
+
+**OnLeave**
+
+fun(self: Widget)
+
+
+
+**OnListboxToggled**
+
+fun(self: Widget)
+
+
+
+**OnModelChanged**
+
+fun(self: Widget)
+
+
+
+**OnMouseDown**
+
+fun(self: Widget, mouseButton: "LeftButton"|"RightButton")
+
+
+
+**OnMouseMove**
+
+fun(self: Widget)
+
+
+
+**OnMouseUp**
+
+fun(self: Widget, mouseButton: "LeftButton"|"RightButton")
+
+
+
+**OnMovedPosition**
+
+fun(self: Widget)
+
+
+
+**OnPageChanged**
+
+fun(self: Widget)
+
+
+
+**OnPermissionChanged**
+
+fun(self: Widget)
+
+
+
+**OnRadioChanged**
+
+fun(self: Widget, index: any, data: any)
+
+
+
+**OnRestricted**
+
+fun(self: Widget)
+
+
+
+**OnScale**
+
+fun(self: Widget)
+
+
+
+**OnScaleAnimeEnd**
+
+fun(self: Widget)
+
+
+
+**OnSelChanged**
+
+fun(self: Widget, selectedIndex?: number, doubleClick?: boolean)
+
+
+
+**OnShow**
+
+fun(self: Widget)
+
+
+
+**OnSliderChanged**
+
+fun(self: Widget, value: number)
+
+
+
+**OnTabChanged**
+
+fun(self: Widget, selected: number, viewSelected: number)
+
+
+
+**OnTextChanged**
+
+fun(self: Widget)
+
+
+
+**OnTooltip**
+
+fun(self: Widget, text?: string, posX?: number, posY?: number, off?: boolean)
+
+
+
+**OnUpdate**
+
+fun(self: Widget, frameTime: number)
+
+
+
+**OnVisibleChanged**
+
+fun(self: Widget, visible: boolean)
+
+
+
+**OnWheelDown**
+
+fun(self: Widget, delta: number)
+
+
+
+**OnWheelUp**
+
+fun(self: Widget, delta: number)
+
+
+
+**PING_TYPE**
+
+`1`|`2`|`3`|`4`|`5`
+
+```lua
+PING_TYPE:
+    | `1` -- Ping
+    | `2` -- Enemy
+    | `3` -- Attack
+    | `4` -- Line
+    | `5` -- Eraser
+```
+
+**POWER_TYPE**
+
+"HEALTH"|"MANA"
+
+```lua
+POWER_TYPE:
+    | "HEALTH"
+    | "MANA"
+```
+
+**PreClick**
+
+fun(self: Widget)
+
+
+
+**PreUse**
+
+fun(self: Widget)
+
+
+
+**QUEST_DIRECTING_MODE_HOT_KEY_TYPE**
+
+`1`|`2`|`3`
+
+```lua
+QUEST_DIRECTING_MODE_HOT_KEY_TYPE:
+    | `1` -- Previous
+    | `2` -- Next
+    | `3` -- Confirm/Skip
+```
+
+**QUEST_ERROR**
+
+`10`|`11`|`12`|`13`|`14`...(+35)
+
+```lua
+QUEST_ERROR:
+    | `1` -- ALREADY_HAVE
+    | `2` -- INVALID_QUEST
+    | `3` -- PLAYER_NOT_FOUND
+    | `4` -- INVALID_CHARACTER
+    | `5` -- CANT_SUPPLY_QUEST_ITEM
+    | `6` -- MAYBE_NORMAL_OR_COMMON_QUEST_FULL
+    | `7` -- INVALID_NPC_OR_QUEST
+    | `8` -- INVALID_REQUEST_FOR_NPC
+    | `9` -- UNIT_REQUIREMENT_CHECK
+    | `10` -- INVALID_REWARD_SELECTION
+    | `11` -- CANT_SUPPLY_REWARDS
+    | `12` -- INVALID_QUEST_STATUS
+    | `13` -- REMOVE_QUEST_ITEM_FAIL
+    | `14` -- INVALID_QUEST_OBJECTIVE
+    | `15` -- INVALID_QUEST_OBJECTIVE_INDEX
+    | `16` -- WRONG_ANSWER_FOR_PLAYER_CHOICE
+    | `17` -- PRECEDENT_OBJECTIVE_IS_NOT_COMPLETED
+    | `18` -- INVALID_NPC
+    | `19` -- INVALID_DOODAD
+    | `20` -- TOO_FAR_AWAY_TO_INTERACT_WITH
+    | `21` -- UPDATE_FAILED
+    | `22` -- NOT_PROGRESSING
+    | `23` -- BAG_FULL
+    | `24` -- ITEM_REQUIRED
+    | `25` -- LEVEL_NOT_MATCH
+    | `26` -- GAINED_ITEM_IS_NOT_MATCH
+    | `27` -- ALREADY_COMPLETED
+    | `28` -- BACKPACK_OCCUPIED
+    | `29` -- CANT_SUPPLY_MONEY
+    | `30` -- CANT_ACCEPT_BY_FATIGUE
+    | `31` -- DAILY_LIMIT
+    | `32` -- NO_MATE_ITEM_IN_THE_BAG
+    | `33` -- NEED_TO_MATE_SUMMON
+    | `34` -- NOT_ENOUGH_MATE_LEVEL
+    | `35` -- MATE_EQUIPMENTS_ARE_NOT_EMPTY
+    | `36` -- PLAYER_TRADE
+    | `37` -- NOT_RUNNING_GAME_SCHEDULE_QUEST
+    | `38` -- CANNOT_WHILE_TELEPORT
+    | `39` -- BLOCKED_QUEST
+    | `40` -- CHRONICLE_INFO_NEED
+    | `40` -- WEEKLY_LIMIT
+```
+
+**QUEST_STATUS**
+
+"dropped"|"started"|"updated"
+
+```lua
+QUEST_STATUS:
+    | "dropped"
+    | "started"
+    | "updated"
+```
+
+**RACE**
+
+"daru"|"dwarf"|"elf"|"fairy"|"firran"...(+5)
+
+```lua
+RACE:
+    | "daru"
+    | "dwarf"
+    | "elf"
+    | "fairy"
+    | "firran"
+    | "harani"
+    | "none"
+    | "nuian"
+    | "returned"
+    | "warborn"
+```
+
+**RESIDENT_BOARD_TYPE**
+
+`1`|`2`|`3`|`4`|`5`...(+2)
+
+```lua
+RESIDENT_BOARD_TYPE:
+    | `1` -- Fabric   - Nuia/Haranya
+    | `2` -- Leather  - Nuia/Haranya
+    | `3` -- Lumber   - Nuia/Haranya
+    | `4` -- Iron     - Nuia/Haranya
+    | `5` -- Prince   - Auroria
+    | `6` -- Queen    - Auroria
+    | `7` -- Ancestor - Auroria
+```
+
+**RESPONSE_TYPE**
+
+`1`|`2`|`3`
+
+```lua
+RESPONSE_TYPE:
+    | `1` -- Saved Job
+    | `2` -- Changed Job
+    | `3` -- Deleted Job
+```
+
+**SIEGE_ACTION**
+
+"change_state"|"ignore"
+
+```lua
+SIEGE_ACTION:
+    | "change_state"
+    | "ignore"
+```
+
+**SIEGE_PERIOD_NAME**
+
+"siege_period_hero_volunteer"|"siege_period_peace"
+
+```lua
+SIEGE_PERIOD_NAME:
+    | "siege_period_hero_volunteer"
+    | "siege_period_peace"
+```
+
+**SKILL_ALERT_STATUS_BUFF_NAME**
+
+"Bleed (All)"|"Bubble Trap"|"Charmed"|"Deep Freeze"|"Enervate"...(+16)
+
+```lua
+SKILL_ALERT_STATUS_BUFF_NAME:
+    | "Stun"
+    | "Impaled"
+    | "Stagger"
+    | "Tripped"
+    | "Fear"
+    | "Sleep"
+    | "Snare"
+    | "Slowed"
+    | "Silence"
+    | "Shackle"
+    | "Imprison"
+    | "Launched"
+    | "Ice Damage"
+    | "Deep Freeze"
+    | "Poisonous"
+    | "Bleed (All)"
+    | "Shaken"
+    | "Enervate"
+    | "Charmed"
+    | "Bubble Trap"
+    | "Petrification"
+```
+
+**SKILL_ALERT_STATUS_BUFF_TAG**
+
+`10`|`11`|`12`|`13`|`14`...(+16)
+
+```lua
+-- Obtained from db unit_status_buff_tags
+SKILL_ALERT_STATUS_BUFF_TAG:
+    | `1` -- Stun
+    | `2` -- Impaled
+    | `3` -- Stagger
+    | `4` -- Tripped
+    | `5` -- Fear
+    | `6` -- Sleep
+    | `7` -- Snare
+    | `8` -- Slowed
+    | `9` -- Silence
+    | `10` -- Shackle
+    | `11` -- Imprison
+    | `12` -- Launched
+    | `13` -- Ice Damage
+    | `14` -- Deep Freeze
+    | `15` -- Poisonous
+    | `16` -- Bleed (All)
+    | `17` -- Shaken
+    | `18` -- Enervate
+    | `19` -- Charmed
+    | `20` -- Bubble Trap
+    | `21` -- Petrification
+```
+
+**SKILL_MSG_RESULT_CODE**
+
+"ALERT_OPTION"|"ALERT_OPTION_POPUP_DESC"|"ALERT_OPTION_POSITION_1_TEXT"|"ALERT_OPTION_POSITION_2_TEXT"|"ALERT_OPTION_POSITION_BASIC_TEXT"...(+202)
+
+```lua
+-- Obtained from db ui_texts key = /^skill_/
+SKILL_MSG_RESULT_CODE:
+    | "ALERT_OPTION_POPUP_DESC"
+    | "ALERT_OPTION_POSITION_1_TEXT"
+    | "ALERT_OPTION_POSITION_2_TEXT"
+    | "ALERT_OPTION_POSITION_BASIC_TEXT"
+    | "ALERT_OPTION_POSITION_OFF_TEXT"
+    | "ALERT_OPTION"
+    | "ALERT_TEXT"
+    | "ALREADY_OTHER_PLAYER_BOUND"
+    | "BACKPACK_OCCUPIED"
+    | "BAG_FULL"
+    | "BLANK_MINDED"
+    | "CANNOT_CAST_IN_CHANNELING"
+    | "CANNOT_CAST_IN_COMBAT"
+    | "CANNOT_CAST_IN_PRISON"
+    | "CANNOT_CAST_IN_STUN"
+    | "CANNOT_CAST_IN_SWIMMING"
+    | "CANNOT_CAST_WHILE_MOVING"
+    | "CANNOT_CAST_WHILE_WALKING"
+    | "CANNOT_SPAWN_DOODAD_IN_HOUSE"
+    | "CANNOT_UNSUMMON_UNDER_STUN_SLEEP_ROOT"
+    | "CANNOT_USE_FOR_SELF"
+    | "CHANGED"
+    | "COOLDOWN_TIME"
+    | "CRIPPLED"
+    | "EFFECT_OCCUR"
+    | "FAILURE"
+    | "FESTIVAL_ZONE"
+    | "HIGHER_BUFF"
+    | "HOUSE_OWNER"
+    | "INACTIVE_ABILITY"
+    | "INFO_TITLE"
+    | "INIT_MSG_2"
+    | "INIT_MSG_4"
+    | "INVALID_ACCOUNT_ATTRIBUTE"
+    | "INVALID_GRADE_ENCHANT_SUPPORT_ITEM"
+    | "INVALID_LOCATION"
+    | "INVALID_SKILL"
+    | "INVALID_SOURCE"
+    | "INVALID_TARGET"
+    | "ITEM_LOCKED"
+    | "LACK_ACTABILITY"
+    | "LACK_COMBAT_RESOURCE"
+    | "LACK_HEALTH"
+    | "LACK_MANA"
+    | "LACK_SOURCE_ITEM_SET"
+    | "LEVEL"
+    | "LIST"
+    | "NEED_LABOR_POWER"
+    | "NEED_MONEY"
+    | "NEED_NOCOMBAT_TARGET"
+    | "NEED_REAGENT"
+    | "NEED_STEALTH"
+    | "NO_PERM"
+    | "NO_TARGET"
+    | "NOT_CHECKED_SECOND_PASS"
+    | "NOT_ENOUGH_ABILITY_LEVEL"
+    | "NOT_MY_NPC"
+    | "NOT_NOW"
+    | "NOT_PREOCCUPIED"
+    | "NOT_PVP_AREA"
+    | "NOTIFY_TITLE"
+    | "OBSTACLE_FOR_SPAWN_DOODAD"
+    | "OBSTACLE"
+    | "ON_CASTING"
+    | "ONLY_DURING_SWIMMING"
+    | "OUTOF_ANGLE"
+    | "OUTOF_HEIGHT"
+    | "PROTECTED_FACTION"
+    | "PROTECTED_LEVEL"
+    | "RETURNER_TARGET"
+    | "SILENCE"
+    | "SKILL_REQ_FAIL"
+    | "SOURCE_ALIVE"
+    | "SOURCE_CANNOT_USE_WHILE_JUMPING"
+    | "SOURCE_CANNOT_USE_WHILE_LEVITATING"
+    | "SOURCE_DIED"
+    | "SOURCE_IS_HANGING"
+    | "SOURCE_IS_RIDING"
+    | "SUCCESS"
+    | "TARGET_ALIVE"
+    | "TARGET_DESTROYED"
+    | "TARGET_DIED"
+    | "TARGET_IMMUNE"
+    | "TOO_CLOSE_RANGE"
+    | "TOO_FAR_RANGE"
+    | "TRAIN"
+    | "ULC_ALREADY_ACTIVATED"
+    | "UNIT_REQS_OR_FAIL"
+    | "URK_ABILITY"
+    | "URK_ACHIEVEMENT_COMPLETE"
+    | "URK_ACTABILITY_POINT"
+    | "URK_ADD_ARCHE_PASS_POINT"
+    | "URK_AREA_SPHERE"
+    | "URK_BUFF_TAG"
+    | "URK_BUFF"
+    | "URK_CAN_LEARN_CRAFT"
+    | "URK_CANNOT_USE_BUILDING_HOUSE"
+    | "URK_CANNOT_USE_BY_ULC_ACTIVATE"
+    | "URK_CANNOT_USE_WITH_NON_COMBAT_INSTUMENT"
+    | "URK_COMBAT_RESOURCE"
+    | "URK_COMBAT"
+    | "URK_COMPLETE_QUEST_CONTEXT"
+    | "URK_COMPLETE_QUEST"
+    | "URK_CONFLICT_ZONE_STATE"
+    | "URK_CORPSE_RANGE"
+    | "URK_CRAFT_RANK"
+    | "URK_DECO_LIMIT_EXPANDED"
+    | "URK_DOMINION_COUNT_LESS"
+    | "URK_DOMINION_COUNT_MORE"
+    | "URK_DOMINION_MEMBER_AT_POS_NOT"
+    | "URK_DOMINION_MEMBER_AT_POS"
+    | "URK_DOMINION_MEMBER_NOT"
+    | "URK_DOMINION_MEMBER"
+    | "URK_DOODAD_RANGE"
+    | "URK_DOODAD_TARGET_FRIENDLY"
+    | "URK_DOODAD_TARGET_HOSTILE"
+    | "URK_DUAL"
+    | "URK_ENABLE_ARCHE_PASS_WITH_TYPE"
+    | "URK_ENABLE_ARCHE_PASS"
+    | "URK_EQUIP_APPELLATION"
+    | "URK_EQUIP_INSTRUMENT"
+    | "URK_EQUIP_ITEM"
+    | "URK_EQUIP_RANGED"
+    | "URK_EQUIP_SHIELD"
+    | "URK_EQUIP_SHOT_GUN"
+    | "URK_EQUIP_SLOT"
+    | "URK_EQUIP_WEAPON_TYPE"
+    | "URK_EXCEPT_COMPLETE_QUEST_CONTEXT"
+    | "URK_EXCEPT_PROGRESS_QUEST_CONTEXT"
+    | "URK_EXCEPT_READY_QUEST_CONTEXT"
+    | "URK_EXPEDITION_BATTLE"
+    | "URK_FACTION_MATCH_ONLY_NOT"
+    | "URK_FACTION_MATCH_ONLY"
+    | "URK_FACTION_MATCH"
+    | "URK_FULL_RECHARGED_LABOR_POWER"
+    | "URK_GEAR_SCORE_OVER"
+    | "URK_GEAR_SCORE_UNDER"
+    | "URK_GEAR_SCORE"
+    | "URK_GENDER"
+    | "URK_HEALTH_MARGIN"
+    | "URK_HEALTH"
+    | "URK_HEIR_LEVEL"
+    | "URK_HONOR_POINT"
+    | "URK_HOUSE_ONLY"
+    | "URK_HOUSE"
+    | "URK_HOUSING"
+    | "URK_IN_PROGRESS_QUEST"
+    | "URK_IN_ZONE_GROUP"
+    | "URK_IN_ZONE"
+    | "URK_ITEM_ELEMENT_EVOLVING_EXP"
+    | "URK_ITEM_LOOK_CHANGE_MAPPING"
+    | "URK_LABOR_POWER_MARGIN_LOCAL"
+    | "URK_LABOR_POWER_MARGIN"
+    | "URK_LESS_ACTABILITY_POINT"
+    | "URK_LEVEL"
+    | "URK_LIVING_POINT"
+    | "URK_MANA_MARGIN"
+    | "URK_MAX_LEVEL"
+    | "URK_MOTHER_FACTION_ONLY_NOT"
+    | "URK_MOTHER_FACTION_ONLY"
+    | "URK_MOTHER_FACTION"
+    | "URK_NATION_MEMBER_NOT"
+    | "URK_NATION_MEMBER"
+    | "URK_NEED_ULC_ACTIVATE"
+    | "URK_NO_BUFF_TAG"
+    | "URK_NO_DUAL"
+    | "URK_NO_EXPEDITION_BATTLE"
+    | "URK_NO_TARGET_ITEM_TAG"
+    | "URK_NOBUFF"
+    | "URK_NOT_EXPANDABLE"
+    | "URK_NOT_HERO"
+    | "URK_NOT_IN_HOUSING_AREA"
+    | "URK_NOT_UNDER_WATER"
+    | "URK_OUT_ZONE"
+    | "URK_OWN_APPELLATION"
+    | "URK_OWN_ITEM_COUNT"
+    | "URK_OWN_ITEM_NOT"
+    | "URK_OWN_ITEM"
+    | "URK_OWN_QUEST_ITEM_GROUP"
+    | "URK_PRECOMPLETE_QUEST_CONTEXT"
+    | "URK_PREMIUM_ARCHE_PASS"
+    | "URK_PROGRESS_QUEST_CONTEXT"
+    | "URK_RACE"
+    | "URK_READY_QUEST_CONTEXT"
+    | "URK_READY_QUEST"
+    | "URK_SOURCE_HEALTH_LESS_THAN"
+    | "URK_SOURCE_HEALTH_MORE_THAN"
+    | "URK_STEALTH"
+    | "URK_TARGET_BUFF_TAG"
+    | "URK_TARGET_BUFF"
+    | "URK_TARGET_COMBAT"
+    | "URK_TARGET_DOODAD"
+    | "URK_TARGET_HEALTH_LESS_THAN"
+    | "URK_TARGET_HEALTH_MORE_THAN"
+    | "URK_TARGET_ITEM_TAG"
+    | "URK_TARGET_MANA_LESS_THAN"
+    | "URK_TARGET_MANA_MORE_THAN"
+    | "URK_TARGET_NOBUFF_TAG_NO_TARGET"
+    | "URK_TARGET_NOBUFF_TAG"
+    | "URK_TARGET_NPC_GROUP"
+    | "URK_TARGET_NPC"
+    | "URK_TARGET_OWNER_TYPE"
+    | "URK_TOD"
+    | "URK_TRAINED_SKILL"
+    | "URK_UNDER_WATER"
+    | "URK_UNKNOWN"
+    | "URK_VERDICT_ONLY"
+```
+
+**SKILL_TYPE**
+
+"buff"|"skill"
+
+```lua
+SKILL_TYPE:
+    | "buff"
+    | "skill"
+```
+
+**SLIDER_SCROLL_TYPE**
+
+`0`|`1`
+
+```lua
+SLIDER_SCROLL_TYPE:
+    | `0` -- VERTICAL
+    | `1` -- HORIZONTAL
+```
+
+**SOUND_NAME**
+
+"battlefield_1_secound"|"battlefield_2_secound"|"battlefield_3_secound"|"battlefield_4_secound"|"battlefield_5_secound"...(+219)
+
+```lua
+-- Obtained from db sound_pack_items sound_pack_id = 203
+SOUND_NAME:
+    | "battlefield_1_secound"
+    | "battlefield_2_secound"
+    | "battlefield_3_secound"
+    | "battlefield_4_secound"
+    | "battlefield_5_secound"
+    | "battlefield_already_start"
+    | "battlefield_defeat"
+    | "battlefield_draw"
+    | "battlefield_end"
+    | "battlefield_kill_amazing_spirit"
+    | "battlefield_kill_destruction_god"
+    | "battlefield_kill_eyes_on_fire"
+    | "battlefield_kill_fifth"
+    | "battlefield_kill_first"
+    | "battlefield_kill_fourth"
+    | "battlefield_kill_more_than_sixth"
+    | "battlefield_kill_second"
+    | "battlefield_kill_third"
+    | "battlefield_start"
+    | "battlefield_win"
+    | "cdi_scene_artillery_contents2"
+    | "cdi_scene_artillery_quest_accept_title"
+    | "cdi_scene_artillery_title"
+    | "cdi_scene_combat_contents2"
+    | "cdi_scene_combat_contents3"
+    | "cdi_scene_combat_title"
+    | "cdi_scene_complete_quest_title"
+    | "cdi_scene_find_captain_title"
+    | "cdi_scene_glider_quest_accept_title"
+    | "cdi_scene_go_to_oldman_title"
+    | "cdi_scene_guardtower_title"
+    | "cdi_scene_ladder_contents1"
+    | "cdi_scene_ladder_title"
+    | "cdi_scene_quest_accept_title"
+    | "cdi_scene_siege_contents2"
+    | "cdi_scene_siege_quest_accept_title"
+    | "cdi_scene_siege_title"
+    | "cdi_scene_start_contents2"
+    | "cdi_scene_tribe_quest_accept_title"
+    | "edit_box_text_added"
+    | "edit_box_text_deleted"
+    | "event_actability_expert_changed"
+    | "event_auction_item_putdown"
+    | "event_auction_item_putup"
+    | "event_commercial_mail_alarm"
+    | "event_current_mail_delete"
+    | "event_explored_region"
+    | "event_item_added"
+    | "event_item_ancient_added"
+    | "event_item_artifact_added"
+    | "event_item_epic_added"
+    | "event_item_heroic_added"
+    | "event_item_legendary_added"
+    | "event_item_mythic_added"
+    | "event_item_rare_added"
+    | "event_item_socketing_result_fail"
+    | "event_item_socketing_result_success"
+    | "event_item_uncommon_added"
+    | "event_item_unique_added"
+    | "event_item_wonder_added"
+    | "event_mail_alarm"
+    | "event_mail_delete"
+    | "event_mail_read_changed"
+    | "event_mail_send"
+    | "event_message_box_ability_change_onok"
+    | "event_message_box_aution_bid_onok"
+    | "event_message_box_aution_direct_onok"
+    | "event_message_box_default_onok"
+    | "event_message_box_item_destroy_onok"
+    | "event_nation_independence"
+    | "event_quest_completed_daily"
+    | "event_quest_completed_daily_hunt"
+    | "event_quest_completed_group"
+    | "event_quest_completed_hidden"
+    | "event_quest_completed_livelihood"
+    | "event_quest_completed_main"
+    | "event_quest_completed_normal"
+    | "event_quest_completed_saga"
+    | "event_quest_completed_task"
+    | "event_quest_completed_tutorial"
+    | "event_quest_completed_weekly"
+    | "event_quest_directing_mode"
+    | "event_quest_dropped_daily"
+    | "event_quest_dropped_daily_hunt"
+    | "event_quest_dropped_group"
+    | "event_quest_dropped_hidden"
+    | "event_quest_dropped_livelihood"
+    | "event_quest_dropped_main"
+    | "event_quest_dropped_normal"
+    | "event_quest_dropped_saga"
+    | "event_quest_dropped_task"
+    | "event_quest_dropped_tutorial"
+    | "event_quest_dropped_weekly"
+    | "event_quest_failed_daily"
+    | "event_quest_failed_daily_hunt"
+    | "event_quest_failed_group"
+    | "event_quest_failed_hidden"
+    | "event_quest_failed_livelihood"
+    | "event_quest_failed_main"
+    | "event_quest_failed_normal"
+    | "event_quest_failed_saga"
+    | "event_quest_failed_task"
+    | "event_quest_failed_tutorial"
+    | "event_quest_failed_weekly"
+    | "event_quest_list_changed"
+    | "event_quest_started_daily"
+    | "event_quest_started_daily_hunt"
+    | "event_quest_started_group"
+    | "event_quest_started_hidden"
+    | "event_quest_started_livelihood"
+    | "event_quest_started_main"
+    | "event_quest_started_normal"
+    | "event_quest_started_saga"
+    | "event_quest_started_task"
+    | "event_quest_started_tutorial"
+    | "event_quest_started_weekly"
+    | "event_siege_defeat"
+    | "event_siege_ready_to_siege"
+    | "event_siege_victory"
+    | "event_trade_can_not_putup"
+    | "event_trade_item_and_money_recv"
+    | "event_trade_item_putup"
+    | "event_trade_item_recv"
+    | "event_trade_item_tookdown"
+    | "event_trade_lock"
+    | "event_trade_money_recv"
+    | "event_trade_unlock"
+    | "event_ulc_activate"
+    | "event_web_messenger_alarm"
+    | "gender_transfer"
+    | "high_rank_achievement"
+    | "item_synthesis_result"
+    | "listbox_item_selected"
+    | "listbox_item_toggled"
+    | "listbox_over"
+    | "login_stage_music_before_login"
+    | "login_stage_music_character_stage"
+    | "login_stage_music_creator"
+    | "login_stage_music_world_select"
+    | "login_stage_ready_to_connect_world"
+    | "login_stage_start_game"
+    | "login_stage_try_login"
+    | "login_stage_world_select"
+    | "low_rank_achievement"
+    | "makeup_done"
+    | "successor_skill_change"
+    | "successor_skill_select"
+    | "tutorial_contents_2584_2_1"
+    | "tutorial_contents_2584_2_2"
+    | "tutorial_contents_2585_2_1"
+    | "tutorial_contents_2585_2_2"
+    | "tutorial_contents_2586_2_1"
+    | "tutorial_contents_2586_2_2"
+    | "tutorial_contents_2587_1_1"
+    | "tutorial_contents_2588_1_1"
+    | "tutorial_contents_2589_2_1"
+    | "tutorial_contents_2589_2_2"
+    | "tutorial_contents_2590_2_1"
+    | "tutorial_contents_2590_2_2"
+    | "tutorial_contents_2591_1_1"
+    | "tutorial_contents_2592_1_1"
+    | "tutorial_contents_2593_1_1"
+    | "tutorial_contents_2594_2_1"
+    | "tutorial_contents_2594_2_2"
+    | "tutorial_contents_2595_1_1"
+    | "tutorial_contents_2596_2_1"
+    | "tutorial_contents_2596_2_2"
+    | "tutorial_contents_2597_1_1"
+    | "tutorial_contents_2598_2_1"
+    | "tutorial_contents_2598_2_2"
+    | "tutorial_contents_2599_1_1"
+    | "tutorial_contents_2600_1_1"
+    | "tutorial_contents_2601_1_1"
+    | "tutorial_contents_2602_1_1"
+    | "tutorial_contents_2603_1_1"
+    | "tutorial_contents_2604_1_1"
+    | "tutorial_contents_2605_1_1"
+    | "tutorial_contents_2606_1_1"
+    | "tutorial_contents_2607_1_1"
+    | "tutorial_contents_2608_1_1"
+    | "tutorial_contents_2609_2_1"
+    | "tutorial_contents_2609_2_2"
+    | "tutorial_contents_2610_1_1"
+    | "tutorial_contents_2611_1_1"
+    | "tutorial_contents_2612_1_1"
+    | "tutorial_contents_2613_1_1"
+    | "tutorial_contents_2614_1_1"
+    | "tutorial_contents_2615_1_1"
+    | "tutorial_contents_2616_1_1"
+    | "tutorial_contents_2617_1_1"
+    | "tutorial_contents_2618_1_1"
+    | "tutorial_contents_2619_1_1"
+    | "tutorial_contents_2620_1_1"
+    | "tutorial_contents_2621_1_1"
+    | "tutorial_contents_2622_1_1"
+    | "tutorial_contents_2623_1_1"
+    | "tutorial_contents_2624_1_1"
+    | "tutorial_contents_2625_1_1"
+    | "tutorial_contents_2626_1_1"
+    | "tutorial_contents_2627_1_1"
+    | "tutorial_contents_2628_1_1"
+    | "tutorial_contents_2629_1_1"
+    | "tutorial_contents_2630_1_1"
+    | "tutorial_contents_2631_1_1"
+    | "tutorial_contents_2632_1_1"
+    | "tutorial_contents_2633_1_1"
+    | "tutorial_contents_2634_1_1"
+    | "tutorial_contents_2635_1_1"
+    | "tutorial_contents_2636_1_1"
+    | "tutorial_contents_2639_1_1"
+    | "tutorial_contents_2640_1_1"
+    | "tutorial_contents_2641_1_1"
+    | "tutorial_contents_2642_1_1"
+    | "tutorial_contents_2643_1_1"
+    | "tutorial_contents_2644_1_1"
+    | "tutorial_contents_2645_1_1"
+    | "tutorial_contents_2646_1_1"
+    | "tutorial_contents_2647_1_1"
+    | "tutorial_contents_2648_1_1"
+    | "tutorial_contents_2649_1_1"
+    | "tutorial_contents_2650_1_1"
+    | "tutorial_contents_2651_1_1"
+    | "tutorial_contents_2652_1_1"
+    | "tutorial_contents_2653_1_1"
+```
+
+**STAT_KIND**
+
+`1`|`2`|`3`|`4`|`5`
+
+```lua
+STAT_KIND:
+    | `1` -- Strength
+    | `2` -- Agility
+    | `3` -- Stamina
+    | `4` -- Intelligence
+    | `5` -- Spirit
+```
+
+**SUB_ZONE_ID**
+
+`1000`|`1001`|`1002`|`1003`|`1004`...(+1351)
+
+```lua
+-- Obtained form db sub_zones
+SUB_ZONE_ID:
+    | `1` -- Paean Hills
+    | `2` -- Harpa's Camp
+    | `3` -- Fleetwhisper Valley
+    | `4` -- Sylvan Devi
+    | `5` -- Forbidden Ruins
+    | `6` -- Seer's Cottage
+    | `8` -- Dahuta Cult Coven
+    | `9` -- The Barrens
+    | `10` -- Woods of the Forgotten
+    | `11` -- Gweonid Lake
+    | `12` -- Lakeside
+    | `13` -- Green Lord
+    | `14` -- Memoria
+    | `15` -- Soulreath
+    | `16` -- Windswept Ruins
+    | `17` -- Soundless Copse
+    | `18` -- Thorntimbre Woods
+    | `19` -- Hereafter Hill
+    | `20` -- Gweonid Guardians' Camp
+    | `21` -- Chimeran Marsh
+    | `22` -- Thirsty Altar
+    | `23` -- Ravaged Shrine
+    | `24` -- Inner Ruins
+    | `25` -- Greenwoods
+    | `26` -- Zealot's Stead
+    | `27` -- Dawnsliver Plains
+    | `28` -- Torini Garden
+    | `29` -- Marianople Plantations
+    | `30` -- Housing Province
+    | `31` -- Housing Province
+    | `32` -- Pauper's Ridge
+    | `33` -- The Gaiety Theater
+    | `34` -- Falleaf Isle
+    | `35` -- Sheep Ranch
+    | `36` -- Goblin Dens
+    | `37` -- Marianople
+    | `38` -- Summerleaf River
+    | `39` -- Bonetalon Caverns
+    | `40` -- Iron Road
+    | `41` -- Jewel of Marianople
+    | `42` -- Crafting District
+    | `43` -- Ribble's Farm
+    | `44` -- Ribble's Granary
+    | `45` -- Desolate Farm
+    | `46` -- Gerald's Farm
+    | `47` -- Cloudspun Gorge
+    | `48` -- Pawnfrost Peaks
+    | `49` -- Duskgleam
+    | `50` -- Darkmane Orc Village
+    | `51` -- Centauros
+    | `52` -- Cloistera
+    | `53` -- Hermit's Valley
+    | `54` -- Loka's Checkmate
+    | `55` -- Loka's Steps
+    | `56` -- Grassea
+    | `57` -- Barren Road
+    | `58` -- Afindelle's Glade
+    | `59` -- Homes
+    | `60` -- Housing Province
+    | `61` -- Royster's Camp
+    | `62` -- Excavation Site
+    | `63` -- Earsplit Field
+    | `64` -- Barkbridge Trail
+    | `65` -- Lower Lilyut River
+    | `66` -- Lonesoul Cliff
+    | `67` -- Northern Sharpwind Plains
+    | `68` -- Housing Province
+    | `69` -- Rockfall Mine
+    | `70` -- Tomb of the Colossus
+    | `71` -- Bloodwind Cliff
+    | `72` -- Sandcloud
+    | `73` -- Roadsend Post
+    | `74` -- Sandtooth
+    | `75` -- Breaker Coast
+    | `76` -- Bloodmist Guard Post
+    | `77` -- Secret Hideout
+    | `78` -- Dwarf Encampment
+    | `79` -- Austere Heights
+    | `80` -- Bloodmist
+    | `81` -- Bloodmist Mine
+    | `82` -- Dreadnought
+    | `83` -- Vanishing Road
+    | `84` -- Shrieking Ravine
+    | `85` -- Guard Barracks
+    | `86` -- Wyrdwind Manor
+    | `87` -- Trieste Manor
+    | `88` -- Noryette Manor
+    | `89` -- Gourmet Market
+    | `90` -- Windscour Checkpoint
+    | `91` -- Loka River
+    | `92` -- Lower Loka River
+    | `93` -- Moringa Forest
+    | `94` -- Harani Campsite
+    | `95` -- Snowlion Rock
+    | `96` -- Kapagan Steppe
+    | `97` -- Arida Ranch
+    | `98` -- Loka's Blessing
+    | `99` -- Firetalon
+    | `100` -- Baobab Hill
+    | `101` -- Bonehoarders Outpost
+    | `102` -- Scarsteppe
+    | `103` -- Sandwind Prairie
+    | `104` -- Firesnarl
+    | `105` -- Weeping Star Oasis
+    | `106` -- Conqueror's Champaign
+    | `107` -- Sunshade Rendezvous
+    | `108` -- Glorybright Rise
+    | `109` -- Parched Oasis
+    | `110` -- Royal Palace
+    | `111` -- Consulate
+    | `112` -- Antiquary Society
+    | `113` -- Warscorched Scar
+    | `114` -- Dusty Hill
+    | `115` -- Oliviano's Orchard
+    | `116` -- Venomist Canyon
+    | `117` -- Forest of Repose
+    | `118` -- Hermit's Cabin
+    | `119` -- Weeping Stripmine
+    | `120` -- Sundowne
+    | `121` -- Painted Fields
+    | `122` -- Deadfield Dew
+    | `123` -- Farmfields
+    | `124` -- Royal Farmfields
+    | `125` -- Nui's Glory Coast
+    | `126` -- Arena
+    | `127` -- Observatory
+    | `128` -- Ezna Road
+    | `129` -- Moonswept Homes
+    | `130` -- Antiquity Research Camp
+    | `131` -- Dawnsreach Twin Pillars
+    | `132` -- Brotherhood Lost Fortress
+    | `133` -- Demon War Cemetery
+    | `134` -- Demon War Memorial
+    | `135` -- Ezna Crematorium
+    | `136` -- Shield Ridge
+    | `137` -- Unbreachable Gate
+    | `138` -- Howling Bull
+    | `139` -- Solis Hill
+    | `140` -- Commercial Port
+    | `141` -- Airship Platform
+    | `142` -- Sunken Merchant Ship
+    | `143` -- Military Port
+    | `144` -- Ezna
+    | `145` -- Serf District
+    | `146` -- Crafting District
+    | `147` -- Commercial District
+    | `148` -- Moonswept District
+    | `149` -- Godshield
+    | `150` -- White Arden Ferry
+    | `151` -- Ambrosia Meadow
+    | `152` -- Courtyard of Farewells
+    | `153` -- Kargarde Banquet Hall
+    | `154` -- Hive Colony
+    | `155` -- Red Moss Cave
+    | `156` -- Red Moss Depths
+    | `157` -- Crossroads
+    | `158` -- Birchkeep
+    | `159` -- Western White Arden
+    | `160` -- Southern White Arden
+    | `161` -- Eastern White Arden
+    | `162` -- Heart of White Arden
+    | `163` -- Ardenia
+    | `164` -- Housing Province
+    | `165` -- Tattered Tent
+    | `166` -- Broken Wing Brotherhood Camp
+    | `167` -- Blackmane Base Camp
+    | `168` -- Castlekeep Hill
+    | `169` -- Burnt Castle Camp
+    | `170` -- Eclipse Fields
+    | `171` -- Grimsvoten
+    | `172` -- Starsunder
+    | `173` -- Dahuta's Cauldron
+    | `174` -- Burnt Castle Serf Quarters
+    | `175` -- Orchid Hills
+    | `176` -- Burnt Castle
+    | `177` -- Burnt Courtyard
+    | `178` -- Burnt Castle Docks
+    | `179` -- Ivory Isles
+    | `180` -- Ivoran
+    | `181` -- Red Herrington
+    | `182` -- Seachild Wharf
+    | `183` -- Seachild Villa
+    | `184` -- Volcanology Research Institute
+    | `185` -- Fugitive's Road
+    | `186` -- Fugitive's Haven
+    | `187` -- Deserted House
+    | `188` -- Arcum Iris
+    | `189` -- Barren Sandhill
+    | `190` -- Wild Road
+    | `191` -- Cragmire
+    | `192` -- Rocknest
+    | `193` -- Withered Fields
+    | `194` -- Sanctia Oasis
+    | `195` -- Tiger's Tail
+    | `196` -- Serpent's Pass
+    | `197` -- Hassan's Camp
+    | `198` -- Granite Quarry
+    | `199` -- Northfall
+    | `200` -- Redivi Valley
+    | `201` -- Pebble Encampment
+    | `202` -- Boulder Encampment
+    | `203` -- Hatora
+    | `204` -- Parchsun Settlement
+    | `205` -- Ambushed Caravan
+    | `206` -- Snake Eye Den
+    | `207` -- Widesleeves
+    | `208` -- Dry Reservoir
+    | `209` -- Dragonskull
+    | `210` -- Dragonribs
+    | `211` -- Dragonheart
+    | `212` -- Dragonroar Fortress
+    | `213` -- Crimson Plateau
+    | `214` -- Dragontail
+    | `215` -- Lake Dragontear
+    | `216` -- Dry Reservoir Camp
+    | `217` -- Hardbleak Island
+    | `218` -- Iona
+    | `219` -- Brownscale Wyrmkin Camp
+    | `220` -- Lavis
+    | `221` -- Bonefence Hutment
+    | `222` -- Bonepool Hutment
+    | `223` -- Dragontail Arc
+    | `224` -- Red Clay Encampment
+    | `225` -- Red Clay Fortress
+    | `226` -- Giant's Cradle
+    | `227` -- Anvilton
+    | `228` -- Summerleaf River
+    | `229` -- Giant's Canyon
+    | `230` -- Iron Road
+    | `231` -- Grand Temple of Shatigon
+    | `232` -- Golem Factory Roof
+    | `233` -- Gorgon Cave Roof
+    | `234` -- Sandy Cave Roof
+    | `235` -- Summerleaf Riverbank
+    | `236` -- Aubre Cradle Housing Province
+    | `237` -- Tomb of Young Giants
+    | `238` -- Airain Castle Gate
+    | `239` -- Rectory Province
+    | `240` -- Minotaur Den
+    | `241` -- Bitterwind Plains
+    | `242` -- Windshade
+    | `243` -- Riverspan
+    | `244` -- Fallen Fortress
+    | `245` -- Bear Mountain Bandit Camp
+    | `246` -- Ronbann Castle
+    | `247` -- Housing Province
+    | `248` -- Great Couloir
+    | `249` -- Nymph Sanctuary
+    | `250` -- Lilyut Crossroads
+    | `251` -- Bear Mountain
+    | `252` -- Western Ronbann Mine
+    | `253` -- Eastern Ronbann Mine
+    | `254` -- Old Pine
+    | `255` -- Lilyut River
+    | `256` -- Snowlion's Rest
+    | `257` -- Watermist Foothills
+    | `258` -- Scout Camp
+    | `259` -- Solongos Camp
+    | `260` -- Silver Sunset Tribe
+    | `261` -- Windwing Tribe
+    | `262` -- Sunpawn Steppe
+    | `263` -- Bloodtear Stairs
+    | `264` -- Loka's Steps
+    | `265` -- Housing Province
+    | `266` -- Pillars of the King
+    | `267` -- Pillar of the North Lord
+    | `268` -- Pillar of Vassals
+    | `269` -- Ascetic's Way
+    | `270` -- Tower Road
+    | `271` -- Trade Plaza
+    | `272` -- Crafting District
+    | `273` -- Commercial District
+    | `274` -- Salphira Chapel
+    | `276` -- Poacher's Watch
+    | `277` -- Mahadevi Jungle
+    | `278` -- City of Towers
+    | `279` -- Mahadevi Port
+    | `280` -- Winking Bottle Brewery
+    | `281` -- Mahadevi Pass
+    | `282` -- Queenstower Quarry
+    | `283` -- Blackrock Coast
+    | `284` -- Kalimantan Rubber Plantation
+    | `285` -- Queensgrove
+    | `288` -- Mahadevi River
+    | `289` -- Abandoned Claimstake
+    | `290` -- Solisa
+    | `291` -- Sun's End
+    | `292` -- Eastern Halcyona
+    | `293` -- Western Halcyona
+    | `294` -- Whitecap Beach
+    | `295` -- Prison Camp
+    | `297` -- Warhorse Ranch
+    | `300` -- Winking Bottle Brewery
+    | `301` -- Airship Laboratory
+    | `302` -- Operations Base Camp
+    | `303` -- Warsmith Castle
+    | `304` -- Camp
+    | `305` -- Woodhenge Chapterhouse
+    | `306` -- Ossuary
+    | `307` -- Seareach
+    | `308` -- River Labs
+    | `309` -- Tigerspine Mountains
+    | `310` -- South Devi River
+    | `311` -- Watermist Forest
+    | `312` -- North Devi River
+    | `313` -- Running Tiger
+    | `314` -- Jackpot Clan Settlement
+    | `315` -- Anvilton
+    | `316` -- Automaton Factory
+    | `317` -- Ironclaw Mine
+    | `318` -- Foundry
+    | `319` -- Arach Hollow
+    | `320` -- Blue Cypress Headquarters
+    | `321` -- Junkyard
+    | `322` -- Arach Hollow Barracks
+    | `323` -- Crystal Lake
+    | `324` -- Desiree Peak
+    | `325` -- Desireen
+    | `326` -- Monolith Researcher's Cottage
+    | `327` -- Sunken Bay
+    | `328` -- Bluemist Forest
+    | `330` -- Sheep Ranch
+    | `331` -- Solzrean Gate
+    | `332` -- Wardton
+    | `334` -- Farmland
+    | `335` -- Crescent Throne
+    | `336` -- Blackreath Keep
+    | `337` -- Milke River
+    | `338` -- Lacton
+    | `339` -- Nymph Sanctuary
+    | `340` -- Castigant Ruins
+    | `341` -- Moonswept Bay
+    | `342` -- Corpsegouge Mine
+    | `343` -- East Housing Province
+    | `344` -- West Housing Province
+    | `345` -- Deserted Home
+    | `346` -- Ipnya Avenue
+    | `347` -- Road of Lost Souls
+    | `348` -- Sacred Plaza
+    | `349` -- Bridge of Oblation
+    | `350` -- Eastern Marianople Gate
+    | `351` -- Western Marianople Gate
+    | `352` -- Southern Marianople Gate
+    | `353` -- Northern Marianople Gate
+    | `354` -- Benisa Garden
+    | `355` -- Soulborne Square
+    | `356` -- Bank
+    | `357` -- Auction House
+    | `358` -- Oldtown Market
+    | `359` -- Marian Hall
+    | `374` -- Ignomin Valley
+    | `375` -- Anarchi
+    | `376` -- Shadowcopse
+    | `377` -- Housing Province
+    | `378` -- Diehole Marsh
+    | `379` -- Woodhenge Castle
+    | `380` -- Pirate Base
+    | `381` -- Trieste Thespians
+    | `382` -- Giant Bee Colony
+    | `383` -- Teleporation Laboratory
+    | `384` -- Hexmire
+    | `385` -- Pitiless Bog
+    | `386` -- Giant Furnace
+    | `387` -- Pioneer's Bridge
+    | `388` -- Bathhouse
+    | `389` -- Postal Temple
+    | `390` -- East Gate
+    | `391` -- Ancestor's Square
+    | `392` -- Sage's Plaza
+    | `393` -- Central Council Hall
+    | `394` -- Pantheon
+    | `395` -- Auditorium
+    | `396` -- Postal Temple
+    | `397` -- West Gate
+    | `398` -- Andelph Prison
+    | `399` -- Andelph Housing Province
+    | `400` -- Andelph Archeum Orchard
+    | `401` -- Gold Sage's Chancery
+    | `402` -- Silver Sage's Chancery
+    | `403` -- Iron Sage's Chancery
+    | `404` -- Stone Sage's Chancery
+    | `405` -- Seed Sage's Chancery
+    | `406` -- Road Sage's Chancery
+    | `407` -- Shaggy Hill
+    | `408` -- Starshower
+    | `409` -- Starshower Forest
+    | `410` -- Starshower Mine
+    | `411` -- Chuckhole Gulch
+    | `412` -- Six Sages Road
+    | `413` -- Grenwolf
+    | `414` -- Grenwolf Forest
+    | `415` -- Royal Hunting Grounds
+    | `416` -- Blueglass
+    | `417` -- Wetsands
+    | `418` -- Grenwolf Hillock
+    | `419` -- Royal Campsite
+    | `420` -- Housing Province
+    | `421` -- Corinth Hill
+    | `422` -- Calleil Priory
+    | `423` -- Nymph's Veil
+    | `424` -- Logging Site
+    | `425` -- Memoria Lake
+    | `426` -- Goblin Research Camp
+    | `427` -- Coral Plains Villa
+    | `428` -- Kraken's Lair
+    | `429` -- Seawind Road
+    | `430` -- Mermaid's Tears
+    | `431` -- Ardora Bridge
+    | `432` -- Withersand Campground
+    | `433` -- Seajoy Banquet Hall
+    | `434` -- Pearldrop
+    | `435` -- Coral Plains
+    | `436` -- Silver Palm Road
+    | `437` -- Cloudstorm Farm
+    | `438` -- Songspinner Field
+    | `439` -- Workers' Barracks
+    | `440` -- Warlock's Hideout
+    | `441` -- Starsand Haven
+    | `442` -- Starsand
+    | `443` -- Torch of Ipnya
+    | `444` -- Golden Fable Harbor
+    | `445` -- Regulus's Banquet Hall
+    | `446` -- Vintner's Cottage
+    | `448` -- Begonia Hilltop
+    | `449` -- Fable Hill
+    | `451` -- Beech Forest
+    | `452` -- Malika
+    | `453` -- Ancient Ramparts
+    | `454` -- Glitterstone
+    | `455` -- Pomegranate Cave
+    | `456` -- Rose Estate
+    | `457` -- Yearning River
+    | `458` -- Fortress
+    | `459` -- Dolmen Floodplain
+    | `460` -- Village of Nui's Way
+    | `461` -- Sleeper's Cape
+    | `462` -- Hadir Farm
+    | `463` -- The Cliff That Ends Regret
+    | `464` -- Waveroar Ruins
+    | `465` -- Housing Province
+    | `466` -- Marooned Isle
+    | `467` -- Bloodhand Outpost
+    | `468` -- Caernord
+    | `469` -- Royal Palace
+    | `470` -- Opera House
+    | `471` -- Glitterstone
+    | `472` -- Mount Mirage
+    | `473` -- Finnea Harbor
+    | `474` -- Noble's Hunting Grounds
+    | `475` -- Glitterstone Mine
+    | `476` -- Manors
+    | `477` -- Commercial/Industrial District
+    | `478` -- Street
+    | `479` -- Seaport Fortress
+    | `480` -- Sylvan Wall
+    | `481` -- Sylvan Wall Gallows
+    | `482` -- Sylvan Wall Moss Cave
+    | `483` -- Sylven Wall Camp
+    | `484` -- Perinoor Ruins
+    | `485` -- Coliseum Ruins
+    | `486` -- Palace Ruins
+    | `487` -- Temple Ruins
+    | `488` -- Stonehew
+    | `489` -- Goldfeather Garden
+    | `490` -- Apprentice Village
+    | `491` -- Fallen Memorial
+    | `492` -- Skyfin Nest
+    | `493` -- Breezebrine Coast
+    | `494` -- Askja Crater
+    | `495` -- Kareldar Crater
+    | `496` -- Lavamoat Crater
+    | `497` -- Lavastone Crater
+    | `498` -- Benisa Garden
+    | `499` -- Central Square
+    | `500` -- Nobles' Quarter
+    | `501` -- Workshop District
+    | `502` -- Commercial District
+    | `503` -- Military Quarter
+    | `504` -- Crescent Port
+    | `505` -- Library
+    | `506` -- Capital Castle
+    | `507` -- Ynys Isle
+    | `508` -- Ynys Dock
+    | `509` -- Godsand
+    | `510` -- Forest of Silence
+    | `511` -- Divine Weald
+    | `512` -- Shrine to Nui
+    | `513` -- Hereafter Gate
+    | `514` -- Arden Guard Camp
+    | `515` -- Broken Cart
+    | `516` -- Harpy's Lair
+    | `517` -- Housing Province
+    | `518` -- Banshee Haunt
+    | `519` -- Sanctuary of the Goddess
+    | `521` -- Lonely Tomb
+    | `522` -- Widow's Rapids
+    | `523` -- Necromancer's Stead
+    | `524` -- Jaira's Outpost
+    | `525` -- Civilian Quarter
+    | `526` -- Port Market
+    | `527` -- Lutesong Hill
+    | `528` -- Seven Bridges
+    | `529` -- Torchfyre Bay
+    | `530` -- Lighthouse
+    | `531` -- Silent Forest Checkpoint
+    | `532` -- Bleakfish
+    | `533` -- Weeping Hill
+    | `534` -- Shrine of Reunion
+    | `535` -- Wingfeather Valley
+    | `536` -- Whitewing Sanctuary
+    | `537` -- Wingfeather Gateway
+    | `538` -- Winebalm
+    | `539` -- Paddies
+    | `540` -- Scaelken
+    | `541` -- Achassi Nest
+    | `542` -- Lutesong Harbor
+    | `543` -- Kalmira II's Palace
+    | `544` -- Jaun's Ranch
+    | `545` -- Northern Checkpoint
+    | `546` -- Housing Province
+    | `547` -- Whisperiver
+    | `548` -- Singing River
+    | `549` -- Housing Province
+    | `550` -- Villanelle
+    | `551` -- Sarracenia Grove
+    | `552` -- Rising Waterfall
+    | `553` -- Logging Site
+    | `554` -- Fallow Paddy
+    | `555` -- Tree of Melodies
+    | `556` -- Broken Wagon
+    | `557` -- Red-Eyed Den
+    | `558` -- Garden Keeper's Cottage
+    | `559` -- Dreadtrees
+    | `560` -- Lineriph's Villa
+    | `561` -- Daeier University
+    | `562` -- Quinto Hall of Art
+    | `563` -- Ollo Engineering Institute
+    | `564` -- Gondola Station
+    | `565` -- Dawnsliver
+    | `566` -- Airship Platform
+    | `567` -- Wizard's Hideout
+    | `568` -- Webreach Den
+    | `570` -- Goldminer's Claim
+    | `571` -- Flotsam Shore
+    | `572` -- Haver Farm
+    | `573` -- Rubber Depot
+    | `574` -- Management Post
+    | `575` -- Dawnsbreak Plantation
+    | `576` -- #
+    | `577` -- Solis Headlands
+    | `578` -- Austera
+    | `579` -- Freedom Plaza
+    | `580` -- Port
+    | `581` -- Midden
+    | `582` -- Slum
+    | `583` -- Kalia Manor
+    | `584` -- Sable Dock
+    | `585` -- Ezna Dock
+    | `586` -- Crafting District
+    | `587` -- Queensroad
+    | `588` -- Traveler's Spring
+    | `589` -- Glittering Grove
+    | `590` -- Sylvina Springs
+    | `591` -- Sylvina Hot Springs
+    | `592` -- Construction Site
+    | `593` -- Pavitra's Fall
+    | `594` -- Pavitra's Monument
+    | `595` -- Couples' Cove
+    | `596` -- Halo Rise
+    | `597` -- Halo Hollow
+    | `598` -- Saffron Plantation
+    | `599` -- Public Garden
+    | `600` -- Breeding Colony
+    | `601` -- Housing Province
+    | `602` -- Forbidden Shore
+    | `603` -- Bloodcrown Crossroads
+    | `604` -- Mahadevi Pass
+    | `605` -- Halcyona Gulf
+    | `606` -- Traveler's Rest
+    | `607` -- Mahadevi
+    | `608` -- Limion's Camp
+    | `609` -- Lucilis Camp
+    | `610` -- Spywatch Camp
+    | `611` -- Nuzan Training Grounds
+    | `612` -- Housing Province
+    | `613` -- Housing Province
+    | `614` -- Northern Housing Province
+    | `616` -- Sellus's Camp
+    | `617` -- Maelstrom
+    | `618` -- Beal's Camp
+    | `619` -- Exhumers' Camp
+    | `620` -- Moat
+    | `621` -- Bashudi's Camp
+    | `622` -- Mendi's Camp
+    | `623` -- Salphira Shrine
+    | `624` -- Library
+    | `625` -- Bank
+    | `626` -- Auction House
+    | `627` -- Royal Palace
+    | `628` -- Mahadevi
+    | `629` -- Mahadevi
+    | `630` -- Mahadevi
+    | `631` -- Corona Shores
+    | `632` -- Serf Refuge
+    | `634` -- Jadegale Hotsprings
+    | `635` -- Glitterstone Hotsprings
+    | `636` -- Topaz Hotsprings
+    | `637` -- Mahadevi Checkpoint
+    | `638` -- North Monolith
+    | `639` -- South Monolith
+    | `640` -- West Monolith
+    | `641` -- Housing Province
+    | `643` -- Goddess's Shoreline
+    | `644` -- Ynys Strait
+    | `645` -- Eclipse Seacoast
+    | `646` -- Liberty's Shore
+    | `647` -- Icemaiden Sea
+    | `648` -- Icemother Sea
+    | `649` -- Icecrone Sea
+    | `650` -- Barley Field
+    | `652` -- Castaway Strait
+    | `653` -- Mahadevi Coast
+    | `654` -- Oldtown
+    | `655` -- Castaway Strait
+    | `656` -- Housing Province
+    | `657` -- Eznan Guard Camp
+    | `658` -- Seawall
+    | `659` -- Barracks
+    | `660` -- Port
+    | `661` -- Logging Site
+    | `662` -- 3rd Corps Camp
+    | `663` -- Royal Palace
+    | `664` -- You must turn back; only the dead sail here. And be warned: you may not survive to pass this way again.
+    | `665` -- Climb the vine.
+    | `666` -- Use shortcut keys to view important details quickly: B for your Inventory, L for your Quest List, and M for your Map.
+    | `667` -- Climb the bar.
+    | `668` -- Right-click a marked NPC to continue your quest.
+    | `669` -- Burn away the cobwebs.
+    | `670` -- Guardians' Grove
+    | `671` -- Vedisa
+    | `672` -- Reminis Forest
+    | `673` -- Huntsman's Retreat
+    | `674` -- Sawblade Logging Site
+    | `675` -- Cloaked Forest
+    | `676` -- Stille Camp
+    | `677` -- Treebane Clearing
+    | `678` -- Ebon Timber
+    | `679` -- Moonshade
+    | `680` -- Ancient Necropolis
+    | `681` -- Returned Camp
+    | `682` -- Ancient Necropolis
+    | `683` -- Tragedy's Tomb
+    | `684` -- Soundless Lake
+    | `685` -- Lakeside Villa
+    | `686` -- Yata pasture
+    | `687` -- Tigerseye
+    | `688` -- Gnawbones Cave
+    | `689` -- Cleric's Robe Falls
+    | `690` -- Flamehawk Canyon
+    | `691` -- Housing Province
+    | `692` -- Management Post
+    | `693` -- Jorga's Camp
+    | `694` -- Hal Hahpa
+    | `695` -- Rabbit Burrow
+    | `696` -- Hatchling Colony
+    | `697` -- Goldberry Bank
+    | `698` -- Cloudland Byway
+    | `699` -- Farmland
+    | `700` -- Six Sages Statues
+    | `701` -- Reindeer Road
+    | `702` -- Reindeer Sanctuary
+    | `703` -- Nui's Glory Arch
+    | `704` -- Airain Peak
+    | `705` -- Housing Province
+    | `706` -- Seed Mine
+    | `707` -- Astra Cavern
+    | `708` -- Beaktalon Ridge
+    | `709` -- Skydeep Inn
+    | `710` -- Tunnel
+    | `711` -- Avalanche
+    | `712` -- Snow Storehouse
+    | `713` -- Coldwind Cave
+    | `714` -- Groundling Nest
+    | `715` -- Footbare Pass
+    | `716` -- Footbare Station
+    | `717` -- Iron Road
+    | `718` -- Frostspine Hill
+    | `719` -- Seed Mine
+    | `720` -- Millennium Snow Village
+    | `721` -- Bronze Peak
+    | `722` -- Blizzard Valley
+    | `723` -- Andelph
+    | `724` -- Big Goldtooth Goblin Dens
+    | `725` -- Crossroads Guardpost
+    | `726` -- Evergray Screen
+    | `727` -- Snowlion Training Grounds
+    | `728` -- Whisperwind
+    | `729` -- Nascent Cliffs
+    | `730` -- Nascent Cliffs
+    | `731` -- Falconrib
+    | `732` -- Nomadic Encampment
+    | `733` -- Wind's Promise
+    | `734` -- Eye of Day
+    | `735` -- Darkeflight Cavern
+    | `736` -- Graymist
+    | `737` -- Hearthome
+    | `738` -- Housing Province
+    | `739` -- Falcon Rock Ward
+    | `740` -- Housing Province
+    | `741` -- Housing Province
+    | `742` -- Oxion Clan
+    | `743` -- Schima Stronghold
+    | `744` -- Eyas Rock
+    | `745` -- Talon's Edge
+    | `746` -- Halfmoon
+    | `747` -- Whitecloud Road
+    | `748` -- Cloudgrain
+    | `749` -- Bleakbreath Cave
+    | `750` -- Eye of Night
+    | `751` -- Reedpipe Dens
+    | `752` -- Tibbec's Sawmill
+    | `753` -- Rockmar Barrow
+    | `754` -- Children of Ipnya Outpost
+    | `755` -- Windbreaker Woods
+    | `756` -- Trosk Mountains
+    | `757` -- The Fissures
+    | `758` -- Trosk River
+    | `759` -- Arid Plains
+    | `760` -- Museum
+    | `761` -- West End Homes
+    | `762` -- West Main Street
+    | `763` -- South End Homes
+    | `764` -- East Main Street
+    | `765` -- North End Homes
+    | `766` -- East End Homes
+    | `767` -- Memorial Plaza
+    | `768` -- Falcon's Grave
+    | `769` -- Warehouse
+    | `770` -- Brewery
+    | `771` -- Everwhite Beach
+    | `772` -- Sawshark Shore
+    | `773` -- Whirlpool Coast
+    | `774` -- Suntower Park
+    | `775` -- Tower of Nadir
+    | `776` -- Spearmen's Barracks
+    | `777` -- Glaive Alley
+    | `778` -- Abandoned Guardpost
+    | `779` -- Dreadnought Arm Staircase
+    | `780` -- Dreadnought Chest Quarry
+    | `781` -- Dreadnought Stomach Factory
+    | `782` -- Dreadnought Shoulder Chancery
+    | `783` -- Dreadnought Waist Lab
+    | `784` -- Dreadnought Leg Prison
+    | `785` -- Dreadnought Head Chamber
+    | `786` -- Abandoned Homes
+    | `787` -- Fallen Fortress
+    | `788` -- Dragon's Nook
+    | `789` -- Flamerager Tribe
+    | `790` -- Wrinkle Lake
+    | `791` -- Boar Hunting Grounds
+    | `792` -- Warborn Hut
+    | `793` -- Barrenthorn
+    | `794` -- Dragon's Nook Observatory
+    | `795` -- Bitterspine Forest
+    | `796` -- Widowbite Hill
+    | `797` -- Sepulchre Union
+    | `798` -- Stone Cemetery
+    | `799` -- Central Tower
+    | `800` -- Searbone Mine
+    | `801` -- Searbone
+    | `802` -- Flamesnap Wilds
+    | `803` -- West Flamesnap
+    | `804` -- Demonhunter Trial Grounds
+    | `805` -- Shriver's Hand
+    | `806` -- Airship Port
+    | `807` -- Elder District
+    | `808` -- Commercial District
+    | `809` -- Hall of Justice
+    | `810` -- Bank
+    | `811` -- Auction House
+    | `812` -- Chaser's Field
+    | `813` -- Tower Ruins
+    | `814` -- Sealed Prayers
+    | `815` -- Land of Beasts
+    | `816` -- Harpy's Lair
+    | `817` -- Boar Hunting Grounds
+    | `818` -- Sunbite Wilds
+    | `819` -- Sunbite Wilds
+    | `820` -- Sunbite Wilds
+    | `822` -- Blooddread Hideaway
+    | `823` -- Goldmane Stronghold
+    | `824` -- Dorothy's Farm
+    | `825` -- Wizard's Cottage
+    | `826` -- Farmhouse
+    | `827` -- Farmhouse
+    | `828` -- Storehouse
+    | `829` -- Mercenary Training Camp
+    | `830` -- Mercenary Training Camp
+    | `831` -- Sapper Training Camp
+    | `833` -- Artillery Range
+    | `834` -- Melee Training Grounds
+    | `835` -- Swamp
+    | `836` -- Ebon Timber
+    | `837` -- Ebon Timber
+    | `838` -- Ebon Timber
+    | `839` -- Ebon Timber
+    | `840` -- Ebon Timber
+    | `841` -- Ebon Timber
+    | `842` -- Ebon Timber
+    | `843` -- Ebon Timber
+    | `844` -- City Ruins
+    | `845` -- Ebon Timber
+    | `846` -- Housing Province
+    | `847` -- Count Sebastian's Retreat
+    | `848` -- Housing Province
+    | `850` -- Redmane Gnoll Den
+    | `851` -- Anthills
+    | `852` -- Grub Pit
+    | `853` -- Safehouse
+    | `854` -- Harani Campsite
+    | `855` -- Housing Province
+    | `856` -- Housing Province
+    | `857` -- Stoltzburg Fortress
+    | `858` -- Hulkflesh Ravine
+    | `859` -- Hulkflesh Ravine
+    | `860` -- Research Camp
+    | `861` -- Checkpoint
+    | `862` -- Orc Hutment
+    | `863` -- Stormester Plateau
+    | `864` -- Dairy Pasture
+    | `865` -- Blackclasp
+    | `866` -- Freedich Island
+    | `867` -- Housing Province
+    | `868` -- Jemuna's Camp
+    | `869` -- Growlgate Isle
+    | `870` -- Ynystere Monument
+    | `871` -- Strait of No Return
+    | `872` -- Housing Province
+    | `873` -- Housing Province
+    | `874` -- Housing Province
+    | `875` -- Housing Province
+    | `876` -- Housing Province
+    | `877` -- Housing Province
+    | `878` -- Housing Province
+    | `879` -- Housing Province
+    | `880` -- Prince Reander Monument
+    | `881` -- Yearning River
+    | `882` -- Rose Estate Farm
+    | `883` -- Old Malika
+    | `884` -- Brimblaze Tower
+    | `885` -- Weigh Station
+    | `886` -- Marquis's Villa
+    | `887` -- Farmer's Hut
+    | `888` -- Hadir's Manse
+    | `889` -- Vyolet River
+    | `890` -- Rose Estate Manor
+    | `891` -- Heedeye Tower
+    | `892` -- Bulwark
+    | `893` -- Aquafarm Zone
+    | `894` -- Snakescale Den
+    | `895` -- Cemetery
+    | `897` -- Wavehorde Islet
+    | `898` -- Anarchi
+    | `899` -- Haven
+    | `900` -- Trieste Thespians
+    | `901` -- Woodhenge Castle
+    | `902` -- Ignomin Valley
+    | `903` -- Bloodhead Dens
+    | `904` -- Shadowcopse
+    | `905` -- Hexmire
+    | `906` -- Diehole Marsh
+    | `907` -- Halcyona Hideout
+    | `908` -- Pitiless Bog
+    | `909` -- Windscour Skyport
+    | `910` -- Skyfang
+    | `911` -- Sutran Hill
+    | `912` -- Windheart Lake
+    | `913` -- Housing Province
+    | `914` -- Windstone Ruins
+    | `915` -- Bonehoarders' Stronghold
+    | `916` -- Auroria Research Library
+    | `917` -- Galegarden
+    | `918` -- Tainted Farmland
+    | `919` -- Cursed Village
+    | `920` -- Jadegale
+    | `921` -- Skysteps
+    | `922` -- Forsaken Weald
+    | `923` -- Tigris Greenwood
+    | `924` -- Occult Altar
+    | `925` -- Pavilion of the King
+    | `926` -- Jadegale Refuge
+    | `927` -- Peony Farm
+    | `928` -- Cemetery
+    | `929` -- Snowlion Raceway
+    | `930` -- Veroe
+    | `931` -- Galegarden
+    | `932` -- Tehmika Tribe
+    | `933` -- Sage's Temple
+    | `934` -- Tehmi Ruins
+    | `935` -- Windwhip Hideout
+    | `936` -- Sage's Temple
+    | `937` -- Field Library
+    | `938` -- Jadegale Pond
+    | `939` -- Farmers' Rest
+    | `940` -- Jadegale Ravine
+    | `941` -- Secret Room
+    | `942` -- Chancery
+    | `943` -- Veroe Skyport
+    | `944` -- Eurythmin Steppe
+    | `945` -- Hellsdame Oasis
+    | `946` -- Zephyr Lea
+    | `947` -- Lower Lilyut River
+    | `948` -- Whitecloud Peak
+    | `949` -- Aquafarm
+    | `950` -- Ancient Gallows
+    | `951` -- The Gallows
+    | `952` -- Herbalist Camp
+    | `953` -- Wildlife Control Post
+    | `954` -- Perinoor Ruins
+    | `955` -- Stonehew
+    | `956` -- Skyfin Nest
+    | `957` -- City Ruins
+    | `958` -- Regent's Tower
+    | `959` -- Apprentice Village
+    | `960` -- Goldscale Sanctuary
+    | `961` -- Goldscale Garden
+    | `962` -- Archeology Camp
+    | `963` -- Archeology Base Camp
+    | `964` -- Housing Province
+    | `965` -- Blackwood Rampart
+    | `966` -- Public Farm
+    | `967` -- Public Farm
+    | `968` -- Public Farm
+    | `969` -- Sleeping Forest
+    | `970` -- Hill
+    | `971` -- Preservation Society
+    | `972` -- Palace Ruins
+    | `973` -- Housing Province
+    | `974` -- Public Stable
+    | `975` -- White Gnoll Den
+    | `976` -- Western Halcyona Gulf
+    | `977` -- Eastern Halcyona Gulf
+    | `978` -- Altar of the Nine Flames
+    | `979` -- Profane Temple
+    | `980` -- Postulants' Nave
+    | `981` -- Hall of Retribution
+    | `982` -- Ssslythx
+    | `983` -- Watermist
+    | `984` -- Rotdeep Pond
+    | `985` -- Specimen Pens
+    | `986` -- Necromancer's Vicarage
+    | `987` -- Wastewater Basin
+    | `988` -- Bridge of the Dead
+    | `989` -- Hadir Manor
+    | `990` -- Mass Grave
+    | `991` -- Armory Gate
+    | `992` -- Finger Collector's Post
+    | `993` -- Charred Armory
+    | `994` -- Cursed Corridor
+    | `995` -- Dewstone Crossroads
+    | `996` -- Astra Cavern
+    | `997` -- Halcyona Windfarm
+    | `998` -- Public Farm
+    | `999` -- #
+    | `1000` -- Glass Coast
+    | `1001` -- Whisperwind Summoning Circle
+    | `1002` -- Eznan Harbor
+    | `1003` -- Midday's Rest
+    | `1004` -- Snowlion Rock Camp
+    | `1005` -- Snowlion Rest Camp
+    | `1006` -- Bank
+    | `1007` -- Crafting District
+    | `1008` -- Commercial District
+    | `1009` -- Inn
+    | `1010` -- Sloane's Cottage
+    | `1011` -- Field of Honor
+    | `1012` -- Derelict Bridge
+    | `1013` -- Nerta's Refuge
+    | `1014` -- Guild Warehouse
+    | `1015` -- Hidden Cavern
+    | `1016` -- Okape's Lair
+    | `1017` -- Bloodhand Warehouse
+    | `1018` -- Howling Ranch
+    | `1019` -- Westpark
+    | `1020` -- Hall of the Stolen
+    | `1021` -- Black Snake Pit
+    | `1022` -- Weeping Charnel House
+    | `1023` -- Vincenzio's Family Villa
+    | `1024` -- Shadowhawk Headquarters
+    | `1025` -- The Idle Hour Bookshop
+    | `1026` -- Shadowhawk Conclave
+    | `1027` -- The Goat & Gargoyle
+    | `1028` -- Croft's Laboratory
+    | `1029` -- Safehouse
+    | `1030` -- Windwhip's Redoubt
+    | `1031` -- Deathspice Crafting Chamber
+    | `1032` -- Kitchen of Fearful Tastes
+    | `1033` -- Flamewhirl Chamber
+    | `1034` -- Cradle of Nightmares
+    | `1035` -- Dreadkiss Sitting Room
+    | `1036` -- Death's Door
+    | `1037` -- Hidden Chamber
+    | `1038` -- Bedlam Quarters
+    | `1039` -- Labyrinth Keeper's Parlor
+    | `1040` -- Soulscour Bathroom
+    | `1041` -- Bedroom of Devouring
+    | `1042` -- Labyrinth of Shattered Dreams
+    | `1043` -- Chamber of Fragmented Memories
+    | `1044` -- Ravaged Chamber
+    | `1045` -- Rockflow Road
+    | `1046` -- Flamebelch Road
+    | `1047` -- Reaper's Shortcut
+    | `1048` -- The Rabbit's Foot
+    | `1049` -- Housing Province
+    | `1050` -- Abandoned Drill Camp
+    | `1051` -- Cursed Village
+    | `1052` -- Kosan Heirs Hideout
+    | `1053` -- Jadegale Farmland
+    | `1056` -- Housing Province
+    | `1057` -- Catacombs
+    | `1059` -- Wellig Island
+    | `1060` -- Moonhead Isle
+    | `1061` -- Whitecap Isle
+    | `1062` -- Ororo Island
+    | `1063` -- Abyssal Trap
+    | `1064` -- Nightmare's Embrace
+    | `1065` -- Laboratory of Terrors
+    | `1066` -- Womb of the Crimson Dream
+    | `1067` -- Sanctuary of Darkness
+    | `1068` -- Creatures' Vault
+    | `1069` -- Duskfallen Hall
+    | `1070` -- Mouth of Chaos
+    | `1071` -- Dimensional Crevice
+    | `1072` -- Sea of Drowned Love
+    | `1073` -- Ancient Guardian's Chamber
+    | `1074` -- Prince's Chamber
+    | `1075` -- Ruins: Main Floor
+    | `1076` -- Ruins: Second Floor
+    | `1077` -- Snakescale Cave
+    | `1078` -- Snakeskin Cave
+    | `1079` -- Dahuta's Garden
+    | `1080` -- Scarecrow Garden
+    | `1081` -- Shattered Chasm
+    | `1082` -- Marine Housing Province
+    | `1083` -- Red Dragon's Keep
+    | `1084` -- Dimensional Crevice
+    | `1085` -- Dimensional Crevice
+    | `1086` -- Encyclopedia Room Entrance
+    | `1087` -- Encyclopedia Room Exit
+    | `1088` -- Encyclopedia Room Lyceum
+    | `1089` -- Libris Garden Entrance
+    | `1090` -- Libris Garden Exit
+    | `1091` -- Libris Garden Lyceum
+    | `1092` -- Screaming Archives Entrance
+    | `1093` -- Screaming Archives Exit
+    | `1094` -- Screaming Archives Lyceum
+    | `1095` -- Encyclopedia Room
+    | `1096` -- Libris Garden
+    | `1097` -- Screaming Archives
+    | `1098` -- Introspect Path
+    | `1099` -- Verdant Skychamber
+    | `1100` -- Evening Botanica
+    | `1101` -- Screening Hall
+    | `1102` -- Frozen Study
+    | `1103` -- Deranged Bookroom
+    | `1104` -- Corner Reading Room
+    | `1105` -- Screening Hall Lobby
+    | `1106` -- Frozen Lobby
+    | `1107` -- Deranged Lobby
+    | `1108` -- Corner Lobby
+    | `1109` -- Ayanad Ruins
+    | `1110` -- Ayanad Ruins
+    | `1111` -- Housing Province
+    | `1112` -- Wynn's Secret Study
+    | `1113` -- Stena's Secret Study
+    | `1114` -- Sealed Secret Study
+    | `1115` -- Secret Garden
+    | `1116` -- Inkcalm Chamber
+    | `1117` -- Halnaak's Secret Study
+    | `1118` -- Tinnereph's Secret Study
+    | `1119` -- Screaming Archives Secret Study
+    | `1120` -- Denistrious's Secret Study
+    | `1121` -- Port
+    | `1122` -- Arcadian Sea
+    | `1123` -- Auroria
+    | `1124` -- Auroran Hilltop
+    | `1125` -- Auroran Interior Castle
+    | `1126` -- Mistmerrow
+    | `1127` -- Crimson Altar
+    | `1128` -- Crimson Basin
+    | `1129` -- The Icemount
+    | `1130` -- Disabled
+    | `1131` -- Disabled
+    | `1132` -- Fishing Camp
+    | `1133` -- Miroir Tundra
+    | `1134` -- Shattered Sea
+    | `1135` -- Sea of Graves
+    | `1136` -- Devouring Depths
+    | `1137` -- Sea of Graves
+    | `1138` -- Sea of Graves
+    | `1139` -- Sea of Graves
+    | `1140` -- Riven Gates
+    | `1141` -- Chimera Training Camp
+    | `1142` -- Heart of Ayanad Core
+    | `1143` -- Heart of Ayanad Lobby
+    | `1144` -- Vineviper Garden
+    | `1145` -- Music Hall
+    | `1146` -- Glaring Court
+    | `1147` -- Mistsong Summit
+    | `1148` -- Whispering Street
+    | `1149` -- The Soul Well
+    | `1150` -- Breathswept Avenue
+    | `1151` -- Vineviper Garden Entrance
+    | `1152` -- Music Hall Entrance
+    | `1153` -- Glaring Court Entrance
+    | `1154` -- Snowfang Isle
+    | `1155` -- Wayfarer's Island
+    | `1156` -- Daredevil's Key
+    | `1157` -- Housing Province
+    | `1158` -- Luckbeard Island
+    | `1159` -- Housing Province
+    | `1160` -- Housing Province
+    | `1161` -- Housing Province
+    | `1162` -- Housing Province
+    | `1163` -- Iron Road
+    | `1164` -- Ironwrought
+    | `1165` -- Sage's Gate
+    | `1166` -- Great Temple of Shatigon
+    | `1167` -- Koven's Lab
+    | `1168` -- Giant's Canyon
+    | `1169` -- Giant's Tear
+    | `1170` -- Steelwind Pass
+    | `1171` -- Clockwork Factory
+    | `1172` -- Mysterious Machine
+    | `1173` -- Summer Leaf Riverbank
+    | `1174` -- Summer Leaf Camp
+    | `1175` -- Summer Leaf River
+    | `1176` -- Harani Construction Site
+    | `1177` -- Junkyard
+    | `1178` -- Bleachbone Beach
+    | `1179` -- Flower Farm
+    | `1180` -- Fleurstad
+    | `1181` -- Harani Governor's Office
+    | `1182` -- Thornsong Forest
+    | `1183` -- Warborn Soup Settlement
+    | `1184` -- Communal Ranch
+    | `1185` -- Repentance's Rest
+    | `1186` -- Rocknest
+    | `1187` -- Redempton
+    | `1188` -- Mother's Root
+    | `1189` -- Rainpale Cave
+    | `1190` -- Andelph
+    | `1191` -- Housing Province
+    | `1192` -- Barefoot Barley Field
+    | `1193` -- Ice Grail Lake
+    | `1194` -- Ice Grail
+    | `1195` -- Snowfall Station
+    | `1196` -- Reindeer Sanctuary
+    | `1197` -- Icefang Orc Camp
+    | `1198` -- Logging Area
+    | `1199` -- Howling Forest
+    | `1200` -- Starshower
+    | `1201` -- Starshower Mine
+    | `1202` -- Hermit's Hut
+    | `1203` -- Sage Statue
+    | `1204` -- Reindeer Tribe Camp
+    | `1205` -- Boiling Sea
+    | `1206` -- Tadpole Head Field
+    | `1207` -- Tadpole Tail Field
+    | `1208` -- Lotus Song Garden
+    | `1209` -- Cloud Bridge
+    | `1210` -- Loka's Nose
+    | `1211` -- Reedwind Crimson Watch Camp
+    | `1212` -- Cragnest
+    | `1213` -- Mirdautas
+    | `1214` -- Floating Island
+    | `1215` -- Blood Judgment
+    | `1216` -- Blood Begins
+    | `1217` -- Blood Ends
+    | `1218` -- Gilda
+    | `1219` -- Nasya
+    | `1220` -- Esya
+    | `1221` -- Shadow Shores
+    | `1222` -- Whale's Tomb
+    | `1223` -- Weigh Station
+    | `1224` -- Crimson Watch Supply Depot
+    | `1225` -- Lunar Halo Basin
+    | `1226` -- Nuia Defense Base
+    | `1227` -- Haranya Defense Base
+    | `1228` -- Pirate Defense Base
+    | `1229` -- Player Nation Defense Base
+    | `1230` -- Western Seal
+    | `1231` -- Eastern Seal
+    | `1232` -- Northern Seal
+    | `1233` -- Southern Seal
+    | `1234` -- Torch of Ipnya
+    | `1235` -- Crimson Watch Camp
+    | `1236` -- Housing Province
+    | `1237` -- Housing Province
+    | `1238` -- Charybdis's Whirlpool
+    | `1239` -- Team Base
+    | `1240` -- Waiting Area
+    | `1241` -- Mountain Gate
+    | `1242` -- Ruins of Hiram City
+    | `1243` -- Dragon's Maw
+    | `1244` -- Akasch Worship Site
+    | `1245` -- Nemi River
+    | `1246` -- Illusion Cave
+    | `1247` -- Western Hiram Mountains
+    | `1248` -- Amaitan Highlands
+    | `1249` -- Hiram Camp
+    | `1250` -- The Navel of the World
+    | `1251` -- Millennium Snow
+    | `1252` -- Screening Hall Lobby
+    | `1253` -- Screening Hall
+    | `1254` -- Frozen Study
+    | `1255` -- Frozen Lobby
+    | `1256` -- Deranged Bookroom
+    | `1257` -- Deranged Lobby
+    | `1258` -- Corner Lobby
+    | `1259` -- Corner Reading Room
+    | `1260` -- Heart of Ayanad Lobby
+    | `1262` -- Heart of Ayanad Core
+    | `1267` -- Hiram Cave
+    | `1268` -- Frozen Highlands
+    | `1269` -- Waterfall Stairs
+    | `1270` -- Black Forest
+    | `1271` -- Amaitan Meadows
+    | `1272` -- Gate of Gods
+    | `1273` -- Hall of Warriors
+    | `1274` -- Gate of Strength
+    | `1275` -- Gate of Patience
+    | `1276` -- Gate of Wisdom
+    | `1277` -- Ipnya's Blessing
+    | `1278` -- Warrior’s Breath
+    | `1279` -- Weapon Workshop
+    | `1280` -- Haradium Refinery Station
+    | `1281` -- Time Research Lab
+    | `1282` -- Haradium Mine
+    | `1283` -- Abyssal Legion Base Camp
+    | `1284` -- Waterfall Stairs Camp
+    | `1285` -- Black Forest Camp
+    | `1286` -- Amaitan Meadows Camp
+    | `1287` -- Ipnya Sealstone
+    | `1288` -- The Fall of Hiram City
+    | `1289` -- Crimson Mistmerrow
+    | `1290` -- Cave Entrance
+    | `1291` -- Halfmoon Bay
+    | `1292` -- Gathering Seahag
+    | `1293` -- Collapsing Earth
+    | `1294` -- Green Isles
+    | `1295` -- White Arden Guard Post
+    | `1296` -- Moonsand Field
+    | `1297` -- Golden Beard Cave
+    | `1298` -- Rujin's Pavilion
+    | `1299` -- Hidden Sanctuary
+    | `1300` -- Reminiscent Marsh
+    | `1301` -- Siege Base
+    | `1302` -- Lantern Tree
+    | `1303` -- Secret Grotto
+    | `1304` -- Prismatic Falls
+    | `1305` -- Pools of Creation
+    | `1306` -- Elysium
+    | `1307` -- Ynys Monolith
+    | `1308` -- Delphinad Mirage
+    | `1309` -- Circle of Authority
+    | `1310` -- Frost Fangs
+    | `1311` -- Boreal Blades
+    | `1312` -- Tahyang's Final Rest
+    | `1313` -- Shimmering Glade
+    | `1314` -- Gate of Seasons
+    | `1315` -- Amber Ridge
+    | `1316` -- Shattered Strand
+    | `1317` -- Genesis Glade
+    | `1318` -- Shadowhawk Citadel
+    | `1319` -- Court of the Hawk
+    | `1320` -- Celestia
+    | `1321` -- Radiant Ridge
+    | `1322` -- Lucent Gorge
+    | `1323` -- Drifting Enclaves
+    | `1324` -- Spirit Shelter
+    | `1325` -- Boreal Meadow
+    | `1326` -- The Great Library
+    | `1327` -- Shadowhawk Citadel
+    | `1328` -- Verdant Grove
+    | `1329` -- Arbiter's Plaza
+    | `1330` -- Ethereal Antechamber
+    | `1331` -- Hall of Eternity
+    | `1332` -- Atrium of the Immortal
+    | `1333` -- Central Hall
+    | `1334` -- Auroria Seal
+    | `1335` -- Nuia Seal
+    | `1336` -- Haranya Seal
+    | `1337` -- Crimson Watch Camp
+    | `1338` -- Arcane Academy
+    | `1339` -- Northern Corridor
+    | `1340` -- Southern Corridor
+    | `1341` -- Southern Ruins
+    | `1342` -- Northern Ruins
+    | `1343` -- Campus Gardens
+    | `1344` -- Mysthrane Library
+    | `1345` -- Housing Province
+    | `1346` -- Housing Province
+    | `1347` -- Housing Province
+    | `1348` -- Housing Province
+    | `1349` -- Warden Memorial
+    | `1352` -- Trial Grounds
+    | `1354` -- Cragtear Scars
+    | `1355` -- Ethereal Haven
+    | `1357` -- Lost Cenote
+    | `1358` -- Verdant Vault
+    | `1359` -- Gleaming Grove
+    | `1360` -- Titan's Maw
+    | `1361` -- Queen's Altar
+    | `1362` -- Abyssal Workshop
+    | `1363` -- Silent Plateau
+    | `1364` -- Dawnfeather Hill
+    | `1365` -- Thorn Lock Room
+    | `1366` -- Bloody Thorn Room
+    | `1367` -- Mistsong Thorn Room
+    | `1368` -- Black Ocean Thorn Room
+    | `1369` -- Thorn Room of Bitterness and Wrath
+    | `1370` -- Light and Shadow Thorn Room
+    | `1371` -- Ayanad Thorn Room
+    | `1372` -- Windwhip Temporary Camp
+    | `1373` -- Wildflower Forest
+    | `1374` -- Terena
+    | `1375` -- Plains Eye
+    | `1376` -- Dead Grip
+    | `1377` -- Abyssal Trap
+    | `1378` -- Sanctuary of Darkness
+    | `1379` -- Dimensional Crack
+    | `1380` -- Dimensional Crack
+    | `1381` -- Dimensional Crack
+    | `1382` -- Shattered Chasm
+    | `1384` -- Moonsand Field
+    | `1385` -- Siege Base
+    | `1386` -- Eroded Area
+    | `1387` -- Golden Beard Cave
+    | `1388` -- Dimensional Boundary Defense Raid
+    | `1389` -- Moonsand Field
+    | `1390` -- Siege Base
+    | `1391` -- Eroded Area
+    | `1392` -- Golden Beard Cave
+    | `1393` -- Dimensional Boundary Defense Raid
+    | `1394` -- Dimensional Boundary Defense Raid
+    | `1395` -- Housing Province
+    | `1396` -- Housing Province
+    | `1397` -- Housing Province
+    | `1398` -- Housing Province
+    | `1399` -- Housing Province
+    | `1400` -- Sapphire Mine
+    | `1401` -- Vanilla Farmland
+    | `1402` -- Banana Tree Habitat
+    | `1403` -- Cactus Habitat
+    | `1404` -- Island of Abundance
+```
+
+**SUB_ZONE_NAME**
+
+""|"3rd Corps Camp"|"Abandoned Claimstake"|"Abandoned Drill Camp"|"Abandoned Guardpost"...(+1163)
+
+```lua
+-- db sub_zones
+SUB_ZONE_NAME:
+    | ""
+    | "3rd Corps Camp"
+    | "Abandoned Claimstake"
+    | "Abandoned Drill Camp"
+    | "Abandoned Guardpost"
+    | "Abandoned Homes"
+    | "Abyssal Legion Base Camp"
+    | "Abyssal Trap"
+    | "Abyssal Workshop"
+    | "Achassi Nest"
+    | "Afindelle's Glade"
+    | "Airain Castle Gate"
+    | "Airain Peak"
+    | "Airship Laboratory"
+    | "Airship Platform"
+    | "Airship Port"
+    | "Akasch Worship Site"
+    | "Altar of the Nine Flames"
+    | "Amaitan Highlands"
+    | "Amaitan Meadows Camp"
+    | "Amaitan Meadows"
+    | "Amber Ridge"
+    | "Ambrosia Meadow"
+    | "Ambushed Caravan"
+    | "Anarchi"
+    | "Ancestor's Square"
+    | "Ancient Gallows"
+    | "Ancient Guardian's Chamber"
+    | "Ancient Necropolis"
+    | "Ancient Ramparts"
+    | "Andelph Archeum Orchard"
+    | "Andelph Housing Province"
+    | "Andelph Prison"
+    | "Andelph"
+    | "Anthills"
+    | "Antiquary Society"
+    | "Antiquity Research Camp"
+    | "Anvilton"
+    | "Apprentice Village"
+    | "Aquafarm Zone"
+    | "Aquafarm"
+    | "Arach Hollow Barracks"
+    | "Arach Hollow"
+    | "Arbiter's Plaza"
+    | "Arcadian Sea"
+    | "Arcane Academy"
+    | "Archeology Base Camp"
+    | "Archeology Camp"
+    | "Arcum Iris"
+    | "Arden Guard Camp"
+    | "Ardenia"
+    | "Ardora Bridge"
+    | "Arena"
+    | "Arid Plains"
+    | "Arida Ranch"
+    | "Armory Gate"
+    | "Artillery Range"
+    | "Ascetic's Way"
+    | "Askja Crater"
+    | "Astra Cavern"
+    | "Atrium of the Immortal"
+    | "Aubre Cradle Housing Province"
+    | "Auction House"
+    | "Auditorium"
+    | "Auroran Hilltop"
+    | "Auroran Interior Castle"
+    | "Auroria Research Library"
+    | "Auroria Seal"
+    | "Auroria"
+    | "Austera"
+    | "Austere Heights"
+    | "Automaton Factory"
+    | "Avalanche"
+    | "Ayanad Ruins"
+    | "Ayanad Thorn Room"
+    | "Banana Tree Habitat"
+    | "Bank"
+    | "Banshee Haunt"
+    | "Baobab Hill"
+    | "Barefoot Barley Field"
+    | "Barkbridge Trail"
+    | "Barley Field"
+    | "Barracks"
+    | "Barren Road"
+    | "Barren Sandhill"
+    | "Barrenthorn"
+    | "Bashudi's Camp"
+    | "Bathhouse"
+    | "Beaktalon Ridge"
+    | "Beal's Camp"
+    | "Bear Mountain Bandit Camp"
+    | "Bear Mountain"
+    | "Bedlam Quarters"
+    | "Bedroom of Devouring"
+    | "Beech Forest"
+    | "Begonia Hilltop"
+    | "Benisa Garden"
+    | "Big Goldtooth Goblin Dens"
+    | "Birchkeep"
+    | "Bitterspine Forest"
+    | "Bitterwind Plains"
+    | "Black Forest Camp"
+    | "Black Forest"
+    | "Black Ocean Thorn Room"
+    | "Black Snake Pit"
+    | "Blackclasp"
+    | "Blackmane Base Camp"
+    | "Blackreath Keep"
+    | "Blackrock Coast"
+    | "Blackwood Rampart"
+    | "Bleachbone Beach"
+    | "Bleakbreath Cave"
+    | "Bleakfish"
+    | "Blizzard Valley"
+    | "Blood Begins"
+    | "Blood Ends"
+    | "Blood Judgment"
+    | "Bloodcrown Crossroads"
+    | "Blooddread Hideaway"
+    | "Bloodhand Outpost"
+    | "Bloodhand Warehouse"
+    | "Bloodhead Dens"
+    | "Bloodmist Guard Post"
+    | "Bloodmist Mine"
+    | "Bloodmist"
+    | "Bloodtear Stairs"
+    | "Bloodwind Cliff"
+    | "Bloody Thorn Room"
+    | "Blue Cypress Headquarters"
+    | "Blueglass"
+    | "Bluemist Forest"
+    | "Boar Hunting Grounds"
+    | "Boiling Sea"
+    | "Bonefence Hutment"
+    | "Bonehoarders Outpost"
+    | "Bonehoarders' Stronghold"
+    | "Bonepool Hutment"
+    | "Bonetalon Caverns"
+    | "Boreal Blades"
+    | "Boreal Meadow"
+    | "Boulder Encampment"
+    | "Breaker Coast"
+    | "Breathswept Avenue"
+    | "Breeding Colony"
+    | "Breezebrine Coast"
+    | "Brewery"
+    | "Bridge of Oblation"
+    | "Bridge of the Dead"
+    | "Brimblaze Tower"
+    | "Broken Cart"
+    | "Broken Wagon"
+    | "Broken Wing Brotherhood Camp"
+    | "Bronze Peak"
+    | "Brotherhood Lost Fortress"
+    | "Brownscale Wyrmkin Camp"
+    | "Bulwark"
+    | "Burn away the cobwebs."
+    | "Burnt Castle Camp"
+    | "Burnt Castle Docks"
+    | "Burnt Castle Serf Quarters"
+    | "Burnt Castle"
+    | "Burnt Courtyard"
+    | "Cactus Habitat"
+    | "Caernord"
+    | "Calleil Priory"
+    | "Camp"
+    | "Campus Gardens"
+    | "Capital Castle"
+    | "Castaway Strait"
+    | "Castigant Ruins"
+    | "Castlekeep Hill"
+    | "Catacombs"
+    | "Cave Entrance"
+    | "Celestia"
+    | "Cemetery"
+    | "Centauros"
+    | "Central Council Hall"
+    | "Central Hall"
+    | "Central Square"
+    | "Central Tower"
+    | "Chamber of Fragmented Memories"
+    | "Chancery"
+    | "Charred Armory"
+    | "Charybdis's Whirlpool"
+    | "Chaser's Field"
+    | "Checkpoint"
+    | "Children of Ipnya Outpost"
+    | "Chimera Training Camp"
+    | "Chimeran Marsh"
+    | "Chuckhole Gulch"
+    | "Circle of Authority"
+    | "City of Towers"
+    | "City Ruins"
+    | "Civilian Quarter"
+    | "Cleric's Robe Falls"
+    | "Climb the bar."
+    | "Climb the vine."
+    | "Cloaked Forest"
+    | "Clockwork Factory"
+    | "Cloistera"
+    | "Cloud Bridge"
+    | "Cloudgrain"
+    | "Cloudland Byway"
+    | "Cloudspun Gorge"
+    | "Cloudstorm Farm"
+    | "Coldwind Cave"
+    | "Coliseum Ruins"
+    | "Collapsing Earth"
+    | "Commercial District"
+    | "Commercial Port"
+    | "Commercial/Industrial District"
+    | "Communal Ranch"
+    | "Conqueror's Champaign"
+    | "Construction Site"
+    | "Consulate"
+    | "Coral Plains Villa"
+    | "Coral Plains"
+    | "Corinth Hill"
+    | "Corner Lobby"
+    | "Corner Reading Room"
+    | "Corona Shores"
+    | "Corpsegouge Mine"
+    | "Count Sebastian's Retreat"
+    | "Couples' Cove"
+    | "Court of the Hawk"
+    | "Courtyard of Farewells"
+    | "Cradle of Nightmares"
+    | "Crafting District"
+    | "Cragmire"
+    | "Cragnest"
+    | "Cragtear Scars"
+    | "Creatures' Vault"
+    | "Crescent Port"
+    | "Crescent Throne"
+    | "Crimson Altar"
+    | "Crimson Basin"
+    | "Crimson Mistmerrow"
+    | "Crimson Plateau"
+    | "Crimson Watch Camp"
+    | "Crimson Watch Supply Depot"
+    | "Croft's Laboratory"
+    | "Crossroads Guardpost"
+    | "Crossroads"
+    | "Crystal Lake"
+    | "Cursed Corridor"
+    | "Cursed Village"
+    | "Daeier University"
+    | "Dahuta Cult Coven"
+    | "Dahuta's Cauldron"
+    | "Dahuta's Garden"
+    | "Dairy Pasture"
+    | "Daredevil's Key"
+    | "Darkeflight Cavern"
+    | "Darkmane Orc Village"
+    | "Dawnfeather Hill"
+    | "Dawnsbreak Plantation"
+    | "Dawnsliver Plains"
+    | "Dawnsliver"
+    | "Dawnsreach Twin Pillars"
+    | "Dead Grip"
+    | "Deadfield Dew"
+    | "Death's Door"
+    | "Deathspice Crafting Chamber"
+    | "Delphinad Mirage"
+    | "Demon War Cemetery"
+    | "Demon War Memorial"
+    | "Demonhunter Trial Grounds"
+    | "Denistrious's Secret Study"
+    | "Deranged Bookroom"
+    | "Deranged Lobby"
+    | "Derelict Bridge"
+    | "Deserted Home"
+    | "Deserted House"
+    | "Desiree Peak"
+    | "Desireen"
+    | "Desolate Farm"
+    | "Devouring Depths"
+    | "Dewstone Crossroads"
+    | "Diehole Marsh"
+    | "Dimensional Boundary Defense Raid"
+    | "Dimensional Crack"
+    | "Dimensional Crevice"
+    | "Disabled"
+    | "Divine Weald"
+    | "Dolmen Floodplain"
+    | "Dorothy's Farm"
+    | "Dragon's Maw"
+    | "Dragon's Nook Observatory"
+    | "Dragon's Nook"
+    | "Dragonheart"
+    | "Dragonribs"
+    | "Dragonroar Fortress"
+    | "Dragonskull"
+    | "Dragontail Arc"
+    | "Dragontail"
+    | "Dreadkiss Sitting Room"
+    | "Dreadnought Arm Staircase"
+    | "Dreadnought Chest Quarry"
+    | "Dreadnought Head Chamber"
+    | "Dreadnought Leg Prison"
+    | "Dreadnought Shoulder Chancery"
+    | "Dreadnought Stomach Factory"
+    | "Dreadnought Waist Lab"
+    | "Dreadnought"
+    | "Dreadtrees"
+    | "Drifting Enclaves"
+    | "Dry Reservoir Camp"
+    | "Dry Reservoir"
+    | "Duskfallen Hall"
+    | "Duskgleam"
+    | "Dusty Hill"
+    | "Dwarf Encampment"
+    | "Earsplit Field"
+    | "East End Homes"
+    | "East Gate"
+    | "East Housing Province"
+    | "East Main Street"
+    | "Eastern Halcyona Gulf"
+    | "Eastern Halcyona"
+    | "Eastern Marianople Gate"
+    | "Eastern Ronbann Mine"
+    | "Eastern Seal"
+    | "Eastern White Arden"
+    | "Ebon Timber"
+    | "Eclipse Fields"
+    | "Eclipse Seacoast"
+    | "Elder District"
+    | "Elysium"
+    | "Encyclopedia Room Entrance"
+    | "Encyclopedia Room Exit"
+    | "Encyclopedia Room Lyceum"
+    | "Encyclopedia Room"
+    | "Eroded Area"
+    | "Esya"
+    | "Ethereal Antechamber"
+    | "Ethereal Haven"
+    | "Eurythmin Steppe"
+    | "Evening Botanica"
+    | "Evergray Screen"
+    | "Everwhite Beach"
+    | "Excavation Site"
+    | "Exhumers' Camp"
+    | "Eyas Rock"
+    | "Eye of Day"
+    | "Eye of Night"
+    | "Ezna Crematorium"
+    | "Ezna Dock"
+    | "Ezna Road"
+    | "Ezna"
+    | "Eznan Guard Camp"
+    | "Eznan Harbor"
+    | "Fable Hill"
+    | "Falcon Rock Ward"
+    | "Falcon's Grave"
+    | "Falconrib"
+    | "Falleaf Isle"
+    | "Fallen Fortress"
+    | "Fallen Memorial"
+    | "Fallow Paddy"
+    | "Farmer's Hut"
+    | "Farmers' Rest"
+    | "Farmfields"
+    | "Farmhouse"
+    | "Farmland"
+    | "Field Library"
+    | "Field of Honor"
+    | "Finger Collector's Post"
+    | "Finnea Harbor"
+    | "Firesnarl"
+    | "Firetalon"
+    | "Fishing Camp"
+    | "Flamebelch Road"
+    | "Flamehawk Canyon"
+    | "Flamerager Tribe"
+    | "Flamesnap Wilds"
+    | "Flamewhirl Chamber"
+    | "Fleetwhisper Valley"
+    | "Fleurstad"
+    | "Floating Island"
+    | "Flotsam Shore"
+    | "Flower Farm"
+    | "Footbare Pass"
+    | "Footbare Station"
+    | "Forbidden Ruins"
+    | "Forbidden Shore"
+    | "Forest of Repose"
+    | "Forest of Silence"
+    | "Forsaken Weald"
+    | "Fortress"
+    | "Foundry"
+    | "Freedich Island"
+    | "Freedom Plaza"
+    | "Frost Fangs"
+    | "Frostspine Hill"
+    | "Frozen Highlands"
+    | "Frozen Lobby"
+    | "Frozen Study"
+    | "Fugitive's Haven"
+    | "Fugitive's Road"
+    | "Galegarden"
+    | "Garden Keeper's Cottage"
+    | "Gate of Gods"
+    | "Gate of Patience"
+    | "Gate of Seasons"
+    | "Gate of Strength"
+    | "Gate of Wisdom"
+    | "Gathering Seahag"
+    | "Genesis Glade"
+    | "Gerald's Farm"
+    | "Giant Bee Colony"
+    | "Giant Furnace"
+    | "Giant's Canyon"
+    | "Giant's Cradle"
+    | "Giant's Tear"
+    | "Gilda"
+    | "Glaive Alley"
+    | "Glaring Court Entrance"
+    | "Glaring Court"
+    | "Glass Coast"
+    | "Gleaming Grove"
+    | "Glittering Grove"
+    | "Glitterstone Hotsprings"
+    | "Glitterstone Mine"
+    | "Glitterstone"
+    | "Glorybright Rise"
+    | "Gnawbones Cave"
+    | "Goblin Dens"
+    | "Goblin Research Camp"
+    | "Goddess's Shoreline"
+    | "Godsand"
+    | "Godshield"
+    | "Gold Sage's Chancery"
+    | "Goldberry Bank"
+    | "Golden Beard Cave"
+    | "Golden Fable Harbor"
+    | "Goldfeather Garden"
+    | "Goldmane Stronghold"
+    | "Goldminer's Claim"
+    | "Goldscale Garden"
+    | "Goldscale Sanctuary"
+    | "Golem Factory Roof"
+    | "Gondola Station"
+    | "Gorgon Cave Roof"
+    | "Gourmet Market"
+    | "Grand Temple of Shatigon"
+    | "Granite Quarry"
+    | "Grassea"
+    | "Graymist"
+    | "Great Couloir"
+    | "Great Temple of Shatigon"
+    | "Green Isles"
+    | "Green Lord"
+    | "Greenwoods"
+    | "Grenwolf Forest"
+    | "Grenwolf Hillock"
+    | "Grenwolf"
+    | "Grimsvoten"
+    | "Groundling Nest"
+    | "Growlgate Isle"
+    | "Grub Pit"
+    | "Guard Barracks"
+    | "Guardians' Grove"
+    | "Guild Warehouse"
+    | "Gweonid Guardians' Camp"
+    | "Gweonid Lake"
+    | "Hadir Farm"
+    | "Hadir Manor"
+    | "Hadir's Manse"
+    | "Hal Hahpa"
+    | "Halcyona Gulf"
+    | "Halcyona Hideout"
+    | "Halcyona Windfarm"
+    | "Halfmoon Bay"
+    | "Halfmoon"
+    | "Hall of Eternity"
+    | "Hall of Justice"
+    | "Hall of Retribution"
+    | "Hall of the Stolen"
+    | "Hall of Warriors"
+    | "Halnaak's Secret Study"
+    | "Halo Hollow"
+    | "Halo Rise"
+    | "Haradium Mine"
+    | "Haradium Refinery Station"
+    | "Harani Campsite"
+    | "Harani Construction Site"
+    | "Harani Governor's Office"
+    | "Haranya Defense Base"
+    | "Haranya Seal"
+    | "Hardbleak Island"
+    | "Harpa's Camp"
+    | "Harpy's Lair"
+    | "Hassan's Camp"
+    | "Hatchling Colony"
+    | "Hatora"
+    | "Haven"
+    | "Haver Farm"
+    | "Heart of Ayanad Core"
+    | "Heart of Ayanad Lobby"
+    | "Heart of White Arden"
+    | "Hearthome"
+    | "Heedeye Tower"
+    | "Hellsdame Oasis"
+    | "Herbalist Camp"
+    | "Hereafter Gate"
+    | "Hereafter Hill"
+    | "Hermit's Cabin"
+    | "Hermit's Hut"
+    | "Hermit's Valley"
+    | "Hexmire"
+    | "Hidden Cavern"
+    | "Hidden Chamber"
+    | "Hidden Sanctuary"
+    | "Hill"
+    | "Hiram Camp"
+    | "Hiram Cave"
+    | "Hive Colony"
+    | "Homes"
+    | "Housing Province"
+    | "Howling Bull"
+    | "Howling Forest"
+    | "Howling Ranch"
+    | "Hulkflesh Ravine"
+    | "Huntsman's Retreat"
+    | "Ice Grail Lake"
+    | "Ice Grail"
+    | "Icecrone Sea"
+    | "Icefang Orc Camp"
+    | "Icemaiden Sea"
+    | "Icemother Sea"
+    | "Ignomin Valley"
+    | "Illusion Cave"
+    | "Inkcalm Chamber"
+    | "Inn"
+    | "Inner Ruins"
+    | "Introspect Path"
+    | "Iona"
+    | "Ipnya Avenue"
+    | "Ipnya Sealstone"
+    | "Ipnya's Blessing"
+    | "Iron Road"
+    | "Iron Sage's Chancery"
+    | "Ironclaw Mine"
+    | "Ironwrought"
+    | "Island of Abundance"
+    | "Ivoran"
+    | "Ivory Isles"
+    | "Jackpot Clan Settlement"
+    | "Jadegale Farmland"
+    | "Jadegale Hotsprings"
+    | "Jadegale Pond"
+    | "Jadegale Ravine"
+    | "Jadegale Refuge"
+    | "Jadegale"
+    | "Jaira's Outpost"
+    | "Jaun's Ranch"
+    | "Jemuna's Camp"
+    | "Jewel of Marianople"
+    | "Jorga's Camp"
+    | "Junkyard"
+    | "Kalia Manor"
+    | "Kalimantan Rubber Plantation"
+    | "Kalmira II's Palace"
+    | "Kapagan Steppe"
+    | "Kareldar Crater"
+    | "Kargarde Banquet Hall"
+    | "Kitchen of Fearful Tastes"
+    | "Kosan Heirs Hideout"
+    | "Koven's Lab"
+    | "Kraken's Lair"
+    | "Laboratory of Terrors"
+    | "Labyrinth Keeper's Parlor"
+    | "Labyrinth of Shattered Dreams"
+    | "Lacton"
+    | "Lake Dragontear"
+    | "Lakeside Villa"
+    | "Lakeside"
+    | "Land of Beasts"
+    | "Lantern Tree"
+    | "Lavamoat Crater"
+    | "Lavastone Crater"
+    | "Lavis"
+    | "Liberty's Shore"
+    | "Library"
+    | "Libris Garden Entrance"
+    | "Libris Garden Exit"
+    | "Libris Garden Lyceum"
+    | "Libris Garden"
+    | "Light and Shadow Thorn Room"
+    | "Lighthouse"
+    | "Lilyut Crossroads"
+    | "Lilyut River"
+    | "Limion's Camp"
+    | "Lineriph's Villa"
+    | "Logging Area"
+    | "Logging Site"
+    | "Loka River"
+    | "Loka's Blessing"
+    | "Loka's Checkmate"
+    | "Loka's Nose"
+    | "Loka's Steps"
+    | "Lonely Tomb"
+    | "Lonesoul Cliff"
+    | "Lost Cenote"
+    | "Lotus Song Garden"
+    | "Lower Lilyut River"
+    | "Lower Loka River"
+    | "Lucent Gorge"
+    | "Lucilis Camp"
+    | "Luckbeard Island"
+    | "Lunar Halo Basin"
+    | "Lutesong Harbor"
+    | "Lutesong Hill"
+    | "Maelstrom"
+    | "Mahadevi Checkpoint"
+    | "Mahadevi Coast"
+    | "Mahadevi Jungle"
+    | "Mahadevi Pass"
+    | "Mahadevi Port"
+    | "Mahadevi River"
+    | "Mahadevi"
+    | "Malika"
+    | "Management Post"
+    | "Manors"
+    | "Marian Hall"
+    | "Marianople Plantations"
+    | "Marianople"
+    | "Marine Housing Province"
+    | "Marooned Isle"
+    | "Marquis's Villa"
+    | "Mass Grave"
+    | "Melee Training Grounds"
+    | "Memoria Lake"
+    | "Memoria"
+    | "Memorial Plaza"
+    | "Mendi's Camp"
+    | "Mercenary Training Camp"
+    | "Mermaid's Tears"
+    | "Midday's Rest"
+    | "Midden"
+    | "Military Port"
+    | "Military Quarter"
+    | "Milke River"
+    | "Millennium Snow Village"
+    | "Millennium Snow"
+    | "Minotaur Den"
+    | "Mirdautas"
+    | "Miroir Tundra"
+    | "Mistmerrow"
+    | "Mistsong Summit"
+    | "Mistsong Thorn Room"
+    | "Moat"
+    | "Monolith Researcher's Cottage"
+    | "Moonhead Isle"
+    | "Moonsand Field"
+    | "Moonshade"
+    | "Moonswept Bay"
+    | "Moonswept District"
+    | "Moonswept Homes"
+    | "Moringa Forest"
+    | "Mother's Root"
+    | "Mount Mirage"
+    | "Mountain Gate"
+    | "Mouth of Chaos"
+    | "Museum"
+    | "Music Hall Entrance"
+    | "Music Hall"
+    | "Mysterious Machine"
+    | "Mysthrane Library"
+    | "Nascent Cliffs"
+    | "Nasya"
+    | "Necromancer's Stead"
+    | "Necromancer's Vicarage"
+    | "Nemi River"
+    | "Nerta's Refuge"
+    | "Nightmare's Embrace"
+    | "Noble's Hunting Grounds"
+    | "Nobles' Quarter"
+    | "Nomadic Encampment"
+    | "North Devi River"
+    | "North End Homes"
+    | "North Monolith"
+    | "Northern Checkpoint"
+    | "Northern Corridor"
+    | "Northern Housing Province"
+    | "Northern Marianople Gate"
+    | "Northern Ruins"
+    | "Northern Seal"
+    | "Northern Sharpwind Plains"
+    | "Northfall"
+    | "Noryette Manor"
+    | "Nui's Glory Arch"
+    | "Nui's Glory Coast"
+    | "Nuia Defense Base"
+    | "Nuia Seal"
+    | "Nuzan Training Grounds"
+    | "Nymph Sanctuary"
+    | "Nymph's Veil"
+    | "Observatory"
+    | "Occult Altar"
+    | "Okape's Lair"
+    | "Old Malika"
+    | "Old Pine"
+    | "Oldtown Market"
+    | "Oldtown"
+    | "Oliviano's Orchard"
+    | "Ollo Engineering Institute"
+    | "Opera House"
+    | "Operations Base Camp"
+    | "Orc Hutment"
+    | "Orchid Hills"
+    | "Ororo Island"
+    | "Ossuary"
+    | "Oxion Clan"
+    | "Paddies"
+    | "Paean Hills"
+    | "Painted Fields"
+    | "Palace Ruins"
+    | "Pantheon"
+    | "Parched Oasis"
+    | "Parchsun Settlement"
+    | "Pauper's Ridge"
+    | "Pavilion of the King"
+    | "Pavitra's Fall"
+    | "Pavitra's Monument"
+    | "Pawnfrost Peaks"
+    | "Pearldrop"
+    | "Pebble Encampment"
+    | "Peony Farm"
+    | "Perinoor Ruins"
+    | "Pillar of the North Lord"
+    | "Pillar of Vassals"
+    | "Pillars of the King"
+    | "Pioneer's Bridge"
+    | "Pirate Base"
+    | "Pirate Defense Base"
+    | "Pitiless Bog"
+    | "Plains Eye"
+    | "Player Nation Defense Base"
+    | "Poacher's Watch"
+    | "Pomegranate Cave"
+    | "Pools of Creation"
+    | "Port Market"
+    | "Port"
+    | "Postal Temple"
+    | "Postulants' Nave"
+    | "Preservation Society"
+    | "Prince Reander Monument"
+    | "Prince's Chamber"
+    | "Prismatic Falls"
+    | "Prison Camp"
+    | "Profane Temple"
+    | "Public Farm"
+    | "Public Garden"
+    | "Public Stable"
+    | "Queen's Altar"
+    | "Queensgrove"
+    | "Queensroad"
+    | "Queenstower Quarry"
+    | "Quinto Hall of Art"
+    | "Rabbit Burrow"
+    | "Radiant Ridge"
+    | "Rainpale Cave"
+    | "Ravaged Chamber"
+    | "Ravaged Shrine"
+    | "Reaper's Shortcut"
+    | "Rectory Province"
+    | "Red Clay Encampment"
+    | "Red Clay Fortress"
+    | "Red Dragon's Keep"
+    | "Red Herrington"
+    | "Red Moss Cave"
+    | "Red Moss Depths"
+    | "Red-Eyed Den"
+    | "Redempton"
+    | "Redivi Valley"
+    | "Redmane Gnoll Den"
+    | "Reedpipe Dens"
+    | "Reedwind Crimson Watch Camp"
+    | "Regent's Tower"
+    | "Regulus's Banquet Hall"
+    | "Reindeer Road"
+    | "Reindeer Sanctuary"
+    | "Reindeer Tribe Camp"
+    | "Reminis Forest"
+    | "Reminiscent Marsh"
+    | "Repentance's Rest"
+    | "Research Camp"
+    | "Returned Camp"
+    | "Ribble's Farm"
+    | "Ribble's Granary"
+    | "Right-click a marked NPC to continue your quest."
+    | "Rising Waterfall"
+    | "Riven Gates"
+    | "River Labs"
+    | "Riverspan"
+    | "Road of Lost Souls"
+    | "Road Sage's Chancery"
+    | "Roadsend Post"
+    | "Rockfall Mine"
+    | "Rockflow Road"
+    | "Rockmar Barrow"
+    | "Rocknest"
+    | "Ronbann Castle"
+    | "Rose Estate Farm"
+    | "Rose Estate Manor"
+    | "Rose Estate"
+    | "Rotdeep Pond"
+    | "Royal Campsite"
+    | "Royal Farmfields"
+    | "Royal Hunting Grounds"
+    | "Royal Palace"
+    | "Royster's Camp"
+    | "Rubber Depot"
+    | "Ruins of Hiram City"
+    | "Ruins: Main Floor"
+    | "Ruins: Second Floor"
+    | "Rujin's Pavilion"
+    | "Running Tiger"
+    | "Sable Dock"
+    | "Sacred Plaza"
+    | "Safehouse"
+    | "Saffron Plantation"
+    | "Sage Statue"
+    | "Sage's Gate"
+    | "Sage's Plaza"
+    | "Sage's Temple"
+    | "Salphira Chapel"
+    | "Salphira Shrine"
+    | "Sanctia Oasis"
+    | "Sanctuary of Darkness"
+    | "Sanctuary of the Goddess"
+    | "Sandcloud"
+    | "Sandtooth"
+    | "Sandwind Prairie"
+    | "Sandy Cave Roof"
+    | "Sapper Training Camp"
+    | "Sapphire Mine"
+    | "Sarracenia Grove"
+    | "Sawblade Logging Site"
+    | "Sawshark Shore"
+    | "Scaelken"
+    | "Scarecrow Garden"
+    | "Scarsteppe"
+    | "Schima Stronghold"
+    | "Scout Camp"
+    | "Screaming Archives Entrance"
+    | "Screaming Archives Exit"
+    | "Screaming Archives Lyceum"
+    | "Screaming Archives Secret Study"
+    | "Screaming Archives"
+    | "Screening Hall Lobby"
+    | "Screening Hall"
+    | "Sea of Drowned Love"
+    | "Sea of Graves"
+    | "Seachild Villa"
+    | "Seachild Wharf"
+    | "Seajoy Banquet Hall"
+    | "Sealed Prayers"
+    | "Sealed Secret Study"
+    | "Seaport Fortress"
+    | "Searbone Mine"
+    | "Searbone"
+    | "Seareach"
+    | "Seawall"
+    | "Seawind Road"
+    | "Secret Garden"
+    | "Secret Grotto"
+    | "Secret Hideout"
+    | "Secret Room"
+    | "Seed Mine"
+    | "Seed Sage's Chancery"
+    | "Seer's Cottage"
+    | "Sellus's Camp"
+    | "Sepulchre Union"
+    | "Serf District"
+    | "Serf Refuge"
+    | "Serpent's Pass"
+    | "Seven Bridges"
+    | "Shadow Shores"
+    | "Shadowcopse"
+    | "Shadowhawk Citadel"
+    | "Shadowhawk Conclave"
+    | "Shadowhawk Headquarters"
+    | "Shaggy Hill"
+    | "Shattered Chasm"
+    | "Shattered Sea"
+    | "Shattered Strand"
+    | "Sheep Ranch"
+    | "Shield Ridge"
+    | "Shimmering Glade"
+    | "Shrieking Ravine"
+    | "Shrine of Reunion"
+    | "Shrine to Nui"
+    | "Shriver's Hand"
+    | "Siege Base"
+    | "Silent Forest Checkpoint"
+    | "Silent Plateau"
+    | "Silver Palm Road"
+    | "Silver Sage's Chancery"
+    | "Silver Sunset Tribe"
+    | "Singing River"
+    | "Six Sages Road"
+    | "Six Sages Statues"
+    | "Skydeep Inn"
+    | "Skyfang"
+    | "Skyfin Nest"
+    | "Skysteps"
+    | "Sleeper's Cape"
+    | "Sleeping Forest"
+    | "Sloane's Cottage"
+    | "Slum"
+    | "Snake Eye Den"
+    | "Snakescale Cave"
+    | "Snakescale Den"
+    | "Snakeskin Cave"
+    | "Snow Storehouse"
+    | "Snowfall Station"
+    | "Snowfang Isle"
+    | "Snowlion Raceway"
+    | "Snowlion Rest Camp"
+    | "Snowlion Rock Camp"
+    | "Snowlion Rock"
+    | "Snowlion Training Grounds"
+    | "Snowlion's Rest"
+    | "Solis Headlands"
+    | "Solis Hill"
+    | "Solisa"
+    | "Solongos Camp"
+    | "Solzrean Gate"
+    | "Songspinner Field"
+    | "Soulborne Square"
+    | "Soulreath"
+    | "Soulscour Bathroom"
+    | "Soundless Copse"
+    | "Soundless Lake"
+    | "South Devi River"
+    | "South End Homes"
+    | "South Monolith"
+    | "Southern Corridor"
+    | "Southern Marianople Gate"
+    | "Southern Ruins"
+    | "Southern Seal"
+    | "Southern White Arden"
+    | "Spearmen's Barracks"
+    | "Specimen Pens"
+    | "Spirit Shelter"
+    | "Spywatch Camp"
+    | "Ssslythx"
+    | "Starsand Haven"
+    | "Starsand"
+    | "Starshower Forest"
+    | "Starshower Mine"
+    | "Starshower"
+    | "Starsunder"
+    | "Steelwind Pass"
+    | "Stena's Secret Study"
+    | "Stille Camp"
+    | "Stoltzburg Fortress"
+    | "Stone Cemetery"
+    | "Stone Sage's Chancery"
+    | "Stonehew"
+    | "Storehouse"
+    | "Stormester Plateau"
+    | "Strait of No Return"
+    | "Street"
+    | "Summer Leaf Camp"
+    | "Summer Leaf River"
+    | "Summer Leaf Riverbank"
+    | "Summerleaf River"
+    | "Summerleaf Riverbank"
+    | "Sun's End"
+    | "Sunbite Wilds"
+    | "Sundowne"
+    | "Sunken Bay"
+    | "Sunken Merchant Ship"
+    | "Sunpawn Steppe"
+    | "Sunshade Rendezvous"
+    | "Suntower Park"
+    | "Sutran Hill"
+    | "Swamp"
+    | "Sylvan Devi"
+    | "Sylvan Wall Gallows"
+    | "Sylvan Wall Moss Cave"
+    | "Sylvan Wall"
+    | "Sylven Wall Camp"
+    | "Sylvina Hot Springs"
+    | "Sylvina Springs"
+    | "Tadpole Head Field"
+    | "Tadpole Tail Field"
+    | "Tahyang's Final Rest"
+    | "Tainted Farmland"
+    | "Talon's Edge"
+    | "Tattered Tent"
+    | "Team Base"
+    | "Tehmi Ruins"
+    | "Tehmika Tribe"
+    | "Teleporation Laboratory"
+    | "Temple Ruins"
+    | "Terena"
+    | "The Barrens"
+    | "The Cliff That Ends Regret"
+    | "The Fall of Hiram City"
+    | "The Fissures"
+    | "The Gaiety Theater"
+    | "The Gallows"
+    | "The Goat & Gargoyle"
+    | "The Great Library"
+    | "The Icemount"
+    | "The Idle Hour Bookshop"
+    | "The Navel of the World"
+    | "The Rabbit's Foot"
+    | "The Soul Well"
+    | "Thirsty Altar"
+    | "Thorn Lock Room"
+    | "Thorn Room of Bitterness and Wrath"
+    | "Thornsong Forest"
+    | "Thorntimbre Woods"
+    | "Tibbec's Sawmill"
+    | "Tiger's Tail"
+    | "Tigerseye"
+    | "Tigerspine Mountains"
+    | "Tigris Greenwood"
+    | "Time Research Lab"
+    | "Tinnereph's Secret Study"
+    | "Titan's Maw"
+    | "Tomb of the Colossus"
+    | "Tomb of Young Giants"
+    | "Topaz Hotsprings"
+    | "Torch of Ipnya"
+    | "Torchfyre Bay"
+    | "Torini Garden"
+    | "Tower of Nadir"
+    | "Tower Road"
+    | "Tower Ruins"
+    | "Trade Plaza"
+    | "Tragedy's Tomb"
+    | "Traveler's Rest"
+    | "Traveler's Spring"
+    | "Tree of Melodies"
+    | "Treebane Clearing"
+    | "Trial Grounds"
+    | "Trieste Manor"
+    | "Trieste Thespians"
+    | "Trosk Mountains"
+    | "Trosk River"
+    | "Tunnel"
+    | "Unbreachable Gate"
+    | "Use shortcut keys to view important details quickly: B for your Inventory, L for your Quest List, and M for your Map."
+    | "Vanilla Farmland"
+    | "Vanishing Road"
+    | "Vedisa"
+    | "Venomist Canyon"
+    | "Verdant Grove"
+    | "Verdant Skychamber"
+    | "Verdant Vault"
+    | "Veroe Skyport"
+    | "Veroe"
+    | "Village of Nui's Way"
+    | "Villanelle"
+    | "Vincenzio's Family Villa"
+    | "Vineviper Garden Entrance"
+    | "Vineviper Garden"
+    | "Vintner's Cottage"
+    | "Volcanology Research Institute"
+    | "Vyolet River"
+    | "Waiting Area"
+    | "Warborn Hut"
+    | "Warborn Soup Settlement"
+    | "Warden Memorial"
+    | "Wardton"
+    | "Warehouse"
+    | "Warhorse Ranch"
+    | "Warlock's Hideout"
+    | "Warrior’s Breath"
+    | "Warscorched Scar"
+    | "Warsmith Castle"
+    | "Wastewater Basin"
+    | "Waterfall Stairs Camp"
+    | "Waterfall Stairs"
+    | "Watermist Foothills"
+    | "Watermist Forest"
+    | "Watermist"
+    | "Wavehorde Islet"
+    | "Waveroar Ruins"
+    | "Wayfarer's Island"
+    | "Weapon Workshop"
+    | "Webreach Den"
+    | "Weeping Charnel House"
+    | "Weeping Hill"
+    | "Weeping Star Oasis"
+    | "Weeping Stripmine"
+    | "Weigh Station"
+    | "Wellig Island"
+    | "West End Homes"
+    | "West Flamesnap"
+    | "West Gate"
+    | "West Housing Province"
+    | "West Main Street"
+    | "West Monolith"
+    | "Western Halcyona Gulf"
+    | "Western Halcyona"
+    | "Western Hiram Mountains"
+    | "Western Marianople Gate"
+    | "Western Ronbann Mine"
+    | "Western Seal"
+    | "Western White Arden"
+    | "Westpark"
+    | "Wetsands"
+    | "Whale's Tomb"
+    | "Whirlpool Coast"
+    | "Whispering Street"
+    | "Whisperiver"
+    | "Whisperwind Summoning Circle"
+    | "Whisperwind"
+    | "White Arden Ferry"
+    | "White Arden Guard Post"
+    | "White Gnoll Den"
+    | "Whitecap Beach"
+    | "Whitecap Isle"
+    | "Whitecloud Peak"
+    | "Whitecloud Road"
+    | "Whitewing Sanctuary"
+    | "Widesleeves"
+    | "Widow's Rapids"
+    | "Widowbite Hill"
+    | "Wild Road"
+    | "Wildflower Forest"
+    | "Wildlife Control Post"
+    | "Wind's Promise"
+    | "Windbreaker Woods"
+    | "Windheart Lake"
+    | "Windscour Checkpoint"
+    | "Windscour Skyport"
+    | "Windshade"
+    | "Windstone Ruins"
+    | "Windswept Ruins"
+    | "Windwhip Hideout"
+    | "Windwhip Temporary Camp"
+    | "Windwhip's Redoubt"
+    | "Windwing Tribe"
+    | "Winebalm"
+    | "Wingfeather Gateway"
+    | "Wingfeather Valley"
+    | "Winking Bottle Brewery"
+    | "Withered Fields"
+    | "Withersand Campground"
+    | "Wizard's Cottage"
+    | "Wizard's Hideout"
+    | "Womb of the Crimson Dream"
+    | "Woodhenge Castle"
+    | "Woodhenge Chapterhouse"
+    | "Woods of the Forgotten"
+    | "Workers' Barracks"
+    | "Workshop District"
+    | "Wrinkle Lake"
+    | "Wynn's Secret Study"
+    | "Wyrdwind Manor"
+    | "Yata pasture"
+    | "Yearning River"
+    | "Ynys Dock"
+    | "Ynys Isle"
+    | "Ynys Monolith"
+    | "Ynys Strait"
+    | "Ynystere Monument"
+    | "You must turn back; only the dead sail here. And be warned: you may not survive to pass this way again."
+    | "Zealot's Stead"
+    | "Zephyr Lea"
+```
+
+**TAB_CORNER**
+
+"BOTTOMLEFT"|"BOTTOMRIGHT"|"TOPLEFT"|"TOPRIGHT"
+
+```lua
+TAB_CORNER:
+    | "TOPLEFT"
+    | "TOPRIGHT"
+    | "BOTTOMLEFT"
+    | "BOTTOMRIGHT"
+```
+
+**TARGET_TYPE**
+
+"doodad"|"nothing"|"ui"|"unit"
+
+```lua
+TARGET_TYPE:
+    | "doodad"
+    | "nothing"
+    | "ui"
+    | "unit"
+```
+
+**TEAM_CHANGE_REASON**
+
+"joined"|"leaved"|"refreshed"
+
+```lua
+TEAM_CHANGE_REASON:
+    | "joined"
+    | "leaved"
+    | "refreshed"
+```
+
+**TOOLTIP_KIND**
+
+"big_sailing_ship"|"boat"|"fishboat"|"gubuk"|"leviathan"...(+7)
+
+```lua
+-- db ui_texts category_id 100
+TOOLTIP_KIND:
+    | "big_sailing_ship"
+    | "boat"
+    | "fishboat"
+    | "gubuk"
+    | "leviathan"
+    | "machine"
+    | "merchant_ship"
+    | "siege_weapon"
+    | "slave_equipment"
+    | "small_sailing_ship"
+    | "speedboat"
+    | "tank"
+```
+
+**TOOLTIP_TYPE**
+
+"carrying_backpack_slave"|"commonFarm"|"common_farm"|"conquest"|"corpse"...(+7)
+
+```lua
+TOOLTIP_TYPE:
+    | "carrying_backpack_slave" -- @TODO: Havent seen yet.
+    | "common_farm"
+    | "commonFarm"
+    | "conquest" -- @TODO: Havent seen yet.
+    | "corpse"
+    | "light_house"
+    | "mySlave"
+    | "normal"
+    | "shipyard" -- @TODO: Havent seen yet.
+    | "slave"
+    | "territory" -- @TODO: Havent seen yet.
+    | "zoneState"
+```
+
+**UIBOUND_KEY**
+
+"ui_bound_actionBar_renewal1"|"ui_bound_actionBar_renewal10"|"ui_bound_actionBar_renewal11"|"ui_bound_actionBar_renewal2"|"ui_bound_actionBar_renewal3"...(+42)
+
+```lua
+UIBOUND_KEY:
+    | "ui_bound_actionBar_renewal1" -- Basic Shortcut Bar
+    | "ui_bound_actionBar_renewal2" -- 1st Shortcut Bar Left
+    | "ui_bound_actionBar_renewal3" -- 1st Shortcut Bar Right
+    | "ui_bound_actionBar_renewal4" -- 2nd Shortcut Bar Left
+    | "ui_bound_actionBar_renewal5" -- 2nd Shortcut Bar Right
+    | "ui_bound_actionBar_renewal6" -- 3rd Shortcut Bar Left
+    | "ui_bound_actionBar_renewal7" -- 3rd Shortcut Bar Right
+    | "ui_bound_actionBar_renewal8" -- 4th Shortcut Bar Left
+    | "ui_bound_actionBar_renewal9" -- 4th Shortcut Bar Right
+    | "ui_bound_actionBar_renewal10" -- 5th Shortcut Bar Left
+    | "ui_bound_actionBar_renewal11" -- 5th Shortcut Bar Right
+    | "ui_bound_battlefield_actionbar"
+    | "ui_bound_chatWindow[0]"
+    | "ui_bound_chatWindow[1]"
+    | "ui_bound_chatWindow[2]"
+    | "ui_bound_chatWindow[3]"
+    | "ui_bound_chatWindow[4]"
+    | "ui_bound_chatWindow[5]"
+    | "ui_bound_chatWindow[6]"
+    | "ui_bound_chatWindow[7]"
+    | "ui_bound_combatResource"
+    | "ui_bound_combatResourceFrame"
+    | "ui_bound_craftFrame"
+    | "ui_bound_craftOrderBoard"
+    | "ui_bound_invite_jury_popup"
+    | "ui_bound_megaphone_frame"
+    | "ui_bound_mobilization_order_popup"
+    | "ui_bound_modeSkillActionBar"
+    | "ui_bound_partyFrame1"
+    | "ui_bound_partyFrame2"
+    | "ui_bound_partyFrame3"
+    | "ui_bound_partyFrame4"
+    | "ui_bound_petBar1"
+    | "ui_bound_petBar2"
+    | "ui_bound_petFrame1"
+    | "ui_bound_petFrame2"
+    | "ui_bound_petInfoWindow"
+    | "ui_bound_playerFrame"
+    | "ui_bound_questList"
+    | "ui_bound_questNotifier"
+    | "ui_bound_raidFrame"
+    | "ui_bound_raidFrame2"
+    | "ui_bound_sagaBook"
+    | "ui_bound_shortcutSkillActionBar"
+    | "ui_bound_targetFrame"
+    | "ui_bound_targettotarget"
+    | "ui_bound_watchtarget"
+```
+
+**UIEVENT_TYPE**
+
+"ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+871)
+
+```lua
+UIEVENT_TYPE:
+    | "ABILITY_CHANGED"
+    | "ABILITY_EXP_CHANGED"
+    | "ABILITY_SET_CHANGED"
+    | "ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"
+    | "ACCOUNT_ATTENDANCE_ADDED"
+    | "ACCOUNT_ATTENDANCE_LOADED"
+    | "ACCOUNT_ATTRIBUTE_UPDATED"
+    | "ACCOUNT_RESTRICT_NOTICE"
+    | "ACHIEVEMENT_UPDATE"
+    | "ACQUAINTANCE_LOGIN"
+    | "ACTABILITY_EXPERT_CHANGED"
+    | "ACTABILITY_EXPERT_EXPANDED"
+    | "ACTABILITY_EXPERT_GRADE_CHANGED"
+    | "ACTABILITY_MODIFIER_UPDATE"
+    | "ACTABILITY_REFRESH_ALL"
+    | "ACTION_BAR_AUTO_REGISTERED"
+    | "ACTION_BAR_PAGE_CHANGED"
+    | "ACTIONS_UPDATE"
+    | "ADD_GIVEN_QUEST_INFO"
+    | "ADD_NOTIFY_QUEST_INFO"
+    | "ADDED_ITEM"
+    | "ADDON_LOADED"
+    | "AGGRO_METER_CLEARED"
+    | "AGGRO_METER_UPDATED"
+    | "ALL_SIEGE_RAID_TEAM_INFOS"
+    | "ANTIBOT_PUNISH"
+    | "APPELLATION_CHANGED"
+    | "APPELLATION_GAINED"
+    | "APPELLATION_STAMP_SET"
+    | "ARCHE_PASS_BUY"
+    | "ARCHE_PASS_COMPLETED"
+    | "ARCHE_PASS_DROPPED"
+    | "ARCHE_PASS_EXPIRED"
+    | "ARCHE_PASS_LOADED"
+    | "ARCHE_PASS_MISSION_CHANGED"
+    | "ARCHE_PASS_MISSION_COMPLETED"
+    | "ARCHE_PASS_OWNED"
+    | "ARCHE_PASS_RESETED"
+    | "ARCHE_PASS_STARTED"
+    | "ARCHE_PASS_UPDATE_POINT"
+    | "ARCHE_PASS_UPDATE_REWARD_ITEM"
+    | "ARCHE_PASS_UPDATE_TIER"
+    | "ARCHE_PASS_UPGRADE_PREMIUM"
+    | "ASK_BUY_LABOR_POWER_POTION"
+    | "ASK_FORCE_ATTACK"
+    | "AUCTION_BIDDED"
+    | "AUCTION_BIDDEN"
+    | "AUCTION_BOUGHT"
+    | "AUCTION_BOUGHT_BY_SOMEONE"
+    | "AUCTION_CANCELED"
+    | "AUCTION_CHARACTER_LEVEL_TOO_LOW"
+    | "AUCTION_ITEM_ATTACHMENT_STATE_CHANGED"
+    | "AUCTION_ITEM_PUT_UP"
+    | "AUCTION_ITEM_SEARCH"
+    | "AUCTION_ITEM_SEARCHED"
+    | "AUCTION_LOWEST_PRICE"
+    | "AUCTION_PERMISSION_BY_CRAFT"
+    | "AUCTION_TOGGLE"
+    | "AUDIENCE_JOINED"
+    | "AUDIENCE_LEFT"
+    | "BAD_USER_LIST_UPDATE"
+    | "BADWORD_USER_REPORED_RESPONE_MSG"
+    | "BAG_EXPANDED"
+    | "BAG_ITEM_CONFIRMED"
+    | "BAG_REAL_INDEX_SHOW"
+    | "BAG_TAB_CREATED"
+    | "BAG_TAB_REMOVED"
+    | "BAG_TAB_SORTED"
+    | "BAG_TAB_SWITCHED"
+    | "BAG_UPDATE"
+    | "BAN_PLAYER_RESULT"
+    | "BANK_EXPANDED"
+    | "BANK_REAL_INDEX_SHOW"
+    | "BANK_TAB_CREATED"
+    | "BANK_TAB_REMOVED"
+    | "BANK_TAB_SORTED"
+    | "BANK_TAB_SWITCHED"
+    | "BANK_UPDATE"
+    | "BEAUTYSHOP_CLOSE_BY_SYSTEM"
+    | "BLESS_UTHSTIN_EXTEND_MAX_STATS"
+    | "BLESS_UTHSTIN_ITEM_SLOT_CLEAR"
+    | "BLESS_UTHSTIN_ITEM_SLOT_SET"
+    | "BLESS_UTHSTIN_MESSAGE"
+    | "BLESS_UTHSTIN_UPDATE_STATS"
+    | "BLESS_UTHSTIN_WILL_APPLY_STATS"
+    | "BLOCKED_USER_LIST"
+    | "BLOCKED_USER_UPDATE"
+    | "BLOCKED_USERS_INFO"
+    | "BOT_SUSPECT_REPORTED"
+    | "BUFF_SKILL_CHANGED"
+    | "BUFF_UPDATE"
+    | "BUILD_CONDITION"
+    | "BUILDER_END"
+    | "BUILDER_STEP"
+    | "BUTLER_INFO_UPDATED"
+    | "BUTLER_UI_COMMAND"
+    | "BUY_RESULT_AA_POINT"
+    | "BUY_SPECIALTY_CONTENT_INFO"
+    | "CANCEL_CRAFT_ORDER"
+    | "CANCEL_REBUILD_HOUSE_CAMERA_MODE"
+    | "CANDIDATE_LIST_CHANGED"
+    | "CANDIDATE_LIST_HIDE"
+    | "CANDIDATE_LIST_SELECTION_CHANGED"
+    | "CANDIDATE_LIST_SHOW"
+    | "CHANGE_ACTABILITY_DECO_NUM"
+    | "CHANGE_CONTRIBUTION_POINT_TO_PLAYER"
+    | "CHANGE_CONTRIBUTION_POINT_TO_STORE"
+    | "CHANGE_MY_LANGUAGE"
+    | "CHANGE_OPTION"
+    | "CHANGE_PAY_INFO"
+    | "CHANGE_VISUAL_RACE_ENDED"
+    | "CHANGED_AUTO_USE_AAPOINT"
+    | "CHANGED_MSG"
+    | "CHAT_DICE_VALUE"
+    | "CHAT_EMOTION"
+    | "CHAT_FAILED"
+    | "CHAT_JOINED_CHANNEL"
+    | "CHAT_LEAVED_CHANNEL"
+    | "CHAT_MESSAGE"
+    | "CHAT_MSG_ALARM"
+    | "CHAT_MSG_DOODAD"
+    | "CHAT_MSG_QUEST"
+    | "CHECK_TEXTURE"
+    | "CLEAR_BOSS_TELESCOPE_INFO"
+    | "CLEAR_CARRYING_BACKPACK_SLAVE_INFO"
+    | "CLEAR_COMPLETED_QUEST_INFO"
+    | "CLEAR_CORPSE_INFO"
+    | "CLEAR_DOODAD_INFO"
+    | "CLEAR_FISH_SCHOOL_INFO"
+    | "CLEAR_GIVEN_QUEST_STATIC_INFO"
+    | "CLEAR_HOUSING_INFO"
+    | "CLEAR_MY_SLAVE_POS_INFO"
+    | "CLEAR_NOTIFY_QUEST_INFO"
+    | "CLEAR_NPC_INFO"
+    | "CLEAR_SHIP_TELESCOPE_INFO"
+    | "CLEAR_TRANSFER_TELESCOPE_INFO"
+    | "CLOSE_CRAFT_ORDER"
+    | "CLOSE_MUSIC_SHEET"
+    | "COFFER_INTERACTION_END"
+    | "COFFER_INTERACTION_START"
+    | "COFFER_REAL_INDEX_SHOW"
+    | "COFFER_TAB_CREATED"
+    | "COFFER_TAB_REMOVED"
+    | "COFFER_TAB_SORTED"
+    | "COFFER_TAB_SWITCHED"
+    | "COFFER_UPDATE"
+    | "COMBAT_MSG"
+    | "COMBAT_TEXT"
+    | "COMBAT_TEXT_COLLISION"
+    | "COMBAT_TEXT_SYNERGY"
+    | "COMMON_FARM_UPDATED"
+    | "COMMUNITY_ERROR"
+    | "COMPLETE_ACHIEVEMENT"
+    | "COMPLETE_CRAFT_ORDER"
+    | "COMPLETE_QUEST_CONTEXT_DOODAD"
+    | "COMPLETE_QUEST_CONTEXT_NPC"
+    | "CONSOLE_WRITE"
+    | "CONVERT_TO_RAID_TEAM"
+    | "COPY_RAID_MEMBERS_TO_CLIPBOARD"
+    | "CRAFT_DOODAD_INFO"
+    | "CRAFT_ENDED"
+    | "CRAFT_FAILED"
+    | "CRAFT_ORDER_ENTRY_SEARCHED"
+    | "CRAFT_RECIPE_ADDED"
+    | "CRAFT_STARTED"
+    | "CRAFT_TRAINED"
+    | "CRAFTING_END"
+    | "CRAFTING_START"
+    | "CREATE_ORIGIN_UCC_ITEM"
+    | "CRIME_REPORTED"
+    | "DEBUFF_UPDATE"
+    | "DELETE_CRAFT_ORDER"
+    | "DELETE_PORTAL"
+    | "DESTROY_PAPER"
+    | "DIAGONAL_ASR"
+    | "DIAGONAL_LINE"
+    | "DICE_BID_RULE_CHANGED"
+    | "DISCONNECT_FROM_AUTH"
+    | "DISCONNECTED_BY_WORLD"
+    | "DISMISS_PET"
+    | "DIVE_END"
+    | "DIVE_START"
+    | "DOMINION"
+    | "DOMINION_GUARD_TOWER_STATE_NOTICE"
+    | "DOMINION_GUARD_TOWER_UPDATE_TOOLTIP"
+    | "DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED"
+    | "DOMINION_SIEGE_PERIOD_CHANGED"
+    | "DOMINION_SIEGE_SYSTEM_NOTICE"
+    | "DOMINION_SIEGE_UPDATE_TIMER"
+    | "DOODAD_LOGIC"
+    | "DOODAD_PHASE_MSG"
+    | "DOODAD_PHASE_UI_MSG"
+    | "DRAW_DOODAD_SIGN_TAG"
+    | "DRAW_DOODAD_TOOLTIP"
+    | "DYEING_END"
+    | "DYEING_START"
+    | "DYNAMIC_ACTION_BAR_HIDE"
+    | "DYNAMIC_ACTION_BAR_SHOW"
+    | "ENABLE_TEAM_AREA_INVITATION"
+    | "ENCHANT_EXAMINE"
+    | "ENCHANT_RESULT"
+    | "ENCHANT_SAY_ABILITY"
+    | "END_HERO_ELECTION_PERIOD"
+    | "END_QUEST_CHAT_BUBBLE"
+    | "ENDED_DUEL"
+    | "ENTER_ANOTHER_ZONEGROUP"
+    | "ENTER_ENCHANT_ITEM_MODE"
+    | "ENTER_GACHA_LOOT_MODE"
+    | "ENTER_ITEM_LOOK_CONVERT_MODE"
+    | "ENTER_WORLD_CANCELLED"
+    | "ENTERED_INSTANT_GAME_ZONE"
+    | "ENTERED_LOADING"
+    | "ENTERED_LOGIN"
+    | "ENTERED_SCREEN_SHOT_CAMERA_MODE"
+    | "ENTERED_SUBZONE"
+    | "ENTERED_WORLD"
+    | "ENTERED_WORLD_SELECT"
+    | "EQUIP_SLOT_REINFORCE_MSG_CHAGNE_LEVEL_EFFECT"
+    | "EQUIP_SLOT_REINFORCE_EXPAND_PAGE"
+    | "EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT"
+    | "EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP"
+    | "EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT"
+    | "EQUIP_SLOT_REINFORCE_SELECT_PAGE"
+    | "EQUIP_SLOT_REINFORCE_UPDATE"
+    | "ESC_MENU_ADD_BUTTON"
+    | "ESCAPE_END"
+    | "ESCAPE_START"
+    | "EVENT_SCHEDULE_START"
+    | "EVENT_SCHEDULE_STOP"
+    | "EXP_CHANGED"
+    | "EXPEDITION_APPLICANT_ACCEPT"
+    | "EXPEDITION_APPLICANT_REJECT"
+    | "EXPEDITION_BUFF_CHANGE"
+    | "EXPEDITION_EXP"
+    | "EXPEDITION_HISTORY"
+    | "EXPEDITION_LEVEL_UP"
+    | "EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT"
+    | "EXPEDITION_MANAGEMENT_APPLICANT_ADD"
+    | "EXPEDITION_MANAGEMENT_APPLICANT_DEL"
+    | "EXPEDITION_MANAGEMENT_APPLICANT_REJECT"
+    | "EXPEDITION_MANAGEMENT_APPLICANTS"
+    | "EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED"
+    | "EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED"
+    | "EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED"
+    | "EXPEDITION_MANAGEMENT_MEMBERS_INFO"
+    | "EXPEDITION_MANAGEMENT_POLICY_CHANGED"
+    | "EXPEDITION_MANAGEMENT_RECRUITMENT_ADD"
+    | "EXPEDITION_MANAGEMENT_RECRUITMENT_DEL"
+    | "EXPEDITION_MANAGEMENT_RECRUITMENTS"
+    | "EXPEDITION_MANAGEMENT_ROLE_CHANGED"
+    | "EXPEDITION_MANAGEMENT_UPDATED"
+    | "EXPEDITION_RANKING"
+    | "EXPEDITION_SUMMON_SUGGEST"
+    | "EXPEDITION_WAR_DECLARATION_FAILED"
+    | "EXPEDITION_WAR_DECLARATION_MONEY"
+    | "EXPEDITION_WAR_KILL_SCORE"
+    | "EXPEDITION_WAR_SET_PROTECT_DATE"
+    | "EXPEDITION_WAR_STATE"
+    | "EXPIRED_ITEM"
+    | "FACTION_CHANGED"
+    | "FACTION_COMPETITION_INFO"
+    | "FACTION_COMPETITION_RESULT"
+    | "FACTION_COMPETITION_UPDATE_POINT"
+    | "FACTION_RELATION_ACCEPTED"
+    | "FACTION_RELATION_CHANGED"
+    | "FACTION_RELATION_COUNT"
+    | "FACTION_RELATION_DENIED"
+    | "FACTION_RELATION_HISTORY"
+    | "FACTION_RELATION_REQUESTED"
+    | "FACTION_RELATION_WILL_CHANGE"
+    | "FACTION_RENAMED"
+    | "FADE_INOUT_DONE"
+    | "FAIL_WEB_PLAY_DIARY_INSTANT"
+    | "FAILED_TO_SET_PET_AUTO_SKILL"
+    | "FAMILY_ERROR"
+    | "FAMILY_EXP_ADD"
+    | "FAMILY_INFO_REFRESH"
+    | "FAMILY_LEVEL_UP"
+    | "FAMILY_MEMBER"
+    | "FAMILY_MEMBER_ADDED"
+    | "FAMILY_MEMBER_KICKED"
+    | "FAMILY_MEMBER_LEFT"
+    | "FAMILY_MEMBER_ONLINE"
+    | "FAMILY_MGR"
+    | "FAMILY_NAME_CHANGED"
+    | "FAMILY_OWNER_CHANGED"
+    | "FAMILY_REFRESH"
+    | "FAMILY_REMOVED"
+    | "FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL"
+    | "FIND_FACTION_REZ_DISTRICT_DURATION_FAIL"
+    | "FOLDER_STATE_CHANGED"
+    | "FORCE_ATTACK_CHANGED"
+    | "FRIENDLIST"
+    | "FRIENDLIST_INFO"
+    | "FRIENDLIST_UPDATE"
+    | "GACHA_LOOT_PACK_LOG"
+    | "GACHA_LOOT_PACK_RESULT"
+    | "GAME_EVENT_EMPTY"
+    | "GAME_EVENT_INFO_LIST_UPDATED"
+    | "GAME_EVENT_INFO_REQUESTED"
+    | "GAME_SCHEDULE"
+    | "GENDER_TRANSFERED"
+    | "GLIDER_MOVED_INTO_BAG"
+    | "GOODS_MAIL_INBOX_ITEM_TAKEN"
+    | "GOODS_MAIL_INBOX_MONEY_TAKEN"
+    | "GOODS_MAIL_INBOX_TAX_PAID"
+    | "GOODS_MAIL_INBOX_UPDATE"
+    | "GOODS_MAIL_RETURNED"
+    | "GOODS_MAIL_SENT_SUCCESS"
+    | "GOODS_MAIL_SENTBOX_UPDATE"
+    | "GOODS_MAIL_WRITE_ITEM_UPDATE"
+    | "GRADE_ENCHANT_BROADCAST"
+    | "GRADE_ENCHANT_RESULT"
+    | "GUARDTOWER_HEALTH_CHANGED"
+    | "GUILD_BANK_INTERACTION_END"
+    | "GUILD_BANK_INTERACTION_START"
+    | "GUILD_BANK_INVEN_SHOW"
+    | "GUILD_BANK_MONEY_UPDATE"
+    | "GUILD_BANK_REAL_INDEX_SHOW"
+    | "GUILD_BANK_TAB_CREATED"
+    | "GUILD_BANK_TAB_REMOVED"
+    | "GUILD_BANK_TAB_SORTED"
+    | "GUILD_BANK_TAB_SWITCHED"
+    | "GUILD_BANK_UPDATE"
+    | "HEIR_LEVEL_UP"
+    | "HEIR_SKILL_ACTIVE_TYPE_MSG"
+    | "HEIR_SKILL_LEARN"
+    | "HEIR_SKILL_RESET"
+    | "HEIR_SKILL_UPDATE"
+    | "HERO_ALL_SCORE_UPDATED"
+    | "HERO_ANNOUNCE_REMAIN_TIME"
+    | "HERO_CANDIDATE_NOTI"
+    | "HERO_CANDIDATES_ANNOUNCED"
+    | "HERO_ELECTION"
+    | "HERO_ELECTION_DAY_ALERT"
+    | "HERO_ELECTION_RESULT"
+    | "HERO_ELECTION_VOTED"
+    | "HERO_NOTI"
+    | "HERO_RANK_DATA_RETRIEVED"
+    | "HERO_RANK_DATA_TIMEOUT"
+    | "HERO_SCORE_UPDATED"
+    | "HERO_SEASON_OFF"
+    | "HERO_SEASON_UPDATED"
+    | "HIDE_ROADMAP_TOOLTIP"
+    | "HIDE_SKILL_MAP_EFFECT"
+    | "HIDE_WORLDMAP_TOOLTIP"
+    | "HOUSE_BUILD_INFO"
+    | "HOUSE_BUY_FAIL"
+    | "HOUSE_BUY_SUCCESS"
+    | "HOUSE_CANCEL_SELL_FAIL"
+    | "HOUSE_CANCEL_SELL_SUCCESS"
+    | "HOUSE_DECO_UPDATED"
+    | "HOUSE_FARM_MSG"
+    | "HOUSE_INFO_UPDATED"
+    | "HOUSE_INTERACTION_END"
+    | "HOUSE_INTERACTION_START"
+    | "HOUSE_PERMISSION_UPDATED"
+    | "HOUSE_REBUILD_TAX_INFO"
+    | "HOUSE_ROTATE_CONFIRM"
+    | "HOUSE_SALE_SUCCESS"
+    | "HOUSE_SET_SELL_FAIL"
+    | "HOUSE_SET_SELL_SUCCESS"
+    | "HOUSE_STEP_INFO_UPDATED"
+    | "HOUSE_TAX_INFO"
+    | "HOUSING_UCC_CLOSE"
+    | "HOUSING_UCC_ITEM_SLOT_CLEAR"
+    | "HOUSING_UCC_ITEM_SLOT_SET"
+    | "HOUSING_UCC_LEAVE"
+    | "HOUSING_UCC_UPDATED"
+    | "HPW_ZONE_STATE_CHANGE"
+    | "HPW_ZONE_STATE_WAR_END"
+    | "IME_STATUS_CHANGED"
+    | "INDUN_INITAL_ROUND_INFO"
+    | "INDUN_ROUND_END"
+    | "INDUN_ROUND_START"
+    | "INDUN_UPDATE_ROUND_INFO"
+    | "INGAME_SHOP_BUY_RESULT"
+    | "INIT_CHRONICLE_INFO"
+    | "INSERT_CRAFT_ORDER"
+    | "INSTANCE_ENTERABLE_MSG"
+    | "INSTANT_GAME_BEST_RATING_REWARD"
+    | "INSTANT_GAME_END"
+    | "INSTANT_GAME_JOIN_APPLY"
+    | "INSTANT_GAME_JOIN_CANCEL"
+    | "INSTANT_GAME_KILL"
+    | "INSTANT_GAME_PICK_BUFFS"
+    | "INSTANT_GAME_READY"
+    | "INSTANT_GAME_RETIRE"
+    | "INSTANT_GAME_ROUND_RESULT"
+    | "INSTANT_GAME_START"
+    | "INSTANT_GAME_START_POINT_RETURN_MSG"
+    | "INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME"
+    | "INSTANT_GAME_WAIT"
+    | "INTERACTION_END"
+    | "INTERACTION_START"
+    | "INVALID_NAME_POLICY"
+    | "INVEN_SLOT_SPLIT"
+    | "ITEM_ACQUISITION_BY_LOOT"
+    | "ITEM_CHANGE_MAPPING_RESULT"
+    | "ITEM_ENCHANT_MAGICAL_RESULT"
+    | "ITEM_EQUIP_RESULT"
+    | "ITEM_LOOK_CONVERTED"
+    | "ITEM_LOOK_CONVERTED_EFFECT"
+    | "ITEM_REFURBISHMENT_RESULT"
+    | "ITEM_SMELTING_RESULT"
+    | "ITEM_SOCKET_UPGRADE"
+    | "ITEM_SOCKETING_RESULT"
+    | "JURY_OK_COUNT"
+    | "JURY_WAITING_NUMBER"
+    | "LABORPOWER_CHANGED"
+    | "LEAVE_ENCHANT_ITEM_MODE"
+    | "LEAVE_GACHA_LOOT_MODE"
+    | "LEAVE_ITEM_LOOK_CONVERT_MODE"
+    | "LEAVED_INSTANT_GAME_ZONE"
+    | "LEAVING_WORLD_CANCELED"
+    | "LEAVING_WORLD_STARTED"
+    | "LEFT_LOADING"
+    | "LEFT_LOGIN"
+    | "LEFT_SCREEN_SHOT_CAMERA_MODE"
+    | "LEFT_SUBZONE"
+    | "LEFT_WORLD"
+    | "LEVEL_CHANGED"
+    | "LOGIN_CHARACTER_UPDATED"
+    | "LOGIN_DENIED"
+    | "LOOT_BAG_CHANGED"
+    | "LOOT_BAG_CLOSE"
+    | "LOOT_DICE"
+    | "LOOT_PACK_ITEM_BROADCAST"
+    | "LOOTING_RULE_BOP_CHANGED"
+    | "LOOTING_RULE_GRADE_CHANGED"
+    | "LOOTING_RULE_MASTER_CHANGED"
+    | "LOOTING_RULE_METHOD_CHANGED"
+    | "LP_MANAGE_CHARACTER_CHANGED"
+    | "MAIL_INBOX_ATTACHMENT_TAKEN_ALL"
+    | "MAIL_INBOX_ITEM_TAKEN"
+    | "MAIL_INBOX_MONEY_TAKEN"
+    | "MAIL_INBOX_TAX_PAID"
+    | "MAIL_INBOX_UPDATE"
+    | "MAIL_RETURNED"
+    | "MAIL_SENT_SUCCESS"
+    | "MAIL_SENTBOX_UPDATE"
+    | "MAIL_WRITE_ITEM_UPDATE"
+    | "MAP_EVENT_CHANGED"
+    | "MATE_SKILL_LEARNED"
+    | "MATE_STATE_UPDATE"
+    | "MEGAPHONE_MESSAGE"
+    | "MIA_MAIL_INBOX_ITEM_TAKEN"
+    | "MIA_MAIL_INBOX_MONEY_TAKEN"
+    | "MIA_MAIL_INBOX_TAX_PAID"
+    | "MIA_MAIL_INBOX_UPDATE"
+    | "MIA_MAIL_RETURNED"
+    | "MIA_MAIL_SENT_SUCCESS"
+    | "MIA_MAIL_SENTBOX_UPDATE"
+    | "MIA_MAIL_WRITE_ITEM_UPDATE"
+    | "MINE_AMOUNT"
+    | "MINI_SCOREBOARD_CHANGED"
+    | "MODE_ACTIONS_UPDATE"
+    | "MONEY_ACQUISITION_BY_LOOT"
+    | "MOUNT_BAG_UPDATE"
+    | "MOUNT_PET"
+    | "MOUNT_SLOT_CHANGED"
+    | "MOUSE_CLICK"
+    | "MOUSE_DOWN"
+    | "MOUSE_UP"
+    | "MOVE_SPEED_CHANGE"
+    | "MOVIE_ABORT"
+    | "MOVIE_LOAD"
+    | "MOVIE_START"
+    | "MOVIE_STOP"
+    | "MULTI_QUEST_CONTEXT_SELECT"
+    | "MULTI_QUEST_CONTEXT_SELECT_LIST"
+    | "NAME_TAG_MODE_CHANGED_MSG"
+    | "NATION_DOMINION"
+    | "NAVI_MARK_POS_TO_MAP"
+    | "NAVI_MARK_REMOVE"
+    | "NEW_DAY_STARTED"
+    | "NEW_SKILL_POINT"
+    | "NEXT_SIEGE_INFO"
+    | "NOTICE_MESSAGE"
+    | "NOTIFY_AUTH_ADVERTISING_MESSAGE"
+    | "NOTIFY_AUTH_BILLING_MESSAGE"
+    | "NOTIFY_AUTH_DISCONNECTION_MESSAGE"
+    | "NOTIFY_AUTH_FATIGUE_MESSAGE"
+    | "NOTIFY_AUTH_NOTICE_MESSAGE"
+    | "NOTIFY_AUTH_TC_FATIGUE_MESSAGE"
+    | "NOTIFY_WEB_TRANSFER_STATE"
+    | "NPC_CRAFT_ERROR"
+    | "NPC_CRAFT_UPDATE"
+    | "NPC_INTERACTION_END"
+    | "NPC_INTERACTION_START"
+    | "UNIT_NPC_EQUIPMENT_CHANGED"
+    | "NUONS_ARROW_SHOW"
+    | "NUONS_ARROW_UI_MSG"
+    | "NUONS_ARROW_UPDATE"
+    | "ONE_AND_ONE_CHAT_ADD_MESSAGE"
+    | "ONE_AND_ONE_CHAT_END"
+    | "ONE_AND_ONE_CHAT_START"
+    | "OPEN_ARS"
+    | "OPEN_CHAT"
+    | "OPEN_COMMON_FARM_INFO"
+    | "OPEN_CONFIG"
+    | "OPEN_CRAFT_ORDER_BOARD"
+    | "OPEN_EMBLEM_IMPRINT_UI"
+    | "OPEN_EMBLEM_UPLOAD_UI"
+    | "OPEN_EXPEDITION_PORTAL_LIST"
+    | "OPEN_MUSIC_SHEET"
+    | "OPEN_NAVI_DOODAD_NAMING_DIALOG"
+    | "OPEN_OTP"
+    | "OPEN_PAPER"
+    | "OPEN_PCCERT"
+    | "OPEN_PROMOTION_EVENT_URL"
+    | "OPEN_SECURE_CARD"
+    | "OPEN_WORLD_QUEUE"
+    | "OPTIMIZATION_RESULT_MESSAGE"
+    | "OPTION_RESET"
+    | "PASSENGER_MOUNT_PET"
+    | "PASSENGER_UNMOUNT_PET"
+    | "PET_AUTO_SKILL_CHANGED"
+    | "PET_FOLLOWING_MASTER"
+    | "PET_STOP_BY_MASTER"
+    | "PETMATE_BOUND"
+    | "PETMATE_UNBOUND"
+    | "PLAYER_AA_POINT"
+    | "PLAYER_ABILITY_LEVEL_CHANGED"
+    | "PLAYER_BANK_AA_POINT"
+    | "PLAYER_BANK_MONEY"
+    | "PLAYER_BM_POINT"
+    | "PLAYER_GEAR_POINT"
+    | "PLAYER_HONOR_POINT"
+    | "PLAYER_HONOR_POINT_CHANGED_IN_HPW"
+    | "PLAYER_JURY_POINT"
+    | "PLAYER_LEADERSHIP_POINT"
+    | "PLAYER_LIVING_POINT"
+    | "PLAYER_MONEY"
+    | "PLAYER_RESURRECTED"
+    | "PLAYER_RESURRECTION"
+    | "PLAYER_VISUAL_RACE"
+    | "POST_CRAFT_ORDER"
+    | "PRELIMINARY_EQUIP_UPDATE"
+    | "PREMIUM_FIRST_BUY_BONUS"
+    | "PREMIUM_GRADE_CHANGE"
+    | "PREMIUM_LABORPOWER_CHANGED"
+    | "PREMIUM_POINT_CHANGE"
+    | "PREMIUM_SERVICE_BUY_RESULT"
+    | "PREMIUM_SERVICE_LIST_UPDATED"
+    | "PROCESS_CRAFT_ORDER"
+    | "PROGRESS_TALK_QUEST_CONTEXT"
+    | "QUEST_CHAT_LET_IT_DONE"
+    | "QUEST_CHAT_RESTART"
+    | "QUEST_CONTEXT_CONDITION_EVENT"
+    | "QUEST_CONTEXT_OBJECTIVE_EVENT"
+    | "QUEST_CONTEXT_UPDATED"
+    | "QUEST_DIRECTING_MODE_END"
+    | "QUEST_DIRECTING_MODE_HOT_KEY"
+    | "QUEST_ERROR_INFO"
+    | "QUEST_HIDDEN_COMPLETE"
+    | "QUEST_HIDDEN_READY"
+    | "QUEST_LEFT_TIME_UPDATED"
+    | "QUEST_MSG"
+    | "QUEST_NOTIFIER_START"
+    | "QUEST_QUICK_CLOSE_EVENT"
+    | "RAID_APPLICANT_LIST"
+    | "RAID_FRAME_SIMPLE_VIEW"
+    | "RAID_RECRUIT_DETAIL"
+    | "RAID_RECRUIT_HUD"
+    | "RAID_RECRUIT_LIST"
+    | "RANDOM_SHOP_INFO"
+    | "RANDOM_SHOP_UPDATE"
+    | "RANK_ALARM_MSG"
+    | "RANK_DATA_RECEIVED"
+    | "RANK_LOCK"
+    | "RANK_PERSONAL_DATA"
+    | "RANK_RANKER_APPEARANCE"
+    | "RANK_REWARD_SNAPSHOTS"
+    | "RANK_SEASON_RESULT_RECEIVED"
+    | "RANK_SNAPSHOTS"
+    | "RANK_UNLOCK"
+    | "READY_TO_CONNECT_WORLD"
+    | "RECOVERABLE_EXP"
+    | "RECOVERED_EXP"
+    | "REENTRY_NOTIFY_DISABLE"
+    | "REENTRY_NOTIFY_ENABLE"
+    | "REFRESH_COMBAT_RESOURCE"
+    | "REFRESH_COMBAT_RESOURCE_UPDATE_TIME"
+    | "REFRESH_SQUAD_LIST"
+    | "REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE"
+    | "REFRESH_WORLD_QUEUE"
+    | "RELOAD_CASH"
+    | "REMOVE_BOSS_TELESCOPE_INFO"
+    | "REMOVE_CARRYING_BACKPACK_SLAVE_INFO"
+    | "REMOVE_FISH_SCHOOL_INFO"
+    | "REMOVE_GIVEN_QUEST_INFO"
+    | "REMOVE_NOTIFY_QUEST_INFO"
+    | "REMOVE_PING"
+    | "REMOVE_SHIP_TELESCOPE_INFO"
+    | "REMOVE_TRANSFER_TELESCOPE_INFO"
+    | "REMOVED_ITEM"
+    | "RENAME_CHARACTER_FAILED"
+    | "RENAME_PORTAL"
+    | "RENEW_ITEM_SUCCEEDED"
+    | "BAD_USER_LIST_UPDATE"
+    | "REPORT_CRIME"
+    | "REPRESENT_CHARACTER_RESULT"
+    | "REPUTATION_GIVEN"
+    | "REQUIRE_DELAY_TO_CHAT"
+    | "REQUIRE_ITEM_TO_CHAT"
+    | "RESET_INGAME_SHOP_MODELVIEW"
+    | "RESIDENT_BOARD_TYPE"
+    | "RESIDENT_HOUSING_TRADE_LIST"
+    | "RESIDENT_MEMBER_LIST"
+    | "RESIDENT_SERVICE_POINT_CHANGED"
+    | "RESIDENT_TOWNHALL"
+    | "RESIDENT_ZONE_STATE_CHANGE"
+    | "ROLLBACK_FAVORITE_CRAFTS"
+    | "RULING_CLOSED"
+    | "RULING_STATUS"
+    | "SAVE_PORTAL"
+    | "SAVE_SCREEN_SHOT"
+    | "SCALE_ENCHANT_BROADCAST"
+    | "SCHEDULE_ITEM_SENT"
+    | "SCHEDULE_ITEM_UPDATED"
+    | "SECOND_PASSWORD_ACCOUNT_LOCKED"
+    | "SECOND_PASSWORD_CHANGE_COMPLETED"
+    | "SECOND_PASSWORD_CHECK_COMPLETED"
+    | "SECOND_PASSWORD_CHECK_OVER_FAILED"
+    | "SECOND_PASSWORD_CLEAR_COMPLETED"
+    | "SECOND_PASSWORD_CREATION_COMPLETED"
+    | "SELECT_SQUAD_LIST"
+    | "SELECTED_INSTANCE_DIFFICULT"
+    | "SELL_SPECIALTY"
+    | "SELL_SPECIALTY_CONTENT_INFO"
+    | "SENSITIVE_OPERATION_VERIFY"
+    | "SENSITIVE_OPERATION_VERIFY_SUCCESS"
+    | "SET_DEFAULT_EXPAND_RATIO"
+    | "SET_EFFECT_ICON_VISIBLE"
+    | "SET_LOGIN_BROWSER_URL"
+    | "SET_OVERHEAD_MARK"
+    | "SET_PING_MODE"
+    | "SET_REBUILD_HOUSE_CAMERA_MODE"
+    | "SET_ROADMAP_PICKABLE"
+    | "SET_UI_MESSAGE"
+    | "SET_WEB_MESSENGE_COUNT"
+    | "SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW"
+    | "SHOW_ADD_TAB_WINDOW"
+    | "SHOW_ADDED_ITEM"
+    | "SHOW_BANNER"
+    | "SHOW_CHARACTER_ABILITY_WINDOW"
+    | "SHOW_CHARACTER_CREATE_WINDOW"
+    | "SHOW_CHARACTER_CUSTOMIZE_WINDOW"
+    | "SHOW_CHARACTER_SELECT_WINDOW"
+    | "SHOW_CHAT_TAB_CONTEXT"
+    | "SHOW_CRIME_RECORDS"
+    | "SHOW_DEPENDANT_WAIT_JURY"
+    | "SHOW_DEPENDANT_WAIT_TRIAL"
+    | "SHOW_GAME_RATING"
+    | "SHOW_HEALTH_NOTICE"
+    | "SHOW_HIDDEN_BUFF"
+    | "SHOW_LOGIN_WINDOW"
+    | "SHOW_PRIVACY_POLICY_WINDOW"
+    | "SHOW_RAID_FRAME_SETTINGS"
+    | "SHOW_RECOMMEND_USING_SECOND_PASSWORD"
+    | "SHOW_RENAME_EXPEIDITON"
+    | "SHOW_ROADMAP_TOOLTIP"
+    | "SHOW_SERVER_SELECT_WINDOW"
+    | "SHOW_SEXTANT_POS"
+    | "SHOW_SLAVE_INFO"
+    | "SHOW_VERDICTS"
+    | "SHOW_WORLDMAP_LOCATION"
+    | "SHOW_WORLDMAP_TOOLTIP"
+    | "SIEGE_APPOINT_RESULT"
+    | "SIEGE_RAID_REGISTER_LIST"
+    | "SIEGE_RAID_TEAM_INFO"
+    | "SIEGE_WAR_ENDED"
+    | "SIEGEWEAPON_BOUND"
+    | "SIEGEWEAPON_UNBOUND"
+    | "SIM_DOODAD_MSG"
+    | "SKILL_ALERT_ADD"
+    | "SKILL_ALERT_REMOVE"
+    | "SKILL_CHANGED"
+    | "SKILL_DEBUG_MSG"
+    | "SKILL_LEARNED"
+    | "SKILL_MAP_EFFECT"
+    | "SKILL_MSG"
+    | "SKILL_SELECTIVE_ITEM"
+    | "SKILL_SELECTIVE_ITEM_NOT_AVAILABLE"
+    | "SKILL_SELECTIVE_ITEM_READY_STATUS"
+    | "SKILL_UPGRADED"
+    | "SKILLS_RESET"
+    | "SLAVE_SHIP_BOARDING"
+    | "SLAVE_SHIP_UNBOARDING"
+    | "SLAVE_SPAWN"
+    | "SPAWN_PET"
+    | "SPECIAL_ABILITY_LEARNED"
+    | "SPECIALTY_CONTENT_RECIPE_INFO"
+    | "SPECIALTY_RATIO_BETWEEN_INFO"
+    | "SPELLCAST_START"
+    | "SPELLCAST_STOP"
+    | "SPELLCAST_SUCCEEDED"
+    | "START_CHAT_BUBBLE"
+    | "START_HERO_ELECTION_PERIOD"
+    | "START_QUEST_CONTEXT"
+    | "START_QUEST_CONTEXT_DOODAD"
+    | "START_QUEST_CONTEXT_NPC"
+    | "START_QUEST_CONTEXT_SPHERE"
+    | "START_SENSITIVE_OPERATION"
+    | "START_TALK_QUEST_CONTEXT"
+    | "START_TODAY_ASSIGNMENT"
+    | "STARTED_DUEL"
+    | "STICKED_MSG"
+    | "STILL_LOADING"
+    | "STORE_ADD_BUY_ITEM"
+    | "STORE_ADD_SELL_ITEM"
+    | "STORE_BUY"
+    | "STORE_FULL"
+    | "STORE_SELL"
+    | "STORE_SOLD_LIST"
+    | "STORE_TRADE_FAILED"
+    | "SURVEY_FORM_UPDATE"
+    | "SWITCH_ENCHANT_ITEM_MODE"
+    | "SYNC_PORTAL"
+    | "SYS_INDUN_STAT_UPDATED"
+    | "SYSMSG"
+    | "TARGET_CHANGED"
+    | "TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO"
+    | "TARGET_OVER"
+    | "TARGET_TO_TARGET_CHANGED"
+    | "TEAM_JOINT_BREAK"
+    | "TEAM_JOINT_BROKEN"
+    | "TEAM_JOINT_CHAT"
+    | "TEAM_JOINT_RESPONSE"
+    | "TEAM_JOINT_TARGET"
+    | "TEAM_JOINTED"
+    | "TEAM_MEMBER_DISCONNECTED"
+    | "TEAM_MEMBER_UNIT_ID_CHANGED"
+    | "TEAM_MEMBERS_CHANGED"
+    | "TEAM_ROLE_CHANGED"
+    | "TEAM_SUMMON_SUGGEST"
+    | "TENCENT_HEALTH_CARE_URL"
+    | "TIME_MESSAGE"
+    | "TOGGLE_CHANGE_VISUAL_RACE"
+    | "TOGGLE_COMMUNITY"
+    | "TOGGLE_CRAFT"
+    | "TOGGLE_FACTION"
+    | "TOGGLE_FOLLOW"
+    | "TOGGLE_IN_GAME_NOTICE"
+    | "TOGGLE_MEGAPHONE_CHAT"
+    | "TOGGLE_PARTY_FRAME"
+    | "TOGGLE_PET_MANAGE"
+    | "TOGGLE_PORTAL_DIALOG"
+    | "TOGGLE_RAID_FRAME"
+    | "TOGGLE_RAID_FRAME_PARTY"
+    | "TOGGLE_RAID_FRAME2"
+    | "TOGGLE_ROADMAP"
+    | "TOGGLE_WALK"
+    | "TOWER_DEF_INFO_UPDATE"
+    | "TOWER_DEF_MSG"
+    | "TRADE_CAN_START"
+    | "TRADE_CANCELED"
+    | "TRADE_ITEM_PUTUP"
+    | "TRADE_ITEM_TOOKDOWN"
+    | "TRADE_ITEM_UPDATED"
+    | "TRADE_LOCKED"
+    | "TRADE_MADE"
+    | "TRADE_MONEY_PUTUP"
+    | "TRADE_OK"
+    | "TRADE_OTHER_ITEM_PUTUP"
+    | "TRADE_OTHER_ITEM_TOOKDOWN"
+    | "TRADE_OTHER_LOCKED"
+    | "TRADE_OTHER_MONEY_PUTUP"
+    | "TRADE_OTHER_OK"
+    | "TRADE_STARTED"
+    | "TRADE_UI_TOGGLE"
+    | "TRADE_UNLOCKED"
+    | "TRANSFORM_COMBAT_RESOURCE"
+    | "TRIAL_CANCELED"
+    | "TRIAL_CLOSED"
+    | "TRIAL_MESSAGE"
+    | "TRIAL_STATUS"
+    | "TRIAL_TIMER"
+    | "TRY_LOOT_DICE"
+    | "TUTORIAL_EVENT"
+    | "TUTORIAL_HIDE_FROM_OPTION"
+    | "UCC_IMPRINT_SUCCEEDED"
+    | "UI_ADDON"
+    | "UI_PERMISSION_UPDATE"
+    | "UI_RELOADED"
+    | "ULC_ACTIVATE"
+    | "ULC_SKILL_MSG"
+    | "UNFINISHED_BUILD_HOUSE"
+    | "UNIT_COMBAT_STATE_CHANGED"
+    | "UNIT_DEAD"
+    | "UNIT_DEAD_NOTICE"
+    | "UNIT_ENTERED_SIGHT"
+    | "UNIT_EQUIPMENT_CHANGED"
+    | "UNIT_KILL_STREAK"
+    | "UNIT_LEAVED_SIGHT"
+    | "UNIT_NAME_CHANGED"
+    | "UNIT_NPC_EQUIPMENT_CHANGED"
+    | "UNITFRAME_ABILITY_UPDATE"
+    | "UNMOUNT_PET"
+    | "UPDATE_BINDINGS"
+    | "UPDATE_BOSS_TELESCOPE_AREA"
+    | "UPDATE_BOSS_TELESCOPE_INFO"
+    | "UPDATE_BOT_CHECK_INFO"
+    | "BUBBLE_UPDATE"
+    | "UPDATE_CARRYING_BACKPACK_SLAVE_INFO"
+    | "UPDATE_CHANGE_VISUAL_RACE_WND"
+    | "UPDATE_CHRONICLE_INFO"
+    | "UPDATE_CHRONICLE_NOTIFIER"
+    | "UPDATE_CLIENT_DRIVEN_INFO"
+    | "UPDATE_COMPLETED_QUEST_INFO"
+    | "UPDATE_CONTENT_ROSTER_WINDOW"
+    | "UPDATE_CORPSE_INFO"
+    | "UPDATE_CRAFT_ORDER_ITEM_FEE"
+    | "UPDATE_CRAFT_ORDER_ITEM_SLOT"
+    | "UPDATE_CRAFT_ORDER_SKILL"
+    | "UPDATE_DEFENCE_INFO"
+    | "UPDATE_DOMINION_INFO"
+    | "UPDATE_DOODAD_INFO"
+    | "UPDATE_DURABILITY_STATUS"
+    | "UPDATE_DYEING_EXCUTABLE"
+    | "UPDATE_ENCHANT_ITEM_MODE"
+    | "UPDATE_EXPEDITION_PORTAL"
+    | "UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT"
+    | "UPDATE_FACTION_REZ_DISTRICT"
+    | "UPDATE_FISH_SCHOOL_AREA"
+    | "UPDATE_FISH_SCHOOL_INFO"
+    | "UPDATE_GACHA_LOOT_MODE"
+    | "UPDATE_GIVEN_QUEST_STATIC_INFO"
+    | "UPDATE_HERO_ELECTION_CONDITION"
+    | "UPDATE_HOUSING_INFO"
+    | "UPDATE_HOUSING_TOOLTIP"
+    | "UPDATE_INGAME_BEAUTYSHOP_STATUS"
+    | "UPDATE_INGAME_SHOP"
+    | "UPDATE_INGAME_SHOP_VIEW"
+    | "UPDATE_INSTANT_GAME_INVITATION_COUNT"
+    | "UPDATE_INSTANT_GAME_KILLSTREAK"
+    | "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT"
+    | "UPDATE_INSTANT_GAME_SCORES"
+    | "UPDATE_INSTANT_GAME_STATE"
+    | "UPDATE_INSTANT_GAME_TIME"
+    | "UPDATE_ITEM_LOOK_CONVERT_MODE"
+    | "UPDATE_MONITOR_NPC"
+    | "UPDATE_MY_SLAVE_POS_INFO"
+    | "UPDATE_NPC_INFO"
+    | "UPDATE_NPC_INFO_BROADCASTING"
+    | "UPDATE_OPTION_BINDINGS"
+    | "UPDATE_PING_INFO"
+    | "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL"
+    | "UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT"
+    | "UPDATE_RETURN_ACCOUNT_STATUS"
+    | "UPDATE_ROADMAP_ANCHOR"
+    | "UPDATE_ROSTER_MEMBER_INFO"
+    | "UPDATE_ROUTE_MAP"
+    | "UPDATE_SHIP_TELESCOPE_INFO"
+    | "UPDATE_SHORTCUT_SKILLS"
+    | "UPDATE_SIEGE_SCORE"
+    | "UPDATE_SKILL_ACTIVE_TYPE"
+    | "UPDATE_SLAVE_EQUIPMENT_SLOT"
+    | "UPDATE_SPECIALTY_RATIO"
+    | "UPDATE_SQUAD"
+    | "UPDATE_TELESCOPE_AREA"
+    | "UPDATE_TODAY_ASSIGNMENT"
+    | "UPDATE_TODAY_ASSIGNMENT_RESET_COUNT"
+    | "UPDATE_TRANSFER_TELESCOPE_AREA"
+    | "UPDATE_TRANSFER_TELESCOPE_INFO"
+    | "UPDATE_ZONE_INFO"
+    | "UPDATE_ZONE_LEVEL_INFO"
+    | "UPDATE_ZONE_PERMISSION"
+    | "VIEW_CASH_BUY_WINDOW"
+    | "WAIT_FRIEND_ADD_ALARM"
+    | "WAIT_FRIENDLIST_UPDATE"
+    | "WAIT_REPLY_FROM_SERVER"
+    | "WATCH_TARGET_CHANGED"
+    | "WEB_BROWSER_ESC_EVENT"
+    | "WORLD_MESSAGE"
+    | "ZONE_SCORE_CONTENT_STATE"
+    | "ZONE_SCORE_UPDATED"
+```
+
+**UI_BUTTON_STATE_TEXT**
+
+"DISABLED"|"HIGHLIGHTED"|"NORMAL"|"PUSHED"
+
+```lua
+UI_BUTTON_STATE_TEXT:
+    | "DISABLED"
+    | "HIGHLIGHTED"
+    | "NORMAL"
+    | "PUSHED"
+```
+
+**UI_LAYER**
+
+"background"|"dialog"|"game"|"hud"|"normal"...(+3)
+
+```lua
+-- Widgets with layers of the same level and parent can overlap based on focus.
+UI_LAYER:
+    | "background" -- Layer 0 (invisible)
+    | "game" -- Layer 1
+   -> "normal" -- Layer 2 (default)
+    | "hud" -- Layer 3
+    | "questdirecting" -- Layer 4
+    | "dialog" -- Layer 5
+    | "tooltip" -- Layer 6
+    | "system" -- Layer 7
+```
+
+**UNIT**
+
+"player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153)
+
+```lua
+UNIT:
+    | "player"
+    | "target"
+    | "targettarget"
+    | "watchtarget"
+    | "playerpet" -- mount/pet
+    | "playerpet1" -- mount
+    | "playerpet2" -- pet
+    | "slave"
+    | "team1" -- team = the current raid/can be co raid
+    | "team2"
+    | "team3"
+    | "team4"
+    | "team5"
+    | "team6"
+    | "team7"
+    | "team8"
+    | "team9"
+    | "team10"
+    | "team11"
+    | "team12"
+    | "team13"
+    | "team14"
+    | "team15"
+    | "team16"
+    | "team17"
+    | "team18"
+    | "team19"
+    | "team20"
+    | "team21"
+    | "team22"
+    | "team23"
+    | "team24"
+    | "team25"
+    | "team26"
+    | "team27"
+    | "team28"
+    | "team29"
+    | "team30"
+    | "team31"
+    | "team32"
+    | "team33"
+    | "team34"
+    | "team35"
+    | "team36"
+    | "team37"
+    | "team38"
+    | "team39"
+    | "team40"
+    | "team41"
+    | "team42"
+    | "team43"
+    | "team44"
+    | "team45"
+    | "team46"
+    | "team47"
+    | "team48"
+    | "team49"
+    | "team50"
+    | "team_1_1"
+    | "team_1_2"
+    | "team_1_3"
+    | "team_1_4"
+    | "team_1_5"
+    | "team_1_6"
+    | "team_1_7"
+    | "team_1_8"
+    | "team_1_9"
+    | "team_1_10"
+    | "team_1_11"
+    | "team_1_12"
+    | "team_1_13"
+    | "team_1_14"
+    | "team_1_15"
+    | "team_1_16"
+    | "team_1_17"
+    | "team_1_18"
+    | "team_1_19"
+    | "team_1_20"
+    | "team_1_21"
+    | "team_1_22"
+    | "team_1_23"
+    | "team_1_24"
+    | "team_1_25"
+    | "team_1_26"
+    | "team_1_27"
+    | "team_1_28"
+    | "team_1_29"
+    | "team_1_30"
+    | "team_1_31"
+    | "team_1_32"
+    | "team_1_33"
+    | "team_1_34"
+    | "team_1_35"
+    | "team_1_36"
+    | "team_1_37"
+    | "team_1_38"
+    | "team_1_39"
+    | "team_1_40"
+    | "team_1_41"
+    | "team_1_42"
+    | "team_1_43"
+    | "team_1_44"
+    | "team_1_45"
+    | "team_1_46"
+    | "team_1_47"
+    | "team_1_48"
+    | "team_1_49"
+    | "team_1_50"
+    | "team_2_1"
+    | "team_2_2"
+    | "team_2_3"
+    | "team_2_4"
+    | "team_2_5"
+    | "team_2_6"
+    | "team_2_7"
+    | "team_2_8"
+    | "team_2_9"
+    | "team_2_10"
+    | "team_2_11"
+    | "team_2_12"
+    | "team_2_13"
+    | "team_2_14"
+    | "team_2_15"
+    | "team_2_16"
+    | "team_2_17"
+    | "team_2_18"
+    | "team_2_19"
+    | "team_2_20"
+    | "team_2_21"
+    | "team_2_22"
+    | "team_2_23"
+    | "team_2_24"
+    | "team_2_25"
+    | "team_2_26"
+    | "team_2_27"
+    | "team_2_28"
+    | "team_2_29"
+    | "team_2_30"
+    | "team_2_31"
+    | "team_2_32"
+    | "team_2_33"
+    | "team_2_34"
+    | "team_2_35"
+    | "team_2_36"
+    | "team_2_37"
+    | "team_2_38"
+    | "team_2_39"
+    | "team_2_40"
+    | "team_2_41"
+    | "team_2_42"
+    | "team_2_43"
+    | "team_2_44"
+    | "team_2_45"
+    | "team_2_46"
+    | "team_2_47"
+    | "team_2_48"
+    | "team_2_49"
+    | "team_2_50"
+```
+
+**UNIT_INFO_TYPE**
+
+"character"|"housing"|"mate"|"npc"|"shipyard"...(+2)
+
+```lua
+UNIT_INFO_TYPE:
+    | "character"
+    | "npc"
+    | "slave"
+    | "housing"
+    | "transfer"
+    | "mate"
+    | "shipyard"
+```
+
+**UNIT_LOCAL**
+
+"player"|"target"|"targettarget"|"watchtarget"
+
+```lua
+UNIT_LOCAL:
+    | "player"
+    | "target"
+    | "targettarget"
+    | "watchtarget"
+```
+
+**UNIT_PET**
+
+"playerpet"|"playerpet1"|"playerpet2"
+
+```lua
+UNIT_PET:
+    | "playerpet" -- mount/pet
+    | "playerpet1" -- mount
+    | "playerpet2" -- pet
+```
+
+**UNIT_TYPE**
+
+"housing"|"npc"
+
+```lua
+UNIT_TYPE:
+    | "housing"
+    | "npc"
+```
+
+**WIDGET_EVENT_TYPE**
+
+"OnAcceptFocus"|"OnAlphaAnimeEnd"|"OnBoundChanged"|"OnChangedAnchor"|"OnCheckChanged"...(+44)
+
+```lua
+WIDGET_EVENT_TYPE:
+    | "OnAcceptFocus"
+    | "OnAlphaAnimeEnd"
+    | "OnBoundChanged"
+    | "OnChangedAnchor"
+    | "OnCheckChanged"
+    | "OnClick"
+    | "OnCloseByEsc"
+    | "OnContentUpdated"
+    | "OnCursorMoved"
+    | "OnDragReceive"
+    | "OnDragStart"
+    | "OnDragStop"
+    | "OnDynamicListUpdatedView"
+    | "OnEffect"
+    | "OnEnableChanged"
+    | "OnEndFadeIn"
+    | "OnEndFadeOut"
+    | "OnEnter"
+    | "OnEnterPressed"
+    | "OnEscapePressed"
+    | "OnEvent"
+    | "OnHide"
+    | "OnKeyDown"
+    | "OnKeyUp"
+    | "OnLeave"
+    | "OnListboxToggled"
+    | "OnModelChanged"
+    | "OnMouseDown"
+    | "OnMouseMove"
+    | "OnMouseUp"
+    | "OnMovedPosition"
+    | "OnPageChanged"
+    | "OnPermissionChanged"
+    | "OnRadioChanged"
+    | "OnRestricted"
+    | "OnScale"
+    | "OnScaleAnimeEnd"
+    | "OnSelChanged"
+    | "OnShow"
+    | "OnSliderChanged"
+    | "OnTabChanged"
+    | "OnTextChanged"
+    | "OnTooltip"
+    | "OnUpdate"
+    | "OnVisibleChanged"
+    | "OnWheelDown"
+    | "OnWheelUp"
+    | "PreClick"
+    | "PreUse"
+```
+
+**WIDGET_SOUND**
+
+"ability_change"|"achievement"|"auction"|"auction_put_up"|"bag"...(+45)
+
+```lua
+WIDGET_SOUND:
+    | "ability_change"
+    | "achievement"
+    | "auction"
+    | "auction_put_up"
+    | "bag"
+    | "bank"
+    | "battlefield_entrance"
+    | "character_info"
+    | "coffer"
+    | "common_farm_info"
+    | "community"
+    | "composition_score"
+    | "config"
+    | "cosmetic_details"
+    | "craft"
+    | "crime_records"
+    | "default_r"
+    | "dialog_common"
+    | "dialog_enter_beautyshop"
+    | "dialog_gender_transfer"
+    | "dyeing"
+    | "edit_box"
+    | "item_enchant"
+    | "loot"
+    | "mail"
+    | "mail_read"
+    | "mail_write"
+    | "my_farm_info"
+    | "option"
+    | "pet_info"
+    | "portal"
+    | "prelim_equipment"
+    | "quest_context_list"
+    | "quest_directing_mode"
+    | "raid_team"
+    | "ranking"
+    | "ranking_reward"
+    | "skill_book"
+    | "store"
+    | "store_drain"
+    | "submenu"
+    | "trade"
+    | "tutorial"
+    | "ucc"
+    | "wash"
+    | "web_messenger"
+    | "web_note"
+    | "web_play_diary"
+    | "web_wiki"
+    | "world_map"
+```
+
+**WORLD_MAP_ZOOM**
+
+`1`|`2`|`3`|`4`
+
+```lua
+WORLD_MAP_ZOOM:
+    | `1` -- World
+    | `2` -- Continent
+    | `3` -- Zone
+    | `4` -- City
+```
+
+**ZONE_CLIMATE**
+
+`1`|`2`|`3`|`4`|`5`
+
+```lua
+ZONE_CLIMATE:
+    | `1` -- None
+    | `2` -- Temperate
+    | `3` -- Tropical
+    | `4` -- Subartic
+    | `5` -- Arid
+```
+
+**ZONE_GROUP_ID**
+
+`0`|`100`|`101`|`102`|`103`...(+151)
+
+```lua
+-- Obtained from db zone_groups
+ZONE_GROUP_ID:
+    | `0` -- current - Current location
+    | `1` -- w_gweonid_forest - Gweonid Forest
+    | `2` -- w_marianople - Marianople
+    | `3` -- w_garangdol_plains - Dewstone Plains
+    | `4` -- e_sunrise_peninsula - Solis Headlands
+    | `5` -- w_solzreed - Solzreed Peninsula
+    | `6` -- w_lilyut_meadow - Lilyut Hills
+    | `7` -- e_rainbow_field - Arcum Iris
+    | `8` -- w_two_crowns - Two Crowns
+    | `9` -- e_mahadevi - Mahadevi
+    | `10` -- w_bronze_rock - Airain Rock
+    | `11` -- e_falcony_plateau - Falcorth Plains
+    | `12` -- e_singing_land - Villanelle
+    | `13` -- e_sunny_wilderness - Sunbite Wilds
+    | `14` -- e_steppe_belt - Windscour Savannah
+    | `15` -- e_ruins_of_hariharalaya - Perinoor Ruins
+    | `16` -- e_lokas_checkers - Rookborne Basin
+    | `17` -- e_ynystere - Ynystere
+    | `18` -- w_white_forest - White Arden
+    | `19` -- w_the_carcass - Karkasse Ridgelands
+    | `20` -- w_cross_plains - Cinderstone Moor
+    | `21` -- w_cradle_of_genesis - Aubre Cradle
+    | `22` -- w_golden_plains - Halcyona
+    | `23` -- e_hasla - Hasla
+    | `24` -- e_tiger_spine_mountains - Tigerspine Mountains
+    | `25` -- e_ancient_forest - Silent Forest
+    | `26` -- w_hell_swamp - Hellswamp
+    | `27` -- w_long_sand - Sanddeep
+    | `28` -- w_barren_land - The Wastes
+    | `29` -- s_lost_island - Libertia Sea
+    | `30` -- s_lostway_sea - Castaway Strait
+    | `31` -- instance_training_camp - Drill Camp
+    | `32` -- instance_silent_colossus - Dreadnought
+    | `33` -- o_salpimari - Heedmar
+    | `34` -- o_nuimari - Nuimari
+    | `35` -- w_dark_side_of_the_moon -
+    | `36` -- s_silent_sea - Arcadian Sea
+    | `37` -- e_una_basin -
+    | `38` -- s_nightmare_coast -
+    | `39` -- s_golden_sea - Halcyona Gulf
+    | `40` -- s_crescent_sea - Feuille Sound
+    | `41` -- locked_sea_temp - Forbidden Sea
+    | `42` -- locked_land_temp - Forbidden Shore
+    | `43` -- o_seonyeokmari - Marcala
+    | `44` -- o_rest_land - Calmlands
+    | `45` -- instance_burntcastle_armory - Burnt Castle Armory
+    | `46` -- instance_hadir_farm - Hadir Farm
+    | `47` -- instance_sal_temple - Palace Cellar
+    | `48` -- e_white_island - Saltswept Atoll
+    | `49` -- arche_mall - Mirage Isle
+    | `50` -- instance_cuttingwind_deadmine - Sharpwind Mines
+    | `51` -- instance_howling_abyss - Howling Abyss
+    | `52` -- instance_cradle_of_destruction - Kroloal Cradle
+    | `53` -- test_instance_violent_maelstrom - Violent Maelstrom Arena
+    | `54` -- o_abyss_gate - Exeloch
+    | `55` -- instance_nachashgar - Serpentis
+    | `56` -- o_land_of_sunlights - Sungold Fields
+    | `57` -- o_ruins_of_gold - Golden Ruins
+    | `58` -- instance_howling_abyss_2 - Greater Howling Abyss
+    | `59` -- s_freedom_island - Sunspeck Sea
+    | `60` -- s_pirate_island - Stormraw Sound
+    | `61` -- o_shining_shore - Diamond Shores
+    | `62` -- instance_immortal_isle - Sea of Drowned Love
+    | `63` -- o_the_great_reeds - Reedwind
+    | `64` -- instance_immortal_isle_easy - Lesser Sea of Drowned Love
+    | `65` -- o_library_2 - Verdant Skychamber
+    | `66` -- instance_nachashgar_easy - Lesser Serpentis
+    | `67` -- o_library_1 - Introspect Path
+    | `68` -- instance_prologue - Lucius's Dream
+    | `69` -- o_library_3 - Evening Botanica
+    | `70` -- instance_library_1 - Encyclopedia Room
+    | `71` -- instance_library_2 - Libris Garden
+    | `72` -- instance_library_3 - Screaming Archives
+    | `73` -- instance_library_boss_1 - Screening Hall
+    | `74` -- instance_library_boss_2 - Frozen Study
+    | `75` -- instance_library_boss_3 - Deranged Bookroom
+    | `76` -- instance_library_tower_defense - Corner Reading Room
+    | `77` -- instance_training_camp_1on1 - Gladiator Arena
+    | `78` -- o_dew_plains - Mistmerrow
+    | `79` -- w_mirror_kingdom - Miroir Tundra
+    | `80` -- s_broken_mirrors_sea - Shattered Sea
+    | `81` -- instance_battle_field - New Arena
+    | `82` -- o_epherium - Epherium
+    | `83` -- instance_hadir_farm_hard - Greater Hadir Farm
+    | `84` -- instance_burntcastle_armory_hard - Greater Burnt Castle Armory
+    | `85` -- instance_library_heart - Heart of Ayanad
+    | `86` -- instance_sal_temple_hard - Greater Palace Cellar
+    | `87` -- instance_cuttingwind_deadmine_hard - Greater Sharpwind Mines
+    | `88` -- instance_cradle_of_destruction_hard - Greater Kroloal Cradle
+    | `89` -- instance_feast_garden - Mistsong Summit
+    | `90` -- instance_training_camp_no_item - Arena
+    | `91` -- instance_the_judge_of_uthstin - Decisive Arena
+    | `92` -- instance_battle_field_of_feast - Free-For-All Arena
+    | `93` -- w_hanuimaru - Ahnimar
+    | `94` -- instance_prologue_izuna - Ancient Ezna
+    | `95` -- s_boiling_sea - Boiling Sea
+    | `96` -- e_sylvina_region - Sylvina Caldera
+    | `97` -- instance_sea_of_chaos - Bloodsalt Bay
+    | `98` -- o_room_of_queen - Queen's Chamber
+    | `99` -- e_lokaloka_mountains - Rokhala Mountains
+    | `100` -- o_room_of_queen_2 - Queen's Chamber
+    | `101` -- o_room_of_queen_3 - Burnt Castle Cellar
+    | `102` -- o_candlestick_of_sea - Aegis Island
+    | `103` -- o_whale_song_bay - Whalesong Harbor
+    | `104` -- s_whale_swell_strait - Whaleswell Straits
+    | `105` -- instance_hanging_gardens_of_ipna - Ipnysh Sanctuary
+    | `106` -- instance_festival_training_camp_1on1 - Snowball Arena
+    | `107` -- o_hirama_the_west - Western Hiram Mountains
+    | `108` -- instance_golden_plains - Golden Plains Battle
+    | `109` -- instance_golden_plains_war - Golden Plains Battle
+    | `110` -- o_hirama_the_east - Eastern Hiram Mountains
+    | `111` -- instance_library_new_boss_1 - Screening Hall (Disabled)
+    | `112` -- instance_library_new_boss_2 - Frozen Study (Disabled)
+    | `113` -- instance_library_new_boss_3 - Deranged Bookroom (Disabled)
+    | `114` -- test_arcaneearth - Corner Reading Room (Disabled)
+    | `115` -- instance_library_new_heart - Heart of Ayanad (Disabled)
+    | `116` -- library_lobby_1f - Unused
+    | `117` -- library_lobby_2f - Verdant Skychamber (Disabled)
+    | `118` -- library_lobby_3f - Evening Botanica (Disabled)
+    | `119` -- library_lobby_4f - Constellation Breakroom (Disabled)
+    | `120` -- instance_library_boss_total - Abyssal Library
+    | `121` -- instance_carcass - Red Dragon's Keep
+    | `122` -- instance_the_last_day_of_hiramakand - The Fall of Hiram City
+    | `125` -- instance_challenge_tower - Noryette Challenge
+    | `126` -- zonegroup_instance_defense_of_feast - Mistsong Banquet
+    | `127` -- instance_sea_survival - Naval Survival Game (test)
+    | `129` -- instance_sea_survival_2 - Stillwater Gulf
+    | `130` -- instance_eternity - Hereafter Rebellion
+    | `131` -- instance_dew_plain - Battle of Mistmerrow
+    | `132` -- instance_dewplane_boss - Kadum
+    | `133` -- the_garden - Garden of the Gods
+    | `134` -- gatekeeper_hall - Gatekeeper Hall
+    | `135` -- instance_hanuimaru_zone - Dairy Cow Dreamland
+    | `136` -- instance_restraint_of_power - Circle of Authority
+    | `137` -- instance_phantom_of_delphinad - Delphinad Mirage
+    | `138` -- instance_arena_2on2 - Test Arena
+    | `139` -- o_land_of_magic - Mysthrane Gorge
+    | `140` -- o_mount_ipnir - Ipnya Ridge
+    | `141` -- instance_garuda_nest - Skyfin War
+    | `142` -- instance_mount_ipnir_story - Queen's Altar
+    | `143` -- instance_event_camp_1on1 - Event Arena
+    | `144` -- test_cbush - Guild House
+    | `145` -- instance_black_thorn - Unused
+    | `146` -- instance_black_spike - Black Thorn Prison
+    | `147` -- o_western_prairie - Great Prairie of the West
+    | `148` -- instance_nachashgar_ancient - Greater Serpentis
+    | `149` -- instance_cuttlefish_event_zone - Squid Game Event Arena
+    | `150` -- instance_dimensional_defence - Dimensional Boundary Defense Raid
+    | `151` -- instance_event_hanuimaru - Ahnimar Event Arena
+    | `152` -- w_golden_moss_forest - Goldleaf Forest
+    | `153` -- instance_training_camp_1on1_ga - Make a Splash
+    | `154` -- instance_burntcastle_armory_nightmare - Nightmare Burnt Castle Armory
+    | `155` -- instance_divided_crossroad - Crossroads Arena
+    | `156` -- instance_noryette_battlefield - Noryette Arena
+    | `158` -- instance_life_dungeon_daru - Island of Abundance
+    | `159` -- instance_golden_plains_ga - Golden Plains Battle
+```
+
+**ZONE_KEY**
+
+`0`|`100`|`101`|`102`|`104`...(+315)
+
+```lua
+-- Obtained from db zones
+ZONE_KEY:
+    | `0` -- login -
+    | `2` -- siegefield -
+    | `3` -- npc_single -
+    | `4` -- cbsuh_nonpc - Guild House
+    | `21` -- old_w_garangdol -
+    | `22` -- old_w_marianople -
+    | `23` -- old_w_solzreed -
+    | `24` -- old_w_two_crowns -
+    | `25` -- old_w_cross_plains -
+    | `29` -- old_w_white_forest -
+    | `30` -- old_w_gold_moss -
+    | `31` -- old_w_longsand -
+    | `32` -- old_w_gold_plains -
+    | `33` -- old_w_cradle_genesis -
+    | `34` -- old_w_bronze_rock -
+    | `35` -- old_w_hanuimaru -
+    | `36` -- old_w_nameless_canyon -
+    | `37` -- old_w_gweoniod_forest -
+    | `38` -- old_w_lilyut_mea -
+    | `39` -- old_w_carcass -
+    | `40` -- old_w_hell_swamp -
+    | `41` -- old_w_death_mt -
+    | `42` -- old_w_twist_coast -
+    | `43` -- old_w_tornado_mea -
+    | `44` -- old_w_dark_moon -
+    | `45` -- old_w_firefly_pen -
+    | `46` -- old_w_frozen_top -
+    | `47` -- old_w_mirror_kingdom -
+    | `72` -- ocean_level -
+    | `73` -- old_e_black_desert -
+    | `74` -- old_e_laveda -
+    | `75` -- old_e_desert_of_fossils -
+    | `76` -- old_e_sunny_wilderness -
+    | `77` -- old_e_volcanic_shore -
+    | `78` -- old_e_sylvina_volcanic_region -
+    | `79` -- old_e_hasla -
+    | `80` -- old_e_ruins_of_hariharalaya -
+    | `81` -- old_e_steppe_belt -
+    | `82` -- old_e_rainbow_field -
+    | `83` -- old_e_lokaloka_mt_south -
+    | `84` -- old_e_lokaloka_mt_north -
+    | `85` -- old_e_return_land -
+    | `86` -- old_e_loca_checkers -
+    | `87` -- old_e_night_velley -
+    | `88` -- old_e_una_basin -
+    | `89` -- old_e_ancient_forest -
+    | `90` -- old_e_ynystere -
+    | `91` -- old_e_sing_land -
+    | `92` -- old_e_falcony_plateau -
+    | `93` -- old_e_tiger_mt -
+    | `94` -- old_e_mahadevi -
+    | `95` -- old_e_sunrise_pen -
+    | `96` -- old_e_white_island -
+    | `97` -- old_w_ynys_island -
+    | `98` -- old_w_wandering_island -
+    | `99` -- origin -
+    | `100` -- model_room -
+    | `101` -- worldlevel8x8 -
+    | `102` -- world8x8_noone -
+    | `104` -- module_object_update -
+    | `105` -- module_hightmap_update -
+    | `108` -- npc_brave -
+    | `117` -- background_lod -
+    | `118` -- main_world_0_0 -
+    | `119` -- main_world_1_0 -
+    | `120` -- main_world_2_0 -
+    | `121` -- main_world_0_1 -
+    | `122` -- main_world_1_1 -
+    | `123` -- main_world_2_1 -
+    | `124` -- main_world_0_2 -
+    | `125` -- main_world_1_2 -
+    | `126` -- main_world_2_2 -
+    | `127` -- main_world_rain_bow -
+    | `128` -- main_world_tiger -
+    | `129` -- w_gweonid_forest_1 - Gweonid Forest
+    | `130` -- main_world_two_crowns -
+    | `131` -- main_world_3_0 -
+    | `132` -- main_world_bone -
+    | `133` -- w_marianople_1 - Marianople
+    | `134` -- instance_silent_colossus - Dreadnought
+    | `135` -- main_world_rough_ynystere -
+    | `136` -- e_steppe_belt_1 - Windscour Savannah
+    | `137` -- e_ruins_of_hariharalaya_1 - Perinoor Ruins
+    | `138` -- e_lokas_checkers_1 - Rookborne Basin
+    | `139` -- e_ynystere_1 - Ynystere
+    | `140` -- w_garangdol_plains_1 - Dewstone Plains
+    | `141` -- e_sunrise_peninsula_1 - Solis Headlands
+    | `142` -- w_solzreed_1 - Solzreed Peninsula
+    | `143` -- w_white_forest_1 - White Arden
+    | `144` -- w_lilyut_meadow_1 - Lilyut Hills
+    | `145` -- w_the_carcass_1 - Karkasse Ridgelands
+    | `146` -- e_rainbow_field_1 - Arcum Iris
+    | `147` -- sound_test -
+    | `148` -- w_cross_plains_1 - Cinderstone Moor
+    | `149` -- w_two_crowns_1 - Two Crowns
+    | `150` -- w_cradle_of_genesis_1 - Aubre Cradle
+    | `151` -- w_golden_plains_1 - Halcyona
+    | `152` -- 3d_environment_object -
+    | `153` -- e_mahadevi_1 - Mahadevi
+    | `154` -- w_bronze_rock_1 - Airain Rock
+    | `155` -- e_hasla_1 - Hasla
+    | `156` -- e_falcony_plateau_1 - Falcorth Plains
+    | `157` -- e_sunny_wilderness_1 - Sunbite Wilds
+    | `158` -- e_tiger_spine_mountains_1 - Tigerspine Mountains
+    | `159` -- e_ancient_forest - Silent Forest
+    | `160` -- e_singing_land_1 - Villanelle
+    | `161` -- w_hell_swamp_1 - Hellswamp
+    | `162` -- w_long_sand_1 - Sanddeep
+    | `163` -- test_w_gweonid_forest -
+    | `164` -- w_barren_land - The Wastes
+    | `165` -- machinima_w_solzreed -
+    | `166` -- npc_test -
+    | `167` -- 3d_natural_object -
+    | `168` -- machinima_w_gweonid_forest -
+    | `169` -- machinima_w_garangdol_plains -
+    | `170` -- machinima_w_bronze_rock -
+    | `171` -- sumday_nonpc -
+    | `172` -- s_lost_island - Castaway Strait
+    | `173` -- s_lostway_sea - Castaway Strait
+    | `174` -- gstar2010 - G-Star 2010
+    | `175` -- chls_model_room -
+    | `176` -- s_zman_nonpc -
+    | `177` -- loginbg2 -
+    | `178` -- w_solzreed_2 - Solzreed Peninsula
+    | `179` -- w_solzreed_3 - Solzreed Peninsula
+    | `180` -- s_silent_sea_7 - Arcadian Sea
+    | `181` -- w_gweonid_forest_2 - Gweonid Forest
+    | `182` -- w_gweonid_forest_3 - Gweonid Forest
+    | `183` -- w_marianople_2 - Marianople
+    | `184` -- e_falcony_plateau_2 - Falcorth Plains
+    | `185` -- w_garangdol_plains_2 - Dewstone Plains
+    | `186` -- w_two_crowns_2 - Two Crowns
+    | `187` -- e_rainbow_field_2 - Arcum Iris
+    | `188` -- e_rainbow_field_3 - Arcum Iris
+    | `189` -- e_rainbow_field_4 - Arcum Iris
+    | `190` -- e_sunny_wilderness_2 - Sunbite Wilds
+    | `191` -- e_sunrise_peninsula_2 - Solis Headlands
+    | `192` -- w_bronze_rock_2 - Airain Rock
+    | `193` -- w_bronze_rock_3 - Airain Rock
+    | `194` -- e_singing_land_2 - Villanelle
+    | `195` -- w_lilyut_meadow_2 - Lilyut Hills
+    | `196` -- e_mahadevi_2 - Mahadevi
+    | `197` -- e_mahadevi_3 - Mahadevi
+    | `198` -- instance_training_camp - Drill Camp
+    | `204` -- o_salpimari - Heedmar
+    | `205` -- o_nuimari - Nuimari
+    | `206` -- w_golden_plains_2 - Halcyona
+    | `207` -- w_golden_plains_3 - Halcyona
+    | `209` -- w_dark_side_of_the_moon -
+    | `210` -- s_silent_sea_1 - Arcadian Sea
+    | `211` -- s_silent_sea_2 - Arcadian Sea
+    | `212` -- s_silent_sea_3 - Arcadian Sea
+    | `213` -- s_silent_sea_4 - Arcadian Sea
+    | `214` -- s_silent_sea_5 - Arcadian Sea
+    | `215` -- s_silent_sea_6 - Arcadian Sea
+    | `216` -- e_una_basin -
+    | `217` -- s_nightmare_coast -
+    | `218` -- s_golden_sea_1 - Halcyona Gulf
+    | `219` -- s_golden_sea_2 - Halcyona Gulf
+    | `221` -- s_crescent_sea - Feuille Sound
+    | `225` -- lock_south_sunrise_peninsula - Southern Solis Forbidden Field
+    | `226` -- lock_golden_sea - Forbidden Halcyona Reef
+    | `227` -- lock_left_side_of_silent_sea - Western Arcadian Sea Forbidden Reef
+    | `228` -- lock_right_side_of_silent_sea_1 - Eastern Arcadian Sea Forbidden Reef
+    | `229` -- lock_right_side_of_silent_sea_2 - Eastern Arcadian Sea Forbidden Reef
+    | `233` -- o_seonyeokmari - Marcala
+    | `234` -- o_rest_land - Calmlands
+    | `236` -- instance_burntcastle_armory - Burnt Castle Armory
+    | `240` -- instance_sal_temple - Palace Cellar
+    | `241` -- instance_hadir_farm - Hadir Farm
+    | `242` -- e_ruins_of_hariharalaya_2 - Perinoor Ruins
+    | `243` -- e_ruins_of_hariharalaya_3 - Perinoor Ruins
+    | `244` -- w_white_forest_2 - White Arden
+    | `245` -- w_long_sand_2 - Sanddeep
+    | `246` -- e_lokas_checkers_2 - Rookborne Basin
+    | `247` -- e_steppe_belt_2 - Windscour Savannah
+    | `248` -- w_hell_swamp_2 - Hellswamp
+    | `251` -- e_sylvina_region - Sylvina Caldera
+    | `256` -- e_singing_land_3 - Villanelle
+    | `257` -- w_cross_plains_2 - Cinderstone Moor
+    | `258` -- e_tiger_spine_mountains_2 - Tigerspine Mountains
+    | `259` -- e_ynystere_2 - Ynystere
+    | `260` -- arche_mall - Mirage Isle
+    | `261` -- e_white_island - Saltswept Atoll
+    | `262` -- instance_cuttingwind_deadmine - Sharpwind Mines
+    | `264` -- instance_cradle_of_destruction - Kroloal Cradle
+    | `265` -- instance_howling_abyss - Howling Abyss
+    | `266` -- w_mirror_kingdom_1 - Miroir Tundra
+    | `267` -- w_frozen_top_1 - Skytalon
+    | `269` -- w_hanuimaru_1 - Ahnimar
+    | `270` -- e_lokaloka_mountains_1 - Rokhala Mountains
+    | `271` -- test_instance_violent_maelstrom - 199881 DO NOT TRANSLATE
+    | `272` -- e_hasla_2 - Hasla
+    | `273` -- w_the_carcass_2 - Karkasse Ridgelands
+    | `274` -- e_hasla_3 - Hasla
+    | `275` -- o_land_of_sunlights - Sungold Fields
+    | `276` -- o_abyss_gate - Exeloch
+    | `277` -- s_lonely_sea_1 - Unknown Area
+    | `278` -- instance_nachashgar - Serpentis
+    | `280` -- instance_howling_abyss_2 - Greater Howling Abyss
+    | `281` -- o_ruins_of_gold - Golden Ruins
+    | `282` -- o_shining_shore_1 - Diamond Shores
+    | `283` -- s_freedom_island - Sunspeck Sea
+    | `284` -- s_pirate_island - Stormraw Sound
+    | `285` -- instance_immortal_isle - Sea of Drowned Love
+    | `286` -- e_sunny_wilderness_3 - Sunbite Wilds
+    | `287` -- e_sunny_wilderness_4 - Sunbite Wilds
+    | `288` -- o_the_great_reeds - Reedwind
+    | `289` -- s_silent_sea_8 - Arcadian Sea
+    | `290` -- instance_immortal_isle_easy - Lesser Sea of Drowned Love
+    | `292` -- instance_nachashgar_easy - Lesser Serpentis
+    | `293` -- o_library_1 - Introspect Path
+    | `294` -- o_library_2 - Verdant Skychamber
+    | `295` -- o_library_3 - Evening Botanica
+    | `296` -- instance_library_1 -  Encyclopedia Room
+    | `297` -- instance_library_2 - Libris Garden
+    | `298` -- instance_library_3 - Screaming Archives
+    | `299` -- tutorial_test - 264310 DO NOT TRANSLATE
+    | `300` -- instance_prologue - 268409 DO NOT TRANSLATE
+    | `301` -- o_shining_shore_2 - Diamond Shores
+    | `302` -- instance_training_camp_1on1 - Gladiator Arena
+    | `303` -- instance_library_boss_1 - Screening Hall
+    | `304` -- instance_library_boss_2 - Frozen Study
+    | `305` -- instance_library_boss_3 - Deranged Bookroom
+    | `306` -- instance_library_tower_defense - Corner Reading Room
+    | `307` -- o_dew_plains - Mistmerrow
+    | `308` -- s_broken_mirrors_sea_1 - Shattered Sea
+    | `309` -- s_broken_mirrors_sea_2 - Shattered Sea
+    | `310` -- o_whale_song_bay - Whalesong Harbor
+    | `311` -- lock_left_side_of_broken_mirrors_sea - Shattered Sea Hidden Sea
+    | `312` -- o_epherium_1 - Epherium
+    | `313` -- instance_battle_field - New Arena
+    | `314` -- o_epherium_2 - Epherium
+    | `315` -- instance_library_heart - Heart of Ayanad
+    | `316` -- instance_burntcastle_armory_hard - Greater Burnt Castle Armory
+    | `317` -- instance_hadir_farm_hard - Greater Hadir Farm
+    | `318` -- instance_cuttingwind_deadmine_hard - Greater Sharpwind Mines
+    | `319` -- instance_sal_temple_hard - Greater Palace Cellar
+    | `320` -- instance_cradle_of_destruction_hard - Greater Kroloal Cradle
+    | `321` -- instance_feast_garden - Mistsong Summit
+    | `322` -- instance_training_camp_no_item - Gladiator Arena
+    | `323` -- instance_the_judge_of_uthstin - Decisive Arena
+    | `326` -- instance_battle_field_of_feast - Free-For-All Arena
+    | `327` -- instance_prologue_izuna - Ezna Massacre Site
+    | `328` -- w_cradle_of_genesis_2 - Aubre Cradle
+    | `329` -- s_boiling_sea_1 - Boiling Sea
+    | `330` -- s_boiling_sea_2 - Boiling Sea
+    | `331` -- s_boiling_sea_3 - Boiling Sea
+    | `332` -- s_boiling_sea_4 - Boiling Sea
+    | `333` -- w_hanuimaru_2 - Ahnimar
+    | `334` -- w_hanuimaru_3 - Ahnimar
+    | `335` -- s_lonely_sea_2 - Unknown Area
+    | `337` -- o_room_of_queen_1 - Queen's Chamber
+    | `338` -- instance_sea_of_chaos - [Naval Arena] Bloodsalt Bay
+    | `339` -- s_boiling_sea_5 - Boiling Sea
+    | `340` -- e_lokaloka_mountains_2 - Rokhala Mountains
+    | `341` -- o_room_of_queen_2 - Queen's Chamber
+    | `342` -- o_room_of_queen_3 - Unreleased Queen's Chamber
+    | `343` -- s_whale_swell_strait - Whaleswell Straits
+    | `344` -- o_candlestick_of_sea - Aegis Island
+    | `345` -- lock_left_side_of_whale_sea - West Whalesong
+    | `346` -- instance_hanging_gardens_of_ipna - Ipnysh Sanctuary
+    | `347` -- instance_festival_camp_1on1 - Snowball Arena
+    | `348` -- promotion - Promotion
+    | `349` -- promotion_45 - Promotion
+    | `350` -- o_hirama_the_west_1 - Western Hiram Mountains
+    | `351` -- o_hirama_the_west_2 - Western Hiram Mountains
+    | `352` -- instance_golden_plains - Golden Plains Battle
+    | `353` -- instance_golden_plains_war - Golden Plains Battle
+    | `354` -- o_hirama_the_east_1 - Eastern Hiram Mountains
+    | `355` -- o_hirama_the_east_2 - Eastern Hiram Mountains
+    | `356` -- instance_library_new_boss_1 - Screening Hall (Disabled)
+    | `357` -- instance_library_new_boss_2 - Frozen Study
+    | `358` -- instance_library_new_boss_3 - Deranged Bookroom
+    | `359` -- test_arcaneearth - Magic Land Test
+    | `360` -- instance_library_new_heart - Heart of Ayanad
+    | `361` -- library_lobby_1f - Introspect Path
+    | `362` -- library_lobby_2f - Verdant Skychamber
+    | `363` -- library_lobby_3f - Evening Botanica
+    | `364` -- library_lobby_4f - Constellation Breakroom
+    | `365` -- instance_library_boss_total - Abyssal Library
+    | `366` -- instance_carcass - Red Dragon's Keep
+    | `367` -- instance_the_last_day_of_hiramakand - The Fall of Hiram City
+    | `368` -- instance_challenge_tower - Noryette Challenge
+    | `369` -- zone_instance_defense_of_feast - Mistsong Banquet
+    | `370` -- instance_sea_survival - Naval Survival Game (test)
+    | `371` -- tod_test - 598857 DO NOT TRANSLATE - TEST
+    | `372` -- instance_sea_survival_2 - Stillwater Gulf
+    | `373` -- instance_eternity - Hereafter Rebellion
+    | `374` -- instance_dew_plain - Battle of Mistmerrow
+    | `375` -- loginbg5 -
+    | `376` -- instance_dewplane_boss - Kadum
+    | `378` -- the_garden_1 - Garden of the Gods
+    | `379` -- gatekeeper_hall - Gatekeeper Hall
+    | `381` -- instance_hanuimaru - Dairy Cow Dreamland
+    | `382` -- the_garden_2 - Garden of the Gods
+    | `383` -- instance_restraint_of_power - Circle of Authority
+    | `384` -- instance_phantom_of_delphinad - Delphinad Mirage
+    | `386` -- instance_arena_2on2 - Test Arena
+    | `387` -- o_land_of_magic - Mysthrane Gorge
+    | `388` -- o_mount_ipnir_1 - Ipnya Ridge
+    | `389` -- instance_garuda_nest - Skyfin War
+    | `390` -- instance_mount_ipnir_story - Queen's Altar
+    | `391` -- o_mount_ipnir_2 - Ipnya Ridge
+    | `393` -- instance_event_camp_1on1 - Event Arena
+    | `395` -- instance_black_thorn - Unused
+    | `396` -- instance_black_spike - Black Thorn
+    | `397` -- o_western_prairie_1 - Great Prairie of the West
+    | `398` -- instance_nachashgar_ancient - Greater Serpentis
+    | `399` -- instance_cuttlefish_event_zone - Squid Game Event Arena
+    | `401` -- o_western_prairie_2 - Great Prairie of the West
+    | `402` -- instance_dimensional_defence - Dimensional Boundary Defense Raid
+    | `403` -- instance_event_hanuimaru - Ahnimar Event Arena
+    | `405` -- w_golden_moss_forest - Goldleaf Forest
+    | `406` -- instance_training_camp_1on1_ga - Gladiator Arena
+    | `407` -- instance_burntcastle_armory_nightmare -
+    | `408` -- instance_divided_crossroad - Crossroads Arena
+    | `409` -- instance_noryette_battlefield - Noryette Arena
+    | `410` -- instance_life_dungeon_daru - Island of Abundance
+    | `411` -- instance_golden_plains_ga - Arena
+```
+
+**ZONE_LEVEL**
+
+`0`|`1`|`2`|`3`
+
+```lua
+ZONE_LEVEL:
+    | `0` -- World
+    | `1` -- Continent
+    | `2` -- Zone
+    | `3` -- City
+```
+
+**ZONE_NAME**
+
+"Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143)
+
+```lua
+ZONE_NAME:
+    | "Abyssal Library"
+    | "Aegis Island"
+    | "Ahnimar Event Arena"
+    | "Ahnimar"
+    | "Airain Rock"
+    | "Ancient Ezna"
+    | "Arcadian Sea"
+    | "Arcum Iris"
+    | "Arena"
+    | "Aubre Cradle"
+    | "Battle of Mistmerrow"
+    | "Black Thorn Prison"
+    | "Bloodsalt Bay"
+    | "Boiling Sea"
+    | "Burnt Castle Armory"
+    | "Burnt Castle Cellar"
+    | "Calmlands"
+    | "Castaway Strait"
+    | "Cinderstone Moor"
+    | "Circle of Authority"
+    | "Constellation Breakroom (Disabled)"
+    | "Corner Reading Room (Disabled)"
+    | "Corner Reading Room"
+    | "Crossroads Arena"
+    | "Dairy Cow Dreamland"
+    | "Decisive Arena"
+    | "Delphinad Mirage"
+    | "Deranged Bookroom (Disabled)"
+    | "Deranged Bookroom"
+    | "Dewstone Plains"
+    | "Diamond Shores"
+    | "Dimensional Boundary Defense Raid"
+    | "Dreadnought"
+    | "Drill Camp"
+    | "Eastern Hiram Mountains"
+    | "Encyclopedia Room"
+    | "Epherium"
+    | "Evening Botanica (Disabled)"
+    | "Evening Botanica"
+    | "Event Arena"
+    | "Exeloch"
+    | "Falcorth Plains"
+    | "Feuille Sound"
+    | "Forbidden Sea"
+    | "Forbidden Shore"
+    | "Free-For-All Arena"
+    | "Frozen Study (Disabled)"
+    | "Frozen Study"
+    | "Garden of the Gods"
+    | "Gatekeeper Hall"
+    | "Gladiator Arena"
+    | "Golden Plains Battle"
+    | "Golden Ruins"
+    | "Goldleaf Forest"
+    | "Great Prairie of the West"
+    | "Greater Burnt Castle Armory"
+    | "Greater Hadir Farm"
+    | "Greater Howling Abyss"
+    | "Greater Kroloal Cradle"
+    | "Greater Palace Cellar"
+    | "Greater Serpentis"
+    | "Greater Sharpwind Mines"
+    | "Guild House"
+    | "Gweonid Forest"
+    | "Hadir Farm"
+    | "Halcyona Gulf"
+    | "Halcyona"
+    | "Hasla"
+    | "Heart of Ayanad (Disabled)"
+    | "Heart of Ayanad"
+    | "Heedmar"
+    | "Hellswamp"
+    | "Hereafter Rebellion"
+    | "Howling Abyss"
+    | "Introspect Path"
+    | "Ipnya Ridge"
+    | "Ipnysh Sanctuary"
+    | "Island of Abundance"
+    | "Kadum"
+    | "Karkasse Ridgelands"
+    | "Kroloal Cradle"
+    | "Lesser Sea of Drowned Love"
+    | "Lesser Serpentis"
+    | "Libertia Sea"
+    | "Libris Garden"
+    | "Lilyut Hills"
+    | "Lucius's Dream"
+    | "Mahadevi"
+    | "Make a Splash"
+    | "Marcala"
+    | "Marianople"
+    | "Mirage Isle"
+    | "Miroir Tundra"
+    | "Mistmerrow"
+    | "Mistsong Banquet"
+    | "Mistsong Summit"
+    | "Mysthrane Gorge"
+    | "Naval Survival Game (test)"
+    | "New Arena"
+    | "Nightmare Burnt Castle Armory"
+    | "Noryette Arena"
+    | "Noryette Challenge"
+    | "Nuimari"
+    | "Palace Cellar"
+    | "Perinoor Ruins"
+    | "Queen's Altar"
+    | "Queen's Chamber"
+    | "Red Dragon's Keep"
+    | "Reedwind"
+    | "Rokhala Mountains"
+    | "Rookborne Basin"
+    | "Saltswept Atoll"
+    | "Sanddeep"
+    | "Screaming Archives"
+    | "Screening Hall (Disabled)"
+    | "Screening Hall"
+    | "Sea of Drowned Love"
+    | "Serpentis"
+    | "Sharpwind Mines"
+    | "Shattered Sea"
+    | "Silent Forest"
+    | "Skyfin War"
+    | "Snowball Arena"
+    | "Solis Headlands"
+    | "Solzreed Peninsula"
+    | "Squid Game Event Arena"
+    | "Stillwater Gulf"
+    | "Stormraw Sound"
+    | "Sunbite Wilds"
+    | "Sungold Fields"
+    | "Sunspeck Sea"
+    | "Sylvina Caldera"
+    | "Test Arena"
+    | "The Fall of Hiram City"
+    | "The Wastes"
+    | "Tigerspine Mountains"
+    | "Two Crowns"
+    | "Unused"
+    | "Verdant Skychamber (Disabled)"
+    | "Verdant Skychamber"
+    | "Villanelle"
+    | "Violent Maelstrom Arena"
+    | "Western Hiram Mountains"
+    | "Whalesong Harbor"
+    | "Whaleswell Straits"
+    | "White Arden"
+    | "Windscour Savannah"
+    | "Ynystere"
+```
+

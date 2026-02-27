@@ -724,6 +724,8 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---| `ZST_INVALID`
 
 ---@FIXME: when a addon is reloaded this doesnt get removed.
+---**Warning:** Buttons are not removed when the addon is reloaded.
+---
 ---Adds a button to the escape menu for the related addon.
 ---@param categoryId ESC_MENU_CATEGORY_ID The category ID for the menu.
 ---@param uiCategory UI_CATEGORY The UI category ID. Use an ID above 1000 for custom UI_CATEGORYs to avoid conflicts with default categories or other addons. (max: `16777216`)

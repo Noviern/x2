@@ -452,7 +452,7 @@
 ---@field zoneGroupName string
 
 ---@class TargetAbilityTemplate
----@field index number
+---@field index ABILITY_TYPE|number
 ---@field level number
 ---@field name string
 
@@ -467,15 +467,23 @@
 ---@field [3] ABILITY_TYPE
 
 ---@class UnitInfo
+---@field base_progress number|nil if type == housing
+---@field building_state "done"|string|nil if type == housing
 ---@field class UnitClass
----@field expeditionName string|nil
+---@field expeditionName string|nil if type == character
 ---@field faction string
 ---@field family_name string
+---@field grade string|nil
 ---@field heirLevel number
+---@field house_category string|nil if type == housing
 ---@field hp string
+---@field is_portal boolean|nil if type == npc
+---@field kind string|nil if type == npc
 ---@field level number
----@field maxHp string
+---@field max_hp string
 ---@field name string
+---@field owner_name string|nil if type == housing
+---@field nick_name string|nil
 ---@field type UNIT_INFO_TYPE
 
 ---@class BuffInfo

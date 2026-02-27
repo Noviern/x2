@@ -1,0 +1,118 @@
+# X2Trial
+## Globals
+**MAX_BAD_USER_RECORDS_LIST_COUNT**
+
+`integer`
+
+**MAX_BAD_USER_RECORDS_PAGE_COUNT**
+
+`integer`
+
+**MAX_BAD_USER_RECORD_PER_PAGE_COUNT**
+
+`integer`
+
+**MAX_REPORT_BAD_USER_DESCRIPTION_SIZE**
+
+`integer`
+
+**SENTENCE_GUILTY_1**
+
+`integer`
+
+**SENTENCE_GUILTY_2**
+
+`integer`
+
+**SENTENCE_GUILTY_3**
+
+`integer`
+
+**SENTENCE_GUILTY_4**
+
+`integer`
+
+**SENTENCE_GUILTY_5**
+
+`integer`
+
+**SENTENCE_NOT_GUILTY**
+
+`integer`
+
+**TRIAL_FINAL_STATEMENT**
+
+`integer`
+
+**TRIAL_FREE**
+
+`integer`
+
+**TRIAL_GUILTY_BY_SYSTEM**
+
+`integer`
+
+**TRIAL_GUILTY_BY_USER**
+
+`integer`
+
+**TRIAL_POST_SENTENCE**
+
+`integer`
+
+**TRIAL_SENTENCE**
+
+`integer`
+
+**TRIAL_TESTIMONY**
+
+`integer`
+
+**TRIAL_WAITING_CRIME_RECORD**
+
+`integer`
+
+**TRIAL_WAITING_JURY**
+
+`integer`
+
+**X2Trial**
+
+`X2Trial`
+
+## Aliases
+**SENTENCE_TYPE**
+
+`SENTENCE_GUILTY_1`|`SENTENCE_GUILTY_2`|`SENTENCE_GUILTY_3`|`SENTENCE_GUILTY_4`|`SENTENCE_GUILTY_5`...(+1)
+
+```lua
+-- api/X2Trial
+SENTENCE_TYPE:
+    | `SENTENCE_GUILTY_1`
+    | `SENTENCE_GUILTY_2`
+    | `SENTENCE_GUILTY_3`
+    | `SENTENCE_GUILTY_4`
+    | `SENTENCE_GUILTY_5`
+    | `SENTENCE_NOT_GUILTY`
+```
+
+**TRIAL_STATE**
+
+`TRIAL_FINAL_STATEMENT`|`TRIAL_FREE`|`TRIAL_GUILTY_BY_SYSTEM`|`TRIAL_GUILTY_BY_USER`|`TRIAL_POST_SENTENCE`...(+4)
+
+```lua
+-- api/X2Trial
+TRIAL_STATE:
+    | `TRIAL_FINAL_STATEMENT`
+    | `TRIAL_FREE`
+    | `TRIAL_GUILTY_BY_SYSTEM`
+    | `TRIAL_GUILTY_BY_USER`
+    | `TRIAL_POST_SENTENCE`
+    | `TRIAL_SENTENCE`
+    | `TRIAL_TESTIMONY`
+    | `TRIAL_WAITING_CRIME_RECORD`
+    | `TRIAL_WAITING_JURY`
+```
+
+## Classes
+### Class: X2Trial

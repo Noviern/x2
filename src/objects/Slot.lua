@@ -162,8 +162,8 @@ function Slot:EstablishSlot(slotType, slotIdx) end
 ---```lua
 ---widget:EstablishVirtualSlot(ISLOT_ABILITY_VIEW, ATTACK_SKILL + 1, 1)
 ---widget:EstablishVirtualSlot(ISLOT_ACTION, 1, 1) -- Shortcut bar slots. (min: `1`, max: `72`)
----widget:EstablishVirtualSlot(ISLOT_BAG, 0, 1) -- (min: `0`, max: `149`)
----widget:EstablishVirtualSlot(ISLOT_BANK, 0, 1) -- (min: `0`, max: `149`)
+---widget:EstablishVirtualSlot(ISLOT_BAG, 0, 0) -- (min: `0`, max: `149`)
+---widget:EstablishVirtualSlot(ISLOT_BANK, 0, 0) -- (min: `0`, max: `149`)
 ---widget:EstablishVirtualSlot(ISLOT_COFFER, 0, 1) -- (min: `0`, max: `149`)
 ---widget:EstablishVirtualSlot(ISLOT_CONSTANT, 0, 1)
 ---widget:EstablishVirtualSlot(ISLOT_EQUIPMENT, ES_HEAD - 1, 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_EQUIPMENT`.

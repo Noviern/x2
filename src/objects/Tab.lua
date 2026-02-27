@@ -53,7 +53,7 @@ function Tab:GetActivateTabCount() end
 function Tab:GetTabCount() end
 
 ---Hides the tab at the specified index in the Tab.
----@param idx number The index of the tab to hide.
+---@param idx number The index of the tab to hide. (min: `1`)
 function Tab:HideTab(idx) end
 
 ---Checks if the tab at the specified index is hidden.
