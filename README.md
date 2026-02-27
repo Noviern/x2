@@ -6,7 +6,7 @@ Provides documentation, definitions, and IntelliSense for ArcheAge Addons throug
 
 ## How To Use IntelliSense ([VSCode](https://code.visualstudio.com/))
 1. Clone or download this repo.
-2. Extract and place in `C:/ArcheRage/Documents/Addon`.
+2. Extract and place in `C:/ArcheRage/Documents/Addon`. (Rename folder to `x2` so that the full path looks like `C:/ArcheRage/Documents/Addon/x2/`)
 3. Install VSCode Extension [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua).
 4. Create a `.luarc.jsonc` in your project.
 
