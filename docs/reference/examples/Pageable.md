@@ -15,7 +15,7 @@ pageableExample:SetPageCount(3)
 
 for i = 1, 3 do
   local page = pageableExample:CreateChildWidget("textbox", "page", i, true)
-  page:SetText("page" .. i .. "\nscroll up to go to previous page\nscroll down to go to next apge")
+  page:SetText("page" .. i .. "\nscroll up to go to previous page\nscroll down to go to next page")
   page:AddAnchor("TOPLEFT", pageableExample, 0, 0)
   page:AddAnchor("BOTTOMRIGHT", pageableExample, 0, 0)
   pageableExample:AddWidgetToPage(page, i)
