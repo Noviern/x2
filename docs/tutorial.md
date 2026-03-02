@@ -157,7 +157,7 @@ obj:SetHeight(80)
 obj:Show(true)
 
 if obj:IsValidUIObject() then
-    ADDON:ChatLog("Object is alive and has type:", obj:GetObjectType())
+    ADDON:ChatLog("Object is alive and has type: " .. obj:GetObjectType())
 end
 ```
 
