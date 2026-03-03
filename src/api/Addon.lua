@@ -403,12 +403,138 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---@alias ContentTriggerFunc fun(show: boolean|nil, data: table|nil)
 
 ---api/Addon
+---db > system_factions
 ---@alias FACTION_TYPE
 ---| `HARIHARA_FACTION_ID`
 ---| `MONSTER_FACTION_ID`
 ---| `NUIA_FACTION_ID`
 ---| `OUTLAW_FACTION_ID`
 ---| `PC_IN_ALL_FACTION_ID`
+---| `1`   # Friendly
+---| `2`   # Neutral
+---| `3`   # Hostile
+---| `101` # Crescent Throne
+---| `102` # Eznan Royals
+---| `103` # Dreamwaker Exiles
+---| `104` # Andelph
+---| `105` # Wyrdwinds
+---| `106` # Triestes
+---| `107` # Noryettes
+---| `108` # East Ishvara
+---| `109` # West Ishvara
+---| `110` # South Ishvara
+---| `111` # North Ishvara
+---| `112` # Reminisci Castle
+---| `113` # Wandering Winds
+---| `114` # Pirate
+---| `115` # Horror
+---| `116` # Animal
+---| `117` # 27499 DO NOT TRANSLATE
+---| `118` # 27500 DO NOT TRANSLATE
+---| `119` # 27501 DO NOT TRANSLATE
+---| `120` # 27502 DO NOT TRANSLATE
+---| `121` # 27503 DO NOT TRANSLATE
+---| `122` # 27504 DO NOT TRANSLATE
+---| `123` # 27505 DO NOT TRANSLATE
+---| `124` # 27506 DO NOT TRANSLATE
+---| `125` # 27507 DO NOT TRANSLATE
+---| `126` # 27508 DO NOT TRANSLATE
+---| `127` # 27509 DO NOT TRANSLATE
+---| `128` # 27510 DO NOT TRANSLATE
+---| `129` # 27511 DO NOT TRANSLATE
+---| `130` # 27512 DO NOT TRANSLATE
+---| `131` # Friendly to all factions except monsters.
+---| `132` # 27514 DO NOT TRANSLATE
+---| `133` # Bloodhand Infiltrators
+---| `134` # Team Sallium
+---| `135` # Team Illion
+---| `136` # Bloodhand Infiltrator Trackers
+---| `137` # Bloodhands
+---| `138` # 27520 DO NOT TRANSLATE
+---| `139` # 27521 DO NOT TRANSLATE
+---| `140` # 27522 DO NOT TRANSLATE
+---| `141` # 27523 DO NOT TRANSLATE
+---| `142` # Antiquary Society
+---| `143` # 3rd Corps
+---| `144` # Eznan Guard
+---| `145` # 27527 DO NOT TRANSLATE
+---| `146` # 27528 DO NOT TRANSLATE
+---| `147` # The Crimson Watch
+---| `148` # Nuia Alliance
+---| `149` # Haranya Alliance
+---| `150` # 27532 DO NOT TRANSLATE
+---| `151` # 27533 DO NOT TRANSLATE
+---| `152` # 27534 DO NOT TRANSLATE
+---| `153` # 27535 DO NOT TRANSLATE
+---| `154` # 27536 DO NOT TRANSLATE
+---| `155` # 27537 DO NOT TRANSLATE
+---| `156` # 27538 DO NOT TRANSLATE
+---| `157` # 27539 DO NOT TRANSLATE
+---| `158` # 27540 DO NOT TRANSLATE
+---| `159` # Red Team
+---| `160` # Blue Team
+---| `161` # Pirate
+---| `162` # Neutral Guard
+---| `163` # Harani Bloodhand Infiltrators
+---| `164` # Pirate Hunters
+---| `165` # 170906 DO NOT TRANSLATE
+---| `166` # Independents
+---| `167` # Nuian Guard
+---| `168` # Harani Guard
+---| `169` # 184394 DO NOT TRANSLATE
+---| `170` # Scarecrows
+---| `171` # Nuian Front Watch
+---| `172` # Fish
+---| `173` # Haranya Front Watch
+---| `174` # Pirate Front Watch
+---| `175` # Nuia
+---| `176` # Haranya
+---| `177` # Player Nation Friendship (Nuia/Haranya/Pirate Hostility)
+---| `178` # Panophtes
+---| `179` # Argoth
+---| `180` # 343643 DO NOT TRANSLATE
+---| `181` # 343644 DO NOT TRANSLATE
+---| `182` # Unused
+---| `183` # Player Nations
+---| `184` # Nuian Faction Alliance
+---| `185` # Haranyan Faction Alliance
+---| `186` # Arena Participant
+---| `187` # Repentant Shadows
+---| `188` # Friend
+---| `189` # Ynystere Royal Family
+---| `190` # Family Monster
+---| `191` # Team Morpheus
+---| `192` # Team Rangora
+---| `193` # Team Pavitra
+---| `194` # Team Illion
+---| `195` # Ipnya
+---| `196` # Raid
+---| `197` # Noryette Challenger
+---| `198` # Party
+---| `199` # Haranya Alliance
+---| `200` # Nuia Alliance
+---| `201` # Anthalon
+---| `202` # Last Survivor
+---| `203` # Unclaimed
+---| `204` # Garden Explorer
+---| `205` # Garden Pioneer
+---| `206` # Garden Researcher
+---| `207` # No Owner
+---| `208` # Skillset Doodad
+---| `209` # Warden
+---| `210` # Infiltrator
+---| `211` # Game Participant
+---| `212` # Kurt
+---| `213` # Isan
+---| `214` # Machine Rift Defense Faction
+---| `215` # Sporty Day Participant
+---| `216` # test_fairy
+---| `217` # test_fairy Nuia
+---| `218` # test_fairy Haranya
+---| `219` # Event Participant
+---| `220` # Team Yata
+---| `221` # Team Greenman
+
 
 ---api/Addon
 ---@alias UI_TEXT_CATEGORY_ID
