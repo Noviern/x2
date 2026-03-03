@@ -44,9 +44,9 @@
 ```
 > Aligns the UI bounds to the specified anchor point at the given coordinates.
 > 
-> **Although this variant implicitly uses the parent of the current object,
-> `AddAnchor(anchor, parentId, x, y)` is usually recommended** because it makes
-> the anchor relationship explicit and much easier for future readers to
+> **Warning:** Although this variant implicitly uses the parent of the current
+> object, `AddAnchor(anchor, parentId, x, y)` is usually recommended because it
+> makes the anchor relationship explicit and much easier for future readers to
 > understand which object this UI element is actually anchored to.
 > 
 > @*param* `anchor` — Sets both the anchor point and anchor origin. (default: `"TOPLEFT"`)
@@ -149,7 +149,7 @@
   -> effectiveOffX: number
   2. effectiveOffY: number
 ```
-> Retrieves the effective offset (left, top) of the UI bounds.
+> Retrieves the effective rendered offset (left, top) of the UI bounds.
 > 
 > @*return* `effectiveOffX` — The effective x-offset.
 > 
@@ -161,8 +161,8 @@
   -> offX: number
   2. offY: number
 ```
-> Retrieves the offset coordinates of the UI bounds, constrained by screen
-> dimensions.
+> Retrieves the effective rendered offset (left, top) of the UI bounds,
+> constrained by screen dimensions.
 > 
 > @*return* `offX` — The x-offset (min: `0`, max: `screen width - effective width`).
 > 
@@ -223,8 +223,7 @@
   -> effectiveWidth: number
   2. effectiveHeight: number
 ```
-> Retrieves the effective width and height of the UI bounds, scaled if
-> ApplyUIScale is true.
+> Retrieves the effective rednered extent (width, height) of the UI bounds.
 > 
 > @*return* `effectiveWidth` — The effective width.
 > 

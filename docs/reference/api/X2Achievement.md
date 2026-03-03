@@ -88,6 +88,42 @@ ACHIEVEMENT_FILTER:
     | `AF_UNCOMPLETE` -- Doesnt work. Produces the same result as AF_ALL.
 ```
 
+**EAK_ACHIEVEMENT**
+
+2
+
+```lua
+EAK_ACHIEVEMENT:
+    | 2
+```
+
+**EAK_ARCHERAGE**
+
+4
+
+```lua
+EAK_ARCHERAGE:
+    | 4
+```
+
+**EAK_COLLECTION**
+
+3
+
+```lua
+EAK_COLLECTION:
+    | 3
+```
+
+**EAK_RACIAL_MISSION**
+
+1
+
+```lua
+EAK_RACIAL_MISSION:
+    | 1
+```
+
 **ENUM_ACHIEVEMENT_KIND**
 
 `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`
@@ -317,7 +353,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetSubcategoryInfo
 ```lua
-(method) X2Achievement:GetSubcategoryInfo(subCategory: number)
+(method) X2Achievement:GetSubcategoryInfo(subCategory: `10`|`11`|`12`|`13`|`14`...(+53))
   -> subcategoryInfo: SubcategoryInfo|nil
 ```
 > Retrieves subcategory information if the specified subcategory exists.
@@ -325,6 +361,68 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 > @*param* `subCategory` — The subcategory to query.
 > 
 > @*return* `subcategoryInfo` — The subcategory information, or `nil` if not found.
+> 
+> ```lua
+> subCategory:
+>     | `1` -- Character
+>     | `2` -- Pets/Mounts
+>     | `3` -- Collection
+>     | `4` -- Misc.
+>     | `5` -- Combat/PvP
+>     | `6` -- Siege
+>     | `7` -- Arena
+>     | `8` -- Collection
+>     | `9` -- Crafting
+>     | `10` -- Harvesting
+>     | `11` -- Trade
+>     | `12` -- Construction / Furniture
+>     | `13` -- Badges/Proficiency
+>     | `14` -- Quests/Completed
+>     | `15` -- Rifts/Attacks
+>     | `16` -- Collection
+>     | `17` -- Criminal Justice
+>     | `18` -- Groups
+>     | `31` -- Spring
+>     | `32` -- Summer
+>     | `33` -- Fall
+>     | `34` -- Winter
+>     | `35` -- Special Events
+>     | `41` -- Heroic
+>     | `44` -- Fishing
+>     | `9000001` -- Collection
+>     | `9000002` -- Exploration
+>     | `9000003` -- Special Events
+>     | `9000004` -- Arena
+>     | `9000005` -- Festival
+>     | `9000006` -- Exploration
+>     | `9000007` -- Pets/Mounts
+>     | `9000008` -- Character Development
+>     | `9000009` -- Adventure
+>     | `9000010` -- Royal Archivist
+>     | `9000011` -- Vocation
+>     | `9000012` -- Hiram Disciple
+>     | `9000013` -- Great Library Curator
+>     | `9000014` -- Akaschic Investigator
+>     | `36` -- Skywarden
+>     | `42` -- Sky Emperor
+>     | `45` -- Shapeshifter
+>     | `46` -- Strada
+>     | `47` -- Tuskora
+>     | `48` -- Fashion Icon
+>     | `8000001` -- Crazy Cat Person
+>     | `19` -- Lv1-5
+>     | `20` -- Lv6-10
+>     | `21` -- Lv11-15
+>     | `22` -- Lv16-20
+>     | `23` -- Lv21-25
+>     | `24` -- Lv26-30
+>     | `25` -- Lv31-35
+>     | `26` -- Lv36-40
+>     | `27` -- Lv41-45
+>     | `29` -- Lv51-55
+>     | `28` -- Lv46-50
+>     | `30` -- Lv1-70
+> ```
 > 
 > See: [SubcategoryInfo](../types/classes.md#class-subcategoryinfo)
 
@@ -355,7 +453,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetAchievementMainList
 ```lua
-(method) X2Achievement:GetAchievementMainList(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`, subCategoryType: number, achievementFilter: `AF_ALL`|`AF_COMPLETE`|`AF_INVALID`|`AF_TRACING`|`AF_UNCOMPLETE`)
+(method) X2Achievement:GetAchievementMainList(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`, subCategoryType: number|`0`, achievementFilter: `AF_ALL`|`AF_COMPLETE`|`AF_INVALID`|`AF_TRACING`|`AF_UNCOMPLETE`)
   -> achievementMainList: number[]
 ```
 > Retrieves a list of achievement types for the specified kind and subcategory
@@ -369,6 +467,8 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 > 
 > @*return* `achievementMainList` — A table of achievement types, or empty if none exist.
 > 
+> 
+> 
 > ```lua
 > -- api/X2Achievement
 > achievementKind:
@@ -376,6 +476,9 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 >     | `EAK_ARCHERAGE`
 >     | `EAK_COLLECTION`
 >     | `EAK_RACIAL_MISSION`
+> 
+> subCategoryType:
+>     | `0`
 > 
 > -- api/X2Achievement
 > -- Achievement Filter

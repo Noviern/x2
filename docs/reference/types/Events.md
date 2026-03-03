@@ -1807,7 +1807,7 @@ Event triggers when the player changes an ancestral skill.
 
 **HERO_ALL_SCORE_UPDATED_HANDLER**
 
-fun(factionID: `HARIHARA_FACTION_ID`|`MONSTER_FACTION_ID`|`NUIA_FACTION_ID`|`OUTLAW_FACTION_ID`|`PC_IN_ALL_FACTION_ID`)
+fun(factionID: `101`|`102`|`103`|`104`|`105`...(+124))
 
 Event triggers when the player tries to retrieve hero information or hero
 mission status.
@@ -1862,7 +1862,7 @@ fun()
 
 **HERO_RANK_DATA_RETRIEVED_HANDLER**
 
-fun(factionID: `HARIHARA_FACTION_ID`|`MONSTER_FACTION_ID`|`NUIA_FACTION_ID`|`OUTLAW_FACTION_ID`|`PC_IN_ALL_FACTION_ID`)
+fun(factionID: `101`|`102`|`103`|`104`|`105`...(+124))
 
 Event triggers when the player tries to retrieve hero information.
 
@@ -2446,7 +2446,7 @@ Event triggers when the player pays their taxes through the mail.
 
 **MAIL_INBOX_UPDATE_HANDLER**
 
-fun(read: boolean, mailListKind: number)
+fun(read: boolean|nil, mailListKind: `MAIL_LIST_CONTINUE`|`MAIL_LIST_END`|`MAIL_LIST_INVALID`|`MAIL_LIST_START`|nil)
 
 Event triggers when the players mailbox has an update.
 
@@ -4851,6 +4851,4854 @@ Event triggers when the player starts tracking a new target.
 **WEB_BROWSER_ESC_EVENT_HANDLER**
 
 fun(browser: any)
+
+
+
+**WIDGET_ABILITY_CHANGED_HANDLER**
+
+fun(self: Widget, newAbility: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9), oldAbility: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9))
+
+
+
+**WIDGET_ABILITY_EXP_CHANGED_HANDLER**
+
+fun(self: Widget, expStr: string)
+
+
+
+**WIDGET_ABILITY_SET_CHANGED_HANDLER**
+
+fun(self: Widget, responseType: `1`|`2`|`3`)
+
+
+
+**WIDGET_ABILITY_SET_USABLE_SLOT_COUNT_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACCOUNT_ATTENDANCE_ADDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACCOUNT_ATTENDANCE_LOADED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACCOUNT_RESTRICT_NOTICE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACHIEVEMENT_UPDATE_HANDLER**
+
+fun(self: Widget, status: string|"update", newAchievementType: number)
+
+
+
+**WIDGET_ACQUAINTANCE_LOGIN_HANDLER**
+
+fun(self: Widget, cmf: `CMF_ACQ_CONSUME_GROUP`|`CMF_ADDED_ITEM_GROUP`|`CMF_ADDED_ITEM_SELF`|`CMF_ADDED_ITEM_TEAM`|`CMF_ALL_SERVER`...(+60), charName: string)
+
+
+
+**WIDGET_ACTABILITY_EXPERT_CHANGED_HANDLER**
+
+fun(self: Widget, actabilityId: number, name: string, diff: string|number, final: string|number)
+
+
+
+**WIDGET_ACTABILITY_EXPERT_EXPANDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACTABILITY_EXPERT_GRADE_CHANGED_HANDLER**
+
+fun(self: Widget, actabilityId: `10`|`11`|`12`|`13`|`14`...(+32), isUpgrade: boolean, name: "Alchemy"|"Artistry"|"Carpentry"|"Commerce"|"Construction"...(+32), gradeName: "Adept"|"Amateur"|"Authority"|"Celebrity"|"Champion"...(+7))
+
+
+
+**WIDGET_ACTABILITY_MODIFIER_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACTABILITY_REFRESH_ALL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACTIONS_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ACTION_BAR_AUTO_REGISTERED_HANDLER**
+
+fun(self: Widget, slotIndex: number)
+
+
+
+**WIDGET_ACTION_BAR_PAGE_CHANGED_HANDLER**
+
+fun(self: Widget, page: number)
+
+
+
+**WIDGET_ADDED_ITEM_HANDLER**
+
+fun(self: Widget, itemLinkText: string, itemCount: number, itemTaskType: number, tradeOtherName: string)
+
+
+
+**WIDGET_ADDON_LOADED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ADD_GIVEN_QUEST_INFO_HANDLER**
+
+fun(self: Widget, type: `0`|`1`, questType: number)
+
+
+
+**WIDGET_ADD_NOTIFY_QUEST_INFO_HANDLER**
+
+fun(self: Widget, qType: number)
+
+
+
+**WIDGET_ALL_SIEGE_RAID_TEAM_INFOS_HANDLER**
+
+fun(self: Widget, teamInfos: SiegeRaidTeamInfos)
+
+
+
+**WIDGET_APPELLATION_CHANGED_HANDLER**
+
+fun(self: Widget, stringId: string, isChanged: boolean)
+
+
+
+**WIDGET_APPELLATION_GAINED_HANDLER**
+
+fun(self: Widget, str: string)
+
+
+
+**WIDGET_APPELLATION_STAMP_SET_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ASK_BUY_LABOR_POWER_POTION_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ASK_FORCE_ATTACK_HANDLER**
+
+fun(self: Widget, forceAttackLevel: number)
+
+
+
+**WIDGET_AUCTION_BIDDED_HANDLER**
+
+fun(self: Widget, itemName: string, moneyStr: string)
+
+
+
+**WIDGET_AUCTION_BIDDEN_HANDLER**
+
+fun(self: Widget, itemName: string, moneyStr: string)
+
+
+
+**WIDGET_AUCTION_BOUGHT_BY_SOMEONE_HANDLER**
+
+fun(self: Widget, itemName: string, moneyStr: string)
+
+
+
+**WIDGET_AUCTION_BOUGHT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_AUCTION_CANCELED_HANDLER**
+
+fun(self: Widget, itemName: string)
+
+
+
+**WIDGET_AUCTION_CHARACTER_LEVEL_TOO_LOW_HANDLER**
+
+fun(self: Widget, msg: string)
+
+
+
+**WIDGET_AUCTION_ITEM_ATTACHMENT_STATE_CHANGED_HANDLER**
+
+fun(self: Widget, attached: boolean)
+
+
+
+**WIDGET_AUCTION_ITEM_PUT_UP_HANDLER**
+
+fun(self: Widget, itemName: string)
+
+
+
+**WIDGET_AUCTION_ITEM_SEARCHED_HANDLER**
+
+fun(self: Widget, clearLastSearchArticle: boolean)
+
+
+
+**WIDGET_AUCTION_ITEM_SEARCH_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_AUCTION_LOWEST_PRICE_HANDLER**
+
+fun(self: Widget, itemType: number, grade: `0`|`10`|`11`|`12`|`1`...(+8), price: string)
+
+
+
+**WIDGET_AUCTION_PERMISSION_BY_CRAFT_HANDLER**
+
+fun(self: Widget, icraftType: number)
+
+
+
+**WIDGET_AUDIENCE_JOINED_HANDLER**
+
+fun(self: Widget, audienceName: string)
+
+
+
+**WIDGET_AUDIENCE_LEFT_HANDLER**
+
+fun(self: Widget, audienceName: string)
+
+
+
+**WIDGET_BADWORD_USER_REPORED_RESPONE_MSG_HANDLER**
+
+fun(self: Widget, success: boolean)
+
+
+
+**WIDGET_BAD_USER_LIST_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BAG_EXPANDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BAG_ITEM_CONFIRMED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BAG_REAL_INDEX_SHOW_HANDLER**
+
+fun(self: Widget, isRealSlotShow: boolean)
+
+
+
+**WIDGET_BAG_TAB_CREATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BAG_TAB_REMOVED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BAG_TAB_SORTED_HANDLER**
+
+fun(self: Widget, arg: number)
+
+
+
+**WIDGET_BAG_TAB_SWITCHED_HANDLER**
+
+fun(self: Widget, tabId: any)
+
+
+
+**WIDGET_BAG_UPDATE_HANDLER**
+
+fun(self: Widget, bagId: number, slotId: number)
+
+
+
+**WIDGET_BANK_EXPANDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BANK_REAL_INDEX_SHOW_HANDLER**
+
+fun(self: Widget, isRealSlotShow: boolean)
+
+
+
+**WIDGET_BANK_TAB_CREATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BANK_TAB_REMOVED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BANK_TAB_SORTED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BANK_TAB_SWITCHED_HANDLER**
+
+fun(self: Widget, tabId: number)
+
+
+
+**WIDGET_BANK_UPDATE_HANDLER**
+
+fun(self: Widget, bagId: number, slotId: number)
+
+
+
+**WIDGET_BEAUTYSHOP_CLOSE_BY_SYSTEM_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BLESS_UTHSTIN_EXTEND_MAX_STATS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BLESS_UTHSTIN_ITEM_SLOT_CLEAR_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BLESS_UTHSTIN_ITEM_SLOT_SET_HANDLER**
+
+fun(self: Widget, msgapplycountlimit?: any)
+
+
+
+**WIDGET_BLESS_UTHSTIN_MESSAGE_HANDLER**
+
+fun(self: Widget, messageType: number)
+
+
+
+**WIDGET_BLESS_UTHSTIN_UPDATE_STATS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BLESS_UTHSTIN_WILL_APPLY_STATS_HANDLER**
+
+fun(self: Widget, itemType: number, incStatsKind: `1`|`2`|`3`|`4`|`5`, decStatsKind: `1`|`2`|`3`|`4`|`5`, incStatsPoint: number, decStatsPoint: number)
+
+
+
+**WIDGET_BLOCKED_USERS_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BLOCKED_USER_LIST_HANDLER**
+
+fun(self: Widget, msg: string)
+
+
+
+**WIDGET_BLOCKED_USER_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BOT_SUSPECT_REPORTED_HANDLER**
+
+fun(self: Widget, sourceName: string, targetName: string)
+
+
+
+**WIDGET_BUFF_SKILL_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BUFF_UPDATE_HANDLER**
+
+fun(self: Widget, action: "create"|"destroy", target: "character"|"mate"|"slave")
+
+
+
+**WIDGET_BUILDER_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_BUILDER_STEP_HANDLER**
+
+fun(self: Widget, step: "position"|"roation")
+
+
+
+**WIDGET_BUILD_CONDITION_HANDLER**
+
+fun(self: Widget, param: any)
+
+
+
+**WIDGET_BUTLER_INFO_UPDATED_HANDLER**
+
+fun(self: Widget, event: "equipment"|"garden"|"harvestSlot"|"labowPower"|"productionCost"...(+5), noError: boolean)
+
+
+
+**WIDGET_BUTLER_UI_COMMAND_HANDLER**
+
+fun(self: Widget, mode: number)
+
+
+
+**WIDGET_BUY_SPECIALTY_CONTENT_INFO_HANDLER**
+
+fun(self: Widget, list: SpecialtyContentInfo[])
+
+
+
+**WIDGET_CANCEL_CRAFT_ORDER_HANDLER**
+
+fun(self: Widget, result: boolean)
+
+
+
+**WIDGET_CANCEL_REBUILD_HOUSE_CAMERA_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CANDIDATE_LIST_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CANDIDATE_LIST_HIDE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CANDIDATE_LIST_SELECTION_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CANDIDATE_LIST_SHOW_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CHANGED_MSG_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CHANGE_ACTABILITY_DECO_NUM_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CHANGE_CONTRIBUTION_POINT_TO_PLAYER_HANDLER**
+
+fun(self: Widget, isGain: boolean, diff: string, total: string)
+
+
+
+**WIDGET_CHANGE_CONTRIBUTION_POINT_TO_STORE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CHANGE_MY_LANGUAGE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CHANGE_OPTION_HANDLER**
+
+fun(self: Widget, optionType: number, infoTable: ChangeOptionInfo)
+
+
+
+**WIDGET_CHANGE_VISUAL_RACE_ENDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CHAT_DICE_VALUE_HANDLER**
+
+fun(self: Widget, msg: string)
+
+
+
+**WIDGET_CHAT_EMOTION_HANDLER**
+
+fun(self: Widget, message: string)
+
+
+
+**WIDGET_CHAT_FAILED_HANDLER**
+
+fun(self: Widget, message: string, channelName: string)
+
+
+
+**WIDGET_CHAT_JOINED_CHANNEL_HANDLER**
+
+fun(self: Widget, channel: `CHAT_ALL_SERVER`|`CHAT_BIG_MEGAPHONE`|`CHAT_DAILY_MSG`|`CHAT_EXPEDITION`|`CHAT_FACTION`...(+22), name: string)
+
+
+
+**WIDGET_CHAT_LEAVED_CHANNEL_HANDLER**
+
+fun(self: Widget, channel: `CHAT_ALL_SERVER`|`CHAT_BIG_MEGAPHONE`|`CHAT_DAILY_MSG`|`CHAT_EXPEDITION`|`CHAT_FACTION`...(+22), name: string)
+
+
+
+**WIDGET_CHAT_MESSAGE_HANDLER**
+
+fun(self: Widget, channel: `CHAT_ALL_SERVER`|`CHAT_BIG_MEGAPHONE`|`CHAT_DAILY_MSG`|`CHAT_EXPEDITION`|`CHAT_FACTION`...(+22), relation: `UR_FRIENDLY`|`UR_HOSTILE`|`UR_NEUTRAL`, name: string, message: string, info: CHAT_MESSAGE_INFO)
+
+
+
+**WIDGET_CHAT_MSG_ALARM_HANDLER**
+
+fun(self: Widget, text: string)
+
+
+
+**WIDGET_CHAT_MSG_DOODAD_HANDLER**
+
+fun(self: Widget, message: string, author: string, authorId: string, isSelf: boolean, tailType: `CBK_NORMAL`|`CBK_SYSTEM`|`CBK_THINK`, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)
+
+
+
+**WIDGET_CHAT_MSG_QUEST_HANDLER**
+
+fun(self: Widget, message: string, author: string, authorId: string, isSelf: boolean, tailType: `CBK_NORMAL`|`CBK_SYSTEM`|`CBK_THINK`, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)
+
+
+
+**WIDGET_CHECK_TEXTURE_HANDLER**
+
+fun(self: Widget, texturePath: string)
+
+
+
+**WIDGET_CLEAR_BOSS_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_CARRYING_BACKPACK_SLAVE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_COMPLETED_QUEST_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_CORPSE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_DOODAD_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_FISH_SCHOOL_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_GIVEN_QUEST_STATIC_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_HOUSING_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_MY_SLAVE_POS_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_NOTIFY_QUEST_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_NPC_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_SHIP_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLEAR_TRANSFER_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLOSE_CRAFT_ORDER_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CLOSE_MUSIC_SHEET_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_COFFER_INTERACTION_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_COFFER_INTERACTION_START_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_COFFER_REAL_INDEX_SHOW_HANDLER**
+
+fun(self: Widget, isRealSlotShow: any)
+
+
+
+**WIDGET_COFFER_TAB_CREATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_COFFER_TAB_REMOVED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_COFFER_TAB_SORTED_HANDLER**
+
+fun(self: Widget, bagId: number)
+
+
+
+**WIDGET_COFFER_TAB_SWITCHED_HANDLER**
+
+fun(self: Widget, tabId: number)
+
+
+
+**WIDGET_COFFER_UPDATE_HANDLER**
+
+fun(self: Widget, bagId: number, slotId: number)
+
+
+
+**WIDGET_COMBAT_MSG_HANDLER**
+
+fun(self: Widget, targetUnitId: string, combatEvent: "ENVIRONMENTAL_DAMAGE"|"ENVIRONMENTAL_DRAIN"|"ENVIRONMENTAL_ENERGIZE"|"ENVIRONMENTAL_HEALED"|"ENVIRONMENTAL_LEECH"...(+14), source: string, target: string, ...any)
+
+
+
+**WIDGET_COMBAT_TEXT_COLLISION_HANDLER**
+
+fun(targetUnitId: string, combatEvent: string, source: string, target: string, collisionSource: "COLLISION"|"DROWNING"|"FALLING", subType: `COLLISION_PART_BOTTOM`|`COLLISION_PART_FRONT`|`COLLISION_PART_REAR`|`COLLISION_PART_SIDE`|`COLLISION_PART_TOP`, mySlave: boolean, damage: number, powerType: "HEALTH"|"MANA")
+
+
+
+**WIDGET_COMBAT_TEXT_HANDLER**
+
+fun(self: Widget, sourceUnitId: string, targetUnitId: string, amount: number, a: number, b: string, hitType: "CRITICAL"|"HIT"|"IMMUNE", d: number, e: boolean, f: number, g: boolean, distance: number)
+
+
+
+**WIDGET_COMBAT_TEXT_SYNERGY_HANDLER**
+
+fun(self: Widget, arg: number)
+
+
+
+**WIDGET_COMMON_FARM_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_COMMUNITY_ERROR_HANDLER**
+
+fun(self: Widget, msg: any)
+
+
+
+**WIDGET_COMPLETE_ACHIEVEMENT_HANDLER**
+
+fun(self: Widget, newAchievementType: number)
+
+
+
+**WIDGET_COMPLETE_CRAFT_ORDER_HANDLER**
+
+fun(self: Widget, info: CraftOrderInfo)
+
+
+
+**WIDGET_COMPLETE_QUEST_CONTEXT_DOODAD_HANDLER**
+
+fun(self: Widget, qtype: number, useDirectingMode: boolean, doodadId: string)
+
+
+
+**WIDGET_COMPLETE_QUEST_CONTEXT_NPC_HANDLER**
+
+fun(self: Widget, qtype: number, useDirectingMode: boolean, npcId: string)
+
+
+
+**WIDGET_CONVERT_TO_RAID_TEAM_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_COPY_RAID_MEMBERS_TO_CLIPBOARD_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CRAFTING_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CRAFTING_START_HANDLER**
+
+fun(self: Widget, doodadId: any, count: any)
+
+
+
+**WIDGET_CRAFT_DOODAD_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CRAFT_ENDED_HANDLER**
+
+fun(self: Widget, leftCount: any)
+
+
+
+**WIDGET_CRAFT_FAILED_HANDLER**
+
+fun(self: Widget, itemLinkText: string)
+
+
+
+**WIDGET_CRAFT_ORDER_ENTRY_SEARCHED_HANDLER**
+
+fun(self: Widget, infos: CraftOrderEntries, totalCount: number, page: number)
+
+
+
+**WIDGET_CRAFT_RECIPE_ADDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CRAFT_STARTED_HANDLER**
+
+fun(self: Widget, leftCount: number)
+
+
+
+**WIDGET_CRAFT_TRAINED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CREATE_ORIGIN_UCC_ITEM_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_CRIME_REPORTED_HANDLER**
+
+fun(self: Widget, diffPoint: number, diffRecord: number, diffScore: number)
+
+
+
+**WIDGET_DEBUFF_UPDATE_HANDLER**
+
+fun(self: Widget, action: "create"|"destroy", target: "character"|"mate"|"slave")
+
+
+
+**WIDGET_DELETE_CRAFT_ORDER_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DELETE_PORTAL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DESTROY_PAPER_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DIAGONAL_ASR_HANDLER**
+
+fun(self: Widget, itemName: string, itemGrade: `0`|`10`|`11`|`12`|`1`...(+8), askMarketPriceUi: boolean, values: DiagonalASRInfo)
+
+
+
+**WIDGET_DIAGONAL_LINE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DICE_BID_RULE_CHANGED_HANDLER**
+
+fun(self: Widget, diceBidRule: `1`|`2`|`3`)
+
+
+
+**WIDGET_DISCONNECTED_BY_WORLD_HANDLER**
+
+fun(self: Widget, title: string, body: string)
+
+
+
+**WIDGET_DISMISS_PET_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_DIVE_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DIVE_START_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DOMINION_GUARD_TOWER_STATE_NOTICE_HANDLER**
+
+fun(self: Widget, key: `0`|`1`|`2`|`3`|`4`...(+2), name: string, factionName: string)
+
+
+
+**WIDGET_DOMINION_GUARD_TOWER_UPDATE_TOOLTIP_HANDLER**
+
+fun(self: Widget, unitId: any)
+
+
+
+**WIDGET_DOMINION_HANDLER**
+
+fun(self: Widget, action: string, zoneGroupName: string, expeditionName: string)
+
+
+
+**WIDGET_DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED_HANDLER**
+
+fun(self: Widget, count: number)
+
+
+
+**WIDGET_DOMINION_SIEGE_PERIOD_CHANGED_HANDLER**
+
+fun(self: Widget, siegeInfo: SiegeInfo)
+
+
+
+**WIDGET_DOMINION_SIEGE_SYSTEM_NOTICE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DOMINION_SIEGE_UPDATE_TIMER_HANDLER**
+
+fun(self: Widget, secondHalf: boolean)
+
+
+
+**WIDGET_DOODAD_LOGIC_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DOODAD_PHASE_MSG_HANDLER**
+
+fun(self: Widget, text: string)
+
+
+
+**WIDGET_DOODAD_PHASE_UI_MSG_HANDLER**
+
+fun(self: Widget, phaseMsgInfo: PhaseMsgInfo)
+
+
+
+**WIDGET_DRAW_DOODAD_SIGN_TAG_HANDLER**
+
+fun(self: Widget, tooltip: nil)
+
+
+
+**WIDGET_DRAW_DOODAD_TOOLTIP_HANDLER**
+
+fun(self: Widget, info: DoodadTooltipInfo)
+
+
+
+**WIDGET_DYEING_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DYEING_START_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DYNAMIC_ACTION_BAR_HIDE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_DYNAMIC_ACTION_BAR_SHOW_HANDLER**
+
+fun(self: Widget, dynamicActionType: any)
+
+
+
+**WIDGET_ENABLE_TEAM_AREA_INVITATION_HANDLER**
+
+fun(self: Widget, enable: boolean)
+
+
+
+**WIDGET_ENCHANT_EXAMINE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ENCHANT_RESULT_HANDLER**
+
+fun(self: Widget, resultCode: any, itemLink: any, oldGrade: any, newGrade: any, breakRewardItemType: any, breakRewardItemCount: any, breakRewardByMail: any)
+
+
+
+**WIDGET_ENCHANT_SAY_ABILITY_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ENDED_DUEL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_END_HERO_ELECTION_PERIOD_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_END_QUEST_CHAT_BUBBLE_HANDLER**
+
+fun(self: Widget, playedBubble: boolean)
+
+
+
+**WIDGET_ENTERED_INSTANT_GAME_ZONE_HANDLER**
+
+fun(self: Widget, arg: number)
+
+
+
+**WIDGET_ENTERED_LOADING_HANDLER**
+
+fun(self: Widget, worldImagePath: string)
+
+
+
+**WIDGET_ENTERED_SCREEN_SHOT_CAMERA_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ENTERED_SUBZONE_HANDLER**
+
+fun(self: Widget, zoneName: ""|"3rd Corps Camp"|"Abandoned Claimstake"|"Abandoned Drill Camp"|"Abandoned Guardpost"...(+1163))
+
+
+
+**WIDGET_ENTERED_WORLD_HANDLER**
+
+fun(self: Widget, unknown: boolean)
+
+
+
+**WIDGET_ENTER_ANOTHER_ZONEGROUP_HANDLER**
+
+fun(self: Widget, zoneId: `0`|`100`|`101`|`102`|`103`...(+151))
+
+
+
+**WIDGET_ENTER_ENCHANT_ITEM_MODE_HANDLER**
+
+fun(self: Widget, mode: "awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7))
+
+
+
+**WIDGET_ENTER_GACHA_LOOT_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ENTER_ITEM_LOOK_CONVERT_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EQUIP_SLOT_REINFORCE_EXPAND_PAGE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT_HANDLER**
+
+fun(self: Widget, equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27), level: number)
+
+
+
+**WIDGET_EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP_HANDLER**
+
+fun(self: Widget, equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27), level: number)
+
+
+
+**WIDGET_EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT_HANDLER**
+
+fun(self: Widget, equipSlotAttribute: number, level: number)
+
+
+
+**WIDGET_EQUIP_SLOT_REINFORCE_SELECT_PAGE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EQUIP_SLOT_REINFORCE_UPDATE_HANDLER**
+
+fun(self: Widget, equipSlot: any)
+
+
+
+**WIDGET_ESCAPE_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ESCAPE_START_HANDLER**
+
+fun(self: Widget, waitTime: number)
+
+
+
+**WIDGET_ESC_MENU_ADD_BUTTON_HANDLER**
+
+fun(self: Widget, info: EscMenuAddButtonInfo)
+
+
+
+**WIDGET_EVENT_SCHEDULE_START_HANDLER**
+
+fun(self: Widget, msg: any)
+
+
+
+**WIDGET_EVENT_SCHEDULE_STOP_HANDLER**
+
+fun(self: Widget, msg: any)
+
+
+
+**WIDGET_EXPEDITION_APPLICANT_ACCEPT_HANDLER**
+
+fun(self: Widget, expeditionName: string)
+
+
+
+**WIDGET_EXPEDITION_APPLICANT_REJECT_HANDLER**
+
+fun(self: Widget, expeditionName: string)
+
+
+
+**WIDGET_EXPEDITION_BUFF_CHANGE_HANDLER**
+
+fun(self: Widget, expedition: number)
+
+
+
+**WIDGET_EXPEDITION_EXP_HANDLER**
+
+fun(self: Widget, amount: number, amountStr: string)
+
+
+
+**WIDGET_EXPEDITION_HISTORY_HANDLER**
+
+fun(self: Widget, tabId: number)
+
+
+
+**WIDGET_EXPEDITION_LEVEL_UP_HANDLER**
+
+fun(self: Widget, level: any)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_APPLICANTS_HANDLER**
+
+fun(self: Widget, infos: ExpeditionApplicant[])
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT_HANDLER**
+
+fun(self: Widget, charId: any)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_ADD_HANDLER**
+
+fun(self: Widget, expeditionId: any)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_DEL_HANDLER**
+
+fun(self: Widget, expeditionId: any)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_REJECT_HANDLER**
+
+fun(self: Widget, charId: any)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_MEMBERS_INFO_HANDLER**
+
+fun(self: Widget, totalCount: number, startIndex: number, memberInfos: MemberInfo[])
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_POLICY_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_RECRUITMENTS_HANDLER**
+
+fun(self: Widget, total: number, perPageItemCount: number, infos: GuildRecruitmentInfo[])
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_RECRUITMENT_ADD_HANDLER**
+
+fun(self: Widget, info: any)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_RECRUITMENT_DEL_HANDLER**
+
+fun(self: Widget, expeditionId: any)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_ROLE_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_MANAGEMENT_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_RANKING_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_SUMMON_SUGGEST_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_WAR_DECLARATION_FAILED_HANDLER**
+
+fun(self: Widget, errorMsg: any, param: any)
+
+
+
+**WIDGET_EXPEDITION_WAR_DECLARATION_MONEY_HANDLER**
+
+fun(self: Widget, unitId: any, name: any, money: any)
+
+
+
+**WIDGET_EXPEDITION_WAR_KILL_SCORE_HANDLER**
+
+fun(self: Widget, toggle: boolean)
+
+
+
+**WIDGET_EXPEDITION_WAR_SET_PROTECT_DATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_EXPEDITION_WAR_STATE_HANDLER**
+
+fun(self: Widget, related: boolean, state: string, declarer: string, defendant: string, winner: string)
+
+
+
+**WIDGET_EXPIRED_ITEM_HANDLER**
+
+fun(self: Widget, itemLinkText: string)
+
+
+
+**WIDGET_EXP_CHANGED_HANDLER**
+
+fun(self: Widget, stringId: string, expNum: number, expStr: string)
+
+
+
+**WIDGET_FACTION_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FACTION_COMPETITION_INFO_HANDLER**
+
+fun(self: Widget, info: FactionCompetitionInfo)
+
+
+
+**WIDGET_FACTION_COMPETITION_RESULT_HANDLER**
+
+fun(self: Widget, infos: FactionCompetitionResultInfos)
+
+
+
+**WIDGET_FACTION_COMPETITION_UPDATE_POINT_HANDLER**
+
+fun(self: Widget, infos: FactionCompetitionPointInfo)
+
+
+
+**WIDGET_FACTION_RELATION_ACCEPTED_HANDLER**
+
+fun(self: Widget, name: any, factionName: any)
+
+
+
+**WIDGET_FACTION_RELATION_CHANGED_HANDLER**
+
+fun(self: Widget, isHostile: boolean, f1Name: string, f2Name: string)
+
+
+
+**WIDGET_FACTION_RELATION_COUNT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FACTION_RELATION_DENIED_HANDLER**
+
+fun(self: Widget, name: any)
+
+
+
+**WIDGET_FACTION_RELATION_HISTORY_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FACTION_RELATION_REQUESTED_HANDLER**
+
+fun(self: Widget, name: any, factionName: any)
+
+
+
+**WIDGET_FACTION_RELATION_WILL_CHANGE_HANDLER**
+
+fun(self: Widget, f1Name: string, f2Name: string)
+
+
+
+**WIDGET_FACTION_RENAMED_HANDLER**
+
+fun(self: Widget, isExpedition: boolean, oldName: string, newName: string)
+
+
+
+**WIDGET_FAILED_TO_SET_PET_AUTO_SKILL_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_FAMILY_ERROR_HANDLER**
+
+fun(self: Widget, msg: any)
+
+
+
+**WIDGET_FAMILY_EXP_ADD_HANDLER**
+
+fun(self: Widget, amount: any)
+
+
+
+**WIDGET_FAMILY_INFO_REFRESH_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FAMILY_LEVEL_UP_HANDLER**
+
+fun(self: Widget, levelName: any)
+
+
+
+**WIDGET_FAMILY_MEMBER_ADDED_HANDLER**
+
+fun(self: Widget, owner: any, member: any, title: any)
+
+
+
+**WIDGET_FAMILY_MEMBER_HANDLER**
+
+fun(self: Widget, owner: any, member: any, role: any, title: any)
+
+
+
+**WIDGET_FAMILY_MEMBER_KICKED_HANDLER**
+
+fun(self: Widget, member: any)
+
+
+
+**WIDGET_FAMILY_MEMBER_LEFT_HANDLER**
+
+fun(self: Widget, member: any)
+
+
+
+**WIDGET_FAMILY_MEMBER_ONLINE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FAMILY_MGR_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FAMILY_NAME_CHANGED_HANDLER**
+
+fun(self: Widget, FAMILY_NAME_CHANGED: any)
+
+
+
+**WIDGET_FAMILY_OWNER_CHANGED_HANDLER**
+
+fun(self: Widget, owner: any)
+
+
+
+**WIDGET_FAMILY_REFRESH_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FAMILY_REMOVED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL_HANDLER**
+
+fun(self: Widget, cooltime: number)
+
+
+
+**WIDGET_FIND_FACTION_REZ_DISTRICT_DURATION_FAIL_HANDLER**
+
+fun(self: Widget, remain: number)
+
+
+
+**WIDGET_FOLDER_STATE_CHANGED_HANDLER**
+
+fun(self: Widget, arg: string)
+
+
+
+**WIDGET_FORCE_ATTACK_CHANGED_HANDLER**
+
+fun(self: Widget, uiserId: string, inBloodlust: boolean)
+
+
+
+**WIDGET_FRIENDLIST_HANDLER**
+
+fun(self: Widget, msg: string)
+
+
+
+**WIDGET_FRIENDLIST_INFO_HANDLER**
+
+fun(self: Widget, totalCount: number, memberInfos: FriendInfo[])
+
+
+
+**WIDGET_FRIENDLIST_UPDATE_HANDLER**
+
+fun(self: Widget, updateType: "delete"|"insert", dataField: string|FriendInfo)
+
+
+
+**WIDGET_GACHA_LOOT_PACK_LOG_HANDLER**
+
+fun(self: Widget, logs: GachaLootPackLog)
+
+
+
+**WIDGET_GACHA_LOOT_PACK_RESULT_HANDLER**
+
+fun(self: Widget, results: GachaLootPackResult)
+
+
+
+**WIDGET_GAME_EVENT_EMPTY_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GAME_EVENT_INFO_LIST_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GAME_EVENT_INFO_REQUESTED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GAME_SCHEDULE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GENDER_TRANSFERED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GLIDER_MOVED_INTO_BAG_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GOODS_MAIL_INBOX_ITEM_TAKEN_HANDLER**
+
+fun(self: Widget, index: any)
+
+
+
+**WIDGET_GOODS_MAIL_INBOX_MONEY_TAKEN_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GOODS_MAIL_INBOX_TAX_PAID_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GOODS_MAIL_INBOX_UPDATE_HANDLER**
+
+fun(self: Widget, read: boolean, arg: number)
+
+
+
+**WIDGET_GOODS_MAIL_RETURNED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GOODS_MAIL_SENTBOX_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GOODS_MAIL_SENT_SUCCESS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GOODS_MAIL_WRITE_ITEM_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GRADE_ENCHANT_BROADCAST_HANDLER**
+
+fun(self: Widget, characterName: string, resultCode: `IEBCT_ENCHANT_GREATE_SUCCESS`|`IEBCT_ENCHANT_SUCCESS`|`IEBCT_EVOVING`, itemLink: string, oldGrade: `0`|`10`|`11`|`12`|`1`...(+8), newGrade: `0`|`10`|`11`|`12`|`1`...(+8))
+
+
+
+**WIDGET_GRADE_ENCHANT_RESULT_HANDLER**
+
+fun(self: Widget, resultCode: `IGER_BREAK`|`IGER_DISABLE`|`IGER_DOWNGRADE`|`IGER_FAIL`|`IGER_GREAT_SUCCESS`...(+2), itemLink: string, oldGrade: `0`|`10`|`11`|`12`|`1`...(+8), newGrade: `0`|`10`|`11`|`12`|`1`...(+8), breakRewardItemType: number, breakRewardItemCount: number, breakRewardByMail: boolean)
+
+
+
+**WIDGET_GUARDTOWER_HEALTH_CHANGED_HANDLER**
+
+fun(self: Widget, arg1: string, arg2: string, arg3: string)
+
+
+
+**WIDGET_GUILD_BANK_INDEX_SHOW_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_INTERACTION_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_INTERACTION_START_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_INVEN_SHOW_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_MONEY_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_REAL_INDEX_SHOW_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_TAB_CREATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_TAB_REMOVED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_TAB_SORTED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_TAB_SWITCHED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_GUILD_BANK_UPDATE_HANDLER**
+
+fun(self: Widget, arg1: number, slot: number)
+
+
+
+**WIDGET_HEIR_LEVEL_UP_HANDLER**
+
+fun(self: Widget, myUnit: boolean, unitId: string)
+
+
+
+**WIDGET_HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER**
+
+fun(self: Widget, activeType: number, ability: number, text: string, pos: `1`|`2`|`3`|`4`|`5`...(+3))
+
+
+
+**WIDGET_HEIR_SKILL_LEARN_HANDLER**
+
+fun(self: Widget, text: string, pos: `1`|`2`|`3`|`4`|`5`...(+3))
+
+
+
+**WIDGET_HEIR_SKILL_RESET_HANDLER**
+
+fun(self: Widget, isAll: boolean, text: string, info: `1`|`2`|`3`|`4`|`5`...(+3))
+
+
+
+**WIDGET_HEIR_SKILL_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_ALL_SCORE_UPDATED_HANDLER**
+
+fun(self: Widget, factionID: `101`|`102`|`103`|`104`|`105`...(+124))
+
+
+
+**WIDGET_HERO_ANNOUNCE_REMAIN_TIME_HANDLER**
+
+fun(self: Widget, remainTime: number, isStartTime: boolean)
+
+
+
+**WIDGET_HERO_CANDIDATES_ANNOUNCED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_CANDIDATE_NOTI_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_ELECTION_DAY_ALERT_HANDLER**
+
+fun(self: Widget, title: any, desc: any)
+
+
+
+**WIDGET_HERO_ELECTION_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_ELECTION_RESULT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_ELECTION_VOTED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_NOTI_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_RANK_DATA_RETRIEVED_HANDLER**
+
+fun(self: Widget, factionID: `101`|`102`|`103`|`104`|`105`...(+124))
+
+
+
+**WIDGET_HERO_RANK_DATA_TIMEOUT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_SCORE_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_SEASON_OFF_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HERO_SEASON_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HIDE_ROADMAP_TOOLTIP_HANDLER**
+
+fun(self: Widget, text: any)
+
+
+
+**WIDGET_HIDE_SKILL_MAP_EFFECT_HANDLER**
+
+fun(self: Widget, index: number)
+
+
+
+**WIDGET_HIDE_WORLDMAP_TOOLTIP_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOTKEY_ACTION_HANDLER**
+
+fun(self: Widget, actionName: string, keyUp: boolean)
+
+
+
+**WIDGET_HOUSE_BUILD_INFO_HANDLER**
+
+fun(self: Widget, hType: `100`|`101`|`102`|`103`|`104`...(+832), baseTax: string, hTax: string, heavyTaxHouseCount: number, normalTaxHouseCount: number, isHeavyTaxHouse: boolean, hostileTaxRate: number, monopolyTaxRate: number, depositString: string, taxType: `HOUSING_TAX_CONTRIBUTION`|`HOUSING_TAX_SEAL`, completion: boolean)
+
+
+
+**WIDGET_HOUSE_BUY_FAIL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_BUY_SUCCESS_HANDLER**
+
+fun(self: Widget, houseName: string)
+
+
+
+**WIDGET_HOUSE_CANCEL_SELL_FAIL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_CANCEL_SELL_SUCCESS_HANDLER**
+
+fun(self: Widget, houseName: string)
+
+
+
+**WIDGET_HOUSE_DECO_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_FARM_MSG_HANDLER**
+
+fun(self: Widget, name: any, total: any, harvestable: any)
+
+
+
+**WIDGET_HOUSE_INFO_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_INTERACTION_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_INTERACTION_START_HANDLER**
+
+fun(self: Widget, structureType: string, viewType: string, arg: boolean)
+
+
+
+**WIDGET_HOUSE_PERMISSION_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_REBUILD_TAX_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_ROTATE_CONFIRM_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_SALE_SUCCESS_HANDLER**
+
+fun(self: Widget, houseName: string)
+
+
+
+**WIDGET_HOUSE_SET_SELL_FAIL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSE_SET_SELL_SUCCESS_HANDLER**
+
+fun(self: Widget, houseName: string)
+
+
+
+**WIDGET_HOUSE_STEP_INFO_UPDATED_HANDLER**
+
+fun(self: Widget, structureType: "housing"|"shipyard")
+
+
+
+**WIDGET_HOUSE_TAX_INFO_HANDLER**
+
+fun(self: Widget, dominionTaxRate: any, hostileTaxRate: any, taxString: any, dueTime: any, prepayTime: any, weeksWithoutPay: any, weeksPrepay: any, isAlreadyPaid: any, isHeavyTaxHouse: any, depositString: any, taxType: any, id: any)
+
+
+
+**WIDGET_HOUSING_UCC_CLOSE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSING_UCC_ITEM_SLOT_CLEAR_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSING_UCC_ITEM_SLOT_SET_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSING_UCC_LEAVE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HOUSING_UCC_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_HPW_ZONE_STATE_CHANGE_HANDLER**
+
+fun(self: Widget, zoneId: `0`|`100`|`101`|`102`|`103`...(+151))
+
+
+
+**WIDGET_HPW_ZONE_STATE_WAR_END_HANDLER**
+
+fun(self: Widget, zoneId: `0`|`100`|`101`|`102`|`103`...(+151), points: number)
+
+
+
+**WIDGET_IME_STATUS_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INDUN_INITAL_ROUND_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INDUN_ROUND_END_HANDLER**
+
+fun(self: Widget, success: boolean, round: number, isBossRound: boolean, lastRound: boolean)
+
+
+
+**WIDGET_INDUN_ROUND_START_HANDLER**
+
+fun(self: Widget, round: number, isBossRound: boolean)
+
+
+
+**WIDGET_INDUN_UPDATE_ROUND_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INGAME_SHOP_BUY_RESULT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INIT_CHRONICLE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSERT_CRAFT_ORDER_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANCE_ENTERABLE_MSG_HANDLER**
+
+fun(self: Widget, info: InstanceEnterableInfo)
+
+
+
+**WIDGET_INSTANT_GAME_BEST_RATING_REWARD_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_JOIN_APPLY_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_JOIN_CANCEL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_KILL_HANDLER**
+
+fun(self: Widget, msgInfo: InstanceGameKillInfo)
+
+
+
+**WIDGET_INSTANT_GAME_PICK_BUFFS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_READY_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_RETIRE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_ROUND_RESULT_HANDLER**
+
+fun(self: Widget, resultState: any, resultRound: any)
+
+
+
+**WIDGET_INSTANT_GAME_START_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INSTANT_GAME_START_POINT_RETURN_MSG_HANDLER**
+
+fun(self: Widget, remainSec: number)
+
+
+
+**WIDGET_INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME_HANDLER**
+
+fun(self: Widget, remainTime: any)
+
+
+
+**WIDGET_INSTANT_GAME_WAIT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INTERACTION_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INTERACTION_START_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_INVALID_NAME_POLICY_HANDLER**
+
+fun(self: Widget, namePolicyType: any)
+
+
+
+**WIDGET_INVEN_SLOT_SPLIT_HANDLER**
+
+fun(self: Widget, invenType: string, slot: number, amount: number)
+
+
+
+**WIDGET_ITEM_ACQUISITION_BY_LOOT_HANDLER**
+
+fun(self: Widget, charName: string, itemLinkText: string, itemCount: number)
+
+
+
+**WIDGET_ITEM_CHANGE_MAPPING_RESULT_HANDLER**
+
+fun(self: Widget, result: `ICMR_FAIL_DISABLE_ENCHANT`|`ICMR_FAIL`|`ICMR_SUCCESS`, oldGrade: `0`|`10`|`11`|`12`|`1`...(+8), oldGearScore: number, itemLink: string, bonusRate: number)
+
+
+
+**WIDGET_ITEM_ENCHANT_MAGICAL_RESULT_HANDLER**
+
+fun(self: Widget, resultCode: number|`1`, itemLink: string, gemItemType: number)
+
+
+
+**WIDGET_ITEM_EQUIP_RESULT_HANDLER**
+
+fun(self: Widget, ItemEquipResult: `ITEM_MATE_NOT_EQUIP`|`ITEM_MATE_UNSUMMON`|`ITEM_SLAVE_NOT_EQUIP`|`ITEM_SLAVE_UNSUMMON`)
+
+
+
+**WIDGET_ITEM_LOOK_CONVERTED_EFFECT_HANDLER**
+
+fun(self: Widget, itemInfo: ItemInfo)
+
+
+
+**WIDGET_ITEM_LOOK_CONVERTED_HANDLER**
+
+fun(self: Widget, itemLinkText: string)
+
+
+
+**WIDGET_ITEM_REFURBISHMENT_RESULT_HANDLER**
+
+fun(self: Widget, resultCode: `IGER_BREAK`|`IGER_DISABLE`|`IGER_DOWNGRADE`|`IGER_FAIL`|`IGER_GREAT_SUCCESS`...(+2), itemLink: string, beforeScale: string, afterScale: string)
+
+
+
+**WIDGET_ITEM_SMELTING_RESULT_HANDLER**
+
+fun(self: Widget, resultCode: any, itemLink: any, smeltingItemType: any)
+
+
+
+**WIDGET_ITEM_SOCKETING_RESULT_HANDLER**
+
+fun(self: Widget, resultCode: `1`, itemLink: string, socketItemType: number, install: boolean)
+
+
+
+**WIDGET_ITEM_SOCKET_UPGRADE_HANDLER**
+
+fun(self: Widget, socketItemType: number)
+
+
+
+**WIDGET_JURY_OK_COUNT_HANDLER**
+
+fun(self: Widget, count: number, total: number)
+
+
+
+**WIDGET_JURY_WAITING_NUMBER_HANDLER**
+
+fun(self: Widget, num: number)
+
+
+
+**WIDGET_LABORPOWER_CHANGED_HANDLER**
+
+fun(self: Widget, diff: number, laborPower: number)
+
+
+
+**WIDGET_LEAVED_INSTANT_GAME_ZONE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEAVE_ENCHANT_ITEM_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEAVE_GACHA_LOOT_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEAVE_ITEM_LOOK_CONVERT_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEAVING_WORLD_CANCELED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEAVING_WORLD_STARTED_HANDLER**
+
+fun(self: Widget, waitTime: number, exitTarget: `EXIT_CLIENT_NONE_ACTION`|`EXIT_CLIENT`|`EXIT_TO_CHARACTER_LIST`|`EXIT_TO_WORLD_LIST`, idleKick: boolean)
+
+
+
+**WIDGET_LEFT_LOADING_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEFT_SCREEN_SHOT_CAMERA_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEFT_SUBZONE_HANDLER**
+
+fun(self: Widget, zoneId: `1000`|`1001`|`1002`|`1003`|`1004`...(+1351), zoneName: ""|"3rd Corps Camp"|"Abandoned Claimstake"|"Abandoned Drill Camp"|"Abandoned Guardpost"...(+1163))
+
+
+
+**WIDGET_LEFT_WORLD_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LEVEL_CHANGED_HANDLER**
+
+fun(self: Widget, name: string, stringId: string)
+
+
+
+**WIDGET_LOOTING_RULE_BOP_CHANGED_HANDLER**
+
+fun(self: Widget, rollForBop: number)
+
+
+
+**WIDGET_LOOTING_RULE_GRADE_CHANGED_HANDLER**
+
+fun(self: Widget, grade: number)
+
+
+
+**WIDGET_LOOTING_RULE_MASTER_CHANGED_HANDLER**
+
+fun(self: Widget, charName: string)
+
+
+
+**WIDGET_LOOTING_RULE_METHOD_CHANGED_HANDLER**
+
+fun(self: Widget, lootMethod: number)
+
+
+
+**WIDGET_LOOT_BAG_CHANGED_HANDLER**
+
+fun(self: Widget, setTime: boolean)
+
+
+
+**WIDGET_LOOT_BAG_CLOSE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_LOOT_DICE_HANDLER**
+
+fun(self: Widget, charName: string, itemLinkText: string, diceValue: number)
+
+
+
+**WIDGET_LOOT_PACK_ITEM_BROADCAST_HANDLER**
+
+fun(self: Widget, characterName: string, sourceName: string, useItemLink: string, resultItemLink: string)
+
+
+
+**WIDGET_LP_MANAGE_CHARACTER_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MAIL_INBOX_ATTACHMENT_TAKEN_ALL_HANDLER**
+
+fun(self: Widget, mailId: number)
+
+
+
+**WIDGET_MAIL_INBOX_ITEM_TAKEN_HANDLER**
+
+fun(self: Widget, index: number)
+
+
+
+**WIDGET_MAIL_INBOX_MONEY_TAKEN_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MAIL_INBOX_TAX_PAID_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MAIL_INBOX_UPDATE_HANDLER**
+
+fun(self: Widget, read: boolean|nil, mailListKind: `MAIL_LIST_CONTINUE`|`MAIL_LIST_END`|`MAIL_LIST_INVALID`|`MAIL_LIST_START`|nil)
+
+
+
+**WIDGET_MAIL_RETURNED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MAIL_SENTBOX_UPDATE_HANDLER**
+
+fun(self: Widget, read: any, mailListKind: any)
+
+
+
+**WIDGET_MAIL_SENT_SUCCESS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MAIL_WRITE_ITEM_UPDATE_HANDLER**
+
+fun(self: Widget, index: number)
+
+
+
+**WIDGET_MAP_EVENT_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MATE_SKILL_LEARNED_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`, text: string)
+
+
+
+**WIDGET_MATE_STATE_UPDATE_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`, stateIndex: `1`|`2`|`3`|`4`)
+
+
+
+**WIDGET_MEGAPHONE_MESSAGE_HANDLER**
+
+fun(self: Widget, show: any, channel: any, name: any, message: any, isMyMessage: any)
+
+
+
+**WIDGET_MIA_MAIL_INBOX_ITEM_TAKEN_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MIA_MAIL_INBOX_MONEY_TAKEN_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MIA_MAIL_INBOX_TAX_PAID_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MIA_MAIL_INBOX_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MIA_MAIL_RETURNED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MIA_MAIL_SENTBOX_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MIA_MAIL_SENT_SUCCESS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MIA_MAIL_WRITE_ITEM_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MINE_AMOUNT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MINI_SCOREBOARD_CHANGED_HANDLER**
+
+fun(self: Widget, status: "inactive"|"remove"|"update", info: MiniScoreBoardInfo[]|nil)
+
+
+
+**WIDGET_MODE_ACTIONS_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MONEY_ACQUISITION_BY_LOOT_HANDLER**
+
+fun(self: Widget, charName: any, moneyStr: any)
+
+
+
+**WIDGET_MOUNT_BAG_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MOUNT_PET_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`, isMyPet: boolean)
+
+
+
+**WIDGET_MOUNT_SLOT_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MOUSE_CLICK_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MOUSE_DOWN_HANDLER**
+
+fun(self: Widget, widgetId: string)
+
+
+
+**WIDGET_MOUSE_UP_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MOVE_SPEED_CHANGE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MOVIE_ABORT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MOVIE_LOAD_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MOVIE_STOP_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_MULTI_QUEST_CONTEXT_SELECT_HANDLER**
+
+fun(self: Widget, targetNpc: boolean, qtype: number, useDirectingMode: boolean, targetId: string, interactionValue: string)
+
+
+
+**WIDGET_MULTI_QUEST_CONTEXT_SELECT_LIST_HANDLER**
+
+fun(self: Widget, questList: QuestSelectList)
+
+
+
+**WIDGET_NAME_TAG_MODE_CHANGED_MSG_HANDLER**
+
+fun(self: Widget, changedNameTagMode: `1`|`2`|`3`|`4`)
+
+
+
+**WIDGET_NATION_DOMINION_HANDLER**
+
+fun(self: Widget, zoneGroupType: `0`|`100`|`101`|`102`|`103`...(+151), force: boolean)
+
+
+
+**WIDGET_NAVI_MARK_POS_TO_MAP_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_NAVI_MARK_REMOVE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_NEW_DAY_STARTED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_NEW_SKILL_POINT_HANDLER**
+
+fun(self: Widget, point: number)
+
+
+
+**WIDGET_NEXT_SIEGE_INFO_HANDLER**
+
+fun(self: Widget, siegeInfo: NextSiegeInfo)
+
+
+
+**WIDGET_NOTICE_MESSAGE_HANDLER**
+
+fun(self: Widget, noticeType: number, color: string, visibleTime: number, message: string, name: string)
+
+
+
+**WIDGET_NOTIFY_AUTH_ADVERTISING_MESSAGE_HANDLER**
+
+fun(self: Widget, msg: any, remainTime: any)
+
+
+
+**WIDGET_NOTIFY_AUTH_BILLING_MESSAGE_HANDLER**
+
+fun(self: Widget, msg: any, remainTime: any)
+
+
+
+**WIDGET_NOTIFY_AUTH_DISCONNECTION_MESSAGE_HANDLER**
+
+fun(self: Widget, msg: any, remainTime: any)
+
+
+
+**WIDGET_NOTIFY_AUTH_FATIGUE_MESSAGE_HANDLER**
+
+fun(self: Widget, msg: any, remainTime: any)
+
+
+
+**WIDGET_NOTIFY_AUTH_NOTICE_MESSAGE_HANDLER**
+
+fun(self: Widget, message: any, visibleTime: any, needCountdown: any)
+
+
+
+**WIDGET_NOTIFY_AUTH_TC_FATIGUE_MESSAGE_HANDLER**
+
+fun(self: Widget, msg: any, remainTime: any)
+
+
+
+**WIDGET_NPC_CRAFT_ERROR_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_NPC_CRAFT_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_NPC_INTERACTION_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_NPC_INTERACTION_START_HANDLER**
+
+fun(self: Widget, value: "quest", addedValue: "complete"|"start"|"talk", npcId: string)
+
+
+
+**WIDGET_NPC_UNIT_EQUIPMENT_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_NUONS_ARROW_SHOW_HANDLER**
+
+fun(self: Widget, visible: any)
+
+
+
+**WIDGET_NUONS_ARROW_UI_MSG_HANDLER**
+
+fun(self: Widget, nuonsMsgInfo: any)
+
+
+
+**WIDGET_NUONS_ARROW_UPDATE_HANDLER**
+
+fun(self: Widget, data: NuonsArrowUpdate[])
+
+
+
+**WIDGET_ONE_AND_ONE_CHAT_ADD_MESSAGE_HANDLER**
+
+fun(self: Widget, channelId: any, speakerName: any, message: any, isSpeakerGm: any)
+
+
+
+**WIDGET_ONE_AND_ONE_CHAT_END_HANDLER**
+
+fun(self: Widget, channelId: any)
+
+
+
+**WIDGET_ONE_AND_ONE_CHAT_START_HANDLER**
+
+fun(self: Widget, channelId: any, targetName: any)
+
+
+
+**WIDGET_OPEN_CHAT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_OPEN_COMMON_FARM_INFO_HANDLER**
+
+fun(self: Widget, commonFarmType: `1`|`2`|`3`|`4`)
+
+
+
+**WIDGET_OPEN_CONFIG_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_OPEN_CRAFT_ORDER_BOARD_HANDLER**
+
+fun(self: Widget, tabName: string)
+
+
+
+**WIDGET_OPEN_EMBLEM_IMPRINT_UI_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_OPEN_EMBLEM_UPLOAD_UI_HANDLER**
+
+fun(self: Widget, doodad: number)
+
+
+
+**WIDGET_OPEN_EXPEDITION_PORTAL_LIST_HANDLER**
+
+fun(self: Widget, addPortal: boolean, interactionDoodad: boolean, expeditionOwner: boolean)
+
+
+
+**WIDGET_OPEN_MUSIC_SHEET_HANDLER**
+
+fun(self: Widget, isShow: boolean, itemIdString: string, isWide: number)
+
+
+
+**WIDGET_OPEN_NAVI_DOODAD_NAMING_DIALOG_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_OPEN_PAPER_HANDLER**
+
+fun(self: Widget, type: "book"|"page", idx: number)
+
+
+
+**WIDGET_OPEN_PROMOTION_EVENT_URL_HANDLER**
+
+fun(self: Widget, url: any)
+
+
+
+**WIDGET_OPTIMIZATION_RESULT_MESSAGE_HANDLER**
+
+fun(self: Widget, activated: boolean)
+
+
+
+**WIDGET_OPTION_RESET_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PASSENGER_MOUNT_PET_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_PASSENGER_UNMOUNT_PET_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_PETMATE_BOUND_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PETMATE_UNBOUND_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PET_AUTO_SKILL_CHANGED_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_PET_FOLLOWING_MASTER_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_PET_STOP_BY_MASTER_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_PLAYER_AA_POINT_HANDLER**
+
+fun(self: Widget, change: any, changeStr: any, itemTaskType: any, info: any)
+
+
+
+**WIDGET_PLAYER_ABILITY_LEVEL_CHANGED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PLAYER_BANK_AA_POINT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PLAYER_BANK_MONEY_HANDLER**
+
+fun(self: Widget, amount: number, amountStr: string)
+
+
+
+**WIDGET_PLAYER_BM_POINT_HANDLER**
+
+fun(self: Widget, oldBmPoint: string)
+
+
+
+**WIDGET_PLAYER_GEAR_POINT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PLAYER_HONOR_POINT_CHANGED_IN_HPW_HANDLER**
+
+fun(self: Widget, amount: number)
+
+
+
+**WIDGET_PLAYER_HONOR_POINT_HANDLER**
+
+fun(self: Widget, amount: number, amountStr: string, isCombatInHonorPointWar?: boolean)
+
+
+
+**WIDGET_PLAYER_JURY_POINT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PLAYER_LEADERSHIP_POINT_HANDLER**
+
+fun(self: Widget, amount: number, amountStr: string)
+
+
+
+**WIDGET_PLAYER_LIVING_POINT_HANDLER**
+
+fun(self: Widget, amount: number, amountStr: string)
+
+
+
+**WIDGET_PLAYER_MONEY_HANDLER**
+
+fun(self: Widget, change: number, changeStr: string, itemTaskType: number, info?: any)
+
+
+
+**WIDGET_PLAYER_RESURRECTED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PLAYER_RESURRECTION_HANDLER**
+
+fun(self: Widget, name: string)
+
+
+
+**WIDGET_PLAYER_VISUAL_RACE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_POST_CRAFT_ORDER_HANDLER**
+
+fun(self: Widget, result: boolean)
+
+
+
+**WIDGET_PRELIMINARY_EQUIP_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PREMIUM_GRADE_CHANGE_HANDLER**
+
+fun(self: Widget, prevPremiumGrade: any, presentPremiumGrade: any)
+
+
+
+**WIDGET_PREMIUM_LABORPOWER_CHANGED_HANDLER**
+
+fun(self: Widget, onlineDiff: any, offlineDiff: any)
+
+
+
+**WIDGET_PREMIUM_POINT_CHANGE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PREMIUM_SERVICE_BUY_RESULT_HANDLER**
+
+fun(self: Widget, err: any)
+
+
+
+**WIDGET_PREMIUM_SERVICE_LIST_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_PROCESS_CRAFT_ORDER_HANDLER**
+
+fun(self: Widget, result: boolean, processType: `COPT_INSTANT`|`COPT_INVALID`|`COPT_PC`)
+
+
+
+**WIDGET_PROGRESS_TALK_QUEST_CONTEXT_HANDLER**
+
+fun(self: Widget, qtype: number, useDirectingMode: boolean, npcId: string, doodadId?: string)
+
+
+
+**WIDGET_QUEST_CHAT_LET_IT_DONE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_QUEST_CHAT_RESTART_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_QUEST_CONTEXT_CONDITION_EVENT_HANDLER**
+
+fun(self: Widget, objText: string, condition: "dropped"|"started"|"updated")
+
+
+
+**WIDGET_QUEST_CONTEXT_OBJECTIVE_EVENT_HANDLER**
+
+fun(self: Widget, objText: string)
+
+
+
+**WIDGET_QUEST_CONTEXT_UPDATED_HANDLER**
+
+fun(self: Widget, qType: number, status: "dropped"|"started"|"updated")
+
+
+
+**WIDGET_QUEST_DIRECTING_MODE_END_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_QUEST_DIRECTING_MODE_HOT_KEY_HANDLER**
+
+fun(self: Widget, key: `1`|`2`|`3`)
+
+
+
+**WIDGET_QUEST_ERROR_INFO_HANDLER**
+
+fun(self: Widget, errNum: `10`|`11`|`12`|`13`|`14`...(+35), qtype: number, questDetail?: string, isCommon?: boolean)
+
+
+
+**WIDGET_QUEST_HIDDEN_COMPLETE_HANDLER**
+
+fun(self: Widget, qtype: number)
+
+
+
+**WIDGET_QUEST_HIDDEN_READY_HANDLER**
+
+fun(self: Widget, qtype: number)
+
+
+
+**WIDGET_QUEST_LEFT_TIME_UPDATED_HANDLER**
+
+fun(self: Widget, qtype: number, leftTime: number)
+
+
+
+**WIDGET_QUEST_MSG_HANDLER**
+
+fun(self: Widget, arg1: string, arg2: string)
+
+
+
+**WIDGET_QUEST_NOTIFIER_START_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_QUEST_QUICK_CLOSE_EVENT_HANDLER**
+
+fun(self: Widget, qtype: number)
+
+
+
+**WIDGET_RAID_APPLICANT_LIST_HANDLER**
+
+fun(self: Widget, data: RaidApplicantData)
+
+
+
+**WIDGET_RAID_FRAME_SIMPLE_VIEW_HANDLER**
+
+fun(self: Widget, simple: boolean)
+
+
+
+**WIDGET_RAID_RECRUIT_DETAIL_HANDLER**
+
+fun(self: Widget, data: RaidRecruitDetailInfo)
+
+
+
+**WIDGET_RAID_RECRUIT_HUD_HANDLER**
+
+fun(self: Widget, infos: RaidRecruitInfo[])
+
+
+
+**WIDGET_RAID_RECRUIT_LIST_HANDLER**
+
+fun(self: Widget, data: RaidRecruitListInfo)
+
+
+
+**WIDGET_RANDOM_SHOP_INFO_HANDLER**
+
+fun(self: Widget, isHide: boolean, isdailyReset: boolean)
+
+
+
+**WIDGET_RANDOM_SHOP_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RANK_ALARM_MSG_HANDLER**
+
+fun(self: Widget, rankType: `RK_CHARACTER_GEAR_SCORE`|`RK_EXPEDITION_BATTLE_RECORD`|`RK_EXPEDITION_GEAR_SCORE`|`RK_EXPEDITION_INSTANCE_RATING`|`RK_FISHING_SUM`...(+7), msg: string)
+
+
+
+**WIDGET_RANK_DATA_RECEIVED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RANK_LOCK_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RANK_PERSONAL_DATA_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RANK_RANKER_APPEARANCE_HANDLER**
+
+fun(self: Widget, charID: number)
+
+
+
+**WIDGET_RANK_REWARD_SNAPSHOTS_HANDLER**
+
+fun(self: Widget, rankType: number, divisionId: number)
+
+
+
+**WIDGET_RANK_SEASON_RESULT_RECEIVED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RANK_SNAPSHOTS_HANDLER**
+
+fun(self: Widget, rankType: number, divisionId: number)
+
+
+
+**WIDGET_RANK_UNLOCK_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RECOVERABLE_EXP_HANDLER**
+
+fun(self: Widget, stringId: string, restorableExp: number, expLoss: number)
+
+
+
+**WIDGET_RECOVERED_EXP_HANDLER**
+
+fun(self: Widget, stringId: string, recoveredExp: number)
+
+
+
+**WIDGET_REENTRY_NOTIFY_DISABLE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_REENTRY_NOTIFY_ENABLE_HANDLER**
+
+fun(self: Widget, param: ReentryParam)
+
+
+
+**WIDGET_REFRESH_COMBAT_RESOURCE_HANDLER**
+
+fun(self: Widget, resetBar: boolean, groupType: number, resourceType: number, point?: number)
+
+
+
+**WIDGET_REFRESH_COMBAT_RESOURCE_UPDATE_TIME_HANDLER**
+
+fun(self: Widget, updateReesourceType: number, nowTime: number, show: boolean)
+
+
+
+**WIDGET_REFRESH_SQUAD_LIST_HANDLER**
+
+fun(self: Widget, arg?: boolean)
+
+
+
+**WIDGET_REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RELOAD_CASH_HANDLER**
+
+fun(self: Widget, money: any)
+
+
+
+**WIDGET_REMOVED_ITEM_HANDLER**
+
+fun(self: Widget, itemLinkText: string, itemCount: number, removeState: "consume"|"conversion"|"destroy", itemTaskType: number, tradeOtherName: string)
+
+
+
+**WIDGET_REMOVE_BOSS_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget, arg: any)
+
+
+
+**WIDGET_REMOVE_CARRYING_BACKPACK_SLAVE_INFO_HANDLER**
+
+fun(self: Widget, arg: any)
+
+
+
+**WIDGET_REMOVE_FISH_SCHOOL_INFO_HANDLER**
+
+fun(self: Widget, index: number)
+
+
+
+**WIDGET_REMOVE_GIVEN_QUEST_INFO_HANDLER**
+
+fun(self: Widget, arg1: number, qType: number)
+
+
+
+**WIDGET_REMOVE_NOTIFY_QUEST_INFO_HANDLER**
+
+fun(self: Widget, qType: number)
+
+
+
+**WIDGET_REMOVE_PING_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_REMOVE_SHIP_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget, arg: number)
+
+
+
+**WIDGET_REMOVE_TRANSFER_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget, index: number)
+
+
+
+**WIDGET_RENAME_PORTAL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RENEW_ITEM_SUCCEEDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_REPORT_BAD_USER_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_REPORT_CRIME_HANDLER**
+
+fun(self: Widget, doodadName: string, locationName: string)
+
+
+
+**WIDGET_REPUTATION_GIVEN_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_REQUIRE_DELAY_TO_CHAT_HANDLER**
+
+fun(self: Widget, channel: any, delay: any, remain: any)
+
+
+
+**WIDGET_REQUIRE_ITEM_TO_CHAT_HANDLER**
+
+fun(self: Widget, channel: any)
+
+
+
+**WIDGET_RESET_INGAME_SHOP_MODELVIEW_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RESIDENT_BOARD_TYPE_HANDLER**
+
+fun(self: Widget, boardType: `1`|`2`|`3`|`4`|`5`...(+2))
+
+
+
+**WIDGET_RESIDENT_HOUSING_TRADE_LIST_HANDLER**
+
+fun(self: Widget, infos: ResidentHousing, rownum: number, filter: number, searchword: string, refresh: number)
+
+
+
+**WIDGET_RESIDENT_MEMBER_LIST_HANDLER**
+
+fun(self: Widget, total: number, start: number, refresh: number, members: ResidentMember[])
+
+
+
+**WIDGET_RESIDENT_SERVICE_POINT_CHANGED_HANDLER**
+
+fun(self: Widget, zoneGroupName: "Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143), amount: number, total: number)
+
+
+
+**WIDGET_RESIDENT_TOWNHALL_HANDLER**
+
+fun(self: Widget, info: ResidentInfo)
+
+
+
+**WIDGET_RESIDENT_ZONE_STATE_CHANGE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_ROLLBACK_FAVORITE_CRAFTS_HANDLER**
+
+fun(self: Widget, datas: Craft[])
+
+
+
+**WIDGET_RULING_CLOSED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_RULING_STATUS_HANDLER**
+
+fun(self: Widget, count: number, total: number, sentenceType: `SENTENCE_GUILTY_1`|`SENTENCE_GUILTY_2`|`SENTENCE_GUILTY_3`|`SENTENCE_GUILTY_4`|`SENTENCE_GUILTY_5`...(+1), sentenceTime: number)
+
+
+
+**WIDGET_SAVE_PORTAL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SAVE_SCREEN_SHOT_HANDLER**
+
+fun(self: Widget, path: string)
+
+
+
+**WIDGET_SCALE_ENCHANT_BROADCAST_HANDLER**
+
+fun(self: Widget, characterName: string, resultCode: `IEBCT_ENCHANT_GREATE_SUCCESS`|`IEBCT_ENCHANT_SUCCESS`|`IEBCT_EVOVING`, itemLink: string, oldScale: string, newScale: string)
+
+
+
+**WIDGET_SCHEDULE_ITEM_SENT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SCHEDULE_ITEM_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SELECTED_INSTANCE_DIFFICULT_HANDLER**
+
+fun(self: Widget, difficult: any)
+
+
+
+**WIDGET_SELECT_SQUAD_LIST_HANDLER**
+
+fun(self: Widget, data: SelectSquadList)
+
+
+
+**WIDGET_SELL_SPECIALTY_CONTENT_INFO_HANDLER**
+
+fun(self: Widget, list: SpecialtyInfo)
+
+
+
+**WIDGET_SELL_SPECIALTY_HANDLER**
+
+fun(self: Widget, text: string)
+
+
+
+**WIDGET_SET_DEFAULT_EXPAND_RATIO_HANDLER**
+
+fun(self: Widget, isSameZone: boolean)
+
+
+
+**WIDGET_SET_EFFECT_ICON_VISIBLE_HANDLER**
+
+fun(self: Widget, isShow: boolean, arg: Widget)
+
+
+
+**WIDGET_SET_OVERHEAD_MARK_HANDLER**
+
+fun(self: Widget, unitId: string, index: number, visible: boolean)
+
+
+
+**WIDGET_SET_PING_MODE_HANDLER**
+
+fun(self: Widget, pick: boolean)
+
+
+
+**WIDGET_SET_REBUILD_HOUSE_CAMERA_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SET_ROADMAP_PICKABLE_HANDLER**
+
+fun(self: Widget, pick: boolean)
+
+
+
+**WIDGET_SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW_HANDLER**
+
+fun(self: Widget, zoneName: string, accumulatePoint: number, state?: any)
+
+
+
+**WIDGET_SHOW_ADDED_ITEM_HANDLER**
+
+fun(self: Widget, item: ItemInfo, count: number, taskType: number)
+
+
+
+**WIDGET_SHOW_ADD_TAB_WINDOW_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SHOW_BANNER_HANDLER**
+
+fun(self: Widget, show: boolean, instanceType: number, remainPreNoticeTime?: any)
+
+
+
+**WIDGET_SHOW_CHAT_TAB_CONTEXT_HANDLER**
+
+fun(self: Widget, arg1: Widget, arg2: number)
+
+
+
+**WIDGET_SHOW_CRIME_RECORDS_HANDLER**
+
+fun(self: Widget, trialState: `TRIAL_FINAL_STATEMENT`|`TRIAL_FREE`|`TRIAL_GUILTY_BY_SYSTEM`|`TRIAL_GUILTY_BY_USER`|`TRIAL_POST_SENTENCE`...(+4))
+
+
+
+**WIDGET_SHOW_DEFENDANT_WAIT_JURY_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SHOW_DEFENDANT_WAIT_TRIAL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SHOW_RAID_FRAME_SETTINGS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SHOW_RENAME_EXPEIDITON_HANDLER**
+
+fun(self: Widget, byItem: any, triedName: any, ownerWnd: any)
+
+
+
+**WIDGET_SHOW_ROADMAP_TOOLTIP_HANDLER**
+
+fun(self: Widget, tooltipInfo: TooltipInfo[], tooltipCount: number)
+
+
+
+**WIDGET_SHOW_SEXTANT_POS_HANDLER**
+
+fun(self: Widget, sextantPos: SEXTANT)
+
+
+
+**WIDGET_SHOW_SLAVE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SHOW_VERDICTS_HANDLER**
+
+fun(self: Widget, p1: number, p2: number, p3: number, p4: number, p5: number)
+
+
+
+**WIDGET_SHOW_WORLDMAP_LOCATION_HANDLER**
+
+fun(self: Widget, zoneId: `0`|`100`|`101`|`102`|`104`...(+315), x: number, y: number, z: number)
+
+
+
+**WIDGET_SHOW_WORLDMAP_TOOLTIP_HANDLER**
+
+fun(self: Widget, tooltipInfo: TooltipInfo[], tooltipCount: number)
+
+
+
+**WIDGET_SIEGEWEAPON_BOUND_HANDLER**
+
+fun(self: Widget, arg: number)
+
+
+
+**WIDGET_SIEGEWEAPON_UNBOUND_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SIEGE_APPOINT_RESULT_HANDLER**
+
+fun(self: Widget, isDefender: any, faction: any)
+
+
+
+**WIDGET_SIEGE_RAID_REGISTER_LIST_HANDLER**
+
+fun(self: Widget, zoneGroupType?: any, bRegistState?: any, bListUpdate?: any)
+
+
+
+**WIDGET_SIEGE_RAID_TEAM_INFO_HANDLER**
+
+fun(self: Widget, info: SiegeRaidInfo)
+
+
+
+**WIDGET_SIEGE_WAR_ENDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SIM_DOODAD_MSG_HANDLER**
+
+fun(self: Widget, code?: any)
+
+
+
+**WIDGET_SKILLS_RESET_HANDLER**
+
+fun(self: Widget, ability: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9))
+
+
+
+**WIDGET_SKILL_ALERT_ADD_HANDLER**
+
+fun(self: Widget, statusBuffType: `10`|`11`|`12`|`13`|`14`...(+16), buffId: number, remainTime: number, name: "Bleed (All)"|"Bubble Trap"|"Charmed"|"Deep Freeze"|"Enervate"...(+16))
+
+
+
+**WIDGET_SKILL_ALERT_REMOVE_HANDLER**
+
+fun(self: Widget, statusBuffType: `10`|`11`|`12`|`13`|`14`...(+16))
+
+
+
+**WIDGET_SKILL_CHANGED_HANDLER**
+
+fun(self: Widget, text: string, level: number, ability: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9))
+
+
+
+**WIDGET_SKILL_LEARNED_HANDLER**
+
+fun(self: Widget, text: string, skillType: "buff"|"skill")
+
+
+
+**WIDGET_SKILL_MAP_EFFECT_HANDLER**
+
+fun(self: Widget, info: SkillMapEffectInfo)
+
+
+
+**WIDGET_SKILL_MSG_HANDLER**
+
+fun(self: Widget, resultCode: "ALERT_OPTION"|"ALERT_OPTION_POPUP_DESC"|"ALERT_OPTION_POSITION_1_TEXT"|"ALERT_OPTION_POSITION_2_TEXT"|"ALERT_OPTION_POSITION_BASIC_TEXT"...(+202), param: string, skillType: number)
+
+
+
+**WIDGET_SKILL_SELECTIVE_ITEM_HANDLER**
+
+fun(self: Widget, list: SkillSelectiveItemList, usingSlotIndex: number)
+
+
+
+**WIDGET_SKILL_SELECTIVE_ITEM_NOT_AVAILABLE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SKILL_SELECTIVE_ITEM_READY_STATUS_HANDLER**
+
+fun(self: Widget, status: boolean)
+
+
+
+**WIDGET_SKILL_UPGRADED_HANDLER**
+
+fun(self: Widget, skillType: number, level: number, arg: number)
+
+
+
+**WIDGET_SLAVE_SHIP_BOARDING_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SLAVE_SHIP_UNBOARDING_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SLAVE_SPAWN_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SPAWN_PET_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+
+
+
+**WIDGET_SPECIALTY_CONTENT_RECIPE_INFO_HANDLER**
+
+fun(self: Widget, list: any)
+
+
+
+**WIDGET_SPECIALTY_RATIO_BETWEEN_INFO_HANDLER**
+
+fun(self: Widget, specialtyRatioTable: SpecialtyRatioInfo[])
+
+
+
+**WIDGET_SPECIAL_ABILITY_LEARNED_HANDLER**
+
+fun(self: Widget, recvAbility: number)
+
+
+
+**WIDGET_SPELLCAST_START_HANDLER**
+
+fun(self: Widget, spellName: string, castingTime: number, caster: "player"|"target"|"targettarget"|"watchtarget", castingUseable: boolean)
+
+
+
+**WIDGET_SPELLCAST_STOP_HANDLER**
+
+fun(self: Widget, caster: "player"|"target"|"targettarget"|"watchtarget")
+
+
+
+**WIDGET_SPELLCAST_SUCCEEDED_HANDLER**
+
+fun(self: Widget, caster: "player"|"target"|"targettarget"|"watchtarget")
+
+
+
+**WIDGET_STARTED_DUEL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_START_CHAT_BUBBLE_HANDLER**
+
+fun(self: Widget, arg: string)
+
+
+
+**WIDGET_START_HERO_ELECTION_PERIOD_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_START_QUEST_CONTEXT_DOODAD_HANDLER**
+
+fun(self: Widget, qtype: number, useDirectingMode: boolean, doodadId: number)
+
+
+
+**WIDGET_START_QUEST_CONTEXT_HANDLER**
+
+fun(self: Widget, qtype: any, useDirectingMode: any, npcId: any)
+
+
+
+**WIDGET_START_QUEST_CONTEXT_NPC_HANDLER**
+
+fun(self: Widget, qtype: number, useDirectingMode: boolean, npcId: string)
+
+
+
+**WIDGET_START_QUEST_CONTEXT_SPHERE_HANDLER**
+
+fun(self: Widget, qtype: number, stype: number)
+
+
+
+**WIDGET_START_SENSITIVE_OPERATION_HANDLER**
+
+fun(self: Widget, remainTime: any)
+
+
+
+**WIDGET_START_TALK_QUEST_CONTEXT_HANDLER**
+
+fun(self: Widget, doodadId: any)
+
+
+
+**WIDGET_START_TODAY_ASSIGNMENT_HANDLER**
+
+fun(self: Widget, stepName: any)
+
+
+
+**WIDGET_STICKED_MSG_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_STILL_LOADING_HANDLER**
+
+fun(self: Widget, loadingProgress: any)
+
+
+
+**WIDGET_STORE_ADD_BUY_ITEM_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_STORE_ADD_SELL_ITEM_HANDLER**
+
+fun(self: Widget, slotNumber: number)
+
+
+
+**WIDGET_STORE_BUY_HANDLER**
+
+fun(self: Widget, itemLinkText: string, stackCount: number)
+
+
+
+**WIDGET_STORE_FULL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_STORE_SELL_HANDLER**
+
+fun(self: Widget, itemLinkText: string, stackCount: number)
+
+
+
+**WIDGET_STORE_SOLD_LIST_HANDLER**
+
+fun(self: Widget, soldItems: ItemInfo[])
+
+
+
+**WIDGET_STORE_TRADE_FAILED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SURVEY_FORM_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SWITCH_ENCHANT_ITEM_MODE_HANDLER**
+
+fun(self: Widget, mode: "awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7))
+
+
+
+**WIDGET_SYNC_PORTAL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_SYSMSG_HANDLER**
+
+fun(self: Widget, msg: string)
+
+
+
+**WIDGET_SYS_INDUN_STAT_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TARGET_CHANGED_HANDLER**
+
+fun(self: Widget, stringId: string|nil, targetType: "housing"|"npc"|nil)
+
+
+
+**WIDGET_TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO_HANDLER**
+
+fun(self: Widget, curHp: any, maxHp: any)
+
+
+
+**WIDGET_TARGET_OVER_HANDLER**
+
+fun(self: Widget, targetType: "doodad"|"nothing"|"ui"|"unit", unitId: string|number)
+
+
+
+**WIDGET_TARGET_TO_TARGET_CHANGED_HANDLER**
+
+fun(self: Widget, stringId: string|nil, targetType: "doodad"|"nothing"|"ui"|"unit"|nil)
+
+
+
+**WIDGET_TEAM_JOINTED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TEAM_JOINT_BREAK_HANDLER**
+
+fun(self: Widget, requester: any, enable: any)
+
+
+
+**WIDGET_TEAM_JOINT_BROKEN_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TEAM_JOINT_CHAT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TEAM_JOINT_RESPONSE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TEAM_JOINT_TARGET_HANDLER**
+
+fun(self: Widget, isJointable: any)
+
+
+
+**WIDGET_TEAM_MEMBERS_CHANGED_HANDLER**
+
+fun(self: Widget, reason: "joined"|"leaved"|"refreshed", value: TeamMember)
+
+
+
+**WIDGET_TEAM_MEMBER_DISCONNECTED_HANDLER**
+
+fun(self: Widget, isParty: boolean, jointOrder: number, stringId: string, memberIndex: number)
+
+
+
+**WIDGET_TEAM_MEMBER_UNIT_ID_CHANGED_HANDLER**
+
+fun(self: Widget, oldStringId: string, stringId: string)
+
+
+
+**WIDGET_TEAM_ROLE_CHANGED_HANDLER**
+
+fun(self: Widget, jointOrder: number, memberIndex: number, role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
+
+
+
+**WIDGET_TEAM_SUMMON_SUGGEST_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TIME_MESSAGE_HANDLER**
+
+fun(self: Widget, key: any, timeTable: any)
+
+
+
+**WIDGET_TOGGLE_CHANGE_VISUAL_RACE_HANDLER**
+
+fun(self: Widget, data: ChangeVisualRace)
+
+
+
+**WIDGET_TOGGLE_COMMUNITY_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TOGGLE_CRAFT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TOGGLE_FACTION_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TOGGLE_FOLLOW_HANDLER**
+
+fun(self: Widget, on: boolean)
+
+
+
+**WIDGET_TOGGLE_IN_GAME_NOTICE_HANDLER**
+
+fun(self: Widget, url: any)
+
+
+
+**WIDGET_TOGGLE_PARTY_FRAME_HANDLER**
+
+fun(self: Widget, show: boolean)
+
+
+
+**WIDGET_TOGGLE_PET_MANAGE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TOGGLE_PORTAL_DIALOG_HANDLER**
+
+fun(self: Widget, addPortal: boolean, skillTypeNumber: number, itemTypeNumber: number)
+
+
+
+**WIDGET_TOGGLE_RAID_FRAME2_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TOGGLE_RAID_FRAME_HANDLER**
+
+fun(self: Widget, show: boolean)
+
+
+
+**WIDGET_TOGGLE_RAID_FRAME_PARTY_HANDLER**
+
+fun(self: Widget, party: number, visible: boolean)
+
+
+
+**WIDGET_TOGGLE_ROADMAP_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TOGGLE_WALK_HANDLER**
+
+fun(self: Widget, speed: number)
+
+
+
+**WIDGET_TOWER_DEF_INFO_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TOWER_DEF_MSG_HANDLER**
+
+fun(self: Widget, towerDefInfo: TowerDefInfo)
+
+
+
+**WIDGET_TRADE_CANCELED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_CAN_START_HANDLER**
+
+fun(self: Widget, unitIdStr: any)
+
+
+
+**WIDGET_TRADE_ITEM_PUTUP_HANDLER**
+
+fun(self: Widget, inventoryIdx: number, amount: number)
+
+
+
+**WIDGET_TRADE_ITEM_TOOKDOWN_HANDLER**
+
+fun(self: Widget, inventoryIdx: any)
+
+
+
+**WIDGET_TRADE_ITEM_UPDATED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_LOCKED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_MADE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_MONEY_PUTUP_HANDLER**
+
+fun(self: Widget, money: string)
+
+
+
+**WIDGET_TRADE_OK_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_OTHER_ITEM_PUTUP_HANDLER**
+
+fun(self: Widget, otherIdx: any, type: any, stackCount: any, tooltip: any)
+
+
+
+**WIDGET_TRADE_OTHER_ITEM_TOOKDOWN_HANDLER**
+
+fun(self: Widget, otherIdx: any)
+
+
+
+**WIDGET_TRADE_OTHER_LOCKED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_OTHER_MONEY_PUTUP_HANDLER**
+
+fun(self: Widget, money: any)
+
+
+
+**WIDGET_TRADE_OTHER_OK_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_STARTED_HANDLER**
+
+fun(self: Widget, targetName: string)
+
+
+
+**WIDGET_TRADE_UI_TOGGLE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRADE_UNLOCKED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRANSFORM_COMBAT_RESOURCE_HANDLER**
+
+fun(self: Widget, groupType: `10`|`11`|`12`|`14`|`1`...(+10))
+
+
+
+**WIDGET_TRIAL_CANCELED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRIAL_CLOSED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_TRIAL_MESSAGE_HANDLER**
+
+fun(self: Widget, text: string)
+
+
+
+**WIDGET_TRIAL_STATUS_HANDLER**
+
+fun(self: Widget, state: `TRIAL_FINAL_STATEMENT`|`TRIAL_FREE`|`TRIAL_GUILTY_BY_SYSTEM`|`TRIAL_GUILTY_BY_USER`|`TRIAL_POST_SENTENCE`...(+4), juryCount: number, remainTime: number, arg: number)
+
+
+
+**WIDGET_TRIAL_TIMER_HANDLER**
+
+fun(self: Widget, state: `TRIAL_FINAL_STATEMENT`|`TRIAL_FREE`|`TRIAL_GUILTY_BY_SYSTEM`|`TRIAL_GUILTY_BY_USER`|`TRIAL_POST_SENTENCE`...(+4), remainTable: Time)
+
+
+
+**WIDGET_TRY_LOOT_DICE_HANDLER**
+
+fun(self: Widget, key: number, timeStamp: number, itemLink: string)
+
+
+
+**WIDGET_TUTORIAL_EVENT_HANDLER**
+
+fun(self: Widget, id: number, info: TutorialInfo[])
+
+
+
+**WIDGET_TUTORIAL_HIDE_FROM_OPTION_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UCC_IMPRINT_SUCCEEDED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UI_ADDON_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UI_PERMISSION_UPDATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UI_RELOADED_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UNFINISHED_BUILD_HOUSE_HANDLER**
+
+fun(self: Widget, message: string)
+
+
+
+**WIDGET_UNITFRAME_ABILITY_UPDATE_HANDLER**
+
+fun(self: Widget, unitId: string)
+
+
+
+**WIDGET_UNIT_COMBAT_STATE_CHANGED_HANDLER**
+
+fun(self: Widget, combat: boolean, unitId: string)
+
+
+
+**WIDGET_UNIT_DEAD_HANDLER**
+
+fun(self: Widget, stringId: string, lossExp: number, lossDurabilityRatio: number)
+
+
+
+**WIDGET_UNIT_DEAD_NOTICE_HANDLER**
+
+fun(self: Widget, name: string)
+
+
+
+**WIDGET_UNIT_ENTERED_SIGHT_HANDLER**
+
+fun(self: Widget, unitId: number, unitType: "housing"|"npc", curHp: string, maxHp: string)
+
+
+
+**WIDGET_UNIT_EQUIPMENT_CHANGED_HANDLER**
+
+fun(self: Widget, equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
+
+
+
+**WIDGET_UNIT_KILL_STREAK_HANDLER**
+
+fun(self: Widget, killStreakInfo: KillStreakInfo)
+
+
+
+**WIDGET_UNIT_LEAVED_SIGHT_HANDLER**
+
+fun(self: Widget, unitId: number, unitType: "housing"|"npc")
+
+
+
+**WIDGET_UNIT_NAME_CHANGED_HANDLER**
+
+fun(self: Widget, unitId: string)
+
+
+
+**WIDGET_UNIT_NPC_EQUIPMENT_CHANGED_HANDLER**
+
+fun(self: Widget, arg: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
+
+
+
+**WIDGET_UNMOUNT_PET_HANDLER**
+
+fun(self: Widget, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`, isMyPet: boolean)
+
+
+
+**WIDGET_UPDATE_BINDINGS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_BOSS_TELESCOPE_AREA_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_BOSS_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_BOT_CHECK_INFO_HANDLER**
+
+fun(self: Widget, totalTime: number, remainTime: number, count: number, question: string)
+
+
+
+**WIDGET_UPDATE_BUBBLE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_CARRYING_BACKPACK_SLAVE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_CHANGE_VISUAL_RACE_WND_HANDLER**
+
+fun(self: Widget, fired: boolean)
+
+
+
+**WIDGET_UPDATE_CHRONICLE_INFO_HANDLER**
+
+fun(self: Widget, info: ChronicleInfo)
+
+
+
+**WIDGET_UPDATE_CHRONICLE_NOTIFIER_HANDLER**
+
+fun(self: Widget, init: boolean, mainKey: number)
+
+
+
+**WIDGET_UPDATE_CLIENT_DRIVEN_INFO_HANDLER**
+
+fun(self: Widget, sceneInfo: any)
+
+
+
+**WIDGET_UPDATE_COMPLETED_QUEST_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_CONTENT_ROSTER_WINDOW_HANDLER**
+
+fun(self: Widget, updateInfo: any)
+
+
+
+**WIDGET_UPDATE_CORPSE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_CRAFT_ORDER_ITEM_FEE_HANDLER**
+
+fun(self: Widget, info: CraftOrderItemFee)
+
+
+
+**WIDGET_UPDATE_CRAFT_ORDER_ITEM_SLOT_HANDLER**
+
+fun(self: Widget, info?: CraftOrderItemSlot)
+
+
+
+**WIDGET_UPDATE_CRAFT_ORDER_SKILL_HANDLER**
+
+fun(self: Widget, key: string, fired: boolean)
+
+
+
+**WIDGET_UPDATE_DEFENCE_INFO_HANDLER**
+
+fun(self: Widget, info: any)
+
+
+
+**WIDGET_UPDATE_DOMINION_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_DOODAD_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_DURABILITY_STATUS_HANDLER**
+
+fun(self: Widget, added: boolean, removed: boolean)
+
+
+
+**WIDGET_UPDATE_DYEING_EXCUTABLE_HANDLER**
+
+fun(self: Widget, executeable: boolean)
+
+
+
+**WIDGET_UPDATE_ENCHANT_ITEM_MODE_HANDLER**
+
+fun(self: Widget, isExcutable: boolean, isLock: boolean)
+
+
+
+**WIDGET_UPDATE_EXPEDITION_PORTAL_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT_HANDLER**
+
+fun(self: Widget, count: number)
+
+
+
+**WIDGET_UPDATE_FACTION_REZ_DISTRICT_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_FISH_SCHOOL_AREA_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_FISH_SCHOOL_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_GACHA_LOOT_MODE_HANDLER**
+
+fun(self: Widget, isExcutable: boolean, isLock: boolean)
+
+
+
+**WIDGET_UPDATE_GIVEN_QUEST_STATIC_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_HERO_ELECTION_CONDITION_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_HOUSING_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_HOUSING_TOOLTIP_HANDLER**
+
+fun(self: Widget, unitId: string)
+
+
+
+**WIDGET_UPDATE_INGAME_BEAUTYSHOP_STATUS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_INGAME_SHOP_HANDLER**
+
+fun(self: Widget, updateType: "cart"|"checkTime"|"exchange_ratio"|"goods"|"maintab"...(+2), page?: number, totalItems?: number, arg4?: any)
+
+
+
+**WIDGET_UPDATE_INGAME_SHOP_VIEW_HANDLER**
+
+fun(self: Widget, viewType: "enter_mode"|"leave_mode"|"leave_sort", mode: `1`|`MODE_SEARCH`)
+
+
+
+**WIDGET_UPDATE_INSTANT_GAME_INVITATION_COUNT_HANDLER**
+
+fun(self: Widget, accept: number, totalSize: number)
+
+
+
+**WIDGET_UPDATE_INSTANT_GAME_KILLSTREAK_COUNT_HANDLER**
+
+fun(self: Widget, count: number)
+
+
+
+**WIDGET_UPDATE_INSTANT_GAME_KILLSTREAK_HANDLER**
+
+fun(self: Widget, count: any)
+
+
+
+**WIDGET_UPDATE_INSTANT_GAME_SCORES_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_INSTANT_GAME_STATE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_INSTANT_GAME_TIME_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_ITEM_LOOK_CONVERT_MODE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_MONITOR_NPC_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_MY_SLAVE_POS_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_NPC_INFO_BROADCASTING_HANDLER**
+
+fun(self: Widget, info: NpcBroadcastingInfo[])
+
+
+
+**WIDGET_UPDATE_NPC_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_OPTION_BINDINGS_HANDLER**
+
+fun(self: Widget, overrided?: boolean, oldAction?: string, newAction?: string)
+
+
+
+**WIDGET_UPDATE_PING_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL_HANDLER**
+
+fun(self: Widget, infos: ItemInfo)
+
+
+
+**WIDGET_UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT_HANDLER**
+
+fun(self: Widget, info: CraftOrderInfo|nil)
+
+
+
+**WIDGET_UPDATE_RETURN_ACCOUNT_STATUS_HANDLER**
+
+fun(self: Widget, status: `1`|`2`|`3`)
+
+
+
+**WIDGET_UPDATE_ROADMAP_ANCHOR_HANDLER**
+
+fun(self: Widget, file: string)
+
+
+
+**WIDGET_UPDATE_ROSTER_MEMBER_INFO_HANDLER**
+
+fun(self: Widget, rosterId: any)
+
+
+
+**WIDGET_UPDATE_ROUTE_MAP_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_SHIP_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_SHORTCUT_SKILLS_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_SIEGE_SCORE_HANDLER**
+
+fun(self: Widget, offensePoint: number, outlawPoint: number)
+
+
+
+**WIDGET_UPDATE_SKILL_ACTIVE_TYPE_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_SLAVE_EQUIPMENT_SLOT_HANDLER**
+
+fun(self: Widget, reload: boolean)
+
+
+
+**WIDGET_UPDATE_SPECIALTY_RATIO_HANDLER**
+
+fun(self: Widget, sellItem: SellSpecialtyInfo)
+
+
+
+**WIDGET_UPDATE_SQUAD_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_TELESCOPE_AREA_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_TODAY_ASSIGNMENT_HANDLER**
+
+fun(self: Widget, todayInfo?: TodayAssignmentInfo)
+
+
+
+**WIDGET_UPDATE_TODAY_ASSIGNMENT_RESET_COUNT_HANDLER**
+
+fun(self: Widget, count: number)
+
+
+
+**WIDGET_UPDATE_TRANSFER_TELESCOPE_AREA_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_TRANSFER_TELESCOPE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_ZONE_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_UPDATE_ZONE_LEVEL_INFO_HANDLER**
+
+fun(self: Widget, level: `0`|`1`|`2`|`3`, id: `0`|`100`|`101`|`102`|`103`...(+151))
+
+
+
+**WIDGET_UPDATE_ZONE_PERMISSION_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_VIEW_CASH_BUY_WINDOW_HANDLER**
+
+fun(self: Widget, sellType: any)
+
+
+
+**WIDGET_WAIT_FRIENDLIST_UPDATE_HANDLER**
+
+fun(self: Widget, updateType: string)
+
+
+
+**WIDGET_WAIT_FRIEND_ADD_ALARM_HANDLER**
+
+fun(self: Widget)
+
+
+
+**WIDGET_WAIT_REPLY_FROM_SERVER_HANDLER**
+
+fun(self: Widget, waiting: boolean)
+
+
+
+**WIDGET_WATCH_TARGET_CHANGED_HANDLER**
+
+fun(self: Widget, stringId: any)
+
+
+
+**WIDGET_WEB_BROWSER_ESC_EVENT_HANDLER**
+
+fun(self: Widget, browser: any)
+
+
+
+**WIDGET_WORLD_MESSAGE_HANDLER**
+
+fun(self: Widget, msg: string, iconKey: string, info: WorldMessageInfo)
+
+
+
+**WIDGET_ZONE_SCORE_CONTENT_STATE_HANDLER**
+
+fun(self: Widget, states?: any)
+
+
+
+**WIDGET_ZONE_SCORE_UPDATED_HANDLER**
+
+fun(self: Widget, kind: any, info: any)
 
 
 

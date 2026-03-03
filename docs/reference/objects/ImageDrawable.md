@@ -55,6 +55,8 @@ Extends [DrawableDDS](../types/DrawableDDS.md#class-drawabledds)
 > Sets a TGA texture for the ImageDrawable.
 > 
 > @*param* `filename` — The path to the TGA texture file.
+> 
+> @*return* `success` — `true` if the texture was successfully loaded and set, `false` otherwise.
 
 #### Method: SetTiling
 ```lua
@@ -70,7 +72,7 @@ Extends [DrawableDDS](../types/DrawableDDS.md#class-drawabledds)
 ```
 > Sets a UCC texture for the `ImageDrawable` by UCC ID.
 > 
-> @*param* `complexId` — The UCC ID for the texture.
+> @*param* `complexId` — The UCC ID for the texture stored on the server.
 > 
 > @*param* `isBack` — `true` for background, `false` for foreground.
 
@@ -132,7 +134,7 @@ Extends [DrawableDDS](../types/DrawableDDS.md#class-drawabledds)
 ```
 > Sets a UCC texture for the `ImageDrawable` within a doodad.
 > 
-> @*param* `doodadId` — The doodad ID for the texture.
+> @*param* `doodadId` — The doodad ID for the texture to be applied to.
 > 
 > @*param* `isBack` — `true` for background, `false` for foreground.
 

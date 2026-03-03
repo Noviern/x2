@@ -77,6 +77,7 @@ Button[]|nil
 (method) ListCtrl:Select(itemIdx: number)
 ```
 > Selects the item at the specified index in the ListCtrl.
+> Both the over image and selected image have to be defined.
 > 
 > @*param* `itemIdx` — The row index of the item to select. (min: `0`)
 
@@ -133,7 +134,7 @@ Button[]|nil
 ```
 > Sets the height of the header column for the ListCtrl.
 > 
-> @*param* `height` — The height of the header column.
+> @*param* `height` — The height of the header column. (default: `30`)
 
 #### Method: InsertData
 ```lua

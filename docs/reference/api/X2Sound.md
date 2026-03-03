@@ -30,11 +30,11 @@
 ```
 > Plays a UI sound and returns its sound instance ID.
 > 
-> @*param* `soundName` — The name of the sound to play.
+> @*param* `soundName` — The name of the UI sound to play.
 > 
-> @*param* `duplicable` — If true, allows the sound to play multiple times concurrently; defaults to false.
+> @*param* `duplicable` — `true` to allow multiple concurrent instances of the same sound, `false` to prevent overlap (default: `false`).
 > 
-> @*return* `soundId` — The ID of the sound instance. @TODO: 0 if already playing and not duplicable
+> @*return* `soundId` — The sound instance ID, or `0` if the sound was not played (e.g., already playing and not duplicable).
 > 
 > ```lua
 > -- Obtained from db sound_pack_items sound_pack_id = 203

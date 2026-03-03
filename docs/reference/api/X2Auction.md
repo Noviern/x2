@@ -122,12 +122,14 @@ POST_TYPE:
   -> lowestPrice: string|nil
 ```
 > Retrieves the lowest market price for an item.
+> Returns `nil` on the first call (as it triggers an asynchronous request).
+> Subsequent calls return the actual lowest price once the server response is received.
 > 
 > @*param* `itemType` — The type of item.
 > 
 > @*param* `itemGrade` — The grade of the item.
 > 
-> @*return* `lowestPrice` — The lowest price as a string, or `nil` if not available.
+> @*return* `lowestPrice` — The lowest price as a string, or `nil` if not yet available.
 > 
 > ```lua
 > itemGrade:

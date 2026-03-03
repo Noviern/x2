@@ -118,9 +118,9 @@ TextStyle
 >     | "|ny; Lemonchiffon |r" -- rgb(255, 249, 200)
 >     | "|cFF000000{string}|r" -- #
 >     | "|bu{bulletCharacter};{string}|br" -- #
->     | "|q{questId};"
->     | "|i{itemType},{grade},{kind},{data}"
->     | "|if{craftId};"
+>     | "|q{questId};" -- #
+>     | "|i{itemType},{grade},{kind},{data}" -- #
+>     | "|if{craftId};" -- #
 >     | "|iu{data}" -- link
 >     | "|a{data}" -- raid
 >     | "|A{data}" -- dungeon

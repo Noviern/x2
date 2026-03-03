@@ -67,9 +67,9 @@ AchievementSubCategory[]
 ### Class: AchievementInfo
 #### Field: achievementKind
 ```lua
-number
+`EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`
 ```
-
+> api/X2Achievement
 
 #### Field: name
 ```lua
@@ -81,13 +81,13 @@ string
 ```lua
 number|nil[]
 ```
-> TODO: I think this is only set if highRank == true
+
 
 #### Field: isParentComplete
 ```lua
 boolean|nil
 ```
-> TODO: I think this is only set if highRank == false
+> TODO: this may not exist.
 
 #### Field: isHidden
 ```lua
@@ -105,11 +105,11 @@ string
 ```lua
 RewardInfo|nil
 ```
-> TODO: I think this is only set if highRank == true
+
 
 #### Field: subCategoryType
 ```lua
-number
+`10`|`11`|`12`|`13`|`14`...(+53)
 ```
 
 
@@ -123,7 +123,7 @@ string
 ```lua
 number|nil
 ```
-> TODO: I think this is only set if highRank == true
+
 
 #### Field: summary
 ```lua
@@ -141,7 +141,7 @@ boolean
 ```lua
 number|nil
 ```
-> mainType @TODO: I think this is only set if highRank == false
+> TODO: this may not exist.
 
 #### Field: grade
 ```lua
@@ -183,7 +183,7 @@ Time|nil
 ```lua
 number|nil
 ```
-> TODO: I think this is only set if highRank == true
+> If totalSubCount exists
 
 #### Field: completeNum
 ```lua
@@ -226,7 +226,7 @@ string
 
 #### Field: subCategoryType
 ```lua
-number
+`10`|`11`|`12`|`13`|`14`...(+53)
 ```
 
 
@@ -239,7 +239,7 @@ string
 
 #### Field: subCategoryType
 ```lua
-number
+`10`|`11`|`12`|`13`|`14`...(+53)
 ```
 
 
@@ -2914,16 +2914,18 @@ FactionPointInfo[]
 
 #### Field: winFaction
 ```lua
-`HARIHARA_FACTION_ID`|`MONSTER_FACTION_ID`|`NUIA_FACTION_ID`|`OUTLAW_FACTION_ID`|`PC_IN_ALL_FACTION_ID`
+`101`|`102`|`103`|`104`|`105`...(+124)
 ```
 > api/Addon
+> db > system_factions
 
 ### Class: FactionPointInfo
 #### Field: factionId
 ```lua
-`HARIHARA_FACTION_ID`|`MONSTER_FACTION_ID`|`NUIA_FACTION_ID`|`OUTLAW_FACTION_ID`|`PC_IN_ALL_FACTION_ID`
+`101`|`102`|`103`|`104`|`105`...(+124)
 ```
 > api/Addon
+> db > system_factions
 
 #### Field: point
 ```lua
@@ -3104,7 +3106,7 @@ string
 
 #### Field: [9]
 ```lua
-number
+`101`|`102`|`103`|`104`|`105`...(+124)
 ```
 > Faction
 
@@ -6590,7 +6592,7 @@ string
 
 #### Field: tipType
 ```lua
-string
+string|"appStamp"
 ```
 
 
@@ -6837,7 +6839,7 @@ TextureCoords
 ```lua
 TextureColors|nil
 ```
-> TODO: could be nil?
+
 
 #### Field: offset
 ```lua
@@ -7142,13 +7144,14 @@ string|nil
 
 #### Field: factionId
 ```lua
-`HARIHARA_FACTION_ID`|`MONSTER_FACTION_ID`|`NUIA_FACTION_ID`|`OUTLAW_FACTION_ID`|`PC_IN_ALL_FACTION_ID`...(+1)
+`101`|`102`|`103`|`104`|`105`...(+125)
 ```
 > api/Addon
+> db > system_factions
 
 #### Field: factions
 ```lua
-`HARIHARA_FACTION_ID`|`MONSTER_FACTION_ID`|`NUIA_FACTION_ID`|`OUTLAW_FACTION_ID`|`PC_IN_ALL_FACTION_ID`[]|nil
+`101`|`102`|`103`|`104`|`105`...(+124)[]|nil
 ```
 
 
@@ -7451,25 +7454,6 @@ number|nil
 number|nil
 ```
 
-
-### Class: Vec3Array
-#### Field: [1]
-```lua
-number|nil
-```
-> x
-
-#### Field: [2]
-```lua
-number|nil
-```
-> y
-
-#### Field: [3]
-```lua
-number|nil
-```
-> z
 
 ### Class: VirtualMemoryStats
 #### Field: usage

@@ -85,7 +85,13 @@ TextStyle
 ```lua
 TextStyle
 ```
-> TODO: what is extraStyle used for?
+> [TextStyle](lua://TextStyle)
+> 
+> A `TextStyle` defines the visual appearance of text within a widget,
+> including font, size, color, alignment, outline, shadow, ellipsis,
+> and snapping behavior. It can measure text width and line height, and
+> supports special font types for image-based text rendering.
+> 
 
 #### Method: SetInset
 ```lua

@@ -36,7 +36,7 @@ CT:
 
 **CharacterCacheDataHandler**
 
-fun(self: unknown, data: CacheData)
+fun(self: Widget, data: CacheData)
 
 
 
@@ -71,7 +71,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetCharacterCacheDataHandler
 ```lua
-(method) Widget:SetCharacterCacheDataHandler(handler: fun(self: unknown, data: CacheData))
+(method) Widget:SetCharacterCacheDataHandler(handler: fun(self: Widget, data: CacheData))
 ```
 > Sets a handler for character cache data.
 > 
@@ -123,55 +123,55 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 > 
 > ```lua
 > action:
->     | "OnAcceptFocus"
->     | "OnAlphaAnimeEnd"
->     | "OnBoundChanged"
->     | "OnChangedAnchor"
->     | "OnCheckChanged"
->     | "OnClick"
->     | "OnCloseByEsc"
->     | "OnContentUpdated"
->     | "OnCursorMoved"
->     | "OnDragReceive"
->     | "OnDragStart"
->     | "OnDragStop"
->     | "OnDynamicListUpdatedView"
->     | "OnEffect"
->     | "OnEnableChanged"
->     | "OnEndFadeIn"
->     | "OnEndFadeOut"
->     | "OnEnter"
->     | "OnEnterPressed"
->     | "OnEscapePressed"
->     | "OnEvent"
->     | "OnHide"
->     | "OnKeyDown"
->     | "OnKeyUp"
->     | "OnLeave"
->     | "OnListboxToggled"
->     | "OnModelChanged"
->     | "OnMouseDown"
->     | "OnMouseMove"
->     | "OnMouseUp"
->     | "OnMovedPosition"
->     | "OnPageChanged"
->     | "OnPermissionChanged"
->     | "OnRadioChanged"
->     | "OnRestricted"
->     | "OnScale"
->     | "OnScaleAnimeEnd"
->     | "OnSelChanged"
->     | "OnShow"
->     | "OnSliderChanged"
->     | "OnTabChanged"
->     | "OnTextChanged"
->     | "OnTooltip"
->     | "OnUpdate"
->     | "OnVisibleChanged"
->     | "OnWheelDown"
->     | "OnWheelUp"
->     | "PreClick"
->     | "PreUse"
+>     | "OnAcceptFocus" -- Triggers when the widget accepts focus.
+>     | "OnAlphaAnimeEnd" -- Triggers when the widgets alpha animation has ended.
+>     | "OnBoundChanged" -- Triggers when the widgets ui bound has changed.
+>     | "OnChangedAnchor" -- Triggers when the widgets anchor has been changed.
+>     | "OnCheckChanged" -- triggers when the CheckButton widget check has been changed.
+>     | "OnClick" -- Triggers when the widget has been clicked.
+>     | "OnCloseByEsc" -- Triggers when the Window widget has been closed when the escape key has been pressed. Requires `widget:SetCloseOnEscape(true)`.
+>     | "OnContentUpdated" -- Triggers when the contents of a widget are updated.
+>     | "OnCursorMoved" -- Triggers when the EditboxMultiline widgets cursor has moved.
+>     | "OnDragReceive" -- Triggers when the Window widget has dragging enabled and drag is received.
+>     | "OnDragStart" -- Triggers when the Window widget has dragging enabled and drag has started.
+>     | "OnDragStop" -- Triggers when the Window widget has dragging enabled and drag has stopped.
+>     | "OnDynamicListUpdatedView" -- Triggers when he DynamicList widget view has updated.
+>     | "OnEffect" -- Triggers every frame while the widget is shown.
+>     | "OnEnableChanged" -- Triggers when the widget is enabled or disabled.
+>     | "OnEndFadeIn" -- Triggers when the widget has ended the fade in animation for showing the widget.
+>     | "OnEndFadeOut" -- Triggers when the widget has ended the fade out animation for hiding the widget.
+>     | "OnEnter" -- Triggers when the mouse enters the widgets ui bounds.
+>     | "OnEnterPressed" -- Triggers when the widget is focused and the enter key is pressed.
+>     | "OnEscapePressed" -- Triggers when the widget is focused and the escape key is pressed.
+>     | "OnEvent" -- Triggers when an event registered to the widget triggers.
+>     | "OnHide" -- Triggers when the widget is hidden.
+>     | "OnKeyDown" -- Triggers when the widget has keyboard enabled and the key has been pushed.
+>     | "OnKeyUp" -- Triggers when the widget has keyboard enabled and the key has been released.
+>     | "OnLeave" -- Triggers when mouse leaves the widgets ui bounds.
+>     | "OnListboxToggled" -- Triggers when the Listbox widget is toggled.
+>     | "OnModelChanged" -- triggers when the Model widget model changes.
+>     | "OnMouseDown" -- Triggers when the mouse left or right click is released while within the ui bounds of the widget.
+>     | "OnMouseMove" -- Triggers when the mouse moves while within the widgets ui bounds.
+>     | "OnMouseUp" -- Triggers when the mouse left or right click is pressed while within the ui bounds of the widget.
+>     | "OnMovedPosition" -- Triggers when the Window widget has dragging enabled and the widget has moved.
+>     | "OnPageChanged" -- Triggers when the Pageable widget page changes.
+>     | "OnPermissionChanged" -- Triggers when the permission changes.
+>     | "OnRadioChanged" -- Triggers when the RadioGroup widget radio changes.
+>     | "OnRestricted" -- #
+>     | "OnScale" -- Triggers when the widgets scale has been applied or set.
+>     | "OnScaleAnimeEnd" -- Triggers when the widgets scale animation has ended.
+>     | "OnSelChanged" -- Triggers when the Listbox or ListCtrl widget selection changes.
+>     | "OnShow" -- Triggers when the object is shown.
+>     | "OnSliderChanged" -- Triggers when the Slider widget slider changes.
+>     | "OnTabChanged" -- Triggers when the Tab widget tab changes.
+>     | "OnTextChanged" -- Triggers when the Editbox widget text changes.
+>     | "OnTooltip" -- Triggers when the Listbox widget should show a tooltip.
+>     | "OnUpdate" -- Triggers every frame while the widget is shown.
+>     | "OnVisibleChanged" -- Triggers when the widget is shown or hidden.
+>     | "OnWheelDown" -- Triggers when the mouse is within the widgets ui bounds and the mouse wheel is scrolled down.
+>     | "OnWheelUp" -- Triggers when the mouse is within the widgets ui bounds mouse wheel is scrolled up.
+>     | "PreClick" -- Triggers when the Slot widget is clicked.
+>     | "PreUse" -- Triggers when the Slot widget is clicked.
 > ```
 > 
 > See: [DelegatorHandler](../types/Widget.md#class-delegatorhandler)
@@ -1203,55 +1203,55 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 > 
 > ```lua
 > actionName:
->     | "OnAcceptFocus"
->     | "OnAlphaAnimeEnd"
->     | "OnBoundChanged"
->     | "OnChangedAnchor"
->     | "OnCheckChanged"
->     | "OnClick"
->     | "OnCloseByEsc"
->     | "OnContentUpdated"
->     | "OnCursorMoved"
->     | "OnDragReceive"
->     | "OnDragStart"
->     | "OnDragStop"
->     | "OnDynamicListUpdatedView"
->     | "OnEffect"
->     | "OnEnableChanged"
->     | "OnEndFadeIn"
->     | "OnEndFadeOut"
->     | "OnEnter"
->     | "OnEnterPressed"
->     | "OnEscapePressed"
->     | "OnEvent"
->     | "OnHide"
->     | "OnKeyDown"
->     | "OnKeyUp"
->     | "OnLeave"
->     | "OnListboxToggled"
->     | "OnModelChanged"
->     | "OnMouseDown"
->     | "OnMouseMove"
->     | "OnMouseUp"
->     | "OnMovedPosition"
->     | "OnPageChanged"
->     | "OnPermissionChanged"
->     | "OnRadioChanged"
->     | "OnRestricted"
->     | "OnScale"
->     | "OnScaleAnimeEnd"
->     | "OnSelChanged"
->     | "OnShow"
->     | "OnSliderChanged"
->     | "OnTabChanged"
->     | "OnTextChanged"
->     | "OnTooltip"
->     | "OnUpdate"
->     | "OnVisibleChanged"
->     | "OnWheelDown"
->     | "OnWheelUp"
->     | "PreClick"
->     | "PreUse"
+>     | "OnAcceptFocus" -- Triggers when the widget accepts focus.
+>     | "OnAlphaAnimeEnd" -- Triggers when the widgets alpha animation has ended.
+>     | "OnBoundChanged" -- Triggers when the widgets ui bound has changed.
+>     | "OnChangedAnchor" -- Triggers when the widgets anchor has been changed.
+>     | "OnCheckChanged" -- triggers when the CheckButton widget check has been changed.
+>     | "OnClick" -- Triggers when the widget has been clicked.
+>     | "OnCloseByEsc" -- Triggers when the Window widget has been closed when the escape key has been pressed. Requires `widget:SetCloseOnEscape(true)`.
+>     | "OnContentUpdated" -- Triggers when the contents of a widget are updated.
+>     | "OnCursorMoved" -- Triggers when the EditboxMultiline widgets cursor has moved.
+>     | "OnDragReceive" -- Triggers when the Window widget has dragging enabled and drag is received.
+>     | "OnDragStart" -- Triggers when the Window widget has dragging enabled and drag has started.
+>     | "OnDragStop" -- Triggers when the Window widget has dragging enabled and drag has stopped.
+>     | "OnDynamicListUpdatedView" -- Triggers when he DynamicList widget view has updated.
+>     | "OnEffect" -- Triggers every frame while the widget is shown.
+>     | "OnEnableChanged" -- Triggers when the widget is enabled or disabled.
+>     | "OnEndFadeIn" -- Triggers when the widget has ended the fade in animation for showing the widget.
+>     | "OnEndFadeOut" -- Triggers when the widget has ended the fade out animation for hiding the widget.
+>     | "OnEnter" -- Triggers when the mouse enters the widgets ui bounds.
+>     | "OnEnterPressed" -- Triggers when the widget is focused and the enter key is pressed.
+>     | "OnEscapePressed" -- Triggers when the widget is focused and the escape key is pressed.
+>     | "OnEvent" -- Triggers when an event registered to the widget triggers.
+>     | "OnHide" -- Triggers when the widget is hidden.
+>     | "OnKeyDown" -- Triggers when the widget has keyboard enabled and the key has been pushed.
+>     | "OnKeyUp" -- Triggers when the widget has keyboard enabled and the key has been released.
+>     | "OnLeave" -- Triggers when mouse leaves the widgets ui bounds.
+>     | "OnListboxToggled" -- Triggers when the Listbox widget is toggled.
+>     | "OnModelChanged" -- triggers when the Model widget model changes.
+>     | "OnMouseDown" -- Triggers when the mouse left or right click is released while within the ui bounds of the widget.
+>     | "OnMouseMove" -- Triggers when the mouse moves while within the widgets ui bounds.
+>     | "OnMouseUp" -- Triggers when the mouse left or right click is pressed while within the ui bounds of the widget.
+>     | "OnMovedPosition" -- Triggers when the Window widget has dragging enabled and the widget has moved.
+>     | "OnPageChanged" -- Triggers when the Pageable widget page changes.
+>     | "OnPermissionChanged" -- Triggers when the permission changes.
+>     | "OnRadioChanged" -- Triggers when the RadioGroup widget radio changes.
+>     | "OnRestricted" -- #
+>     | "OnScale" -- Triggers when the widgets scale has been applied or set.
+>     | "OnScaleAnimeEnd" -- Triggers when the widgets scale animation has ended.
+>     | "OnSelChanged" -- Triggers when the Listbox or ListCtrl widget selection changes.
+>     | "OnShow" -- Triggers when the object is shown.
+>     | "OnSliderChanged" -- Triggers when the Slider widget slider changes.
+>     | "OnTabChanged" -- Triggers when the Tab widget tab changes.
+>     | "OnTextChanged" -- Triggers when the Editbox widget text changes.
+>     | "OnTooltip" -- Triggers when the Listbox widget should show a tooltip.
+>     | "OnUpdate" -- Triggers every frame while the widget is shown.
+>     | "OnVisibleChanged" -- Triggers when the widget is shown or hidden.
+>     | "OnWheelDown" -- Triggers when the mouse is within the widgets ui bounds and the mouse wheel is scrolled down.
+>     | "OnWheelUp" -- Triggers when the mouse is within the widgets ui bounds mouse wheel is scrolled up.
+>     | "PreClick" -- Triggers when the Slot widget is clicked.
+>     | "PreUse" -- Triggers when the Slot widget is clicked.
 > ```
 
 #### Method: IsNowAnimation
@@ -1265,13 +1265,68 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetHandler
 ```lua
-(method) Widget:SetHandler(actionName: string, handler: function)
+(method) Widget:SetHandler(actionName: "OnAcceptFocus"|"OnAlphaAnimeEnd"|"OnBoundChanged"|"OnChangedAnchor"|"OnCheckChanged"...(+44), handler: function)
 ```
 > Sets a handler for the specified action.
 > 
 > @*param* `actionName` — The action name.
 > 
 > @*param* `handler` — The handler function.
+> 
+> 
+> 
+> ```lua
+> actionName:
+>     | "OnAcceptFocus" -- Triggers when the widget accepts focus.
+>     | "OnAlphaAnimeEnd" -- Triggers when the widgets alpha animation has ended.
+>     | "OnBoundChanged" -- Triggers when the widgets ui bound has changed.
+>     | "OnChangedAnchor" -- Triggers when the widgets anchor has been changed.
+>     | "OnCheckChanged" -- triggers when the CheckButton widget check has been changed.
+>     | "OnClick" -- Triggers when the widget has been clicked.
+>     | "OnCloseByEsc" -- Triggers when the Window widget has been closed when the escape key has been pressed. Requires `widget:SetCloseOnEscape(true)`.
+>     | "OnContentUpdated" -- Triggers when the contents of a widget are updated.
+>     | "OnCursorMoved" -- Triggers when the EditboxMultiline widgets cursor has moved.
+>     | "OnDragReceive" -- Triggers when the Window widget has dragging enabled and drag is received.
+>     | "OnDragStart" -- Triggers when the Window widget has dragging enabled and drag has started.
+>     | "OnDragStop" -- Triggers when the Window widget has dragging enabled and drag has stopped.
+>     | "OnDynamicListUpdatedView" -- Triggers when he DynamicList widget view has updated.
+>     | "OnEffect" -- Triggers every frame while the widget is shown.
+>     | "OnEnableChanged" -- Triggers when the widget is enabled or disabled.
+>     | "OnEndFadeIn" -- Triggers when the widget has ended the fade in animation for showing the widget.
+>     | "OnEndFadeOut" -- Triggers when the widget has ended the fade out animation for hiding the widget.
+>     | "OnEnter" -- Triggers when the mouse enters the widgets ui bounds.
+>     | "OnEnterPressed" -- Triggers when the widget is focused and the enter key is pressed.
+>     | "OnEscapePressed" -- Triggers when the widget is focused and the escape key is pressed.
+>     | "OnEvent" -- Triggers when an event registered to the widget triggers.
+>     | "OnHide" -- Triggers when the widget is hidden.
+>     | "OnKeyDown" -- Triggers when the widget has keyboard enabled and the key has been pushed.
+>     | "OnKeyUp" -- Triggers when the widget has keyboard enabled and the key has been released.
+>     | "OnLeave" -- Triggers when mouse leaves the widgets ui bounds.
+>     | "OnListboxToggled" -- Triggers when the Listbox widget is toggled.
+>     | "OnModelChanged" -- triggers when the Model widget model changes.
+>     | "OnMouseDown" -- Triggers when the mouse left or right click is released while within the ui bounds of the widget.
+>     | "OnMouseMove" -- Triggers when the mouse moves while within the widgets ui bounds.
+>     | "OnMouseUp" -- Triggers when the mouse left or right click is pressed while within the ui bounds of the widget.
+>     | "OnMovedPosition" -- Triggers when the Window widget has dragging enabled and the widget has moved.
+>     | "OnPageChanged" -- Triggers when the Pageable widget page changes.
+>     | "OnPermissionChanged" -- Triggers when the permission changes.
+>     | "OnRadioChanged" -- Triggers when the RadioGroup widget radio changes.
+>     | "OnRestricted" -- #
+>     | "OnScale" -- Triggers when the widgets scale has been applied or set.
+>     | "OnScaleAnimeEnd" -- Triggers when the widgets scale animation has ended.
+>     | "OnSelChanged" -- Triggers when the Listbox or ListCtrl widget selection changes.
+>     | "OnShow" -- Triggers when the object is shown.
+>     | "OnSliderChanged" -- Triggers when the Slider widget slider changes.
+>     | "OnTabChanged" -- Triggers when the Tab widget tab changes.
+>     | "OnTextChanged" -- Triggers when the Editbox widget text changes.
+>     | "OnTooltip" -- Triggers when the Listbox widget should show a tooltip.
+>     | "OnUpdate" -- Triggers every frame while the widget is shown.
+>     | "OnVisibleChanged" -- Triggers when the widget is shown or hidden.
+>     | "OnWheelDown" -- Triggers when the mouse is within the widgets ui bounds and the mouse wheel is scrolled down.
+>     | "OnWheelUp" -- Triggers when the mouse is within the widgets ui bounds mouse wheel is scrolled up.
+>     | "PreClick" -- Triggers when the Slot widget is clicked.
+>     | "PreUse" -- Triggers when the Slot widget is clicked.
+> ```
 
 #### Method: SetLText
 ```lua
@@ -1432,7 +1487,8 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 ```lua
 (method) Widget:Show(show: boolean, fadeTime?: number)
 ```
-> Shows or hides the widget and enables/disables its `"OnUpdate"` handler. Showing before the extents and anchors are set can cause issues.
+> Shows or hides the widget and enables/disables its `"OnUpdate"` handler.
+> Showing before the extents and anchors are set can cause issues.
 > 
 > @*param* `show` — `true` to show, `false` to hide. (default: `false`)
 > 
@@ -1625,7 +1681,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 ```lua
 (method) Widget:SetScaleAnimation(initialScale: number, finalScale: number, velocityTime: number, accelerationTime: number, scaleAnchor: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4))
 ```
-> Sets a scale animation for the Widget.
+> Sets a scale animation for the Widget. Requires `widget:SetStartAnimation`.
 > 
 > @*param* `initialScale` — The starting scale (must be greater than 0).
 > 
@@ -2314,11 +2370,13 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: Enable
 ```lua
-(method) Widget:Enable(enable: boolean)
+(method) Widget:Enable(enable: boolean, enableChildren?: boolean)
 ```
 > Enables or disables the Widget and its handler actions `"OnClick"`.
 > 
 > @*param* `enable` — `true` to enable, `false` to disable. (default: `true`)
+> 
+> @*param* `enableChildren` — `true` to enable, `false` to disable. (default: `true`)
 
 #### Method: GetText
 ```lua
@@ -2393,55 +2451,55 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 > 
 > ```lua
 > actionName:
->     | "OnAcceptFocus"
->     | "OnAlphaAnimeEnd"
->     | "OnBoundChanged"
->     | "OnChangedAnchor"
->     | "OnCheckChanged"
->     | "OnClick"
->     | "OnCloseByEsc"
->     | "OnContentUpdated"
->     | "OnCursorMoved"
->     | "OnDragReceive"
->     | "OnDragStart"
->     | "OnDragStop"
->     | "OnDynamicListUpdatedView"
->     | "OnEffect"
->     | "OnEnableChanged"
->     | "OnEndFadeIn"
->     | "OnEndFadeOut"
->     | "OnEnter"
->     | "OnEnterPressed"
->     | "OnEscapePressed"
->     | "OnEvent"
->     | "OnHide"
->     | "OnKeyDown"
->     | "OnKeyUp"
->     | "OnLeave"
->     | "OnListboxToggled"
->     | "OnModelChanged"
->     | "OnMouseDown"
->     | "OnMouseMove"
->     | "OnMouseUp"
->     | "OnMovedPosition"
->     | "OnPageChanged"
->     | "OnPermissionChanged"
->     | "OnRadioChanged"
->     | "OnRestricted"
->     | "OnScale"
->     | "OnScaleAnimeEnd"
->     | "OnSelChanged"
->     | "OnShow"
->     | "OnSliderChanged"
->     | "OnTabChanged"
->     | "OnTextChanged"
->     | "OnTooltip"
->     | "OnUpdate"
->     | "OnVisibleChanged"
->     | "OnWheelDown"
->     | "OnWheelUp"
->     | "PreClick"
->     | "PreUse"
+>     | "OnAcceptFocus" -- Triggers when the widget accepts focus.
+>     | "OnAlphaAnimeEnd" -- Triggers when the widgets alpha animation has ended.
+>     | "OnBoundChanged" -- Triggers when the widgets ui bound has changed.
+>     | "OnChangedAnchor" -- Triggers when the widgets anchor has been changed.
+>     | "OnCheckChanged" -- triggers when the CheckButton widget check has been changed.
+>     | "OnClick" -- Triggers when the widget has been clicked.
+>     | "OnCloseByEsc" -- Triggers when the Window widget has been closed when the escape key has been pressed. Requires `widget:SetCloseOnEscape(true)`.
+>     | "OnContentUpdated" -- Triggers when the contents of a widget are updated.
+>     | "OnCursorMoved" -- Triggers when the EditboxMultiline widgets cursor has moved.
+>     | "OnDragReceive" -- Triggers when the Window widget has dragging enabled and drag is received.
+>     | "OnDragStart" -- Triggers when the Window widget has dragging enabled and drag has started.
+>     | "OnDragStop" -- Triggers when the Window widget has dragging enabled and drag has stopped.
+>     | "OnDynamicListUpdatedView" -- Triggers when he DynamicList widget view has updated.
+>     | "OnEffect" -- Triggers every frame while the widget is shown.
+>     | "OnEnableChanged" -- Triggers when the widget is enabled or disabled.
+>     | "OnEndFadeIn" -- Triggers when the widget has ended the fade in animation for showing the widget.
+>     | "OnEndFadeOut" -- Triggers when the widget has ended the fade out animation for hiding the widget.
+>     | "OnEnter" -- Triggers when the mouse enters the widgets ui bounds.
+>     | "OnEnterPressed" -- Triggers when the widget is focused and the enter key is pressed.
+>     | "OnEscapePressed" -- Triggers when the widget is focused and the escape key is pressed.
+>     | "OnEvent" -- Triggers when an event registered to the widget triggers.
+>     | "OnHide" -- Triggers when the widget is hidden.
+>     | "OnKeyDown" -- Triggers when the widget has keyboard enabled and the key has been pushed.
+>     | "OnKeyUp" -- Triggers when the widget has keyboard enabled and the key has been released.
+>     | "OnLeave" -- Triggers when mouse leaves the widgets ui bounds.
+>     | "OnListboxToggled" -- Triggers when the Listbox widget is toggled.
+>     | "OnModelChanged" -- triggers when the Model widget model changes.
+>     | "OnMouseDown" -- Triggers when the mouse left or right click is released while within the ui bounds of the widget.
+>     | "OnMouseMove" -- Triggers when the mouse moves while within the widgets ui bounds.
+>     | "OnMouseUp" -- Triggers when the mouse left or right click is pressed while within the ui bounds of the widget.
+>     | "OnMovedPosition" -- Triggers when the Window widget has dragging enabled and the widget has moved.
+>     | "OnPageChanged" -- Triggers when the Pageable widget page changes.
+>     | "OnPermissionChanged" -- Triggers when the permission changes.
+>     | "OnRadioChanged" -- Triggers when the RadioGroup widget radio changes.
+>     | "OnRestricted" -- #
+>     | "OnScale" -- Triggers when the widgets scale has been applied or set.
+>     | "OnScaleAnimeEnd" -- Triggers when the widgets scale animation has ended.
+>     | "OnSelChanged" -- Triggers when the Listbox or ListCtrl widget selection changes.
+>     | "OnShow" -- Triggers when the object is shown.
+>     | "OnSliderChanged" -- Triggers when the Slider widget slider changes.
+>     | "OnTabChanged" -- Triggers when the Tab widget tab changes.
+>     | "OnTextChanged" -- Triggers when the Editbox widget text changes.
+>     | "OnTooltip" -- Triggers when the Listbox widget should show a tooltip.
+>     | "OnUpdate" -- Triggers every frame while the widget is shown.
+>     | "OnVisibleChanged" -- Triggers when the widget is shown or hidden.
+>     | "OnWheelDown" -- Triggers when the mouse is within the widgets ui bounds and the mouse wheel is scrolled down.
+>     | "OnWheelUp" -- Triggers when the mouse is within the widgets ui bounds mouse wheel is scrolled up.
+>     | "PreClick" -- Triggers when the Slot widget is clicked.
+>     | "PreUse" -- Triggers when the Slot widget is clicked.
 > ```
 
 #### Method: GetValue

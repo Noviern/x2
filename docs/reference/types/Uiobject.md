@@ -75,8 +75,13 @@
   -> validUiobject: boolean
 ```
 > Checks if the UI object is still valid. A UI object can become invalid if it
-> has been removed from the games Object Pool through
-> `Widget:EnableHidingIsRemove(true)`
+> has been removed from the games Object Pool.
+> ```lua
+> widget:EnableHidingIsRemove(true)
+> widget:Show(false)
+> 
+> widget:IsValidUIObject() -- This will still return true as the game hasnt processed the removal of the object.
+> ```
 > 
 > @*return* `validUiobject` — `true` if the UI object is valid, `false` otherwise.
 

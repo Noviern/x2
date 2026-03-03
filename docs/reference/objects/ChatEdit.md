@@ -6,5 +6,5 @@
 ```lua
 (method) ChatEdit:SetChannel(chatType: number)
 ```
-> comment
+
 
