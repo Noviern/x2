@@ -265,7 +265,6 @@ function Grid:SetRowTexCoord(x, y, w, h) end
 ---@param texture string The texture path.
 function Grid:SetRowTexture(texture) end
 
----@TODO: default is wrong
 ---Sets the color for the selected item in the Grid. Requires
 ---`Grid:SetSelectedLine(true)`.
 ---@param r number The red color component. (min: `0`, max: `1`, default: `0.78`)

@@ -33,7 +33,7 @@ function WorldMap:GetClimateInfo(zoneId) end
 function WorldMap:GetCursorSextants() end
 
 ---Retrieves the icon drawable for a specific zoom level and zone ID.
----@param level WORLD_MAP_ZOOM The zoom level.
+---@param level WORLD_MAP_LEVEL The zoom level.
 ---@param id ZONE_GROUP_ID The zone ID.
 ---@return ImageDrawable iconDrawable The icon drawable, empty table if the object `ImageDrawable` hasn't been imported, or `nil` if not found.
 ---@nodiscard
@@ -42,7 +42,7 @@ function WorldMap:GetIconDrawable(level, id) end
 
 ---Retrieves or creates a route drawable for a specific zoom level and ID.
 ---Crashes if an invalid level is provided.
----@param level WORLD_MAP_ZOOM The zoom level.
+---@param level WORLD_MAP_LEVEL The zoom level.
 ---@param id number The route ID.
 ---@return ImageDrawable routeDrawable The route drawable, empty table if the object `ImageDrawable` hasn't been imported, or `nil` if not found.
 ---@return boolean created `true` if the drawable was created, `false` if it already existed.

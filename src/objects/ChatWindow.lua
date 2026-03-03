@@ -19,9 +19,6 @@
 ---@class ChatWindow: Widget, Tabbase
 local ChatWindow = {}
 
----@TODO: check if i need these
----Editbox button (via GetChatEdit, GetAddButton, etc.)?
-
 ---Adds a new tab to the ChatWindow with the specified name and optional widget.
 ---@param tabName string The name of the tab.
 ---@param widget? Widget The optional widget to associate with the tab.

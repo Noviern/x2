@@ -62,7 +62,7 @@
 
 ---@class TextureData
 ---@field offset number[]
----@field colors TextureColors|nil @TODO: could be nil?
+---@field colors TextureColors|nil
 ---@field colorKey TextureColorKey
 ---@field coords TextureCoords
 ---@field inset TextureInset
@@ -93,12 +93,6 @@
 ---@field x number|nil
 ---@field y number|nil
 ---@field z number|nil
-
----@TODO: is this used?
----@class Vec3Array
----@field [1] number|nil x
----@field [2] number|nil y
----@field [3] number|nil z
 
 ---@class VirtualMemoryStats
 ---@field workingSet number
@@ -147,35 +141,37 @@
 ---@field iconPath string
 ---@field name string
 
+---highRankAchievementType, isParentComplete doesnt exist?
+
 ---@class AchievementInfo
----@field achievementKind number
+---@field achievementKind ENUM_ACHIEVEMENT_KIND
 ---@field canProgress boolean
 ---@field categoryName string
 ---@field complete boolean
 ---@field completeDate Time|nil This is set if complete == true
 ---@field completeNum number
----@field completeSubCount number|nil @TODO: I think this is only set if highRank == true
+---@field completeSubCount number|nil If totalSubCount exists
 ---@field current number
 ---@field desc string
 ---@field grade number
 ---@field highRank boolean
----@field highRankAchievementType number|nil mainType @TODO: I think this is only set if highRank == false
+---@field highRankAchievementType number|nil @TODO: this may not exist.
 ---@field iconPath string
 ---@field isHidden boolean
----@field isParentComplete boolean|nil @TODO: I think this is only set if highRank == false
+---@field isParentComplete boolean|nil @TODO: this may not exist.
 ---@field name string
----@field objective number|nil[] @TODO: I think this is only set if highRank == true
----@field reward RewardInfo|nil @TODO: I think this is only set if highRank == true
+---@field objective number|nil[]
+---@field reward RewardInfo|nil
 ---@field subCategoryName string
----@field subCategoryType number
+---@field subCategoryType EAK_SUBCATEGORY_TYPE
 ---@field summary string
----@field totalSubCount number|nil @TODO: I think this is only set if highRank == true
+---@field totalSubCount number|nil
 ---@field tracing boolean
 ---@field type number
 
 ---@class AchievementSubCategory
 ---@field name string
----@field subCategoryType number
+---@field subCategoryType EAK_SUBCATEGORY_TYPE
 
 ---@class AchievementLevelSubCategory: AchievementSubCategory
 ---@field isHeirLevelCategory boolean
@@ -352,7 +348,7 @@
 ---@field modifier table
 ---@field name string
 ---@field reqLevel number
----@field tipType string ---@TODO: appStamp can there be others?
+---@field tipType "appStamp"|string
 
 ---@class AppellationRouteInfo
 ---@field kind number
@@ -810,7 +806,6 @@
 ---@field pull boolean Full
 ---@field remainTime number
 
----@TODO: Enum for faction. this provides a different faction id? nuia returns 104 X2Unit:GetTopLevelFactionNameById
 ---@class FriendInfo
 ---@field [1] string Name
 ---@field [2] number Basic Level
@@ -820,7 +815,7 @@
 ---@field [6] boolean Online
 ---@field [7] boolean Party
 ---@field [8] number Ancestral Level = 40,
----@field [9] number Faction
+---@field [9] FACTION_TYPE Faction
 ---@field [10] number|nil CHK
 
 ---@class InstanceEnterableInfo

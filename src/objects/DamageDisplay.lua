@@ -24,6 +24,7 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay POSITION_CALCULATION_TYPE
 ---| `PCT_DEFAULT`
 ---| `PCT_SHIP_COLLISION`
 
+---@TODO: what is extraStyle used for?
 ---[DamageDisplay](lua://DamageDisplay)
 ---
 ---A `DamageDisplay` widget displays animated damage or combat-related text.
@@ -37,7 +38,7 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay POSITION_CALCULATION_TYPE
 --- - [TextStyle](lua://TextStyle)  used for the `style` and `extraStyle` fields.
 ---
 ---@class DamageDisplay: Widget
----@field extraStyle TextStyle @TODO: what is extraStyle used for?
+---@field extraStyle TextStyle
 ---@field style TextStyle The text style applied to the widget's text.
 local DamageDisplay = {}
 

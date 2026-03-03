@@ -65,7 +65,7 @@ function ImageDrawable:SetSnap(snap) end
 ---@TODO: Verify the usage and format of filename. this didnt not work Game/ui/map/image_map.tga
 ---Sets a TGA texture for the ImageDrawable.
 ---@param filename string The path to the TGA texture file.
----@return boolean success
+---@return boolean success `true` if the texture was successfully loaded and set, `false` otherwise.
 ---@nodiscard
 function ImageDrawable:SetTgaTexture(filename) end
 
@@ -74,14 +74,12 @@ function ImageDrawable:SetTgaTexture(filename) end
 ---@param tiling boolean `true` to enable tiling, `false` to disable. (default: `false`)
 function ImageDrawable:SetTiling(tiling) end
 
----@TODO: Clarify complexId.
 ---Sets a UCC texture for the `ImageDrawable` by UCC ID.
----@param complexId string The UCC ID for the texture.
+---@param complexId string The UCC ID for the texture stored on the server.
 ---@param isBack boolean `true` for background, `false` for foreground.
 function ImageDrawable:SetUccTextureByUccId(complexId, isBack) end
 
----@TODO: Clarify doodadId.
 ---Sets a UCC texture for the `ImageDrawable` within a doodad.
----@param doodadId string The doodad ID for the texture.
+---@param doodadId string The doodad ID for the texture to be applied to.
 ---@param isBack boolean `true` for background, `false` for foreground.
 function ImageDrawable:SetUccTextureInDoodad(doodadId, isBack) end

@@ -13,14 +13,11 @@ AP_TOPRIGHT = 1    -- types/Uibounds
 ---@class Uibounds
 local Uibounds = {}
 
----@TODO: add @warning for other functions in this codebase
-
 ---Aligns the UI bounds to the specified anchor point at the given coordinates.
 ---
----@warning
----**Although this variant implicitly uses the parent of the current object,
----`AddAnchor(anchor, parentId, x, y)` is usually recommended** because it makes
----the anchor relationship explicit and much easier for future readers to
+---**Warning:** Although this variant implicitly uses the parent of the current
+---object, `AddAnchor(anchor, parentId, x, y)` is usually recommended because it
+---makes the anchor relationship explicit and much easier for future readers to
 ---understand which object this UI element is actually anchored to.
 ---@param anchor ANCHOR_POINT Sets both the anchor point and anchor origin. (default: `"TOPLEFT"`)
 ---@param x number The x-coordinate offset. (default: `0`)
@@ -86,22 +83,20 @@ function Uibounds:BindWidth(width) end
 ---@nodiscard
 function Uibounds:CheckOutOfScreen() end
 
----@TODO: this also starts scaling x and y on AddAnchor when they are applied
----Retrieves the offset coordinates of the UI bounds, constrained by screen
----dimensions.
+---Retrieves the effective rendered offset (left, top) of the UI bounds,
+---constrained by screen dimensions.
 ---@return number offX The x-offset (min: `0`, max: `screen width - effective width`).
 ---@return number offY The y-offset (min: `0`, max: `screen height - effective height`).
 ---@nodiscard
 function Uibounds:CorrectOffsetByScreen() end
 
----Retrieves the effective width and height of the UI bounds, scaled if
----ApplyUIScale is true.
+---Retrieves the effective rednered extent (width, height) of the UI bounds.
 ---@return number effectiveWidth The effective width.
 ---@return number effectiveHeight The effective height.
 ---@nodiscard
 function Uibounds:GetEffectiveExtent() end
 
----Retrieves the effective offset (left, top) of the UI bounds.
+---Retrieves the effective rendered offset (left, top) of the UI bounds.
 ---@return number effectiveOffX The effective x-offset.
 ---@return number effectiveOffY The effective y-offset.
 ---@nodiscard
@@ -118,7 +113,6 @@ function Uibounds:GetExtent() end
 ---@nodiscard
 function Uibounds:GetHeight() end
 
----@TODO: this is scaled sometimes, its only scaled if the widget has been dragged and ApplyUIScale true. it appears dragging a widget makes addanchor start to scale x and y when applied
 ---Retrieves the UI scaled offset (right, center) of the UI bounds.
 ---@return number offX The x-offset, scaled up by 1 / UI scale.
 ---@return number offY The y-offset, scaled up by 1 / UI scale.

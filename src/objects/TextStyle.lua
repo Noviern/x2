@@ -52,7 +52,6 @@ function TextStyle:GetLineHeight() end
 ---@nodiscard
 function TextStyle:GetTextWidth(text) end
 
----@TODO: center for label, what abnout other widgets?
 ---Sets the text alignment for the TextStyle.
 ---@param align TEXT_ALIGN The text alignment type. (default: `"ALIGN_CENTER"`)
 function TextStyle:SetAlign(align) end

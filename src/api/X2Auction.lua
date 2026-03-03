@@ -28,11 +28,12 @@ X2Auction = {}       -- api/X2Auction
 ---@param askMarketPriceUi boolean `true` to open the market price UI, `false` otherwise. Buggy: only opens if UI was opened previously.
 function X2Auction:AskMarketPrice(itemType, itemGrade, askMarketPriceUi) end
 
----@FIXME: this is broken and doesnt always return a value, needs more testing
 ---Retrieves the lowest market price for an item.
+---Returns `nil` on the first call (as it triggers an asynchronous request).
+---Subsequent calls return the actual lowest price once the server response is received.
 ---@param itemType number The type of item.
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.
----@return string|nil lowestPrice The lowest price as a string, or `nil` if not available.
+---@return string|nil lowestPrice The lowest price as a string, or `nil` if not yet available.
 ---@nodiscard
 function X2Auction:GetLowestPrice(itemType, itemGrade) end
 

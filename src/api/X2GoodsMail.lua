@@ -20,10 +20,10 @@ MAIL_HERO_DROPOUT_COMEBACK_REQUEST = 48 -- api/X2GoodsMail MAIL_TYPE
 MAIL_HERO_ELECTION_ITEM = 29            -- api/X2GoodsMail MAIL_TYPE
 MAIL_HOUSING_REBUILD = 30               -- api/X2GoodsMail MAIL_TYPE
 MAIL_HOUSING_SALE = 21                  -- api/X2GoodsMail MAIL_TYPE
-MAIL_LIST_CONTINUE = 2                  -- api/X2GoodsMail MAIL_TYPE
-MAIL_LIST_END = 3                       -- api/X2GoodsMail MAIL_TYPE
-MAIL_LIST_INVALID = 0                   -- api/X2GoodsMail MAIL_TYPE
-MAIL_LIST_START = 1                     -- api/X2GoodsMail MAIL_TYPE
+MAIL_LIST_CONTINUE = 2                  -- api/X2GoodsMail MAIL_LIST_TYPE
+MAIL_LIST_END = 3                       -- api/X2GoodsMail MAIL_LIST_TYPE
+MAIL_LIST_INVALID = 0                   -- api/X2GoodsMail MAIL_LIST_TYPE
+MAIL_LIST_START = 1                     -- api/X2GoodsMail MAIL_LIST_TYPE
 MAIL_MOBILIZATION_GIVE_ITEM = 27        -- api/X2GoodsMail MAIL_TYPE
 MAIL_NORMAL = 1                         -- api/X2GoodsMail MAIL_TYPE
 MAIL_PROMOTION = 10                     -- api/X2GoodsMail MAIL_TYPE
@@ -62,10 +62,6 @@ X2GoodsMail = {}                        -- api/X2GoodsMail
 ---| `MAIL_HERO_ELECTION_ITEM`
 ---| `MAIL_HOUSING_REBUILD`
 ---| `MAIL_HOUSING_SALE`
----| `MAIL_LIST_CONTINUE`
----| `MAIL_LIST_END`
----| `MAIL_LIST_INVALID`
----| `MAIL_LIST_START`
 ---| `MAIL_MOBILIZATION_GIVE_ITEM`
 ---| `MAIL_NORMAL`
 ---| `MAIL_PROMOTION`
@@ -76,12 +72,18 @@ X2GoodsMail = {}                        -- api/X2GoodsMail
 ---| `MAIL_TAX_IN_KIND_RECEIPT`
 
 ---api/X2GoodsMail
+---@alias MAIL_LIST_TYPE
+---| `MAIL_LIST_CONTINUE`
+---| `MAIL_LIST_END`
+---| `MAIL_LIST_INVALID`
+---| `MAIL_LIST_START`
+
+---api/X2GoodsMail
 ---@alias MAIL_LIST_KIND
 ---| `MLK_COMMERCIAL`
 ---| `MLK_INBOX`
 ---| `MLK_OUTBOX`
 
----@TODO: Schedule Item Mail Type?
 ---api/X2GoodsMail
 ---@alias SIMT
 ---| `SIMT_SCHEDULE_ITEM_CUSTOM_MAIL`

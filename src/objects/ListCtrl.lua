@@ -91,6 +91,7 @@ function ListCtrl:InsertData(key, colIdx, subItemData) end
 function ListCtrl:InsertRows(count, withEventWindow) end
 
 ---Selects the item at the specified index in the ListCtrl.
+---Both the over image and selected image have to be defined.
 ---@param itemIdx number The row index of the item to select. (min: `0`)
 function ListCtrl:Select(itemIdx) end
 
@@ -101,7 +102,7 @@ function ListCtrl:Select(itemIdx) end
 function ListCtrl:SetColumnWidth(idx, width) end
 
 ---Sets the height of the header column for the ListCtrl.
----@param height number The height of the header column.
+---@param height number The height of the header column. (default: `30`)
 function ListCtrl:SetHeaderColumnHeight(height) end
 
 ---Sets the offset for the overed image in the ListCtrl.

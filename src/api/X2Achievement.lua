@@ -6,9 +6,13 @@ AF_INVALID = 0              -- api/X2Achievement ACHIEVEMENT_FILTER
 AF_TRACING = 4              -- api/X2Achievement ACHIEVEMENT_FILTER
 AF_UNCOMPLETE = 3           -- api/X2Achievement ACHIEVEMENT_FILTER
 EAK_ACHIEVEMENT = 2         -- api/X2Achievement ENUM_ACHIEVEMENT_KIND
+---@alias EAK_ACHIEVEMENT 2
 EAK_ARCHERAGE = 4           -- api/X2Achievement ENUM_ACHIEVEMENT_KIND
+---@alias EAK_ARCHERAGE 4
 EAK_COLLECTION = 3          -- api/X2Achievement ENUM_ACHIEVEMENT_KIND
+---@alias EAK_COLLECTION 3
 EAK_RACIAL_MISSION = 1      -- api/X2Achievement ENUM_ACHIEVEMENT_KIND
+---@alias EAK_RACIAL_MISSION 1
 MAX_TRACING_ACHIEVEMENT = 6 -- api/X2Achievement
 TADT_ARCHE_PASS = 5         -- api/X2Achievement TODAY_ACHIEVEMENT_DAILY_TYPE
 TADT_EXPEDITION = 2         -- api/X2Achievement TODAY_ACHIEVEMENT_DAILY_TYPE
@@ -29,7 +33,6 @@ X2Achievement = {}          -- api/X2Achievement
 ---| `AF_TRACING`
 ---| `AF_UNCOMPLETE` # Doesnt work. Produces the same result as AF_ALL.
 
----@TODO: ENUM?
 ---api/X2Achievement
 ---@alias ENUM_ACHIEVEMENT_KIND
 ---| `EAK_ACHIEVEMENT`
@@ -64,10 +67,14 @@ function X2Achievement:GetAchievementInfo(achievementType) end
 ---Retrieves a list of achievement types for the specified kind and subcategory
 ---with the given filter.
 ---@param achievementKind ENUM_ACHIEVEMENT_KIND The achievement kind.
----@param subCategoryType number The subcategory achievement type.
+---@param subCategoryType `0`|number The subcategory achievement type.
 ---@param achievementFilter ACHIEVEMENT_FILTER The filter to apply.
 ---@return number[] achievementMainList A table of achievement types, or empty if none exist.
 ---@nodiscard
+---@overload fun(self: self, achievementKind: EAK_ACHIEVEMENT, subCategoryType: EAK_ACHIEVEMENT_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
+---@overload fun(self: self, achievementKind: EAK_ARCHERAGE, subCategoryType: EAK_ARCHERAGE_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
+---@overload fun(self: self, achievementKind: EAK_COLLECTION, subCategoryType: EAK_COLLECTION_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
+---@overload fun(self: self, achievementKind: EAK_RACIAL_MISSION, subCategoryType: EAK_RACIAL_MISSION_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
 function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType, achievementFilter) end
 
 ---Retrieves the name of the specified achievement type.
@@ -112,7 +119,7 @@ function X2Achievement:GetCategories(achievementKind) end
 function X2Achievement:GetCategoryCount(achievementKind, categoryType, subCategoryType, achievementFilter) end
 
 ---Retrieves subcategory information if the specified subcategory exists.
----@param subCategory number The subcategory to query.
+---@param subCategory EAK_SUBCATEGORY_TYPE The subcategory to query.
 ---@return SubcategoryInfo|nil subcategoryInfo The subcategory information, or `nil` if not found.
 ---@nodiscard
 ---@see SubcategoryInfo
