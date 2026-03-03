@@ -1,3 +1,17 @@
+---This file dumps events into temp/eventdump.txt.
+
+local addon_path = "C:/ArcheRage/Documents/Addon/" .. ADDON:GetName() .. "/"
+
+package.path     = package.path .. ";" .. addon_path .. "?.lua;"
+package.cpath    = package.cpath .. ";" .. addon_path .. "?.dll;"
+
+---@param filename string
+---@param mode openmode
+---@return file*?
+function open(filename, mode)
+  return io.open(addon_path .. filename, mode)
+end
+
 local file = assert(open("temp/eventdump.txt", "w"))
 local eventCount = 0
 
@@ -14,9 +28,9 @@ end
 
 ---@param name UIEVENT_TYPE
 local function SetEventHandler(name)
-  if eventCount < 230 then UI:SetEventHandler(name, event(name)) end
+  if eventCount < 220 then UI:SetEventHandler(name, event(name)) end
   eventCount = eventCount + 1
-  if eventCount == 230 then
+  if eventCount == 220 then
     ADDON:ChatLog("last " .. name)
   end
 end
@@ -40,6 +54,7 @@ SetEventHandler("REOPEN_RANDOM_BOX_ALARM_FAVORITE")
 --------------------------------------------------------------------------------
 -- These events needed further testing.
 --------------------------------------------------------------------------------
+SetEventHandler("TOWER_DEF_MSG")
 -- SetEventHandler("SHOW_WORLDMAP_TOOLTIP")
 -- SetEventHandler("SHOW_ROADMAP_TOOLTIP")
 -- SetEventHandler("DRAW_DOODAD_TOOLTIP")
@@ -63,6 +78,7 @@ SetEventHandler("HEIR_SKILL_ACTIVE_TYPE_MSG")
 --------------------------------------------------------------------------------
 -- Need documented
 --------------------------------------------------------------------------------
+SetEventHandler("SIEGE_RAID_TEAM_INFO")
 SetEventHandler("ABILITY_EXP_CHANGED")
 SetEventHandler("ACTABILITY_REFRESH_ALL")
 SetEventHandler("ASK_BUY_LABOR_POWER_POTION")
@@ -301,12 +317,12 @@ SetEventHandler("ENCHANT_RESULT")
 -- These events cause crashes
 --------------------------------------------------------------------------------
 -- SetEventHandler("START_SENSITIVE_OPERATION")
--- SetEventHandler("TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO") -- crash?
--- SetEventHandler("TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION") -- crash?
--- SetEventHandler("EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT") -- crash
+-- SetEventHandler("TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO")
+-- SetEventHandler("TARGET_NPC_HEALTH_CHANGED_FOR_VERSUS_FACTION")
+-- SetEventHandler("EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT")
 -- SetEventHandler("HOUSE_TAX_INFO")
--- SetEventHandler("REPORT_BAD_USER_UPDATE") -- crash?
--- SetEventHandler("SHOW_DEFENDANT_WAIT_JURY") --crash?
--- SetEventHandler("SHOW_DEFENDANT_WAIT_TRIAL") --crash?
--- SetEventHandler("UPDATE_BUBBLE") -- crash
--- SetEventHandler("NPC_UNIT_EQUIPMENT_CHANGED") -- crash
+-- SetEventHandler("REPORT_BAD_USER_UPDATE")
+-- SetEventHandler("SHOW_DEFENDANT_WAIT_JURY")
+-- SetEventHandler("SHOW_DEFENDANT_WAIT_TRIAL")
+-- SetEventHandler("UPDATE_BUBBLE")
+-- SetEventHandler("NPC_UNIT_EQUIPMENT_CHANGED")
