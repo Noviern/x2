@@ -1,5 +1,11 @@
 # Rename this to toc.g to enable this addon.
 scripts/dump.lua
-scripts/dump_globals.lua
 
-# src/globals.lua
+# Only one of the blocks below should be uncommented at a time.
+
+# Global Dump
+# scripts/dump_globals.lua
+
+# Event Dump
+# scripts/apitypes.lua
+# scripts/event_testing.lua
