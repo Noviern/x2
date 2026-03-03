@@ -102,7 +102,7 @@ function Editbox:SetPrefixInset(left, top, right, bottom) end
 ---@param prefixText string The prefix text to display.
 function Editbox:SetPrefixText(prefixText) end
 
----@FIXME: Clarify re-clickable behavior.
+---@TODO: Clarify re-clickable behavior.
 ---Enables or disables re-clickable behavior for the Editbox.
 ---@param click boolean `true` to enable re-clicking, `false` to disable.
 function Editbox:SetReClickable(click) end

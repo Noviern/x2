@@ -1,6 +1,6 @@
 ---@meta _
 
----@FIXME: X2Input:GetMousePos() would be nice to have for this.
+---@TODO: X2Input:GetMousePos() would be nice to have for this.
 
 ---[PaintColorPicker](lua://PaintColorPicker)
 ---

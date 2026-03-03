@@ -67,7 +67,6 @@
 ---@field coords TextureCoords
 ---@field inset TextureInset
 ---@field extent TextureDimensions
--- @field type string @FIXME: this doesn't exist but really should
 
 ---@class TextureKeyData
 ---@field width number
