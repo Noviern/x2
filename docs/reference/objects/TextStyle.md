@@ -197,7 +197,7 @@ Extends [Uiobject](../types/Uiobject.md#class-uiobject)
 > @*param* `key` — The color key to apply.
 > 
 > ```lua
-> -- game/ui/settings/font_color.g
+> -- ui/settings/font_color.g
 > key:
 >     | "action_slot_key_binding"
 >     | "adamant"

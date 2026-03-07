@@ -171,7 +171,7 @@ TextStyle
 > @*param* `style` — The style configuration to apply.
 > 
 > ```lua
-> -- game/ui/setting/button_style.g
+> -- ui/setting/button_style.g
 > style:
 >     | "accept_v"
 >     | "actionbar_lock"

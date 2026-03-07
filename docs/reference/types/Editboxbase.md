@@ -76,7 +76,7 @@ TextStyle
 > @*param* `colorKey` — The color key for the cursor.
 > 
 > ```lua
-> -- game/ui/setting/etc_color.g
+> -- ui/setting/etc_color.g
 > colorKey:
 >     | "action_slot_state_img_able"
 >     | "action_slot_state_img_can_learn"

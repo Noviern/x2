@@ -22,7 +22,7 @@ Extends [Drawablebase](../types/Drawablebase.md#class-drawablebase)
 > Sets the texture color by `colorKey` for the ColorDrawable.
 > 
 > ```lua
-> -- game/ui/setting/etc_color.g
+> -- ui/setting/etc_color.g
 > colorKey:
 >     | "action_slot_state_img_able"
 >     | "action_slot_state_img_can_learn"

@@ -157,7 +157,7 @@ ANCHOR_POINT:
 "ac_steer_idle"|"ac_steer_l_01"|"ac_steer_r_01"|"additive_all_co_combat_miss"|"additive_all_re_combat_confuse"...(+2286)
 
 ```lua
--- db > anim_actions + game/animations
+-- db > anim_actions + animations/
 ANIMATION:
     | "ac_steer_idle"
     | "ac_steer_l_01"
@@ -2943,7 +2943,7 @@ BUTLER_EVENT:
 "accept_v"|"actionbar_lock"|"actionbar_rotate"|"actionbar_unlock"|"all_repair"...(+183)
 
 ```lua
--- game/ui/setting/button_style.g
+-- ui/setting/button_style.g
 BUTTON_STYLE:
     | "accept_v"
     | "actionbar_lock"
@@ -3151,7 +3151,7 @@ COLLISION_SOURCE:
 "ENVIRONMENTAL_DAMAGE"|"ENVIRONMENTAL_DRAIN"|"ENVIRONMENTAL_ENERGIZE"|"ENVIRONMENTAL_HEALED"|"ENVIRONMENTAL_LEECH"...(+14)
 
 ```lua
--- game/scriptsbin/globalui/chat/chat_msg_event.lua
+-- scriptsbin/globalui/chat/chat_msg_event.lua
 COMBAT_EVENT:
     | "ENVIRONMENTAL_DAMAGE"
     | "ENVIRONMENTAL_DRAIN"
@@ -5879,7 +5879,7 @@ DOODAD_PERMISSION:
 "action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27)
 
 ```lua
--- game/ui/setting/etc_color.g
+-- ui/setting/etc_color.g
 DRAWABLE_COLOR_KEY:
     | "action_slot_state_img_able"
     | "action_slot_state_img_can_learn"
@@ -6158,7 +6158,7 @@ ESC_MENU_CATEGORY_ID:
 ""|"achievement"|"auction"|"bag"|"butler"...(+26)
 
 ```lua
--- game/ui/common/esc_menu.g
+-- ui/common/esc_menu.g
 ESC_MENU_ICON_KEY:
     | ""
     | "achievement"
@@ -6198,7 +6198,7 @@ ESC_MENU_ICON_KEY:
 "action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27)
 
 ```lua
--- game/ui/setting/etc_color.g
+-- ui/setting/etc_color.g
 ETC_COLOR:
     | "action_slot_state_img_able"
     | "action_slot_state_img_can_learn"
@@ -6382,7 +6382,7 @@ FOLDER_STATE:
 "action_slot_key_binding"|"adamant"|"aggro_meter"|"all_in_item_grade_combobox"|"assassin"...(+320)
 
 ```lua
--- game/ui/settings/font_color.g
+-- ui/settings/font_color.g
 FONT_COLOR_KEY:
     | "action_slot_key_binding"
     | "adamant"
@@ -6990,7 +6990,7 @@ HOTKEY_MANAGER:
 
 **HOTKEY_NAME**
 
-","|"."|"/"|"0"|"1"...(+95)
+","|"."|"/"|"0"|"1"...(+96)
 
 ```lua
 -- Supported modifier keys: CTRL, SHIFT, ALT
@@ -7065,6 +7065,7 @@ HOTKEY_NAME:
     | "X" -- Keyboard
     | "Y" -- Keyboard
     | "Z" -- Keyboard
+    | "CTRL" -- Keyboard
     | "SPACE" -- Keyboard
     | "INSERT" -- Keyboard
     | "HOME" -- Keyboard
@@ -8451,7 +8452,7 @@ fun(self: Widget)
 
 **OnEvent**
 
-fun(self: Widget, event: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+871), ...any)
+fun(self: Widget, event: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), ...any)
 
 
 
@@ -11997,7 +11998,7 @@ UIBOUND_KEY:
 
 **UIEVENT_TYPE**
 
-"ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+871)
+"ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872)
 
 ```lua
 UIEVENT_TYPE:
@@ -12841,12 +12842,13 @@ UIEVENT_TYPE:
     | "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT"
     | "UPDATE_INSTANT_GAME_SCORES"
     | "UPDATE_INSTANT_GAME_STATE"
+    | "UPDATE_INSTANT_GAME_TARGET_NPC_INFO"
     | "UPDATE_INSTANT_GAME_TIME"
     | "UPDATE_ITEM_LOOK_CONVERT_MODE"
     | "UPDATE_MONITOR_NPC"
     | "UPDATE_MY_SLAVE_POS_INFO"
     | "UPDATE_NPC_INFO"
-    | "UPDATE_NPC_INFO_BROADCASTING"
+    | "UPDATE_INDUN_PLAYING_INFO_BROADCASTING"
     | "UPDATE_OPTION_BINDINGS"
     | "UPDATE_PING_INFO"
     | "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL"

@@ -259,7 +259,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 > Plays an animation for the ModelView.
 > 
 > ```lua
-> -- db > anim_actions + game/animations
+> -- db > anim_actions + animations/
 > name:
 >     | "ac_steer_idle"
 >     | "ac_steer_l_01"

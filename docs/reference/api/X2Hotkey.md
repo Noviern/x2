@@ -22,7 +22,7 @@
 
 #### Method: SetBindingUiEvent
 ```lua
-(method) X2Hotkey:SetBindingUiEvent(actionName: string, key: string|","|"."|"/"|"0"...(+96))
+(method) X2Hotkey:SetBindingUiEvent(actionName: string, key: string|","|"."|"/"|"0"...(+97))
 ```
 > Binds a key to an action and registers the key to fire the `HOTKEY_ACTION`
 > event when pressed and released. This can't be saved but the hotkey can be
@@ -105,6 +105,7 @@
 >     | "X" -- Keyboard
 >     | "Y" -- Keyboard
 >     | "Z" -- Keyboard
+>     | "CTRL" -- Keyboard
 >     | "SPACE" -- Keyboard
 >     | "INSERT" -- Keyboard
 >     | "HOME" -- Keyboard
@@ -172,7 +173,7 @@
 
 #### Method: SetBindingUiEventWithIndex
 ```lua
-(method) X2Hotkey:SetBindingUiEventWithIndex(actionName: string, key: string|","|"."|"/"|"0"...(+96), index: `1`|`2`)
+(method) X2Hotkey:SetBindingUiEventWithIndex(actionName: string, key: string|","|"."|"/"|"0"...(+97), index: `1`|`2`)
 ```
 > Binds a key to a action in the specified index and registers the key to fire
 > the `HOTKEY_ACTION` event when pressed and released. This can't be saved but
@@ -257,6 +258,7 @@
 >     | "X" -- Keyboard
 >     | "Y" -- Keyboard
 >     | "Z" -- Keyboard
+>     | "CTRL" -- Keyboard
 >     | "SPACE" -- Keyboard
 >     | "INSERT" -- Keyboard
 >     | "HOME" -- Keyboard
@@ -300,7 +302,7 @@
 
 #### Method: SetOptionBindingUiEvent
 ```lua
-(method) X2Hotkey:SetOptionBindingUiEvent(actionName: string, key: string|","|"."|"/"|"0"...(+96))
+(method) X2Hotkey:SetOptionBindingUiEvent(actionName: string, key: string|","|"."|"/"|"0"...(+97))
 ```
 > Binds a key to a action option button and once saved registers the key to
 > fire the `HOTKEY_ACTION` event when pressed and released.
@@ -388,6 +390,7 @@
 >     | "X" -- Keyboard
 >     | "Y" -- Keyboard
 >     | "Z" -- Keyboard
+>     | "CTRL" -- Keyboard
 >     | "SPACE" -- Keyboard
 >     | "INSERT" -- Keyboard
 >     | "HOME" -- Keyboard
@@ -427,7 +430,7 @@
 
 #### Method: SetOptionBindingButtonWithIndex
 ```lua
-(method) X2Hotkey:SetOptionBindingButtonWithIndex(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), key: string|","|"."|"/"|"0"...(+96), keyType: `1`|`2`)
+(method) X2Hotkey:SetOptionBindingButtonWithIndex(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), key: string|","|"."|"/"|"0"...(+97), keyType: `1`|`2`)
 ```
 > Binds a key to a action option button in the specified index. Can't be saved
 > or used.
@@ -638,6 +641,7 @@
 >     | "X" -- Keyboard
 >     | "Y" -- Keyboard
 >     | "Z" -- Keyboard
+>     | "CTRL" -- Keyboard
 >     | "SPACE" -- Keyboard
 >     | "INSERT" -- Keyboard
 >     | "HOME" -- Keyboard
@@ -681,7 +685,7 @@
 
 #### Method: SetOptionBindingUiEventWithIndex
 ```lua
-(method) X2Hotkey:SetOptionBindingUiEventWithIndex(actionName: string, key: string|","|"."|"/"|"0"...(+96), index: `1`|`2`)
+(method) X2Hotkey:SetOptionBindingUiEventWithIndex(actionName: string, key: string|","|"."|"/"|"0"...(+97), index: `1`|`2`)
 ```
 > Binds a key to a custom action option button in the specified index and once
 > saved registers the key to fire the `HOTKEY_ACTION` event when pressed and
@@ -772,6 +776,7 @@
 >     | "X" -- Keyboard
 >     | "Y" -- Keyboard
 >     | "Z" -- Keyboard
+>     | "CTRL" -- Keyboard
 >     | "SPACE" -- Keyboard
 >     | "INSERT" -- Keyboard
 >     | "HOME" -- Keyboard
@@ -1693,7 +1698,7 @@
 
 #### Method: SetOptionBindingWithIndex
 ```lua
-(method) X2Hotkey:SetOptionBindingWithIndex(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), key: string|","|"."|"/"|"0"...(+96), index: `1`|`2`, arg: number)
+(method) X2Hotkey:SetOptionBindingWithIndex(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), key: string|","|"."|"/"|"0"...(+97), index: `1`|`2`, arg: number)
 ```
 > Binds a key to a action option button in the specified index with additional
 > arguments. Can trigger the `UPDATE_OPTION_BINDINGS` event if the button key
@@ -1913,6 +1918,7 @@
 >     | "X" -- Keyboard
 >     | "Y" -- Keyboard
 >     | "Z" -- Keyboard
+>     | "CTRL" -- Keyboard
 >     | "SPACE" -- Keyboard
 >     | "INSERT" -- Keyboard
 >     | "HOME" -- Keyboard

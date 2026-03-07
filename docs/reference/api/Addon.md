@@ -2464,7 +2464,7 @@ ZONE_STATE_TYPE:
 >     | `UIC_WHISPER`
 >     | `UIC_WORLDMAP`
 > 
-> -- game/ui/common/esc_menu.g
+> -- ui/common/esc_menu.g
 > iconKey:
 >     | ""
 >     | "achievement"
@@ -2839,7 +2839,6 @@ ZONE_STATE_TYPE:
 ```
 > Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos` to save
 > the change and `ADDON:ReloadAddon` to reload the state of the addon.
-> afterward and a reload (or character select).
 > 
 > @*param* `name` — The name of the addon to enable or disable.
 > 
@@ -3705,7 +3704,7 @@ ZONE_STATE_TYPE:
 
 #### Method: ReleaseEventHandler
 ```lua
-(method) UIParent:ReleaseEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+871), handler: function)
+(method) UIParent:ReleaseEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), handler: function)
 ```
 > Releases an event handler for the specified UI event.
 > 
@@ -4555,12 +4554,13 @@ ZONE_STATE_TYPE:
 >     | "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT"
 >     | "UPDATE_INSTANT_GAME_SCORES"
 >     | "UPDATE_INSTANT_GAME_STATE"
+>     | "UPDATE_INSTANT_GAME_TARGET_NPC_INFO"
 >     | "UPDATE_INSTANT_GAME_TIME"
 >     | "UPDATE_ITEM_LOOK_CONVERT_MODE"
 >     | "UPDATE_MONITOR_NPC"
 >     | "UPDATE_MY_SLAVE_POS_INFO"
 >     | "UPDATE_NPC_INFO"
->     | "UPDATE_NPC_INFO_BROADCASTING"
+>     | "UPDATE_INDUN_PLAYING_INFO_BROADCASTING"
 >     | "UPDATE_OPTION_BINDINGS"
 >     | "UPDATE_PING_INFO"
 >     | "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL"
@@ -4704,7 +4704,7 @@ ZONE_STATE_TYPE:
 
 #### Method: SetEventHandler
 ```lua
-(method) UIParent:SetEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+871), handler: function)
+(method) UIParent:SetEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), handler: function)
 ```
 > Sets an event handler for the specified UI event (more than 255 events will
 > crash the game, multiple handlers to the same event can also crash the game).
@@ -5557,12 +5557,13 @@ ZONE_STATE_TYPE:
 >     | "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT"
 >     | "UPDATE_INSTANT_GAME_SCORES"
 >     | "UPDATE_INSTANT_GAME_STATE"
+>     | "UPDATE_INSTANT_GAME_TARGET_NPC_INFO"
 >     | "UPDATE_INSTANT_GAME_TIME"
 >     | "UPDATE_ITEM_LOOK_CONVERT_MODE"
 >     | "UPDATE_MONITOR_NPC"
 >     | "UPDATE_MY_SLAVE_POS_INFO"
 >     | "UPDATE_NPC_INFO"
->     | "UPDATE_NPC_INFO_BROADCASTING"
+>     | "UPDATE_INDUN_PLAYING_INFO_BROADCASTING"
 >     | "UPDATE_OPTION_BINDINGS"
 >     | "UPDATE_PING_INFO"
 >     | "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL"
@@ -5844,7 +5845,7 @@ ZONE_STATE_TYPE:
 > @*return* `fontColor` — The font color associated with the key.
 > 
 > ```lua
-> -- game/ui/settings/font_color.g
+> -- ui/settings/font_color.g
 > key:
 >     | "action_slot_key_binding"
 >     | "adamant"

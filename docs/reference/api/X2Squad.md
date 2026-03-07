@@ -33,13 +33,13 @@
 `X2Squad`
 
 ## Aliases
-**SCI**
+**SQUAD_CATEGORY_INSTANCE**
 
 `SCI_BATTLE_FIELD`|`SCI_INDUN`
 
 ```lua
 -- api/X2Squad
-SCI:
+SQUAD_CATEGORY_INSTANCE:
     | `SCI_BATTLE_FIELD`
     | `SCI_INDUN`
 ```

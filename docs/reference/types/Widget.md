@@ -304,7 +304,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: RegisterEvent
 ```lua
-(method) Widget:RegisterEvent(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+871))
+(method) Widget:RegisterEvent(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872))
 ```
 > Registers an event for the Widget to be accessible by the OnEvent handler
 > action.
@@ -1153,12 +1153,13 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 >     | "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT"
 >     | "UPDATE_INSTANT_GAME_SCORES"
 >     | "UPDATE_INSTANT_GAME_STATE"
+>     | "UPDATE_INSTANT_GAME_TARGET_NPC_INFO"
 >     | "UPDATE_INSTANT_GAME_TIME"
 >     | "UPDATE_ITEM_LOOK_CONVERT_MODE"
 >     | "UPDATE_MONITOR_NPC"
 >     | "UPDATE_MY_SLAVE_POS_INFO"
 >     | "UPDATE_NPC_INFO"
->     | "UPDATE_NPC_INFO_BROADCASTING"
+>     | "UPDATE_INDUN_PLAYING_INFO_BROADCASTING"
 >     | "UPDATE_OPTION_BINDINGS"
 >     | "UPDATE_PING_INFO"
 >     | "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL"
@@ -2117,7 +2118,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 > @*return* `drawable` — The created color drawable, or an empty table if the object `ColorDrawable` hasn't been imported.
 > 
 > ```lua
-> -- game/ui/setting/etc_color.g
+> -- ui/setting/etc_color.g
 > colorKey:
 >     | "action_slot_state_img_able"
 >     | "action_slot_state_img_can_learn"
@@ -2372,7 +2373,12 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 ```lua
 (method) Widget:Enable(enable: boolean, enableChildren?: boolean)
 ```
-> Enables or disables the Widget and its handler actions `"OnClick"`.
+> Enables or disables the Widget, changes the state of the widget if supported,
+> and enables or disables its handler actions:
+> - `"OnClick"`
+> - `"OnMouseDown"`
+> - `"OnMouseMove"`
+> - `"OnMouseUp"`
 > 
 > @*param* `enable` — `true` to enable, `false` to disable. (default: `true`)
 > 
@@ -2551,7 +2557,18 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 ```lua
 (method) Widget:EnablePick(enable: boolean)
 ```
-> Enables or disables the Widget handler action `"OnClick"`.
+> Enables or disables the Widgets ability to be picked and the widget actions
+> that relate to a widget being picked:
+> - `"OnClick"`
+> - `"OnDragReceive"`
+> - `"OnDragStart"`
+> - `"OnDragStop"`
+> - `"OnEnter"`
+> - `"OnEscapePressed"`
+> - `"OnLeave"`
+> - `"OnMouseDown"`
+> - `"OnMouseMove"`
+> - `"OnMouseUp"`
 > 
 > @*param* `enable` — `true` to enable picking, `false` to disable. (default: `true`)
 
@@ -2619,7 +2636,8 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 ```lua
 (method) Widget:EnableFocus(enable: boolean)
 ```
-> Enables or disables focus for the Widget.
+> Enables or disables focus for the Widget and when the widget is focus enables
+> the widget handler actions `"OnKeyUp"` and `"OnKeyDown"`.
 > 
 > @*param* `enable` — `true` to enable focus, `false` to disable.
 

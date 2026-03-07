@@ -160,6 +160,3 @@ if obj:IsValidUIObject() then
     ADDON:ChatLog("Object is alive and has type: " .. obj:GetObjectType())
 end
 ```
-
-## Widget Actions
-WIP

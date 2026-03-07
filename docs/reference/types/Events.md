@@ -419,7 +419,7 @@ fun(sourceName: string, targetName: string)
 
 fun()
 
-
+Event triggers when the players buff/debuff/hidden buff that gives a skill for the dynamic shortcut changes.
 
 **BUFF_UPDATE_HANDLER**
 
@@ -441,9 +441,9 @@ Event triggers when the player is attempting to place something that can be buil
 
 **BUILD_CONDITION_HANDLER**
 
-fun(param: any)
+fun(condition: BuildCondition)
 
-
+Event triggers when the player views the build condition of a community center.
 
 **BUTLER_INFO_UPDATED_HANDLER**
 
@@ -696,7 +696,7 @@ Event triggers when the player attempts to use sheet music.
 
 fun()
 
-Event triggers when the player interacts with something other than the coffer.
+Event triggers when the player interacts with something other than the coffer (storage chest).
 
 **COFFER_INTERACTION_START_HANDLER**
 
@@ -714,31 +714,31 @@ fun(isRealSlotShow: any)
 
 fun()
 
-Event triggers when the player creates a tab for the coffer.
+Event triggers when the player creates a tab for the coffer (storage chest).
 
 **COFFER_TAB_REMOVED_HANDLER**
 
 fun()
 
-Event triggers when the player deletes a tab from the coffer.
+Event triggers when the player deletes a tab from the coffer (storage chest).
 
 **COFFER_TAB_SORTED_HANDLER**
 
 fun(bagId: number)
 
-Event triggers when the player sorts the coffer.
+Event triggers when the player sorts the coffer (storage chest).
 
 **COFFER_TAB_SWITCHED_HANDLER**
 
 fun(tabId: number)
 
-
+Event triggers when the player changes their coffer (storage chest) tab.
 
 **COFFER_UPDATE_HANDLER**
 
 fun(bagId: number, slotId: number)
 
-Event triggers when the players coffer updates.
+Event triggers when the players coffer (storage chest) updates.
 
 **COMBAT_MSG_HANDLER**
 
@@ -1123,7 +1123,7 @@ Event triggers when the player enters another zone group.
 
 fun(mode: "awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7))
 
-
+Event triggers when the player attempts to enter enchanting mode.
 
 **ENTER_GACHA_LOOT_MODE_HANDLER**
 
@@ -3438,7 +3438,7 @@ sales tab of the resident townhall for the zone.
 
 fun(datas: Craft[])
 
-Event triggers when the players  favorite crafts are rolledback.
+Event triggers when the players favorite crafts are rolledback.
 
 **RULING_CLOSED_HANDLER**
 
@@ -3746,7 +3746,7 @@ Event triggers when the player attempts to open an item that has a selection.
 
 **SKILL_UPGRADED_HANDLER**
 
-fun(skillType: number, level: number, arg: number)
+fun(skillType: number, level: number, oldLevel: number)
 
 Event triggers when the players skill upgrades.
 
@@ -4308,7 +4308,7 @@ options window.
 
 fun()
 
-
+Event triggers when a ucc imprint has succeeded.
 
 **UI_ADDON_HANDLER**
 
@@ -4519,7 +4519,7 @@ Event triggers when the player opens the map.
 
 fun(added: boolean, removed: boolean)
 
-Event triggers when the players durability on their gear changes.
+Event triggers when the players durability status of their gear changes. (e.g., Item is nearly broken)
 
 **UPDATE_DYEING_EXCUTABLE_HANDLER**
 
@@ -4595,6 +4595,12 @@ fun(unitId: string)
 
 Event triggers when a housing tooltip updates.
 
+**UPDATE_INDUN_PLAYING_INFO_BROADCASTING_HANDLER**
+
+fun(info: NpcBroadcastingInfo[])
+
+Event triggers every second while the npc info is broadcasting for the player. (e.g. Hereafter Rebellion Win Condition/Progress)
+
 **UPDATE_INGAME_BEAUTYSHOP_STATUS_HANDLER**
 
 fun()
@@ -4643,6 +4649,12 @@ fun()
 
 Event triggers when the player queues an instance.
 
+**UPDATE_INSTANT_GAME_TARGET_NPC_INFO_HANDLER**
+
+fun()
+
+Event triggers when the instance target npc information changes. (e.g., Halcyona War Relics)
+
 **UPDATE_INSTANT_GAME_TIME_HANDLER**
 
 fun()
@@ -4666,12 +4678,6 @@ Event triggers when a montiored npc updates for the map.
 fun()
 
 Event triggers every 5 seconds to update the players slave (vehicle) position information.
-
-**UPDATE_NPC_INFO_BROADCASTING_HANDLER**
-
-fun(info: NpcBroadcastingInfo[])
-
-Event triggers every second while the npc info is broadcasting for the player. (e.g. Hereafter Rebellion Win Condition/Progress)
 
 **UPDATE_NPC_INFO_HANDLER**
 
@@ -5294,7 +5300,7 @@ fun(self: Widget, step: "position"|"roation")
 
 **WIDGET_BUILD_CONDITION_HANDLER**
 
-fun(self: Widget, param: any)
+fun(self: Widget, condition: BuildCondition)
 
 
 
@@ -8582,7 +8588,7 @@ fun(self: Widget, status: boolean)
 
 **WIDGET_SKILL_UPGRADED_HANDLER**
 
-fun(self: Widget, skillType: number, level: number, arg: number)
+fun(self: Widget, skillType: number, level: number, oldLevel: number)
 
 
 
@@ -9426,6 +9432,12 @@ fun(self: Widget, unitId: string)
 
 
 
+**WIDGET_UPDATE_INDUN_PLAYING_INFO_BROADCASTING_HANDLER**
+
+fun(self: Widget, info: NpcBroadcastingInfo[])
+
+
+
 **WIDGET_UPDATE_INGAME_BEAUTYSHOP_STATUS_HANDLER**
 
 fun(self: Widget)
@@ -9474,6 +9486,12 @@ fun(self: Widget)
 
 
 
+**WIDGET_UPDATE_INSTANT_GAME_TARGET_NPC_INFO_HANDLER**
+
+fun(self: Widget)
+
+
+
 **WIDGET_UPDATE_INSTANT_GAME_TIME_HANDLER**
 
 fun(self: Widget)
@@ -9495,12 +9513,6 @@ fun(self: Widget)
 **WIDGET_UPDATE_MY_SLAVE_POS_INFO_HANDLER**
 
 fun(self: Widget)
-
-
-
-**WIDGET_UPDATE_NPC_INFO_BROADCASTING_HANDLER**
-
-fun(self: Widget, info: NpcBroadcastingInfo[])
 
 
 

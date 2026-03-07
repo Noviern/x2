@@ -758,6 +758,73 @@ string|nil
 ```
 
 
+### Class: BuildCondition
+#### Field: buildEffect
+```lua
+string
+```
+
+
+#### Field: itemType
+```lua
+number
+```
+
+
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: reqItemCount
+```lua
+number
+```
+
+
+#### Field: title
+```lua
+string
+```
+
+
+#### Field: itemCount
+```lua
+number
+```
+
+
+#### Field: effectDesc
+```lua
+string
+```
+
+
+#### Field: isLastStep
+```lua
+boolean
+```
+
+
+#### Field: buildExplanation
+```lua
+string
+```
+
+
+#### Field: devoteItemCount
+```lua
+number
+```
+
+
+#### Field: tooltip
+```lua
+string
+```
+
+
 ### Class: CHAT_MESSAGE_INFO
 #### Field: charId
 ```lua
@@ -2759,7 +2826,7 @@ string
 ```lua
 ""|"achievement"|"auction"|"bag"|"butler"...(+26)
 ```
-> game/ui/common/esc_menu.g
+> ui/common/esc_menu.g
 
 #### Field: uiContentType
 ```lua
@@ -7196,7 +7263,7 @@ string
 ```lua
 `0`|`100`|`101`|`102`|`103`...(+151)
 ```
-> TODO: Might not be ZONE_GROUP_ID
+> Obtained from db zone_groups
 
 ### Class: TutorialInfo
 #### Field: [1]
