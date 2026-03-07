@@ -175,7 +175,7 @@
 ---| "BOTTOMRIGHT"
 
 ---@TODO: this is may not be accurate
----db > anim_actions + game/animations
+---db > anim_actions + animations/
 ---@alias ANIMATION
 ---| "ac_steer_idle"
 ---| "ac_steer_l_01"
@@ -2889,7 +2889,7 @@
 ---| "specialtyTradeSlot"
 ---| "tractor"
 
----game/ui/setting/button_style.g
+---ui/setting/button_style.g
 ---@alias BUTTON_STYLE
 ---| "accept_v"
 ---| "actionbar_lock"
@@ -3133,7 +3133,7 @@
 ---| "FALLING"
 
 ---@TODO: ENVIRONMENTAL/MELEE may not be complete.
----game/scriptsbin/globalui/chat/chat_msg_event.lua
+---scriptsbin/globalui/chat/chat_msg_event.lua
 ---@alias COMBAT_EVENT
 ---| "ENVIRONMENTAL_DAMAGE"
 ---| "ENVIRONMENTAL_DRAIN"
@@ -5819,7 +5819,7 @@
 ---| `5` # Family and Guild
 ---| `6` # Alliance
 
----game/ui/setting/etc_color.g
+---ui/setting/etc_color.g
 ---@alias DRAWABLE_COLOR_KEY
 ---| "action_slot_state_img_able"
 ---| "action_slot_state_img_can_learn"
@@ -5970,7 +5970,7 @@
 ---| "socket_remove"
 ---| "socket_upgrade"
 
----game/ui/setting/etc_color.g
+---ui/setting/etc_color.g
 ---@alias ETC_COLOR
 ---| "action_slot_state_img_able"
 ---| "action_slot_state_img_can_learn"
@@ -6013,7 +6013,7 @@
 ---| `4` # Convenience
 ---| `5` # System
 
----game/ui/common/esc_menu.g
+---ui/common/esc_menu.g
 ---@alias ESC_MENU_ICON_KEY
 ---| ""
 ---| "achievement"
@@ -6179,7 +6179,7 @@
 ---| "close"
 ---| "open"
 
----game/ui/settings/font_color.g
+---ui/settings/font_color.g
 ---@alias FONT_COLOR_KEY
 ---| "action_slot_key_binding"
 ---| "adamant"
@@ -6824,6 +6824,7 @@
 ---| "X"            # Keyboard
 ---| "Y"            # Keyboard
 ---| "Z"            # Keyboard
+---| "CTRL"         # Keyboard
 ---| "SPACE"        # Keyboard
 ---| "INSERT"       # Keyboard
 ---| "HOME"         # Keyboard
@@ -12029,12 +12030,13 @@
 ---| "UPDATE_INSTANT_GAME_KILLSTREAK_COUNT"
 ---| "UPDATE_INSTANT_GAME_SCORES"
 ---| "UPDATE_INSTANT_GAME_STATE"
+---| "UPDATE_INSTANT_GAME_TARGET_NPC_INFO"
 ---| "UPDATE_INSTANT_GAME_TIME"
 ---| "UPDATE_ITEM_LOOK_CONVERT_MODE"
 ---| "UPDATE_MONITOR_NPC"
 ---| "UPDATE_MY_SLAVE_POS_INFO"
 ---| "UPDATE_NPC_INFO"
----| "UPDATE_NPC_INFO_BROADCASTING"
+---| "UPDATE_INDUN_PLAYING_INFO_BROADCASTING"
 ---| "UPDATE_OPTION_BINDINGS"
 ---| "UPDATE_PING_INFO"
 ---| "UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL"

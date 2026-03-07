@@ -937,7 +937,6 @@ function ADDON:ImportObject(objectId) end
 ---@nodiscard
 function ADDON:LoadData(key) end
 
----@TODO: should i @see alias functions?
 ---Registers a trigger function to a UI category and returns whether it
 ---succeeded. This can override the trigger function for existing UI categories.
 ---@param uiCategory UI_CATEGORY The UI category to register the function to. (max: `16777216`)
@@ -969,10 +968,8 @@ function ADDON:SaveAddonInfos() end
 ---@param data table The data to save.
 function ADDON:SaveData(key, data) end
 
----@TODO: fix this description
 ---Enables or disables an addon. Requires calling `ADDON:SaveAddonInfos` to save
 ---the change and `ADDON:ReloadAddon` to reload the state of the addon.
----afterward and a reload (or character select).
 ---@param name string The name of the addon to enable or disable.
 ---@param enable boolean `true` to enable, `false` to disable the addon.
 function ADDON:SetAddonEnable(name, enable) end
@@ -2009,7 +2006,7 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "UPDATE_ITEM_LOOK_CONVERT_MODE", handler: UPDATE_ITEM_LOOK_CONVERT_MODE_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_MONITOR_NPC", handler: UPDATE_MONITOR_NPC_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_MY_SLAVE_POS_INFO", handler: UPDATE_MY_SLAVE_POS_INFO_HANDLER)
----@overload fun(self: self, eventName: "UPDATE_NPC_INFO_BROADCASTING", handler: UPDATE_NPC_INFO_BROADCASTING_HANDLER)
+---@overload fun(self: self, eventName: "UPDATE_INDUN_PLAYING_INFO_BROADCASTING", handler: UPDATE_INDUN_PLAYING_INFO_BROADCASTING_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_NPC_INFO", handler: UPDATE_NPC_INFO_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_OPTION_BINDINGS", handler: UPDATE_OPTION_BINDINGS_HANDLER)
 ---@overload fun(self: self, eventName: "UPDATE_PING_INFO", handler: UPDATE_PING_INFO_HANDLER)

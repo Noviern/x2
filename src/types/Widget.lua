@@ -284,8 +284,12 @@ function Widget:DisableDrawables(nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 function Widget:DisableDrawablesWithChildren(nameLayer) end
 
----@TODO: Make a list of events that can be activated/deactivated by this. This also sets the state to disabled (actually highlighted because state is bugged atm). can change the state of a widget if the widget has state
----Enables or disables the Widget and its handler actions `"OnClick"`.
+---Enables or disables the Widget, changes the state of the widget if supported,
+---and enables or disables its handler actions:
+---- `"OnClick"`
+---- `"OnMouseDown"`
+---- `"OnMouseMove"`
+---- `"OnMouseUp"`
 ---@param enable boolean `true` to enable, `false` to disable. (default: `true`)
 ---@param enableChildren? boolean `true` to enable, `false` to disable. (default: `true`)
 function Widget:Enable(enable, enableChildren) end
@@ -302,8 +306,8 @@ function Widget:EnableDrawables(nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to enable.
 function Widget:EnableDrawablesWithChildren(nameLayer) end
 
----@TODO: Make a list of events that can be activated/deactivated by this. default value.
----Enables or disables focus for the Widget.
+---Enables or disables focus for the Widget and when the widget is focus enables
+---the widget handler actions `"OnKeyUp"` and `"OnKeyDown"`.
 ---@param enable boolean `true` to enable focus, `false` to disable.
 function Widget:EnableFocus(enable) end
 
@@ -316,12 +320,21 @@ function Widget:EnableHidingIsRemove(enable) end
 ---@param enable boolean `true` to enable keyboard input, `false` to disable.
 function Widget:EnableKeyboard(enable) end
 
----@TODO: Verify if additional parameter exists. Make a list of events that can be activated/deactivated by this.
----Enables or disables the Widget handler action `"OnClick"`.
+---Enables or disables the Widgets ability to be picked and the widget actions
+---that relate to a widget being picked:
+---- `"OnClick"`
+---- `"OnDragReceive"`
+---- `"OnDragStart"`
+---- `"OnDragStop"`
+---- `"OnEnter"`
+---- `"OnEscapePressed"`
+---- `"OnLeave"`
+---- `"OnMouseDown"`
+---- `"OnMouseMove"`
+---- `"OnMouseUp"`
 ---@param enable boolean `true` to enable picking, `false` to disable. (default: `true`)
 function Widget:EnablePick(enable) end
 
----@TODO: Make a list of events that can be activated/deactivated by this.
 ---Enables or disables scrolling for the Widget. Children widgets outside of the
 ---parent widget will not render.
 ---@param enable boolean `true` to enable scrolling, `false` to disable.

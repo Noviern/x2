@@ -9,7 +9,6 @@ local Uiobject = {}
 function Uiobject:GetId() end
 
 ---@FIXME: May be broken, currently returns nothing.
----@TODO: try this on child widgets
 ---Retrieves the name of the UI object.
 ---@return string name
 ---@nodiscard

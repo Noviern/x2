@@ -105,7 +105,7 @@
 ---@alias APPELLATION_STAMP_SET_HANDLER fun()
 ---@alias WIDGET_APPELLATION_STAMP_SET_HANDLER fun(self: Widget)
 
----@TODO: I haven't seen this yet. I suspect its disable on ArcheRage.
+---@TODO: I haven't seen this yet. I suspect its disabled on ArcheRage.
 ---Event triggers when the players labor is low and the game recommends they buy a labor potion from the market place.
 ---@alias ASK_BUY_LABOR_POWER_POTION_HANDLER fun()
 ---@alias WIDGET_ASK_BUY_LABOR_POWER_POTION_HANDLER fun(self: Widget)
@@ -183,7 +183,7 @@
 ---@alias BAG_EXPANDED_HANDLER fun()
 ---@alias WIDGET_BAG_EXPANDED_HANDLER fun(self: Widget)
 
----@TODO: this doesnt trigger every time
+---@TODO: this doesnt trigger every time, maybe its when the bag idx changes for each item?
 ---Event triggers when the player receives an item to their bag.
 ---@alias BAG_ITEM_CONFIRMED_HANDLER fun()
 ---@alias WIDGET_BAG_ITEM_CONFIRMED_HANDLER fun(self: Widget)
@@ -284,7 +284,7 @@
 ---@alias BOT_SUSPECT_REPORTED_HANDLER fun(sourceName: string, targetName: string)
 ---@alias WIDGET_BOT_SUSPECT_REPORTED_HANDLER fun(self: Widget, sourceName: string, targetName: string)
 
----@TODO:
+---Event triggers when the players buff/debuff/hidden buff that gives a skill for the dynamic shortcut changes.
 ---@alias BUFF_SKILL_CHANGED_HANDLER fun()
 ---@alias WIDGET_BUFF_SKILL_CHANGED_HANDLER fun(self: Widget)
 
@@ -292,9 +292,9 @@
 ---@alias BUFF_UPDATE_HANDLER fun(action: BUFF_ACTION, target: BUFF_TARGET)
 ---@alias WIDGET_BUFF_UPDATE_HANDLER fun(self: Widget, action: BUFF_ACTION, target: BUFF_TARGET)
 
----@TODO:
----@alias BUILD_CONDITION_HANDLER fun(param)
----@alias WIDGET_BUILD_CONDITION_HANDLER fun(self: Widget, param)
+---Event triggers when the player views the build condition of a community center.
+---@alias BUILD_CONDITION_HANDLER fun(condition: BuildCondition)
+---@alias WIDGET_BUILD_CONDITION_HANDLER fun(self: Widget, condition: BuildCondition)
 
 ---Event triggers when the player cancels trying to place something that can be built.
 ---@alias BUILDER_END_HANDLER fun()
@@ -469,7 +469,7 @@
 ---@alias CLOSE_MUSIC_SHEET_HANDLER fun()
 ---@alias WIDGET_CLOSE_MUSIC_SHEET_HANDLER fun(self: Widget)
 
----Event triggers when the player interacts with something other than the coffer.
+---Event triggers when the player interacts with something other than the coffer (storage chest).
 ---@alias COFFER_INTERACTION_END_HANDLER fun()
 ---@alias WIDGET_COFFER_INTERACTION_END_HANDLER fun(self: Widget)
 
@@ -481,23 +481,23 @@
 ---@alias COFFER_REAL_INDEX_SHOW_HANDLER fun(isRealSlotShow)
 ---@alias WIDGET_COFFER_REAL_INDEX_SHOW_HANDLER fun(self: Widget, isRealSlotShow)
 
----Event triggers when the player creates a tab for the coffer.
+---Event triggers when the player creates a tab for the coffer (storage chest).
 ---@alias COFFER_TAB_CREATED_HANDLER fun()
 ---@alias WIDGET_COFFER_TAB_CREATED_HANDLER fun(self: Widget)
 
----Event triggers when the player deletes a tab from the coffer.
+---Event triggers when the player deletes a tab from the coffer (storage chest).
 ---@alias COFFER_TAB_REMOVED_HANDLER fun()
 ---@alias WIDGET_COFFER_TAB_REMOVED_HANDLER fun(self: Widget)
 
----Event triggers when the player sorts the coffer.
+---Event triggers when the player sorts the coffer (storage chest).
 ---@alias COFFER_TAB_SORTED_HANDLER fun(bagId: number)
 ---@alias WIDGET_COFFER_TAB_SORTED_HANDLER fun(self: Widget, bagId: number)
 
----@TODO:
+---Event triggers when the player changes their coffer (storage chest) tab.
 ---@alias COFFER_TAB_SWITCHED_HANDLER fun(tabId: number)
 ---@alias WIDGET_COFFER_TAB_SWITCHED_HANDLER fun(self: Widget, tabId: number)
 
----Event triggers when the players coffer updates.
+---Event triggers when the players coffer (storage chest) updates.
 ---@alias COFFER_UPDATE_HANDLER fun(bagId: number, slotId: number)
 ---@alias WIDGET_COFFER_UPDATE_HANDLER fun(self: Widget, bagId: number, slotId: number)
 
@@ -755,7 +755,7 @@
 ---@alias ENTER_ANOTHER_ZONEGROUP_HANDLER fun(zoneId: ZONE_GROUP_ID)
 ---@alias WIDGET_ENTER_ANOTHER_ZONEGROUP_HANDLER fun(self: Widget, zoneId: ZONE_GROUP_ID)
 
----@TODO: Needs more testing.
+---Event triggers when the player attempts to enter enchanting mode.
 ---@alias ENTER_ENCHANT_ITEM_MODE_HANDLER fun(mode: ENCHANT_ITEM_MODE)
 ---@alias WIDGET_ENTER_ENCHANT_ITEM_MODE_HANDLER fun(self: Widget, mode: ENCHANT_ITEM_MODE)
 
@@ -783,7 +783,6 @@
 ---@alias ENTERED_SUBZONE_HANDLER fun(zoneName: SUB_ZONE_NAME)
 ---@alias WIDGET_ENTERED_SUBZONE_HANDLER fun(self: Widget, zoneName: SUB_ZONE_NAME)
 
----@TODO: scriptsbin says this can return a widget maybe?
 ---Event triggers when the player enters the world.
 ---@alias ENTERED_WORLD_HANDLER fun(unknown: boolean)
 ---@alias WIDGET_ENTERED_WORLD_HANDLER fun(self: Widget, unknown: boolean)
@@ -893,7 +892,6 @@
 ---@alias EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED_HANDLER fun(self: Widget)
 
----@TODO: are there other triggers?
 ---Event triggers when the prestige of a guild member changes.
 ---@alias EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED_HANDLER fun(self: Widget)
@@ -1221,7 +1219,7 @@
 ---@alias HEIR_LEVEL_UP_HANDLER fun(myUnit: boolean, unitId: string)
 ---@alias WIDGET_HEIR_LEVEL_UP_HANDLER fun(self: Widget, myUnit: boolean, unitId: string)
 
----@TODO:
+---@TODO: I think this is part of a old/beta heir skills when you could purchases skills from the arena shop.
 ---@alias HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER fun(activeType: number, ability: number, text: string, pos: HEIR_SKILL_TYPE)
 ---@alias WIDGET_HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER fun(self: Widget, activeType: number, ability: number, text: string, pos: HEIR_SKILL_TYPE)
 
@@ -1576,7 +1574,6 @@
 ---@alias LEAVE_ITEM_LOOK_CONVERT_MODE_HANDLER fun()
 ---@alias WIDGET_LEAVE_ITEM_LOOK_CONVERT_MODE_HANDLER fun(self: Widget)
 
----@TODO: does this trigger for all instances? tried halc war and sodl
 ---Event triggers when the player leaves the instance.
 ---@alias LEAVED_INSTANT_GAME_ZONE_HANDLER fun()
 ---@alias WIDGET_LEAVED_INSTANT_GAME_ZONE_HANDLER fun(self: Widget)
@@ -2325,7 +2322,7 @@
 ---@alias WIDGET_RESIDENT_ZONE_STATE_CHANGE_HANDLER fun(self: Widget)
 
 ---@TODO: I haven't seen this.
----Event triggers when the players  favorite crafts are rolledback.
+---Event triggers when the players favorite crafts are rolledback.
 ---@alias ROLLBACK_FAVORITE_CRAFTS_HANDLER fun(datas: Craft[])
 ---@alias WIDGET_ROLLBACK_FAVORITE_CRAFTS_HANDLER fun(self: Widget, datas: Craft[])
 
@@ -2531,10 +2528,9 @@
 ---@alias SKILL_SELECTIVE_ITEM_READY_STATUS_HANDLER fun(status: boolean)
 ---@alias WIDGET_SKILL_SELECTIVE_ITEM_READY_STATUS_HANDLER fun(self: Widget, status: boolean)
 
----@TODO: arg?
 ---Event triggers when the players skill upgrades.
----@alias SKILL_UPGRADED_HANDLER fun(skillType: number, level: number, arg: number)
----@alias WIDGET_SKILL_UPGRADED_HANDLER fun(self: Widget, skillType: number, level: number, arg: number)
+---@alias SKILL_UPGRADED_HANDLER fun(skillType: number, level: number, oldLevel: number)
+---@alias WIDGET_SKILL_UPGRADED_HANDLER fun(self: Widget, skillType: number, level: number, oldLevel: number)
 
 ---Event triggers when the player resets a skill tree.
 ---@alias SKILLS_RESET_HANDLER fun(ability: ABILITY_TYPE_NAME)
@@ -2914,7 +2910,7 @@
 ---@alias TUTORIAL_HIDE_FROM_OPTION_HANDLER fun()
 ---@alias WIDGET_TUTORIAL_HIDE_FROM_OPTION_HANDLER fun(self: Widget)
 
----@TODO:
+---Event triggers when a ucc imprint has succeeded.
 ---@alias UCC_IMPRINT_SUCCEEDED_HANDLER fun()
 ---@alias WIDGET_UCC_IMPRINT_SUCCEEDED_HANDLER fun(self: Widget)
 
@@ -3055,8 +3051,7 @@
 ---@alias UPDATE_DOODAD_INFO_HANDLER fun()
 ---@alias WIDGET_UPDATE_DOODAD_INFO_HANDLER fun(self: Widget)
 
----@TODO: This may be reversed
----Event triggers when the players durability on their gear changes.
+---Event triggers when the players durability status of their gear changes. (e.g., Item is nearly broken)
 ---@alias UPDATE_DURABILITY_STATUS_HANDLER fun(added: boolean, removed: boolean)
 ---@alias WIDGET_UPDATE_DURABILITY_STATUS_HANDLER fun(self: Widget, added: boolean, removed: boolean)
 
@@ -3142,6 +3137,10 @@
 ---@alias UPDATE_INSTANT_GAME_STATE_HANDLER fun()
 ---@alias WIDGET_UPDATE_INSTANT_GAME_STATE_HANDLER fun(self: Widget)
 
+---Event triggers when the instance target npc information changes. (e.g., Halcyona War Relics)
+---@alias UPDATE_INSTANT_GAME_TARGET_NPC_INFO_HANDLER fun()
+---@alias WIDGET_UPDATE_INSTANT_GAME_TARGET_NPC_INFO_HANDLER fun(self: Widget)
+
 ---Event triggers every 500ms while the player is inside an instance.
 ---@alias UPDATE_INSTANT_GAME_TIME_HANDLER fun()
 ---@alias WIDGET_UPDATE_INSTANT_GAME_TIME_HANDLER fun(self: Widget)
@@ -3162,10 +3161,9 @@
 ---@alias UPDATE_NPC_INFO_HANDLER fun()
 ---@alias WIDGET_UPDATE_NPC_INFO_HANDLER fun(self: Widget)
 
----@TODO: rename to UPDATE_INDUN_PLAYING_INFO_BROADCASTING
 ---Event triggers every second while the npc info is broadcasting for the player. (e.g. Hereafter Rebellion Win Condition/Progress)
----@alias UPDATE_NPC_INFO_BROADCASTING_HANDLER fun(info: NpcBroadcastingInfo[])
----@alias WIDGET_UPDATE_NPC_INFO_BROADCASTING_HANDLER fun(self: Widget, info: NpcBroadcastingInfo[])
+---@alias UPDATE_INDUN_PLAYING_INFO_BROADCASTING_HANDLER fun(info: NpcBroadcastingInfo[])
+---@alias WIDGET_UPDATE_INDUN_PLAYING_INFO_BROADCASTING_HANDLER fun(self: Widget, info: NpcBroadcastingInfo[])
 
 ---Event triggers when the player opens the settings window and triggers when
 ---the player updates a setting.
@@ -3188,7 +3186,6 @@
 ---@alias UPDATE_RETURN_ACCOUNT_STATUS_HANDLER fun(status: `1`|`2`|`3`)
 ---@alias WIDGET_UPDATE_RETURN_ACCOUNT_STATUS_HANDLER fun(self: Widget, status: `1`|`2`|`3`)
 
----@TODO:
 ---Event triggers when the player changes zones.
 ---@alias UPDATE_ROADMAP_ANCHOR_HANDLER fun(file: string)
 ---@alias WIDGET_UPDATE_ROADMAP_ANCHOR_HANDLER fun(self: Widget, file: string)

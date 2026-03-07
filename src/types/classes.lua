@@ -1018,7 +1018,7 @@
 ---@field msg string
 ---@field step string
 ---@field titleMsg string
----@field zoneGroup ZONE_GROUP_ID @TODO: Might not be ZONE_GROUP_ID
+---@field zoneGroup ZONE_GROUP_ID
 
 ---@class KillStreakInfo
 ---@field gameType number
@@ -1507,5 +1507,18 @@
 ---@field featureSetCondition boolean
 ---@field hotkeyActionName string
 ---@field restart boolean
+---@field title string
+---@field tooltip string
+
+---@class BuildCondition
+---@field buildEffect string
+---@field buildExplanation string
+---@field devoteItemCount number
+---@field effectDesc string
+---@field isLastStep boolean
+---@field itemCount number
+---@field itemType number
+---@field name string
+---@field reqItemCount number
 ---@field title string
 ---@field tooltip string
