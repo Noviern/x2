@@ -127,9 +127,9 @@ TEAM_ROLE:
 ```
 > Retrieves the role of the specified member in the given team.
 > 
-> @*param* `teamIndex` — The index of the team.
+> @*param* `teamIndex` — The index of the team.  (min: `0`)
 > 
-> @*param* `memberIndex` — The index of the member within the team.
+> @*param* `memberIndex` — The index of the member within the team.  (min: `1`)
 > 
 > @*return* `role` — The role of the member.
 > 
