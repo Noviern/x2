@@ -45,8 +45,8 @@ X2Team = {}                           -- api/X2Team
 ---| `TMROLE_TANKER`
 
 ---Retrieves the role of the specified member in the given team.
----@param teamIndex number The index of the team.
----@param memberIndex number The index of the member within the team.
+---@param teamIndex number The index of the team. (min: `0`)
+---@param memberIndex number The index of the member within the team. (min: `1`)
 ---@return TEAM_ROLE role The role of the member.
 ---@nodiscard
 function X2Team:GetRole(teamIndex, memberIndex) end
