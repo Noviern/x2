@@ -160,7 +160,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: MouseUp
 ```lua
-(method) Webbrowser:MouseUp(button: "LeftButton"|"RightButton")
+(method) Webbrowser:MouseUp(button: MOUSE_BUTTON)
 ```
 > Simulates a mouse up event on the Webbrowser.
 > 
@@ -174,7 +174,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: MouseDown
 ```lua
-(method) Webbrowser:MouseDown(button: "LeftButton"|"RightButton")
+(method) Webbrowser:MouseDown(button: MOUSE_BUTTON)
 ```
 > Simulates a mouse down event on the Webbrowser.
 > 

@@ -11,7 +11,7 @@
 ## Aliases
 **SKILL_INFORMATION_KIND**
 
-`4`|`SIK_DESCRIPTION`
+SKILL_INFORMATION_KIND
 
 ```lua
 -- api/X2Skill
@@ -41,7 +41,7 @@ SKILL_INFORMATION_KIND:
 
 #### Method: GetSkillTooltip
 ```lua
-(method) X2Skill:GetSkillTooltip(skillId: number, itemType: number, filter?: `4`|`SIK_DESCRIPTION`)
+(method) X2Skill:GetSkillTooltip(skillId: number, itemType: number, filter?: SKILL_INFORMATION_KIND)
   -> skillTooltip: SkillTooltip
 ```
 > Returns tooltip information for a skill, filtered by an optional scope.
@@ -66,7 +66,7 @@ SKILL_INFORMATION_KIND:
 
 #### Method: GetMateCooldown
 ```lua
-(method) X2Skill:GetMateCooldown(skillId: number, ignoreGlobalCooldown: boolean, mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)
+(method) X2Skill:GetMateCooldown(skillId: number, ignoreGlobalCooldown: boolean, mateType: MATE_TYPE)
   -> remainTime: number|nil
 ```
 > Retrieves the cooldown information for a specified skill for the mate.

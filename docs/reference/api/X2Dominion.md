@@ -43,7 +43,7 @@
 ## Aliases
 **HP_WORLD_STATE**
 
-`-1`|`HPWS_BATTLE`|`HPWS_PEACE`|`HPWS_TROUBLE_0`|`HPWS_TROUBLE_1`...(+4)
+HP_WORLD_STATE
 
 ```lua
 -- api/X2Dominion

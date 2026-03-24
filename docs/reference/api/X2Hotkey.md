@@ -22,7 +22,7 @@
 
 #### Method: SetBindingUiEvent
 ```lua
-(method) X2Hotkey:SetBindingUiEvent(actionName: string, key: string|","|"."|"/"|"0"...(+97))
+(method) X2Hotkey:SetBindingUiEvent(actionName: string, key: string|HOTKEY_NAME)
 ```
 > Binds a key to an action and registers the key to fire the `HOTKEY_ACTION`
 > event when pressed and released. This can't be saved but the hotkey can be
@@ -173,7 +173,7 @@
 
 #### Method: SetBindingUiEventWithIndex
 ```lua
-(method) X2Hotkey:SetBindingUiEventWithIndex(actionName: string, key: string|","|"."|"/"|"0"...(+97), index: `1`|`2`)
+(method) X2Hotkey:SetBindingUiEventWithIndex(actionName: string, key: string|HOTKEY_NAME, index: HOTKEY_MANAGER)
 ```
 > Binds a key to a action in the specified index and registers the key to fire
 > the `HOTKEY_ACTION` event when pressed and released. This can't be saved but
@@ -302,7 +302,7 @@
 
 #### Method: SetOptionBindingUiEvent
 ```lua
-(method) X2Hotkey:SetOptionBindingUiEvent(actionName: string, key: string|","|"."|"/"|"0"...(+97))
+(method) X2Hotkey:SetOptionBindingUiEvent(actionName: string, key: string|HOTKEY_NAME)
 ```
 > Binds a key to a action option button and once saved registers the key to
 > fire the `HOTKEY_ACTION` event when pressed and released.
@@ -430,7 +430,7 @@
 
 #### Method: SetOptionBindingButtonWithIndex
 ```lua
-(method) X2Hotkey:SetOptionBindingButtonWithIndex(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), key: string|","|"."|"/"|"0"...(+97), keyType: `1`|`2`)
+(method) X2Hotkey:SetOptionBindingButtonWithIndex(action: HOTKEY_ACTION, key: string|HOTKEY_NAME, keyType: HOTKEY_MANAGER)
 ```
 > Binds a key to a action option button in the specified index. Can't be saved
 > or used.
@@ -685,7 +685,7 @@
 
 #### Method: SetOptionBindingUiEventWithIndex
 ```lua
-(method) X2Hotkey:SetOptionBindingUiEventWithIndex(actionName: string, key: string|","|"."|"/"|"0"...(+97), index: `1`|`2`)
+(method) X2Hotkey:SetOptionBindingUiEventWithIndex(actionName: string, key: string|HOTKEY_NAME, index: HOTKEY_MANAGER)
 ```
 > Binds a key to a custom action option button in the specified index and once
 > saved registers the key to fire the `HOTKEY_ACTION` event when pressed and
@@ -820,7 +820,7 @@
 
 #### Method: IsValidActionName
 ```lua
-(method) X2Hotkey:IsValidActionName(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120))
+(method) X2Hotkey:IsValidActionName(action: HOTKEY_ACTION)
   -> validActionName: boolean
 ```
 > Checks if a hotkey action is valid.
@@ -960,7 +960,7 @@
 
 #### Method: GetOptionBindingUiEvent
 ```lua
-(method) X2Hotkey:GetOptionBindingUiEvent(actionName: string|"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"...(+121), index: `1`|`2`)
+(method) X2Hotkey:GetOptionBindingUiEvent(actionName: string|HOTKEY_ACTION, index: HOTKEY_MANAGER)
   -> key: string
 ```
 > Returns the key bound to the action option button.
@@ -1114,7 +1114,7 @@
 
 #### Method: IsOverridableAction
 ```lua
-(method) X2Hotkey:IsOverridableAction(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120))
+(method) X2Hotkey:IsOverridableAction(action: HOTKEY_ACTION)
   -> overridableAction: boolean
 ```
 > Checks if a hotkey action is overridable.
@@ -1254,7 +1254,7 @@
 
 #### Method: GetBindingUiEvent
 ```lua
-(method) X2Hotkey:GetBindingUiEvent(actionName: string|"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"...(+121), index: `1`|`2`)
+(method) X2Hotkey:GetBindingUiEvent(actionName: string|HOTKEY_ACTION, index: HOTKEY_MANAGER)
   -> key: string
 ```
 > Returns the current set key for the action.
@@ -1400,7 +1400,7 @@
 
 #### Method: GetOptionBindingButton
 ```lua
-(method) X2Hotkey:GetOptionBindingButton(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), index: `1`|`2`)
+(method) X2Hotkey:GetOptionBindingButton(action: HOTKEY_ACTION, index: HOTKEY_MANAGER)
   -> key: string
 ```
 > Returns the key bound to the action option button for a specified hotkey
@@ -1547,7 +1547,7 @@
 
 #### Method: GetOptionBinding
 ```lua
-(method) X2Hotkey:GetOptionBinding(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), index: `1`|`2`, option: boolean, arg: number)
+(method) X2Hotkey:GetOptionBinding(action: HOTKEY_ACTION, index: HOTKEY_MANAGER, option: boolean, arg: number)
   -> optionBinding: string
 ```
 > Returns the key bound to the action option button for a specified hotkey
@@ -1698,7 +1698,7 @@
 
 #### Method: SetOptionBindingWithIndex
 ```lua
-(method) X2Hotkey:SetOptionBindingWithIndex(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), key: string|","|"."|"/"|"0"...(+97), index: `1`|`2`, arg: number)
+(method) X2Hotkey:SetOptionBindingWithIndex(action: HOTKEY_ACTION, key: string|HOTKEY_NAME, index: HOTKEY_MANAGER, arg: number)
 ```
 > Binds a key to a action option button in the specified index with additional
 > arguments. Can trigger the `UPDATE_OPTION_BINDINGS` event if the button key

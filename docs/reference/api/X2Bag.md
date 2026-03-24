@@ -18,7 +18,7 @@
 
 #### Method: GetBagItemInfo
 ```lua
-(method) X2Bag:GetBagItemInfo(bagId: 1, slot: number, neededInfo?: `IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5))
+(method) X2Bag:GetBagItemInfo(bagId: 1, slot: number, neededInfo?: ITEM_INFORMATION_KIND)
   -> bagItemInfo: ItemInfo|nil
 ```
 > Retrieves item information for the specified slot if it exists.

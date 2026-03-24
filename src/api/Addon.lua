@@ -926,7 +926,8 @@ function ADDON:GetName() end
 ---@param apiType API The API to import.
 function ADDON:ImportAPI(apiType) end
 
----Imports the `objectId` for the addon. Call only once per `OBJECT`.
+---Imports the `objectId` for the addon. Call only once per `OBJECT`. Extra
+---calls will not reimport the object.
 ---@param objectId OBJECT The object ID to import.
 function ADDON:ImportObject(objectId) end
 

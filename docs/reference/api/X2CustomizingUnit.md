@@ -19,7 +19,7 @@
 ## Aliases
 **PUPIL_RANGE**
 
-`PR_BOTH`|`PR_LEFT`|`PR_RIGHT`
+PUPIL_RANGE
 
 ```lua
 -- api/X2CustomizingUnit

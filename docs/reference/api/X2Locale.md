@@ -9,7 +9,7 @@
 #### Method: GetKeyboardLayout
 ```lua
 (method) X2Locale:GetKeyboardLayout()
-  -> keyboardLayout: ""|"JAPANESE"|"KOREAN"
+  -> keyboardLayout: KEYBOARD_LAYOUT
 ```
 > Retrieves the current keyboard layout.
 > 
@@ -48,7 +48,7 @@
 
 #### Method: LocalizeUiText
 ```lua
-(method) X2Locale:LocalizeUiText(category: `ABILITY_CATEGORY_DESCRIPTION_TEXT`|`ABILITY_CATEGORY_TEXT`|`ABILITY_CHANGER_TEXT`|`ATTRIBUTE_TEXT`|`ATTRIBUTE_VARIATION_TEXT`...(+117), key: string, ...string)
+(method) X2Locale:LocalizeUiText(category: UI_TEXT_CATEGORY_ID, key: string, ...string)
   -> localizedUiText: string
 ```
 > Retrieves localized UI text for the specified category and key, replacing
@@ -191,7 +191,7 @@
 
 #### Method: HasLocalizeUiText
 ```lua
-(method) X2Locale:HasLocalizeUiText(categoryId: `ABILITY_CATEGORY_DESCRIPTION_TEXT`|`ABILITY_CATEGORY_TEXT`|`ABILITY_CHANGER_TEXT`|`ATTRIBUTE_TEXT`|`ATTRIBUTE_VARIATION_TEXT`...(+117), key: string)
+(method) X2Locale:HasLocalizeUiText(categoryId: UI_TEXT_CATEGORY_ID, key: string)
   -> localizeUiText: boolean
 ```
 > Checks if the specified localization category and key exist.
@@ -332,7 +332,7 @@
 #### Method: GetLocale
 ```lua
 (method) X2Locale:GetLocale()
-  -> locale: ""|"de"|"en_sg"|"en_us"|"fr"...(+7)
+  -> locale: LOCALE_STR
 ```
 > Retrieves the current locale.
 > 
@@ -357,7 +357,7 @@
 #### Method: GetLocaleIndex
 ```lua
 (method) X2Locale:GetLocaleIndex()
-  -> localeIndex: `-1`|`0`|`10`|`1`|`2`...(+7)
+  -> localeIndex: LOCALE_INDEX
 ```
 > Retrieves the locale index.
 > 
@@ -381,7 +381,7 @@
 
 #### Method: TextFormating
 ```lua
-(method) X2Locale:TextFormating(text: string|"@ACHIEVEMENT_NAME(achievementId)"|"@AREA_SPHERE(sphereId)"|"@CONTENT_CONFIG(configId)"|"@DAY(days)"...(+63))
+(method) X2Locale:TextFormating(text: string|FORMAT_MACRO)
   -> textFormatted: string
 ```
 > Formats the specified text.

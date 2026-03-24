@@ -23,7 +23,7 @@
 ## Aliases
 **CT**
 
-`CT_ABILITY`|`CT_EXPEDITION_NAME`|`CT_NAME`
+CT
 
 ```lua
 -- types/Widget
@@ -36,13 +36,13 @@ CT:
 
 **CharacterCacheDataHandler**
 
-fun(self: Widget, data: CacheData)
+CharacterCacheDataHandler
 
 
 
 **DRAG_CONDITION**
 
-`DC_ALWAYS`|`DC_SHIFT_KEY_DOWN`
+DRAG_CONDITION
 
 ```lua
 -- types/Widget
@@ -53,7 +53,7 @@ DRAG_CONDITION:
 
 **DelegatorHandler**
 
-fun(delegator: Widget, callbacker: Widget, mbt: "LeftButton"|"RightButton")
+DelegatorHandler
 
 
 
@@ -71,7 +71,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetCharacterCacheDataHandler
 ```lua
-(method) Widget:SetCharacterCacheDataHandler(handler: fun(self: Widget, data: CacheData))
+(method) Widget:SetCharacterCacheDataHandler(handler: CharacterCacheDataHandler)
 ```
 > Sets a handler for character cache data.
 > 
@@ -111,7 +111,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetDelegator
 ```lua
-(method) Widget:SetDelegator(action: "OnAcceptFocus"|"OnAlphaAnimeEnd"|"OnBoundChanged"|"OnChangedAnchor"|"OnCheckChanged"...(+44), delegator: Widget, handler: fun(delegator: Widget, callbacker: Widget, mbt: "LeftButton"|"RightButton"))
+(method) Widget:SetDelegator(action: WIDGET_EVENT_TYPE, delegator: Widget, handler: DelegatorHandler)
 ```
 > Sets a handler for a specific action on a delegator widget.
 > 
@@ -178,7 +178,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetDragCondition
 ```lua
-(method) Widget:SetDragCondition(dragCondition: `DC_ALWAYS`|`DC_SHIFT_KEY_DOWN`)
+(method) Widget:SetDragCondition(dragCondition: DRAG_CONDITION)
 ```
 > Sets the drag condition for the Widget. This restricts when the events
 > `OnDragReceive`, `OnDragStart`, and `OnDragStop` are fired.
@@ -213,7 +213,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetDrawableLayerAlpha
 ```lua
-(method) Widget:SetDrawableLayerAlpha(alpha: number, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:SetDrawableLayerAlpha(alpha: number, nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Sets the alpha for a specific drawable layer.
 > 
@@ -240,7 +240,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: RemoveAllDrawables
 ```lua
-(method) Widget:RemoveAllDrawables(nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:RemoveAllDrawables(nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Removes all drawables for the specified layer.
 > 
@@ -304,7 +304,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: RegisterEvent
 ```lua
-(method) Widget:RegisterEvent(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872))
+(method) Widget:RegisterEvent(eventName: UIEVENT_TYPE)
 ```
 > Registers an event for the Widget to be accessible by the OnEvent handler
 > action.
@@ -1196,7 +1196,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: ReleaseHandler
 ```lua
-(method) Widget:ReleaseHandler(actionName: "OnAcceptFocus"|"OnAlphaAnimeEnd"|"OnBoundChanged"|"OnChangedAnchor"|"OnCheckChanged"...(+44))
+(method) Widget:ReleaseHandler(actionName: WIDGET_EVENT_TYPE)
 ```
 > Releases a handler for the specified action.
 > 
@@ -1266,7 +1266,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetHandler
 ```lua
-(method) Widget:SetHandler(actionName: "OnAcceptFocus"|"OnAlphaAnimeEnd"|"OnBoundChanged"|"OnChangedAnchor"|"OnCheckChanged"...(+44), handler: function)
+(method) Widget:SetHandler(actionName: WIDGET_EVENT_TYPE, handler: function)
 ```
 > Sets a handler for the specified action.
 > 
@@ -1331,7 +1331,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetLText
 ```lua
-(method) Widget:SetLText(category: `ABILITY_CATEGORY_DESCRIPTION_TEXT`|`ABILITY_CATEGORY_TEXT`|`ABILITY_CHANGER_TEXT`|`ATTRIBUTE_TEXT`|`ATTRIBUTE_VARIATION_TEXT`...(+117), key: string, ...string)
+(method) Widget:SetLText(category: UI_TEXT_CATEGORY_ID, key: string, ...string)
 ```
 > Sets localized text for the Widget with multiple optional parameters.
 > 
@@ -1515,7 +1515,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: StartSizing
 ```lua
-(method) Widget:StartSizing(anchorPoint: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4))
+(method) Widget:StartSizing(anchorPoint: ANCHOR_POINT)
 ```
 > Starts resizing the Widget from the specified anchor point.
 > 
@@ -1573,7 +1573,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetSounds
 ```lua
-(method) Widget:SetSounds(name: "ability_change"|"achievement"|"auction"|"auction_put_up"|"bag"...(+45))
+(method) Widget:SetSounds(name: WIDGET_SOUND)
 ```
 > Sets the sounds to play for the Widget, this plays differently for each
 > type of widget, for instance a button will play its sound when clicked, and
@@ -1655,7 +1655,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetLayerColor
 ```lua
-(method) Widget:SetLayerColor(r: number, g: number, b: number, a: number, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:SetLayerColor(r: number, g: number, b: number, a: number, nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Sets the color for the specified layer.
 > 
@@ -1680,7 +1680,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: SetScaleAnimation
 ```lua
-(method) Widget:SetScaleAnimation(initialScale: number, finalScale: number, velocityTime: number, accelerationTime: number, scaleAnchor: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4))
+(method) Widget:SetScaleAnimation(initialScale: number, finalScale: number, velocityTime: number, accelerationTime: number, scaleAnchor: ANCHOR_POINT)
 ```
 > Sets a scale animation for the Widget. Requires `widget:SetStartAnimation`.
 > 
@@ -1762,7 +1762,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: UseDynamicDrawableState
 ```lua
-(method) Widget:UseDynamicDrawableState(nameLayer: "artwork"|"background"|"overlay"|"overoverlay", use: boolean)
+(method) Widget:UseDynamicDrawableState(nameLayer: DRAWABLE_NAME_LAYER, use: boolean)
 ```
 > Enables or disables dynamic drawable state for the specified layer.
 > 
@@ -1806,7 +1806,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateImageDrawable
 ```lua
-(method) Widget:CreateImageDrawable(texturePath: string, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateImageDrawable(texturePath: string, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: ImageDrawable|nil
 ```
 > **Requires importing the `ImageDrawable` Object.**
@@ -1833,7 +1833,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateIconDrawable
 ```lua
-(method) Widget:CreateIconDrawable(nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateIconDrawable(nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: IconDrawable
 ```
 > **Requires importing the `IconDrawable` Object.**
@@ -1857,7 +1857,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateEffectDrawableByKey
 ```lua
-(method) Widget:CreateEffectDrawableByKey(texturePath: string, textureKey: string, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateEffectDrawableByKey(texturePath: string, textureKey: string, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: EffectDrawable
 ```
 > **Requires importing the `EffectDrawable` Object.**
@@ -1885,7 +1885,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateEffectDrawable
 ```lua
-(method) Widget:CreateEffectDrawable(texturePath: string, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateEffectDrawable(texturePath: string, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: EffectDrawable|nil
 ```
 > **Requires importing the `EffectDrawable` Object.**
@@ -1911,7 +1911,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateNinePartDrawable
 ```lua
-(method) Widget:CreateNinePartDrawable(texturePath: string, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateNinePartDrawable(texturePath: string, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: NinePartDrawable
 ```
 > **Requires importing the `NinePartDrawable` Object.**
@@ -1937,7 +1937,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateThreeColorDrawable
 ```lua
-(method) Widget:CreateThreeColorDrawable(width: number, height: number, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateThreeColorDrawable(width: number, height: number, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: ThreeColorDrawable
 ```
 > **Requires importing the `ThreeColorDrawable` Object.**
@@ -1965,7 +1965,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateTextDrawable
 ```lua
-(method) Widget:CreateTextDrawable(fontPath: "font_combat"|"font_main"|"font_sub", fontSize: number, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateTextDrawable(fontPath: FONT_PATH, fontSize: number, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: TextDrawable
 ```
 > **Requires importing the `TextDrawable` Object.**
@@ -1998,7 +1998,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateThreePartDrawable
 ```lua
-(method) Widget:CreateThreePartDrawable(texturePath: string, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateThreePartDrawable(texturePath: string, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: ThreePartDrawable
 ```
 > **Requires importing the `ThreePartDrawable` Object.**
@@ -2030,7 +2030,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateDrawable
 ```lua
-(method) Widget:CreateDrawable(texturePath: string, textureKey: string, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateDrawable(texturePath: string, textureKey: string, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: DrawableDDS
 ```
 > **Requires importing the correct `Drawable` Object type for the `textureKey`.**
@@ -2058,7 +2058,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateColorDrawable
 ```lua
-(method) Widget:CreateColorDrawable(r: number, g: number, b: number, a: number, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateColorDrawable(r: number, g: number, b: number, a: number, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: ColorDrawable
 ```
 > **Requires importing the `ColorDrawable` Object.**
@@ -2104,7 +2104,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateColorDrawableByKey
 ```lua
-(method) Widget:CreateColorDrawableByKey(colorKey: "action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27), nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:CreateColorDrawableByKey(colorKey: DRAWABLE_COLOR_KEY, nameLayer: DRAWABLE_NAME_LAYER)
   -> drawable: ColorDrawable
 ```
 > **Requires importing the `ColorDrawable` Object.**
@@ -2181,7 +2181,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateChildWidget
 ```lua
-(method) Widget:CreateChildWidget(objectTypeStr: "avi"|"button"|"chatwindow"|"checkbutton"|"circlediagram"...(+34), name: string, index: number, reflectToScriptTable: boolean)
+(method) Widget:CreateChildWidget(objectTypeStr: OBJECT_NAME, name: string, index: number, reflectToScriptTable: boolean)
   -> widget: Widget
 ```
 > Creates and returns a child widget, attaching it as a property to the Widget,
@@ -2259,7 +2259,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: CreateChildWidgetByType
 ```lua
-(method) Widget:CreateChildWidgetByType(objectType: `0`|`10`|`11`|`12`|`13`...(+51), name: string, index: number, reflectToScriptTable: boolean)
+(method) Widget:CreateChildWidgetByType(objectType: OBJECT, name: string, index: number, reflectToScriptTable: boolean)
   -> widget: Widget
 ```
 > Creates and returns a child widget by type and gives the widget a draw priority z-index.
@@ -2354,7 +2354,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: DisableDrawables
 ```lua
-(method) Widget:DisableDrawables(nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:DisableDrawables(nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Disables drawables for the specified layer.
 > 
@@ -2425,7 +2425,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 #### Method: GetUILayer
 ```lua
 (method) Widget:GetUILayer()
-  -> uiLayer: "background"|"dialog"|"game"|"hud"|"normal"...(+3)
+  -> uiLayer: UI_LAYER
 ```
 > Retrieves the UI layer of the Widget.
 > 
@@ -2446,7 +2446,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: HasHandler
 ```lua
-(method) Widget:HasHandler(actionName: "OnAcceptFocus"|"OnAlphaAnimeEnd"|"OnBoundChanged"|"OnChangedAnchor"|"OnCheckChanged"...(+44))
+(method) Widget:HasHandler(actionName: WIDGET_EVENT_TYPE)
   -> handlerExists: boolean
 ```
 > Checks if the Widget has a handler for the specified action.
@@ -2529,7 +2529,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: DisableDrawablesWithChildren
 ```lua
-(method) Widget:DisableDrawablesWithChildren(nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:DisableDrawablesWithChildren(nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Disables drawables for the specified layer and its children.
 > 
@@ -2574,7 +2574,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: EnableDrawables
 ```lua
-(method) Widget:EnableDrawables(nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:EnableDrawables(nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Enables drawables for the specified layer.
 > 
@@ -2608,7 +2608,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: EnableDrawablesWithChildren
 ```lua
-(method) Widget:EnableDrawablesWithChildren(nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Widget:EnableDrawablesWithChildren(nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Enables drawables for the specified layer and its children.
 > 

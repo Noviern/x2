@@ -7806,6 +7806,21 @@
 ---| "zh_cn" # Chinese (Simplified, China)
 ---| "zh_tw" # Chinese(Traditional, Taiwan)
 
+---ui/map/icon/npc_icon.g
+---@alias MARKER
+---| `1`  # mark_01
+---| `2`  # mark_02
+---| `3`  # mark_03
+---| `4`  # mark_04
+---| `5`  # mark_05
+---| `6`  # mark_06
+---| `7`  # mark_07
+---| `8`  # mark_08
+---| `9`  # mark_09
+---| `10` # mark_heart
+---| `11` # mark_star
+---| `12` # mark_x
+
 ---@alias MATE_STATE
 ---| `1` # Aggressive
 ---| `2` # Protective

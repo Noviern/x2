@@ -91,7 +91,7 @@
 ## Aliases
 **ISLOT_ABILITY_VIEW**
 
-243
+ISLOT_ABILITY_VIEW
 
 ```lua
 ISLOT_ABILITY_VIEW:
@@ -100,7 +100,7 @@ ISLOT_ABILITY_VIEW:
 
 **ISLOT_ACTION**
 
-254
+ISLOT_ACTION
 
 ```lua
 ISLOT_ACTION:
@@ -109,7 +109,7 @@ ISLOT_ACTION:
 
 **ISLOT_BAG**
 
-2
+ISLOT_BAG
 
 ```lua
 ISLOT_BAG:
@@ -118,7 +118,7 @@ ISLOT_BAG:
 
 **ISLOT_BANK**
 
-3
+ISLOT_BANK
 
 ```lua
 ISLOT_BANK:
@@ -127,7 +127,7 @@ ISLOT_BANK:
 
 **ISLOT_COFFER**
 
-4
+ISLOT_COFFER
 
 ```lua
 ISLOT_COFFER:
@@ -136,7 +136,7 @@ ISLOT_COFFER:
 
 **ISLOT_CONSTANT**
 
-249
+ISLOT_CONSTANT
 
 ```lua
 ISLOT_CONSTANT:
@@ -145,7 +145,7 @@ ISLOT_CONSTANT:
 
 **ISLOT_EQUIPMENT**
 
-1
+ISLOT_EQUIPMENT
 
 ```lua
 ISLOT_EQUIPMENT:
@@ -154,7 +154,7 @@ ISLOT_EQUIPMENT:
 
 **ISLOT_GUILD_BANK**
 
-33
+ISLOT_GUILD_BANK
 
 ```lua
 ISLOT_GUILD_BANK:
@@ -163,7 +163,7 @@ ISLOT_GUILD_BANK:
 
 **ISLOT_HEIR_SKILL_VIEW**
 
-234
+ISLOT_HEIR_SKILL_VIEW
 
 ```lua
 ISLOT_HEIR_SKILL_VIEW:
@@ -172,7 +172,7 @@ ISLOT_HEIR_SKILL_VIEW:
 
 **ISLOT_INSTANT_KILL_STREAK**
 
-244
+ISLOT_INSTANT_KILL_STREAK
 
 ```lua
 ISLOT_INSTANT_KILL_STREAK:
@@ -181,7 +181,7 @@ ISLOT_INSTANT_KILL_STREAK:
 
 **ISLOT_MODE_ACTION**
 
-246
+ISLOT_MODE_ACTION
 
 ```lua
 ISLOT_MODE_ACTION:
@@ -190,7 +190,7 @@ ISLOT_MODE_ACTION:
 
 **ISLOT_ORIGIN_SKILL_VIEW**
 
-233
+ISLOT_ORIGIN_SKILL_VIEW
 
 ```lua
 ISLOT_ORIGIN_SKILL_VIEW:
@@ -199,7 +199,7 @@ ISLOT_ORIGIN_SKILL_VIEW:
 
 **ISLOT_PET_BATTLE_ACTION**
 
-239
+ISLOT_PET_BATTLE_ACTION
 
 ```lua
 ISLOT_PET_BATTLE_ACTION:
@@ -208,7 +208,7 @@ ISLOT_PET_BATTLE_ACTION:
 
 **ISLOT_PET_RIDE_ACTION**
 
-248
+ISLOT_PET_RIDE_ACTION
 
 ```lua
 ISLOT_PET_RIDE_ACTION:
@@ -217,7 +217,7 @@ ISLOT_PET_RIDE_ACTION:
 
 **ISLOT_PRELIMINARY_EQUIPMENT**
 
-7
+ISLOT_PRELIMINARY_EQUIPMENT
 
 ```lua
 ISLOT_PRELIMINARY_EQUIPMENT:
@@ -226,7 +226,7 @@ ISLOT_PRELIMINARY_EQUIPMENT:
 
 **ISLOT_SHORTCUT_ACTION**
 
-235
+ISLOT_SHORTCUT_ACTION
 
 ```lua
 ISLOT_SHORTCUT_ACTION:
@@ -235,7 +235,7 @@ ISLOT_SHORTCUT_ACTION:
 
 **ISLOT_SKILL_ALERT**
 
-232
+ISLOT_SKILL_ALERT
 
 ```lua
 ISLOT_SKILL_ALERT:
@@ -244,7 +244,7 @@ ISLOT_SKILL_ALERT:
 
 **PRELIMINARY_EQUIPMENT_SLOT**
 
-`ES_MAINHAND`|`ES_OFFHAND`
+PRELIMINARY_EQUIPMENT_SLOT
 
 ```lua
 -- objects/Slot
@@ -255,7 +255,7 @@ PRELIMINARY_EQUIPMENT_SLOT:
 
 **SLOT_TYPE**
 
-`ISLOT_ABILITY_VIEW`|`ISLOT_ACTION`|`ISLOT_BAG`|`ISLOT_BANK`|`ISLOT_COFFER`...(+12)
+SLOT_TYPE
 
 ```lua
 -- objects/Slot
@@ -384,7 +384,7 @@ IconDrawable
 #### Method: GetBindedType
 ```lua
 (method) Slot:GetBindedType()
-  -> bindedType: "buff"|"function"|"item"|"none"|"pet_skill"...(+2)
+  -> bindedType: BIND_TYPE
 ```
 > Retrieves the binded type of the Slot.
 > 
@@ -411,7 +411,7 @@ IconDrawable
 
 #### Method: EstablishItem
 ```lua
-(method) Slot:EstablishItem(itemType: number, itemGrade: `0`|`10`|`11`|`12`|`1`...(+8))
+(method) Slot:EstablishItem(itemType: number, itemGrade: ITEM_GRADE_TYPE)
 ```
 > Establishes an item for the Slot with the specified type and grade.
 > 
@@ -453,7 +453,7 @@ IconDrawable
 
 #### Method: EstablishSkillAlert
 ```lua
-(method) Slot:EstablishSkillAlert(statusBuffTag: `10`|`11`|`12`|`13`|`14`...(+16), remain: number, duration: number)
+(method) Slot:EstablishSkillAlert(statusBuffTag: SKILL_ALERT_STATUS_BUFF_TAG, remain: number, duration: number)
 ```
 > Establishes a skill alert for the Slot.
 > 
@@ -491,7 +491,7 @@ IconDrawable
 
 #### Method: EstablishSlot
 ```lua
-(method) Slot:EstablishSlot(slotType: `ISLOT_ABILITY_VIEW`|`ISLOT_ACTION`|`ISLOT_BAG`|`ISLOT_BANK`|`ISLOT_COFFER`...(+12), slotIdx: number)
+(method) Slot:EstablishSlot(slotType: SLOT_TYPE, slotIdx: number)
 ```
 > Establishes a slot with the specified type and index. Triggers the event
 > `OnContentUpdated`.
@@ -546,7 +546,7 @@ IconDrawable
 
 #### Method: EstablishSkillSlot
 ```lua
-(method) Slot:EstablishSkillSlot(slotType: `ISLOT_ABILITY_VIEW`|`ISLOT_ACTION`|`ISLOT_BAG`|`ISLOT_BANK`|`ISLOT_COFFER`...(+12), slotIdx: number)
+(method) Slot:EstablishSkillSlot(slotType: SLOT_TYPE, slotIdx: number)
 ```
 > Establishes a skill slot for the Slot.
 > 
@@ -578,7 +578,7 @@ IconDrawable
 
 #### Method: EstablishVirtualSlot
 ```lua
-(method) Slot:EstablishVirtualSlot(slotType: `ISLOT_ABILITY_VIEW`|`ISLOT_ACTION`|`ISLOT_BAG`|`ISLOT_BANK`|`ISLOT_COFFER`...(+12), slotIdx: number, virtualSlotIdx: number)
+(method) Slot:EstablishVirtualSlot(slotType: SLOT_TYPE, slotIdx: number, virtualSlotIdx: number)
 ```
 > Establishes a virtual slot for the Slot. Triggers the event
 > `OnContentUpdated`.
@@ -635,7 +635,7 @@ IconDrawable
 
 #### Method: ChangeIconLayer
 ```lua
-(method) Slot:ChangeIconLayer(nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Slot:ChangeIconLayer(nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Changes the icon layer for the Slot.
 > 

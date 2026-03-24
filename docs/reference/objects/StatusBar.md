@@ -11,7 +11,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 > 
 #### Method: AddAnchorChildToBar
 ```lua
-(method) StatusBar:AddAnchorChildToBar(anchorChild: DrawableDDS, childAnchorPoint: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4), anchorOigin?: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4), x?: number, y?: number)
+(method) StatusBar:AddAnchorChildToBar(anchorChild: DrawableDDS, childAnchorPoint: ANCHOR_POINT, anchorOigin?: ANCHOR_POINT, x?: number, y?: number)
 ```
 > Adds a child widget to the StatusBar with specified anchoring.
 > 
@@ -80,7 +80,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetBarTexture
 ```lua
-(method) StatusBar:SetBarTexture(nameTex: string, nameLayer: "artwork"|"background"|"overlay"|"overoverlay")
+(method) StatusBar:SetBarTexture(nameTex: string, nameLayer: DRAWABLE_NAME_LAYER)
 ```
 > Sets the texture for the StatusBar.
 > 
@@ -110,7 +110,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetOrientation
 ```lua
-(method) StatusBar:SetOrientation(orientation: "HORIZONTAL"|"HORIZONTAL_INV"|"VERTICAL"|"normal")
+(method) StatusBar:SetOrientation(orientation: ORIENTATION)
 ```
 > Sets the orientation of the StatusBar.
 > 
@@ -231,7 +231,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 #### Method: GetOrientation
 ```lua
 (method) StatusBar:GetOrientation()
-  -> orientation: "HORIZONTAL"|"HORIZONTAL_INV"|"VERTICAL"|"normal"
+  -> orientation: ORIENTATION
 ```
 > Retrieves the orientation of the StatusBar.
 > 

@@ -24,7 +24,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetLineColorByKey
 ```lua
-(method) Line:SetLineColorByKey(colorKey: "action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27))
+(method) Line:SetLineColorByKey(colorKey: ETC_COLOR)
 ```
 > Sets the line color using a color key for the Line.
 > 

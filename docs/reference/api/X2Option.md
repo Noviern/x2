@@ -899,7 +899,7 @@
 ## Aliases
 **HOTKEY_ACTION_TYPE**
 
-`HA_ACTION_BAR_PAGE_NEXT`|`HA_ACTION_BAR_PAGE_PREV`|`HA_ACTIVATE_WEAPON`|`HA_AUTORUN`|`HA_BACK_CAMERA`...(+64)
+HOTKEY_ACTION_TYPE
 
 ```lua
 -- api/X2Option
@@ -977,7 +977,7 @@ HOTKEY_ACTION_TYPE:
 
 **OPTION_ITEM_SAVE_LEVEL_TYPE**
 
-`OISLT_CHARACTER_MODE`|`OISLT_CHARACTER`|`OISLT_SYSTEM`
+OPTION_ITEM_SAVE_LEVEL_TYPE
 
 ```lua
 -- api/X2Option
@@ -989,7 +989,7 @@ OPTION_ITEM_SAVE_LEVEL_TYPE:
 
 **OPTION_ITEM_TYPE**
 
-`OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145)
+OPTION_ITEM_TYPE
 
 ```lua
 -- api/X2Option
@@ -1150,7 +1150,7 @@ OPTION_ITEM_TYPE:
 ### Class: X2Option
 #### Method: CreateOptionItemFloat
 ```lua
-(method) X2Option:CreateOptionItemFloat(name: string, value: number, saveLevel: `OISLT_CHARACTER_MODE`|`OISLT_CHARACTER`|`OISLT_SYSTEM`)
+(method) X2Option:CreateOptionItemFloat(name: string, value: number, saveLevel: OPTION_ITEM_SAVE_LEVEL_TYPE)
   -> saveLevel: number
 ```
 > Creates a float option, saves it based on the specified save level, and
@@ -1180,7 +1180,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetConsoleVariable
 ```lua
-(method) X2Option:SetConsoleVariable(name: string|"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"...(+2625), value: string)
+(method) X2Option:SetConsoleVariable(name: string|CONSOLE_VAR, value: string)
 ```
 > Sets the value for the specified console variable.
 > 
@@ -3855,7 +3855,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemDefaultFloatValue
 ```lua
-(method) X2Option:SetItemDefaultFloatValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: number)
+(method) X2Option:SetItemDefaultFloatValue(optionType: OPTION_ITEM_TYPE, value: number)
 ```
 > Sets the default float value for the specified option type.
 > 
@@ -4020,7 +4020,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemDefaultStringValue
 ```lua
-(method) X2Option:SetItemDefaultStringValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: string)
+(method) X2Option:SetItemDefaultStringValue(optionType: OPTION_ITEM_TYPE, value: string)
 ```
 > Sets the default string value for the specified option type.
 > 
@@ -4185,7 +4185,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemFloatValueWithoutModify
 ```lua
-(method) X2Option:SetItemFloatValueWithoutModify(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: number)
+(method) X2Option:SetItemFloatValueWithoutModify(optionType: OPTION_ITEM_TYPE, value: number)
 ```
 > Sets the float value for the specified option type without modifying other
 > settings.
@@ -4351,7 +4351,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemDefaultFloatValueByName
 ```lua
-(method) X2Option:SetItemDefaultFloatValueByName(name: string|"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"...(+2625), value: number)
+(method) X2Option:SetItemDefaultFloatValueByName(name: string|CONSOLE_VAR, value: number)
 ```
 > Sets the default float value for the specified console variable.
 > 
@@ -6994,7 +6994,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemFloatValueByName
 ```lua
-(method) X2Option:SetItemFloatValueByName(name: string|"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"...(+2625), value: number)
+(method) X2Option:SetItemFloatValueByName(name: string|CONSOLE_VAR, value: number)
 ```
 > Sets the float value for the specified console variable.
 > 
@@ -9637,7 +9637,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemDefaultStringValueByName
 ```lua
-(method) X2Option:SetItemDefaultStringValueByName(name: string|"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"...(+2625), value: string)
+(method) X2Option:SetItemDefaultStringValueByName(name: string|CONSOLE_VAR, value: string)
 ```
 > Sets the default string value for the specified console variable.
 > 
@@ -12280,7 +12280,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemFloatValue
 ```lua
-(method) X2Option:SetItemFloatValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: number)
+(method) X2Option:SetItemFloatValue(optionType: OPTION_ITEM_TYPE, value: number)
 ```
 > Sets the float value for the specified option type.
 > 
@@ -12445,7 +12445,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemStringValue
 ```lua
-(method) X2Option:SetItemStringValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: string)
+(method) X2Option:SetItemStringValue(optionType: OPTION_ITEM_TYPE, value: string)
 ```
 > Sets the string value for the specified option type.
 > 
@@ -12649,7 +12649,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: GetConsoleVariable
 ```lua
-(method) X2Option:GetConsoleVariable(name: "ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"|"MemStats"...(+2624))
+(method) X2Option:GetConsoleVariable(name: CONSOLE_VAR)
   -> consoleVariable: string|nil
 ```
 > Retrieves the value of the specified console variable if it exists.
@@ -15311,7 +15311,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: CreateOptionItemString
 ```lua
-(method) X2Option:CreateOptionItemString(name: string, value: string, saveLevel: `OISLT_CHARACTER_MODE`|`OISLT_CHARACTER`|`OISLT_SYSTEM`)
+(method) X2Option:CreateOptionItemString(name: string, value: string, saveLevel: OPTION_ITEM_SAVE_LEVEL_TYPE)
   -> saveLevel: number
 ```
 > Creates a string option, saves it based on the specified save level, and
@@ -15355,7 +15355,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: GetHotkeyInfo
 ```lua
-(method) X2Option:GetHotkeyInfo(hotkeyActionType: `HA_ACTION_BAR_PAGE_NEXT`|`HA_ACTION_BAR_PAGE_PREV`|`HA_ACTIVATE_WEAPON`|`HA_AUTORUN`|`HA_BACK_CAMERA`...(+64))
+(method) X2Option:GetHotkeyInfo(hotkeyActionType: HOTKEY_ACTION_TYPE)
   -> infos: HotKeyInfo[]|nil
 ```
 > Retrieves hotkey information for the specified action type.
@@ -15449,7 +15449,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: GetOptionItemValueByName
 ```lua
-(method) X2Option:GetOptionItemValueByName(name: string|"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"...(+2625))
+(method) X2Option:GetOptionItemValueByName(name: string|CONSOLE_VAR)
   -> optionItemValue: number
 ```
 > Retrieves the value for the specified console variable.
@@ -18105,7 +18105,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: GetOptionItemValue
 ```lua
-(method) X2Option:GetOptionItemValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145))
+(method) X2Option:GetOptionItemValue(optionType: OPTION_ITEM_TYPE)
   -> optionItemValue: number
 ```
 > Retrieves the value for the specified option type.
@@ -18271,7 +18271,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: GetOptionInfo
 ```lua
-(method) X2Option:GetOptionInfo(optionId: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145))
+(method) X2Option:GetOptionInfo(optionId: OPTION_ITEM_TYPE)
   -> optionInfo: OptionInfo|nil
 ```
 > Retrieves information for the specified option.
@@ -18437,7 +18437,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemStringValueByName
 ```lua
-(method) X2Option:SetItemStringValueByName(name: string|"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"...(+2625), value: string)
+(method) X2Option:SetItemStringValueByName(name: string|CONSOLE_VAR, value: string)
 ```
 > Sets the string value for the specified console variable.
 > 

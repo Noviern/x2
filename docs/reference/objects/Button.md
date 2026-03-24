@@ -23,7 +23,7 @@
 ## Aliases
 **UI_BUTTON_STATE**
 
-`UI_BUTTON_DISABLED`|`UI_BUTTON_HIGHLIGHTED`|`UI_BUTTON_NORMAL`|`UI_BUTTON_PUSHED`
+UI_BUTTON_STATE
 
 ```lua
 -- objects/Button
@@ -62,7 +62,7 @@ TextStyle
 ```lua
 (method) Button:SetHighlightColor(r: number, g: number, b: number, a: number)
 ```
-> Sets the color for the highlighted state of the button.
+> Sets the background color for the highlighted state of the button.
 > 
 > @*param* `r` — Red value (min: `0`, max: `1`).
 > 
@@ -120,7 +120,7 @@ TextStyle
 ```lua
 (method) Button:SetDisabledColor(r: number, g: number, b: number, a: number)
 ```
-> Sets the color for the disabled state of the button.
+> Sets the background color for the disabled state of the button.
 > 
 > @*param* `r` — Red value (min: `0`, max: `1`).
 > 
@@ -148,7 +148,7 @@ TextStyle
 ```lua
 (method) Button:SetNormalColor(r: number, g: number, b: number, a: number)
 ```
-> Sets the color for the normal state of the button.
+> Sets the background color for the normal state of the button.
 > 
 > @*param* `r` — Red value (min: `0`, max: `1`).
 > 
@@ -160,7 +160,7 @@ TextStyle
 
 #### Method: SetStyle
 ```lua
-(method) Button:SetStyle(style: "accept_v"|"actionbar_lock"|"actionbar_rotate"|"actionbar_unlock"|"all_repair"...(+183))
+(method) Button:SetStyle(style: BUTTON_STYLE)
 ```
 > Sets the style for the button, including extent, state backgrounds, and other
 > visual properties.
@@ -401,7 +401,7 @@ TextStyle
 ```lua
 (method) Button:SetPushedColor(r: number, g: number, b: number, a: number)
 ```
-> Sets the color for the pushed state of the button.
+> Sets the background color for the pushed state of the button.
 > 
 > @*param* `r` — Red value (min: `0`, max: `1`).
 > 
@@ -478,7 +478,7 @@ TextStyle
 
 #### Method: DeregisterForClicks
 ```lua
-(method) Button:DeregisterForClicks(mouseButton: "LeftButton"|"RightButton")
+(method) Button:DeregisterForClicks(mouseButton: MOUSE_BUTTON)
 ```
 > Disables clicking for the specified mouse button.
 > 
@@ -493,7 +493,7 @@ TextStyle
 #### Method: GetButtonState
 ```lua
 (method) Button:GetButtonState()
-  -> state: "DISABLED"|"HIGHLIGHTED"|"NORMAL"|"PUSHED"
+  -> state: UI_BUTTON_STATE_TEXT
 ```
 > Retrieves the current state of the button.
 > 
@@ -509,7 +509,7 @@ TextStyle
 
 #### Method: SetButtonState
 ```lua
-(method) Button:SetButtonState(state: "DISABLED"|"HIGHLIGHTED"|"NORMAL"|"PUSHED")
+(method) Button:SetButtonState(state: UI_BUTTON_STATE_TEXT)
 ```
 > Sets the state of the button.
 > 
@@ -564,7 +564,7 @@ TextStyle
 
 #### Method: RegisterForClicks
 ```lua
-(method) Button:RegisterForClicks(mouseButton: "LeftButton"|"RightButton", enable?: boolean)
+(method) Button:RegisterForClicks(mouseButton: MOUSE_BUTTON, enable?: boolean)
 ```
 > Enables or disables clicking for the specified mouse button.
 > 
@@ -601,7 +601,7 @@ TextStyle
 
 #### Method: CreateStateDrawable
 ```lua
-(method) Button:CreateStateDrawable(state: `UI_BUTTON_DISABLED`|`UI_BUTTON_HIGHLIGHTED`|`UI_BUTTON_NORMAL`|`UI_BUTTON_PUSHED`, drawableType: `7`|`9`|`UOT_IMAGE_DRAWABLE`|`UOT_NINE_PART_DRAWABLE`, path: string, layer?: "artwork"|"background"|"overlay"|"overoverlay")
+(method) Button:CreateStateDrawable(state: UI_BUTTON_STATE, drawableType: UI_OBJECT_TYPE_DRAWABLE, path: string, layer?: DRAWABLE_NAME_LAYER)
   -> stateDrawable: DrawableDDS
 ```
 > Creates a drawable for the specified button state and type.

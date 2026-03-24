@@ -119,7 +119,7 @@
 ## Aliases
 **ACCOUNT_RESTRICT_CODE**
 
-`ACCOUNT_RESTRICT_CODE_NEXON`|`ACCOUNT_RESTRICT_CODE_NONE`|`ACCOUNT_RESTRICT_CODE_XL`
+ACCOUNT_RESTRICT_CODE
 
 ```lua
 -- api/X2Player
@@ -131,7 +131,7 @@ ACCOUNT_RESTRICT_CODE:
 
 **APPELATION_ROUTE_TYPE**
 
-`APPELATION_ROUTE_TYPE_ACHIEVEMENTS`|`APPELATION_ROUTE_TYPE_ETC`|`APPELATION_ROUTE_TYPE_HIDDEN`|`APPELATION_ROUTE_TYPE_MAX`|`APPELATION_ROUTE_TYPE_MERCHANT_PACKS`...(+1)
+APPELATION_ROUTE_TYPE
 
 ```lua
 -- api/X2Player
@@ -146,7 +146,7 @@ APPELATION_ROUTE_TYPE:
 
 **SCREEN_STATE**
 
-`SCREEN_BASE`|`SCREEN_CHARACTER_CREATE`|`SCREEN_CHARACTER_SELECT`|`SCREEN_INIT_WORLD`|`SCREEN_INTRO`...(+4)
+SCREEN_STATE
 
 ```lua
 -- api/X2Player
@@ -164,7 +164,7 @@ SCREEN_STATE:
 
 **ZONE_PERMISSION_WINDOW**
 
-`ZPW_ENTER`|`ZPW_EXPEL`|`ZPW_OUT`|`ZPW_WAIT`|`ZP_RESERVED`
+ZONE_PERMISSION_WINDOW
 
 ```lua
 -- api/X2Player
@@ -193,7 +193,7 @@ ZONE_PERMISSION_WINDOW:
 
 #### Method: GetAppellations
 ```lua
-(method) X2Player:GetAppellations(appellationRouteFilter: `APPELATION_ROUTE_TYPE_ACHIEVEMENTS`|`APPELATION_ROUTE_TYPE_ETC`|`APPELATION_ROUTE_TYPE_HIDDEN`|`APPELATION_ROUTE_TYPE_MAX`|`APPELATION_ROUTE_TYPE_MERCHANT_PACKS`...(+1), appellationPageIndex: number)
+(method) X2Player:GetAppellations(appellationRouteFilter: APPELATION_ROUTE_TYPE, appellationPageIndex: number)
   -> appellations: Appellation[]
 ```
 > Retrieves a list of up to 50 appellation instances.
@@ -230,7 +230,7 @@ ZONE_PERMISSION_WINDOW:
 
 #### Method: GetAppellationsCount
 ```lua
-(method) X2Player:GetAppellationsCount(appellationRouteFilter: `APPELATION_ROUTE_TYPE_ACHIEVEMENTS`|`APPELATION_ROUTE_TYPE_ETC`|`APPELATION_ROUTE_TYPE_HIDDEN`|`APPELATION_ROUTE_TYPE_MAX`|`APPELATION_ROUTE_TYPE_MERCHANT_PACKS`...(+1))
+(method) X2Player:GetAppellationsCount(appellationRouteFilter: APPELATION_ROUTE_TYPE)
   -> appellationsCount: number
 ```
 > Retrieves the total count of appellations for the specified route type.

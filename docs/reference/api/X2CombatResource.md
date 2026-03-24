@@ -23,7 +23,7 @@
 ## Aliases
 **COMBAT_RESOURCE_UITYPE**
 
-`CRU_DOUBLE_GAUGE_2`|`CRU_DOUBLE_GAUGE`|`CRU_GAUGE`|`CRU_OVERLAP`
+COMBAT_RESOURCE_UITYPE
 
 ```lua
 -- api/X2CombatResource
@@ -38,7 +38,7 @@ COMBAT_RESOURCE_UITYPE:
 ### Class: X2CombatResource
 #### Method: CheckCombatResourceMaxPointByGroupType
 ```lua
-(method) X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType: `10`|`11`|`12`|`14`|`1`...(+10))
+(method) X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType: ABILITY_TYPE)
   -> maxPointByGroupType: boolean
 ```
 > Checks if the combat resource for the specified group type is at its maximum.
@@ -81,7 +81,7 @@ COMBAT_RESOURCE_UITYPE:
 
 #### Method: GetCombatResourceInfoByGroupType
 ```lua
-(method) X2CombatResource:GetCombatResourceInfoByGroupType(groupType: `10`|`11`|`12`|`14`|`1`...(+10))
+(method) X2CombatResource:GetCombatResourceInfoByGroupType(groupType: ABILITY_TYPE)
   -> combatResourceInfo: CombatResource|nil
 ```
 > Retrieves combat resource information for the specified group type if the

@@ -26,7 +26,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetOrientation
 ```lua
-(method) Slider:SetOrientation(scrollType: `0`|`1`)
+(method) Slider:SetOrientation(scrollType: SLIDER_SCROLL_TYPE)
 ```
 > Sets the orientation of the Slider.
 > 
@@ -113,7 +113,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 #### Method: GetOrientation
 ```lua
 (method) Slider:GetOrientation()
-  -> orientation: `0`|`1`
+  -> orientation: SLIDER_SCROLL_TYPE
 ```
 > Retrieves the orientation of the Slider.
 > 

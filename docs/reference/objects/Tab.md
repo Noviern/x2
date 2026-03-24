@@ -50,7 +50,7 @@ Button[]|nil
 
 #### Method: SetCorner
 ```lua
-(method) Tab:SetCorner(corner: "BOTTOMLEFT"|"BOTTOMRIGHT"|"TOPLEFT"|"TOPRIGHT")
+(method) Tab:SetCorner(corner: TAB_CORNER)
 ```
 > Sets the corner where tabs are placed in the Tab. Should be called before
 > `Tab:AlignTabButtons()`.

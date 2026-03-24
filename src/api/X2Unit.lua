@@ -90,6 +90,18 @@ X2Unit = {}                   -- api/X2Unit
 ---@nodiscard
 function X2Unit:GetCurrentZoneGroup() end
 
+---Retrieves the overhead marker ID for the specified unit.
+---@param unit UNIT The unit to query.
+---@return MARKER|`0`|nil marker The marker ID, `0` if no marker is set, or `nil` if the unit is not found/in range.
+---@nodiscard
+function X2Unit:GetOverHeadMarker(unit) end
+
+---Retrieves the unit ID associated with the given overhead marker index.
+---@param markerIndex MARKER The marker index to query.
+---@return string|nil unitId The unit ID, or `nil` if the marker is not assigned.
+---@discard
+function X2Unit:GetOverHeadMarkerUnitId(markerIndex) end
+
 ---Retrieves a list of up to three target ability templates for the specified
 ---target if in render range.
 ---@param target UNIT The target unit.
@@ -141,6 +153,14 @@ function X2Unit:GetUnitScreenPosition(unit) end
 ---@return number|nil angle The unit's angle, or `nil` if not in range.
 ---@nodiscard
 function X2Unit:GetUnitWorldPositionByTarget(unit, isLocal) end
+
+---Removes all over head markers. Cooldown 1s.
+function X2Unit:RemoveAllOverHeadMarker() end
+
+---Set a over head marker. Cooldown 1s.
+---@param unit UNIT The unit to mark.
+---@param markerIndex MARKER The marker ID to apply.
+function X2Unit:SetOverHeadMarker(unit, markerIndex) end
 
 ---Retrieves buff information for the specified buff index of the unit if in
 ---render range.

@@ -267,7 +267,7 @@
 ## Aliases
 **EQUIPMENT_SLOT**
 
-`ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27)
+EQUIPMENT_SLOT
 
 ```lua
 -- api/X2Equipment
@@ -308,7 +308,7 @@ EQUIPMENT_SLOT:
 
 **EQUIPMENT_SLOT_TYPE**
 
-`EST_1HANDED`|`EST_2HANDED`|`EST_AMMUNITION`|`EST_ARMS`|`EST_BACKPACK`...(+28)
+EQUIPMENT_SLOT_TYPE
 
 ```lua
 -- api/X2Equipment
@@ -352,7 +352,7 @@ EQUIPMENT_SLOT_TYPE:
 ### Class: X2Equipment
 #### Method: GetEquippedItemTooltipInfo
 ```lua
-(method) X2Equipment:GetEquippedItemTooltipInfo(equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27), targetEquippedItem: boolean)
+(method) X2Equipment:GetEquippedItemTooltipInfo(equipSlot: EQUIPMENT_SLOT, targetEquippedItem: boolean)
   -> equippedItemTooltipInfo: ItemInfo|nil
 ```
 > Retrieves tooltip information for the equipped item in the specified slot.
@@ -404,7 +404,7 @@ EQUIPMENT_SLOT_TYPE:
 
 #### Method: MateUnequipItem
 ```lua
-(method) X2Equipment:MateUnequipItem(targetName: "playerpet"|"playerpet1"|"playerpet2", slotNo: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
+(method) X2Equipment:MateUnequipItem(targetName: UNIT_PET, slotNo: EQUIPMENT_SLOT)
   -> success: boolean
 ```
 > Attempts to unequip an item from a mate and move it to the player's
@@ -460,7 +460,7 @@ EQUIPMENT_SLOT_TYPE:
 
 #### Method: GetEquippedItemType
 ```lua
-(method) X2Equipment:GetEquippedItemType(equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
+(method) X2Equipment:GetEquippedItemType(equipSlot: EQUIPMENT_SLOT)
   -> equippedItemType: number|nil
 ```
 > Retrieves the type of item equipped in the specified slot.
@@ -508,7 +508,7 @@ EQUIPMENT_SLOT_TYPE:
 
 #### Method: PickupMateEquippedItem
 ```lua
-(method) X2Equipment:PickupMateEquippedItem(targetName: "playerpet"|"playerpet1"|"playerpet2", slotNo: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
+(method) X2Equipment:PickupMateEquippedItem(targetName: UNIT_PET, slotNo: EQUIPMENT_SLOT)
 ```
 > Picks up the equipped item from a mate's slot. The item is placed in the
 > cursor for manual placement.

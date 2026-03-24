@@ -25,7 +25,7 @@
 
 #### Method: PlayUISound
 ```lua
-(method) X2Sound:PlayUISound(soundName: "battlefield_1_secound"|"battlefield_2_secound"|"battlefield_3_secound"|"battlefield_4_secound"|"battlefield_5_secound"...(+219), duplicable?: boolean)
+(method) X2Sound:PlayUISound(soundName: SOUND_NAME, duplicable?: boolean)
   -> soundId: number
 ```
 > Plays a UI sound and returns its sound instance ID.

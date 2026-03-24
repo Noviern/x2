@@ -67,7 +67,7 @@
 ## Aliases
 **STAGE_STATE**
 
-`STAGE_ABILITY`|`STAGE_CI`|`STAGE_CREATE`|`STAGE_CUSTOMIZE`|`STAGE_GAME_RATING`...(+6)
+STAGE_STATE
 
 ```lua
 -- api/X2LoginCharacter

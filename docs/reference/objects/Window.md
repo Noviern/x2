@@ -35,7 +35,7 @@ EmptyWidget
 
 #### Method: SetUILayer
 ```lua
-(method) Window:SetUILayer(layerName: "background"|"dialog"|"game"|"hud"|"normal"...(+3))
+(method) Window:SetUILayer(layerName: UI_LAYER)
 ```
 > Sets the UI layer for the Window. If the window is a child then the layer is
 > relative to the parents layer.

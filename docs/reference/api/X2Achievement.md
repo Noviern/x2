@@ -75,7 +75,7 @@
 ## Aliases
 **ACHIEVEMENT_FILTER**
 
-`AF_ALL`|`AF_COMPLETE`|`AF_INVALID`|`AF_TRACING`|`AF_UNCOMPLETE`
+ACHIEVEMENT_FILTER
 
 ```lua
 -- api/X2Achievement
@@ -90,7 +90,7 @@ ACHIEVEMENT_FILTER:
 
 **EAK_ACHIEVEMENT**
 
-2
+EAK_ACHIEVEMENT
 
 ```lua
 EAK_ACHIEVEMENT:
@@ -99,7 +99,7 @@ EAK_ACHIEVEMENT:
 
 **EAK_ARCHERAGE**
 
-4
+EAK_ARCHERAGE
 
 ```lua
 EAK_ARCHERAGE:
@@ -108,7 +108,7 @@ EAK_ARCHERAGE:
 
 **EAK_COLLECTION**
 
-3
+EAK_COLLECTION
 
 ```lua
 EAK_COLLECTION:
@@ -117,7 +117,7 @@ EAK_COLLECTION:
 
 **EAK_RACIAL_MISSION**
 
-1
+EAK_RACIAL_MISSION
 
 ```lua
 EAK_RACIAL_MISSION:
@@ -126,7 +126,7 @@ EAK_RACIAL_MISSION:
 
 **ENUM_ACHIEVEMENT_KIND**
 
-`EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`
+ENUM_ACHIEVEMENT_KIND
 
 ```lua
 -- api/X2Achievement
@@ -139,7 +139,7 @@ ENUM_ACHIEVEMENT_KIND:
 
 **TODAY_ACHIEVEMENT_DAILY_TYPE**
 
-`TADT_ARCHE_PASS`|`TADT_EXPEDITION_PUBLIC`|`TADT_EXPEDITION`|`TADT_FAMILY`|`TADT_HERO`...(+2)
+TODAY_ACHIEVEMENT_DAILY_TYPE
 
 ```lua
 -- api/X2Achievement
@@ -157,7 +157,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 ### Class: X2Achievement
 #### Method: AddTracingAchievement
 ```lua
-(method) X2Achievement:AddTracingAchievement(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`, achievementType: number)
+(method) X2Achievement:AddTracingAchievement(achievementKind: ENUM_ACHIEVEMENT_KIND, achievementType: number)
   -> success: boolean
 ```
 > Adds an achievement to the ambitions category under the specified kind.
@@ -179,7 +179,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetTodayAssignmentInfo
 ```lua
-(method) X2Achievement:GetTodayAssignmentInfo(todayType: `TADT_ARCHE_PASS`|`TADT_EXPEDITION_PUBLIC`|`TADT_EXPEDITION`|`TADT_FAMILY`|`TADT_HERO`...(+2), index: number)
+(method) X2Achievement:GetTodayAssignmentInfo(todayType: TODAY_ACHIEVEMENT_DAILY_TYPE, index: number)
   -> todayAssignmentInfo: TodayAssignmentInfo|nil
 ```
 > Retrieves assignment information for the specified type and index.
@@ -215,7 +215,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetTodayAssignmentCount
 ```lua
-(method) X2Achievement:GetTodayAssignmentCount(todayType: `TADT_ARCHE_PASS`|`TADT_EXPEDITION_PUBLIC`|`TADT_EXPEDITION`|`TADT_FAMILY`|`TADT_HERO`...(+2))
+(method) X2Achievement:GetTodayAssignmentCount(todayType: TODAY_ACHIEVEMENT_DAILY_TYPE)
   -> todayAssignmentCount: number
 ```
 > Retrieves the assignment count for the specified today type, defaulting to 7
@@ -239,7 +239,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetTodayAssignmentInfoForChange
 ```lua
-(method) X2Achievement:GetTodayAssignmentInfoForChange(todayType: `TADT_ARCHE_PASS`|`TADT_EXPEDITION_PUBLIC`|`TADT_EXPEDITION`|`TADT_FAMILY`|`TADT_HERO`...(+2), index: number)
+(method) X2Achievement:GetTodayAssignmentInfoForChange(todayType: TODAY_ACHIEVEMENT_DAILY_TYPE, index: number)
   -> todayAssignmentInfo: TodayAssignmentInfo|nil
 ```
 > Retrieves assignment information for changing the specified type and index.
@@ -278,7 +278,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetTodayAssignmentResetCount
 ```lua
-(method) X2Achievement:GetTodayAssignmentResetCount(todayType: `TADT_ARCHE_PASS`|`TADT_EXPEDITION_PUBLIC`|`TADT_EXPEDITION`|`TADT_FAMILY`|`TADT_HERO`...(+2))
+(method) X2Achievement:GetTodayAssignmentResetCount(todayType: TODAY_ACHIEVEMENT_DAILY_TYPE)
   -> resetCount: number
   2. maxCount: number
 ```
@@ -305,7 +305,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: IsTodayAssignmentQuest
 ```lua
-(method) X2Achievement:IsTodayAssignmentQuest(todayType: `TADT_ARCHE_PASS`|`TADT_EXPEDITION_PUBLIC`|`TADT_EXPEDITION`|`TADT_FAMILY`|`TADT_HERO`...(+2), questType: number)
+(method) X2Achievement:IsTodayAssignmentQuest(todayType: TODAY_ACHIEVEMENT_DAILY_TYPE, questType: number)
   -> todayAssignmentQuest: boolean
 ```
 > Checks if the quest ID is in the today’s assignment quests and not already
@@ -331,7 +331,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: IsTracingAchievement
 ```lua
-(method) X2Achievement:IsTracingAchievement(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`, achievementType: number)
+(method) X2Achievement:IsTracingAchievement(achievementKind: ENUM_ACHIEVEMENT_KIND, achievementType: number)
   -> tracingAchievement: boolean
 ```
 > Checks if the specified achievement type in the given kind is being traced.
@@ -353,7 +353,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetSubcategoryInfo
 ```lua
-(method) X2Achievement:GetSubcategoryInfo(subCategory: `10`|`11`|`12`|`13`|`14`...(+53))
+(method) X2Achievement:GetSubcategoryInfo(subCategory: EAK_SUBCATEGORY_TYPE)
   -> subcategoryInfo: SubcategoryInfo|nil
 ```
 > Retrieves subcategory information if the specified subcategory exists.
@@ -428,7 +428,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetCategories
 ```lua
-(method) X2Achievement:GetCategories(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`)
+(method) X2Achievement:GetCategories(achievementKind: ENUM_ACHIEVEMENT_KIND)
   -> categories: AchievementCategory[]|AchievementLevelSubCategory[]
 ```
 > Retrieves categories for the specified kind, returning level subcategories
@@ -453,7 +453,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetAchievementMainList
 ```lua
-(method) X2Achievement:GetAchievementMainList(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`, subCategoryType: number|`0`, achievementFilter: `AF_ALL`|`AF_COMPLETE`|`AF_INVALID`|`AF_TRACING`|`AF_UNCOMPLETE`)
+(method) X2Achievement:GetAchievementMainList(achievementKind: ENUM_ACHIEVEMENT_KIND, subCategoryType: number|`0`, achievementFilter: ACHIEVEMENT_FILTER)
   -> achievementMainList: number[]
 ```
 > Retrieves a list of achievement types for the specified kind and subcategory
@@ -505,7 +505,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetCategoryCount
 ```lua
-(method) X2Achievement:GetCategoryCount(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`, categoryType: number, subCategoryType: number, achievementFilter: `AF_ALL`|`AF_COMPLETE`|`AF_INVALID`|`AF_TRACING`|`AF_UNCOMPLETE`)
+(method) X2Achievement:GetCategoryCount(achievementKind: ENUM_ACHIEVEMENT_KIND, categoryType: number, subCategoryType: number, achievementFilter: ACHIEVEMENT_FILTER)
   -> complete: number
   2. total: number
 ```
@@ -555,7 +555,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetAchievementTracingList
 ```lua
-(method) X2Achievement:GetAchievementTracingList(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`)
+(method) X2Achievement:GetAchievementTracingList(achievementKind: ENUM_ACHIEVEMENT_KIND)
   -> achievementTracingList: number[]
 ```
 > Retrieves a list of achievement types being traced for the specified kind.
@@ -575,7 +575,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: GetAchievementSubList
 ```lua
-(method) X2Achievement:GetAchievementSubList(mainType: number, achievementFilter: `AF_ALL`|`AF_COMPLETE`|`AF_INVALID`|`AF_TRACING`|`AF_UNCOMPLETE`)
+(method) X2Achievement:GetAchievementSubList(mainType: number, achievementFilter: ACHIEVEMENT_FILTER)
   -> achievementSubList: AchievementSubList[]
 ```
 > Retrieves a list of achievement sublists for the specified main type with the
@@ -602,7 +602,7 @@ TODAY_ACHIEVEMENT_DAILY_TYPE:
 
 #### Method: RemoveTracingAchievement
 ```lua
-(method) X2Achievement:RemoveTracingAchievement(achievementKind: `EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`, achievementType: number)
+(method) X2Achievement:RemoveTracingAchievement(achievementKind: ENUM_ACHIEVEMENT_KIND, achievementType: number)
 ```
 > Removes the specified achievement type in the given kind from tracing.
 > 

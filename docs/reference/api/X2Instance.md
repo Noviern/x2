@@ -15,7 +15,7 @@
 ## Aliases
 **INSTANCE_VISIT_TYPE**
 
-`IVT_PERMIT`|`IVT_RESET`
+INSTANCE_VISIT_TYPE
 
 ```lua
 -- api/X2Instance

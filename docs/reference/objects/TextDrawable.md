@@ -62,7 +62,7 @@ TextStyle
 
 #### Method: SetLText
 ```lua
-(method) TextDrawable:SetLText(category: `ABILITY_CATEGORY_DESCRIPTION_TEXT`|`ABILITY_CATEGORY_TEXT`|`ABILITY_CHANGER_TEXT`|`ATTRIBUTE_TEXT`|`ATTRIBUTE_VARIATION_TEXT`...(+117), key: string, ...string)
+(method) TextDrawable:SetLText(category: UI_TEXT_CATEGORY_ID, key: string, ...string)
 ```
 > Sets localized text for the TextDrawable with multiple optional parameters.
 > 
@@ -201,7 +201,7 @@ TextStyle
 
 #### Method: SetAlign
 ```lua
-(method) TextDrawable:SetAlign(align: `ALIGN_BOTTOM_LEFT`|`ALIGN_BOTTOM_RIGHT`|`ALIGN_BOTTOM`|`ALIGN_CENTER`|`ALIGN_LEFT`...(+4))
+(method) TextDrawable:SetAlign(align: TEXT_ALIGN)
 ```
 > Sets the text alignment of the TextDrawable.
 > 

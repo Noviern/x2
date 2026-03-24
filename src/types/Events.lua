@@ -308,9 +308,9 @@
 ---@alias BUTLER_INFO_UPDATED_HANDLER fun(event: BUTLER_EVENT, noError: boolean)
 ---@alias WIDGET_BUTLER_INFO_UPDATED_HANDLER fun(self: Widget, event: BUTLER_EVENT, noError: boolean)
 
----@TODO:
----@alias BUTLER_UI_COMMAND_HANDLER fun(mode: number)
----@alias WIDGET_BUTLER_UI_COMMAND_HANDLER fun(self: Widget, mode: number)
+---Event triggers if the player does something that activates the butler ui such as using vitalizing treats.
+---@alias BUTLER_UI_COMMAND_HANDLER fun(mode: BUTLER_MODE)
+---@alias WIDGET_BUTLER_UI_COMMAND_HANDLER fun(self: Widget, mode: BUTLER_MODE)
 
 ---Event triggers when the player opens the purchase cargo window.
 ---@alias BUY_SPECIALTY_CONTENT_INFO_HANDLER fun(list: SpecialtyContentInfo[])
@@ -541,7 +541,7 @@
 ---@alias COMMON_FARM_UPDATED_HANDLER fun()
 ---@alias WIDGET_COMMON_FARM_UPDATED_HANDLER fun(self: Widget)
 
----@TODO:
+---Event triggers when the player attempts to send a friend request to a player that does not exist, or attempts to block a character that is already blocked.
 ---@alias COMMUNITY_ERROR_HANDLER fun(msg)
 ---@alias WIDGET_COMMUNITY_ERROR_HANDLER fun(self: Widget, msg)
 
@@ -2472,6 +2472,7 @@
 ---@alias WIDGET_SIEGE_RAID_REGISTER_LIST_HANDLER fun(self: Widget, zoneGroupType?, bRegistState?, bListUpdate?)
 
 ---@TODO:
+---Event triggers when the player attempts to apply to a siege raid.
 ---@alias SIEGE_RAID_TEAM_INFO_HANDLER fun(info: SiegeRaidInfo)
 ---@alias WIDGET_SIEGE_RAID_TEAM_INFO_HANDLER fun(self: Widget, info: SiegeRaidInfo)
 

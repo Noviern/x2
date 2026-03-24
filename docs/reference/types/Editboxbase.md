@@ -69,7 +69,7 @@ TextStyle
 
 #### Method: SetCursorColorByColorKey
 ```lua
-(method) Editboxbase:SetCursorColorByColorKey(colorKey: "action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27))
+(method) Editboxbase:SetCursorColorByColorKey(colorKey: ETC_COLOR)
 ```
 > Sets the cursor color using a color key for the Editboxbase.
 > 

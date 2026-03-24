@@ -11,7 +11,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 > 
 #### Method: SetAviName
 ```lua
-(method) Avi:SetAviName(fileName: "objects/machinima/avi/all_01_recruit.avi"|"objects/machinima/avi/all_02_memory.avi"|"objects/machinima/avi/all_04_son.avi"|"objects/machinima/avi/all_15_plateau.avi"|"objects/machinima/avi/all_16_river.avi"...(+178))
+(method) Avi:SetAviName(fileName: AVI_PATH)
 ```
 > Sets the AVI file to be used by the widget.
 > 

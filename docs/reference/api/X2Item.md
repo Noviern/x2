@@ -151,7 +151,7 @@
 ## Aliases
 **BPT**
 
-`BPT_GOODS`|`BPT_TRADEGOODS`
+BPT
 
 ```lua
 -- api/X2Item
@@ -163,7 +163,7 @@ BPT:
 
 **BUY_MODE_MILEAGE**
 
-`BM_MILEAGE_ITEM_TYPE`|`BM_MILEAGE_USABLE_ONE_ITEM_TYPE`
+BUY_MODE_MILEAGE
 
 ```lua
 -- api/X2Item
@@ -174,7 +174,7 @@ BUY_MODE_MILEAGE:
 
 **ITEM_INFORMATION_KIND**
 
-`IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5)
+ITEM_INFORMATION_KIND
 
 ```lua
 -- api/X2Item
@@ -194,7 +194,7 @@ ITEM_INFORMATION_KIND:
 
 **ITEM_MATE**
 
-`ITEM_MATE_NOT_EQUIP`|`ITEM_MATE_UNSUMMON`|`ITEM_SLAVE_NOT_EQUIP`|`ITEM_SLAVE_UNSUMMON`
+ITEM_MATE
 
 ```lua
 -- api/X2Item
@@ -207,7 +207,7 @@ ITEM_MATE:
 
 **ITEM_SECURITY**
 
-`ITEM_SECURITY_INVALID`|`ITEM_SECURITY_LOCKED`|`ITEM_SECURITY_UNLOCKED`|`ITEM_SECURITY_UNLOCKING`
+ITEM_SECURITY
 
 ```lua
 -- api/X2Item
@@ -220,7 +220,7 @@ ITEM_SECURITY:
 
 **ITEM_SOCKET_UPGRADE_STATE**
 
-`ISUS_MAX_UPGRADE`|`ISUS_MISS_MATCH`|`ISUS_UPGRADE`
+ITEM_SOCKET_UPGRADE_STATE
 
 ```lua
 -- api/X2Item
@@ -232,7 +232,7 @@ ITEM_SOCKET_UPGRADE_STATE:
 
 **ITEM_TASK**
 
-`ITEM_TASK_CRAFT_PICKUP_PRODUCT`|`ITEM_TASK_HOUSE_CREATION`|`ITEM_TASK_INVALID`|`ITEM_TASK_MAIL`|`ITEM_TASK_TRADE`
+ITEM_TASK
 
 ```lua
 -- api/X2Item
@@ -248,7 +248,7 @@ ITEM_TASK:
 ### Class: X2Item
 #### Method: InfoFromLink
 ```lua
-(method) X2Item:InfoFromLink(linkText: string, kind?: "1"|"2"|"3")
+(method) X2Item:InfoFromLink(linkText: string, kind?: LINKKIND)
   -> itemInfo: ItemInfo
 ```
 > Retrieves item information from the specified link text.

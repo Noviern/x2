@@ -71,7 +71,7 @@
 
 #### Method: SetPingWidget
 ```lua
-(method) Map:SetPingWidget(widget: Widget, drawable: DrawableDDS, pingType: `1`|`2`|`3`|`4`|`5`)
+(method) Map:SetPingWidget(widget: Widget, drawable: DrawableDDS, pingType: PING_TYPE)
 ```
 > Sets the ping widget and drawable for the specified ping type on the map.
 > 
@@ -180,7 +180,7 @@
 
 #### Method: SetPingBtn
 ```lua
-(method) Map:SetPingBtn(clicked: boolean, pingType: `1`|`2`|`3`|`4`|`5`)
+(method) Map:SetPingBtn(clicked: boolean, pingType: PING_TYPE)
 ```
 > Sets the ping button state and type for the map.
 > 

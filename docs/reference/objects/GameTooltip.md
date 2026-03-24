@@ -55,7 +55,7 @@
 ## Aliases
 **UNIT_FRAME_TOOLTIP**
 
-`UFT_CUPLABOR`|`UFT_CURHP`|`UFT_CURMP`|`UFT_GEARSCORE`|`UFT_MAXHP`...(+8)
+UNIT_FRAME_TOOLTIP
 
 ```lua
 -- objects/GameTooltip
@@ -170,7 +170,7 @@ TextStyle
 
 #### Method: AddLine
 ```lua
-(method) GameTooltip:AddLine(text: string, fontPath: "font_combat"|"font_main"|"font_sub", fontSize: number, align: "left"|"right", textAlign: `ALIGN_BOTTOM_LEFT`|`ALIGN_BOTTOM_RIGHT`|`ALIGN_BOTTOM`|`ALIGN_CENTER`|`ALIGN_LEFT`...(+4), indentation: number)
+(method) GameTooltip:AddLine(text: string, fontPath: FONT_PATH, fontSize: number, align: LINE_ALIGN, textAlign: TEXT_ALIGN, indentation: number)
   -> index: number
 ```
 > Adds a new line to the GameTooltip and returns its index.
@@ -247,7 +247,7 @@ TextStyle
 
 #### Method: AddAnotherSideLine
 ```lua
-(method) GameTooltip:AddAnotherSideLine(index: number, text: string, fontPath: "font_combat"|"font_main"|"font_sub", fontSize: number, textAlign: `ALIGN_BOTTOM_LEFT`|`ALIGN_BOTTOM_RIGHT`|`ALIGN_BOTTOM`|`ALIGN_CENTER`|`ALIGN_LEFT`...(+4), indentation: number)
+(method) GameTooltip:AddAnotherSideLine(index: number, text: string, fontPath: FONT_PATH, fontSize: number, textAlign: TEXT_ALIGN, indentation: number)
 ```
 > Adds text to an existing line in the GameTooltip on the opposite side.
 > 

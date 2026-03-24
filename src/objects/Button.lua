@@ -136,7 +136,7 @@ function Button:SetButtonState(state) end
 ---@see DrawableDDS
 function Button:SetDisabledBackground(disabledTable) end
 
----Sets the color for the disabled state of the button.
+---Sets the background color for the disabled state of the button.
 ---@param r number Red value (min: `0`, max: `1`).
 ---@param g number Green value (min: `0`, max: `1`).
 ---@param b number Blue value (min: `0`, max: `1`).
@@ -158,7 +158,7 @@ function Button:SetFocus() end
 ---@see DrawableDDS
 function Button:SetHighlightBackground(highlightTable) end
 
----Sets the color for the highlighted state of the button.
+---Sets the background color for the highlighted state of the button.
 ---@param r number Red value (min: `0`, max: `1`).
 ---@param g number Green value (min: `0`, max: `1`).
 ---@param b number Blue value (min: `0`, max: `1`).
@@ -184,7 +184,7 @@ function Button:SetInset(left, top, right, bottom) end
 ---@see DrawableDDS
 function Button:SetNormalBackground(normalTable) end
 
----Sets the color for the normal state of the button.
+---Sets the background color for the normal state of the button.
 ---@param r number Red value (min: `0`, max: `1`).
 ---@param g number Green value (min: `0`, max: `1`).
 ---@param b number Blue value (min: `0`, max: `1`).
@@ -196,7 +196,7 @@ function Button:SetNormalColor(r, g, b, a) end
 ---@see DrawableDDS
 function Button:SetPushedBackground(pushedTable) end
 
----Sets the color for the pushed state of the button.
+---Sets the background color for the pushed state of the button.
 ---@param r number Red value (min: `0`, max: `1`).
 ---@param g number Green value (min: `0`, max: `1`).
 ---@param b number Blue value (min: `0`, max: `1`).

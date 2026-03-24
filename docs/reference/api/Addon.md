@@ -1415,13 +1415,13 @@
 ## Aliases
 **ContentTriggerFunc**
 
-fun(show: boolean|nil, data: table|nil)
+ContentTriggerFunc
 
 api/Addon
 
 **FACTION_TYPE**
 
-`101`|`102`|`103`|`104`|`105`...(+124)
+FACTION_TYPE
 
 ```lua
 -- api/Addon
@@ -1560,7 +1560,7 @@ FACTION_TYPE:
 
 **UI_CATEGORY**
 
-`UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121)
+UI_CATEGORY
 
 ```lua
 -- api/Addon
@@ -1695,7 +1695,7 @@ UI_CATEGORY:
 
 **UI_MACRO**
 
-`UM_ACHIEVEMENT_NAME`|`UM_AREA_SPHERE`|`UM_DAY`|`UM_DOODAD_NAME`|`UM_EXPEDITION_LEADER_NAME_BY_ZONEGROUP`...(+19)
+UI_MACRO
 
 ```lua
 -- api/Addon
@@ -1728,7 +1728,7 @@ UI_MACRO:
 
 **UI_OBJECT_TYPE**
 
-`UOT_EDITBOX_MULTILINE`|`UOT_EDITBOX`|`UOT_EMPTY_WIDGET`|`UOT_IMAGE_DRAWABLE`|`UOT_LABEL`...(+6)
+UI_OBJECT_TYPE
 
 ```lua
 -- api/Addon
@@ -1748,7 +1748,7 @@ UI_OBJECT_TYPE:
 
 **UI_OBJECT_TYPE_DRAWABLE**
 
-`7`|`9`|`UOT_IMAGE_DRAWABLE`|`UOT_NINE_PART_DRAWABLE`
+UI_OBJECT_TYPE_DRAWABLE
 
 ```lua
 -- api/Addon
@@ -1761,7 +1761,7 @@ UI_OBJECT_TYPE_DRAWABLE:
 
 **UI_TEXT_CATEGORY_ID**
 
-`ABILITY_CATEGORY_DESCRIPTION_TEXT`|`ABILITY_CATEGORY_TEXT`|`ABILITY_CHANGER_TEXT`|`ATTRIBUTE_TEXT`|`ATTRIBUTE_VARIATION_TEXT`...(+117)
+UI_TEXT_CATEGORY_ID
 
 ```lua
 -- api/Addon
@@ -1892,7 +1892,7 @@ UI_TEXT_CATEGORY_ID:
 
 **UNIT_RELATION**
 
-`UR_FRIENDLY`|`UR_HOSTILE`|`UR_NEUTRAL`
+UNIT_RELATION
 
 ```lua
 -- api/Addon
@@ -1904,7 +1904,7 @@ UNIT_RELATION:
 
 **UOT_AVI**
 
-52
+UOT_AVI
 
 ```lua
 UOT_AVI:
@@ -1913,7 +1913,7 @@ UOT_AVI:
 
 **UOT_BUTTON**
 
-2
+UOT_BUTTON
 
 ```lua
 UOT_BUTTON:
@@ -1922,7 +1922,7 @@ UOT_BUTTON:
 
 **UOT_CHAT_WINDOW**
 
-38
+UOT_CHAT_WINDOW
 
 ```lua
 UOT_CHAT_WINDOW:
@@ -1931,7 +1931,7 @@ UOT_CHAT_WINDOW:
 
 **UOT_CHECK_BUTTON**
 
-23
+UOT_CHECK_BUTTON
 
 ```lua
 UOT_CHECK_BUTTON:
@@ -1940,7 +1940,7 @@ UOT_CHECK_BUTTON:
 
 **UOT_CIRCLE_DIAGRAM**
 
-31
+UOT_CIRCLE_DIAGRAM
 
 ```lua
 UOT_CIRCLE_DIAGRAM:
@@ -1949,7 +1949,7 @@ UOT_CIRCLE_DIAGRAM:
 
 **UOT_COLOR_DRAWABLE**
 
-7
+UOT_COLOR_DRAWABLE
 
 ```lua
 UOT_COLOR_DRAWABLE:
@@ -1958,7 +1958,7 @@ UOT_COLOR_DRAWABLE:
 
 **UOT_COLOR_PICKER**
 
-32
+UOT_COLOR_PICKER
 
 ```lua
 UOT_COLOR_PICKER:
@@ -1967,7 +1967,7 @@ UOT_COLOR_PICKER:
 
 **UOT_COMBO_BOX**
 
-40
+UOT_COMBO_BOX
 
 ```lua
 UOT_COMBO_BOX:
@@ -1976,7 +1976,7 @@ UOT_COMBO_BOX:
 
 **UOT_COOLDOWN_BUTTON**
 
-20
+UOT_COOLDOWN_BUTTON
 
 ```lua
 UOT_COOLDOWN_BUTTON:
@@ -1985,7 +1985,7 @@ UOT_COOLDOWN_BUTTON:
 
 **UOT_COOLDOWN_CONSTANT_BUTTON**
 
-22
+UOT_COOLDOWN_CONSTANT_BUTTON
 
 ```lua
 UOT_COOLDOWN_CONSTANT_BUTTON:
@@ -1994,7 +1994,7 @@ UOT_COOLDOWN_CONSTANT_BUTTON:
 
 **UOT_COOLDOWN_INVENTORY_BUTTON**
 
-21
+UOT_COOLDOWN_INVENTORY_BUTTON
 
 ```lua
 UOT_COOLDOWN_INVENTORY_BUTTON:
@@ -2003,7 +2003,7 @@ UOT_COOLDOWN_INVENTORY_BUTTON:
 
 **UOT_DAMAGE_DISPLAY**
 
-35
+UOT_DAMAGE_DISPLAY
 
 ```lua
 UOT_DAMAGE_DISPLAY:
@@ -2012,7 +2012,7 @@ UOT_DAMAGE_DISPLAY:
 
 **UOT_DYNAMIC_LIST**
 
-54
+UOT_DYNAMIC_LIST
 
 ```lua
 UOT_DYNAMIC_LIST:
@@ -2021,7 +2021,7 @@ UOT_DYNAMIC_LIST:
 
 **UOT_EDITBOX**
 
-3
+UOT_EDITBOX
 
 ```lua
 UOT_EDITBOX:
@@ -2030,7 +2030,7 @@ UOT_EDITBOX:
 
 **UOT_EDITBOX_MULTILINE**
 
-4
+UOT_EDITBOX_MULTILINE
 
 ```lua
 UOT_EDITBOX_MULTILINE:
@@ -2039,7 +2039,7 @@ UOT_EDITBOX_MULTILINE:
 
 **UOT_EMPTY_WIDGET**
 
-46
+UOT_EMPTY_WIDGET
 
 ```lua
 UOT_EMPTY_WIDGET:
@@ -2048,7 +2048,7 @@ UOT_EMPTY_WIDGET:
 
 **UOT_FOLDER**
 
-34
+UOT_FOLDER
 
 ```lua
 UOT_FOLDER:
@@ -2057,7 +2057,7 @@ UOT_FOLDER:
 
 **UOT_GAME_TOOLTIP**
 
-18
+UOT_GAME_TOOLTIP
 
 ```lua
 UOT_GAME_TOOLTIP:
@@ -2066,7 +2066,7 @@ UOT_GAME_TOOLTIP:
 
 **UOT_GRID**
 
-28
+UOT_GRID
 
 ```lua
 UOT_GRID:
@@ -2075,7 +2075,7 @@ UOT_GRID:
 
 **UOT_IMAGE_DRAWABLE**
 
-10
+UOT_IMAGE_DRAWABLE
 
 ```lua
 UOT_IMAGE_DRAWABLE:
@@ -2084,7 +2084,7 @@ UOT_IMAGE_DRAWABLE:
 
 **UOT_LABEL**
 
-1
+UOT_LABEL
 
 ```lua
 UOT_LABEL:
@@ -2093,7 +2093,7 @@ UOT_LABEL:
 
 **UOT_LINE**
 
-48
+UOT_LINE
 
 ```lua
 UOT_LINE:
@@ -2102,7 +2102,7 @@ UOT_LINE:
 
 **UOT_LISTBOX**
 
-5
+UOT_LISTBOX
 
 ```lua
 UOT_LISTBOX:
@@ -2111,7 +2111,7 @@ UOT_LISTBOX:
 
 **UOT_LIST_CTRL**
 
-45
+UOT_LIST_CTRL
 
 ```lua
 UOT_LIST_CTRL:
@@ -2120,7 +2120,7 @@ UOT_LIST_CTRL:
 
 **UOT_MEGAPHONE_CHATEDIT**
 
-44
+UOT_MEGAPHONE_CHATEDIT
 
 ```lua
 UOT_MEGAPHONE_CHATEDIT:
@@ -2129,7 +2129,7 @@ UOT_MEGAPHONE_CHATEDIT:
 
 **UOT_MESSAGE**
 
-16
+UOT_MESSAGE
 
 ```lua
 UOT_MESSAGE:
@@ -2138,7 +2138,7 @@ UOT_MESSAGE:
 
 **UOT_MODELVIEW**
 
-29
+UOT_MODELVIEW
 
 ```lua
 UOT_MODELVIEW:
@@ -2147,7 +2147,7 @@ UOT_MODELVIEW:
 
 **UOT_NINE_PART_DRAWABLE**
 
-8
+UOT_NINE_PART_DRAWABLE
 
 ```lua
 UOT_NINE_PART_DRAWABLE:
@@ -2156,7 +2156,7 @@ UOT_NINE_PART_DRAWABLE:
 
 **UOT_PAGEABLE**
 
-25
+UOT_PAGEABLE
 
 ```lua
 UOT_PAGEABLE:
@@ -2165,7 +2165,7 @@ UOT_PAGEABLE:
 
 **UOT_PAINT_COLOR_PICKER**
 
-33
+UOT_PAINT_COLOR_PICKER
 
 ```lua
 UOT_PAINT_COLOR_PICKER:
@@ -2174,7 +2174,7 @@ UOT_PAINT_COLOR_PICKER:
 
 **UOT_RADIO_GROUP**
 
-55
+UOT_RADIO_GROUP
 
 ```lua
 UOT_RADIO_GROUP:
@@ -2183,7 +2183,7 @@ UOT_RADIO_GROUP:
 
 **UOT_ROADMAP**
 
-27
+UOT_ROADMAP
 
 ```lua
 UOT_ROADMAP:
@@ -2192,7 +2192,7 @@ UOT_ROADMAP:
 
 **UOT_SLIDER**
 
-24
+UOT_SLIDER
 
 ```lua
 UOT_SLIDER:
@@ -2201,7 +2201,7 @@ UOT_SLIDER:
 
 **UOT_SLOT**
 
-47
+UOT_SLOT
 
 ```lua
 UOT_SLOT:
@@ -2210,7 +2210,7 @@ UOT_SLOT:
 
 **UOT_STATUSBAR**
 
-17
+UOT_STATUSBAR
 
 ```lua
 UOT_STATUSBAR:
@@ -2219,7 +2219,7 @@ UOT_STATUSBAR:
 
 **UOT_TAB**
 
-36
+UOT_TAB
 
 ```lua
 UOT_TAB:
@@ -2228,7 +2228,7 @@ UOT_TAB:
 
 **UOT_TEXTBOX**
 
-39
+UOT_TEXTBOX
 
 ```lua
 UOT_TEXTBOX:
@@ -2237,7 +2237,7 @@ UOT_TEXTBOX:
 
 **UOT_THREE_PART_DRAWABLE**
 
-9
+UOT_THREE_PART_DRAWABLE
 
 ```lua
 UOT_THREE_PART_DRAWABLE:
@@ -2246,7 +2246,7 @@ UOT_THREE_PART_DRAWABLE:
 
 **UOT_UNITFRAME_TOOLTIP**
 
-19
+UOT_UNITFRAME_TOOLTIP
 
 ```lua
 UOT_UNITFRAME_TOOLTIP:
@@ -2255,7 +2255,7 @@ UOT_UNITFRAME_TOOLTIP:
 
 **UOT_WEBBROWSER**
 
-30
+UOT_WEBBROWSER
 
 ```lua
 UOT_WEBBROWSER:
@@ -2264,7 +2264,7 @@ UOT_WEBBROWSER:
 
 **UOT_WINDOW**
 
-0
+UOT_WINDOW
 
 ```lua
 UOT_WINDOW:
@@ -2273,7 +2273,7 @@ UOT_WINDOW:
 
 **UOT_WORLDMAP**
 
-26
+UOT_WORLDMAP
 
 ```lua
 UOT_WORLDMAP:
@@ -2282,7 +2282,7 @@ UOT_WORLDMAP:
 
 **UOT_X2_EDITBOX**
 
-53
+UOT_X2_EDITBOX
 
 ```lua
 UOT_X2_EDITBOX:
@@ -2291,7 +2291,7 @@ UOT_X2_EDITBOX:
 
 **ZONE_STATE_TYPE**
 
-`ZST_CONQUEST_WAR`|`ZST_INVALID`
+ZONE_STATE_TYPE
 
 ```lua
 -- api/Addon
@@ -2304,7 +2304,7 @@ ZONE_STATE_TYPE:
 ### Class: ADDON
 #### Method: AddEscMenuButton
 ```lua
-(method) ADDON:AddEscMenuButton(categoryId: `1`|`2`|`3`|`4`|`5`, uiCategory: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121), iconKey: ""|"achievement"|"auction"|"bag"|"butler"...(+26), name: string, data?: EscMenuButtonData)
+(method) ADDON:AddEscMenuButton(categoryId: ESC_MENU_CATEGORY_ID, uiCategory: UI_CATEGORY, iconKey: ESC_MENU_ICON_KEY, name: string, data?: EscMenuButtonData)
 ```
 > **Warning:** Buttons are not removed when the addon is reloaded.
 > 
@@ -2503,7 +2503,7 @@ ZONE_STATE_TYPE:
 
 #### Method: RegisterContentWidget
 ```lua
-(method) ADDON:RegisterContentWidget(uiCategory: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121), widget: Widget, triggerFunc?: fun(show: boolean|nil, data: table|nil))
+(method) ADDON:RegisterContentWidget(uiCategory: UI_CATEGORY, widget: Widget, triggerFunc?: ContentTriggerFunc)
   -> widget: Widget|nil
 ```
 > Registers a widget and its optional trigger function to a UI category and
@@ -2653,7 +2653,7 @@ ZONE_STATE_TYPE:
 
 #### Method: RegisterContentTriggerFunc
 ```lua
-(method) ADDON:RegisterContentTriggerFunc(uiCategory: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121), triggerFunc: fun(show: boolean|nil, data: table|nil))
+(method) ADDON:RegisterContentTriggerFunc(uiCategory: UI_CATEGORY, triggerFunc: ContentTriggerFunc)
   -> success: boolean
 ```
 > Registers a trigger function to a UI category and returns whether it
@@ -2846,7 +2846,7 @@ ZONE_STATE_TYPE:
 
 #### Method: ShowContent
 ```lua
-(method) ADDON:ShowContent(uiCategory: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121), show: boolean, data?: table)
+(method) ADDON:ShowContent(uiCategory: UI_CATEGORY, show: boolean, data?: table)
   -> success: boolean
 ```
 > Shows or hides the UI category and returns whether the operation succeeded.
@@ -2992,9 +2992,10 @@ ZONE_STATE_TYPE:
 
 #### Method: ImportObject
 ```lua
-(method) ADDON:ImportObject(objectId: `0`|`10`|`11`|`12`|`13`...(+51))
+(method) ADDON:ImportObject(objectId: OBJECT)
 ```
-> Imports the `objectId` for the addon. Call only once per `OBJECT`.
+> Imports the `objectId` for the addon. Call only once per `OBJECT`. Extra
+> calls will not reimport the object.
 > 
 > @*param* `objectId` — The object ID to import.
 > 
@@ -3086,7 +3087,7 @@ ZONE_STATE_TYPE:
 
 #### Method: ImportAPI
 ```lua
-(method) ADDON:ImportAPI(apiType: `10`|`11`|`12`|`13`|`14`...(+80))
+(method) ADDON:ImportAPI(apiType: API)
 ```
 > Imports the API type for the addon. Call once per `API`.
 > 
@@ -3226,7 +3227,7 @@ ZONE_STATE_TYPE:
 
 #### Method: GetContentMainScriptPosVis
 ```lua
-(method) ADDON:GetContentMainScriptPosVis(uiCategory: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121))
+(method) ADDON:GetContentMainScriptPosVis(uiCategory: UI_CATEGORY)
   -> x: number|nil
   2. y: number|nil
   3. width: number|nil
@@ -3382,7 +3383,7 @@ ZONE_STATE_TYPE:
 
 #### Method: ToggleContent
 ```lua
-(method) ADDON:ToggleContent(uiCategory: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121), data?: table)
+(method) ADDON:ToggleContent(uiCategory: UI_CATEGORY, data?: table)
   -> success: boolean
 ```
 > Toggles the visibility of the UI category and returns whether the operation
@@ -3532,7 +3533,7 @@ ZONE_STATE_TYPE:
 ### Class: UIParent
 #### Method: ClearUIBound
 ```lua
-(method) UIParent:ClearUIBound(key: string|"ui_bound_actionBar_renewal1"|"ui_bound_actionBar_renewal10"|"ui_bound_actionBar_renewal11"|"ui_bound_actionBar_renewal2"...(+43))
+(method) UIParent:ClearUIBound(key: string|UIBOUND_KEY)
 ```
 > Clears the UI bound associated with the specified UI key. Reload
 > (or character select) required to update the UI.
@@ -3704,7 +3705,7 @@ ZONE_STATE_TYPE:
 
 #### Method: ReleaseEventHandler
 ```lua
-(method) UIParent:ReleaseEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), handler: function)
+(method) UIParent:ReleaseEventHandler(eventName: UIEVENT_TYPE, handler: function)
 ```
 > Releases an event handler for the specified UI event.
 > 
@@ -4630,7 +4631,7 @@ ZONE_STATE_TYPE:
 
 #### Method: SetUIBound
 ```lua
-(method) UIParent:SetUIBound(key: string|"ui_bound_actionBar_renewal1"|"ui_bound_actionBar_renewal10"|"ui_bound_actionBar_renewal11"|"ui_bound_actionBar_renewal2"...(+43), uiBound: UIBound)
+(method) UIParent:SetUIBound(key: string|UIBOUND_KEY, uiBound: UIBound)
 ```
 > Saves the UI bound for the specified key. This saves per character and can be
 > accessed by other addons.
@@ -4704,7 +4705,7 @@ ZONE_STATE_TYPE:
 
 #### Method: SetEventHandler
 ```lua
-(method) UIParent:SetEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), handler: function)
+(method) UIParent:SetEventHandler(eventName: UIEVENT_TYPE, handler: function)
 ```
 > Sets an event handler for the specified UI event (more than 255 events will
 > crash the game, multiple handlers to the same event can also crash the game).
@@ -5706,7 +5707,7 @@ ZONE_STATE_TYPE:
 
 #### Method: CreateWidget
 ```lua
-(method) UIParent:CreateWidget(widgetName: "avi"|"button"|"chatwindow"|"checkbutton"|"circlediagram"...(+34), id: string, parentId: string|"UIParent"|Widget)
+(method) UIParent:CreateWidget(widgetName: OBJECT_NAME, id: string, parentId: string|"UIParent"|Widget)
   -> widget: Widget
 ```
 > Creates a widget of the specified type with the given ID and parent.
@@ -5771,7 +5772,7 @@ ZONE_STATE_TYPE:
 
 #### Method: GetUIBound
 ```lua
-(method) UIParent:GetUIBound(key: string|"ui_bound_actionBar_renewal1"|"ui_bound_actionBar_renewal10"|"ui_bound_actionBar_renewal11"|"ui_bound_actionBar_renewal2"...(+43))
+(method) UIParent:GetUIBound(key: string|UIBOUND_KEY)
   -> uiBound: UIBound|nil
 ```
 > Retrieves the UI bound for the specified key, if it exists.
@@ -5835,7 +5836,7 @@ ZONE_STATE_TYPE:
 
 #### Method: GetFontColor
 ```lua
-(method) UIParent:GetFontColor(key: "action_slot_key_binding"|"adamant"|"aggro_meter"|"all_in_item_grade_combobox"|"assassin"...(+320))
+(method) UIParent:GetFontColor(key: FONT_COLOR_KEY)
   -> fontColor: RGBAColor
 ```
 > Retrieves the font color for the specified key.
@@ -6231,7 +6232,7 @@ ZONE_STATE_TYPE:
 
 #### Method: GetPermission
 ```lua
-(method) UIParent:GetPermission(uiCategory: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121))
+(method) UIParent:GetPermission(uiCategory: UI_CATEGORY)
   -> permission: boolean
 ```
 > Retrieves the permission state for the specified UI category.

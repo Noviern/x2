@@ -71,7 +71,7 @@
 ## Aliases
 **SIEGE_RAID**
 
-`SIEGE_RAID_TEAM_ALL_INFO`|`SIEGE_RAID_TEAM_INFO_BY_FACTION`
+SIEGE_RAID
 
 ```lua
 -- api/X2Team
@@ -82,7 +82,7 @@ SIEGE_RAID:
 
 **TEAM_JOIN**
 
-`TEAM_JOINT_MENU_CHAT`|`TEAM_JOINT_MENU_TARGET`|`TEAM_JOINT_REQUEST`
+TEAM_JOIN
 
 ```lua
 -- api/X2Team
@@ -94,7 +94,7 @@ TEAM_JOIN:
 
 **TEAM_LOOT**
 
-`TEAM_LOOT_FREE_FOR_ALL`|`TEAM_LOOT_MASTER_LOOTER`|`TEAM_LOOT_ROUND_ROBIN`
+TEAM_LOOT
 
 ```lua
 -- api/X2Team
@@ -106,7 +106,7 @@ TEAM_LOOT:
 
 **TEAM_ROLE**
 
-`TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
+TEAM_ROLE
 
 ```lua
 -- api/X2Team
@@ -123,13 +123,13 @@ TEAM_ROLE:
 #### Method: GetRole
 ```lua
 (method) X2Team:GetRole(teamIndex: number, memberIndex: number)
-  -> role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
+  -> role: TEAM_ROLE
 ```
 > Retrieves the role of the specified member in the given team.
 > 
-> @*param* `teamIndex` — The index of the team.  (min: `0`)
+> @*param* `teamIndex` — The index of the team. (min: `0`)
 > 
-> @*param* `memberIndex` — The index of the member within the team.  (min: `1`)
+> @*param* `memberIndex` — The index of the member within the team. (min: `1`)
 > 
 > @*return* `role` — The role of the member.
 > 
@@ -149,9 +149,9 @@ TEAM_ROLE:
 ```
 > Moves a team member to a different position.
 > 
-> @*param* `frommemberIndex` — The current index of the member.
+> @*param* `frommemberIndex` — The current index of the member. (min: `1`)
 > 
-> @*param* `tomemberIndex` — The target index to move the member to.
+> @*param* `tomemberIndex` — The target index to move the member to. (min: `1`)
 
 #### Method: MoveTeamMemberToParty
 ```lua
@@ -159,13 +159,13 @@ TEAM_ROLE:
 ```
 > Moves a team member to a different party.
 > 
-> @*param* `frommemberIndex` — The current index of the member.
+> @*param* `frommemberIndex` — The current index of the member.  (min: `1`)
 > 
 > @*param* `toParty` — The target party number to move the member to.
 
 #### Method: KickTeamMemberByName
 ```lua
-(method) X2Team:KickTeamMemberByName(charName: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
+(method) X2Team:KickTeamMemberByName(charName: string, teamRoleType: TEAM_ROLE)
 ```
 > Kicks a team member by their character name.
 > 
@@ -186,7 +186,7 @@ TEAM_ROLE:
 #### Method: GetTeamRoleType
 ```lua
 (method) X2Team:GetTeamRoleType()
-  -> role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
+  -> role: TEAM_ROLE
 ```
 > Returns the current role of the local player in the team.
 > 
@@ -204,12 +204,12 @@ TEAM_ROLE:
 
 #### Method: KickTeamMember
 ```lua
-(method) X2Team:KickTeamMember(memberIndex: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
+(method) X2Team:KickTeamMember(memberIndex: string, teamRoleType: TEAM_ROLE)
   -> success: boolean
 ```
 > Kicks a team member from the team.
 > 
-> @*param* `memberIndex` — The index or identifier of the member to kick.
+> @*param* `memberIndex` — The index or identifier of the member to kick. (min: `1`)
 > 
 > @*param* `teamRoleType` — The role of the member being kicked.
 > 
@@ -227,7 +227,7 @@ TEAM_ROLE:
 
 #### Method: SetRole
 ```lua
-(method) X2Team:SetRole(role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
+(method) X2Team:SetRole(role: TEAM_ROLE)
 ```
 > Sets the player's role in a raid.
 > 
