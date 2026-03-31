@@ -142,7 +142,7 @@ TextStyle
 
 #### Method: CheckNamePolicy
 ```lua
-(method) Editbox:CheckNamePolicy(nameType: NAME_RENAME_TYPE)
+(method) Editbox:CheckNamePolicy(nameType: `NRT_CHARACTER`|`NRT_CHAT_TAB`|`NRT_CUSTOM`|`NRT_FACTION_ROLE`|`NRT_FACTION`...(+6))
 ```
 > Checks the name policy for the Editbox.
 > 

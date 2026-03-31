@@ -31,7 +31,7 @@
 ## Aliases
 **NATION_RELATION**
 
-NATION_RELATION
+`NR_FRIENDLY`|`NR_HOSTILE`|`NR_INVALID`|`NR_LIGEANCE`|`NR_NATIVE`...(+1)
 
 ```lua
 -- api/X2Nation

@@ -15,7 +15,7 @@
 ## Aliases
 **DRAWABLE_ANIMATION_TYPE**
 
-DRAWABLE_ANIMATION_TYPE
+`DAT_LINEAR_ALPHA`|`DAT_LINEAR_SCALE`|`DAT_MOVE`
 
 ```lua
 -- objects/ImageDrawable

@@ -19,7 +19,7 @@
 ## Aliases
 **LIST_CTRL_COLUMN_ITEM_TYPE**
 
-LIST_CTRL_COLUMN_ITEM_TYPE
+`LCCIT_BUTTON`|`LCCIT_STRING`|`LCCIT_TEXTBOX`|`LCCIT_WINDOW`
 
 ```lua
 -- objects/ListCtrl
@@ -185,7 +185,7 @@ Button[]|nil
 
 #### Method: InsertColumn
 ```lua
-(method) ListCtrl:InsertColumn(width: number, itemType: LIST_CTRL_COLUMN_ITEM_TYPE)
+(method) ListCtrl:InsertColumn(width: number, itemType: `LCCIT_BUTTON`|`LCCIT_STRING`|`LCCIT_TEXTBOX`|`LCCIT_WINDOW`)
   -> index: number
 ```
 > Creates a column with specified width and item type, returning its index.

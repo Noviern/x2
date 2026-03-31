@@ -13,7 +13,7 @@
 #### Method: GetObjectType
 ```lua
 (method) Uiobject:GetObjectType()
-  -> objectType: OBJECT_NAME
+  -> objectType: "avi"|"button"|"chatwindow"|"checkbutton"|"circlediagram"...(+34)
 ```
 > Retrieves the object type of the UI object.
 > 

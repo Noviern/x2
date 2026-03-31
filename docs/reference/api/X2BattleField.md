@@ -27,7 +27,7 @@
 ## Aliases
 **NPC_INFORMATION_BROAD_CAST**
 
-NPC_INFORMATION_BROAD_CAST
+`NIBC_BUFF_LEFT_TIME`|`NIBC_BUFF_STACK`
 
 ```lua
 -- api/X2BattleField
@@ -38,7 +38,7 @@ NPC_INFORMATION_BROAD_CAST:
 
 **VS**
 
-VS
+`VS_DRAW`|`VS_LOSE`|`VS_WIN`
 
 ```lua
 -- api/X2BattleField

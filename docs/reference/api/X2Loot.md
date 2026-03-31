@@ -19,7 +19,7 @@
 ## Aliases
 **DICE_RULE_KIND**
 
-DICE_RULE_KIND
+`DRK_AUTO_ACCEPT`|`DRK_AUTO_GIVEUP`|`DRK_DEFAULT`
 
 ```lua
 -- api/X2Loot

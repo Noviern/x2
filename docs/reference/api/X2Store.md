@@ -87,7 +87,7 @@
 ## Aliases
 **CURRENCY**
 
-CURRENCY
+`CURRENCY_AA_POINT`|`CURRENCY_CONTRIBUTION_POINT`|`CURRENCY_GOLD_WITH_AA_POINT`|`CURRENCY_GOLD`|`CURRENCY_HONOR_POINT`...(+2)
 
 ```lua
 -- api/X2Store
@@ -103,7 +103,7 @@ CURRENCY:
 
 **MPT**
 
-MPT
+`MPT_ALLWAYS`|`MPT_DALIY`|`MPT_MONTHLY`|`MPT_WEEKLY`
 
 ```lua
 -- api/X2Store
@@ -117,7 +117,7 @@ MPT:
 
 **SHOP_OPEN**
 
-SHOP_OPEN
+`SHOP_OPEN_BATTLEFIELD`|`SHOP_OPEN_CONTRIBUTION`|`SHOP_OPEN_DIRECT_RANDOM_SHOP`|`SHOP_OPEN_HONORPOINT`|`SHOP_OPEN_LIVINGPOINT`...(+2)
 
 ```lua
 -- api/X2Store
@@ -147,7 +147,7 @@ SHOP_OPEN:
 
 #### Method: GetSpecialtyRatioBetween
 ```lua
-(method) X2Store:GetSpecialtyRatioBetween(fromZoneGroup: ZONE_GROUP_ID, toZoneGroup: ZONE_GROUP_ID)
+(method) X2Store:GetSpecialtyRatioBetween(fromZoneGroup: `0`|`100`|`101`|`102`|`103`...(+151), toZoneGroup: `0`|`100`|`101`|`102`|`103`...(+151))
   -> cooldownTime: number
 ```
 > Retrieves the cooldown time and triggers the `SPECIALTY_RATIO_BETWEEN_INFO`
@@ -495,7 +495,7 @@ SHOP_OPEN:
 
 #### Method: GetSellableZoneGroups
 ```lua
-(method) X2Store:GetSellableZoneGroups(fromZoneGroup: ZONE_GROUP_ID)
+(method) X2Store:GetSellableZoneGroups(fromZoneGroup: `0`|`100`|`101`|`102`|`103`...(+151))
   -> sellableZoneGroups: ZoneInfo[]
 ```
 > Retrieves a list of zone information for all zones where a pack crafted in

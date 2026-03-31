@@ -75,7 +75,7 @@ Extends [DrawableDDS](../types/DrawableDDS.md#class-drawabledds)
 
 #### Method: SetMoveEffectType
 ```lua
-(method) EffectDrawable:SetMoveEffectType(phase: number, moveType: MOVE_TYPE, horizontalRadius: number, verticalRadius: number, velocityTime: number, accelerationTime: number)
+(method) EffectDrawable:SetMoveEffectType(phase: number, moveType: "bottom"|"circle"|"left"|"right"|"top", horizontalRadius: number, verticalRadius: number, velocityTime: number, accelerationTime: number)
 ```
 > Sets the move effect type and parameters for the specified phase.
 > 
@@ -231,7 +231,7 @@ Extends [DrawableDDS](../types/DrawableDDS.md#class-drawabledds)
 
 #### Method: SetEffectPriority
 ```lua
-(method) EffectDrawable:SetEffectPriority(phase: number, priority: EFFECT_PRIORITY, velocityTime: number, accelerationTime: number)
+(method) EffectDrawable:SetEffectPriority(phase: number, priority: "alpha"|"colorb"|"colorg"|"colorr"|"rotate"...(+2), velocityTime: number, accelerationTime: number)
 ```
 > Sets the priority and timing for the specified effect phase.
 > 

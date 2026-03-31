@@ -139,7 +139,7 @@
 ## Aliases
 **BANVOTE_TYPE**
 
-BANVOTE_TYPE
+`BANVOTE_TYPE_CHECK_ENABLE`|`BANVOTE_TYPE_START_VOTE`|`BANVOTE_TYPE_VOTE_AGREE`|`BANVOTE_TYPE_VOTE_CLEAR`
 
 ```lua
 -- api/X2Unit
@@ -152,7 +152,7 @@ BANVOTE_TYPE:
 
 **BAN_REASON_TYPE**
 
-BAN_REASON_TYPE
+`BRT_CHEATING`|`BRT_CHILLING_EFFECT`|`BRT_NON_PARTICIPATE`|`BRT_NO_MANNER_CHAT`|`BRT_NO_REASON`
 
 ```lua
 -- api/X2Unit
@@ -166,7 +166,7 @@ BAN_REASON_TYPE:
 
 **DUEL_TYPE**
 
-DUEL_TYPE
+`DUEL_TYPE_INVALID`|`DUEL_TYPE_PARTY`|`DUEL_TYPE_SOLO`
 
 ```lua
 -- api/X2Unit
@@ -178,7 +178,7 @@ DUEL_TYPE:
 
 **GAME_TYPE**
 
-GAME_TYPE
+`GAME_TYPE_BATTLE_FIELD`|`GAME_TYPE_CONFLICT_ZONE`|`GAME_TYPE_INDUN`|`GAME_TYPE_NORMAL`|`GAME_TYPE_SEAMLESS`...(+1)
 
 ```lua
 -- api/X2Unit
@@ -193,7 +193,7 @@ GAME_TYPE:
 
 **GENDER_ID**
 
-GENDER_ID
+`GENDER_FEMALE`|`GENDER_MALE`|`GENDER_NONE`
 
 ```lua
 -- api/X2Unit
@@ -205,7 +205,7 @@ GENDER_ID:
 
 **RACE_ID**
 
-RACE_ID
+`RACE_DARU`|`RACE_DWARF`|`RACE_ELF`|`RACE_FAIRY`|`RACE_FERRE`...(+5)
 
 ```lua
 -- api/X2Unit
@@ -227,7 +227,7 @@ RACE_ID:
 #### Method: GetCurrentZoneGroup
 ```lua
 (method) X2Unit:GetCurrentZoneGroup()
-  -> currentZoneGroup: ZONE_GROUP_ID
+  -> currentZoneGroup: `0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Retrieves the current zone group ID.
 > 
@@ -396,7 +396,7 @@ RACE_ID:
 
 #### Method: UnitHiddenBuff
 ```lua
-(method) X2Unit:UnitHiddenBuff(unit: UNIT, buffIndex: number)
+(method) X2Unit:UnitHiddenBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number)
   -> unitHiddenBuffInfo: BuffInfo
 ```
 > Retrieves hidden buff information for the specified buff index of the unit if
@@ -574,7 +574,7 @@ RACE_ID:
 
 #### Method: UnitHiddenBuffCount
 ```lua
-(method) X2Unit:UnitHiddenBuffCount(unit: UNIT)
+(method) X2Unit:UnitHiddenBuffCount(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitHiddenBuffCount: number
 ```
 > Retrieves the number of hidden buffs on the specified unit if in render
@@ -748,7 +748,7 @@ RACE_ID:
 
 #### Method: UnitHiddenBuffTooltip
 ```lua
-(method) X2Unit:UnitHiddenBuffTooltip(unit: UNIT, buffIndex: number, neededInfo?: BUFF_INFO_KIND)
+(method) X2Unit:UnitHiddenBuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
   -> unitHiddenBuffTooltip: BuffTooltip|nil
 ```
 > Retrieves the hidden buff tooltip for the specified buff index of the unit if
@@ -938,7 +938,7 @@ RACE_ID:
 
 #### Method: UnitHealthInfo
 ```lua
-(method) X2Unit:UnitHealthInfo(unit: UNIT)
+(method) X2Unit:UnitHealthInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitCurrentHealth: string
   2. unitMaxHealth: string
   3. unitHealthPercentage: string
@@ -1118,7 +1118,7 @@ RACE_ID:
 
 #### Method: UnitGearScore
 ```lua
-(method) X2Unit:UnitGearScore(unit: UNIT, comma: boolean)
+(method) X2Unit:UnitGearScore(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), comma: boolean)
   -> result: boolean|string
 ```
 > Retrieves the gear score of the specified unit within visual range or a
@@ -1294,7 +1294,7 @@ RACE_ID:
 
 #### Method: UnitHealth
 ```lua
-(method) X2Unit:UnitHealth(unit: UNIT)
+(method) X2Unit:UnitHealth(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitHealth: string|nil
 ```
 > Retrieves the health of the specified unit if it exists.
@@ -1467,7 +1467,7 @@ RACE_ID:
 
 #### Method: UnitDistance
 ```lua
-(method) X2Unit:UnitDistance(unit: UNIT)
+(method) X2Unit:UnitDistance(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitDistance: UnitDistance|nil
 ```
 > Retrieves the distance between the player and the specified unit's boundary
@@ -1643,7 +1643,7 @@ RACE_ID:
 
 #### Method: UnitDeBuffTooltip
 ```lua
-(method) X2Unit:UnitDeBuffTooltip(unit: UNIT, deBuffIndex: number, neededInfo?: BUFF_INFO_KIND)
+(method) X2Unit:UnitDeBuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
   -> unitDebuffTooltip: BuffTooltip|nil
 ```
 > Retrieves the debuff tooltip for the specified buff index of the unit if in
@@ -1833,8 +1833,8 @@ RACE_ID:
 
 #### Method: UnitLevel
 ```lua
-(method) X2Unit:UnitLevel(unit: UNIT)
-  -> unitLevel: number|ABILITY_ACTIVATION_LEVEL|nil
+(method) X2Unit:UnitLevel(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitLevel: number|`ABILITY_ACTIVATION_LEVEL_1`|`ABILITY_ACTIVATION_LEVEL_2`|`ABILITY_ACTIVATION_LEVEL_3`|nil
 ```
 > Retrieves the level of the specified unit if it exists.
 > 
@@ -2012,7 +2012,7 @@ RACE_ID:
 
 #### Method: UnitManaInfo
 ```lua
-(method) X2Unit:UnitManaInfo(unit: UNIT)
+(method) X2Unit:UnitManaInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitCurrentMana: string
   2. unitMaxMana: string
   3. unitManaPercentage: string
@@ -2192,7 +2192,7 @@ RACE_ID:
 
 #### Method: UnitNameWithWorld
 ```lua
-(method) X2Unit:UnitNameWithWorld(unit: UNIT)
+(method) X2Unit:UnitNameWithWorld(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitNameWithWorld: string|nil
 ```
 > Retrieves the name with world information of the specified unit if it exists.
@@ -2365,7 +2365,7 @@ RACE_ID:
 
 #### Method: UnitRemovableDebuff
 ```lua
-(method) X2Unit:UnitRemovableDebuff(unit: UNIT, deBuffIndex: number)
+(method) X2Unit:UnitRemovableDebuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number)
   -> removableDebuff: BuffInfo|nil
 ```
 > Retrieves the removable debuff for the specified buff index of the unit if it
@@ -2541,7 +2541,7 @@ RACE_ID:
 
 #### Method: UnitMana
 ```lua
-(method) X2Unit:UnitMana(unit: UNIT)
+(method) X2Unit:UnitMana(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitCurrentMana: string|nil
 ```
 > Retrieves the current mana of the specified unit if it exists.
@@ -2714,7 +2714,7 @@ RACE_ID:
 
 #### Method: UnitName
 ```lua
-(method) X2Unit:UnitName(unit: UNIT)
+(method) X2Unit:UnitName(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitName: string|nil
 ```
 > Retrieves the name of the specified unit if it exists.
@@ -2887,7 +2887,7 @@ RACE_ID:
 
 #### Method: UnitMaxHealth
 ```lua
-(method) X2Unit:UnitMaxHealth(unit: UNIT)
+(method) X2Unit:UnitMaxHealth(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitMaxHealth: string|nil
 ```
 > Retrieves the maximum health of the specified unit if it exists.
@@ -3060,7 +3060,7 @@ RACE_ID:
 
 #### Method: UnitMaxMana
 ```lua
-(method) X2Unit:UnitMaxMana(unit: UNIT)
+(method) X2Unit:UnitMaxMana(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitMaxMana: string|nil
 ```
 > Retrieves the maximum mana of the specified unit if it exists.
@@ -3233,7 +3233,7 @@ RACE_ID:
 
 #### Method: UnitRemovableDebuffCount
 ```lua
-(method) X2Unit:UnitRemovableDebuffCount(unit: UNIT)
+(method) X2Unit:UnitRemovableDebuffCount(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> removableDebuffCount: number|nil
 ```
 > Retrieves the number of removable debuffs on the specified unit if in render
@@ -3407,7 +3407,7 @@ RACE_ID:
 
 #### Method: UnitDeBuffCount
 ```lua
-(method) X2Unit:UnitDeBuffCount(unit: UNIT)
+(method) X2Unit:UnitDeBuffCount(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitDeBuffCount: number
 ```
 > Retrieves the number of debuffs on the specified unit if in render range.
@@ -3580,7 +3580,7 @@ RACE_ID:
 
 #### Method: UnitCastingInfo
 ```lua
-(method) X2Unit:UnitCastingInfo(unit: UNIT)
+(method) X2Unit:UnitCastingInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitCastingInfo: CastingInfo|nil
 ```
 > Retrieves casting information for the specified unit if in render range.
@@ -3764,7 +3764,7 @@ RACE_ID:
 
 #### Method: GetUnitId
 ```lua
-(method) X2Unit:GetUnitId(unit: UNIT)
+(method) X2Unit:GetUnitId(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitId: string|nil
 ```
 > Retrieves the unit ID for the specified unit if in render range.
@@ -3950,7 +3950,7 @@ RACE_ID:
 
 #### Method: GetTargetAbilityTemplates
 ```lua
-(method) X2Unit:GetTargetAbilityTemplates(target: UNIT)
+(method) X2Unit:GetTargetAbilityTemplates(target: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> targetAbilityTemplates: TargetAbility[]|nil
 ```
 > Retrieves a list of up to three target ability templates for the specified
@@ -4126,8 +4126,8 @@ RACE_ID:
 
 #### Method: GetOverHeadMarker
 ```lua
-(method) X2Unit:GetOverHeadMarker(unit: UNIT)
-  -> marker: MARKER|`0`|nil
+(method) X2Unit:GetOverHeadMarker(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> marker: `0`|`10`|`11`|`12`|`1`...(+9)
 ```
 > Retrieves the overhead marker ID for the specified unit.
 > 
@@ -4315,7 +4315,7 @@ RACE_ID:
 
 #### Method: GetOverHeadMarkerUnitId
 ```lua
-(method) X2Unit:GetOverHeadMarkerUnitId(markerIndex: MARKER)
+(method) X2Unit:GetOverHeadMarkerUnitId(markerIndex: `10`|`11`|`12`|`1`|`2`...(+7))
   -> unitId: string|nil
 ```
 > Retrieves the unit ID associated with the given overhead marker index.
@@ -4343,7 +4343,7 @@ RACE_ID:
 
 #### Method: UnitDeBuff
 ```lua
-(method) X2Unit:UnitDeBuff(unit: UNIT, deBuffIndex: number)
+(method) X2Unit:UnitDeBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number)
   -> unitDebuffInfo: BuffInfo
 ```
 > Retrieves debuff information for the specified buff index of the unit if in
@@ -4532,7 +4532,7 @@ RACE_ID:
 
 #### Method: GetUnitWorldPositionByTarget
 ```lua
-(method) X2Unit:GetUnitWorldPositionByTarget(unit: UNIT, isLocal: boolean)
+(method) X2Unit:GetUnitWorldPositionByTarget(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), isLocal: boolean)
   -> x: number|nil
   2. y: number|nil
   3. z: number|nil
@@ -4717,7 +4717,7 @@ RACE_ID:
 
 #### Method: UnitBuffCount
 ```lua
-(method) X2Unit:UnitBuffCount(unit: UNIT)
+(method) X2Unit:UnitBuffCount(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> unitBuffCount: number
 ```
 > Retrieves the number of buffs on the specified unit if in render range.
@@ -4890,7 +4890,7 @@ RACE_ID:
 
 #### Method: UnitBuffTooltip
 ```lua
-(method) X2Unit:UnitBuffTooltip(unit: UNIT, buffIndex: number, neededInfo?: BUFF_INFO_KIND)
+(method) X2Unit:UnitBuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
   -> unitBuffTooltip: BuffTooltip|nil
 ```
 > Retrieves the buff tooltip for the specified buff index of the unit if in
@@ -5080,7 +5080,7 @@ RACE_ID:
 
 #### Method: GetUnitScreenPosition
 ```lua
-(method) X2Unit:GetUnitScreenPosition(unit: UNIT)
+(method) X2Unit:GetUnitScreenPosition(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
   -> x: number|nil
   2. y: number|nil
   3. z: number|nil
@@ -5260,7 +5260,7 @@ RACE_ID:
 
 #### Method: UnitBuff
 ```lua
-(method) X2Unit:UnitBuff(unit: UNIT, buffIndex: number)
+(method) X2Unit:UnitBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number)
   -> unitBuffInfo: BuffInfo
 ```
 > Retrieves buff information for the specified buff index of the unit if in
@@ -5444,7 +5444,7 @@ RACE_ID:
 
 #### Method: SetOverHeadMarker
 ```lua
-(method) X2Unit:SetOverHeadMarker(unit: UNIT, markerIndex: MARKER)
+(method) X2Unit:SetOverHeadMarker(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), markerIndex: `10`|`11`|`12`|`1`|`2`...(+7))
 ```
 > Set a over head marker. Cooldown 1s.
 > 
@@ -5631,7 +5631,7 @@ RACE_ID:
 
 #### Method: UnitRemovableDebuffTooltip
 ```lua
-(method) X2Unit:UnitRemovableDebuffTooltip(unit: UNIT, deBuffIndex: number, neededInfo?: BUFF_INFO_KIND)
+(method) X2Unit:UnitRemovableDebuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
   -> removableDebuffTooltip: BuffInfo|nil
 ```
 > Retrieves the removable debuff tooltip for the specified buff index of the

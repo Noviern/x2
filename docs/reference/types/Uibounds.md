@@ -40,7 +40,7 @@
 ### Class: Uibounds
 #### Method: AddAnchor
 ```lua
-(method) Uibounds:AddAnchor(anchor: ANCHOR_POINT, x: number, y: number)
+(method) Uibounds:AddAnchor(anchor: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4), x: number, y: number)
 ```
 > Aligns the UI bounds to the specified anchor point at the given coordinates.
 > 
@@ -170,7 +170,7 @@
 
 #### Method: AddAnchor
 ```lua
-(method) Uibounds:AddAnchor(anchor: ANCHOR_POINT, parentId: "UIParent"|Drawablebase|Widget, x: number, y: number)
+(method) Uibounds:AddAnchor(anchor: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4), parentId: "UIParent"|Drawablebase|Widget, x: number, y: number)
 ```
 > Aligns the UI bounds to the specified anchor point at the given coordinates.
 > 
@@ -231,7 +231,7 @@
 
 #### Method: AddAnchor
 ```lua
-(method) Uibounds:AddAnchor(anchorPoint: ANCHOR_POINT, parentId: "UIParent"|Drawablebase|Widget, anchorOrigin: ANCHOR_POINT, x: number, y: number)
+(method) Uibounds:AddAnchor(anchorPoint: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4), parentId: "UIParent"|Drawablebase|Widget, anchorOrigin: "BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4), x: number, y: number)
 ```
 > Aligns the UI bounds' anchor point to the specified parent and origin at the
 > given coordinates.

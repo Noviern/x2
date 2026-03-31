@@ -55,7 +55,7 @@
 ## Aliases
 **HOUSING_LIST_FILTER**
 
-HOUSING_LIST_FILTER
+`HOUSING_LIST_FILTER_ALL`|`HOUSING_LIST_FILTER_FARM`|`HOUSING_LIST_FILTER_FLOATING`|`HOUSING_LIST_FILTER_HOUSE_NAME`|`HOUSING_LIST_FILTER_LARGE`...(+7)
 
 ```lua
 -- api/X2Resident
@@ -78,7 +78,7 @@ HOUSING_LIST_FILTER:
 ### Class: X2Resident
 #### Method: FilterHousingTradeList
 ```lua
-(method) X2Resident:FilterHousingTradeList(filterindex: HOUSING_LIST_FILTER, searchWord: string)
+(method) X2Resident:FilterHousingTradeList(filterindex: `HOUSING_LIST_FILTER_ALL`|`HOUSING_LIST_FILTER_FARM`|`HOUSING_LIST_FILTER_FLOATING`|`HOUSING_LIST_FILTER_HOUSE_NAME`|`HOUSING_LIST_FILTER_LARGE`...(+7), searchWord: string)
   -> unknown: boolean
 ```
 > Searches for housing trade listings in the current zone with the given
@@ -107,7 +107,7 @@ HOUSING_LIST_FILTER:
 
 #### Method: RefreshResidentMembers
 ```lua
-(method) X2Resident:RefreshResidentMembers(zoneGroupType: ZONE_GROUP_ID, offline: boolean, startIndex: number)
+(method) X2Resident:RefreshResidentMembers(zoneGroupType: `0`|`100`|`101`|`102`|`103`...(+151), offline: boolean, startIndex: number)
 ```
 > Refreshes the list of members shown on the resident board.
 > The resident board must be open for the refresh to take effect.
@@ -281,7 +281,7 @@ HOUSING_LIST_FILTER:
 
 #### Method: GetResidentMembers
 ```lua
-(method) X2Resident:GetResidentMembers(zoneGroupType: ZONE_GROUP_ID, offline: boolean, startIndex: number)
+(method) X2Resident:GetResidentMembers(zoneGroupType: `0`|`100`|`101`|`102`|`103`...(+151), offline: boolean, startIndex: number)
 ```
 > Gets a list of resident members and displays them on the resident board.
 > The resident board must be open for the list to appear.
@@ -455,7 +455,7 @@ HOUSING_LIST_FILTER:
 
 #### Method: GetResidentBoardContent
 ```lua
-(method) X2Resident:GetResidentBoardContent(boardType: RESIDENT_BOARD_TYPE)
+(method) X2Resident:GetResidentBoardContent(boardType: `1`|`2`|`3`|`4`|`5`...(+2))
   -> residentBoardContent: ResidentBoardContent
 ```
 > Retrieves resident board content for the specified board type in the current
@@ -480,7 +480,7 @@ HOUSING_LIST_FILTER:
 
 #### Method: RequestHousingTradeList
 ```lua
-(method) X2Resident:RequestHousingTradeList(zoneGroupType: ZONE_GROUP_ID, filterindex: HOUSING_LIST_FILTER, searchWord: string)
+(method) X2Resident:RequestHousingTradeList(zoneGroupType: `0`|`100`|`101`|`102`|`103`...(+151), filterindex: `HOUSING_LIST_FILTER_ALL`|`HOUSING_LIST_FILTER_FARM`|`HOUSING_LIST_FILTER_FLOATING`|`HOUSING_LIST_FILTER_HOUSE_NAME`|`HOUSING_LIST_FILTER_LARGE`...(+7), searchWord: string)
 ```
 > Searches for housing trade listings in the specified zone with the given
 > filter and search word, triggering the `RESIDENT_HOUSING_TRADE_LIST` event.

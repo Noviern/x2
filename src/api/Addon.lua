@@ -178,7 +178,7 @@ TRADE_TEXT = 16                                   -- api/Addon UI_TEXT_CATEGORY_
 TRIAL_TEXT = 113                                  -- api/Addon UI_TEXT_CATEGORY_ID
 TUTORIAL_TEXT = 15                                -- api/Addon UI_TEXT_CATEGORY_ID
 UCC_TEXT = 73                                     -- api/Addon UI_TEXT_CATEGORY_ID
-UCST_UNIT = 41                                    -- api/Addon
+UCST_UNIT = 42                                    -- api/Addon
 UI = UIParent                                     -- api/Addon UIParent
 UIC_ABILITY_CHANGE = 57                           -- api/Addon UI_CATEGORY
 UIC_ACHIEVEMENT = 25                              -- api/Addon UI_CATEGORY
@@ -858,6 +858,7 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---@param iconKey ESC_MENU_ICON_KEY The icon key for the button.
 ---@param name string The name of the button.
 ---@param data? EscMenuButtonData Optional data for the button. If this is set it will override the `iconKey`.
+---@param badgeData? EscMenuBadgeData Optional data for the badge button.
 ---@usage
 ---```lua
 ---ADDON:AddEscMenuButton(5, 1300, "", "example", {
@@ -865,7 +866,8 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---})
 ---```
 ---@see EscMenuButtonData
-function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data) end
+---@see EscMenuBadgeData
+function ADDON:AddEscMenuButton(categoryId, uiCategory, iconKey, name, data, badgeData) end
 
 ---Logs a message to the chat under `CMF_SYSTEM`.
 ---@param logMessage string The message to log.
@@ -992,6 +994,12 @@ function ADDON:ShowContent(uiCategory, show, data) end
 ---ADDON:ToggleContent(UIC_MY_CUSTOM_WIDGET, { hello = "world" })
 ---```
 function ADDON:ToggleContent(uiCategory, data) end
+
+---Updates the escape menu badge button for the UI category.
+---@param uiContentType UI_CATEGORY
+---@param buttonValue number
+---@param colorKey string
+function ADDON:UpdateEscMenuButton(uiContentType, buttonValue, colorKey) end
 
 ---Clears the UI bound associated with the specified UI key. Reload
 ---(or character select) required to update the UI.

@@ -27,7 +27,7 @@
 ## Aliases
 **PORTAL_SEARCH_COLUMN**
 
-PORTAL_SEARCH_COLUMN
+`PSC_ALL`|`PSC_NAME`|`PSC_WORLD`|`PSC_ZONE`
 
 ```lua
 -- api/X2Warp

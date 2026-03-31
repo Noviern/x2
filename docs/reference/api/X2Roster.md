@@ -23,7 +23,7 @@
 ## Aliases
 **ROSTER_ROLE**
 
-ROSTER_ROLE
+`ROSTER_ROLE_MAIL`|`ROSTER_ROLE_MANAGE`|`ROSTER_ROLE_MAX`
 
 ```lua
 -- api/X2Roster

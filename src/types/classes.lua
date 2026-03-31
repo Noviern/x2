@@ -11,6 +11,11 @@
 ---@field subItems ListCtrlItemSubItem[]
 ---@field eventWindow Window ---@TODO: unsure what this is for.
 
+---@class EscMenuBadgeData
+---@field buttonType ESC_MENU_BUTTON_TYPE
+---@field buttonValue number|nil 0 disable, 1 and more enable or show
+---@field colorKey string|nil ui/common/default.g > text_badge_bg.colors
+
 ---@class EscMenuButtonData
 ---@field path string Addon/{addonname}/example.dds
 ---@field x number|nil

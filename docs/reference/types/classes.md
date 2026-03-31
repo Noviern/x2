@@ -2,7 +2,7 @@
 ## Aliases
 **ListCtrlItemSubItem**
 
-ListCtrlItemSubItem
+Button|SubItemString|Textbox|Window
 
 [Button](lua://Button)
 
@@ -67,7 +67,7 @@ AchievementSubCategory[]
 ### Class: AchievementInfo
 #### Field: achievementKind
 ```lua
-ENUM_ACHIEVEMENT_KIND
+`EAK_ACHIEVEMENT`|`EAK_ARCHERAGE`|`EAK_COLLECTION`|`EAK_RACIAL_MISSION`
 ```
 > api/X2Achievement
 
@@ -109,7 +109,7 @@ RewardInfo|nil
 
 #### Field: subCategoryType
 ```lua
-EAK_SUBCATEGORY_TYPE
+`10`|`11`|`12`|`13`|`14`...(+53)
 ```
 
 
@@ -226,7 +226,7 @@ string
 
 #### Field: subCategoryType
 ```lua
-EAK_SUBCATEGORY_TYPE
+`10`|`11`|`12`|`13`|`14`...(+53)
 ```
 
 
@@ -239,7 +239,7 @@ string
 
 #### Field: subCategoryType
 ```lua
-EAK_SUBCATEGORY_TYPE
+`10`|`11`|`12`|`13`|`14`...(+53)
 ```
 
 
@@ -372,7 +372,7 @@ string
 
 #### Field: type
 ```lua
-ABILITY_TYPE
+`10`|`11`|`12`|`14`|`1`...(+10)
 ```
 > api/X2Ability
 
@@ -573,7 +573,7 @@ number
 ### Class: BaseLinkInfo
 #### Field: linkType
 ```lua
-LINKTYPE
+"character"|"craft"|"invalid"|"item"|"none"...(+4)
 ```
 
 
@@ -870,7 +870,7 @@ boolean
 
 #### Field: displayLocale
 ```lua
-LOCALE
+`LOCALE_DE`|`LOCALE_EN_SG`|`LOCALE_EN_US`|`LOCALE_FR`|`LOCALE_IND`...(+7)
 ```
 > api/X2Chat
 
@@ -883,7 +883,7 @@ string
 ### Class: CacheData
 #### Field: cacheType
 ```lua
-CT
+`CT_ABILITY`|`CT_EXPEDITION_NAME`|`CT_NAME`
 ```
 > types/Widget
 > Cache Type
@@ -999,7 +999,7 @@ boolean|nil
 
 #### Field: messageLocale
 ```lua
-LOCALE|nil
+`LOCALE_DE`|`LOCALE_EN_SG`|`LOCALE_EN_US`|`LOCALE_FR`|`LOCALE_IND`...(+8)
 ```
 > api/X2Chat
 
@@ -1063,7 +1063,7 @@ number
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -1114,7 +1114,7 @@ any
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -1127,7 +1127,7 @@ any
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -1154,19 +1154,19 @@ boolean
 
 #### Field: source
 ```lua
-COLLISION_SOURCE
+"COLLISION"|"DROWNING"|"FALLING"
 ```
 
 
 #### Field: subType
 ```lua
-COLLISION_PART
+`COLLISION_PART_BOTTOM`|`COLLISION_PART_FRONT`|`COLLISION_PART_REAR`|`COLLISION_PART_SIDE`|`COLLISION_PART_TOP`
 ```
 > api/X2Chat
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -1209,13 +1209,13 @@ any
 
 #### Field: source
 ```lua
-COLLISION_SOURCE
+"COLLISION"|"DROWNING"|"FALLING"
 ```
 
 
 #### Field: subType
 ```lua
-COLLISION_PART
+`COLLISION_PART_BOTTOM`|`COLLISION_PART_FRONT`|`COLLISION_PART_REAR`|`COLLISION_PART_SIDE`|`COLLISION_PART_TOP`
 ```
 > api/X2Chat
 
@@ -1255,7 +1255,7 @@ any
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -1270,7 +1270,7 @@ number
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -1443,7 +1443,7 @@ boolean
 
 #### Field: uiType
 ```lua
-COMBAT_RESOURCE_UITYPE
+`CRU_DOUBLE_GAUGE_2`|`CRU_DOUBLE_GAUGE`|`CRU_GAUGE`|`CRU_OVERLAP`
 ```
 > api/X2CombatResource
 
@@ -1524,7 +1524,7 @@ boolean
 
 #### Field: uiType
 ```lua
-COMBAT_RESOURCE_UITYPE
+`CRU_DOUBLE_GAUGE_2`|`CRU_DOUBLE_GAUGE`|`CRU_GAUGE`|`CRU_OVERLAP`
 ```
 > api/X2CombatResource
 
@@ -1729,7 +1729,7 @@ number
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -1798,7 +1798,7 @@ number
 
 #### Field: powerType
 ```lua
-POWER_TYPE
+"HEALTH"|"MANA"
 ```
 
 
@@ -2003,7 +2003,7 @@ number
 
 #### Field: craftGrade
 ```lua
-ITEM_GRADE_TYPE
+`0`|`10`|`11`|`12`|`1`...(+8)
 ```
 
 
@@ -2305,7 +2305,7 @@ number
 
 #### Field: craftGrade
 ```lua
-ITEM_GRADE_TYPE
+`0`|`10`|`11`|`12`|`1`...(+8)
 ```
 
 
@@ -2696,7 +2696,7 @@ string|nil
 
 #### Field: permission
 ```lua
-DOODAD_PERMISSION|nil
+`1`|`2`|`3`|`4`|`5`...(+2)
 ```
 
 
@@ -2812,7 +2812,7 @@ string
 ### Class: EscMenuAddButtonInfo
 #### Field: categoryId
 ```lua
-ESC_MENU_CATEGORY_ID
+`1`|`2`|`3`|`4`|`5`
 ```
 > Taken from db ui_esc_menu_categories
 
@@ -2824,15 +2824,34 @@ string
 
 #### Field: iconKey
 ```lua
-ESC_MENU_ICON_KEY
+""|"achievement"|"auction"|"bag"|"butler"...(+26)
 ```
 > ui/common/esc_menu.g
 
 #### Field: uiContentType
 ```lua
-UI_CATEGORY
+`UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121)
 ```
 > api/Addon
+
+### Class: EscMenuBadgeData
+#### Field: buttonType
+```lua
+`1`|`2`|`3`
+```
+
+
+#### Field: buttonValue
+```lua
+number|nil
+```
+> 0 disable, 1 and more enable or show
+
+#### Field: colorKey
+```lua
+string|nil
+```
+> ui/common/default.g > text_badge_bg.colors
 
 ### Class: EscMenuButtonData
 #### Field: h
@@ -2981,7 +3000,7 @@ FactionPointInfo[]
 
 #### Field: winFaction
 ```lua
-FACTION_TYPE
+`101`|`102`|`103`|`104`|`105`...(+124)
 ```
 > api/Addon
 > db > system_factions
@@ -2989,7 +3008,7 @@ FACTION_TYPE
 ### Class: FactionPointInfo
 #### Field: factionId
 ```lua
-FACTION_TYPE
+`101`|`102`|`103`|`104`|`105`...(+124)
 ```
 > api/Addon
 > db > system_factions
@@ -3106,7 +3125,7 @@ number|nil
 
 #### Field: animType
 ```lua
-DRAWABLE_ANIMATION_TYPE|LINEAR_ANIMATION_TYPE|nil
+`DAT_LINEAR_ALPHA`|`DAT_LINEAR_SCALE`|`DAT_MOVE`|`LAT_AFTERIMAGE`|`LAT_COUNT`...(+5)
 ```
 > This can add multiple LINEAR_ANIMATION_TYPE
 
@@ -3125,7 +3144,7 @@ number|nil
 
 #### Field: [5]
 ```lua
-RACE_ID
+`RACE_DARU`|`RACE_DWARF`|`RACE_ELF`|`RACE_FAIRY`|`RACE_FERRE`...(+5)
 ```
 > api/X2Unit
 
@@ -3173,14 +3192,14 @@ string
 
 #### Field: [9]
 ```lua
-FACTION_TYPE
+`101`|`102`|`103`|`104`|`105`...(+124)
 ```
 > Faction
 
 ### Class: GachaLootPackItemLog
 #### Field: itemGrade
 ```lua
-ITEM_GRADE_TYPE
+`0`|`10`|`11`|`12`|`1`...(+8)
 ```
 
 
@@ -3199,7 +3218,7 @@ number
 ### Class: GachaLootPackItemResult
 #### Field: grade
 ```lua
-ITEM_GRADE_TYPE
+`0`|`10`|`11`|`12`|`1`...(+8)
 ```
 
 
@@ -3769,7 +3788,7 @@ number
 
 #### Field: linkKind
 ```lua
-LINKKIND_STR|nil
+"auciton"|"coffer"|"guildBank"|nil
 ```
 
 
@@ -3919,7 +3938,7 @@ boolean
 
 #### Field: securityState
 ```lua
-ITEM_SECURITY
+`ITEM_SECURITY_INVALID`|`ITEM_SECURITY_LOCKED`|`ITEM_SECURITY_UNLOCKED`|`ITEM_SECURITY_UNLOCKING`
 ```
 > api/X2Item
 
@@ -4240,7 +4259,7 @@ number
 
 #### Field: linkKind
 ```lua
-LINKKIND_NUM
+`1`|`2`|`3`
 ```
 
 
@@ -4264,7 +4283,7 @@ boolean
 
 #### Field: itemGrade
 ```lua
-ITEM_GRADE_TYPE
+`0`|`10`|`11`|`12`|`1`...(+8)
 ```
 
 
@@ -4473,7 +4492,7 @@ Window
 
 #### Field: subItems
 ```lua
-ListCtrlItemSubItem[]
+Button|SubItemString|Textbox|Window[]
 ```
 
 
@@ -4658,7 +4677,7 @@ number
 
 #### Field: zoneGroupName
 ```lua
-ZONE_NAME
+"Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143)
 ```
 
 
@@ -4674,7 +4693,7 @@ Extends [BaseLinkInfo](../types/BaseLinkInfo.md#class-baselinkinfo)
 ### Class: NpcBroadcastingInfo
 #### Field: broadcastingType
 ```lua
-NPC_INFORMATION_BROAD_CAST
+`NIBC_BUFF_LEFT_TIME`|`NIBC_BUFF_STACK`
 ```
 > api/X2BattleField
 
@@ -4717,13 +4736,13 @@ string
 
 #### Field: name
 ```lua
-ZONE_NAME
+"Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143)
 ```
 
 
 #### Field: zoneGroup
 ```lua
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Obtained from db zone_groups
 
@@ -4805,7 +4824,7 @@ number
 ### Class: QuestItem
 #### Field: order
 ```lua
-QUEST_MARK_ORDER
+`QUEST_MARK_ORDER_DAILY_HUNT`|`QUEST_MARK_ORDER_DAILY`|`QUEST_MARK_ORDER_LIVELIHOOD`|`QUEST_MARK_ORDER_MAIN`|`QUEST_MARK_ORDER_NORMAL`...(+2)
 ```
 > api/X2Quest
 
@@ -4952,7 +4971,7 @@ number
 
 #### Field: role
 ```lua
-TEAM_ROLE
+`TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
 ```
 > api/X2Team
 
@@ -5282,7 +5301,7 @@ number
 
 #### Field: zoneId
 ```lua
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Obtained from db zone_groups
 
@@ -5542,7 +5561,7 @@ number
 
 #### Field: specialtyZone
 ```lua
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Obtained from db zone_groups
 
@@ -5604,13 +5623,13 @@ number
 ### Class: SiegeInfo
 #### Field: action
 ```lua
-SIEGE_ACTION
+"change_state"|"ignore"
 ```
 
 
 #### Field: periodName
 ```lua
-SIEGE_PERIOD_NAME
+"siege_period_hero_volunteer"|"siege_period_peace"
 ```
 
 
@@ -5622,7 +5641,7 @@ string
 
 #### Field: zoneGroupName
 ```lua
-ZONE_NAME
+"Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143)
 ```
 
 
@@ -5646,7 +5665,7 @@ boolean
 
 #### Field: zoneGroupType
 ```lua
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Obtained from db zone_groups
 
@@ -5666,7 +5685,7 @@ SiegeRaidZoneInfo
 ### Class: SiegeRaidMemberInfo
 #### Field: ability
 ```lua
-ABILITY_TYPE[]
+`10`|`11`|`12`|`14`|`1`...(+10)[]
 ```
 
 
@@ -6373,7 +6392,7 @@ string
 
 #### Field: specialtyZone
 ```lua
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Obtained from db zone_groups
 
@@ -6526,7 +6545,7 @@ string
 
 #### Field: zoneGroupType
 ```lua
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Obtained from db zone_groups
 
@@ -6779,7 +6798,7 @@ TargetAbilityTemplate
 ### Class: TargetAbilityTemplate
 #### Field: index
 ```lua
-number|ABILITY_TYPE
+number|`10`|`11`|`12`|`14`...(+11)
 ```
 > api/X2Ability
 
@@ -7163,13 +7182,13 @@ string
 
 #### Field: tooltipType
 ```lua
-TOOLTIP_TYPE
+"carrying_backpack_slave"|"commonFarm"|"common_farm"|"conquest"|"corpse"...(+7)
 ```
 
 
 #### Field: kind
 ```lua
-TOOLTIP_KIND|nil
+"big_sailing_ship"|"boat"|"fishboat"|"gubuk"|"leviathan"...(+8)
 ```
 > db ui_texts category_id 100
 
@@ -7211,20 +7230,20 @@ string|nil
 
 #### Field: factionId
 ```lua
-FACTION_TYPE|nil
+`101`|`102`|`103`|`104`|`105`...(+125)
 ```
 > api/Addon
 > db > system_factions
 
 #### Field: factions
 ```lua
-FACTION_TYPE[]|nil
+`101`|`102`|`103`|`104`|`105`...(+124)[]|nil
 ```
 
 
 #### Field: zoneId
 ```lua
-ZONE_GROUP_ID|nil
+`0`|`100`|`101`|`102`|`103`...(+152)
 ```
 > Obtained from db zone_groups
 
@@ -7261,7 +7280,7 @@ string
 
 #### Field: zoneGroup
 ```lua
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 ```
 > Obtained from db zone_groups
 
@@ -7307,38 +7326,38 @@ string
 ### Class: UnitClass
 #### Field: [1]
 ```lua
-ABILITY_TYPE
+`10`|`11`|`12`|`14`|`1`...(+10)
 ```
 > api/X2Ability
 
 #### Field: [2]
 ```lua
-ABILITY_TYPE
+`10`|`11`|`12`|`14`|`1`...(+10)
 ```
 > api/X2Ability
 
 #### Field: [3]
 ```lua
-ABILITY_TYPE
+`10`|`11`|`12`|`14`|`1`...(+10)
 ```
 > api/X2Ability
 
 ### Class: UnitClassNames
 #### Field: [1]
 ```lua
-ABILITY_TYPE_NAME
+"adamant"|"assassin"|"death"|"fight"|"hatred"...(+9)
 ```
 
 
 #### Field: [2]
 ```lua
-ABILITY_TYPE_NAME
+"adamant"|"assassin"|"death"|"fight"|"hatred"...(+9)
 ```
 
 
 #### Field: [3]
 ```lua
-ABILITY_TYPE_NAME
+"adamant"|"assassin"|"death"|"fight"|"hatred"...(+9)
 ```
 
 
@@ -7460,7 +7479,7 @@ string
 
 #### Field: type
 ```lua
-UNIT_INFO_TYPE
+"character"|"housing"|"mate"|"npc"|"shipyard"...(+2)
 ```
 
 
@@ -7538,19 +7557,19 @@ number
 ### Class: WorldMessageInfo
 #### Field: factionName
 ```lua
-FACTION_NAME
+"170906 DO NOT TRANSLATE"|"184394 DO NOT TRANSLATE"|"27499 DO NOT TRANSLATE"|"27500 DO NOT TRANSLATE"|"27501 DO NOT TRANSLATE"...(+115)
 ```
 > Obtained from db system_factions.name
 
 #### Field: trgFactionName
 ```lua
-FACTION_NAME
+"170906 DO NOT TRANSLATE"|"184394 DO NOT TRANSLATE"|"27499 DO NOT TRANSLATE"|"27500 DO NOT TRANSLATE"|"27501 DO NOT TRANSLATE"...(+115)
 ```
 > Obtained from db system_factions.name
 
 #### Field: trgMotherFactionName
 ```lua
-FACTION_NAME
+"170906 DO NOT TRANSLATE"|"184394 DO NOT TRANSLATE"|"27499 DO NOT TRANSLATE"|"27500 DO NOT TRANSLATE"|"27501 DO NOT TRANSLATE"...(+115)
 ```
 > Obtained from db system_factions.name
 
@@ -7568,7 +7587,7 @@ SEXTANT
 
 #### Field: motherFactionName
 ```lua
-FACTION_NAME
+"170906 DO NOT TRANSLATE"|"184394 DO NOT TRANSLATE"|"27499 DO NOT TRANSLATE"|"27500 DO NOT TRANSLATE"|"27501 DO NOT TRANSLATE"...(+115)
 ```
 > Obtained from db system_factions.name
 
@@ -7580,7 +7599,7 @@ string
 
 #### Field: zoneGroupName
 ```lua
-ZONE_NAME
+"Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143)
 ```
 
 
@@ -7606,7 +7625,7 @@ string
 ### Class: ZoneStateInfo
 #### Field: conflictState
 ```lua
-HP_WORLD_STATE
+`-1`|`HPWS_BATTLE`|`HPWS_PEACE`|`HPWS_TROUBLE_0`|`HPWS_TROUBLE_1`...(+4)
 ```
 > api/X2Dominion
 
@@ -7726,7 +7745,7 @@ boolean
 
 #### Field: zoneName
 ```lua
-ZONE_NAME
+"Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143)
 ```
 
 

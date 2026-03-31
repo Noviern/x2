@@ -21,6 +21,7 @@ ADDON = {
   SetAddonEnable = "<function ADDON>",
   ShowContent = "<function ADDON>",
   ToggleContent = "<function ADDON>",
+  UpdateEscMenuButton = "<function ADDON>",
 }
 ATTRIBUTE_TEXT = 44
 ATTRIBUTE_VARIATION_TEXT = 135
@@ -195,7 +196,7 @@ TRADE_TEXT = 16
 TRIAL_TEXT = 113
 TUTORIAL_TEXT = 15
 UCC_TEXT = 73
-UCST_UNIT = 41
+UCST_UNIT = 42
 UI = {
   ClearUIBound = "<function UI>",
   CreateWidget = "<function UI>",
@@ -472,6 +473,7 @@ X2 = {
   SetAddonEnable = "<function ADDON>",
   ShowContent = "<function ADDON>",
   ToggleContent = "<function ADDON>",
+  UpdateEscMenuButton = "<function ADDON>",
 }
 ZST_CONQUEST_WAR = 1
 ZST_INVALID = 0

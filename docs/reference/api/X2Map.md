@@ -627,7 +627,7 @@
 ## Aliases
 **FILTER**
 
-FILTER
+`FILTER_DOODAD`|`FILTER_HOUSE`|`FILTER_INVALID`|`FILTER_NPC`|`FILTER_STRUCTURE`
 
 ```lua
 -- api/X2Map
@@ -641,7 +641,7 @@ FILTER:
 
 **MAP_STRUCTURE_TYPE**
 
-MAP_STRUCTURE_TYPE
+`MST_BOSS`|`MST_COMMON_FARM`|`MST_CORPSE_POS`|`MST_DOODAD_ALCHEMY`|`MST_DOODAD_ARCHIUM`...(+145)
 
 ```lua
 -- api/X2Map
@@ -802,7 +802,7 @@ MAP_STRUCTURE_TYPE:
 ### Class: X2Map
 #### Method: GetZoneStateInfoByZoneId
 ```lua
-(method) X2Map:GetZoneStateInfoByZoneId(zoneId: ZONE_GROUP_ID)
+(method) X2Map:GetZoneStateInfoByZoneId(zoneId: `0`|`100`|`101`|`102`|`103`...(+151))
   -> zoneStateInfo: ZoneStateInfo|nil
 ```
 > Retrieves zone state information for the specified zone ID if it exists.
@@ -976,7 +976,7 @@ MAP_STRUCTURE_TYPE:
 
 #### Method: ShowWorldmapLocation
 ```lua
-(method) X2Map:ShowWorldmapLocation(zoneId: ZONE_GROUP_ID, x: number, y: number, z: number)
+(method) X2Map:ShowWorldmapLocation(zoneId: `0`|`100`|`101`|`102`|`103`...(+151), x: number, y: number, z: number)
 ```
 > Opens the world map and highlights the specified location.
 > 

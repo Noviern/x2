@@ -95,7 +95,7 @@
 ## Aliases
 **CHAT_BUBBLE_KIND**
 
-CHAT_BUBBLE_KIND
+`CBK_NORMAL`|`CBK_SYSTEM`|`CBK_THINK`
 
 ```lua
 -- api/X2Quest
@@ -107,7 +107,7 @@ CHAT_BUBBLE_KIND:
 
 **DAY_OF_WEEK**
 
-DAY_OF_WEEK
+`DOW_FRIDAY`|`DOW_INVALID`|`DOW_MONDAY`|`DOW_SATURDAY`|`DOW_SUNDAY`...(+3)
 
 ```lua
 -- api/X2Quest
@@ -124,7 +124,7 @@ DAY_OF_WEEK:
 
 **QUEST_MARK_ORDER**
 
-QUEST_MARK_ORDER
+`QUEST_MARK_ORDER_DAILY_HUNT`|`QUEST_MARK_ORDER_DAILY`|`QUEST_MARK_ORDER_LIVELIHOOD`|`QUEST_MARK_ORDER_MAIN`|`QUEST_MARK_ORDER_NORMAL`...(+2)
 
 ```lua
 -- api/X2Quest
@@ -159,6 +159,17 @@ QUEST_MARK_ORDER:
 > @*param* `questType` — The quest ID.
 > 
 > @*return* `completed` — `true` if the quest is completed, `false` otherwise.
+
+#### Method: IsReadyForCompleteQuest
+```lua
+(method) X2Quest:IsReadyForCompleteQuest(questType: number)
+  -> isReadyForComplete: boolean
+```
+> Checks if the specified quest is complete and ready to turn in.
+> 
+> @*param* `questType` — The quest ID.
+> 
+> @*return* `isReadyForComplete` — `true` if the quest is complete and ready to turn in, `false` otherwise.
 
 #### Method: GetQuestContextMainTitle
 ```lua

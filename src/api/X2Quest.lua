@@ -75,6 +75,12 @@ function X2Quest:GetQuestContextMainTitle(questType) end
 ---@nodiscard
 function X2Quest:IsCompleted(questType) end
 
+---Checks if the specified quest is complete and ready to turn in.
+---@param questType number The quest ID.
+---@return boolean isReadyForComplete `true` if the quest is complete and ready to turn in, `false` otherwise.
+---@nodiscard
+function X2Quest:IsReadyForCompleteQuest(questType) end
+
 ---@FIXME: Broken? Tried both active quest index and quest ID.
 ---Sets the specified quest as the active tracked quest.
 ---@param idx number The quest index or ID to track (type unclear).

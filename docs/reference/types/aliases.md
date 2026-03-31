@@ -2,7 +2,7 @@
 ## Aliases
 **ABILITY_TYPE_NAME**
 
-ABILITY_TYPE_NAME
+"adamant"|"assassin"|"death"|"fight"|"hatred"...(+9)
 
 ```lua
 ABILITY_TYPE_NAME:
@@ -24,7 +24,7 @@ ABILITY_TYPE_NAME:
 
 **ACTABILITY_GRADE**
 
-ACTABILITY_GRADE
+"Adept"|"Amateur"|"Authority"|"Celebrity"|"Champion"...(+7)
 
 ```lua
 -- db expert_limits
@@ -45,7 +45,7 @@ ACTABILITY_GRADE:
 
 **ACTABILITY_ID**
 
-ACTABILITY_ID
+`10`|`11`|`12`|`13`|`14`...(+32)
 
 ```lua
 -- db actability_groups
@@ -91,7 +91,7 @@ ACTABILITY_ID:
 
 **ACTABILITY_NAME**
 
-ACTABILITY_NAME
+"Alchemy"|"Artistry"|"Carpentry"|"Commerce"|"Construction"...(+32)
 
 ```lua
 -- db actability_groups
@@ -137,7 +137,7 @@ ACTABILITY_NAME:
 
 **ANCHOR_POINT**
 
-ANCHOR_POINT
+"BOTTOM"|"BOTTOMLEFT"|"BOTTOMRIGHT"|"CENTER"|"LEFT"...(+4)
 
 ```lua
 ANCHOR_POINT:
@@ -154,7 +154,7 @@ ANCHOR_POINT:
 
 **ANIMATION**
 
-ANIMATION
+"ac_steer_idle"|"ac_steer_l_01"|"ac_steer_r_01"|"additive_all_co_combat_miss"|"additive_all_re_combat_confuse"...(+2286)
 
 ```lua
 -- db > anim_actions + animations/
@@ -2454,7 +2454,7 @@ ANIMATION:
 
 **API**
 
-API
+`10`|`11`|`12`|`13`|`14`...(+80)
 
 ```lua
 API:
@@ -2547,7 +2547,7 @@ API:
 
 **AUCTION_CATEGORY**
 
-AUCTION_CATEGORY
+`0`|`10`|`11`|`12`|`13`...(+76)
 
 ```lua
 AUCTION_CATEGORY:
@@ -2636,7 +2636,7 @@ AUCTION_CATEGORY:
 
 **AUCTION_GRADE_FILTER**
 
-AUCTION_GRADE_FILTER
+`10`|`11`|`12`|`13`|`1`...(+8)
 
 ```lua
 AUCTION_GRADE_FILTER:
@@ -2657,7 +2657,7 @@ AUCTION_GRADE_FILTER:
 
 **AUTOCOMPLETE_FILTER**
 
-AUTOCOMPLETE_FILTER
+""|"auctionable"|"craftMaterial"|"craftProduct"
 
 ```lua
 AUTOCOMPLETE_FILTER:
@@ -2669,7 +2669,7 @@ AUTOCOMPLETE_FILTER:
 
 **AUTOCOMPLETE_TYPE**
 
-AUTOCOMPLETE_TYPE
+"appellation"|"ingameShopGoods"|"item"|"itemForDebug"|"itemTypeForDebug"...(+1)
 
 ```lua
 AUTOCOMPLETE_TYPE:
@@ -2683,7 +2683,7 @@ AUTOCOMPLETE_TYPE:
 
 **AVI_PATH**
 
-AVI_PATH
+"objects/machinima/avi/all_01_recruit.avi"|"objects/machinima/avi/all_02_memory.avi"|"objects/machinima/avi/all_04_son.avi"|"objects/machinima/avi/all_15_plateau.avi"|"objects/machinima/avi/all_16_river.avi"...(+178)
 
 ```lua
 AVI_PATH:
@@ -2874,7 +2874,7 @@ AVI_PATH:
 
 **BEAUTY_SHOP_ZOOM**
 
-BEAUTY_SHOP_ZOOM
+`-1`|`0`|`1`|`2`
 
 ```lua
 BEAUTY_SHOP_ZOOM:
@@ -2886,7 +2886,7 @@ BEAUTY_SHOP_ZOOM:
 
 **BIND_TYPE**
 
-BIND_TYPE
+"buff"|"function"|"item"|"none"|"pet_skill"...(+2)
 
 ```lua
 BIND_TYPE:
@@ -2901,7 +2901,7 @@ BIND_TYPE:
 
 **BUFF_ACTION**
 
-BUFF_ACTION
+"create"|"destroy"
 
 ```lua
 BUFF_ACTION:
@@ -2911,7 +2911,7 @@ BUFF_ACTION:
 
 **BUFF_TARGET**
 
-BUFF_TARGET
+"character"|"mate"|"slave"
 
 ```lua
 BUFF_TARGET:
@@ -2922,7 +2922,7 @@ BUFF_TARGET:
 
 **BUTLER_EVENT**
 
-BUTLER_EVENT
+"equipment"|"garden"|"harvestSlot"|"labowPower"|"productionCost"...(+5)
 
 ```lua
 BUTLER_EVENT:
@@ -2940,7 +2940,7 @@ BUTLER_EVENT:
 
 **BUTTON_STYLE**
 
-BUTTON_STYLE
+"accept_v"|"actionbar_lock"|"actionbar_rotate"|"actionbar_unlock"|"all_repair"...(+183)
 
 ```lua
 -- ui/setting/button_style.g
@@ -3137,7 +3137,7 @@ BUTTON_STYLE:
 
 **COLLISION_SOURCE**
 
-COLLISION_SOURCE
+"COLLISION"|"DROWNING"|"FALLING"
 
 ```lua
 COLLISION_SOURCE:
@@ -3148,7 +3148,7 @@ COLLISION_SOURCE:
 
 **COMBAT_EVENT**
 
-COMBAT_EVENT
+"ENVIRONMENTAL_DAMAGE"|"ENVIRONMENTAL_DRAIN"|"ENVIRONMENTAL_ENERGIZE"|"ENVIRONMENTAL_HEALED"|"ENVIRONMENTAL_LEECH"...(+14)
 
 ```lua
 -- scriptsbin/globalui/chat/chat_msg_event.lua
@@ -3176,7 +3176,7 @@ COMBAT_EVENT:
 
 **COMBAT_HIT_TYPE**
 
-COMBAT_HIT_TYPE
+"CRITICAL"|"HIT"|"IMMUNE"
 
 ```lua
 COMBAT_HIT_TYPE:
@@ -3187,7 +3187,7 @@ COMBAT_HIT_TYPE:
 
 **COMMON_FARM_TYPE**
 
-COMMON_FARM_TYPE
+`1`|`2`|`3`|`4`
 
 ```lua
 COMMON_FARM_TYPE:
@@ -3199,7 +3199,7 @@ COMMON_FARM_TYPE:
 
 **CONSOLE_VAR**
 
-CONSOLE_VAR
+"ExitOnQuit"|"FixedTooltipPosition"|"MasterGrahicQuality"|"MemInfo"|"MemStats"...(+2624)
 
 ```lua
 CONSOLE_VAR:
@@ -5836,7 +5836,7 @@ CONSOLE_VAR:
 
 **DICE_BID_TYPE**
 
-DICE_BID_TYPE
+`1`|`2`|`3`
 
 ```lua
 DICE_BID_TYPE:
@@ -5847,7 +5847,7 @@ DICE_BID_TYPE:
 
 **DOMINION_GUARD_TOWER_STATE_NOTICE_KEY**
 
-DOMINION_GUARD_TOWER_STATE_NOTICE_KEY
+`0`|`1`|`2`|`3`|`4`...(+2)
 
 ```lua
 DOMINION_GUARD_TOWER_STATE_NOTICE_KEY:
@@ -5862,7 +5862,7 @@ DOMINION_GUARD_TOWER_STATE_NOTICE_KEY:
 
 **DOODAD_PERMISSION**
 
-DOODAD_PERMISSION
+`1`|`2`|`3`|`4`|`5`...(+1)
 
 ```lua
 DOODAD_PERMISSION:
@@ -5876,7 +5876,7 @@ DOODAD_PERMISSION:
 
 **DRAWABLE_COLOR_KEY**
 
-DRAWABLE_COLOR_KEY
+"action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27)
 
 ```lua
 -- ui/setting/etc_color.g
@@ -5917,7 +5917,7 @@ DRAWABLE_COLOR_KEY:
 
 **DRAWABLE_NAME_LAYER**
 
-DRAWABLE_NAME_LAYER
+"artwork"|"background"|"overlay"|"overoverlay"
 
 ```lua
 -- Drawables with layers of the same level and parent can overlap based on focus.
@@ -5930,7 +5930,7 @@ DRAWABLE_NAME_LAYER:
 
 **EAK_ACHIEVEMENT_SUBCATEGORY_TYPE**
 
-EAK_ACHIEVEMENT_SUBCATEGORY_TYPE
+`10`|`11`|`12`|`13`|`14`...(+20)
 
 ```lua
 EAK_ACHIEVEMENT_SUBCATEGORY_TYPE:
@@ -5963,7 +5963,7 @@ EAK_ACHIEVEMENT_SUBCATEGORY_TYPE:
 
 **EAK_ARCHERAGE_SUBCATEGORY_TYPE**
 
-EAK_ARCHERAGE_SUBCATEGORY_TYPE
+`9000001`|`9000002`|`9000003`|`9000004`|`9000005`...(+9)
 
 ```lua
 EAK_ARCHERAGE_SUBCATEGORY_TYPE:
@@ -5985,7 +5985,7 @@ EAK_ARCHERAGE_SUBCATEGORY_TYPE:
 
 **EAK_COLLECTION_SUBCATEGORY_TYPE**
 
-EAK_COLLECTION_SUBCATEGORY_TYPE
+`36`|`42`|`45`|`46`|`47`...(+2)
 
 ```lua
 EAK_COLLECTION_SUBCATEGORY_TYPE:
@@ -6000,7 +6000,7 @@ EAK_COLLECTION_SUBCATEGORY_TYPE:
 
 **EAK_RACIAL_MISSION_SUBCATEGORY_TYPE**
 
-EAK_RACIAL_MISSION_SUBCATEGORY_TYPE
+`19`|`20`|`21`|`22`|`23`...(+7)
 
 ```lua
 EAK_RACIAL_MISSION_SUBCATEGORY_TYPE:
@@ -6020,7 +6020,7 @@ EAK_RACIAL_MISSION_SUBCATEGORY_TYPE:
 
 **EAK_SUBCATEGORY_TYPE**
 
-EAK_SUBCATEGORY_TYPE
+`10`|`11`|`12`|`13`|`14`...(+53)
 
 ```lua
 EAK_SUBCATEGORY_TYPE:
@@ -6086,7 +6086,7 @@ EAK_SUBCATEGORY_TYPE:
 
 **EFFECT_PRIORITY**
 
-EFFECT_PRIORITY
+"alpha"|"colorb"|"colorg"|"colorr"|"rotate"...(+2)
 
 ```lua
 EFFECT_PRIORITY:
@@ -6101,7 +6101,7 @@ EFFECT_PRIORITY:
 
 **ENCHANT_ITEM_MODE**
 
-ENCHANT_ITEM_MODE
+"awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7)
 
 ```lua
 ENCHANT_ITEM_MODE:
@@ -6121,7 +6121,7 @@ ENCHANT_ITEM_MODE:
 
 **ENCHANT_MODE**
 
-ENCHANT_MODE
+"awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7)
 
 ```lua
 ENCHANT_MODE:
@@ -6139,9 +6139,20 @@ ENCHANT_MODE:
     | "socket_upgrade"
 ```
 
+**ESC_MENU_BUTTON_TYPE**
+
+`1`|`2`|`3`
+
+```lua
+ESC_MENU_BUTTON_TYPE:
+    | `1` -- normal
+    | `2` -- on/off
+    | `3` -- numbers
+```
+
 **ESC_MENU_CATEGORY_ID**
 
-ESC_MENU_CATEGORY_ID
+`1`|`2`|`3`|`4`|`5`
 
 ```lua
 -- Taken from db ui_esc_menu_categories
@@ -6155,7 +6166,7 @@ ESC_MENU_CATEGORY_ID:
 
 **ESC_MENU_ICON_KEY**
 
-ESC_MENU_ICON_KEY
+""|"achievement"|"auction"|"bag"|"butler"...(+26)
 
 ```lua
 -- ui/common/esc_menu.g
@@ -6195,7 +6206,7 @@ ESC_MENU_ICON_KEY:
 
 **ETC_COLOR**
 
-ETC_COLOR
+"action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27)
 
 ```lua
 -- ui/setting/etc_color.g
@@ -6236,7 +6247,7 @@ ETC_COLOR:
 
 **FACTION_NAME**
 
-FACTION_NAME
+"170906 DO NOT TRANSLATE"|"184394 DO NOT TRANSLATE"|"27499 DO NOT TRANSLATE"|"27500 DO NOT TRANSLATE"|"27501 DO NOT TRANSLATE"...(+115)
 
 ```lua
 -- Obtained from db system_factions.name
@@ -6369,7 +6380,7 @@ FACTION_NAME:
 
 **FOLDER_STATE**
 
-FOLDER_STATE
+"close"|"open"
 
 ```lua
 FOLDER_STATE:
@@ -6379,7 +6390,7 @@ FOLDER_STATE:
 
 **FONT_COLOR_KEY**
 
-FONT_COLOR_KEY
+"action_slot_key_binding"|"adamant"|"aggro_meter"|"all_in_item_grade_combobox"|"assassin"...(+320)
 
 ```lua
 -- ui/settings/font_color.g
@@ -6713,7 +6724,7 @@ FONT_COLOR_KEY:
 
 **FONT_PATH**
 
-FONT_PATH
+"font_combat"|"font_main"|"font_sub"
 
 ```lua
 FONT_PATH:
@@ -6724,7 +6735,7 @@ FONT_PATH:
 
 **FORMAT_MACRO**
 
-FORMAT_MACRO
+"@ACHIEVEMENT_NAME(achievementId)"|"@AREA_SPHERE(sphereId)"|"@CONTENT_CONFIG(configId)"|"@DAY(days)"|"@DOODAD_NAME(doodadId)"...(+62)
 
 ```lua
 -- Example: @PC_NAME(0) is a @PC_GENDER(0) @PC_RACE(0) -> Noviern is a Male Dwarf.
@@ -6800,7 +6811,7 @@ FORMAT_MACRO:
 
 **FRIEND_LIST_UPDATE_TYPE**
 
-FRIEND_LIST_UPDATE_TYPE
+"delete"|"insert"
 
 ```lua
 FRIEND_LIST_UPDATE_TYPE:
@@ -6810,7 +6821,7 @@ FRIEND_LIST_UPDATE_TYPE:
 
 **GENDER**
 
-GENDER
+"female"|"male"|"none"
 
 ```lua
 GENDER:
@@ -6821,7 +6832,7 @@ GENDER:
 
 **HEADER_TYPE**
 
-HEADER_TYPE
+"left"|"top"
 
 ```lua
 HEADER_TYPE:
@@ -6831,7 +6842,7 @@ HEADER_TYPE:
 
 **HEIR_SKILL_TYPE**
 
-HEIR_SKILL_TYPE
+`1`|`2`|`3`|`4`|`5`...(+3)
 
 ```lua
 HEIR_SKILL_TYPE:
@@ -6847,7 +6858,7 @@ HEIR_SKILL_TYPE:
 
 **HOTKEY_ACTION**
 
-HOTKEY_ACTION
+"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120)
 
 ```lua
 HOTKEY_ACTION:
@@ -6980,7 +6991,7 @@ HOTKEY_ACTION:
 
 **HOTKEY_MANAGER**
 
-HOTKEY_MANAGER
+`1`|`2`
 
 ```lua
 HOTKEY_MANAGER:
@@ -6990,7 +7001,7 @@ HOTKEY_MANAGER:
 
 **HOTKEY_NAME**
 
-HOTKEY_NAME
+","|"."|"/"|"0"|"1"...(+96)
 
 ```lua
 -- Supported modifier keys: CTRL, SHIFT, ALT
@@ -7105,7 +7116,7 @@ HOTKEY_NAME:
 
 **HOUSE_STRUCTURE_TYPE**
 
-HOUSE_STRUCTURE_TYPE
+"housing"|"shipyard"
 
 ```lua
 HOUSE_STRUCTURE_TYPE:
@@ -7115,7 +7126,7 @@ HOUSE_STRUCTURE_TYPE:
 
 **HOUSE_TYPE**
 
-HOUSE_TYPE
+`100`|`101`|`102`|`103`|`104`...(+832)
 
 ```lua
 -- Obtain from db housings
@@ -7961,7 +7972,7 @@ HOUSE_TYPE:
 
 **INGAME_SHOP_TYPE**
 
-INGAME_SHOP_TYPE
+"cart"|"checkTime"|"exchange_ratio"|"goods"|"maintab"...(+2)
 
 ```lua
 INGAME_SHOP_TYPE:
@@ -7976,7 +7987,7 @@ INGAME_SHOP_TYPE:
 
 **INGAME_SHOP_VIEW_TYPE**
 
-INGAME_SHOP_VIEW_TYPE
+"enter_mode"|"leave_mode"|"leave_sort"
 
 ```lua
 INGAME_SHOP_VIEW_TYPE:
@@ -7987,7 +7998,7 @@ INGAME_SHOP_VIEW_TYPE:
 
 **ITEM_GRADE_TYPE**
 
-ITEM_GRADE_TYPE
+`0`|`10`|`11`|`12`|`1`...(+8)
 
 ```lua
 ITEM_GRADE_TYPE:
@@ -8008,7 +8019,7 @@ ITEM_GRADE_TYPE:
 
 **ITEM_SOCKETING_RESULT_CODE**
 
-ITEM_SOCKETING_RESULT_CODE
+`1`
 
 ```lua
 ITEM_SOCKETING_RESULT_CODE:
@@ -8017,7 +8028,7 @@ ITEM_SOCKETING_RESULT_CODE:
 
 **KEYBOARD_LAYOUT**
 
-KEYBOARD_LAYOUT
+""|"JAPANESE"|"KOREAN"
 
 ```lua
 KEYBOARD_LAYOUT:
@@ -8028,7 +8039,7 @@ KEYBOARD_LAYOUT:
 
 **KEY_MODIFIER**
 
-KEY_MODIFIER
+`0`|`17`|`34`|`68`
 
 ```lua
 KEY_MODIFIER:
@@ -8040,7 +8051,7 @@ KEY_MODIFIER:
 
 **LINE_ALIGN**
 
-LINE_ALIGN
+"left"|"right"
 
 ```lua
 LINE_ALIGN:
@@ -8050,7 +8061,7 @@ LINE_ALIGN:
 
 **LINKKIND**
 
-LINKKIND
+"1"|"2"|"3"
 
 ```lua
 LINKKIND:
@@ -8061,7 +8072,7 @@ LINKKIND:
 
 **LINKKIND_NUM**
 
-LINKKIND_NUM
+`1`|`2`|`3`
 
 ```lua
 LINKKIND_NUM:
@@ -8072,7 +8083,7 @@ LINKKIND_NUM:
 
 **LINKKIND_STR**
 
-LINKKIND_STR
+"auciton"|"coffer"|"guildBank"
 
 ```lua
 LINKKIND_STR:
@@ -8083,7 +8094,7 @@ LINKKIND_STR:
 
 **LINKTYPE**
 
-LINKTYPE
+"character"|"craft"|"invalid"|"item"|"none"...(+4)
 
 ```lua
 LINKTYPE:
@@ -8100,7 +8111,7 @@ LINKTYPE:
 
 **LOCALE_INDEX**
 
-LOCALE_INDEX
+`-1`|`0`|`10`|`1`|`2`...(+7)
 
 ```lua
 LOCALE_INDEX:
@@ -8120,7 +8131,7 @@ LOCALE_INDEX:
 
 **LOCALE_STR**
 
-LOCALE_STR
+""|"de"|"en_sg"|"en_us"|"fr"...(+7)
 
 ```lua
 LOCALE_STR:
@@ -8140,7 +8151,7 @@ LOCALE_STR:
 
 **MARKER**
 
-MARKER
+`10`|`11`|`12`|`1`|`2`...(+7)
 
 ```lua
 -- ui/map/icon/npc_icon.g
@@ -8161,7 +8172,7 @@ MARKER:
 
 **MATE_STATE**
 
-MATE_STATE
+`1`|`2`|`3`|`4`
 
 ```lua
 MATE_STATE:
@@ -8173,7 +8184,7 @@ MATE_STATE:
 
 **MINI_SCOREBOARD_CHANGED_STATUS**
 
-MINI_SCOREBOARD_CHANGED_STATUS
+"inactive"|"remove"|"update"
 
 ```lua
 MINI_SCOREBOARD_CHANGED_STATUS:
@@ -8184,7 +8195,7 @@ MINI_SCOREBOARD_CHANGED_STATUS:
 
 **MOUSE_BUTTON**
 
-MOUSE_BUTTON
+"LeftButton"|"RightButton"
 
 ```lua
 MOUSE_BUTTON:
@@ -8194,7 +8205,7 @@ MOUSE_BUTTON:
 
 **MOVE_TYPE**
 
-MOVE_TYPE
+"bottom"|"circle"|"left"|"right"|"top"
 
 ```lua
 MOVE_TYPE:
@@ -8207,7 +8218,7 @@ MOVE_TYPE:
 
 **NAME_TAG_MODE_OFFSET**
 
-NAME_TAG_MODE_OFFSET
+`1`|`2`|`3`|`4`
 
 ```lua
 NAME_TAG_MODE_OFFSET:
@@ -8219,7 +8230,7 @@ NAME_TAG_MODE_OFFSET:
 
 **NPC_INTERACTION_ADDED_VALUE**
 
-NPC_INTERACTION_ADDED_VALUE
+"complete"|"start"|"talk"
 
 ```lua
 NPC_INTERACTION_ADDED_VALUE:
@@ -8230,7 +8241,7 @@ NPC_INTERACTION_ADDED_VALUE:
 
 **OBJECT**
 
-OBJECT
+`0`|`10`|`11`|`12`|`13`...(+51)
 
 ```lua
 OBJECT:
@@ -8294,7 +8305,7 @@ OBJECT:
 
 **OBJECT_NAME**
 
-OBJECT_NAME
+"avi"|"button"|"chatwindow"|"checkbutton"|"circlediagram"...(+34)
 
 ```lua
 OBJECT_NAME:
@@ -8341,7 +8352,7 @@ OBJECT_NAME:
 
 **ORIENTATION**
 
-ORIENTATION
+"HORIZONTAL"|"HORIZONTAL_INV"|"VERTICAL"|"normal"
 
 ```lua
 ORIENTATION:
@@ -8353,289 +8364,289 @@ ORIENTATION:
 
 **OnAcceptFocus**
 
-OnAcceptFocus
+fun(self: Widget)
 
 
 
 **OnAlphaAnimeEnd**
 
-OnAlphaAnimeEnd
+fun(self: Widget)
 
 
 
 **OnBoundChanged**
 
-OnBoundChanged
+fun(self: Widget)
 
 
 
 **OnChangedAnchor**
 
-OnChangedAnchor
+fun(self: Widget)
 
 
 
 **OnCheckChanged**
 
-OnCheckChanged
+fun(self: Widget)
 
 
 
 **OnClick**
 
-OnClick
+fun(self: Widget, mouseButton: "LeftButton"|"RightButton", doubleClick: boolean, keyModifier: `0`|`17`|`34`|`68`)
 
 
 
 **OnCloseByEsc**
 
-OnCloseByEsc
+fun(self: Widget)
 
 
 
 **OnContentUpdated**
 
-OnContentUpdated
+fun(self: Widget, action: string, arg2: any, arg3: any)
 
 
 
 **OnCursorMoved**
 
-OnCursorMoved
+fun(self: Widget)
 
 
 
 **OnDragReceive**
 
-OnDragReceive
+fun(self: Widget)
 
 
 
 **OnDragStart**
 
-OnDragStart
+fun(self: Widget)
 
 
 
 **OnDragStop**
 
-OnDragStop
+fun(self: Widget)
 
 
 
 **OnDynamicListUpdatedView**
 
-OnDynamicListUpdatedView
+fun(self: Widget)
 
 
 
 **OnEffect**
 
-OnEffect
+fun(self: Widget, frameTime: number)
 
 
 
 **OnEnableChanged**
 
-OnEnableChanged
+fun(self: Widget)
 
 
 
 **OnEndFadeIn**
 
-OnEndFadeIn
+fun(self: Widget)
 
 
 
 **OnEndFadeOut**
 
-OnEndFadeOut
+fun(self: Widget)
 
 
 
 **OnEnter**
 
-OnEnter
+fun(self: Widget)
 
 
 
 **OnEnterPressed**
 
-OnEnterPressed
+fun(self: Widget)
 
 
 
 **OnEscapePressed**
 
-OnEscapePressed
+fun(self: Widget)
 
 
 
 **OnEvent**
 
-OnEvent
+fun(self: Widget, event: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), ...any)
 
 
 
 **OnHide**
 
-OnHide
+fun(self: Widget)
 
 
 
 **OnKeyDown**
 
-OnKeyDown
+fun(self: Widget, key: string)
 
 
 
 **OnKeyUp**
 
-OnKeyUp
+fun(self: Widget, key: string)
 
 
 
 **OnLeave**
 
-OnLeave
+fun(self: Widget)
 
 
 
 **OnListboxToggled**
 
-OnListboxToggled
+fun(self: Widget)
 
 
 
 **OnModelChanged**
 
-OnModelChanged
+fun(self: Widget)
 
 
 
 **OnMouseDown**
 
-OnMouseDown
+fun(self: Widget, mouseButton: "LeftButton"|"RightButton")
 
 
 
 **OnMouseMove**
 
-OnMouseMove
+fun(self: Widget)
 
 
 
 **OnMouseUp**
 
-OnMouseUp
+fun(self: Widget, mouseButton: "LeftButton"|"RightButton")
 
 
 
 **OnMovedPosition**
 
-OnMovedPosition
+fun(self: Widget)
 
 
 
 **OnPageChanged**
 
-OnPageChanged
+fun(self: Widget)
 
 
 
 **OnPermissionChanged**
 
-OnPermissionChanged
+fun(self: Widget)
 
 
 
 **OnRadioChanged**
 
-OnRadioChanged
+fun(self: Widget, index: any, data: any)
 
 
 
 **OnRestricted**
 
-OnRestricted
+fun(self: Widget)
 
 
 
 **OnScale**
 
-OnScale
+fun(self: Widget)
 
 
 
 **OnScaleAnimeEnd**
 
-OnScaleAnimeEnd
+fun(self: Widget)
 
 
 
 **OnSelChanged**
 
-OnSelChanged
+fun(self: Widget, selectedIndex?: number, doubleClick?: boolean)
 
 
 
 **OnShow**
 
-OnShow
+fun(self: Widget)
 
 
 
 **OnSliderChanged**
 
-OnSliderChanged
+fun(self: Widget, value: number)
 
 
 
 **OnTabChanged**
 
-OnTabChanged
+fun(self: Widget, selected: number, viewSelected: number)
 
 
 
 **OnTextChanged**
 
-OnTextChanged
+fun(self: Widget)
 
 
 
 **OnTooltip**
 
-OnTooltip
+fun(self: Widget, text?: string, posX?: number, posY?: number, off?: boolean)
 
 
 
 **OnUpdate**
 
-OnUpdate
+fun(self: Widget, frameTime: number)
 
 
 
 **OnVisibleChanged**
 
-OnVisibleChanged
+fun(self: Widget, visible: boolean)
 
 
 
 **OnWheelDown**
 
-OnWheelDown
+fun(self: Widget, delta: number)
 
 
 
 **OnWheelUp**
 
-OnWheelUp
+fun(self: Widget, delta: number)
 
 
 
 **PING_TYPE**
 
-PING_TYPE
+`1`|`2`|`3`|`4`|`5`
 
 ```lua
 PING_TYPE:
@@ -8648,7 +8659,7 @@ PING_TYPE:
 
 **POWER_TYPE**
 
-POWER_TYPE
+"HEALTH"|"MANA"
 
 ```lua
 POWER_TYPE:
@@ -8658,19 +8669,19 @@ POWER_TYPE:
 
 **PreClick**
 
-PreClick
+fun(self: Widget)
 
 
 
 **PreUse**
 
-PreUse
+fun(self: Widget)
 
 
 
 **QUEST_DIRECTING_MODE_HOT_KEY_TYPE**
 
-QUEST_DIRECTING_MODE_HOT_KEY_TYPE
+`1`|`2`|`3`
 
 ```lua
 QUEST_DIRECTING_MODE_HOT_KEY_TYPE:
@@ -8681,7 +8692,7 @@ QUEST_DIRECTING_MODE_HOT_KEY_TYPE:
 
 **QUEST_ERROR**
 
-QUEST_ERROR
+`10`|`11`|`12`|`13`|`14`...(+35)
 
 ```lua
 QUEST_ERROR:
@@ -8730,7 +8741,7 @@ QUEST_ERROR:
 
 **QUEST_STATUS**
 
-QUEST_STATUS
+"dropped"|"started"|"updated"
 
 ```lua
 QUEST_STATUS:
@@ -8741,7 +8752,7 @@ QUEST_STATUS:
 
 **RACE**
 
-RACE
+"daru"|"dwarf"|"elf"|"fairy"|"firran"...(+5)
 
 ```lua
 RACE:
@@ -8759,7 +8770,7 @@ RACE:
 
 **RESIDENT_BOARD_TYPE**
 
-RESIDENT_BOARD_TYPE
+`1`|`2`|`3`|`4`|`5`...(+2)
 
 ```lua
 RESIDENT_BOARD_TYPE:
@@ -8774,7 +8785,7 @@ RESIDENT_BOARD_TYPE:
 
 **RESPONSE_TYPE**
 
-RESPONSE_TYPE
+`1`|`2`|`3`
 
 ```lua
 RESPONSE_TYPE:
@@ -8785,7 +8796,7 @@ RESPONSE_TYPE:
 
 **SIEGE_ACTION**
 
-SIEGE_ACTION
+"change_state"|"ignore"
 
 ```lua
 SIEGE_ACTION:
@@ -8795,7 +8806,7 @@ SIEGE_ACTION:
 
 **SIEGE_PERIOD_NAME**
 
-SIEGE_PERIOD_NAME
+"siege_period_hero_volunteer"|"siege_period_peace"
 
 ```lua
 SIEGE_PERIOD_NAME:
@@ -8805,7 +8816,7 @@ SIEGE_PERIOD_NAME:
 
 **SKILL_ALERT_STATUS_BUFF_NAME**
 
-SKILL_ALERT_STATUS_BUFF_NAME
+"Bleed (All)"|"Bubble Trap"|"Charmed"|"Deep Freeze"|"Enervate"...(+16)
 
 ```lua
 SKILL_ALERT_STATUS_BUFF_NAME:
@@ -8834,7 +8845,7 @@ SKILL_ALERT_STATUS_BUFF_NAME:
 
 **SKILL_ALERT_STATUS_BUFF_TAG**
 
-SKILL_ALERT_STATUS_BUFF_TAG
+`10`|`11`|`12`|`13`|`14`...(+16)
 
 ```lua
 -- Obtained from db unit_status_buff_tags
@@ -8864,7 +8875,7 @@ SKILL_ALERT_STATUS_BUFF_TAG:
 
 **SKILL_MSG_RESULT_CODE**
 
-SKILL_MSG_RESULT_CODE
+"ALERT_OPTION"|"ALERT_OPTION_POPUP_DESC"|"ALERT_OPTION_POSITION_1_TEXT"|"ALERT_OPTION_POSITION_2_TEXT"|"ALERT_OPTION_POSITION_BASIC_TEXT"...(+202)
 
 ```lua
 -- Obtained from db ui_texts key = /^skill_/
@@ -9080,7 +9091,7 @@ SKILL_MSG_RESULT_CODE:
 
 **SKILL_TYPE**
 
-SKILL_TYPE
+"buff"|"skill"
 
 ```lua
 SKILL_TYPE:
@@ -9090,7 +9101,7 @@ SKILL_TYPE:
 
 **SLIDER_SCROLL_TYPE**
 
-SLIDER_SCROLL_TYPE
+`0`|`1`
 
 ```lua
 SLIDER_SCROLL_TYPE:
@@ -9100,7 +9111,7 @@ SLIDER_SCROLL_TYPE:
 
 **SOUND_NAME**
 
-SOUND_NAME
+"battlefield_1_secound"|"battlefield_2_secound"|"battlefield_3_secound"|"battlefield_4_secound"|"battlefield_5_secound"...(+219)
 
 ```lua
 -- Obtained from db sound_pack_items sound_pack_id = 203
@@ -9333,7 +9344,7 @@ SOUND_NAME:
 
 **STAT_KIND**
 
-STAT_KIND
+`1`|`2`|`3`|`4`|`5`
 
 ```lua
 STAT_KIND:
@@ -9346,7 +9357,7 @@ STAT_KIND:
 
 **SUB_ZONE_ID**
 
-SUB_ZONE_ID
+`1000`|`1001`|`1002`|`1003`|`1004`...(+1351)
 
 ```lua
 -- Obtained form db sub_zones
@@ -10711,7 +10722,7 @@ SUB_ZONE_ID:
 
 **SUB_ZONE_NAME**
 
-SUB_ZONE_NAME
+""|"3rd Corps Camp"|"Abandoned Claimstake"|"Abandoned Drill Camp"|"Abandoned Guardpost"...(+1163)
 
 ```lua
 -- db sub_zones
@@ -11888,7 +11899,7 @@ SUB_ZONE_NAME:
 
 **TAB_CORNER**
 
-TAB_CORNER
+"BOTTOMLEFT"|"BOTTOMRIGHT"|"TOPLEFT"|"TOPRIGHT"
 
 ```lua
 TAB_CORNER:
@@ -11900,7 +11911,7 @@ TAB_CORNER:
 
 **TARGET_TYPE**
 
-TARGET_TYPE
+"doodad"|"nothing"|"ui"|"unit"
 
 ```lua
 TARGET_TYPE:
@@ -11912,7 +11923,7 @@ TARGET_TYPE:
 
 **TEAM_CHANGE_REASON**
 
-TEAM_CHANGE_REASON
+"joined"|"leaved"|"refreshed"
 
 ```lua
 TEAM_CHANGE_REASON:
@@ -11923,7 +11934,7 @@ TEAM_CHANGE_REASON:
 
 **TOOLTIP_KIND**
 
-TOOLTIP_KIND
+"big_sailing_ship"|"boat"|"fishboat"|"gubuk"|"leviathan"...(+7)
 
 ```lua
 -- db ui_texts category_id 100
@@ -11944,7 +11955,7 @@ TOOLTIP_KIND:
 
 **TOOLTIP_TYPE**
 
-TOOLTIP_TYPE
+"carrying_backpack_slave"|"commonFarm"|"common_farm"|"conquest"|"corpse"...(+7)
 
 ```lua
 TOOLTIP_TYPE:
@@ -11964,7 +11975,7 @@ TOOLTIP_TYPE:
 
 **UIBOUND_KEY**
 
-UIBOUND_KEY
+"ui_bound_actionBar_renewal1"|"ui_bound_actionBar_renewal10"|"ui_bound_actionBar_renewal11"|"ui_bound_actionBar_renewal2"|"ui_bound_actionBar_renewal3"...(+42)
 
 ```lua
 UIBOUND_KEY:
@@ -12019,7 +12030,7 @@ UIBOUND_KEY:
 
 **UIEVENT_TYPE**
 
-UIEVENT_TYPE
+"ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872)
 
 ```lua
 UIEVENT_TYPE:
@@ -12906,7 +12917,7 @@ UIEVENT_TYPE:
 
 **UI_BUTTON_STATE_TEXT**
 
-UI_BUTTON_STATE_TEXT
+"DISABLED"|"HIGHLIGHTED"|"NORMAL"|"PUSHED"
 
 ```lua
 UI_BUTTON_STATE_TEXT:
@@ -12918,7 +12929,7 @@ UI_BUTTON_STATE_TEXT:
 
 **UI_LAYER**
 
-UI_LAYER
+"background"|"dialog"|"game"|"hud"|"normal"...(+3)
 
 ```lua
 -- Widgets with layers of the same level and parent can overlap based on focus.
@@ -12935,7 +12946,7 @@ UI_LAYER:
 
 **UNIT**
 
-UNIT
+"player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153)
 
 ```lua
 UNIT:
@@ -13101,7 +13112,7 @@ UNIT:
 
 **UNIT_INFO_TYPE**
 
-UNIT_INFO_TYPE
+"character"|"housing"|"mate"|"npc"|"shipyard"...(+2)
 
 ```lua
 UNIT_INFO_TYPE:
@@ -13116,7 +13127,7 @@ UNIT_INFO_TYPE:
 
 **UNIT_LOCAL**
 
-UNIT_LOCAL
+"player"|"target"|"targettarget"|"watchtarget"
 
 ```lua
 UNIT_LOCAL:
@@ -13128,7 +13139,7 @@ UNIT_LOCAL:
 
 **UNIT_PET**
 
-UNIT_PET
+"playerpet"|"playerpet1"|"playerpet2"
 
 ```lua
 UNIT_PET:
@@ -13139,7 +13150,7 @@ UNIT_PET:
 
 **UNIT_TYPE**
 
-UNIT_TYPE
+"housing"|"npc"
 
 ```lua
 UNIT_TYPE:
@@ -13149,7 +13160,7 @@ UNIT_TYPE:
 
 **WIDGET_EVENT_TYPE**
 
-WIDGET_EVENT_TYPE
+"OnAcceptFocus"|"OnAlphaAnimeEnd"|"OnBoundChanged"|"OnChangedAnchor"|"OnCheckChanged"...(+44)
 
 ```lua
 WIDGET_EVENT_TYPE:
@@ -13206,7 +13217,7 @@ WIDGET_EVENT_TYPE:
 
 **WIDGET_SOUND**
 
-WIDGET_SOUND
+"ability_change"|"achievement"|"auction"|"auction_put_up"|"bag"...(+45)
 
 ```lua
 WIDGET_SOUND:
@@ -13264,7 +13275,7 @@ WIDGET_SOUND:
 
 **WORLD_MAP_LEVEL**
 
-WORLD_MAP_LEVEL
+`1`|`2`|`3`|`4`
 
 ```lua
 WORLD_MAP_LEVEL:
@@ -13276,7 +13287,7 @@ WORLD_MAP_LEVEL:
 
 **ZONE_CLIMATE**
 
-ZONE_CLIMATE
+`1`|`2`|`3`|`4`|`5`
 
 ```lua
 ZONE_CLIMATE:
@@ -13289,7 +13300,7 @@ ZONE_CLIMATE:
 
 **ZONE_GROUP_ID**
 
-ZONE_GROUP_ID
+`0`|`100`|`101`|`102`|`103`...(+151)
 
 ```lua
 -- Obtained from db zone_groups
@@ -13454,7 +13465,7 @@ ZONE_GROUP_ID:
 
 **ZONE_KEY**
 
-ZONE_KEY
+`0`|`100`|`101`|`102`|`104`...(+315)
 
 ```lua
 -- Obtained from db zones
@@ -13783,7 +13794,7 @@ ZONE_KEY:
 
 **ZONE_LEVEL**
 
-ZONE_LEVEL
+`0`|`1`|`2`|`3`
 
 ```lua
 ZONE_LEVEL:
@@ -13795,7 +13806,7 @@ ZONE_LEVEL:
 
 **ZONE_NAME**
 
-ZONE_NAME
+"Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143)
 
 ```lua
 ZONE_NAME:

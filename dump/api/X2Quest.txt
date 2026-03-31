@@ -25,5 +25,6 @@ X2Quest = {
   GetActiveQuestType = "<function X2Quest>",
   GetQuestContextMainTitle = "<function X2Quest>",
   IsCompleted = "<function X2Quest>",
+  IsReadyForCompleteQuest = "<function X2Quest>",
   SetTrackingActiveQuest = "<function X2Quest>",
 }

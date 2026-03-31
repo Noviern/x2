@@ -24,8 +24,8 @@ Extends [Widget](../types/Widget.md#class-widget), [Map](../types/Map.md#class-m
 > 
 #### Method: GetClimateInfo
 ```lua
-(method) WorldMap:GetClimateInfo(zoneId: ZONE_GROUP_ID)
-  -> climateInfo: ZONE_CLIMATE[]
+(method) WorldMap:GetClimateInfo(zoneId: `0`|`100`|`101`|`102`|`103`...(+151))
+  -> climateInfo: `1`|`2`|`3`|`4`|`5`[]
 ```
 > Retrieves climate information for a specific zone.
 > 
@@ -196,7 +196,7 @@ Extends [Widget](../types/Widget.md#class-widget), [Map](../types/Map.md#class-m
 
 #### Method: SetTroubleZoneColor
 ```lua
-(method) WorldMap:SetTroubleZoneColor(state: HP_WORLD_STATE, r: number, g: number, b: number, a: number)
+(method) WorldMap:SetTroubleZoneColor(state: `-1`|`HPWS_BATTLE`|`HPWS_PEACE`|`HPWS_TROUBLE_0`|`HPWS_TROUBLE_1`...(+4), r: number, g: number, b: number, a: number)
 ```
 > Sets the color for trouble zones on the world map based on their state.
 > 
@@ -295,7 +295,7 @@ Extends [Widget](../types/Widget.md#class-widget), [Map](../types/Map.md#class-m
 
 #### Method: ShowPortal
 ```lua
-(method) WorldMap:ShowPortal(zoneId: ZONE_KEY, x: number, y: number, z: number)
+(method) WorldMap:ShowPortal(zoneId: `0`|`100`|`101`|`102`|`104`...(+315), x: number, y: number, z: number)
 ```
 > Shows a portal location on the world map at the specified coordinates.
 > Crashes if `SetPortalDrawable` is not called first.
@@ -675,7 +675,7 @@ Extends [Widget](../types/Widget.md#class-widget), [Map](../types/Map.md#class-m
 
 #### Method: GetIconDrawable
 ```lua
-(method) WorldMap:GetIconDrawable(level: WORLD_MAP_LEVEL, id: ZONE_GROUP_ID)
+(method) WorldMap:GetIconDrawable(level: `1`|`2`|`3`|`4`, id: `0`|`100`|`101`|`102`|`103`...(+151))
   -> iconDrawable: ImageDrawable
 ```
 > Retrieves the icon drawable for a specific zoom level and zone ID.
@@ -888,7 +888,7 @@ Extends [Widget](../types/Widget.md#class-widget), [Map](../types/Map.md#class-m
 
 #### Method: GetRouteDrawable
 ```lua
-(method) WorldMap:GetRouteDrawable(level: WORLD_MAP_LEVEL, id: number)
+(method) WorldMap:GetRouteDrawable(level: `1`|`2`|`3`|`4`, id: number)
   -> routeDrawable: ImageDrawable
   2. created: boolean
 ```
@@ -944,7 +944,7 @@ Extends [Widget](../types/Widget.md#class-widget), [Map](../types/Map.md#class-m
 
 #### Method: RemovePing
 ```lua
-(method) WorldMap:RemovePing(pingType: PING_TYPE)
+(method) WorldMap:RemovePing(pingType: `1`|`2`|`3`|`4`|`5`)
 ```
 > Removes a ping from the world map by its type.
 > 

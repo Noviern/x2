@@ -17,7 +17,7 @@ Extends [Drawablebase](../types/Drawablebase.md#class-drawablebase)
 
 #### Method: SetTextureColor
 ```lua
-(method) ColorDrawable:SetTextureColor(colorKey: ETC_COLOR)
+(method) ColorDrawable:SetTextureColor(colorKey: "action_slot_state_img_able"|"action_slot_state_img_can_learn"|"action_slot_state_img_cant_or_not_learn"|"action_slot_state_img_disable"|"common_black_bg"...(+27))
 ```
 > Sets the texture color by `colorKey` for the ColorDrawable.
 > 

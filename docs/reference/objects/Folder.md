@@ -166,7 +166,7 @@ TextStyle
 #### Method: GetState
 ```lua
 (method) Folder:GetState()
-  -> state: FOLDER_STATE
+  -> state: "close"|"open"
 ```
 > Retrieves the current state of the Folder.
 > 

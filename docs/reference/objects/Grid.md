@@ -118,7 +118,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetHeaderType
 ```lua
-(method) Grid:SetHeaderType(type: HEADER_TYPE)
+(method) Grid:SetHeaderType(type: "left"|"top")
 ```
 > Sets the header type for the Grid.
 > 

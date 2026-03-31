@@ -35,7 +35,7 @@
 ## Aliases
 **LINEAR_ANIMATION_TYPE**
 
-LINEAR_ANIMATION_TYPE
+`LAT_AFTERIMAGE`|`LAT_COUNT`|`LAT_LINEAR_DISPLAY`|`LAT_MOVE`|`LAT_NONE`...(+1)
 
 ```lua
 -- objects/DamageDisplay
@@ -50,7 +50,7 @@ LINEAR_ANIMATION_TYPE:
 
 **POSITION_CALCULATION_TYPE**
 
-POSITION_CALCULATION_TYPE
+`PCT_DEFAULT`|`PCT_SHIP_COLLISION`
 
 ```lua
 -- objects/DamageDisplay
@@ -119,7 +119,7 @@ TextStyle
 
 #### Method: SetPositionCalculationType
 ```lua
-(method) DamageDisplay:SetPositionCalculationType(positionCalculationType: POSITION_CALCULATION_TYPE)
+(method) DamageDisplay:SetPositionCalculationType(positionCalculationType: `PCT_DEFAULT`|`PCT_SHIP_COLLISION`)
 ```
 > Sets the position calculation type for the DamageDisplay.
 > 

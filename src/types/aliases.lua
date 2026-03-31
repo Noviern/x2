@@ -6005,6 +6005,11 @@
 ---| "texture_check_window_tooltip_bg"
 ---| "web_browser_background"
 
+---@alias ESC_MENU_BUTTON_TYPE
+---| `1` # normal
+---| `2` # on/off
+---| `3` # numbers
+
 ---Taken from db ui_esc_menu_categories
 ---@alias ESC_MENU_CATEGORY_ID
 ---| `1` # Character

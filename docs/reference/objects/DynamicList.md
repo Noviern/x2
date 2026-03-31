@@ -2,25 +2,25 @@
 ## Aliases
 **MainDataFunc**
 
-MainDataFunc
+fun(subItem: EmptyWidget, mainKey: number, isOpen: boolean, frameBg: Drawablebase, subListSize: number, isClicked: boolean)
 
 
 
 **MainLayoutFunc**
 
-MainLayoutFunc
+fun(subItem: EmptyWidget, index: number)
 
 
 
 **SubDataFunc**
 
-SubDataFunc
+fun(subItem: EmptyWidget, subItemInfo: table, isClicked: boolean)
 
 
 
 **SubLayoutFunc**
 
-SubLayoutFunc
+fun(subItem: EmptyWidget, index: number)
 
 
 
@@ -244,7 +244,7 @@ DynamicListContent
 
 #### Method: CreateOveredImage
 ```lua
-(method) DynamicList:CreateOveredImage(layerStr: DRAWABLE_NAME_LAYER)
+(method) DynamicList:CreateOveredImage(layerStr: "artwork"|"background"|"overlay"|"overoverlay")
   -> overedImage: NinePartDrawable
 ```
 > Creates an overed image for the DynamicList with the specified layer.
@@ -306,7 +306,7 @@ DynamicListContent
 
 #### Method: InitFunc
 ```lua
-(method) DynamicList:InitFunc(mainLayout: MainLayoutFunc, mainData: MainDataFunc, subLayout: SubLayoutFunc, subData: function)
+(method) DynamicList:InitFunc(mainLayout: fun(subItem: EmptyWidget, index: number), mainData: fun(subItem: EmptyWidget, mainKey: number, isOpen: boolean, frameBg: Drawablebase, subListSize: number, isClicked: boolean), subLayout: fun(subItem: EmptyWidget, index: number), subData: function)
 ```
 > Initializes functions for main and sub layouts and data in the DynamicList.
 > 
@@ -356,7 +356,7 @@ DynamicListContent
 
 #### Method: InitBgType
 ```lua
-(method) DynamicList:InitBgType(bgDrawType: UI_OBJECT_TYPE_DRAWABLE)
+(method) DynamicList:InitBgType(bgDrawType: `7`|`9`|`UOT_IMAGE_DRAWABLE`|`UOT_NINE_PART_DRAWABLE`)
 ```
 > Initializes the background draw type for the `frameBg` of the `mainData` function for the `InitFunc` in the DynamicList.
 > 

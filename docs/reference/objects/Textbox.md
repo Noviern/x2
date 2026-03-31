@@ -71,7 +71,7 @@ TextStyle
 
 #### Method: SetText
 ```lua
-(method) Textbox:SetText(text: string|FORMAT_MACRO)
+(method) Textbox:SetText(text: string|"@ACHIEVEMENT_NAME(achievementId)"|"@AREA_SPHERE(sphereId)"|"@CONTENT_CONFIG(configId)"|"@DAY(days)"...(+63))
 ```
 > Sets the text for the Textbox.
 > 

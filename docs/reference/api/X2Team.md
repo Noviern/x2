@@ -71,7 +71,7 @@
 ## Aliases
 **SIEGE_RAID**
 
-SIEGE_RAID
+`SIEGE_RAID_TEAM_ALL_INFO`|`SIEGE_RAID_TEAM_INFO_BY_FACTION`
 
 ```lua
 -- api/X2Team
@@ -82,7 +82,7 @@ SIEGE_RAID:
 
 **TEAM_JOIN**
 
-TEAM_JOIN
+`TEAM_JOINT_MENU_CHAT`|`TEAM_JOINT_MENU_TARGET`|`TEAM_JOINT_REQUEST`
 
 ```lua
 -- api/X2Team
@@ -94,7 +94,7 @@ TEAM_JOIN:
 
 **TEAM_LOOT**
 
-TEAM_LOOT
+`TEAM_LOOT_FREE_FOR_ALL`|`TEAM_LOOT_MASTER_LOOTER`|`TEAM_LOOT_ROUND_ROBIN`
 
 ```lua
 -- api/X2Team
@@ -106,7 +106,7 @@ TEAM_LOOT:
 
 **TEAM_ROLE**
 
-TEAM_ROLE
+`TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
 
 ```lua
 -- api/X2Team
@@ -123,7 +123,7 @@ TEAM_ROLE:
 #### Method: GetRole
 ```lua
 (method) X2Team:GetRole(teamIndex: number, memberIndex: number)
-  -> role: TEAM_ROLE
+  -> role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
 ```
 > Retrieves the role of the specified member in the given team.
 > 
@@ -165,7 +165,7 @@ TEAM_ROLE:
 
 #### Method: KickTeamMemberByName
 ```lua
-(method) X2Team:KickTeamMemberByName(charName: string, teamRoleType: TEAM_ROLE)
+(method) X2Team:KickTeamMemberByName(charName: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
 ```
 > Kicks a team member by their character name.
 > 
@@ -186,7 +186,7 @@ TEAM_ROLE:
 #### Method: GetTeamRoleType
 ```lua
 (method) X2Team:GetTeamRoleType()
-  -> role: TEAM_ROLE
+  -> role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
 ```
 > Returns the current role of the local player in the team.
 > 
@@ -204,7 +204,7 @@ TEAM_ROLE:
 
 #### Method: KickTeamMember
 ```lua
-(method) X2Team:KickTeamMember(memberIndex: string, teamRoleType: TEAM_ROLE)
+(method) X2Team:KickTeamMember(memberIndex: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
   -> success: boolean
 ```
 > Kicks a team member from the team.
@@ -227,7 +227,7 @@ TEAM_ROLE:
 
 #### Method: SetRole
 ```lua
-(method) X2Team:SetRole(role: TEAM_ROLE)
+(method) X2Team:SetRole(role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
 ```
 > Sets the player's role in a raid.
 > 

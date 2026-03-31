@@ -47,7 +47,7 @@
 ## Aliases
 **FONT_KIND**
 
-FONT_KIND
+`FTK_GENERAL`|`FTK_IMAGETEXT`
 
 ```lua
 -- objects/TextStyle
@@ -58,7 +58,7 @@ FONT_KIND:
 
 **FTK_GENERAL**
 
-FTK_GENERAL
+0
 
 ```lua
 FTK_GENERAL:
@@ -67,7 +67,7 @@ FTK_GENERAL:
 
 **FTK_IMAGETEXT**
 
-FTK_IMAGETEXT
+2
 
 ```lua
 FTK_IMAGETEXT:
@@ -76,7 +76,7 @@ FTK_IMAGETEXT:
 
 **TEXT_ALIGN**
 
-TEXT_ALIGN
+`ALIGN_BOTTOM_LEFT`|`ALIGN_BOTTOM_RIGHT`|`ALIGN_BOTTOM`|`ALIGN_CENTER`|`ALIGN_LEFT`...(+4)
 
 ```lua
 -- objects/TextStyle
@@ -114,7 +114,7 @@ Extends [Uiobject](../types/Uiobject.md#class-uiobject)
 
 #### Method: SetFont
 ```lua
-(method) TextStyle:SetFont(fontPath: string, fontSize: number, fontType?: FONT_KIND)
+(method) TextStyle:SetFont(fontPath: string, fontSize: number, fontType?: `FTK_GENERAL`|`FTK_IMAGETEXT`)
 ```
 > Sets the font path, size, and optional type for the TextStyle.
 > 
@@ -189,7 +189,7 @@ Extends [Uiobject](../types/Uiobject.md#class-uiobject)
 
 #### Method: SetColorByKey
 ```lua
-(method) TextStyle:SetColorByKey(key: FONT_COLOR_KEY)
+(method) TextStyle:SetColorByKey(key: "action_slot_key_binding"|"adamant"|"aggro_meter"|"all_in_item_grade_combobox"|"assassin"...(+320))
 ```
 > Sets the color for the TextStyle using a color key. Must be applied before
 > text.
@@ -539,7 +539,7 @@ Extends [Uiobject](../types/Uiobject.md#class-uiobject)
 
 #### Method: SetAlign
 ```lua
-(method) TextStyle:SetAlign(align: TEXT_ALIGN)
+(method) TextStyle:SetAlign(align: `ALIGN_BOTTOM_LEFT`|`ALIGN_BOTTOM_RIGHT`|`ALIGN_BOTTOM`|`ALIGN_CENTER`|`ALIGN_LEFT`...(+4))
 ```
 > Sets the text alignment for the TextStyle.
 > 

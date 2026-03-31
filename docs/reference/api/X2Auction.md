@@ -31,7 +31,7 @@
 ## Aliases
 **AUCTION_SERVICE_KIND**
 
-AUCTION_SERVICE_KIND
+`ASK_ACCOUNT_BUFF`|`ASK_NORMAL`|`ASK_PCBANG`|`ASK_PREMIUM`
 
 ```lua
 -- api/X2Auction
@@ -44,7 +44,7 @@ AUCTION_SERVICE_KIND:
 
 **POST_TYPE**
 
-POST_TYPE
+`PT_BID`|`PT_PARTITION`
 
 ```lua
 -- api/X2Auction
@@ -57,7 +57,7 @@ POST_TYPE:
 ### Class: X2Auction
 #### Method: AskMarketPrice
 ```lua
-(method) X2Auction:AskMarketPrice(itemType: number, itemGrade: ITEM_GRADE_TYPE, askMarketPriceUi: boolean)
+(method) X2Auction:AskMarketPrice(itemType: number, itemGrade: `0`|`10`|`11`|`12`|`1`...(+8), askMarketPriceUi: boolean)
 ```
 > Requests the market price for an item, triggering the `DIAGONAL_ASR` event.
 > 
@@ -118,7 +118,7 @@ POST_TYPE:
 
 #### Method: GetLowestPrice
 ```lua
-(method) X2Auction:GetLowestPrice(itemType: number, itemGrade: ITEM_GRADE_TYPE)
+(method) X2Auction:GetLowestPrice(itemType: number, itemGrade: `0`|`10`|`11`|`12`|`1`...(+8))
   -> lowestPrice: string|nil
 ```
 > Retrieves the lowest market price for an item.
@@ -159,7 +159,7 @@ POST_TYPE:
 
 #### Method: SearchAuctionArticle
 ```lua
-(method) X2Auction:SearchAuctionArticle(page: number, minLevel: number, maxLevel: number, grade: AUCTION_GRADE_FILTER, category: AUCTION_CATEGORY, exactMatch: boolean, keywords: string, minDirectPriceStr: string, maxDirectPriceStr: string)
+(method) X2Auction:SearchAuctionArticle(page: number, minLevel: number, maxLevel: number, grade: `10`|`11`|`12`|`13`|`1`...(+8), category: `0`|`10`|`11`|`12`|`13`...(+76), exactMatch: boolean, keywords: string, minDirectPriceStr: string, maxDirectPriceStr: string)
 ```
 > Searches the auction house with the specified parameters. Only works when
 > the auction house is open.

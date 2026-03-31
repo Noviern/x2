@@ -167,7 +167,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: RemoveEquipSlot
 ```lua
-(method) ModelView:RemoveEquipSlot(index: EQUIPMENT_SLOT)
+(method) ModelView:RemoveEquipSlot(index: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
 ```
 > Removes an item from the specified equipment slot.
 > 
@@ -254,7 +254,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: PlayAnimation
 ```lua
-(method) ModelView:PlayAnimation(name: ANIMATION, loop: boolean)
+(method) ModelView:PlayAnimation(name: "ac_steer_idle"|"ac_steer_l_01"|"ac_steer_r_01"|"additive_all_co_combat_miss"|"additive_all_re_combat_confuse"...(+2286), loop: boolean)
 ```
 > Plays an animation for the ModelView.
 > 
@@ -2562,7 +2562,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetCustomizingPupilColor
 ```lua
-(method) ModelView:SetCustomizingPupilColor(r: number, g: number, b: number, range: PUPIL_RANGE)
+(method) ModelView:SetCustomizingPupilColor(r: number, g: number, b: number, range: `PR_BOTH`|`PR_LEFT`|`PR_RIGHT`)
 ```
 > Sets the custom pupil color for a specified range.
 > 
@@ -2654,7 +2654,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: UnequipItemSlot
 ```lua
-(method) ModelView:UnequipItemSlot(itemSlot: EQUIPMENT_SLOT)
+(method) ModelView:UnequipItemSlot(itemSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
 ```
 > Unequips an item from the specified slot. `ModelView:ApplyModel` after is required.
 > 
@@ -2697,7 +2697,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetCustomizingPupil
 ```lua
-(method) ModelView:SetCustomizingPupil(index: number, range: PUPIL_RANGE)
+(method) ModelView:SetCustomizingPupil(index: number, range: `PR_BOTH`|`PR_LEFT`|`PR_RIGHT`)
 ```
 > Sets the custom pupil index for a specified range.
 > 
@@ -2770,7 +2770,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: SetEquipSlotFromCharacter
 ```lua
-(method) ModelView:SetEquipSlotFromCharacter(index: EQUIPMENT_SLOT)
+(method) ModelView:SetEquipSlotFromCharacter(index: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
 ```
 > Sets the equipment from a character slot to the current model.
 > 
@@ -2956,7 +2956,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: EquipCostume
 ```lua
-(method) ModelView:EquipCostume(itemType: number, itemGrade: ITEM_GRADE_TYPE, r: number, g: number, b: number)
+(method) ModelView:EquipCostume(itemType: number, itemGrade: `0`|`10`|`11`|`12`|`1`...(+8), r: number, g: number, b: number)
 ```
 > Equips a costume item on the model with specified color.
 > 
@@ -3138,7 +3138,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: Init
 ```lua
-(method) ModelView:Init(unit: UNIT, createModel: boolean)
+(method) ModelView:Init(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), createModel: boolean)
   -> unknown: boolean
 ```
 > Initializes the ModelView with a unit and model creation option.
@@ -3313,7 +3313,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: InitByModelRef
 ```lua
-(method) ModelView:InitByModelRef(modelRef: number, race: RACE, gender: GENDER, butlerMode: boolean)
+(method) ModelView:InitByModelRef(modelRef: number, race: "daru"|"dwarf"|"elf"|"fairy"|"firran"...(+5), gender: "female"|"male"|"none", butlerMode: boolean)
 ```
 > Initializes the ModelView with a model reference, race, gender, and butler
 > mode.
@@ -3352,7 +3352,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 #### Method: GetRace
 ```lua
 (method) ModelView:GetRace()
-  -> raceId: RACE_ID
+  -> raceId: `RACE_DARU`|`RACE_DWARF`|`RACE_ELF`|`RACE_FAIRY`|`RACE_FERRE`...(+5)
 ```
 > Returns the `raceId` for the model of the ModelView.
 > 
@@ -3391,7 +3391,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: GetCustomPupilColor
 ```lua
-(method) ModelView:GetCustomPupilColor(range: PUPIL_RANGE)
+(method) ModelView:GetCustomPupilColor(range: `PR_BOTH`|`PR_LEFT`|`PR_RIGHT`)
   -> red: number
   2. green: number
   3. blue: number
@@ -3414,7 +3414,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: GetCustomPupil
 ```lua
-(method) ModelView:GetCustomPupil(range: PUPIL_RANGE)
+(method) ModelView:GetCustomPupil(range: `PR_BOTH`|`PR_LEFT`|`PR_RIGHT`)
   -> index: number|nil
 ```
 > Retrieves the custom pupil index for a given range.
@@ -3430,7 +3430,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 #### Method: GetGender
 ```lua
 (method) ModelView:GetGender()
-  -> genderId: GENDER_ID
+  -> genderId: `GENDER_FEMALE`|`GENDER_MALE`|`GENDER_NONE`
 ```
 > Returns `gender` for the ModelView.
 > 
@@ -3494,7 +3494,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 
 #### Method: ZoomInOutBeautyShop
 ```lua
-(method) ModelView:ZoomInOutBeautyShop(amount: BEAUTY_SHOP_ZOOM)
+(method) ModelView:ZoomInOutBeautyShop(amount: `-1`|`0`|`1`|`2`)
 ```
 > Zooms in or out in beauty shop mode.
 > 

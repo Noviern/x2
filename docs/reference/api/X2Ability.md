@@ -163,7 +163,7 @@
 ## Aliases
 **ABILITY_ACTIVATION_LEVEL**
 
-ABILITY_ACTIVATION_LEVEL
+`ABILITY_ACTIVATION_LEVEL_1`|`ABILITY_ACTIVATION_LEVEL_2`|`ABILITY_ACTIVATION_LEVEL_3`
 
 ```lua
 -- api/X2Ability
@@ -175,7 +175,7 @@ ABILITY_ACTIVATION_LEVEL:
 
 **ABILITY_TYPE**
 
-ABILITY_TYPE
+`10`|`11`|`12`|`14`|`1`...(+10)
 
 ```lua
 -- api/X2Ability
@@ -199,7 +199,7 @@ ABILITY_TYPE:
 
 **BUFF_INFO_KIND**
 
-BUFF_INFO_KIND
+`BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1)
 
 ```lua
 -- api/X2Ability
@@ -215,7 +215,7 @@ BUFF_INFO_KIND:
 
 **RECOMMENDED_ABILITY_CATEGORY**
 
-RECOMMENDED_ABILITY_CATEGORY
+`RAC_FIRST`|`RAC_INVALID`|`RAC_SECOND`
 
 ```lua
 -- api/X2Ability
@@ -227,7 +227,7 @@ RECOMMENDED_ABILITY_CATEGORY:
 
 **SBC**
 
-SBC
+`SBC_ATTACK`|`SBC_EMOTION`|`SBC_GENERAL`|`SBC_JOB`|`SBC_NONE`
 
 ```lua
 -- api/X2Ability
@@ -241,7 +241,7 @@ SBC:
 
 **SKILL**
 
-SKILL
+`ACTIVE_SKILL_1`|`ACTIVE_SKILL_2`|`ACTIVE_SKILL_3`|`ATTACK_SKILL`|`EMOTION_SKILL`...(+8)
 
 ```lua
 -- api/X2Ability
@@ -263,7 +263,7 @@ SKILL:
 
 **SLOT_ACTIVE_TYPE**
 
-SLOT_ACTIVE_TYPE
+`SAT_ACTIVE`|`SAT_HIDE`|`SAT_NONACTIVE`|`SAT_NONE`
 
 ```lua
 -- api/X2Ability
@@ -289,7 +289,7 @@ SLOT_ACTIVE_TYPE:
 
 #### Method: GetMyActabilityInfo
 ```lua
-(method) X2Ability:GetMyActabilityInfo(actabilityGroupType: ACTABILITY_ID)
+(method) X2Ability:GetMyActabilityInfo(actabilityGroupType: `10`|`11`|`12`|`13`|`14`...(+32))
   -> myActabilityInfo: ActabilityGroupTypeInfo|nil
 ```
 > Returns actability information for the player.
@@ -342,7 +342,7 @@ SLOT_ACTIVE_TYPE:
 
 #### Method: GetBuffTooltip
 ```lua
-(method) X2Ability:GetBuffTooltip(buffType: number, itemLevel: number, neededInfo?: BUFF_INFO_KIND)
+(method) X2Ability:GetBuffTooltip(buffType: number, itemLevel: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
   -> buffTooltip: AppellationBuffInfo
 ```
 > Retrieves information for the buff tooltip based on the buff type and item
@@ -383,7 +383,7 @@ SLOT_ACTIVE_TYPE:
 
 #### Method: IsActiveAbility
 ```lua
-(method) X2Ability:IsActiveAbility(index: ABILITY_TYPE)
+(method) X2Ability:IsActiveAbility(index: `10`|`11`|`12`|`14`|`1`...(+10))
   -> activeAbility: boolean
 ```
 > Returns if the ability is active.
