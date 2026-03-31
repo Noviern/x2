@@ -3536,9 +3536,15 @@ ZONE_STATE_TYPE:
 
 #### Method: UpdateEscMenuButton
 ```lua
-(method) ADDON:UpdateEscMenuButton(uiContentType: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121), buttonValue: number, colorKey: string)
+(method) ADDON:UpdateEscMenuButton(uiContentType: `UIC_ABILITY_CHANGE`|`UIC_ACHIEVEMENT`|`UIC_ACTABILITY`|`UIC_ADDON`|`UIC_APPELLATION`...(+121), buttonValue: `1`|`2`|`3`, colorKey: string)
 ```
 > Updates the escape menu badge button for the UI category.
+> 
+> @*param* `uiContentType` — The UI category to update.
+> 
+> @*param* `buttonValue` — The button type for the badge of the UI category.
+> 
+> @*param* `colorKey` — The color key for the badge.
 > 
 > ```lua
 > -- api/Addon
@@ -3669,6 +3675,11 @@ ZONE_STATE_TYPE:
 >     | `UIC_WEB_WIKI`
 >     | `UIC_WHISPER`
 >     | `UIC_WORLDMAP`
+> 
+> buttonValue:
+>     | `1` -- normal
+>     | `2` -- on/off
+>     | `3` -- numbers
 > ```
 
 ### Class: UIParent

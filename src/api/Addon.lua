@@ -996,9 +996,9 @@ function ADDON:ShowContent(uiCategory, show, data) end
 function ADDON:ToggleContent(uiCategory, data) end
 
 ---Updates the escape menu badge button for the UI category.
----@param uiContentType UI_CATEGORY
----@param buttonValue number
----@param colorKey string
+---@param uiContentType UI_CATEGORY  The UI category to update.
+---@param buttonValue ESC_MENU_BUTTON_TYPE The button type for the badge of the UI category.
+---@param colorKey string The color key for the badge.
 function ADDON:UpdateEscMenuButton(uiContentType, buttonValue, colorKey) end
 
 ---Clears the UI bound associated with the specified UI key. Reload
