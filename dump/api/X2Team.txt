@@ -21,5 +21,7 @@ X2Team = {
   KickTeamMemberByName = "<function X2Team>",
   MoveTeamMember = "<function X2Team>",
   MoveTeamMemberToParty = "<function X2Team>",
+  RaidRecruitAdd = "<function X2Team>",
+  RaidRecruitDel = "<function X2Team>",
   SetRole = "<function X2Team>",
 }

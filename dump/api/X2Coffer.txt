@@ -1,1 +1,5 @@
-X2Coffer = {}
+X2Coffer = {
+  CountItems = "<function X2Coffer>",
+  GetBagItemInfo = "<function X2Coffer>",
+  ItemStack = "<function X2Coffer>",
+}

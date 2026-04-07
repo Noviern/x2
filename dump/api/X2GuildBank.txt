@@ -1,1 +1,5 @@
-X2GuildBank = {}
+X2GuildBank = {
+  CountItems = "<function X2GuildBank>",
+  GetBagItemInfo = "<function X2GuildBank>",
+  ItemStack = "<function X2GuildBank>",
+}

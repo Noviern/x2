@@ -1,4 +1,6 @@
 X2Bag = {
+  CountItems = "<function X2Bag>",
   EquipBagItem = "<function X2Bag>",
   GetBagItemInfo = "<function X2Bag>",
+  ItemStack = "<function X2Bag>",
 }

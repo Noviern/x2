@@ -6,15 +6,14 @@
 
 ## Classes
 ### Class: X2Bag
-#### Method: EquipBagItem
+#### Method: CountItems
 ```lua
-(method) X2Bag:EquipBagItem(slot: number, isAuxEquip: boolean)
+(method) X2Bag:CountItems()
+  -> itemCount: number
 ```
-> Attempts to equip an item from the specified slot.
+> Returns the total number of items in the player's bag.
 > 
-> @*param* `slot` — The slot containing the item to equip. (min: `1`)
-> 
-> @*param* `isAuxEquip` — Whether to equip as auxiliary equipment.
+> @*return* `itemCount` — The total count of items currently in the bag.
 
 #### Method: GetBagItemInfo
 ```lua
@@ -51,4 +50,25 @@
 > ```
 > 
 > See: [ItemInfo](../types/classes.md#class-iteminfo)
+
+#### Method: EquipBagItem
+```lua
+(method) X2Bag:EquipBagItem(slot: number, isAuxEquip: boolean)
+```
+> Attempts to equip an item from the specified slot.
+> 
+> @*param* `slot` — The slot containing the item to equip. (min: `1`)
+> 
+> @*param* `isAuxEquip` — Whether to equip as auxiliary equipment.
+
+#### Method: ItemStack
+```lua
+(method) X2Bag:ItemStack(slot: number)
+  -> itemStack: number
+```
+> Returns the current stack size of the item in the specified bag slot.
+> 
+> @*param* `slot` — The bag slot index. (min: `1`)
+> 
+> @*return* `itemStack` — The number of items in the stack.
 

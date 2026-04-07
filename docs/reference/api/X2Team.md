@@ -143,6 +143,56 @@ TEAM_ROLE:
 >     | `TMROLE_TANKER`
 > ```
 
+#### Method: MoveTeamMemberToParty
+```lua
+(method) X2Team:MoveTeamMemberToParty(frommemberIndex: number, toParty: number)
+```
+> Moves a team member to a different party.
+> 
+> @*param* `frommemberIndex` — The current index of the member.  (min: `1`)
+> 
+> @*param* `toParty` — The target party number to move the member to.
+
+#### Method: RaidRecruitAdd
+```lua
+(method) X2Team:RaidRecruitAdd(type: `1`|`2`|`3`|`4`, subType: number, headcount: number, limitLevel: number, autoJoin: boolean, msg: string, hour: number, minute: number, limitGearPoint: number)
+```
+> Registers a new raid recruitment listing.
+> Cooldown 5 seconds.
+> 
+> @*param* `type` — The type of raid recruitment.
+> 
+> @*param* `subType` — The subtype of the raid.
+> 
+> @*param* `headcount` — Maximum number of players that can join.
+> 
+> @*param* `limitLevel` — Minimum level required to join. (min: `0`, max: `125`, base 0-55 + ancestral 1-70)
+> 
+> @*param* `autoJoin` — `true` to allow auto-join, `false` otherwise.
+> 
+> @*param* `msg` — The recruitment message.
+> 
+> @*param* `hour` — Departure hour.
+> 
+> @*param* `minute` — Departure minute.
+> 
+> @*param* `limitGearPoint` — Minimum gear score required to join.
+> 
+> ```lua
+> type:
+>     | `1` -- Dungeons
+>     | `2` -- Raids
+>     | `3` -- Faction War
+>     | `4` -- Other
+> ```
+
+#### Method: RaidRecruitDel
+```lua
+(method) X2Team:RaidRecruitDel()
+```
+> Shows popup confirming if the raid recuitment post should be deleted.
+> Cooldown 5 seconds.
+
 #### Method: MoveTeamMember
 ```lua
 (method) X2Team:MoveTeamMember(frommemberIndex: number, tomemberIndex: number)
@@ -153,15 +203,28 @@ TEAM_ROLE:
 > 
 > @*param* `tomemberIndex` — The target index to move the member to. (min: `1`)
 
-#### Method: MoveTeamMemberToParty
+#### Method: KickTeamMember
 ```lua
-(method) X2Team:MoveTeamMemberToParty(frommemberIndex: number, toParty: number)
+(method) X2Team:KickTeamMember(memberIndex: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
+  -> success: boolean
 ```
-> Moves a team member to a different party.
+> Kicks a team member from the team.
 > 
-> @*param* `frommemberIndex` — The current index of the member.  (min: `1`)
+> @*param* `memberIndex` — The index or identifier of the member to kick. (min: `1`)
 > 
-> @*param* `toParty` — The target party number to move the member to.
+> @*param* `teamRoleType` — The role of the member being kicked.
+> 
+> @*return* `success` — `true` if the kick was successful, `false` otherwise.
+> 
+> ```lua
+> -- api/X2Team
+> teamRoleType:
+>     | `TMROLE_DEALER`
+>     | `TMROLE_HEALER`
+>     | `TMROLE_NONE`
+>     | `TMROLE_RANGED_DEALER`
+>     | `TMROLE_TANKER`
+> ```
 
 #### Method: KickTeamMemberByName
 ```lua
@@ -195,29 +258,6 @@ TEAM_ROLE:
 > ```lua
 > -- api/X2Team
 > role:
->     | `TMROLE_DEALER`
->     | `TMROLE_HEALER`
->     | `TMROLE_NONE`
->     | `TMROLE_RANGED_DEALER`
->     | `TMROLE_TANKER`
-> ```
-
-#### Method: KickTeamMember
-```lua
-(method) X2Team:KickTeamMember(memberIndex: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
-  -> success: boolean
-```
-> Kicks a team member from the team.
-> 
-> @*param* `memberIndex` — The index or identifier of the member to kick. (min: `1`)
-> 
-> @*param* `teamRoleType` — The role of the member being kicked.
-> 
-> @*return* `success` — `true` if the kick was successful, `false` otherwise.
-> 
-> ```lua
-> -- api/X2Team
-> teamRoleType:
 >     | `TMROLE_DEALER`
 >     | `TMROLE_HEALER`
 >     | `TMROLE_NONE`

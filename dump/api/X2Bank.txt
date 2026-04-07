@@ -1,1 +1,5 @@
-X2Bank = {}
+X2Bank = {
+  CountItems = "<function X2Bank>",
+  GetBagItemInfo = "<function X2Bank>",
+  ItemStack = "<function X2Bank>",
+}

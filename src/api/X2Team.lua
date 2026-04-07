@@ -81,6 +81,23 @@ function X2Team:MoveTeamMember(frommemberIndex, tomemberIndex) end
 ---@param toParty number The target party number to move the member to.
 function X2Team:MoveTeamMemberToParty(frommemberIndex, toParty) end
 
+---Registers a new raid recruitment listing.
+---Cooldown 5 seconds.
+---@param type RAID_RECRUIT_TYPE The type of raid recruitment.
+---@param subType number The subtype of the raid.
+---@param headcount number Maximum number of players that can join.
+---@param limitLevel number Minimum level required to join. (min: `0`, max: `125`, base 0-55 + ancestral 1-70)
+---@param autoJoin boolean `true` to allow auto-join, `false` otherwise.
+---@param msg string The recruitment message.
+---@param hour number Departure hour.
+---@param minute number Departure minute.
+---@param limitGearPoint number Minimum gear score required to join.
+function X2Team:RaidRecruitAdd(type, subType, headcount, limitLevel, autoJoin, msg, hour, minute, limitGearPoint) end
+
+---Shows popup confirming if the raid recuitment post should be deleted.
+---Cooldown 5 seconds.
+function X2Team:RaidRecruitDel() end
+
 ---Sets the player's role in a raid.
 ---@param role TEAM_ROLE The role to set for the player.
 function X2Team:SetRole(role) end

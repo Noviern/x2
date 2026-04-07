@@ -99,7 +99,7 @@ function X2Unit:GetOverHeadMarker(unit) end
 ---Retrieves the unit ID associated with the given overhead marker index.
 ---@param markerIndex MARKER The marker index to query.
 ---@return string|nil unitId The unit ID, or `nil` if the marker is not assigned.
----@discard
+---@nodiscard
 function X2Unit:GetOverHeadMarkerUnitId(markerIndex) end
 
 ---Retrieves a list of up to three target ability templates for the specified
