@@ -17,11 +17,11 @@
 ---@field colorKey string|nil ui/common/default.g > text_badge_bg.colors
 
 ---@class EscMenuButtonData
----@field path string Addon/{addonname}/example.dds
+---@field path string|nil Addon/{addonname}/example.dds
 ---@field x number|nil
 ---@field y number|nil
----@field w number 25
----@field h number 25
+---@field w number|nil 25
+---@field h number|nil 25
 
 ---@class AddonInfo
 ---@field name string

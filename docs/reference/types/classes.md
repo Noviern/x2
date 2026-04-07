@@ -2856,7 +2856,7 @@ string|nil
 ### Class: EscMenuButtonData
 #### Field: h
 ```lua
-number
+number|nil
 ```
 > 25
 
@@ -2868,13 +2868,13 @@ number|nil
 
 #### Field: w
 ```lua
-number
+number|nil
 ```
 > 25
 
 #### Field: path
 ```lua
-string
+string|nil
 ```
 > Addon/{addonname}/example.dds
 

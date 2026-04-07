@@ -8768,6 +8768,18 @@ RACE:
     | "warborn"
 ```
 
+**RAID_RECRUIT_TYPE**
+
+`1`|`2`|`3`|`4`
+
+```lua
+RAID_RECRUIT_TYPE:
+    | `1` -- Dungeons
+    | `2` -- Raids
+    | `3` -- Faction War
+    | `4` -- Other
+```
+
 **RESIDENT_BOARD_TYPE**
 
 `1`|`2`|`3`|`4`|`5`...(+2)
