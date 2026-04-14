@@ -5162,6 +5162,75 @@ boolean
 ```
 
 
+### Class: RaidRecruitSubType
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: subType
+```lua
+number
+```
+
+
+### Class: RaidRecruitSubTypeInfo
+#### Field: comment
+```lua
+string
+```
+
+
+#### Field: level
+```lua
+number
+```
+
+
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: gearScoreLimitMax
+```lua
+number
+```
+
+
+#### Field: gearScore
+```lua
+number
+```
+
+
+#### Field: subType
+```lua
+number
+```
+
+
+### Class: RaidRecruitType
+#### Field: iconKey
+```lua
+string
+```
+
+
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: type
+```lua
+number
+```
+
+
 ### Class: RechargeBuffInfo
 #### Field: chargeLifetime
 ```lua

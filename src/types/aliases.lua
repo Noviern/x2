@@ -8046,6 +8046,43 @@
 ---| `3` # Faction War
 ---| `4` # Other
 
+---@alias RAID_RECRUIT_SUBTYPE_DUNGEON
+---| `1` # Recruit Any: Dungeon
+---| `3` # Burnt Castle Armory
+---| `4` # Hadir Farm
+---| `5` # Howling Abyss
+
+---@alias RAID_RECRUIT_SUBTYPE_RAID
+---| `2`       # Recruit Any: Raid
+---| `36`      # Furious Thunderwing Titan
+---| `9000009` # Kraken
+---| `9000010` # Black Dragon
+---| `9000011` # Leviathan
+---| `9000012` # World Bosses
+
+---@alias RAID_RECRUIT_SUBTYPE_FACTION_WAR
+---| `18`      # Recruit Any: Faction War
+---| `9000003` # Alemine Fortress
+--- `38`      # Siege - Disabled
+
+---@alias RAID_RECRUIT_SUBTYPE_OTHER
+---| `0`       # Recruit Any: Misc.
+---| `20`      # Crimson Rift
+---| `21`      # Grimghast Rift
+---| `22`      # Ocleera Rift
+---| `23`      # Tower Defense
+---| `24`      # Aegis Island
+---| `26`      # The Lusca Awakens
+---| `27`      # Abyssal Attack
+---| `9000001` # Wonderland Races
+---| `9000002` # Hasla Zombie Apocalypse
+---| `9000005` # Temporary Events
+---| `9000006` # PvP/PvE
+---| `9000007` # Defend-Merchant
+---| `9000008` # Attack-Merchant
+---| `9000013` # Akasch Invasion
+---| `9000014` # Hiram Rift
+
 ---@alias RESIDENT_BOARD_TYPE
 ---| `1` # Fabric   - Nuia/Haranya
 ---| `2` # Leather  - Nuia/Haranya

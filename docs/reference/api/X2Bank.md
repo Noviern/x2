@@ -17,12 +17,10 @@
 
 #### Method: GetBagItemInfo
 ```lua
-(method) X2Bank:GetBagItemInfo(bankId: 1, slot: number, neededInfo?: `IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5))
+(method) X2Bank:GetBagItemInfo(slot: number, neededInfo?: `IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5))
   -> bankItemInfo: ItemInfo|nil
 ```
 > Retrieves item information for the specified slot if it exists.
-> 
-> @*param* `bankId` — The bank ID.
 > 
 > @*param* `slot` — The slot to query. (min:  `1`)
 > 
@@ -31,9 +29,6 @@
 > @*return* `bankItemInfo` — The item information, or `nil` if the slot is empty or doesn't exist.
 > 
 > ```lua
-> bankId:
->     | 1
-> 
 > -- api/X2Item
 > -- Values can be added together to get more information.
 > neededInfo:

@@ -50,13 +50,25 @@ Button
 
 #### Method: SetAutocomplete
 ```lua
-(method) Combobox:SetAutocomplete(type: string, filter: string)
+(method) Combobox:SetAutocomplete(type: "appellation"|"ingameShopGoods"|"item"|"itemForDebug"|"itemTypeForDebug"...(+1), filter: string)
 ```
 > Sets the autocomplete type and filter for the Combobox.
 > 
 > @*param* `type` — The autocomplete type.
 > 
 > @*param* `filter` — The autocomplete filter.
+> 
+> 
+> 
+> ```lua
+> type:
+>     | "appellation"
+>     | "ingameShopGoods"
+>     | "item"
+>     | "itemForDebug"
+>     | "itemTypeForDebug"
+>     | "store"
+> ```
 
 #### Method: SetDropdownVisibleLimit
 ```lua

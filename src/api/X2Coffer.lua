@@ -8,14 +8,14 @@ X2Coffer = {} -- api/X2Coffer
 ---@nodiscard
 function X2Coffer:CountItems() end
 
----Retrieves item information for the specified slot if it exists.
----@param cofferId 1 The coffer ID.
+---Retrieves item information for the specified slot if it exists. The player
+---must interact with a coffer for this to return anything.
 ---@param slot number The slot to query. (min:  `1`)
 ---@param neededInfo? ITEM_INFORMATION_KIND Optional additional information for the item.
 ---@return ItemInfo|nil cofferItemInfo The item information, or `nil` if the slot is empty or doesn't exist.
 ---@nodiscard
 ---@see ItemInfo
-function X2Coffer:GetBagItemInfo(cofferId, slot, neededInfo) end
+function X2Coffer:GetBagItemInfo(slot, neededInfo) end
 
 ---Returns the current stack size of the item in the specified coffer slot.
 ---@param slot number The coffer slot index. (min: `1`)

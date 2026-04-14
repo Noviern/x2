@@ -44,6 +44,28 @@ X2Team = {}                           -- api/X2Team
 ---| `TMROLE_RANGED_DEALER`
 ---| `TMROLE_TANKER`
 
+---Returns information for a specific raid recruit type and subtype.
+---@param recruitType any The raid recruit type.
+---@param recruitSubType any The raid recruit subtype.
+---@return RaidRecruitSubTypeInfo raidRecruitSubType The subtype information.
+---@nodiscard
+---@see RaidRecruitSubTypeInfo
+function X2Team:GetRaidRecruitSubType(recruitType, recruitSubType) end
+
+---Returns subtype information for multiple raid recruit types.
+---@param recruitTypeList table A table containing the types to look up.
+---@param bExceptSiege boolean `true` to exclude siege raids from the list, `false` otherwise.
+---@return RaidRecruitSubType[] raidRecruitSubTypeList A list of subtype information.
+---@nodiscard
+---@see RaidRecruitSubType
+function X2Team:GetRaidRecruitSubTypeList(recruitTypeList, bExceptSiege) end
+
+---Returns the full list of available raid recruit types.
+---@return RaidRecruitType[] raidRecruitTypeList The list of raid recruit types.
+---@nodiscard
+---@see RaidRecruitType
+function X2Team:GetRaidRecruitTypeList() end
+
 ---Retrieves the role of the specified member in the given team.
 ---@param teamIndex number The index of the team. (min: `0`)
 ---@param memberIndex number The index of the member within the team. (min: `1`)
@@ -92,6 +114,10 @@ function X2Team:MoveTeamMemberToParty(frommemberIndex, toParty) end
 ---@param hour number Departure hour.
 ---@param minute number Departure minute.
 ---@param limitGearPoint number Minimum gear score required to join.
+---@overload fun(self: self, type: 1, subType: RAID_RECRUIT_SUBTYPE_DUNGEON, headcount: number, limitLevel: number, autoJoin: boolean, msg: string, hour: number, minute: number, limitGearPoint: number)
+---@overload fun(self: self, type: 2, subType: RAID_RECRUIT_SUBTYPE_RAID, headcount: number, limitLevel: number, autoJoin: boolean, msg: string, hour: number, minute: number, limitGearPoint: number)
+---@overload fun(self: self, type: 3, subType: RAID_RECRUIT_SUBTYPE_FACTION_WAR, headcount: number, limitLevel: number, autoJoin: boolean, msg: string, hour: number, minute: number, limitGearPoint: number)
+---@overload fun(self: self, type: 4, subType: RAID_RECRUIT_SUBTYPE_OTHER, headcount: number, limitLevel: number, autoJoin: boolean, msg: string, hour: number, minute: number, limitGearPoint: number)
 function X2Team:RaidRecruitAdd(type, subType, headcount, limitLevel, autoJoin, msg, hour, minute, limitGearPoint) end
 
 ---Shows popup confirming if the raid recuitment post should be deleted.

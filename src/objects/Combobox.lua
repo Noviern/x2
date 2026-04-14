@@ -39,7 +39,7 @@ function Combobox:Insert(datas) end
 function Combobox:PauseAutocomplete(pause) end
 
 ---Sets the autocomplete type and filter for the Combobox.
----@param type string The autocomplete type.
+---@param type AUTOCOMPLETE_TYPE The autocomplete type.
 ---@param filter string The autocomplete filter.
 ---@overload fun(self: self, type: "appellation", filter: "")
 ---@overload fun(self: self, type: "ingameShopGoods", filter: "ingameShopGoods")

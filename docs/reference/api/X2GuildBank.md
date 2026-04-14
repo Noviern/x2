@@ -17,12 +17,11 @@
 
 #### Method: GetBagItemInfo
 ```lua
-(method) X2GuildBank:GetBagItemInfo(guildBankId: 1, slot: number, neededInfo?: `IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5))
+(method) X2GuildBank:GetBagItemInfo(slot: number, neededInfo?: `IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5))
   -> guild: ItemInfo|nil
 ```
-> Retrieves item information for the specified slot if it exists.
-> 
-> @*param* `guildBankId` — The guild bank ID.
+> Retrieves item information for the specified slot if it exists. The player
+> must interact with a guild bank for this to return anything.
 > 
 > @*param* `slot` — The slot to query. (min:  `1`)
 > 
@@ -31,9 +30,6 @@
 > @*return* `guild` — bankItemInfo The item information, or `nil` if the slot is empty or doesn't exist.
 > 
 > ```lua
-> guildBankId:
->     | 1
-> 
 > -- api/X2Item
 > -- Values can be added together to get more information.
 > neededInfo:

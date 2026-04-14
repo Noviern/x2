@@ -17,12 +17,11 @@
 
 #### Method: GetBagItemInfo
 ```lua
-(method) X2Coffer:GetBagItemInfo(cofferId: 1, slot: number, neededInfo?: `IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5))
+(method) X2Coffer:GetBagItemInfo(slot: number, neededInfo?: `IIK_CATEGORY`|`IIK_CONSUME_ITEM`|`IIK_GRADE_STR`|`IIK_GRADE`|`IIK_IMPL`...(+5))
   -> cofferItemInfo: ItemInfo|nil
 ```
-> Retrieves item information for the specified slot if it exists.
-> 
-> @*param* `cofferId` — The coffer ID.
+> Retrieves item information for the specified slot if it exists. The player
+> must interact with a coffer for this to return anything.
 > 
 > @*param* `slot` — The slot to query. (min:  `1`)
 > 
@@ -31,9 +30,6 @@
 > @*return* `cofferItemInfo` — The item information, or `nil` if the slot is empty or doesn't exist.
 > 
 > ```lua
-> cofferId:
->     | 1
-> 
 > -- api/X2Item
 > -- Values can be added together to get more information.
 > neededInfo:

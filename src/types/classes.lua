@@ -1527,3 +1527,20 @@
 ---@field reqItemCount number
 ---@field title string
 ---@field tooltip string
+
+---@class RaidRecruitSubTypeInfo
+---@field comment string
+---@field gearScore number
+---@field gearScoreLimitMax number
+---@field level number
+---@field name string
+---@field subType number
+
+---@class RaidRecruitSubType
+---@field name string
+---@field subType number
+
+---@class RaidRecruitType
+---@field iconKey string
+---@field name string
+---@field type number

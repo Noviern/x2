@@ -8768,6 +8768,66 @@ RACE:
     | "warborn"
 ```
 
+**RAID_RECRUIT_SUBTYPE_DUNGEON**
+
+`1`|`3`|`4`|`5`
+
+```lua
+RAID_RECRUIT_SUBTYPE_DUNGEON:
+    | `1` -- Recruit Any: Dungeon
+    | `3` -- Burnt Castle Armory
+    | `4` -- Hadir Farm
+    | `5` -- Howling Abyss
+```
+
+**RAID_RECRUIT_SUBTYPE_FACTION_WAR**
+
+`18`|`9000003`
+
+```lua
+RAID_RECRUIT_SUBTYPE_FACTION_WAR:
+    | `18` -- Recruit Any: Faction War
+    | `9000003` -- Alemine Fortress
+```
+
+**RAID_RECRUIT_SUBTYPE_OTHER**
+
+`0`|`20`|`21`|`22`|`23`...(+11)
+
+```lua
+RAID_RECRUIT_SUBTYPE_OTHER:
+    | `0` -- Recruit Any: Misc.
+    | `20` -- Crimson Rift
+    | `21` -- Grimghast Rift
+    | `22` -- Ocleera Rift
+    | `23` -- Tower Defense
+    | `24` -- Aegis Island
+    | `26` -- The Lusca Awakens
+    | `27` -- Abyssal Attack
+    | `9000001` -- Wonderland Races
+    | `9000002` -- Hasla Zombie Apocalypse
+    | `9000005` -- Temporary Events
+    | `9000006` -- PvP/PvE
+    | `9000007` -- Defend-Merchant
+    | `9000008` -- Attack-Merchant
+    | `9000013` -- Akasch Invasion
+    | `9000014` -- Hiram Rift
+```
+
+**RAID_RECRUIT_SUBTYPE_RAID**
+
+`2`|`36`|`9000009`|`9000010`|`9000011`...(+1)
+
+```lua
+RAID_RECRUIT_SUBTYPE_RAID:
+    | `2` -- Recruit Any: Raid
+    | `36` -- Furious Thunderwing Titan
+    | `9000009` -- Kraken
+    | `9000010` -- Black Dragon
+    | `9000011` -- Leviathan
+    | `9000012` -- World Bosses
+```
+
 **RAID_RECRUIT_TYPE**
 
 `1`|`2`|`3`|`4`

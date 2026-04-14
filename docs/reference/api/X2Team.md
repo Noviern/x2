@@ -120,22 +120,44 @@ TEAM_ROLE:
 
 ## Classes
 ### Class: X2Team
-#### Method: GetRole
+#### Method: GetRaidRecruitSubType
 ```lua
-(method) X2Team:GetRole(teamIndex: number, memberIndex: number)
-  -> role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
+(method) X2Team:GetRaidRecruitSubType(recruitType: any, recruitSubType: any)
+  -> raidRecruitSubType: RaidRecruitSubTypeInfo
 ```
-> Retrieves the role of the specified member in the given team.
+> Returns information for a specific raid recruit type and subtype.
 > 
-> @*param* `teamIndex` — The index of the team. (min: `0`)
+> @*param* `recruitType` — The raid recruit type.
 > 
-> @*param* `memberIndex` — The index of the member within the team. (min: `1`)
+> @*param* `recruitSubType` — The raid recruit subtype.
 > 
-> @*return* `role` — The role of the member.
+> @*return* `raidRecruitSubType` — The subtype information.
+> 
+> See: [RaidRecruitSubTypeInfo](../types/classes.md#class-raidrecruitsubtypeinfo)
+
+#### Method: MoveTeamMember
+```lua
+(method) X2Team:MoveTeamMember(frommemberIndex: number, tomemberIndex: number)
+```
+> Moves a team member to a different position.
+> 
+> @*param* `frommemberIndex` — The current index of the member. (min: `1`)
+> 
+> @*param* `tomemberIndex` — The target index to move the member to. (min: `1`)
+
+#### Method: KickTeamMemberByName
+```lua
+(method) X2Team:KickTeamMemberByName(charName: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
+```
+> Kicks a team member by their character name.
+> 
+> @*param* `charName` — The name of the character to kick.
+> 
+> @*param* `teamRoleType` — The role of the member being kicked.
 > 
 > ```lua
 > -- api/X2Team
-> role:
+> teamRoleType:
 >     | `TMROLE_DEALER`
 >     | `TMROLE_HEALER`
 >     | `TMROLE_NONE`
@@ -178,6 +200,8 @@ TEAM_ROLE:
 > 
 > @*param* `limitGearPoint` — Minimum gear score required to join.
 > 
+> 
+> 
 > ```lua
 > type:
 >     | `1` -- Dungeons
@@ -192,16 +216,6 @@ TEAM_ROLE:
 ```
 > Shows popup confirming if the raid recuitment post should be deleted.
 > Cooldown 5 seconds.
-
-#### Method: MoveTeamMember
-```lua
-(method) X2Team:MoveTeamMember(frommemberIndex: number, tomemberIndex: number)
-```
-> Moves a team member to a different position.
-> 
-> @*param* `frommemberIndex` — The current index of the member. (min: `1`)
-> 
-> @*param* `tomemberIndex` — The target index to move the member to. (min: `1`)
 
 #### Method: KickTeamMember
 ```lua
@@ -226,19 +240,22 @@ TEAM_ROLE:
 >     | `TMROLE_TANKER`
 > ```
 
-#### Method: KickTeamMemberByName
+#### Method: GetRole
 ```lua
-(method) X2Team:KickTeamMemberByName(charName: string, teamRoleType: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)
+(method) X2Team:GetRole(teamIndex: number, memberIndex: number)
+  -> role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`
 ```
-> Kicks a team member by their character name.
+> Retrieves the role of the specified member in the given team.
 > 
-> @*param* `charName` — The name of the character to kick.
+> @*param* `teamIndex` — The index of the team. (min: `0`)
 > 
-> @*param* `teamRoleType` — The role of the member being kicked.
+> @*param* `memberIndex` — The index of the member within the team. (min: `1`)
+> 
+> @*return* `role` — The role of the member.
 > 
 > ```lua
 > -- api/X2Team
-> teamRoleType:
+> role:
 >     | `TMROLE_DEALER`
 >     | `TMROLE_HEALER`
 >     | `TMROLE_NONE`
@@ -264,6 +281,32 @@ TEAM_ROLE:
 >     | `TMROLE_RANGED_DEALER`
 >     | `TMROLE_TANKER`
 > ```
+
+#### Method: GetRaidRecruitSubTypeList
+```lua
+(method) X2Team:GetRaidRecruitSubTypeList(recruitTypeList: table, bExceptSiege: boolean)
+  -> raidRecruitSubTypeList: RaidRecruitSubType[]
+```
+> Returns subtype information for multiple raid recruit types.
+> 
+> @*param* `recruitTypeList` — A table containing the types to look up.
+> 
+> @*param* `bExceptSiege` — `true` to exclude siege raids from the list, `false` otherwise.
+> 
+> @*return* `raidRecruitSubTypeList` — A list of subtype information.
+> 
+> See: [RaidRecruitSubType](../types/classes.md#class-raidrecruitsubtype)
+
+#### Method: GetRaidRecruitTypeList
+```lua
+(method) X2Team:GetRaidRecruitTypeList()
+  -> raidRecruitTypeList: RaidRecruitType[]
+```
+> Returns the full list of available raid recruit types.
+> 
+> @*return* `raidRecruitTypeList` — The list of raid recruit types.
+> 
+> See: [RaidRecruitType](../types/classes.md#class-raidrecruittype)
 
 #### Method: SetRole
 ```lua
