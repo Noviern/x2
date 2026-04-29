@@ -38,7 +38,7 @@ COMBAT_RESOURCE_UITYPE:
 ### Class: X2CombatResource
 #### Method: CheckCombatResourceMaxPointByGroupType
 ```lua
-(method) X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType: `10`|`11`|`12`|`14`|`1`...(+10))
+(method) X2CombatResource:CheckCombatResourceMaxPointByGroupType(groupType: `10`|`11`|`12`|`14`|`1`...(+11))
   -> maxPointByGroupType: boolean
 ```
 > Checks if the combat resource for the specified group type is at its maximum.
@@ -65,6 +65,7 @@ COMBAT_RESOURCE_UITYPE:
 >     | `12` -- SWIFTBLADE (ASSASSIN)
 >     | `14` -- SPELLDANCE (PLEASURE)
 >     | `ABILITY_MADNESS` -- GUNSLINGER (MADNESS)
+>     | `30` -- invalid
 > ```
 
 #### Method: GetCombatResourceInfo
@@ -81,7 +82,7 @@ COMBAT_RESOURCE_UITYPE:
 
 #### Method: GetCombatResourceInfoByGroupType
 ```lua
-(method) X2CombatResource:GetCombatResourceInfoByGroupType(groupType: `10`|`11`|`12`|`14`|`1`...(+10))
+(method) X2CombatResource:GetCombatResourceInfoByGroupType(groupType: `10`|`11`|`12`|`14`|`1`...(+11))
   -> combatResourceInfo: CombatResource|nil
 ```
 > Retrieves combat resource information for the specified group type if the
@@ -109,6 +110,7 @@ COMBAT_RESOURCE_UITYPE:
 >     | `12` -- SWIFTBLADE (ASSASSIN)
 >     | `14` -- SPELLDANCE (PLEASURE)
 >     | `ABILITY_MADNESS` -- GUNSLINGER (MADNESS)
+>     | `30` -- invalid
 > ```
 > 
 > See: [CombatResource](../types/classes.md#class-combatresource)

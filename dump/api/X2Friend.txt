@@ -1,4 +1,7 @@
 MAX_BLOCK_USER = 200
 MAX_FRIENDS = 100
 MAX_WAIT_FRIENDS = 50
-X2Friend = {}
+X2Friend = {
+  GetFriendList = "<function X2Friend>",
+  IsMyFriend = "<function X2Friend>",
+}

@@ -781,7 +781,7 @@
 ---@field [2] number Basic Level
 ---@field [3] UnitClassNames Class
 ---@field [4] number Guild Role
----@field [5] table Connection Status (empty)
+---@field [5] Time|table Connection Status (last active date or could be empty if the player is online)
 ---@field [6] string Memo
 ---@field [7] boolean Online
 ---@field [8] boolean Party
@@ -818,7 +818,7 @@
 ---@field [5] RACE_ID
 ---@field [6] boolean Online
 ---@field [7] boolean Party
----@field [8] number Ancestral Level = 40,
+---@field [8] number Ancestral Level
 ---@field [9] FACTION_TYPE Faction
 ---@field [10] number|nil CHK
 
@@ -968,7 +968,7 @@
 
 ---@class SiegeRaidZoneInfo
 ---@field commanderName string
----@field factionId number
+---@field factionId FACTION_TYPE
 ---@field memberCnt number
 ---@field memberMax number
 ---@field scheduleInfo SiegeRaidScheduleInfo
@@ -1544,3 +1544,32 @@
 ---@field iconKey string
 ---@field name string
 ---@field type number
+
+---@class AppliedAllLevelEffect
+---@field attributeType string
+---@field unitModifierType number
+---@field value number
+
+---@class BundleEffectInfo
+---@field level number
+---@field reqOffenseLevel number
+---@field reqDefenseLevel number
+---@field reqSupportLevel number
+---@field unitModifierInfos AppliedAllLevelEffect[]
+
+---@class LevelEffectInfo
+---@field attribute number
+---@field attributeKey string
+---@field value number
+
+---@class ReinforceInfo
+---@field exp number
+---@field isMaxLevel boolean
+---@field level number
+---@field totalExp number
+
+---@class SetEffect
+---@field desc string
+---@field enable boolean
+---@field requiredLevel number
+---@field step number

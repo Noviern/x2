@@ -175,7 +175,7 @@ ABILITY_ACTIVATION_LEVEL:
 
 **ABILITY_TYPE**
 
-`10`|`11`|`12`|`14`|`1`...(+10)
+`10`|`11`|`12`|`14`|`1`...(+11)
 
 ```lua
 -- api/X2Ability
@@ -195,6 +195,7 @@ ABILITY_TYPE:
     | `12` -- SWIFTBLADE (ASSASSIN)
     | `14` -- SPELLDANCE (PLEASURE)
     | `ABILITY_MADNESS` -- GUNSLINGER (MADNESS)
+    | `30` -- invalid
 ```
 
 **BUFF_INFO_KIND**
@@ -383,7 +384,7 @@ SLOT_ACTIVE_TYPE:
 
 #### Method: IsActiveAbility
 ```lua
-(method) X2Ability:IsActiveAbility(index: `10`|`11`|`12`|`14`|`1`...(+10))
+(method) X2Ability:IsActiveAbility(index: `10`|`11`|`12`|`14`|`1`...(+11))
   -> activeAbility: boolean
 ```
 > Returns if the ability is active.
@@ -410,5 +411,6 @@ SLOT_ACTIVE_TYPE:
 >     | `12` -- SWIFTBLADE (ASSASSIN)
 >     | `14` -- SPELLDANCE (PLEASURE)
 >     | `ABILITY_MADNESS` -- GUNSLINGER (MADNESS)
+>     | `30` -- invalid
 > ```
 

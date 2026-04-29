@@ -180,3 +180,14 @@ EXPEDITION_MEMBER_SORT_KIND:
 
 ## Classes
 ### Class: X2Faction
+#### Method: IsMyExpeditionMember
+```lua
+(method) X2Faction:IsMyExpeditionMember(charName: string)
+  -> isExpeditionMember: boolean
+```
+> Checks whether the specified character is a member of the player's expedition (guild).
+> 
+> @*param* `charName` — The name of the character to check.
+> 
+> @*return* `isExpeditionMember` — `true` if the character is in the player's expedition, `false` otherwise.
+

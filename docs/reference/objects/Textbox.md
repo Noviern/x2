@@ -233,6 +233,10 @@ TextStyle
 ```
 > Retrieves the total unscaled UI text height of the Textbox.
 > 
+> **Warning:** This can produce different results based on if the widget is 
+> currently shown and if the players UI scale is anything other than 100%. The
+> value when the widget is not shown is wrong. (Last checked: 4/24/2026)
+> 
 > @*return* `textHeight` — The total unscaled UI text height. (default: `-1`)
 
 #### Method: GetInset

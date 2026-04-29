@@ -74,7 +74,7 @@ function ListCtrl:GetSelectedIdx() end
 ---@return number index The index of the created column. (min: `0`)
 function ListCtrl:InsertColumn(width, itemType) end
 
----Inserts data into the ListCtrl at the specified row anbd column index.
+---Inserts data into the ListCtrl at the specified row and column index.
 ---- **Must be set after `ListCtrl:InsertColumn`**
 ---- **Must be set after `ListCtrl:InsertRows`.**
 ---@param key number The key (row index) for the data. (min: `0` for header)

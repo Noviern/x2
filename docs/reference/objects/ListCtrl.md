@@ -140,7 +140,7 @@ Button[]|nil
 ```lua
 (method) ListCtrl:InsertData(key: number, colIdx: number, subItemData: string)
 ```
-> Inserts data into the ListCtrl at the specified row anbd column index.
+> Inserts data into the ListCtrl at the specified row and column index.
 > - **Must be set after `ListCtrl:InsertColumn`**
 > - **Must be set after `ListCtrl:InsertRows`.**
 > 

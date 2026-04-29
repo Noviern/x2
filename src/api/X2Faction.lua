@@ -64,3 +64,9 @@ X2Faction = {}                     -- api/X2Faction
 ---| `EMT_BUFF`
 ---| `EMT_QUEST`
 ---| `EMT_RANK_REWARD`
+
+---Checks whether the specified character is a member of the player's expedition (guild).
+---@param charName string The name of the character to check.
+---@return boolean isExpeditionMember `true` if the character is in the player's expedition, `false` otherwise.
+---@nodiscard
+function X2Faction:IsMyExpeditionMember(charName) end

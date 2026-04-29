@@ -223,7 +223,7 @@
   -> effectiveWidth: number
   2. effectiveHeight: number
 ```
-> Retrieves the effective rednered extent (width, height) of the UI bounds.
+> Retrieves the effective rendered extent (width, height) of the UI bounds.
 > 
 > @*return* `effectiveWidth` — The effective width.
 > 

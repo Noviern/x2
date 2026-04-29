@@ -65,6 +65,7 @@ X2Ability = {}                       -- api/X2Ability
 ---| `12` # SWIFTBLADE (ASSASSIN)
 ---| `14` # SPELLDANCE (PLEASURE)
 ---| `ABILITY_MADNESS` # GUNSLINGER (MADNESS)
+---| `30` # invalid
 
 ---api/X2Ability
 ---Values can be added together to get more information. (e.g, `BIK_DESCRIPTION + BIK_RUNTIME_DURATION`)

@@ -15,11 +15,11 @@ X2Dominion = {}    -- api/X2Dominion
 ---api/X2Dominion
 ---@alias HP_WORLD_STATE
 ---| `-1`
----| `HPWS_BATTLE`
----| `HPWS_PEACE`
 ---| `HPWS_TROUBLE_0`
 ---| `HPWS_TROUBLE_1`
 ---| `HPWS_TROUBLE_2`
 ---| `HPWS_TROUBLE_3`
 ---| `HPWS_TROUBLE_4`
+---| `HPWS_BATTLE`
 ---| `HPWS_WAR`
+---| `HPWS_PEACE`

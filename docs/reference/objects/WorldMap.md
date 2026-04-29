@@ -214,14 +214,14 @@ Extends [Widget](../types/Widget.md#class-widget), [Map](../types/Map.md#class-m
 > -- api/X2Dominion
 > state:
 >     | `-1`
->     | `HPWS_BATTLE`
->     | `HPWS_PEACE`
 >     | `HPWS_TROUBLE_0`
 >     | `HPWS_TROUBLE_1`
 >     | `HPWS_TROUBLE_2`
 >     | `HPWS_TROUBLE_3`
 >     | `HPWS_TROUBLE_4`
+>     | `HPWS_BATTLE`
 >     | `HPWS_WAR`
+>     | `HPWS_PEACE`
 > ```
 
 #### Method: SetTempNotifyCoord

@@ -372,7 +372,7 @@ string
 
 #### Field: type
 ```lua
-`10`|`11`|`12`|`14`|`1`...(+10)
+`10`|`11`|`12`|`14`|`1`...(+11)
 ```
 > api/X2Ability
 
@@ -565,6 +565,25 @@ string
 
 
 #### Field: type
+```lua
+number
+```
+
+
+### Class: AppliedAllLevelEffect
+#### Field: attributeType
+```lua
+string
+```
+
+
+#### Field: unitModifierType
+```lua
+number
+```
+
+
+#### Field: value
 ```lua
 number
 ```
@@ -822,6 +841,37 @@ number
 #### Field: tooltip
 ```lua
 string
+```
+
+
+### Class: BundleEffectInfo
+#### Field: level
+```lua
+number
+```
+
+
+#### Field: reqSupportLevel
+```lua
+number
+```
+
+
+#### Field: reqOffenseLevel
+```lua
+number
+```
+
+
+#### Field: reqDefenseLevel
+```lua
+number
+```
+
+
+#### Field: unitModifierInfos
+```lua
+AppliedAllLevelEffect[]
 ```
 
 
@@ -3164,7 +3214,7 @@ boolean
 ```lua
 number
 ```
-> Ancestral Level = 40,
+> Ancestral Level
 
 #### Field: [4]
 ```lua
@@ -4472,6 +4522,25 @@ number
 ```
 
 
+### Class: LevelEffectInfo
+#### Field: attribute
+```lua
+number
+```
+
+
+#### Field: attributeKey
+```lua
+string
+```
+
+
+#### Field: value
+```lua
+number
+```
+
+
 ### Class: ListCtrlItem
 Extends [Window](../types/Window.md#class-window)
 
@@ -4505,9 +4574,9 @@ number
 
 #### Field: [5]
 ```lua
-table
+table|Time
 ```
-> Connection Status (empty)
+> Connection Status (last active date or could be empty if the player is online)
 
 #### Field: [4]
 ```lua
@@ -5263,6 +5332,31 @@ string|nil
 ```
 > instanceName
 
+### Class: ReinforceInfo
+#### Field: exp
+```lua
+number
+```
+
+
+#### Field: level
+```lua
+number
+```
+
+
+#### Field: isMaxLevel
+```lua
+boolean
+```
+
+
+#### Field: totalExp
+```lua
+number
+```
+
+
 ### Class: RequiredConditionInfo
 #### Field: equipSlotTypes
 ```lua
@@ -5670,6 +5764,31 @@ SpecialtySupplyInfo
 ```
 
 
+### Class: SetEffect
+#### Field: desc
+```lua
+string
+```
+
+
+#### Field: requiredLevel
+```lua
+number
+```
+
+
+#### Field: enable
+```lua
+boolean
+```
+
+
+#### Field: step
+```lua
+number
+```
+
+
 ### Class: SetItemsInfo
 #### Field: equipped
 ```lua
@@ -5754,7 +5873,7 @@ SiegeRaidZoneInfo
 ### Class: SiegeRaidMemberInfo
 #### Field: ability
 ```lua
-`10`|`11`|`12`|`14`|`1`...(+10)[]
+`10`|`11`|`12`|`14`|`1`...(+11)[]
 ```
 
 
@@ -5902,9 +6021,10 @@ number
 
 #### Field: factionId
 ```lua
-number
+`101`|`102`|`103`|`104`|`105`...(+124)
 ```
-
+> api/Addon
+> db > system_factions
 
 #### Field: memberCnt
 ```lua
@@ -6867,7 +6987,7 @@ TargetAbilityTemplate
 ### Class: TargetAbilityTemplate
 #### Field: index
 ```lua
-number|`10`|`11`|`12`|`14`...(+11)
+number|`10`|`11`|`12`|`14`...(+12)
 ```
 > api/X2Ability
 
@@ -7395,19 +7515,19 @@ string
 ### Class: UnitClass
 #### Field: [1]
 ```lua
-`10`|`11`|`12`|`14`|`1`...(+10)
+`10`|`11`|`12`|`14`|`1`...(+11)
 ```
 > api/X2Ability
 
 #### Field: [2]
 ```lua
-`10`|`11`|`12`|`14`|`1`...(+10)
+`10`|`11`|`12`|`14`|`1`...(+11)
 ```
 > api/X2Ability
 
 #### Field: [3]
 ```lua
-`10`|`11`|`12`|`14`|`1`...(+10)
+`10`|`11`|`12`|`14`|`1`...(+11)
 ```
 > api/X2Ability
 

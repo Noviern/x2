@@ -90,7 +90,7 @@ function Uibounds:CheckOutOfScreen() end
 ---@nodiscard
 function Uibounds:CorrectOffsetByScreen() end
 
----Retrieves the effective rednered extent (width, height) of the UI bounds.
+---Retrieves the effective rendered extent (width, height) of the UI bounds.
 ---@return number effectiveWidth The effective width.
 ---@return number effectiveHeight The effective height.
 ---@nodiscard

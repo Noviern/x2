@@ -4251,7 +4251,7 @@ fun()
 
 **TRANSFORM_COMBAT_RESOURCE_HANDLER**
 
-fun(groupType: `10`|`11`|`12`|`14`|`1`...(+10))
+fun(groupType: `10`|`11`|`12`|`14`|`1`...(+11))
 
 Event triggers when a combat resource has been transformed. (e.g. When Vitalism Prayer reaches max stacks it converts into Divine Response.)
 
@@ -9092,7 +9092,7 @@ fun(self: Widget)
 
 **WIDGET_TRANSFORM_COMBAT_RESOURCE_HANDLER**
 
-fun(self: Widget, groupType: `10`|`11`|`12`|`14`|`1`...(+10))
+fun(self: Widget, groupType: `10`|`11`|`12`|`14`|`1`...(+11))
 
 
 

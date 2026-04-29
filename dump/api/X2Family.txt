@@ -1,1 +1,3 @@
-X2Family = {}
+X2Family = {
+  GetMemberList = "<function X2Family>",
+}
