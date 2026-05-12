@@ -3,7 +3,12 @@
 ---@class X2Coffer
 X2Coffer = {} -- api/X2Coffer
 
----Returns the total number of items in the player's coffer.
+---Returns the total capacity of the coffer.
+---@return number capacity The maximum number of items the coffer can hold.
+---@nodiscard
+function X2Coffer:Capacity() end
+
+---Returns the total number of items in the coffer.
 ---@return number itemCount The total count of items currently in the coffer.
 ---@nodiscard
 function X2Coffer:CountItems() end
@@ -22,3 +27,8 @@ function X2Coffer:GetBagItemInfo(slot, neededInfo) end
 ---@return number itemStack The number of items in the stack.
 ---@nodiscard
 function X2Coffer:ItemStack(slot) end
+
+---Moves an item from the coffer to an empty bag slot.
+---Cooldown 500ms.
+---@param slotIdx number The coffer slot index to move from. (min: `1`, max: `150`)
+function X2Coffer:MoveToEmptyBagSlot(slotIdx) end

@@ -53,6 +53,7 @@ Button
 (method) Combobox:SetAutocomplete(type: "appellation"|"ingameShopGoods"|"item"|"itemForDebug"|"itemTypeForDebug"...(+1), filter: string)
 ```
 > Sets the autocomplete type and filter for the Combobox.
+> `Combobox:SetEditable` must be set to `true`.
 > 
 > @*param* `type` — The autocomplete type.
 > 
@@ -76,7 +77,7 @@ Button
 ```
 > Sets the maximum number of visible items in the Combobox dropdown.
 > 
-> @*param* `limit` — The maximum number of visible items (min: `0`, max: `10`). (default: `10`)
+> @*param* `limit` — The maximum number of visible items (min: `0`). (default: `10`)
 
 #### Method: PauseAutocomplete
 ```lua

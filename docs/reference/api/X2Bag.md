@@ -6,14 +6,34 @@
 
 ## Classes
 ### Class: X2Bag
-#### Method: CountItems
+#### Method: Capacity
 ```lua
-(method) X2Bag:CountItems()
-  -> itemCount: number
+(method) X2Bag:Capacity()
+  -> capacity: number
 ```
-> Returns the total number of items in the player's bag.
+> Returns the total capacity of the player's bag.
 > 
-> @*return* `itemCount` — The total count of items currently in the bag.
+> @*return* `capacity` — The maximum number of items the bag can hold.
+
+#### Method: ItemStack
+```lua
+(method) X2Bag:ItemStack(slot: number)
+  -> itemStack: number
+```
+> Returns the current stack size of the item in the specified bag slot.
+> 
+> @*param* `slot` — The bag slot index. (min: `1`)
+> 
+> @*return* `itemStack` — The number of items in the stack.
+
+#### Method: MoveToEmptyBankSlot
+```lua
+(method) X2Bag:MoveToEmptyBankSlot(slotIdx: number)
+```
+> Moves an item from the bag to an empty bank slot.
+> Cooldown 500ms.
+> 
+> @*param* `slotIdx` — The bag slot index to move from. (min: `1`, max: `150`)
 
 #### Method: GetBagItemInfo
 ```lua
@@ -51,6 +71,15 @@
 > 
 > See: [ItemInfo](../types/classes.md#class-iteminfo)
 
+#### Method: CountItems
+```lua
+(method) X2Bag:CountItems()
+  -> itemCount: number
+```
+> Returns the total number of items in the player's bag.
+> 
+> @*return* `itemCount` — The total count of items currently in the bag.
+
 #### Method: EquipBagItem
 ```lua
 (method) X2Bag:EquipBagItem(slot: number, isAuxEquip: boolean)
@@ -61,14 +90,12 @@
 > 
 > @*param* `isAuxEquip` — Whether to equip as auxiliary equipment.
 
-#### Method: ItemStack
+#### Method: MoveToEmptyCofferSlot
 ```lua
-(method) X2Bag:ItemStack(slot: number)
-  -> itemStack: number
+(method) X2Bag:MoveToEmptyCofferSlot(slotIdx: number)
 ```
-> Returns the current stack size of the item in the specified bag slot.
+> Moves an item from the bag to an empty coffer slot.
+> Cooldown 500ms.
 > 
-> @*param* `slot` — The bag slot index. (min: `1`)
-> 
-> @*return* `itemStack` — The number of items in the stack.
+> @*param* `slotIdx` — The bag slot index to move from. (min: `1`, max: `150`)
 

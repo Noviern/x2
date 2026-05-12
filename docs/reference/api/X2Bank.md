@@ -6,14 +6,25 @@
 
 ## Classes
 ### Class: X2Bank
-#### Method: CountItems
+#### Method: Capacity
 ```lua
-(method) X2Bank:CountItems()
-  -> itemCount: number
+(method) X2Bank:Capacity()
+  -> capacity: number
 ```
-> Returns the total number of items in the player's bank.
+> Returns the total capacity of the player's bank.
 > 
-> @*return* `itemCount` — The total count of items currently in the bank.
+> @*return* `capacity` — The maximum number of items the bank can hold.
+
+#### Method: ItemStack
+```lua
+(method) X2Bank:ItemStack(slot: number)
+  -> itemStack: number
+```
+> Returns the current stack size of the item in the specified bank slot.
+> 
+> @*param* `slot` — The bank slot index. (min: `1`)
+> 
+> @*return* `itemStack` — The number of items in the stack.
 
 #### Method: GetBagItemInfo
 ```lua
@@ -46,14 +57,21 @@
 > 
 > See: [ItemInfo](../types/classes.md#class-iteminfo)
 
-#### Method: ItemStack
+#### Method: CountItems
 ```lua
-(method) X2Bank:ItemStack(slot: number)
-  -> itemStack: number
+(method) X2Bank:CountItems()
+  -> itemCount: number
 ```
-> Returns the current stack size of the item in the specified bank slot.
+> Returns the total number of items in the player's bank.
 > 
-> @*param* `slot` — The bank slot index. (min: `1`)
+> @*return* `itemCount` — The total count of items currently in the bank.
+
+#### Method: MoveToEmptyBagSlot
+```lua
+(method) X2Bank:MoveToEmptyBagSlot(slotIdx: number)
+```
+> Moves an item from the bank to an empty bag slot.
+> Cooldown 500ms.
 > 
-> @*return* `itemStack` — The number of items in the stack.
+> @*param* `slotIdx` — The bank slot index to move from. (min: `1`, max: `150`)
 

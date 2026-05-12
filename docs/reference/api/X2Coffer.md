@@ -6,14 +6,25 @@
 
 ## Classes
 ### Class: X2Coffer
-#### Method: CountItems
+#### Method: Capacity
 ```lua
-(method) X2Coffer:CountItems()
-  -> itemCount: number
+(method) X2Coffer:Capacity()
+  -> capacity: number
 ```
-> Returns the total number of items in the player's coffer.
+> Returns the total capacity of the coffer.
 > 
-> @*return* `itemCount` — The total count of items currently in the coffer.
+> @*return* `capacity` — The maximum number of items the coffer can hold.
+
+#### Method: ItemStack
+```lua
+(method) X2Coffer:ItemStack(slot: number)
+  -> itemStack: number
+```
+> Returns the current stack size of the item in the specified coffer slot.
+> 
+> @*param* `slot` — The coffer slot index. (min: `1`)
+> 
+> @*return* `itemStack` — The number of items in the stack.
 
 #### Method: GetBagItemInfo
 ```lua
@@ -47,14 +58,21 @@
 > 
 > See: [ItemInfo](../types/classes.md#class-iteminfo)
 
-#### Method: ItemStack
+#### Method: CountItems
 ```lua
-(method) X2Coffer:ItemStack(slot: number)
-  -> itemStack: number
+(method) X2Coffer:CountItems()
+  -> itemCount: number
 ```
-> Returns the current stack size of the item in the specified coffer slot.
+> Returns the total number of items in the coffer.
 > 
-> @*param* `slot` — The coffer slot index. (min: `1`)
+> @*return* `itemCount` — The total count of items currently in the coffer.
+
+#### Method: MoveToEmptyBagSlot
+```lua
+(method) X2Coffer:MoveToEmptyBagSlot(slotIdx: number)
+```
+> Moves an item from the coffer to an empty bag slot.
+> Cooldown 500ms.
 > 
-> @*return* `itemStack` — The number of items in the stack.
+> @*param* `slotIdx` — The coffer slot index to move from. (min: `1`, max: `150`)
 

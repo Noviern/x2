@@ -663,7 +663,7 @@ number
 ```lua
 number
 ```
-> scaled x
+> scaled x (EffectiveOffset)
 
 #### Field: width
 ```lua
@@ -675,7 +675,7 @@ number
 ```lua
 number
 ```
-> scaled y
+> scaled y (EffectiveOffset)
 
 ### Class: BuffInfo
 #### Field: buff_id
@@ -3704,13 +3704,19 @@ number
 ```
 
 
-#### Field: magicResistance
+#### Field: maxDamage
 ```lua
 number
 ```
 
 
-#### Field: maxDamage
+#### Field: maxDurability
+```lua
+number
+```
+
+
+#### Field: magicResistance
 ```lua
 number
 ```
@@ -3728,13 +3734,13 @@ number
 ```
 
 
-#### Field: lookChanged
+#### Field: maxSetItemCount
 ```lua
-boolean
+number
 ```
 
 
-#### Field: maxDurability
+#### Field: minDamage
 ```lua
 number
 ```
@@ -3746,7 +3752,7 @@ number
 ```
 
 
-#### Field: maxSetItemCount
+#### Field: moveSpeed
 ```lua
 number
 ```
@@ -3758,37 +3764,37 @@ ModifireTable[]
 ```
 
 
-#### Field: minDamage
-```lua
-number
-```
-
-
-#### Field: moveSpeed
-```lua
-number
-```
-
-
-#### Field: locked
-```lua
-boolean
-```
-
-
-#### Field: location_world_name
+#### Field: name
 ```lua
 string
 ```
 
 
-#### Field: level_limit
+#### Field: lookChanged
+```lua
+boolean
+```
+
+
+#### Field: location_zone_name
+```lua
+string
+```
+
+
+#### Field: level_requirement
 ```lua
 number
 ```
 
 
-#### Field: level_requirement
+#### Field: lifeSpan
+```lua
+number
+```
+
+
+#### Field: level_limit
 ```lua
 number
 ```
@@ -3800,27 +3806,9 @@ number
 ```
 
 
-#### Field: item_impl
+#### Field: locked
 ```lua
-"accessory"|"armor"|"butler_armor"|"enchanting_gem"|"itemGrade"...(+11)
-```
-
-
-#### Field: location_zone_name
-```lua
-string
-```
-
-
-#### Field: lifeSpan
-```lua
-number
-```
-
-
-#### Field: lifeSpanType
-```lua
-string
+boolean
 ```
 
 
@@ -3830,33 +3818,45 @@ boolean
 ```
 
 
-#### Field: livingPointPrice
-```lua
-number
-```
-
-
 #### Field: linkKind
 ```lua
 "auciton"|"coffer"|"guildBank"|nil
 ```
 
 
-#### Field: item_flag_cannot_equip
+#### Field: lifeSpanType
+```lua
+string
+```
+
+
+#### Field: location_world_name
+```lua
+string
+```
+
+
+#### Field: livingPointPrice
+```lua
+number
+```
+
+
+#### Field: item_impl
+```lua
+"accessory"|"armor"|"butler_armor"|"enchanting_gem"|"itemGrade"...(+11)
+```
+
+
+#### Field: needsUnpack
 ```lua
 boolean
 ```
 
 
-#### Field: name
+#### Field: pinned
 ```lua
-string
-```
-
-
-#### Field: overIcon
-```lua
-string
+boolean
 ```
 
 
@@ -3920,9 +3920,9 @@ boolean
 ```
 
 
-#### Field: needsUnpack
+#### Field: overIcon
 ```lua
-boolean
+string
 ```
 
 
@@ -3998,25 +3998,31 @@ boolean
 ```
 
 
-#### Field: itemUsage
+#### Field: item_flag_cannot_equip
 ```lua
-string
+boolean
 ```
 
 
-#### Field: itemGrade
+#### Field: itemType
 ```lua
 number
 ```
 
 
-#### Field: craftedWorldName
+#### Field: crafter
 ```lua
 string
 ```
 
 
-#### Field: crafter
+#### Field: dead
+```lua
+boolean
+```
+
+
+#### Field: craftedWorldName
 ```lua
 string
 ```
@@ -4034,31 +4040,7 @@ number
 ```
 
 
-#### Field: convertibleItem
-```lua
-boolean
-```
-
-
-#### Field: dead
-```lua
-boolean
-```
-
-
-#### Field: durability
-```lua
-number
-```
-
-
 #### Field: description
-```lua
-string
-```
-
-
-#### Field: elementName
 ```lua
 string
 ```
@@ -4070,27 +4052,51 @@ string
 ```
 
 
+#### Field: durability
+```lua
+number
+```
+
+
 #### Field: equipSetInfo
 ```lua
 EquipSetInfo
 ```
 
 
-#### Field: contributionPointPrice
+#### Field: elementName
 ```lua
-number
+string
 ```
 
 
-#### Field: category
+#### Field: equiped
 ```lua
-string
+boolean
+```
+
+
+#### Field: convertibleItem
+```lua
+boolean
+```
+
+
+#### Field: checkUnitReq
+```lua
+boolean
 ```
 
 
 #### Field: attackDelay
 ```lua
 number
+```
+
+
+#### Field: auction_only
+```lua
+boolean
 ```
 
 
@@ -4106,21 +4112,9 @@ number
 ```
 
 
-#### Field: checkUnitReq
+#### Field: contributionPointPrice
 ```lua
-boolean
-```
-
-
-#### Field: auction_only
-```lua
-boolean
-```
-
-
-#### Field: baseEquipment
-```lua
-boolean
+number
 ```
 
 
@@ -4130,43 +4124,61 @@ number
 ```
 
 
-#### Field: canEvolve
-```lua
-boolean
-```
-
-
 #### Field: buffType
 ```lua
 number
 ```
 
 
-#### Field: itemType
-```lua
-number
-```
-
-
-#### Field: equiped
+#### Field: baseEquipment
 ```lua
 boolean
 ```
 
 
-#### Field: evolvingCategory
+#### Field: category
+```lua
+string
+```
+
+
+#### Field: canEvolve
+```lua
+boolean
+```
+
+
+#### Field: itemUsage
+```lua
+string
+```
+
+
+#### Field: equippedSetItemCount
+```lua
+number
+```
+
+
+#### Field: evolvingInfo
+```lua
+EvolvingInfo
+```
+
+
+#### Field: isEnchantDisable
+```lua
+boolean
+```
+
+
+#### Field: isMaterial
 ```lua
 boolean
 ```
 
 
 #### Field: indestructible
-```lua
-boolean
-```
-
-
-#### Field: isEnchantDisable
 ```lua
 boolean
 ```
@@ -4184,31 +4196,7 @@ number
 ```
 
 
-#### Field: healDps
-```lua
-number
-```
-
-
-#### Field: isMaterial
-```lua
-boolean
-```
-
-
-#### Field: isPetOnly
-```lua
-boolean
-```
-
-
 #### Field: isMyWorld
-```lua
-boolean
-```
-
-
-#### Field: isUnderWaterCreature
 ```lua
 boolean
 ```
@@ -4220,39 +4208,33 @@ boolean
 ```
 
 
-#### Field: equippedSetItemCount
+#### Field: isPetOnly
+```lua
+boolean
+```
+
+
+#### Field: itemGrade
 ```lua
 number
 ```
 
 
-#### Field: gradeIcon
+#### Field: isUnderWaterCreature
 ```lua
-string
+boolean
 ```
 
 
-#### Field: gradeColor
+#### Field: evolvingCategory
 ```lua
-string
+boolean
 ```
 
 
-#### Field: extraDPS
+#### Field: healDps
 ```lua
 number
-```
-
-
-#### Field: extraArmor
-```lua
-number
-```
-
-
-#### Field: evolvingInfo
-```lua
-EvolvingInfo
 ```
 
 
@@ -4268,9 +4250,21 @@ GearScoreItemInfo
 ```
 
 
-#### Field: gemModifireTable
+#### Field: extraDPS
 ```lua
-ModifireTable[]
+number
+```
+
+
+#### Field: extraArmor
+```lua
+number
+```
+
+
+#### Field: gradeIcon
+```lua
+string
 ```
 
 
@@ -4280,13 +4274,25 @@ number
 ```
 
 
-#### Field: grade
+#### Field: gender
 ```lua
 string
 ```
 
 
-#### Field: gender
+#### Field: gemModifireTable
+```lua
+ModifireTable[]
+```
+
+
+#### Field: gradeColor
+```lua
+string
+```
+
+
+#### Field: grade
 ```lua
 string
 ```

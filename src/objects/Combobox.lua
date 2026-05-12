@@ -39,6 +39,7 @@ function Combobox:Insert(datas) end
 function Combobox:PauseAutocomplete(pause) end
 
 ---Sets the autocomplete type and filter for the Combobox.
+---`Combobox:SetEditable` must be set to `true`.
 ---@param type AUTOCOMPLETE_TYPE The autocomplete type.
 ---@param filter string The autocomplete filter.
 ---@overload fun(self: self, type: "appellation", filter: "")
@@ -50,7 +51,7 @@ function Combobox:PauseAutocomplete(pause) end
 function Combobox:SetAutocomplete(type, filter) end
 
 ---Sets the maximum number of visible items in the Combobox dropdown.
----@param limit number The maximum number of visible items (min: `0`, max: `10`). (default: `10`)
+---@param limit number The maximum number of visible items (min: `0`). (default: `10`)
 function Combobox:SetDropdownVisibleLimit(limit) end
 
 ---Enables or disables editability of the Combobox. If set to `false` any guide

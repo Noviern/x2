@@ -76,6 +76,18 @@ function X2Hotkey:IsValidActionName(action) end
 ---pressed again.**
 function X2Hotkey:OptionToBinding() end
 
+---Removes the hotkey binding from the specified action.
+---@param action HOTKEY_ACTION|string The action to remove the binding from.
+---@param index HOTKEY_MANAGER The hotkey manager index.
+---@param arg number Additional argument for the binding. (min: `0`)
+---@usage
+---```lua
+---X2Hotkey:BindingToOption()
+---X2Hotkey:SetOptionBindingUiEventWithIndex("moveforward", 1, 0)
+---X2Hotkey:SaveHotKey()
+---```
+function X2Hotkey:RemoveOptionBinding(action, index, arg) end
+
 ---Saves currently set hotkeys. Triggers the `UPDATE_BINDINGS` event.
 ---- **`X2Hotkey:BindingToOption()` must be used before or all hotkeys will
 ---be erased upon reloading!**

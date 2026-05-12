@@ -84,8 +84,8 @@
 ---@field scale number
 
 ---@class Bound
----@field x number scaled x
----@field y number scaled y
+---@field x number scaled x (EffectiveOffset)
+---@field y number scaled y (EffectiveOffset)
 ---@field width number unscaled width
 ---@field height number unscaled height
 
@@ -1463,6 +1463,7 @@
 ---@field useConsumeItem boolean
 ---@field wear boolean
 ---@field linkKind LINKKIND_STR|nil
+---@field pinned boolean
 
 ---@class NuonsArrowUpdate
 ---@field charge string

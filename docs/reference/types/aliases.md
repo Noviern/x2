@@ -8448,7 +8448,7 @@ fun(self: Widget, frameTime: number)
 
 **OnEnableChanged**
 
-fun(self: Widget)
+fun(self: Widget, enabled: boolean)
 
 
 

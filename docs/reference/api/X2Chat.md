@@ -568,69 +568,69 @@
 ```lua
 -- api/X2Chat
 CHANNEL_MESSAGE_FILTER:
-    | `CMF_ACQ_CONSUME_GROUP`
-    | `CMF_ADDED_ITEM_GROUP`
-    | `CMF_ADDED_ITEM_SELF`
-    | `CMF_ADDED_ITEM_TEAM`
-    | `CMF_ALL_SERVER`
-    | `CMF_BEHAVIOR_RESULT`
-    | `CMF_CHANNEL_INFO`
-    | `CMF_COMBAT_DEAD`
-    | `CMF_COMBAT_DST_GROUP`
-    | `CMF_COMBAT_ENVIRONMENTAL_DMANAGE`
-    | `CMF_COMBAT_MELEE_DAMAGE`
-    | `CMF_COMBAT_MELEE_GROUP`
-    | `CMF_COMBAT_MELEE_MISSED`
-    | `CMF_COMBAT_SPELL_AURA`
-    | `CMF_COMBAT_SPELL_DAMAGE`
-    | `CMF_COMBAT_SPELL_ENERGIZE`
-    | `CMF_COMBAT_SPELL_GROUP`
-    | `CMF_COMBAT_SPELL_HEALED`
-    | `CMF_COMBAT_SPELL_MISSED`
-    | `CMF_COMBAT_SRC_GROUP`
-    | `CMF_COMMUNITY`
-    | `CMF_CONNECT_ALERT`
-    | `CMF_CONNECT_EXPEDITION`
-    | `CMF_CONNECT_FAMILY`
-    | `CMF_CONNECT_FRIEND`
+    | `CMF_ACQ_CONSUME_GROUP` -- Alert>Acquire/Use Info
+    | `CMF_ADDED_ITEM_GROUP` -- Alert>Acquired Item Info
+    | `CMF_ADDED_ITEM_SELF` -- Alert>Acquired Item Info>Self
+    | `CMF_ADDED_ITEM_TEAM` -- Alert>Acquired Item Info>Team
+    | `CMF_ALL_SERVER` -- Dialogue>EVO
+    | `CMF_BEHAVIOR_RESULT` -- Only displays on All Tab.
+    | `CMF_CHANNEL_INFO` -- Alert>Chat Window Info
+    | `CMF_COMBAT_DEAD` -- Combat>Dead
+    | `CMF_COMBAT_DST_GROUP` -- Combat>Others
+    | `CMF_COMBAT_ENVIRONMENTAL_DMANAGE` -- Combat>Environmental Damage
+    | `CMF_COMBAT_MELEE_DAMAGE` -- Combat>Basic Attack>Damage
+    | `CMF_COMBAT_MELEE_GROUP` -- Combat>Basic Attack
+    | `CMF_COMBAT_MELEE_MISSED` -- Combat>Basic Attack>Miss
+    | `CMF_COMBAT_SPELL_AURA` -- Combat>Buff/Debuff Effects
+    | `CMF_COMBAT_SPELL_DAMAGE` -- Combat>Skill>Damage
+    | `CMF_COMBAT_SPELL_ENERGIZE` -- Combat>Skill>Mana Regen
+    | `CMF_COMBAT_SPELL_GROUP` -- Combat>Skill
+    | `CMF_COMBAT_SPELL_HEALED` -- Combat>Skill>Heal
+    | `CMF_COMBAT_SPELL_MISSED` -- Combat>Skill>Miss
+    | `CMF_COMBAT_SRC_GROUP` -- Combat>Self
+    | `CMF_COMMUNITY` -- Only displays on All Tab.
+    | `CMF_CONNECT_ALERT` -- Alert>Online Alert
+    | `CMF_CONNECT_EXPEDITION` -- Alert>Online Alert>Guild
+    | `CMF_CONNECT_FAMILY` -- Alert>Online Alert>Family
+    | `CMF_CONNECT_FRIEND` -- Alert>Online Alert>Friend
     | `CMF_DE`
-    | `CMF_DOMINION_AND_SIEGE_INFO`
-    | `CMF_EMOTIOIN_EXPRESS`
-    | `CMF_END_USE`
+    | `CMF_DOMINION_AND_SIEGE_INFO` -- Alert>Territory/Siege Info
+    | `CMF_EMOTIOIN_EXPRESS` -- Alert>Other>Emote
+    | `CMF_END_USE` -- Only displays on All Tab.
     | `CMF_EN_SG`
     | `CMF_EN_US`
-    | `CMF_ETC_GROUP`
-    | `CMF_EXPEDITION`
-    | `CMF_FAMILY`
+    | `CMF_ETC_GROUP` -- Alert>Other
+    | `CMF_EXPEDITION` -- Dialogue>Guild
+    | `CMF_FAMILY` -- Dialogue>Family
     | `CMF_FR`
-    | `CMF_HERO_SEASON_UPDATED`
+    | `CMF_HERO_SEASON_UPDATED` -- Only displays on All Tab.
     | `CMF_IND`
     | `CMF_JA`
     | `CMF_KO`
     | `CMF_LANG_BEGIN`
     | `CMF_LANG_END`
-    | `CMF_LOCALE_SERVER`
-    | `CMF_LOOT_METHOD_CHANGED`
-    | `CMF_NOTICE`
-    | `CMF_OTHER_CONTINENT`
-    | `CMF_PARTY`
-    | `CMF_PARTY_AND_RAID_INFO`
-    | `CMF_PLAY_MUSIC`
-    | `CMF_QUEST_INFO`
-    | `CMF_RAID`
-    | `CMF_RAID_COMMAND`
+    | `CMF_LOCALE_SERVER` -- Only displays on All Tab.
+    | `CMF_LOOT_METHOD_CHANGED` -- Alert>Acquired Item Info>Change Loot Mode
+    | `CMF_NOTICE` -- Alert>Alert
+    | `CMF_OTHER_CONTINENT` -- Dialogue>Other Continent Dialect
+    | `CMF_PARTY` -- Dialogue>Party
+    | `CMF_PARTY_AND_RAID_INFO` -- Alert>Party/Raid Info
+    | `CMF_PLAY_MUSIC` -- Only displays on All Tab.
+    | `CMF_QUEST_INFO` -- Alert>Quest Info
+    | `CMF_RAID` -- Dialogue>Raid
+    | `CMF_RAID_COMMAND` -- Dialogue>Raid
     | `CMF_RU`
-    | `CMF_SELF_CONTRIBUTION_POINT_CHANGED`
-    | `CMF_SELF_HONOR_POINT_CHANGED`
-    | `CMF_SELF_LEADERSHIP_POINT_CHANGED`
-    | `CMF_SELF_LIVING_POINT_CHANGED`
-    | `CMF_SELF_MONEY_CHANGED`
-    | `CMF_SELF_SKILL_INFO`
-    | `CMF_SQUAD`
-    | `CMF_SYSTEM`
+    | `CMF_SELF_CONTRIBUTION_POINT_CHANGED` -- Only displays on All Tab.
+    | `CMF_SELF_HONOR_POINT_CHANGED` -- Alert>Acquire/Use Info>Honor Points
+    | `CMF_SELF_LEADERSHIP_POINT_CHANGED` -- Only displays on All Tab.
+    | `CMF_SELF_LIVING_POINT_CHANGED` -- Alert>Acquire/Use Info>Vocation Badges
+    | `CMF_SELF_MONEY_CHANGED` -- Alert>Acquire/Use Info>Gold
+    | `CMF_SELF_SKILL_INFO` -- Alert>Other>Skill Info
+    | `CMF_SQUAD` -- Dialogue>Team
+    | `CMF_SYSTEM` -- Alert>System
     | `CMF_TH`
-    | `CMF_TRADE_STORE_MSG`
-    | `CMF_WHISPER`
+    | `CMF_TRADE_STORE_MSG` -- Alert>Trade/Shop
+    | `CMF_WHISPER` -- Dialogue>Whisper
     | `CMF_ZH_CN`
     | `CMF_ZH_TW`
 ```
@@ -642,22 +642,22 @@ CHANNEL_MESSAGE_FILTER:
 ```lua
 -- api/X2Chat
 CHANNEL_MESSAGE_FILTER_SPECIAL:
-    | `CMF_BEGIN_USE`
-    | `CMF_BIG_MEGAPHONE`
-    | `CMF_COMBAT_DST_OTHER`
-    | `CMF_COMBAT_DST_SELF`
-    | `CMF_COMBAT_SPELL_CAST`
-    | `CMF_COMBAT_SRC_OTHER`
-    | `CMF_COMBAT_SRC_SELF`
-    | `CMF_FACTION`
-    | `CMF_FIND_PARTY`
-    | `CMF_NONE`
-    | `CMF_RACE`
-    | `CMF_SAY`
-    | `CMF_SMALL_MEGAPHONE`
-    | `CMF_TRADE`
-    | `CMF_TRIAL`
-    | `CMF_ZONE`
+    | `CMF_BEGIN_USE` -- Dialogue>Local
+    | `CMF_BIG_MEGAPHONE` -- Only displays on All Tab.
+    | `CMF_COMBAT_DST_OTHER` -- Does not work.
+    | `CMF_COMBAT_DST_SELF` -- Does not work.
+    | `CMF_COMBAT_SPELL_CAST` -- Does not work.
+    | `CMF_COMBAT_SRC_OTHER` -- Does not work.
+    | `CMF_COMBAT_SRC_SELF` -- Does not work.
+    | `CMF_FACTION` -- Dialogue>Faction
+    | `CMF_FIND_PARTY` -- Dialogue>Party-Up
+    | `CMF_NONE` -- Does not work.
+    | `CMF_RACE` -- Only displays on All Tab.
+    | `CMF_SAY` -- Dialogue>Local
+    | `CMF_SMALL_MEGAPHONE` -- Only displays on All Tab.
+    | `CMF_TRADE` -- Dialogue>Trade
+    | `CMF_TRIAL` -- Dialogue>Trial
+    | `CMF_ZONE` -- Dialogue>Shout
 ```
 
 **CHAT_ICON_KIND**
@@ -798,87 +798,87 @@ QUEST_MANAGEMENT_STATE:
 > -- api/X2Chat
 > -- api/X2Chat
 > filter:
->     | `CMF_ACQ_CONSUME_GROUP`
->     | `CMF_ADDED_ITEM_GROUP`
->     | `CMF_ADDED_ITEM_SELF`
->     | `CMF_ADDED_ITEM_TEAM`
->     | `CMF_ALL_SERVER`
->     | `CMF_BEHAVIOR_RESULT`
->     | `CMF_CHANNEL_INFO`
->     | `CMF_COMBAT_DEAD`
->     | `CMF_COMBAT_DST_GROUP`
->     | `CMF_COMBAT_ENVIRONMENTAL_DMANAGE`
->     | `CMF_COMBAT_MELEE_DAMAGE`
->     | `CMF_COMBAT_MELEE_GROUP`
->     | `CMF_COMBAT_MELEE_MISSED`
->     | `CMF_COMBAT_SPELL_AURA`
->     | `CMF_COMBAT_SPELL_DAMAGE`
->     | `CMF_COMBAT_SPELL_ENERGIZE`
->     | `CMF_COMBAT_SPELL_GROUP`
->     | `CMF_COMBAT_SPELL_HEALED`
->     | `CMF_COMBAT_SPELL_MISSED`
->     | `CMF_COMBAT_SRC_GROUP`
->     | `CMF_COMMUNITY`
->     | `CMF_CONNECT_ALERT`
->     | `CMF_CONNECT_EXPEDITION`
->     | `CMF_CONNECT_FAMILY`
->     | `CMF_CONNECT_FRIEND`
+>     | `CMF_ACQ_CONSUME_GROUP` -- Alert>Acquire/Use Info
+>     | `CMF_ADDED_ITEM_GROUP` -- Alert>Acquired Item Info
+>     | `CMF_ADDED_ITEM_SELF` -- Alert>Acquired Item Info>Self
+>     | `CMF_ADDED_ITEM_TEAM` -- Alert>Acquired Item Info>Team
+>     | `CMF_ALL_SERVER` -- Dialogue>EVO
+>     | `CMF_BEHAVIOR_RESULT` -- Only displays on All Tab.
+>     | `CMF_CHANNEL_INFO` -- Alert>Chat Window Info
+>     | `CMF_COMBAT_DEAD` -- Combat>Dead
+>     | `CMF_COMBAT_DST_GROUP` -- Combat>Others
+>     | `CMF_COMBAT_ENVIRONMENTAL_DMANAGE` -- Combat>Environmental Damage
+>     | `CMF_COMBAT_MELEE_DAMAGE` -- Combat>Basic Attack>Damage
+>     | `CMF_COMBAT_MELEE_GROUP` -- Combat>Basic Attack
+>     | `CMF_COMBAT_MELEE_MISSED` -- Combat>Basic Attack>Miss
+>     | `CMF_COMBAT_SPELL_AURA` -- Combat>Buff/Debuff Effects
+>     | `CMF_COMBAT_SPELL_DAMAGE` -- Combat>Skill>Damage
+>     | `CMF_COMBAT_SPELL_ENERGIZE` -- Combat>Skill>Mana Regen
+>     | `CMF_COMBAT_SPELL_GROUP` -- Combat>Skill
+>     | `CMF_COMBAT_SPELL_HEALED` -- Combat>Skill>Heal
+>     | `CMF_COMBAT_SPELL_MISSED` -- Combat>Skill>Miss
+>     | `CMF_COMBAT_SRC_GROUP` -- Combat>Self
+>     | `CMF_COMMUNITY` -- Only displays on All Tab.
+>     | `CMF_CONNECT_ALERT` -- Alert>Online Alert
+>     | `CMF_CONNECT_EXPEDITION` -- Alert>Online Alert>Guild
+>     | `CMF_CONNECT_FAMILY` -- Alert>Online Alert>Family
+>     | `CMF_CONNECT_FRIEND` -- Alert>Online Alert>Friend
 >     | `CMF_DE`
->     | `CMF_DOMINION_AND_SIEGE_INFO`
->     | `CMF_EMOTIOIN_EXPRESS`
->     | `CMF_END_USE`
+>     | `CMF_DOMINION_AND_SIEGE_INFO` -- Alert>Territory/Siege Info
+>     | `CMF_EMOTIOIN_EXPRESS` -- Alert>Other>Emote
+>     | `CMF_END_USE` -- Only displays on All Tab.
 >     | `CMF_EN_SG`
 >     | `CMF_EN_US`
->     | `CMF_ETC_GROUP`
->     | `CMF_EXPEDITION`
->     | `CMF_FAMILY`
+>     | `CMF_ETC_GROUP` -- Alert>Other
+>     | `CMF_EXPEDITION` -- Dialogue>Guild
+>     | `CMF_FAMILY` -- Dialogue>Family
 >     | `CMF_FR`
->     | `CMF_HERO_SEASON_UPDATED`
+>     | `CMF_HERO_SEASON_UPDATED` -- Only displays on All Tab.
 >     | `CMF_IND`
 >     | `CMF_JA`
 >     | `CMF_KO`
 >     | `CMF_LANG_BEGIN`
 >     | `CMF_LANG_END`
->     | `CMF_LOCALE_SERVER`
->     | `CMF_LOOT_METHOD_CHANGED`
->     | `CMF_NOTICE`
->     | `CMF_OTHER_CONTINENT`
->     | `CMF_PARTY`
->     | `CMF_PARTY_AND_RAID_INFO`
->     | `CMF_PLAY_MUSIC`
->     | `CMF_QUEST_INFO`
->     | `CMF_RAID`
->     | `CMF_RAID_COMMAND`
+>     | `CMF_LOCALE_SERVER` -- Only displays on All Tab.
+>     | `CMF_LOOT_METHOD_CHANGED` -- Alert>Acquired Item Info>Change Loot Mode
+>     | `CMF_NOTICE` -- Alert>Alert
+>     | `CMF_OTHER_CONTINENT` -- Dialogue>Other Continent Dialect
+>     | `CMF_PARTY` -- Dialogue>Party
+>     | `CMF_PARTY_AND_RAID_INFO` -- Alert>Party/Raid Info
+>     | `CMF_PLAY_MUSIC` -- Only displays on All Tab.
+>     | `CMF_QUEST_INFO` -- Alert>Quest Info
+>     | `CMF_RAID` -- Dialogue>Raid
+>     | `CMF_RAID_COMMAND` -- Dialogue>Raid
 >     | `CMF_RU`
->     | `CMF_SELF_CONTRIBUTION_POINT_CHANGED`
->     | `CMF_SELF_HONOR_POINT_CHANGED`
->     | `CMF_SELF_LEADERSHIP_POINT_CHANGED`
->     | `CMF_SELF_LIVING_POINT_CHANGED`
->     | `CMF_SELF_MONEY_CHANGED`
->     | `CMF_SELF_SKILL_INFO`
->     | `CMF_SQUAD`
->     | `CMF_SYSTEM`
+>     | `CMF_SELF_CONTRIBUTION_POINT_CHANGED` -- Only displays on All Tab.
+>     | `CMF_SELF_HONOR_POINT_CHANGED` -- Alert>Acquire/Use Info>Honor Points
+>     | `CMF_SELF_LEADERSHIP_POINT_CHANGED` -- Only displays on All Tab.
+>     | `CMF_SELF_LIVING_POINT_CHANGED` -- Alert>Acquire/Use Info>Vocation Badges
+>     | `CMF_SELF_MONEY_CHANGED` -- Alert>Acquire/Use Info>Gold
+>     | `CMF_SELF_SKILL_INFO` -- Alert>Other>Skill Info
+>     | `CMF_SQUAD` -- Dialogue>Team
+>     | `CMF_SYSTEM` -- Alert>System
 >     | `CMF_TH`
->     | `CMF_TRADE_STORE_MSG`
->     | `CMF_WHISPER`
+>     | `CMF_TRADE_STORE_MSG` -- Alert>Trade/Shop
+>     | `CMF_WHISPER` -- Dialogue>Whisper
 >     | `CMF_ZH_CN`
 >     | `CMF_ZH_TW`
->     | `CMF_BEGIN_USE`
->     | `CMF_BIG_MEGAPHONE`
->     | `CMF_COMBAT_DST_OTHER`
->     | `CMF_COMBAT_DST_SELF`
->     | `CMF_COMBAT_SPELL_CAST`
->     | `CMF_COMBAT_SRC_OTHER`
->     | `CMF_COMBAT_SRC_SELF`
->     | `CMF_FACTION`
->     | `CMF_FIND_PARTY`
->     | `CMF_NONE`
->     | `CMF_RACE`
->     | `CMF_SAY`
->     | `CMF_SMALL_MEGAPHONE`
->     | `CMF_TRADE`
->     | `CMF_TRIAL`
->     | `CMF_ZONE`
+>     | `CMF_BEGIN_USE` -- Dialogue>Local
+>     | `CMF_BIG_MEGAPHONE` -- Only displays on All Tab.
+>     | `CMF_COMBAT_DST_OTHER` -- Does not work.
+>     | `CMF_COMBAT_DST_SELF` -- Does not work.
+>     | `CMF_COMBAT_SPELL_CAST` -- Does not work.
+>     | `CMF_COMBAT_SRC_OTHER` -- Does not work.
+>     | `CMF_COMBAT_SRC_SELF` -- Does not work.
+>     | `CMF_FACTION` -- Dialogue>Faction
+>     | `CMF_FIND_PARTY` -- Dialogue>Party-Up
+>     | `CMF_NONE` -- Does not work.
+>     | `CMF_RACE` -- Only displays on All Tab.
+>     | `CMF_SAY` -- Dialogue>Local
+>     | `CMF_SMALL_MEGAPHONE` -- Only displays on All Tab.
+>     | `CMF_TRADE` -- Dialogue>Trade
+>     | `CMF_TRIAL` -- Dialogue>Trial
+>     | `CMF_ZONE` -- Dialogue>Shout
 > ```
 > 
 > See: [ChatMessageOption](../types/classes.md#class-chatmessageoption)

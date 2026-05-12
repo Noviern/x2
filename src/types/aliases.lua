@@ -16,7 +16,7 @@
 ---@alias OnDragStop fun(self: Widget)
 ---@alias OnDynamicListUpdatedView fun(self: Widget)
 ---@alias OnEffect fun(self: Widget, frameTime: number)
----@alias OnEnableChanged fun(self: Widget)
+---@alias OnEnableChanged fun(self: Widget, enabled: boolean)
 ---@alias OnEndFadeIn fun(self: Widget)
 ---@alias OnEndFadeOut fun(self: Widget)
 ---@alias OnEnter fun(self: Widget)

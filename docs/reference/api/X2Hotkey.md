@@ -159,17 +159,156 @@
 > X2Hotkey:SaveHotKey()
 > ```
 
-#### Method: OptionToBinding
+#### Method: RemoveOptionBinding
 ```lua
-(method) X2Hotkey:OptionToBinding()
+(method) X2Hotkey:RemoveOptionBinding(action: string|"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"...(+121), index: `1`|`2`, arg: number)
 ```
-> Sets current option bindings and allows them to be used but does not save
-> them.
-> - **`X2Hotkey:BindingToOption()` must be used before or all hotkeys will
-> be erased upon reloading!**
-> - **Any key pressed when this is fired and `X2Hotkey:BindingToOption()` isn't
-> used right before setting a hotkey can become stuck in a pressed state until
-> pressed again.**
+> Removes the hotkey binding from the specified action.
+> 
+> @*param* `action` — The action to remove the binding from.
+> 
+> @*param* `index` — The hotkey manager index.
+> 
+> @*param* `arg` — Additional argument for the binding. (min: `0`)
+> 
+> ```lua
+> X2Hotkey:BindingToOption()
+> X2Hotkey:SetOptionBindingUiEventWithIndex("moveforward", 1, 0)
+> X2Hotkey:SaveHotKey()
+> ```
+> 
+> ```lua
+> action:
+>     | "action_bar_button"
+>     | "action_bar_page_next"
+>     | "action_bar_page_prev"
+>     | "action_bar_page"
+>     | "activate_weapon"
+>     | "autorun"
+>     | "back_camera"
+>     | "battle_pet_action_bar_button"
+>     | "builder_rotate_left_large"
+>     | "builder_rotate_left_normal"
+>     | "builder_rotate_left_small"
+>     | "builder_rotate_right_large"
+>     | "builder_rotate_right_normal"
+>     | "builder_rotate_right_small"
+>     | "builder_zoom_in"
+>     | "builder_zoom_out"
+>     | "change_roadmap_size"
+>     | "cycle_camera_clockwise"
+>     | "cycle_camera_counter_clockwise"
+>     | "cycle_friendly_backward"
+>     | "cycle_friendly_forward"
+>     | "cycle_friendly_head_marker_backward"
+>     | "cycle_friendly_head_marker_forward"
+>     | "cycle_hostile_backward"
+>     | "cycle_hostile_forward"
+>     | "cycle_hostile_head_marker_backward"
+>     | "cycle_hostile_head_marker_forward"
+>     | "do_interaction_1"
+>     | "do_interaction_2"
+>     | "do_interaction_3"
+>     | "do_interaction_4"
+>     | "dof_add_dist"
+>     | "dof_add_range"
+>     | "dof_auto_focus"
+>     | "dof_bokeh_add_intensity"
+>     | "dof_bokeh_add_size"
+>     | "dof_bokeh_circle"
+>     | "dof_bokeh_heart"
+>     | "dof_bokeh_hexagon"
+>     | "dof_bokeh_star"
+>     | "dof_bokeh_sub_intensity"
+>     | "dof_bokeh_sub_size"
+>     | "dof_bokeh_toggle"
+>     | "dof_sub_dist"
+>     | "dof_sub_range"
+>     | "dof_toggle"
+>     | "down"
+>     | "front_camera"
+>     | "instant_kill_streak_action_bar_button"
+>     | "jump"
+>     | "left_camera"
+>     | "mode_action_bar_button"
+>     | "moveback"
+>     | "moveforward"
+>     | "moveleft"
+>     | "moveright"
+>     | "open_chat"
+>     | "open_config"
+>     | "open_target_equipment"
+>     | "over_head_marker_to_target"
+>     | "over_head_marker"
+>     | "pet_target"
+>     | "quest_directing_interaction"
+>     | "quick_interaction"
+>     | "reply_last_whisper"
+>     | "reply_last_whispered"
+>     | "ride_pet_action_bar_button"
+>     | "right_camera"
+>     | "rotatepitch"
+>     | "rotateyaw"
+>     | "round_target"
+>     | "screenshot_zoom_in"
+>     | "screenshot_zoom_out"
+>     | "screenshotcamera"
+>     | "screenshotmode"
+>     | "self_target"
+>     | "set_watch_target"
+>     | "slash_open_chat"
+>     | "swap_preliminary_equipment"
+>     | "targets_target_to_target"
+>     | "team_target"
+>     | "toggle_achievement"
+>     | "toggle_auction"
+>     | "toggle_bag"
+>     | "toggle_battle_field"
+>     | "toggle_butler_info"
+>     | "toggle_character"
+>     | "toggle_chronicle_book"
+>     | "toggle_commercial_mail"
+>     | "toggle_common_farm_info"
+>     | "toggle_community_expedition_tab"
+>     | "toggle_community_faction_tab"
+>     | "toggle_community_family_tab"
+>     | "toggle_community"
+>     | "toggle_craft_book"
+>     | "toggle_faction"
+>     | "toggle_force_attack"
+>     | "toggle_gm_console"
+>     | "toggle_hero"
+>     | "toggle_ingameshop"
+>     | "toggle_mail"
+>     | "toggle_megaphone_chat"
+>     | "toggle_nametag"
+>     | "toggle_optimization"
+>     | "toggle_pet_manage"
+>     | "toggle_post"
+>     | "toggle_quest"
+>     | "toggle_raid_frame"
+>     | "toggle_raid_team_manager"
+>     | "toggle_random_shop"
+>     | "toggle_ranking"
+>     | "toggle_show_guide_decal"
+>     | "toggle_specialty_info"
+>     | "toggle_spellbook"
+>     | "toggle_walk"
+>     | "toggle_web_messenger"
+>     | "toggle_web_play_diary_instant"
+>     | "toggle_web_play_diary"
+>     | "toggle_web_wiki"
+>     | "toggle_worldmap"
+>     | "turnleft"
+>     | "turnright"
+>     | "watch_targets_target_to_target"
+>     | "zoom_in"
+>     | "zoom_out"
+> 
+> index:
+>     | `1` -- PRIMARY
+>     | `2` -- SECONDARY
+> ```
 
 #### Method: SetBindingUiEventWithIndex
 ```lua
@@ -818,299 +957,17 @@
 >     | `2` -- SECONDARY
 > ```
 
-#### Method: IsValidActionName
+#### Method: OptionToBinding
 ```lua
-(method) X2Hotkey:IsValidActionName(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120))
-  -> validActionName: boolean
+(method) X2Hotkey:OptionToBinding()
 ```
-> Checks if a hotkey action is valid.
-> 
-> @*param* `action` — The hotkey action to validate.
-> 
-> @*return* `validActionName` — `true` if the action name is valid, `false` otherwise.
-> 
-> ```lua
-> action:
->     | "action_bar_button"
->     | "action_bar_page_next"
->     | "action_bar_page_prev"
->     | "action_bar_page"
->     | "activate_weapon"
->     | "autorun"
->     | "back_camera"
->     | "battle_pet_action_bar_button"
->     | "builder_rotate_left_large"
->     | "builder_rotate_left_normal"
->     | "builder_rotate_left_small"
->     | "builder_rotate_right_large"
->     | "builder_rotate_right_normal"
->     | "builder_rotate_right_small"
->     | "builder_zoom_in"
->     | "builder_zoom_out"
->     | "change_roadmap_size"
->     | "cycle_camera_clockwise"
->     | "cycle_camera_counter_clockwise"
->     | "cycle_friendly_backward"
->     | "cycle_friendly_forward"
->     | "cycle_friendly_head_marker_backward"
->     | "cycle_friendly_head_marker_forward"
->     | "cycle_hostile_backward"
->     | "cycle_hostile_forward"
->     | "cycle_hostile_head_marker_backward"
->     | "cycle_hostile_head_marker_forward"
->     | "do_interaction_1"
->     | "do_interaction_2"
->     | "do_interaction_3"
->     | "do_interaction_4"
->     | "dof_add_dist"
->     | "dof_add_range"
->     | "dof_auto_focus"
->     | "dof_bokeh_add_intensity"
->     | "dof_bokeh_add_size"
->     | "dof_bokeh_circle"
->     | "dof_bokeh_heart"
->     | "dof_bokeh_hexagon"
->     | "dof_bokeh_star"
->     | "dof_bokeh_sub_intensity"
->     | "dof_bokeh_sub_size"
->     | "dof_bokeh_toggle"
->     | "dof_sub_dist"
->     | "dof_sub_range"
->     | "dof_toggle"
->     | "down"
->     | "front_camera"
->     | "instant_kill_streak_action_bar_button"
->     | "jump"
->     | "left_camera"
->     | "mode_action_bar_button"
->     | "moveback"
->     | "moveforward"
->     | "moveleft"
->     | "moveright"
->     | "open_chat"
->     | "open_config"
->     | "open_target_equipment"
->     | "over_head_marker_to_target"
->     | "over_head_marker"
->     | "pet_target"
->     | "quest_directing_interaction"
->     | "quick_interaction"
->     | "reply_last_whisper"
->     | "reply_last_whispered"
->     | "ride_pet_action_bar_button"
->     | "right_camera"
->     | "rotatepitch"
->     | "rotateyaw"
->     | "round_target"
->     | "screenshot_zoom_in"
->     | "screenshot_zoom_out"
->     | "screenshotcamera"
->     | "screenshotmode"
->     | "self_target"
->     | "set_watch_target"
->     | "slash_open_chat"
->     | "swap_preliminary_equipment"
->     | "targets_target_to_target"
->     | "team_target"
->     | "toggle_achievement"
->     | "toggle_auction"
->     | "toggle_bag"
->     | "toggle_battle_field"
->     | "toggle_butler_info"
->     | "toggle_character"
->     | "toggle_chronicle_book"
->     | "toggle_commercial_mail"
->     | "toggle_common_farm_info"
->     | "toggle_community_expedition_tab"
->     | "toggle_community_faction_tab"
->     | "toggle_community_family_tab"
->     | "toggle_community"
->     | "toggle_craft_book"
->     | "toggle_faction"
->     | "toggle_force_attack"
->     | "toggle_gm_console"
->     | "toggle_hero"
->     | "toggle_ingameshop"
->     | "toggle_mail"
->     | "toggle_megaphone_chat"
->     | "toggle_nametag"
->     | "toggle_optimization"
->     | "toggle_pet_manage"
->     | "toggle_post"
->     | "toggle_quest"
->     | "toggle_raid_frame"
->     | "toggle_raid_team_manager"
->     | "toggle_random_shop"
->     | "toggle_ranking"
->     | "toggle_show_guide_decal"
->     | "toggle_specialty_info"
->     | "toggle_spellbook"
->     | "toggle_walk"
->     | "toggle_web_messenger"
->     | "toggle_web_play_diary_instant"
->     | "toggle_web_play_diary"
->     | "toggle_web_wiki"
->     | "toggle_worldmap"
->     | "turnleft"
->     | "turnright"
->     | "watch_targets_target_to_target"
->     | "zoom_in"
->     | "zoom_out"
-> ```
-
-#### Method: GetOptionBindingUiEvent
-```lua
-(method) X2Hotkey:GetOptionBindingUiEvent(actionName: string|"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"...(+121), index: `1`|`2`)
-  -> key: string
-```
-> Returns the key bound to the action option button.
-> 
-> @*param* `actionName` — The action name or hotkey action to query.
-> 
-> @*param* `index` — The index of the hotkey manager.
-> 
-> @*return* `key` — The key bound to the action option button.
-> 
-> ```lua
-> actionName:
->     | "action_bar_button"
->     | "action_bar_page_next"
->     | "action_bar_page_prev"
->     | "action_bar_page"
->     | "activate_weapon"
->     | "autorun"
->     | "back_camera"
->     | "battle_pet_action_bar_button"
->     | "builder_rotate_left_large"
->     | "builder_rotate_left_normal"
->     | "builder_rotate_left_small"
->     | "builder_rotate_right_large"
->     | "builder_rotate_right_normal"
->     | "builder_rotate_right_small"
->     | "builder_zoom_in"
->     | "builder_zoom_out"
->     | "change_roadmap_size"
->     | "cycle_camera_clockwise"
->     | "cycle_camera_counter_clockwise"
->     | "cycle_friendly_backward"
->     | "cycle_friendly_forward"
->     | "cycle_friendly_head_marker_backward"
->     | "cycle_friendly_head_marker_forward"
->     | "cycle_hostile_backward"
->     | "cycle_hostile_forward"
->     | "cycle_hostile_head_marker_backward"
->     | "cycle_hostile_head_marker_forward"
->     | "do_interaction_1"
->     | "do_interaction_2"
->     | "do_interaction_3"
->     | "do_interaction_4"
->     | "dof_add_dist"
->     | "dof_add_range"
->     | "dof_auto_focus"
->     | "dof_bokeh_add_intensity"
->     | "dof_bokeh_add_size"
->     | "dof_bokeh_circle"
->     | "dof_bokeh_heart"
->     | "dof_bokeh_hexagon"
->     | "dof_bokeh_star"
->     | "dof_bokeh_sub_intensity"
->     | "dof_bokeh_sub_size"
->     | "dof_bokeh_toggle"
->     | "dof_sub_dist"
->     | "dof_sub_range"
->     | "dof_toggle"
->     | "down"
->     | "front_camera"
->     | "instant_kill_streak_action_bar_button"
->     | "jump"
->     | "left_camera"
->     | "mode_action_bar_button"
->     | "moveback"
->     | "moveforward"
->     | "moveleft"
->     | "moveright"
->     | "open_chat"
->     | "open_config"
->     | "open_target_equipment"
->     | "over_head_marker_to_target"
->     | "over_head_marker"
->     | "pet_target"
->     | "quest_directing_interaction"
->     | "quick_interaction"
->     | "reply_last_whisper"
->     | "reply_last_whispered"
->     | "ride_pet_action_bar_button"
->     | "right_camera"
->     | "rotatepitch"
->     | "rotateyaw"
->     | "round_target"
->     | "screenshot_zoom_in"
->     | "screenshot_zoom_out"
->     | "screenshotcamera"
->     | "screenshotmode"
->     | "self_target"
->     | "set_watch_target"
->     | "slash_open_chat"
->     | "swap_preliminary_equipment"
->     | "targets_target_to_target"
->     | "team_target"
->     | "toggle_achievement"
->     | "toggle_auction"
->     | "toggle_bag"
->     | "toggle_battle_field"
->     | "toggle_butler_info"
->     | "toggle_character"
->     | "toggle_chronicle_book"
->     | "toggle_commercial_mail"
->     | "toggle_common_farm_info"
->     | "toggle_community_expedition_tab"
->     | "toggle_community_faction_tab"
->     | "toggle_community_family_tab"
->     | "toggle_community"
->     | "toggle_craft_book"
->     | "toggle_faction"
->     | "toggle_force_attack"
->     | "toggle_gm_console"
->     | "toggle_hero"
->     | "toggle_ingameshop"
->     | "toggle_mail"
->     | "toggle_megaphone_chat"
->     | "toggle_nametag"
->     | "toggle_optimization"
->     | "toggle_pet_manage"
->     | "toggle_post"
->     | "toggle_quest"
->     | "toggle_raid_frame"
->     | "toggle_raid_team_manager"
->     | "toggle_random_shop"
->     | "toggle_ranking"
->     | "toggle_show_guide_decal"
->     | "toggle_specialty_info"
->     | "toggle_spellbook"
->     | "toggle_walk"
->     | "toggle_web_messenger"
->     | "toggle_web_play_diary_instant"
->     | "toggle_web_play_diary"
->     | "toggle_web_wiki"
->     | "toggle_worldmap"
->     | "turnleft"
->     | "turnright"
->     | "watch_targets_target_to_target"
->     | "zoom_in"
->     | "zoom_out"
-> 
-> index:
->     | `1` -- PRIMARY
->     | `2` -- SECONDARY
-> ```
-
-#### Method: EnableHotkey
-```lua
-(method) X2Hotkey:EnableHotkey(enable: boolean)
-```
-> Enables or disables the hotkey system.
-> 
-> @*param* `enable` — `true` to enable the hotkey system, `false` to disable it. (default: `true`)
+> Sets current option bindings and allows them to be used but does not save
+> them.
+> - **`X2Hotkey:BindingToOption()` must be used before or all hotkeys will
+> be erased upon reloading!**
+> - **Any key pressed when this is fired and `X2Hotkey:BindingToOption()` isn't
+> used right before setting a hotkey can become stuck in a pressed state until
+> pressed again.**
 
 #### Method: IsOverridableAction
 ```lua
@@ -1398,10 +1255,158 @@
 >     | `2` -- SECONDARY
 > ```
 
-#### Method: GetOptionBindingButton
+#### Method: EnableHotkey
 ```lua
-(method) X2Hotkey:GetOptionBindingButton(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), index: `1`|`2`)
-  -> key: string
+(method) X2Hotkey:EnableHotkey(enable: boolean)
+```
+> Enables or disables the hotkey system.
+> 
+> @*param* `enable` — `true` to enable the hotkey system, `false` to disable it. (default: `true`)
+
+#### Method: IsValidActionName
+```lua
+(method) X2Hotkey:IsValidActionName(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120))
+  -> validActionName: boolean
+```
+> Checks if a hotkey action is valid.
+> 
+> @*param* `action` — The hotkey action to validate.
+> 
+> @*return* `validActionName` — `true` if the action name is valid, `false` otherwise.
+> 
+> ```lua
+> action:
+>     | "action_bar_button"
+>     | "action_bar_page_next"
+>     | "action_bar_page_prev"
+>     | "action_bar_page"
+>     | "activate_weapon"
+>     | "autorun"
+>     | "back_camera"
+>     | "battle_pet_action_bar_button"
+>     | "builder_rotate_left_large"
+>     | "builder_rotate_left_normal"
+>     | "builder_rotate_left_small"
+>     | "builder_rotate_right_large"
+>     | "builder_rotate_right_normal"
+>     | "builder_rotate_right_small"
+>     | "builder_zoom_in"
+>     | "builder_zoom_out"
+>     | "change_roadmap_size"
+>     | "cycle_camera_clockwise"
+>     | "cycle_camera_counter_clockwise"
+>     | "cycle_friendly_backward"
+>     | "cycle_friendly_forward"
+>     | "cycle_friendly_head_marker_backward"
+>     | "cycle_friendly_head_marker_forward"
+>     | "cycle_hostile_backward"
+>     | "cycle_hostile_forward"
+>     | "cycle_hostile_head_marker_backward"
+>     | "cycle_hostile_head_marker_forward"
+>     | "do_interaction_1"
+>     | "do_interaction_2"
+>     | "do_interaction_3"
+>     | "do_interaction_4"
+>     | "dof_add_dist"
+>     | "dof_add_range"
+>     | "dof_auto_focus"
+>     | "dof_bokeh_add_intensity"
+>     | "dof_bokeh_add_size"
+>     | "dof_bokeh_circle"
+>     | "dof_bokeh_heart"
+>     | "dof_bokeh_hexagon"
+>     | "dof_bokeh_star"
+>     | "dof_bokeh_sub_intensity"
+>     | "dof_bokeh_sub_size"
+>     | "dof_bokeh_toggle"
+>     | "dof_sub_dist"
+>     | "dof_sub_range"
+>     | "dof_toggle"
+>     | "down"
+>     | "front_camera"
+>     | "instant_kill_streak_action_bar_button"
+>     | "jump"
+>     | "left_camera"
+>     | "mode_action_bar_button"
+>     | "moveback"
+>     | "moveforward"
+>     | "moveleft"
+>     | "moveright"
+>     | "open_chat"
+>     | "open_config"
+>     | "open_target_equipment"
+>     | "over_head_marker_to_target"
+>     | "over_head_marker"
+>     | "pet_target"
+>     | "quest_directing_interaction"
+>     | "quick_interaction"
+>     | "reply_last_whisper"
+>     | "reply_last_whispered"
+>     | "ride_pet_action_bar_button"
+>     | "right_camera"
+>     | "rotatepitch"
+>     | "rotateyaw"
+>     | "round_target"
+>     | "screenshot_zoom_in"
+>     | "screenshot_zoom_out"
+>     | "screenshotcamera"
+>     | "screenshotmode"
+>     | "self_target"
+>     | "set_watch_target"
+>     | "slash_open_chat"
+>     | "swap_preliminary_equipment"
+>     | "targets_target_to_target"
+>     | "team_target"
+>     | "toggle_achievement"
+>     | "toggle_auction"
+>     | "toggle_bag"
+>     | "toggle_battle_field"
+>     | "toggle_butler_info"
+>     | "toggle_character"
+>     | "toggle_chronicle_book"
+>     | "toggle_commercial_mail"
+>     | "toggle_common_farm_info"
+>     | "toggle_community_expedition_tab"
+>     | "toggle_community_faction_tab"
+>     | "toggle_community_family_tab"
+>     | "toggle_community"
+>     | "toggle_craft_book"
+>     | "toggle_faction"
+>     | "toggle_force_attack"
+>     | "toggle_gm_console"
+>     | "toggle_hero"
+>     | "toggle_ingameshop"
+>     | "toggle_mail"
+>     | "toggle_megaphone_chat"
+>     | "toggle_nametag"
+>     | "toggle_optimization"
+>     | "toggle_pet_manage"
+>     | "toggle_post"
+>     | "toggle_quest"
+>     | "toggle_raid_frame"
+>     | "toggle_raid_team_manager"
+>     | "toggle_random_shop"
+>     | "toggle_ranking"
+>     | "toggle_show_guide_decal"
+>     | "toggle_specialty_info"
+>     | "toggle_spellbook"
+>     | "toggle_walk"
+>     | "toggle_web_messenger"
+>     | "toggle_web_play_diary_instant"
+>     | "toggle_web_play_diary"
+>     | "toggle_web_wiki"
+>     | "toggle_worldmap"
+>     | "turnleft"
+>     | "turnright"
+>     | "watch_targets_target_to_target"
+>     | "zoom_in"
+>     | "zoom_out"
+> ```
+
+#### Method: GetOptionBinding
+```lua
+(method) X2Hotkey:GetOptionBinding(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), index: `1`|`2`, option: boolean, arg: number)
+  -> optionBinding: string
 ```
 > Returns the key bound to the action option button for a specified hotkey
 > index.
@@ -1410,7 +1415,11 @@
 > 
 > @*param* `index` — The index of the hotkey manager.
 > 
-> @*return* `key` — The button binding string.
+> @*param* `option` — `true` to include additional options, `false` otherwise.
+> 
+> @*param* `arg` — Additional argument for the binding.
+> 
+> @*return* `optionBinding` — The option binding string.
 > 
 > ```lua
 > action:
@@ -1545,10 +1554,156 @@
 >     | `2` -- SECONDARY
 > ```
 
-#### Method: GetOptionBinding
+#### Method: GetOptionBindingUiEvent
 ```lua
-(method) X2Hotkey:GetOptionBinding(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), index: `1`|`2`, option: boolean, arg: number)
-  -> optionBinding: string
+(method) X2Hotkey:GetOptionBindingUiEvent(actionName: string|"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"...(+121), index: `1`|`2`)
+  -> key: string
+```
+> Returns the key bound to the action option button.
+> 
+> @*param* `actionName` — The action name or hotkey action to query.
+> 
+> @*param* `index` — The index of the hotkey manager.
+> 
+> @*return* `key` — The key bound to the action option button.
+> 
+> ```lua
+> actionName:
+>     | "action_bar_button"
+>     | "action_bar_page_next"
+>     | "action_bar_page_prev"
+>     | "action_bar_page"
+>     | "activate_weapon"
+>     | "autorun"
+>     | "back_camera"
+>     | "battle_pet_action_bar_button"
+>     | "builder_rotate_left_large"
+>     | "builder_rotate_left_normal"
+>     | "builder_rotate_left_small"
+>     | "builder_rotate_right_large"
+>     | "builder_rotate_right_normal"
+>     | "builder_rotate_right_small"
+>     | "builder_zoom_in"
+>     | "builder_zoom_out"
+>     | "change_roadmap_size"
+>     | "cycle_camera_clockwise"
+>     | "cycle_camera_counter_clockwise"
+>     | "cycle_friendly_backward"
+>     | "cycle_friendly_forward"
+>     | "cycle_friendly_head_marker_backward"
+>     | "cycle_friendly_head_marker_forward"
+>     | "cycle_hostile_backward"
+>     | "cycle_hostile_forward"
+>     | "cycle_hostile_head_marker_backward"
+>     | "cycle_hostile_head_marker_forward"
+>     | "do_interaction_1"
+>     | "do_interaction_2"
+>     | "do_interaction_3"
+>     | "do_interaction_4"
+>     | "dof_add_dist"
+>     | "dof_add_range"
+>     | "dof_auto_focus"
+>     | "dof_bokeh_add_intensity"
+>     | "dof_bokeh_add_size"
+>     | "dof_bokeh_circle"
+>     | "dof_bokeh_heart"
+>     | "dof_bokeh_hexagon"
+>     | "dof_bokeh_star"
+>     | "dof_bokeh_sub_intensity"
+>     | "dof_bokeh_sub_size"
+>     | "dof_bokeh_toggle"
+>     | "dof_sub_dist"
+>     | "dof_sub_range"
+>     | "dof_toggle"
+>     | "down"
+>     | "front_camera"
+>     | "instant_kill_streak_action_bar_button"
+>     | "jump"
+>     | "left_camera"
+>     | "mode_action_bar_button"
+>     | "moveback"
+>     | "moveforward"
+>     | "moveleft"
+>     | "moveright"
+>     | "open_chat"
+>     | "open_config"
+>     | "open_target_equipment"
+>     | "over_head_marker_to_target"
+>     | "over_head_marker"
+>     | "pet_target"
+>     | "quest_directing_interaction"
+>     | "quick_interaction"
+>     | "reply_last_whisper"
+>     | "reply_last_whispered"
+>     | "ride_pet_action_bar_button"
+>     | "right_camera"
+>     | "rotatepitch"
+>     | "rotateyaw"
+>     | "round_target"
+>     | "screenshot_zoom_in"
+>     | "screenshot_zoom_out"
+>     | "screenshotcamera"
+>     | "screenshotmode"
+>     | "self_target"
+>     | "set_watch_target"
+>     | "slash_open_chat"
+>     | "swap_preliminary_equipment"
+>     | "targets_target_to_target"
+>     | "team_target"
+>     | "toggle_achievement"
+>     | "toggle_auction"
+>     | "toggle_bag"
+>     | "toggle_battle_field"
+>     | "toggle_butler_info"
+>     | "toggle_character"
+>     | "toggle_chronicle_book"
+>     | "toggle_commercial_mail"
+>     | "toggle_common_farm_info"
+>     | "toggle_community_expedition_tab"
+>     | "toggle_community_faction_tab"
+>     | "toggle_community_family_tab"
+>     | "toggle_community"
+>     | "toggle_craft_book"
+>     | "toggle_faction"
+>     | "toggle_force_attack"
+>     | "toggle_gm_console"
+>     | "toggle_hero"
+>     | "toggle_ingameshop"
+>     | "toggle_mail"
+>     | "toggle_megaphone_chat"
+>     | "toggle_nametag"
+>     | "toggle_optimization"
+>     | "toggle_pet_manage"
+>     | "toggle_post"
+>     | "toggle_quest"
+>     | "toggle_raid_frame"
+>     | "toggle_raid_team_manager"
+>     | "toggle_random_shop"
+>     | "toggle_ranking"
+>     | "toggle_show_guide_decal"
+>     | "toggle_specialty_info"
+>     | "toggle_spellbook"
+>     | "toggle_walk"
+>     | "toggle_web_messenger"
+>     | "toggle_web_play_diary_instant"
+>     | "toggle_web_play_diary"
+>     | "toggle_web_wiki"
+>     | "toggle_worldmap"
+>     | "turnleft"
+>     | "turnright"
+>     | "watch_targets_target_to_target"
+>     | "zoom_in"
+>     | "zoom_out"
+> 
+> index:
+>     | `1` -- PRIMARY
+>     | `2` -- SECONDARY
+> ```
+
+#### Method: GetOptionBindingButton
+```lua
+(method) X2Hotkey:GetOptionBindingButton(action: "action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"|"activate_weapon"...(+120), index: `1`|`2`)
+  -> key: string
 ```
 > Returns the key bound to the action option button for a specified hotkey
 > index.
@@ -1557,11 +1712,7 @@
 > 
 > @*param* `index` — The index of the hotkey manager.
 > 
-> @*param* `option` — `true` to include additional options, `false` otherwise.
-> 
-> @*param* `arg` — Additional argument for the binding.
-> 
-> @*return* `optionBinding` — The option binding string.
+> @*return* `key` — The button binding string.
 > 
 > ```lua
 > action:

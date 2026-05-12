@@ -8,6 +8,7 @@ X2Hotkey = {
   IsOverridableAction = "<function X2Hotkey>",
   IsValidActionName = "<function X2Hotkey>",
   OptionToBinding = "<function X2Hotkey>",
+  RemoveOptionBinding = "<function X2Hotkey>",
   SaveHotKey = "<function X2Hotkey>",
   SetBindingUiEvent = "<function X2Hotkey>",
   SetBindingUiEventWithIndex = "<function X2Hotkey>",

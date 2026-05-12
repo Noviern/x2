@@ -1,5 +1,7 @@
 X2Coffer = {
+  Capacity = "<function X2Coffer>",
   CountItems = "<function X2Coffer>",
   GetBagItemInfo = "<function X2Coffer>",
   ItemStack = "<function X2Coffer>",
+  MoveToEmptyBagSlot = "<function X2Coffer>",
 }

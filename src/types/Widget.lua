@@ -25,7 +25,8 @@ DC_SHIFT_KEY_DOWN = 1  -- types/Widget DRAG_CONDITION
 ---@class Widget: Uibounds, Uiobject
 local Widget = {}
 
----Applies or removes UI scaling for the Widget.
+---Applies or removes UI scaling for the Widget. Must be applied before a widget
+---is shown.
 ---@param apply boolean `true` to apply UI scale, `false` to remove. (default: `true`)
 function Widget:ApplyUIScale(apply) end
 
@@ -291,7 +292,7 @@ function Widget:DisableDrawablesWithChildren(nameLayer) end
 ---- `"OnMouseMove"`
 ---- `"OnMouseUp"`
 ---@param enable boolean `true` to enable, `false` to disable. (default: `true`)
----@param enableChildren? boolean `true` to enable, `false` to disable. (default: `true`)
+---@param enableChildren? boolean `true` to also enable/disable all children recursively, `false` to affect only this widget. (default: `false`)
 function Widget:Enable(enable, enableChildren) end
 
 ---Enables or disables the Widget handler actions `"OnDragStart"` and `"OnDragStop"`.
@@ -648,10 +649,13 @@ function Widget:SetStartAnimation(alpha, scale) end
 function Widget:SetText(text) end
 
 ---@TODO: what are all the actions this disables?
----Shows or hides the widget and enables/disables its `"OnUpdate"` handler.
----Showing before the extents and anchors are set can cause issues.
+---Shows or hides the widget and enables/disables its "OnUpdate" handler.
+---Anchors set before the widget is first shown are not affected by UI scale.
+---Anchors set after the widget is shown are scaled.
+---The first time a widget is shown, UI scale is applied unless specified not to
+---by `Widget:ApplyUIScale(false)`
 ---@param show boolean `true` to show, `false` to hide. (default: `false`)
----@param fadeTime? number The optional fade duration in milliseconds.
+---@param fadeTime? number Optional fade duration in milliseconds.
 function Widget:Show(show, fadeTime) end
 
 ---Starts moving the Widget. Should be used in conjunction with

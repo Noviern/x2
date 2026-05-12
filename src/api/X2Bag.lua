@@ -3,6 +3,11 @@
 ---@class X2Bag
 X2Bag = {} -- api/X2Bag
 
+---Returns the total capacity of the player's bag.
+---@return number capacity The maximum number of items the bag can hold.
+---@nodiscard
+function X2Bag:Capacity() end
+
 ---Returns the total number of items in the player's bag.
 ---@return number itemCount The total count of items currently in the bag.
 ---@nodiscard
@@ -27,3 +32,13 @@ function X2Bag:GetBagItemInfo(bagId, slot, neededInfo) end
 ---@return number itemStack The number of items in the stack.
 ---@nodiscard
 function X2Bag:ItemStack(slot) end
+
+---Moves an item from the bag to an empty bank slot.
+---Cooldown 500ms.
+---@param slotIdx number The bag slot index to move from. (min: `1`, max: `150`)
+function X2Bag:MoveToEmptyBankSlot(slotIdx) end
+
+---Moves an item from the bag to an empty coffer slot.
+---Cooldown 500ms.
+---@param slotIdx number The bag slot index to move from. (min: `1`, max: `150`)
+function X2Bag:MoveToEmptyCofferSlot(slotIdx) end

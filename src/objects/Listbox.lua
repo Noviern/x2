@@ -18,6 +18,7 @@
 ---@field itemStyleSub TextStyle Secondary style applied to items in the list (for alternate states or sub-items).
 local Listbox = {}
 
+---@TODO: x2ui/baselib/list.lua#L23 icon?
 ---Appends an item to the Listbox with the specified key, value, and optional
 ---color.
 ---@param key string The key for the item.
