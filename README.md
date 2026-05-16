@@ -2,7 +2,7 @@
 
 Provides documentation, definitions, and IntelliSense for ArcheAge Addons through the use of the [Lua Language Server](https://luals.github.io/).
 
-<video src="https://github.com/user-attachments/assets/a434d02e-e6fb-48fa-ba13-5d457b9fd525"></video>
+![X2](https://i.imgur.com/IE2XJB8.gif)
 
 ## How To Use IntelliSense ([VSCode](https://code.visualstudio.com/))
 1. Clone or download this repo.
