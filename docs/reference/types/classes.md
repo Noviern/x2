@@ -79,7 +79,7 @@ string
 
 #### Field: objective
 ```lua
-number|nil[]
+number[]|nil
 ```
 
 
@@ -2572,6 +2572,175 @@ number
 ```
 > Highlight Color Red. (min: `0`, max: `255`)
 
+### Class: DetailInstanceInfo
+#### Field: available
+```lua
+boolean
+```
+
+
+#### Field: resetCount
+```lua
+number
+```
+
+
+#### Field: resetItem
+```lua
+boolean
+```
+
+
+#### Field: playingTime
+```lua
+number
+```
+
+
+#### Field: permitLimit
+```lua
+number
+```
+
+
+#### Field: playRoundCount
+```lua
+number
+```
+
+
+#### Field: permitItem
+```lua
+boolean
+```
+
+
+#### Field: resetLimit
+```lua
+number
+```
+
+
+#### Field: showExpeditionLevel
+```lua
+boolean
+```
+
+
+#### Field: uiKey
+```lua
+string
+```
+
+
+#### Field: roundTime
+```lua
+number
+```
+
+
+#### Field: squadCreatable
+```lua
+boolean
+```
+
+
+#### Field: singleApplyAvailable
+```lua
+boolean
+```
+
+
+#### Field: zoneList
+```lua
+InstanceZoneInfo[]
+```
+
+
+#### Field: permitCount
+```lua
+number
+```
+
+
+#### Field: maxEnterCount
+```lua
+number
+```
+
+
+#### Field: enterCount
+```lua
+number
+```
+
+
+#### Field: entranceTime
+```lua
+EntranceTime
+```
+
+
+#### Field: desc
+```lua
+string
+```
+
+
+#### Field: balanceLevel
+```lua
+number
+```
+
+
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: expeditionLevel
+```lua
+number
+```
+
+
+#### Field: gearScoreLimitMax
+```lua
+number
+```
+
+
+#### Field: levelMin
+```lua
+number
+```
+
+
+#### Field: gearScore
+```lua
+number
+```
+
+
+#### Field: levelMax
+```lua
+number
+```
+
+
+#### Field: hasSquad
+```lua
+boolean
+```
+
+
+#### Field: zoneName
+```lua
+string
+```
+
+
 ### Class: DiagonalASRDailyInfo
 #### Field: dailyAvg
 ```lua
@@ -2846,6 +3015,19 @@ number|nil
 ```
 
 
+### Class: EntranceTime
+#### Field: timeGroupInfo
+```lua
+GroupInfo[]
+```
+
+
+#### Field: weekGroupInfo
+```lua
+GroupInfo[]
+```
+
+
 ### Class: EquipSetInfo
 #### Field: bonuses
 ```lua
@@ -2856,6 +3038,43 @@ BonusesInfo[]
 #### Field: equipSetItemInfoDesc
 ```lua
 string
+```
+
+
+### Class: EquipSlotReinforceMaterialInfo
+#### Field: [1]
+```lua
+RequiredMaterialInfo
+```
+
+
+#### Field: [4]
+```lua
+RequiredMaterialInfo
+```
+
+
+#### Field: curExp
+```lua
+number
+```
+
+
+#### Field: [3]
+```lua
+RequiredMaterialInfo
+```
+
+
+#### Field: [2]
+```lua
+RequiredMaterialInfo
+```
+
+
+#### Field: totalExp
+```lua
+number
 ```
 
 
@@ -3329,6 +3548,43 @@ number
 ```
 
 
+### Class: GroupInfo
+#### Field: anyTime
+```lua
+boolean
+```
+
+
+#### Field: toHH
+```lua
+number
+```
+
+
+#### Field: toMM
+```lua
+number
+```
+
+
+#### Field: fromMM
+```lua
+number
+```
+
+
+#### Field: fromHH
+```lua
+number
+```
+
+
+#### Field: weekInfoList
+```lua
+number[]
+```
+
+
 ### Class: GuildInterests
 #### Field: [1]
 ```lua
@@ -3491,6 +3747,43 @@ number|nil
 ```
 > Right
 
+### Class: InstanceByKind
+#### Field: globalArena
+```lua
+boolean
+```
+
+
+#### Field: showFestivalIcon
+```lua
+boolean
+```
+
+
+#### Field: type
+```lua
+number
+```
+
+
+#### Field: memberCount
+```lua
+number[]
+```
+
+
+#### Field: globalField
+```lua
+boolean
+```
+
+
+#### Field: uiKey
+```lua
+string
+```
+
+
 ### Class: InstanceEnterableInfo
 #### Field: content
 ```lua
@@ -3556,6 +3849,50 @@ number
 #### Field: victimCorpsDeath
 ```lua
 number
+```
+
+
+### Class: InstanceUiKind
+#### Field: listButtonPath
+```lua
+string
+```
+
+
+#### Field: showHonorStore
+```lua
+boolean
+```
+
+
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: type
+```lua
+number
+```
+
+
+### Class: InstanceZoneInfo
+#### Field: uiKey
+```lua
+string
+```
+
+
+#### Field: zoneKey
+```lua
+number
+```
+
+
+#### Field: zoneName
+```lua
+string
 ```
 
 
@@ -4349,6 +4686,19 @@ number
 ```
 
 
+### Class: ItemMaterialInfo
+#### Field: count
+```lua
+number
+```
+
+
+#### Field: item
+```lua
+ItemInfo
+```
+
+
 ### Class: ItemTree
 #### Field: child
 ```lua
@@ -4525,6 +4875,50 @@ number
 #### Field: victimName
 ```lua
 number
+```
+
+
+### Class: LevelEffect
+#### Field: attributeType
+```lua
+number
+```
+
+
+#### Field: unitModifierType
+```lua
+number
+```
+
+
+#### Field: triggerLevel
+```lua
+number
+```
+
+
+#### Field: isChangeable
+```lua
+boolean
+```
+
+
+#### Field: value
+```lua
+number
+```
+
+
+### Class: LevelEffectChangeUIInfo
+#### Field: item
+```lua
+ItemInfo
+```
+
+
+#### Field: levelEffectList
+```lua
+LevelEffect[]
 ```
 
 
@@ -5367,6 +5761,49 @@ number
 #### Field: equipSlotTypes
 ```lua
 string[]
+```
+
+
+### Class: RequiredMaterialInfo
+#### Field: currency
+```lua
+number
+```
+
+
+#### Field: itemList
+```lua
+ItemMaterialInfo[]
+```
+
+
+#### Field: materialType
+```lua
+number
+```
+
+
+#### Field: hasCashItem
+```lua
+boolean
+```
+
+
+#### Field: currencyValue
+```lua
+number
+```
+
+
+#### Field: gainExp
+```lua
+number
+```
+
+
+#### Field: name
+```lua
+string
 ```
 
 

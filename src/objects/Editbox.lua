@@ -15,7 +15,7 @@
 ---**Dependencies**:
 --- - [TextStyle](lua://TextStyle) used for the `prefixStyle` field.
 ---
----@class Editbox: Widget, Editboxbase
+---@class Editbox: Editboxbase
 ---@field prefixStyle TextStyle The text style applied to the optional prefix text.
 local Editbox = {}
 
@@ -75,13 +75,6 @@ function Editbox:SetHistoryLines(count) end
 ---Sets the initial value for the Editbox.
 ---@param val number The initial value.
 function Editbox:SetInitVal(val) end
-
----Sets the inset for the Editbox.
----@param left number The left inset.
----@param top number The top inset.
----@param right number The right inset.
----@param bottom number The bottom inset.
-function Editbox:SetInset(left, top, right, bottom) end
 
 ---Enables or disables password mode for the Editbox.
 ---@param password boolean `true` to enable password mode, `false` to disable. (default: `false`)

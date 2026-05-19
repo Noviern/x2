@@ -6,7 +6,7 @@
 ---text. Provides cursor position queries, line and text metrics, configurable
 ---insets, and adjustable line spacing. Intended for longer text.
 ---
----@class EditboxMultiline: Widget, Editboxbase
+---@class EditboxMultiline: Editboxbase
 local EditboxMultiline = {}
 
 ---Clears all text in the EditboxMultiline.
@@ -41,13 +41,6 @@ function EditboxMultiline:GetTextHeight() end
 ---@return number textLength The length of the text.
 ---@nodiscard
 function EditboxMultiline:GetTextLength() end
-
----Sets the inset for the EditboxMultiline.
----@param left number The left inset.
----@param top number The top inset.
----@param right number The right inset.
----@param bottom number The bottom inset.
-function EditboxMultiline:SetInset(left, top, right, bottom) end
 
 ---Sets the line spacing for the EditboxMultiline.
 ---@param space number The line spacing value.

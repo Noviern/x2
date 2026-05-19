@@ -1,6 +1,8 @@
 # Editboxbase
 ## Classes
 ### Class: Editboxbase
+Extends [Widget](../types/Widget.md#class-widget)
+
 #### Field: style
 ```lua
 TextStyle
@@ -25,22 +27,6 @@ TextStyle
 > supports special font types for image-based text rendering.
 > 
 
-#### Method: SetGuideText
-```lua
-(method) Editboxbase:SetGuideText(text: string)
-```
-> Sets the guide text for the Editboxbase.
-> 
-> @*param* `text` — The guide text to display.
-
-#### Method: SetReadOnly
-```lua
-(method) Editboxbase:SetReadOnly(readOnly: boolean)
-```
-> Enables or disables read-only mode for the Editboxbase.
-> 
-> @*param* `readOnly` — `true` to make read-only, `false` to allow editing. (default: `false`)
-
 #### Method: SetGuideTextInset
 ```lua
 (method) Editboxbase:SetGuideTextInset(insetData: InsetData)
@@ -51,6 +37,28 @@ TextStyle
 > 
 > See: [InsetData](../types/classes.md#class-insetdata)
 
+#### Method: SetReadOnly
+```lua
+(method) Editboxbase:SetReadOnly(readOnly: boolean)
+```
+> Enables or disables read-only mode for the Editboxbase.
+> 
+> @*param* `readOnly` — `true` to make read-only, `false` to allow editing. (default: `false`)
+
+#### Method: SetInset
+```lua
+(method) Editboxbase:SetInset(left: number, top: number, right: number, bottom: number)
+```
+> Sets the inset for the Editboxbase.
+> 
+> @*param* `left` — The left inset.
+> 
+> @*param* `top` — The top inset.
+> 
+> @*param* `right` — The right inset.
+> 
+> @*param* `bottom` — The bottom inset.
+
 #### Method: SetMaxTextLength
 ```lua
 (method) Editboxbase:SetMaxTextLength(length: number)
@@ -59,6 +67,31 @@ TextStyle
 > 
 > @*param* `length` — The maximum text length. (`256` for `X2Editbox`, `9215` for `EditboxMultiline`, `256` for `MegaphoneChatEdit`)
 
+#### Method: SetGuideText
+```lua
+(method) Editboxbase:SetGuideText(text: string)
+```
+> Sets the guide text for the Editboxbase.
+> 
+> @*param* `text` — The guide text to display.
+
+#### Method: SetCursorHeight
+```lua
+(method) Editboxbase:SetCursorHeight(height: number)
+```
+> Sets the cursor height for the Editboxbase.
+> 
+> @*param* `height` — The height of the cursor.
+
+#### Method: MaxTextLength
+```lua
+(method) Editboxbase:MaxTextLength()
+  -> maxTextLength: number
+```
+> Retrieves the maximum text length for the Editboxbase.
+> 
+> @*return* `maxTextLength` — The maximum text length. (default: `64` for `X2Editbox`, default:`256` for `EditboxMultiline`, default: `45` for `MegaphoneChatEdit`)
+
 #### Method: SetCursorOffset
 ```lua
 (method) Editboxbase:SetCursorOffset(offset: number)
@@ -66,6 +99,20 @@ TextStyle
 > Sets the cursor offset for the Editboxbase.
 > 
 > @*param* `offset` — The cursor offset position.
+
+#### Method: SetCursorColor
+```lua
+(method) Editboxbase:SetCursorColor(r: number, g: number, b: number, a: number)
+```
+> Sets the color of the cursor for the Editboxbase.
+> 
+> @*param* `r` — The red color component. (min: `0`, max: `1`)
+> 
+> @*param* `g` — The green color component. (min: `0`, max: `1`)
+> 
+> @*param* `b` — The blue color component. (min: `0`, max: `1`)
+> 
+> @*param* `a` — The alpha (opacity) component. (min: `0`, max: `1`)
 
 #### Method: SetCursorColorByColorKey
 ```lua
@@ -111,37 +158,6 @@ TextStyle
 >     | "texture_check_window_tooltip_bg"
 >     | "web_browser_background"
 > ```
-
-#### Method: SetCursorHeight
-```lua
-(method) Editboxbase:SetCursorHeight(height: number)
-```
-> Sets the cursor height for the Editboxbase.
-> 
-> @*param* `height` — The height of the cursor.
-
-#### Method: MaxTextLength
-```lua
-(method) Editboxbase:MaxTextLength()
-  -> maxTextLength: number
-```
-> Retrieves the maximum text length for the Editboxbase.
-> 
-> @*return* `maxTextLength` — The maximum text length. (default: `64` for `X2Editbox`, default:`256` for `EditboxMultiline`, default: `45` for `MegaphoneChatEdit`)
-
-#### Method: SetCursorColor
-```lua
-(method) Editboxbase:SetCursorColor(r: number, g: number, b: number, a: number)
-```
-> Sets the color of the cursor for the Editboxbase.
-> 
-> @*param* `r` — The red color component. (min: `0`, max: `1`)
-> 
-> @*param* `g` — The green color component. (min: `0`, max: `1`)
-> 
-> @*param* `b` — The blue color component. (min: `0`, max: `1`)
-> 
-> @*param* `a` — The alpha (opacity) component. (min: `0`, max: `1`)
 
 #### Method: ClearTextOnEnter
 ```lua

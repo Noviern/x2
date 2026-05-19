@@ -71,10 +71,10 @@ function X2Achievement:GetAchievementInfo(achievementType) end
 ---@param achievementFilter ACHIEVEMENT_FILTER The filter to apply.
 ---@return number[] achievementMainList A table of achievement types, or empty if none exist.
 ---@nodiscard
----@overload fun(self: self, achievementKind: EAK_ACHIEVEMENT, subCategoryType: EAK_ACHIEVEMENT_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
----@overload fun(self: self, achievementKind: EAK_ARCHERAGE, subCategoryType: EAK_ARCHERAGE_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
----@overload fun(self: self, achievementKind: EAK_COLLECTION, subCategoryType: EAK_COLLECTION_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
----@overload fun(self: self, achievementKind: EAK_RACIAL_MISSION, subCategoryType: EAK_RACIAL_MISSION_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER)
+---@overload fun(self: self, achievementKind: EAK_ACHIEVEMENT, subCategoryType: EAK_ACHIEVEMENT_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER): number[]
+---@overload fun(self: self, achievementKind: EAK_ARCHERAGE, subCategoryType: EAK_ARCHERAGE_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER): number[]
+---@overload fun(self: self, achievementKind: EAK_COLLECTION, subCategoryType: EAK_COLLECTION_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER): number[]
+---@overload fun(self: self, achievementKind: EAK_RACIAL_MISSION, subCategoryType: EAK_RACIAL_MISSION_SUBCATEGORY_TYPE, achievementFilter: ACHIEVEMENT_FILTER): number[]
 function X2Achievement:GetAchievementMainList(achievementKind, subCategoryType, achievementFilter) end
 
 ---Retrieves the name of the specified achievement type.

@@ -164,7 +164,7 @@
 ---@field isHidden boolean
 ---@field isParentComplete boolean|nil @TODO: this may not exist.
 ---@field name string
----@field objective number|nil[]
+---@field objective number[]|nil
 ---@field reward RewardInfo|nil
 ---@field subCategoryName string
 ---@field subCategoryType EAK_SUBCATEGORY_TYPE
@@ -1574,3 +1574,96 @@
 ---@field enable boolean
 ---@field requiredLevel number
 ---@field step number
+
+---@class LevelEffect
+---@field attributeType number
+---@field isChangeable boolean
+---@field triggerLevel number
+---@field unitModifierType number
+---@field value number
+
+---@class LevelEffectChangeUIInfo
+---@field item ItemInfo
+---@field levelEffectList LevelEffect[]
+
+---@class ItemMaterialInfo
+---@field count number
+---@field item ItemInfo
+
+---@class RequiredMaterialInfo
+---@field currency number
+---@field currencyValue number
+---@field gainExp number
+---@field hasCashItem boolean
+---@field itemList ItemMaterialInfo[]
+---@field materialType number
+---@field name string
+
+---@class EquipSlotReinforceMaterialInfo
+---@field [1] RequiredMaterialInfo
+---@field [2] RequiredMaterialInfo
+---@field [3] RequiredMaterialInfo
+---@field [4] RequiredMaterialInfo
+---@field curExp number
+---@field totalExp number
+
+---@class InstanceUiKind
+---@field listButtonPath string
+---@field name string
+---@field showHonorStore boolean
+---@field type number
+
+---@class GroupInfo
+---@field anyTime boolean
+---@field fromHH number
+---@field fromMM number
+---@field toHH number
+---@field toMM number
+---@field weekInfoList number[]
+
+---@class EntranceTime
+---@field timeGroupInfo GroupInfo[]
+---@field weekGroupInfo GroupInfo[]
+
+---@class InstanceZoneInfo
+---@field uiKey string
+---@field zoneKey number ---@TODO: this is not ZONE_KEY but instead the zones.id
+---@field zoneName string
+
+---@class DetailInstanceInfo
+---@field available boolean
+---@field balanceLevel number
+---@field desc string
+---@field enterCount number
+---@field entranceTime EntranceTime
+---@field expeditionLevel number
+---@field gearScore number
+---@field gearScoreLimitMax number
+---@field hasSquad boolean
+---@field levelMax number
+---@field levelMin number
+---@field maxEnterCount number
+---@field name string
+---@field permitCount number
+---@field permitItem boolean
+---@field permitLimit number
+---@field playRoundCount number
+---@field playingTime number
+---@field resetCount number
+---@field resetItem boolean
+---@field resetLimit number
+---@field roundTime number
+---@field showExpeditionLevel boolean
+---@field singleApplyAvailable boolean
+---@field squadCreatable boolean
+---@field uiKey string
+---@field zoneList InstanceZoneInfo[]
+---@field zoneName string
+
+---@class InstanceByKind
+---@field globalArena boolean
+---@field globalField boolean
+---@field memberCount number[]
+---@field showFestivalIcon boolean
+---@field type number
+---@field uiKey string

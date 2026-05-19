@@ -137,8 +137,9 @@ EQUIP_SLOT_REINFORCE_ATTRIBUTE:
 #### Method: GetMaterialInfo
 ```lua
 (method) X2EquipSlotReinforce:GetMaterialInfo(equipSlotIndex: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27), level: number)
+  -> equipSlotReinforceMaterialInfo: EquipSlotReinforceMaterialInfo
 ```
-> **Warning:** currently broken, crashes the game.
+> Returns the material info for the specified equiment slot and level.
 > 
 > @*param* `equipSlotIndex` — The equipment slot index.
 > 
@@ -180,6 +181,8 @@ EQUIP_SLOT_REINFORCE_ATTRIBUTE:
 >     | `ES_UNDERSHIRT`
 >     | `ES_WAIST`
 > ```
+> 
+> See: [EquipSlotReinforceMaterialInfo](../types/classes.md#class-equipslotreinforcematerialinfo)
 
 #### Method: GetSetEffects
 ```lua
@@ -343,8 +346,9 @@ EQUIP_SLOT_REINFORCE_ATTRIBUTE:
 #### Method: GetLevelEffectChangeUIInfo
 ```lua
 (method) X2EquipSlotReinforce:GetLevelEffectChangeUIInfo(equipSlotIndex: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
+  -> levelEffectChangeUIInfo: LevelEffectChangeUIInfo
 ```
-> **Warning:** currently broken, crashes the game.
+> Returns level effect info for the givin equipment slot.
 > 
 > @*param* `equipSlotIndex` — The equipment slot index.
 > 
@@ -384,6 +388,8 @@ EQUIP_SLOT_REINFORCE_ATTRIBUTE:
 >     | `ES_UNDERSHIRT`
 >     | `ES_WAIST`
 > ```
+> 
+> See: [LevelEffectChangeUIInfo](../types/classes.md#class-leveleffectchangeuiinfo)
 
 #### Method: GetAppliedAllSetEffect
 ```lua

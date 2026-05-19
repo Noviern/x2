@@ -297,7 +297,7 @@ Event triggers when the players sorts their bag.
 
 **BAG_TAB_SWITCHED_HANDLER**
 
-fun(tabId: any)
+fun(tabId: number)
 
 Event triggers when the player changes the bag tab.
 
@@ -5156,7 +5156,7 @@ fun(self: Widget, arg: number)
 
 **WIDGET_BAG_TAB_SWITCHED_HANDLER**
 
-fun(self: Widget, tabId: any)
+fun(self: Widget, tabId: number)
 
 
 

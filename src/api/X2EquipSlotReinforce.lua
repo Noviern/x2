@@ -51,11 +51,11 @@ function X2EquipSlotReinforce:GetBundleEffectInfos() end
 ---@nodiscard
 function X2EquipSlotReinforce:GetBundleEffectTopLevel() end
 
----@FIXME: Currently broken - crashes the game.
----@TODO: Likely a relic of an early system.
----**Warning:** currently broken, crashes the game.
+---Returns level effect info for the givin equipment slot.
 ---@param equipSlotIndex EQUIPMENT_SLOT The equipment slot index.
----@deprecated
+---@return LevelEffectChangeUIInfo levelEffectChangeUIInfo
+---@nodiscard
+---@see LevelEffectChangeUIInfo
 function X2EquipSlotReinforce:GetLevelEffectChangeUIInfo(equipSlotIndex) end
 
 ---Returns level effect information for the specified equipment slot.
@@ -71,10 +71,13 @@ function X2EquipSlotReinforce:GetLevelEffectInfoByEquipSlot(equipSlotIndex) end
 ---@nodiscard
 function X2EquipSlotReinforce:GetLevelEffectStep(equipSlotIndex) end
 
----@FIXME: Currently broken - crashes the game.
----**Warning:** currently broken, crashes the game.
+
+---Returns the material info for the specified equiment slot and level.
 ---@param equipSlotIndex EQUIPMENT_SLOT The equipment slot index.
 ---@param level number The level to query.
+---@return EquipSlotReinforceMaterialInfo equipSlotReinforceMaterialInfo
+---@nodiscard
+---@see EquipSlotReinforceMaterialInfo
 function X2EquipSlotReinforce:GetMaterialInfo(equipSlotIndex, level) end
 
 ---Returns the next level required to activate the next set effect for the attribute.

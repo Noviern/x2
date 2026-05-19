@@ -1,7 +1,7 @@
 # EditboxMultiline
 ## Classes
 ### Class: EditboxMultiline
-Extends [Widget](../types/Widget.md#class-widget), [Editboxbase](../types/Editboxbase.md#class-editboxbase)
+Extends [Editboxbase](../types/Editboxbase.md#class-editboxbase)
 
 > [EditboxMultiline](../types/EditboxMultiline.md#class-editboxmultiline)
 > 
@@ -14,6 +14,15 @@ Extends [Widget](../types/Widget.md#class-widget), [Editboxbase](../types/Editbo
 (method) EditboxMultiline:Clear()
 ```
 > Clears all text in the EditboxMultiline.
+
+#### Method: GetLineHeight
+```lua
+(method) EditboxMultiline:GetLineHeight()
+  -> lineHeight: number
+```
+> Retrieves the height of a single line in the EditboxMultiline.
+> 
+> @*return* `lineHeight` — The height of a line.
 
 #### Method: GetTextHeight
 ```lua
@@ -33,38 +42,6 @@ Extends [Widget](../types/Widget.md#class-widget), [Editboxbase](../types/Editbo
 > 
 > @*return* `textLength` — The length of the text.
 
-#### Method: SetInset
-```lua
-(method) EditboxMultiline:SetInset(left: number, top: number, right: number, bottom: number)
-```
-> Sets the inset for the EditboxMultiline.
-> 
-> @*param* `left` — The left inset.
-> 
-> @*param* `top` — The top inset.
-> 
-> @*param* `right` — The right inset.
-> 
-> @*param* `bottom` — The bottom inset.
-
-#### Method: GetLineHeight
-```lua
-(method) EditboxMultiline:GetLineHeight()
-  -> lineHeight: number
-```
-> Retrieves the height of a single line in the EditboxMultiline.
-> 
-> @*return* `lineHeight` — The height of a line.
-
-#### Method: GetCursorPosY
-```lua
-(method) EditboxMultiline:GetCursorPosY()
-  -> cursorPosY: number
-```
-> Retrieves the y-coordinate of the cursor in the EditboxMultiline.
-> 
-> @*return* `cursorPosY` — The y-coordinate of the cursor.
-
 #### Method: GetLineCount
 ```lua
 (method) EditboxMultiline:GetLineCount()
@@ -82,6 +59,15 @@ Extends [Widget](../types/Widget.md#class-widget), [Editboxbase](../types/Editbo
 > Retrieves the x-coordinate of the cursor in the EditboxMultiline.
 > 
 > @*return* `cursorPosX` — The x-coordinate of the cursor.
+
+#### Method: GetCursorPosY
+```lua
+(method) EditboxMultiline:GetCursorPosY()
+  -> cursorPosY: number
+```
+> Retrieves the y-coordinate of the cursor in the EditboxMultiline.
+> 
+> @*return* `cursorPosY` — The y-coordinate of the cursor.
 
 #### Method: SetLineSpace
 ```lua

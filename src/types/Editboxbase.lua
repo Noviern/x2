@@ -1,6 +1,6 @@
 ---@meta _
 
----@class Editboxbase
+---@class Editboxbase: Widget
 ---@field guideTextStyle TextStyle
 ---@field style TextStyle
 local Editboxbase = {}
@@ -36,6 +36,13 @@ function Editboxbase:SetCursorColor(r, g, b, a) end
 ---Sets the cursor color using a color key for the Editboxbase.
 ---@param colorKey ETC_COLOR The color key for the cursor.
 function Editboxbase:SetCursorColorByColorKey(colorKey) end
+
+---Sets the inset for the Editboxbase.
+---@param left number The left inset.
+---@param top number The top inset.
+---@param right number The right inset.
+---@param bottom number The bottom inset.
+function Editboxbase:SetInset(left, top, right, bottom) end
 
 ---Enables or disables read-only mode for the Editboxbase.
 ---@param readOnly boolean `true` to make read-only, `false` to allow editing. (default: `false`)

@@ -21,3 +21,13 @@ X2Squad = {}                        -- api/X2Squad
 ---| `SOT_MUST_PUBLIC`
 ---| `SOT_PRIVATE`
 ---| `SOT_PUBLIC`
+
+---Creates a new squad for an instance.
+---@param selectedField number The selected instance/field ID.
+---@param openType SQUAD_OPEN_TYPE The squad open type.
+---@param explanation string The squad description/explanation.
+---@param partyInvitation boolean `true` to allow party invitations, `false` otherwise.
+---@param limitLevel number The minimum level required to join.
+---@param limitGearScore number The minimum gear score required to join.
+---@return boolean success `true` if the squad was created successfully, `false` otherwise.
+function X2Squad:CreateSquad(selectedField, openType, explanation, partyInvitation, limitLevel, limitGearScore) end

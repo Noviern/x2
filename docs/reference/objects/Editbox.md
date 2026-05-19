@@ -1,7 +1,7 @@
 # Editbox
 ## Classes
 ### Class: Editbox
-Extends [Widget](../types/Widget.md#class-widget), [Editboxbase](../types/Editboxbase.md#class-editboxbase)
+Extends [Editboxbase](../types/Editboxbase.md#class-editboxbase)
 
 > [Editbox](../types/Editbox.md#class-editbox)
 > 
@@ -22,19 +22,13 @@ TextStyle
 ```
 > The text style applied to the optional prefix text.
 
-#### Method: SetInset
+#### Method: SetPassword
 ```lua
-(method) Editbox:SetInset(left: number, top: number, right: number, bottom: number)
+(method) Editbox:SetPassword(password: boolean)
 ```
-> Sets the inset for the Editbox.
+> Enables or disables password mode for the Editbox.
 > 
-> @*param* `left` — The left inset.
-> 
-> @*param* `top` — The top inset.
-> 
-> @*param* `right` — The right inset.
-> 
-> @*param* `bottom` — The bottom inset.
+> @*param* `password` — `true` to enable password mode, `false` to disable. (default: `false`)
 
 #### Method: SetInitVal
 ```lua
@@ -58,13 +52,21 @@ TextStyle
 ```
 > Sets focus to the Editbox.
 
-#### Method: SetPassword
+#### Method: SetPossibleFirstZero
 ```lua
-(method) Editbox:SetPassword(password: boolean)
+(method) Editbox:SetPossibleFirstZero(possibleFirstZero: boolean)
 ```
-> Enables or disables password mode for the Editbox.
+> Enables or disables allowing a leading zero in digit input.
 > 
-> @*param* `password` — `true` to enable password mode, `false` to disable. (default: `false`)
+> @*param* `possibleFirstZero` — `true` to allow leading zero, `false` to disallow. (default: `false`)
+
+#### Method: SetPrefixText
+```lua
+(method) Editbox:SetPrefixText(prefixText: string)
+```
+> Sets the prefix text for the Editbox.
+> 
+> @*param* `prefixText` — The prefix text to display.
 
 #### Method: SetPrefixInset
 ```lua
@@ -80,14 +82,6 @@ TextStyle
 > 
 > @*param* `bottom` — The bottom inset for the prefix.
 
-#### Method: SetPossibleFirstZero
-```lua
-(method) Editbox:SetPossibleFirstZero(possibleFirstZero: boolean)
-```
-> Enables or disables allowing a leading zero in digit input.
-> 
-> @*param* `possibleFirstZero` — `true` to allow leading zero, `false` to disallow. (default: `false`)
-
 #### Method: SetReClickable
 ```lua
 (method) Editbox:SetReClickable(click: boolean)
@@ -95,14 +89,6 @@ TextStyle
 > Enables or disables re-clickable behavior for the Editbox.
 > 
 > @*param* `click` — `true` to enable re-clicking, `false` to disable.
-
-#### Method: SetPrefixText
-```lua
-(method) Editbox:SetPrefixText(prefixText: string)
-```
-> Sets the prefix text for the Editbox.
-> 
-> @*param* `prefixText` — The prefix text to display.
 
 #### Method: UseSelectAllWhenFocused
 ```lua

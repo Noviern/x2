@@ -205,8 +205,8 @@
 ---@alias WIDGET_BAG_TAB_SORTED_HANDLER fun(self: Widget, arg: number)
 
 ---Event triggers when the player changes the bag tab.
----@alias BAG_TAB_SWITCHED_HANDLER fun(tabId)
----@alias WIDGET_BAG_TAB_SWITCHED_HANDLER fun(self: Widget, tabId)
+---@alias BAG_TAB_SWITCHED_HANDLER fun(tabId: number)
+---@alias WIDGET_BAG_TAB_SWITCHED_HANDLER fun(self: Widget, tabId: number)
 
 ---Event triggers when the players bag updates.
 ---@alias BAG_UPDATE_HANDLER fun(bagId: number, slotId: number)
