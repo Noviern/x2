@@ -1,14 +1,12 @@
 ---@meta _
 
----@class ComboboxDropDown: Listbox
+---@class Vslider: Slider
+---@field thumb Button
+
+---@class ScrollListbox: Listbox
 ---@field downBtn Button
 ---@field upBtn Button
 ---@field vslider Vslider
-local ComboboxDropDown = {}
-
----@class Vslider: Slider
----@field thumb Button
-local Vslider = {}
 
 ---[Combobox](lua://Combobox)
 ---
@@ -23,14 +21,14 @@ local Vslider = {}
 --- - [X2Editbox](lua://X2Editbox) used for the selector field.
 ---
 ---@class Combobox: Widget
----@field dropdown ComboboxDropDown The dropdown for the Combobox.
+---@field dropdown ScrollListbox The dropdown for the Combobox.
 ---@field selector X2Editbox The input exitbox if the Combobox is editable.
 ---@field selectorBtn Button The input button if the Combobox is not editable.
 ---@field toggle Button Dropdown open/close button
 local Combobox = {}
 
----Inserts data into the Combobox dropdown if `Combobox:SetEditable(false)`.
----@param datas ItemTree[] The data to insert for autocomplete.
+---Inserts data into the Combobox dropdown.
+---@param datas ItemTree[] The data to insert into the dropdown.
 ---@see ItemTree
 function Combobox:Insert(datas) end
 

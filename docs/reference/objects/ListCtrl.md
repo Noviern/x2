@@ -74,12 +74,14 @@ Button[]|nil
 
 #### Method: Select
 ```lua
-(method) ListCtrl:Select(itemIdx: number)
+(method) ListCtrl:Select(itemIdx: number, triggerEvent: boolean|nil)
 ```
 > Selects the item at the specified index in the ListCtrl.
 > Both the over image and selected image have to be defined.
 > 
 > @*param* `itemIdx` — The row index of the item to select. (min: `0`)
+> 
+> @*param* `triggerEvent` — `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
 
 #### Method: SetUseDoubleClick
 ```lua

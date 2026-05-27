@@ -150,15 +150,18 @@ function Listbox:ScrollUp() end
 
 ---Selects the item at the specified index in the Listbox.
 ---@param index number The index to select. (min: `0`)
-function Listbox:Select(index) end
+---@param triggerEvent boolean|nil `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
+function Listbox:Select(index, triggerEvent) end
 
 ---Selects an item by its text in the Listbox.
 ---@param text string The text of the item to select.
-function Listbox:SelectWithText(text) end
+---@param triggerEvent boolean|nil `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
+function Listbox:SelectWithText(text, triggerEvent) end
 
 ---Selects an item by its value in the Listbox.
 ---@param value number The value of the item to select.
-function Listbox:SelectWithValue(value) end
+---@param triggerEvent boolean|nil `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
+function Listbox:SelectWithValue(value, triggerEvent) end
 
 ---Sets the border line width for the Listbox. Requires `SetLineColor` to be
 ---set.

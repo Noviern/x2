@@ -82,6 +82,16 @@ TextStyle
 > 
 > @*param* `bottom` — The bottom inset for the prefix.
 
+#### Method: SetText
+```lua
+(method) Editbox:SetText(text: string, triggerEvent: boolean|nil)
+```
+> Sets the text for the Editbox.
+> 
+> @*param* `text` — The text to set.
+> 
+> @*param* `triggerEvent` — `true` to trigger the `"OnTextChanged"` action, `false` to do nothing. (default: `true`)
+
 #### Method: SetReClickable
 ```lua
 (method) Editbox:SetReClickable(click: boolean)

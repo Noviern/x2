@@ -57,6 +57,24 @@ fun(delegator: Widget, callbacker: Widget, mbt: "LeftButton"|"RightButton")
 
 
 
+**OptionalParent**
+
+"UIParent"|Widget|nil
+
+```lua
+OptionalParent:
+    | "UIParent"
+```
+
+**Parent**
+
+"UIParent"|Widget
+
+```lua
+Parent:
+    | "UIParent"
+```
+
 ## Classes
 ### Class: Widget
 Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uiobject.md#class-uiobject)

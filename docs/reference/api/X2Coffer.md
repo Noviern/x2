@@ -72,7 +72,7 @@
 (method) X2Coffer:MoveToEmptyBagSlot(slotIdx: number)
 ```
 > Moves an item from the coffer to an empty bag slot.
-> Cooldown 500ms.
+> Cooldown 200ms.
 > 
 > @*param* `slotIdx` — The coffer slot index to move from. (min: `1`, max: `150`)
 

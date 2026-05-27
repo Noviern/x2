@@ -93,7 +93,8 @@ function ListCtrl:InsertRows(count, withEventWindow) end
 ---Selects the item at the specified index in the ListCtrl.
 ---Both the over image and selected image have to be defined.
 ---@param itemIdx number The row index of the item to select. (min: `0`)
-function ListCtrl:Select(itemIdx) end
+---@param triggerEvent boolean|nil `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
+function ListCtrl:Select(itemIdx, triggerEvent) end
 
 ---Sets the width of the column at the specified index. Index must be at least
 ---`1` to avoid crashing.

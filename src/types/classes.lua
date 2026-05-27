@@ -1372,6 +1372,7 @@
 ---@field buffType number
 ---@field canEvolve boolean
 ---@field category string
+---@field category_id number
 ---@field checkUnitReq boolean
 ---@field contributionPointPrice number
 ---@field convertibleItem boolean

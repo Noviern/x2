@@ -558,27 +558,33 @@ TextStyle
 
 #### Method: Select
 ```lua
-(method) Listbox:Select(index: number)
+(method) Listbox:Select(index: number, triggerEvent: boolean|nil)
 ```
 > Selects the item at the specified index in the Listbox.
 > 
 > @*param* `index` — The index to select. (min: `0`)
+> 
+> @*param* `triggerEvent` — `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
 
 #### Method: SelectWithValue
 ```lua
-(method) Listbox:SelectWithValue(value: number)
+(method) Listbox:SelectWithValue(value: number, triggerEvent: boolean|nil)
 ```
 > Selects an item by its value in the Listbox.
 > 
 > @*param* `value` — The value of the item to select.
+> 
+> @*param* `triggerEvent` — `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
 
 #### Method: SelectWithText
 ```lua
-(method) Listbox:SelectWithText(text: string)
+(method) Listbox:SelectWithText(text: string, triggerEvent: boolean|nil)
 ```
 > Selects an item by its text in the Listbox.
 > 
 > @*param* `text` — The text of the item to select.
+> 
+> @*param* `triggerEvent` — `true` to trigger the `"OnSelChanged"` action, `false` to do nothing. (default: `true`)
 
 #### Method: GetSelectedText
 ```lua

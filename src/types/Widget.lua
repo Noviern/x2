@@ -18,6 +18,9 @@ DC_SHIFT_KEY_DOWN = 1  -- types/Widget DRAG_CONDITION
 ---| `DC_ALWAYS`
 ---| `DC_SHIFT_KEY_DOWN`
 
+---@alias Parent "UIParent"|Widget
+---@alias OptionalParent Parent|nil
+
 ---@alias CharacterCacheDataHandler fun(self: Widget, data: CacheData)
 
 ---@alias DelegatorHandler fun(delegator: Widget, callbacker: Widget, mbt: MOUSE_BUTTON)

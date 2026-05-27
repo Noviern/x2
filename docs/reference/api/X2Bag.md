@@ -31,7 +31,7 @@
 (method) X2Bag:MoveToEmptyBankSlot(slotIdx: number)
 ```
 > Moves an item from the bag to an empty bank slot.
-> Cooldown 500ms.
+> Cooldown 200ms.
 > 
 > @*param* `slotIdx` — The bag slot index to move from. (min: `1`, max: `150`)
 
@@ -95,7 +95,7 @@
 (method) X2Bag:MoveToEmptyCofferSlot(slotIdx: number)
 ```
 > Moves an item from the bag to an empty coffer slot.
-> Cooldown 500ms.
+> Cooldown 200ms.
 > 
 > @*param* `slotIdx` — The bag slot index to move from. (min: `1`, max: `150`)
 

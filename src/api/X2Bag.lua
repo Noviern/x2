@@ -34,11 +34,11 @@ function X2Bag:GetBagItemInfo(bagId, slot, neededInfo) end
 function X2Bag:ItemStack(slot) end
 
 ---Moves an item from the bag to an empty bank slot.
----Cooldown 500ms.
+---Cooldown 200ms.
 ---@param slotIdx number The bag slot index to move from. (min: `1`, max: `150`)
 function X2Bag:MoveToEmptyBankSlot(slotIdx) end
 
 ---Moves an item from the bag to an empty coffer slot.
----Cooldown 500ms.
+---Cooldown 200ms.
 ---@param slotIdx number The bag slot index to move from. (min: `1`, max: `150`)
 function X2Bag:MoveToEmptyCofferSlot(slotIdx) end

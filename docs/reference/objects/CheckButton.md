@@ -57,13 +57,13 @@ Extends [Button](../types/Button.md#class-button)
 
 #### Method: SetChecked
 ```lua
-(method) CheckButton:SetChecked(state: boolean, trigger: boolean|nil)
+(method) CheckButton:SetChecked(state: boolean, triggerEvent: boolean|nil)
 ```
 > Sets the state of the CheckButton.
 > 
 > @*param* `state` — `true` to check the CheckButton, `false` to uncheck. (default: `false`)
 > 
-> @*param* `trigger` — `true` to trigger the `"OnCheckChanged"` action, `false` to do nothing. (default: `false`)
+> @*param* `triggerEvent` — `true` to trigger the `"OnCheckChanged"` action, `false` to do nothing. (default: `false`)
 
 #### Method: SetDisabledCheckedBackground
 ```lua

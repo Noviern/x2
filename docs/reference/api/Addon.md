@@ -5860,7 +5860,7 @@ ZONE_STATE_TYPE:
 
 #### Method: CreateWidget
 ```lua
-(method) UIParent:CreateWidget(widgetName: "avi"|"button"|"chatwindow"|"checkbutton"|"circlediagram"...(+34), id: string, parentId: string|"UIParent"|Widget)
+(method) UIParent:CreateWidget(widgetName: "avi"|"button"|"chatwindow"|"checkbutton"|"circlediagram"...(+34), id: string, parentId: "UIParent"|Widget)
   -> widget: Widget
 ```
 > Creates a widget of the specified type with the given ID and parent.
@@ -5869,7 +5869,7 @@ ZONE_STATE_TYPE:
 > 
 > @*param* `id` — The unique identifier for the widget. If the name already exists it will cause a UI Logic Error.
 > 
-> @*param* `parentId` — The parent `"UIParent"`, `Widget`, or `Widget` id for the widget.
+> @*param* `parentId` — The parent `"UIParent"` or `Widget`.
 > 
 > @*return* `widget` — The created widget, empty table if the widget hasn't been imported, or `nil` if failed.
 > 

@@ -100,6 +100,11 @@ function Editbox:SetPrefixText(prefixText) end
 ---@param click boolean `true` to enable re-clicking, `false` to disable.
 function Editbox:SetReClickable(click) end
 
+---Sets the text for the Editbox.
+---@param text string The text to set.
+---@param triggerEvent boolean|nil `true` to trigger the `"OnTextChanged"` action, `false` to do nothing. (default: `true`)
+function Editbox:SetText(text, triggerEvent) end
+
 ---Enables or disables selecting all text when the Editbox gains focus.
 ---@param use boolean `true` to select all text on focus, `false` to disable. (default: `true`)
 function Editbox:UseSelectAllWhenFocused(use) end

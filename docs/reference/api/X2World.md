@@ -186,3 +186,10 @@ WORLD_TYPE:
 
 ## Classes
 ### Class: X2World
+#### Method: GetCurrentWorldName
+```lua
+(method) X2World:GetCurrentWorldName()
+  -> currentWorldName: string
+```
+> Returns the corrent world name.
+

@@ -1012,49 +1012,49 @@ function UIParent:ClearUIBound(key) end
 ---@generic T
 ---@param widgetName OBJECT_NAME The type of widget to create.
 ---@param id string The unique identifier for the widget. If the name already exists it will cause a UI Logic Error.
----@param parentId "UIParent"|Widget|string The parent `"UIParent"`, `Widget`, or `Widget` id for the widget.
+---@param parentId Parent The parent `"UIParent"` or `Widget`.
 ---@return Widget widget The created widget, empty table if the widget hasn't been imported, or `nil` if failed.
 ---@nodiscard
 ---@see Widget
----@overload fun(self: self, widgetName: "avi", id: string, parentId: "UIParent"|Widget|string): Avi
----@overload fun(self: self, widgetName: "button", id: string, parentId: "UIParent"|Widget|string): Button
----@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: "UIParent"|Widget|string): ChatWindow
----@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: "UIParent"|Widget|string): CheckButton
----@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: "UIParent"|Widget|string): CircleDiagram
----@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: "UIParent"|Widget|string): ColorPicker
----@overload fun(self: self, widgetName: "combobox", id: string, parentId: "UIParent"|Widget|string): Combobox
----@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: "UIParent"|Widget|string): CooldownButton
----@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: "UIParent"|Widget|string): CooldownConstantButton
----@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: "UIParent"|Widget|string): CooldownInventoryButton
----@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: "UIParent"|Widget|string): DamageDisplay
----@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: "UIParent"|Widget|string): DynamicList
----@overload fun(self: self, widgetName: "editbox", id: string, parentId: "UIParent"|Widget|string): Editbox
----@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: "UIParent"|Widget|string): EditboxMultiline
----@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: "UIParent"|Widget|string): EmptyWidget
----@overload fun(self: self, widgetName: "folder", id: string, parentId: "UIParent"|Widget|string): Folder
----@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: "UIParent"|Widget|string): GameTooltip
----@overload fun(self: self, widgetName: "grid", id: string, parentId: "UIParent"|Widget|string): Grid
----@overload fun(self: self, widgetName: "label", id: string, parentId: "UIParent"|Widget|string): Label
----@overload fun(self: self, widgetName: "line", id: string, parentId: "UIParent"|Widget|string): Line
----@overload fun(self: self, widgetName: "listbox", id: string, parentId: "UIParent"|Widget|string): Listbox
----@overload fun(self: self, widgetName: "listctrl", id: string, parentId: "UIParent"|Widget|string): ListCtrl
----@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: "UIParent"|Widget|string): MegaphoneChatEdit
----@overload fun(self: self, widgetName: "message", id: string, parentId: "UIParent"|Widget|string): Message
----@overload fun(self: self, widgetName: "modelview", id: string, parentId: "UIParent"|Widget|string): ModelView
----@overload fun(self: self, widgetName: "pageable", id: string, parentId: "UIParent"|Widget|string): Pageable
----@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: "UIParent"|Widget|string): PaintColorPicker
----@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: "UIParent"|Widget|string): RadioGroup
----@overload fun(self: self, widgetName: "roadmap", id: string, parentId: "UIParent"|Widget|string): RoadMap
----@overload fun(self: self, widgetName: "slider", id: string, parentId: "UIParent"|Widget|string): Slider
----@overload fun(self: self, widgetName: "slot", id: string, parentId: "UIParent"|Widget|string): Slot
----@overload fun(self: self, widgetName: "statusbar", id: string, parentId: "UIParent"|Widget|string): StatusBar
----@overload fun(self: self, widgetName: "tab", id: string, parentId: "UIParent"|Widget|string): Tab
----@overload fun(self: self, widgetName: "textbox", id: string, parentId: "UIParent"|Widget|string): Textbox
----@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: "UIParent"|Widget|string): UnitframeTooltip
----@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: "UIParent"|Widget|string): Webbrowser
----@overload fun(self: self, widgetName: "window", id: string, parentId: "UIParent"|Widget|string): Window
----@overload fun(self: self, widgetName: "worldmap", id: string, parentId: "UIParent"|Widget|string): WorldMap
----@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: "UIParent"|Widget|string): X2Editbox
+---@overload fun(self: self, widgetName: "avi", id: string, parentId: Parent): Avi
+---@overload fun(self: self, widgetName: "button", id: string, parentId: Parent): Button
+---@overload fun(self: self, widgetName: "chatwindow", id: string, parentId: Parent): ChatWindow
+---@overload fun(self: self, widgetName: "checkbutton", id: string, parentId: Parent): CheckButton
+---@overload fun(self: self, widgetName: "circlediagram", id: string, parentId: Parent): CircleDiagram
+---@overload fun(self: self, widgetName: "colorpicker", id: string, parentId: Parent): ColorPicker
+---@overload fun(self: self, widgetName: "combobox", id: string, parentId: Parent): Combobox
+---@overload fun(self: self, widgetName: "cooldownbutton", id: string, parentId: Parent): CooldownButton
+---@overload fun(self: self, widgetName: "cooldownconstantbutton", id: string, parentId: Parent): CooldownConstantButton
+---@overload fun(self: self, widgetName: "cooldowninventorybutton", id: string, parentId: Parent): CooldownInventoryButton
+---@overload fun(self: self, widgetName: "damagedisplay", id: string, parentId: Parent): DamageDisplay
+---@overload fun(self: self, widgetName: "dynamiclist", id: string, parentId: Parent): DynamicList
+---@overload fun(self: self, widgetName: "editbox", id: string, parentId: Parent): Editbox
+---@overload fun(self: self, widgetName: "editboxmultiline", id: string, parentId: Parent): EditboxMultiline
+---@overload fun(self: self, widgetName: "emptywidget", id: string, parentId: Parent): EmptyWidget
+---@overload fun(self: self, widgetName: "folder", id: string, parentId: Parent): Folder
+---@overload fun(self: self, widgetName: "gametooltip", id: string, parentId: Parent): GameTooltip
+---@overload fun(self: self, widgetName: "grid", id: string, parentId: Parent): Grid
+---@overload fun(self: self, widgetName: "label", id: string, parentId: Parent): Label
+---@overload fun(self: self, widgetName: "line", id: string, parentId: Parent): Line
+---@overload fun(self: self, widgetName: "listbox", id: string, parentId: Parent): Listbox
+---@overload fun(self: self, widgetName: "listctrl", id: string, parentId: Parent): ListCtrl
+---@overload fun(self: self, widgetName: "megaphonechatedit", id: string, parentId: Parent): MegaphoneChatEdit
+---@overload fun(self: self, widgetName: "message", id: string, parentId: Parent): Message
+---@overload fun(self: self, widgetName: "modelview", id: string, parentId: Parent): ModelView
+---@overload fun(self: self, widgetName: "pageable", id: string, parentId: Parent): Pageable
+---@overload fun(self: self, widgetName: "paintcolorpicker", id: string, parentId: Parent): PaintColorPicker
+---@overload fun(self: self, widgetName: "radiogroup", id: string, parentId: Parent): RadioGroup
+---@overload fun(self: self, widgetName: "roadmap", id: string, parentId: Parent): RoadMap
+---@overload fun(self: self, widgetName: "slider", id: string, parentId: Parent): Slider
+---@overload fun(self: self, widgetName: "slot", id: string, parentId: Parent): Slot
+---@overload fun(self: self, widgetName: "statusbar", id: string, parentId: Parent): StatusBar
+---@overload fun(self: self, widgetName: "tab", id: string, parentId: Parent): Tab
+---@overload fun(self: self, widgetName: "textbox", id: string, parentId: Parent): Textbox
+---@overload fun(self: self, widgetName: "unitframetooltip", id: string, parentId: Parent): UnitframeTooltip
+---@overload fun(self: self, widgetName: "webbrowser", id: string, parentId: Parent): Webbrowser
+---@overload fun(self: self, widgetName: "window", id: string, parentId: Parent): Window
+---@overload fun(self: self, widgetName: "worldmap", id: string, parentId: Parent): WorldMap
+---@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: Parent): X2Editbox
 function UIParent:CreateWidget(widgetName, id, parentId) end
 
 ---@FIXME: currently unusable without SetAccountUITimeStamp

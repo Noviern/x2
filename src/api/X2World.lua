@@ -70,3 +70,7 @@ X2World = {}                       -- api/X2World
 ---| `WT_RECOMMEND`
 ---| `WT_REMASTER`
 ---| `WT_RESTRICT_AGE`
+
+---Returns the corrent world name.
+---@return string currentWorldName
+function X2World:GetCurrentWorldName() end

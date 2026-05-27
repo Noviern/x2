@@ -23,7 +23,7 @@ Button
 
 #### Field: dropdown
 ```lua
-ComboboxDropDown
+ScrollListbox
 ```
 > The dropdown for the Combobox.
 
@@ -91,13 +91,13 @@ Button
 ```lua
 (method) Combobox:Insert(datas: ItemTree[])
 ```
-> Inserts data into the Combobox dropdown if `Combobox:SetEditable(false)`.
+> Inserts data into the Combobox dropdown.
 > 
-> @*param* `datas` — The data to insert for autocomplete.
+> @*param* `datas` — The data to insert into the dropdown.
 > 
 > See: [ItemTree](../types/classes.md#class-itemtree)
 
-### Class: ComboboxDropDown
+### Class: ScrollListbox
 Extends [Listbox](../types/Listbox.md#class-listbox)
 
 #### Field: downBtn
