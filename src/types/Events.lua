@@ -122,7 +122,7 @@
 ---@alias AUCTION_BIDDEN_HANDLER fun(itemName: string, moneyStr: string)
 ---@alias WIDGET_AUCTION_BIDDEN_HANDLER fun(self: Widget, itemName: string, moneyStr: string)
 
----Event triggers when the player buys seomthing on the auction house.
+---Event triggers when the player buys something on the auction house.
 ---@alias AUCTION_BOUGHT_HANDLER fun()
 ---@alias WIDGET_AUCTION_BOUGHT_HANDLER fun(self: Widget)
 

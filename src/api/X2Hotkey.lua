@@ -83,7 +83,7 @@ function X2Hotkey:OptionToBinding() end
 ---@usage
 ---```lua
 ---X2Hotkey:BindingToOption()
----X2Hotkey:SetOptionBindingUiEventWithIndex("moveforward", 1, 0)
+---X2Hotkey:RemoveOptionBinding("moveforward", 1, 0)
 ---X2Hotkey:SaveHotKey()
 ---```
 function X2Hotkey:RemoveOptionBinding(action, index, arg) end

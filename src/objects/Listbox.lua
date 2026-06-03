@@ -117,7 +117,7 @@ function Listbox:GetSelectedValue() end
 function Listbox:GetTop() end
 
 ---Retrieves the number of currently visible items in the Listbox.
----@return number viewItemCount The number of visible items. (default: `50`)
+---@return number viewItemCount The number of visible items. (default: `-1`)
 ---@nodiscard
 function Listbox:GetViewItemCount() end
 

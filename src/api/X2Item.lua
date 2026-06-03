@@ -95,7 +95,7 @@ X2Item = {}                             -- api/X2Item
 ---Retrieves item information from the specified link text.
 ---@param linkText string The link text to query. (e.g., `"|i{itemType},{grade},{kind},{data}"`)
 ---@param kind? LINKKIND Optional kind of link.
----@return ItemInfo itemInfo The item information.
+---@return ItemInfo|nil itemInfo The item information if it exists, `nil` otherwise.
 ---@nodiscard
 ---@see ItemInfo
 function X2Item:InfoFromLink(linkText, kind) end

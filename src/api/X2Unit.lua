@@ -276,6 +276,13 @@ function X2Unit:UnitHiddenBuffCount(unit) end
 ---@see BuffTooltip
 function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex, neededInfo) end
 
+---Retrieves the unit's attribute information.
+---@param unit UNIT The unit to query.
+---@return UnitAttributesInfo|nil unitInfo The unit's attributes, or `nil` if the unit is not available.
+---@nodiscard
+---@see UnitAttributesInfo
+function X2Unit:UnitInfo(unit) end
+
 ---Retrieves the level of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
 ---@return ABILITY_ACTIVATION_LEVEL|number|nil unitLevel The unit's level (1 to 55), or `nil` if not found.
@@ -308,6 +315,13 @@ function X2Unit:UnitMaxHealth(unit) end
 ---@return string|nil unitMaxMana The unit's maximum mana, or `nil` if not found.
 ---@nodiscard
 function X2Unit:UnitMaxMana(unit) end
+
+---Retrieves the unit's attribute modifier information.
+---@param unit UNIT The unit to query.
+---@return UnitAttributeModifierInfo|nil unitModifierInfo The unit's attribute modifiers, or `nil` if the unit is not available.
+---@nodiscard
+---@see UnitAttributeModifierInfo
+function X2Unit:UnitModifierInfo(unit) end
 
 ---Retrieves the name of the specified unit if it exists.
 ---@param unit UNIT The unit to query.
