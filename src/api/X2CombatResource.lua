@@ -14,7 +14,7 @@ X2CombatResource = {}  -- api/X2CombatResource
 ---| `CRU_GAUGE`
 ---| `CRU_OVERLAP`
 
----@FIXME: Broken? Always returns false.
+---@FIXME Broken? Always returns false.
 ---Checks if the combat resource for the specified group type is at its maximum.
 ---@param groupType ABILITY_TYPE The group type to check.
 ---@return boolean maxPointByGroupType `true` if the combat resource is at maximum, `false` otherwise.

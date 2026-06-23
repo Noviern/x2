@@ -73,7 +73,7 @@ function Uibounds:AddAnchor(anchor, parentId, x, y) end
 ---@see Drawablebase
 function Uibounds:AddAnchor(anchorPoint, parentId, anchorOrigin, x, y) end
 
----@TODO: This doesnt appear to restrict the widgets min/max width so im unsure what it does. It does set the widgets width.
+---@TODO This doesnt appear to restrict the widgets min/max width so im unsure what it does. It does set the widgets width.
 ---Binds the width of the UI bounds.
 ---@param width number The width to bind.
 function Uibounds:BindWidth(width) end
@@ -124,7 +124,7 @@ function Uibounds:GetOffset() end
 ---@nodiscard
 function Uibounds:GetWidth() end
 
----@TODO: Broken?
+---@TODO Broken?
 ---Removes all anchors from the UI bounds, excluding anchor origin.
 function Uibounds:RemoveAllAnchors() end
 

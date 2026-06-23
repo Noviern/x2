@@ -13,7 +13,7 @@ function X2Bag:Capacity() end
 ---@nodiscard
 function X2Bag:CountItems() end
 
----Attempts to equip an item from the specified slot.
+---Attempts to equip an item from the specified slot. Cannot be used in combat.
 ---@param slot number The slot containing the item to equip. (min: `1`)
 ---@param isAuxEquip boolean Whether to equip as auxiliary equipment.
 function X2Bag:EquipBagItem(slot, isAuxEquip) end

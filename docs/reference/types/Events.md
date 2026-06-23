@@ -184,7 +184,7 @@ Event triggers when the player sells something on the auction house.
 
 fun()
 
-Event triggers when the player buys seomthing on the auction house.
+Event triggers when the player buys something on the auction house.
 
 **AUCTION_CANCELED_HANDLER**
 

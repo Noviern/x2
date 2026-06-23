@@ -9,7 +9,7 @@ X2Sound = {} -- api/X2Sound
 ---@nodiscard
 function X2Sound:IsPlaying(soundId) end
 
----@FIXME: Broken. Does not appear to work.
+---@FIXME Broken. Does not appear to work.
 ---Plays music from the specified sound pack item.
 ---@param soundPackItemName string The name of the sound pack item.
 function X2Sound:PlayMusic(soundPackItemName) end

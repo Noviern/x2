@@ -1,5 +1,5 @@
 ---@meta _
 
----@TODO: definition
+---@TODO definition
 ---objects/MegaphoneChatEdit
 ---@class MegaphoneChatEdit: Editbox, ChatEdit

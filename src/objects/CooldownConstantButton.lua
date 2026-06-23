@@ -8,7 +8,7 @@ UI_BUTTON_PUSHED = 2      -- objects/CooldownConstantButton UI_BUTTON_STATE
 
 ---[CooldownConstantButton](lua://CooldownConstantButton)
 ---
----@FIXME:
+---@FIXME
 ---**Warning:** Most methods for this class are broken.
 ---
 ---A `CooldownConstantButton` widget is specialized and binds its cooldown
@@ -20,18 +20,18 @@ UI_BUTTON_PUSHED = 2      -- objects/CooldownConstantButton UI_BUTTON_STATE
 ---@class CooldownConstantButton: CooldownButton
 local CooldownConstantButton = {}
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the item type for the `CooldownConstantButton`.
 ---@param itemType number The item type to set.
 function CooldownConstantButton:SetItem(itemType) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the item slot and slot type for the `CooldownConstantButton`.
 ---@param itemSlot number The item slot index.
 ---@param slotType number The type of slot.
 function CooldownConstantButton:SetItemSlot(itemSlot, slotType) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the skill type for the `CooldownConstantButton`.
 ---@param skillType number The skill type to set.
 function CooldownConstantButton:SetSkill(skillType) end

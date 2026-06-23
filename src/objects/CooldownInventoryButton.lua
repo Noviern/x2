@@ -8,7 +8,7 @@ UI_BUTTON_PUSHED = 2      -- objects/CooldownInventoryButton UI_BUTTON_STATE
 
 ---[CooldownInventoryButton](lua://CooldownInventoryButton)
 ---
----@FIXME:
+---@FIXME
 ---**Warning:** Most methods for this class are broken.
 ---
 ---A `CooldownInventoryButton` widget reflects the cooldown state of
@@ -20,22 +20,22 @@ UI_BUTTON_PUSHED = 2      -- objects/CooldownInventoryButton UI_BUTTON_STATE
 ---@class CooldownInventoryButton: CooldownButton
 local CooldownInventoryButton = {}
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the bag item slot for the `CooldownInventoryButton`.
 ---@param itemSlot number The item slot index in the bag.
 function CooldownInventoryButton:SetBagItemSlot(itemSlot) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the bank item slot for the `CooldownInventoryButton`.
 ---@param itemSlot number The item slot index in the bank.
 function CooldownInventoryButton:SetBankItemSlot(itemSlot) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the coffer item slot for the `CooldownInventoryButton`.
 ---@param itemSlot number The item slot index in the coffer.
 function CooldownInventoryButton:SetCofferItemSlot(itemSlot) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the guild bank item slot for the `CooldownInventoryButton`.
 ---@param itemSlot number The item slot index in the guild bank.
 function CooldownInventoryButton:SetGuildBankItemSlot(itemSlot) end

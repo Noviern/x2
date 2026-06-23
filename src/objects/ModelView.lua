@@ -12,11 +12,11 @@
 ---@class ModelView: Widget
 local ModelView = {}
 
----@TODO: document
+---@TODO document
 ---@param offset number
 function ModelView:AddModelPosX(offset) end
 
----@TODO: document
+---@TODO document
 ---@param offset number
 function ModelView:AddModelPosZ(offset) end
 
@@ -24,7 +24,7 @@ function ModelView:AddModelPosZ(offset) end
 ---@param angle number in degrees.
 function ModelView:AddRotation(angle) end
 
----@TODO: document
+---@TODO document
 ---@param angle number in degrees.
 function ModelView:AddRotationX(angle) end
 
@@ -34,7 +34,7 @@ function ModelView:AddRotationX(angle) end
 ---@param offsetZ number height
 function ModelView:AdjustCameraPos(offsetX, offsetY, offsetZ) end
 
----@TODO: unsure how this works
+---@TODO unsure how this works
 ---Adjusts the camera position relative to the model in the ModelView.
 ---@param offsetY number
 ---@param offsetZ number
@@ -46,7 +46,7 @@ function ModelView:ApplyCustomizerParamToUnit() end
 ---Applies the model to the ModelView.
 function ModelView:ApplyModel() end
 
----@TODO: document
+---@TODO document
 ---@param itemType number
 function ModelView:ApplyModelByDyeingItem(itemType) end
 
@@ -71,21 +71,21 @@ function ModelView:EquipCostume(itemType, itemGrade, r, g, b) end
 ---@param itemType number
 function ModelView:EquipItem(itemType) end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the custom body normal index and weight.
 ---@return number|nil index
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 function ModelView:GetCustomBodyNormal() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the custom decoration index and weight.
 ---@return number|nil index
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 function ModelView:GetCustomDeco() end
 
----@TODO: unsure what this is suppose to return, maybe number|nil? usage still needed
+---@TODO unsure what this is suppose to return, maybe number|nil? usage still needed
 ---Retrieves the custom eyebrow index.
 ---@return number|nil
 ---@nodiscard
@@ -98,13 +98,13 @@ function ModelView:GetCustomEyebrow() end
 ---@nodiscard
 function ModelView:GetCustomEyebrowColor() end
 
----@TODO: unsure what this is suppose to return, maybe number|nil? usage still needed
+---@TODO unsure what this is suppose to return, maybe number|nil? usage still needed
 ---Retrieves the custom face diffuse index.
 ---@return nil
 ---@nodiscard
 function ModelView:GetCustomFaceDiffuse() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the custom face normal index and weight.
 ---@return number|nil index
 ---@return number|nil weight (min: `0`, max: `1`)
@@ -116,14 +116,14 @@ function ModelView:GetCustomFaceNormal() end
 ---@nodiscard
 function ModelView:GetCustomHair() end
 
----@TODO: returns CustomHairColor for new hair and a number for older hair
+---@TODO returns CustomHairColor for new hair and a number for older hair
 ---Retrieves the custom hair color.
 ---@return CustomHairColor|number|nil customHairColor
 ---@nodiscard
 ---@see CustomHairColor
 function ModelView:GetCustomHairColor() end
 
----@TODO: unsure what this is suppose to return, maybe number|nil? usage still needed
+---@TODO unsure what this is suppose to return, maybe number|nil? usage still needed
 ---Retrieves the custom horn index.
 ---@return number|nil
 ---@nodiscard
@@ -153,20 +153,20 @@ function ModelView:GetCustomizingOddEyeUsable() end
 ---@nodiscard
 function ModelView:GetCustomLipColor() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the custom makeup index and weight.
 ---@return number|nil index
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 function ModelView:GetCustomMakeUp() end
 
----@TODO: unsure what this is suppose to return, maybe number|nil? usage still needed
+---@TODO unsure what this is suppose to return, maybe number|nil? usage still needed
 ---Retrieves the custom preview cloth index.
 ---@return number|nil
 ---@nodiscard
 function ModelView:GetCustomPreviewCloth() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the custom pupil index for a given range.
 ---@param range PUPIL_RANGE
 ---@return number|nil index
@@ -196,14 +196,14 @@ function ModelView:GetCustomSkinColor() end
 ---@nodiscard
 function ModelView:GetCustomTail() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the custom tattoo index and weight.
 ---@return number|nil index
 ---@return number|nil weight (min: `0`, max: `1`)
 ---@nodiscard
 function ModelView:GetCustomTattoo() end
 
----@TODO: can this be nil? not sure on default
+---@TODO can this be nil? not sure on default
 ---Retrieves the current value for a face target parameter.
 ---@param index number
 ---@return number faceTargetCurValue (default: `0`)
@@ -225,17 +225,17 @@ function ModelView:GetRace() end
 ---@nodiscard
 function ModelView:GetRotation() end
 
----@TODO: document
+---@TODO document
 ---@return number angle
 function ModelView:GetRotationX() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the scar status of the model.
 ---@return table|nil info
 ---@nodiscard
 function ModelView:GetScarStatus() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Retrieves the selected preset index for a specific part.
 ---@param part number
 ---@return nil
@@ -253,7 +253,7 @@ function ModelView:GetTwoToneHairStatus() end
 ---@nodiscard
 function ModelView:HasDiffWithClientUnit() end
 
----@TODO: unknown return
+---@TODO unknown return
 ---Initializes the ModelView with a unit and model creation option.
 ---@param unit UNIT
 ---@param createModel boolean
@@ -263,7 +263,7 @@ function ModelView:Init(unit, createModel) end
 ---Initializes beauty shop mode.
 function ModelView:InitBeautyShop() end
 
----@TODO: never got this to work
+---@TODO never got this to work
 ---Initializes the ModelView with a model reference, race, gender, and butler
 ---mode.
 ---@param modelRef number
@@ -272,11 +272,11 @@ function ModelView:InitBeautyShop() end
 ---@param butlerMode boolean
 function ModelView:InitByModelRef(modelRef, race, gender, butlerMode) end
 
----@FIXME: this may not work without X2Customizer
+---@FIXME this may not work without X2Customizer
 ---Initializes customizer controls for the ModelView.
 function ModelView:InitCustomizerControl() end
 
----@FIXME: This is broken, returns the opposite of what you would expect.
+---@FIXME This is broken, returns the opposite of what you would expect.
 ---Returns a boolean `frozen` indicating if the model is frozen for ModelView.
 ---@return boolean frozen
 ---@nodiscard
@@ -305,10 +305,10 @@ function ModelView:ResetBeautyShop() end
 ---Resets changes to the model's equipment.
 function ModelView:ResetEquips() end
 
----@TODO: document
+---@TODO document
 function ModelView:ResetModelPos() end
 
----@TODO: document
+---@TODO document
 function ModelView:ResetZoom() end
 
 ---Sets the background color for the ModelView.
@@ -486,7 +486,7 @@ function ModelView:SetFov(angle) end
 ---@param isStop boolean
 function ModelView:SetFreeze(isStop) end
 
----@TODO: not sure what this does, name has been updated to SetIngameShopCamMode
+---@TODO not sure what this does, name has been updated to SetIngameShopCamMode
 ---Sets the in-game shop mode for the ModelView.
 ---@param ingameShop boolean
 function ModelView:SetIngameShopCamMode(ingameShop) end
@@ -518,7 +518,7 @@ function ModelView:SetModelViewExtent(width, height) end
 ---@param angle number in degrees. (default: `0`)
 function ModelView:SetRotation(angle) end
 
----@TODO: document
+---@TODO document
 ---@param angle number in degrees. (default: `0`)
 function ModelView:SetRotationX(angle) end
 

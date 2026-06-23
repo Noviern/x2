@@ -2,7 +2,7 @@
 
 MAX_SKILL_MAP_EFFECT_COUNT = 6 -- objects/WorldMap
 
----@FIXME: Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
+---@FIXME Worldmap is highly tied to the actual world map and one can have an effect on the other, for instance changing things in the Worldmap can change things on the real world map.
 
 ---[WorldMap](lua://WorldMap)
 ---
@@ -112,13 +112,13 @@ function WorldMap:SetFestivalZoneColor(r, g, b, a) end
 ---@see EffectDrawable
 function WorldMap:SetPortalDrawable(drawable) end
 
----@TODO: Confirm if RGBAColor is correct and clarify functionality. may allow values up to 255.
+---@TODO Confirm if RGBAColor is correct and clarify functionality. may allow values up to 255.
 ---Sets a temporary notification color for the world map.
 ---@param color RGBAColor The color for the temporary notification.
 ---@see RGBAColor
 function WorldMap:SetTempNotifyColor(color) end
 
----@TODO: Confirm if RGBAColor is correct and clarify functionality.
+---@TODO Confirm if RGBAColor is correct and clarify functionality.
 ---Sets temporary notification coordinates for the world map.
 ---@param isMain boolean Whether the coordinate is for the main notification.
 ---@param coord table The coordinate data.
@@ -139,7 +139,7 @@ function WorldMap:SetTroubleZoneColor(state, r, g, b, a) end
 ---@param y number The y-coordinate.
 function WorldMap:ShowCommonFarm(farmGroupType, farmType, x, y) end
 
----@FIXME: Crashes if `SetPortalDrawable` is not called first.
+---@FIXME Crashes if `SetPortalDrawable` is not called first.
 ---Shows a portal location on the world map at the specified coordinates.
 ---Crashes if `SetPortalDrawable` is not called first.
 ---@param zoneId ZONE_KEY The zone ID.

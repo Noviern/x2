@@ -99,7 +99,7 @@ function Message:GetLinkInfoOnCursor() end
 ---@nodiscard
 function Message:GetMaxLines() end
 
----@TODO: havent found a way to get a messageTimeStamp to test this, this could also have a param named chatType
+---@TODO havent found a way to get a messageTimeStamp to test this, this could also have a param named chatType
 ---Retrieves the message text for a given timestamp in the Message.
 ---@param messageTimeStamp number The timestamp of the message.
 ---@return string message The message text.

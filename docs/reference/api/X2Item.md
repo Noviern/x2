@@ -249,7 +249,7 @@ ITEM_TASK:
 #### Method: InfoFromLink
 ```lua
 (method) X2Item:InfoFromLink(linkText: string, kind?: "1"|"2"|"3")
-  -> itemInfo: ItemInfo
+  -> itemInfo: ItemInfo|nil
 ```
 > Retrieves item information from the specified link text.
 > 
@@ -257,7 +257,7 @@ ITEM_TASK:
 > 
 > @*param* `kind` — Optional kind of link.
 > 
-> @*return* `itemInfo` — The item information.
+> @*return* `itemInfo` — The item information if it exists, `nil` otherwise.
 > 
 > ```lua
 > kind:

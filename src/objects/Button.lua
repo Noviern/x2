@@ -120,7 +120,7 @@ function Button:SetAutoClipChar(resize) end
 ---@param resize boolean `true` to enable auto resizing, `false` to disable. (default: `false`)
 function Button:SetAutoResize(resize) end
 
----@FIXME: SetButtonState and GetButtonState - Almost none of the states match their actual state.
+---@FIXME SetButtonState and GetButtonState - Almost none of the states match their actual state.
 ---FAKE STATE > REAL STATE
 ---NORMAL = HIGHLIGHTED
 ---HIGHLIGHTED = DISABLED

@@ -30,7 +30,7 @@ X2Resident = {}                              -- api/X2Resident
 ---| `HOUSING_LIST_FILTER_UNDERWATER_STRUCTURE`
 ---| `HOUSING_LIST_FILTER_WORKTABLE`
 
----@TODO: Unsure how the unknown is used, appears to always return `false`.
+---@TODO Unsure how the unknown is used, appears to always return `false`.
 ---Searches for housing trade listings in the current zone with the given
 ---filter and search word, triggering the `RESIDENT_HOUSING_TRADE_LIST` event.
 ---@param filterindex HOUSING_LIST_FILTER The filter to apply.

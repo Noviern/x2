@@ -1,6 +1,6 @@
 ---@meta _
 
----@FIXME: These dont appear to exist on any drawable and they dont appear in the scriptsbin. Im also missing TextureDrawable and Drawable
+---@FIXME These dont appear to exist on any drawable and they dont appear in the scriptsbin. Im also missing TextureDrawable and Drawable
 ------@field GetEffectPhaseCount fun(self: self)
 ------@field GetEffectPhaseProperties fun(self: self, phase)
 ------@field GetMoveEffectPhaseCount fun(self: self)

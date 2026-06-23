@@ -62,14 +62,14 @@ function ImageDrawable:SetAnimFrameInfo(frameInfo) end
 ---@param snap boolean `true` to enable snapping, `false` to disable. (default: `true`)
 function ImageDrawable:SetSnap(snap) end
 
----@TODO: Verify the usage and format of filename. this didnt not work Game/ui/map/image_map.tga
+---@TODO Verify the usage and format of filename. this didnt not work Game/ui/map/image_map.tga
 ---Sets a TGA texture for the ImageDrawable.
 ---@param filename string The path to the TGA texture file.
 ---@return boolean success `true` if the texture was successfully loaded and set, `false` otherwise.
 ---@nodiscard
 function ImageDrawable:SetTgaTexture(filename) end
 
----@TODO: Clarify tiling behavior.
+---@TODO Clarify tiling behavior.
 ---Enables or disables tiling for the ImageDrawable.
 ---@param tiling boolean `true` to enable tiling, `false` to disable. (default: `false`)
 function ImageDrawable:SetTiling(tiling) end

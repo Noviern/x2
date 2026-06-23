@@ -78,15 +78,15 @@ function X2Team:GetRole(teamIndex, memberIndex) end
 ---@nodiscard
 function X2Team:GetTeamRoleType() end
 
----@TODO: min max?
----@TODO: teamRoleType is the kickers role type instead othe player being kicked?
+---@TODO min max?
+---@TODO teamRoleType is the kickers role type instead othe player being kicked?
 ---Kicks a team member from the team.
 ---@param memberIndex string The index or identifier of the member to kick. (min: `1`)
 ---@param teamRoleType TEAM_ROLE The role of the member being kicked.
 ---@return boolean success `true` if the kick was successful, `false` otherwise.
 function X2Team:KickTeamMember(memberIndex, teamRoleType) end
 
----@TODO: teamRoleType is the kickers role type instead othe player being kicked?
+---@TODO teamRoleType is the kickers role type instead othe player being kicked?
 ---Kicks a team member by their character name.
 ---@param charName string The name of the character to kick.
 ---@param teamRoleType TEAM_ROLE The role of the member being kicked.
@@ -97,7 +97,7 @@ function X2Team:KickTeamMemberByName(charName, teamRoleType) end
 ---@param tomemberIndex number The target index to move the member to. (min: `1`)
 function X2Team:MoveTeamMember(frommemberIndex, tomemberIndex) end
 
----@TODO: different party or within the same party? party index min?
+---@TODO different party or within the same party? party index min?
 ---Moves a team member to a different party.
 ---@param frommemberIndex number The current index of the member.  (min: `1`)
 ---@param toParty number The target party number to move the member to.

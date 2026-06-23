@@ -81,7 +81,7 @@ function X2Quest:IsCompleted(questType) end
 ---@nodiscard
 function X2Quest:IsReadyForCompleteQuest(questType) end
 
----@FIXME: Broken? Tried both active quest index and quest ID.
+---@FIXME Broken? Tried both active quest index and quest ID.
 ---Sets the specified quest as the active tracked quest.
 ---@param idx number The quest index or ID to track (type unclear).
 function X2Quest:SetTrackingActiveQuest(idx) end

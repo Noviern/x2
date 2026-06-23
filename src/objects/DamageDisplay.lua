@@ -24,7 +24,7 @@ PCT_SHIP_COLLISION = 1  -- objects/DamageDisplay POSITION_CALCULATION_TYPE
 ---| `PCT_DEFAULT`
 ---| `PCT_SHIP_COLLISION`
 
----@TODO: what is extraStyle used for?
+---@TODO what is extraStyle used for?
 ---[DamageDisplay](lua://DamageDisplay)
 ---
 ---A `DamageDisplay` widget displays animated damage or combat-related text.

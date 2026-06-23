@@ -50,10 +50,10 @@ X2Craft = {}                        -- api/X2Craft
 ---@see CraftBaseInfo
 function X2Craft:GetCraftBaseInfo(craftType, doodadId) end
 
----@FIXME: Crash EXCEPTION_ACCESS_VIOLATION. Need to set doodadId type. No usage
 ---Retrieves the material information for the specified craft type.
 ---@param craftType number The type of craft to query.
 ---@param doodadId? number The doodad ID.
+---@return CraftInfo[]|nil
 function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end
 
 ---Retrieves a list containing craft product information.
@@ -62,3 +62,9 @@ function X2Craft:GetCraftMaterialInfo(craftType, doodadId) end
 ---@nodiscard
 ---@see CraftProductInfo
 function X2Craft:GetCraftProductInfo(craftType) end
+
+---Retrieves the craft type for the item type.
+---@param itemType number
+---@return number|nil craftType The type of craft for the item type, or `nil` if not found.
+---@nodiscard
+function X2Craft:GetCraftTypeByItemType(itemType) end

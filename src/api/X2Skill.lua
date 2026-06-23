@@ -26,7 +26,7 @@ function X2Skill:GetCooldown(skillId, ignoreGlobalCooldown) end
 ---@nodiscard
 function X2Skill:GetMateCooldown(skillId, ignoreGlobalCooldown, mateType) end
 
----@TODO: Not sure how the itemType works with skillId, maybe one should be 0 and set the other?
+---@TODO Not sure how the itemType works with skillId, maybe one should be 0 and set the other?
 ---Returns tooltip information for a skill, filtered by an optional scope.
 ---@param skillId number The ID of the skill.
 ---@param itemType number The item type associated with the skill.

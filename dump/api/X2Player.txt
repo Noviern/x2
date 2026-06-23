@@ -38,6 +38,7 @@ X2Player = {
   GetShowingAppellation = "<function X2Player>",
   GetStampChangeItemInfo = "<function X2Player>",
   GetUnitAppellationRouteList = "<function X2Player>",
+  PlayerInCombat = "<function X2Player>",
 }
 ZPW_ENTER = 0
 ZPW_EXPEL = 3

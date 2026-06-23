@@ -13,12 +13,12 @@ local EditboxMultiline = {}
 function EditboxMultiline:Clear() end
 
 ---Retrieves the x-coordinate of the cursor in the EditboxMultiline.
----@return number cursorPosX The x-coordinate of the cursor.
+---@return number cursorPosX The x-coordinate of the cursor relative to the EditboxMultiline and its inset.
 ---@nodiscard
 function EditboxMultiline:GetCursorPosX() end
 
 ---Retrieves the y-coordinate of the cursor in the EditboxMultiline.
----@return number cursorPosY The y-coordinate of the cursor.
+---@return number cursorPosY The y-coordinate of the cursor relative to the EditboxMultiline and its inset.
 ---@nodiscard
 function EditboxMultiline:GetCursorPosY() end
 
@@ -27,12 +27,12 @@ function EditboxMultiline:GetCursorPosY() end
 ---@nodiscard
 function EditboxMultiline:GetLineCount() end
 
----Retrieves the height of a single line in the EditboxMultiline.
+---Retrieves the unscaled height of a single line in the EditboxMultiline.
 ---@return number lineHeight The height of a line.
 ---@nodiscard
 function EditboxMultiline:GetLineHeight() end
 
----Retrieves the total height of the text in the EditboxMultiline.
+---Retrieves the total unscaled height of the text in the EditboxMultiline.
 ---@return number textHeight The total text height.
 ---@nodiscard
 function EditboxMultiline:GetTextHeight() end
@@ -43,5 +43,5 @@ function EditboxMultiline:GetTextHeight() end
 function EditboxMultiline:GetTextLength() end
 
 ---Sets the line spacing for the EditboxMultiline.
----@param space number The line spacing value.
+---@param space number The line spacing value. (default: `1`)
 function EditboxMultiline:SetLineSpace(space) end

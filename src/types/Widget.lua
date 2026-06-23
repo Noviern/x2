@@ -103,7 +103,7 @@ function Widget:Clickable(clickable) end
 ---@overload fun(self: self, objectTypeStr: "x2editbox", name: string, index: number, reflectToScriptTable: boolean): X2Editbox
 function Widget:CreateChildWidget(objectTypeStr, name, index, reflectToScriptTable) end
 
----@FIXME: objectType should be UOT_WIDGET if we had all UOTs
+---@FIXME objectType should be UOT_WIDGET if we had all UOTs
 ---Creates and returns a child widget by type and gives the widget a draw priority z-index.
 ---@param objectType OBJECT The type of widget to create.
 ---@param name string The name of the widget.
@@ -190,6 +190,7 @@ function Widget:CreateColorDrawableByKey(colorKey, nameLayer) end
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to apply the drawable to.
 ---@return DrawableDDS drawable The created drawable, or an empty table if the object `DrawableDDS` hasn't been imported.
 ---@nodiscard
+---@see DrawableDDS
 function Widget:CreateDrawable(texturePath, textureKey, nameLayer) end
 
 ---**Requires importing the `EffectDrawable` Object.**
@@ -278,12 +279,12 @@ function Widget:CreateThreePartDrawable(texturePath, nameLayer) end
 ---Detaches the Widget from its parent.
 function Widget:DetachWidget() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Disables drawables for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 function Widget:DisableDrawables(nameLayer) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Disables drawables for the specified layer and its children.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to disable.
 function Widget:DisableDrawablesWithChildren(nameLayer) end
@@ -362,7 +363,7 @@ function Widget:GetAttachedWidget() end
 ---@nodiscard
 function Widget:GetParent() end
 
----@TODO: Returns nil and "NONE", possibly broken? If its not broken I need to define a ROTATION enum for the return.
+---@TODO Returns nil and "NONE", possibly broken? If its not broken I need to define a ROTATION enum for the return.
 ---Retrieves the rotation of the widget.
 ---@return string|nil rotation
 ---@nodiscard
@@ -378,7 +379,7 @@ function Widget:GetText() end
 ---@nodiscard
 function Widget:GetUILayer() end
 
----@TODO: Clarify typeStr purpose.
+---@TODO Clarify typeStr purpose.
 ---Retrieves the value for the specified type.
 ---@param typeStr string The type to query.
 ---@return number value The value associated with the type.
@@ -458,7 +459,7 @@ function Widget:RemoveAllDrawables(nameLayer) end
 ---@see Drawablebase
 function Widget:RemoveDrawable(drawableTable) end
 
----@FIXME: Error when SetCharacterCacheDataHandler is set before. [Lua Error] attempt to call a string value
+---@FIXME Error when SetCharacterCacheDataHandler is set before. [Lua Error] attempt to call a string value
 ---Requests character cache data.
 ---@param cacheQueryId string The cache query ID.
 function Widget:RequestCharacterCacheData(cacheQueryId) end
@@ -474,7 +475,7 @@ function Widget:SetAlpha(alpha) end
 ---@param accelerationTime number Duration in seconds for acceleration.
 function Widget:SetAlphaAnimation(initialAlpha, finalAlpha, velocityTime, accelerationTime) end
 
----@TODO: Clarify category purpose.
+---@TODO Clarify category purpose.
 ---Sets the category for the Widget.
 ---@param category string The category to set.
 function Widget:SetCategory(category) end
@@ -484,7 +485,7 @@ function Widget:SetCategory(category) end
 ---@see CharacterCacheDataHandler
 function Widget:SetCharacterCacheDataHandler(handler) end
 
----@TODO: Not sure if this works correctly.
+---@TODO Not sure if this works correctly.
 ---Sets a handler for a specific action on a delegator widget.
 ---@param action WIDGET_EVENT_TYPE The action name.
 ---@param delegator Widget The delegator widget.
@@ -596,7 +597,7 @@ function Widget:SetMaxResizingExtent(width, height) end
 ---@param height number The minimum height.
 function Widget:SetMinResizingExtent(width, height) end
 
----@TODO: Broken? direction enum
+---@TODO Broken? direction enum
 ---Sets a move animation for the Widget.
 ---@param direction string The direction of the animation.
 ---@param delta number The movement distance.
@@ -618,7 +619,7 @@ function Widget:SetMoveAnimation(direction, delta, time, repeatAnimation) end
 ---```
 function Widget:SetResizingBorderSize(left, top, right, bottom) end
 
----@TODO: Takes a string, usage unclear.
+---@TODO Takes a string, usage unclear.
 ---Sets the rotation of the widget.
 ---@param rs string The rotation value.
 function Widget:SetRotation(rs) end
@@ -635,7 +636,7 @@ function Widget:SetScale(scale) end
 ---@param scaleAnchor ANCHOR_POINT The anchor point for scaling.
 function Widget:SetScaleAnimation(initialScale, finalScale, velocityTime, accelerationTime, scaleAnchor) end
 
----@TODO: Make a list of widgets and their interactions that invoke sound.
+---@TODO Make a list of widgets and their interactions that invoke sound.
 ---Sets the sounds to play for the Widget, this plays differently for each
 ---type of widget, for instance a button will play its sound when clicked, and
 ---a window will play its sound when shown/hidden.
@@ -651,7 +652,7 @@ function Widget:SetStartAnimation(alpha, scale) end
 ---@param text string The text to set.
 function Widget:SetText(text) end
 
----@TODO: what are all the actions this disables?
+---@TODO what are all the actions this disables?
 ---Shows or hides the widget and enables/disables its "OnUpdate" handler.
 ---Anchors set before the widget is first shown are not affected by UI scale.
 ---Anchors set after the widget is shown are scaled.
@@ -688,17 +689,17 @@ function Widget:StartSizing(anchorPoint) end
 ---```
 function Widget:StopMovingOrSizing() end
 
----@TODO: Broken?
+---@TODO Broken?
 ---Triggers or stops the move animation of the Widget.
 ---@param on boolean `true` to start the animation, `false` to stop.
 function Widget:TriggerMoveAnimation(on) end
 
----@TODO: What is this?
+---@TODO What is this?
 ---Enables or disables dynamic content state for the widget.
 ---@param use boolean `true` to enable, `false` to disable.
 function Widget:UseDynamicContentState(use) end
 
----@TODO: What is this?
+---@TODO What is this?
 ---Enables or disables dynamic drawable state for the specified layer.
 ---@param nameLayer DRAWABLE_NAME_LAYER The layer to modify.
 ---@param use boolean `true` to enable, `false` to disable.

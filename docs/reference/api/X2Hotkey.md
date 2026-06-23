@@ -173,7 +173,7 @@
 > 
 > ```lua
 > X2Hotkey:BindingToOption()
-> X2Hotkey:SetOptionBindingUiEventWithIndex("moveforward", 1, 0)
+> X2Hotkey:RemoveOptionBinding("moveforward", 1, 0)
 > X2Hotkey:SaveHotKey()
 > ```
 > 

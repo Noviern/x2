@@ -1,6 +1,6 @@
 ---@meta _
 
----@FIXME: Grid will always only show one less column than it should.
+---@FIXME Grid will always only show one less column than it should.
 
 ---[Grid](lua://Grid)
 ---
@@ -9,7 +9,7 @@
 ---grid:SetWidth(400)
 ---grid:SetDefaultColWidth(100)
 ---grid:SetColCount(8)
------ 400 grid width / 100 column width = should show 4 columns but instead shows 3 
+----- 400 grid width / 100 column width = should show 4 columns but instead shows 3
 ---```
 ---
 ---A `Grid` widget is table-like for displaying items in rows and columns.
@@ -110,7 +110,7 @@ function Grid:SetColCount(count) end
 ---@param h number The height.
 function Grid:SetColTexCoord(x, y, w, h) end
 
----@FIXME: Broken? SetRowTexture does this?
+---@FIXME Broken? SetRowTexture does this?
 ---Sets the texture for a column in the Grid.
 ---@param texture string The texture path.
 function Grid:SetColTexture(texture) end
@@ -155,12 +155,12 @@ function Grid:SetDefaultColWidth(width) end
 ---@param height number The default row height.
 function Grid:SetDefaultRowHeight(height) end
 
----@TODO: Clarify draw line type and valid values.
+---@TODO Clarify draw line type and valid values.
 ---Sets the draw line type for the Grid.
 ---@param type string The draw line type.
 function Grid:SetDrawLineType(type) end
 
----@TODO: Clarify purpose of draw start number.
+---@TODO Clarify purpose of draw start number.
 ---Sets the draw start number for the Grid.
 ---@param number number The draw start number.
 function Grid:SetDrawStartNumber(number) end
@@ -238,7 +238,7 @@ function Grid:SetLineBackGround(line) end
 ---@param a number The alpha component. (min: `0`, max: `1`)
 function Grid:SetLineColor(r, g, b, a) end
 
----@TODO: need an example of this working
+---@TODO need an example of this working
 ---Enables or disables row clipping in the Grid.
 ---@param use boolean `true` to enable row clipping, `false` to disable.
 function Grid:SetRowCliping(use) end

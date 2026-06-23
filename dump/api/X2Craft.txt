@@ -16,4 +16,5 @@ X2Craft = {
   GetCraftBaseInfo = "<function X2Craft>",
   GetCraftMaterialInfo = "<function X2Craft>",
   GetCraftProductInfo = "<function X2Craft>",
+  GetCraftTypeByItemType = "<function X2Craft>",
 }

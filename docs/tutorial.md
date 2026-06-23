@@ -24,10 +24,10 @@ Widgets are the interactive and structural UI elements you're probably most fami
 ADDON:ImportObject(2) -- Button
 
 local myBtn = UIParent:CreateWidget("button", "MyCustomButton", "UIParent")
-myBtn:AddAnchor("CENTER", "UIParent", 0, 0)
-myBtn:SetStyle("text_default")
-myBtn:SetText("Click Me")
 myBtn:Show(true)
+myBtn:SetStyle("text_default")
+myBtn:AddAnchor("CENTER", "UIParent", 0, 0)
+myBtn:SetText("Click Me")
 ```
 
 ![Example of a Button Widget](https://i.imgur.com/4VLmX1h.png)
@@ -126,8 +126,8 @@ ADDON:ImportObject(8) -- NinePartDrawable
 
 local background = myBtn:CreateNinePartDrawable("ui/common/default.dds", "background")
 background:SetTextureInfo("common_bg", "auction_title")
-background:AddAnchor("TOP", myBtn, "BOTTOM", 0, 50)
 background:SetExtent(300, 20)
+background:AddAnchor("TOP", myBtn, "BOTTOM", 0, 50)
 
 ```
 
@@ -151,10 +151,10 @@ Both **Widgets** and **Drawables** are built on the same foundational classes in
 -- Works the same way on both a Button widget and a Texture drawable
 local obj = ... -- could be a button or a drawable texture
 
+obj:Show(true)
 obj:AddAnchor("CENTER", "UIParent", 0, 0)
 obj:SetWidth(200)
 obj:SetHeight(80)
-obj:Show(true)
 
 if obj:IsValidUIObject() then
     ADDON:ChatLog("Object is alive and has type: " .. obj:GetObjectType())

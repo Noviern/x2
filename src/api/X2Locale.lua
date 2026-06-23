@@ -25,7 +25,7 @@ function X2Locale:GetLocaleIndex() end
 ---@nodiscard
 function X2Locale:HasLocalizeUiText(categoryId, key) end
 
----@TODO: Clarify if this triggers an event and how this works.
+---@TODO Clarify if this triggers an event and how this works.
 function X2Locale:LocalizeFormatUiText() end
 
 ---Localizes non-UI text after replacing placeholders with provided arguments.

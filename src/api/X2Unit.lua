@@ -33,6 +33,14 @@ RACE_NONE = 0                 -- api/X2Unit RACE_ID
 RACE_NUIAN = 1                -- api/X2Unit RACE_ID
 RACE_RETURNED = 7             -- api/X2Unit RACE_ID
 RACE_WARBORN = 8              -- api/X2Unit RACE_ID
+UO_BUTLER = 7                 -- api/X2Unit UNIT_OWNER
+UO_CHARACTER = 0              -- api/X2Unit UNIT_OWNER
+UO_HOUSING = 3                -- api/X2Unit UNIT_OWNER
+UO_MATE = 5                   -- api/X2Unit UNIT_OWNER
+UO_NPC = 1                    -- api/X2Unit UNIT_OWNER
+UO_SHIPYARD = 6               -- api/X2Unit UNIT_OWNER
+UO_SLAVE = 2                  -- api/X2Unit UNIT_OWNER
+UO_TRANSFER = 4               -- api/X2Unit UNIT_OWNER
 ---@class X2Unit
 X2Unit = {}                   -- api/X2Unit
 
@@ -84,6 +92,17 @@ X2Unit = {}                   -- api/X2Unit
 ---| `RACE_NUIAN`     # 1
 ---| `RACE_RETURNED`  # 7
 ---| `RACE_WARBORN`   # 8
+
+---api/X2Unit
+---@alias UNIT_OWNER
+---| `UO_BUTLER`
+---| `UO_CHARACTER`
+---| `UO_HOUSING`
+---| `UO_MATE`
+---| `UO_NPC`
+---| `UO_SHIPYARD`
+---| `UO_SLAVE`
+---| `UO_TRANSFER`
 
 ---Retrieves the current zone group ID.
 ---@return ZONE_GROUP_ID currentZoneGroup The current zone group ID.
@@ -153,6 +172,13 @@ function X2Unit:GetUnitScreenPosition(unit) end
 ---@return number|nil angle The unit's angle, or `nil` if not in range.
 ---@nodiscard
 function X2Unit:GetUnitWorldPositionByTarget(unit, isLocal) end
+
+---Retrieves a list of units of the unitOwner type.
+---@param unitOwner UNIT_OWNER
+---@return UnitInSight[]|nil unitsInSight A list of units in sight, `nil` if none of the unitOwner exist.
+---@nodiscard
+---@see UnitInSight
+function X2Unit:GetUnitsInSight(unitOwner) end
 
 ---Removes all over head markers. Cooldown 1s.
 function X2Unit:RemoveAllOverHeadMarker() end
@@ -250,8 +276,9 @@ function X2Unit:UnitHealth(unit) end
 ---@nodiscard
 function X2Unit:UnitHealthInfo(unit) end
 
+---@TODO what is ranker
 ---Retrieves hidden buff information for the specified buff index of the unit if
----it exists.
+---it exists. Restricted to any except target and ranker.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The hidden buff index. (min: `1`)
 ---@return BuffInfo unitHiddenBuffInfo The hidden buff information, or an empty table if not found.
@@ -259,15 +286,17 @@ function X2Unit:UnitHealthInfo(unit) end
 ---@see BuffInfo
 function X2Unit:UnitHiddenBuff(unit, buffIndex) end
 
+---@TODO what is ranker
 ---Retrieves the number of hidden buffs on the specified unit if in render
----range.
+---range. Restricted to any except target and ranker.
 ---@param unit UNIT The unit to query.
 ---@return number unitHiddenBuffCount The number of hidden buffs, or 0 if not in range.
 ---@nodiscard
 function X2Unit:UnitHiddenBuffCount(unit) end
 
+---@TODO what is ranker
 ---Retrieves the hidden buff tooltip for the specified buff index of the unit if
----it exists.
+---it exists. Restricted to any except target and ranker.
 ---@param unit UNIT The unit to query.
 ---@param buffIndex number The hidden buff index. (min: `1`)
 ---@param neededInfo? BUFF_INFO_KIND Optional additional information for the buff.
@@ -277,6 +306,7 @@ function X2Unit:UnitHiddenBuffCount(unit) end
 function X2Unit:UnitHiddenBuffTooltip(unit, buffIndex, neededInfo) end
 
 ---Retrieves the unit's attribute information.
+---Restricted to just "player".
 ---@param unit UNIT The unit to query.
 ---@return UnitAttributesInfo|nil unitInfo The unit's attributes, or `nil` if the unit is not available.
 ---@nodiscard
@@ -317,6 +347,7 @@ function X2Unit:UnitMaxHealth(unit) end
 function X2Unit:UnitMaxMana(unit) end
 
 ---Retrieves the unit's attribute modifier information.
+---Restricted to just "player".
 ---@param unit UNIT The unit to query.
 ---@return UnitAttributeModifierInfo|nil unitModifierInfo The unit's attribute modifiers, or `nil` if the unit is not available.
 ---@nodiscard
@@ -335,23 +366,26 @@ function X2Unit:UnitName(unit) end
 ---@nodiscard
 function X2Unit:UnitNameWithWorld(unit) end
 
+---@TODO what is ranker
 ---Retrieves the removable debuff for the specified buff index of the unit if it
----exists.
+---exists. Restricted to any except target and ranker.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
 ---@return BuffInfo|nil removableDebuff The removable debuff information, or `nil` if not found.
 ---@nodiscard
 function X2Unit:UnitRemovableDebuff(unit, deBuffIndex) end
 
+---@TODO what is ranker
 ---Retrieves the number of removable debuffs on the specified unit if in render
----range.
+---range. Restricted to any except target and ranker.
 ---@param unit UNIT The unit to query.
 ---@return number|nil removableDebuffCount The number of removable debuffs, or `nil` if none exist.
 ---@nodiscard
 function X2Unit:UnitRemovableDebuffCount(unit) end
 
+---@TODO what is ranker
 ---Retrieves the removable debuff tooltip for the specified buff index of the
----unit if it exists.
+---unit if it exists. Restricted to any except target and ranker.
 ---@param unit UNIT The unit to query.
 ---@param deBuffIndex number The debuff index. (min: `1`)
 ---@param neededInfo? BUFF_INFO_KIND Optional additional information for the buff.

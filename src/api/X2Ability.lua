@@ -91,7 +91,7 @@ X2Ability = {}                       -- api/X2Ability
 ---| `SAT_NONE`
 
 ---api/X2Ability
----@TODO: Speech Bubble Category?
+---@TODO Speech Bubble Category?
 ---@alias SBC
 ---| `SBC_ATTACK`
 ---| `SBC_EMOTION`
@@ -127,8 +127,8 @@ function X2Ability:GetActiveAbility() end
 ---@see ActabilityInfo
 function X2Ability:GetAllMyActabilityInfos() end
 
----@FIXME: Only BIK_DESCRIPTION appears to work.
----@TODO: Find a buff where itemLevel actually matters.
+---@FIXME Only BIK_DESCRIPTION appears to work.
+---@TODO Find a buff where itemLevel actually matters.
 ---Retrieves information for the buff tooltip based on the buff type and item
 ---level.
 ---@param buffType number The type of buff.

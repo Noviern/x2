@@ -22,7 +22,7 @@ function Editboxbase:MaxTextLength() end
 ---@param offset number The cursor offset position.
 function Editboxbase:SetCursorOffset(offset) end
 
----Sets the cursor height for the Editboxbase.
+---Sets the cursor height for the Editboxbase. Adds to the base height of the cursor.
 ---@param height number The height of the cursor.
 function Editboxbase:SetCursorHeight(height) end
 

@@ -1,4 +1,4 @@
----@TODO: This file is getting large, two options:
+---@TODO This file is getting large, two options:
 ---1. split all aliases into their own file (which may take LuaLS longer to load)
 ---2. move aliases to its related API/Object but what should happen to aliases that are shared?
 
@@ -174,7 +174,7 @@
 ---| "BOTTOM"
 ---| "BOTTOMRIGHT"
 
----@TODO: this is may not be accurate
+---@TODO this is may not be accurate
 ---db > anim_actions + animations/
 ---@alias ANIMATION
 ---| "ac_steer_idle"
@@ -3079,7 +3079,7 @@
 ---| "write"
 ---| "zone_permission_out"
 ---| "zone_permission_wait"
----@TODO: Added in a future patch.
+---@TODO Added in a future patch.
 --- "all_ability"
 --- "assassin"
 --- "assassin_selected"
@@ -3132,7 +3132,7 @@
 ---| "DROWNING"
 ---| "FALLING"
 
----@TODO: ENVIRONMENTAL/MELEE may not be complete.
+---@TODO ENVIRONMENTAL/MELEE may not be complete.
 ---scriptsbin/globalui/chat/chat_msg_event.lua
 ---@alias COMBAT_EVENT
 ---| "ENVIRONMENTAL_DAMAGE"
@@ -6520,7 +6520,7 @@
 -- -| "img_font_action_bar"
 -- -| "img_font_combat"
 
----@TODO: document this better
+---@TODO document this better
 ---Example: @PC_NAME(0) is a @PC_GENDER(0) @PC_RACE(0) -> Noviern is a Male Dwarf.
 ---@alias FORMAT_MACRO
 ---| "@ACHIEVEMENT_NAME(achievementId)"   # achievements.id
@@ -6741,7 +6741,7 @@
 ---| "zoom_in"
 ---| "zoom_out"
 ---
----@TODO: These dont exist as of 10.0, they may exist in a future patch.
+---@TODO These dont exist as of 10.0, they may exist in a future patch.
 -- | "builder_rotate_mode"
 -- | "builtin_multi"
 -- | "builtin"
@@ -8129,7 +8129,7 @@
 ---| `20` # Bubble Trap
 ---| `21` # Petrification
 
----@TODO: this may produce different results based on locale
+---@TODO this may produce different results based on locale
 ---@alias SKILL_ALERT_STATUS_BUFF_NAME
 ---| "Stun"
 ---| "Impaled"
@@ -8153,7 +8153,7 @@
 ---| "Bubble Trap"
 ---| "Petrification"
 
----@TODO: this may not be 100% accurate.
+---@TODO this may not be 100% accurate.
 ---Obtained from db ui_texts key = /^skill_/
 ---@alias SKILL_MSG_RESULT_CODE
 ---| "ALERT_OPTION_POPUP_DESC"
@@ -11168,20 +11168,20 @@
 ---| "speedboat"
 ---| "tank"
 
----| "sea_gimic" @TODO: ^ this wasnt in the db but is the scriptsbin, sunken ship maybe?
+---| "sea_gimic" @TODO ^ this wasnt in the db but is the scriptsbin, sunken ship maybe?
 
 ---@alias TOOLTIP_TYPE
----| "carrying_backpack_slave" @TODO: Havent seen yet.
+---| "carrying_backpack_slave" @TODO Havent seen yet.
 ---| "common_farm"
 ---| "commonFarm"
----| "conquest" @TODO: Havent seen yet.
+---| "conquest" @TODO Havent seen yet.
 ---| "corpse"
 ---| "light_house"
 ---| "mySlave"
 ---| "normal"
----| "shipyard" @TODO: Havent seen yet.
+---| "shipyard" @TODO Havent seen yet.
 ---| "slave"
----| "territory" @TODO: Havent seen yet.
+---| "territory" @TODO Havent seen yet.
 ---| "zoneState"
 
 
@@ -11251,7 +11251,7 @@
 ---| "ui_bound_targettotarget"
 ---| "ui_bound_watchtarget"
 
----@TODO: this needs updated.
+---@TODO this needs updated.
 ---@alias UIEVENT_TYPE
 ---| "ABILITY_CHANGED"
 ---| "ABILITY_EXP_CHANGED"
@@ -12045,10 +12045,8 @@
 ---| "UNIT_COMBAT_STATE_CHANGED"
 ---| "UNIT_DEAD"
 ---| "UNIT_DEAD_NOTICE"
----| "UNIT_ENTERED_SIGHT"
 ---| "UNIT_EQUIPMENT_CHANGED"
 ---| "UNIT_KILL_STREAK"
----| "UNIT_LEAVED_SIGHT"
 ---| "UNIT_NAME_CHANGED"
 ---| "UNIT_NPC_EQUIPMENT_CHANGED"
 ---| "UNITFRAME_ABILITY_UPDATE"
@@ -12312,7 +12310,7 @@
 ---| "housing"
 ---| "npc"
 
----@TODO: document which events each widget supports. OnContentUpdated, OnEscapePressed
+---@TODO document which events each widget supports. OnContentUpdated, OnEscapePressed
 ---@alias WIDGET_EVENT_TYPE
 ---| "OnAcceptFocus"            # Triggers when the widget accepts focus.
 ---| "OnAlphaAnimeEnd"          # Triggers when the widgets alpha animation has ended.

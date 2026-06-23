@@ -394,184 +394,6 @@ RACE_ID:
 >     | `159` -- instance_golden_plains_ga - Golden Plains Battle
 > ```
 
-#### Method: UnitHiddenBuff
-```lua
-(method) X2Unit:UnitHiddenBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number)
-  -> unitHiddenBuffInfo: BuffInfo
-```
-> Retrieves hidden buff information for the specified buff index of the unit if
-> it exists.
-> 
-> @*param* `unit` — The unit to query.
-> 
-> @*param* `buffIndex` — The hidden buff index. (min: `1`)
-> 
-> @*return* `unitHiddenBuffInfo` — The hidden buff information, or an empty table if not found.
-> 
-> ```lua
-> unit:
->     | "player"
->     | "target"
->     | "targettarget"
->     | "watchtarget"
->     | "playerpet" -- mount/pet
->     | "playerpet1" -- mount
->     | "playerpet2" -- pet
->     | "slave"
->     | "team1" -- team = the current raid/can be co raid
->     | "team2"
->     | "team3"
->     | "team4"
->     | "team5"
->     | "team6"
->     | "team7"
->     | "team8"
->     | "team9"
->     | "team10"
->     | "team11"
->     | "team12"
->     | "team13"
->     | "team14"
->     | "team15"
->     | "team16"
->     | "team17"
->     | "team18"
->     | "team19"
->     | "team20"
->     | "team21"
->     | "team22"
->     | "team23"
->     | "team24"
->     | "team25"
->     | "team26"
->     | "team27"
->     | "team28"
->     | "team29"
->     | "team30"
->     | "team31"
->     | "team32"
->     | "team33"
->     | "team34"
->     | "team35"
->     | "team36"
->     | "team37"
->     | "team38"
->     | "team39"
->     | "team40"
->     | "team41"
->     | "team42"
->     | "team43"
->     | "team44"
->     | "team45"
->     | "team46"
->     | "team47"
->     | "team48"
->     | "team49"
->     | "team50"
->     | "team_1_1"
->     | "team_1_2"
->     | "team_1_3"
->     | "team_1_4"
->     | "team_1_5"
->     | "team_1_6"
->     | "team_1_7"
->     | "team_1_8"
->     | "team_1_9"
->     | "team_1_10"
->     | "team_1_11"
->     | "team_1_12"
->     | "team_1_13"
->     | "team_1_14"
->     | "team_1_15"
->     | "team_1_16"
->     | "team_1_17"
->     | "team_1_18"
->     | "team_1_19"
->     | "team_1_20"
->     | "team_1_21"
->     | "team_1_22"
->     | "team_1_23"
->     | "team_1_24"
->     | "team_1_25"
->     | "team_1_26"
->     | "team_1_27"
->     | "team_1_28"
->     | "team_1_29"
->     | "team_1_30"
->     | "team_1_31"
->     | "team_1_32"
->     | "team_1_33"
->     | "team_1_34"
->     | "team_1_35"
->     | "team_1_36"
->     | "team_1_37"
->     | "team_1_38"
->     | "team_1_39"
->     | "team_1_40"
->     | "team_1_41"
->     | "team_1_42"
->     | "team_1_43"
->     | "team_1_44"
->     | "team_1_45"
->     | "team_1_46"
->     | "team_1_47"
->     | "team_1_48"
->     | "team_1_49"
->     | "team_1_50"
->     | "team_2_1"
->     | "team_2_2"
->     | "team_2_3"
->     | "team_2_4"
->     | "team_2_5"
->     | "team_2_6"
->     | "team_2_7"
->     | "team_2_8"
->     | "team_2_9"
->     | "team_2_10"
->     | "team_2_11"
->     | "team_2_12"
->     | "team_2_13"
->     | "team_2_14"
->     | "team_2_15"
->     | "team_2_16"
->     | "team_2_17"
->     | "team_2_18"
->     | "team_2_19"
->     | "team_2_20"
->     | "team_2_21"
->     | "team_2_22"
->     | "team_2_23"
->     | "team_2_24"
->     | "team_2_25"
->     | "team_2_26"
->     | "team_2_27"
->     | "team_2_28"
->     | "team_2_29"
->     | "team_2_30"
->     | "team_2_31"
->     | "team_2_32"
->     | "team_2_33"
->     | "team_2_34"
->     | "team_2_35"
->     | "team_2_36"
->     | "team_2_37"
->     | "team_2_38"
->     | "team_2_39"
->     | "team_2_40"
->     | "team_2_41"
->     | "team_2_42"
->     | "team_2_43"
->     | "team_2_44"
->     | "team_2_45"
->     | "team_2_46"
->     | "team_2_47"
->     | "team_2_48"
->     | "team_2_49"
->     | "team_2_50"
-> ```
-> 
-> See: [BuffInfo](../types/classes.md#class-buffinfo)
-
 #### Method: UnitHiddenBuffCount
 ```lua
 (method) X2Unit:UnitHiddenBuffCount(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
@@ -936,6 +758,532 @@ RACE_ID:
 > 
 > See: [BuffTooltip](../types/classes.md#class-bufftooltip)
 
+#### Method: UnitInfo
+```lua
+(method) X2Unit:UnitInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitInfo: UnitAttributesInfo|nil
+```
+> Retrieves the unit's attribute information.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*return* `unitInfo` — The unit's attributes, or `nil` if the unit is not available.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> ```
+> 
+> See: [UnitAttributesInfo](../types/classes.md#class-unitattributesinfo)
+
+#### Method: UnitHiddenBuff
+```lua
+(method) X2Unit:UnitHiddenBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number)
+  -> unitHiddenBuffInfo: BuffInfo
+```
+> Retrieves hidden buff information for the specified buff index of the unit if
+> it exists.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*param* `buffIndex` — The hidden buff index. (min: `1`)
+> 
+> @*return* `unitHiddenBuffInfo` — The hidden buff information, or an empty table if not found.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> ```
+> 
+> See: [BuffInfo](../types/classes.md#class-buffinfo)
+
+#### Method: UnitHealth
+```lua
+(method) X2Unit:UnitHealth(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitHealth: string|nil
+```
+> Retrieves the health of the specified unit if it exists.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*return* `unitHealth` — The unit's health, or `nil` if not found.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> ```
+
 #### Method: UnitHealthInfo
 ```lua
 (method) X2Unit:UnitHealthInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
@@ -1292,179 +1640,6 @@ RACE_ID:
 >     | "team_2_50"
 > ```
 
-#### Method: UnitHealth
-```lua
-(method) X2Unit:UnitHealth(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
-  -> unitHealth: string|nil
-```
-> Retrieves the health of the specified unit if it exists.
-> 
-> @*param* `unit` — The unit to query.
-> 
-> @*return* `unitHealth` — The unit's health, or `nil` if not found.
-> 
-> ```lua
-> unit:
->     | "player"
->     | "target"
->     | "targettarget"
->     | "watchtarget"
->     | "playerpet" -- mount/pet
->     | "playerpet1" -- mount
->     | "playerpet2" -- pet
->     | "slave"
->     | "team1" -- team = the current raid/can be co raid
->     | "team2"
->     | "team3"
->     | "team4"
->     | "team5"
->     | "team6"
->     | "team7"
->     | "team8"
->     | "team9"
->     | "team10"
->     | "team11"
->     | "team12"
->     | "team13"
->     | "team14"
->     | "team15"
->     | "team16"
->     | "team17"
->     | "team18"
->     | "team19"
->     | "team20"
->     | "team21"
->     | "team22"
->     | "team23"
->     | "team24"
->     | "team25"
->     | "team26"
->     | "team27"
->     | "team28"
->     | "team29"
->     | "team30"
->     | "team31"
->     | "team32"
->     | "team33"
->     | "team34"
->     | "team35"
->     | "team36"
->     | "team37"
->     | "team38"
->     | "team39"
->     | "team40"
->     | "team41"
->     | "team42"
->     | "team43"
->     | "team44"
->     | "team45"
->     | "team46"
->     | "team47"
->     | "team48"
->     | "team49"
->     | "team50"
->     | "team_1_1"
->     | "team_1_2"
->     | "team_1_3"
->     | "team_1_4"
->     | "team_1_5"
->     | "team_1_6"
->     | "team_1_7"
->     | "team_1_8"
->     | "team_1_9"
->     | "team_1_10"
->     | "team_1_11"
->     | "team_1_12"
->     | "team_1_13"
->     | "team_1_14"
->     | "team_1_15"
->     | "team_1_16"
->     | "team_1_17"
->     | "team_1_18"
->     | "team_1_19"
->     | "team_1_20"
->     | "team_1_21"
->     | "team_1_22"
->     | "team_1_23"
->     | "team_1_24"
->     | "team_1_25"
->     | "team_1_26"
->     | "team_1_27"
->     | "team_1_28"
->     | "team_1_29"
->     | "team_1_30"
->     | "team_1_31"
->     | "team_1_32"
->     | "team_1_33"
->     | "team_1_34"
->     | "team_1_35"
->     | "team_1_36"
->     | "team_1_37"
->     | "team_1_38"
->     | "team_1_39"
->     | "team_1_40"
->     | "team_1_41"
->     | "team_1_42"
->     | "team_1_43"
->     | "team_1_44"
->     | "team_1_45"
->     | "team_1_46"
->     | "team_1_47"
->     | "team_1_48"
->     | "team_1_49"
->     | "team_1_50"
->     | "team_2_1"
->     | "team_2_2"
->     | "team_2_3"
->     | "team_2_4"
->     | "team_2_5"
->     | "team_2_6"
->     | "team_2_7"
->     | "team_2_8"
->     | "team_2_9"
->     | "team_2_10"
->     | "team_2_11"
->     | "team_2_12"
->     | "team_2_13"
->     | "team_2_14"
->     | "team_2_15"
->     | "team_2_16"
->     | "team_2_17"
->     | "team_2_18"
->     | "team_2_19"
->     | "team_2_20"
->     | "team_2_21"
->     | "team_2_22"
->     | "team_2_23"
->     | "team_2_24"
->     | "team_2_25"
->     | "team_2_26"
->     | "team_2_27"
->     | "team_2_28"
->     | "team_2_29"
->     | "team_2_30"
->     | "team_2_31"
->     | "team_2_32"
->     | "team_2_33"
->     | "team_2_34"
->     | "team_2_35"
->     | "team_2_36"
->     | "team_2_37"
->     | "team_2_38"
->     | "team_2_39"
->     | "team_2_40"
->     | "team_2_41"
->     | "team_2_42"
->     | "team_2_43"
->     | "team_2_44"
->     | "team_2_45"
->     | "team_2_46"
->     | "team_2_47"
->     | "team_2_48"
->     | "team_2_49"
->     | "team_2_50"
-> ```
-
 #### Method: UnitDistance
 ```lua
 (method) X2Unit:UnitDistance(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
@@ -1640,196 +1815,6 @@ RACE_ID:
 > ```
 > 
 > See: [UnitDistance](../types/classes.md#class-unitdistance)
-
-#### Method: UnitDeBuffTooltip
-```lua
-(method) X2Unit:UnitDeBuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
-  -> unitDebuffTooltip: BuffTooltip|nil
-```
-> Retrieves the debuff tooltip for the specified buff index of the unit if in
-> render range.
-> 
-> @*param* `unit` — The unit to query.
-> 
-> @*param* `deBuffIndex` — The debuff index. (min: `1`)
-> 
-> @*param* `neededInfo` — Optional additional information for the buff.
-> 
-> @*return* `unitDebuffTooltip` — The debuff tooltip, or `nil` if not in range.
-> 
-> ```lua
-> unit:
->     | "player"
->     | "target"
->     | "targettarget"
->     | "watchtarget"
->     | "playerpet" -- mount/pet
->     | "playerpet1" -- mount
->     | "playerpet2" -- pet
->     | "slave"
->     | "team1" -- team = the current raid/can be co raid
->     | "team2"
->     | "team3"
->     | "team4"
->     | "team5"
->     | "team6"
->     | "team7"
->     | "team8"
->     | "team9"
->     | "team10"
->     | "team11"
->     | "team12"
->     | "team13"
->     | "team14"
->     | "team15"
->     | "team16"
->     | "team17"
->     | "team18"
->     | "team19"
->     | "team20"
->     | "team21"
->     | "team22"
->     | "team23"
->     | "team24"
->     | "team25"
->     | "team26"
->     | "team27"
->     | "team28"
->     | "team29"
->     | "team30"
->     | "team31"
->     | "team32"
->     | "team33"
->     | "team34"
->     | "team35"
->     | "team36"
->     | "team37"
->     | "team38"
->     | "team39"
->     | "team40"
->     | "team41"
->     | "team42"
->     | "team43"
->     | "team44"
->     | "team45"
->     | "team46"
->     | "team47"
->     | "team48"
->     | "team49"
->     | "team50"
->     | "team_1_1"
->     | "team_1_2"
->     | "team_1_3"
->     | "team_1_4"
->     | "team_1_5"
->     | "team_1_6"
->     | "team_1_7"
->     | "team_1_8"
->     | "team_1_9"
->     | "team_1_10"
->     | "team_1_11"
->     | "team_1_12"
->     | "team_1_13"
->     | "team_1_14"
->     | "team_1_15"
->     | "team_1_16"
->     | "team_1_17"
->     | "team_1_18"
->     | "team_1_19"
->     | "team_1_20"
->     | "team_1_21"
->     | "team_1_22"
->     | "team_1_23"
->     | "team_1_24"
->     | "team_1_25"
->     | "team_1_26"
->     | "team_1_27"
->     | "team_1_28"
->     | "team_1_29"
->     | "team_1_30"
->     | "team_1_31"
->     | "team_1_32"
->     | "team_1_33"
->     | "team_1_34"
->     | "team_1_35"
->     | "team_1_36"
->     | "team_1_37"
->     | "team_1_38"
->     | "team_1_39"
->     | "team_1_40"
->     | "team_1_41"
->     | "team_1_42"
->     | "team_1_43"
->     | "team_1_44"
->     | "team_1_45"
->     | "team_1_46"
->     | "team_1_47"
->     | "team_1_48"
->     | "team_1_49"
->     | "team_1_50"
->     | "team_2_1"
->     | "team_2_2"
->     | "team_2_3"
->     | "team_2_4"
->     | "team_2_5"
->     | "team_2_6"
->     | "team_2_7"
->     | "team_2_8"
->     | "team_2_9"
->     | "team_2_10"
->     | "team_2_11"
->     | "team_2_12"
->     | "team_2_13"
->     | "team_2_14"
->     | "team_2_15"
->     | "team_2_16"
->     | "team_2_17"
->     | "team_2_18"
->     | "team_2_19"
->     | "team_2_20"
->     | "team_2_21"
->     | "team_2_22"
->     | "team_2_23"
->     | "team_2_24"
->     | "team_2_25"
->     | "team_2_26"
->     | "team_2_27"
->     | "team_2_28"
->     | "team_2_29"
->     | "team_2_30"
->     | "team_2_31"
->     | "team_2_32"
->     | "team_2_33"
->     | "team_2_34"
->     | "team_2_35"
->     | "team_2_36"
->     | "team_2_37"
->     | "team_2_38"
->     | "team_2_39"
->     | "team_2_40"
->     | "team_2_41"
->     | "team_2_42"
->     | "team_2_43"
->     | "team_2_44"
->     | "team_2_45"
->     | "team_2_46"
->     | "team_2_47"
->     | "team_2_48"
->     | "team_2_49"
->     | "team_2_50"
-> 
-> -- api/X2Ability
-> -- Values can be added together to get more information. (e.g, `BIK_DESCRIPTION + BIK_RUNTIME_DURATION`)
-> neededInfo:
->     | `BIK_DESCRIPTION`
->     | `BIK_RUNTIME_ALL`
->     | `BIK_RUNTIME_DURATION`
->     | `BIK_RUNTIME_MINE`
->     | `BIK_RUNTIME_STACK`
->     | `BIK_RUNTIME_TIMELEFT`
-> ```
-> 
-> See: [BuffTooltip](../types/classes.md#class-bufftooltip)
 
 #### Method: UnitLevel
 ```lua
@@ -2885,16 +2870,16 @@ RACE_ID:
 >     | "team_2_50"
 > ```
 
-#### Method: UnitMaxHealth
+#### Method: UnitMaxMana
 ```lua
-(method) X2Unit:UnitMaxHealth(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
-  -> unitMaxHealth: string|nil
+(method) X2Unit:UnitMaxMana(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitMaxMana: string|nil
 ```
-> Retrieves the maximum health of the specified unit if it exists.
+> Retrieves the maximum mana of the specified unit if it exists.
 > 
 > @*param* `unit` — The unit to query.
 > 
-> @*return* `unitMaxHealth` — The unit's maximum health, or `nil` if not found.
+> @*return* `unitMaxMana` — The unit's maximum mana, or `nil` if not found.
 > 
 > ```lua
 > unit:
@@ -3058,16 +3043,191 @@ RACE_ID:
 >     | "team_2_50"
 > ```
 
-#### Method: UnitMaxMana
+#### Method: UnitModifierInfo
 ```lua
-(method) X2Unit:UnitMaxMana(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
-  -> unitMaxMana: string|nil
+(method) X2Unit:UnitModifierInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitModifierInfo: UnitAttributeModifierInfo|nil
 ```
-> Retrieves the maximum mana of the specified unit if it exists.
+> Retrieves the unit's attribute modifier information.
 > 
 > @*param* `unit` — The unit to query.
 > 
-> @*return* `unitMaxMana` — The unit's maximum mana, or `nil` if not found.
+> @*return* `unitModifierInfo` — The unit's attribute modifiers, or `nil` if the unit is not available.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> ```
+> 
+> See: [UnitAttributeModifierInfo](../types/classes.md#class-unitattributemodifierinfo)
+
+#### Method: UnitMaxHealth
+```lua
+(method) X2Unit:UnitMaxHealth(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitMaxHealth: string|nil
+```
+> Retrieves the maximum health of the specified unit if it exists.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*return* `unitMaxHealth` — The unit's maximum health, or `nil` if not found.
 > 
 > ```lua
 > unit:
@@ -3405,16 +3565,209 @@ RACE_ID:
 >     | "team_2_50"
 > ```
 
-#### Method: UnitDeBuffCount
+#### Method: UnitDeBuffTooltip
 ```lua
-(method) X2Unit:UnitDeBuffCount(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
-  -> unitDeBuffCount: number
+(method) X2Unit:UnitDeBuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
+  -> unitDebuffTooltip: BuffTooltip|nil
 ```
-> Retrieves the number of debuffs on the specified unit if in render range.
+> Retrieves the debuff tooltip for the specified buff index of the unit if in
+> render range.
 > 
 > @*param* `unit` — The unit to query.
 > 
-> @*return* `unitDeBuffCount` — The number of debuffs, or 0 if not in range.
+> @*param* `deBuffIndex` — The debuff index. (min: `1`)
+> 
+> @*param* `neededInfo` — Optional additional information for the buff.
+> 
+> @*return* `unitDebuffTooltip` — The debuff tooltip, or `nil` if not in range.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> 
+> -- api/X2Ability
+> -- Values can be added together to get more information. (e.g, `BIK_DESCRIPTION + BIK_RUNTIME_DURATION`)
+> neededInfo:
+>     | `BIK_DESCRIPTION`
+>     | `BIK_RUNTIME_ALL`
+>     | `BIK_RUNTIME_DURATION`
+>     | `BIK_RUNTIME_MINE`
+>     | `BIK_RUNTIME_STACK`
+>     | `BIK_RUNTIME_TIMELEFT`
+> ```
+> 
+> See: [BuffTooltip](../types/classes.md#class-bufftooltip)
+
+#### Method: UnitDeBuff
+```lua
+(method) X2Unit:UnitDeBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number)
+  -> unitDebuffInfo: BuffInfo
+```
+> Retrieves debuff information for the specified buff index of the unit if in
+> render range.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*param* `deBuffIndex` — The debuff index. (min: `1`)
+> 
+> @*return* `unitDebuffInfo` — The debuff information, or an empty table if not in range.
 > 
 > ```lua
 > unit:
@@ -3577,190 +3930,8 @@ RACE_ID:
 >     | "team_2_49"
 >     | "team_2_50"
 > ```
-
-#### Method: UnitCastingInfo
-```lua
-(method) X2Unit:UnitCastingInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
-  -> unitCastingInfo: CastingInfo|nil
-```
-> Retrieves casting information for the specified unit if in render range.
 > 
-> @*param* `unit` — The unit to query.
-> 
-> @*return* `unitCastingInfo` — The casting information, or `nil` if not in range.
-> 
-> ```lua
-> unit:
->     | "player"
->     | "target"
->     | "targettarget"
->     | "watchtarget"
->     | "playerpet" -- mount/pet
->     | "playerpet1" -- mount
->     | "playerpet2" -- pet
->     | "slave"
->     | "team1" -- team = the current raid/can be co raid
->     | "team2"
->     | "team3"
->     | "team4"
->     | "team5"
->     | "team6"
->     | "team7"
->     | "team8"
->     | "team9"
->     | "team10"
->     | "team11"
->     | "team12"
->     | "team13"
->     | "team14"
->     | "team15"
->     | "team16"
->     | "team17"
->     | "team18"
->     | "team19"
->     | "team20"
->     | "team21"
->     | "team22"
->     | "team23"
->     | "team24"
->     | "team25"
->     | "team26"
->     | "team27"
->     | "team28"
->     | "team29"
->     | "team30"
->     | "team31"
->     | "team32"
->     | "team33"
->     | "team34"
->     | "team35"
->     | "team36"
->     | "team37"
->     | "team38"
->     | "team39"
->     | "team40"
->     | "team41"
->     | "team42"
->     | "team43"
->     | "team44"
->     | "team45"
->     | "team46"
->     | "team47"
->     | "team48"
->     | "team49"
->     | "team50"
->     | "team_1_1"
->     | "team_1_2"
->     | "team_1_3"
->     | "team_1_4"
->     | "team_1_5"
->     | "team_1_6"
->     | "team_1_7"
->     | "team_1_8"
->     | "team_1_9"
->     | "team_1_10"
->     | "team_1_11"
->     | "team_1_12"
->     | "team_1_13"
->     | "team_1_14"
->     | "team_1_15"
->     | "team_1_16"
->     | "team_1_17"
->     | "team_1_18"
->     | "team_1_19"
->     | "team_1_20"
->     | "team_1_21"
->     | "team_1_22"
->     | "team_1_23"
->     | "team_1_24"
->     | "team_1_25"
->     | "team_1_26"
->     | "team_1_27"
->     | "team_1_28"
->     | "team_1_29"
->     | "team_1_30"
->     | "team_1_31"
->     | "team_1_32"
->     | "team_1_33"
->     | "team_1_34"
->     | "team_1_35"
->     | "team_1_36"
->     | "team_1_37"
->     | "team_1_38"
->     | "team_1_39"
->     | "team_1_40"
->     | "team_1_41"
->     | "team_1_42"
->     | "team_1_43"
->     | "team_1_44"
->     | "team_1_45"
->     | "team_1_46"
->     | "team_1_47"
->     | "team_1_48"
->     | "team_1_49"
->     | "team_1_50"
->     | "team_2_1"
->     | "team_2_2"
->     | "team_2_3"
->     | "team_2_4"
->     | "team_2_5"
->     | "team_2_6"
->     | "team_2_7"
->     | "team_2_8"
->     | "team_2_9"
->     | "team_2_10"
->     | "team_2_11"
->     | "team_2_12"
->     | "team_2_13"
->     | "team_2_14"
->     | "team_2_15"
->     | "team_2_16"
->     | "team_2_17"
->     | "team_2_18"
->     | "team_2_19"
->     | "team_2_20"
->     | "team_2_21"
->     | "team_2_22"
->     | "team_2_23"
->     | "team_2_24"
->     | "team_2_25"
->     | "team_2_26"
->     | "team_2_27"
->     | "team_2_28"
->     | "team_2_29"
->     | "team_2_30"
->     | "team_2_31"
->     | "team_2_32"
->     | "team_2_33"
->     | "team_2_34"
->     | "team_2_35"
->     | "team_2_36"
->     | "team_2_37"
->     | "team_2_38"
->     | "team_2_39"
->     | "team_2_40"
->     | "team_2_41"
->     | "team_2_42"
->     | "team_2_43"
->     | "team_2_44"
->     | "team_2_45"
->     | "team_2_46"
->     | "team_2_47"
->     | "team_2_48"
->     | "team_2_49"
->     | "team_2_50"
-> ```
-> 
-> See: [CastingInfo](../types/classes.md#class-castinginfo)
-
-#### Method: GetTargetUnitId
-```lua
-(method) X2Unit:GetTargetUnitId()
-  -> unitId: string|nil
-```
-> Retrieves the unit ID of the current target if in render range.
-> 
-> @*return* `unitId` — The target's unit ID, or `nil` if not in range.
+> See: [BuffInfo](../types/classes.md#class-buffinfo)
 
 #### Method: GetUnitId
 ```lua
@@ -3947,6 +4118,54 @@ RACE_ID:
 > @*return* `unitInfo` — The unit information, or `nil` if not in range.
 > 
 > See: [UnitInfo](../types/classes.md#class-unitinfo)
+
+#### Method: GetUnitNameById
+```lua
+(method) X2Unit:GetUnitNameById(unitId: string)
+  -> unitName: string|nil
+```
+> Retrieves the name of the unit for the specified unit ID if in render range.
+> 
+> @*param* `unitId` — The unit ID.
+> 
+> @*return* `unitName` — The unit name, or `nil` if not in range.
+
+#### Method: GetTargetUnitId
+```lua
+(method) X2Unit:GetTargetUnitId()
+  -> unitId: string|nil
+```
+> Retrieves the unit ID of the current target if in render range.
+> 
+> @*return* `unitId` — The target's unit ID, or `nil` if not in range.
+
+#### Method: GetOverHeadMarkerUnitId
+```lua
+(method) X2Unit:GetOverHeadMarkerUnitId(markerIndex: `10`|`11`|`12`|`1`|`2`...(+7))
+  -> unitId: string|nil
+```
+> Retrieves the unit ID associated with the given overhead marker index.
+> 
+> @*param* `markerIndex` — The marker index to query.
+> 
+> @*return* `unitId` — The unit ID, or `nil` if the marker is not assigned.
+> 
+> ```lua
+> -- ui/map/icon/npc_icon.g
+> markerIndex:
+>     | `1` -- mark_01
+>     | `2` -- mark_02
+>     | `3` -- mark_03
+>     | `4` -- mark_04
+>     | `5` -- mark_05
+>     | `6` -- mark_06
+>     | `7` -- mark_07
+>     | `8` -- mark_08
+>     | `9` -- mark_09
+>     | `10` -- mark_heart
+>     | `11` -- mark_star
+>     | `12` -- mark_x
+> ```
 
 #### Method: GetTargetAbilityTemplates
 ```lua
@@ -4313,47 +4532,565 @@ RACE_ID:
 >     | `0`
 > ```
 
-#### Method: GetOverHeadMarkerUnitId
+#### Method: UnitDeBuffCount
 ```lua
-(method) X2Unit:GetOverHeadMarkerUnitId(markerIndex: `10`|`11`|`12`|`1`|`2`...(+7))
-  -> unitId: string|nil
+(method) X2Unit:UnitDeBuffCount(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitDeBuffCount: number
 ```
-> Retrieves the unit ID associated with the given overhead marker index.
+> Retrieves the number of debuffs on the specified unit if in render range.
 > 
-> @*param* `markerIndex` — The marker index to query.
+> @*param* `unit` — The unit to query.
 > 
-> @*return* `unitId` — The unit ID, or `nil` if the marker is not assigned.
+> @*return* `unitDeBuffCount` — The number of debuffs, or 0 if not in range.
 > 
 > ```lua
-> -- ui/map/icon/npc_icon.g
-> markerIndex:
->     | `1` -- mark_01
->     | `2` -- mark_02
->     | `3` -- mark_03
->     | `4` -- mark_04
->     | `5` -- mark_05
->     | `6` -- mark_06
->     | `7` -- mark_07
->     | `8` -- mark_08
->     | `9` -- mark_09
->     | `10` -- mark_heart
->     | `11` -- mark_star
->     | `12` -- mark_x
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
 > ```
 
-#### Method: UnitDeBuff
+#### Method: GetUnitScreenPosition
 ```lua
-(method) X2Unit:UnitDeBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), deBuffIndex: number)
-  -> unitDebuffInfo: BuffInfo
+(method) X2Unit:GetUnitScreenPosition(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> x: number|nil
+  2. y: number|nil
+  3. z: number|nil
 ```
-> Retrieves debuff information for the specified buff index of the unit if in
+> Retrieves the screen position (x, y, z) of the specified unit if in render
+> range.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*return* `x` — The UI scaled x-coordinate, or `nil` if not in range.
+> 
+> @*return* `y` — The UI scaled y-coordinate, or `nil` if not in range.
+> 
+> @*return* `z` — The UI scaled z-coordinate, or `nil` if not in range.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> ```
+
+#### Method: RemoveAllOverHeadMarker
+```lua
+(method) X2Unit:RemoveAllOverHeadMarker()
+```
+> Removes all over head markers. Cooldown 1s.
+
+#### Method: UnitBuffTooltip
+```lua
+(method) X2Unit:UnitBuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
+  -> unitBuffTooltip: BuffTooltip|nil
+```
+> Retrieves the buff tooltip for the specified buff index of the unit if in
 > render range.
 > 
 > @*param* `unit` — The unit to query.
 > 
-> @*param* `deBuffIndex` — The debuff index. (min: `1`)
+> @*param* `buffIndex` — The buff index. (min: `1`)
 > 
-> @*return* `unitDebuffInfo` — The debuff information, or an empty table if not in range.
+> @*param* `neededInfo` — Optional additional information for the buff.
+> 
+> @*return* `unitBuffTooltip` — The buff tooltip, or `nil` if not in range.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> 
+> -- api/X2Ability
+> -- Values can be added together to get more information. (e.g, `BIK_DESCRIPTION + BIK_RUNTIME_DURATION`)
+> neededInfo:
+>     | `BIK_DESCRIPTION`
+>     | `BIK_RUNTIME_ALL`
+>     | `BIK_RUNTIME_DURATION`
+>     | `BIK_RUNTIME_MINE`
+>     | `BIK_RUNTIME_STACK`
+>     | `BIK_RUNTIME_TIMELEFT`
+> ```
+> 
+> See: [BuffTooltip](../types/classes.md#class-bufftooltip)
+
+#### Method: UnitCastingInfo
+```lua
+(method) X2Unit:UnitCastingInfo(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
+  -> unitCastingInfo: CastingInfo|nil
+```
+> Retrieves casting information for the specified unit if in render range.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*return* `unitCastingInfo` — The casting information, or `nil` if not in range.
 > 
 > ```lua
 > unit:
@@ -4517,18 +5254,7 @@ RACE_ID:
 >     | "team_2_50"
 > ```
 > 
-> See: [BuffInfo](../types/classes.md#class-buffinfo)
-
-#### Method: GetUnitNameById
-```lua
-(method) X2Unit:GetUnitNameById(unitId: string)
-  -> unitName: string|nil
-```
-> Retrieves the name of the unit for the specified unit ID if in render range.
-> 
-> @*param* `unitId` — The unit ID.
-> 
-> @*return* `unitName` — The unit name, or `nil` if not in range.
+> See: [CastingInfo](../types/classes.md#class-castinginfo)
 
 #### Method: GetUnitWorldPositionByTarget
 ```lua
@@ -4888,560 +5614,6 @@ RACE_ID:
 >     | "team_2_50"
 > ```
 
-#### Method: UnitBuffTooltip
-```lua
-(method) X2Unit:UnitBuffTooltip(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number, neededInfo?: `BIK_DESCRIPTION`|`BIK_RUNTIME_ALL`|`BIK_RUNTIME_DURATION`|`BIK_RUNTIME_MINE`|`BIK_RUNTIME_STACK`...(+1))
-  -> unitBuffTooltip: BuffTooltip|nil
-```
-> Retrieves the buff tooltip for the specified buff index of the unit if in
-> render range.
-> 
-> @*param* `unit` — The unit to query.
-> 
-> @*param* `buffIndex` — The buff index. (min: `1`)
-> 
-> @*param* `neededInfo` — Optional additional information for the buff.
-> 
-> @*return* `unitBuffTooltip` — The buff tooltip, or `nil` if not in range.
-> 
-> ```lua
-> unit:
->     | "player"
->     | "target"
->     | "targettarget"
->     | "watchtarget"
->     | "playerpet" -- mount/pet
->     | "playerpet1" -- mount
->     | "playerpet2" -- pet
->     | "slave"
->     | "team1" -- team = the current raid/can be co raid
->     | "team2"
->     | "team3"
->     | "team4"
->     | "team5"
->     | "team6"
->     | "team7"
->     | "team8"
->     | "team9"
->     | "team10"
->     | "team11"
->     | "team12"
->     | "team13"
->     | "team14"
->     | "team15"
->     | "team16"
->     | "team17"
->     | "team18"
->     | "team19"
->     | "team20"
->     | "team21"
->     | "team22"
->     | "team23"
->     | "team24"
->     | "team25"
->     | "team26"
->     | "team27"
->     | "team28"
->     | "team29"
->     | "team30"
->     | "team31"
->     | "team32"
->     | "team33"
->     | "team34"
->     | "team35"
->     | "team36"
->     | "team37"
->     | "team38"
->     | "team39"
->     | "team40"
->     | "team41"
->     | "team42"
->     | "team43"
->     | "team44"
->     | "team45"
->     | "team46"
->     | "team47"
->     | "team48"
->     | "team49"
->     | "team50"
->     | "team_1_1"
->     | "team_1_2"
->     | "team_1_3"
->     | "team_1_4"
->     | "team_1_5"
->     | "team_1_6"
->     | "team_1_7"
->     | "team_1_8"
->     | "team_1_9"
->     | "team_1_10"
->     | "team_1_11"
->     | "team_1_12"
->     | "team_1_13"
->     | "team_1_14"
->     | "team_1_15"
->     | "team_1_16"
->     | "team_1_17"
->     | "team_1_18"
->     | "team_1_19"
->     | "team_1_20"
->     | "team_1_21"
->     | "team_1_22"
->     | "team_1_23"
->     | "team_1_24"
->     | "team_1_25"
->     | "team_1_26"
->     | "team_1_27"
->     | "team_1_28"
->     | "team_1_29"
->     | "team_1_30"
->     | "team_1_31"
->     | "team_1_32"
->     | "team_1_33"
->     | "team_1_34"
->     | "team_1_35"
->     | "team_1_36"
->     | "team_1_37"
->     | "team_1_38"
->     | "team_1_39"
->     | "team_1_40"
->     | "team_1_41"
->     | "team_1_42"
->     | "team_1_43"
->     | "team_1_44"
->     | "team_1_45"
->     | "team_1_46"
->     | "team_1_47"
->     | "team_1_48"
->     | "team_1_49"
->     | "team_1_50"
->     | "team_2_1"
->     | "team_2_2"
->     | "team_2_3"
->     | "team_2_4"
->     | "team_2_5"
->     | "team_2_6"
->     | "team_2_7"
->     | "team_2_8"
->     | "team_2_9"
->     | "team_2_10"
->     | "team_2_11"
->     | "team_2_12"
->     | "team_2_13"
->     | "team_2_14"
->     | "team_2_15"
->     | "team_2_16"
->     | "team_2_17"
->     | "team_2_18"
->     | "team_2_19"
->     | "team_2_20"
->     | "team_2_21"
->     | "team_2_22"
->     | "team_2_23"
->     | "team_2_24"
->     | "team_2_25"
->     | "team_2_26"
->     | "team_2_27"
->     | "team_2_28"
->     | "team_2_29"
->     | "team_2_30"
->     | "team_2_31"
->     | "team_2_32"
->     | "team_2_33"
->     | "team_2_34"
->     | "team_2_35"
->     | "team_2_36"
->     | "team_2_37"
->     | "team_2_38"
->     | "team_2_39"
->     | "team_2_40"
->     | "team_2_41"
->     | "team_2_42"
->     | "team_2_43"
->     | "team_2_44"
->     | "team_2_45"
->     | "team_2_46"
->     | "team_2_47"
->     | "team_2_48"
->     | "team_2_49"
->     | "team_2_50"
-> 
-> -- api/X2Ability
-> -- Values can be added together to get more information. (e.g, `BIK_DESCRIPTION + BIK_RUNTIME_DURATION`)
-> neededInfo:
->     | `BIK_DESCRIPTION`
->     | `BIK_RUNTIME_ALL`
->     | `BIK_RUNTIME_DURATION`
->     | `BIK_RUNTIME_MINE`
->     | `BIK_RUNTIME_STACK`
->     | `BIK_RUNTIME_TIMELEFT`
-> ```
-> 
-> See: [BuffTooltip](../types/classes.md#class-bufftooltip)
-
-#### Method: GetUnitScreenPosition
-```lua
-(method) X2Unit:GetUnitScreenPosition(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153))
-  -> x: number|nil
-  2. y: number|nil
-  3. z: number|nil
-```
-> Retrieves the screen position (x, y, z) of the specified unit if in render
-> range.
-> 
-> @*param* `unit` — The unit to query.
-> 
-> @*return* `x` — The UI scaled x-coordinate, or `nil` if not in range.
-> 
-> @*return* `y` — The UI scaled y-coordinate, or `nil` if not in range.
-> 
-> @*return* `z` — The UI scaled z-coordinate, or `nil` if not in range.
-> 
-> ```lua
-> unit:
->     | "player"
->     | "target"
->     | "targettarget"
->     | "watchtarget"
->     | "playerpet" -- mount/pet
->     | "playerpet1" -- mount
->     | "playerpet2" -- pet
->     | "slave"
->     | "team1" -- team = the current raid/can be co raid
->     | "team2"
->     | "team3"
->     | "team4"
->     | "team5"
->     | "team6"
->     | "team7"
->     | "team8"
->     | "team9"
->     | "team10"
->     | "team11"
->     | "team12"
->     | "team13"
->     | "team14"
->     | "team15"
->     | "team16"
->     | "team17"
->     | "team18"
->     | "team19"
->     | "team20"
->     | "team21"
->     | "team22"
->     | "team23"
->     | "team24"
->     | "team25"
->     | "team26"
->     | "team27"
->     | "team28"
->     | "team29"
->     | "team30"
->     | "team31"
->     | "team32"
->     | "team33"
->     | "team34"
->     | "team35"
->     | "team36"
->     | "team37"
->     | "team38"
->     | "team39"
->     | "team40"
->     | "team41"
->     | "team42"
->     | "team43"
->     | "team44"
->     | "team45"
->     | "team46"
->     | "team47"
->     | "team48"
->     | "team49"
->     | "team50"
->     | "team_1_1"
->     | "team_1_2"
->     | "team_1_3"
->     | "team_1_4"
->     | "team_1_5"
->     | "team_1_6"
->     | "team_1_7"
->     | "team_1_8"
->     | "team_1_9"
->     | "team_1_10"
->     | "team_1_11"
->     | "team_1_12"
->     | "team_1_13"
->     | "team_1_14"
->     | "team_1_15"
->     | "team_1_16"
->     | "team_1_17"
->     | "team_1_18"
->     | "team_1_19"
->     | "team_1_20"
->     | "team_1_21"
->     | "team_1_22"
->     | "team_1_23"
->     | "team_1_24"
->     | "team_1_25"
->     | "team_1_26"
->     | "team_1_27"
->     | "team_1_28"
->     | "team_1_29"
->     | "team_1_30"
->     | "team_1_31"
->     | "team_1_32"
->     | "team_1_33"
->     | "team_1_34"
->     | "team_1_35"
->     | "team_1_36"
->     | "team_1_37"
->     | "team_1_38"
->     | "team_1_39"
->     | "team_1_40"
->     | "team_1_41"
->     | "team_1_42"
->     | "team_1_43"
->     | "team_1_44"
->     | "team_1_45"
->     | "team_1_46"
->     | "team_1_47"
->     | "team_1_48"
->     | "team_1_49"
->     | "team_1_50"
->     | "team_2_1"
->     | "team_2_2"
->     | "team_2_3"
->     | "team_2_4"
->     | "team_2_5"
->     | "team_2_6"
->     | "team_2_7"
->     | "team_2_8"
->     | "team_2_9"
->     | "team_2_10"
->     | "team_2_11"
->     | "team_2_12"
->     | "team_2_13"
->     | "team_2_14"
->     | "team_2_15"
->     | "team_2_16"
->     | "team_2_17"
->     | "team_2_18"
->     | "team_2_19"
->     | "team_2_20"
->     | "team_2_21"
->     | "team_2_22"
->     | "team_2_23"
->     | "team_2_24"
->     | "team_2_25"
->     | "team_2_26"
->     | "team_2_27"
->     | "team_2_28"
->     | "team_2_29"
->     | "team_2_30"
->     | "team_2_31"
->     | "team_2_32"
->     | "team_2_33"
->     | "team_2_34"
->     | "team_2_35"
->     | "team_2_36"
->     | "team_2_37"
->     | "team_2_38"
->     | "team_2_39"
->     | "team_2_40"
->     | "team_2_41"
->     | "team_2_42"
->     | "team_2_43"
->     | "team_2_44"
->     | "team_2_45"
->     | "team_2_46"
->     | "team_2_47"
->     | "team_2_48"
->     | "team_2_49"
->     | "team_2_50"
-> ```
-
-#### Method: UnitBuff
-```lua
-(method) X2Unit:UnitBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number)
-  -> unitBuffInfo: BuffInfo
-```
-> Retrieves buff information for the specified buff index of the unit if in
-> render range.
-> 
-> @*param* `unit` — The unit to query.
-> 
-> @*param* `buffIndex` — The buff index. (min: `1`)
-> 
-> @*return* `unitBuffInfo` — The buff information, or an empty table if not in range.
-> 
-> ```lua
-> unit:
->     | "player"
->     | "target"
->     | "targettarget"
->     | "watchtarget"
->     | "playerpet" -- mount/pet
->     | "playerpet1" -- mount
->     | "playerpet2" -- pet
->     | "slave"
->     | "team1" -- team = the current raid/can be co raid
->     | "team2"
->     | "team3"
->     | "team4"
->     | "team5"
->     | "team6"
->     | "team7"
->     | "team8"
->     | "team9"
->     | "team10"
->     | "team11"
->     | "team12"
->     | "team13"
->     | "team14"
->     | "team15"
->     | "team16"
->     | "team17"
->     | "team18"
->     | "team19"
->     | "team20"
->     | "team21"
->     | "team22"
->     | "team23"
->     | "team24"
->     | "team25"
->     | "team26"
->     | "team27"
->     | "team28"
->     | "team29"
->     | "team30"
->     | "team31"
->     | "team32"
->     | "team33"
->     | "team34"
->     | "team35"
->     | "team36"
->     | "team37"
->     | "team38"
->     | "team39"
->     | "team40"
->     | "team41"
->     | "team42"
->     | "team43"
->     | "team44"
->     | "team45"
->     | "team46"
->     | "team47"
->     | "team48"
->     | "team49"
->     | "team50"
->     | "team_1_1"
->     | "team_1_2"
->     | "team_1_3"
->     | "team_1_4"
->     | "team_1_5"
->     | "team_1_6"
->     | "team_1_7"
->     | "team_1_8"
->     | "team_1_9"
->     | "team_1_10"
->     | "team_1_11"
->     | "team_1_12"
->     | "team_1_13"
->     | "team_1_14"
->     | "team_1_15"
->     | "team_1_16"
->     | "team_1_17"
->     | "team_1_18"
->     | "team_1_19"
->     | "team_1_20"
->     | "team_1_21"
->     | "team_1_22"
->     | "team_1_23"
->     | "team_1_24"
->     | "team_1_25"
->     | "team_1_26"
->     | "team_1_27"
->     | "team_1_28"
->     | "team_1_29"
->     | "team_1_30"
->     | "team_1_31"
->     | "team_1_32"
->     | "team_1_33"
->     | "team_1_34"
->     | "team_1_35"
->     | "team_1_36"
->     | "team_1_37"
->     | "team_1_38"
->     | "team_1_39"
->     | "team_1_40"
->     | "team_1_41"
->     | "team_1_42"
->     | "team_1_43"
->     | "team_1_44"
->     | "team_1_45"
->     | "team_1_46"
->     | "team_1_47"
->     | "team_1_48"
->     | "team_1_49"
->     | "team_1_50"
->     | "team_2_1"
->     | "team_2_2"
->     | "team_2_3"
->     | "team_2_4"
->     | "team_2_5"
->     | "team_2_6"
->     | "team_2_7"
->     | "team_2_8"
->     | "team_2_9"
->     | "team_2_10"
->     | "team_2_11"
->     | "team_2_12"
->     | "team_2_13"
->     | "team_2_14"
->     | "team_2_15"
->     | "team_2_16"
->     | "team_2_17"
->     | "team_2_18"
->     | "team_2_19"
->     | "team_2_20"
->     | "team_2_21"
->     | "team_2_22"
->     | "team_2_23"
->     | "team_2_24"
->     | "team_2_25"
->     | "team_2_26"
->     | "team_2_27"
->     | "team_2_28"
->     | "team_2_29"
->     | "team_2_30"
->     | "team_2_31"
->     | "team_2_32"
->     | "team_2_33"
->     | "team_2_34"
->     | "team_2_35"
->     | "team_2_36"
->     | "team_2_37"
->     | "team_2_38"
->     | "team_2_39"
->     | "team_2_40"
->     | "team_2_41"
->     | "team_2_42"
->     | "team_2_43"
->     | "team_2_44"
->     | "team_2_45"
->     | "team_2_46"
->     | "team_2_47"
->     | "team_2_48"
->     | "team_2_49"
->     | "team_2_50"
-> ```
-> 
-> See: [BuffInfo](../types/classes.md#class-buffinfo)
-
-#### Method: RemoveAllOverHeadMarker
-```lua
-(method) X2Unit:RemoveAllOverHeadMarker()
-```
-> Removes all over head markers. Cooldown 1s.
-
 #### Method: SetOverHeadMarker
 ```lua
 (method) X2Unit:SetOverHeadMarker(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), markerIndex: `10`|`11`|`12`|`1`|`2`...(+7))
@@ -5628,6 +5800,184 @@ RACE_ID:
 >     | `11` -- mark_star
 >     | `12` -- mark_x
 > ```
+
+#### Method: UnitBuff
+```lua
+(method) X2Unit:UnitBuff(unit: "player"|"playerpet"|"playerpet1"|"playerpet2"|"slave"...(+153), buffIndex: number)
+  -> unitBuffInfo: BuffInfo
+```
+> Retrieves buff information for the specified buff index of the unit if in
+> render range.
+> 
+> @*param* `unit` — The unit to query.
+> 
+> @*param* `buffIndex` — The buff index. (min: `1`)
+> 
+> @*return* `unitBuffInfo` — The buff information, or an empty table if not in range.
+> 
+> ```lua
+> unit:
+>     | "player"
+>     | "target"
+>     | "targettarget"
+>     | "watchtarget"
+>     | "playerpet" -- mount/pet
+>     | "playerpet1" -- mount
+>     | "playerpet2" -- pet
+>     | "slave"
+>     | "team1" -- team = the current raid/can be co raid
+>     | "team2"
+>     | "team3"
+>     | "team4"
+>     | "team5"
+>     | "team6"
+>     | "team7"
+>     | "team8"
+>     | "team9"
+>     | "team10"
+>     | "team11"
+>     | "team12"
+>     | "team13"
+>     | "team14"
+>     | "team15"
+>     | "team16"
+>     | "team17"
+>     | "team18"
+>     | "team19"
+>     | "team20"
+>     | "team21"
+>     | "team22"
+>     | "team23"
+>     | "team24"
+>     | "team25"
+>     | "team26"
+>     | "team27"
+>     | "team28"
+>     | "team29"
+>     | "team30"
+>     | "team31"
+>     | "team32"
+>     | "team33"
+>     | "team34"
+>     | "team35"
+>     | "team36"
+>     | "team37"
+>     | "team38"
+>     | "team39"
+>     | "team40"
+>     | "team41"
+>     | "team42"
+>     | "team43"
+>     | "team44"
+>     | "team45"
+>     | "team46"
+>     | "team47"
+>     | "team48"
+>     | "team49"
+>     | "team50"
+>     | "team_1_1"
+>     | "team_1_2"
+>     | "team_1_3"
+>     | "team_1_4"
+>     | "team_1_5"
+>     | "team_1_6"
+>     | "team_1_7"
+>     | "team_1_8"
+>     | "team_1_9"
+>     | "team_1_10"
+>     | "team_1_11"
+>     | "team_1_12"
+>     | "team_1_13"
+>     | "team_1_14"
+>     | "team_1_15"
+>     | "team_1_16"
+>     | "team_1_17"
+>     | "team_1_18"
+>     | "team_1_19"
+>     | "team_1_20"
+>     | "team_1_21"
+>     | "team_1_22"
+>     | "team_1_23"
+>     | "team_1_24"
+>     | "team_1_25"
+>     | "team_1_26"
+>     | "team_1_27"
+>     | "team_1_28"
+>     | "team_1_29"
+>     | "team_1_30"
+>     | "team_1_31"
+>     | "team_1_32"
+>     | "team_1_33"
+>     | "team_1_34"
+>     | "team_1_35"
+>     | "team_1_36"
+>     | "team_1_37"
+>     | "team_1_38"
+>     | "team_1_39"
+>     | "team_1_40"
+>     | "team_1_41"
+>     | "team_1_42"
+>     | "team_1_43"
+>     | "team_1_44"
+>     | "team_1_45"
+>     | "team_1_46"
+>     | "team_1_47"
+>     | "team_1_48"
+>     | "team_1_49"
+>     | "team_1_50"
+>     | "team_2_1"
+>     | "team_2_2"
+>     | "team_2_3"
+>     | "team_2_4"
+>     | "team_2_5"
+>     | "team_2_6"
+>     | "team_2_7"
+>     | "team_2_8"
+>     | "team_2_9"
+>     | "team_2_10"
+>     | "team_2_11"
+>     | "team_2_12"
+>     | "team_2_13"
+>     | "team_2_14"
+>     | "team_2_15"
+>     | "team_2_16"
+>     | "team_2_17"
+>     | "team_2_18"
+>     | "team_2_19"
+>     | "team_2_20"
+>     | "team_2_21"
+>     | "team_2_22"
+>     | "team_2_23"
+>     | "team_2_24"
+>     | "team_2_25"
+>     | "team_2_26"
+>     | "team_2_27"
+>     | "team_2_28"
+>     | "team_2_29"
+>     | "team_2_30"
+>     | "team_2_31"
+>     | "team_2_32"
+>     | "team_2_33"
+>     | "team_2_34"
+>     | "team_2_35"
+>     | "team_2_36"
+>     | "team_2_37"
+>     | "team_2_38"
+>     | "team_2_39"
+>     | "team_2_40"
+>     | "team_2_41"
+>     | "team_2_42"
+>     | "team_2_43"
+>     | "team_2_44"
+>     | "team_2_45"
+>     | "team_2_46"
+>     | "team_2_47"
+>     | "team_2_48"
+>     | "team_2_49"
+>     | "team_2_50"
+> ```
+> 
+> See: [BuffInfo](../types/classes.md#class-buffinfo)
 
 #### Method: UnitRemovableDebuffTooltip
 ```lua

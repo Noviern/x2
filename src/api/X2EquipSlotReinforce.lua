@@ -24,7 +24,7 @@ function X2EquipSlotReinforce:GetAppliedAllBundleEffect() end
 ---@see AppliedAllLevelEffect
 function X2EquipSlotReinforce:GetAppliedAllLevelEffect() end
 
----@TODO: This is only used if X2Player:GetFeatureSet().equipSlotBundleEffect == false. Likely a relic of an early system.
+---@TODO This is only used if X2Player:GetFeatureSet().equipSlotBundleEffect == false. Likely a relic of an early system.
 ---@deprecated
 function X2EquipSlotReinforce:GetAppliedAllSetEffect() end
 
@@ -70,7 +70,6 @@ function X2EquipSlotReinforce:GetLevelEffectInfoByEquipSlot(equipSlotIndex) end
 ---@return number levelEffectStep The current level effect step.
 ---@nodiscard
 function X2EquipSlotReinforce:GetLevelEffectStep(equipSlotIndex) end
-
 
 ---Returns the material info for the specified equiment slot and level.
 ---@param equipSlotIndex EQUIPMENT_SLOT The equipment slot index.
@@ -131,7 +130,7 @@ function X2EquipSlotReinforce:HasNextSetEffect(attributeType) end
 ---@nodiscard
 function X2EquipSlotReinforce:IsFullExp(equipSlotIndex) end
 
----@FIXME:
+---@FIXME
 ---**Warning:** This function does not appear to work.
 ---Checks whether an item is tagged as an in-game shop item.
 ---@param itemType number The item type to check.

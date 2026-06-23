@@ -25,7 +25,7 @@ function RoadMap:SetMapSize(radioValue) end
 ---@param isShow boolean `true` to show NPCs, `false` to hide. (default: `false`)
 function RoadMap:SetRoadMapNpc(isShow) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Shows or hides the leader ping on the RoadMap.
 ---@param isShow boolean `true` to show the leader ping, `false` to hide.
 function RoadMap:ShowLeaderPing(isShow) end

@@ -4,6 +4,8 @@ EGFT_BANK = 0                      -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TY
 EGFT_BUFF = 1                      -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TYPE
 EGFT_QUEST = 3                     -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TYPE
 EGFT_SHOP = 2                      -- api/X2Faction EXPEDITION_GUILD_FUNCTION_TYPE
+EHP_GUILDBANK_ITEM = 5             -- api/X2Faction EXPEDITION_HISTORY_PAGE
+EHP_GUILDBANK_MONEY = 6            -- api/X2Faction EXPEDITION_HISTORY_PAGE
 EHP_INSTANCE = 4                   -- api/X2Faction EXPEDITION_HISTORY_PAGE
 EHP_MANAGEMENT = 1                 -- api/X2Faction EXPEDITION_HISTORY_PAGE
 EHP_STORE = 2                      -- api/X2Faction EXPEDITION_HISTORY_PAGE
@@ -39,6 +41,8 @@ X2Faction = {}                     -- api/X2Faction
 
 ---api/X2Faction
 ---@alias EXPEDITION_HISTORY_PAGE
+---| `EHP_GUILDBANK_ITEM`
+---| `EHP_GUILDBANK_MONEY`
 ---| `EHP_INSTANCE`
 ---| `EHP_MANAGEMENT`
 ---| `EHP_STORE`

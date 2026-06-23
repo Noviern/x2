@@ -21,7 +21,7 @@ X2Auction = {}       -- api/X2Auction
 ---| `PT_BID`
 ---| `PT_PARTITION`
 
----@FIXME: Buggy: only opens if UI was opened previously.
+---@FIXME Buggy: only opens if UI was opened previously.
 ---Requests the market price for an item, triggering the `DIAGONAL_ASR` event.
 ---@param itemType number The type of item.
 ---@param itemGrade ITEM_GRADE_TYPE The grade of the item.

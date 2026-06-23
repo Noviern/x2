@@ -536,7 +536,7 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---| `221` # Team Greenman
 
 
----@TODO: sort these by number
+---@TODO sort these by number
 ---api/Addon
 ---@alias UI_TEXT_CATEGORY_ID
 ---| `ABILITY_CATEGORY_DESCRIPTION_TEXT` # 54
@@ -850,7 +850,7 @@ ZST_INVALID = 0         -- api/Addon ZONE_STATE_TYPE
 ---| `ZST_CONQUEST_WAR`
 ---| `ZST_INVALID`
 
----@FIXME: when a addon is reloaded this doesnt get removed.
+---@FIXME when a addon is reloaded this doesnt get removed.
 ---**Warning:** Buttons are not removed when the addon is reloaded.
 ---
 ---Adds a button to the escape menu for the related addon.
@@ -958,7 +958,7 @@ function ADDON:RegisterContentTriggerFunc(uiCategory, triggerFunc) end
 ---@see Widget
 function ADDON:RegisterContentWidget(uiCategory, widget, triggerFunc) end
 
----@FIXME: Reloading the current addon crashes the game.
+---@FIXME Reloading the current addon crashes the game.
 ---Reloads the addon with the specified name. Avoid reloading the current addon
 ---to prevent game crashes.
 ---@param name string The name of the addon to reload.
@@ -1057,7 +1057,7 @@ function UIParent:ClearUIBound(key) end
 ---@overload fun(self: self, widgetName: "x2editbox", id: string, parentId: Parent): X2Editbox
 function UIParent:CreateWidget(widgetName, id, parentId) end
 
----@FIXME: currently unusable without SetAccountUITimeStamp
+---@FIXME currently unusable without SetAccountUITimeStamp
 ---Retrieves the account UI timestamp for the specified key. This is currently
 ---unusable without its counterpart method `UIParent:SetAccountUITimeStamp`.
 ---@param key string The key to retrieve the timestamp for.
@@ -1176,7 +1176,7 @@ function UIParent:GetUIScale() end
 ---@nodiscard
 function UIParent:GetUIScaleRange() end
 
----@FIXME: `UIParent:SetUIStamp`
+---@FIXME `UIParent:SetUIStamp`
 ---Retrieves the UI stamp for the specified key.
 ---@param key string The key to retrieve the UI stamp for.
 ---@return string|nil uiStamp The UI stamp associated with the key.
@@ -1240,7 +1240,7 @@ function UIParent:IsRenderThreadSupported() end
 ---@param handler function The handler function to release.
 function UIParent:ReleaseEventHandler(eventName, handler) end
 
----@FIXME: More than 255 events will crash the game. multiple handlers to the same event can also crash the game upon addon reload
+---@FIXME More than 255 events will crash the game. multiple handlers to the same event can also crash the game upon addon reload
 ---Sets an event handler for the specified UI event (more than 255 events will
 ---crash the game, multiple handlers to the same event can also crash the game).
 ---@param eventName UIEVENT_TYPE The UI event to set the handler for.
@@ -1966,10 +1966,8 @@ function UIParent:ReleaseEventHandler(eventName, handler) end
 ---@overload fun(self: self, eventName: "UNIT_COMBAT_STATE_CHANGED", handler: UNIT_COMBAT_STATE_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_DEAD_NOTICE", handler: UNIT_DEAD_NOTICE_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_DEAD", handler: UNIT_DEAD_HANDLER)
----@overload fun(self: self, eventName: "UNIT_ENTERED_SIGHT", handler: UNIT_ENTERED_SIGHT_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_EQUIPMENT_CHANGED", handler: UNIT_EQUIPMENT_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_KILL_STREAK", handler: UNIT_KILL_STREAK_HANDLER)
----@overload fun(self: self, eventName: "UNIT_LEAVED_SIGHT", handler: UNIT_LEAVED_SIGHT_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_NAME_CHANGED", handler: UNIT_NAME_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "UNIT_NPC_EQUIPMENT_CHANGED", handler: UNIT_NPC_EQUIPMENT_CHANGED_HANDLER)
 ---@overload fun(self: self, eventName: "UNITFRAME_ABILITY_UPDATE", handler: UNITFRAME_ABILITY_UPDATE_HANDLER)
@@ -2069,22 +2067,22 @@ function UIParent:SetUIScale(scale, immediatelyApply) end
 ---@param use boolean Whether to enable comma usage. The default is set by the game region.
 function UIParent:SetUseInsertComma(use) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the camera view angles in radians.
 ---@param angles Vec3 The camera angles to set.
 function UIParent:SetViewCameraAngles(angles) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the camera view direction.
 ---@param dir Vec3 The camera direction to set.
 function UIParent:SetViewCameraDir(dir) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the camera field of view.
 ---@param fov number The field of view to set.
 function UIParent:SetViewCameraFov(fov) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the camera view position.
 ---@param pos Vec3 The camera position to set.
 function UIParent:SetViewCameraPos(pos) end

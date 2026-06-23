@@ -639,7 +639,7 @@ TextStyle
 ```
 > Retrieves the number of currently visible items in the Listbox.
 > 
-> @*return* `viewItemCount` — The number of visible items. (default: `50`)
+> @*return* `viewItemCount` — The number of visible items. (default: `-1`)
 
 #### Method: GetViewItemsInfo
 ```lua

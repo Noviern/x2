@@ -67,6 +67,7 @@ ZP_RESERVED = 4                          -- api/X2Player ZONE_PERMISSION_WINDOW
 ---| `ZP_RESERVED`
 
 ---Sets the player's appellation name and effect.
+---Cooldown 2s.
 ---@param appellationNameType number The appellation name type.
 ---@param appellationEffectType number The appellation effect type.
 ---@return boolean successful `true` if the change was successful, even if types are invalid.
@@ -169,3 +170,7 @@ function X2Player:GetStampChangeItemInfo() end
 ---@nodiscard
 ---@see UnitAppellationRoute
 function X2Player:GetUnitAppellationRouteList() end
+
+---Retrieves wheather the player is in combat or not.
+---@return boolean isPlayerInCombat `true` if the player is in combat, `false` otherwise.
+function X2Player:PlayerInCombat() end

@@ -7,7 +7,7 @@
 ---@alias ABILITY_CHANGED_HANDLER fun(newAbility: ABILITY_TYPE_NAME, oldAbility: ABILITY_TYPE_NAME)
 ---@alias WIDGET_ABILITY_CHANGED_HANDLER fun(self: Widget, newAbility: ABILITY_TYPE_NAME, oldAbility: ABILITY_TYPE_NAME)
 
----@TODO:
+---@TODO
 ---@alias ABILITY_EXP_CHANGED_HANDLER fun(expStr: string)
 ---@alias WIDGET_ABILITY_EXP_CHANGED_HANDLER fun(self: Widget, expStr: string)
 
@@ -55,7 +55,7 @@
 ---@alias ACTABILITY_MODIFIER_UPDATE_HANDLER fun()
 ---@alias WIDGET_ACTABILITY_MODIFIER_UPDATE_HANDLER fun(self: Widget)
 
----@TODO: I haven't actually seen this happen nor do I know what would cause this to be neccessary.
+---@TODO I haven't actually seen this happen nor do I know what would cause this to be neccessary.
 ---Event triggers when the players proficiencies need to be refreshed.
 ---@alias ACTABILITY_REFRESH_ALL_HANDLER fun()
 ---@alias WIDGET_ACTABILITY_REFRESH_ALL_HANDLER fun(self: Widget)
@@ -68,11 +68,11 @@
 ---@alias ACTION_BAR_PAGE_CHANGED_HANDLER fun(page: number)
 ---@alias WIDGET_ACTION_BAR_PAGE_CHANGED_HANDLER fun(self: Widget, page: number)
 
----@TODO:
+---@TODO
 ---@alias ACTIONS_UPDATE_HANDLER fun()
 ---@alias WIDGET_ACTIONS_UPDATE_HANDLER fun(self: Widget)
 
----@TODO: Make a enum for type
+---@TODO Make a enum for type
 ---Event triggers when a new event has appeared with in the players range.
 ---@alias ADD_GIVEN_QUEST_INFO_HANDLER fun(type: `0`|`1`, questType: number)
 ---@alias WIDGET_ADD_GIVEN_QUEST_INFO_HANDLER fun(self: Widget, type: `0`|`1`, questType: number)
@@ -105,7 +105,7 @@
 ---@alias APPELLATION_STAMP_SET_HANDLER fun()
 ---@alias WIDGET_APPELLATION_STAMP_SET_HANDLER fun(self: Widget)
 
----@TODO: I haven't seen this yet. I suspect its disabled on ArcheRage.
+---@TODO I haven't seen this yet. I suspect its disabled on ArcheRage.
 ---Event triggers when the players labor is low and the game recommends they buy a labor potion from the market place.
 ---@alias ASK_BUY_LABOR_POWER_POTION_HANDLER fun()
 ---@alias WIDGET_ASK_BUY_LABOR_POWER_POTION_HANDLER fun(self: Widget)
@@ -183,12 +183,12 @@
 ---@alias BAG_EXPANDED_HANDLER fun()
 ---@alias WIDGET_BAG_EXPANDED_HANDLER fun(self: Widget)
 
----@TODO: this doesnt trigger every time, maybe its when the bag idx changes for each item?
+---@TODO this doesnt trigger every time, maybe its when the bag idx changes for each item?
 ---Event triggers when the player receives an item to their bag.
 ---@alias BAG_ITEM_CONFIRMED_HANDLER fun()
 ---@alias WIDGET_BAG_ITEM_CONFIRMED_HANDLER fun(self: Widget)
 
----@TODO: This would  trigger when the real id should be shown on top of the slot, unsure how I can trigger this. Maybe a console variable?
+---@TODO This would  trigger when the real id should be shown on top of the slot, unsure how I can trigger this. Maybe a console variable?
 ---@alias BAG_REAL_INDEX_SHOW_HANDLER fun(isRealSlotShow: boolean)
 ---@alias WIDGET_BAG_REAL_INDEX_SHOW_HANDLER fun(self: Widget, isRealSlotShow: boolean)
 
@@ -216,7 +216,7 @@
 ---@alias BANK_EXPANDED_HANDLER fun()
 ---@alias WIDGET_BANK_EXPANDED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias BANK_REAL_INDEX_SHOW_HANDLER fun(isRealSlotShow: boolean)
 ---@alias WIDGET_BANK_REAL_INDEX_SHOW_HANDLER fun(self: Widget, isRealSlotShow: boolean)
 
@@ -276,11 +276,11 @@
 ---@alias BLOCKED_USER_UPDATE_HANDLER fun()
 ---@alias WIDGET_BLOCKED_USER_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias BLOCKED_USERS_INFO_HANDLER fun()
 ---@alias WIDGET_BLOCKED_USERS_INFO_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias BOT_SUSPECT_REPORTED_HANDLER fun(sourceName: string, targetName: string)
 ---@alias WIDGET_BOT_SUSPECT_REPORTED_HANDLER fun(self: Widget, sourceName: string, targetName: string)
 
@@ -325,23 +325,23 @@
 ---@alias CANCEL_REBUILD_HOUSE_CAMERA_MODE_HANDLER fun()
 ---@alias WIDGET_CANCEL_REBUILD_HOUSE_CAMERA_MODE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CANDIDATE_LIST_CHANGED_HANDLER fun()
 ---@alias WIDGET_CANDIDATE_LIST_CHANGED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CANDIDATE_LIST_HIDE_HANDLER fun()
 ---@alias WIDGET_CANDIDATE_LIST_HIDE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CANDIDATE_LIST_SELECTION_CHANGED_HANDLER fun()
 ---@alias WIDGET_CANDIDATE_LIST_SELECTION_CHANGED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CANDIDATE_LIST_SHOW_HANDLER fun()
 ---@alias WIDGET_CANDIDATE_LIST_SHOW_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CHANGE_ACTABILITY_DECO_NUM_HANDLER fun()
 ---@alias WIDGET_CHANGE_ACTABILITY_DECO_NUM_HANDLER fun(self: Widget)
 
@@ -365,7 +365,7 @@
 ---@alias CHANGE_VISUAL_RACE_ENDED_HANDLER fun()
 ---@alias WIDGET_CHANGE_VISUAL_RACE_ENDED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CHANGED_MSG_HANDLER fun()
 ---@alias WIDGET_CHANGED_MSG_HANDLER fun(self: Widget)
 
@@ -405,7 +405,7 @@
 ---@alias CHAT_MSG_QUEST_HANDLER fun(message: string, author: string, authorId: string, isSelf: boolean, tailType: CHAT_BUBBLE_KIND, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)
 ---@alias WIDGET_CHAT_MSG_QUEST_HANDLER fun(self: Widget, message: string, author: string, authorId: string, isSelf: boolean, tailType: CHAT_BUBBLE_KIND, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)
 
----@TODO:
+---@TODO
 ---@alias CHECK_TEXTURE_HANDLER fun(texturePath: string)
 ---@alias WIDGET_CHECK_TEXTURE_HANDLER fun(self: Widget, texturePath: string)
 
@@ -473,11 +473,11 @@
 ---@alias COFFER_INTERACTION_END_HANDLER fun()
 ---@alias WIDGET_COFFER_INTERACTION_END_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias COFFER_INTERACTION_START_HANDLER fun()
 ---@alias WIDGET_COFFER_INTERACTION_START_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias COFFER_REAL_INDEX_SHOW_HANDLER fun(isRealSlotShow)
 ---@alias WIDGET_COFFER_REAL_INDEX_SHOW_HANDLER fun(self: Widget, isRealSlotShow)
 
@@ -520,7 +520,7 @@
 --   ?11 = 12.75,  distance
 -- }
 
----@TODO: all players depending on players Damage/Heal Info: Target in settings>game info
+---@TODO all players depending on players Damage/Heal Info: Target in settings>game info
 ---@alias COMBAT_TEXT_HANDLER fun(sourceUnitId: string, targetUnitId: string, amount: number, a: number, b: string, hitType: COMBAT_HIT_TYPE, d: number, e: boolean, f: number, g: boolean, distance: number)
 ---@alias WIDGET_COMBAT_TEXT_HANDLER fun(self: Widget, sourceUnitId: string, targetUnitId: string, amount: number, a: number, b: string, hitType: COMBAT_HIT_TYPE, d: number, e: boolean, f: number, g: boolean, distance: number)
 
@@ -532,7 +532,7 @@
 ---  collisionSource: COLLISION_SOURCE, subType: COLLISION_PART, mySlave: boolean, damage: number,
 ---  powerType: POWER_TYPE)
 
----@TODO: What is the difference between a combo effect and combo? discord>ceaseless is a combo effect not a combo
+---@TODO What is the difference between a combo effect and combo? discord>ceaseless is a combo effect not a combo
 ---Event triggers when a skill has a combo **effect**.
 ---@alias COMBAT_TEXT_SYNERGY_HANDLER fun(arg: number)
 ---@alias WIDGET_COMBAT_TEXT_SYNERGY_HANDLER fun(self: Widget, arg: number)
@@ -569,7 +569,7 @@
 ---@alias COPY_RAID_MEMBERS_TO_CLIPBOARD_HANDLER fun()
 ---@alias WIDGET_COPY_RAID_MEMBERS_TO_CLIPBOARD_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CRAFT_DOODAD_INFO_HANDLER fun()
 ---@alias WIDGET_CRAFT_DOODAD_INFO_HANDLER fun(self: Widget)
 
@@ -585,7 +585,7 @@
 ---@alias CRAFT_ORDER_ENTRY_SEARCHED_HANDLER fun(infos: CraftOrderEntries, totalCount: number, page: number)
 ---@alias WIDGET_CRAFT_ORDER_ENTRY_SEARCHED_HANDLER fun(self: Widget, infos: CraftOrderEntries, totalCount: number, page: number)
 
----@TODO:
+---@TODO
 ---@alias CRAFT_RECIPE_ADDED_HANDLER fun()
 ---@alias WIDGET_CRAFT_RECIPE_ADDED_HANDLER fun(self: Widget)
 
@@ -593,11 +593,11 @@
 ---@alias CRAFT_STARTED_HANDLER fun(leftCount: number)
 ---@alias WIDGET_CRAFT_STARTED_HANDLER fun(self: Widget, leftCount: number)
 
----@TODO:
+---@TODO
 ---@alias CRAFT_TRAINED_HANDLER fun()
 ---@alias WIDGET_CRAFT_TRAINED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias CRAFTING_END_HANDLER fun()
 ---@alias WIDGET_CRAFTING_END_HANDLER fun(self: Widget)
 
@@ -605,7 +605,7 @@
 ---@alias CRAFTING_START_HANDLER fun(doodadId, count)
 ---@alias WIDGET_CRAFTING_START_HANDLER fun(self: Widget, doodadId, count)
 
----@TODO:
+---@TODO
 ---@alias CREATE_ORIGIN_UCC_ITEM_HANDLER fun()
 ---@alias WIDGET_CREATE_ORIGIN_UCC_ITEM_HANDLER fun(self: Widget)
 
@@ -633,7 +633,7 @@
 ---@alias DIAGONAL_ASR_HANDLER fun(itemName: string, itemGrade: ITEM_GRADE_TYPE, askMarketPriceUi: boolean, values: DiagonalASRInfo)
 ---@alias WIDGET_DIAGONAL_ASR_HANDLER fun(self: Widget, itemName: string, itemGrade: ITEM_GRADE_TYPE, askMarketPriceUi: boolean, values: DiagonalASRInfo)
 
----@TODO:
+---@TODO
 ---@alias DIAGONAL_LINE_HANDLER fun()
 ---@alias WIDGET_DIAGONAL_LINE_HANDLER fun(self: Widget)
 
@@ -665,7 +665,7 @@
 ---@alias DOMINION_GUARD_TOWER_STATE_NOTICE_HANDLER fun(key: DOMINION_GUARD_TOWER_STATE_NOTICE_KEY, name: string, factionName: string)
 ---@alias WIDGET_DOMINION_GUARD_TOWER_STATE_NOTICE_HANDLER fun(self: Widget, key: DOMINION_GUARD_TOWER_STATE_NOTICE_KEY, name: string, factionName: string)
 
----@TODO:
+---@TODO
 ---@alias DOMINION_GUARD_TOWER_UPDATE_TOOLTIP_HANDLER fun(unitId)
 ---@alias WIDGET_DOMINION_GUARD_TOWER_UPDATE_TOOLTIP_HANDLER fun(self: Widget, unitId)
 
@@ -677,7 +677,7 @@
 ---@alias DOMINION_SIEGE_PERIOD_CHANGED_HANDLER fun(siegeInfo: SiegeInfo)
 ---@alias WIDGET_DOMINION_SIEGE_PERIOD_CHANGED_HANDLER fun(self: Widget, siegeInfo: SiegeInfo)
 
----@TODO:
+---@TODO
 ---@alias DOMINION_SIEGE_SYSTEM_NOTICE_HANDLER fun()
 ---@alias WIDGET_DOMINION_SIEGE_SYSTEM_NOTICE_HANDLER fun(self: Widget)
 
@@ -685,7 +685,7 @@
 ---@alias DOMINION_SIEGE_UPDATE_TIMER_HANDLER fun(secondHalf: boolean)
 ---@alias WIDGET_DOMINION_SIEGE_UPDATE_TIMER_HANDLER fun(self: Widget, secondHalf: boolean)
 
----@TODO:
+---@TODO
 ---@alias DOODAD_LOGIC_HANDLER fun()
 ---@alias WIDGET_DOODAD_LOGIC_HANDLER fun(self: Widget)
 
@@ -697,7 +697,7 @@
 ---@alias DOODAD_PHASE_UI_MSG_HANDLER fun(phaseMsgInfo: PhaseMsgInfo)
 ---@alias WIDGET_DOODAD_PHASE_UI_MSG_HANDLER fun(self: Widget, phaseMsgInfo: PhaseMsgInfo)
 
----@TODO: tooltip?
+---@TODO tooltip?
 ---Event triggers when the player hovers over a doodad and the tooltip appears
 ---in the bottom right of the screen.
 ---@alias DRAW_DOODAD_SIGN_TAG_HANDLER fun(tooltip: nil)
@@ -727,15 +727,15 @@
 ---@alias ENABLE_TEAM_AREA_INVITATION_HANDLER fun(enable: boolean)
 ---@alias WIDGET_ENABLE_TEAM_AREA_INVITATION_HANDLER fun(self: Widget, enable: boolean)
 
----@TODO:
+---@TODO
 ---@alias ENCHANT_EXAMINE_HANDLER fun()
 ---@alias WIDGET_ENCHANT_EXAMINE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias ENCHANT_RESULT_HANDLER fun(resultCode, itemLink, oldGrade, newGrade, breakRewardItemType, breakRewardItemCount, breakRewardByMail)
 ---@alias WIDGET_ENCHANT_RESULT_HANDLER fun(self: Widget, resultCode, itemLink, oldGrade, newGrade, breakRewardItemType, breakRewardItemCount, breakRewardByMail)
 
----@TODO:
+---@TODO
 ---@alias ENCHANT_SAY_ABILITY_HANDLER fun()
 ---@alias WIDGET_ENCHANT_SAY_ABILITY_HANDLER fun(self: Widget)
 
@@ -747,7 +747,7 @@
 ---@alias END_QUEST_CHAT_BUBBLE_HANDLER fun(playedBubble: boolean)
 ---@alias WIDGET_END_QUEST_CHAT_BUBBLE_HANDLER fun(self: Widget, playedBubble: boolean)
 
----@TODO:
+---@TODO
 ---@alias ENDED_DUEL_HANDLER fun()
 ---@alias WIDGET_ENDED_DUEL_HANDLER fun(self: Widget)
 
@@ -763,7 +763,7 @@
 ---@alias ENTER_GACHA_LOOT_MODE_HANDLER fun()
 ---@alias WIDGET_ENTER_GACHA_LOOT_MODE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias ENTER_ITEM_LOOK_CONVERT_MODE_HANDLER fun()
 ---@alias WIDGET_ENTER_ITEM_LOOK_CONVERT_MODE_HANDLER fun(self: Widget)
 
@@ -787,7 +787,7 @@
 ---@alias ENTERED_WORLD_HANDLER fun(unknown: boolean)
 ---@alias WIDGET_ENTERED_WORLD_HANDLER fun(self: Widget, unknown: boolean)
 
----@TODO:
+---@TODO
 ---@alias EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT_HANDLER fun()
 ---@alias WIDGET_EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT_HANDLER fun(self: Widget)
 
@@ -828,11 +828,11 @@
 ---@alias ESCAPE_START_HANDLER fun(waitTime: number)
 ---@alias WIDGET_ESCAPE_START_HANDLER fun(self: Widget, waitTime: number)
 
----@TODO:
+---@TODO
 ---@alias EVENT_SCHEDULE_START_HANDLER fun(msg)
 ---@alias WIDGET_EVENT_SCHEDULE_START_HANDLER fun(self: Widget, msg)
 
----@TODO:
+---@TODO
 ---@alias EVENT_SCHEDULE_STOP_HANDLER fun(msg)
 ---@alias WIDGET_EVENT_SCHEDULE_STOP_HANDLER fun(self: Widget, msg)
 
@@ -860,23 +860,23 @@
 ---@alias EXPEDITION_HISTORY_HANDLER fun(tabId: number)
 ---@alias WIDGET_EXPEDITION_HISTORY_HANDLER fun(self: Widget, tabId: number)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_LEVEL_UP_HANDLER fun(level)
 ---@alias WIDGET_EXPEDITION_LEVEL_UP_HANDLER fun(self: Widget, level)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT_HANDLER fun(charId)
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT_HANDLER fun(self: Widget, charId)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_APPLICANT_ADD_HANDLER fun(expeditionId)
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_ADD_HANDLER fun(self: Widget, expeditionId)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_APPLICANT_DEL_HANDLER fun(expeditionId)
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_DEL_HANDLER fun(self: Widget, expeditionId)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_APPLICANT_REJECT_HANDLER fun(charId)
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_APPLICANT_REJECT_HANDLER fun(self: Widget, charId)
 
@@ -884,7 +884,7 @@
 ---@alias EXPEDITION_MANAGEMENT_APPLICANTS_HANDLER fun(infos: ExpeditionApplicant[])
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_APPLICANTS_HANDLER fun(self: Widget, infos: ExpeditionApplicant[])
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED_HANDLER fun(self: Widget)
 
@@ -900,15 +900,15 @@
 ---@alias EXPEDITION_MANAGEMENT_MEMBERS_INFO_HANDLER fun(totalCount: number, startIndex: number, memberInfos: MemberInfo[])
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_MEMBERS_INFO_HANDLER fun(self: Widget, totalCount: number, startIndex: number, memberInfos: MemberInfo[])
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_POLICY_CHANGED_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_POLICY_CHANGED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_RECRUITMENT_ADD_HANDLER fun(info)
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_RECRUITMENT_ADD_HANDLER fun(self: Widget, info)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_RECRUITMENT_DEL_HANDLER fun(expeditionId)
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_RECRUITMENT_DEL_HANDLER fun(self: Widget, expeditionId)
 
@@ -916,7 +916,7 @@
 ---@alias EXPEDITION_MANAGEMENT_RECRUITMENTS_HANDLER fun(total: number, perPageItemCount: number, infos: GuildRecruitmentInfo[])
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_RECRUITMENTS_HANDLER fun(self: Widget, total: number, perPageItemCount: number, infos: GuildRecruitmentInfo[])
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_MANAGEMENT_ROLE_CHANGED_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_ROLE_CHANGED_HANDLER fun(self: Widget)
 
@@ -924,19 +924,19 @@
 ---@alias EXPEDITION_MANAGEMENT_UPDATED_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_MANAGEMENT_UPDATED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_RANKING_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_RANKING_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_SUMMON_SUGGEST_HANDLER fun()
 ---@alias WIDGET_EXPEDITION_SUMMON_SUGGEST_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_WAR_DECLARATION_FAILED_HANDLER fun(errorMsg, param)
 ---@alias WIDGET_EXPEDITION_WAR_DECLARATION_FAILED_HANDLER fun(self: Widget, errorMsg, param)
 
----@TODO:
+---@TODO
 ---@alias EXPEDITION_WAR_DECLARATION_MONEY_HANDLER fun(unitId, name, money)
 ---@alias WIDGET_EXPEDITION_WAR_DECLARATION_MONEY_HANDLER fun(self: Widget, unitId, name, money)
 
@@ -956,7 +956,7 @@
 ---@alias EXPIRED_ITEM_HANDLER fun(itemLinkText: string)
 ---@alias WIDGET_EXPIRED_ITEM_HANDLER fun(self: Widget, itemLinkText: string)
 
----@TODO:
+---@TODO
 ---@alias FACTION_CHANGED_HANDLER fun()
 ---@alias WIDGET_FACTION_CHANGED_HANDLER fun(self: Widget)
 
@@ -972,20 +972,20 @@
 ---@alias FACTION_COMPETITION_UPDATE_POINT_HANDLER fun(infos: FactionCompetitionPointInfo)
 ---@alias WIDGET_FACTION_COMPETITION_UPDATE_POINT_HANDLER fun(self: Widget, infos: FactionCompetitionPointInfo)
 
----@TODO:
+---@TODO
 ---@alias FACTION_RELATION_ACCEPTED_HANDLER fun(name, factionName)
 ---@alias WIDGET_FACTION_RELATION_ACCEPTED_HANDLER fun(self: Widget, name, factionName)
 
----@TODO: i think the only happens when a relation starts
+---@TODO i think the only happens when a relation starts
 ---Event triggers when a faction relation changes.
 ---@alias FACTION_RELATION_CHANGED_HANDLER fun(isHostile: boolean, f1Name: string, f2Name: string)
 ---@alias WIDGET_FACTION_RELATION_CHANGED_HANDLER fun(self: Widget, isHostile: boolean, f1Name: string, f2Name: string)
 
----@TODO:
+---@TODO
 ---@alias FACTION_RELATION_COUNT_HANDLER fun()
 ---@alias WIDGET_FACTION_RELATION_COUNT_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias FACTION_RELATION_DENIED_HANDLER fun(name)
 ---@alias WIDGET_FACTION_RELATION_DENIED_HANDLER fun(self: Widget, name)
 
@@ -993,11 +993,11 @@
 ---@alias FACTION_RELATION_HISTORY_HANDLER fun()
 ---@alias WIDGET_FACTION_RELATION_HISTORY_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias FACTION_RELATION_REQUESTED_HANDLER fun(name, factionName)
 ---@alias WIDGET_FACTION_RELATION_REQUESTED_HANDLER fun(self: Widget, name, factionName)
 
----@TODO: i think the only happens when a relation ends
+---@TODO i think the only happens when a relation ends
 ---Event triggers when a faction relation will change.
 ---@alias FACTION_RELATION_WILL_CHANGE_HANDLER fun(f1Name: string, f2Name: string)
 ---@alias WIDGET_FACTION_RELATION_WILL_CHANGE_HANDLER fun(self: Widget, f1Name: string, f2Name: string)
@@ -1010,59 +1010,59 @@
 ---@alias FAILED_TO_SET_PET_AUTO_SKILL_HANDLER fun(mateType: MATE_TYPE)
 ---@alias WIDGET_FAILED_TO_SET_PET_AUTO_SKILL_HANDLER fun(self: Widget, mateType: MATE_TYPE)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_ERROR_HANDLER fun(msg)
 ---@alias WIDGET_FAMILY_ERROR_HANDLER fun(self: Widget, msg)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_EXP_ADD_HANDLER fun(amount)
 ---@alias WIDGET_FAMILY_EXP_ADD_HANDLER fun(self: Widget, amount)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_INFO_REFRESH_HANDLER fun()
 ---@alias WIDGET_FAMILY_INFO_REFRESH_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_LEVEL_UP_HANDLER fun(levelName)
 ---@alias WIDGET_FAMILY_LEVEL_UP_HANDLER fun(self: Widget, levelName)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_MEMBER_HANDLER fun(owner, member, role, title)
 ---@alias WIDGET_FAMILY_MEMBER_HANDLER fun(self: Widget, owner, member, role, title)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_MEMBER_ADDED_HANDLER fun(owner, member, title)
 ---@alias WIDGET_FAMILY_MEMBER_ADDED_HANDLER fun(self: Widget, owner, member, title)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_MEMBER_KICKED_HANDLER fun(member)
 ---@alias WIDGET_FAMILY_MEMBER_KICKED_HANDLER fun(self: Widget, member)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_MEMBER_LEFT_HANDLER fun(member)
 ---@alias WIDGET_FAMILY_MEMBER_LEFT_HANDLER fun(self: Widget, member)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_MEMBER_ONLINE_HANDLER fun()
 ---@alias WIDGET_FAMILY_MEMBER_ONLINE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_MGR_HANDLER fun()
 ---@alias WIDGET_FAMILY_MGR_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_NAME_CHANGED_HANDLER fun(FAMILY_NAME_CHANGED)
 ---@alias WIDGET_FAMILY_NAME_CHANGED_HANDLER fun(self: Widget, FAMILY_NAME_CHANGED)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_OWNER_CHANGED_HANDLER fun(owner)
 ---@alias WIDGET_FAMILY_OWNER_CHANGED_HANDLER fun(self: Widget, owner)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_REFRESH_HANDLER fun()
 ---@alias WIDGET_FAMILY_REFRESH_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias FAMILY_REMOVED_HANDLER fun()
 ---@alias WIDGET_FAMILY_REMOVED_HANDLER fun(self: Widget)
 
@@ -1102,7 +1102,7 @@
 ---@alias GACHA_LOOT_PACK_RESULT_HANDLER fun(results: GachaLootPackResult)
 ---@alias WIDGET_GACHA_LOOT_PACK_RESULT_HANDLER fun(self: Widget, results: GachaLootPackResult)
 
----@TODO:
+---@TODO
 ---@alias GAME_EVENT_EMPTY_HANDLER fun()
 ---@alias WIDGET_GAME_EVENT_EMPTY_HANDLER fun(self: Widget)
 
@@ -1114,7 +1114,7 @@
 ---@alias GAME_EVENT_INFO_REQUESTED_HANDLER fun()
 ---@alias WIDGET_GAME_EVENT_INFO_REQUESTED_HANDLER fun(self: Widget)
 
----@TODO: triggered when opening beauty shop and triggers when you open the full kit demo window and then "randomly" when while the window is open
+---@TODO triggered when opening beauty shop and triggers when you open the full kit demo window and then "randomly" when while the window is open
 ---@alias GAME_SCHEDULE_HANDLER fun()
 ---@alias WIDGET_GAME_SCHEDULE_HANDLER fun(self: Widget)
 
@@ -1131,11 +1131,11 @@
 ---@alias GOODS_MAIL_INBOX_ITEM_TAKEN_HANDLER fun(index)
 ---@alias WIDGET_GOODS_MAIL_INBOX_ITEM_TAKEN_HANDLER fun(self: Widget, index)
 
----@TODO:
+---@TODO
 ---@alias GOODS_MAIL_INBOX_MONEY_TAKEN_HANDLER fun()
 ---@alias WIDGET_GOODS_MAIL_INBOX_MONEY_TAKEN_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias GOODS_MAIL_INBOX_TAX_PAID_HANDLER fun()
 ---@alias WIDGET_GOODS_MAIL_INBOX_TAX_PAID_HANDLER fun(self: Widget)
 
@@ -1143,19 +1143,19 @@
 ---@alias GOODS_MAIL_INBOX_UPDATE_HANDLER fun(read: boolean, arg: number)
 ---@alias WIDGET_GOODS_MAIL_INBOX_UPDATE_HANDLER fun(self: Widget, read: boolean, arg: number)
 
----@TODO:
+---@TODO
 ---@alias GOODS_MAIL_RETURNED_HANDLER fun()
 ---@alias WIDGET_GOODS_MAIL_RETURNED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias GOODS_MAIL_SENT_SUCCESS_HANDLER fun()
 ---@alias WIDGET_GOODS_MAIL_SENT_SUCCESS_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias GOODS_MAIL_SENTBOX_UPDATE_HANDLER fun()
 ---@alias WIDGET_GOODS_MAIL_SENTBOX_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias GOODS_MAIL_WRITE_ITEM_UPDATE_HANDLER fun()
 ---@alias WIDGET_GOODS_MAIL_WRITE_ITEM_UPDATE_HANDLER fun(self: Widget)
 
@@ -1171,7 +1171,7 @@
 ---@alias GUARDTOWER_HEALTH_CHANGED_HANDLER fun(arg1: string, arg2: string, arg3: string)
 ---@alias WIDGET_GUARDTOWER_HEALTH_CHANGED_HANDLER fun(self: Widget, arg1: string, arg2: string, arg3: string)
 
----@TODO:
+---@TODO
 ---@alias GUILD_BANK_INDEX_SHOW_HANDLER fun() -- Crash
 ---@alias WIDGET_GUILD_BANK_INDEX_SHOW_HANDLER fun(self: Widget) -- Crash
 
@@ -1179,7 +1179,7 @@
 ---@alias GUILD_BANK_INTERACTION_END_HANDLER fun()
 ---@alias WIDGET_GUILD_BANK_INTERACTION_END_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias GUILD_BANK_INTERACTION_START_HANDLER fun()
 ---@alias WIDGET_GUILD_BANK_INTERACTION_START_HANDLER fun(self: Widget)
 
@@ -1187,11 +1187,11 @@
 ---@alias GUILD_BANK_INVEN_SHOW_HANDLER fun()
 ---@alias WIDGET_GUILD_BANK_INVEN_SHOW_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias GUILD_BANK_MONEY_UPDATE_HANDLER fun()
 ---@alias WIDGET_GUILD_BANK_MONEY_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias GUILD_BANK_REAL_INDEX_SHOW_HANDLER fun()
 ---@alias WIDGET_GUILD_BANK_REAL_INDEX_SHOW_HANDLER fun(self: Widget)
 
@@ -1219,7 +1219,7 @@
 ---@alias HEIR_LEVEL_UP_HANDLER fun(myUnit: boolean, unitId: string)
 ---@alias WIDGET_HEIR_LEVEL_UP_HANDLER fun(self: Widget, myUnit: boolean, unitId: string)
 
----@TODO: I think this is part of a old/beta heir skills when you could purchases skills from the arena shop.
+---@TODO I think this is part of a old/beta heir skills when you could purchases skills from the arena shop.
 ---@alias HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER fun(activeType: number, ability: number, text: string, pos: HEIR_SKILL_TYPE)
 ---@alias WIDGET_HEIR_SKILL_ACTIVE_TYPE_MSG_HANDLER fun(self: Widget, activeType: number, ability: number, text: string, pos: HEIR_SKILL_TYPE)
 
@@ -1244,11 +1244,11 @@
 ---@alias HERO_ANNOUNCE_REMAIN_TIME_HANDLER fun(remainTime: number, isStartTime: boolean)
 ---@alias WIDGET_HERO_ANNOUNCE_REMAIN_TIME_HANDLER fun(self: Widget, remainTime: number, isStartTime: boolean)
 
----@TODO:
+---@TODO
 ---@alias HERO_CANDIDATE_NOTI_HANDLER fun()
 ---@alias WIDGET_HERO_CANDIDATE_NOTI_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias HERO_CANDIDATES_ANNOUNCED_HANDLER fun()
 ---@alias WIDGET_HERO_CANDIDATES_ANNOUNCED_HANDLER fun(self: Widget)
 
@@ -1256,7 +1256,7 @@
 ---@alias HERO_ELECTION_HANDLER fun()
 ---@alias WIDGET_HERO_ELECTION_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias HERO_ELECTION_DAY_ALERT_HANDLER fun(title, desc)
 ---@alias WIDGET_HERO_ELECTION_DAY_ALERT_HANDLER fun(self: Widget, title, desc)
 
@@ -1268,7 +1268,7 @@
 ---@alias HERO_ELECTION_VOTED_HANDLER fun()
 ---@alias WIDGET_HERO_ELECTION_VOTED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias HERO_NOTI_HANDLER fun()
 ---@alias WIDGET_HERO_NOTI_HANDLER fun(self: Widget)
 
@@ -1276,7 +1276,7 @@
 ---@alias HERO_RANK_DATA_RETRIEVED_HANDLER fun(factionID: FACTION_TYPE)
 ---@alias WIDGET_HERO_RANK_DATA_RETRIEVED_HANDLER fun(self: Widget, factionID: FACTION_TYPE)
 
----@TODO:
+---@TODO
 ---@alias HERO_RANK_DATA_TIMEOUT_HANDLER fun()
 ---@alias WIDGET_HERO_RANK_DATA_TIMEOUT_HANDLER fun(self: Widget)
 
@@ -1308,7 +1308,7 @@
 ---@alias HOUSE_BUILD_INFO_HANDLER fun(hType: HOUSE_TYPE, baseTax: string, hTax: string, heavyTaxHouseCount: number, normalTaxHouseCount: number, isHeavyTaxHouse: boolean, hostileTaxRate: number, monopolyTaxRate: number, depositString: string, taxType: HOUSING_TAX, completion: boolean)
 ---@alias WIDGET_HOUSE_BUILD_INFO_HANDLER fun(self: Widget, hType: HOUSE_TYPE, baseTax: string, hTax: string, heavyTaxHouseCount: number, normalTaxHouseCount: number, isHeavyTaxHouse: boolean, hostileTaxRate: number, monopolyTaxRate: number, depositString: string, taxType: HOUSING_TAX, completion: boolean)
 
----@TODO:
+---@TODO
 ---@alias HOUSE_BUY_FAIL_HANDLER fun()
 ---@alias WIDGET_HOUSE_BUY_FAIL_HANDLER fun(self: Widget)
 
@@ -1324,15 +1324,15 @@
 ---@alias HOUSE_CANCEL_SELL_SUCCESS_HANDLER fun(houseName: string)
 ---@alias WIDGET_HOUSE_CANCEL_SELL_SUCCESS_HANDLER fun(self: Widget, houseName: string)
 
----@TODO:
+---@TODO
 ---@alias HOUSE_DECO_UPDATED_HANDLER fun()
 ---@alias WIDGET_HOUSE_DECO_UPDATED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias HOUSE_FARM_MSG_HANDLER fun(name, total, harvestable)
 ---@alias WIDGET_HOUSE_FARM_MSG_HANDLER fun(self: Widget, name, total, harvestable)
 
----@TODO:
+---@TODO
 ---@alias HOUSE_INFO_UPDATED_HANDLER fun()
 ---@alias WIDGET_HOUSE_INFO_UPDATED_HANDLER fun(self: Widget)
 
@@ -1352,7 +1352,7 @@
 ---@alias HOUSE_REBUILD_TAX_INFO_HANDLER fun()
 ---@alias WIDGET_HOUSE_REBUILD_TAX_INFO_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias HOUSE_ROTATE_CONFIRM_HANDLER fun()
 ---@alias WIDGET_HOUSE_ROTATE_CONFIRM_HANDLER fun(self: Widget)
 
@@ -1372,11 +1372,11 @@
 ---@alias HOUSE_STEP_INFO_UPDATED_HANDLER fun(structureType: HOUSE_STRUCTURE_TYPE)
 ---@alias WIDGET_HOUSE_STEP_INFO_UPDATED_HANDLER fun(self: Widget, structureType: HOUSE_STRUCTURE_TYPE)
 
----@TODO:
+---@TODO
 ---@alias HOUSE_TAX_INFO_HANDLER fun(dominionTaxRate, hostileTaxRate, taxString, dueTime, prepayTime, weeksWithoutPay, weeksPrepay, isAlreadyPaid, isHeavyTaxHouse, depositString, taxType, id)
 ---@alias WIDGET_HOUSE_TAX_INFO_HANDLER fun(self: Widget, dominionTaxRate, hostileTaxRate, taxString, dueTime, prepayTime, weeksWithoutPay, weeksPrepay, isAlreadyPaid, isHeavyTaxHouse, depositString, taxType, id)
 
----@TODO:
+---@TODO
 ---@alias HOUSING_UCC_CLOSE_HANDLER fun()
 ---@alias WIDGET_HOUSING_UCC_CLOSE_HANDLER fun(self: Widget)
 
@@ -1429,7 +1429,7 @@
 ---@alias INGAME_SHOP_BUY_RESULT_HANDLER fun()
 ---@alias WIDGET_INGAME_SHOP_BUY_RESULT_HANDLER fun(self: Widget)
 
----@TODO: not sure if this is 100% accurate if all quests are complete.
+---@TODO not sure if this is 100% accurate if all quests are complete.
 ---Event triggers when the player loads into the world to initalize the chronicle quest window.
 ---@alias INIT_CHRONICLE_INFO_HANDLER fun()
 ---@alias WIDGET_INIT_CHRONICLE_INFO_HANDLER fun(self: Widget)
@@ -1442,7 +1442,7 @@
 ---@alias INSTANCE_ENTERABLE_MSG_HANDLER fun(info: InstanceEnterableInfo)
 ---@alias WIDGET_INSTANCE_ENTERABLE_MSG_HANDLER fun(self: Widget, info: InstanceEnterableInfo)
 
----@TODO:
+---@TODO
 ---@alias INSTANT_GAME_BEST_RATING_REWARD_HANDLER fun()
 ---@alias WIDGET_INSTANT_GAME_BEST_RATING_REWARD_HANDLER fun(self: Widget)
 
@@ -1450,7 +1450,7 @@
 ---@alias INSTANT_GAME_END_HANDLER fun()
 ---@alias WIDGET_INSTANT_GAME_END_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias INSTANT_GAME_JOIN_APPLY_HANDLER fun()
 ---@alias WIDGET_INSTANT_GAME_JOIN_APPLY_HANDLER fun(self: Widget)
 
@@ -1470,11 +1470,11 @@
 ---@alias INSTANT_GAME_READY_HANDLER fun()
 ---@alias WIDGET_INSTANT_GAME_READY_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias INSTANT_GAME_RETIRE_HANDLER fun()
 ---@alias WIDGET_INSTANT_GAME_RETIRE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias INSTANT_GAME_ROUND_RESULT_HANDLER fun(resultState, resultRound)
 ---@alias WIDGET_INSTANT_GAME_ROUND_RESULT_HANDLER fun(self: Widget, resultState, resultRound)
 
@@ -1482,11 +1482,11 @@
 ---@alias INSTANT_GAME_START_HANDLER fun()
 ---@alias WIDGET_INSTANT_GAME_START_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias INSTANT_GAME_START_POINT_RETURN_MSG_HANDLER fun(remainSec: number)
 ---@alias WIDGET_INSTANT_GAME_START_POINT_RETURN_MSG_HANDLER fun(self: Widget, remainSec: number)
 
----@TODO:
+---@TODO
 ---@alias INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME_HANDLER fun(remainTime)
 ---@alias WIDGET_INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME_HANDLER fun(self: Widget, remainTime)
 
@@ -1498,11 +1498,11 @@
 ---@alias INTERACTION_END_HANDLER fun()
 ---@alias WIDGET_INTERACTION_END_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias INTERACTION_START_HANDLER fun()
 ---@alias WIDGET_INTERACTION_START_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias INVALID_NAME_POLICY_HANDLER fun(namePolicyType)
 ---@alias WIDGET_INVALID_NAME_POLICY_HANDLER fun(self: Widget, namePolicyType)
 
@@ -1538,7 +1538,7 @@
 ---@alias ITEM_REFURBISHMENT_RESULT_HANDLER fun(resultCode: ITEM_GRADE_ENCHANT_RESULT, itemLink: string, beforeScale: string, afterScale: string)
 ---@alias WIDGET_ITEM_REFURBISHMENT_RESULT_HANDLER fun(self: Widget, resultCode: ITEM_GRADE_ENCHANT_RESULT, itemLink: string, beforeScale: string, afterScale: string)
 
----@TODO:
+---@TODO
 ---@alias ITEM_SMELTING_RESULT_HANDLER fun(resultCode, itemLink, smeltingItemType)
 ---@alias WIDGET_ITEM_SMELTING_RESULT_HANDLER fun(self: Widget, resultCode, itemLink, smeltingItemType)
 
@@ -1638,7 +1638,7 @@
 ---@alias LOOTING_RULE_METHOD_CHANGED_HANDLER fun(lootMethod: number)
 ---@alias WIDGET_LOOTING_RULE_METHOD_CHANGED_HANDLER fun(self: Widget, lootMethod: number)
 
----@TODO:
+---@TODO
 ---@alias LP_MANAGE_CHARACTER_CHANGED_HANDLER fun()
 ---@alias WIDGET_LP_MANAGE_CHARACTER_CHANGED_HANDLER fun(self: Widget)
 
@@ -1662,7 +1662,7 @@
 ---@alias MAIL_INBOX_UPDATE_HANDLER fun(read: boolean|nil, mailListKind: MAIL_LIST_TYPE|nil)
 ---@alias WIDGET_MAIL_INBOX_UPDATE_HANDLER fun(self: Widget, read: boolean|nil, mailListKind: MAIL_LIST_TYPE|nil)
 
----@TODO:
+---@TODO
 ---@alias MAIL_RETURNED_HANDLER fun()
 ---@alias WIDGET_MAIL_RETURNED_HANDLER fun(self: Widget)
 
@@ -1691,43 +1691,43 @@
 ---@alias MATE_STATE_UPDATE_HANDLER fun(mateType: MATE_TYPE, stateIndex: MATE_STATE)
 ---@alias WIDGET_MATE_STATE_UPDATE_HANDLER fun(self: Widget, mateType: MATE_TYPE, stateIndex: MATE_STATE)
 
----@TODO:
+---@TODO
 ---@alias MEGAPHONE_MESSAGE_HANDLER fun(show, channel, name, message, isMyMessage)
 ---@alias WIDGET_MEGAPHONE_MESSAGE_HANDLER fun(self: Widget, show, channel, name, message, isMyMessage)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_INBOX_ITEM_TAKEN_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_INBOX_ITEM_TAKEN_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_INBOX_MONEY_TAKEN_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_INBOX_MONEY_TAKEN_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_INBOX_TAX_PAID_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_INBOX_TAX_PAID_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_INBOX_UPDATE_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_INBOX_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_RETURNED_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_RETURNED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_SENT_SUCCESS_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_SENT_SUCCESS_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_SENTBOX_UPDATE_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_SENTBOX_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MIA_MAIL_WRITE_ITEM_UPDATE_HANDLER fun()
 ---@alias WIDGET_MIA_MAIL_WRITE_ITEM_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MINE_AMOUNT_HANDLER fun()
 ---@alias WIDGET_MINE_AMOUNT_HANDLER fun(self: Widget)
 
@@ -1739,11 +1739,11 @@
 ---@alias MODE_ACTIONS_UPDATE_HANDLER fun()
 ---@alias WIDGET_MODE_ACTIONS_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MONEY_ACQUISITION_BY_LOOT_HANDLER fun(charName, moneyStr)
 ---@alias WIDGET_MONEY_ACQUISITION_BY_LOOT_HANDLER fun(self: Widget, charName, moneyStr)
 
----@TODO:
+---@TODO
 ---@alias MOUNT_BAG_UPDATE_HANDLER fun()
 ---@alias WIDGET_MOUNT_BAG_UPDATE_HANDLER fun(self: Widget)
 
@@ -1751,11 +1751,11 @@
 ---@alias MOUNT_PET_HANDLER fun(mateType: MATE_TYPE, isMyPet: boolean)
 ---@alias WIDGET_MOUNT_PET_HANDLER fun(self: Widget, mateType: MATE_TYPE, isMyPet: boolean)
 
----@TODO:
+---@TODO
 ---@alias MOUNT_SLOT_CHANGED_HANDLER fun()
 ---@alias WIDGET_MOUNT_SLOT_CHANGED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MOUSE_CLICK_HANDLER fun()
 ---@alias WIDGET_MOUSE_CLICK_HANDLER fun(self: Widget)
 
@@ -1763,7 +1763,7 @@
 ---@alias MOUSE_DOWN_HANDLER fun(widgetId: string)
 ---@alias WIDGET_MOUSE_DOWN_HANDLER fun(self: Widget, widgetId: string)
 
----@TODO:
+---@TODO
 ---@alias MOUSE_UP_HANDLER fun()
 ---@alias WIDGET_MOUSE_UP_HANDLER fun(self: Widget)
 
@@ -1771,15 +1771,15 @@
 ---@alias MOVE_SPEED_CHANGE_HANDLER fun()
 ---@alias WIDGET_MOVE_SPEED_CHANGE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MOVIE_ABORT_HANDLER fun()
 ---@alias WIDGET_MOVIE_ABORT_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MOVIE_LOAD_HANDLER fun()
 ---@alias WIDGET_MOVIE_LOAD_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias MOVIE_STOP_HANDLER fun()
 ---@alias WIDGET_MOVIE_STOP_HANDLER fun(self: Widget)
 
@@ -1799,11 +1799,11 @@
 ---@alias NATION_DOMINION_HANDLER fun(zoneGroupType: ZONE_GROUP_ID, force: boolean)
 ---@alias WIDGET_NATION_DOMINION_HANDLER fun(self: Widget, zoneGroupType: ZONE_GROUP_ID, force: boolean)
 
----@TODO:
+---@TODO
 ---@alias NAVI_MARK_POS_TO_MAP_HANDLER fun()
 ---@alias WIDGET_NAVI_MARK_POS_TO_MAP_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias NAVI_MARK_REMOVE_HANDLER fun()
 ---@alias WIDGET_NAVI_MARK_REMOVE_HANDLER fun(self: Widget)
 
@@ -1819,40 +1819,40 @@
 ---@alias NEXT_SIEGE_INFO_HANDLER fun(siegeInfo: NextSiegeInfo)
 ---@alias WIDGET_NEXT_SIEGE_INFO_HANDLER fun(self: Widget, siegeInfo: NextSiegeInfo)
 
----@TODO:  noticeType 1 = send to chat otherwise send to centerMessage, name could be nil?
+---@TODO  noticeType 1 = send to chat otherwise send to centerMessage, name could be nil?
 ---Event triggers when a gm notice message occurs.
 ---@alias NOTICE_MESSAGE_HANDLER fun(noticeType: number, color: string, visibleTime: number, message: string, name: string)
 ---@alias WIDGET_NOTICE_MESSAGE_HANDLER fun(self: Widget, noticeType: number, color: string, visibleTime: number, message: string, name: string)
 
----@TODO:
+---@TODO
 ---@alias NOTIFY_AUTH_ADVERTISING_MESSAGE_HANDLER fun(msg, remainTime)
 ---@alias WIDGET_NOTIFY_AUTH_ADVERTISING_MESSAGE_HANDLER fun(self: Widget, msg, remainTime)
 
----@TODO:
+---@TODO
 ---@alias NOTIFY_AUTH_BILLING_MESSAGE_HANDLER fun(msg, remainTime)
 ---@alias WIDGET_NOTIFY_AUTH_BILLING_MESSAGE_HANDLER fun(self: Widget, msg, remainTime)
 
----@TODO:
+---@TODO
 ---@alias NOTIFY_AUTH_DISCONNECTION_MESSAGE_HANDLER fun(msg, remainTime)
 ---@alias WIDGET_NOTIFY_AUTH_DISCONNECTION_MESSAGE_HANDLER fun(self: Widget, msg, remainTime)
 
----@TODO:
+---@TODO
 ---@alias NOTIFY_AUTH_FATIGUE_MESSAGE_HANDLER fun(msg, remainTime)
 ---@alias WIDGET_NOTIFY_AUTH_FATIGUE_MESSAGE_HANDLER fun(self: Widget, msg, remainTime)
 
----@TODO:
+---@TODO
 ---@alias NOTIFY_AUTH_NOTICE_MESSAGE_HANDLER fun(message, visibleTime, needCountdown)
 ---@alias WIDGET_NOTIFY_AUTH_NOTICE_MESSAGE_HANDLER fun(self: Widget, message, visibleTime, needCountdown)
 
----@TODO:
+---@TODO
 ---@alias NOTIFY_AUTH_TC_FATIGUE_MESSAGE_HANDLER fun(msg, remainTime)
 ---@alias WIDGET_NOTIFY_AUTH_TC_FATIGUE_MESSAGE_HANDLER fun(self: Widget, msg, remainTime)
 
----@TODO:
+---@TODO
 ---@alias NPC_CRAFT_ERROR_HANDLER fun()
 ---@alias WIDGET_NPC_CRAFT_ERROR_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias NPC_CRAFT_UPDATE_HANDLER fun()
 ---@alias WIDGET_NPC_CRAFT_UPDATE_HANDLER fun(self: Widget)
 
@@ -1864,15 +1864,15 @@
 ---@alias NPC_INTERACTION_START_HANDLER fun(value: "quest", addedValue: NPC_INTERACTION_ADDED_VALUE, npcId: string)
 ---@alias WIDGET_NPC_INTERACTION_START_HANDLER fun(self: Widget, value: "quest", addedValue: NPC_INTERACTION_ADDED_VALUE, npcId: string)
 
----@TODO:
+---@TODO
 ---@alias NPC_UNIT_EQUIPMENT_CHANGED_HANDLER fun()
 ---@alias WIDGET_NPC_UNIT_EQUIPMENT_CHANGED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias NUONS_ARROW_SHOW_HANDLER fun(visible)
 ---@alias WIDGET_NUONS_ARROW_SHOW_HANDLER fun(self: Widget, visible)
 
----@TODO:
+---@TODO
 ---@alias NUONS_ARROW_UI_MSG_HANDLER fun(nuonsMsgInfo)
 ---@alias WIDGET_NUONS_ARROW_UI_MSG_HANDLER fun(self: Widget, nuonsMsgInfo)
 
@@ -1880,15 +1880,15 @@
 ---@alias NUONS_ARROW_UPDATE_HANDLER fun(data: NuonsArrowUpdate[])
 ---@alias WIDGET_NUONS_ARROW_UPDATE_HANDLER fun(self: Widget, data: NuonsArrowUpdate[])
 
----@TODO:
+---@TODO
 ---@alias ONE_AND_ONE_CHAT_ADD_MESSAGE_HANDLER fun(channelId, speakerName, message, isSpeakerGm)
 ---@alias WIDGET_ONE_AND_ONE_CHAT_ADD_MESSAGE_HANDLER fun(self: Widget, channelId, speakerName, message, isSpeakerGm)
 
----@TODO:
+---@TODO
 ---@alias ONE_AND_ONE_CHAT_END_HANDLER fun(channelId)
 ---@alias WIDGET_ONE_AND_ONE_CHAT_END_HANDLER fun(self: Widget, channelId)
 
----@TODO:
+---@TODO
 ---@alias ONE_AND_ONE_CHAT_START_HANDLER fun(channelId, targetName)
 ---@alias WIDGET_ONE_AND_ONE_CHAT_START_HANDLER fun(self: Widget, channelId, targetName)
 
@@ -1908,7 +1908,7 @@
 ---@alias OPEN_CRAFT_ORDER_BOARD_HANDLER fun(tabName: string)
 ---@alias WIDGET_OPEN_CRAFT_ORDER_BOARD_HANDLER fun(self: Widget, tabName: string)
 
----@TODO:
+---@TODO
 ---@alias OPEN_EMBLEM_IMPRINT_UI_HANDLER fun()
 ---@alias WIDGET_OPEN_EMBLEM_IMPRINT_UI_HANDLER fun(self: Widget)
 
@@ -1924,7 +1924,7 @@
 ---@alias OPEN_MUSIC_SHEET_HANDLER fun(isShow: boolean, itemIdString: string, isWide: number)
 ---@alias WIDGET_OPEN_MUSIC_SHEET_HANDLER fun(self: Widget, isShow: boolean, itemIdString: string, isWide: number)
 
----@TODO:
+---@TODO
 ---@alias OPEN_NAVI_DOODAD_NAMING_DIALOG_HANDLER fun()
 ---@alias WIDGET_OPEN_NAVI_DOODAD_NAMING_DIALOG_HANDLER fun(self: Widget)
 
@@ -1932,7 +1932,7 @@
 ---@alias OPEN_PAPER_HANDLER fun(type: "page"|"book", idx: number)
 ---@alias WIDGET_OPEN_PAPER_HANDLER fun(self: Widget, type: "page"|"book", idx: number)
 
----@TODO:
+---@TODO
 ---@alias OPEN_PROMOTION_EVENT_URL_HANDLER fun(url)
 ---@alias WIDGET_OPEN_PROMOTION_EVENT_URL_HANDLER fun(self: Widget, url)
 
@@ -1972,7 +1972,7 @@
 ---@alias PETMATE_UNBOUND_HANDLER fun()
 ---@alias WIDGET_PETMATE_UNBOUND_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias PLAYER_AA_POINT_HANDLER fun(change, changeStr, itemTaskType, info)
 ---@alias WIDGET_PLAYER_AA_POINT_HANDLER fun(self: Widget, change, changeStr, itemTaskType, info)
 
@@ -1980,7 +1980,7 @@
 ---@alias PLAYER_ABILITY_LEVEL_CHANGED_HANDLER fun()
 ---@alias WIDGET_PLAYER_ABILITY_LEVEL_CHANGED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias PLAYER_BANK_AA_POINT_HANDLER fun()
 ---@alias WIDGET_PLAYER_BANK_AA_POINT_HANDLER fun(self: Widget)
 
@@ -1992,7 +1992,7 @@
 ---@alias PLAYER_BM_POINT_HANDLER fun(oldBmPoint: string)
 ---@alias WIDGET_PLAYER_BM_POINT_HANDLER fun(self: Widget, oldBmPoint: string)
 
----@TODO:
+---@TODO
 ---@alias PLAYER_GEAR_POINT_HANDLER fun()
 ---@alias WIDGET_PLAYER_GEAR_POINT_HANDLER fun(self: Widget)
 
@@ -2040,19 +2040,19 @@
 ---@alias PRELIMINARY_EQUIP_UPDATE_HANDLER fun()
 ---@alias WIDGET_PRELIMINARY_EQUIP_UPDATE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias PREMIUM_GRADE_CHANGE_HANDLER fun(prevPremiumGrade, presentPremiumGrade)
 ---@alias WIDGET_PREMIUM_GRADE_CHANGE_HANDLER fun(self: Widget, prevPremiumGrade, presentPremiumGrade)
 
----@TODO:
+---@TODO
 ---@alias PREMIUM_LABORPOWER_CHANGED_HANDLER fun(onlineDiff, offlineDiff)
 ---@alias WIDGET_PREMIUM_LABORPOWER_CHANGED_HANDLER fun(self: Widget, onlineDiff, offlineDiff)
 
----@TODO:
+---@TODO
 ---@alias PREMIUM_POINT_CHANGE_HANDLER fun()
 ---@alias WIDGET_PREMIUM_POINT_CHANGE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias PREMIUM_SERVICE_BUY_RESULT_HANDLER fun(err)
 ---@alias WIDGET_PREMIUM_SERVICE_BUY_RESULT_HANDLER fun(self: Widget, err)
 
@@ -2068,11 +2068,11 @@
 ---@alias PROGRESS_TALK_QUEST_CONTEXT_HANDLER fun(qtype: number, useDirectingMode: boolean, npcId: string, doodadId?: string)
 ---@alias WIDGET_PROGRESS_TALK_QUEST_CONTEXT_HANDLER fun(self: Widget, qtype: number, useDirectingMode: boolean, npcId: string, doodadId?: string)
 
----@TODO:
+---@TODO
 ---@alias QUEST_CHAT_LET_IT_DONE_HANDLER fun()
 ---@alias WIDGET_QUEST_CHAT_LET_IT_DONE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias QUEST_CHAT_RESTART_HANDLER fun()
 ---@alias WIDGET_QUEST_CHAT_RESTART_HANDLER fun(self: Widget)
 
@@ -2088,7 +2088,7 @@
 ---@alias QUEST_CONTEXT_UPDATED_HANDLER fun(qType: number, status: QUEST_STATUS)
 ---@alias WIDGET_QUEST_CONTEXT_UPDATED_HANDLER fun(self: Widget, qType: number, status: QUEST_STATUS)
 
----@TODO:
+---@TODO
 ---@alias QUEST_DIRECTING_MODE_END_HANDLER fun()
 ---@alias WIDGET_QUEST_DIRECTING_MODE_END_HANDLER fun(self: Widget)
 
@@ -2112,7 +2112,7 @@
 ---@alias QUEST_LEFT_TIME_UPDATED_HANDLER fun(qtype: number, leftTime: number)
 ---@alias WIDGET_QUEST_LEFT_TIME_UPDATED_HANDLER fun(self: Widget, qtype: number, leftTime: number)
 
----@TODO: arg2 is for msg_quest > The quest "$1" must be in-progess.
+---@TODO arg2 is for msg_quest > The quest "$1" must be in-progess.
 ---@alias QUEST_MSG_HANDLER fun(arg1: string, arg2: string)
 ---@alias WIDGET_QUEST_MSG_HANDLER fun(self: Widget, arg1: string, arg2: string)
 
@@ -2157,11 +2157,11 @@
 ---@alias RANK_ALARM_MSG_HANDLER fun(rankType: RANK_KIND, msg: string)
 ---@alias WIDGET_RANK_ALARM_MSG_HANDLER fun(self: Widget, rankType: RANK_KIND, msg: string)
 
----@TODO:
+---@TODO
 ---@alias RANK_DATA_RECEIVED_HANDLER fun()
 ---@alias WIDGET_RANK_DATA_RECEIVED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias RANK_LOCK_HANDLER fun()
 ---@alias WIDGET_RANK_LOCK_HANDLER fun(self: Widget)
 
@@ -2179,7 +2179,7 @@
 ---@alias RANK_REWARD_SNAPSHOTS_HANDLER fun(rankType: number, divisionId: number)
 ---@alias WIDGET_RANK_REWARD_SNAPSHOTS_HANDLER fun(self: Widget, rankType: number, divisionId: number)
 
----@TODO:
+---@TODO
 ---@alias RANK_SEASON_RESULT_RECEIVED_HANDLER fun()
 ---@alias WIDGET_RANK_SEASON_RESULT_RECEIVED_HANDLER fun(self: Widget)
 
@@ -2187,7 +2187,7 @@
 ---@alias RANK_SNAPSHOTS_HANDLER fun(rankType: number, divisionId: number)
 ---@alias WIDGET_RANK_SNAPSHOTS_HANDLER fun(self: Widget, rankType: number, divisionId: number)
 
----@TODO:
+---@TODO
 ---@alias RANK_UNLOCK_HANDLER fun()
 ---@alias WIDGET_RANK_UNLOCK_HANDLER fun(self: Widget)
 
@@ -2223,15 +2223,15 @@
 ---@alias REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE_HANDLER fun()
 ---@alias WIDGET_REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias RELOAD_CASH_HANDLER fun(money)
 ---@alias WIDGET_RELOAD_CASH_HANDLER fun(self: Widget, money)
 
----@TODO:
+---@TODO
 ---@alias REMOVE_BOSS_TELESCOPE_INFO_HANDLER fun(arg)
 ---@alias WIDGET_REMOVE_BOSS_TELESCOPE_INFO_HANDLER fun(self: Widget, arg)
 
----@TODO:
+---@TODO
 ---@alias REMOVE_CARRYING_BACKPACK_SLAVE_INFO_HANDLER fun(arg)
 ---@alias WIDGET_REMOVE_CARRYING_BACKPACK_SLAVE_INFO_HANDLER fun(self: Widget, arg)
 
@@ -2267,11 +2267,11 @@
 ---@alias RENAME_PORTAL_HANDLER fun()
 ---@alias WIDGET_RENAME_PORTAL_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias RENEW_ITEM_SUCCEEDED_HANDLER fun()
 ---@alias WIDGET_RENEW_ITEM_SUCCEEDED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias REPORT_BAD_USER_UPDATE_HANDLER fun()
 ---@alias WIDGET_REPORT_BAD_USER_UPDATE_HANDLER fun(self: Widget)
 
@@ -2283,15 +2283,15 @@
 ---@alias REPUTATION_GIVEN_HANDLER fun()
 ---@alias WIDGET_REPUTATION_GIVEN_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias REQUIRE_DELAY_TO_CHAT_HANDLER fun(channel, delay, remain)
 ---@alias WIDGET_REQUIRE_DELAY_TO_CHAT_HANDLER fun(self: Widget, channel, delay, remain)
 
----@TODO:
+---@TODO
 ---@alias REQUIRE_ITEM_TO_CHAT_HANDLER fun(channel)
 ---@alias WIDGET_REQUIRE_ITEM_TO_CHAT_HANDLER fun(self: Widget, channel)
 
----@TODO:
+---@TODO
 ---@alias RESET_INGAME_SHOP_MODELVIEW_HANDLER fun()
 ---@alias WIDGET_RESET_INGAME_SHOP_MODELVIEW_HANDLER fun(self: Widget)
 
@@ -2321,7 +2321,7 @@
 ---@alias RESIDENT_ZONE_STATE_CHANGE_HANDLER fun()
 ---@alias WIDGET_RESIDENT_ZONE_STATE_CHANGE_HANDLER fun(self: Widget)
 
----@TODO: I haven't seen this.
+---@TODO I haven't seen this.
 ---Event triggers when the players favorite crafts are rolledback.
 ---@alias ROLLBACK_FAVORITE_CRAFTS_HANDLER fun(datas: Craft[])
 ---@alias WIDGET_ROLLBACK_FAVORITE_CRAFTS_HANDLER fun(self: Widget, datas: Craft[])
@@ -2359,7 +2359,7 @@
 ---@alias SELECT_SQUAD_LIST_HANDLER fun(data: SelectSquadList)
 ---@alias WIDGET_SELECT_SQUAD_LIST_HANDLER fun(self: Widget, data: SelectSquadList)
 
----@TODO:
+---@TODO
 ---@alias SELECTED_INSTANCE_DIFFICULT_HANDLER fun(difficult)
 ---@alias WIDGET_SELECTED_INSTANCE_DIFFICULT_HANDLER fun(self: Widget, difficult)
 
@@ -2376,7 +2376,7 @@
 ---@alias SET_DEFAULT_EXPAND_RATIO_HANDLER fun(isSameZone: boolean)
 ---@alias WIDGET_SET_DEFAULT_EXPAND_RATIO_HANDLER fun(self: Widget, isSameZone: boolean)
 
----@TODO: the widget it returns has extra properties but unable to get them.
+---@TODO the widget it returns has extra properties but unable to get them.
 ---Event triggers when a effect icon should be visible on the map.
 ---@alias SET_EFFECT_ICON_VISIBLE_HANDLER fun(isShow: boolean, arg: Widget)
 ---@alias WIDGET_SET_EFFECT_ICON_VISIBLE_HANDLER fun(self: Widget, isShow: boolean, arg: Widget)
@@ -2402,7 +2402,7 @@
 ---@alias SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW_HANDLER fun(zoneName: string, accumulatePoint: number, state?)
 ---@alias WIDGET_SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW_HANDLER fun(self: Widget, zoneName: string, accumulatePoint: number, state?)
 
----@TODO:
+---@TODO
 ---@alias SHOW_ADD_TAB_WINDOW_HANDLER fun()
 ---@alias WIDGET_SHOW_ADD_TAB_WINDOW_HANDLER fun(self: Widget)
 
@@ -2414,7 +2414,7 @@
 ---@alias SHOW_BANNER_HANDLER fun(show: boolean, instanceType: number, remainPreNoticeTime?)
 ---@alias WIDGET_SHOW_BANNER_HANDLER fun(self: Widget, show: boolean, instanceType: number, remainPreNoticeTime?)
 
----@TODO: returns a widget but unsure which widget as no methods are available.
+---@TODO returns a widget but unsure which widget as no methods are available.
 ---Event triggers when the player right clicks on a tab for the context menu.
 ---@alias SHOW_CHAT_TAB_CONTEXT_HANDLER fun(arg1: Widget, arg2: number)
 ---@alias WIDGET_SHOW_CHAT_TAB_CONTEXT_HANDLER fun(self: Widget, arg1: Widget, arg2: number)
@@ -2423,11 +2423,11 @@
 ---@alias SHOW_CRIME_RECORDS_HANDLER fun(trialState: TRIAL_STATE)
 ---@alias WIDGET_SHOW_CRIME_RECORDS_HANDLER fun(self: Widget, trialState: TRIAL_STATE)
 
----@TODO:
+---@TODO
 ---@alias SHOW_DEFENDANT_WAIT_JURY_HANDLER fun()
 ---@alias WIDGET_SHOW_DEFENDANT_WAIT_JURY_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias SHOW_DEFENDANT_WAIT_TRIAL_HANDLER fun()
 ---@alias WIDGET_SHOW_DEFENDANT_WAIT_TRIAL_HANDLER fun(self: Widget)
 
@@ -2435,7 +2435,7 @@
 ---@alias SHOW_RAID_FRAME_SETTINGS_HANDLER fun()
 ---@alias WIDGET_SHOW_RAID_FRAME_SETTINGS_HANDLER fun(self: Widget)
 
----@TODO: Does not appear to work.
+---@TODO Does not appear to work.
 ---@alias SHOW_RENAME_EXPEIDITON_HANDLER fun(byItem, triedName, ownerWnd)
 ---@alias WIDGET_SHOW_RENAME_EXPEIDITON_HANDLER fun(self: Widget, byItem, triedName, ownerWnd)
 
@@ -2463,7 +2463,7 @@
 ---@alias SHOW_WORLDMAP_TOOLTIP_HANDLER fun(tooltipInfo: TooltipInfo[], tooltipCount: number)
 ---@alias WIDGET_SHOW_WORLDMAP_TOOLTIP_HANDLER fun(self: Widget, tooltipInfo: TooltipInfo[], tooltipCount: number)
 
----@TODO:
+---@TODO
 ---@alias SIEGE_APPOINT_RESULT_HANDLER fun(isDefender, faction)
 ---@alias WIDGET_SIEGE_APPOINT_RESULT_HANDLER fun(self: Widget, isDefender, faction)
 
@@ -2471,12 +2471,12 @@
 ---@alias SIEGE_RAID_REGISTER_LIST_HANDLER fun(zoneGroupType?, bRegistState?, bListUpdate?)
 ---@alias WIDGET_SIEGE_RAID_REGISTER_LIST_HANDLER fun(self: Widget, zoneGroupType?, bRegistState?, bListUpdate?)
 
----@TODO:
+---@TODO
 ---Event triggers when the player attempts to apply to a siege raid.
 ---@alias SIEGE_RAID_TEAM_INFO_HANDLER fun(info: SiegeRaidInfo)
 ---@alias WIDGET_SIEGE_RAID_TEAM_INFO_HANDLER fun(self: Widget, info: SiegeRaidInfo)
 
----@TODO:
+---@TODO
 ---@alias SIEGE_WAR_ENDED_HANDLER fun()
 ---@alias WIDGET_SIEGE_WAR_ENDED_HANDLER fun(self: Widget)
 
@@ -2488,7 +2488,7 @@
 ---@alias SIEGEWEAPON_UNBOUND_HANDLER fun()
 ---@alias WIDGET_SIEGEWEAPON_UNBOUND_HANDLER fun(self: Widget)
 
----@TODO: cancel placing a diary pen
+---@TODO cancel placing a diary pen
 ---@alias SIM_DOODAD_MSG_HANDLER fun(code?)
 ---@alias WIDGET_SIM_DOODAD_MSG_HANDLER fun(self: Widget, code?)
 
@@ -2521,7 +2521,7 @@
 ---@alias SKILL_SELECTIVE_ITEM_HANDLER fun(list: SkillSelectiveItemList, usingSlotIndex: number)
 ---@alias WIDGET_SKILL_SELECTIVE_ITEM_HANDLER fun(self: Widget, list: SkillSelectiveItemList, usingSlotIndex: number)
 
----@TODO:
+---@TODO
 ---@alias SKILL_SELECTIVE_ITEM_NOT_AVAILABLE_HANDLER fun()
 ---@alias WIDGET_SKILL_SELECTIVE_ITEM_NOT_AVAILABLE_HANDLER fun(self: Widget)
 
@@ -2537,11 +2537,11 @@
 ---@alias SKILLS_RESET_HANDLER fun(ability: ABILITY_TYPE_NAME)
 ---@alias WIDGET_SKILLS_RESET_HANDLER fun(self: Widget, ability: ABILITY_TYPE_NAME)
 
----@TODO:
+---@TODO
 ---@alias SLAVE_SHIP_BOARDING_HANDLER fun()
 ---@alias WIDGET_SLAVE_SHIP_BOARDING_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias SLAVE_SHIP_UNBOARDING_HANDLER fun()
 ---@alias WIDGET_SLAVE_SHIP_UNBOARDING_HANDLER fun(self: Widget)
 
@@ -2557,7 +2557,7 @@
 ---@alias SPECIAL_ABILITY_LEARNED_HANDLER fun(recvAbility: number)
 ---@alias WIDGET_SPECIAL_ABILITY_LEARNED_HANDLER fun(self: Widget, recvAbility: number)
 
----@TODO:
+---@TODO
 ---@alias SPECIALTY_CONTENT_RECIPE_INFO_HANDLER fun(list)
 ---@alias WIDGET_SPECIALTY_CONTENT_RECIPE_INFO_HANDLER fun(self: Widget, list)
 
@@ -2581,11 +2581,11 @@
 ---@alias START_CHAT_BUBBLE_HANDLER fun(arg: string)
 ---@alias WIDGET_START_CHAT_BUBBLE_HANDLER fun(self: Widget, arg: string)
 
----@TODO:
+---@TODO
 ---@alias START_HERO_ELECTION_PERIOD_HANDLER fun()
 ---@alias WIDGET_START_HERO_ELECTION_PERIOD_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias START_QUEST_CONTEXT_HANDLER fun(qtype, useDirectingMode, npcId)
 ---@alias WIDGET_START_QUEST_CONTEXT_HANDLER fun(self: Widget, qtype, useDirectingMode, npcId)
 
@@ -2601,11 +2601,11 @@
 ---@alias START_QUEST_CONTEXT_SPHERE_HANDLER fun(qtype: number, stype: number)
 ---@alias WIDGET_START_QUEST_CONTEXT_SPHERE_HANDLER fun(self: Widget, qtype: number, stype: number)
 
----@TODO:
+---@TODO
 ---@alias START_SENSITIVE_OPERATION_HANDLER fun(remainTime)
 ---@alias WIDGET_START_SENSITIVE_OPERATION_HANDLER fun(self: Widget, remainTime)
 
----@TODO:
+---@TODO
 ---@alias START_TALK_QUEST_CONTEXT_HANDLER fun(doodadId)
 ---@alias WIDGET_START_TALK_QUEST_CONTEXT_HANDLER fun(self: Widget, doodadId)
 
@@ -2613,19 +2613,19 @@
 ---@alias START_TODAY_ASSIGNMENT_HANDLER fun(stepName)
 ---@alias WIDGET_START_TODAY_ASSIGNMENT_HANDLER fun(self: Widget, stepName)
 
----@TODO:
+---@TODO
 ---@alias STARTED_DUEL_HANDLER fun()
 ---@alias WIDGET_STARTED_DUEL_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias STICKED_MSG_HANDLER fun()
 ---@alias WIDGET_STICKED_MSG_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias STILL_LOADING_HANDLER fun(loadingProgress)
 ---@alias WIDGET_STILL_LOADING_HANDLER fun(self: Widget, loadingProgress)
 
----@TODO:
+---@TODO
 ---@alias STORE_ADD_BUY_ITEM_HANDLER fun()
 ---@alias WIDGET_STORE_ADD_BUY_ITEM_HANDLER fun(self: Widget)
 
@@ -2650,12 +2650,12 @@
 ---@alias STORE_SOLD_LIST_HANDLER fun(soldItems: ItemInfo[])
 ---@alias WIDGET_STORE_SOLD_LIST_HANDLER fun(self: Widget, soldItems: ItemInfo[])
 
----@TODO: Unsure the difference between STORE_FULL and STORE_TRADE_FAILED as different items give different events when the players bag is full.
+---@TODO Unsure the difference between STORE_FULL and STORE_TRADE_FAILED as different items give different events when the players bag is full.
 ---Event triggers when the player attempts to purchase an item from a store and their bag is full.
 ---@alias STORE_TRADE_FAILED_HANDLER fun()
 ---@alias WIDGET_STORE_TRADE_FAILED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias SURVEY_FORM_UPDATE_HANDLER fun()
 ---@alias WIDGET_SURVEY_FORM_UPDATE_HANDLER fun(self: Widget)
 
@@ -2663,7 +2663,7 @@
 ---@alias SWITCH_ENCHANT_ITEM_MODE_HANDLER fun(mode: ENCHANT_MODE)
 ---@alias WIDGET_SWITCH_ENCHANT_ITEM_MODE_HANDLER fun(self: Widget, mode: ENCHANT_MODE)
 
----@TODO:
+---@TODO
 ---@alias SYNC_PORTAL_HANDLER fun()
 ---@alias WIDGET_SYNC_PORTAL_HANDLER fun(self: Widget)
 
@@ -2679,7 +2679,7 @@
 ---@alias TARGET_CHANGED_HANDLER fun(stringId: string|nil, targetType: UNIT_TYPE|nil)
 ---@alias WIDGET_TARGET_CHANGED_HANDLER fun(self: Widget, stringId: string|nil, targetType: UNIT_TYPE|nil)
 
----@TODO:
+---@TODO
 ---@alias TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO_HANDLER fun(curHp, maxHp)
 ---@alias WIDGET_TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO_HANDLER fun(self: Widget, curHp, maxHp)
 
@@ -2691,7 +2691,7 @@
 ---@alias TARGET_TO_TARGET_CHANGED_HANDLER fun(stringId: string|nil, targetType: TARGET_TYPE|nil)
 ---@alias WIDGET_TARGET_TO_TARGET_CHANGED_HANDLER fun(self: Widget, stringId: string|nil, targetType: TARGET_TYPE|nil)
 
----@TODO:
+---@TODO
 ---@alias TEAM_JOINT_BREAK_HANDLER fun(requester, enable)
 ---@alias WIDGET_TEAM_JOINT_BREAK_HANDLER fun(self: Widget, requester, enable)
 
@@ -2699,15 +2699,15 @@
 ---@alias TEAM_JOINT_BROKEN_HANDLER fun()
 ---@alias WIDGET_TEAM_JOINT_BROKEN_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TEAM_JOINT_CHAT_HANDLER fun()
 ---@alias WIDGET_TEAM_JOINT_CHAT_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TEAM_JOINT_RESPONSE_HANDLER fun()
 ---@alias WIDGET_TEAM_JOINT_RESPONSE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TEAM_JOINT_TARGET_HANDLER fun(isJointable)
 ---@alias WIDGET_TEAM_JOINT_TARGET_HANDLER fun(self: Widget, isJointable)
 
@@ -2731,11 +2731,11 @@
 ---@alias TEAM_ROLE_CHANGED_HANDLER fun(jointOrder: number, memberIndex: number, role: TEAM_ROLE)
 ---@alias WIDGET_TEAM_ROLE_CHANGED_HANDLER fun(self: Widget, jointOrder: number, memberIndex: number, role: TEAM_ROLE)
 
----@TODO:
+---@TODO
 ---@alias TEAM_SUMMON_SUGGEST_HANDLER fun()
 ---@alias WIDGET_TEAM_SUMMON_SUGGEST_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TIME_MESSAGE_HANDLER fun(key, timeTable)
 ---@alias WIDGET_TIME_MESSAGE_HANDLER fun(self: Widget, key, timeTable)
 
@@ -2744,15 +2744,15 @@
 ---@alias TOGGLE_CHANGE_VISUAL_RACE_HANDLER fun(data: ChangeVisualRace)
 ---@alias WIDGET_TOGGLE_CHANGE_VISUAL_RACE_HANDLER fun(self: Widget, data: ChangeVisualRace)
 
----@TODO:
+---@TODO
 ---@alias TOGGLE_COMMUNITY_HANDLER fun()
 ---@alias WIDGET_TOGGLE_COMMUNITY_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TOGGLE_CRAFT_HANDLER fun()
 ---@alias WIDGET_TOGGLE_CRAFT_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TOGGLE_FACTION_HANDLER fun()
 ---@alias WIDGET_TOGGLE_FACTION_HANDLER fun(self: Widget)
 
@@ -2760,7 +2760,7 @@
 ---@alias TOGGLE_FOLLOW_HANDLER fun(on: boolean)
 ---@alias WIDGET_TOGGLE_FOLLOW_HANDLER fun(self: Widget, on: boolean)
 
----@TODO:
+---@TODO
 ---@alias TOGGLE_IN_GAME_NOTICE_HANDLER fun(url)
 ---@alias WIDGET_TOGGLE_IN_GAME_NOTICE_HANDLER fun(self: Widget, url)
 
@@ -2768,7 +2768,7 @@
 ---@alias TOGGLE_PARTY_FRAME_HANDLER fun(show: boolean)
 ---@alias WIDGET_TOGGLE_PARTY_FRAME_HANDLER fun(self: Widget, show: boolean)
 
----@TODO:
+---@TODO
 ---@alias TOGGLE_PET_MANAGE_HANDLER fun()
 ---@alias WIDGET_TOGGLE_PET_MANAGE_HANDLER fun(self: Widget)
 
@@ -2780,7 +2780,7 @@
 ---@alias TOGGLE_RAID_FRAME_HANDLER fun(show: boolean)
 ---@alias WIDGET_TOGGLE_RAID_FRAME_HANDLER fun(self: Widget, show: boolean)
 
----@FIXME: Both raids parties get shown or hidden regardless of which raid party your trying to change.
+---@FIXME Both raids parties get shown or hidden regardless of which raid party your trying to change.
 ---Event triggers when a party in the raid is shown or hidden.
 ---@alias TOGGLE_RAID_FRAME_PARTY_HANDLER fun(party: number, visible: boolean)
 ---@alias WIDGET_TOGGLE_RAID_FRAME_PARTY_HANDLER fun(self: Widget, party: number, visible: boolean)
@@ -2805,11 +2805,11 @@
 ---@alias TOWER_DEF_MSG_HANDLER fun(towerDefInfo: TowerDefInfo)
 ---@alias WIDGET_TOWER_DEF_MSG_HANDLER fun(self: Widget, towerDefInfo: TowerDefInfo)
 
----@TODO:
+---@TODO
 ---@alias TRADE_CAN_START_HANDLER fun(unitIdStr)
 ---@alias WIDGET_TRADE_CAN_START_HANDLER fun(self: Widget, unitIdStr)
 
----@TODO:
+---@TODO
 ---@alias TRADE_CANCELED_HANDLER fun()
 ---@alias WIDGET_TRADE_CANCELED_HANDLER fun(self: Widget)
 
@@ -2817,11 +2817,11 @@
 ---@alias TRADE_ITEM_PUTUP_HANDLER fun(inventoryIdx: number, amount: number)
 ---@alias WIDGET_TRADE_ITEM_PUTUP_HANDLER fun(self: Widget, inventoryIdx: number, amount: number)
 
----@TODO:
+---@TODO
 ---@alias TRADE_ITEM_TOOKDOWN_HANDLER fun(inventoryIdx)
 ---@alias WIDGET_TRADE_ITEM_TOOKDOWN_HANDLER fun(self: Widget, inventoryIdx)
 
----@TODO:
+---@TODO
 ---@alias TRADE_ITEM_UPDATED_HANDLER fun()
 ---@alias WIDGET_TRADE_ITEM_UPDATED_HANDLER fun(self: Widget)
 
@@ -2841,11 +2841,11 @@
 ---@alias TRADE_OK_HANDLER fun()
 ---@alias WIDGET_TRADE_OK_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TRADE_OTHER_ITEM_PUTUP_HANDLER fun(otherIdx, type, stackCount, tooltip)
 ---@alias WIDGET_TRADE_OTHER_ITEM_PUTUP_HANDLER fun(self: Widget, otherIdx, type, stackCount, tooltip)
 
----@TODO:
+---@TODO
 ---@alias TRADE_OTHER_ITEM_TOOKDOWN_HANDLER fun(otherIdx)
 ---@alias WIDGET_TRADE_OTHER_ITEM_TOOKDOWN_HANDLER fun(self: Widget, otherIdx)
 
@@ -2853,7 +2853,7 @@
 ---@alias TRADE_OTHER_LOCKED_HANDLER fun()
 ---@alias WIDGET_TRADE_OTHER_LOCKED_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TRADE_OTHER_MONEY_PUTUP_HANDLER fun(money)
 ---@alias WIDGET_TRADE_OTHER_MONEY_PUTUP_HANDLER fun(self: Widget, money)
 
@@ -2865,11 +2865,11 @@
 ---@alias TRADE_STARTED_HANDLER fun(targetName: string)
 ---@alias WIDGET_TRADE_STARTED_HANDLER fun(self: Widget, targetName: string)
 
----@TODO:
+---@TODO
 ---@alias TRADE_UI_TOGGLE_HANDLER fun()
 ---@alias WIDGET_TRADE_UI_TOGGLE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias TRADE_UNLOCKED_HANDLER fun()
 ---@alias WIDGET_TRADE_UNLOCKED_HANDLER fun(self: Widget)
 
@@ -2877,7 +2877,7 @@
 ---@alias TRANSFORM_COMBAT_RESOURCE_HANDLER fun(groupType: ABILITY_TYPE)
 ---@alias WIDGET_TRANSFORM_COMBAT_RESOURCE_HANDLER fun(self: Widget, groupType: ABILITY_TYPE)
 
----@TODO:
+---@TODO
 ---@alias TRIAL_CANCELED_HANDLER fun()
 ---@alias WIDGET_TRIAL_CANCELED_HANDLER fun(self: Widget)
 
@@ -2885,7 +2885,7 @@
 ---@alias TRIAL_CLOSED_HANDLER fun()
 ---@alias WIDGET_TRIAL_CLOSED_HANDLER fun(self: Widget)
 
----@TODO: are there other triggers?
+---@TODO are there other triggers?
 ---Event triggers when the player attempts to join a trial that has already begun.
 ---@alias TRIAL_MESSAGE_HANDLER fun(text: string)
 ---@alias WIDGET_TRIAL_MESSAGE_HANDLER fun(self: Widget, text: string)
@@ -2943,9 +2943,10 @@
 ---@alias UNIT_DEAD_NOTICE_HANDLER fun(name: string)
 ---@alias WIDGET_UNIT_DEAD_NOTICE_HANDLER fun(self: Widget, name: string)
 
+---Disabled https://na.archerage.to/forums/threads/server-updates-6-9-guild-bank-history-and-other-updates.13525/
 ---Event triggers when a unit enters the players sight.
----@alias UNIT_ENTERED_SIGHT_HANDLER fun(unitId: number, unitType: UNIT_TYPE, curHp: string, maxHp: string)
----@alias WIDGET_UNIT_ENTERED_SIGHT_HANDLER fun(self: Widget, unitId: number, unitType: UNIT_TYPE, curHp: string, maxHp: string)
+-- -@alias UNIT_ENTERED_SIGHT_HANDLER fun(unitId: number, unitType: UNIT_TYPE, curHp: string, maxHp: string)
+-- -@alias WIDGET_UNIT_ENTERED_SIGHT_HANDLER fun(self: Widget, unitId: number, unitType: UNIT_TYPE, curHp: string, maxHp: string)
 
 ---Event triggers when the player changes their gear.
 ---@alias UNIT_EQUIPMENT_CHANGED_HANDLER fun(equipSlot: EQUIPMENT_SLOT)
@@ -2955,9 +2956,10 @@
 ---@alias UNIT_KILL_STREAK_HANDLER fun(killStreakInfo: KillStreakInfo)
 ---@alias WIDGET_UNIT_KILL_STREAK_HANDLER fun(self: Widget, killStreakInfo: KillStreakInfo)
 
+---Disabled https://na.archerage.to/forums/threads/server-updates-6-9-guild-bank-history-and-other-updates.13525/
 ---Event triggers when a unit leaves the players sight.
----@alias UNIT_LEAVED_SIGHT_HANDLER fun(unitId: number, unitType: UNIT_TYPE)
----@alias WIDGET_UNIT_LEAVED_SIGHT_HANDLER fun(self: Widget, unitId: number, unitType: UNIT_TYPE)
+-- -@alias UNIT_LEAVED_SIGHT_HANDLER fun(unitId: number, unitType: UNIT_TYPE)
+-- -@alias WIDGET_UNIT_LEAVED_SIGHT_HANDLER fun(self: Widget, unitId: number, unitType: UNIT_TYPE)
 
 ---Event triggers when a units name changes.
 ---@alias UNIT_NAME_CHANGED_HANDLER fun(unitId: string)
@@ -2991,11 +2993,11 @@
 ---@alias UPDATE_BOT_CHECK_INFO_HANDLER fun(totalTime: number, remainTime: number, count: number, question: string)
 ---@alias WIDGET_UPDATE_BOT_CHECK_INFO_HANDLER fun(self: Widget, totalTime: number, remainTime: number, count: number, question: string)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_BUBBLE_HANDLER fun()
 ---@alias WIDGET_UPDATE_BUBBLE_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_CARRYING_BACKPACK_SLAVE_INFO_HANDLER fun()
 ---@alias WIDGET_UPDATE_CARRYING_BACKPACK_SLAVE_INFO_HANDLER fun(self: Widget)
 
@@ -3011,7 +3013,7 @@
 ---@alias UPDATE_CHRONICLE_NOTIFIER_HANDLER fun(init: boolean, mainKey: number)
 ---@alias WIDGET_UPDATE_CHRONICLE_NOTIFIER_HANDLER fun(self: Widget, init: boolean, mainKey: number)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_CLIENT_DRIVEN_INFO_HANDLER fun(sceneInfo)
 ---@alias WIDGET_UPDATE_CLIENT_DRIVEN_INFO_HANDLER fun(self: Widget, sceneInfo)
 
@@ -3019,7 +3021,7 @@
 ---@alias UPDATE_COMPLETED_QUEST_INFO_HANDLER fun()
 ---@alias WIDGET_UPDATE_COMPLETED_QUEST_INFO_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_CONTENT_ROSTER_WINDOW_HANDLER fun(updateInfo)
 ---@alias WIDGET_UPDATE_CONTENT_ROSTER_WINDOW_HANDLER fun(self: Widget, updateInfo)
 
@@ -3040,7 +3042,7 @@
 ---@alias UPDATE_CRAFT_ORDER_SKILL_HANDLER fun(key: string, fired: boolean)
 ---@alias WIDGET_UPDATE_CRAFT_ORDER_SKILL_HANDLER fun(self: Widget, key: string, fired: boolean)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_DEFENCE_INFO_HANDLER fun(info)
 ---@alias WIDGET_UPDATE_DEFENCE_INFO_HANDLER fun(self: Widget, info)
 
@@ -3122,7 +3124,7 @@
 ---@alias UPDATE_INSTANT_GAME_INVITATION_COUNT_HANDLER fun(accept: number, totalSize: number)
 ---@alias WIDGET_UPDATE_INSTANT_GAME_INVITATION_COUNT_HANDLER fun(self: Widget, accept: number, totalSize: number)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_INSTANT_GAME_KILLSTREAK_HANDLER fun(count)
 ---@alias WIDGET_UPDATE_INSTANT_GAME_KILLSTREAK_HANDLER fun(self: Widget, count)
 
@@ -3191,11 +3193,11 @@
 ---@alias UPDATE_ROADMAP_ANCHOR_HANDLER fun(file: string)
 ---@alias WIDGET_UPDATE_ROADMAP_ANCHOR_HANDLER fun(self: Widget, file: string)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_ROSTER_MEMBER_INFO_HANDLER fun(rosterId)
 ---@alias WIDGET_UPDATE_ROSTER_MEMBER_INFO_HANDLER fun(self: Widget, rosterId)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_ROUTE_MAP_HANDLER fun()
 ---@alias WIDGET_UPDATE_ROUTE_MAP_HANDLER fun(self: Widget)
 
@@ -3203,7 +3205,7 @@
 ---@alias UPDATE_SHIP_TELESCOPE_INFO_HANDLER fun()
 ---@alias WIDGET_UPDATE_SHIP_TELESCOPE_INFO_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias UPDATE_SHORTCUT_SKILLS_HANDLER fun()
 ---@alias WIDGET_UPDATE_SHORTCUT_SKILLS_HANDLER fun(self: Widget)
 
@@ -3259,7 +3261,7 @@
 ---@alias UPDATE_ZONE_PERMISSION_HANDLER fun()
 ---@alias WIDGET_UPDATE_ZONE_PERMISSION_HANDLER fun(self: Widget)
 
----@TODO:
+---@TODO
 ---@alias VIEW_CASH_BUY_WINDOW_HANDLER fun(sellType)
 ---@alias WIDGET_VIEW_CASH_BUY_WINDOW_HANDLER fun(self: Widget, sellType)
 
@@ -3279,7 +3281,7 @@
 ---@alias WATCH_TARGET_CHANGED_HANDLER fun(stringId)
 ---@alias WIDGET_WATCH_TARGET_CHANGED_HANDLER fun(self: Widget, stringId)
 
----@TODO:
+---@TODO
 ---@alias WEB_BROWSER_ESC_EVENT_HANDLER fun(browser)
 ---@alias WIDGET_WEB_BROWSER_ESC_EVENT_HANDLER fun(self: Widget, browser)
 
@@ -3287,12 +3289,12 @@
 ---@alias WORLD_MESSAGE_HANDLER fun(msg: string, iconKey: string, info: WorldMessageInfo)
 ---@alias WIDGET_WORLD_MESSAGE_HANDLER fun(self: Widget, msg: string, iconKey: string, info: WorldMessageInfo)
 
----@TODO: I think each zone has a score based on content that has been completed.
+---@TODO I think each zone has a score based on content that has been completed.
 ---Event triggers when the zones content score changes.
 ---@alias ZONE_SCORE_CONTENT_STATE_HANDLER fun(states?)
 ---@alias WIDGET_ZONE_SCORE_CONTENT_STATE_HANDLER fun(self: Widget, states?)
 
----@TODO:
+---@TODO
 ---@alias ZONE_SCORE_UPDATED_HANDLER fun(kind, info)
 ---@alias WIDGET_ZONE_SCORE_UPDATED_HANDLER fun(self: Widget, kind, info)
 

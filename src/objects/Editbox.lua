@@ -1,6 +1,6 @@
 ---@meta _
 
----@FIXME: Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
+---@FIXME Is appears editbox by itself does not work, only provides a textbox that can be typed into but none of the methods work.
 
 ---[Editbox](lua://Editbox)
 ---
@@ -71,7 +71,7 @@ function Editbox:SetFocus() end
 ---@param count number The maximum number of history lines. (default: `0`)
 function Editbox:SetHistoryLines(count) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the initial value for the Editbox.
 ---@param val number The initial value.
 function Editbox:SetInitVal(val) end
@@ -95,7 +95,7 @@ function Editbox:SetPrefixInset(left, top, right, bottom) end
 ---@param prefixText string The prefix text to display.
 function Editbox:SetPrefixText(prefixText) end
 
----@TODO: Clarify re-clickable behavior.
+---@TODO Clarify re-clickable behavior.
 ---Enables or disables re-clickable behavior for the Editbox.
 ---@param click boolean `true` to enable re-clicking, `false` to disable.
 function Editbox:SetReClickable(click) end

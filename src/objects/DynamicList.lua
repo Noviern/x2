@@ -9,7 +9,7 @@
 ---@class DynamicListContent: EmptyWidget
 ---@field anchor DynamicListAnchor
 
----@TODO: get a working example of this widget.
+---@TODO get a working example of this widget.
 ---[DynamicList](lua://DynamicList)
 ---
 ---A `DynamicList` widget displays and manages hierarchical, expandable list
@@ -44,7 +44,7 @@ function DynamicList:EnableChildTouch(isEnable) end
 ---@param index number The index of the data to erase.
 function DynamicList:EraseData(index) end
 
----@TODO: Clarify parameters and their roles.
+---@TODO Clarify parameters and their roles.
 ---Erases sub-item information from the DynamicList.
 ---@param mainKey number The main key identifier.
 ---@param depth number The depth level of the sub-item.
@@ -72,7 +72,7 @@ function DynamicList:GetMainList() end
 ---@nodiscard
 function DynamicList:GetScrollMaxValue() end
 
----@TODO: Clarify return values and their meaning.
+---@TODO Clarify return values and their meaning.
 ---Retrieves information about the currently selected item.
 ---@return number key The key of the selected item. (default: `-1`)
 ---@return number depth The depth of the selected item. (default: `0`)
@@ -90,7 +90,7 @@ function DynamicList:InitCreateWidgetPool() end
 ---@alias MainDataFunc fun(subItem: EmptyWidget, mainKey: number, isOpen: boolean, frameBg: Drawablebase, subListSize: number, isClicked: boolean)
 ---@alias SubLayoutFunc fun(subItem: EmptyWidget, index: number)
 
----@TODO: subItemInfo
+---@TODO subItemInfo
 ---@alias SubDataFunc fun(subItem: EmptyWidget, subItemInfo: table, isClicked: boolean)
 
 ---Initializes functions for main and sub layouts and data in the DynamicList.
@@ -123,14 +123,14 @@ function DynamicList:InitFunc(mainLayout, mainData, subLayout, subData) end
 ---```
 function DynamicList:InitHeight(viewHeight, mainHeight, subHeight) end
 
----@TODO: Clarify subDatas structure. I think its just { { key = 1 }, ... }
+---@TODO Clarify subDatas structure. I think its just { { key = 1 }, ... }
 ---Inserts data into the DynamicList at the specified index.
 ---@param index number The index to insert data. (min: `1`)
 ---@param mainKey number The main key identifier.
 ---@param subDatas table The sub-data table.
 function DynamicList:InsertData(index, mainKey, subDatas) end
 
----@TODO: Confirm parameters and sub-item insertion logic.
+---@TODO Confirm parameters and sub-item insertion logic.
 ---Inserts sub-item information into the DynamicList.
 ---@param mainKey number The main key identifier.
 ---@param depth number The depth level of the sub-item.
@@ -138,7 +138,7 @@ function DynamicList:InsertData(index, mainKey, subDatas) end
 ---@param key number The key of the sub-item.
 function DynamicList:InsertSubItemInfo(mainKey, depth, depthKey, key) end
 
----@TODO: Verify key and depth usage.
+---@TODO Verify key and depth usage.
 ---Checks if the specified item is selected in the DynamicList.
 ---@param key number The key of the item.
 ---@param depth number The depth of the item.
@@ -146,36 +146,36 @@ function DynamicList:InsertSubItemInfo(mainKey, depth, depthKey, key) end
 ---@nodiscard
 function DynamicList:IsSelectedItem(key, depth) end
 
----@TODO: Confirm item list loading behavior.
+---@TODO Confirm item list loading behavior.
 ---Loads the item list for the DynamicList.
 function DynamicList:LoadItemList() end
 
----@TODO: Clarify height parameter and movement effect.
+---@TODO Clarify height parameter and movement effect.
 ---Moves the DynamicList view by the specified height.
 ---@param height number The height to move the view.
 function DynamicList:MoveHeight(height) end
 
----@FIXME: setting open to true results in a error, [Lua Error] attempt to call a boolean value
+---@FIXME setting open to true results in a error, [Lua Error] attempt to call a boolean value
 ---Moves to the specified index in the DynamicList with anchor height.
 ---@param index number The index to move to.
 ---@param anchorHeight number The anchor height for positioning.
 ---@param open boolean `true` to open the item, `false` to close.
 function DynamicList:MoveIndex(index, anchorHeight, open) end
 
----@TODO: Clarify sub-item opening logic.
+---@TODO Clarify sub-item opening logic.
 ---Opens a sub-item in the DynamicList based on its information.
 ---@param mainKey number The main key identifier.
 ---@param depth number The depth level of the sub-item.
 ---@param key number The key of the sub-item.
 function DynamicList:OpenBySubItemInfo(mainKey, depth, key) end
 
----@TODO: Confirm mainKey and subDatas structure.
+---@TODO Confirm mainKey and subDatas structure.
 ---Pushes data into the DynamicList.
 ---@param mainKey number The main key identifier.
 ---@param subDatas table The sub-data table.
 function DynamicList:PushData(mainKey, subDatas) end
 
----@TODO: Verify item list saving behavior.
+---@TODO Verify item list saving behavior.
 ---Saves the item list for the DynamicList.
 function DynamicList:SaveItemList() end
 
@@ -184,35 +184,35 @@ function DynamicList:SaveItemList() end
 ---@param subListGap number The gap between sub-list items.
 function DynamicList:SetGaps(mainGap, subListGap) end
 
----@TODO: Confirm key and depth usage for selection.
+---@TODO Confirm key and depth usage for selection.
 ---Sets the selected item information in the DynamicList.
 ---@param key number The key of the item to select.
 ---@param depth number The depth of the item to select.
 function DynamicList:SetSelectedItemInfo(key, depth) end
 
----@FIXME: causes the game to hang
+---@FIXME causes the game to hang
 ---Toggles the state of the item at the specified index in the DynamicList.
 ---@param index number The index of the item to toggle.
 function DynamicList:Toggle(index) end
 
----@FIXME: causes the game to hang
+---@FIXME causes the game to hang
 ---Toggles the state of the item with the specified main key in the DynamicList.
 ---@param mainKey number The main key identifier.
 function DynamicList:ToggleByMainKey(mainKey) end
 
----@TODO: Clarify sub-item toggle logic.
+---@TODO Clarify sub-item toggle logic.
 ---Toggles the state of a sub-item in the DynamicList.
 ---@param mainKey number The main key identifier.
 ---@param depth number The depth level of the sub-item.
 ---@param depthKey number The depth key identifier.
 function DynamicList:ToggleSubItem(mainKey, depth, depthKey) end
 
----@TODO: Verify mainKey and subDatas structure for updates.
+---@TODO Verify mainKey and subDatas structure for updates.
 ---Updates data in the DynamicList for the specified main key.
 ---@param mainKey number The main key identifier.
 ---@param subDatas table The updated sub-data table.
 function DynamicList:UpdateData(mainKey, subDatas) end
 
----@TODO: Confirm view update behavior.
+---@TODO Confirm view update behavior.
 ---Updates the view of the DynamicList.
 function DynamicList:UpdateView() end

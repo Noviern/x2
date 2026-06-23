@@ -8,7 +8,7 @@ local Uiobject = {}
 ---@nodiscard
 function Uiobject:GetId() end
 
----@FIXME: May be broken, currently returns nothing.
+---@FIXME May be broken, currently returns nothing.
 ---Retrieves the name of the UI object.
 ---@return string name
 ---@nodiscard

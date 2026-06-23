@@ -298,7 +298,7 @@ X2Option = {}                                    -- api/X2Option
 ---| `HA_ZOOM_IN`
 ---| `HA_ZOOM_OUT`
 
----@TODO: db options > option_item_save_level_type_id might be needed. OISLT_SYSTEM appears to save it to the system but unable to get again once I restart (C:\ArcheRage\Documents\USER[]\udf\.+.sst)
+---@TODO db options > option_item_save_level_type_id might be needed. OISLT_SYSTEM appears to save it to the system but unable to get again once I restart (C:\ArcheRage\Documents\USER[]\udf\.+.sst)
 ---api/X2Option
 ---@alias OPTION_ITEM_SAVE_LEVEL_TYPE
 ---| `OISLT_CHARACTER`
@@ -458,7 +458,7 @@ X2Option = {}                                    -- api/X2Option
 ---| `OIT_USE_CELERITY_WITH_DOUBLE_FORWARD`
 ---| `OIT_VISIBLEMYEQUIPINFO`
 
----@FIXME: never got this to save
+---@FIXME never got this to save
 ---Creates a float option, saves it based on the specified save level, and
 ---returns the save level.
 ---@param name string The option name.
@@ -467,7 +467,7 @@ X2Option = {}                                    -- api/X2Option
 ---@return number saveLevel The save level used.
 function X2Option:CreateOptionItemFloat(name, value, saveLevel) end
 
----@FIXME: never got this to save
+---@FIXME never got this to save
 ---Creates a string option, saves it based on the specified save level, and
 ---returns the save level.
 ---@param name string The option name.
@@ -548,7 +548,7 @@ function X2Option:GetResolution(index) end
 ---@nodiscard
 function X2Option:GetResolutionCount() end
 
----@TODO: Are there other modeOptionId?
+---@TODO Are there other modeOptionId?
 ---Retrieves a list of sub-options for the specified mode option ID and selected
 ---value.
 ---@param modeOptionId `OIT_NAME_TAG_MODE` The mode option ID.
@@ -613,7 +613,7 @@ function X2Option:SetItemFloatValue(optionType, value) end
 ---@param value number The float value to set.
 function X2Option:SetItemFloatValueByName(name, value) end
 
----@TODO: What option would this actually work on?
+---@TODO What option would this actually work on?
 ---Sets the float value for the specified option type without modifying other
 ---settings.
 ---@param optionType OPTION_ITEM_TYPE The option type.

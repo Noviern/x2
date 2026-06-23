@@ -67,13 +67,13 @@ function EffectDrawable:SetEffectRotate(phase, initial, final) end
 ---@param finalY number The final Y scale (default: `1`).
 function EffectDrawable:SetEffectScale(phase, initialX, finalX, initialY, finalY) end
 
----@TODO: Clarify axis parameter and its effect.
+---@TODO Clarify axis parameter and its effect.
 ---Sets the axis for the scale effect in the specified phase.
 ---@param phase number The effect phase. (min: `1`)
 ---@param axis string The axis for scaling.
 function EffectDrawable:SetEffectScaleAxis(phase, axis) end
 
----@TODO: Verify drawType parameter and its effect.
+---@TODO Verify drawType parameter and its effect.
 ---Sets the internal draw type for the EffectDrawable.
 ---@param drawType string The draw type to set.
 function EffectDrawable:SetInternalDrawType(drawType) end

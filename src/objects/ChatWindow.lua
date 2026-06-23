@@ -2,7 +2,7 @@
 
 ---[ChatWindow](lua://ChatWindow)
 ---
----@FIXME:
+---@FIXME
 ---**Warning:** Most methods for this class are broken.
 ---
 ---A `ChatWindow` widget is a multi-tabbed chat display and input system - the
@@ -31,12 +31,12 @@ local ChatWindow = {}
 ---@see Widget
 function ChatWindow:AddTab(tabName, widget) end
 
----@FIXME: This doesn't disable tab switching if false.
+---@FIXME This doesn't disable tab switching if false.
 ---Enables or disables tab switching in the ChatWindow.
 ---@param allow boolean `true` to allow tab switching, `false` to disable.
 function ChatWindow:AllowTabSwitch(allow) end
 
----@FIXME: returns self.
+---@FIXME returns self.
 ---Retrieves the add button for the ChatWindow.
 ---@return ChatWindow addButton The add button.
 ---@nodiscard
@@ -47,19 +47,19 @@ function ChatWindow:GetAddButton() end
 ---@nodiscard
 function ChatWindow:GetCaretDrawable() end
 
----@FIXME: returns self.
+---@FIXME returns self.
 ---Retrieves the chat edit widget for the ChatWindow.
 ---@return ChatWindow chatEdit The chat edit widget.
 ---@nodiscard
 function ChatWindow:GetChatEdit() end
 
----@FIXME: returns self.
+---@FIXME returns self.
 ---Retrieves the chat method selector for the ChatWindow.
 ---@return ChatWindow chatMethodSelector The chat method selector.
 ---@nodiscard
 function ChatWindow:GetChatMethodSelector() end
 
----@FIXME: returns self.
+---@FIXME returns self.
 ---Retrieves the IME toggle button for the ChatWindow.
 ---@return ChatWindow imeToggleButton The IME toggle button.
 ---@nodiscard
@@ -83,13 +83,13 @@ function ChatWindow:GetLockNotifyDrawable() end
 ---@see ThreePartDrawable
 function ChatWindow:GetRightLineDrawable() end
 
----@FIXME: returns self.
+---@FIXME returns self.
 ---Retrieves the URL button for the ChatWindow.
 ---@return ChatWindow urlButton The URL button.
 ---@nodiscard
 function ChatWindow:GetUrlButton() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Sets the offset for the caret in the ChatWindow.
 ---@param x number The x-offset.
 ---@param y number The y-offset.
@@ -106,37 +106,37 @@ function ChatWindow:SetChatWindowId(id) end
 ---@param bottomRightYOffset number The y-offset for the bottom-right corner.
 function ChatWindow:SetContentOffset(topLeftXOffset, topLeftYOffset, bottomRightXOffset, bottomRightYOffset) end
 
----@TODO: Clarify what injectable means in this context.
+---@TODO Clarify what injectable means in this context.
 ---Sets whether the ChatWindow is injectable.
 ---@param injectable boolean `true` to enable injectable mode, `false` to disable.
 function ChatWindow:SetInjectable(injectable) end
 
----@TODO: Clarify purpose of left line offset.
+---@TODO Clarify purpose of left line offset.
 ---Sets the offset for the left line in the ChatWindow.
 ---@param offset number The offset value.
 function ChatWindow:SetLeftLineOffset(offset) end
 
----@TODO: Verify notification time behavior.
+---@TODO Verify notification time behavior.
 ---Sets the maximum notification time for the ChatWindow.
 ---@param time number The maximum notification time in milliseconds.
 function ChatWindow:SetMaxNotifyTime(time) end
 
----@FIXME: Doesn't always set the minimum width.
+---@FIXME Doesn't always set the minimum width.
 ---Sets the minimum tab width for the ChatWindow.
 ---@param width number The minimum tab width.
 function ChatWindow:SetMinTabWidth(width) end
 
----@TODO: Clarify blinking frequency behavior.
+---@TODO Clarify blinking frequency behavior.
 ---Sets the notification blinking frequency for the ChatWindow.
 ---@param freq number The blinking frequency in milliseconds.
 function ChatWindow:SetNotifyBlinkingFreq(freq) end
 
----@TODO: Clarify purpose of right line offset.
+---@TODO Clarify purpose of right line offset.
 ---Sets the offset for the right line in the ChatWindow.
 ---@param offset number The offset value.
 function ChatWindow:SetRightLineOffset(offset) end
 
----@TODO: Confirm slide time behavior during dragging.
+---@TODO Confirm slide time behavior during dragging.
 ---Sets the slide time for tab dragging in the ChatWindow.
 ---@param time number The slide time in milliseconds.
 function ChatWindow:SetSlideTimeInDragging(time) end
@@ -152,7 +152,7 @@ function ChatWindow:SetTabAreaHeight(height) end
 ---@param bottom number The bottom inset.
 function ChatWindow:SetTabAreaInset(left, top, right, bottom) end
 
----@TODO: Clarify alpha settings for selected and unselected tabs.
+---@TODO Clarify alpha settings for selected and unselected tabs.
 ---Sets the alpha transparency for selected and unselected tab buttons.
 ---@param selectedAlpha number The alpha for selected tabs. (min: `0`, max: `1`)
 ---@param unselectedAlpha number The alpha for unselected tabs. (min: `0`, max: `1`)
@@ -162,17 +162,17 @@ function ChatWindow:SetTabButtonAlpha(selectedAlpha, unselectedAlpha) end
 ---@param width number The tab width.
 function ChatWindow:SetTabWidth(width) end
 
----@FIXME: Button is added but it doesn't render.
+---@FIXME Button is added but it doesn't render.
 ---Enables or disables the add tab button in the ChatWindow.
 ---@param use boolean `true` to enable the add tab button, `false` to disable. (default: `true`)
 function ChatWindow:UseAddTabButton(use) end
 
----@TODO: Clarify auto-resizing tab button mode behavior.
+---@TODO Clarify auto-resizing tab button mode behavior.
 ---Enables or disables auto-resizing tab button mode in the ChatWindow.
 ---@param offset boolean `true` to enable auto-resizing, `false` to disable. (default: `false`)
 function ChatWindow:UseAutoResizingTabButtonMode(offset) end
 
----@TODO: Verify sliding button behavior.
+---@TODO Verify sliding button behavior.
 ---Enables or disables sliding button functionality in the ChatWindow.
 ---@param use boolean `true` to enable sliding buttons, `false` to disable.
 function ChatWindow:UseSlidingButton(use) end

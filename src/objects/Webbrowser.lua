@@ -1,6 +1,6 @@
 ---@meta _
 
----@TODO: webbrowser may inherit Webview
+---@TODO webbrowser may inherit Webview
 
 ---[Webbrowser](lua://Webbrowser)
 ---
@@ -26,11 +26,11 @@ function Webbrowser:ClearFocus() end
 ---@nodiscard
 function Webbrowser:GetURL() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Loads a blank page in the Webbrowser.
 function Webbrowser:LoadBlankPage() end
 
----@FIXME: RightButton doesnt appear to work.
+---@FIXME RightButton doesnt appear to work.
 ---Simulates a mouse down event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
 function Webbrowser:MouseDown(button) end
@@ -39,70 +39,70 @@ function Webbrowser:MouseDown(button) end
 ---`"OnMouseMove"` event.
 function Webbrowser:MouseMove() end
 
----@FIXME: RightButton doesnt appear to work.
+---@FIXME RightButton doesnt appear to work.
 ---Simulates a mouse up event on the Webbrowser.
 ---@param button MOUSE_BUTTON The mouse button to simulate.
 function Webbrowser:MouseUp(button) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the expedition BBS page in the Webbrowser.'
 function Webbrowser:RequestExpeditionBBS() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the expedition home page in the Webbrowser.
 function Webbrowser:RequestExpeditionHome() end
 
----@TODO: Not sure why this exists when SetURL works the same.
+---@TODO Not sure why this exists when SetURL works the same.
 ---Requests an external page in the Webbrowser.
 ---@param url string The URL of the external page.
 function Webbrowser:RequestExternalPage(url) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the help page in the Webbrowser.
 function Webbrowser:RequestHelp() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the messenger page in the Webbrowser.
 function Webbrowser:RequestMessenger() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the messenger page for a specific PC name in the Webbrowser.
 ---@param pcName string The PC name for the messenger request.
 function Webbrowser:RequestMessengerByPcName(pcName) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the messenger page based on the current target in the Webbrowser.
 function Webbrowser:RequestMessengerOnTarget() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the play diary page in the Webbrowser.
 function Webbrowser:RequestPlayDiary() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the play diary page for a specific PC name in the Webbrowser.
 ---@param pcName string The PC name for the play diary request.
 function Webbrowser:RequestPlayDiaryByPcName(pcName) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests an instant play diary page by file name in the Webbrowser.
 ---@param fileName string The file name for the play diary.
 function Webbrowser:RequestPlayDiaryInstant(fileName) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the play diary page based on the current target in the Webbrowser.
 function Webbrowser:RequestPlayDiaryOnTarget() end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests verification for a sensitive operation with the specified URL.
 ---@param url string The URL for the sensitive operation.
 function Webbrowser:RequestSensitiveOperationVerify(url) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests a TGOS operation in the Webbrowser.
 ---@param arg number The argument for the TGOS request.
 function Webbrowser:RequestTGOS(arg) end
 
----@FIXME: Broken?
+---@FIXME Broken?
 ---Requests the wiki page in the Webbrowser.
 function Webbrowser:RequestWiki() end
 
@@ -122,12 +122,12 @@ function Webbrowser:SetFocus() end
 ---@param drawable Drawablebase The drawable to display during loading.
 function Webbrowser:SetLoadingDrawable(drawable) end
 
----@TODO: Clarify toParent behavior and purpose.
+---@TODO Clarify toParent behavior and purpose.
 ---Sets whether messages are sent to the parent of the Webbrowser.
 ---@param toParent boolean `true` to send messages to parent, `false` otherwise.
 function Webbrowser:SetMsgToParent(toParent) end
 
----@FIXME: Right now this isnt necessary to call as only "background" confirmed working.
+---@FIXME Right now this isnt necessary to call as only "background" confirmed working.
 ---Sets the UI layer for the Webbrowser.
 ---@param layer "background" The UI layer to set (only "background" confirmed working).
 function Webbrowser:SetUiLayer(layer) end

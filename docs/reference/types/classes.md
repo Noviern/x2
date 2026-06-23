@@ -4041,7 +4041,37 @@ number
 ```
 
 
-#### Field: magicResistance
+#### Field: lookChanged
+```lua
+boolean
+```
+
+
+#### Field: lookType
+```lua
+number
+```
+
+
+#### Field: longitudeSec
+```lua
+number
+```
+
+
+#### Field: longitudeMin
+```lua
+number
+```
+
+
+#### Field: longitudeDir
+```lua
+"E"|"W"
+```
+
+
+#### Field: magicDps
 ```lua
 number
 ```
@@ -4053,31 +4083,13 @@ number
 ```
 
 
-#### Field: magicDps
-```lua
-number
-```
-
-
-#### Field: lookType
-```lua
-number
-```
-
-
-#### Field: lookChanged
-```lua
-boolean
-```
-
-
-#### Field: maxDurability
-```lua
-number
-```
-
-
 #### Field: maxStack
+```lua
+number
+```
+
+
+#### Field: magicResistance
 ```lua
 number
 ```
@@ -4089,9 +4101,9 @@ number
 ```
 
 
-#### Field: modifier
+#### Field: maxDurability
 ```lua
-ModifireTable[]
+number
 ```
 
 
@@ -4101,19 +4113,13 @@ number
 ```
 
 
-#### Field: moveSpeed
+#### Field: longitudeDeg
 ```lua
 number
 ```
 
 
-#### Field: locked
-```lua
-boolean
-```
-
-
-#### Field: location_world_name
+#### Field: location_zone_name
 ```lua
 string
 ```
@@ -4137,15 +4143,15 @@ number
 ```
 
 
-#### Field: item_impl
+#### Field: latitudeSec
 ```lua
-"accessory"|"armor"|"butler_armor"|"enchanting_gem"|"itemGrade"...(+11)
+number
 ```
 
 
-#### Field: location_zone_name
+#### Field: locked
 ```lua
-string
+boolean
 ```
 
 
@@ -4156,6 +4162,12 @@ number
 
 
 #### Field: lifeSpanType
+```lua
+string
+```
+
+
+#### Field: location_world_name
 ```lua
 string
 ```
@@ -4179,9 +4191,15 @@ number
 ```
 
 
-#### Field: item_flag_cannot_equip
+#### Field: latitudeMin
 ```lua
-boolean
+number
+```
+
+
+#### Field: modifier
+```lua
+ModifireTable[]
 ```
 
 
@@ -4191,27 +4209,15 @@ string
 ```
 
 
-#### Field: overIcon
+#### Field: socketInfo
 ```lua
-string
+SocketInfo
 ```
 
 
 #### Field: soul_bind
 ```lua
 string
-```
-
-
-#### Field: soul_bind_type
-```lua
-number
-```
-
-
-#### Field: socketInfo
-```lua
-SocketInfo
 ```
 
 
@@ -4227,15 +4233,15 @@ string
 ```
 
 
-#### Field: soul_bound
+#### Field: skillType
 ```lua
 number
 ```
 
 
-#### Field: uccTooltip
+#### Field: soul_bind_type
 ```lua
-string
+number
 ```
 
 
@@ -4251,21 +4257,63 @@ boolean
 ```
 
 
+#### Field: soul_bound
+```lua
+number
+```
+
+
 #### Field: useAsSkin
 ```lua
 boolean
 ```
 
 
-#### Field: needsUnpack
+#### Field: uccTooltip
+```lua
+string
+```
+
+
+#### Field: moveSpeed
+```lua
+number
+```
+
+
+#### Field: sideEffect
 ```lua
 boolean
 ```
 
 
-#### Field: skillType
+#### Field: sellable
 ```lua
-number
+boolean
+```
+
+
+#### Field: pinned
+```lua
+boolean
+```
+
+
+#### Field: processedState
+```lua
+string
+```
+
+
+#### Field: overIcon
+```lua
+string
+```
+
+
+#### Field: needsUnpack
+```lua
+boolean
 ```
 
 
@@ -4281,31 +4329,19 @@ RechargeBuffInfo
 ```
 
 
-#### Field: refund
+#### Field: repairable
 ```lua
 number
 ```
 
 
-#### Field: processedState
+#### Field: securityState
 ```lua
-string
+`ITEM_SECURITY_INVALID`|`ITEM_SECURITY_LOCKED`|`ITEM_SECURITY_UNLOCKED`|`ITEM_SECURITY_UNLOCKING`
 ```
+> api/X2Item
 
-
-#### Field: pinned
-```lua
-boolean
-```
-
-
-#### Field: sideEffect
-```lua
-boolean
-```
-
-
-#### Field: repairable
+#### Field: refund
 ```lua
 number
 ```
@@ -4323,43 +4359,37 @@ RequiredConditionInfo
 ```
 
 
-#### Field: sellable
-```lua
-boolean
-```
-
-
-#### Field: securityState
-```lua
-`ITEM_SECURITY_INVALID`|`ITEM_SECURITY_LOCKED`|`ITEM_SECURITY_UNLOCKED`|`ITEM_SECURITY_UNLOCKING`
-```
-> api/X2Item
-
 #### Field: useConsumeItem
 ```lua
 boolean
 ```
 
 
-#### Field: itemUsage
+#### Field: latitudeDir
 ```lua
-string
+"N"|"S"
 ```
 
 
-#### Field: itemGrade
+#### Field: item_impl
 ```lua
-number
-```
-
-
-#### Field: craftedWorldName
-```lua
-string
+"accessory"|"armor"|"butler_armor"|"enchanting_gem"|"itemGrade"...(+11)
 ```
 
 
 #### Field: crafter
+```lua
+string
+```
+
+
+#### Field: dead
+```lua
+boolean
+```
+
+
+#### Field: craftedWorldName
 ```lua
 string
 ```
@@ -4377,31 +4407,7 @@ number
 ```
 
 
-#### Field: convertibleItem
-```lua
-boolean
-```
-
-
-#### Field: dead
-```lua
-boolean
-```
-
-
-#### Field: durability
-```lua
-number
-```
-
-
 #### Field: description
-```lua
-string
-```
-
-
-#### Field: elementName
 ```lua
 string
 ```
@@ -4413,21 +4419,45 @@ string
 ```
 
 
+#### Field: equiped
+```lua
+boolean
+```
+
+
+#### Field: durability
+```lua
+number
+```
+
+
 #### Field: equipSetInfo
 ```lua
 EquipSetInfo
 ```
 
 
-#### Field: contributionPointPrice
+#### Field: elementName
+```lua
+string
+```
+
+
+#### Field: equippedSetItemCount
 ```lua
 number
 ```
 
 
-#### Field: category_id
+#### Field: convertibleItem
 ```lua
-number
+boolean
+```
+
+
+#### Field: checkUnitReq
+```lua
+boolean
 ```
 
 
@@ -4455,9 +4485,9 @@ number
 ```
 
 
-#### Field: checkUnitReq
+#### Field: contributionPointPrice
 ```lua
-boolean
+number
 ```
 
 
@@ -4468,6 +4498,12 @@ number
 
 
 #### Field: buffType
+```lua
+number
+```
+
+
+#### Field: category_id
 ```lua
 number
 ```
@@ -4491,15 +4527,9 @@ boolean
 ```
 
 
-#### Field: itemType
+#### Field: latitudeDeg
 ```lua
 number
-```
-
-
-#### Field: equiped
-```lua
-boolean
 ```
 
 
@@ -4509,37 +4539,13 @@ boolean
 ```
 
 
-#### Field: indestructible
-```lua
-boolean
-```
-
-
-#### Field: isEnchantDisable
-```lua
-boolean
-```
-
-
-#### Field: icon
-```lua
-string
-```
-
-
-#### Field: honorPrice
+#### Field: extraArmor
 ```lua
 number
 ```
 
 
-#### Field: healDps
-```lua
-number
-```
-
-
-#### Field: isMaterial
+#### Field: isMyWorld
 ```lua
 boolean
 ```
@@ -4551,13 +4557,19 @@ boolean
 ```
 
 
-#### Field: isMyWorld
+#### Field: isMaterial
 ```lua
 boolean
 ```
 
 
-#### Field: isUnderWaterCreature
+#### Field: isEnchantDisable
+```lua
+boolean
+```
+
+
+#### Field: indestructible
 ```lua
 boolean
 ```
@@ -4569,31 +4581,31 @@ boolean
 ```
 
 
-#### Field: equippedSetItemCount
+#### Field: itemGrade
 ```lua
 number
 ```
 
 
-#### Field: gradeIcon
+#### Field: item_flag_cannot_equip
+```lua
+boolean
+```
+
+
+#### Field: isUnderWaterCreature
+```lua
+boolean
+```
+
+
+#### Field: itemUsage
 ```lua
 string
 ```
 
 
-#### Field: gradeColor
-```lua
-string
-```
-
-
-#### Field: extraDPS
-```lua
-number
-```
-
-
-#### Field: extraArmor
+#### Field: itemType
 ```lua
 number
 ```
@@ -4605,21 +4617,15 @@ EvolvingInfo
 ```
 
 
-#### Field: gradeEnchantable
+#### Field: icon
 ```lua
-boolean
+string
 ```
 
 
-#### Field: gearScore
+#### Field: healDps
 ```lua
-GearScoreItemInfo
-```
-
-
-#### Field: gemModifireTable
-```lua
-ModifireTable[]
+number
 ```
 
 
@@ -4629,15 +4635,57 @@ number
 ```
 
 
-#### Field: grade
+#### Field: gemModifireTable
 ```lua
-string
+ModifireTable[]
+```
+
+
+#### Field: gearScore
+```lua
+GearScoreItemInfo
+```
+
+
+#### Field: extraDPS
+```lua
+number
+```
+
+
+#### Field: honorPrice
+```lua
+number
 ```
 
 
 #### Field: gender
 ```lua
 string
+```
+
+
+#### Field: gradeColor
+```lua
+string
+```
+
+
+#### Field: grade
+```lua
+string
+```
+
+
+#### Field: gradeIcon
+```lua
+string
+```
+
+
+#### Field: gradeEnchantable
+```lua
+boolean
 ```
 
 
@@ -7958,6 +8006,1160 @@ number
 #### Field: value
 ```lua
 string
+```
+
+
+### Class: UnitAttributeModifierInfo
+#### Field: armor
+```lua
+number
+```
+
+
+#### Field: melee_parry_mul
+```lua
+number
+```
+
+
+#### Field: melee_parry_rate
+```lua
+number
+```
+
+
+#### Field: melee_min_dps
+```lua
+number
+```
+
+
+#### Field: melee_max_dps
+```lua
+number
+```
+
+
+#### Field: melee_dps
+```lua
+number
+```
+
+
+#### Field: melee_success_rate
+```lua
+number
+```
+
+
+#### Field: offhand_melee_speed
+```lua
+number
+```
+
+
+#### Field: move_speed
+```lua
+number
+```
+
+
+#### Field: persistent_mana_regen
+```lua
+number
+```
+
+
+#### Field: persistent_health_regen
+```lua
+number
+```
+
+
+#### Field: ranged_attack_speed_mul
+```lua
+number
+```
+
+
+#### Field: melee_damage_mul_anti_pc
+```lua
+number
+```
+
+
+#### Field: melee_damage_mul
+```lua
+number
+```
+
+
+#### Field: max_health
+```lua
+number
+```
+
+
+#### Field: mana_regen
+```lua
+number
+```
+
+
+#### Field: mainhand_melee_speed
+```lua
+number
+```
+
+
+#### Field: melee_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: max_mana
+```lua
+number
+```
+
+
+#### Field: melee_critical_bonus
+```lua
+number
+```
+
+
+#### Field: melee_attack_speed_mul
+```lua
+number
+```
+
+
+#### Field: melee_critical_rate
+```lua
+number
+```
+
+
+#### Field: melee_critical_mul
+```lua
+number
+```
+
+
+#### Field: magic_resist
+```lua
+number
+```
+
+
+#### Field: ranged_critical_bonus
+```lua
+number
+```
+
+
+#### Field: ranged_critical_rate
+```lua
+number
+```
+
+
+#### Field: spell_damage_critical_mul
+```lua
+number
+```
+
+
+#### Field: spell_damage_mul
+```lua
+number
+```
+
+
+#### Field: spell_damage_critical_bonus
+```lua
+number
+```
+
+
+#### Field: spell_critical_rate
+```lua
+number
+```
+
+
+#### Field: spell_critical_mul
+```lua
+number
+```
+
+
+#### Field: spell_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: spell_dps
+```lua
+number
+```
+
+
+#### Field: spell_damage_mul_anti_pc
+```lua
+number
+```
+
+
+#### Field: spi
+```lua
+number
+```
+
+
+#### Field: spell_success_rate
+```lua
+number
+```
+
+
+#### Field: ranged_critical_mul
+```lua
+number
+```
+
+
+#### Field: spell_critical_bonus
+```lua
+number
+```
+
+
+#### Field: ranged_speed
+```lua
+number
+```
+
+
+#### Field: ranged_damage_mul_anti_pc
+```lua
+number
+```
+
+
+#### Field: ranged_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: ranged_damage_mul
+```lua
+number
+```
+
+
+#### Field: ranged_success_rate
+```lua
+number
+```
+
+
+#### Field: ranged_dps
+```lua
+number
+```
+
+
+#### Field: ranged_min_dps
+```lua
+number
+```
+
+
+#### Field: ranged_max_dps
+```lua
+number
+```
+
+
+#### Field: ranged_parry_rate
+```lua
+number
+```
+
+
+#### Field: ranged_parry_mul
+```lua
+number
+```
+
+
+#### Field: sta
+```lua
+number
+```
+
+
+#### Field: magic_penetration
+```lua
+number
+```
+
+
+#### Field: loot_gold_mul
+```lua
+number
+```
+
+
+#### Field: drop_rate_mul
+```lua
+number
+```
+
+
+#### Field: exp_mul
+```lua
+number
+```
+
+
+#### Field: dodge_rate
+```lua
+number
+```
+
+
+#### Field: dodge_mul
+```lua
+number
+```
+
+
+#### Field: dex
+```lua
+number
+```
+
+
+#### Field: flexibility
+```lua
+number
+```
+
+
+#### Field: heal_critical_bonus
+```lua
+number
+```
+
+
+#### Field: gear_score
+```lua
+number
+```
+
+
+#### Field: heal_critical_rate
+```lua
+number
+```
+
+
+#### Field: heal_critical_mul
+```lua
+number
+```
+
+
+#### Field: heal_damage_mul
+```lua
+number
+```
+
+
+#### Field: detect_stealth_range_mul
+```lua
+number
+```
+
+
+#### Field: casting_time
+```lua
+number
+```
+
+
+#### Field: backattack_ranged_damage_mul
+```lua
+number
+```
+
+
+#### Field: backattack_melee_damage_mul
+```lua
+number
+```
+
+
+#### Field: attack_anim_speed_mul
+```lua
+number
+```
+
+
+#### Field: casting_time_mul
+```lua
+number
+```
+
+
+#### Field: backattack_spell_damage_mul
+```lua
+number
+```
+
+
+#### Field: block_mul
+```lua
+number
+```
+
+
+#### Field: battle_resist
+```lua
+number
+```
+
+
+#### Field: bulls_eye
+```lua
+number
+```
+
+
+#### Field: block_rate
+```lua
+number
+```
+
+
+#### Field: magic_effect_resist_percentage
+```lua
+number
+```
+
+
+#### Field: heal_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: heal_mul
+```lua
+number
+```
+
+
+#### Field: incoming_siege_damage_mul
+```lua
+number
+```
+
+
+#### Field: incoming_ranged_damage_val
+```lua
+number
+```
+
+
+#### Field: incoming_ranged_damage_mul
+```lua
+number
+```
+
+
+#### Field: incoming_ranged_damage_add_anti_npc
+```lua
+number
+```
+
+
+#### Field: incoming_siege_damage_val
+```lua
+number
+```
+
+
+#### Field: incoming_spell_damage_mul
+```lua
+number
+```
+
+
+#### Field: incoming_spell_damage_add_anti_npc
+```lua
+number
+```
+
+
+#### Field: int
+```lua
+number
+```
+
+
+#### Field: incoming_spell_damage_val
+```lua
+number
+```
+
+
+#### Field: heal_dps
+```lua
+number
+```
+
+
+#### Field: incoming_melee_damage_val
+```lua
+number
+```
+
+
+#### Field: incoming_melee_damage_add_anti_npc
+```lua
+number
+```
+
+
+#### Field: ignore_armor
+```lua
+number
+```
+
+
+#### Field: health_regen
+```lua
+number
+```
+
+
+#### Field: heal_mul_only_heal
+```lua
+number
+```
+
+
+#### Field: incoming_melee_damage_mul
+```lua
+number
+```
+
+
+#### Field: ignore_shield_bonus
+```lua
+number
+```
+
+
+#### Field: ignore_shield_chance
+```lua
+number
+```
+
+
+#### Field: ignore_shield_bonus_mul
+```lua
+number
+```
+
+
+#### Field: incoming_heal_mul
+```lua
+number
+```
+
+
+#### Field: incoming_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: str
+```lua
+number
+```
+
+
+### Class: UnitAttributesInfo
+#### Field: armor
+```lua
+number
+```
+
+
+#### Field: melee_damage_mul_anti_pc
+```lua
+number
+```
+
+
+#### Field: melee_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: melee_damage_mul
+```lua
+number
+```
+
+
+#### Field: melee_critical_rate
+```lua
+number
+```
+
+
+#### Field: melee_dps
+```lua
+number
+```
+
+
+#### Field: melee_min_dps
+```lua
+number
+```
+
+
+#### Field: melee_max_dps
+```lua
+number
+```
+
+
+#### Field: melee_success_rate
+```lua
+number
+```
+
+
+#### Field: melee_parry_rate
+```lua
+number
+```
+
+
+#### Field: move_speed
+```lua
+number
+```
+
+
+#### Field: melee_critical_bonus
+```lua
+number
+```
+
+
+#### Field: mainhand_melee_speed
+```lua
+number
+```
+
+
+#### Field: int
+```lua
+number
+```
+
+
+#### Field: incoming_spell_damage_val
+```lua
+number
+```
+
+
+#### Field: incoming_spell_damage_mul
+```lua
+number
+```
+
+
+#### Field: mana_regen
+```lua
+number
+```
+
+
+#### Field: loot_gold_mul
+```lua
+number
+```
+
+
+#### Field: magic_penetration
+```lua
+number
+```
+
+
+#### Field: magic_effect_resist_percentage
+```lua
+number
+```
+
+
+#### Field: magic_resist_percentage
+```lua
+number
+```
+
+
+#### Field: magic_resist
+```lua
+number
+```
+
+
+#### Field: incoming_spell_damage_add_anti_npc
+```lua
+number
+```
+
+
+#### Field: move_speed_rate
+```lua
+number
+```
+
+
+#### Field: persistent_health_regen
+```lua
+number
+```
+
+
+#### Field: spell_damage_mul
+```lua
+number
+```
+
+
+#### Field: spell_critical_rate
+```lua
+number
+```
+
+
+#### Field: spell_critical_bonus
+```lua
+number
+```
+
+
+#### Field: ranged_success_rate
+```lua
+number
+```
+
+
+#### Field: spell_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: spell_dps
+```lua
+number
+```
+
+
+#### Field: spell_damage_mul_anti_pc
+```lua
+number
+```
+
+
+#### Field: spi
+```lua
+number
+```
+
+
+#### Field: spell_success_rate
+```lua
+number
+```
+
+
+#### Field: offhand_melee_speed
+```lua
+number
+```
+
+
+#### Field: ranged_speed
+```lua
+number
+```
+
+
+#### Field: ranged_min_dps
+```lua
+number
+```
+
+
+#### Field: ranged_critical_rate
+```lua
+number
+```
+
+
+#### Field: ranged_critical_bonus
+```lua
+number
+```
+
+
+#### Field: persistent_mana_regen
+```lua
+number
+```
+
+
+#### Field: ranged_parry_rate
+```lua
+number
+```
+
+
+#### Field: ranged_damage_mul
+```lua
+number
+```
+
+
+#### Field: ranged_damage_mul_anti_pc
+```lua
+number
+```
+
+
+#### Field: ranged_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: ranged_max_dps
+```lua
+number
+```
+
+
+#### Field: ranged_dps
+```lua
+number
+```
+
+
+#### Field: sta
+```lua
+number
+```
+
+
+#### Field: incoming_siege_damage_val
+```lua
+number
+```
+
+
+#### Field: incoming_ranged_damage_val
+```lua
+number
+```
+
+
+#### Field: detect_stealth_range_mul
+```lua
+number
+```
+
+
+#### Field: detect_stealth_range
+```lua
+number
+```
+
+
+#### Field: casting_time_mul
+```lua
+number
+```
+
+
+#### Field: casting_time
+```lua
+number
+```
+
+
+#### Field: dex
+```lua
+number
+```
+
+
+#### Field: drop_rate_mul
+```lua
+number
+```
+
+
+#### Field: dodge_rate
+```lua
+number
+```
+
+
+#### Field: flexibility
+```lua
+number
+```
+
+
+#### Field: exp_mul
+```lua
+number
+```
+
+
+#### Field: flexibility_bonus
+```lua
+number
+```
+
+
+#### Field: bulls_eye_rate
+```lua
+number
+```
+
+
+#### Field: block_rate
+```lua
+number
+```
+
+
+#### Field: attack_anim_speed_mul
+```lua
+number
+```
+
+
+#### Field: attack_anim_speed
+```lua
+number
+```
+
+
+#### Field: armor_percentage
+```lua
+number
+```
+
+
+#### Field: bulls_eye
+```lua
+number
+```
+
+
+#### Field: backattack_melee_damage_mul
+```lua
+number
+```
+
+
+#### Field: backattack_spell_damage_mul
+```lua
+number
+```
+
+
+#### Field: backattack_ranged_damage_mul
+```lua
+number
+```
+
+
+#### Field: battle_resist_rate
+```lua
+number
+```
+
+
+#### Field: battle_resist
+```lua
+number
+```
+
+
+#### Field: incoming_siege_damage_mul
+```lua
+number
+```
+
+
+#### Field: flexibility_ratio
+```lua
+number
+```
+
+
+#### Field: global_cooldown_mul
+```lua
+number
+```
+
+
+#### Field: incoming_heal_mul
+```lua
+number
+```
+
+
+#### Field: incoming_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: ignore_shield_chance
+```lua
+number
+```
+
+
+#### Field: ignore_shield_bonus_mul
+```lua
+number
+```
+
+
+#### Field: incoming_melee_damage_add_anti_npc
+```lua
+number
+```
+
+
+#### Field: incoming_melee_damage_val
+```lua
+number
+```
+
+
+#### Field: incoming_melee_damage_mul
+```lua
+number
+```
+
+
+#### Field: incoming_ranged_damage_mul
+```lua
+number
+```
+
+
+#### Field: incoming_ranged_damage_add_anti_npc
+```lua
+number
+```
+
+
+#### Field: gear_score
+```lua
+number
+```
+
+
+#### Field: ignore_shield_bonus
+```lua
+number
+```
+
+
+#### Field: health_regen
+```lua
+number
+```
+
+
+#### Field: heal_damage_mul
+```lua
+number
+```
+
+
+#### Field: heal_critical_rate
+```lua
+number
+```
+
+
+#### Field: heal_critical_bonus
+```lua
+number
+```
+
+
+#### Field: ignore_armor
+```lua
+number
+```
+
+
+#### Field: heal_damage_mul_anti_npc
+```lua
+number
+```
+
+
+#### Field: heal_mul
+```lua
+number
+```
+
+
+#### Field: heal_dps
+```lua
+number
+```
+
+
+#### Field: heal_mul_only_heal
+```lua
+number
+```
+
+
+#### Field: str
+```lua
+number
 ```
 
 

@@ -103,7 +103,7 @@ function Slot:EstablishSkill(skillType) end
 ---@param duration number The total duration of the alert in milliseconds.
 function Slot:EstablishSkillAlert(statusBuffTag, remain, duration) end
 
----@TODO: What slotTypes are supported?
+---@TODO What slotTypes are supported?
 ---Establishes a skill slot for the Slot.
 ---@param slotType SLOT_TYPE The type of the slot.
 ---@param slotIdx number The index of the slot.
@@ -124,35 +124,35 @@ function Slot:EstablishSkillSlot(slotType, slotIdx) end
 ---widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_EQUIPMENT`.
 ---widget:EstablishSlot(ISLOT_GUILD_BANK, 0) -- The currently open guild bank cell. (min: `0`, max: `149`)
 ---widget:EstablishSlot(ISLOT_HEIR_SKILL_VIEW, 1) -- The current ancestral skill being changed. (min: `1`, max: `8`)
----widget:EstablishSlot(ISLOT_INSTANT_KILL_STREAK, @TODO:)
+---widget:EstablishSlot(ISLOT_INSTANT_KILL_STREAK, @TODO)
 ---widget:EstablishSlot(ISLOT_MODE_ACTION, 1) -- Dynamic shortcut slots. (min: `1`, max: `20`)
 ---widget:EstablishSlot(ISLOT_ORIGIN_SKILL_VIEW, 1) -- The current ancestral tree being changed.
 ---widget:EstablishSlot(ISLOT_PET_BATTLE_ACTION, 1) -- Currently summoned battlepet. (min: `1`, max: `6`)
 ---widget:EstablishSlot(ISLOT_PET_RIDE_ACTION, 1) -- Currently summoned mount. (min: `1`, max: `6`)
 ---widget:EstablishSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_PRELIMINARY_EQUIPMENT`.
 ---widget:EstablishSlot(ISLOT_SHORTCUT_ACTION, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
----widget:EstablishSlot(ISLOT_SKILL_ALERT, @TODO:)
+---widget:EstablishSlot(ISLOT_SKILL_ALERT, @TODO)
 ---```
 ---@overload fun(self: self, slotType: ISLOT_ABILITY_VIEW, slotIdx: SKILL)
 ---@overload fun(self: self, slotType: ISLOT_ACTION, slotIdx: number)
----@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number) @FIXME: Only grade of the item renders.
----@overload fun(self: self, slotType: ISLOT_BANK, slotIdx: number) @FIXME: Only grade of the item renders.
----@overload fun(self: self, slotType: ISLOT_COFFER, slotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number) @FIXME Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_BANK, slotIdx: number) @FIXME Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_COFFER, slotIdx: number) @FIXME Only grade of the item renders.
 ---@overload fun(self: self, slotType: ISLOT_CONSTANT, slotIdx: 0)
 ---@overload fun(self: self, slotType: ISLOT_EQUIPMENT, slotIdx: EQUIPMENT_SLOT)
----@overload fun(self: self, slotType: ISLOT_GUILD_BANK, slotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_GUILD_BANK, slotIdx: number) @FIXME Only grade of the item renders.
 ---@overload fun(self: self, slotType: ISLOT_HEIR_SKILL_VIEW, slotIdx: HEIR_SKILL_TYPE)
----@overload fun(self: self, slotType: ISLOT_INSTANT_KILL_STREAK, slotIdx: number) @FIXME: Crash.
+---@overload fun(self: self, slotType: ISLOT_INSTANT_KILL_STREAK, slotIdx: number) @FIXME Crash.
 ---@overload fun(self: self, slotType: ISLOT_MODE_ACTION, slotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_ORIGIN_SKILL_VIEW, slotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_PET_BATTLE_ACTION, slotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_PET_RIDE_ACTION, slotIdx: number)
----@overload fun(self: self, slotType: ISLOT_PRELIMINARY_EQUIPMENT, slotIdx: PRELIMINARY_EQUIPMENT_SLOT) @FIXME: Preliminary Equipment does not render.
+---@overload fun(self: self, slotType: ISLOT_PRELIMINARY_EQUIPMENT, slotIdx: PRELIMINARY_EQUIPMENT_SLOT) @FIXME Preliminary Equipment does not render.
 ---@overload fun(self: self, slotType: ISLOT_SHORTCUT_ACTION, slotIdx: number)
----@overload fun(self: self, slotType: ISLOT_SKILL_ALERT, slotIdx: number) @TODO:
+---@overload fun(self: self, slotType: ISLOT_SKILL_ALERT, slotIdx: number) @TODO
 function Slot:EstablishSlot(slotType, slotIdx) end
 
----@FIXME: virtualSlotIdx is used in `X2Bag:SlotByIdx`, `X2Bank:SlotByIdx`, `X2Coffer:SlotByIdx`, and `X2GuildBank:SlotByIdx`.
+---@FIXME virtualSlotIdx is used in `X2Bag:SlotByIdx`, `X2Bank:SlotByIdx`, `X2Coffer:SlotByIdx`, and `X2GuildBank:SlotByIdx`.
 ---Establishes a virtual slot for the Slot. Triggers the event
 ---`OnContentUpdated`.
 ---@param slotType SLOT_TYPE The type of the slot.
@@ -169,32 +169,32 @@ function Slot:EstablishSlot(slotType, slotIdx) end
 ---widget:EstablishVirtualSlot(ISLOT_EQUIPMENT, ES_HEAD - 1, 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_EQUIPMENT`.
 ---widget:EstablishVirtualSlot(ISLOT_GUILD_BANK, 0, 1) -- The currently open guild bank cell. (min: `0`, max: `149`)
 ---widget:EstablishVirtualSlot(ISLOT_HEIR_SKILL_VIEW, 1, 1) -- The current ancestral skill being changed. (min: `1`, max: `8`)
----widget:EstablishVirtualSlot(ISLOT_INSTANT_KILL_STREAK, @TODO:, 1)
+---widget:EstablishVirtualSlot(ISLOT_INSTANT_KILL_STREAK, @TODO, 1)
 ---widget:EstablishVirtualSlot(ISLOT_MODE_ACTION, 1, 1) -- Dynamic shortcut slots. (min: `1`, max: `20`)
 ---widget:EstablishVirtualSlot(ISLOT_ORIGIN_SKILL_VIEW, 1, 1) -- The current ancestral tree being changed.
 ---widget:EstablishVirtualSlot(ISLOT_PET_BATTLE_ACTION, 1, 1) -- Currently summoned battlepet. (min: `1`, max: `6`)
 ---widget:EstablishVirtualSlot(ISLOT_PET_RIDE_ACTION, 1, 1) -- Currently summoned mount. (min: `1`, max: `6`)
 ---widget:EstablishVirtualSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1, 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_PRELIMINARY_EQUIPMENT`.
 ---widget:EstablishVirtualSlot(ISLOT_SHORTCUT_ACTION, 1, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
----widget:EstablishVirtualSlot(ISLOT_SKILL_ALERT, @TODO:, 1)
+---widget:EstablishVirtualSlot(ISLOT_SKILL_ALERT, @TODO, 1)
 ---```
 ---@overload fun(self: self, slotType: ISLOT_ABILITY_VIEW, slotIdx: SKILL, virtualSlotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_ACTION, slotIdx: number, virtualSlotIdx: number)
----@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
----@overload fun(self: self, slotType: ISLOT_BANK, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
----@overload fun(self: self, slotType: ISLOT_COFFER, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_BAG, slotIdx: number, virtualSlotIdx: number) @FIXME Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_BANK, slotIdx: number, virtualSlotIdx: number) @FIXME Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_COFFER, slotIdx: number, virtualSlotIdx: number) @FIXME Only grade of the item renders.
 ---@overload fun(self: self, slotType: ISLOT_CONSTANT, slotIdx: 0, virtualSlotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_EQUIPMENT, slotIdx: EQUIPMENT_SLOT, virtualSlotIdx: number)
----@overload fun(self: self, slotType: ISLOT_GUILD_BANK, slotIdx: number, virtualSlotIdx: number) @FIXME: Only grade of the item renders.
+---@overload fun(self: self, slotType: ISLOT_GUILD_BANK, slotIdx: number, virtualSlotIdx: number) @FIXME Only grade of the item renders.
 ---@overload fun(self: self, slotType: ISLOT_HEIR_SKILL_VIEW, slotIdx: HEIR_SKILL_TYPE, virtualSlotIdx: number)
----@overload fun(self: self, slotType: ISLOT_INSTANT_KILL_STREAK, slotIdx: number, virtualSlotIdx: number) @FIXME: Crash.
+---@overload fun(self: self, slotType: ISLOT_INSTANT_KILL_STREAK, slotIdx: number, virtualSlotIdx: number) @FIXME Crash.
 ---@overload fun(self: self, slotType: ISLOT_MODE_ACTION, slotIdx: number, virtualSlotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_ORIGIN_SKILL_VIEW, slotIdx: number, virtualSlotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_PET_BATTLE_ACTION, slotIdx: number, virtualSlotIdx: number)
 ---@overload fun(self: self, slotType: ISLOT_PET_RIDE_ACTION, slotIdx: number, virtualSlotIdx: number)
----@overload fun(self: self, slotType: ISLOT_PRELIMINARY_EQUIPMENT, slotIdx: PRELIMINARY_EQUIPMENT_SLOT, virtualSlotIdx: number) @FIXME: Preliminary Equipment does not render.
+---@overload fun(self: self, slotType: ISLOT_PRELIMINARY_EQUIPMENT, slotIdx: PRELIMINARY_EQUIPMENT_SLOT, virtualSlotIdx: number) @FIXME Preliminary Equipment does not render.
 ---@overload fun(self: self, slotType: ISLOT_SHORTCUT_ACTION, slotIdx: number, virtualSlotIdx: number)
----@overload fun(self: self, slotType: ISLOT_SKILL_ALERT, slotIdx: number, virtualSlotIdx: number) @TODO:
+---@overload fun(self: self, slotType: ISLOT_SKILL_ALERT, slotIdx: number, virtualSlotIdx: number) @TODO
 function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 
 ---Retrieves the binded type of the Slot.
@@ -202,7 +202,7 @@ function Slot:EstablishVirtualSlot(slotType, slotIdx, virtualSlotIdx) end
 ---@nodiscard
 function Slot:GetBindedType() end
 
----@TODO: Clarify what ItemInfo is sent.
+---@TODO Clarify what ItemInfo is sent.
 ---Retrieves extra information for the Slot.
 ---@return ItemInfo|SkillInfo|nil extraInfo The extra information, or `nil` if none exists.
 ---@nodiscard

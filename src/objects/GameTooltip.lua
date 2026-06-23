@@ -115,7 +115,7 @@ function GameTooltip:SetInset(left, top, right, bottom) end
 ---@param space number The line spacing value. (default: `0`)
 function GameTooltip:SetLineSpace(space) end
 
----@TODO: unsure what this does exactly.
+---@TODO unsure what this does exactly.
 ---Sets the tooltip data for the GameTooltip.
 ---@param data string The data to set for the tooltip.
 function GameTooltip:SetTooltipData(data) end

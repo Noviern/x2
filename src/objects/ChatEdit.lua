@@ -4,6 +4,6 @@
 ---@class ChatEdit
 local ChatEdit = {}
 
----@TODO: Document
+---@TODO Document
 ---@param chatType number
 function ChatEdit:SetChannel(chatType) end

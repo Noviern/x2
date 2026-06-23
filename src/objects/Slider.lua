@@ -1,6 +1,6 @@
 ---@meta _
 
----@FIXME: If Slider:SetThumbButtonWidget is not set and you attempt to mouse over the slider the game crashes.
+---@FIXME If Slider:SetThumbButtonWidget is not set and you attempt to mouse over the slider the game crashes.
 
 ---[Slider](lua://Slider)
 ---
@@ -39,7 +39,7 @@ function Slider:GetOrientation() end
 ---@see Button
 function Slider:GetThumbButtonWidget() end
 
----@TODO: This and GetThumbButtonWidget appear to return the same value so unsure what this exists for.
+---@TODO This and GetThumbButtonWidget appear to return the same value so unsure what this exists for.
 ---Retrieves the thumb drawable of the Slider.
 ---@return Button|nil thumbDrawable The thumb drawable, or `nil` if not set.
 ---@nodiscard
