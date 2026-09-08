@@ -17,9 +17,11 @@ X2Hotkey = {} -- api/X2Hotkey
 ----- Set a new binding.
 ---X2Hotkey:SaveHotKey()
 ---```
+---Disabled in combat.
 function X2Hotkey:BindingToOption() end
 
 ---Enables or disables the hotkey system.
+---Disabled in combat.
 ---@param enable boolean `true` to enable the hotkey system, `false` to disable it. (default: `true`)
 function X2Hotkey:EnableHotkey(enable) end
 
@@ -74,9 +76,11 @@ function X2Hotkey:IsValidActionName(action) end
 ---- **Any key pressed when this is fired and `X2Hotkey:BindingToOption()` isn't
 ---used right before setting a hotkey can become stuck in a pressed state until
 ---pressed again.**
+---Disabled in combat.
 function X2Hotkey:OptionToBinding() end
 
 ---Removes the hotkey binding from the specified action.
+---Disabled in combat.
 ---@param action HOTKEY_ACTION|string The action to remove the binding from.
 ---@param index HOTKEY_MANAGER The hotkey manager index.
 ---@param arg number Additional argument for the binding. (min: `0`)
@@ -100,11 +104,13 @@ function X2Hotkey:RemoveOptionBinding(action, index, arg) end
 ----- Set a new binding here.
 ---X2Hotkey:SaveHotKey()
 ---```
+---Disabled in combat.
 function X2Hotkey:SaveHotKey() end
 
 ---Binds a key to an action and registers the key to fire the `HOTKEY_ACTION`
 ---event when pressed and released. This can't be saved but the hotkey can be
 ---used immediately.
+---Disabled in combat.
 ---@param actionName string The custom action name to bind.
 ---@param key HOTKEY_NAME|string The key to bind to the action.
 function X2Hotkey:SetBindingUiEvent(actionName, key) end
@@ -112,6 +118,7 @@ function X2Hotkey:SetBindingUiEvent(actionName, key) end
 ---Binds a key to a action in the specified index and registers the key to fire
 ---the `HOTKEY_ACTION` event when pressed and released. This can't be saved but
 ---the hotkey can be used immediately.
+---Disabled in combat.
 ---@param actionName string The custom action name to bind.
 ---@param key HOTKEY_NAME|string The key to bind to the action.
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
@@ -119,6 +126,7 @@ function X2Hotkey:SetBindingUiEventWithIndex(actionName, key, index) end
 
 ---Binds a key to a action option button in the specified index. Can't be saved
 ---or used.
+---Disabled in combat.
 ---@param action HOTKEY_ACTION The hotkey action to bind.
 ---@param key HOTKEY_NAME|string The key to bind.
 ---@param keyType HOTKEY_MANAGER The key type for the binding.
@@ -126,6 +134,7 @@ function X2Hotkey:SetOptionBindingButtonWithIndex(action, key, keyType) end
 
 ---Binds a key to a action option button and once saved registers the key to
 ---fire the `HOTKEY_ACTION` event when pressed and released.
+---Disabled in combat.
 ---@param actionName string The custom action name to bind.
 ---@param key HOTKEY_NAME|string The key to bind to the action.
 ---@usage
@@ -139,6 +148,7 @@ function X2Hotkey:SetOptionBindingUiEvent(actionName, key) end
 ---Binds a key to a custom action option button in the specified index and once
 ---saved registers the key to fire the `HOTKEY_ACTION` event when pressed and
 ---released.
+---Disabled in combat.
 ---@param actionName string The custom action name to bind.
 ---@param key HOTKEY_NAME|string The key to bind to the action.
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.
@@ -153,6 +163,7 @@ function X2Hotkey:SetOptionBindingUiEventWithIndex(actionName, key, index) end
 ---Binds a key to a action option button in the specified index with additional
 ---arguments. Can trigger the `UPDATE_OPTION_BINDINGS` event if the button key
 ---has changed.
+---Disabled in combat.
 ---@param action HOTKEY_ACTION The hotkey action to bind.
 ---@param key HOTKEY_NAME|string The key to bind.
 ---@param index HOTKEY_MANAGER The index of the hotkey manager.

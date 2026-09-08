@@ -145,6 +145,15 @@ SHOP_OPEN:
 > 
 > See: [ZoneInfo](../types/classes.md#class-zoneinfo)
 
+#### Method: GetSpecialtyRatio
+```lua
+(method) X2Store:GetSpecialtyRatio()
+  -> specialtyRatio: number
+```
+> Retrieves the specialty ratio.
+> 
+> @*return* `specialtyRatio` — The specialty ratio.
+
 #### Method: GetSpecialtyRatioBetween
 ```lua
 (method) X2Store:GetSpecialtyRatioBetween(fromZoneGroup: `0`|`100`|`101`|`102`|`103`...(+151), toZoneGroup: `0`|`100`|`101`|`102`|`103`...(+151))
@@ -484,15 +493,6 @@ SHOP_OPEN:
 >     | `159` -- instance_golden_plains_ga - Golden Plains Battle
 > ```
 
-#### Method: GetSpecialtyRatio
-```lua
-(method) X2Store:GetSpecialtyRatio()
-  -> specialtyRatio: number
-```
-> Retrieves the specialty ratio.
-> 
-> @*return* `specialtyRatio` — The specialty ratio.
-
 #### Method: GetSellableZoneGroups
 ```lua
 (method) X2Store:GetSellableZoneGroups(fromZoneGroup: `0`|`100`|`101`|`102`|`103`...(+151))
@@ -667,6 +667,13 @@ SHOP_OPEN:
 > ```
 > 
 > See: [ZoneInfo](../types/classes.md#class-zoneinfo)
+
+#### Method: GetRandomShopStoreRefreshCount
+```lua
+(method) X2Store:GetRandomShopStoreRefreshCount()
+  -> info: table|nil
+```
+
 
 #### Method: GetZoneSpecialtyRatio
 ```lua

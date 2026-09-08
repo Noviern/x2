@@ -510,14 +510,14 @@ IconDrawable
 > widget:EstablishSlot(ISLOT_EQUIPMENT, ES_HEAD - 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_EQUIPMENT`.
 > widget:EstablishSlot(ISLOT_GUILD_BANK, 0) -- The currently open guild bank cell. (min: `0`, max: `149`)
 > widget:EstablishSlot(ISLOT_HEIR_SKILL_VIEW, 1) -- The current ancestral skill being changed. (min: `1`, max: `8`)
-> widget:EstablishSlot(ISLOT_INSTANT_KILL_STREAK, @TODO:)
+> widget:EstablishSlot(ISLOT_INSTANT_KILL_STREAK, @TODO)
 > widget:EstablishSlot(ISLOT_MODE_ACTION, 1) -- Dynamic shortcut slots. (min: `1`, max: `20`)
 > widget:EstablishSlot(ISLOT_ORIGIN_SKILL_VIEW, 1) -- The current ancestral tree being changed.
 > widget:EstablishSlot(ISLOT_PET_BATTLE_ACTION, 1) -- Currently summoned battlepet. (min: `1`, max: `6`)
 > widget:EstablishSlot(ISLOT_PET_RIDE_ACTION, 1) -- Currently summoned mount. (min: `1`, max: `6`)
 > widget:EstablishSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_PRELIMINARY_EQUIPMENT`.
 > widget:EstablishSlot(ISLOT_SHORTCUT_ACTION, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
-> widget:EstablishSlot(ISLOT_SKILL_ALERT, @TODO:)
+> widget:EstablishSlot(ISLOT_SKILL_ALERT, @TODO)
 > ```
 > 
 > 
@@ -599,14 +599,14 @@ IconDrawable
 > widget:EstablishVirtualSlot(ISLOT_EQUIPMENT, ES_HEAD - 1, 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_EQUIPMENT`.
 > widget:EstablishVirtualSlot(ISLOT_GUILD_BANK, 0, 1) -- The currently open guild bank cell. (min: `0`, max: `149`)
 > widget:EstablishVirtualSlot(ISLOT_HEIR_SKILL_VIEW, 1, 1) -- The current ancestral skill being changed. (min: `1`, max: `8`)
-> widget:EstablishVirtualSlot(ISLOT_INSTANT_KILL_STREAK, @TODO:, 1)
+> widget:EstablishVirtualSlot(ISLOT_INSTANT_KILL_STREAK, @TODO, 1)
 > widget:EstablishVirtualSlot(ISLOT_MODE_ACTION, 1, 1) -- Dynamic shortcut slots. (min: `1`, max: `20`)
 > widget:EstablishVirtualSlot(ISLOT_ORIGIN_SKILL_VIEW, 1, 1) -- The current ancestral tree being changed.
 > widget:EstablishVirtualSlot(ISLOT_PET_BATTLE_ACTION, 1, 1) -- Currently summoned battlepet. (min: `1`, max: `6`)
 > widget:EstablishVirtualSlot(ISLOT_PET_RIDE_ACTION, 1, 1) -- Currently summoned mount. (min: `1`, max: `6`)
 > widget:EstablishVirtualSlot(ISLOT_PRELIMINARY_EQUIPMENT, ES_MAINHAND - 1, 1) -- Equipment slots need to be negatively offset by 1 for `ISLOT_PRELIMINARY_EQUIPMENT`.
 > widget:EstablishVirtualSlot(ISLOT_SHORTCUT_ACTION, 1, 1) -- Transformation shortcut bar slots. (min: `1`, max: `12`)
-> widget:EstablishVirtualSlot(ISLOT_SKILL_ALERT, @TODO:, 1)
+> widget:EstablishVirtualSlot(ISLOT_SKILL_ALERT, @TODO, 1)
 > ```
 > 
 > 

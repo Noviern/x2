@@ -1086,12 +1086,6 @@ function UIParent:GetCurrentPolyCount() end
 ---@nodiscard
 function UIParent:GetCurrentTimeStamp() end
 
----Retrieves the entity name if it exists within render range.
----@param sEntityName string The name of the entity to check.
----@return string|nil sEntityName The entity name if found, or `nil` if not in range.
----@nodiscard
-function UIParent:GetEntityByName(sEntityName) end
-
 ---Retrieves the value for the specified key from `ui/setting/etc_value.g`.
 ---@param key "inventory_guide_line_space" The key to retrieve the value for.
 ---@return number etcValue The value associated with the key.

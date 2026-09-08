@@ -296,6 +296,10 @@
 
 `integer`
 
+**OIT_AUTOTRACKQUESTS**
+
+`integer`
+
 **OIT_AUTO_ENEMY_TARGETING**
 
 `integer`
@@ -989,12 +993,13 @@ OPTION_ITEM_SAVE_LEVEL_TYPE:
 
 **OPTION_ITEM_TYPE**
 
-`OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145)
+`OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146)
 
 ```lua
 -- api/X2Option
 OPTION_ITEM_TYPE:
     | `OIT_ACTION_BAR_LOCK`
+    | `OIT_AUTOTRACKQUESTS`
     | `OIT_AUTO_ENEMY_TARGETING`
     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
     | `OIT_BASIC_CURSOR_SHAPE`
@@ -3855,7 +3860,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemDefaultFloatValue
 ```lua
-(method) X2Option:SetItemDefaultFloatValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: number)
+(method) X2Option:SetItemDefaultFloatValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146), value: number)
 ```
 > Sets the default float value for the specified option type.
 > 
@@ -3867,6 +3872,7 @@ OPTION_ITEM_TYPE:
 > -- api/X2Option
 > optionType:
 >     | `OIT_ACTION_BAR_LOCK`
+>     | `OIT_AUTOTRACKQUESTS`
 >     | `OIT_AUTO_ENEMY_TARGETING`
 >     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
 >     | `OIT_BASIC_CURSOR_SHAPE`
@@ -4020,7 +4026,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemDefaultStringValue
 ```lua
-(method) X2Option:SetItemDefaultStringValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: string)
+(method) X2Option:SetItemDefaultStringValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146), value: string)
 ```
 > Sets the default string value for the specified option type.
 > 
@@ -4032,6 +4038,7 @@ OPTION_ITEM_TYPE:
 > -- api/X2Option
 > optionType:
 >     | `OIT_ACTION_BAR_LOCK`
+>     | `OIT_AUTOTRACKQUESTS`
 >     | `OIT_AUTO_ENEMY_TARGETING`
 >     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
 >     | `OIT_BASIC_CURSOR_SHAPE`
@@ -4185,7 +4192,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemFloatValueWithoutModify
 ```lua
-(method) X2Option:SetItemFloatValueWithoutModify(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: number)
+(method) X2Option:SetItemFloatValueWithoutModify(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146), value: number)
 ```
 > Sets the float value for the specified option type without modifying other
 > settings.
@@ -4198,6 +4205,7 @@ OPTION_ITEM_TYPE:
 > -- api/X2Option
 > optionType:
 >     | `OIT_ACTION_BAR_LOCK`
+>     | `OIT_AUTOTRACKQUESTS`
 >     | `OIT_AUTO_ENEMY_TARGETING`
 >     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
 >     | `OIT_BASIC_CURSOR_SHAPE`
@@ -12280,7 +12288,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemFloatValue
 ```lua
-(method) X2Option:SetItemFloatValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: number)
+(method) X2Option:SetItemFloatValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146), value: number)
 ```
 > Sets the float value for the specified option type.
 > 
@@ -12292,6 +12300,7 @@ OPTION_ITEM_TYPE:
 > -- api/X2Option
 > optionType:
 >     | `OIT_ACTION_BAR_LOCK`
+>     | `OIT_AUTOTRACKQUESTS`
 >     | `OIT_AUTO_ENEMY_TARGETING`
 >     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
 >     | `OIT_BASIC_CURSOR_SHAPE`
@@ -12445,7 +12454,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: SetItemStringValue
 ```lua
-(method) X2Option:SetItemStringValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145), value: string)
+(method) X2Option:SetItemStringValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146), value: string)
 ```
 > Sets the string value for the specified option type.
 > 
@@ -12457,6 +12466,7 @@ OPTION_ITEM_TYPE:
 > -- api/X2Option
 > optionType:
 >     | `OIT_ACTION_BAR_LOCK`
+>     | `OIT_AUTOTRACKQUESTS`
 >     | `OIT_AUTO_ENEMY_TARGETING`
 >     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
 >     | `OIT_BASIC_CURSOR_SHAPE`
@@ -18105,7 +18115,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: GetOptionItemValue
 ```lua
-(method) X2Option:GetOptionItemValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145))
+(method) X2Option:GetOptionItemValue(optionType: `OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146))
   -> optionItemValue: number
 ```
 > Retrieves the value for the specified option type.
@@ -18118,6 +18128,7 @@ OPTION_ITEM_TYPE:
 > -- api/X2Option
 > optionType:
 >     | `OIT_ACTION_BAR_LOCK`
+>     | `OIT_AUTOTRACKQUESTS`
 >     | `OIT_AUTO_ENEMY_TARGETING`
 >     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
 >     | `OIT_BASIC_CURSOR_SHAPE`
@@ -18271,7 +18282,7 @@ OPTION_ITEM_TYPE:
 
 #### Method: GetOptionInfo
 ```lua
-(method) X2Option:GetOptionInfo(optionId: `OIT_ACTION_BAR_LOCK`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`|`OIT_CAMERA_USE_SHAKE`...(+145))
+(method) X2Option:GetOptionInfo(optionId: `OIT_ACTION_BAR_LOCK`|`OIT_AUTOTRACKQUESTS`|`OIT_AUTO_ENEMY_TARGETING`|`OIT_AUTO_USE_ONLY_MY_PORTAL`|`OIT_BASIC_CURSOR_SHAPE`...(+146))
   -> optionInfo: OptionInfo|nil
 ```
 > Retrieves information for the specified option.
@@ -18284,6 +18295,7 @@ OPTION_ITEM_TYPE:
 > -- api/X2Option
 > optionId:
 >     | `OIT_ACTION_BAR_LOCK`
+>     | `OIT_AUTOTRACKQUESTS`
 >     | `OIT_AUTO_ENEMY_TARGETING`
 >     | `OIT_AUTO_USE_ONLY_MY_PORTAL`
 >     | `OIT_BASIC_CURSOR_SHAPE`

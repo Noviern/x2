@@ -127,16 +127,6 @@ MODIFY_FAVORITE_CRAFT_RESULT:
 > 
 > See: [CraftBaseInfo](../types/classes.md#class-craftbaseinfo)
 
-#### Method: GetCraftMaterialInfo
-```lua
-(method) X2Craft:GetCraftMaterialInfo(craftType: number, doodadId?: number)
-```
-> Retrieves the material information for the specified craft type.
-> 
-> @*param* `craftType` — The type of craft to query.
-> 
-> @*param* `doodadId` — The doodad ID.
-
 #### Method: GetCraftProductInfo
 ```lua
 (method) X2Craft:GetCraftProductInfo(craftType: number)
@@ -149,4 +139,24 @@ MODIFY_FAVORITE_CRAFT_RESULT:
 > @*return* `craftProductInfo` — A table of craft product info, or `nil` if not found.
 > 
 > See: [CraftProductInfo](../types/classes.md#class-craftproductinfo)
+
+#### Method: GetCraftMaterialInfo
+```lua
+(method) X2Craft:GetCraftMaterialInfo(craftType: number, doodadId?: number)
+  -> CraftInfo[]|nil
+```
+> Retrieves the material information for the specified craft type.
+> 
+> @*param* `craftType` — The type of craft to query.
+> 
+> @*param* `doodadId` — The doodad ID.
+
+#### Method: GetCraftTypeByItemType
+```lua
+(method) X2Craft:GetCraftTypeByItemType(itemType: number)
+  -> craftType: number|nil
+```
+> Retrieves the craft type for the item type.
+> 
+> @*return* `craftType` — The type of craft for the item type, or `nil` if not found.
 

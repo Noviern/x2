@@ -13,4 +13,9 @@ HOUSING_UCC_POS_TOP = 3
 HOUSING_UCC_POS_WALL = 1
 HOUSING_UCC_POS_WALL_OUTDOOR = 4
 MAX_PREPAID_WEEKS = 5
-X2House = {}
+X2House = {
+  GetCurrentHousingTaxInfo = "<function X2House>",
+  GetHouseName = "<function X2House>",
+  GetHouseOwnerName = "<function X2House>",
+  GetHouseType = "<function X2House>",
+}

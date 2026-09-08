@@ -6,14 +6,17 @@
 
 ## Classes
 ### Class: X2Input
-#### Method: IsAltKeyDown
+#### Method: GetMousePos
 ```lua
-(method) X2Input:IsAltKeyDown()
-  -> altKeyDown: boolean
+(method) X2Input:GetMousePos()
+  -> mouseX: number
+  2. mouseY: number
 ```
-> Checks if the Alt key is currently pressed.
+> Retrieves the current mouse position.
 > 
-> @*return* `altKeyDown` — `true` if Alt is down, `false` otherwise.
+> @*return* `mouseX` — The current mouse x position.
+> 
+> @*return* `mouseY` — The current mouse y position.
 
 #### Method: IsControlKeyDown
 ```lua
@@ -23,6 +26,15 @@
 > Checks if the Control key is currently pressed.
 > 
 > @*return* `controlKeyDown` — `true` if Control is down, `false` otherwise.
+
+#### Method: IsAltKeyDown
+```lua
+(method) X2Input:IsAltKeyDown()
+  -> altKeyDown: boolean
+```
+> Checks if the Alt key is currently pressed.
+> 
+> @*return* `altKeyDown` — `true` if Alt is down, `false` otherwise.
 
 #### Method: IsShiftKeyDown
 ```lua

@@ -132,6 +132,38 @@
 
 `integer`
 
+**UO_BUTLER**
+
+`integer`
+
+**UO_CHARACTER**
+
+`integer`
+
+**UO_HOUSING**
+
+`integer`
+
+**UO_MATE**
+
+`integer`
+
+**UO_NPC**
+
+`integer`
+
+**UO_SHIPYARD**
+
+`integer`
+
+**UO_SLAVE**
+
+`integer`
+
+**UO_TRANSFER**
+
+`integer`
+
 **X2Unit**
 
 `X2Unit`
@@ -220,6 +252,23 @@ RACE_ID:
     | `RACE_NUIAN` -- 1
     | `RACE_RETURNED` -- 7
     | `RACE_WARBORN` -- 8
+```
+
+**UNIT_OWNER**
+
+`UO_BUTLER`|`UO_CHARACTER`|`UO_HOUSING`|`UO_MATE`|`UO_NPC`...(+3)
+
+```lua
+-- api/X2Unit
+UNIT_OWNER:
+    | `UO_BUTLER`
+    | `UO_CHARACTER`
+    | `UO_HOUSING`
+    | `UO_MATE`
+    | `UO_NPC`
+    | `UO_SHIPYARD`
+    | `UO_SLAVE`
+    | `UO_TRANSFER`
 ```
 
 ## Classes
@@ -400,7 +449,7 @@ RACE_ID:
   -> unitHiddenBuffCount: number
 ```
 > Retrieves the number of hidden buffs on the specified unit if in render
-> range.
+> range. Restricted to any except target and ranker.
 > 
 > @*param* `unit` — The unit to query.
 > 
@@ -574,7 +623,7 @@ RACE_ID:
   -> unitHiddenBuffTooltip: BuffTooltip|nil
 ```
 > Retrieves the hidden buff tooltip for the specified buff index of the unit if
-> it exists.
+> it exists. Restricted to any except target and ranker.
 > 
 > @*param* `unit` — The unit to query.
 > 
@@ -764,6 +813,7 @@ RACE_ID:
   -> unitInfo: UnitAttributesInfo|nil
 ```
 > Retrieves the unit's attribute information.
+> Restricted to just "player".
 > 
 > @*param* `unit` — The unit to query.
 > 
@@ -939,7 +989,7 @@ RACE_ID:
   -> unitHiddenBuffInfo: BuffInfo
 ```
 > Retrieves hidden buff information for the specified buff index of the unit if
-> it exists.
+> it exists. Restricted to any except target and ranker.
 > 
 > @*param* `unit` — The unit to query.
 > 
@@ -2354,7 +2404,7 @@ RACE_ID:
   -> removableDebuff: BuffInfo|nil
 ```
 > Retrieves the removable debuff for the specified buff index of the unit if it
-> exists.
+> exists. Restricted to any except target and ranker.
 > 
 > @*param* `unit` — The unit to query.
 > 
@@ -3049,6 +3099,7 @@ RACE_ID:
   -> unitModifierInfo: UnitAttributeModifierInfo|nil
 ```
 > Retrieves the unit's attribute modifier information.
+> Restricted to just "player".
 > 
 > @*param* `unit` — The unit to query.
 > 
@@ -3397,7 +3448,7 @@ RACE_ID:
   -> removableDebuffCount: number|nil
 ```
 > Retrieves the number of removable debuffs on the specified unit if in render
-> range.
+> range. Restricted to any except target and ranker.
 > 
 > @*param* `unit` — The unit to query.
 > 
@@ -5985,7 +6036,7 @@ RACE_ID:
   -> removableDebuffTooltip: BuffInfo|nil
 ```
 > Retrieves the removable debuff tooltip for the specified buff index of the
-> unit if it exists.
+> unit if it exists. Restricted to any except target and ranker.
 > 
 > @*param* `unit` — The unit to query.
 > 

@@ -1,4 +1,5 @@
 X2Input = {
+  GetMousePos = "<function X2Input>",
   IsAltKeyDown = "<function X2Input>",
   IsControlKeyDown = "<function X2Input>",
   IsShiftKeyDown = "<function X2Input>",

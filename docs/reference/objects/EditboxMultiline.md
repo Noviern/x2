@@ -20,7 +20,7 @@ Extends [Editboxbase](../types/Editboxbase.md#class-editboxbase)
 (method) EditboxMultiline:GetLineHeight()
   -> lineHeight: number
 ```
-> Retrieves the height of a single line in the EditboxMultiline.
+> Retrieves the unscaled height of a single line in the EditboxMultiline.
 > 
 > @*return* `lineHeight` — The height of a line.
 
@@ -29,7 +29,7 @@ Extends [Editboxbase](../types/Editboxbase.md#class-editboxbase)
 (method) EditboxMultiline:GetTextHeight()
   -> textHeight: number
 ```
-> Retrieves the total height of the text in the EditboxMultiline.
+> Retrieves the total unscaled height of the text in the EditboxMultiline.
 > 
 > @*return* `textHeight` — The total text height.
 
@@ -58,7 +58,7 @@ Extends [Editboxbase](../types/Editboxbase.md#class-editboxbase)
 ```
 > Retrieves the x-coordinate of the cursor in the EditboxMultiline.
 > 
-> @*return* `cursorPosX` — The x-coordinate of the cursor.
+> @*return* `cursorPosX` — The x-coordinate of the cursor relative to the EditboxMultiline and its inset.
 
 #### Method: GetCursorPosY
 ```lua
@@ -67,7 +67,7 @@ Extends [Editboxbase](../types/Editboxbase.md#class-editboxbase)
 ```
 > Retrieves the y-coordinate of the cursor in the EditboxMultiline.
 > 
-> @*return* `cursorPosY` — The y-coordinate of the cursor.
+> @*return* `cursorPosY` — The y-coordinate of the cursor relative to the EditboxMultiline and its inset.
 
 #### Method: SetLineSpace
 ```lua
@@ -75,5 +75,5 @@ Extends [Editboxbase](../types/Editboxbase.md#class-editboxbase)
 ```
 > Sets the line spacing for the EditboxMultiline.
 > 
-> @*param* `space` — The line spacing value.
+> @*param* `space` — The line spacing value. (default: `1`)
 

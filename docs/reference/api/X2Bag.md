@@ -84,7 +84,7 @@
 ```lua
 (method) X2Bag:EquipBagItem(slot: number, isAuxEquip: boolean)
 ```
-> Attempts to equip an item from the specified slot.
+> Attempts to equip an item from the specified slot. Cannot be used in combat.
 > 
 > @*param* `slot` — The slot containing the item to equip. (min: `1`)
 > 

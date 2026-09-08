@@ -87,7 +87,7 @@ number[]|nil
 ```lua
 boolean|nil
 ```
-> TODO: this may not exist.
+> TODO this may not exist.
 
 #### Field: isHidden
 ```lua
@@ -141,7 +141,7 @@ boolean
 ```lua
 number|nil
 ```
-> TODO: this may not exist.
+> TODO this may not exist.
 
 #### Field: grade
 ```lua
@@ -633,6 +633,25 @@ number
 ```
 
 
+### Class: BlockedCharacter
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: unitName
+```lua
+string
+```
+
+
+#### Field: worldName
+```lua
+string
+```
+
+
 ### Class: BonusesInfo
 #### Field: bufDesc
 ```lua
@@ -875,6 +894,43 @@ AppliedAllLevelEffect[]
 ```
 
 
+### Class: ButlerChargeInfo
+#### Field: freeChargeAmount
+```lua
+number
+```
+
+
+#### Field: maxFreeChargeCount
+```lua
+number
+```
+
+
+#### Field: maxWeeklychargeAmount
+```lua
+number
+```
+
+
+#### Field: isFree
+```lua
+boolean
+```
+
+
+#### Field: freeChargeCount
+```lua
+number
+```
+
+
+#### Field: remainWeeklyChargeAmount
+```lua
+number
+```
+
+
 ### Class: CHAT_MESSAGE_INFO
 #### Field: charId
 ```lua
@@ -1102,7 +1158,7 @@ boolean
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 ### Class: CombatDamageSuffix
 #### Field: damage
@@ -1133,7 +1189,7 @@ boolean
 ```lua
 "CRITICAL"|"HIT"
 ```
-> TODO: COMBAT_HIT_TYPE?
+> TODO COMBAT_HIT_TYPE?
 
 #### Field: elementDamage
 ```lua
@@ -1224,13 +1280,13 @@ boolean
 ```lua
 "CRITICAL"|"HIT"
 ```
-> TODO: COMBAT_HIT_TYPE?
+> TODO COMBAT_HIT_TYPE?
 
 #### Field: mySlave
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: elementDamage
 ```lua
@@ -1255,7 +1311,7 @@ boolean
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: source
 ```lua
@@ -1340,7 +1396,7 @@ boolean
 ```lua
 "CRITICAL"|"HIT"
 ```
-> TODO: COMBAT_HIT_TYPE?
+> TODO COMBAT_HIT_TYPE?
 
 #### Field: elementDamage
 ```lua
@@ -1670,7 +1726,7 @@ Extends [CombatSpellPrefix](../types/CombatSpellPrefix.md#class-combatspellprefi
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: spellName
 ```lua
@@ -1775,7 +1831,7 @@ number
 ```lua
 "CRITICAL"|"HIT"
 ```
-> TODO: COMBAT_HIT_TYPE?
+> TODO COMBAT_HIT_TYPE?
 
 #### Field: powerType
 ```lua
@@ -1844,7 +1900,7 @@ number
 ```lua
 "CRITICAL"|"HIT"
 ```
-> TODO: COMBAT_HIT_TYPE?
+> TODO COMBAT_HIT_TYPE?
 
 #### Field: powerType
 ```lua
@@ -2179,6 +2235,31 @@ boolean
 ```
 
 
+### Class: CraftInfo
+#### Field: amount
+```lua
+number
+```
+
+
+#### Field: item_info
+```lua
+ItemInfo
+```
+
+
+#### Field: count
+```lua
+number
+```
+
+
+#### Field: mainGrade
+```lua
+boolean
+```
+
+
 ### Class: CraftLinkInfo
 Extends [BaseLinkInfo](../types/BaseLinkInfo.md#class-baselinkinfo), [CommonLinkFields](../types/CommonLinkFields.md#class-commonlinkfields)
 
@@ -2490,7 +2571,7 @@ number
 ```lua
 number|nil
 ```
-> Old Hair @TODO: If this is set by default on the model then rgb cant be used and vice versa, needs more testing.
+> Old Hair @TODO If this is set by default on the model then rgb cant be used and vice versa, needs more testing.
 
 #### Field: defaultR
 ```lua
@@ -2539,7 +2620,7 @@ number
 ```lua
 number|nil
 ```
-> Old Hair @TODO: If this is set by default on the model then rgb cant be used and vice versa, needs more testing.
+> Old Hair @TODO If this is set by default on the model then rgb cant be used and vice versa, needs more testing.
 
 ### Class: CustomizingHairTwoToneColor
 #### Field: firstWidth
@@ -2862,13 +2943,13 @@ DiagonalASRDailyInfo
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: maxCount
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 ### Class: DoodadTooltipInfo
 #### Field: alignLeft
@@ -2899,7 +2980,7 @@ boolean|nil
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: goodsValue
 ```lua
@@ -2929,7 +3010,7 @@ string|nil
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: progress
 ```lua
@@ -2959,7 +3040,7 @@ string|nil
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: chillRemainTime
 ```lua
@@ -2983,7 +3064,7 @@ Time|nil
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: displayTime
 ```lua
@@ -3007,7 +3088,7 @@ boolean|nil
 ```lua
 any
 ```
-> TODO:
+> TODO
 
 #### Field: weight
 ```lua
@@ -3150,6 +3231,4855 @@ string|nil
 #### Field: y
 ```lua
 number|nil
+```
+
+
+### Class: EventTable
+#### Field: ABILITY_CHANGED
+```lua
+fun(newAbility: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9), oldAbility: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9))|nil
+```
+> Event triggers when one of the players ability is changed.
+
+#### Field: RANK_SNAPSHOTS
+```lua
+fun(rankType: number, divisionId: number)|nil
+```
+> Event triggers when the player checks ranking info.
+
+#### Field: RANK_SEASON_RESULT_RECEIVED
+```lua
+fun()|nil
+```
+
+
+#### Field: RANK_UNLOCK
+```lua
+fun()|nil
+```
+
+
+#### Field: RECOVERABLE_EXP
+```lua
+fun(stringId: string, restorableExp: number, expLoss: number)|nil
+```
+> Event triggers when the player dies and has recoverable exp.
+
+#### Field: RECOVERED_EXP
+```lua
+fun(stringId: string, recoveredExp: number)|nil
+```
+> Event triggers when the player recovers lost exp.
+
+#### Field: RANK_REWARD_SNAPSHOTS
+```lua
+fun(rankType: number, divisionId: number)|nil
+```
+> Event triggers when the player views a pervious ranking snapshot.
+
+#### Field: RANK_PERSONAL_DATA
+```lua
+fun()|nil
+```
+> Event triggers when the player views a tab of the ranking information window
+> that requires the players personal data.
+
+#### Field: RANK_RANKER_APPEARANCE
+```lua
+fun(charID: number)|nil
+```
+> Event triggers when the player views the gear of a player on the ranking
+> information window.
+
+#### Field: RANK_DATA_RECEIVED
+```lua
+fun()|nil
+```
+
+
+#### Field: RANK_LOCK
+```lua
+fun()|nil
+```
+
+
+#### Field: RANK_ALARM_MSG
+```lua
+fun(rankType: `RK_CHARACTER_GEAR_SCORE`|`RK_EXPEDITION_BATTLE_RECORD`|`RK_EXPEDITION_GEAR_SCORE`|`RK_EXPEDITION_INSTANCE_RATING`|`RK_FISHING_SUM`...(+7), msg: string)|nil
+```
+> Event triggers when a ranking information alarm occurs.
+
+#### Field: REENTRY_NOTIFY_DISABLE
+```lua
+fun()|nil
+```
+> Event triggers when the player is no longer able to reenter a instance.
+
+#### Field: REFRESH_COMBAT_RESOURCE
+```lua
+fun(resetBar: boolean, groupType: number, resourceType: number, point?: number)|nil
+```
+> Event triggers when the players combat resource has been refreshed.
+
+#### Field: REMOVE_CARRYING_BACKPACK_SLAVE_INFO
+```lua
+fun(arg: any)|nil
+```
+
+
+#### Field: REMOVE_BOSS_TELESCOPE_INFO
+```lua
+fun(arg: any)|nil
+```
+
+
+#### Field: REMOVE_FISH_SCHOOL_INFO
+```lua
+fun(index: number)|nil
+```
+> Event triggers when a fish is no longer on fish telescope.
+
+#### Field: REMOVE_GIVEN_QUEST_INFO
+```lua
+fun(arg1: number, qType: number)|nil
+```
+> Event triggers when the new quest is not within range of the player.
+
+#### Field: REENTRY_NOTIFY_ENABLE
+```lua
+fun(param: ReentryParam)|nil
+```
+> Event triggers when the player can still reenter a instance.
+
+#### Field: REMOVED_ITEM
+```lua
+fun(itemLinkText: string, itemCount: number, removeState: "consume"|"conversion"|"destroy", itemTaskType: number, tradeOtherName: string)|nil
+```
+> Event triggers when an item has been deleted/removed from the players inventory.
+
+#### Field: REFRESH_STORE_MERCHANT_GOOD_LIMIT_PURCHASE
+```lua
+fun()|nil
+```
+> Event triggers when the stores purchase count for a limited item changes.
+
+#### Field: RELOAD_CASH
+```lua
+fun(money: any)|nil
+```
+
+
+#### Field: REFRESH_COMBAT_RESOURCE_UPDATE_TIME
+```lua
+fun(updateReesourceType: number, nowTime: number, show: boolean)|nil
+```
+> Event triggers when the players combat resource has been updated.
+
+#### Field: REFRESH_SQUAD_LIST
+```lua
+fun(arg?: boolean)|nil
+```
+> Event triggers when the players squad list has refreshed.
+
+#### Field: REMOVE_NOTIFY_QUEST_INFO
+```lua
+fun(qType: number)|nil
+```
+> Event triggers when a quest notifcation is removed.
+
+#### Field: RANDOM_SHOP_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when the manastorm shop updates.
+
+#### Field: RAID_RECRUIT_LIST
+```lua
+fun(data: RaidRecruitListInfo)|nil
+```
+> Event triggers when the player views the raid recruit window.
+
+#### Field: QUEST_CONTEXT_OBJECTIVE_EVENT
+```lua
+fun(objText: string)|nil
+```
+> Event triggers when the players quest updates.
+
+#### Field: QUEST_CONTEXT_CONDITION_EVENT
+```lua
+fun(objText: string, condition: "dropped"|"started"|"updated")|nil
+```
+> Event triggers when the players quest condition occurs.
+
+#### Field: QUEST_CONTEXT_UPDATED
+```lua
+fun(qType: number, status: "dropped"|"started"|"updated")|nil
+```
+> Event triggers when the players quest updates.
+
+#### Field: QUEST_DIRECTING_MODE_END
+```lua
+fun()|nil
+```
+
+
+#### Field: QUEST_DIRECTING_MODE_HOT_KEY
+```lua
+fun(key: `1`|`2`|`3`)|nil
+```
+> Event triggers when the player uses a hot key to advance the quest dialog.
+
+#### Field: QUEST_CHAT_RESTART
+```lua
+fun()|nil
+```
+
+
+#### Field: PROGRESS_TALK_QUEST_CONTEXT
+```lua
+fun(qtype: number, useDirectingMode: boolean, npcId: string, doodadId?: string)|nil
+```
+> Event triggers when the player talks to a npc that is required to progress a quest.
+
+#### Field: QUEST_CHAT_LET_IT_DONE
+```lua
+fun()|nil
+```
+
+
+#### Field: PREMIUM_SERVICE_LIST_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the patron window.
+
+#### Field: PROCESS_CRAFT_ORDER
+```lua
+fun(result: boolean, processType: `COPT_INSTANT`|`COPT_INVALID`|`COPT_PC`)|nil
+```
+> Event triggers when the player processes a crafting order.
+
+#### Field: RANDOM_SHOP_INFO
+```lua
+fun(isHide: boolean, isdailyReset: boolean)|nil
+```
+> Event triggers when the manastorm shop updates.
+
+#### Field: QUEST_ERROR_INFO
+```lua
+fun(errNum: `10`|`11`|`12`|`13`|`14`...(+35), qtype: number, questDetail?: string, isCommon?: boolean)|nil
+```
+> Event triggers when the players quest has an error.
+
+#### Field: QUEST_HIDDEN_READY
+```lua
+fun(qtype: number)|nil
+```
+> Event triggers when the player activates a hidden quest.
+
+#### Field: RAID_FRAME_SIMPLE_VIEW
+```lua
+fun(simple: boolean)|nil
+```
+> Event triggers when the player checks the status display of the raid and
+> changing raid window zoom setting.
+
+#### Field: RAID_RECRUIT_DETAIL
+```lua
+fun(data: RaidRecruitDetailInfo)|nil
+```
+> Event triggers when the player views the details of a raid recruit.
+
+#### Field: RAID_RECRUIT_HUD
+```lua
+fun(infos: RaidRecruitInfo[])|nil
+```
+> Event triggers when the raid hud changes.
+
+#### Field: QUEST_HIDDEN_COMPLETE
+```lua
+fun(qtype: number)|nil
+```
+> Event triggers when the player completes a hidden quest.
+
+#### Field: RAID_APPLICANT_LIST
+```lua
+fun(data: RaidApplicantData)|nil
+```
+> Event triggers when the player checks their raid applicant list.
+
+#### Field: QUEST_NOTIFIER_START
+```lua
+fun()|nil
+```
+> Event triggers when the player loads into the world and the quest notifier needs to be initialized or refreshed.
+
+#### Field: QUEST_QUICK_CLOSE_EVENT
+```lua
+fun(qtype: number)|nil
+```
+> Event triggers when a quests window is closed to show a video.
+
+#### Field: QUEST_LEFT_TIME_UPDATED
+```lua
+fun(qtype: number, leftTime: number)|nil
+```
+> Event triggers when the players quest updates.
+
+#### Field: QUEST_MSG
+```lua
+fun(arg1: string, arg2: string)|nil
+```
+
+
+#### Field: PREMIUM_SERVICE_BUY_RESULT
+```lua
+fun(err: any)|nil
+```
+
+
+#### Field: REMOVE_PING
+```lua
+fun()|nil
+```
+> Event triggers when the player enters/exits an instance and the map needs to remove all pings.
+
+#### Field: REMOVE_TRANSFER_TELESCOPE_INFO
+```lua
+fun(index: number)|nil
+```
+> Event triggers when a transfer vehicle is no longer on the telescope.
+
+#### Field: SET_ROADMAP_PICKABLE
+```lua
+fun(pick: boolean)|nil
+```
+> Event triggers when the player enables/disables ping mode.
+
+#### Field: SET_REBUILD_HOUSE_CAMERA_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player enters house preview mode for remodeling a
+> building.
+
+#### Field: SHOW_ACCUMULATE_HONOR_POINT_DURING_HPW
+```lua
+fun(zoneName: string, accumulatePoint: number, state?: any)|nil
+```
+> Event triggers when the players honor points change during war due to combat.
+
+#### Field: SHOW_ADDED_ITEM
+```lua
+fun(item: ItemInfo, count: number, taskType: number)|nil
+```
+> Event triggers when the player receives an item.
+
+#### Field: SHOW_ADD_TAB_WINDOW
+```lua
+fun()|nil
+```
+
+
+#### Field: SET_PING_MODE
+```lua
+fun(pick: boolean)|nil
+```
+> Event triggers when the player enables/disables ping mode.
+
+#### Field: SET_EFFECT_ICON_VISIBLE
+```lua
+fun(isShow: boolean, arg: Widget)|nil
+```
+> Event triggers when a effect icon should be visible on the map.
+
+#### Field: SET_OVERHEAD_MARK
+```lua
+fun(unitId: string, index: number, visible: boolean)|nil
+```
+> Event triggers when a player has a mark set or remove on them.
+
+#### Field: SELL_SPECIALTY_CONTENT_INFO
+```lua
+fun(list: SpecialtyInfo)|nil
+```
+> Event triggers when the player checks the specialty price information at a
+> trade outlet.
+
+#### Field: SET_DEFAULT_EXPAND_RATIO
+```lua
+fun(isSameZone: boolean)|nil
+```
+> Event triggers when the player is changing zones in the map.
+
+#### Field: SELL_SPECIALTY
+```lua
+fun(text: string)|nil
+```
+> Event triggers when the player sells specialty cargo.
+
+#### Field: SHOW_BANNER
+```lua
+fun(show: boolean, instanceType: number, remainPreNoticeTime?: any)|nil
+```
+> Event triggers when a banner should appear for content.
+
+#### Field: SHOW_CRIME_RECORDS
+```lua
+fun(trialState: `TRIAL_FINAL_STATEMENT`|`TRIAL_FREE`|`TRIAL_GUILTY_BY_SYSTEM`|`TRIAL_GUILTY_BY_USER`|`TRIAL_POST_SENTENCE`...(+4))|nil
+```
+> Event triggers when the player joins a trial and triggers at each trial state.
+
+#### Field: SHOW_SEXTANT_POS
+```lua
+fun(sextantPos: SEXTANT)|nil
+```
+> Event triggers when the player uses a sextant.
+
+#### Field: SHOW_SLAVE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player checks the summon information of the vehicle.
+
+#### Field: SHOW_VERDICTS
+```lua
+fun(p1: number, p2: number, p3: number, p4: number, p5: number)|nil
+```
+> Event triggers when the player has to make a verdict in a trial.
+
+#### Field: SHOW_CHAT_TAB_CONTEXT
+```lua
+fun(arg1: Widget, arg2: number)|nil
+```
+> Event triggers when the player right clicks on a tab for the context menu.
+
+#### Field: SHOW_ROADMAP_TOOLTIP
+```lua
+fun(tooltipInfo: TooltipInfo[], tooltipCount: number)|nil
+```
+> Event triggers when a tooltip is shown on the roadmap.
+
+#### Field: SHOW_RAID_FRAME_SETTINGS
+```lua
+fun()|nil
+```
+> Event triggers when the player views the raid frame settings.
+
+#### Field: SHOW_RENAME_EXPEIDITON
+```lua
+fun(byItem: any, triedName: any, ownerWnd: any)|nil
+```
+
+
+#### Field: SHOW_DEFENDANT_WAIT_JURY
+```lua
+fun()|nil
+```
+
+
+#### Field: SHOW_DEFENDANT_WAIT_TRIAL
+```lua
+fun()|nil
+```
+
+
+#### Field: REMOVE_SHIP_TELESCOPE_INFO
+```lua
+fun(arg: number)|nil
+```
+> Event triggers when a ship is no longer on the telescope.
+
+#### Field: SELECT_SQUAD_LIST
+```lua
+fun(data: SelectSquadList)|nil
+```
+> Event triggers when the player view the Recruit/Search page for instances.
+
+#### Field: SCHEDULE_ITEM_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers every minute to update the schedule.
+
+#### Field: REQUIRE_ITEM_TO_CHAT
+```lua
+fun(channel: any)|nil
+```
+
+
+#### Field: REQUIRE_DELAY_TO_CHAT
+```lua
+fun(channel: any, delay: any, remain: any)|nil
+```
+
+
+#### Field: RESET_INGAME_SHOP_MODELVIEW
+```lua
+fun()|nil
+```
+
+
+#### Field: RESIDENT_BOARD_TYPE
+```lua
+fun(boardType: `1`|`2`|`3`|`4`|`5`...(+2))|nil
+```
+> Event triggers when the player views the residents board type.
+
+#### Field: RESIDENT_HOUSING_TRADE_LIST
+```lua
+fun(infos: ResidentHousing, rownum: number, filter: number, searchword: string, refresh: number)|nil
+```
+> Event triggers when the player views the housing sales tab of a zone.
+
+#### Field: REPUTATION_GIVEN
+```lua
+fun()|nil
+```
+> Event triggers when the player thumbs a player.
+
+#### Field: REPORT_BAD_USER_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: REPORT_CRIME
+```lua
+fun(doodadName: string, locationName: string)|nil
+```
+> Event triggers when the player begins to report a crime.
+
+#### Field: RENAME_PORTAL
+```lua
+fun()|nil
+```
+> Event triggers when the player renames a portal.
+
+#### Field: RENEW_ITEM_SUCCEEDED
+```lua
+fun()|nil
+```
+
+
+#### Field: SELECTED_INSTANCE_DIFFICULT
+```lua
+fun(difficult: any)|nil
+```
+
+
+#### Field: RESIDENT_MEMBER_LIST
+```lua
+fun(total: number, start: number, refresh: number, members: ResidentMember[])|nil
+```
+> Event triggers when the player views the housing residents tab of a zone.
+
+#### Field: RESIDENT_TOWNHALL
+```lua
+fun(info: ResidentInfo)|nil
+```
+> Event triggers when the player accesses the task board at resident townhall
+> of the zone.
+
+#### Field: SAVE_SCREEN_SHOT
+```lua
+fun(path: string)|nil
+```
+> Event triggers when the player saves a screenshot.
+
+#### Field: SCALE_ENCHANT_BROADCAST
+```lua
+fun(characterName: string, resultCode: `IEBCT_ENCHANT_GREATE_SUCCESS`|`IEBCT_ENCHANT_SUCCESS`|`IEBCT_EVOVING`, itemLink: string, oldScale: string, newScale: string)|nil
+```
+> Event triggers when a player increases the temper of their equipment and it is broadcasted to the server.
+
+#### Field: SCHEDULE_ITEM_SENT
+```lua
+fun()|nil
+```
+> Event triggers when the player clicks on an scheduled item (loyalty token) to
+> collect it.
+
+#### Field: RESIDENT_SERVICE_POINT_CHANGED
+```lua
+fun(zoneGroupName: "Abyssal Library"|"Aegis Island"|"Ahnimar Event Arena"|"Ahnimar"|"Airain Rock"...(+143), amount: number, total: number)|nil
+```
+> Event triggers when the players residental contribution points change.
+
+#### Field: SAVE_PORTAL
+```lua
+fun()|nil
+```
+> Event triggers when the player saves a portal.
+
+#### Field: RULING_CLOSED
+```lua
+fun()|nil
+```
+> Event triggers when a jury ruling is has come to an end.
+
+#### Field: RULING_STATUS
+```lua
+fun(count: number, total: number, sentenceType: `SENTENCE_GUILTY_1`|`SENTENCE_GUILTY_2`|`SENTENCE_GUILTY_3`|`SENTENCE_GUILTY_4`|`SENTENCE_GUILTY_5`...(+1), sentenceTime: number)|nil
+```
+> Event triggers when a member of the jury votes.
+
+#### Field: RESIDENT_ZONE_STATE_CHANGE
+```lua
+fun()|nil
+```
+> Event triggers when the player is viewing the location of land for sale in
+> sales tab of the resident townhall for the zone.
+
+#### Field: ROLLBACK_FAVORITE_CRAFTS
+```lua
+fun(datas: Craft[])|nil
+```
+> Event triggers when the players favorite crafts are rolledback.
+
+#### Field: SHOW_WORLDMAP_LOCATION
+```lua
+fun(zoneId: `0`|`100`|`101`|`102`|`104`...(+315), x: number, y: number, z: number)|nil
+```
+> Event triggers when the world map has a location to be shown.
+
+#### Field: PREMIUM_POINT_CHANGE
+```lua
+fun()|nil
+```
+
+
+#### Field: PREMIUM_GRADE_CHANGE
+```lua
+fun(prevPremiumGrade: any, presentPremiumGrade: any)|nil
+```
+
+
+#### Field: MOVIE_LOAD
+```lua
+fun()|nil
+```
+
+
+#### Field: MOVIE_ABORT
+```lua
+fun()|nil
+```
+
+
+#### Field: MOVIE_STOP
+```lua
+fun()|nil
+```
+
+
+#### Field: MULTI_QUEST_CONTEXT_SELECT
+```lua
+fun(targetNpc: boolean, qtype: number, useDirectingMode: boolean, targetId: string, interactionValue: string)|nil
+```
+> Event triggers when the player interacts with a npc that has multiple quests.
+
+#### Field: MULTI_QUEST_CONTEXT_SELECT_LIST
+```lua
+fun(questList: QuestSelectList)|nil
+```
+> Event triggers when the player interacts with a npc that has multiple quests.
+
+#### Field: MOVE_SPEED_CHANGE
+```lua
+fun()|nil
+```
+> Event triggers when the players move speed changes.
+
+#### Field: MOUSE_DOWN
+```lua
+fun(widgetId: string)|nil
+```
+> Event triggers when the player clicks on a widget.
+
+#### Field: MOUSE_UP
+```lua
+fun()|nil
+```
+
+
+#### Field: MOUNT_SLOT_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: MOUSE_CLICK
+```lua
+fun()|nil
+```
+
+
+#### Field: MOUNT_PET
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`, isMyPet: boolean)|nil
+```
+> Event triggers when the player mounts a pet.
+
+#### Field: NAME_TAG_MODE_CHANGED_MSG
+```lua
+fun(changedNameTagMode: `1`|`2`|`3`|`4`)|nil
+```
+> Event triggers when the player changes the name tag mode.
+
+#### Field: NAVI_MARK_POS_TO_MAP
+```lua
+fun()|nil
+```
+
+
+#### Field: NOTIFY_AUTH_BILLING_MESSAGE
+```lua
+fun(msg: any, remainTime: any)|nil
+```
+
+
+#### Field: NOTIFY_AUTH_ADVERTISING_MESSAGE
+```lua
+fun(msg: any, remainTime: any)|nil
+```
+
+
+#### Field: NOTIFY_AUTH_DISCONNECTION_MESSAGE
+```lua
+fun(msg: any, remainTime: any)|nil
+```
+
+
+#### Field: NOTIFY_AUTH_FATIGUE_MESSAGE
+```lua
+fun(msg: any, remainTime: any)|nil
+```
+
+
+#### Field: NATION_DOMINION
+```lua
+fun(zoneGroupType: `0`|`100`|`101`|`102`|`103`...(+151), force: boolean)|nil
+```
+> Event triggers when the player is selecting a territory from the Faction > Auroria Territories window.
+
+#### Field: NOTICE_MESSAGE
+```lua
+fun(noticeType: number, color: string, visibleTime: number, message: string, name: string)|nil
+```
+> Event triggers when a gm notice message occurs.
+
+#### Field: NEW_SKILL_POINT
+```lua
+fun(point: number)|nil
+```
+> Event triggers when the player gains a new skill point.
+
+#### Field: NEXT_SIEGE_INFO
+```lua
+fun(siegeInfo: NextSiegeInfo)|nil
+```
+> Event triggers when the next siege information is required.
+
+#### Field: NAVI_MARK_REMOVE
+```lua
+fun()|nil
+```
+
+
+#### Field: NEW_DAY_STARTED
+```lua
+fun()|nil
+```
+> Event triggers when a new day (daily reset) starts.
+
+#### Field: NOTIFY_AUTH_NOTICE_MESSAGE
+```lua
+fun(message: any, visibleTime: any, needCountdown: any)|nil
+```
+
+
+#### Field: MOUNT_BAG_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: MODE_ACTIONS_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when the players dynamic shortcut is updated.
+
+#### Field: MAIL_WRITE_ITEM_UPDATE
+```lua
+fun(index: number)|nil
+```
+> Event triggers when the player starts to create a new mail.
+
+#### Field: MAIL_SENT_SUCCESS
+```lua
+fun()|nil
+```
+> Event triggers when the player successfully sends a mail.
+
+#### Field: MAP_EVENT_CHANGED
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the map.
+
+#### Field: MATE_SKILL_LEARNED
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`, text: string)|nil
+```
+> Event triggers when the players mount or battlepet learns a new skill.
+
+#### Field: MATE_STATE_UPDATE
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`, stateIndex: `1`|`2`|`3`|`4`)|nil
+```
+> Event triggers when the players mount of battlepet state changes without the
+> player changing it.
+
+#### Field: MAIL_SENTBOX_UPDATE
+```lua
+fun(read: any, mailListKind: any)|nil
+```
+> Event triggers when the player checks their sent mail.
+
+#### Field: MAIL_INBOX_UPDATE
+```lua
+fun(read: boolean|nil, mailListKind: `MAIL_LIST_CONTINUE`|`MAIL_LIST_END`|`MAIL_LIST_INVALID`|`MAIL_LIST_START`|nil)|nil
+```
+> Event triggers when the players mailbox has an update.
+
+#### Field: MAIL_RETURNED
+```lua
+fun()|nil
+```
+
+
+#### Field: MAIL_INBOX_MONEY_TAKEN
+```lua
+fun()|nil
+```
+> Event triggers when the player takes money from the mail.
+
+#### Field: MAIL_INBOX_TAX_PAID
+```lua
+fun()|nil
+```
+> Event triggers when the player pays their taxes through the mail.
+
+#### Field: MONEY_ACQUISITION_BY_LOOT
+```lua
+fun(charName: any, moneyStr: any)|nil
+```
+
+
+#### Field: MEGAPHONE_MESSAGE
+```lua
+fun(show: any, channel: any, name: any, message: any, isMyMessage: any)|nil
+```
+
+
+#### Field: MIA_MAIL_INBOX_MONEY_TAKEN
+```lua
+fun()|nil
+```
+
+
+#### Field: MIA_MAIL_WRITE_ITEM_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: MINE_AMOUNT
+```lua
+fun()|nil
+```
+
+
+#### Field: MINI_SCOREBOARD_CHANGED
+```lua
+fun(status: "inactive"|"remove"|"update", info: MiniScoreBoardInfo[]|nil)|nil
+```
+> Event triggers when the mini scoreboard changes.
+
+#### Field: MIA_MAIL_INBOX_ITEM_TAKEN
+```lua
+fun()|nil
+```
+
+
+#### Field: MIA_MAIL_SENT_SUCCESS
+```lua
+fun()|nil
+```
+
+
+#### Field: MIA_MAIL_RETURNED
+```lua
+fun()|nil
+```
+
+
+#### Field: MIA_MAIL_SENTBOX_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: MIA_MAIL_INBOX_TAX_PAID
+```lua
+fun()|nil
+```
+
+
+#### Field: MIA_MAIL_INBOX_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: PREMIUM_LABORPOWER_CHANGED
+```lua
+fun(onlineDiff: any, offlineDiff: any)|nil
+```
+
+
+#### Field: NOTIFY_AUTH_TC_FATIGUE_MESSAGE
+```lua
+fun(msg: any, remainTime: any)|nil
+```
+
+
+#### Field: NPC_CRAFT_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: PLAYER_BANK_AA_POINT
+```lua
+fun()|nil
+```
+
+
+#### Field: PLAYER_ABILITY_LEVEL_CHANGED
+```lua
+fun()|nil
+```
+> Event triggers when the players ability level changes.
+
+#### Field: PLAYER_BANK_MONEY
+```lua
+fun(amount: number, amountStr: string)|nil
+```
+> Event triggers when the player deposits or withdraws from their bank.
+
+#### Field: PLAYER_BM_POINT
+```lua
+fun(oldBmPoint: string)|nil
+```
+> Event triggers when the players loyalty tokens change.
+
+#### Field: PLAYER_GEAR_POINT
+```lua
+fun()|nil
+```
+
+
+#### Field: PLAYER_AA_POINT
+```lua
+fun(change: any, changeStr: any, itemTaskType: any, info: any)|nil
+```
+
+
+#### Field: PET_FOLLOWING_MASTER
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when the players mount state t is following.
+
+#### Field: PET_STOP_BY_MASTER
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when the players mount state is not following.
+
+#### Field: PETMATE_UNBOUND
+```lua
+fun()|nil
+```
+> Event triggers when the player unmounts another players pet.
+
+#### Field: PET_AUTO_SKILL_CHANGED
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when the players pet auto skill changes
+
+#### Field: PETMATE_BOUND
+```lua
+fun()|nil
+```
+> Event triggers when the player mounts another players pet.
+
+#### Field: PLAYER_HONOR_POINT
+```lua
+fun(amount: number, amountStr: string, isCombatInHonorPointWar?: boolean)|nil
+```
+> Event triggers when the players honor points change.
+
+#### Field: PLAYER_JURY_POINT
+```lua
+fun()|nil
+```
+> Event triggers when the player completes a trial.
+
+#### Field: PLAYER_VISUAL_RACE
+```lua
+fun()|nil
+```
+> Event triggers when the player changes race.
+
+#### Field: POST_CRAFT_ORDER
+```lua
+fun(result: boolean)|nil
+```
+> Event triggers when the player attempts to list a craftring request.
+
+#### Field: PRELIMINARY_EQUIP_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when the player changes equipment.
+
+#### Field: PLAYER_HONOR_POINT_CHANGED_IN_HPW
+```lua
+fun(amount: number)|nil
+```
+> Event triggers when the players honor points change in a zone.
+
+#### Field: PLAYER_RESURRECTION
+```lua
+fun(name: string)|nil
+```
+> Event triggers when the player has been resurrected.
+
+#### Field: PLAYER_MONEY
+```lua
+fun(change: number, changeStr: string, itemTaskType: number, info?: any)|nil
+```
+> Event triggers when the players money changes
+
+#### Field: PLAYER_RESURRECTED
+```lua
+fun()|nil
+```
+> Event triggers when the player accepts a resurrection.
+
+#### Field: PLAYER_LEADERSHIP_POINT
+```lua
+fun(amount: number, amountStr: string)|nil
+```
+> Event triggers when the player receives leadership points.
+
+#### Field: PLAYER_LIVING_POINT
+```lua
+fun(amount: number, amountStr: string)|nil
+```
+> Event triggers when the players vocation changes.
+
+#### Field: NPC_CRAFT_ERROR
+```lua
+fun()|nil
+```
+
+
+#### Field: PASSENGER_UNMOUNT_PET
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when a passenger unmounts the players pet.
+
+#### Field: OPTION_RESET
+```lua
+fun()|nil
+```
+> Event triggers when the player resets a Game Settings option.
+
+#### Field: ONE_AND_ONE_CHAT_ADD_MESSAGE
+```lua
+fun(channelId: any, speakerName: any, message: any, isSpeakerGm: any)|nil
+```
+
+
+#### Field: NUONS_ARROW_UPDATE
+```lua
+fun(data: NuonsArrowUpdate[])|nil
+```
+> Event triggers when a continent has regional community center development update.
+
+#### Field: ONE_AND_ONE_CHAT_END
+```lua
+fun(channelId: any)|nil
+```
+
+
+#### Field: ONE_AND_ONE_CHAT_START
+```lua
+fun(channelId: any, targetName: any)|nil
+```
+
+
+#### Field: OPEN_CHAT
+```lua
+fun()|nil
+```
+> Event triggers when the player opens their chat.
+
+#### Field: NUONS_ARROW_UI_MSG
+```lua
+fun(nuonsMsgInfo: any)|nil
+```
+
+
+#### Field: NPC_UNIT_EQUIPMENT_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: NUONS_ARROW_SHOW
+```lua
+fun(visible: any)|nil
+```
+
+
+#### Field: NPC_INTERACTION_END
+```lua
+fun()|nil
+```
+> Event triggers when the player ends a interaction with a npc.
+
+#### Field: NPC_INTERACTION_START
+```lua
+fun(value: "quest", addedValue: "complete"|"start"|"talk", npcId: string)|nil
+```
+> Event triggers when the player starts a interaction with a npc.
+
+#### Field: PASSENGER_MOUNT_PET
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when a passenger mounts the players pet.
+
+#### Field: OPEN_COMMON_FARM_INFO
+```lua
+fun(commonFarmType: `1`|`2`|`3`|`4`)|nil
+```
+> Event triggers when the player opens information board at a public farm to check which items can be placed.
+
+#### Field: OPEN_CRAFT_ORDER_BOARD
+```lua
+fun(tabName: string)|nil
+```
+> Event triggers when the player opens the crafting request window by right clicking on a crafting request.
+
+#### Field: OPEN_PAPER
+```lua
+fun(type: "book"|"page", idx: number)|nil
+```
+> Event triggers when the player opens a letter/book in their inventory.
+
+#### Field: OPEN_PROMOTION_EVENT_URL
+```lua
+fun(url: any)|nil
+```
+
+
+#### Field: OPTIMIZATION_RESULT_MESSAGE
+```lua
+fun(activated: boolean)|nil
+```
+> Event triggers when the player enables/disables optimization.
+
+#### Field: OPEN_CONFIG
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the escape menu with the escape key.
+
+#### Field: OPEN_NAVI_DOODAD_NAMING_DIALOG
+```lua
+fun()|nil
+```
+
+
+#### Field: OPEN_EXPEDITION_PORTAL_LIST
+```lua
+fun(addPortal: boolean, interactionDoodad: boolean, expeditionOwner: boolean)|nil
+```
+> Event triggers when the player interacts with their guild portal.
+
+#### Field: OPEN_MUSIC_SHEET
+```lua
+fun(isShow: boolean, itemIdString: string, isWide: number)|nil
+```
+> Event triggers when the player opens a music sheet to begin composing music.
+
+#### Field: OPEN_EMBLEM_IMPRINT_UI
+```lua
+fun()|nil
+```
+
+
+#### Field: OPEN_EMBLEM_UPLOAD_UI
+```lua
+fun(doodad: number)|nil
+```
+> Event triggers when the player opens the crest printer window.
+
+#### Field: MAIL_INBOX_ITEM_TAKEN
+```lua
+fun(index: number)|nil
+```
+> Event triggers when the player takes an item from the mail.
+
+#### Field: SHOW_WORLDMAP_TOOLTIP
+```lua
+fun(tooltipInfo: TooltipInfo[], tooltipCount: number)|nil
+```
+> Event triggers when a tooltip is shown on the worldmap.
+
+#### Field: SIEGEWEAPON_UNBOUND
+```lua
+fun()|nil
+```
+> Event triggers when the player unmounts a siege weapon.
+
+#### Field: UPDATE_COMPLETED_QUEST_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the map needs to update the completed quest information.
+
+#### Field: UPDATE_CLIENT_DRIVEN_INFO
+```lua
+fun(sceneInfo: any)|nil
+```
+
+
+#### Field: UPDATE_CONTENT_ROSTER_WINDOW
+```lua
+fun(updateInfo: any)|nil
+```
+
+
+#### Field: UPDATE_CORPSE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player dies and when the player respawns.
+
+#### Field: UPDATE_CRAFT_ORDER_ITEM_FEE
+```lua
+fun(info: CraftOrderItemFee)|nil
+```
+> Event triggers when the player is attempting to list a requested item.
+
+#### Field: UPDATE_CHRONICLE_NOTIFIER
+```lua
+fun(init: boolean, mainKey: number)|nil
+```
+> Event triggers when the players chronicle quest notification tab updates.
+
+#### Field: UPDATE_CHANGE_VISUAL_RACE_WND
+```lua
+fun(fired: boolean)|nil
+```
+> Event triggers when the player starts/cancels the race transformation.
+
+#### Field: UPDATE_CHRONICLE_INFO
+```lua
+fun(info: ChronicleInfo)|nil
+```
+> Event triggers when the player purchases a chronicle quest.
+
+#### Field: UPDATE_BUBBLE
+```lua
+fun()|nil
+```
+
+
+#### Field: UPDATE_CARRYING_BACKPACK_SLAVE_INFO
+```lua
+fun()|nil
+```
+
+
+#### Field: UPDATE_BOT_CHECK_INFO
+```lua
+fun(totalTime: number, remainTime: number, count: number, question: string)|nil
+```
+> Event triggers when the bot check window info for the player updates.
+
+#### Field: UPDATE_CRAFT_ORDER_ITEM_SLOT
+```lua
+fun(info?: CraftOrderItemSlot)|nil
+```
+> Event triggers when the request slot updates.
+
+#### Field: UPDATE_DEFENCE_INFO
+```lua
+fun(info: any)|nil
+```
+
+
+#### Field: UPDATE_EXPEDITION_TODAY_ASSIGNMENT_RESET_COUNT
+```lua
+fun(count: number)|nil
+```
+> Event triggers when the players guild assignments reset.
+
+#### Field: UPDATE_EXPEDITION_PORTAL
+```lua
+fun()|nil
+```
+> Event triggers when the players guild house portal list changes.
+
+#### Field: UPDATE_FACTION_REZ_DISTRICT
+```lua
+fun()|nil
+```
+> Event triggers when a hero activates a hero respawn spot.
+
+#### Field: UPDATE_FISH_SCHOOL_AREA
+```lua
+fun()|nil
+```
+> Event triggers when the player starts and stops using a ship fish telescope.
+
+#### Field: UPDATE_CRAFT_ORDER_SKILL
+```lua
+fun(key: string, fired: boolean)|nil
+```
+> Event triggers when the player starts to make, or cancels, a request for a
+> craft order.
+
+#### Field: UPDATE_ENCHANT_ITEM_MODE
+```lua
+fun(isExcutable: boolean, isLock: boolean)|nil
+```
+> Event triggers when an item is about to be enchanted and when at the start of the item being enchanted.
+
+#### Field: UPDATE_DURABILITY_STATUS
+```lua
+fun(added: boolean, removed: boolean)|nil
+```
+> Event triggers when the players durability status of their gear changes. (e.g., Item is nearly broken)
+
+#### Field: UPDATE_DYEING_EXCUTABLE
+```lua
+fun(executeable: boolean)|nil
+```
+> Event triggers when the player attempts to dye an item and the dye preview window opens.
+
+#### Field: UPDATE_DOMINION_INFO
+```lua
+fun()|nil
+```
+> Event triggers whenever there is a siege information update.
+
+#### Field: UPDATE_DOODAD_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the map.
+
+#### Field: UPDATE_FISH_SCHOOL_INFO
+```lua
+fun()|nil
+```
+> Event triggers every 500ms while the player is using a ship fish telescope.
+
+#### Field: UPDATE_BOSS_TELESCOPE_INFO
+```lua
+fun()|nil
+```
+> Event triggers every 500ms while the player is using a boss telescope.
+
+#### Field: UPDATE_BINDINGS
+```lua
+fun()|nil
+```
+> Event triggers when the player applies updates to their hotkey bindings.
+
+#### Field: TUTORIAL_EVENT
+```lua
+fun(id: number, info: TutorialInfo[])|nil
+```
+> Event triggers when an tutorial event occurs.
+
+#### Field: TRY_LOOT_DICE
+```lua
+fun(key: number, timeStamp: number, itemLink: string)|nil
+```
+> Event triggers when an item that needs to be rolled on drops.
+
+#### Field: TUTORIAL_HIDE_FROM_OPTION
+```lua
+fun()|nil
+```
+> Event triggers when the player disables pop-up tutorial windows from their
+> options window.
+
+#### Field: UCC_IMPRINT_SUCCEEDED
+```lua
+fun()|nil
+```
+> Event triggers when a ucc imprint has succeeded.
+
+#### Field: UI_ADDON
+```lua
+fun()|nil
+```
+> Event triggers when `ADDON:FireAddon` has been called.
+
+#### Field: TRIAL_TIMER
+```lua
+fun(state: `TRIAL_FINAL_STATEMENT`|`TRIAL_FREE`|`TRIAL_GUILTY_BY_SYSTEM`|`TRIAL_GUILTY_BY_USER`|`TRIAL_POST_SENTENCE`...(+4), remainTable: Time)|nil
+```
+> Event triggers every second a player is in a trial.
+
+#### Field: TRIAL_MESSAGE
+```lua
+fun(text: string)|nil
+```
+> Event triggers when the player attempts to join a trial that has already begun.
+
+#### Field: TRIAL_STATUS
+```lua
+fun(state: `TRIAL_FINAL_STATEMENT`|`TRIAL_FREE`|`TRIAL_GUILTY_BY_SYSTEM`|`TRIAL_GUILTY_BY_USER`|`TRIAL_POST_SENTENCE`...(+4), juryCount: number, remainTime: number, arg: number)|nil
+```
+> Event triggers when the trial changes state,
+
+#### Field: TRIAL_CANCELED
+```lua
+fun()|nil
+```
+
+
+#### Field: TRIAL_CLOSED
+```lua
+fun()|nil
+```
+> Event triggers when a trial is over.
+
+#### Field: UPDATE_BOSS_TELESCOPE_AREA
+```lua
+fun()|nil
+```
+> Event triggers when the player starts and stops using a boss telescope.
+
+#### Field: UI_PERMISSION_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when a ui permission update has occured.
+
+#### Field: UNFINISHED_BUILD_HOUSE
+```lua
+fun(message: string)|nil
+```
+> Event triggers when the player attempts to place land while they already have land that is unbuilt.
+
+#### Field: UNIT_KILL_STREAK
+```lua
+fun(killStreakInfo: KillStreakInfo)|nil
+```
+> Event triggers when a player is on a kill streak.
+
+#### Field: UNIT_NAME_CHANGED
+```lua
+fun(unitId: string)|nil
+```
+> Event triggers when a units name changes.
+
+#### Field: UNIT_NPC_EQUIPMENT_CHANGED
+```lua
+fun(arg: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))|nil
+```
+> Event triggers when the players pet equipment changes.
+
+#### Field: UI_RELOADED
+```lua
+fun()|nil
+```
+> Event triggers when the players UI reloads. (Toggling Vertical Sync will cause a UI reload)
+
+#### Field: UNIT_EQUIPMENT_CHANGED
+```lua
+fun(equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))|nil
+```
+> Event triggers when the player changes their gear.
+
+#### Field: UNIT_DEAD
+```lua
+fun(stringId: string, lossExp: number, lossDurabilityRatio: number)|nil
+```
+> Event triggers when a player dies.
+
+#### Field: UNIT_DEAD_NOTICE
+```lua
+fun(name: string)|nil
+```
+> Event triggers when a player dies.
+
+#### Field: UNITFRAME_ABILITY_UPDATE
+```lua
+fun(unitId: string)|nil
+```
+> Event triggers when a player changes their class.
+
+#### Field: UNIT_COMBAT_STATE_CHANGED
+```lua
+fun(combat: boolean, unitId: string)|nil
+```
+> Event triggers when the combat state of a unit changes.
+
+#### Field: TRANSFORM_COMBAT_RESOURCE
+```lua
+fun(groupType: `10`|`11`|`12`|`14`|`1`...(+11))|nil
+```
+> Event triggers when a combat resource has been transformed. (e.g. When Vitalism Prayer reaches max stacks it converts into Divine Response.)
+
+#### Field: UPDATE_GACHA_LOOT_MODE
+```lua
+fun(isExcutable: boolean, isLock: boolean)|nil
+```
+> Event triggers when the open chest (gold/silver/copper crate) window receives
+> a update when the player selects a crate or a key and when each crate is
+> opened.
+
+#### Field: UPDATE_HERO_ELECTION_CONDITION
+```lua
+fun()|nil
+```
+> Event triggers when the hero election condition has updated.
+
+#### Field: UPDATE_TELESCOPE_AREA
+```lua
+fun()|nil
+```
+> Event triggers when the player starts and stops using a ship telescope.
+
+#### Field: UPDATE_SQUAD
+```lua
+fun()|nil
+```
+> Event triggers when the players squad updates.
+
+#### Field: UPDATE_TODAY_ASSIGNMENT
+```lua
+fun(todayInfo?: TodayAssignmentInfo)|nil
+```
+> Event triggers when the players daily assignment updates.
+
+#### Field: UPDATE_TODAY_ASSIGNMENT_RESET_COUNT
+```lua
+fun(count: number)|nil
+```
+> Event triggers when the players daily assignments reset.
+
+#### Field: UPDATE_TRANSFER_TELESCOPE_AREA
+```lua
+fun()|nil
+```
+> Event triggers when the player starts and stops using a telescope.
+
+#### Field: UPDATE_SPECIALTY_RATIO
+```lua
+fun(sellItem: SellSpecialtyInfo)|nil
+```
+> Event triggers when the player opens the sell cargo window. Event triggers when `X2Store:GetZoneSpecialtyRatio` is used.
+
+#### Field: UPDATE_SKILL_ACTIVE_TYPE
+```lua
+fun()|nil
+```
+> Event triggers when the player learns a new emote.
+
+#### Field: UPDATE_SLAVE_EQUIPMENT_SLOT
+```lua
+fun(reload: boolean)|nil
+```
+> Event triggers when the players slave equipment slot updates.
+
+#### Field: UPDATE_SHORTCUT_SKILLS
+```lua
+fun()|nil
+```
+
+
+#### Field: UPDATE_SIEGE_SCORE
+```lua
+fun(offensePoint: number, outlawPoint: number)|nil
+```
+> Event triggers when the siege score changes.
+
+#### Field: UPDATE_SHIP_TELESCOPE_INFO
+```lua
+fun()|nil
+```
+> Event triggers every 500ms while the player is using a ship telescope.
+
+#### Field: UPDATE_TRANSFER_TELESCOPE_INFO
+```lua
+fun()|nil
+```
+> Event triggers every 500ms while the player is using a telescope.
+
+#### Field: UPDATE_ZONE_LEVEL_INFO
+```lua
+fun(level: `0`|`1`|`2`|`3`, id: `0`|`100`|`101`|`102`|`103`...(+151))|nil
+```
+> Event triggers when the world map zone zoom level changes.
+
+#### Field: WATCH_TARGET_CHANGED
+```lua
+fun(stringId: any)|nil
+```
+> Event triggers when the player starts tracking a new target.
+
+#### Field: WEB_BROWSER_ESC_EVENT
+```lua
+fun(browser: any)|nil
+```
+
+
+#### Field: WORLD_MESSAGE
+```lua
+fun(msg: string, iconKey: string, info: WorldMessageInfo)|nil
+```
+> Event triggers when a world message occurs.
+
+#### Field: UPDATE_ZONE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player enters a new zone.
+
+#### Field: WAIT_REPLY_FROM_SERVER
+```lua
+fun(waiting: boolean)|nil
+```
+> Event triggers when the player is waiting on a reply from the server.
+
+#### Field: WAIT_FRIENDLIST_UPDATE
+```lua
+fun(updateType: string)|nil
+```
+> Event triggers when the player receieves a friend request.
+
+#### Field: WAIT_FRIEND_ADD_ALARM
+```lua
+fun()|nil
+```
+> Event triggers when the player receieves a friend request.
+
+#### Field: UPDATE_ZONE_PERMISSION
+```lua
+fun()|nil
+```
+> Event triggers when the player enters a zone with permissions. (Ipyna Ridge Akasch Invasion)
+
+#### Field: VIEW_CASH_BUY_WINDOW
+```lua
+fun(sellType: any)|nil
+```
+
+
+#### Field: UPDATE_GIVEN_QUEST_STATIC_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the players given quest information updates.
+
+#### Field: UPDATE_ROUTE_MAP
+```lua
+fun()|nil
+```
+
+
+#### Field: UPDATE_ROADMAP_ANCHOR
+```lua
+fun(file: string)|nil
+```
+> Event triggers when the player changes zones.
+
+#### Field: UPDATE_INSTANT_GAME_INVITATION_COUNT
+```lua
+fun(accept: number, totalSize: number)|nil
+```
+> Event triggers when a instance invitation goes out and each time a player joins.
+
+#### Field: UPDATE_INGAME_SHOP_VIEW
+```lua
+fun(viewType: "enter_mode"|"leave_mode"|"leave_sort", mode: `1`|`MODE_SEARCH`)|nil
+```
+> Event triggers when the in game shops view changes.
+
+#### Field: UPDATE_INSTANT_GAME_KILLSTREAK
+```lua
+fun(count: any)|nil
+```
+
+
+#### Field: UPDATE_INSTANT_GAME_KILLSTREAK_COUNT
+```lua
+fun(count: number)|nil
+```
+> Event triggers when the player kills another player in a instance.
+
+#### Field: UPDATE_INSTANT_GAME_SCORES
+```lua
+fun()|nil
+```
+> Event triggers when an instance score updates.
+
+#### Field: UPDATE_INGAME_SHOP
+```lua
+fun(updateType: "cart"|"checkTime"|"exchange_ratio"|"goods"|"maintab"...(+2), page?: number, totalItems?: number, arg4?: any)|nil
+```
+> Event triggers when the in game shop receives an event.
+
+#### Field: UPDATE_INDUN_PLAYING_INFO_BROADCASTING
+```lua
+fun(info: NpcBroadcastingInfo[])|nil
+```
+> Event triggers every second while the npc info is broadcasting for the player. (e.g. Hereafter Rebellion Win Condition/Progress)
+
+#### Field: UPDATE_INGAME_BEAUTYSHOP_STATUS
+```lua
+fun()|nil
+```
+> Event triggers when the players ability to use the beautyshop changes.
+
+#### Field: UPDATE_HOUSING_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the housing information for the map updates.
+
+#### Field: UPDATE_HOUSING_TOOLTIP
+```lua
+fun(unitId: string)|nil
+```
+> Event triggers when a housing tooltip updates.
+
+#### Field: UPDATE_ROSTER_MEMBER_INFO
+```lua
+fun(rosterId: any)|nil
+```
+
+
+#### Field: UPDATE_INSTANT_GAME_STATE
+```lua
+fun()|nil
+```
+> Event triggers when the player queues an instance.
+
+#### Field: UPDATE_ITEM_LOOK_CONVERT_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player opens/closes the item infusion window.
+
+#### Field: UPDATE_RESTORE_CRAFT_ORDER_ITEM_MATERIAL
+```lua
+fun(infos: ItemInfo)|nil
+```
+> Event triggers when the player is attemping to revert a crafting order.
+
+#### Field: UPDATE_RESTORE_CRAFT_ORDER_ITEM_SLOT
+```lua
+fun(info: CraftOrderInfo|nil)|nil
+```
+> Event triggers when the player is attempting to revert a crafting order.
+
+#### Field: UPDATE_RETURN_ACCOUNT_STATUS
+```lua
+fun(status: `1`|`2`|`3`)|nil
+```
+> Event triggers when the player returns to the game after a month. https://na.archerage.to/forums/threads/returning-player-pack.10482/
+
+#### Field: UPDATE_INSTANT_GAME_TIME
+```lua
+fun()|nil
+```
+> Event triggers every 500ms while the player is inside an instance.
+
+#### Field: UPDATE_PING_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the map has a ping update.
+
+#### Field: UPDATE_NPC_INFO
+```lua
+fun()|nil
+```
+> Event triggers when npc information for the map has changed.
+
+#### Field: UPDATE_OPTION_BINDINGS
+```lua
+fun(overrided?: boolean, oldAction?: string, newAction?: string)|nil
+```
+> Event triggers when the player opens the settings window and triggers when
+> the player updates a setting.
+
+#### Field: UPDATE_MONITOR_NPC
+```lua
+fun()|nil
+```
+> Event triggers when a montiored npc updates for the map.
+
+#### Field: UPDATE_MY_SLAVE_POS_INFO
+```lua
+fun()|nil
+```
+> Event triggers every 5 seconds to update the players slave (vehicle) position information.
+
+#### Field: SIEGEWEAPON_BOUND
+```lua
+fun(arg: number)|nil
+```
+> Event triggers when the player mounts a siege weapon.
+
+#### Field: TRADE_UNLOCKED
+```lua
+fun()|nil
+```
+
+
+#### Field: TRADE_STARTED
+```lua
+fun(targetName: string)|nil
+```
+> Event triggers when the player starts trading with another player.
+
+#### Field: START_QUEST_CONTEXT_NPC
+```lua
+fun(qtype: number, useDirectingMode: boolean, npcId: string)|nil
+```
+> Event triggers when the player interacts with a npc that gives a quest with context,
+
+#### Field: START_QUEST_CONTEXT_DOODAD
+```lua
+fun(qtype: number, useDirectingMode: boolean, doodadId: number)|nil
+```
+> Event triggers when the player starts a quest with a context doodad.
+
+#### Field: START_QUEST_CONTEXT_SPHERE
+```lua
+fun(qtype: number, stype: number)|nil
+```
+> Event triggers when the player enters a quest sphere and a quest starts.
+
+#### Field: START_SENSITIVE_OPERATION
+```lua
+fun(remainTime: any)|nil
+```
+
+
+#### Field: START_TALK_QUEST_CONTEXT
+```lua
+fun(doodadId: any)|nil
+```
+
+
+#### Field: START_QUEST_CONTEXT
+```lua
+fun(qtype: any, useDirectingMode: any, npcId: any)|nil
+```
+
+
+#### Field: START_CHAT_BUBBLE
+```lua
+fun(arg: string)|nil
+```
+> Event triggers when the player interacts with a npc that starts a chat bubble.
+
+#### Field: START_HERO_ELECTION_PERIOD
+```lua
+fun()|nil
+```
+
+
+#### Field: SPELLCAST_SUCCEEDED
+```lua
+fun(caster: "player"|"target"|"targettarget"|"watchtarget")|nil
+```
+> Event triggers when a local unit successfully casts a spell.
+
+#### Field: STARTED_DUEL
+```lua
+fun()|nil
+```
+
+
+#### Field: SPELLCAST_STOP
+```lua
+fun(caster: "player"|"target"|"targettarget"|"watchtarget")|nil
+```
+> Event triggers when a local unit stops casting a spell.
+
+#### Field: START_TODAY_ASSIGNMENT
+```lua
+fun(stepName: any)|nil
+```
+> Event triggers when the player opens a daily assignment.
+
+#### Field: STILL_LOADING
+```lua
+fun(loadingProgress: any)|nil
+```
+
+
+#### Field: STORE_SOLD_LIST
+```lua
+fun(soldItems: ItemInfo[])|nil
+```
+> Event triggers when the player accesses a merchant or when the merchants sold
+> list updates.
+
+#### Field: STORE_TRADE_FAILED
+```lua
+fun()|nil
+```
+> Event triggers when the player attempts to purchase an item from a store and their bag is full.
+
+#### Field: SURVEY_FORM_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: STICKED_MSG
+```lua
+fun()|nil
+```
+
+
+#### Field: STORE_SELL
+```lua
+fun(itemLinkText: string, stackCount: number)|nil
+```
+> Event triggers when the player has sold an item to a merchant.
+
+#### Field: STORE_BUY
+```lua
+fun(itemLinkText: string, stackCount: number)|nil
+```
+> Event triggers when the player buys an item from merchant.
+
+#### Field: STORE_FULL
+```lua
+fun()|nil
+```
+> Event triggers when the player attempts to purchase an item from a store and their bag is full.
+
+#### Field: STORE_ADD_BUY_ITEM
+```lua
+fun()|nil
+```
+
+
+#### Field: STORE_ADD_SELL_ITEM
+```lua
+fun(slotNumber: number)|nil
+```
+> Event triggers when the player attempts to sell an item a merchant.
+
+#### Field: SWITCH_ENCHANT_ITEM_MODE
+```lua
+fun(mode: "awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7))|nil
+```
+> Event triggers when the player changes their enchanting mode.
+
+#### Field: SPELLCAST_START
+```lua
+fun(spellName: string, castingTime: number, caster: "player"|"target"|"targettarget"|"watchtarget", castingUseable: boolean)|nil
+```
+> Event triggers when a local unit starts casting a spell.
+
+#### Field: SPECIALTY_RATIO_BETWEEN_INFO
+```lua
+fun(specialtyRatioTable: SpecialtyRatioInfo[])|nil
+```
+> Event triggers when the player checks the specialty ratio between two zones.
+
+#### Field: SKILL_ALERT_ADD
+```lua
+fun(statusBuffType: `10`|`11`|`12`|`13`|`14`...(+16), buffId: number, remainTime: number, name: "Bleed (All)"|"Bubble Trap"|"Charmed"|"Deep Freeze"|"Enervate"...(+16))|nil
+```
+> Event triggers when the player receives a status debuff.
+
+#### Field: SKILLS_RESET
+```lua
+fun(ability: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9))|nil
+```
+> Event triggers when the player resets a skill tree.
+
+#### Field: SKILL_ALERT_REMOVE
+```lua
+fun(statusBuffType: `10`|`11`|`12`|`13`|`14`...(+16))|nil
+```
+> Event triggers when the players status debuff is gone.
+
+#### Field: SKILL_CHANGED
+```lua
+fun(text: string, level: number, ability: "adamant"|"assassin"|"death"|"fight"|"hatred"...(+9))|nil
+```
+> Event triggers when the players skill level changes.
+
+#### Field: SKILL_LEARNED
+```lua
+fun(text: string, skillType: "buff"|"skill")|nil
+```
+> Event triggers when the player learns a skill.
+
+#### Field: SIM_DOODAD_MSG
+```lua
+fun(code?: any)|nil
+```
+
+
+#### Field: SIEGE_RAID_TEAM_INFO
+```lua
+fun(info: SiegeRaidInfo)|nil
+```
+> Event triggers when the player attempts to apply to a siege raid.
+
+#### Field: SIEGE_WAR_ENDED
+```lua
+fun()|nil
+```
+
+
+#### Field: SIEGE_APPOINT_RESULT
+```lua
+fun(isDefender: any, faction: any)|nil
+```
+
+
+#### Field: SIEGE_RAID_REGISTER_LIST
+```lua
+fun(zoneGroupType?: any, bRegistState?: any, bListUpdate?: any)|nil
+```
+> Event triggers when a siege raid is created.
+
+#### Field: SPECIAL_ABILITY_LEARNED
+```lua
+fun(recvAbility: number)|nil
+```
+> Event triggers when the player learns to transform.
+
+#### Field: SKILL_MAP_EFFECT
+```lua
+fun(info: SkillMapEffectInfo)|nil
+```
+> Event triggers when the worldmap has an effect that that needs to be shown.
+
+#### Field: SKILL_SELECTIVE_ITEM
+```lua
+fun(list: SkillSelectiveItemList, usingSlotIndex: number)|nil
+```
+> Event triggers when the player is trying tos select an item from a supply
+> kit.
+
+#### Field: SLAVE_SPAWN
+```lua
+fun()|nil
+```
+> Event triggers when the player spawns a vehicle.
+
+#### Field: SPAWN_PET
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when the player spawns a pet.
+
+#### Field: SPECIALTY_CONTENT_RECIPE_INFO
+```lua
+fun(list: any)|nil
+```
+
+
+#### Field: SKILL_MSG
+```lua
+fun(resultCode: "ALERT_OPTION"|"ALERT_OPTION_POPUP_DESC"|"ALERT_OPTION_POSITION_1_TEXT"|"ALERT_OPTION_POSITION_2_TEXT"|"ALERT_OPTION_POSITION_BASIC_TEXT"...(+202), param: string, skillType: number)|nil
+```
+> Event triggers when the player uses as skill has a message.
+
+#### Field: SLAVE_SHIP_UNBOARDING
+```lua
+fun()|nil
+```
+
+
+#### Field: SKILL_UPGRADED
+```lua
+fun(skillType: number, level: number, oldLevel: number)|nil
+```
+> Event triggers when the players skill upgrades.
+
+#### Field: SLAVE_SHIP_BOARDING
+```lua
+fun()|nil
+```
+
+
+#### Field: SKILL_SELECTIVE_ITEM_NOT_AVAILABLE
+```lua
+fun()|nil
+```
+
+
+#### Field: SKILL_SELECTIVE_ITEM_READY_STATUS
+```lua
+fun(status: boolean)|nil
+```
+> Event triggers when the player attempts to open an item that has a selection.
+
+#### Field: TRADE_UI_TOGGLE
+```lua
+fun()|nil
+```
+
+
+#### Field: SYNC_PORTAL
+```lua
+fun()|nil
+```
+
+
+#### Field: SYS_INDUN_STAT_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when the player views the system status of a dungeon instance.
+
+#### Field: TOWER_DEF_MSG
+```lua
+fun(towerDefInfo: TowerDefInfo)|nil
+```
+> Event triggers when a tower defense message occurs.
+
+#### Field: TOWER_DEF_INFO_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when a tower defense information updates.
+
+#### Field: TRADE_CANCELED
+```lua
+fun()|nil
+```
+
+
+#### Field: TRADE_CAN_START
+```lua
+fun(unitIdStr: any)|nil
+```
+
+
+#### Field: TRADE_ITEM_PUTUP
+```lua
+fun(inventoryIdx: number, amount: number)|nil
+```
+> Event triggers when the player puts an item up for trade.
+
+#### Field: TOGGLE_WALK
+```lua
+fun(speed: number)|nil
+```
+> Event triggers when the player toggles walk.
+
+#### Field: TOGGLE_RAID_FRAME_PARTY
+```lua
+fun(party: number, visible: boolean)|nil
+```
+> Event triggers when a party in the raid is shown or hidden.
+
+#### Field: TOGGLE_ROADMAP
+```lua
+fun()|nil
+```
+> Event triggers when the roadmap size is changed.
+
+#### Field: TOGGLE_RAID_FRAME
+```lua
+fun(show: boolean)|nil
+```
+> Event triggers when the first raid frame is shown or hidden.
+
+#### Field: TOGGLE_RAID_FRAME2
+```lua
+fun()|nil
+```
+> Event triggers when the second raid frame is shown or hidden.
+
+#### Field: TOGGLE_PORTAL_DIALOG
+```lua
+fun(addPortal: boolean, skillTypeNumber: number, itemTypeNumber: number)|nil
+```
+> Event triggers when the player uses a teleport book.
+
+#### Field: TRADE_ITEM_TOOKDOWN
+```lua
+fun(inventoryIdx: any)|nil
+```
+
+
+#### Field: TRADE_LOCKED
+```lua
+fun()|nil
+```
+> Event triggers when the player locks their trade.
+
+#### Field: TRADE_OTHER_LOCKED
+```lua
+fun()|nil
+```
+> Event triggers when the other player being traded with locks their trade.
+
+#### Field: TRADE_OTHER_MONEY_PUTUP
+```lua
+fun(money: any)|nil
+```
+
+
+#### Field: TRADE_OTHER_OK
+```lua
+fun()|nil
+```
+> Event triggers when the other player being traded with confirms their trade.
+
+#### Field: TRADE_ITEM_UPDATED
+```lua
+fun()|nil
+```
+
+
+#### Field: TRADE_OTHER_ITEM_TOOKDOWN
+```lua
+fun(otherIdx: any)|nil
+```
+
+
+#### Field: TRADE_OK
+```lua
+fun()|nil
+```
+> Event triggers when the player confirms the trade.
+
+#### Field: TRADE_OTHER_ITEM_PUTUP
+```lua
+fun(otherIdx: any, type: any, stackCount: any, tooltip: any)|nil
+```
+
+
+#### Field: TRADE_MADE
+```lua
+fun()|nil
+```
+> Event triggers when a trade has been made.
+
+#### Field: TRADE_MONEY_PUTUP
+```lua
+fun(money: string)|nil
+```
+> Event triggers when the player puts up money on their trade.
+
+#### Field: SYSMSG
+```lua
+fun(msg: string)|nil
+```
+> Event triggers when there is a system message.
+
+#### Field: TOGGLE_PET_MANAGE
+```lua
+fun()|nil
+```
+
+
+#### Field: TOGGLE_IN_GAME_NOTICE
+```lua
+fun(url: any)|nil
+```
+
+
+#### Field: TEAM_JOINT_BROKEN
+```lua
+fun()|nil
+```
+> Event triggers when a co raid splits.
+
+#### Field: TEAM_JOINT_BREAK
+```lua
+fun(requester: any, enable: any)|nil
+```
+
+
+#### Field: TEAM_JOINT_CHAT
+```lua
+fun()|nil
+```
+
+
+#### Field: TEAM_JOINT_RESPONSE
+```lua
+fun()|nil
+```
+
+
+#### Field: TEAM_JOINT_TARGET
+```lua
+fun(isJointable: any)|nil
+```
+
+
+#### Field: TEAM_JOINTED
+```lua
+fun()|nil
+```
+> Event triggers when a raid joins another raid join.
+
+#### Field: TARGET_OVER
+```lua
+fun(targetType: "doodad"|"nothing"|"ui"|"unit", unitId: string|number)|nil
+```
+> Event triggers when the players mouse is over a target.
+
+#### Field: TARGET_TO_TARGET_CHANGED
+```lua
+fun(stringId: string|nil, targetType: "doodad"|"nothing"|"ui"|"unit"|nil)|nil
+```
+> Event triggers when the players target changes their target.
+
+#### Field: TARGET_CHANGED
+```lua
+fun(stringId: string|nil, targetType: "housing"|"npc"|nil)|nil
+```
+> Event triggers when the player targets a new unit.
+
+#### Field: TARGET_NPC_HEALTH_CHANGED_FOR_DEFENCE_INFO
+```lua
+fun(curHp: any, maxHp: any)|nil
+```
+
+
+#### Field: TOGGLE_PARTY_FRAME
+```lua
+fun(show: boolean)|nil
+```
+> Event triggers when the players party is shown or hidden.
+
+#### Field: TEAM_MEMBERS_CHANGED
+```lua
+fun(reason: "joined"|"leaved"|"refreshed", value: TeamMember)|nil
+```
+> Event triggers when the players team changes.
+
+#### Field: TEAM_MEMBER_UNIT_ID_CHANGED
+```lua
+fun(oldStringId: string, stringId: string)|nil
+```
+> Event triggers when a team members unit id changes.
+
+#### Field: TOGGLE_CRAFT
+```lua
+fun()|nil
+```
+
+
+#### Field: TOGGLE_FACTION
+```lua
+fun()|nil
+```
+
+
+#### Field: TOGGLE_FOLLOW
+```lua
+fun(on: boolean)|nil
+```
+> Event triggers when the player toggles follow on another player.
+
+#### Field: TEAM_MEMBER_DISCONNECTED
+```lua
+fun(isParty: boolean, jointOrder: number, stringId: string, memberIndex: number)|nil
+```
+> Event triggers when a player in the team is disconnected.
+
+#### Field: TOGGLE_COMMUNITY
+```lua
+fun()|nil
+```
+
+
+#### Field: TIME_MESSAGE
+```lua
+fun(key: any, timeTable: any)|nil
+```
+
+
+#### Field: TOGGLE_CHANGE_VISUAL_RACE
+```lua
+fun(data: ChangeVisualRace)|nil
+```
+> Event triggers when the player attempts to use a race change elixir.
+
+#### Field: TEAM_ROLE_CHANGED
+```lua
+fun(jointOrder: number, memberIndex: number, role: `TMROLE_DEALER`|`TMROLE_HEALER`|`TMROLE_NONE`|`TMROLE_RANGED_DEALER`|`TMROLE_TANKER`)|nil
+```
+> Event triggers when a player changes their team role.
+
+#### Field: TEAM_SUMMON_SUGGEST
+```lua
+fun()|nil
+```
+
+
+#### Field: ZONE_SCORE_CONTENT_STATE
+```lua
+fun(states?: any)|nil
+```
+> Event triggers when the zones content score changes.
+
+#### Field: MAIL_INBOX_ATTACHMENT_TAKEN_ALL
+```lua
+fun(mailId: number)|nil
+```
+> Event triggers when the player takes all from a mail.
+
+#### Field: LOOT_PACK_ITEM_BROADCAST
+```lua
+fun(characterName: string, sourceName: string, useItemLink: string, resultItemLink: string)|nil
+```
+> Event triggers when a player loots an item that broadcasts to the server.
+
+#### Field: COMPLETE_QUEST_CONTEXT_NPC
+```lua
+fun(qtype: number, useDirectingMode: boolean, npcId: string)|nil
+```
+> Event triggers when the player completes a npc context quest.
+
+#### Field: COMPLETE_QUEST_CONTEXT_DOODAD
+```lua
+fun(qtype: number, useDirectingMode: boolean, doodadId: string)|nil
+```
+> Event triggers when the player completes part of a quest doodad.
+
+#### Field: CONVERT_TO_RAID_TEAM
+```lua
+fun()|nil
+```
+> Event triggers when the players party is converted into a raid.
+
+#### Field: COPY_RAID_MEMBERS_TO_CLIPBOARD
+```lua
+fun()|nil
+```
+> Event triggers when the players copies raid members to their clipboard.
+
+#### Field: CRAFTING_END
+```lua
+fun()|nil
+```
+
+
+#### Field: COMPLETE_CRAFT_ORDER
+```lua
+fun(info: CraftOrderInfo)|nil
+```
+> Event triggers when the players craft order has been completed.
+
+#### Field: COMMUNITY_ERROR
+```lua
+fun(msg: any)|nil
+```
+> Event triggers when the player attempts to send a friend request to a player that does not exist, or attempts to block a character that is already blocked.
+
+#### Field: COMPLETE_ACHIEVEMENT
+```lua
+fun(newAchievementType: number)|nil
+```
+> Event triggers when the player completes an achievement.
+
+#### Field: COMBAT_TEXT_SYNERGY
+```lua
+fun(arg: number)|nil
+```
+> Event triggers when a skill has a combo **effect**.
+
+#### Field: COMMON_FARM_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers whenever the players common (public) farm updates.
+
+#### Field: COMBAT_TEXT_COLLISION
+```lua
+fun(targetUnitId: string, combatEvent: string, source: string, target: string, collisionSource: "COLLISION"|"DROWNING"|"FALLING", subType: `COLLISION_PART_BOTTOM`|`COLLISION_PART_FRONT`|`COLLISION_PART_REAR`|`COLLISION_PART_SIDE`|`COLLISION_PART_TOP`, mySlave: boolean, damage: number, powerType: "HEALTH"|"MANA")|nil
+```
+> Event triggers when there is a collision.
+
+#### Field: CRAFTING_START
+```lua
+fun(doodadId: any, count: any)|nil
+```
+> Event triggers when the player opens the crafting window.
+
+#### Field: CRAFT_ENDED
+```lua
+fun(leftCount: any)|nil
+```
+> Event triggers when an item has been crafted.
+
+#### Field: CRIME_REPORTED
+```lua
+fun(diffPoint: number, diffRecord: number, diffScore: number)|nil
+```
+> Event triggers when the players crime has been reported.
+
+#### Field: CREATE_ORIGIN_UCC_ITEM
+```lua
+fun()|nil
+```
+
+
+#### Field: DEBUFF_UPDATE
+```lua
+fun(action: "create"|"destroy", target: "character"|"mate"|"slave")|nil
+```
+> Event triggers when a debuff is created or destroyed for a unit.
+
+#### Field: DELETE_CRAFT_ORDER
+```lua
+fun()|nil
+```
+> Event triggers when a crafting order has been removed.
+
+#### Field: CRAFT_DOODAD_INFO
+```lua
+fun()|nil
+```
+
+
+#### Field: CRAFT_TRAINED
+```lua
+fun()|nil
+```
+
+
+#### Field: CRAFT_RECIPE_ADDED
+```lua
+fun()|nil
+```
+
+
+#### Field: CRAFT_STARTED
+```lua
+fun(leftCount: number)|nil
+```
+> Event triggers when the player has started crafting.
+
+#### Field: CRAFT_FAILED
+```lua
+fun(itemLinkText: string)|nil
+```
+> Event triggers when the player fails to craft an item.
+
+#### Field: CRAFT_ORDER_ENTRY_SEARCHED
+```lua
+fun(infos: CraftOrderEntries, totalCount: number, page: number)|nil
+```
+> Event triggers when crafting order entries are requested.
+
+#### Field: DELETE_PORTAL
+```lua
+fun()|nil
+```
+> Event triggers when a portal has been deleted from the players teleport book.
+
+#### Field: COMBAT_TEXT
+```lua
+fun(sourceUnitId: string, targetUnitId: string, amount: number, a: number, b: string, hitType: "CRITICAL"|"HIT"|"IMMUNE", d: number, e: boolean, f: number, g: boolean, distance: number)|nil
+```
+
+
+#### Field: COFFER_UPDATE
+```lua
+fun(bagId: number, slotId: number)|nil
+```
+> Event triggers when the players coffer (storage chest) updates.
+
+#### Field: CLEAR_HOUSING_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the housing information needs to be cleared from the map.
+
+#### Field: CLEAR_GIVEN_QUEST_STATIC_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the given quest information needs to be cleared from the map.
+
+#### Field: CLEAR_MY_SLAVE_POS_INFO
+```lua
+fun()|nil
+```
+> Event triggers every 5 seconds to clear the players slave (vehicle) position information.
+
+#### Field: CLEAR_NOTIFY_QUEST_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the notify quest information needs to be cleared from the map.
+
+#### Field: CLEAR_NPC_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the npc information needs to be cleared from the map.
+
+#### Field: CLEAR_FISH_SCHOOL_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the fish school information needs to be cleared from the map.
+
+#### Field: CLEAR_CORPSE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player dies and when the player respawns or the players corpse information expires.
+
+#### Field: CLEAR_DOODAD_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the map.
+
+#### Field: CLEAR_CARRYING_BACKPACK_SLAVE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the pack slave information needs to be cleared from the map.
+
+#### Field: CLEAR_COMPLETED_QUEST_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the completed quest information needs to be cleared from the map.
+
+#### Field: COMBAT_MSG
+```lua
+fun(targetUnitId: string, combatEvent: "ENVIRONMENTAL_DAMAGE"|"ENVIRONMENTAL_DRAIN"|"ENVIRONMENTAL_ENERGIZE"|"ENVIRONMENTAL_HEALED"|"ENVIRONMENTAL_LEECH"...(+14), source: string, target: string, ...any)|nil
+```
+> Event triggers when a combat message occurs.
+
+#### Field: CLEAR_SHIP_TELESCOPE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player stops using a ship telescope.
+
+#### Field: CLOSE_CRAFT_ORDER
+```lua
+fun()|nil
+```
+> Event triggers when the player creates a craft order.
+
+#### Field: COFFER_TAB_REMOVED
+```lua
+fun()|nil
+```
+> Event triggers when the player deletes a tab from the coffer (storage chest).
+
+#### Field: COFFER_TAB_SORTED
+```lua
+fun(bagId: number)|nil
+```
+> Event triggers when the player sorts the coffer (storage chest).
+
+#### Field: COFFER_TAB_SWITCHED
+```lua
+fun(tabId: number)|nil
+```
+> Event triggers when the player changes their coffer (storage chest) tab.
+
+#### Field: CLEAR_TRANSFER_TELESCOPE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player stops using a telescope.
+
+#### Field: COFFER_TAB_CREATED
+```lua
+fun()|nil
+```
+> Event triggers when the player creates a tab for the coffer (storage chest).
+
+#### Field: COFFER_INTERACTION_START
+```lua
+fun()|nil
+```
+
+
+#### Field: COFFER_REAL_INDEX_SHOW
+```lua
+fun(isRealSlotShow: any)|nil
+```
+
+
+#### Field: CLOSE_MUSIC_SHEET
+```lua
+fun()|nil
+```
+> Event triggers when the player attempts to use sheet music.
+
+#### Field: COFFER_INTERACTION_END
+```lua
+fun()|nil
+```
+> Event triggers when the player interacts with something other than the coffer (storage chest).
+
+#### Field: CLEAR_BOSS_TELESCOPE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the boss telescope information needs to be cleared from the map.
+
+#### Field: DESTROY_PAPER
+```lua
+fun()|nil
+```
+> Event triggers when the player deletes a letter/book from their inventory.
+
+#### Field: DIAGONAL_LINE
+```lua
+fun()|nil
+```
+
+
+#### Field: ENTERED_SUBZONE
+```lua
+fun(zoneName: ""|"3rd Corps Camp"|"Abandoned Claimstake"|"Abandoned Drill Camp"|"Abandoned Guardpost"...(+1163))|nil
+```
+> Event triggers when the player enters a subzone.
+
+#### Field: ENTERED_SCREEN_SHOT_CAMERA_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player enters screenshot mode.
+
+#### Field: ENTERED_WORLD
+```lua
+fun(unknown: boolean)|nil
+```
+> Event triggers when the player enters the world.
+
+#### Field: ENTER_ANOTHER_ZONEGROUP
+```lua
+fun(zoneId: `0`|`100`|`101`|`102`|`103`...(+151))|nil
+```
+> Event triggers when the player enters another zone group.
+
+#### Field: ENTER_ENCHANT_ITEM_MODE
+```lua
+fun(mode: "awaken"|"element"|"evolving"|"evolving_re_roll"|"gem"...(+7))|nil
+```
+> Event triggers when the player attempts to enter enchanting mode.
+
+#### Field: ENTERED_LOADING
+```lua
+fun(worldImagePath: string)|nil
+```
+> Event triggers when the player enters a loading screen.
+
+#### Field: END_QUEST_CHAT_BUBBLE
+```lua
+fun(playedBubble: boolean)|nil
+```
+> Event triggers when the player talks to a npc with a quest chat bubble.
+
+#### Field: ENTERED_INSTANT_GAME_ZONE
+```lua
+fun(arg: number)|nil
+```
+> Event triggers when the player enters a instance.
+
+#### Field: ENDED_DUEL
+```lua
+fun()|nil
+```
+
+
+#### Field: END_HERO_ELECTION_PERIOD
+```lua
+fun()|nil
+```
+> Event triggers when the hero election period has ended.
+
+#### Field: ENCHANT_SAY_ABILITY
+```lua
+fun()|nil
+```
+
+
+#### Field: ENTER_GACHA_LOOT_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the open chest (gold/silver/copper crate) window.
+
+#### Field: EQUIP_SLOT_REINFORCE_EXPAND_PAGE
+```lua
+fun()|nil
+```
+> Event triggers when the player expands their Ipnysh Artifacts pages.
+
+#### Field: EQUIP_SLOT_REINFORCE_UPDATE
+```lua
+fun(equipSlot: any)|nil
+```
+> Event triggers when the player increases the ipnysh level of an equipment
+> slot.
+
+#### Field: ESCAPE_END
+```lua
+fun()|nil
+```
+> Event triggers when the player stops using the escape skill or the player has successfully escaped.
+
+#### Field: ESCAPE_START
+```lua
+fun(waitTime: number)|nil
+```
+> Event triggers when the player attempts to use the escape skill.
+
+#### Field: ENTER_ITEM_LOOK_CONVERT_MODE
+```lua
+fun()|nil
+```
+
+
+#### Field: EQUIP_SLOT_REINFORCE_SELECT_PAGE
+```lua
+fun()|nil
+```
+> Event triggers when the player changes their Ipnysh Artifacts page.
+
+#### Field: EQUIP_SLOT_REINFORCE_MSG_LEVEL_UP
+```lua
+fun(equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27), level: number)|nil
+```
+> Event triggers when the players ipnysh equipment slot levels up.
+
+#### Field: EQUIP_SLOT_REINFORCE_MSG_SET_EFFECT
+```lua
+fun(equipSlotAttribute: number, level: number)|nil
+```
+> Event triggers when the players ipnysh equipment slot levels up.
+
+#### Field: EQUIP_SLOT_REINFORCE_MSG_CHANGE_LEVEL_EFFECT
+```lua
+fun()|nil
+```
+
+
+#### Field: EQUIP_SLOT_REINFORCE_MSG_LEVEL_EFFECT
+```lua
+fun(equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27), level: number)|nil
+```
+> Event triggers when the players ipnysh equipment slot effect levels up.
+
+#### Field: DIAGONAL_ASR
+```lua
+fun(itemName: string, itemGrade: `0`|`10`|`11`|`12`|`1`...(+8), askMarketPriceUi: boolean, values: DiagonalASRInfo)|nil
+```
+> Event triggers when the market price of an item is requested.
+
+#### Field: ENCHANT_RESULT
+```lua
+fun(resultCode: any, itemLink: any, oldGrade: any, newGrade: any, breakRewardItemType: any, breakRewardItemCount: any, breakRewardByMail: any)|nil
+```
+
+
+#### Field: ENABLE_TEAM_AREA_INVITATION
+```lua
+fun(enable: boolean)|nil
+```
+> Event triggers when the player does a radius invite and when that radius invite is off cooldown.
+
+#### Field: DOMINION_GUARD_TOWER_STATE_NOTICE
+```lua
+fun(key: `0`|`1`|`2`|`3`|`4`...(+2), name: string, factionName: string)|nil
+```
+> Event triggers when the siege lodestones state changes.
+
+#### Field: DOMINION
+```lua
+fun(action: string, zoneGroupName: string, expeditionName: string)|nil
+```
+> Event triggers when the player events a siegable zone.
+
+#### Field: DOMINION_GUARD_TOWER_UPDATE_TOOLTIP
+```lua
+fun(unitId: any)|nil
+```
+
+
+#### Field: DOMINION_SIEGE_PARTICIPANT_COUNT_CHANGED
+```lua
+fun(count: number)|nil
+```
+> Event triggers when the player joins a siege raid.
+
+#### Field: DOMINION_SIEGE_PERIOD_CHANGED
+```lua
+fun(siegeInfo: SiegeInfo)|nil
+```
+> Event triggers when the siege period changes.
+
+#### Field: DIVE_START
+```lua
+fun()|nil
+```
+> Event triggers when the player starts diving.
+
+#### Field: DISMISS_PET
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when the player dismisses a pet.
+
+#### Field: DIVE_END
+```lua
+fun()|nil
+```
+> Event triggers when the player stops diving.
+
+#### Field: DICE_BID_RULE_CHANGED
+```lua
+fun(diceBidRule: `1`|`2`|`3`)|nil
+```
+> Event triggers when the players bid type changes.
+
+#### Field: DISCONNECTED_BY_WORLD
+```lua
+fun(title: string, body: string)|nil
+```
+> Event triggers every 500ms when the player has disconnected from the world.
+
+#### Field: ENCHANT_EXAMINE
+```lua
+fun()|nil
+```
+
+
+#### Field: DOMINION_SIEGE_SYSTEM_NOTICE
+```lua
+fun()|nil
+```
+
+
+#### Field: DOODAD_LOGIC
+```lua
+fun()|nil
+```
+
+
+#### Field: DYEING_START
+```lua
+fun()|nil
+```
+> Event triggers when the player wants to start dying an item.
+
+#### Field: DYNAMIC_ACTION_BAR_HIDE
+```lua
+fun()|nil
+```
+> Event triggers when the player dynamic action bar (interaction bar) is hidden.
+
+#### Field: DYNAMIC_ACTION_BAR_SHOW
+```lua
+fun(dynamicActionType: any)|nil
+```
+> Event triggers when the player dynamic action bar (interaction bar) is shown.
+
+#### Field: DOMINION_SIEGE_UPDATE_TIMER
+```lua
+fun(secondHalf: boolean)|nil
+```
+> Event triggers every 500ms while a siege update is occuring.
+
+#### Field: DYEING_END
+```lua
+fun()|nil
+```
+> Event triggers when the player ends dying an item.
+
+#### Field: DRAW_DOODAD_SIGN_TAG
+```lua
+fun(tooltip: nil)|nil
+```
+> Event triggers when the player hovers over a doodad and the tooltip appears
+> in the bottom right of the screen.
+
+#### Field: DRAW_DOODAD_TOOLTIP
+```lua
+fun(info: DoodadTooltipInfo)|nil
+```
+> Event triggers every frame the players mouse hovers a doodad.
+
+#### Field: DOODAD_PHASE_MSG
+```lua
+fun(text: string)|nil
+```
+> Event triggers when a doodad phase message occurs. (ex: Strength of the Faction message)
+
+#### Field: DOODAD_PHASE_UI_MSG
+```lua
+fun(phaseMsgInfo: PhaseMsgInfo)|nil
+```
+> Event triggers when a title UI message appears.
+
+#### Field: ESC_MENU_ADD_BUTTON
+```lua
+fun(info: EscMenuAddButtonInfo)|nil
+```
+> Event triggers when a new button is added to the escape menu.
+
+#### Field: CHECK_TEXTURE
+```lua
+fun(texturePath: string)|nil
+```
+
+
+#### Field: CHAT_MSG_DOODAD
+```lua
+fun(message: string, author: string, authorId: string, isSelf: boolean, tailType: `CBK_NORMAL`|`CBK_SYSTEM`|`CBK_THINK`, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)|nil
+```
+> Event triggers when the player receives a chat message from a doodad/npc.
+
+#### Field: AUCTION_CHARACTER_LEVEL_TOO_LOW
+```lua
+fun(msg: string)|nil
+```
+> Event triggers when the player attempts to list an item or search for an item
+> in the auction house and they are too low of a level.
+
+#### Field: AUCTION_CANCELED
+```lua
+fun(itemName: string)|nil
+```
+> Event triggers when the player cancels a listed item.
+
+#### Field: AUCTION_ITEM_ATTACHMENT_STATE_CHANGED
+```lua
+fun(attached: boolean)|nil
+```
+> Event triggers when a player is listing an item on the auction house.
+
+#### Field: AUCTION_ITEM_PUT_UP
+```lua
+fun(itemName: string)|nil
+```
+> Event triggers when a player is listing an item on the auction house.
+
+#### Field: AUCTION_ITEM_SEARCH
+```lua
+fun()|nil
+```
+> Event triggers when a player is listing or searching for an item on the auction house.
+
+#### Field: AUCTION_BOUGHT_BY_SOMEONE
+```lua
+fun(itemName: string, moneyStr: string)|nil
+```
+> Event triggers when the player sells something on the auction house.
+
+#### Field: AUCTION_BIDDEN
+```lua
+fun(itemName: string, moneyStr: string)|nil
+```
+> Event triggers when the player receives a bid on an item on the auction house.
+
+#### Field: AUCTION_BOUGHT
+```lua
+fun()|nil
+```
+> Event triggers when the player buys something on the auction house.
+
+#### Field: ASK_FORCE_ATTACK
+```lua
+fun(forceAttackLevel: number)|nil
+```
+> Event triggers when the player attempts to turn on bloodlust.
+
+#### Field: AUCTION_BIDDED
+```lua
+fun(itemName: string, moneyStr: string)|nil
+```
+> Event triggers when the player bids on an item on the auction house.
+
+#### Field: ASK_BUY_LABOR_POWER_POTION
+```lua
+fun()|nil
+```
+> Event triggers when the players labor is low and the game recommends they buy a labor potion from the market place.
+
+#### Field: AUCTION_ITEM_SEARCHED
+```lua
+fun(clearLastSearchArticle: boolean)|nil
+```
+> Event triggers when a player is listing or searching for an item on the auction house.
+
+#### Field: AUCTION_PERMISSION_BY_CRAFT
+```lua
+fun(icraftType: number)|nil
+```
+> Event triggers when a player has started crafting and after each craft end.
+
+#### Field: BAG_ITEM_CONFIRMED
+```lua
+fun()|nil
+```
+> Event triggers when the player receives an item to their bag.
+
+#### Field: BAG_REAL_INDEX_SHOW
+```lua
+fun(isRealSlotShow: boolean)|nil
+```
+
+
+#### Field: BAG_TAB_CREATED
+```lua
+fun()|nil
+```
+> Event triggers when the player creates a tab in their bag.
+
+#### Field: AUCTION_LOWEST_PRICE
+```lua
+fun(itemType: number, grade: `0`|`10`|`11`|`12`|`1`...(+8), price: string)|nil
+```
+> Event triggers when a player is listing an item on the auction house.
+
+#### Field: BAG_EXPANDED
+```lua
+fun()|nil
+```
+> Event triggers when the player expands their bag.
+
+#### Field: BADWORD_USER_REPORED_RESPONE_MSG
+```lua
+fun(success: boolean)|nil
+```
+> Event triggers when the player attempts to report a player for inappropriate language.
+
+#### Field: BAD_USER_LIST_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when the list of people who reported a suspicious user is updated.
+
+#### Field: AUDIENCE_JOINED
+```lua
+fun(audienceName: string)|nil
+```
+> Event triggers when a player joins the jury audience.
+
+#### Field: AUDIENCE_LEFT
+```lua
+fun(audienceName: string)|nil
+```
+> Event triggers when a player leaves the jury audience.
+
+#### Field: BAG_TAB_REMOVED
+```lua
+fun()|nil
+```
+> Event triggers when the player deletes a tab in their bag.
+
+#### Field: APPELLATION_STAMP_SET
+```lua
+fun()|nil
+```
+> Event triggers when the players stamp (name icon) changes.
+
+#### Field: APPELLATION_CHANGED
+```lua
+fun(stringId: string, isChanged: boolean)|nil
+```
+> Event triggers when a player changes their appellation.
+
+#### Field: ACHIEVEMENT_UPDATE
+```lua
+fun(status: string|"update", newAchievementType: number)|nil
+```
+> Event triggers when the player updates an achievement.
+
+#### Field: ACCOUNT_RESTRICT_NOTICE
+```lua
+fun()|nil
+```
+> Event triggers when the players account gets restricted.
+
+#### Field: ACQUAINTANCE_LOGIN
+```lua
+fun(cmf: `CMF_ACQ_CONSUME_GROUP`|`CMF_ADDED_ITEM_GROUP`|`CMF_ADDED_ITEM_SELF`|`CMF_ADDED_ITEM_TEAM`|`CMF_ALL_SERVER`...(+60), charName: string)|nil
+```
+> Event triggers when an acquaintance (guild member) logs in.
+
+#### Field: ACTABILITY_EXPERT_CHANGED
+```lua
+fun(actabilityId: number, name: string, diff: string|number, final: string|number)|nil
+```
+> Event triggers when the players proficiency changes.
+
+#### Field: ACTABILITY_EXPERT_EXPANDED
+```lua
+fun()|nil
+```
+> Event triggers when the player expands their maximum proficiency specializations.
+
+#### Field: ACCOUNT_ATTENDANCE_LOADED
+```lua
+fun()|nil
+```
+> Event triggers when dailies reset.
+
+#### Field: ABILITY_SET_USABLE_SLOT_COUNT_CHANGED
+```lua
+fun()|nil
+```
+> Event triggers when the players statsaver is expanded.
+
+#### Field: ACCOUNT_ATTENDANCE_ADDED
+```lua
+fun()|nil
+```
+> Event triggers when the player tracks their daily login.
+
+#### Field: ABILITY_EXP_CHANGED
+```lua
+fun(expStr: string)|nil
+```
+
+
+#### Field: ABILITY_SET_CHANGED
+```lua
+fun(responseType: `1`|`2`|`3`)|nil
+```
+> Event triggers when the players statsaver set is saved, changed, or deleted
+
+#### Field: APPELLATION_GAINED
+```lua
+fun(str: string)|nil
+```
+> Event triggers when the player gains a title.
+
+#### Field: ACTABILITY_EXPERT_GRADE_CHANGED
+```lua
+fun(actabilityId: `10`|`11`|`12`|`13`|`14`...(+32), isUpgrade: boolean, name: "Alchemy"|"Artistry"|"Carpentry"|"Commerce"|"Construction"...(+32), gradeName: "Adept"|"Amateur"|"Authority"|"Celebrity"|"Champion"...(+7))|nil
+```
+> Event triggers when the players proficiency level changes.
+
+#### Field: ACTABILITY_REFRESH_ALL
+```lua
+fun()|nil
+```
+> Event triggers when the players proficiencies need to be refreshed.
+
+#### Field: ADD_GIVEN_QUEST_INFO
+```lua
+fun(type: `0`|`1`, questType: number)|nil
+```
+> Event triggers when a new event has appeared with in the players range.
+
+#### Field: ADD_NOTIFY_QUEST_INFO
+```lua
+fun(qType: number)|nil
+```
+> Event triggers when the player has a quest notification info.
+
+#### Field: ALL_SIEGE_RAID_TEAM_INFOS
+```lua
+fun(teamInfos: SiegeRaidTeamInfos)|nil
+```
+> Event triggers when the player views the Siege Info tab when a siege period has started.
+
+#### Field: ACTABILITY_MODIFIER_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when the players proficiency modifiers are updated.
+
+#### Field: ADDON_LOADED
+```lua
+fun()|nil
+```
+> Event triggers when the addon has fully loaded.
+
+#### Field: ACTION_BAR_PAGE_CHANGED
+```lua
+fun(page: number)|nil
+```
+> Event triggers when the players action bar changes. (min: `1`)
+
+#### Field: ADDED_ITEM
+```lua
+fun(itemLinkText: string, itemCount: number, itemTaskType: number, tradeOtherName: string)|nil
+```
+> Event triggers when an item has been added to the players inventory.
+
+#### Field: ACTIONS_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: ACTION_BAR_AUTO_REGISTERED
+```lua
+fun(slotIndex: number)|nil
+```
+> Event triggers when the players shortcut bar has a skill auto registered. (e.g. When the player is leveling and learns a skill and it auto registers to the players shortcut bar.)
+
+#### Field: CHAT_MSG_QUEST
+```lua
+fun(message: string, author: string, authorId: string, isSelf: boolean, tailType: `CBK_NORMAL`|`CBK_SYSTEM`|`CBK_THINK`, showTime: number, fadeTime: number, currentBubbleType: number|nil, qtype: number|nil, forceFinished: boolean|nil)|nil
+```
+> Event triggers when the player interacts with a npc that has a quest message.
+
+#### Field: BAG_TAB_SORTED
+```lua
+fun(arg: number)|nil
+```
+> Event triggers when the players sorts their bag.
+
+#### Field: BAG_UPDATE
+```lua
+fun(bagId: number, slotId: number)|nil
+```
+> Event triggers when the players bag updates.
+
+#### Field: CANDIDATE_LIST_SHOW
+```lua
+fun()|nil
+```
+
+
+#### Field: CANDIDATE_LIST_SELECTION_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: CHANGED_MSG
+```lua
+fun()|nil
+```
+
+
+#### Field: CHANGE_ACTABILITY_DECO_NUM
+```lua
+fun()|nil
+```
+
+
+#### Field: CHANGE_CONTRIBUTION_POINT_TO_PLAYER
+```lua
+fun(isGain: boolean, diff: string, total: string)|nil
+```
+> Event triggers when the player contributes a change to the guilds prestige.
+
+#### Field: CANDIDATE_LIST_HIDE
+```lua
+fun()|nil
+```
+
+
+#### Field: CANCEL_REBUILD_HOUSE_CAMERA_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player exists house preview mode for remodeling a
+> building.
+
+#### Field: CANDIDATE_LIST_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: BUY_SPECIALTY_CONTENT_INFO
+```lua
+fun(list: SpecialtyContentInfo[])|nil
+```
+> Event triggers when the player opens the purchase cargo window.
+
+#### Field: CANCEL_CRAFT_ORDER
+```lua
+fun(result: boolean)|nil
+```
+> Event triggers when a crafting order has been canceled.
+
+#### Field: BUTLER_UI_COMMAND
+```lua
+fun(mode: `ADD_GARDEN_MODE`|`CHANGE_LOOK_MODE`|`RECHARGE_COST_MODE`|`REGISTER_HARVEST_MODE`|`REGISTER_TRACTOR_MODE`...(+1))|nil
+```
+> Event triggers if the player does something that activates the butler ui such as using vitalizing treats.
+
+#### Field: CHANGE_CONTRIBUTION_POINT_TO_STORE
+```lua
+fun()|nil
+```
+> Event triggers when the players guilds prestige changes.
+
+#### Field: CHANGE_OPTION
+```lua
+fun(optionType: number, infoTable: ChangeOptionInfo)|nil
+```
+> Event triggers when the player changes a Game Settings option.
+
+#### Field: CHAT_LEAVED_CHANNEL
+```lua
+fun(channel: `CHAT_ALL_SERVER`|`CHAT_BIG_MEGAPHONE`|`CHAT_DAILY_MSG`|`CHAT_EXPEDITION`|`CHAT_FACTION`...(+22), name: string)|nil
+```
+> Event triggers when the player leaves a channel.
+
+#### Field: CHAT_MESSAGE
+```lua
+fun(channel: `CHAT_ALL_SERVER`|`CHAT_BIG_MEGAPHONE`|`CHAT_DAILY_MSG`|`CHAT_EXPEDITION`|`CHAT_FACTION`...(+22), relation: `UR_FRIENDLY`|`UR_HOSTILE`|`UR_NEUTRAL`, name: string, message: string, info: CHAT_MESSAGE_INFO)|nil
+```
+> Event triggers when a chat message occurs.
+
+#### Field: CHAT_MSG_ALARM
+```lua
+fun(text: string)|nil
+```
+> Event triggers when a chat message alarm occurs.
+
+#### Field: CHANGE_MY_LANGUAGE
+```lua
+fun()|nil
+```
+> Event triggers when the player changes their language.
+
+#### Field: CHAT_JOINED_CHANNEL
+```lua
+fun(channel: `CHAT_ALL_SERVER`|`CHAT_BIG_MEGAPHONE`|`CHAT_DAILY_MSG`|`CHAT_EXPEDITION`|`CHAT_FACTION`...(+22), name: string)|nil
+```
+> Event triggers when the player joins a channel.
+
+#### Field: CHAT_EMOTION
+```lua
+fun(message: string)|nil
+```
+> Event triggers when a player does a chat emotion.
+
+#### Field: CHAT_FAILED
+```lua
+fun(message: string, channelName: string)|nil
+```
+> Event triggers when the player fails to send a chat message.
+
+#### Field: CHANGE_VISUAL_RACE_ENDED
+```lua
+fun()|nil
+```
+> Event triggers when the player changes race.
+
+#### Field: CHAT_DICE_VALUE
+```lua
+fun(msg: string)|nil
+```
+> Event triggers when a player uses /roll.
+
+#### Field: BAG_TAB_SWITCHED
+```lua
+fun(tabId: number)|nil
+```
+> Event triggers when the player changes the bag tab.
+
+#### Field: BUTLER_INFO_UPDATED
+```lua
+fun(event: "equipment"|"garden"|"harvestSlot"|"labowPower"|"productionCost"...(+5), noError: boolean)|nil
+```
+> Event triggers when the player is updating the farmhand.
+
+#### Field: BUILDER_STEP
+```lua
+fun(step: "position"|"roation")|nil
+```
+> Event triggers when the player is attempting to place something that can be built.
+
+#### Field: BANK_UPDATE
+```lua
+fun(bagId: number, slotId: number)|nil
+```
+> Event triggers when the players bank updates.
+
+#### Field: BANK_TAB_SWITCHED
+```lua
+fun(tabId: number)|nil
+```
+> Event triggers when the player changes the bank tab.
+
+#### Field: BEAUTYSHOP_CLOSE_BY_SYSTEM
+```lua
+fun()|nil
+```
+> Event triggers when the beautyshop is closed by the system. (e.g the player dies while in the beautyshop)
+
+#### Field: BLESS_UTHSTIN_EXTEND_MAX_STATS
+```lua
+fun()|nil
+```
+> Event triggers when the player increases their maximum stat migration limit.
+
+#### Field: BLESS_UTHSTIN_ITEM_SLOT_CLEAR
+```lua
+fun()|nil
+```
+> Event triggers when the players stat migration slot is clear.
+
+#### Field: BANK_TAB_SORTED
+```lua
+fun()|nil
+```
+> Event triggers when the player sorts their bank.
+
+#### Field: BANK_TAB_CREATED
+```lua
+fun()|nil
+```
+> Event triggers when the players creates a tab in their bank.
+
+#### Field: BANK_TAB_REMOVED
+```lua
+fun()|nil
+```
+> Event triggers when the player deletes a tab in their bank.
+
+#### Field: BANK_EXPANDED
+```lua
+fun()|nil
+```
+> Event triggers when the player expands their bank.
+
+#### Field: BANK_REAL_INDEX_SHOW
+```lua
+fun(isRealSlotShow: boolean)|nil
+```
+
+
+#### Field: BUILD_CONDITION
+```lua
+fun(condition: BuildCondition)|nil
+```
+> Event triggers when the player views the build condition of a community center.
+
+#### Field: BLESS_UTHSTIN_ITEM_SLOT_SET
+```lua
+fun(msgapplycountlimit?: any)|nil
+```
+> Event triggers when the player sets a item in the stat migration slot.
+
+#### Field: BLESS_UTHSTIN_UPDATE_STATS
+```lua
+fun()|nil
+```
+> Event triggers when the player changes their stat migration or activates a different stat migration.
+
+#### Field: BUFF_SKILL_CHANGED
+```lua
+fun()|nil
+```
+> Event triggers when the players buff/debuff/hidden buff that gives a skill for the dynamic shortcut changes.
+
+#### Field: BUFF_UPDATE
+```lua
+fun(action: "create"|"destroy", target: "character"|"mate"|"slave")|nil
+```
+> Event triggers when a buff is created or destroyed for a unit.
+
+#### Field: BUILDER_END
+```lua
+fun()|nil
+```
+> Event triggers when the player cancels trying to place something that can be built.
+
+#### Field: BLESS_UTHSTIN_MESSAGE
+```lua
+fun(messageType: number)|nil
+```
+> Event triggers when the players stat migration or ipnysh artifacts emmits a message.
+
+#### Field: BOT_SUSPECT_REPORTED
+```lua
+fun(sourceName: string, targetName: string)|nil
+```
+
+
+#### Field: BLOCKED_USER_LIST
+```lua
+fun(msg: string)|nil
+```
+> Event triggers when a user is added or removed from the players block list.
+
+#### Field: BLOCKED_USER_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when a user is added or removed from the players block list.
+
+#### Field: BLESS_UTHSTIN_WILL_APPLY_STATS
+```lua
+fun(itemType: number, incStatsKind: `1`|`2`|`3`|`4`|`5`, decStatsKind: `1`|`2`|`3`|`4`|`5`, incStatsPoint: number, decStatsPoint: number)|nil
+```
+> Event triggers when the player applies the stat migration item in the slot.
+
+#### Field: BLOCKED_USERS_INFO
+```lua
+fun()|nil
+```
+
+
+#### Field: LP_MANAGE_CHARACTER_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: EVENT_SCHEDULE_START
+```lua
+fun(msg: any)|nil
+```
+
+
+#### Field: EXPEDITION_APPLICANT_ACCEPT
+```lua
+fun(expeditionName: string)|nil
+```
+> Event triggers when the players application to a guild is accepted.
+
+#### Field: HOUSE_STEP_INFO_UPDATED
+```lua
+fun(structureType: "housing"|"shipyard")|nil
+```
+> Event triggers when a house is being built within range of the player.
+
+#### Field: HOUSE_SET_SELL_SUCCESS
+```lua
+fun(houseName: string)|nil
+```
+> Event triggers when the player successfully set the house to sell.
+
+#### Field: HOUSE_TAX_INFO
+```lua
+fun(dominionTaxRate: any, hostileTaxRate: any, taxString: any, dueTime: any, prepayTime: any, weeksWithoutPay: any, weeksPrepay: any, isAlreadyPaid: any, isHeavyTaxHouse: any, depositString: any, taxType: any, id: any)|nil
+```
+
+
+#### Field: HOUSING_UCC_CLOSE
+```lua
+fun()|nil
+```
+
+
+#### Field: HOUSING_UCC_ITEM_SLOT_CLEAR
+```lua
+fun()|nil
+```
+> Event triggers when the customization window slot is cleared.
+
+#### Field: HOUSE_SET_SELL_FAIL
+```lua
+fun()|nil
+```
+> Event triggers when the player fails to set the house to sell.
+
+#### Field: HOUSE_ROTATE_CONFIRM
+```lua
+fun()|nil
+```
+
+
+#### Field: HOUSE_SALE_SUCCESS
+```lua
+fun(houseName: string)|nil
+```
+> Event triggers when the player successfully sells a house.
+
+#### Field: HOUSE_PERMISSION_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when the player changes the building permissions.
+
+#### Field: HOUSE_REBUILD_TAX_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the remodel window for their house.
+
+#### Field: HOUSE_INTERACTION_START
+```lua
+fun(structureType: string, viewType: string, arg: boolean)|nil
+```
+> Event triggers when the player starts interacting with the building.
+
+#### Field: HOUSING_UCC_ITEM_SLOT_SET
+```lua
+fun()|nil
+```
+> Event triggers when the player places a crest stamp in the housing ucc
+> customization window slot.
+
+#### Field: HOUSING_UCC_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when the players housing ucc updates.
+
+#### Field: INDUN_UPDATE_ROUND_INFO
+```lua
+fun()|nil
+```
+> Event triggers when a instance round begins. (e.g. Noryette Challenge)
+
+#### Field: INDUN_ROUND_START
+```lua
+fun(round: number, isBossRound: boolean)|nil
+```
+> Event triggers when a instance round begins. (e.g. Noryette Challenge)
+
+#### Field: INGAME_SHOP_BUY_RESULT
+```lua
+fun()|nil
+```
+> Event triggers when the player attempts to purchase an item from the marketplace.
+
+#### Field: INIT_CHRONICLE_INFO
+```lua
+fun()|nil
+```
+> Event triggers when the player loads into the world to initalize the chronicle quest window.
+
+#### Field: HOUSING_UCC_LEAVE
+```lua
+fun()|nil
+```
+> Event triggers when the player leaves the house ucc customization window.
+
+#### Field: INDUN_ROUND_END
+```lua
+fun(success: boolean, round: number, isBossRound: boolean, lastRound: boolean)|nil
+```
+> Event triggers when a instance round ends. (e.g. Noryette Challenge)
+
+#### Field: IME_STATUS_CHANGED
+```lua
+fun()|nil
+```
+> Event triggers when the players ime status changes.
+
+#### Field: INDUN_INITAL_ROUND_INFO
+```lua
+fun()|nil
+```
+> Event triggers when a instance initial round starts. (e.g. Noryette Challenge)
+
+#### Field: HPW_ZONE_STATE_CHANGE
+```lua
+fun(zoneId: `0`|`100`|`101`|`102`|`103`...(+151))|nil
+```
+> Event triggers when the state of a zone changes.
+
+#### Field: HPW_ZONE_STATE_WAR_END
+```lua
+fun(zoneId: `0`|`100`|`101`|`102`|`103`...(+151), points: number)|nil
+```
+> Event triggers when a zones war state ends.
+
+#### Field: INSERT_CRAFT_ORDER
+```lua
+fun()|nil
+```
+> Event triggers when a crafting order is listed.
+
+#### Field: HOUSE_INTERACTION_END
+```lua
+fun()|nil
+```
+> Event triggers when the player ends interacting with the building.
+
+#### Field: HOUSE_FARM_MSG
+```lua
+fun(name: any, total: any, harvestable: any)|nil
+```
+
+
+#### Field: HERO_RANK_DATA_RETRIEVED
+```lua
+fun(factionID: `101`|`102`|`103`|`104`|`105`...(+124))|nil
+```
+> Event triggers when the player tries to retrieve hero information.
+
+#### Field: HERO_NOTI
+```lua
+fun()|nil
+```
+
+
+#### Field: HERO_RANK_DATA_TIMEOUT
+```lua
+fun()|nil
+```
+
+
+#### Field: HERO_SCORE_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when the players leadership increases.
+
+#### Field: HERO_SEASON_OFF
+```lua
+fun()|nil
+```
+> Event triggers when a hero season is over.
+
+#### Field: HERO_ELECTION_VOTED
+```lua
+fun()|nil
+```
+> Event triggers when the player casts their vote in a hero election,
+
+#### Field: HERO_ELECTION_DAY_ALERT
+```lua
+fun(title: any, desc: any)|nil
+```
+
+
+#### Field: HERO_ELECTION_RESULT
+```lua
+fun()|nil
+```
+> Event triggers when the hero election has results.
+
+#### Field: HERO_CANDIDATE_NOTI
+```lua
+fun()|nil
+```
+
+
+#### Field: HERO_ELECTION
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the hero election list to cast a vote.
+
+#### Field: HOUSE_INFO_UPDATED
+```lua
+fun()|nil
+```
+
+
+#### Field: HERO_SEASON_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when a new hero season has begun.
+
+#### Field: HIDE_SKILL_MAP_EFFECT
+```lua
+fun(index: number)|nil
+```
+> Event triggers when the worldmap has an effect that that needs to be hidden.
+
+#### Field: HOUSE_CANCEL_SELL_FAIL
+```lua
+fun()|nil
+```
+> Event triggers when the player fails to cancel selling their house.
+
+#### Field: HOUSE_CANCEL_SELL_SUCCESS
+```lua
+fun(houseName: string)|nil
+```
+> Event triggers when the player successfully cancels selling their house.
+
+#### Field: HOUSE_DECO_UPDATED
+```lua
+fun()|nil
+```
+
+
+#### Field: HIDE_ROADMAP_TOOLTIP
+```lua
+fun(text: any)|nil
+```
+> Event triggers when the roadmap tooltip is hidden.
+
+#### Field: HOUSE_BUY_SUCCESS
+```lua
+fun(houseName: string)|nil
+```
+> Event triggers when the player buys a house.
+
+#### Field: HOUSE_BUILD_INFO
+```lua
+fun(hType: `100`|`101`|`102`|`103`|`104`...(+832), baseTax: string, hTax: string, heavyTaxHouseCount: number, normalTaxHouseCount: number, isHeavyTaxHouse: boolean, hostileTaxRate: number, monopolyTaxRate: number, depositString: string, taxType: `HOUSING_TAX_CONTRIBUTION`|`HOUSING_TAX_SEAL`, completion: boolean)|nil
+```
+> Event triggers when the player attempts to place a building and the start construction window is shown/hidden.
+
+#### Field: HOUSE_BUY_FAIL
+```lua
+fun()|nil
+```
+
+
+#### Field: HIDE_WORLDMAP_TOOLTIP
+```lua
+fun()|nil
+```
+> Event triggers when the worldmap tooltip is hidden.
+
+#### Field: HOTKEY_ACTION
+```lua
+fun(actionName: string, keyUp: boolean)|nil
+```
+> Event triggers for the key down and key up when the player uses a hotkey that
+> an addon has registered.
+
+#### Field: HERO_CANDIDATES_ANNOUNCED
+```lua
+fun()|nil
+```
+
+
+#### Field: INSTANCE_ENTERABLE_MSG
+```lua
+fun(info: InstanceEnterableInfo)|nil
+```
+> Event triggers when an instance is now enterable.
+
+#### Field: INSTANT_GAME_END
+```lua
+fun()|nil
+```
+> Event triggers when the instance game ends.
+
+#### Field: LEAVE_ITEM_LOOK_CONVERT_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player closes the item infusion window.
+
+#### Field: LEAVE_GACHA_LOOT_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player closes the open chest (gold/silver/copper crate) window.
+
+#### Field: LEAVING_WORLD_CANCELED
+```lua
+fun()|nil
+```
+> Event triggers if the player cancels leaving the world.
+
+#### Field: LEAVING_WORLD_STARTED
+```lua
+fun(waitTime: number, exitTarget: `EXIT_CLIENT_NONE_ACTION`|`EXIT_CLIENT`|`EXIT_TO_CHARACTER_LIST`|`EXIT_TO_WORLD_LIST`, idleKick: boolean)|nil
+```
+> Event triggers if the player is leaving the world.
+
+#### Field: LEFT_LOADING
+```lua
+fun()|nil
+```
+> Event triggers when the player is finished loading.
+
+#### Field: LEAVE_ENCHANT_ITEM_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player leaves enchanting mode.
+
+#### Field: LABORPOWER_CHANGED
+```lua
+fun(diff: number, laborPower: number)|nil
+```
+> Event triggers when the players labor changes.
+
+#### Field: LEAVED_INSTANT_GAME_ZONE
+```lua
+fun()|nil
+```
+> Event triggers when the player leaves the instance.
+
+#### Field: JURY_OK_COUNT
+```lua
+fun(count: number, total: number)|nil
+```
+> Event triggers when the jury count changes.
+
+#### Field: JURY_WAITING_NUMBER
+```lua
+fun(num: number)|nil
+```
+> Event triggers when the player is checking their current jury waiting number.
+
+#### Field: ITEM_SOCKET_UPGRADE
+```lua
+fun(socketItemType: number)|nil
+```
+> Event triggers when the player upgrades a socketed lunagem in an item.
+
+#### Field: LEFT_SCREEN_SHOT_CAMERA_MODE
+```lua
+fun()|nil
+```
+> Event triggers when the player leaves screenshot mode
+
+#### Field: LEFT_WORLD
+```lua
+fun()|nil
+```
+> Event triggers when the player leaves the world.
+
+#### Field: LOOT_BAG_CHANGED
+```lua
+fun(setTime: boolean)|nil
+```
+> Event triggers when the player opens the loot bag of a mob.
+
+#### Field: LOOT_BAG_CLOSE
+```lua
+fun()|nil
+```
+> Event triggers when the player closes the loot bag of a mob.
+
+#### Field: LOOT_DICE
+```lua
+fun(charName: string, itemLinkText: string, diceValue: number)|nil
+```
+> Event triggers when a player rolls for an item.
+
+#### Field: LEFT_SUBZONE
+```lua
+fun(zoneId: `1000`|`1001`|`1002`|`1003`|`1004`...(+1351), zoneName: ""|"3rd Corps Camp"|"Abandoned Claimstake"|"Abandoned Drill Camp"|"Abandoned Guardpost"...(+1163))|nil
+```
+> Event triggers when the player leaves a subzone.
+
+#### Field: LOOTING_RULE_METHOD_CHANGED
+```lua
+fun(lootMethod: number)|nil
+```
+> Event triggers when the raid leader sets the loot method rule.
+
+#### Field: LOOTING_RULE_GRADE_CHANGED
+```lua
+fun(grade: number)|nil
+```
+> Event triggers when the raid leader sets the loot grade rule.
+
+#### Field: LOOTING_RULE_MASTER_CHANGED
+```lua
+fun(charName: string)|nil
+```
+> Event triggers when the raid leader sets the loot master rule.
+
+#### Field: LEVEL_CHANGED
+```lua
+fun(name: string, stringId: string)|nil
+```
+> Event triggers when a players level changes.
+
+#### Field: LOOTING_RULE_BOP_CHANGED
+```lua
+fun(rollForBop: number)|nil
+```
+> Event triggers when the raid leader sets the loot bind on pick up rule.
+
+#### Field: INSTANT_GAME_BEST_RATING_REWARD
+```lua
+fun()|nil
+```
+
+
+#### Field: ITEM_SOCKETING_RESULT
+```lua
+fun(resultCode: `1`, itemLink: string, socketItemType: number, install: boolean)|nil
+```
+> Event triggers when the player sockets a lunagem into an item.
+
+#### Field: ITEM_REFURBISHMENT_RESULT
+```lua
+fun(resultCode: `IGER_BREAK`|`IGER_DISABLE`|`IGER_DOWNGRADE`|`IGER_FAIL`|`IGER_GREAT_SUCCESS`...(+2), itemLink: string, beforeScale: string, afterScale: string)|nil
+```
+> Event triggers when the player attempts to temper an item.
+
+#### Field: INSTANT_GAME_ROUND_RESULT
+```lua
+fun(resultState: any, resultRound: any)|nil
+```
+
+
+#### Field: INSTANT_GAME_RETIRE
+```lua
+fun()|nil
+```
+
+
+#### Field: INSTANT_GAME_START
+```lua
+fun()|nil
+```
+> Event triggers when an instance game starts.
+
+#### Field: INSTANT_GAME_START_POINT_RETURN_MSG
+```lua
+fun(remainSec: number)|nil
+```
+
+
+#### Field: INSTANT_GAME_UNEARNED_WIN_REMAIN_TIME
+```lua
+fun(remainTime: any)|nil
+```
+
+
+#### Field: INSTANT_GAME_READY
+```lua
+fun()|nil
+```
+> Event triggers when an instance game is ready.
+
+#### Field: INSTANT_GAME_KILL
+```lua
+fun(msgInfo: InstanceGameKillInfo)|nil
+```
+> Event triggers when a player kills another player in an instance.
+
+#### Field: INSTANT_GAME_PICK_BUFFS
+```lua
+fun()|nil
+```
+> Event triggers when the instance game pickable buffs is available.
+
+#### Field: INSTANT_GAME_JOIN_APPLY
+```lua
+fun()|nil
+```
+
+
+#### Field: INSTANT_GAME_JOIN_CANCEL
+```lua
+fun()|nil
+```
+> Event triggers when an instance queue has been canceled.
+
+#### Field: ITEM_SMELTING_RESULT
+```lua
+fun(resultCode: any, itemLink: any, smeltingItemType: any)|nil
+```
+
+
+#### Field: INSTANT_GAME_WAIT
+```lua
+fun()|nil
+```
+> Event triggers when the instance game is waiting.
+
+#### Field: INTERACTION_START
+```lua
+fun()|nil
+```
+
+
+#### Field: ITEM_EQUIP_RESULT
+```lua
+fun(ItemEquipResult: `ITEM_MATE_NOT_EQUIP`|`ITEM_MATE_UNSUMMON`|`ITEM_SLAVE_NOT_EQUIP`|`ITEM_SLAVE_UNSUMMON`)|nil
+```
+> Event triggers when the player attempt to equip an item to a mate/slave and it fails.
+
+#### Field: ITEM_LOOK_CONVERTED
+```lua
+fun(itemLinkText: string)|nil
+```
+> Event triggers when the player changes the image of an item.
+
+#### Field: ITEM_LOOK_CONVERTED_EFFECT
+```lua
+fun(itemInfo: ItemInfo)|nil
+```
+> Event triggers when the player changes the image of an item.
+
+#### Field: INTERACTION_END
+```lua
+fun()|nil
+```
+> Event triggers when the player stops interacting with something.
+
+#### Field: ITEM_ENCHANT_MAGICAL_RESULT
+```lua
+fun(resultCode: number|`1`, itemLink: string, gemItemType: number)|nil
+```
+> Event triggers when the player enchants an item with a lunastone.
+
+#### Field: ITEM_ACQUISITION_BY_LOOT
+```lua
+fun(charName: string, itemLinkText: string, itemCount: number)|nil
+```
+> Event triggers when a player acquires loot.
+
+#### Field: ITEM_CHANGE_MAPPING_RESULT
+```lua
+fun(result: `ICMR_FAIL_DISABLE_ENCHANT`|`ICMR_FAIL`|`ICMR_SUCCESS`, oldGrade: `0`|`10`|`11`|`12`|`1`...(+8), oldGearScore: number, itemLink: string, bonusRate: number)|nil
+```
+> Event triggers when the player attempts to awaken a item.
+
+#### Field: INVALID_NAME_POLICY
+```lua
+fun(namePolicyType: any)|nil
+```
+
+
+#### Field: INVEN_SLOT_SPLIT
+```lua
+fun(invenType: string, slot: number, amount: number)|nil
+```
+> Event triggers when the player starts to split items in their inventory.
+
+#### Field: EVENT_SCHEDULE_STOP
+```lua
+fun(msg: any)|nil
+```
+
+
+#### Field: HERO_ANNOUNCE_REMAIN_TIME
+```lua
+fun(remainTime: number, isStartTime: boolean)|nil
+```
+> Event triggers every 10 seconds when hero annoucement is about to happen.
+
+#### Field: HEIR_SKILL_UPDATE
+```lua
+fun()|nil
+```
+> Event triggers when the player changes an ancestral skill.
+
+#### Field: FACTION_COMPETITION_RESULT
+```lua
+fun(infos: FactionCompetitionResultInfos)|nil
+```
+> Event triggers when a faction competition is over. (e.g. Akasch Invasion/Mysthrane Gorge/Reedwind/Great Prairie/Cinderstone+Ynystere war)
+
+#### Field: FACTION_COMPETITION_INFO
+```lua
+fun(info: FactionCompetitionInfo)|nil
+```
+> Event triggers when the player enters a zone with a competition. (e.g. Akasch Invasion/Mysthrane Gorge/Reedwind/Great Prairie/Cinderstone+Ynystere war)
+
+#### Field: FACTION_COMPETITION_UPDATE_POINT
+```lua
+fun(infos: FactionCompetitionPointInfo)|nil
+```
+> Event triggers when a factions competition points (e.g. Akasch Invasion/Mysthrane Gorge/Reedwind/Great Prairie/Cinderstone+Ynystere war) update.
+
+#### Field: FACTION_RELATION_ACCEPTED
+```lua
+fun(name: any, factionName: any)|nil
+```
+
+
+#### Field: FACTION_RELATION_CHANGED
+```lua
+fun(isHostile: boolean, f1Name: string, f2Name: string)|nil
+```
+> Event triggers when a faction relation changes.
+
+#### Field: FACTION_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: EXPIRED_ITEM
+```lua
+fun(itemLinkText: string)|nil
+```
+> Event triggers when an item expires for the player.
+
+#### Field: EXP_CHANGED
+```lua
+fun(stringId: string, expNum: number, expStr: string)|nil
+```
+> Event triggers when the player receives experience.
+
+#### Field: EXPEDITION_WAR_SET_PROTECT_DATE
+```lua
+fun()|nil
+```
+> Event triggers when the players guild dominion protection date changes.
+
+#### Field: EXPEDITION_WAR_STATE
+```lua
+fun(related: boolean, state: string, declarer: string, defendant: string, winner: string)|nil
+```
+> Event triggers when a guild starts a dominion with another guild.
+
+#### Field: EXPEDITION_WAR_KILL_SCORE
+```lua
+fun(toggle: boolean)|nil
+```
+> Event triggers when the player views the current dominion status.
+
+#### Field: FACTION_RELATION_COUNT
+```lua
+fun()|nil
+```
+
+
+#### Field: FACTION_RELATION_HISTORY
+```lua
+fun()|nil
+```
+> Event triggers when the player views the alliance history of a faction.
+
+#### Field: FAMILY_EXP_ADD
+```lua
+fun(amount: any)|nil
+```
+
+
+#### Field: FAMILY_INFO_REFRESH
+```lua
+fun()|nil
+```
+
+
+#### Field: FAMILY_LEVEL_UP
+```lua
+fun(levelName: any)|nil
+```
+
+
+#### Field: FACTION_RELATION_DENIED
+```lua
+fun(name: any)|nil
+```
+
+
+#### Field: FAMILY_ERROR
+```lua
+fun(msg: any)|nil
+```
+
+
+#### Field: FACTION_RENAMED
+```lua
+fun(isExpedition: boolean, oldName: string, newName: string)|nil
+```
+> Event triggers if a nation or guild is renamed.
+
+#### Field: FAILED_TO_SET_PET_AUTO_SKILL
+```lua
+fun(mateType: `MATE_TYPE_BATTLE`|`MATE_TYPE_NONE`|`MATE_TYPE_RIDE`)|nil
+```
+> Event triggers when the player failed to set a pet auto skill. (e.g. Mount skill auto use/Battlepet not in defensive mode skill auto use)
+
+#### Field: FACTION_RELATION_REQUESTED
+```lua
+fun(name: any, factionName: any)|nil
+```
+
+
+#### Field: FACTION_RELATION_WILL_CHANGE
+```lua
+fun(f1Name: string, f2Name: string)|nil
+```
+> Event triggers when a faction relation will change.
+
+#### Field: FAMILY_MEMBER
+```lua
+fun(owner: any, member: any, role: any, title: any)|nil
+```
+
+
+#### Field: EXPEDITION_WAR_DECLARATION_MONEY
+```lua
+fun(unitId: any, name: any, money: any)|nil
+```
+
+
+#### Field: EXPEDITION_SUMMON_SUGGEST
+```lua
+fun()|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_APPLICANT_ACCEPT
+```lua
+fun(charId: any)|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_APPLICANTS
+```lua
+fun(infos: ExpeditionApplicant[])|nil
+```
+> Event triggers when a guild member (who has permissions) opens the manage applicants window.
+
+#### Field: EXPEDITION_MANAGEMENT_APPLICANT_ADD
+```lua
+fun(expeditionId: any)|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_APPLICANT_DEL
+```lua
+fun(expeditionId: any)|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_APPLICANT_REJECT
+```lua
+fun(charId: any)|nil
+```
+
+
+#### Field: EXPEDITION_LEVEL_UP
+```lua
+fun(level: any)|nil
+```
+
+
+#### Field: EXPEDITION_EXP
+```lua
+fun(amount: number, amountStr: string)|nil
+```
+> Event triggers when the player changes the guilds experience.
+
+#### Field: EXPEDITION_HISTORY
+```lua
+fun(tabId: number)|nil
+```
+> Event triggers when the player accesses their guild history.
+
+#### Field: EXPEDITION_APPLICANT_REJECT
+```lua
+fun(expeditionName: string)|nil
+```
+> Event triggers when the players application to a guild is rejected.
+
+#### Field: EXPEDITION_BUFF_CHANGE
+```lua
+fun(expedition: number)|nil
+```
+> Event triggers when a guilds buff changes.
+
+#### Field: EXPEDITION_WAR_DECLARATION_FAILED
+```lua
+fun(errorMsg: any, param: any)|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_GUILD_FUNCTION_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_MEMBER_NAME_CHANGED
+```lua
+fun()|nil
+```
+> Event triggers when a member of the players guild changes their name.
+
+#### Field: EXPEDITION_MANAGEMENT_ROLE_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when the guild prestige changes.
+
+#### Field: EXPEDITION_RANKING
+```lua
+fun()|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_MEMBERS_INFO
+```lua
+fun(totalCount: number, startIndex: number, memberInfos: MemberInfo[])|nil
+```
+> Event triggers when the player views the members tab in their guild.
+
+#### Field: EXPEDITION_MANAGEMENT_RECRUITMENT_DEL
+```lua
+fun(expeditionId: any)|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_RECRUITMENTS
+```lua
+fun(total: number, perPageItemCount: number, infos: GuildRecruitmentInfo[])|nil
+```
+> Event triggers when the player opens the guild recruitment tab.
+
+#### Field: EXPEDITION_MANAGEMENT_RECRUITMENT_ADD
+```lua
+fun(info: any)|nil
+```
+
+
+#### Field: EXPEDITION_MANAGEMENT_MEMBER_STATUS_CHANGED
+```lua
+fun()|nil
+```
+> Event triggers when the prestige of a guild member changes.
+
+#### Field: EXPEDITION_MANAGEMENT_POLICY_CHANGED
+```lua
+fun()|nil
+```
+
+
+#### Field: HERO_ALL_SCORE_UPDATED
+```lua
+fun(factionID: `101`|`102`|`103`|`104`|`105`...(+124))|nil
+```
+> Event triggers when the player tries to retrieve hero information or hero
+> mission status.
+
+#### Field: FAMILY_MEMBER_ADDED
+```lua
+fun(owner: any, member: any, title: any)|nil
+```
+
+
+#### Field: FAMILY_MEMBER_LEFT
+```lua
+fun(member: any)|nil
+```
+
+
+#### Field: GUARDTOWER_HEALTH_CHANGED
+```lua
+fun(arg1: string, arg2: string, arg3: string)|nil
+```
+> Event triggers when a guard tower health changes.
+
+#### Field: GRADE_ENCHANT_RESULT
+```lua
+fun(resultCode: `IGER_BREAK`|`IGER_DISABLE`|`IGER_DOWNGRADE`|`IGER_FAIL`|`IGER_GREAT_SUCCESS`...(+2), itemLink: string, oldGrade: `0`|`10`|`11`|`12`|`1`...(+8), newGrade: `0`|`10`|`11`|`12`|`1`...(+8), breakRewardItemType: number, breakRewardItemCount: number, breakRewardByMail: boolean)|nil
+```
+> Event triggers when the player regrades an item.
+
+#### Field: GUILD_BANK_INTERACTION_END
+```lua
+fun()|nil
+```
+> Event triggers when the player ends interacting with their guild bank.
+
+#### Field: GUILD_BANK_INTERACTION_START
+```lua
+fun()|nil
+```
+
+
+#### Field: GUILD_BANK_INVEN_SHOW
+```lua
+fun()|nil
+```
+> Event triggers when the guild bank is shown to the player.
+
+#### Field: GRADE_ENCHANT_BROADCAST
+```lua
+fun(characterName: string, resultCode: `IEBCT_ENCHANT_GREATE_SUCCESS`|`IEBCT_ENCHANT_SUCCESS`|`IEBCT_EVOVING`, itemLink: string, oldGrade: `0`|`10`|`11`|`12`|`1`...(+8), newGrade: `0`|`10`|`11`|`12`|`1`...(+8))|nil
+```
+> Event triggers when a player successfully enchants an item to a new grade.
+
+#### Field: GOODS_MAIL_SENT_SUCCESS
+```lua
+fun()|nil
+```
+
+
+#### Field: GOODS_MAIL_WRITE_ITEM_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: GOODS_MAIL_RETURNED
+```lua
+fun()|nil
+```
+
+
+#### Field: GOODS_MAIL_SENTBOX_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: GOODS_MAIL_INBOX_UPDATE
+```lua
+fun(read: boolean, arg: number)|nil
+```
+> Event triggers when the players marketplace mail updates.
+
+#### Field: GUILD_BANK_MONEY_UPDATE
+```lua
+fun()|nil
+```
+
+
+#### Field: GUILD_BANK_TAB_CREATED
+```lua
+fun()|nil
+```
+> Event triggers when the player creates a tab for their guild bank.
+
+#### Field: HEIR_SKILL_ACTIVE_TYPE_MSG
+```lua
+fun(activeType: number, ability: number, text: string, pos: `1`|`2`|`3`|`4`|`5`...(+3))|nil
+```
+
+
+#### Field: HEIR_SKILL_LEARN
+```lua
+fun(text: string, pos: `1`|`2`|`3`|`4`|`5`...(+3))|nil
+```
+> Event triggers when the player changes an ancestral skill.
+
+#### Field: HEIR_SKILL_RESET
+```lua
+fun(isAll: boolean, text: string, info: `1`|`2`|`3`|`4`|`5`...(+3))|nil
+```
+> Event triggers when the player resets an ancestral skill.
+
+#### Field: GUILD_BANK_REAL_INDEX_SHOW
+```lua
+fun()|nil
+```
+
+
+#### Field: HEIR_LEVEL_UP
+```lua
+fun(myUnit: boolean, unitId: string)|nil
+```
+> Event triggers when a players acestral level increases.
+
+#### Field: GUILD_BANK_TAB_SWITCHED
+```lua
+fun()|nil
+```
+> Event triggers when the player changes their guild bank tab.
+
+#### Field: GUILD_BANK_UPDATE
+```lua
+fun(arg1: number, slot: number)|nil
+```
+> Event triggers when the player takes/places an item into their guild bank.
+
+#### Field: GUILD_BANK_TAB_REMOVED
+```lua
+fun()|nil
+```
+> Event triggers when the player deletes a tab from their guild bank.
+
+#### Field: GUILD_BANK_TAB_SORTED
+```lua
+fun()|nil
+```
+> Event triggers when the player sorts their guild bank.
+
+#### Field: FAMILY_MEMBER_KICKED
+```lua
+fun(member: any)|nil
+```
+
+
+#### Field: GOODS_MAIL_INBOX_TAX_PAID
+```lua
+fun()|nil
+```
+
+
+#### Field: GOODS_MAIL_INBOX_ITEM_TAKEN
+```lua
+fun(index: any)|nil
+```
+> Event triggers when the player takes an item from their marketplace mailbox.
+
+#### Field: FIND_FACTION_REZ_DISTRICT_COOLTIME_FAIL
+```lua
+fun(cooltime: number)|nil
+```
+> Event triggers when the player (as a hero) tries to activate a respawn location that is not available yet due to a cooltime.
+
+#### Field: FAMILY_REMOVED
+```lua
+fun()|nil
+```
+
+
+#### Field: FIND_FACTION_REZ_DISTRICT_DURATION_FAIL
+```lua
+fun(remain: number)|nil
+```
+> Event triggers when the player (as a hero) tries to activate a respawn location that is already in use.
+
+#### Field: FOLDER_STATE_CHANGED
+```lua
+fun(arg: string)|nil
+```
+> Event triggers when the player changes the state of a folder.
+
+#### Field: FORCE_ATTACK_CHANGED
+```lua
+fun(uiserId: string, inBloodlust: boolean)|nil
+```
+> Event triggers when a player toggles bloodlust mode.
+
+#### Field: FAMILY_REFRESH
+```lua
+fun()|nil
+```
+
+
+#### Field: FAMILY_NAME_CHANGED
+```lua
+fun(FAMILY_NAME_CHANGED: any)|nil
+```
+
+
+#### Field: FAMILY_OWNER_CHANGED
+```lua
+fun(owner: any)|nil
+```
+
+
+#### Field: FAMILY_MEMBER_ONLINE
+```lua
+fun()|nil
+```
+
+
+#### Field: FAMILY_MGR
+```lua
+fun()|nil
+```
+
+
+#### Field: GOODS_MAIL_INBOX_MONEY_TAKEN
+```lua
+fun()|nil
+```
+
+
+#### Field: FRIENDLIST
+```lua
+fun(msg: string)|nil
+```
+> Event triggers when the player sends a friend request.
+
+#### Field: FRIENDLIST_UPDATE
+```lua
+fun(updateType: "delete"|"insert", dataField: string|FriendInfo)|nil
+```
+> Event triggers when the players friend list updates.
+
+#### Field: GAME_SCHEDULE
+```lua
+fun()|nil
+```
+
+
+#### Field: GENDER_TRANSFERED
+```lua
+fun()|nil
+```
+> Event triggers when the player changes their characters gender.
+
+#### Field: GLIDER_MOVED_INTO_BAG
+```lua
+fun()|nil
+```
+> Event triggers when the player picks up something that moves their glider
+> into their bag.
+
+#### Field: FRIENDLIST_INFO
+```lua
+fun(totalCount: number, memberInfos: FriendInfo[])|nil
+```
+> Event triggers when the player opens their friend list.
+
+#### Field: GAME_EVENT_INFO_REQUESTED
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the daily schedule window after loading into the world.
+
+#### Field: GAME_EVENT_EMPTY
+```lua
+fun()|nil
+```
+
+
+#### Field: GAME_EVENT_INFO_LIST_UPDATED
+```lua
+fun()|nil
+```
+> Event triggers when the player opens the daily schedule window.
+
+#### Field: GACHA_LOOT_PACK_LOG
+```lua
+fun(logs: GachaLootPackLog)|nil
+```
+> Event triggers when the player opens a locked crate.
+
+#### Field: GACHA_LOOT_PACK_RESULT
+```lua
+fun(results: GachaLootPackResult)|nil
+```
+> Event triggers when the player opens a locked crate.
+
+#### Field: ZONE_SCORE_UPDATED
+```lua
+fun(kind: any, info: any)|nil
 ```
 
 
@@ -3717,6 +8647,37 @@ boolean
 #### Field: tooltip
 ```lua
 string
+```
+
+
+### Class: HousingTaxInfo
+#### Field: base_tax
+```lua
+number
+```
+
+
+#### Field: tax_type
+```lua
+number
+```
+
+
+#### Field: deposit
+```lua
+number
+```
+
+
+#### Field: count
+```lua
+number
+```
+
+
+#### Field: total_tax
+```lua
+number
 ```
 
 
@@ -5179,6 +10140,25 @@ number
 ```
 
 
+### Class: MutedCharacter
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: unitName
+```lua
+string
+```
+
+
+#### Field: worldName
+```lua
+string
+```
+
+
 ### Class: NextSiegeInfo
 #### Field: hour
 ```lua
@@ -5387,6 +10367,43 @@ boolean
 #### Field: questType
 ```lua
 number
+```
+
+
+### Class: QuestObjectiveText
+#### Field: category
+```lua
+string
+```
+
+
+#### Field: npc_type
+```lua
+number
+```
+
+
+#### Field: status
+```lua
+string
+```
+
+
+#### Field: name
+```lua
+string
+```
+
+
+#### Field: done
+```lua
+number
+```
+
+
+#### Field: summary
+```lua
+string
 ```
 
 
@@ -6533,7 +11550,7 @@ number
 ```lua
 string
 ```
-> TODO: ZONE_NAME?
+> TODO ZONE_NAME?
 
 ### Class: SkillInfo
 #### Field: abilityName
@@ -9211,6 +14228,19 @@ number
 #### Field: over_distance
 ```lua
 boolean
+```
+
+
+### Class: UnitInSight
+#### Field: id
+```lua
+number
+```
+
+
+#### Field: unit_owner
+```lua
+"character"|"housing"|"mate"|"npc"|"shipyard"...(+2)
 ```
 
 

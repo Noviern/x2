@@ -3858,7 +3858,7 @@ ZONE_STATE_TYPE:
 
 #### Method: ReleaseEventHandler
 ```lua
-(method) UIParent:ReleaseEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), handler: function)
+(method) UIParent:ReleaseEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+870), handler: function)
 ```
 > Releases an event handler for the specified UI event.
 > 
@@ -4660,10 +4660,8 @@ ZONE_STATE_TYPE:
 >     | "UNIT_COMBAT_STATE_CHANGED"
 >     | "UNIT_DEAD"
 >     | "UNIT_DEAD_NOTICE"
->     | "UNIT_ENTERED_SIGHT"
 >     | "UNIT_EQUIPMENT_CHANGED"
 >     | "UNIT_KILL_STREAK"
->     | "UNIT_LEAVED_SIGHT"
 >     | "UNIT_NAME_CHANGED"
 >     | "UNIT_NPC_EQUIPMENT_CHANGED"
 >     | "UNITFRAME_ABILITY_UPDATE"
@@ -4858,7 +4856,7 @@ ZONE_STATE_TYPE:
 
 #### Method: SetEventHandler
 ```lua
-(method) UIParent:SetEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), handler: function)
+(method) UIParent:SetEventHandler(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+870), handler: function)
 ```
 > Sets an event handler for the specified UI event (more than 255 events will
 > crash the game, multiple handlers to the same event can also crash the game).
@@ -5663,10 +5661,8 @@ ZONE_STATE_TYPE:
 >     | "UNIT_COMBAT_STATE_CHANGED"
 >     | "UNIT_DEAD"
 >     | "UNIT_DEAD_NOTICE"
->     | "UNIT_ENTERED_SIGHT"
 >     | "UNIT_EQUIPMENT_CHANGED"
 >     | "UNIT_KILL_STREAK"
->     | "UNIT_LEAVED_SIGHT"
 >     | "UNIT_NAME_CHANGED"
 >     | "UNIT_NPC_EQUIPMENT_CHANGED"
 >     | "UNITFRAME_ABILITY_UPDATE"
@@ -5799,17 +5795,6 @@ ZONE_STATE_TYPE:
 > Retrieves the current timestamp.
 > 
 > @*return* `currentTimeStamp` — The current timestamp in `YYYY-M-D` format.
-
-#### Method: GetEntityByName
-```lua
-(method) UIParent:GetEntityByName(sEntityName: string)
-  -> sEntityName: string|nil
-```
-> Retrieves the entity name if it exists within render range.
-> 
-> @*param* `sEntityName` — The name of the entity to check.
-> 
-> @*return* `sEntityName` — The entity name if found, or `nil` if not in range.
 
 #### Method: GetEtcValue
 ```lua

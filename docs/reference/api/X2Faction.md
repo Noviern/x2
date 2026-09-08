@@ -16,6 +16,14 @@
 
 `integer`
 
+**EHP_GUILDBANK_ITEM**
+
+`integer`
+
+**EHP_GUILDBANK_MONEY**
+
+`integer`
+
 **EHP_INSTANCE**
 
 `integer`
@@ -128,11 +136,13 @@ EXPEDITION_GUILD_FUNCTION_TYPE:
 
 **EXPEDITION_HISTORY_PAGE**
 
-`EHP_INSTANCE`|`EHP_MANAGEMENT`|`EHP_STORE`|`EHP_WAR`
+`EHP_GUILDBANK_ITEM`|`EHP_GUILDBANK_MONEY`|`EHP_INSTANCE`|`EHP_MANAGEMENT`|`EHP_STORE`...(+1)
 
 ```lua
 -- api/X2Faction
 EXPEDITION_HISTORY_PAGE:
+    | `EHP_GUILDBANK_ITEM`
+    | `EHP_GUILDBANK_MONEY`
     | `EHP_INSTANCE`
     | `EHP_MANAGEMENT`
     | `EHP_STORE`
@@ -180,6 +190,14 @@ EXPEDITION_MEMBER_SORT_KIND:
 
 ## Classes
 ### Class: X2Faction
+#### Method: GetExpeditionMemberCount
+```lua
+(method) X2Faction:GetExpeditionMemberCount()
+  -> online: number
+  2. total: number
+```
+> Retrieves the player's expedition online count and total members.
+
 #### Method: IsMyExpeditionMember
 ```lua
 (method) X2Faction:IsMyExpeditionMember(charName: string)

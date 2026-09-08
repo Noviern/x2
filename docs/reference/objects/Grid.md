@@ -10,7 +10,7 @@ Extends [Widget](../types/Widget.md#class-widget)
 > grid:SetWidth(400)
 > grid:SetDefaultColWidth(100)
 > grid:SetColCount(8)
-> -- 400 grid width / 100 column width = should show 4 columns but instead shows 3 
+> -- 400 grid width / 100 column width = should show 4 columns but instead shows 3
 > ```
 > 
 > A `Grid` widget is table-like for displaying items in rows and columns.

@@ -20,6 +20,7 @@ SHOP_OPEN_NORMAL = 0
 SHOP_OPEN_RANDOM_SHOP = 5
 X2Store = {
   GetProductionZoneGroups = "<function X2Store>",
+  GetRandomShopStoreRefreshCount = "<function X2Store>",
   GetSellableZoneGroups = "<function X2Store>",
   GetSpecialtyRatio = "<function X2Store>",
   GetSpecialtyRatioBetween = "<function X2Store>",

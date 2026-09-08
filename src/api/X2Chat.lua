@@ -306,6 +306,10 @@ X2Chat = {}                              -- api/X2Chat
 ---| `QMS_READY_NORMAL`
 ---| `QMS_READY_SAGA`
 
+---@TODO
+---Cooldown 1s
+function X2Chat:AddRaidRecruitLinkToActiveChatInput(linkText) end
+
 ---Sends a message to the specified chat channel.
 ---@param filter CHANNEL_MESSAGE_FILTER|CHANNEL_MESSAGE_FILTER_SPECIAL The chat Channel Message Filter.
 ---@param message string The message to send.

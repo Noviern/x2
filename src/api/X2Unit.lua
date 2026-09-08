@@ -173,13 +173,6 @@ function X2Unit:GetUnitScreenPosition(unit) end
 ---@nodiscard
 function X2Unit:GetUnitWorldPositionByTarget(unit, isLocal) end
 
----Retrieves a list of units of the unitOwner type.
----@param unitOwner UNIT_OWNER
----@return UnitInSight[]|nil unitsInSight A list of units in sight, `nil` if none of the unitOwner exist.
----@nodiscard
----@see UnitInSight
-function X2Unit:GetUnitsInSight(unitOwner) end
-
 ---Removes all over head markers. Cooldown 1s.
 function X2Unit:RemoveAllOverHeadMarker() end
 

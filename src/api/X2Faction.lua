@@ -69,6 +69,12 @@ X2Faction = {}                     -- api/X2Faction
 ---| `EMT_QUEST`
 ---| `EMT_RANK_REWARD`
 
+---Retrieves the player's expedition online count and total members.
+---@return number online
+---@return number total
+---@nodiscard
+function X2Faction:GetExpeditionMemberCount() end
+
 ---Checks whether the specified character is a member of the player's expedition (guild).
 ---@param charName string The name of the character to check.
 ---@return boolean isExpeditionMember `true` if the character is in the player's expedition, `false` otherwise.

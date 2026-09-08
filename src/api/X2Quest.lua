@@ -69,6 +69,20 @@ function X2Quest:GetActiveQuestType(idx) end
 ---@nodiscard
 function X2Quest:GetQuestContextMainTitle(questType) end
 
+---Retrieves the quest journal from the index and returns the objective count.
+---@param idx number The index of the journal.
+---@return number count The objective count for the quest.
+---@nodiscard
+function X2Quest:GetQuestJournalObjectiveCount(idx) end
+
+---Retrieves the quest objective text if it exists.
+---@param idx number The quest id.
+---@param objIdx number The objective index.
+---@return QuestObjectiveText|nil
+---@nodiscard
+---@see QuestObjectiveText
+function X2Quest:GetQuestJournalObjectiveText(idx, objIdx) end
+
 ---Checks if the specified quest is completed.
 ---@param questType number The quest ID.
 ---@return boolean completed `true` if the quest is completed, `false` otherwise.

@@ -19,6 +19,7 @@
 > -- Set a new binding.
 > X2Hotkey:SaveHotKey()
 > ```
+> Disabled in combat.
 
 #### Method: SetBindingUiEvent
 ```lua
@@ -27,6 +28,7 @@
 > Binds a key to an action and registers the key to fire the `HOTKEY_ACTION`
 > event when pressed and released. This can't be saved but the hotkey can be
 > used immediately.
+> Disabled in combat.
 > 
 > @*param* `actionName` — The custom action name to bind.
 > 
@@ -158,12 +160,14 @@
 > -- Set a new binding here.
 > X2Hotkey:SaveHotKey()
 > ```
+> Disabled in combat.
 
 #### Method: RemoveOptionBinding
 ```lua
 (method) X2Hotkey:RemoveOptionBinding(action: string|"action_bar_button"|"action_bar_page"|"action_bar_page_next"|"action_bar_page_prev"...(+121), index: `1`|`2`, arg: number)
 ```
 > Removes the hotkey binding from the specified action.
+> Disabled in combat.
 > 
 > @*param* `action` — The action to remove the binding from.
 > 
@@ -317,6 +321,7 @@
 > Binds a key to a action in the specified index and registers the key to fire
 > the `HOTKEY_ACTION` event when pressed and released. This can't be saved but
 > the hotkey can be used immediately.
+> Disabled in combat.
 > 
 > @*param* `actionName` — The custom action name to bind.
 > 
@@ -445,6 +450,7 @@
 ```
 > Binds a key to a action option button and once saved registers the key to
 > fire the `HOTKEY_ACTION` event when pressed and released.
+> Disabled in combat.
 > 
 > @*param* `actionName` — The custom action name to bind.
 > 
@@ -573,6 +579,7 @@
 ```
 > Binds a key to a action option button in the specified index. Can't be saved
 > or used.
+> Disabled in combat.
 > 
 > @*param* `action` — The hotkey action to bind.
 > 
@@ -829,6 +836,7 @@
 > Binds a key to a custom action option button in the specified index and once
 > saved registers the key to fire the `HOTKEY_ACTION` event when pressed and
 > released.
+> Disabled in combat.
 > 
 > @*param* `actionName` — The custom action name to bind.
 > 
@@ -968,6 +976,7 @@
 > - **Any key pressed when this is fired and `X2Hotkey:BindingToOption()` isn't
 > used right before setting a hotkey can become stuck in a pressed state until
 > pressed again.**
+> Disabled in combat.
 
 #### Method: IsOverridableAction
 ```lua
@@ -1260,6 +1269,7 @@
 (method) X2Hotkey:EnableHotkey(enable: boolean)
 ```
 > Enables or disables the hotkey system.
+> Disabled in combat.
 > 
 > @*param* `enable` — `true` to enable the hotkey system, `false` to disable it. (default: `true`)
 
@@ -1854,6 +1864,7 @@
 > Binds a key to a action option button in the specified index with additional
 > arguments. Can trigger the `UPDATE_OPTION_BINDINGS` event if the button key
 > has changed.
+> Disabled in combat.
 > 
 > @*param* `action` — The hotkey action to bind.
 > 

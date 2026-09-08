@@ -17,3 +17,9 @@ X2Butler = {}             -- api/X2Butler
 ---| `REGISTER_HARVEST_MODE`
 ---| `REGISTER_TRACTOR_MODE`
 ---| `SWAP_EQUIPMENT_MODE`
+
+---Retrieves the butler charge information.
+---@return ButlerChargeInfo chargeInfo The butler charge information.
+---@nodiscard
+---@see ButlerChargeInfo
+function X2Butler:GetChargeInfo() end

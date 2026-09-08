@@ -149,6 +149,19 @@ QUEST_MARK_ORDER:
 > 
 > @*return* `activeQuestListCount` — The number of active quests.
 
+#### Method: GetQuestJournalObjectiveText
+```lua
+(method) X2Quest:GetQuestJournalObjectiveText(idx: number, objIdx: number)
+  -> QuestObjectiveText|nil
+```
+> Retrieves the quest objective text if it exists.
+> 
+> @*param* `idx` — The quest id.
+> 
+> @*param* `objIdx` — The objective index.
+> 
+> See: [QuestObjectiveText](../types/classes.md#class-questobjectivetext)
+
 #### Method: IsCompleted
 ```lua
 (method) X2Quest:IsCompleted(questType: number)
@@ -171,16 +184,16 @@ QUEST_MARK_ORDER:
 > 
 > @*return* `isReadyForComplete` — `true` if the quest is complete and ready to turn in, `false` otherwise.
 
-#### Method: GetQuestContextMainTitle
+#### Method: GetQuestJournalObjectiveCount
 ```lua
-(method) X2Quest:GetQuestContextMainTitle(questType: number)
-  -> questContextMainTitle: string
+(method) X2Quest:GetQuestJournalObjectiveCount(idx: number)
+  -> count: number
 ```
-> Retrieves the main title for the specified quest.
+> Retrieves the quest journal from the index and returns the objective count.
 > 
-> @*param* `questType` — The quest ID.
+> @*param* `idx` — The index of the journal.
 > 
-> @*return* `questContextMainTitle` — The quest's main title.
+> @*return* `count` — The objective count for the quest.
 
 #### Method: GetActiveQuestType
 ```lua
@@ -192,6 +205,17 @@ QUEST_MARK_ORDER:
 > @*param* `idx` — The active quest index (not the quest ID).
 > 
 > @*return* `activeQuestType` — The quest ID.
+
+#### Method: GetQuestContextMainTitle
+```lua
+(method) X2Quest:GetQuestContextMainTitle(questType: number)
+  -> questContextMainTitle: string
+```
+> Retrieves the main title for the specified quest.
+> 
+> @*param* `questType` — The quest ID.
+> 
+> @*return* `questContextMainTitle` — The quest's main title.
 
 #### Method: SetTrackingActiveQuest
 ```lua

@@ -2,6 +2,12 @@ MAX_BLOCK_USER = 200
 MAX_FRIENDS = 100
 MAX_WAIT_FRIENDS = 50
 X2Friend = {
+  BlockUser = "<function X2Friend>",
+  GetBlockList = "<function X2Friend>",
   GetFriendList = "<function X2Friend>",
+  GetMuteList = "<function X2Friend>",
   IsMyFriend = "<function X2Friend>",
+  MuteUser = "<function X2Friend>",
+  UnblockUser = "<function X2Friend>",
+  UnmuteUser = "<function X2Friend>",
 }

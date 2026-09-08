@@ -4358,12 +4358,6 @@ fun(name: string)
 
 Event triggers when a player dies.
 
-**UNIT_ENTERED_SIGHT_HANDLER**
-
-fun(unitId: number, unitType: "housing"|"npc", curHp: string, maxHp: string)
-
-Event triggers when a unit enters the players sight.
-
 **UNIT_EQUIPMENT_CHANGED_HANDLER**
 
 fun(equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
@@ -4375,12 +4369,6 @@ Event triggers when the player changes their gear.
 fun(killStreakInfo: KillStreakInfo)
 
 Event triggers when a player is on a kill streak.
-
-**UNIT_LEAVED_SIGHT_HANDLER**
-
-fun(unitId: number, unitType: "housing"|"npc")
-
-Event triggers when a unit leaves the players sight.
 
 **UNIT_NAME_CHANGED_HANDLER**
 
@@ -9198,12 +9186,6 @@ fun(self: Widget, name: string)
 
 
 
-**WIDGET_UNIT_ENTERED_SIGHT_HANDLER**
-
-fun(self: Widget, unitId: number, unitType: "housing"|"npc", curHp: string, maxHp: string)
-
-
-
 **WIDGET_UNIT_EQUIPMENT_CHANGED_HANDLER**
 
 fun(self: Widget, equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BODY`...(+27))
@@ -9213,12 +9195,6 @@ fun(self: Widget, equipSlot: `ES_ARMS`|`ES_BACKPACK`|`ES_BACK`|`ES_BEARD`|`ES_BO
 **WIDGET_UNIT_KILL_STREAK_HANDLER**
 
 fun(self: Widget, killStreakInfo: KillStreakInfo)
-
-
-
-**WIDGET_UNIT_LEAVED_SIGHT_HANDLER**
-
-fun(self: Widget, unitId: number, unitType: "housing"|"npc")
 
 
 

@@ -2688,3 +2688,36 @@
 ---@field WORLD_MESSAGE WORLD_MESSAGE_HANDLER|nil
 ---@field ZONE_SCORE_CONTENT_STATE ZONE_SCORE_CONTENT_STATE_HANDLER|nil
 ---@field ZONE_SCORE_UPDATED ZONE_SCORE_UPDATED_HANDLER|nil
+
+---@class ButlerChargeInfo
+---@field freeChargeAmount number
+---@field freeChargeCount number
+---@field isFree boolean
+---@field maxFreeChargeCount number
+---@field maxWeeklychargeAmount number
+---@field remainWeeklyChargeAmount number
+
+---@class BlockedCharacter
+---@field name string
+---@field unitName string
+---@field worldName string
+
+---@class MutedCharacter
+---@field name string
+---@field unitName string
+---@field worldName string
+
+---@class HousingTaxInfo
+---@field base_tax number
+---@field count number
+---@field deposit number
+---@field tax_type number
+---@field total_tax number
+
+---@class QuestObjectiveText
+---@field category string
+---@field done number
+---@field name string
+---@field npc_type number
+---@field status string
+---@field summary string

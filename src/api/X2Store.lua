@@ -58,6 +58,11 @@ X2Store = {}                     -- api/X2Store
 ---@see ZoneInfo
 function X2Store:GetProductionZoneGroups() end
 
+---@FIXME currently broken, returns nil if shop hasnt been opened and then returns X2Store, rather than the info, if it has been opened.
+---@return table|nil info
+---@nodiscard
+function X2Store:GetRandomShopStoreRefreshCount() end
+
 ---Retrieves a list of zone information for all zones where a pack crafted in
 ---the specified zone can be turned in.
 ---@param fromZoneGroup ZONE_GROUP_ID The source zone ID.

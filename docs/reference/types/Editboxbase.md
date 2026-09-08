@@ -79,7 +79,7 @@ TextStyle
 ```lua
 (method) Editboxbase:SetCursorHeight(height: number)
 ```
-> Sets the cursor height for the Editboxbase.
+> Sets the cursor height for the Editboxbase. Adds to the base height of the cursor.
 > 
 > @*param* `height` — The height of the cursor.
 

@@ -323,7 +323,7 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 
 #### Method: RegisterEvent
 ```lua
-(method) Widget:RegisterEvent(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872))
+(method) Widget:RegisterEvent(eventName: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+870))
 ```
 > Registers an event for the Widget to be accessible by the OnEvent handler
 > action.
@@ -1124,10 +1124,8 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 >     | "UNIT_COMBAT_STATE_CHANGED"
 >     | "UNIT_DEAD"
 >     | "UNIT_DEAD_NOTICE"
->     | "UNIT_ENTERED_SIGHT"
 >     | "UNIT_EQUIPMENT_CHANGED"
 >     | "UNIT_KILL_STREAK"
->     | "UNIT_LEAVED_SIGHT"
 >     | "UNIT_NAME_CHANGED"
 >     | "UNIT_NPC_EQUIPMENT_CHANGED"
 >     | "UNITFRAME_ABILITY_UPDATE"
@@ -2077,6 +2075,8 @@ Extends [Uibounds](../types/Uibounds.md#class-uibounds), [Uiobject](../types/Uio
 >     | "overlay" -- Layer 3
 >     | "overoverlay" -- Layer 4
 > ```
+> 
+> See: [DrawableDDS](../types/DrawableDDS.md#class-drawabledds)
 
 #### Method: CreateColorDrawable
 ```lua

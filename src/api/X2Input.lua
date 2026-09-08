@@ -3,6 +3,12 @@
 ---@class X2Input
 X2Input = {} -- api/X2Input
 
+---Retrieves the current mouse position.
+---@return number mouseX The current mouse x position.
+---@return number mouseY The current mouse y position.
+---@nodiscard
+function X2Input:GetMousePos() end
+
 ---Checks if the Alt key is currently pressed.
 ---@return boolean altKeyDown `true` if Alt is down, `false` otherwise.
 ---@nodiscard

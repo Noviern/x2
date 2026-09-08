@@ -44,6 +44,10 @@ X2Team = {}                           -- api/X2Team
 ---| `TMROLE_RANGED_DEALER`
 ---| `TMROLE_TANKER`
 
+---@TODO
+---@return string|nil
+function X2Team:GetLinkText() end
+
 ---Returns information for a specific raid recruit type and subtype.
 ---@param recruitType any The raid recruit type.
 ---@param recruitSubType any The raid recruit subtype.
@@ -78,6 +82,12 @@ function X2Team:GetRole(teamIndex, memberIndex) end
 ---@nodiscard
 function X2Team:GetTeamRoleType() end
 
+---@TODO
+---@param charName string
+---@param isParty boolean
+---Cooldown 1 second.
+function X2Team:InviteToTeam(charName, isParty) end
+
 ---@TODO min max?
 ---@TODO teamRoleType is the kickers role type instead othe player being kicked?
 ---Kicks a team member from the team.
@@ -92,6 +102,11 @@ function X2Team:KickTeamMember(memberIndex, teamRoleType) end
 ---@param teamRoleType TEAM_ROLE The role of the member being kicked.
 function X2Team:KickTeamMemberByName(charName, teamRoleType) end
 
+---@TODO
+---@param unit string
+---Cooldown 5 seconds.
+function X2Team:MakeTeamOwner(unit) end
+
 ---Moves a team member to a different position.
 ---@param frommemberIndex number The current index of the member. (min: `1`)
 ---@param tomemberIndex number The target index to move the member to. (min: `1`)
@@ -102,6 +117,18 @@ function X2Team:MoveTeamMember(frommemberIndex, tomemberIndex) end
 ---@param frommemberIndex number The current index of the member.  (min: `1`)
 ---@param toParty number The target party number to move the member to.
 function X2Team:MoveTeamMemberToParty(frommemberIndex, toParty) end
+
+---@TODO
+---Cooldown 1s
+function X2Team:RaidApplicantAccept(charIds) end
+
+---@TODO
+---Cooldown 1s
+function X2Team:RaidApplicantList() end
+
+---@TODO
+---Cooldown 1s
+function X2Team:RaidApplicantReject(charIds) end
 
 ---Registers a new raid recruitment listing.
 ---Cooldown 5 seconds.
@@ -120,7 +147,7 @@ function X2Team:MoveTeamMemberToParty(frommemberIndex, toParty) end
 ---@overload fun(self: self, type: 4, subType: RAID_RECRUIT_SUBTYPE_OTHER, headcount: number, limitLevel: number, autoJoin: boolean, msg: string, hour: number, minute: number, limitGearPoint: number)
 function X2Team:RaidRecruitAdd(type, subType, headcount, limitLevel, autoJoin, msg, hour, minute, limitGearPoint) end
 
----Shows popup confirming if the raid recuitment post should be deleted.
+---Deletes the current listed rait recruitment.
 ---Cooldown 5 seconds.
 function X2Team:RaidRecruitDel() end
 

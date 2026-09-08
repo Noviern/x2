@@ -775,6 +775,12 @@ QUEST_MANAGEMENT_STATE:
 
 ## Classes
 ### Class: X2Chat
+#### Method: AddRaidRecruitLinkToActiveChatInput
+```lua
+(method) X2Chat:AddRaidRecruitLinkToActiveChatInput(linkText: any)
+```
+> Cooldown 1s
+
 #### Method: DispatchChatMessage
 ```lua
 (method) X2Chat:DispatchChatMessage(filter: `CMF_ACQ_CONSUME_GROUP`|`CMF_ADDED_ITEM_GROUP`|`CMF_ADDED_ITEM_SELF`|`CMF_ADDED_ITEM_TEAM`|`CMF_ALL_SERVER`...(+76), message: string, option?: ChatMessageOption)

@@ -50,7 +50,6 @@ X2Unit = {
   GetUnitNameById = "<function X2Unit>",
   GetUnitScreenPosition = "<function X2Unit>",
   GetUnitWorldPositionByTarget = "<function X2Unit>",
-  GetUnitsInSight = "<function X2Unit>",
   RemoveAllOverHeadMarker = "<function X2Unit>",
   SetOverHeadMarker = "<function X2Unit>",
   UnitBuff = "<function X2Unit>",

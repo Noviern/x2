@@ -38,3 +38,25 @@ X2House = {}                          -- api/X2House
 ---| `HOUSING_UCC_POS_TOP`
 ---| `HOUSING_UCC_POS_WALL`
 ---| `HOUSING_UCC_POS_WALL_OUTDOOR`
+
+---Retrieves the housing tax information of the current house when the building information window is open.
+---@return HousingTaxInfo|nil currentHousingTaxInfo
+---@nodiscard
+---@see HousingTaxInfo
+function X2House:GetCurrentHousingTaxInfo() end
+
+---Retrieves the house name of the current house when the building information window is open.
+---@return string houseName The house name.
+---@nodiscard
+function X2House:GetHouseName() end
+
+---Retrieves the house owner name of the current house when the building information window is open.
+---@return string houseOwnerName The house owners name.
+---@nodiscard
+function X2House:GetHouseOwnerName() end
+
+---Retrieves the house type (id) of the current house when the building information window is open.
+---@return number houseType The type for the house.
+---@nodiscard
+function X2House:GetHouseType() end
+

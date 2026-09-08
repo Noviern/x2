@@ -184,12 +184,35 @@ ZONE_PERMISSION_WINDOW:
   -> successful: boolean
 ```
 > Sets the player's appellation name and effect.
+> Cooldown 2s.
 > 
 > @*param* `appellationNameType` — The appellation name type.
 > 
 > @*param* `appellationEffectType` — The appellation effect type.
 > 
 > @*return* `successful` — `true` if the change was successful, even if types are invalid.
+
+#### Method: GetAppellationsCount
+```lua
+(method) X2Player:GetAppellationsCount(appellationRouteFilter: `APPELATION_ROUTE_TYPE_ACHIEVEMENTS`|`APPELATION_ROUTE_TYPE_ETC`|`APPELATION_ROUTE_TYPE_HIDDEN`|`APPELATION_ROUTE_TYPE_MAX`|`APPELATION_ROUTE_TYPE_MERCHANT_PACKS`...(+1))
+  -> appellationsCount: number
+```
+> Retrieves the total count of appellations for the specified route type.
+> 
+> @*param* `appellationRouteFilter` — The route type filter.
+> 
+> @*return* `appellationsCount` — The total number of appellations.
+> 
+> ```lua
+> -- api/X2Player
+> appellationRouteFilter:
+>     | `APPELATION_ROUTE_TYPE_ACHIEVEMENTS`
+>     | `APPELATION_ROUTE_TYPE_ETC`
+>     | `APPELATION_ROUTE_TYPE_HIDDEN`
+>     | `APPELATION_ROUTE_TYPE_MAX`
+>     | `APPELATION_ROUTE_TYPE_MERCHANT_PACKS`
+>     | `APPELATION_ROUTE_TYPE_QUEST_CONTEXTS`
+> ```
 
 #### Method: GetAppellations
 ```lua
@@ -228,43 +251,6 @@ ZONE_PERMISSION_WINDOW:
 > 
 > See: [StampInfo](../types/classes.md#class-stampinfo)
 
-#### Method: GetAppellationsCount
-```lua
-(method) X2Player:GetAppellationsCount(appellationRouteFilter: `APPELATION_ROUTE_TYPE_ACHIEVEMENTS`|`APPELATION_ROUTE_TYPE_ETC`|`APPELATION_ROUTE_TYPE_HIDDEN`|`APPELATION_ROUTE_TYPE_MAX`|`APPELATION_ROUTE_TYPE_MERCHANT_PACKS`...(+1))
-  -> appellationsCount: number
-```
-> Retrieves the total count of appellations for the specified route type.
-> 
-> @*param* `appellationRouteFilter` — The route type filter.
-> 
-> @*return* `appellationsCount` — The total number of appellations.
-> 
-> ```lua
-> -- api/X2Player
-> appellationRouteFilter:
->     | `APPELATION_ROUTE_TYPE_ACHIEVEMENTS`
->     | `APPELATION_ROUTE_TYPE_ETC`
->     | `APPELATION_ROUTE_TYPE_HIDDEN`
->     | `APPELATION_ROUTE_TYPE_MAX`
->     | `APPELATION_ROUTE_TYPE_MERCHANT_PACKS`
->     | `APPELATION_ROUTE_TYPE_QUEST_CONTEXTS`
-> ```
-
-#### Method: GetShowingAppellation
-```lua
-(method) X2Player:GetShowingAppellation()
-  -> showingAppellation: Appellation
-```
-> Retrieves information on the currently displayed appellation.
-> 
-> @*return* `showingAppellation` — The displayed appellation information.
-> 
-> ```lua
-> local showingAppellation = X2Player:GetShowingAppellation()
-> local appellationName = showingAppellation[2]
-> ```
-> See: [Appellation](../types/classes.md#class-appellation)
-
 #### Method: GetEffectAppellation
 ```lua
 (method) X2Player:GetEffectAppellation()
@@ -290,6 +276,32 @@ ZONE_PERMISSION_WINDOW:
 > @*return* `stampChangeItemInfo` — The item requirements for changing a stamp.
 > 
 > See: [StampChangeItemInfo](../types/classes.md#class-stampchangeiteminfo)
+
+#### Method: GetShowingAppellation
+```lua
+(method) X2Player:GetShowingAppellation()
+  -> showingAppellation: Appellation
+```
+> Retrieves information on the currently displayed appellation.
+> 
+> @*return* `showingAppellation` — The displayed appellation information.
+> 
+> ```lua
+> local showingAppellation = X2Player:GetShowingAppellation()
+> local appellationName = showingAppellation[2]
+> ```
+> See: [Appellation](../types/classes.md#class-appellation)
+
+#### Method: GetUnitAppellationRouteList
+```lua
+(method) X2Player:GetUnitAppellationRouteList()
+  -> unitAppellationRoute: UnitAppellationRoute[]
+```
+> Retrieves a list of key-value pairs representing appellation route types.
+> 
+> @*return* `unitAppellationRoute` — A table of appellation route types.
+> 
+> See: [UnitAppellationRoute](../types/classes.md#class-unitappellationroute)
 
 #### Method: GetAppellationStampInfo
 ```lua
@@ -371,14 +383,12 @@ ZONE_PERMISSION_WINDOW:
 > 
 > @*return* `appellationCount` — The number of unlocked appellations.
 
-#### Method: GetUnitAppellationRouteList
+#### Method: PlayerInCombat
 ```lua
-(method) X2Player:GetUnitAppellationRouteList()
-  -> unitAppellationRoute: UnitAppellationRoute[]
+(method) X2Player:PlayerInCombat()
+  -> isPlayerInCombat: boolean
 ```
-> Retrieves a list of key-value pairs representing appellation route types.
+> Retrieves wheather the player is in combat or not.
 > 
-> @*return* `unitAppellationRoute` — A table of appellation route types.
-> 
-> See: [UnitAppellationRoute](../types/classes.md#class-unitappellationroute)
+> @*return* `isPlayerInCombat` — `true` if the player is in combat, `false` otherwise.
 

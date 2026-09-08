@@ -106,3 +106,38 @@ HOUSING_UCC_POS_TYPE:
 
 ## Classes
 ### Class: X2House
+#### Method: GetCurrentHousingTaxInfo
+```lua
+(method) X2House:GetCurrentHousingTaxInfo()
+  -> currentHousingTaxInfo: HousingTaxInfo|nil
+```
+> Retrieves the housing tax information of the current house when the building information window is open.
+> See: [HousingTaxInfo](../types/classes.md#class-housingtaxinfo)
+
+#### Method: GetHouseOwnerName
+```lua
+(method) X2House:GetHouseOwnerName()
+  -> houseOwnerName: string
+```
+> Retrieves the house owner name of the current house when the building information window is open.
+> 
+> @*return* `houseOwnerName` — The house owners name.
+
+#### Method: GetHouseName
+```lua
+(method) X2House:GetHouseName()
+  -> houseName: string
+```
+> Retrieves the house name of the current house when the building information window is open.
+> 
+> @*return* `houseName` — The house name.
+
+#### Method: GetHouseType
+```lua
+(method) X2House:GetHouseType()
+  -> houseType: number
+```
+> Retrieves the house type (id) of the current house when the building information window is open.
+> 
+> @*return* `houseType` — The type for the house.
+

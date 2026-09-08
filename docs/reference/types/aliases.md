@@ -8484,7 +8484,7 @@ fun(self: Widget)
 
 **OnEvent**
 
-fun(self: Widget, event: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872), ...any)
+fun(self: Widget, event: "ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+870), ...any)
 
 
 
@@ -12031,17 +12031,17 @@ TOOLTIP_KIND:
 
 ```lua
 TOOLTIP_TYPE:
-    | "carrying_backpack_slave" -- @TODO: Havent seen yet.
+    | "carrying_backpack_slave" -- @TODO Havent seen yet.
     | "common_farm"
     | "commonFarm"
-    | "conquest" -- @TODO: Havent seen yet.
+    | "conquest" -- @TODO Havent seen yet.
     | "corpse"
     | "light_house"
     | "mySlave"
     | "normal"
-    | "shipyard" -- @TODO: Havent seen yet.
+    | "shipyard" -- @TODO Havent seen yet.
     | "slave"
-    | "territory" -- @TODO: Havent seen yet.
+    | "territory" -- @TODO Havent seen yet.
     | "zoneState"
 ```
 
@@ -12102,7 +12102,7 @@ UIBOUND_KEY:
 
 **UIEVENT_TYPE**
 
-"ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+872)
+"ABILITY_CHANGED"|"ABILITY_EXP_CHANGED"|"ABILITY_SET_CHANGED"|"ABILITY_SET_USABLE_SLOT_COUNT_CHANGED"|"ACCOUNT_ATTENDANCE_ADDED"...(+870)
 
 ```lua
 UIEVENT_TYPE:
@@ -12898,10 +12898,8 @@ UIEVENT_TYPE:
     | "UNIT_COMBAT_STATE_CHANGED"
     | "UNIT_DEAD"
     | "UNIT_DEAD_NOTICE"
-    | "UNIT_ENTERED_SIGHT"
     | "UNIT_EQUIPMENT_CHANGED"
     | "UNIT_KILL_STREAK"
-    | "UNIT_LEAVED_SIGHT"
     | "UNIT_NAME_CHANGED"
     | "UNIT_NPC_EQUIPMENT_CHANGED"
     | "UNITFRAME_ABILITY_UPDATE"

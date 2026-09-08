@@ -46,3 +46,14 @@ BUTLER_MODE:
 
 ## Classes
 ### Class: X2Butler
+#### Method: GetChargeInfo
+```lua
+(method) X2Butler:GetChargeInfo()
+  -> chargeInfo: ButlerChargeInfo
+```
+> Retrieves the butler charge information.
+> 
+> @*return* `chargeInfo` — The butler charge information.
+> 
+> See: [ButlerChargeInfo](../types/classes.md#class-butlerchargeinfo)
+

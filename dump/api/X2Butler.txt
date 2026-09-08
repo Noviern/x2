@@ -4,4 +4,6 @@ RECHARGE_COST_MODE = 3
 REGISTER_HARVEST_MODE = 4
 REGISTER_TRACTOR_MODE = 6
 SWAP_EQUIPMENT_MODE = 1
-X2Butler = {}
+X2Butler = {
+  GetChargeInfo = "<function X2Butler>",
+}

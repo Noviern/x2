@@ -74,6 +74,7 @@ OISLT_CHARACTER = 1                              -- api/X2Option OPTION_ITEM_SAV
 OISLT_CHARACTER_MODE = 3                         -- api/X2Option OPTION_ITEM_SAVE_LEVEL_TYPE
 OISLT_SYSTEM = 2                                 -- api/X2Option OPTION_ITEM_SAVE_LEVEL_TYPE
 OIT_ACTION_BAR_LOCK = 104                        -- api/X2Option OPTION_ITEM_TYPE
+OIT_AUTOTRACKQUESTS = 316                        -- api/X2Option OPTION_ITEM_TYPE
 OIT_AUTO_ENEMY_TARGETING = 72                    -- api/X2Option OPTION_ITEM_TYPE
 OIT_AUTO_USE_ONLY_MY_PORTAL = 73                 -- api/X2Option OPTION_ITEM_TYPE
 OIT_BASIC_CURSOR_SHAPE = 89                      -- api/X2Option OPTION_ITEM_TYPE
@@ -308,6 +309,7 @@ X2Option = {}                                    -- api/X2Option
 ---api/X2Option
 ---@alias OPTION_ITEM_TYPE
 ---| `OIT_ACTION_BAR_LOCK`
+---| `OIT_AUTOTRACKQUESTS`
 ---| `OIT_AUTO_ENEMY_TARGETING`
 ---| `OIT_AUTO_USE_ONLY_MY_PORTAL`
 ---| `OIT_BASIC_CURSOR_SHAPE`
